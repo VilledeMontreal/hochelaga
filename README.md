@@ -1,3 +1,35 @@
+# Pattern Lab VDM
+
+## What this is
+
+A basic installation of the nodejs mustache Patternlab project. The [starterkit-mustache-bootstrap](https://github.com/pattern-lab/starterkit-mustache-bootstrap) starterkit was loaded into the initial installation and populated the /source folder.
+
+## Installation
+
+Clone this repo into a local folder and follow instructions [@https://github.com/pattern-lab/edition-node-gulp)(https://github.com/pattern-lab/edition-node-gulp).
+
+All development happens on the `dev` branch for now.
+
+Essentially, cd into the directory and issue the following commands : 
+```
+gulp patternlab:build
+gulp patternlab:serve
+```
+
+And get to work.
+
+### Gotchas
+
+Remember that loading a new startkit wipes the /source directory. As it is our main playground, it is advisable to do this in a separate Patternlab instance.
+
+## Initial objectives
+
+* Load a copy of bootstrap SASS and get the SASS compilation jobs working from the gulpfile.
+* Reorganize the gulpfile into a /gulp directory, split subtasks.
+
+
+----
+
 # Pattern Lab Node - Gulp Edition
 
 The Gulp wrapper around [Pattern Lab Node Core](https://github.com/pattern-lab/patternlab-node) providing tasks to interact with the core library and move supporting frontend assets.
