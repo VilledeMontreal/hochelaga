@@ -6,6 +6,7 @@
 var gulp = require('gulp'),
   path = require('path'),
   browserSync = require('browser-sync').create(),
+  sass = require('gulp-sass'),
   argv = require('minimist')(process.argv.slice(2)),
   chalk = require('chalk');
 
@@ -28,6 +29,20 @@ function normalizePath() {
     )
     .replace(/\\/g, "/");
 }
+
+/******************************************************
+ * SASS compilation 
+******************************************************/
+var bootstrapSass = {
+  in: './source/styles/vendor/bootstrap/'
+};
+
+
+gulp.task('pl-sass', function(){
+  return gulp.src(path.resolve(paths().source.styles, '**/*.scss'))
+    .pipe(sass().on('error', sass.logError))
+    .pipe(gulp.dest(path.resolve(paths().source.css)));
+});
 
 /******************************************************
  * COPY TASKS - stream assets from source to destination
