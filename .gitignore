@@ -1,0 +1,51 @@
+# Local configuration files
+# -------------------------------------------------
+# src/config/env.js
+# gulpfile.js
+
+
+# Chef generated files
+# ------------------------------------------------------------------------------
+cookbooks
+tmp
+
+# Vagrant generated files
+# ------------------------------------------------------------------------------
+.vagrant
+
+# Node generated files
+# ------------------------------------------------------------------------------
+node_modules
+*.log
+
+
+# OS generated files
+# ------------------------------------------------------------------------------
+*~
+.directory
+.DS_Store*
+.project
+.settings
+.svn
+ehthumbs.db
+Icon?
+Thumbs.db
+
+# IDE generated files
+# ------------------------------------------------------------------------------
+*.bbprojectd
+*.mode1v3
+*.mode2v3
+*.pbxuser
+*.perspective
+*.perspectivev3
+*.sublime-project
+*.sublime-workspace
+*.swp
+*.tmproj
+*~.nib
+.idea
+.komodotools
+.project
+.settings
+nbproject
