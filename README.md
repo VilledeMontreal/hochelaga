@@ -6,7 +6,7 @@ A basic installation of the nodejs mustache Patternlab project. The [starterkit-
 
 ## Installation
 
-Clone this repo into a local folder and follow instructions [@https://github.com/pattern-lab/edition-node-gulp)(https://github.com/pattern-lab/edition-node-gulp).
+Clone this repo into a local folder and follow instructions @[https://github.com/pattern-lab/edition-node-gulp)(https://github.com/pattern-lab/edition-node-gulp).
 
 All development happens on the `dev` branch for now.
 
