@@ -1,7 +1,8 @@
 // Import a custom bootstrap import file
 @import "bootstrap-vdm.scss";
 // import an override file for bootstrap variables
-@import "variables-vdm.scss";
+@import "bootstrap-variables-vdm.scss";
+
 
 // Start writing yor styles below
 // Import other files structured according to your inheritance model
@@ -12,6 +13,7 @@
 //     --skeleton.scss
 
 @import "skeleton.scss";
+@import "fonts.scss";
 
 
 .toto {

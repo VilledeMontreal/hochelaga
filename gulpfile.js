@@ -34,7 +34,7 @@ function normalizePath() {
  * SASS compilation 
 ******************************************************/
 var saasPath = './source/styles/styles.scss';
-var saasAllPath = './source/styles/**/*.scss';
+var sassAllPath = './source/styles/**/*.scss';
 
 gulp.task('pl-sass', function(){
   return gulp.src(saasPath)
@@ -203,11 +203,11 @@ function reloadCSS(done) {
 }
 
 function watch() {
-  // gulp.watch(saasAllPath).on('change', gulp.series('pl-sass')); // works
+  // gulp.watch(sassAllPath).on('change', gulp.series('pl-sass')); // works
   const watchers = [
     {
       name: 'SASS',
-      paths: [saasAllPath],
+      paths: [sassAllPath],
       config: { awaitWriteFinish: true },
       tasks: gulp.series('pl-sass', reloadCSS)
     },
