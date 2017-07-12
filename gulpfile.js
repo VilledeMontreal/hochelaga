@@ -33,16 +33,15 @@ function normalizePath() {
 /******************************************************
  * SASS compilation 
 ******************************************************/
-var bootstrapSass = {
-  in: './source/styles/vendor/bootstrap/'
-};
-
+var saasPath = './source/styles/styles.scss';
+var saasAllPath = './source/styles/**/*.scss';
 
 gulp.task('pl-sass', function(){
-  return gulp.src(path.resolve(paths().source.styles, '**/*.scss'))
-    .pipe(sass().on('error', sass.logError))
-    .pipe(gulp.dest(path.resolve(paths().source.css)));
+  return gulp.src(saasPath)
+    .pipe(sass({outputStyle: 'compressed'}).on('error', sass.logError))
+    .pipe(gulp.dest('./source/css'));
 });
+
 
 /******************************************************
  * COPY TASKS - stream assets from source to destination
@@ -134,6 +133,7 @@ gulp.task('pl-assets', gulp.series(
   'pl-copy:img',
   'pl-copy:favicon',
   'pl-copy:font',
+  gulp.series('pl-sass', 'pl-copy:css', function(done){done();}),
   'pl-copy:css',
   'pl-copy:styleguide',
   'pl-copy:styleguide-css'
@@ -203,7 +203,14 @@ function reloadCSS(done) {
 }
 
 function watch() {
+  // gulp.watch(saasAllPath).on('change', gulp.series('pl-sass')); // works
   const watchers = [
+    {
+      name: 'SASS',
+      paths: [saasAllPath],
+      config: { awaitWriteFinish: true },
+      tasks: gulp.series('pl-sass', reloadCSS)
+    },
     {
       name: 'CSS',
       paths: [normalizePath(paths().source.css, '**', '*.css')],
@@ -226,6 +233,7 @@ function watch() {
         normalizePath(paths().source.images, '**', '*'),
         normalizePath(paths().source.js, '**', '*'),
         normalizePath(paths().source.meta, '**', '*'),
+        'source/styles/**/*.scss',
         normalizePath(paths().source.annotations, '**', '*')
       ].concat(getTemplateWatches()),
       config: { awaitWriteFinish: true },

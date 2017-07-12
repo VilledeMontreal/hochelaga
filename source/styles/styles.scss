@@ -1,9 +1,25 @@
-// Import bootstrap 
-@import "_bootstrap.scss";
+// Import a custom bootstrap import file
+@import "bootstrap-vdm.scss";
 // import an override file for bootstrap variables
-@import "_variables.scss";
+@import "variables-vdm.scss";
 
-/**
-* Start writing yor styles below
-*
-**
+// Start writing yor styles below
+// Import other files structured according to your inheritance model
+
+// Stylesheets structure ->
+// ******************************
+// --styles.scss
+//     --skeleton.scss
+
+@import "skeleton.scss";
+
+
+.toto {
+     color: #000;
+ }
+
+.tata {
+    border: 1px solid red;
+    background: orange;
+    height: 200px;
+}
