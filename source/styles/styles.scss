@@ -10,8 +10,11 @@
 // Stylesheets structure ->
 // ******************************
 // --styles.scss
+//     --patternlab.scss
 //     --skeleton.scss
+//     --fonts.scss
 
+@import "patternlab.scss";
 @import "skeleton.scss";
 @import "fonts.scss";
 

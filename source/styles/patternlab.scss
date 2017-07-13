@@ -1,0 +1,28 @@
+// @file patternlab.scss
+
+/*
+
+The code below lives for the sake of the patternlab instance & should
+not be compiled along with the main site stylesheet
+@TO-DO - insert a gulp job for this specific compilation function
+Another option is to create a plain CSS document and not pipeline it into the compil job
+@see pattern-scaffolding.css in mustache demo starterkit for reference
+*/
+
+#pl { 
+    font-size: normal;
+}
+
+// Fonts
+.stroked-header {
+    padding-top: 0.25em;
+    padding-left: 0.25em;
+    border-top: 1px solid #ddd;
+    width: 93%;
+}
+.pl-small {
+    font-size: 0.85em;
+}
+.pl-smaller {
+    font-size: 0.75em;
+}
