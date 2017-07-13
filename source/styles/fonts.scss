@@ -1,12 +1,14 @@
 // @file fonts.scss
 
 
+// >> Begin demo code for atoms-icons
+// - - - - - - - - - -  - - - - - - 
 $vdm-icon-font-path: '../fonts/';
 $vdm-icon-font-version: '0.5';
-$vdm-icon-font-familly : 'VDM-fonticon';
+$vdm-icon-font-familly : 'vdm-fonticon';
 
 @font-face {
-  font-family: '#{$vdm-icon-font-familly}';
+  font-family: $vdm-icon-font-familly;
   src: url('#{$vdm-icon-font-path}/vdm-font-icon.eot?v=#{$vdm-icon-font-version}');
   src: url('#{$vdm-icon-font-path}/vdm-font-icon.eot?v=#{$vdm-icon-font-version}') format('embedded-opentype'),
     url('#{$vdm-icon-font-path}/vdm-font-icon.woff2?v=#{$vdm-icon-font-version}') format('woff2'),
@@ -16,6 +18,75 @@ $vdm-icon-font-familly : 'VDM-fonticon';
   font-weight: 400;
   font-style: normal;
 }
+
+#icons {
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  list-style: none;
+  border: 0;
+  margin: 0;
+  padding: 0;
+  // display: inline-block;
+  li {
+    margin: 0 10px 10px 0;
+    .font-glyph {
+      font-family: $vdm-icon-font-familly !important;
+      display: block;
+      width: 128px;
+      height: 128px;
+      font-size: 128px;
+      font-family: 'fonticon';
+      background-color: rgba(0, 0, 0, 0.05);
+      text-rendering: geometricPrecision;
+      -webkit-font-smoothing: antialiased;
+      vertical-align: middle;
+      font-smooth: always;
+      font-weight: normal;
+      font-variant: normal;
+      text-transform: none;
+      // border: 0;
+      // margin: 0;
+      // padding: 0;
+      // display: inline-block;
+      &:hover {
+        cursor: pointer;
+        background-color: black;
+        color: white;
+      }
+    }
+    .font-glyphname {
+      padding-top: 10px;
+      font-size: 10px;
+      font-weight: 100;
+      display: block;
+      width: 128px;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      &:before {
+        font-size: 16px;
+        font-family: $vdm-icon-font-familly !important;
+        text-rendering: geometricPrecision;
+        -webkit-font-smoothing: antialiased;
+        vertical-align: middle;
+        font-smooth: always;
+        font-weight: normal;
+        font-variant: normal;
+        text-transform: none;
+      }
+      .glyph-address {
+        cursor: pointer;
+        color: #33b353;
+      }
+    }
+  }
+}
+
+// >> End demo code for atoms-icons
+// - - - - - - - - - -  - - - - - - 
+
 
 
 // @font-face {

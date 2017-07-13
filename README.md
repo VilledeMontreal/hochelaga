@@ -6,7 +6,7 @@ A basic installation of the nodejs mustache Patternlab project. The [starterkit-
 
 ## Installation
 
-Clone this repo into a local folder and follow instructions @[https://github.com/pattern-lab/edition-node-gulp)(https://github.com/pattern-lab/edition-node-gulp).
+Clone this repo into a local folder and follow instructions @[https://github.com/pattern-lab/edition-node-gulp](https://github.com/pattern-lab/edition-node-gulp).
 
 All development happens on the `dev` branch for now.
 
@@ -26,7 +26,7 @@ Remember that loading a new startkit wipes the /source directory. As it is our m
 
 * Load a copy of bootstrap SASS and get the SASS compilation jobs working from the gulpfile.
 * Reorganize the gulpfile into a /gulp directory, split subtasks.
-
+* Import the Montreal font and create a working atom and an icons directory [WIP Martin B].
 
 ----
 
