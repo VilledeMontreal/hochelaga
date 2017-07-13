@@ -1,3 +1,6 @@
+// @file styles.scss
+// This is the summit of the pyramid && the only compiled stylesheet
+
 // Import a custom bootstrap import file
 @import "bootstrap-vdm.scss";
 // import an override file for bootstrap variables
@@ -10,9 +13,11 @@
 // Stylesheets structure ->
 // ******************************
 // --styles.scss
+//     --variables.scss
 //     --skeleton.scss
 //     --icons.scss
 
+@import "variables.scss";
 @import "skeleton.scss";
 @import "icons.scss";
 
