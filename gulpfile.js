@@ -35,9 +35,16 @@ function normalizePath() {
 ******************************************************/
 var saasPath = './source/styles/styles.scss';
 var sassAllPath = './source/styles/**/*.scss';
+var saasPatternalbPath = './source/styles/patternlab.scss';
 
 gulp.task('pl-sass', function(){
   return gulp.src(saasPath)
+    .pipe(sass({outputStyle: 'compressed'}).on('error', sass.logError))
+    .pipe(gulp.dest('./source/css'));
+});
+
+gulp.task('pl-sass-patternlab', function(){
+  return gulp.src(saasPatternalbPath)
     .pipe(sass({outputStyle: 'compressed'}).on('error', sass.logError))
     .pipe(gulp.dest('./source/css'));
 });
@@ -134,6 +141,7 @@ gulp.task('pl-assets', gulp.series(
   'pl-copy:favicon',
   'pl-copy:font',
   gulp.series('pl-sass', 'pl-copy:css', function(done){done();}),
+  gulp.series('pl-sass-patternlab', 'pl-copy:css', function(done){done();}),
   'pl-copy:css',
   'pl-copy:styleguide',
   'pl-copy:styleguide-css'
@@ -209,7 +217,7 @@ function watch() {
       name: 'SASS',
       paths: [sassAllPath],
       config: { awaitWriteFinish: true },
-      tasks: gulp.series('pl-sass', reloadCSS)
+      tasks: gulp.series('pl-sass','pl-sass-patternlab', reloadCSS)
     },
     {
       name: 'CSS',
