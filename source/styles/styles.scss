@@ -17,17 +17,15 @@
 //     --skeleton.scss
 //     --icons.scss
 
-@import url('https://fonts.googleapis.com/css?family=Nunito:300,400,600,700');
+@import url('https://fonts.googleapis.com/css?family=Nunito+Sans:300,400,600,700');
 @import "mixins.scss";
 @import "variables.scss";
 @import "skeleton.scss";
 @import "icons.scss";
 
-html {
-    body {
-        font-family: $font-family-base;
-        font-weight: $nunito-regular;
-    }
+@font-face {
+  font-family: $font-family-base;
+  font-weight: $nunito-regular;
 }
 
 

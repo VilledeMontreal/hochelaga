@@ -30,16 +30,15 @@ $ui-warm-dark:              #A30000 !default;
 //
 //## Font, line-height, and color for body text, headings, and more.
 
-$nunito-family:           "Nunito Sans", sans-serif !default;
 $nunito-light:            300;
 $nunito-regular:          400;
 $nunito-semi:             600;
 $nunito-bold:             700;
 
-$font-family-sans-serif:  $nunito-family !default;
-$font-family-serif:       Georgia, "Times New Roman", Times, serif !default;
-$font-family-monospace:   Menlo, Monaco, Consolas, "Courier New", monospace !default;
-$font-family-base:        $font-family-sans-serif !default;
+// $font-family-sans-serif:  $nunito-family !default;
+// $font-family-serif:       Georgia, "Times New Roman", Times, serif !default;
+// $font-family-monospace:   Menlo, Monaco, Consolas, "Courier New", monospace !default;
+$font-family-base:        "Nunito Sans", sans-serif !default;
 
 $font-size-base:          14px !default;
 $font-size-large:         ceil(($font-size-base * 1.25)) !default; // ~18px
