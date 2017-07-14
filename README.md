@@ -22,11 +22,22 @@ And get to work.
 
 Remember that loading a new startkit wipes the /source directory. As it is our main playground, it is advisable to do this in a separate Patternlab instance.
 
-## Initial objectives
+## Current objectives
 
-* Load a copy of bootstrap SASS and get the SASS compilation jobs working from the gulpfile.
-* Reorganize the gulpfile into a /gulp directory, split subtasks.
-* Import the Montreal font and create a working atom and an icons directory [WIP Martin B].
+* Get along on a common language convention for files, variables, classnames, comments, annotations;
+* Get along on the usage of Bootstrap, why, when, which parts;
+
+
+## Work in progress
+
+* Color swatches
+* Font families, variables, weight, default sizing
+
+
+## Done, needs review
+
+* Fonticon family demo, atoms & grid directory.
+* Effective sass pipeline for the main stylesheet & the patternlab stylesheet w/bootstrap inheritance.
 
 ----
 
