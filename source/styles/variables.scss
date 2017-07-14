@@ -4,7 +4,7 @@
 //
 //## Neutrals
 $white:                     #FFFFFF !default;
-$neutral-base:              #000 !default; 
+$neutral-base:              #000 !default;
 $neutral-dark:              #727271 !default;
 $neutral:                   #A2A3A1 !default;
 $neutral-light:             #D0D0CE !default;
@@ -22,21 +22,21 @@ $ui-light:                  #B4EBE3 !default;
 $ui-lighter:                #87DFD3 !default;
 
 //## Warnings
-$ui-danger:            #FF3200 !default;
-$ui-warm-dark:         #A30000 !default;
+$ui-danger:                 #FF3200 !default;
+$ui-warm-dark:              #A30000 !default;
 
 
 //== Typography
 //
 //## Font, line-height, and color for body text, headings, and more.
 
-$nunito-family: "Nunito", sans-serif !default;
-$nunito-light: 300;
-$nunito-regular: 400;
-$nunito-semi: 600;
-$nunito-bold: 700;
+$nunito-family:           "Nunito Sans", sans-serif !default;
+$nunito-light:            300;
+$nunito-regular:          400;
+$nunito-semi:             600;
+$nunito-bold:             700;
 
-$font-family-sans-serif:  $nunito !default;
+$font-family-sans-serif:  $nunito-family !default;
 $font-family-serif:       Georgia, "Times New Roman", Times, serif !default;
 $font-family-monospace:   Menlo, Monaco, Consolas, "Courier New", monospace !default;
 $font-family-base:        $font-family-sans-serif !default;
