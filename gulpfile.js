@@ -39,7 +39,7 @@ var saasPatternalbPath = './source/styles/patternlab.scss';
 
 gulp.task('pl-sass', function(){
   return gulp.src(saasPath)
-    .pipe(sass({outputStyle: 'compressed'}).on('error', sass.logError))
+    .pipe(sass({}).on('error', sass.logError))
     .pipe(gulp.dest('./source/css'));
 });
 

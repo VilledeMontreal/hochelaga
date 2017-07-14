@@ -16,14 +16,14 @@ $brand:                     #E00000 !default;
 $brand-dark:                $neutral-base !default;
 
 //## UI
-$ui-base:                   #429A8E !default;
+$ui:                        #429A8E !default;
 $ui-medium:                 #5AD3C3 !default;
 $ui-light:                  #B4EBE3 !default;
 $ui-lighter:                #87DFD3 !default;
 
 //## Warnings
-$ui-danger:            #FF3200 !default;
-$ui-warm-dark:         #A30000 !default;
+$ui-alt-danger:            #FF3200 !default;
+$ui-alt-warm-dark:         #A30000 !default;
 
 
 //== Typography
@@ -36,12 +36,12 @@ $nunito-regular: 400;
 $nunito-semi: 600;
 $nunito-bold: 700;
 
-$font-family-sans-serif:  $nunito !default;
+$font-family-sans-serif:  $nunito-family !default;
 $font-family-serif:       Georgia, "Times New Roman", Times, serif !default;
 $font-family-monospace:   Menlo, Monaco, Consolas, "Courier New", monospace !default;
-$font-family-base:        $font-family-sans-serif !default;
+$font-family-base:        $nunito-family !default;
 
-$font-size-base:          14px !default;
+$font-size-base:          16px !default;
 $font-size-large:         ceil(($font-size-base * 1.25)) !default; // ~18px
 $font-size-small:         ceil(($font-size-base * 0.85)) !default; // ~12px
 

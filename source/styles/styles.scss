@@ -18,85 +18,24 @@
 //     --icons.scss
 
 @import url('https://fonts.googleapis.com/css?family=Nunito:300,400,600,700');
-@import "mixins.scss";
 @import "variables.scss";
+@import "mixins.scss";
 @import "skeleton.scss";
 @import "icons.scss";
 
 html {
     body {
-        font-family: $font-family-base;
+        font-family: $nunito-family;
         font-weight: $nunito-regular;
+        // font-size: $font-size-base;
+        font-size: 16px;
+
+        //= = = = Headers = = = =
+        h1,h2,h3,h4,h5,h6,
+        .h1,.h2,.h3,.h4,.h5,.h6 {
+            font-family: $nunito-family;
+            font-weight: $nunito-regular;
+        }
+            
     }
 }
-
-
-// /* Atlas Grotesk Light */
-// @font-face {
-//   font-family: 'nunito-sans-light';
-//   src: url('../fonts/AtlasGrotesk-Light-Web.eot');
-//   src: url('../fonts/AtlasGrotesk-Light-Web.eot?#iefix') format('embedded-opentype'),
-//        url('../fonts/AtlasGrotesk-Light-Web.woff') format('woff'),
-//        url('../fonts/AtlasGrotesk-Light-Web.ttf') format('truetype'),
-//        url('../fonts/AtlasGrotesk-Light-Web.svg#AtlasGrotesk-Light') format('svg');
-//   font-stretch: normal;
-//   font-style: normal;
-//   font-weight: 300;
-// }
-// /* Atlas Grotesk Light italic */
-// @font-face {
-//   font-family: 'nunito-sans-regular';
-//   src: url('../fonts/AtlasGrotesk-LightItalic-Web.eot');
-//   src: url('../fonts/AtlasGrotesk-LightItalic-Web.eot?#iefix') format('embedded-opentype'),
-//        url('../fonts/AtlasGrotesk-LightItalic-Web.woff') format('woff'),
-//        url('../fonts/AtlasGrotesk-LightItalic-Web.ttf') format('truetype'),
-//        url('../fonts/AtlasGrotesk-LightItalic-Web.svg#AtlasGrotesk-LightItalic') format('svg');
-//   font-stretch: normal;
-//   font-style: italic;
-//   font-weight: 300;
-// }
-
-// /* Atlas Grotesk Medium */
-// @font-face {
-//   font-family: 'nunito-sans-semi';
-//   src: url('../fonts/AtlasGrotesk-Medium-Web.eot');
-//   src: url('../fonts/AtlasGrotesk-Medium-Web.eot?#iefix') format('embedded-opentype'),
-//        url('../fonts/AtlasGrotesk-Medium-Web.woff') format('woff'),
-//        url('../fonts/AtlasGrotesk-Medium-Web.ttf') format('truetype'),
-//        url('../fonts/AtlasGrotesk-Medium-Web.svg#AtlasGrotesk-Medium') format('svg');
-//   font-stretch: normal;
-//   font-style: normal;
-//   font-weight: 300;
-// }
-
-// @font-face {
-//   font-family: 'nunito-sans-bold';
-//   src: url('../fonts/AtlasGrotesk-MediumItalic-Web.eot');
-//   src: url('../fonts/AtlasGrotesk-MediumItalic-Web.eot?#iefix') format('embedded-opentype'),
-//        url('../fonts/AtlasGrotesk-MediumItalic-Web.woff') format('woff'),
-//        url('../fonts/AtlasGrotesk-MediumItalic-Web.ttf') format('truetype'),
-//        url('../fonts/AtlasGrotesk-MediumItalic-Web.svg#AtlasGrotesk-MediumItalic') format('svg');
-//   font-stretch: normal;
-//   font-style: italic;
-//   font-weight: 300;
-// }
-
-// .AtlasGrotesk-LightItalic {
-//   font-family: 'AtlasGrotesk-Light';
-//   font-stretch: normal;
-//   font-style: italic;
-//   font-weight: 300;
-// }
-
-// .AtlasGrotesk-Medium {
-//   font-family: 'AtlasGrotesk-Medium';
-//   font-stretch: normal;
-//   font-weight: 300;
-// }
-
-// .AtlasGrotesk-MediumItalic {
-//   font-family: 'AtlasGrotesk-Medium';
-//   font-stretch: normal;
-//   font-style: italic;
-//   font-weight: 300;
-// }

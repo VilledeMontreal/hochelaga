@@ -13,11 +13,6 @@
 // Import our local project variables
 @import "variables.scss";
 
-#pl { 
-    font-size: normal;
-    color: inherit;
-}
-
 // Fonts
 // - - - - - - - - - -  - - - - - - 
 
@@ -40,6 +35,24 @@
     font-size: 0.65em;
 }
 
+// Documentation
+// - - - - - - - - - -  - - - - - - 
+.pl-document {
+    color: $neutral-dark;
+    font-size: $font-size-small;
+    ul {
+        li {
+            line-height: 1.3em;
+            pre {
+                width: 40%;
+                color: $neutral-dark;
+                background: $neutral-lightest;
+            }
+        }
+    }
+}
+
+
 // Colors
 // - - - - - - - - - -  - - - - - - 
 
@@ -50,6 +63,10 @@
     .pl-swatches-wrapper {
         @include make-row();
         @include clearfix();
+        // h2 {
+        //     font-family: $nunito-family;
+        //     font-weight: $nunito-regular;
+        // }
         .pl-swatches {
             @include make-xs-column(12);
             @include make-md-column(6);
@@ -68,67 +85,119 @@
                         display: block;
                         float: right;
                         width: 30%;
-                        font-size:$font-size-small;
+                        font-size: $font-size-small;
                         text-align: right;
                     }
 
-                    // Brand
-                    &.pl-brand {
-                        background: $brand;
-                        color: $white;
-                    }
-                    &.pl-brand-dark {
-                        background: $brand-dark;
-                        color: $white;
-                    }
                     
-                    // Neutrals
-                    &.pl-neutral-lightest {
-                        background: $neutral-lightest;
-                        color: $neutral-base;
-                    }
-                    &.pl-neutral-lighter {
-                        background: $neutral-lighter;
-                        color: $neutral-base;
-                    }
-                    &.pl-neutral-light {
-                        background: $neutral-light;
-                        color: $neutral-base;
-                    }
-                    &.pl-neutral {
-                        background: $neutral;
-                        color: $neutral-base;
-                    }
-                    &.pl-neutral-dark {
-                        background: $neutral-dark;
-                        color: $neutral-lightest;
-                    }
-                    &.pl-neutral-base {
-                        background: $neutral-base;
-                        color: $neutral-lighter;
-                    }
                 }
             }
         }
     }
-}
 
-/*
+    .pl-swatches-color-table {
+        tr {
+            th {
+                font-weight: $nunito-bold;
+            }
+            td {
+                text-align: left;
+            }
+        }
+       // Columns
+       .pl-color-table-column-swatch {
+            width: 10%;
+       }
+       .pl-color-table-column-name {
+            width: 20%;
+            font-weight: $nunito-bold;
+       }
+       .pl-color-table-column-function {
+            width: 70%;
+       }
+       .pl-color-table-column-accessibility {
+            width: 70%;
+       }
 
-<div class="container pl-atom-color pl-columns">
-	<div class="pl-swatches-wrapper">
-		<div class="pl-swatches">
-			<ul class="pl-swatch-list pl-neutral">
-				<li class="pl-neutral-lightest">neutral-lightest</li>
-				<li class="pl-neutral-lighter">neutral-lighter</li>
-				<li class="pl-neutral-light">neutral-light</li>
-				<li class="pl-neutral">neutral</li>
-				<li class="pl-neutral-dark">neutral-dark</li>
-				<li class="pl-neutral-base">neutral-base</li>
-			</ul>
-		</div>
-	</div>
-</div>
+       .pl-swatch-round {
+            border-radius: 15px;
+            width: 30px;
+            height: 30px;
+            display: block;
+            
+       }
+       .pl-sass-name {
+            display: block;
+            font-size: $font-size-small; 
+            font-weight: $nunito-light;
+        }
+    }
 
-*/
+    // Colors
+    // Brand
+    .pl-brand {
+        background: $brand;
+        color: $white;
+    }
+    .pl-brand-dark {
+        background: $brand-dark;
+        color: $white;
+    }
+    
+    // Neutrals
+    .pl-neutral-lightest {
+        background: $neutral-lightest;
+        color: $neutral-dark;
+    }
+    .pl-neutral-lighter {
+        background: $neutral-lighter;
+        color: $neutral-dark;
+    }
+    .pl-neutral-light {
+        background: $neutral-light;
+        color: $neutral-dark;
+    }
+    .pl-neutral {
+        background: $neutral;
+        color: $white;
+    }
+    .pl-neutral-dark {
+        background: $neutral-dark;
+        color: $white;
+    }
+    .pl-neutral-base {
+        background: $neutral-base;
+        color: $white;
+    }
+
+    // UI & Alerts
+    .pl-ui {
+        background: $ui;
+        color: $white;
+    }
+    .pl-ui-medium {
+        background: $ui-medium;
+        color: $white;
+    }
+    .pl-ui-light {
+        background: $ui-light;
+        color: $neutral-dark;
+    }
+    .pl-ui-lighter{
+        background: $ui-lighter;
+        color: $neutral-dark;
+    }
+
+    // Alternate UI colors
+    .pl-ui-alt-danger{
+        background:$ui-alt-danger;
+        color: $white;
+    }
+    .pl-ui-alt-warm-dark{
+        background: $ui-alt-warm-dark;
+        color: $white;
+    }
+
+}// .pl-atom-color
+
 

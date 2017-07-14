@@ -99,7 +99,7 @@ $vdm-icon-font-familly : 'vdm-fonticon';
 i {
   &.vdmi {
     display: inline-block;
-    font: normal normal normal 14px/1 $vdm-icon-font-familly;
+    font: normal normal normal $font-size-base/1 $vdm-icon-font-familly;
     font-size: inherit;
     text-rendering: auto;
     -webkit-font-smoothing: antialiased;
