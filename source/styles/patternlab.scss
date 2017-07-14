@@ -6,6 +6,13 @@
  * @see pattern-scaffolding.css in mustache demo starterkit for reference
  */
 
+// Import a custom bootstrap import file
+@import "bootstrap-vdm.scss";
+// Import an override file for bootstrap variables
+@import "bootstrap-variables-vdm.scss";
+// Import our local project variables
+@import "variables.scss";
+
 #pl { 
     font-size: normal;
     color: inherit;
@@ -32,3 +39,96 @@
 .pl-smallest {
     font-size: 0.65em;
 }
+
+// Colors
+// - - - - - - - - - -  - - - - - - 
+
+.pl-atom-color {
+    &.pl-columns {
+
+    }
+    .pl-swatches-wrapper {
+        @include make-row();
+        @include clearfix();
+        .pl-swatches {
+            @include make-xs-column(12);
+            @include make-md-column(6);
+
+            .pl-swatch-list {
+                    
+                    list-style-type: none;
+                    padding: 0;
+                    margin: 0;
+                    
+                .pl-swatch {
+                    padding: 1em;
+
+                    // Hexadecimal identifier
+                    .pl-hex {
+                        display: block;
+                        float: right;
+                        width: 30%;
+                        font-size:$font-size-small;
+                        text-align: right;
+                    }
+
+                    // Brand
+                    &.pl-brand {
+                        background: $brand;
+                        color: $white;
+                    }
+                    &.pl-brand-dark {
+                        background: $brand-dark;
+                        color: $white;
+                    }
+                    
+                    // Neutrals
+                    &.pl-neutral-lightest {
+                        background: $neutral-lightest;
+                        color: $neutral-base;
+                    }
+                    &.pl-neutral-lighter {
+                        background: $neutral-lighter;
+                        color: $neutral-base;
+                    }
+                    &.pl-neutral-light {
+                        background: $neutral-light;
+                        color: $neutral-base;
+                    }
+                    &.pl-neutral {
+                        background: $neutral;
+                        color: $neutral-base;
+                    }
+                    &.pl-neutral-dark {
+                        background: $neutral-dark;
+                        color: $neutral-lightest;
+                    }
+                    &.pl-neutral-base {
+                        background: $neutral-base;
+                        color: $neutral-lighter;
+                    }
+                }
+            }
+        }
+    }
+}
+
+/*
+
+<div class="container pl-atom-color pl-columns">
+	<div class="pl-swatches-wrapper">
+		<div class="pl-swatches">
+			<ul class="pl-swatch-list pl-neutral">
+				<li class="pl-neutral-lightest">neutral-lightest</li>
+				<li class="pl-neutral-lighter">neutral-lighter</li>
+				<li class="pl-neutral-light">neutral-light</li>
+				<li class="pl-neutral">neutral</li>
+				<li class="pl-neutral-dark">neutral-dark</li>
+				<li class="pl-neutral-base">neutral-base</li>
+			</ul>
+		</div>
+	</div>
+</div>
+
+*/
+
