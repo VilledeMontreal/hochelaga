@@ -106,37 +106,446 @@ i {
     -moz-osx-font-smoothing: grayscale;
 
     // Scale modifiers
-    &.vdmi-lg {
+    &.ic-lg {
       font-size: 1.33333333em;
       line-height: 0.75em;
       vertical-align: -15%;
     }
-    &.vdmi-2x {
+    &.ic-2x {
       font-size: 2em;
     }
-    &.vdmi-3x {
+    &.ic-3x {
       font-size: 3em;
     }
-    &.vdmi-4x {
+    &.ic-4x {
       font-size: 4em;
     }
-    &.vdmi-5x {
+    &.ic-5x {
       font-size: 5em;
     }
 
     // Fixed width 
-    &.vdmi-fw {
+    &.ic-fw {
       width: 1.28571429em;
       text-align: center;
     }
 
     // Individual instances - Rinse & repeat
-    &.vdmi-rosace {
+    &.ic-rosette {
       &:before {
         content: "\E000";
       }
     }
-
+    &.ic-search {
+      &:before {
+        content: "\E001;";
+      }
+    }
+    &.ic-profile {
+      &:before {
+        content: "\E002;";
+      }
+    }
+    &.ic-flag {
+      &:before {
+        content: "\E003;";
+      }
+    }
+    &.ic-calendar {
+      &:before {
+        content: "\E004;";
+      }
+    }
+    &.ic-sun {
+      &:before {
+        content: "\E005;";
+      }
+    }
+    &.ic-ticket {
+      &:before {
+        content: "\E006;";
+      }
+    }
+    &.ic-eye {
+      &:before {
+        content: "\E007;";
+      }
+    }
+    &.ic-people {
+      &:before {
+        content: "\E008;";
+      }
+    }
+    &.ic-doc-holder {
+      &:before {
+        content: "\E009;";
+      }
+    }
+    &.ic-bus {
+      &:before {
+        content: "\E00A;";
+      }
+    }
+    &.ic-phone {
+      &:before {
+        content: "\E00B;";
+      }
+    }
+    &.ic-book {
+      &:before {
+        content: "\E00C;";
+      }
+    }
+    &.ic-arrow-play {
+      &:before {
+        content: "\E00D;";
+      }
+    }
+    &.ic-arrow-select {
+      &:before {
+        content: "\E00E;";
+      }
+    }
+    &.ic-news-item {
+      &:before {
+        content: "\E00F;";
+      }
+    }
+    &.ic-location-star {
+      &:before {
+        content: "\E010;";
+      }
+    }
+    &.ic-permit {
+      &:before {
+        content: "\E011;";
+      }
+    }
+    &.ic-document {
+      &:before {
+        content: "\E012;";
+      }
+    }
+    &.ic-credit-card {
+      &:before {
+        content: "\E013;";
+      }
+    }
+    &.ic-folder {
+      &:before {
+        content: "\E014;";
+      }
+    }
+    &.ic-bell {
+      &:before {
+        content: "\E015;";
+      }
+    }
+    &.ic-settings {
+      &:before {
+        content: "\E016;";
+      }
+    }
+    &.ic-plus-circle-dot {
+      &:before {
+        content: "\E017;";
+      }
+    }
+    &.ic-minus-circle-dot {
+      &:before {
+        content: "\E018;";
+      }
+    }
+    &.ic-steps-checked {
+      &:before {
+        content: "\E019;";
+      }
+    }
+    &.ic-threepoints-circle-dot {
+      &:before {
+        content: "\E01A;";
+      }
+    }
+    &.ic-enveloppe {
+      &:before {
+        content: "\E01B;";
+      }
+    }
+    &.ic-folder-add {
+      &:before {
+        content: "\E01C;";
+      }
+    }
+    &.ic-warning-triangle {
+      &:before {
+        content: "\E01D;";
+      }
+    }
+    &.ic-computer {
+      &:before {
+        content: "\E01E;";
+      }
+    }
+    &.ic-nut {
+      &:before {
+        content: "\E01F;";
+      }
+    }
+    &.ic-pencil {
+      &:before {
+        content: "\E020;";
+      }
+    }
+    &.ic-lightbulb {
+      &:before {
+        content: "\E021;";
+      }
+    }
+    &.ic-pen {
+      &:before {
+        content: "\E022;";
+      }
+    }
+    &.ic-warning-circle {
+      &:before {
+        content: "\E023;";
+      }
+    }
+    &.ic-clock {
+      &:before {
+        content: "\E024;";
+      }
+    }
+    &.ic-target {
+      &:before {
+        content: "\E025;";
+      }
+    }
+    &.ic-broom {
+      &:before {
+        content: "\E026;";
+      }
+    }
+    &.ic-permit {
+      &:before {
+        content: "\E027;";
+      }
+    }
+    &.ic-arrow-circle-up {
+      &:before {
+        content: "\E028;";
+      }
+    }
+    &.ic-arrow-circle-right {
+      &:before {
+        content: "\E029;";
+      }
+    }
+    &.ic-arrow-circle-down {
+      &:before {
+        content: "\E02A;";
+      }
+    }
+    &.ic-arrow-circle-left {
+      &:before {
+        content: "\E02B;";
+      }
+    }
+    &.ic-house {
+      &:before {
+        content: "\E02C;";
+      }
+    }
+    &.ic-x-large {
+      &:before {
+        content: "\E02D;";
+      }
+    }
+    &.ic-circle-progress-done {
+      &:before {
+        content: "\E02E;";
+      }
+    }
+    &.ic-circle-progress-a {
+      &:before {
+        content: "\E02F;";
+      }
+    }
+    &.ic-circle-progress-ab {
+      &:before {
+        content: "\E030;";
+      }
+    }
+    &.ic-circle-progress-abc {
+      &:before {
+        content: "\E031;";
+      }
+    }
+    &.ic-circle-progress-c {
+      &:before {
+        content: "\E032;";
+      }
+    }
+    &.ic-circle-progress-bc {
+      &:before {
+        content: "\E033;";
+      }
+    }
+    &.ic-circle-progress-checked {
+      &:before {
+        content: "\E034;";
+      }
+    }
+    &.ic-circle-progress-folder {
+      &:before {
+        content: "\E035;";
+      }
+    }
+    &.ic-chevron-up {
+      &:before {
+        content: "\E036;";
+      }
+    }
+    &.ic-chevron-right {
+      &:before {
+        content: "\E037;";
+      }
+    }
+    &.ic-chevron-down {
+      &:before {
+        content: "\E038;";
+      }
+    }
+    &.ic-chevron-left {
+      &:before {
+        content: "\E039;";
+      }
+    }
+    &.ic-circle-checked {
+      &:before {
+        content: "\E03A;";
+      }
+    }
+    &.ic-menu {
+      &:before {
+        content: "\E100;";
+      }
+    }
+    &.ic-location {
+      &:before {
+        content: "\E101;";
+      }
+    }
+    &.ic-arrow-up {
+      &:before {
+        content: "\E102;";
+      }
+    }
+    &.ic-arrow-right {
+      &:before {
+        content: "\E103;";
+      }
+    }
+    &.ic-arrow-down {
+      &:before {
+        content: "\E104;";
+      }
+    }
+    &.ic-arrow-left {
+      &:before {
+        content: "\E105;";
+      }
+    }
+    &.ic-plus {
+      &:before {
+        content: "\E200;";
+      }
+    }
+    &.ic-minus {
+      &:before {
+        content: "\E201;";
+      }
+    }
+    &.ic-multiply {
+      &:before {
+        content: "\E202;";
+      }
+    }
+    &.ic-circle-plus {
+      &:before {
+        content: "\E203;";
+      }
+    }
+    &.ic-circle-minus {
+      &:before {
+        content: "\E204;";
+      }
+    }
+    &.ic-circle-multiply {
+      &:before {
+        content: "\E205;";
+      }
+    }
+    &.ic-circle-plus-invert {
+      &:before {
+        content: "\E206;";
+      }
+    }
+    &.ic-circle-minus-invert {
+      &:before {
+        content: "\E207;";
+      }
+    }
+    &.ic-circle-multiply-invert {
+      &:before {
+        content: "\E208;";
+      }
+    }
+    &.ic-checkbox-checked {
+      &:before {
+        content: "\E209;";
+      }
+    }
+    &.ic-checkbox-empty {
+      &:before {
+        content: "\E20A;";
+      }
+    }
+    &.ic-checkbox-checked-trans {
+      &:before {
+        content: "\E20B;";
+      }
+    }
+    &.ic-checkbox-checked-invert {
+      &:before {
+        content: "\E20C;";
+      }
+    }
+    &.ic-trash {
+      &:before {
+        content: "\E400;";
+      }
+    }
+    &.ic-recycle {
+      &:before {
+        content: "\E401;";
+      }
+    }
+    &.ic-compost {
+      &:before {
+        content: "\E402;";
+      }
+    }
+    &.ic-greens {
+      &:before {
+        content: "\E403;";
+      }
+    }
+    &.ic-permit-pet {
+      &:before {
+        content: "\E404;";
+      }
+    }
   }
 }
 
