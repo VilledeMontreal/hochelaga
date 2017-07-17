@@ -17,7 +17,7 @@
 //     --skeleton.scss
 //     --icons.scss
 
-@import url('https://fonts.googleapis.com/css?family=Nunito+Sans:300,400,600,700');
+@import "font.scss";
 @import "variables.scss";
 @import "mixins.scss";
 @import "skeleton.scss";
@@ -36,6 +36,6 @@ html {
             font-family: $nunito-family;
             font-weight: $nunito-regular;
         }
-            
+
     }
 }
