@@ -1,1 +1,19 @@
 @import url('https://fonts.googleapis.com/css?family=Nunito+Sans:300,400,600,700');
+
+html {
+  body {
+    font-family: $font-family-sans-serif;
+    font-weight: $font-weight-regular;
+    // font-size: $font-size-base;
+    font-size: 16px;
+
+    //= = = = Headers = = = =
+    h1,h2,h3,h4,h5,h6,
+    .h1,.h2,.h3,.h4,.h5,.h6 {
+      font-family: $font-family-sans-serif;
+      font-weight: $font-weight-regular;
+    }
+
+  }
+}
+
