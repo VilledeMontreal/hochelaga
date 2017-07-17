@@ -28,31 +28,23 @@ $ui-alt-warm-dark:         #A30000 !default;
 //== Typography
 //
 //## Font, line-height, and color for body text, headings, and more.
-
 // Do not invoke the $nunito- variables direcly if at all possible : they are too specific
+
+//## Fonts Family
+$font-family-sans-serif:  $nunito-family !default;
+$font-family-base:        $nunito-family !default;
+
 $nunito-family:           'Nunito Sans';
 $nunito-light:            300;
 $nunito-regular:          400;
 $nunito-semi:             600;
 $nunito-bold:             700;
 
-$font-family-sans-serif:  $nunito-family !default;
-$font-family-serif:       Georgia, "Times New Roman", Times, serif !default;
-$font-family-monospace:   Menlo, Monaco, Consolas, "Courier New", monospace !default;
-$font-family-base:        $nunito-family !default;
 
+//## Fonts Size
 $font-size-base:          16px !default;                           // 16px
 $font-size-large:         ceil(($font-size-base * 1.25)) !default; // ~18px
 $font-size-small:         ceil(($font-size-base * 0.85)) !default; // ~12px
-
-$font-weight-light:       16px !default;
-$font-weight-regular:     ceil(($font-size-base * 1.25)) !default; // ~18px
-$font-weight-semi:        ceil(($font-size-base * 0.85)) !default; // ~12px
-
-$font-weight-light:        $nunito-light;
-$font-weight-regular:      $nunito-light;
-$font-weight-semi:         $nunito-light;
-$font-weight-bold:         $nunito-light;
 
 $font-size-h1:            floor(($font-size-base * 2.6)) !default; // ~36px
 $font-size-h2:            floor(($font-size-base * 2.15)) !default; // ~30px
@@ -61,9 +53,21 @@ $font-size-h4:            ceil(($font-size-base * 1.25)) !default; // ~18px
 $font-size-h5:            $font-size-base !default;
 $font-size-h6:            ceil(($font-size-base * 0.85)) !default; // ~12px
 
+
+//== Font Weight
+$font-weight-light:       16px !default;
+$font-weight-regular:     ceil(($font-size-base * 1.25)) !default; // ~18px
+$font-weight-semi:        ceil(($font-size-base * 0.85)) !default; // ~12px
+$font-weight-light:        $nunito-light;
+$font-weight-regular:      $nunito-light;
+$font-weight-semi:         $nunito-light;
+$font-weight-bold:         $nunito-light;
+
 $font-weight-h1:          normal;
 $font-weight-h2:          normal;
 $font-weight-h3:          normal;
 $font-weight-h4:          normal;
 $font-weight-h5:          normal;
 $font-weight-h6:          normal;
+
+
