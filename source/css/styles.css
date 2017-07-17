@@ -5815,6 +5815,35 @@ button.close {
   .hidden-print {
     display: none !important; } }
 
+html body {
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-weight: 300;
+  font-size: 16px; }
+  html body h1, html body .h1 {
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-weight: normal;
+    font-size: 36px; }
+  html body h2, html body .h2 {
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-weight: normal;
+    font-size: 30px; }
+  html body h3, html body .h3 {
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-weight: normal;
+    font-size: 24px; }
+  html body h4, html body .h4 {
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-weight: normal;
+    font-size: 18px; }
+  html body h5, html body .h5 {
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-weight: normal;
+    font-size: 14px; }
+  html body h6, html body .h6 {
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-weight: normal;
+    font-size: 12px; }
+
 /* http://meyerweb.com/eric/tools/css/reset/ 
    v2.0 | 20110126
    License: none (public domain) */
@@ -5955,12 +5984,3 @@ i.vdmi {
     text-align: center; }
   i.vdmi.vdmi-rosace:before {
     content: "\E000"; }
-
-html body {
-  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
-  font-weight: 300;
-  font-size: 16px; }
-  html body h1, html body h2, html body h3, html body h4, html body h5, html body h6,
-  html body .h1, html body .h2, html body .h3, html body .h4, html body .h5, html body .h6 {
-    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
-    font-weight: 300; }
