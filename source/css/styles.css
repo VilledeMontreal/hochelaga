@@ -5817,7 +5817,7 @@ button.close {
 
 html body {
   font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
-  font-weight: 300;
+  font-weight: 400;
   font-size: 16px; }
   html body h1, html body .h1 {
     font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
@@ -6094,3 +6094,40 @@ i.vdmi {
     content: "\E403"; }
   i.vdmi.ic-permit-pet:before {
     content: "\E404"; }
+
+.tile {
+  display: block;
+  background: #F2F2F1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid #429A8E; }
+  .tile.tile-nav {
+    text-decoration: none;
+    color: #000; }
+    .tile.tile-nav:hover, .tile.tile-nav:active {
+      color: #FFFFFF;
+      background: #429A8E; }
+      .tile.tile-nav:hover .wrapper h3, .tile.tile-nav:active .wrapper h3 {
+        color: #FFFFFF; }
+      .tile.tile-nav:hover .wrapper .vdmi, .tile.tile-nav:active .wrapper .vdmi {
+        color: #FFFFFF; }
+  .tile.tile-icon {
+    width: 170px;
+    height: 170px; }
+  .tile .wrapper {
+    max-width: 100%;
+    padding-right: 15px;
+    padding-left: 15px;
+    margin-right: auto;
+    margin-left: auto;
+    text-align: center; }
+    .tile .wrapper .vdmi {
+      font-size: 3em;
+      color: #429A8E;
+      cursor: pointer;
+      margin-bottom: 0.15em; }
+    .tile .wrapper h3 {
+      font-size: 14px;
+      cursor: pointer;
+      line-height: 1.6em; }

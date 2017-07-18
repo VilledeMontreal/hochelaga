@@ -55,13 +55,10 @@ $font-size-h6:            ceil(($font-size-base * 0.85)) !default;  // ~12px
 
 
 //== Font Weight
-$font-weight-light:       16px !default;
-$font-weight-regular:     ceil(($font-size-base * 1.25)) !default;  // ~18px
-$font-weight-semi:        ceil(($font-size-base * 0.85)) !default;  // ~12px
 $font-weight-light:        $nunito-light;
-$font-weight-regular:      $nunito-light;
-$font-weight-semi:         $nunito-light;
-$font-weight-bold:         $nunito-light;
+$font-weight-regular:      $nunito-regular;
+$font-weight-semi:         $nunito-semi;
+$font-weight-bold:         $nunito-bold;
 
 $font-weight-h1:          normal;
 $font-weight-h2:          normal;

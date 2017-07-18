@@ -13,6 +13,10 @@
 // Import our local project variables
 @import "variables.scss";
 
+// - - - - - - - - - -  - - - - - - 
+//  * * * ATOMS * * *
+// - - - - - - - - - -  - - - - - - 
+
 // Fonts
 // - - - - - - - - - -  - - - - - - 
 
@@ -239,18 +243,6 @@
         }
     }
 
-//     <div class="container pl-atom-color">
-// 	<div class="swatches-index">
-// 		<h2>Accessibilité</h2>
-// 		<table class="table table-condensed pl-atom-color pl-accessibility-table">
-// 			<tr>
-//             	<td colspan="2" class="pl-acc-demo"><span class="pl-swatch-round pl-swatch-accessibility"></span>Respect des contrastes sur fond clair</td>
-// 				<td colspan="2" class="pl-acc-demo"><span class="pl-swatch-round pl-swatch-accessibility-invert"></span>Respect des contrastes sur fond foncé</td>
-// 			</tr>
-// 		</table>
-// 	</div>
-// </div>
-
     // Colors
     // Brand
     .pl-brand {
@@ -319,3 +311,19 @@
 }// .pl-atom-color
 
 
+// - - - - - - - - - -  - - - - - - 
+//  * * * MOLECULES * * *
+// - - - - - - - - - -  - - - - - - 
+
+// Tiles
+// - - - - - - - - - -  - - - - - - 
+.pl-atom-tiles {
+    .pl-tiles-index {
+        @include make-row();
+        @include clearfix();
+        >li {
+           display: inline-block;
+           margin-right: 15px;
+        }
+    }
+}
