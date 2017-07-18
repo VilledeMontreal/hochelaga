@@ -34,11 +34,26 @@ $ui-alt-warm-dark:         #A30000 !default;
 $font-family-sans-serif:  $nunito-family !default;
 $font-family-base:        $nunito-family !default;
 
-$nunito-family:           'Nunito Sans';
-$nunito-light:            300;
-$nunito-regular:          400;
-$nunito-semi:             600;
-$nunito-bold:             700;
+//== Font Weight
+$font-family:             'Nunito Sans';
+$font-weight-light:        300;
+$font-weight-regular:      400;
+$font-weight-bold:         700;
+
+$font-weight-light:        $nunito-light;
+$font-weight-regular:      $nunito-regular;
+$font-weight-semi:         $nunito-semi;
+$font-weight-bold:         $nunito-bold;
+
+$font-weight-headers: $font-weight-regular;
+
+
+// $font-weight-h1:          normal;
+// $font-weight-h2:          normal;
+// $font-weight-h3:          normal;
+// $font-weight-h4:          normal;
+// $font-weight-h5:          normal;
+// $font-weight-h6:          normal;
 
 
 //## Fonts Size
@@ -46,26 +61,25 @@ $font-size-base:          16px !default;                            // 16px
 $font-size-large:         ceil(($font-size-base * 1.25)) !default;  // ~18px
 $font-size-small:         ceil(($font-size-base * 0.85)) !default;  // ~12px
 
-$font-size-h1:            floor(($font-size-base * 2.6)) !default;  // ~36px
-$font-size-h2:            floor(($font-size-base * 2.15)) !default; // ~30px
-$font-size-h3:            ceil(($font-size-base * 1.7)) !default;   // ~24px
-$font-size-h4:            ceil(($font-size-base * 1.25)) !default;  // ~18px
-$font-size-h5:            $font-size-base !default;
-$font-size-h6:            ceil(($font-size-base * 0.85)) !default;  // ~12px
 
+$font-size-h1:            67px;
+$font-size-h2:            50px;
+$font-size-h3:            37px;
+$font-size-h4:            28px;
+$font-size-h5:            21px;
+$font-size-h6:            16px;
+$font-size-intro:         16px;
+$font-size-label:         12px;
 
-//== Font Weight
-$font-weight-light:        $nunito-light;
-$font-weight-regular:      $nunito-regular;
-$font-weight-semi:         $nunito-semi;
-$font-weight-bold:         $nunito-bold;
-
-$font-weight-h1:          normal;
-$font-weight-h2:          normal;
-$font-weight-h3:          normal;
-$font-weight-h4:          normal;
-$font-weight-h5:          normal;
-$font-weight-h6:          normal;
+//## Line Height
+$line-height-h1:          92px;
+$line-height-h2:          69px;
+$line-height-h3:          50px;
+$line-height-h4:          38px;
+$line-height-h5:          28px;
+$line-height-h6:          26px;
+$line-height-intro:       26px;
+$line-height-label:       16px;
 
 //== Icons
 $vdm-icon-font-path: '../fonts/';
