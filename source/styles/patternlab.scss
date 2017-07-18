@@ -1,0 +1,319 @@
+// @file patternlab.scss
+
+/**
+ * Patternlab specific css -- all classes MUST begin w/ pl-
+ * The code below lives for the sake of the patternlab instance & is not compiled along with the main site stylesheet
+ * @see pattern-scaffolding.css in mustache demo starterkit for reference
+ */
+
+// Import a custom bootstrap import file
+@import "bootstrap-vdm.scss";
+// Import an override file for bootstrap variables
+@import "bootstrap-variables-vdm.scss";
+// Import our local project variables
+@import "variables.scss";
+
+// Fonts
+// - - - - - - - - - -  - - - - - -
+
+// Titles
+.pl-stroked-header {
+  padding-top: 0.25em;
+  padding-left: 0.25em;
+  border-top: 1px solid #ddd;
+  width: 93%;
+}
+
+// Scalers
+.pl-small {
+  font-size: 0.85em;
+}
+.pl-smaller {
+  font-size: 0.75em;
+}
+.pl-smallest {
+  font-size: 0.65em;
+}
+
+// Documentation
+// - - - - - - - - - -  - - - - - -
+.pl-document {
+  color: $neutral-dark;
+  font-size: $font-size-small;
+  ul {
+    li {
+      line-height: 1.3em;
+      pre {
+        width: 40%;
+        color: $neutral-dark;
+        background: $neutral-lightest;
+      }
+    }
+  }
+}
+
+// Icons
+// - - - - - - - - - -  - - - - - -
+.pl-atom-icons-grid {
+  .wrapper{
+    @include make-row();
+    @include clearfix();
+    ul {
+      display: -ms-flexbox;
+      display: flex;
+      -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+      list-style: none;
+      text-align: -webkit-match-parent;
+      border: 0;
+      margin: 0;
+      padding: 0;
+      // Reset font-size & line height : important!
+      font-size: 13px;
+      line-height: 1;
+      >li {
+        margin: 0 5px 10px 0;
+        border: 0;
+        padding: 0;
+        display: inline-block;
+        >i {
+          &.vdmi {
+            font-family: $vdm-icon-font-family !important;
+            display: block;
+            width: 128px;
+            height: 128px;
+            font-size: 128px;
+            background-color: rgba(0, 0, 0, 0.05);
+            text-rendering: geometricPrecision;
+            -webkit-font-smoothing: antialiased;
+            vertical-align: middle;
+            font-smooth: always;
+            font-weight: normal;
+            font-variant: normal;
+            text-transform: none;
+          }
+        }
+        .ic-name,
+        .ic-charcode {
+          display: block;
+          color: $ui;
+          margin-top: 0.5em;
+          font-size: $font-size-small;
+        }
+
+      }
+    }
+  }
+
+
+}
+
+
+// Colors
+// - - - - - - - - - -  - - - - - -
+
+.pl-atom-color {
+  .pl-swatches-wrapper {
+    @include make-row();
+    @include clearfix();
+    .pl-swatches {
+      @include make-xs-column(12);
+      @include make-md-column(6);
+
+      .pl-swatch-list {
+
+        list-style-type: none;
+        padding: 0;
+        margin: 0;
+
+        .pl-swatch {
+          padding: 1em;
+
+          // Hexadecimal identifier
+          .pl-hex {
+            display: block;
+            float: right;
+            width: 30%;
+            font-size: $font-size-small;
+            text-align: right;
+          }
+        }
+      }
+    }
+  }
+
+  .pl-swatches-color-table {
+    tr {
+      th {
+        font-weight: $font-weight-bold;
+        font-size: $font-size-base;
+      }
+      td {
+        text-align: left;
+      }
+    }
+
+    // Columns
+    .pl-color-table-column-swatch {
+      width: 5%;
+    }
+    .pl-color-table-column-name {
+      width: 10%;
+      font-weight: $font-weight-bold;
+    }
+    .pl-color-table-column-function {
+      width: 73%;
+    }
+    .pl-color-table-column-accessibility {
+      width: 7%;
+    }
+
+    .pl-swatch-round {
+      border-radius: 20px;
+      width: 40px;
+      height: 40px;
+      display: block;
+      &.pl-swatch-accessibility,
+      &.pl-swatch-accessibility-invert {
+        border-radius: 15px;
+        width: 30px;
+        height: 30px;
+        background: $neutral-light;
+        color: $neutral-base;
+        float: right;
+        text-align: center;
+        padding-top: 6px;
+        font-size: $font-size-small;
+        margin-right: 0.8em;
+        &:after {
+          content: 'AA';
+        }
+        &:last-of-type {
+          margin-right: 0;
+        }
+      }
+      &.pl-swatch-accessibility-invert {
+        background: $neutral-base;
+        color: $white;
+        float: left;
+      }
+
+    }
+    .pl-sass-name {
+      display: block;
+      font-size: $font-size-small;
+      font-weight: $font-weight-light;
+    }
+
+  }
+
+  .pl-accessibility-table {
+    .pl-acc-demo {
+      width: 50%;
+      padding-left: 30px;
+
+      .pl-swatch-round {
+        display: block;
+        &.pl-swatch-accessibility,
+        &.pl-swatch-accessibility-invert {
+          border-radius: 15px;
+          width: 30px;
+          height: 30px;
+          background: $neutral-light;
+          color: $neutral-base;
+          float: left;
+          text-align: center;
+          padding-top: 6px;
+          font-size: $font-size-small;
+          margin-right: 0.8em;
+          &:after {
+            content: 'AA';
+          }
+        }
+        &.pl-swatch-accessibility-invert {
+          background: $neutral-base;
+          color: $white;
+        }
+
+      }
+    }
+  }
+
+  //     <div class="container pl-atom-color">
+  // 	<div class="swatches-index">
+  // 		<h2>Accessibilité</h2>
+  // 		<table class="table table-condensed pl-atom-color pl-accessibility-table">
+  // 			<tr>
+  //             	<td colspan="2" class="pl-acc-demo"><span class="pl-swatch-round pl-swatch-accessibility"></span>Respect des contrastes sur fond clair</td>
+  // 				<td colspan="2" class="pl-acc-demo"><span class="pl-swatch-round pl-swatch-accessibility-invert"></span>Respect des contrastes sur fond foncé</td>
+  // 			</tr>
+  // 		</table>
+  // 	</div>
+  // </div>
+
+  // Colors
+  // Brand
+  .pl-brand {
+    background: $brand;
+    color: $white;
+  }
+  .pl-brand-dark {
+    background: $brand-dark;
+    color: $white;
+  }
+
+  // Neutrals
+  .pl-neutral-lightest {
+    background: $neutral-lightest;
+    color: $neutral-dark;
+  }
+  .pl-neutral-lighter {
+    background: $neutral-lighter;
+    color: $neutral-dark;
+  }
+  .pl-neutral-light {
+    background: $neutral-light;
+    color: $neutral-dark;
+  }
+  .pl-neutral {
+    background: $neutral;
+    color: $white;
+  }
+  .pl-neutral-dark {
+    background: $neutral-dark;
+    color: $white;
+  }
+  .pl-neutral-base {
+    background: $neutral-base;
+    color: $white;
+  }
+
+  // UI & Alerts
+  .pl-ui {
+    background: $ui;
+    color: $white;
+  }
+  .pl-ui-medium {
+    background: $ui-medium;
+    color: $white;
+  }
+  .pl-ui-light {
+    background: $ui-light;
+    color: $neutral-dark;
+  }
+  .pl-ui-lighter{
+    background: $ui-lighter;
+    color: $neutral-dark;
+  }
+
+  // Alternate UI colors
+  .pl-ui-alt-danger{
+    background:$ui-alt-danger;
+    color: $white;
+  }
+  .pl-ui-alt-warm-dark{
+    background: $ui-alt-warm-dark;
+    color: $white;
+  }
+
+}// .pl-atom-color
