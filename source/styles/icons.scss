@@ -3,12 +3,10 @@
 
 // >> Begin demo code for atoms-icons
 // - - - - - - - - - -  - - - - - - 
-$vdm-icon-font-path: '../fonts/';
-$vdm-icon-font-version: '0.5';
-$vdm-icon-font-familly : 'vdm-fonticon';
+
 
 @font-face {
-  font-family: $vdm-icon-font-familly;
+  font-family: $vdm-icon-font-family;
   src: url('#{$vdm-icon-font-path}/vdm-font-icon.eot?v=#{$vdm-icon-font-version}');
   src: url('#{$vdm-icon-font-path}/vdm-font-icon.eot?v=#{$vdm-icon-font-version}') format('embedded-opentype'),
     url('#{$vdm-icon-font-path}/vdm-font-icon.woff2?v=#{$vdm-icon-font-version}') format('woff2'),
@@ -41,7 +39,7 @@ $vdm-icon-font-familly : 'vdm-fonticon';
     padding: 0;
     display: inline-block;
     .font-glyph {
-      font-family: $vdm-icon-font-familly !important;
+      font-family: $vdm-icon-font-family !important;
       display: block;
       width: 128px;
       height: 128px;
@@ -71,7 +69,7 @@ $vdm-icon-font-familly : 'vdm-fonticon';
       text-overflow: ellipsis;
       &:before {
         font-size: 16px;
-        font-family: $vdm-icon-font-familly !important;
+        font-family: $vdm-icon-font-family !important;
         text-rendering: geometricPrecision;
         -webkit-font-smoothing: antialiased;
         vertical-align: middle;
@@ -99,7 +97,7 @@ $vdm-icon-font-familly : 'vdm-fonticon';
 i {
   &.vdmi {
     display: inline-block;
-    font: normal normal normal $font-size-base/1 $vdm-icon-font-familly;
+    font: normal normal normal $font-size-base/1 $vdm-icon-font-family;
     font-size: inherit;
     text-rendering: auto;
     -webkit-font-smoothing: antialiased;
@@ -138,412 +136,412 @@ i {
     }
     &.ic-search {
       &:before {
-        content: "\E001;";
+        content: "\E001";
       }
     }
     &.ic-profile {
       &:before {
-        content: "\E002;";
+        content: "\E002";
       }
     }
     &.ic-flag {
       &:before {
-        content: "\E003;";
+        content: "\E003";
       }
     }
     &.ic-calendar {
       &:before {
-        content: "\E004;";
+        content: "\E004";
       }
     }
     &.ic-sun {
       &:before {
-        content: "\E005;";
+        content: "\E005";
       }
     }
     &.ic-ticket {
       &:before {
-        content: "\E006;";
+        content: "\E006";
       }
     }
     &.ic-eye {
       &:before {
-        content: "\E007;";
+        content: "\E007";
       }
     }
     &.ic-people {
       &:before {
-        content: "\E008;";
+        content: "\E008";
       }
     }
     &.ic-doc-holder {
       &:before {
-        content: "\E009;";
+        content: "\E009";
       }
     }
     &.ic-bus {
       &:before {
-        content: "\E00A;";
+        content: "\E00A";
       }
     }
     &.ic-phone {
       &:before {
-        content: "\E00B;";
+        content: "\E00B";
       }
     }
     &.ic-book {
       &:before {
-        content: "\E00C;";
+        content: "\E00C";
       }
     }
     &.ic-arrow-play {
       &:before {
-        content: "\E00D;";
+        content: "\E00D";
       }
     }
     &.ic-arrow-select {
       &:before {
-        content: "\E00E;";
+        content: "\E00E";
       }
     }
     &.ic-news-item {
       &:before {
-        content: "\E00F;";
+        content: "\E00F";
       }
     }
     &.ic-location-star {
       &:before {
-        content: "\E010;";
+        content: "\E010";
       }
     }
     &.ic-permit {
       &:before {
-        content: "\E011;";
+        content: "\E011";
       }
     }
     &.ic-document {
       &:before {
-        content: "\E012;";
+        content: "\E012";
       }
     }
     &.ic-credit-card {
       &:before {
-        content: "\E013;";
+        content: "\E013";
       }
     }
     &.ic-folder {
       &:before {
-        content: "\E014;";
+        content: "\E014";
       }
     }
     &.ic-bell {
       &:before {
-        content: "\E015;";
+        content: "\E015";
       }
     }
     &.ic-settings {
       &:before {
-        content: "\E016;";
+        content: "\E016";
       }
     }
     &.ic-plus-circle-dot {
       &:before {
-        content: "\E017;";
+        content: "\E017";
       }
     }
     &.ic-minus-circle-dot {
       &:before {
-        content: "\E018;";
+        content: "\E018";
       }
     }
     &.ic-steps-checked {
       &:before {
-        content: "\E019;";
+        content: "\E019";
       }
     }
-    &.ic-threepoints-circle-dot {
+    &.ic-ellipsis-circle-dot {
       &:before {
-        content: "\E01A;";
+        content: "\E01A";
       }
     }
     &.ic-enveloppe {
       &:before {
-        content: "\E01B;";
+        content: "\E01B";
       }
     }
     &.ic-folder-add {
       &:before {
-        content: "\E01C;";
+        content: "\E01C";
       }
     }
     &.ic-warning-triangle {
       &:before {
-        content: "\E01D;";
+        content: "\E01D";
       }
     }
     &.ic-computer {
       &:before {
-        content: "\E01E;";
+        content: "\E01E";
       }
     }
     &.ic-nut {
       &:before {
-        content: "\E01F;";
+        content: "\E01F";
       }
     }
     &.ic-pencil {
       &:before {
-        content: "\E020;";
+        content: "\E020";
       }
     }
     &.ic-lightbulb {
       &:before {
-        content: "\E021;";
+        content: "\E021";
       }
     }
     &.ic-pen {
       &:before {
-        content: "\E022;";
+        content: "\E022";
       }
     }
     &.ic-warning-circle {
       &:before {
-        content: "\E023;";
+        content: "\E023";
       }
     }
     &.ic-clock {
       &:before {
-        content: "\E024;";
+        content: "\E024";
       }
     }
     &.ic-target {
       &:before {
-        content: "\E025;";
+        content: "\E025";
       }
     }
     &.ic-broom {
       &:before {
-        content: "\E026;";
+        content: "\E026";
       }
     }
     &.ic-permit {
       &:before {
-        content: "\E027;";
+        content: "\E027";
       }
     }
     &.ic-arrow-circle-up {
       &:before {
-        content: "\E028;";
+        content: "\E028";
       }
     }
     &.ic-arrow-circle-right {
       &:before {
-        content: "\E029;";
+        content: "\E029";
       }
     }
     &.ic-arrow-circle-down {
       &:before {
-        content: "\E02A;";
+        content: "\E02A";
       }
     }
     &.ic-arrow-circle-left {
       &:before {
-        content: "\E02B;";
+        content: "\E02B";
       }
     }
     &.ic-house {
       &:before {
-        content: "\E02C;";
+        content: "\E02C";
       }
     }
-    &.ic-x-large {
+    &.ic-x-close {
       &:before {
-        content: "\E02D;";
+        content: "\E02D";
       }
     }
     &.ic-circle-progress-done {
       &:before {
-        content: "\E02E;";
+        content: "\E02E";
       }
     }
     &.ic-circle-progress-a {
       &:before {
-        content: "\E02F;";
+        content: "\E02F";
       }
     }
     &.ic-circle-progress-ab {
       &:before {
-        content: "\E030;";
+        content: "\E030";
       }
     }
     &.ic-circle-progress-abc {
       &:before {
-        content: "\E031;";
+        content: "\E031";
       }
     }
     &.ic-circle-progress-c {
       &:before {
-        content: "\E032;";
+        content: "\E032";
       }
     }
     &.ic-circle-progress-bc {
       &:before {
-        content: "\E033;";
+        content: "\E033";
       }
     }
     &.ic-circle-progress-checked {
       &:before {
-        content: "\E034;";
+        content: "\E034";
       }
     }
     &.ic-circle-progress-folder {
       &:before {
-        content: "\E035;";
+        content: "\E035";
       }
     }
     &.ic-chevron-up {
       &:before {
-        content: "\E036;";
+        content: "\E036";
       }
     }
     &.ic-chevron-right {
       &:before {
-        content: "\E037;";
+        content: "\E037";
       }
     }
     &.ic-chevron-down {
       &:before {
-        content: "\E038;";
+        content: "\E038";
       }
     }
     &.ic-chevron-left {
       &:before {
-        content: "\E039;";
+        content: "\E039";
       }
     }
     &.ic-circle-checked {
       &:before {
-        content: "\E03A;";
+        content: "\E03A";
       }
     }
     &.ic-menu {
       &:before {
-        content: "\E100;";
+        content: "\E100";
       }
     }
     &.ic-location {
       &:before {
-        content: "\E101;";
+        content: "\E101";
       }
     }
     &.ic-arrow-up {
       &:before {
-        content: "\E102;";
+        content: "\E102";
       }
     }
     &.ic-arrow-right {
       &:before {
-        content: "\E103;";
+        content: "\E103";
       }
     }
     &.ic-arrow-down {
       &:before {
-        content: "\E104;";
+        content: "\E104";
       }
     }
     &.ic-arrow-left {
       &:before {
-        content: "\E105;";
+        content: "\E105";
       }
     }
     &.ic-plus {
       &:before {
-        content: "\E200;";
+        content: "\E200";
       }
     }
     &.ic-minus {
       &:before {
-        content: "\E201;";
+        content: "\E201";
       }
     }
     &.ic-multiply {
       &:before {
-        content: "\E202;";
+        content: "\E202";
       }
     }
     &.ic-circle-plus {
       &:before {
-        content: "\E203;";
+        content: "\E203";
       }
     }
     &.ic-circle-minus {
       &:before {
-        content: "\E204;";
+        content: "\E204";
       }
     }
     &.ic-circle-multiply {
       &:before {
-        content: "\E205;";
+        content: "\E205";
       }
     }
     &.ic-circle-plus-invert {
       &:before {
-        content: "\E206;";
+        content: "\E206";
       }
     }
     &.ic-circle-minus-invert {
       &:before {
-        content: "\E207;";
+        content: "\E207";
       }
     }
     &.ic-circle-multiply-invert {
       &:before {
-        content: "\E208;";
+        content: "\E208";
       }
     }
     &.ic-checkbox-checked {
       &:before {
-        content: "\E209;";
+        content: "\E209";
       }
     }
     &.ic-checkbox-empty {
       &:before {
-        content: "\E20A;";
+        content: "\E20A";
       }
     }
     &.ic-checkbox-checked-trans {
       &:before {
-        content: "\E20B;";
+        content: "\E20B";
       }
     }
     &.ic-checkbox-checked-invert {
       &:before {
-        content: "\E20C;";
+        content: "\E20C";
       }
     }
     &.ic-trash {
       &:before {
-        content: "\E400;";
+        content: "\E400";
       }
     }
     &.ic-recycle {
       &:before {
-        content: "\E401;";
+        content: "\E401";
       }
     }
     &.ic-compost {
       &:before {
-        content: "\E402;";
+        content: "\E402";
       }
     }
     &.ic-greens {
       &:before {
-        content: "\E403;";
+        content: "\E403";
       }
     }
     &.ic-permit-pet {
       &:before {
-        content: "\E404;";
+        content: "\E404";
       }
     }
   }

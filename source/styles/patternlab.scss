@@ -52,6 +52,62 @@
     }
 }
 
+// Icons
+// - - - - - - - - - -  - - - - - - 
+.pl-atom-icons-grid {
+    .wrapper{
+        @include make-row();
+        @include clearfix();
+        ul {
+            display: -ms-flexbox;
+            display: flex;
+            -ms-flex-wrap: wrap;
+            flex-wrap: wrap;
+            list-style: none;
+            text-align: -webkit-match-parent;
+            border: 0;
+            margin: 0;
+            padding: 0;
+            // Reset font-size & line height : important!
+            font-size: 13px;
+            line-height: 1;
+            >li {               
+                margin: 0 5px 10px 0;
+                border: 0;
+                padding: 0;
+                display: inline-block;
+                >i {
+                    &.vdmi {
+                        font-family: $vdm-icon-font-family !important;
+                        display: block;
+                        width: 128px;
+                        height: 128px;
+                        font-size: 128px;
+                        background-color: rgba(0, 0, 0, 0.05);
+                        text-rendering: geometricPrecision;
+                        -webkit-font-smoothing: antialiased;
+                        vertical-align: middle;
+                        font-smooth: always;
+                        font-weight: normal;
+                        font-variant: normal;
+                        text-transform: none;
+                    }
+                }
+                .ic-name,
+                .ic-charcode {
+                    display: block;
+                    color: $ui;
+                    margin-top: 0.5em;
+                    font-size: $font-size-small;
+                }
+
+            }
+        }
+    }
+    
+        
+}
+
 
 // Colors
 // - - - - - - - - - -  - - - - - - 
