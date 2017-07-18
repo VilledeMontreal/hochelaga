@@ -18,81 +18,10 @@
 }
 
 
-// >> Begin Nurun code code
-// - - - - - -
-#icons {
-  display: -ms-flexbox;
-  display: flex;
-  -ms-flex-wrap: wrap;
-  flex-wrap: wrap;
-  list-style: none;
-  text-align: -webkit-match-parent;
-  border: 0;
-  margin: 0;
-  padding: 0;
-  // Reset font-size & line height : important!
-  font-size: 13px;
-  line-height: 1;
-  li {
-    margin: 0 10px 10px 0;
-    border: 0;
-    padding: 0;
-    display: inline-block;
-    .font-glyph {
-      font-family: $vdm-icon-font-family !important;
-      display: block;
-      width: 128px;
-      height: 128px;
-      font-size: 128px;
-      background-color: rgba(0, 0, 0, 0.05);
-      text-rendering: geometricPrecision;
-      -webkit-font-smoothing: antialiased;
-      vertical-align: middle;
-      font-smooth: always;
-      font-weight: normal;
-      font-variant: normal;
-      text-transform: none;
-      &:hover {
-        cursor: pointer;
-        background-color: black;
-        color: white;
-      }
-    }
-    .font-glyphname {
-      padding-top: 10px;
-      font-size: 10px;
-      font-weight: 100;
-      display: block;
-      width: 128px;
-      white-space: nowrap;
-      overflow: hidden;
-      text-overflow: ellipsis;
-      &:before {
-        font-size: 16px;
-        font-family: $vdm-icon-font-family !important;
-        text-rendering: geometricPrecision;
-        -webkit-font-smoothing: antialiased;
-        vertical-align: middle;
-        font-smooth: always;
-        font-weight: normal;
-        font-variant: normal;
-        text-transform: none;
-      }
-      .glyph-address {
-        cursor: pointer;
-        color: #33b353;
-      }
-    }
-  }
-}
-//  End Nurun code code <<
-
-
 // >> Begin custom inline vdm code
 // - - - - - -
-
 // @ see primary reference for this implementation : http://fontawesome.io/examples/
-// @ TO-DO : implement more modifiers, fetching inspiration from the main fa stylesheet
+// @ TO-DO : implement more modifiers (scale,etc), fetching inspiration from the main fa stylesheet
 
 i {
   &.vdmi {
@@ -128,7 +57,7 @@ i {
       text-align: center;
     }
 
-    // Individual instances - Rinse & repeat
+    // Individual symbol instances
     &.ic-rosette {
       &:before {
         content: "\E000";

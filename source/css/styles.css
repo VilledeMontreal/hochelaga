@@ -5906,64 +5906,6 @@ table {
   font-weight: normal;
   font-style: normal; }
 
-#icons {
-  display: -ms-flexbox;
-  display: flex;
-  -ms-flex-wrap: wrap;
-  flex-wrap: wrap;
-  list-style: none;
-  text-align: -webkit-match-parent;
-  border: 0;
-  margin: 0;
-  padding: 0;
-  font-size: 13px;
-  line-height: 1; }
-  #icons li {
-    margin: 0 10px 10px 0;
-    border: 0;
-    padding: 0;
-    display: inline-block; }
-    #icons li .font-glyph {
-      font-family: "vdm-fonticon" !important;
-      display: block;
-      width: 128px;
-      height: 128px;
-      font-size: 128px;
-      background-color: rgba(0, 0, 0, 0.05);
-      text-rendering: geometricPrecision;
-      -webkit-font-smoothing: antialiased;
-      vertical-align: middle;
-      font-smooth: always;
-      font-weight: normal;
-      font-variant: normal;
-      text-transform: none; }
-      #icons li .font-glyph:hover {
-        cursor: pointer;
-        background-color: black;
-        color: white; }
-    #icons li .font-glyphname {
-      padding-top: 10px;
-      font-size: 10px;
-      font-weight: 100;
-      display: block;
-      width: 128px;
-      white-space: nowrap;
-      overflow: hidden;
-      text-overflow: ellipsis; }
-      #icons li .font-glyphname:before {
-        font-size: 16px;
-        font-family: "vdm-fonticon" !important;
-        text-rendering: geometricPrecision;
-        -webkit-font-smoothing: antialiased;
-        vertical-align: middle;
-        font-smooth: always;
-        font-weight: normal;
-        font-variant: normal;
-        text-transform: none; }
-      #icons li .font-glyphname .glyph-address {
-        cursor: pointer;
-        color: #33b353; }
-
 i.vdmi {
   display: inline-block;
   font: normal normal normal 14px "vdm-fonticon";
