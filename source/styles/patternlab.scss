@@ -39,6 +39,14 @@
   font-size: 0.65em;
 }
 
+.pl-headers-wrapper {
+  .pl-headers {
+    >li {
+      margin-bottom: 1.5rem;
+    }
+  }
+}
+
 // Documentation
 // - - - - - - - - - -  - - - - - -
 .pl-document {
@@ -249,18 +257,6 @@
     }
   }
 
-  //     <div class="container pl-atom-color">
-  // 	<div class="swatches-index">
-  // 		<h2>Accessibilité</h2>
-  // 		<table class="table table-condensed pl-atom-color pl-accessibility-table">
-  // 			<tr>
-  //             	<td colspan="2" class="pl-acc-demo"><span class="pl-swatch-round pl-swatch-accessibility"></span>Respect des contrastes sur fond clair</td>
-  // 				<td colspan="2" class="pl-acc-demo"><span class="pl-swatch-round pl-swatch-accessibility-invert"></span>Respect des contrastes sur fond foncé</td>
-  // 			</tr>
-  // 		</table>
-  // 	</div>
-  // </div>
-
   // Colors
   // Brand
   .pl-brand {
@@ -326,6 +322,9 @@
     color: $white;
   }
 }// .pl-atom-color
+
+
+
 
 // - - - - - - - - - -  - - - - - - 
 //  * * * MOLECULES * * *

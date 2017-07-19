@@ -28,35 +28,7 @@
     font-size: $font-size-base * 1.3125; // 21px
   } @else if $level == 6 {
     font-size: $font-size-base * 1.0000; // 16px
-  } 
-
-// //## Fonts Family
-// $font-family:             'Nunito Sans' !default;
-// $font-family-sans-serif:  $font-family !default;
-// $font-family-base:        $font-family !default;
-
-// //== Font Weight
-// $font-weight-light:        300; // Nunito Sans Light
-// $font-weight-regular:      400; // Nunito Sans Regular
-// $font-weight-bold:         700; // Nunito Sans Bold
-
-// $font-weight-headers: $font-weight-regular;
-
-// //== Fonts Size
-// $font-size-base:          16px !default;                            //  16px
-// $font-size-large:         ceil(($font-size-base * 1.125)) !default; // ~18px
-// $font-size-small:         ceil(($font-size-base * 0.85)) !default;  // ~14px
-// $font-size-smaller:       ceil(($font-size-base * 0.75)) !default;  // ~12px
-
-
-// //** Unit-less `line-height` for use in components like buttons.
-// $line-height-base:        1.428571429 !default; // 20/14
-
-// //** By default, this inherits from the `<body>`.
-// $headings-font-family:    inherit !default;
-// $headings-line-height:    1.1 !default;
-// $headings-color:          inherit !default;
-
+  }
  }
 
 /**
