@@ -7,6 +7,7 @@
  */
 
 // @arg $level - integrer [1-6]
+// @arg $weight - string ['light','regular','bold']
  @mixin header($level: 1, $weight: 'regular') {
 
   font-family: $font-family;
@@ -41,14 +42,14 @@
 // - - - - - - - - - - 
 
 @mixin drop-shadow(
-    $color-r: $forms-ds-color-r,
-    $color-r: $forms-ds-color-g,
-    $color-r: $forms-ds-color-b,
-    $opacity: $forms-ds-opacity, 
     $dist-top: 0, 
     $dist-right: $forms-ds-right-size, 
     $dist-bottom: $forms-ds-bottom-size, 
-    $dist-left: 0    
+    $dist-left: 0 ,
+    $color-r: $forms-ds-color-r,
+    $color-g: $forms-ds-color-g,
+    $color-b: $forms-ds-color-b,
+    $opacity: $forms-ds-opacity
   ) {
 
     box-shadow: $dist-top $dist-right $dist-bottom $dist-left rgba(
@@ -57,18 +58,6 @@
       $forms-ds-color-b,
       $opacity
     );
-
-//   &:focus,
-//   &.focus {
-//     color: $color;
-//     background-color: darken($background, 10%);
-//     border-color: darken($border, 25%);
-//   }
-//   &:hover {
-//     color: $color;
-//     background-color: darken($background, 10%);
-//         border-color: darken($border, 12%);
-//   }
 }
 
 

@@ -5,6 +5,7 @@
 //== Neutrals
 $white:                     #FFFFFF !default;
 $neutral-base:              #000 !default;
+$neutral-darker:            #80807F !default;
 $neutral-dark:              #727271 !default;
 $neutral:                   #A2A3A1 !default;
 $neutral-light:             #D0D0CE !default;
@@ -70,7 +71,10 @@ $vdm-icon-font-family : 'vdm-fonticon';
 // - - - - - - - - - -
 
 //== Drop shadows
+
 // for rgba($color,$opacity)
+// $ds- == (D)rop (S)hadow
+
 $forms-ds-color-r: 0; 
 $forms-ds-color-g: 0; 
 $forms-ds-color-b: 0; 
@@ -83,20 +87,24 @@ $forms-ds-bottom-size: 11px;
 // - - - - - - - - - -
 
 //== Form elements
-// 'fel' == form element shortened
-$fel-bg-color: $ui;
-$fel-text-color: $white;
-$fel-border: none;
 
-$fel-alt-bg-color: $white;
-$fel-alt-text-color: $ui;
-$fel-alt-border: none;
+// 'felem' == form element shortened
 
-// $fel-disabled-bg-color: 
-// $fel-disabled-text-color: 
-// $fel-disabled-active-text-color: 
+$felem-bg-color: $ui;
+$felem-text-color: $white;
+$felem-border: none;
+
+// Secondary buttons
+$felem-alt-bg-color: $white;
+$felem-alt-text-color: $ui;
+$felem-alt-border: 2px solid $ui;
+
+$felem-disabled-bg-color: $neutral-lightest;
+$felem-disabled-text-color: $neutral-darker;
+$felem-disabled-secondary-border: 2px solid $neutral-lightest;
 
 $btn-default-lat-padding: 40px;
+$btn-default-vert-padding: 5px;
 $btn-default-height: 53px;
 $btn-small-height: 40px;
 

@@ -1,22 +1,90 @@
 // @file ui-buttons-switches-tabs.scss
 
 button[type="button"] {
-    height: 53px;	
-    width: 202px;	
-    border-radius: 100px;	
+    height: $btn-default-height;	
+    width: auto;
+    padding: $btn-default-vert-padding $btn-default-lat-padding;
+    border-radius: $btn-default-height;	
     background-color: $ui;
     text-align: center;
     font-size: $font-size-base;
     color: $white;
-    border: none;
+    border: $felem-border;
     text-shadow: none;
+    margin-right:0.725em;
+    &:last-of-type {
+        margin-right: 0;
+    }
     
     &:active,
     &:hover {
         @include drop-shadow();
     }
-    &.btn-secondary {
-        
+
+    &.btn-small {
+        height: $btn-small-height;
+        font-size: $font-size-smaller;
+        border-radius: $btn-small-height;	
     }
+
+    &.btn-disabled {
+        color: $felem-disabled-text-color;
+        border: $felem-border;
+        background-color: $felem-disabled-bg-color;
+        &:active,
+        &:hover {
+            box-shadow: unset;
+        }
+    }
+
+    &.btn-secondary {
+        color: $felem-alt-text-color;
+        border: $felem-alt-border;
+        background-color: $felem-alt-bg-color;
+        padding: ( $btn-default-vert-padding - 2px ) ( $btn-default-lat-padding - 2px );
+        &.btn-disabled {
+            color: $felem-disabled-text-color;
+            border: $felem-disabled-secondary-border;
+            background-color: $felem-alt-bg-color;
+            &:active,
+            &:hover {
+                box-shadow: unset;
+            }
+        }
+        
+        &:active,
+        &:hover {
+             @include drop-shadow(
+                3px, 
+                $forms-ds-right-size, 
+                $forms-ds-bottom-size, 
+                2px,
+                $forms-ds-color-r,
+                $forms-ds-color-g,
+                $forms-ds-color-b,
+                $forms-ds-opacity
+            );
+        }
+
+    }
+    
+
+
+    // $felem-bg-color: $ui;
+    // $felem-text-color: $white;
+    // $felem-border: none;
+
+    // $felem-alt-bg-color: $white;
+    // $felem-alt-text-color: $ui;
+    // $felem-alt-border: none;
+
+    // $felem-disabled-bg-color: $neutral-lightest;
+    // $felem-disabled-text-color: $neutral-darker;
+
+    // $btn-default-lat-padding: 40px;
+    // $btn-default-height: 53px;
+    // $btn-small-height: 40px;
+
+
 
 }
