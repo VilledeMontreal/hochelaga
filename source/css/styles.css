@@ -5870,6 +5870,16 @@ html body {
   html body strong {
     font-weight: bold; }
 
+/**
+ * - - - - - - - - - - 
+ * == UI
+ * - - - - - - - - - - 
+ */
+/**
+ * - - - - - - - - - - 
+ * == Forms 
+ * - - - - - - - - - - 
+ */
 /* http://meyerweb.com/eric/tools/css/reset/ 
    v2.0 | 20110126
    License: none (public domain) */
@@ -6153,3 +6163,16 @@ i.vdmi {
       font-size: 14px;
       cursor: pointer;
       line-height: 1.6em; }
+
+button[type="button"] {
+  height: 53px;
+  width: 202px;
+  border-radius: 100px;
+  background-color: #429A8E;
+  text-align: center;
+  font-size: 14px;
+  color: #FFFFFF;
+  border: none;
+  text-shadow: none; }
+  button[type="button"]:active, button[type="button"]:hover {
+    box-shadow: 0 5px 11px 0 rgba(0, 0, 0, 0.27); }

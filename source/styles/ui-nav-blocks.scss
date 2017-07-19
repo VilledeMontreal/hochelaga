@@ -1,4 +1,6 @@
 // @file ui-nav-blocks.scss
+
+// Base pseudo-element : tile
 .tile {
     display: block;
     background: $neutral-lightest;
@@ -7,6 +9,7 @@
     justify-content: center;
     border: 1px solid $ui;
 
+    // Navigation tile : this element is always hyperlinked
     &.tile-nav {
         text-decoration: none;
         color: $neutral-base;
@@ -26,11 +29,13 @@
         }
     }
 
+    // Implements vdm-fonticon
     &.tile-icon {
         width: 170px;
         height: 170px;
     }
 
+    // Insures bi-axial centering in the flex grid
     .wrapper {
         max-width: 100%;
         padding-right: 15px;
@@ -38,14 +43,14 @@
         margin-right: auto;
         margin-left: auto;
         text-align: center;
-
+        // Icon
         .vdmi {
             font-size: 3em;
             color: $ui;
             cursor: pointer;
             margin-bottom: 0.15em;
         }
-
+        // Label
         h3 {
             font-size: $font-size-base;
             $font-weight: $font-weight-regular;

@@ -2,7 +2,7 @@
 
 //= = = = Colors = = = =
 //
-//## Neutrals
+//== Neutrals
 $white:                     #FFFFFF !default;
 $neutral-base:              #000 !default;
 $neutral-dark:              #727271 !default;
@@ -11,11 +11,11 @@ $neutral-light:             #D0D0CE !default;
 $neutral-lighter:           #E7E5E5 !default;
 $neutral-lightest:          #F2F2F1 !default;
 
-//## Brand
+//== Brand
 $brand:                     #E00000 !default;
 $brand-dark:                $neutral-base !default;
 
-//## UI
+//== UI
 $ui:                        #429A8E !default;
 $ui-medium:                 #5AD3C3 !default;
 $ui-light:                  #87DFD3 !default;
@@ -28,7 +28,7 @@ $ui-alt-warm-dark:         #A30000 !default;
 //== Typography
 //
 //## Font, line-height, and color for body text, headings, and more.
-// Do not invoke the $nunito- variables direcly if at all possible : they are too specific
+// Do not invoke the $nunito- variables directly if at all possible : they are too specific
 
 //## Fonts Family
 $font-family-sans-serif:  $nunito-family !default;
@@ -40,26 +40,13 @@ $font-weight-light:        300;
 $font-weight-regular:      400;
 $font-weight-bold:         700;
 
-$font-weight-light:        $nunito-light;
-$font-weight-regular:      $nunito-regular;
-$font-weight-semi:         $nunito-semi;
-$font-weight-bold:         $nunito-bold;
-
 $font-weight-headers: $font-weight-regular;
 
-
-// $font-weight-h1:          normal;
-// $font-weight-h2:          normal;
-// $font-weight-h3:          normal;
-// $font-weight-h4:          normal;
-// $font-weight-h5:          normal;
-// $font-weight-h6:          normal;
-
-
-//## Fonts Size
-$font-size-base:          16px !default;                            // 16px
-$font-size-large:         ceil(($font-size-base * 1.25)) !default;  // ~18px
-$font-size-small:         ceil(($font-size-base * 0.85)) !default;  // ~12px
+//== Fonts Size
+$font-size-base:          16px !default;                            //  16px
+$font-size-large:         ceil(($font-size-base * 1.125)) !default; // ~18px
+$font-size-small:         ceil(($font-size-base * 0.85)) !default;  // ~14px
+$font-size-smaller:       ceil(($font-size-base * 0.80)) !default;  // ~12px
 
 
 $font-size-h1:            67px;
@@ -71,7 +58,7 @@ $font-size-h6:            16px;
 $font-size-intro:         16px;
 $font-size-label:         12px;
 
-//## Line Height
+//== Line Height
 $line-height-h1:          92px;
 $line-height-h2:          69px;
 $line-height-h3:          50px;
@@ -85,5 +72,36 @@ $line-height-label:       16px;
 $vdm-icon-font-path: '../fonts/';
 $vdm-icon-font-version: '0.5';
 $vdm-icon-font-family : 'vdm-fonticon';
+
+//== Forms
+
+// Drop shadows: ;
+// for rgba($color,$opacity)
+$forms-ds-color-r: 0; 
+$forms-ds-color-g: 0; 
+$forms-ds-color-b: 0; 
+$forms-ds-opacity: 0.27;
+$forms-ds-right-size: 5px;
+$forms-ds-bottom-size: 11px;
+
+// 'fel' == form element shortened
+$fel-bg-color: $ui;
+$fel-text-color: $white;
+$fel-border: none;
+
+$fel-alt-bg-color: $white;
+$fel-alt-text-color: $ui;
+$fel-alt-border: none;
+
+// $fel-disabled-bg-color: 
+// $fel-disabled-text-color: 
+// $fel-disabled-active-text-color: 
+
+$btn-default-lat-padding: 40px;
+$btn-default-height: 53px;
+$btn-small-height: 40px;
+
+
+
 
 

@@ -1,0 +1,74 @@
+/**
+ * - - - - - - - - - - 
+ * == UI
+ * - - - - - - - - - - 
+ */
+
+//== Accents
+// - - - - - - - - - - 
+
+@mixin drop-shadow(
+    $color-r: $forms-ds-color-r,
+    $color-r: $forms-ds-color-g,
+    $color-r: $forms-ds-color-b,
+    $opacity: $forms-ds-opacity, 
+    $dist-top: 0, 
+    $dist-right: $forms-ds-right-size, 
+    $dist-bottom: $forms-ds-bottom-size, 
+    $dist-left: 0    
+  ) {
+
+    box-shadow: $dist-top $dist-right $dist-bottom $dist-left rgba(
+      $forms-ds-color-r,
+      $forms-ds-color-g,
+      $forms-ds-color-b,
+      $opacity
+    );
+
+//   &:focus,
+//   &.focus {
+//     color: $color;
+//     background-color: darken($background, 10%);
+//     border-color: darken($border, 25%);
+//   }
+//   &:hover {
+//     color: $color;
+//     background-color: darken($background, 10%);
+//         border-color: darken($border, 12%);
+//   }
+}
+
+
+/**
+ * - - - - - - - - - - 
+ * == Forms 
+ * - - - - - - - - - - 
+ */
+
+//== Buttons
+// - - - - - - - - - - 
+@mixin button-alter($color, $background, $border) {
+  color: $color;
+  background-color: $background;
+  border-color: $border;
+
+  &:focus,
+  &.focus {
+    color: $color;
+    background-color: darken($background, 10%);
+    border-color: darken($border, 25%);
+  }
+  &:hover {
+    color: $color;
+    background-color: darken($background, 10%);
+        border-color: darken($border, 12%);
+  }
+}
+
+// Button sizes
+@mixin button-alter-size($padding-vertical, $padding-horizontal, $font-size, $line-height, $border-radius) {
+  padding: $padding-vertical $padding-horizontal;
+  font-size: $font-size;
+  line-height: $line-height;
+  border-radius: $border-radius;
+}
