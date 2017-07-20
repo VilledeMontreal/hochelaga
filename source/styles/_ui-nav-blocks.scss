@@ -3,27 +3,27 @@
 // Base pseudo-element : tile
 .tile {
     display: block;
-    background: $neutral-lightest;
+    background: $vdm-neutral-light;
     display: flex;
     align-items : center;
     justify-content: center;
-    border: 1px solid $ui;
+    border: 1px solid $vdm-brand;
 
     // Navigation tile : this element is always hyperlinked
     &.tile-nav {
         text-decoration: none;
-        color: $neutral-base;
+        color: $vdm-black;
         &:hover,
         &:active {
-            color: $white;
-            background: $ui;
+            color: $vdm-white;
+            background: $vdm-brand;
             .wrapper {
                 h3 {
-                    color: $white;
+                    color: $vdm-white;
                 }
                 .vdmi {
 
-                    color: $white;
+                    color: $vdm-white;
                 }
             }
         }
@@ -46,14 +46,14 @@
         // Icon
         .vdmi {
             font-size: 3em;
-            color: $ui;
+            color: $vdm-brand;
             cursor: pointer;
             margin-bottom: 0.15em;
         }
         // Label
         h3 {
-            font-size: $font-size-base;
-            $font-weight: $font-weight-regular;
+            font-size: $vdm-font-size-base;
+            $font-weight: $vdm-font-weight-regular;
             cursor: pointer;
             line-height: 1.6em;
         }

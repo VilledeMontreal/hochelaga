@@ -3,64 +3,54 @@
 //= = = = Colors = = = =
 //
 //== Neutrals
-$white:                     #FFFFFF;
-$neutral-base:              #000;
-$neutral-darker:            #80807F;
-$neutral-dark:              #727271;
-$neutral:                   #A2A3A1;
-$neutral-light:             #D0D0CE;
-$neutral-lighter:           #E7E5E5;
-$neutral-lightest:          #F2F2F1;
+
+$vdm-white:               #FFFFFF;
+$vdm-black:               #000000;
+$vdm-neutral-mid:         #80807F;
+$vdm-neutral-light:       #E7E5E5;
 
 //== Brand
-$brand:                     #E00000;
-$brand-dark:                $neutral-base;
 
-//== UI
-$ui:                        #429A8E;
-$ui-medium:                 #5AD3C3;
-$ui-light:                  #87DFD3;
-$ui-lighter:                #B4EBE3;
+$vdm-brand:                 #429A8E;
+$vdm-sub-brand:             #E00000;   
 
+// - - - - - - - - - - 
+// == Scaffolding
+// - - - - - - - - - - 
 
-$ui-alt-danger:            #FF3200;
-$ui-alt-warm-dark:         #A30000;
+//== Links
 
+//** Global text color on `<body>`
+$vdm-text:            $vdm-black;
+//** Global textual link color
+$vdm-link:            $vdm-brand;
+$vdm-icon-link:       $vdm-black; // Arrow link
+//** Link hover color
+$vdm-link-hover:      $vdm-black;
+//** Link hover decoration
+$vdm-link-hover-decoration: underline;
+$vdm-icon-link-hover-decoration: none;  // Arrow link
 
 // - - - - - - - - - - 
 // == Typography
 // - - - - - - - - - - 
 
-//== Fonts Family
-$font-family:             'Nunito Sans', Helvetica, Arial, sans-serif;
+//== Font Family
+$vdm-font-family:             'Nunito Sans', Helvetica, Arial, sans-serif;
 
 //== Font Weight
-$font-weight-light:        300; // Nunito Sans Light
-$font-weight-regular:      400; // Nunito Sans Regular
-$font-weight-bold:         700; // Nunito Sans Bold
+$vdm-font-weight-light:        300; // Nunito Sans Light
+$vdm-font-weight-regular:      400; // Nunito Sans Regular
+$vdm-font-weight-bold:         700; // Nunito Sans Bold
 
-$font-weight-headers: $font-weight-regular;
 
 //== Fonts Size
-$font-size-base:          16px;                            //  16px
-$font-size-large:         ceil(($font-size-base * 1.125)); // ~18px
-$font-size-small:         ceil(($font-size-base * 0.85));  // ~14px
-$font-size-smaller:       ceil(($font-size-base * 0.75));  // ~12px
+$vdm-font-size-base:          16px;                            //  16px
+$vdm-font-size-large:         ceil(($vdm-font-size-base * 1.125)); // ~18px
+$vdm-font-size-small:         ceil(($vdm-font-size-base * 0.85));  // ~14px
+$vdm-font-size-smaller:       ceil(($vdm-font-size-base * 0.75));  // ~12px
 
-@debug ($font-size-base);
-
-$line-height-base:        floor(($font-size-base * 1.3731)); // 16/26px
-
-//== Headings
-$headings-font-family:    inherit;
-$headings-line-height:    $line-height-base;
-$headings-color:          inherit;
-
-//== Special contexts - type
-$font-size-intro:         $font-size-base;
-$font-size-label:         $font-size-base * 0.7500;
-$line-height-intro:       $line-height-base * 1.0000;
-$line-height-label:       $font-size-base * 1.000;
+$vdm-line-height-base:        floor(($vdm-font-size-base * 1.3731));   // 16/26px
 
 //== Icons fonts -vdm-font-icon character
 $vdm-icon-font-path: '../fonts/';
@@ -71,17 +61,6 @@ $vdm-icon-font-family : 'vdm-fonticon';
 // == UI - general -- split this cat. later
 // - - - - - - - - - -
 
-//== Drop shadows
-
-// for rgba($color,$opacity)
-// $ds- == (D)rop (S)hadow
-
-$forms-ds-color-r: 0; 
-$forms-ds-color-g: 0; 
-$forms-ds-color-b: 0; 
-$forms-ds-opacity: 0.27;
-$forms-ds-right-size: 5px;
-$forms-ds-bottom-size: 11px;
 
 // - - - - - - - - - - 
 // == Forms
@@ -89,26 +68,24 @@ $forms-ds-bottom-size: 11px;
 
 //== Form elements
 
-// 'felem' == form element shortened
-
-$felem-bg-color: $ui;
-$felem-text-color: $white;
-$felem-border: none;
+$vdm-form-bg-color: $vdm-brand;
+$vdm-form-text-color: $vdm-white;
+$vdm-form-border: none;
 
 // Secondary buttons
-$felem-alt-bg-color: $white;
-$felem-alt-text-color: $ui;
-$felem-alt-border: 2px solid $ui;
+$vdm-form-alt-bg-color: $vdm-white;
+$vdm-form-alt-text-color: $vdm-brand;
+$vdm-form-alt-border: 2px solid $vdm-brand;
 
-$felem-disabled-bg-color: $neutral-lightest;
-$felem-disabled-text-color: $neutral-darker;
-$felem-disabled-secondary-border: 2px solid $neutral-lightest;
+$vdm-form-disabled-bg-color: $vdm-neutral-light;
+$vdm-form-disabled-text-color: $vdm-neutral-mid;
+$vdm-form-disabled-secondary-border: 2px solid $vdm-neutral-light;
 
-$btn-default-padding-x: 40px;
-$btn-default-padding-y: 5px;
-$btn-default-padding-y: 5px;
-$btn-default-height: 53px;
-$btn-small-height: 40px;
+$vdm-btn-default-padding-x: 40px;
+$vdm-btn-default-padding-y: 5px;
+$vdm-btn-default-padding-y: 5px;
+$vdm-btn-default-height: 53px;
+$vdm-btn-small-height: 40px;
 
 
 

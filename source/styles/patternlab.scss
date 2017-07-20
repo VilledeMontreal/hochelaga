@@ -50,15 +50,15 @@
 // Documentation
 // - - - - - - - - - -  - - - - - -
 .pl-document {
-  color: $neutral-dark;
-  font-size: $font-size-small;
+  color: $vdm-neutral-mid;
+  font-size: $vdm-font-size-small;
   ul {
     li {
       line-height: 1.3em;
       pre {
         width: 40%;
-        color: $neutral-dark;
-        background: $neutral-lightest;
+        color: $vdm-neutral-mid;
+        background: $vdm-neutral-light;
       }
     }
   }
@@ -108,9 +108,9 @@
         .ic-name,
         .ic-charcode {
           display: block;
-          color: $ui;
+          color: $vdm-brand;
           margin-top: 0.5em;
-          font-size: $font-size-small;
+          font-size: $vdm-font-size-small;
         }
 
       }
@@ -144,7 +144,7 @@
             display: block;
             float: right;
             width: 30%;
-            font-size: $font-size-small;
+            font-size: $vdm-font-size-small;
             text-align: right;
           }
         }
@@ -155,8 +155,8 @@
   .pl-swatches-color-table {
     tr {
       th {
-        font-weight: $font-weight-bold;
-        font-size: $font-size-base;
+        font-weight: $vdm-font-weight-bold;
+        font-size: $vdm-font-size-base;
       }
       td {
         text-align: left;
@@ -166,8 +166,8 @@
     // Colors
     // Brand
     .pl-brand {
-        background: $brand;
-        color: $white;
+        background: $vdm-brand;
+        color: $vdm-white;
     }
     // Columns
     .pl-color-table-column-swatch {
@@ -175,7 +175,7 @@
     }
     .pl-color-table-column-name {
       width: 10%;
-      font-weight: $font-weight-bold;
+      font-weight: $vdm-font-weight-bold;
     }
     .pl-color-table-column-function {
       width: 73%;
@@ -194,12 +194,12 @@
         border-radius: 15px;
         width: 30px;
         height: 30px;
-        background: $neutral-light;
-        color: $neutral-base;
+        background: $vdm-neutral-light;
+        color: $vdm-black;
         float: right;
         text-align: center;
         padding-top: 6px;
-        font-size: $font-size-small;
+        font-size: $vdm-font-size-small;
         margin-right: 0.8em;
         &:after {
           content: 'AA';
@@ -209,16 +209,16 @@
         }
       }
       &.pl-swatch-accessibility-invert {
-        background: $neutral-base;
-        color: $white;
+        background: $vdm-black;
+        color: $vdm-white;
         float: left;
       }
 
     }
     .pl-sass-name {
       display: block;
-      font-size: $font-size-small;
-      font-weight: $font-weight-light;
+      font-size: $vdm-font-size-small;
+      font-weight: $vdm-font-weight-light;
     }
 
   }
@@ -235,20 +235,20 @@
           border-radius: 15px;
           width: 30px;
           height: 30px;
-          background: $neutral-light;
-          color: $neutral-base;
+          background: $vdm-neutral-light;
+          color: $vdm-black;
           float: left;
           text-align: center;
           padding-top: 6px;
-          font-size: $font-size-small;
+          font-size: $vdm-font-size-small;
           margin-right: 0.8em;
           &:after {
             content: 'AA';
           }
         }
         &.pl-swatch-accessibility-invert {
-          background: $neutral-base;
-          color: $white;
+          background: -base;
+          color: $vdm-white;
         }
 
       }
@@ -258,67 +258,67 @@
   // Colors
   // Brand
   .pl-brand {
-    background: $brand;
-    color: $white;
+    background: $vdm-brand;
+    color: $vdm-white;
   }
-  .pl-brand-dark {
-    background: $brand-dark;
-    color: $white;
-  }
+  // .pl-brand-dark {
+  //   background: $vdm-brand-dark;
+  //   color: $vdm-white;
+  // }
 
   // Neutrals
   .pl-neutral-lightest {
-    background: $neutral-lightest;
-    color: $neutral-dark;
+    background: $vdm-neutral-light;
+    color: $vdm-neutral-mid;
   }
   .pl-neutral-lighter {
-    background: $neutral-lighter;
-    color: $neutral-dark;
+    background: $vdm-neutral-light;
+    color: $vdm-neutral-mid;
   }
   .pl-neutral-light {
-    background: $neutral-light;
-    color: $neutral-dark;
+    background: $vdm-neutral-light;
+    color: $vdm-neutral-mid;
   }
   .pl-neutral {
-    background: $neutral;
-    color: $white;
+    background: $vdm-neutral-mid;
+    color: $vdm-white;
   }
   .pl-neutral-dark {
-    background: $neutral-dark;
-    color: $white;
+    background: $vdm-neutral-mid;
+    color: $vdm-white;
   }
   .pl-neutral-base {
-    background: $neutral-base;
-    color: $white;
+    background: $vdm-black;
+    color: $vdm-white;
   }
 
   // UI & Alerts
   .pl-ui {
-    background: $ui;
-    color: $white;
+    background: $vdm-brand;
+    color: $vdm-white;
   }
-  .pl-ui-medium {
-    background: $ui-medium;
-    color: $white;
-  }
-  .pl-ui-light {
-    background: $ui-light;
-    color: $neutral-dark;
-  }
-  .pl-ui-lighter{
-    background: $ui-lighter;
-    color: $neutral-dark;
-  }
+  // .pl-ui-medium {
+  //   background: $vdm-brand-medium;
+  //   color: $vdm-white;
+  // }
+  // .pl-ui-light {
+  //   background: $vdm-brand-light;
+  //   color: $vdm-neutral-mid;
+  // }
+  // .pl-ui-lighter{
+  //   background: $vdm-brand-lighter;
+  //   color: $vdm-neutral-mid;
+  // }
 
   // Alternate UI colors
-  .pl-ui-alt-danger{
-    background:$ui-alt-danger;
-    color: $white;
-  }
-  .pl-ui-alt-warm-dark{
-    background: $ui-alt-warm-dark;
-    color: $white;
-  }
+  // .pl-ui-alt-danger{
+  //   background:$vdm-brand-alt-danger;
+  //   color: $vdm-white;
+  // }
+  // .pl-ui-alt-warm-dark{
+  //   background: $vdm-brand-alt-warm-dark;
+  //   color: $vdm-white;
+  // }
 }// .pl-atom-color
 
 

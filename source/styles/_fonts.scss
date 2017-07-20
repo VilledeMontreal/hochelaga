@@ -3,9 +3,9 @@
 
 html {
   body {
-    font-family: $font-family;
-    font-weight: $font-weight-regular;
-    font-size: $font-size-base;
+    font-family: $vdm-font-family;
+    font-weight: $vdm-font-weight-regular;
+    font-size: $vdm-font-size-base;
 
     h1 {
       @include header(1);
@@ -29,19 +29,19 @@ html {
       @include header(6);
     }
     .regular {
-      font-weight: $font-weight-regular;
+      font-weight: $vdm-font-weight-regular;
     }
     .bold {
-      font-weight: $font-weight-bold;
+      font-weight: $vdm-font-weight-bold;
     }
     .light {
-      font-weight: $font-weight-light;
+      font-weight: $vdm-font-weight-light;
     }
     .intro {
-      font-family: $font-family;
-      font-weight: $font-weight-regular;
-      font-size: $font-size-intro;
-      line-height: $line-height-intro;
+      font-family: $vdm-font-family;
+      font-weight: $vdm-font-weight-regular;
+      font-size: $vdm-font-size-smaller;
+      line-height: $vdm-line-height-base;
     }
     em {
       font-style: italic;

@@ -10,25 +10,25 @@
 // @arg $weight - string ['light','regular','bold']
  @mixin header($level: 1, $weight: 'regular') {
 
-  font-family: $font-family;
-  font-size: $font-size-base * 4.1875; // 37px
-  font-weight: $font-weight-regular;
-  line-height: $headings-line-height;
+  font-family: $vdm-font-family;
+  font-size: $vdm-font-size-base * 4.1875; // 37px
+  font-weight: $vdm-font-weight-regular;
+  line-height: $vdm-line-height-base;
 
   @if $level == 2 {
-    font-weight: $font-weight-light;
-    font-size: $font-size-base * 3.125;   // 50px
+    font-weight: $vdm-font-weight-light;
+    font-size: $vdm-font-size-base * 3.125;   // 50px
   } @else if $level == 3 {
-    font-size: $font-size-base * 2.3125;  // 37px
+    font-size: $vdm-font-size-base * 2.3125;  // 37px
   } @else if $level == 4 {
-    font-size: $font-size-base * 1.750;   // 28px
+    font-size: $vdm-font-size-base * 1.750;   // 28px
     @if $weight == 'bold' {
-      font-weight: $font-weight-bold;
+      font-weight: $vdm-font-weight-bold;
     }
   } @else if $level == 5 {
-    font-size: $font-size-base * 1.3125; // 21px
+    font-size: $vdm-font-size-base * 1.3125; // 21px
   } @else if $level == 6 {
-    font-size: $font-size-base * 1.0000; // 16px
+    font-size: $vdm-font-size-base * 1.0000; // 16px
   }
  }
 
@@ -43,21 +43,28 @@
 
 @mixin drop-shadow(
     $dist-top: 0, 
-    $dist-right: $forms-ds-right-size, 
-    $dist-bottom: $forms-ds-bottom-size, 
+    $dist-right: 5px, 
+    $dist-bottom: 11px, 
     $dist-left: 0 ,
-    $color-r: $forms-ds-color-r,
-    $color-g: $forms-ds-color-g,
-    $color-b: $forms-ds-color-b,
-    $opacity: $forms-ds-opacity
+    $color-r: 0,
+    $color-g: 0,
+    $color-b: 0,
+    $opacity: 0.27
   ) {
 
     box-shadow: $dist-top $dist-right $dist-bottom $dist-left rgba(
-      $forms-ds-color-r,
-      $forms-ds-color-g,
-      $forms-ds-color-b,
+      $color-r,
+      $color-g,
+      $color-b,
       $opacity
     );
+
+    // $forms-ds-color-r: 0; 
+    // $forms-ds-color-g: 0; 
+    // $forms-ds-color-b: 0; 
+    // $forms-ds-opacity: 0.27;
+    // $forms-ds-right-size: 5px;
+    // $forms-ds-bottom-size: 11px;
 }
 
 
