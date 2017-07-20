@@ -33,13 +33,16 @@ function normalizePath() {
 /******************************************************
  * SASS compilation 
 ******************************************************/
+var sourcemaps = require('gulp-sourcemaps');
 var saasPath = './source/styles/styles.scss';
 var sassAllPath = './source/styles/**/*.scss';
 var saasPatternalbPath = './source/styles/patternlab.scss';
 
 gulp.task('pl-sass', function(){
   return gulp.src(saasPath)
+    .pipe(sourcemaps.init())
     .pipe(sass({}).on('error', sass.logError))
+    .pipe(sourcemaps.write('./source/css/maps'))
     .pipe(gulp.dest('./source/css'));
 });
 

@@ -1,9 +1,11 @@
 // @file ui-buttons-switches-tabs.scss
 
-button[type="button"] {
+button[type="button"], 
+button[type="button"].btn {
+    
     height: $btn-default-height;	
     width: auto;
-    padding: $btn-default-vert-padding $btn-default-lat-padding;
+    padding: $btn-default-padding-y $btn-default-padding-x;
     border-radius: $btn-default-height;	
     background-color: $ui;
     text-align: center;
@@ -19,36 +21,48 @@ button[type="button"] {
     &:active,
     &:hover {
         @include drop-shadow();
+        color: $white;
+        background-color: $ui;
+
     }
 
-    &.btn-small {
+
+
+    &.btn-sm {
         height: $btn-small-height;
         font-size: $font-size-smaller;
         border-radius: $btn-small-height;	
     }
 
-    &.btn-disabled {
+    &[disabled="disabled"] {
         color: $felem-disabled-text-color;
         border: $felem-border;
         background-color: $felem-disabled-bg-color;
         &:active,
         &:hover {
             box-shadow: unset;
+            color: $felem-disabled-text-color;
+            background-color: $felem-disabled-bg-color;
         }
+        
     }
 
     &.btn-secondary {
         color: $felem-alt-text-color;
         border: $felem-alt-border;
         background-color: $felem-alt-bg-color;
-        padding: ( $btn-default-vert-padding - 2px ) ( $btn-default-lat-padding - 2px );
-        &.btn-disabled {
+        padding: ( $btn-default-padding-y - 2px ) ( $btn-default-padding-x - 2px );
+        &[disabled="disabled"] {
             color: $felem-disabled-text-color;
             border: $felem-disabled-secondary-border;
             background-color: $felem-alt-bg-color;
+            
             &:active,
             &:hover {
                 box-shadow: unset;
+                border: $felem-alt-border;
+                background-color: $felem-alt-bg-color;
+                border: $felem-disabled-secondary-border;
             }
         }
         
@@ -64,27 +78,27 @@ button[type="button"] {
                 $forms-ds-color-b,
                 $forms-ds-opacity
             );
+            border: $felem-alt-border;
+            background-color: $felem-alt-bg-color;
         }
 
     }
-    
+}
 
-
-    // $felem-bg-color: $ui;
-    // $felem-text-color: $white;
-    // $felem-border: none;
-
-    // $felem-alt-bg-color: $white;
-    // $felem-alt-text-color: $ui;
-    // $felem-alt-border: none;
-
-    // $felem-disabled-bg-color: $neutral-lightest;
-    // $felem-disabled-text-color: $neutral-darker;
-
-    // $btn-default-lat-padding: 40px;
-    // $btn-default-height: 53px;
-    // $btn-small-height: 40px;
-
-
-
+.btn-primary {
+    &.btn {
+        @extend button[type="button"];
+        box-shadow: unset;
+        font-size: $font-size-base;
+    }  
+}
+a {
+    &.btn-primary {
+        &.btn {
+            @extend button[type="button"];
+            box-shadow: unset;
+            padding-top: 1em;
+            font-size: $font-size-base;
+        }  
+    }
 }

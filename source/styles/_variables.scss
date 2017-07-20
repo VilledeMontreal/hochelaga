@@ -3,28 +3,28 @@
 //= = = = Colors = = = =
 //
 //== Neutrals
-$white:                     #FFFFFF !default;
-$neutral-base:              #000 !default;
-$neutral-darker:            #80807F !default;
-$neutral-dark:              #727271 !default;
-$neutral:                   #A2A3A1 !default;
-$neutral-light:             #D0D0CE !default;
-$neutral-lighter:           #E7E5E5 !default;
-$neutral-lightest:          #F2F2F1 !default;
+$white:                     #FFFFFF;
+$neutral-base:              #000;
+$neutral-darker:            #80807F;
+$neutral-dark:              #727271;
+$neutral:                   #A2A3A1;
+$neutral-light:             #D0D0CE;
+$neutral-lighter:           #E7E5E5;
+$neutral-lightest:          #F2F2F1;
 
 //== Brand
-$brand:                     #E00000 !default;
-$brand-dark:                $neutral-base !default;
+$brand:                     #E00000;
+$brand-dark:                $neutral-base;
 
 //== UI
-$ui:                        #429A8E !default;
-$ui-medium:                 #5AD3C3 !default;
-$ui-light:                  #87DFD3 !default;
-$ui-lighter:                #B4EBE3 !default;
+$ui:                        #429A8E;
+$ui-medium:                 #5AD3C3;
+$ui-light:                  #87DFD3;
+$ui-lighter:                #B4EBE3;
 
 
-$ui-alt-danger:            #FF3200 !default;
-$ui-alt-warm-dark:         #A30000 !default;
+$ui-alt-danger:            #FF3200;
+$ui-alt-warm-dark:         #A30000;
 
 
 // - - - - - - - - - - 
@@ -32,8 +32,7 @@ $ui-alt-warm-dark:         #A30000 !default;
 // - - - - - - - - - - 
 
 //== Fonts Family
-
-$font-family:             'Nunito Sans', Helvetica, Arial, sans-serif !default;
+$font-family:             'Nunito Sans', Helvetica, Arial, sans-serif;
 
 //== Font Weight
 $font-weight-light:        300; // Nunito Sans Light
@@ -43,17 +42,19 @@ $font-weight-bold:         700; // Nunito Sans Bold
 $font-weight-headers: $font-weight-regular;
 
 //== Fonts Size
-$font-size-base:          16px !default;                            //  16px
-$font-size-large:         ceil(($font-size-base * 1.125)) !default; // ~18px
-$font-size-small:         ceil(($font-size-base * 0.85)) !default;  // ~14px
-$font-size-smaller:       ceil(($font-size-base * 0.75)) !default;  // ~12px
+$font-size-base:          16px;                            //  16px
+$font-size-large:         ceil(($font-size-base * 1.125)); // ~18px
+$font-size-small:         ceil(($font-size-base * 0.85));  // ~14px
+$font-size-smaller:       ceil(($font-size-base * 0.75));  // ~12px
 
-$line-height-base:        floor(($font-size-base * 1.3731)) !default; // 16/26px
+@debug ($font-size-base);
+
+$line-height-base:        floor(($font-size-base * 1.3731)); // 16/26px
 
 //== Headings
-$headings-font-family:    inherit !default;
-$headings-line-height:    $line-height-base !default;
-$headings-color:          inherit !default;
+$headings-font-family:    inherit;
+$headings-line-height:    $line-height-base;
+$headings-color:          inherit;
 
 //== Special contexts - type
 $font-size-intro:         $font-size-base;
@@ -103,8 +104,9 @@ $felem-disabled-bg-color: $neutral-lightest;
 $felem-disabled-text-color: $neutral-darker;
 $felem-disabled-secondary-border: 2px solid $neutral-lightest;
 
-$btn-default-lat-padding: 40px;
-$btn-default-vert-padding: 5px;
+$btn-default-padding-x: 40px;
+$btn-default-padding-y: 5px;
+$btn-default-padding-y: 5px;
 $btn-default-height: 53px;
 $btn-small-height: 40px;
 

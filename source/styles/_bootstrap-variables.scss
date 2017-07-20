@@ -1,6 +1,6 @@
 $bootstrap-sass-asset-helper: false !default;
 //
-// Variables - VDM - remove, customize and personalize below
+// Variables
 // --------------------------------------------------
 
 
@@ -42,14 +42,14 @@ $link-hover-decoration: underline !default;
 //== Typography
 //
 //## Font, line-height, and color for body text, headings, and more.
-// $font-family-sans-serif:  "Nunito Sans", sans-serif !default;
-// $font-family-serif:       Georgia, "Times New Roman", Times, serif !default;
+
+$font-family-sans-serif:  "Helvetica Neue", Helvetica, Arial, sans-serif !default;
+$font-family-serif:       Georgia, "Times New Roman", Times, serif !default;
 //** Default monospace fonts for `<code>`, `<kbd>`, and `<pre>`.
-// $font-family-monospace:   Menlo, Monaco, Consolas, "Courier New", monospace !default;
+$font-family-monospace:   Menlo, Monaco, Consolas, "Courier New", monospace !default;
+$font-family-base:        $font-family-sans-serif !default;
 
-$font-family-base:        "Nunito Sans", sans-serif !default;
-
-$font-size-base:          16px !default;
+$font-size-base:          14px !default;
 $font-size-large:         ceil(($font-size-base * 1.25)) !default; // ~18px
 $font-size-small:         ceil(($font-size-base * 0.85)) !default; // ~12px
 
@@ -80,11 +80,7 @@ $headings-color:          inherit !default;
 
 // [converter] If $bootstrap-sass-asset-helper if used, provide path relative to the assets load path.
 // [converter] This is because some asset helpers, such as Sprockets, do not work with file-relative paths.
-
-// $icon-font-path: if($bootstrap-sass-asset-helper, "bootstrap/", "../fonts/bootstrap/") !default;
-$icon-font-path: "../fonts/" !default;
-
-$icon-font-path: if($bootstrap-sass-asset-helper, "bootstrap/", "../fonts/") !default;
+$icon-font-path: if($bootstrap-sass-asset-helper, "bootstrap/", "../fonts/bootstrap/") !default;
 
 //** File name for all font files.
 $icon-font-name:          "glyphicons-halflings-regular" !default;
