@@ -108,9 +108,12 @@
         .ic-name,
         .ic-charcode {
           display: block;
-          color: $vdm-brand;
+          color: $vdm-neutral-mid;
           margin-top: 0.5em;
           font-size: $vdm-font-size-small;
+        }
+        .ic-name {
+          color: $vdm-black;
         }
 
       }
@@ -320,6 +323,14 @@
   //   color: $vdm-white;
   // }
 }// .pl-atom-color
+
+
+
+// Form-elements
+// - - - - - - - - - -  - - - - - -
+.pl-button {
+  margin-bottom: 0.6em;
+}
 
 
 

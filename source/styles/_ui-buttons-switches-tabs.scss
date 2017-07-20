@@ -1,8 +1,7 @@
 // @file ui-buttons-switches-tabs.scss
+.vdm-btn {
 
-button[type="button"], 
-button[type="button"].btn {
-    
+    display: inline-block;
     height: $vdm-btn-default-height;	
     width: auto;
     padding: $vdm-btn-default-padding-y $vdm-btn-default-padding-x;
@@ -14,6 +13,12 @@ button[type="button"].btn {
     border: $vdm-form-border;
     text-shadow: none;
     margin-right:0.725em;
+    vertical-align: middle;
+    touch-action: manipulation;
+    cursor: pointer;
+    background-image: none; // Reset unusual Firefox-on-Android default style; see https://github.com/necolas/normalize.css/issues/214
+    white-space: nowrap;
+
     &:last-of-type {
         margin-right: 0;
     }
@@ -26,9 +31,7 @@ button[type="button"].btn {
 
     }
 
-
-
-    &.btn-sm {
+    &.vdm-btn-sm {
         height: $vdm-btn-small-height;
         font-size: $vdm-font-size-smaller;
         border-radius: $vdm-btn-small-height;	
@@ -47,7 +50,7 @@ button[type="button"].btn {
         
     }
 
-    &.btn-secondary {
+    &.vdm-btn-secondary {
         color: $vdm-form-alt-text-color;
         border: $vdm-form-alt-border;
         background-color: $vdm-form-alt-bg-color;
@@ -79,27 +82,16 @@ button[type="button"].btn {
                 0,
                 0.27
             );
-            border: $vdm-form-alt-border;
+            border: none;
             background-color: $vdm-form-alt-bg-color;
         }
 
     }
 }
 
-.btn-primary {
-    &.btn {
-        @extend button[type="button"];
-        box-shadow: unset;
-        font-size: $vdm-font-size-base;
-    }  
-}
 a {
-    &.btn-primary {
-        &.btn {
-            @extend button[type="button"];
-            box-shadow: unset;
-            padding-top: 1em;
-            font-size: $vdm-font-size-base;
-        }  
+    &.vdm-btn {
+        padding-top: 1em;
+        display: inline-block;
     }
 }

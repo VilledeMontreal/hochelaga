@@ -4230,10 +4230,8 @@ i.vdmi {
       cursor: pointer;
       line-height: 1.6em; }
 
-button[type="button"], .btn-primary.btn, a.btn-primary.btn,
-button[type="button"].btn,
-.btn.btn-primary,
-a.btn.btn-primary {
+.vdm-btn {
+  display: inline-block;
   height: 53px;
   width: auto;
   padding: 5px 40px;
@@ -4244,80 +4242,52 @@ a.btn.btn-primary {
   color: #FFFFFF;
   border: none;
   text-shadow: none;
-  margin-right: 0.725em; }
-  button[type="button"]:last-of-type, .btn-primary.btn:last-of-type,
-  button[type="button"].btn:last-of-type,
-  .btn.btn-primary:last-of-type {
+  margin-right: 0.725em;
+  vertical-align: middle;
+  touch-action: manipulation;
+  cursor: pointer;
+  background-image: none;
+  white-space: nowrap; }
+  .vdm-btn:last-of-type {
     margin-right: 0; }
-  button[type="button"]:active, .btn-primary.btn:active, button[type="button"]:hover, .btn-primary.btn:hover,
-  button[type="button"].btn:active,
-  .btn.btn-primary:active,
-  button[type="button"].btn:hover,
-  .btn.btn-primary:hover {
+  .vdm-btn:active, .vdm-btn:hover {
     box-shadow: 0 5px 11px 0 rgba(0, 0, 0, 0.27);
     color: #FFFFFF;
     background-color: #429A8E; }
-  button[type="button"].btn-sm, .btn-group-sm > button[type="button"].btn, .btn-group-sm > .btn.btn-primary, .btn-sm.btn-primary.btn,
-  button[type="button"].btn.btn-sm,
-  .btn-group-sm > button[type="button"].btn,
-  .btn-group-sm > .btn.btn-primary,
-  .btn.btn-sm.btn-primary {
+  .vdm-btn.vdm-btn-sm {
     height: 40px;
     font-size: 12px;
     border-radius: 40px; }
-  button[type="button"][disabled="disabled"], [disabled="disabled"].btn-primary.btn,
-  button[type="button"].btn[disabled="disabled"],
-  .btn[disabled="disabled"].btn-primary {
+  .vdm-btn[disabled="disabled"] {
     color: #80807F;
     border: none;
     background-color: #E7E5E5; }
-    button[type="button"][disabled="disabled"]:active, [disabled="disabled"].btn-primary.btn:active, button[type="button"][disabled="disabled"]:hover, [disabled="disabled"].btn-primary.btn:hover,
-    button[type="button"].btn[disabled="disabled"]:active,
-    .btn[disabled="disabled"].btn-primary:active,
-    button[type="button"].btn[disabled="disabled"]:hover,
-    .btn[disabled="disabled"].btn-primary:hover {
+    .vdm-btn[disabled="disabled"]:active, .vdm-btn[disabled="disabled"]:hover {
       box-shadow: unset;
       color: #80807F;
       background-color: #E7E5E5; }
-  button[type="button"].btn-secondary, .btn-secondary.btn-primary.btn,
-  button[type="button"].btn.btn-secondary,
-  .btn.btn-secondary.btn-primary {
+  .vdm-btn.vdm-btn-secondary {
     color: #429A8E;
     border: 2px solid #429A8E;
     background-color: #FFFFFF;
     padding: 3px 38px; }
-    button[type="button"].btn-secondary[disabled="disabled"], .btn-secondary[disabled="disabled"].btn-primary.btn,
-    button[type="button"].btn.btn-secondary[disabled="disabled"],
-    .btn.btn-secondary[disabled="disabled"].btn-primary {
+    .vdm-btn.vdm-btn-secondary[disabled="disabled"] {
       color: #80807F;
       border: 2px solid #E7E5E5;
       background-color: #FFFFFF; }
-      button[type="button"].btn-secondary[disabled="disabled"]:active, .btn-secondary[disabled="disabled"].btn-primary.btn:active, button[type="button"].btn-secondary[disabled="disabled"]:hover, .btn-secondary[disabled="disabled"].btn-primary.btn:hover,
-      button[type="button"].btn.btn-secondary[disabled="disabled"]:active,
-      .btn.btn-secondary[disabled="disabled"].btn-primary:active,
-      button[type="button"].btn.btn-secondary[disabled="disabled"]:hover,
-      .btn.btn-secondary[disabled="disabled"].btn-primary:hover {
+      .vdm-btn.vdm-btn-secondary[disabled="disabled"]:active, .vdm-btn.vdm-btn-secondary[disabled="disabled"]:hover {
         box-shadow: unset;
         border: 2px solid #429A8E;
         background-color: #FFFFFF;
         border: 2px solid #E7E5E5; }
-    button[type="button"].btn-secondary:active, .btn-secondary.btn-primary.btn:active, button[type="button"].btn-secondary:hover, .btn-secondary.btn-primary.btn:hover,
-    button[type="button"].btn.btn-secondary:active,
-    .btn.btn-secondary.btn-primary:active,
-    button[type="button"].btn.btn-secondary:hover,
-    .btn.btn-secondary.btn-primary:hover {
+    .vdm-btn.vdm-btn-secondary:active, .vdm-btn.vdm-btn-secondary:hover {
       box-shadow: 3px 5px 11px 2px rgba(0, 0, 0, 0.27);
-      border: 2px solid #429A8E;
+      border: none;
       background-color: #FFFFFF; }
 
-.btn-primary.btn {
-  box-shadow: unset;
-  font-size: 16px; }
-
-a.btn-primary.btn {
-  box-shadow: unset;
+a.vdm-btn {
   padding-top: 1em;
-  font-size: 16px; }
+  display: inline-block; }
 
 label {
   font-family: "Nunito Sans", Helvetica, Arial, sans-serif;
