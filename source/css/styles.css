@@ -3938,10 +3938,14 @@ html header {
   background-color: #E00000;
   height: 100px; }
   html header .header-logo {
+    background-color: #FFFFFF;
     float: left;
     height: 100px; }
     html header .header-logo img {
-      height: 100%; }
+      padding-top: 25px;
+      padding-left: 50px;
+      padding-right: 50px;
+      height: 75%; }
   html header .header-nav {
     float: right; }
     html header .header-nav ul {

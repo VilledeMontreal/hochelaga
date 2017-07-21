@@ -9,10 +9,14 @@ html {
     background-color: $vdm-sub-brand;
     height: 100px;
     .header-logo {
+      background-color: $vdm-white;
       float:left;
       height:100px;
       img {
-        height:100%;
+        padding-top:25px;
+        padding-left:50px;
+        padding-right:50px;
+        height:75%;
       }
     }
     .header-nav {
