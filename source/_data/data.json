@@ -47,7 +47,7 @@
 					]
 				}
 			]
-		}	
+		}
 	},
 	"wellClass" : "",
 	"mediaClass" : "",
@@ -61,87 +61,87 @@
 	"inputAddonAfter" : false,
 	"buttonClass" :"btn-default",
 	"breadcrumbs" : [
-		{ 
-			"url" : "#", 
+		{
+			"url" : "#",
 			"text" : "Link 1"
-			
+
 		},
-		{ 
+		{
 			"url" : "#",
 			"text" : "Link 2"
 		},
-		{ 
-			"url" : "#", 
-			"text" : "Link 3" 
-		}	
+		{
+			"url" : "#",
+			"text" : "Link 3"
+		}
 	],
 	"caret" : "caret",
 	"dropdownClass" : "dropdown",
 	"dropdownList" : [
-		{ 
+		{
 			"url" : "#",
-			"text" : "Action"	 
+			"text" : "Action"
 		},
-		{ 
+		{
 			"url" : "#",
-			"text" : "Another action" 
+			"text" : "Another action"
 		},
-		{ 
+		{
 			"url" : "#",
 			"text" : "Something else here"
 		},
-		{ 
+		{
 			"url" : "#",
-			"text" : "Link 4" 
+			"text" : "Link 4"
 		}
 	],
 	"navClass" : "",
 	"navList" : [
-		{ 
+		{
 			"url" : "#",
 			"text" : "Home"
 		},
-		{ 
+		{
 			"url" : "#",
-			"text" : "Profile" 
+			"text" : "Profile"
 		},
-		{ 
+		{
 			"url" : "#",
-			"text" : "Messages" 
+			"text" : "Messages"
 		}
 	],
 	"paginationClass" : "",
 	"paginationList" : [
-		{ 
+		{
 			"url" : "#",
-			"text" : "1" 
+			"text" : "1"
 		},
-		{ 
+		{
 			"url" : "#",
-			"text" : "2" 
+			"text" : "2"
 		},
-		{ 
+		{
 			"url" : "#",
-			"text" : "3" 
+			"text" : "3"
 		},
-		{ 
+		{
 			"url" : "#",
-			"text" : "4" 
+			"text" : "4"
 		},
-		{ 
+		{
 			"url" : "#",
-			"text" : "5" 
+			"text" : "5"
 		}
 	],
 	"pagerClass" : "",
 	"pagerList" : [
-		{ 
+		{
 			"url" : "#",
-			"text" : "Previous" 
+			"text" : "Previous"
 		},
-		{ 
+		{
 			"url" : "#",
-			"text" : "Next" 
+			"text" : "Next"
 		}
 	],
 	"buttonGroupClass" : "",
@@ -150,7 +150,7 @@
 		{ "text" : "Middle" },
 		{ "text" : "Right"}
 	],
-	
+
 	"alertClass" : "alert-success",
 	"alertText" : "I am alerting you about something",
 	"dismissableAlert" : false,
@@ -182,26 +182,26 @@
 			"text" : "Dropdown",
 			"hasDropdown" : true,
 			"dropdownMenu" : [
-				{ 
+				{
 					"url" : "#",
-					"text" : "Action"	 
+					"text" : "Action"
 				},
-				{ 
+				{
 					"url" : "#",
-					"text" : "Another action" 
+					"text" : "Another action"
 				},
-				{ 
+				{
 					"url" : "#",
 					"text" : "Something else here"
 				},
-				{ 
+				{
 					"separator" : "true"
 				},
-				{ 
+				{
 					"url" : "#",
-					"text" : "Link 4" 
+					"text" : "Link 4"
 				}
-				
+
 			]
 		}
 	],
@@ -221,7 +221,7 @@
 					"mediaRight" : false
 				}
 			]
-			
+
 		},
 		{
 			"heading" : "Item 2",
@@ -241,11 +241,25 @@
 					"mediaLeft" : false,
 					"mediaRight" : true
 				}
-			]	
+			]
 		}
 	],
 	"linked-icon-nav" : {
 		"title-attr" : "Plus d'information au sujet de xyz",
 		"label" : "Titre de la rubrique xyz"
-	}
+	},
+  "primaryNav" : [
+    {
+      "label": "Transactions et demandes",
+      "url": ""
+    },
+    {
+      "label": "Avis publics",
+      "url": ""
+    },
+    {
+      "label": "EN",
+      "url": ""
+    }
+  ]
 }

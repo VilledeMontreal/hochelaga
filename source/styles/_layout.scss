@@ -5,4 +5,34 @@ html {
   body {
     background-color: $vdm-white;
   }
+  header {
+    background-color: $vdm-sub-brand;
+    height: 100px;
+    .header-logo {
+      background-color: $vdm-white;
+      float:left;
+      height:100px;
+      img {
+        padding-top:25px;
+        padding-left:50px;
+        padding-right:50px;
+        height:75%;
+      }
+    }
+    .header-nav {
+      float:right;
+
+      ul {
+        padding-top:35px;
+        list-style-type: none;
+        li {
+          float: left;
+          padding-right:40px;
+          a {
+            color: $vdm-white;
+          }
+        }
+      }
+    }
+  }
 }
