@@ -3956,6 +3956,17 @@ html header {
         padding-right: 40px; }
         html header .header-nav ul li a {
           color: #FFFFFF; }
+    html header .header-nav .header-primary-nav {
+      float: right; }
+    html header .header-nav .header-search {
+      float: right;
+      min-width: 100px;
+      padding-top: 14px;
+      padding-right: 40px; }
+      html header .header-nav .header-search form {
+        display: inline; }
+      html header .header-nav .header-search i {
+        color: #FFFFFF; }
 
 html body {
   font-family: "Nunito Sans", Helvetica, Arial, sans-serif;
