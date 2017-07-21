@@ -5,4 +5,14 @@ html {
   body {
     background-color: $vdm-white;
   }
+  header {
+    background-color: $vdm-sub-brand;
+    height: 100px;
+    .header-logo {
+      height:100px;
+      img {
+        height:100%;
+      }
+    }
+  }
 }
