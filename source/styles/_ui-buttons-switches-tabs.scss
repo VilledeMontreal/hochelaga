@@ -1,4 +1,8 @@
 // @file ui-buttons-switches-tabs.scss
+
+
+// Buttons
+// -------------------------
 .vdm-btn {
 
     display: inline-block;
@@ -96,30 +100,90 @@ a {
     }
 }
 
+// Navigation tabs
+// -------------------------
+
+
+// @ to-do : make variables out of paddings, border heights &&
+
 
 .vdm-tabs {
-    border: none;
-    > li {
-        background: transparent;
+    border: 0;
+    >li {
+        margin-bottom: 0;
+        >a {
+            color: $vdm-neutral-mid;
+            background: transparent;
+            border: 0;
+            padding: 6px 25px;
+            
+            &:hover,
+            &:focus {
+                background: transparent;
+                border: 0;
+                color: $vdm-link;
+            }
+        }
+
         &.active {
+            // border-bottom: 4px solid $vdm-brand;
+
+            // Simulated border with background color & border raduis
+            &:before {
+                content: " ";
+                position: absolute;
+                display: block;
+                height: 4px;
+                border-radius: 4px;
+                width: 100%;
+                background: $vdm-brand;
+                bottom: -4px;
+            }
+            
+
+            >a {      
+                color: $vdm-link;
+                border: 0;
+
+                &:hover,
+                &:focus {
+                    border: 0;
+                    color:  $vdm-link;
+                    margin-bottom: 0;
+                }
+
+            }
 
         }
-        
-        > a {
-            color: $vdm-brand;
+    } // >li
+
+    // Justified tabs
+    &.nav-tabs {
+        &.nav-justified {
+            >li {
+                >a {
+                    margin-bottom: 0;
+                    border-bottom: 0;
+                }
+            }
+            >.active {
+                @media screen and (max-width: $screen-sm-max) {
+                    &:before {
+                        height: 2px;
+                        border-radius: 2px;
+                        bottom: -2px;
+                    }
+                }
+                
+                a { 
+                    border: 0;
+                    border-bottom: 0;
+                }
+            }
         }
     }
+}// vdm
 
-    &.active > a {
-      &,
-      &:hover,
-      &:focus {
-        // color: $nav-tabs-active-link-hover-color;
-        // background-color: $nav-tabs-active-link-hover-bg;
-        // border: 1px solid $nav-tabs-active-link-hover-border-color;
-        // border-bottom-color: transparent;
-        // cursor: default;
-      }
-    }
-}
+
+
 

@@ -4313,11 +4313,45 @@ a.vdm-btn {
   display: inline-block; }
 
 .vdm-tabs {
-  border: none; }
-  .vdm-tabs >  li {
-    background: transparent; }
-    .vdm-tabs >  li > a {
-      color: #429A8E; }
+  border: 0; }
+  .vdm-tabs > li {
+    margin-bottom: 0; }
+    .vdm-tabs > li > a {
+      color: #80807F;
+      background: transparent;
+      border: 0;
+      padding: 6px 25px; }
+      .vdm-tabs > li > a:hover, .vdm-tabs > li > a:focus {
+        background: transparent;
+        border: 0;
+        color: #429A8E; }
+    .vdm-tabs > li.active:before {
+      content: " ";
+      position: absolute;
+      display: block;
+      height: 4px;
+      border-radius: 4px;
+      width: 100%;
+      background: #429A8E;
+      bottom: -4px; }
+    .vdm-tabs > li.active > a {
+      color: #429A8E;
+      border: 0; }
+      .vdm-tabs > li.active > a:hover, .vdm-tabs > li.active > a:focus {
+        border: 0;
+        color: #429A8E;
+        margin-bottom: 0; }
+  .vdm-tabs.nav-tabs.nav-justified > li > a {
+    margin-bottom: 0;
+    border-bottom: 0; }
+  @media screen and (max-width: 991px) {
+    .vdm-tabs.nav-tabs.nav-justified > .active:before {
+      height: 2px;
+      border-radius: 2px;
+      bottom: -2px; } }
+  .vdm-tabs.nav-tabs.nav-justified > .active a {
+    border: 0;
+    border-bottom: 0; }
 
 label {
   font-family: "Nunito Sans", Helvetica, Arial, sans-serif;
