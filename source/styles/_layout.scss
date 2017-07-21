@@ -21,7 +21,6 @@ html {
     }
     .header-nav {
       float:right;
-
       ul {
         padding-top:35px;
         list-style-type: none;
@@ -31,6 +30,21 @@ html {
           a {
             color: $vdm-white;
           }
+        }
+      }
+      .header-primary-nav {
+        float:right;
+      }
+      .header-search {
+        float:right;
+        min-width: 100px;
+        padding-top:14px;
+        padding-right:40px;
+        form {
+          display:inline;
+        }
+        i {
+          color:$vdm-white;
         }
       }
     }
