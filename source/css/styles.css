@@ -3938,9 +3938,20 @@ html header {
   background-color: #E00000;
   height: 100px; }
   html header .header-logo {
+    float: left;
     height: 100px; }
     html header .header-logo img {
       height: 100%; }
+  html header .header-nav {
+    float: right; }
+    html header .header-nav ul {
+      padding-top: 35px;
+      list-style-type: none; }
+      html header .header-nav ul li {
+        float: left;
+        padding-right: 40px; }
+        html header .header-nav ul li a {
+          color: #FFFFFF; }
 
 html body {
   font-family: "Nunito Sans", Helvetica, Arial, sans-serif;

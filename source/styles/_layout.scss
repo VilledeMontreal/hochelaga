@@ -9,9 +9,25 @@ html {
     background-color: $vdm-sub-brand;
     height: 100px;
     .header-logo {
+      float:left;
       height:100px;
       img {
         height:100%;
+      }
+    }
+    .header-nav {
+      float:right;
+
+      ul {
+        padding-top:35px;
+        list-style-type: none;
+        li {
+          float: left;
+          padding-right:40px;
+          a {
+            color: $vdm-white;
+          }
+        }
       }
     }
   }
