@@ -1,6 +1,10 @@
 FROM node:7.5
 MAINTAINER VdMtl
-ARG ENV
+ARG ENV=unknown
+ARG GIT_COMMIT=unknown
+
+# GIT label of the packaged code
+LABEL GIT_COMMIT=${GIT_COMMIT}
 
 #Create app directory
 RUN mkdir -p /usr/src/app
