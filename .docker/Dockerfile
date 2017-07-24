@@ -26,4 +26,5 @@ COPY . /usr/src/app
 
 #Lanch server
 EXPOSE 4200 4443
-CMD ["node", "server.js"]
+#CMD ["node", "server.js"]
+CMD ["npm", "start"]
