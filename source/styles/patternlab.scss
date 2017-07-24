@@ -13,6 +13,10 @@
 // Import our local project variables
 @import "variables.scss";
 
+.sg-main {
+  padding:20px 20px;
+}
+
 // - - - - - - - - - -  - - - - - -
 //  * * * ATOMS * * *
 // - - - - - - - - - -  - - - - - -
@@ -23,7 +27,7 @@
 // Titles
 .pl-stroked-header {
   padding-top: 0.25em;
-  padding-left: 0.25em;
+  // padding-left: 0.25em;
   // border-top: 1px solid #ddd;
   width: 93%;
 }
