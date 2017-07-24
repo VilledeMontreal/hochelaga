@@ -1,6 +1,6 @@
 FROM node:7.5
 MAINTAINER VdMtl
-ARG ENV=unknown
+#ARG ENV=unknown
 ARG GIT_COMMIT=unknown
 
 # GIT label of the packaged code
@@ -22,7 +22,7 @@ RUN npm cache clear && \
 #Bundle app source
 COPY . /usr/src/app
 
-RUN npm run build-${ENV}
+#RUN npm run build-${ENV}
 
 #Lanch server
 EXPOSE 4200 4443
