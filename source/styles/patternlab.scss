@@ -13,9 +13,9 @@
 // Import our local project variables
 @import "variables.scss";
 
-// - - - - - - - - - -  - - - - - - 
+// - - - - - - - - - -  - - - - - -
 //  * * * ATOMS * * *
-// - - - - - - - - - -  - - - - - - 
+// - - - - - - - - - -  - - - - - -
 
 // Fonts
 // - - - - - - - - - -  - - - - - -
@@ -24,7 +24,7 @@
 .pl-stroked-header {
   padding-top: 0.25em;
   padding-left: 0.25em;
-  border-top: 1px solid #ddd;
+  // border-top: 1px solid #ddd;
   width: 93%;
 }
 
@@ -129,6 +129,10 @@
   .pl-swatches-wrapper {
     @include make-row();
     @include clearfix();
+    margin-top:30px;
+    h2 {
+      padding-left:12px;
+    }
     .pl-swatches {
       @include make-xs-column(12);
       @include make-md-column(6);
@@ -171,6 +175,10 @@
     .pl-brand {
         background: $vdm-brand;
         color: $vdm-white;
+    }
+    .pl-sub-brand {
+      background: $vdm-sub-brand;
+      color: $vdm-white;
     }
     // Columns
     .pl-color-table-column-swatch {
@@ -250,7 +258,7 @@
           }
         }
         &.pl-swatch-accessibility-invert {
-          background: -base;
+          background: $vdm-black;
           color: $vdm-white;
         }
 
@@ -264,10 +272,10 @@
     background: $vdm-brand;
     color: $vdm-white;
   }
-  // .pl-brand-dark {
-  //   background: $vdm-brand-dark;
-  //   color: $vdm-white;
-  // }
+  .pl-sub-brand {
+    background: $vdm-sub-brand;
+    color: $vdm-white;
+  }
 
   // Neutrals
   .pl-neutral-lightest {
@@ -335,12 +343,12 @@
 
 
 
-// - - - - - - - - - -  - - - - - - 
+// - - - - - - - - - -  - - - - - -
 //  * * * MOLECULES * * *
-// - - - - - - - - - -  - - - - - - 
+// - - - - - - - - - -  - - - - - -
 
 // Tiles
-// - - - - - - - - - -  - - - - - - 
+// - - - - - - - - - -  - - - - - -
 .pl-atom-tiles {
     .pl-tiles-index {
         @include make-row();
