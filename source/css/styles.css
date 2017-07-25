@@ -3970,14 +3970,18 @@ html header {
 
 html footer {
   background-color: #E00000;
-  height: 200px;
+  height: 280px;
   padding-top: 45px; }
   html footer ul {
     list-style-type: none; }
     html footer ul li {
       padding-bottom: 12px; }
-      html footer ul li a {
-        color: #FFFFFF; }
+  html footer span {
+    color: #FFFFFF; }
+  html footer a {
+    color: #FFFFFF; }
+  html footer a:hover {
+    color: #FFFFFF; }
 
 html body {
   font-family: "Nunito Sans", Helvetica, Arial, sans-serif;

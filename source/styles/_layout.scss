@@ -51,16 +51,22 @@ html {
   }
   footer {
     background-color: $vdm-sub-brand;
-    height: 200px;
+    height: 280px;
     padding-top: 45px;
     ul {
       list-style-type: none;
       li {
         padding-bottom: 12px;
-        a {
-          color: $vdm-white;
-        }
       }
+    }
+    span {
+      color: $vdm-white;
+    }
+    a {
+      color: $vdm-white;
+    }
+    a:hover {
+      color: $vdm-white;
     }
   }
 }
