@@ -12,11 +12,11 @@ $vdm-neutral-light:       #E7E5E5;
 //== Brand
 
 $vdm-brand:                 #429A8E;
-$vdm-sub-brand:             #E00000;   
+$vdm-sub-brand:             #E00000;
 
-// - - - - - - - - - - 
+// - - - - - - - - - -
 // == Scaffolding
-// - - - - - - - - - - 
+// - - - - - - - - - -
 
 //== Links
 
@@ -31,9 +31,9 @@ $vdm-link-hover:      $vdm-black;
 $vdm-link-hover-decoration: underline;
 $vdm-icon-link-hover-decoration: none;  // Arrow link
 
-// - - - - - - - - - - 
+// - - - - - - - - - -
 // == Typography
-// - - - - - - - - - - 
+// - - - - - - - - - -
 
 //== Font Family
 $vdm-font-family:             'Nunito Sans', Helvetica, Arial, sans-serif;
@@ -43,13 +43,13 @@ $vdm-font-weight-light:        300; // Nunito Sans Light
 $vdm-font-weight-regular:      400; // Nunito Sans Regular
 $vdm-font-weight-bold:         700; // Nunito Sans Bold
 
-
 //== Fonts Size
 $vdm-font-size-base:          16px;                            //  16px
 $vdm-font-size-large:         ceil(($vdm-font-size-base * 1.125)); // ~18px
 $vdm-font-size-small:         ceil(($vdm-font-size-base * 0.85));  // ~14px
 $vdm-font-size-smaller:       ceil(($vdm-font-size-base * 0.75));  // ~12px
 
+//== Line Height
 $vdm-line-height-base:        floor(($vdm-font-size-base * 1.3731));   // 16/26px
 
 //== Icons fonts -vdm-font-icon character
@@ -57,12 +57,12 @@ $vdm-icon-font-path: '../fonts/';
 $vdm-icon-font-version: '0.5';
 $vdm-icon-font-family : 'vdm-fonticon';
 
-// - - - - - - - - - - 
+// - - - - - - - - - -
 // == UI - general -- split this cat. later
 // - - - - - - - - - -
 
 
-// - - - - - - - - - - 
+// - - - - - - - - - -
 // == Forms
 // - - - - - - - - - -
 
