@@ -2,7 +2,7 @@
 
 
 // >> Begin demo code for atoms-icons
-// - - - - - - - - - -  - - - - - - 
+// - - - - - - - - - -  - - - - - -
 
 
 @font-face {
@@ -12,6 +12,18 @@
     url('#{$vdm-icon-font-path}/vdm-font-icon.woff2?v=#{$vdm-icon-font-version}') format('woff2'),
     url('#{$vdm-icon-font-path}/vdm-font-icon.woff?v=#{$vdm-icon-font-version}') format('woff'),
     url('#{$vdm-icon-font-path}/vdm-font-icon.ttf?v=#{$vdm-icon-font-version}') format('truetype');
+
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: $fontawesome-icon-font-family;
+  src: url('#{$fontawesome-icon-font-path}/fontawesome-webfont.eot?v=#{$fontawesome-icon-font-version}');
+  src: url('#{$fontawesome-icon-font-path}/fontawesome-webfont.eot?v=#{$fontawesome-icon-font-version}') format('embedded-opentype'),
+  url('#{$fontawesome-icon-font-path}/fontawesome-webfont.woff2?v=#{$fontawesome-icon-font-version}') format('woff2'),
+  url('#{$fontawesome-icon-font-path}/fontawesome-webfont.woff?v=#{$fontawesome-icon-font-version}') format('woff'),
+  url('#{$fontawesome-icon-font-path}/fontawesome-webfont.ttf?v=#{$fontawesome-icon-font-version}') format('truetype');
 
   font-weight: normal;
   font-style: normal;
@@ -51,7 +63,7 @@ i {
       font-size: 5em;
     }
 
-    // Fixed width 
+    // Fixed width
     &.ic-fw {
       width: 1.28571429em;
       text-align: center;
@@ -473,9 +485,131 @@ i {
         content: "\E404";
       }
     }
+    &.ic-facebook {
+      &:before {
+        content: "";
+      }
+    }
+    &.ic-youtube {
+      &:before {
+        content: "";
+      }
+    }
+    &.ic-google-plus {
+      &:before {
+        content: "";
+      }
+    }
+    &.ic-twitter {
+      &:before {
+        content: "";
+      }
+    }
+    &.ic-linkedin {
+      &:before {
+        content: "";
+      }
+    }
+    &.ic-instagram {
+      &:before {
+        content: "";
+      }
+    }
   }
+}
+
+.fa {
+  display: inline-block;
+  color: $vdm-sub-brand;
+  font: normal normal normal $vdm-font-size-base/1 $fontawesome-icon-font-family;
+  font-size: inherit;
+  text-rendering: auto;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  &.fa-facebook {
+    &:before {
+      content: "\f09a";
+    }
+  }
+  &.fa-youtube {
+    &:before {
+      content: "\f167";
+    }
+  }
+  &.fa-google-plus {
+    &:before {
+      content: "\f0d5";
+    }
+  }
+  &.fa-twitter {
+    &:before {
+      content: "\f099";
+    }
+  }
+  &.fa-linkedin {
+    &:before {
+      content: "\f0e1";
+    }
+  }
+  &.fa-instagram {
+    &:before {
+      content: "\f16d";
+    }
+  }
+  &.fa-circle {
+    &:before {
+      content: "\f111";
+      color: $vdm-white;
+    }
+  }
+}
+
+.fa-lg {
+  font-size: 1.33333333em;
+  line-height: 0.75em;
+  vertical-align: -15%;
+}
+.fa-xl {
+  font-size: 1.66666666em;
+  line-height: 1em;
+  vertical-align: -15%;
+}
+.fa-2x {
+  font-size: 2em;
+}
+.fa-stack {
+  position: relative;
+  display: inline-block;
+  width: 2em;
+  height: 2em;
+  line-height: 2em;
+  vertical-align: middle;
+}
+.fa-stack-1x,
+.fa-stack-2x,
+.fa-stack-3x {
+  position: absolute;
+  left: 0;
+  width: 100%;
+  text-align: center;
+}
+.fa-stack-1x {
+  line-height: inherit;
+}
+.fa-stack-2x {
+  font-size: 2em;
+}
+.fa-stack-3x {
+  font-size: 3em;
+}
+.fa-inverse {
+  color: #ffffff;
 }
 
 // End custom inline vdm code <<
 // End demo code for atoms-icons <<
-// - - - - - - - - - -  - - - - - - 
+// - - - - - - - - - -  - - - - - -
+
+
+
+

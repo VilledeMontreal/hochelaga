@@ -3968,6 +3968,17 @@ html header {
       html header .header-nav .header-search i {
         color: #FFFFFF; }
 
+html footer {
+  background-color: #E00000;
+  height: 200px;
+  padding-top: 45px; }
+  html footer ul {
+    list-style-type: none; }
+    html footer ul li {
+      padding-bottom: 12px; }
+      html footer ul li a {
+        color: #FFFFFF; }
+
 html body {
   font-family: "Nunito Sans", Helvetica, Arial, sans-serif;
   font-weight: 400;
@@ -4035,6 +4046,13 @@ html body {
   font-family: "vdm-fonticon";
   src: url("../fonts//vdm-font-icon.eot?v=0.5");
   src: url("../fonts//vdm-font-icon.eot?v=0.5") format("embedded-opentype"), url("../fonts//vdm-font-icon.woff2?v=0.5") format("woff2"), url("../fonts//vdm-font-icon.woff?v=0.5") format("woff"), url("../fonts//vdm-font-icon.ttf?v=0.5") format("truetype");
+  font-weight: normal;
+  font-style: normal; }
+
+@font-face {
+  font-family: "fontawesome-fonticon";
+  src: url("../fonts/font-awesome-4.7.0/fontawesome-webfont.eot?v=4.7.0");
+  src: url("../fonts/font-awesome-4.7.0/fontawesome-webfont.eot?v=4.7.0") format("embedded-opentype"), url("../fonts/font-awesome-4.7.0/fontawesome-webfont.woff2?v=4.7.0") format("woff2"), url("../fonts/font-awesome-4.7.0/fontawesome-webfont.woff?v=4.7.0") format("woff"), url("../fonts/font-awesome-4.7.0/fontawesome-webfont.ttf?v=4.7.0") format("truetype");
   font-weight: normal;
   font-style: normal; }
 
@@ -4226,6 +4244,83 @@ i.vdmi {
     content: "\E403"; }
   i.vdmi.ic-permit-pet:before {
     content: "\E404"; }
+  i.vdmi.ic-facebook:before {
+    content: ""; }
+  i.vdmi.ic-youtube:before {
+    content: ""; }
+  i.vdmi.ic-google-plus:before {
+    content: ""; }
+  i.vdmi.ic-twitter:before {
+    content: ""; }
+  i.vdmi.ic-linkedin:before {
+    content: ""; }
+  i.vdmi.ic-instagram:before {
+    content: ""; }
+
+.fa {
+  display: inline-block;
+  color: #E00000;
+  font: normal normal normal 16px "fontawesome-fonticon";
+  font-size: inherit;
+  text-rendering: auto;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale; }
+  .fa.fa-facebook:before {
+    content: "\f09a"; }
+  .fa.fa-youtube:before {
+    content: "\f167"; }
+  .fa.fa-google-plus:before {
+    content: "\f0d5"; }
+  .fa.fa-twitter:before {
+    content: "\f099"; }
+  .fa.fa-linkedin:before {
+    content: "\f0e1"; }
+  .fa.fa-instagram:before {
+    content: "\f16d"; }
+  .fa.fa-circle:before {
+    content: "\f111";
+    color: #FFFFFF; }
+
+.fa-lg {
+  font-size: 1.33333333em;
+  line-height: 0.75em;
+  vertical-align: -15%; }
+
+.fa-xl {
+  font-size: 1.66666666em;
+  line-height: 1em;
+  vertical-align: -15%; }
+
+.fa-2x {
+  font-size: 2em; }
+
+.fa-stack {
+  position: relative;
+  display: inline-block;
+  width: 2em;
+  height: 2em;
+  line-height: 2em;
+  vertical-align: middle; }
+
+.fa-stack-1x,
+.fa-stack-2x,
+.fa-stack-3x {
+  position: absolute;
+  left: 0;
+  width: 100%;
+  text-align: center; }
+
+.fa-stack-1x {
+  line-height: inherit; }
+
+.fa-stack-2x {
+  font-size: 2em; }
+
+.fa-stack-3x {
+  font-size: 3em; }
+
+.fa-inverse {
+  color: #ffffff; }
 
 .tile {
   display: block;
