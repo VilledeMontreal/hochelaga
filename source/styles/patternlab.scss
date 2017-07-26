@@ -175,7 +175,26 @@
     }
 
     // Colors
-    // Brand
+
+    .pl-black {
+      background: $vdm-black;
+    }
+    .pl-white {
+      background: $vdm-white;
+      border:solid 1px silver;
+    }
+    .pl-sarcelle {
+      background: $vdm-sarcelle;
+    }
+    .pl-grey-light {
+      background: $vdm-grey-light;
+    }
+    .pl-grey {
+      background: $vdm-grey;
+    }
+    .pl-red {
+      background: $vdm-red;
+    }
     .pl-brand {
         background: $vdm-brand;
         color: $vdm-white;
@@ -184,19 +203,20 @@
       background: $vdm-sub-brand;
       color: $vdm-white;
     }
+
     // Columns
     .pl-color-table-column-swatch {
-      width: 5%;
+      width: 25%;
     }
     .pl-color-table-column-name {
-      width: 10%;
+      width: 25%;
       font-weight: $vdm-font-weight-bold;
     }
     .pl-color-table-column-function {
-      width: 73%;
+      width: 25%;
     }
     .pl-color-table-column-accessibility {
-      width: 7%;
+      width: 25%;
     }
 
     .pl-swatch-round {

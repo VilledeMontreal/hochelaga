@@ -1,9 +1,9 @@
 // @file mixins.scss
 
 /**
- * - - - - - - - - - - 
+ * - - - - - - - - - -
  * == Typography
- * - - - - - - - - - - 
+ * - - - - - - - - - -
  */
 
 // @arg $level - integrer [1-6]
@@ -11,40 +11,54 @@
  @mixin header($level: 1, $weight: 'regular') {
 
   font-family: $vdm-font-family;
-  font-size: $vdm-font-size-base * 4.1875; // 37px
+  font-size: $vdm-font-size-base * 4.1875;        // 67px
+  line-height: $vdm-line-height-base * 5.6250;    // 92px
   font-weight: $vdm-font-weight-regular;
-  line-height: $vdm-line-height-base;
+  display: block;
+  margin-top: 0;
+  margin-bottom: 0;
 
   @if $level == 2 {
     font-weight: $vdm-font-weight-light;
-    font-size: $vdm-font-size-base * 3.125;   // 50px
+    font-size: $vdm-font-size-base * 3.125;       // 50px
+    line-height: $vdm-line-height-base * 3.2857;  // 69px
+
   } @else if $level == 3 {
-    font-size: $vdm-font-size-base * 2.3125;  // 37px
+    font-size: $vdm-font-size-base * 2.3125;      // 37px
+    line-height: $vdm-line-height-base * 2.3809;  // 50px
+
   } @else if $level == 4 {
-    font-size: $vdm-font-size-base * 1.750;   // 28px
+    font-size: $vdm-font-size-base * 1.750;       // 28px
+    line-height: $vdm-line-height-base * 1.8095;  // 38px
+
     @if $weight == 'bold' {
-      font-weight: $vdm-font-weight-bold;
+      font-weight: $vdm-font-weight-bold * 1.750; // 28px
+      line-height: $vdm-line-height-base * 1.8095;// 38px
     }
+
   } @else if $level == 5 {
-    font-size: $vdm-font-size-base * 1.3125; // 21px
+    font-size: $vdm-font-size-base * 1.3125;      // 21px
+    line-height: $vdm-line-height-base * 1.3333;  // 28px
+
   } @else if $level == 6 {
-    font-size: $vdm-font-size-base * 1.0000; // 16px
+    font-size: $vdm-font-size-base * 1.0000;      // 16px
+    line-height: $vdm-line-height-base * 1.0000;  // 26px
   }
  }
 
 /**
- * - - - - - - - - - - 
+ * - - - - - - - - - -
  * == UI
- * - - - - - - - - - - 
+ * - - - - - - - - - -
  */
 
 //== Accents
-// - - - - - - - - - - 
+// - - - - - - - - - -
 
 @mixin drop-shadow(
-    $dist-top: 0, 
-    $dist-right: 5px, 
-    $dist-bottom: 11px, 
+    $dist-top: 0,
+    $dist-right: 5px,
+    $dist-bottom: 11px,
     $dist-left: 0 ,
     $color-r: 0,
     $color-g: 0,
@@ -59,9 +73,9 @@
       $opacity
     );
 
-    // $forms-ds-color-r: 0; 
-    // $forms-ds-color-g: 0; 
-    // $forms-ds-color-b: 0; 
+    // $forms-ds-color-r: 0;
+    // $forms-ds-color-g: 0;
+    // $forms-ds-color-b: 0;
     // $forms-ds-opacity: 0.27;
     // $forms-ds-right-size: 5px;
     // $forms-ds-bottom-size: 11px;
@@ -69,13 +83,13 @@
 
 
 /**
- * - - - - - - - - - - 
- * == Forms 
- * - - - - - - - - - - 
+ * - - - - - - - - - -
+ * == Forms
+ * - - - - - - - - - -
  */
 
 //== Buttons
-// - - - - - - - - - - 
+// - - - - - - - - - -
 @mixin button-alter($color, $background, $border) {
   color: $color;
   background-color: $background;

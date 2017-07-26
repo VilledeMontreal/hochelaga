@@ -6,6 +6,11 @@
 
 $vdm-white:               #FFFFFF;
 $vdm-black:               #000000;
+$vdm-sarcelle:            #429A8E;
+$vdm-grey-light:          #F2F2F1;
+$vdm-grey:                #80807F;
+$vdm-red:                 #E00000;
+
 $vdm-neutral-mid:         #80807F;
 $vdm-neutral-light:       #E7E5E5;
 
@@ -50,7 +55,7 @@ $vdm-font-size-small:         ceil(($vdm-font-size-base * 0.85));  // ~14px
 $vdm-font-size-smaller:       ceil(($vdm-font-size-base * 0.75));  // ~12px
 
 //== Line Height
-$vdm-line-height-base:        floor(($vdm-font-size-base * 1.3731));   // 16/26px
+$vdm-line-height-base:        floor(($vdm-font-size-base * 1.3125));   // 21px
 
 //== Icons fonts -vdm-font-icon character
 $vdm-icon-font-path: '../fonts/';
