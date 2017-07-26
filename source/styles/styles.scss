@@ -1,15 +1,16 @@
 // @file styles.scss
 // This is the summit of the pyramid && the only compiled stylesheet
 
-// Import a custom bootstrap import file
+// Import bootstrap imports file
 @import "bootstrap-imports.scss";
-// import an override file for bootstrap variables
+
+// import bootstrap variables file
 @import "bootstrap-variables.scss";
 
-// Start writing yor styles below
-// Import other files structured according to your inheritance model
-
+// Import VDM variables file
 @import "variables.scss";
+
+// Import VDM styles files
 @import "breakpoints.scss";
 @import "mixins.scss";
 @import "layout.scss";
@@ -18,4 +19,3 @@
 @import "ui-nav-blocks.scss";
 @import "ui-buttons-switches-tabs.scss";
 @import "forms.scss";
-
