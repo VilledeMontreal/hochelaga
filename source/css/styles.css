@@ -3952,7 +3952,6 @@ html header {
       padding-top: 35px;
       list-style-type: none; }
       html header .header-nav ul li {
-        float: left;
         padding-right: 40px; }
         html header .header-nav ul li a {
           color: #FFFFFF; }
@@ -3970,18 +3969,60 @@ html header {
 
 html footer {
   background-color: #E00000;
-  height: 280px;
   padding-top: 45px; }
   html footer ul {
-    list-style-type: none; }
+    float: left;
+    padding: 0;
+    margin: 0;
+    list-style-type: none;
+    width: 100%; }
     html footer ul li {
-      padding-bottom: 12px; }
+      float: left;
+      width: 100%; }
+      html footer ul li .link {
+        float: left;
+        padding-top: 4px; }
+      html footer ul li .link-arrow {
+        float: right; }
+  html footer hr {
+    border: solid 2px #FFFFFF; }
   html footer span {
+    color: #FFFFFF; }
+  html footer i {
     color: #FFFFFF; }
   html footer a {
     color: #FFFFFF; }
   html footer a:hover {
     color: #FFFFFF; }
+  html footer .services-citoyen {
+    float: left;
+    margin-bottom: 40px; }
+    html footer .services-citoyen .services-citoyen-311 .number311 {
+      float: left;
+      font-size: 350%; }
+    html footer .services-citoyen .services-citoyen-311 .title {
+      float: right;
+      padding-top: 18px;
+      padding-left: 25px; }
+    html footer .services-citoyen .services-citoyen-horaires .open {
+      background: #429A8E;
+      display: inline-block;
+      border-radius: 50%;
+      width: 14px;
+      height: 14px; }
+    html footer .services-citoyen .services-citoyen-horaires .hours {
+      font-size: 12px; }
+  html footer .horaires .link-arrow {
+    float: left;
+    padding-left: 20px; }
+  html footer .language {
+    text-align: right; }
+  html footer .social-media {
+    text-align: right;
+    margin-top: 90px; }
+  html footer .copyright {
+    font-size: 12px;
+    padding-bottom: 20px; }
 
 /**
  * - - - - - - - - - -
