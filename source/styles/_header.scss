@@ -3,7 +3,32 @@
 header {
   background-color: $vdm-sub-brand;
   height: 100px;
-  .left-menu {
+  .left-nav {
+    float:left;
+    color: $vdm-white;
+    ul.primary {
+      padding-left:0;
+      list-style-type: none;
+      background-color: $vdm-black;
+      li {
+        color: $vdm-grey;
+        border-bottom: solid 1px $vdm-grey;
+        padding-top: 1em;
+        padding-bottom: 1em;
+        padding-left: 1em;
+      }
+    }
+    ul.sub {
+      padding-left:0;
+      padding-right:0;
+      list-style-type: none;
+      li {
+        padding-left: 2em;
+        padding-right:15px;
+      }
+    }
+  }
+  .left-nav-icon {
     float:left;
     color: $vdm-white;
   }

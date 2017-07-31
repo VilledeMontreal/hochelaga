@@ -3934,7 +3934,27 @@ button.list-group-item-danger {
 header {
   background-color: #E00000;
   height: 100px; }
-  header .left-menu {
+  header .left-nav {
+    float: left;
+    color: #FFFFFF; }
+    header .left-nav ul.primary {
+      padding-left: 0;
+      list-style-type: none;
+      background-color: #000000; }
+      header .left-nav ul.primary li {
+        color: #80807F;
+        border-bottom: solid 1px #80807F;
+        padding-top: 1em;
+        padding-bottom: 1em;
+        padding-left: 1em; }
+    header .left-nav ul.sub {
+      padding-left: 0;
+      padding-right: 0;
+      list-style-type: none; }
+      header .left-nav ul.sub li {
+        padding-left: 2em;
+        padding-right: 15px; }
+  header .left-nav-icon {
     float: left;
     color: #FFFFFF; }
   header .header-logo {
