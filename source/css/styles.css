@@ -4506,8 +4506,8 @@ i.vdmi {
   vertical-align: middle;
   touch-action: manipulation;
   cursor: pointer;
-  background-image: none;
-  white-space: nowrap; }
+  white-space: nowrap;
+  background-image: none; }
   .vdm-btn:last-of-type {
     margin-right: 0; }
   .vdm-btn:active, .vdm-btn:hover {
@@ -4539,15 +4539,18 @@ i.vdmi {
         box-shadow: unset;
         border: 2px solid #429A8E;
         background-color: #FFFFFF;
-        border: 2px solid #E7E5E5; }
+        border: 2px solid #E7E5E5;
+        padding: 3px 38px; }
     .vdm-btn.vdm-btn-secondary:active, .vdm-btn.vdm-btn-secondary:hover {
       box-shadow: 3px 5px 11px 2px rgba(0, 0, 0, 0.27);
       border: none;
-      background-color: #FFFFFF; }
+      background-color: #FFFFFF;
+      padding: 5px 40px; }
 
 a.vdm-btn {
   padding-top: 1em;
-  display: inline-block; }
+  display: inline-block;
+  text-decoration: none; }
 
 .vdm-tabs {
   border: 0; }
