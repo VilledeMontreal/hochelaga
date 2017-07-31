@@ -6,6 +6,14 @@ header {
   .left-nav {
     float:left;
     color: $vdm-white;
+    .back {
+      height: 100px;
+      padding-top:30px;
+      background-color: #222222;
+      i {
+        color: $vdm-sarcelle;
+      }
+    }
     ul.primary {
       padding-left:0;
       list-style-type: none;
@@ -13,8 +21,8 @@ header {
       li {
         color: $vdm-grey;
         border-bottom: solid 1px $vdm-grey;
-        padding-top: 1em;
-        padding-bottom: 1em;
+        padding-top: 1.5em;
+        padding-bottom: 1.5em;
         padding-left: 1em;
       }
     }

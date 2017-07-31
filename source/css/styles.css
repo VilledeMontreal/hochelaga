@@ -3937,6 +3937,12 @@ header {
   header .left-nav {
     float: left;
     color: #FFFFFF; }
+    header .left-nav .back {
+      height: 100px;
+      padding-top: 30px;
+      background-color: #222222; }
+      header .left-nav .back i {
+        color: #429A8E; }
     header .left-nav ul.primary {
       padding-left: 0;
       list-style-type: none;
@@ -3944,8 +3950,8 @@ header {
       header .left-nav ul.primary li {
         color: #80807F;
         border-bottom: solid 1px #80807F;
-        padding-top: 1em;
-        padding-bottom: 1em;
+        padding-top: 1.5em;
+        padding-bottom: 1.5em;
         padding-left: 1em; }
     header .left-nav ul.sub {
       padding-left: 0;
