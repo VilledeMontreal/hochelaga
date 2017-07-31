@@ -4055,6 +4055,9 @@ footer {
 html body {
   background-color: #FFFFFF; }
 
+.breadcrumb {
+  background-color: #FFFFFF; }
+
 /**
  * - - - - - - - - - -
  * == Typography
@@ -4160,6 +4163,9 @@ html body {
     font-style: italic; }
   html body strong {
     font-weight: bold; }
+  html body p {
+    line-height: 42px;
+    margin-bottom: 24px; }
 
 @font-face {
   font-family: "vdm-fonticon";
