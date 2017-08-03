@@ -78,11 +78,16 @@ $fontawesome-icon-font-family : 'fontawesome-fonticon';
 
 //== Form elements
 
+// Form generalities
 $vdm-form-bg-color: $vdm-brand;
 $vdm-form-text-color: $vdm-white;
 $vdm-form-border: none;
 
-// Secondary buttons
+// Form elements - generic
+$vdm-element-border-width: 2px;
+$vdm-element-padding: 2px;
+
+// Secondary element states
 $vdm-form-alt-bg-color: $vdm-white;
 $vdm-form-alt-text-color: $vdm-brand;
 $vdm-form-alt-border: 2px solid $vdm-brand;
@@ -91,11 +96,28 @@ $vdm-form-disabled-bg-color: $vdm-neutral-light;
 $vdm-form-disabled-text-color: $vdm-neutral-mid;
 $vdm-form-disabled-secondary-border: 2px solid $vdm-neutral-light;
 
-$vdm-btn-default-padding-x: 40px;
-$vdm-btn-default-padding-y: 5px;
-$vdm-btn-default-border-width: 2px;
-$vdm-btn-default-height: 53px;
+// Buttons
+$vdm-btn-padding-x: 40px;
+$vdm-btn-padding-y: 5px;
+$vdm-btn-border-width: 2px;
+$vdm-btn-height: 53px;
 $vdm-btn-small-height: 40px;
+
+// False checkboxes :on/off switches
+$vdm-switch-border-radius: 40px;
+$vdm-switch-border-radius-inside: 30px;
+$vdm-switch-height: 40px;
+$vdm-switch-width: 75px;
+$vdm-switch-width-inside: 30px;
+$vdm-switch-padding: 5px;
+
+// Checkboxes
+// $vdm-checkbox-border-radius: 40px;
+// $vdm-checkbox-border-radius-inside: 30px;
+// $vdm-checkbox-height: 40px;
+// $vdm-checkbox-width: 75px;
+// $vdm-checkbox-width-inside: 30px;
+// $vdm-checkbox-padding: 3px;
 
 
 

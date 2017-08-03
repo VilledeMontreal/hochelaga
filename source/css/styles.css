@@ -4453,6 +4453,61 @@ i.vdmi {
 .fa-inverse {
   color: #ffffff; }
 
+label {
+  font-family: "Nunito Sans", Helvetica, Arial, sans-serif;
+  font-weight: 400;
+  line-height: 21px; }
+
+.checkbox.vdm-checkbox input {
+  position: relative;
+  margin: 0 2rem 0 0; }
+  .checkbox.vdm-checkbox input:before {
+    content: "";
+    position: absolute;
+    left: 0.4rem;
+    top: 0.4rem;
+    z-index: 1;
+    width: 1.4rem;
+    height: 1.4rem; }
+  .checkbox.vdm-checkbox input:after {
+    content: "";
+    position: absolute;
+    top: -0.125rem;
+    left: 0;
+    width: 2rem;
+    height: 2rem;
+    background: #E7E5E5;
+    cursor: pointer;
+    border-radius: 5px; }
+  .checkbox.vdm-checkbox input[checked="checked"]:before {
+    transform: rotate(-45deg);
+    height: .5rem;
+    border: 1px solid #429A8E;
+    border-top-style: none;
+    border-right-style: none; }
+
+.radio.vdm-radio input {
+  position: relative;
+  margin: 0 2rem 0 0; }
+  .radio.vdm-radio input:before, .radio.vdm-radio input:after {
+    position: absolute;
+    content: '';
+    border-radius: 50%; }
+  .radio.vdm-radio input:before {
+    left: 0;
+    top: 0;
+    content: "";
+    width: 2rem;
+    height: 2rem;
+    background: #E7E5E5; }
+  .radio.vdm-radio input:after {
+    top: 5px;
+    left: 5px;
+    width: 10px;
+    height: 10px;
+    transform: scale(0);
+    background: #429A8E; }
+
 .tile {
   display: block;
   background: #E7E5E5;
@@ -4552,6 +4607,56 @@ a.vdm-btn {
   display: inline-block;
   text-decoration: none; }
 
+.vdm-checkbox.vdm-toggle {
+  position: relative; }
+  .vdm-checkbox.vdm-toggle input[type="checkbox"] {
+    position: absolute;
+    left: -10000px;
+    visibility: hidden; }
+    .vdm-checkbox.vdm-toggle input[type="checkbox"] + label {
+      position: relative;
+      text-indent: -10000px;
+      height: 40px;
+      width: 75px;
+      user-select: none; }
+      .vdm-checkbox.vdm-toggle input[type="checkbox"] + label:before, .vdm-checkbox.vdm-toggle input[type="checkbox"] + label:after {
+        display: block;
+        position: absolute;
+        content: ""; }
+      .vdm-checkbox.vdm-toggle input[type="checkbox"] + label:after {
+        top: 5px;
+        left: 5px;
+        bottom: 5px;
+        right: 5px;
+        background-color: #429A8E;
+        border-radius: 40px;
+        width: 30px; }
+      .vdm-checkbox.vdm-toggle input[type="checkbox"] + label:before {
+        top: 0;
+        left: 0;
+        bottom: 0;
+        right: 0;
+        background-color: transparent;
+        border: 2px solid #429A8E;
+        border-radius: 30px;
+        width: 75px; }
+    .vdm-checkbox.vdm-toggle input[type="checkbox"][checked="checked"] + label:after {
+      background-color: #FFFFFF;
+      margin-left: 35px; }
+    .vdm-checkbox.vdm-toggle input[type="checkbox"][checked="checked"] + label:before {
+      background-color: #429A8E;
+      border: 0; }
+    .vdm-checkbox.vdm-toggle input[type="checkbox"][disabled="disabled"] + label:after {
+      background-color: #FFFFFF;
+      margin-left: 0; }
+    .vdm-checkbox.vdm-toggle input[type="checkbox"][disabled="disabled"] + label:before {
+      background-color: #E7E5E5;
+      border: 0; }
+    .vdm-checkbox.vdm-toggle input[type="checkbox"][disabled="disabled"][checked="checked"] + label:after {
+      margin-left: 35px; }
+    .vdm-checkbox.vdm-toggle input[type="checkbox"][disabled="disabled"][checked="checked"] + label:before {
+      background-color: #E7E5E5; }
+
 .vdm-tabs {
   border: 0; }
   .vdm-tabs > li {
@@ -4592,11 +4697,5 @@ a.vdm-btn {
   .vdm-tabs.nav-tabs.nav-justified > .active a {
     border: 0;
     border-bottom: 0; }
-
-label {
-  font-family: "Nunito Sans", Helvetica, Arial, sans-serif;
-  font-weight: 400;
-  font-size: 12px;
-  line-height: 21px; }
 
 /*# sourceMappingURL=source/css/maps/styles.css.map */

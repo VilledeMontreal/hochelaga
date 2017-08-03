@@ -3,6 +3,135 @@
 label {
     font-family: $vdm-font-family;
     font-weight: $vdm-font-weight-regular;
-    font-size: $vdm-font-size-smaller;
+    //font-size: $vdm-font-size-smaller;
     line-height: $vdm-line-height-base;
+}
+
+
+.checkbox {
+    &.vdm-checkbox {
+        label {
+            // font-size: 1.3125rem;
+        }
+        input {
+            position: relative;
+            margin: 0 2rem 0 0;
+    
+            // The checkmark
+            &:before {
+                // transition: all 0.3s ease-in-out;
+                content: "";
+                position: absolute;
+                left: 0.4rem;
+                top: 0.4rem;
+                z-index: 1;
+                width: 1.4rem;
+                height: 1.4rem;
+            }
+
+            // The patch on top of the input
+            &:after {
+                content: "";
+                position: absolute;
+                top: -0.125rem;
+                left: 0;
+                width: 2rem;
+                height: 2rem;
+                background: $vdm-form-disabled-bg-color;
+                cursor: pointer;
+                border-radius: 5px;
+            }
+
+            // The tranformed rectangle, titled 45 degrees with 2/4 borders
+            &[checked="checked"] {
+                &:before {
+                    transform: rotate(-45deg);
+                    height: .5rem;
+                    border: 1px solid $vdm-brand;
+                    border-top-style: none;
+                    border-right-style: none;
+                }
+            }
+            &[disabled="disabled"] {
+                
+            }
+
+            &[checked="checked"] {
+                &[disabled="disabled"] {
+                
+                }
+            }
+        }
+    }
+}
+
+.radio {
+    &.vdm-radio {
+        label {
+            // font-size: 1.3125rem;
+        }
+        input {
+            position: relative;
+            margin: 0 2rem 0 0;
+
+            &:before, 
+            &:after {
+                position: absolute;
+                content: '';
+                border-radius: 50%;
+                
+            }
+    
+            // The checkmark
+            &:before {
+                left: 0;
+                top: 0;
+                // border: 2px solid rgba(0, 0, 0, 0.54);
+                content: "";
+                width: 2rem;
+                height: 2rem;
+                background: $vdm-form-disabled-bg-color;
+            }
+
+            // The patch on top of the input
+            &:after {
+                // content: "";
+                // position: absolute;
+                // top: -0.125rem;
+                // left: 0;
+                // width: 2rem;
+                // height: 2rem;
+                // background: $vdm-form-disabled-bg-color;
+                // cursor: pointer;
+                // border-radius: 5px;
+
+                top: 5px;
+                left: 5px;
+                width: 10px;
+                height: 10px;
+                transform: scale(0);
+                background: $vdm-brand;
+            }
+
+            // The tranformed rectangle, titled 45 degrees with 2/4 borders
+            &[checked="checked"] {
+                &:before {
+                    // transform: rotate(-45deg);
+                    // height: .5rem;
+                    // border: 1px solid $vdm-brand;
+                    // border-top-style: none;
+                    // border-right-style: none;
+                }
+            }
+            &[disabled="disabled"] {
+                
+            }
+
+            &[checked="checked"] {
+                &[disabled="disabled"] {
+                
+                }
+            }
+        }
+    }
 }
