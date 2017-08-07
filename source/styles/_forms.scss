@@ -8,50 +8,82 @@ label {
 }
 
 
-.checkbox {
-    &.vdm-checkbox {
-        label {
-            // font-size: 1.3125rem;
-        }
+// Radios and checkboxes - common rules
+.checkbox, 
+.radio {
+    &.vdm-checkbox,
+    &.vdm-radio {
         input {
             position: relative;
             margin: 0 2rem 0 0;
-    
-            // The checkmark
-            &:before {
-                // transition: all 0.3s ease-in-out;
-                content: "";
+
+            &:before, 
+            &:after {
                 position: absolute;
-                left: 0.4rem;
-                top: 0.4rem;
+                content: '';
+                // opacity: 0.5; // Debug : line it up with the original element
+            }
+
+            // The background - centering w/ native element is key;
+            &:before {
+                left: -0.3rem;
+                top: -0.3rem;
+                width: 1.8rem;
+                height: 1.8rem;
+                background: $vdm-form-disabled-bg-color;
+                cursor: pointer;
+                border-radius: 0.3rem;
+            }
+
+            // The selection
+            &:after {
                 z-index: 1;
-                width: 1.4rem;
-                height: 1.4rem;
+                width: 1.3rem;
+                height: 1.3rem;
+            }
+        }
+    }
+}
+
+
+.checkbox {
+    &.vdm-checkbox {
+        label {
+
+        }
+        input {
+
+
+            &:before, 
+            &:after {
+
+            }
+
+            // The checkmark
+            &:after {
+                top: 0.125em;
+                transform: rotate(-45deg);
+                width: 1.15rem;
+                height: .5rem;
+
             }
 
             // The patch on top of the input
-            &:after {
-                content: "";
-                position: absolute;
-                top: -0.125rem;
-                left: 0;
-                width: 2rem;
-                height: 2rem;
-                background: $vdm-form-disabled-bg-color;
-                cursor: pointer;
-                border-radius: 5px;
+            &:before {
+
+
             }
 
-            // The tranformed rectangle, titled 45 degrees with 2/4 borders
+            // The tranformed rectangle, titled 45 degrees with 2 out of 4 borders
             &[checked="checked"] {
-                &:before {
-                    transform: rotate(-45deg);
-                    height: .5rem;
+                &:after {
                     border: 1px solid $vdm-brand;
                     border-top-style: none;
                     border-right-style: none;
+
                 }
             }
+
             &[disabled="disabled"] {
                 
             }
@@ -68,59 +100,39 @@ label {
 .radio {
     &.vdm-radio {
         label {
-            // font-size: 1.3125rem;
+
         }
         input {
-            position: relative;
-            margin: 0 2rem 0 0;
+
 
             &:before, 
             &:after {
-                position: absolute;
-                content: '';
                 border-radius: 50%;
-                
+
             }
     
-            // The checkmark
+            // The background of the input
             &:before {
-                left: 0;
-                top: 0;
-                // border: 2px solid rgba(0, 0, 0, 0.54);
-                content: "";
-                width: 2rem;
-                height: 2rem;
-                background: $vdm-form-disabled-bg-color;
+                width: 2.1rem;
+                height: 2.1rem;
+                left: -0.4rem;
+                top: -0.4rem;
             }
 
-            // The patch on top of the input
+            // The inner circle for the checked checkbox
             &:after {
-                // content: "";
-                // position: absolute;
-                // top: -0.125rem;
-                // left: 0;
-                // width: 2rem;
-                // height: 2rem;
-                // background: $vdm-form-disabled-bg-color;
-                // cursor: pointer;
-                // border-radius: 5px;
-
-                top: 5px;
-                left: 5px;
-                width: 10px;
-                height: 10px;
-                transform: scale(0);
-                background: $vdm-brand;
+                width:  70%;
+                height: 70%;
+                // transform: scale(0.75, 0.75);
+                transform: translate(0.23rem, 0.18rem);
+                
             }
 
-            // The tranformed rectangle, titled 45 degrees with 2/4 borders
+            // The selected, circular input
             &[checked="checked"] {
-                &:before {
-                    // transform: rotate(-45deg);
-                    // height: .5rem;
-                    // border: 1px solid $vdm-brand;
-                    // border-top-style: none;
-                    // border-right-style: none;
+                &:after {
+
+                    background: $vdm-brand;
                 }
             }
             &[disabled="disabled"] {
@@ -133,5 +145,13 @@ label {
                 }
             }
         }
+    }
+}
+
+// Fix the inline margin-tops
+.vdm-checkbox, .vdm-radio {
+    &.checkbox-inline, 
+    &.radio-inline {
+        margin-top: 0;
     }
 }
