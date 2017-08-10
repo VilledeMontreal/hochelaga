@@ -4453,6 +4453,45 @@ i.vdmi {
 .fa-inverse {
   color: #ffffff; }
 
+ul.vdm-social-media {
+  margin: 0;
+  padding: 0;
+  list-style-type: none; }
+  ul.vdm-social-media li {
+    margin: 0;
+    padding: 0 1em 0 0;
+    display: inline-block; }
+    ul.vdm-social-media li:last-of-type {
+      margin: 0; }
+    ul.vdm-social-media li a.social-icon {
+      display: block; }
+
+a.social-icon {
+  height: 60px;
+  padding-left: 70px;
+  line-height: 60px;
+  display: inline-block;
+  color: #000000;
+  text-decoration: none; }
+  a.social-icon:hover, a.social-icon:active {
+    color: #000000;
+    text-decoration: underline; }
+  a.social-icon.facebook {
+    background: url("../../../images/icons/ic-facebook.png");
+    background: url("../../../images/icons/ic-facebook.svg") no-repeat 0 0; }
+  a.social-icon.linkedin {
+    background: url("../../../images/icons/ic-linkedin.png");
+    background: url("../../../images/icons/ic-linkedin.svg") no-repeat 0 0; }
+  a.social-icon.twitter {
+    background: url("../../../images/icons/ic-twitter.png");
+    background: url("../../../images/icons/ic-twitter.svg") no-repeat 0 0; }
+  a.social-icon.youtube {
+    background: url("../../../images/icons/ic-youtube.png");
+    background: url("../../../images/icons/ic-youtube.svg") no-repeat 0 0; }
+  a.social-icon.inverse.facebook {
+    background: url("../../../images/icons/ic-facebook-black-white.png");
+    background: url("../../../images/icons/ic-facebook-black-white.svg") no-repeat 0 -65px; }
+
 label {
   font-family: "Nunito Sans", Helvetica, Arial, sans-serif;
   font-weight: 400;
@@ -4517,6 +4556,94 @@ label {
 
 .vdm-checkbox.checkbox-inline, .vdm-checkbox.radio-inline, .vdm-radio.checkbox-inline, .vdm-radio.radio-inline {
   margin-top: 0; }
+
+.form-group.vdm-form-group {
+  position: relative;
+  margin-top: 3rem; }
+  .form-group.vdm-form-group .form-control.vdm-form-control {
+    font-size: 16px;
+    box-shadow: none;
+    transition: none;
+    border: 1px solid #F2F2F1;
+    border-radius: 0; }
+    .form-group.vdm-form-group .form-control.vdm-form-control:focus {
+      border: 1px solid #429A8E; }
+    .form-group.vdm-form-group .form-control.vdm-form-control:focus ~ label, .form-group.vdm-form-group .form-control.vdm-form-control.used ~ label {
+      top: -26px;
+      left: 10px;
+      font-size: 12px;
+      color: #000000; }
+    .form-group.vdm-form-group .form-control.vdm-form-control.used {
+      color: #000000;
+      border: 1px solid #000000; }
+  .form-group.vdm-form-group label {
+    color: #80807F;
+    position: absolute;
+    pointer-events: none;
+    left: 10px;
+    top: 8px;
+    transition: 0.2s ease all; }
+  .form-group.vdm-form-group .help-block {
+    margin-left: 10px;
+    font-size: 12px; }
+  .form-group.vdm-form-group.has-error .vdm-form-control {
+    color: #E00000 !important;
+    border: 1px solid #E00000; }
+    .form-group.vdm-form-group.has-error .vdm-form-control:focus, .form-group.vdm-form-group.has-error .vdm-form-control.used {
+      border: 1px solid #E00000; }
+  .form-group.vdm-form-group.has-error .help-block {
+    color: #E00000;
+    margin-left: 0; }
+  .form-group.vdm-form-group.has-feedback .vdm-form-control ~ .form-control-feedback {
+    font-family: "vdm-fonticon";
+    font-size: 3rem;
+    top: 0; }
+    .form-group.vdm-form-group.has-feedback .vdm-form-control ~ .form-control-feedback.glyphicon-remove:before {
+      content: "\E202";
+      color: #E00000; }
+    .form-group.vdm-form-group.has-feedback .vdm-form-control ~ .form-control-feedback.glyphicon-ok:before {
+      content: "\E20B";
+      color: #429A8E; }
+
+.vdm-select-wrapper {
+  background-color: #FFF;
+  display: inline-block;
+  position: relative;
+  margin-top: 26px; }
+  .vdm-select-wrapper:after {
+    background: #FFFFFF;
+    font-family: "vdm-fonticon";
+    font-size: 2.6rem;
+    content: "\E038";
+    position: absolute;
+    top: 0.1rem;
+    right: 0.2rem;
+    z-index: 2;
+    display: block;
+    width: 34px;
+    height: 32px;
+    line-height: 32px;
+    text-align: center;
+    pointer-events: none; }
+  .vdm-select-wrapper.select-open:after {
+    content: "\E036"; }
+  .vdm-select-wrapper label {
+    font-size: 12px;
+    color: #000000;
+    position: absolute;
+    pointer-events: none;
+    left: 18px;
+    top: -26px; }
+
+select {
+  max-width: 300px; }
+  select.form-control.vdm-select {
+    border-radius: 0;
+    box-shadow: none;
+    border: 1px solid #F2F2F1; }
+    select.form-control.vdm-select:focus {
+      box-shadow: none;
+      border: 1px solid #429A8E; }
 
 .tile {
   display: block;

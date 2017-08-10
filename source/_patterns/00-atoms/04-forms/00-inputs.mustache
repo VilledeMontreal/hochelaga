@@ -1,0 +1,42 @@
+
+<input type="text" class="form-control vdm-form-control" placeholder="Placeholder : Input w/out required parents & w/out label">
+<form>
+    <div class="form-group vdm-form-group">
+        <input type="text" class="form-control vdm-form-control" id="text">
+        <label for="text">Textfield</label>
+    </div>
+    <div class="form-group vdm-form-group">
+        <input type="text" class="form-control vdm-form-control" id="textrequired" required>
+        <label for="textrequired">Required textfield</label>
+        <span class="help-block" id="hblockerror">Helper message for textfield</span>
+    </div>
+    <div class="form-group vdm-form-group has-success has-feedback">
+        <input type="text" class="form-control vdm-form-control" id="textvalid" required>
+        <label for="textvalid">Valid textfield</label>
+        <span class="glyphicon glyphicon-ok form-control-feedback" aria-hidden="true"></span>
+    </div>
+    <div class="form-group vdm-form-group has-error has-feedback">
+        <input type="text" class="form-control vdm-form-control" id="texterror" required>
+        <label for="texterror">Textfield w/ error</label>
+        <span class="help-block" id="hblockerror">Error message below textfield</span>
+        <span class="glyphicon glyphicon-remove form-control-feedback" aria-hidden="true"></span>
+    </div>
+    <fieldset disabled>
+        <div class="form-group vdm-form-group">
+            <input type="text" class="form-control vdm-form-control" id="textdisabled">
+            <label for="textdisabled">Textfield disabled, read only</label>
+        </div>
+    </fieldset>
+    <div class="form-group vdm-form-group">
+        <input type="email" class="form-control vdm-form-control" id="mail">
+        <label for="mail">Email address</label>
+    </div>
+    <div class="form-group vdm-form-group">
+        <input type="password" class="form-control vdm-form-control" id="pass">
+        <label for="pass">Password</label>
+    </div>
+    <div class="form-group vdm-form-group">
+        <textarea class="form-control vdm-form-control" rows="3" id="textarea"></textarea>
+        <label for="textarea">Textarea</label>
+    </div>
+<form>

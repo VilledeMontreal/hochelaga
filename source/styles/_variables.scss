@@ -1,5 +1,11 @@
 // @file variables.scss
 
+//= = = = Environment setup = = = =
+//
+//== Assets
+$assets-img-paths : "../../../images" !default;
+$assets-icons-path : "../../../images/icons" !default;
+
 //= = = = Colors = = = =
 //
 //== Neutrals
@@ -49,7 +55,7 @@ $vdm-font-weight-regular:      400; // Nunito Sans Regular
 $vdm-font-weight-bold:         700; // Nunito Sans Bold
 
 //== Fonts Size
-$vdm-font-size-base:          16px;                            //  16px
+$vdm-font-size-base:          16px;                                 //  16px
 $vdm-font-size-large:         ceil(($vdm-font-size-base * 1.125)); // ~18px
 $vdm-font-size-small:         ceil(($vdm-font-size-base * 0.85));  // ~14px
 $vdm-font-size-smaller:       ceil(($vdm-font-size-base * 0.75));  // ~12px
@@ -61,6 +67,11 @@ $vdm-line-height-base:        floor(($vdm-font-size-base * 1.3125));   // 21px
 $vdm-icon-font-path: '../fonts/';
 $vdm-icon-font-version: '0.5';
 $vdm-icon-font-family : 'vdm-fonticon';
+
+//== Icons fonts -vdm-font-icon character
+$vdm-icon-social-media-scale: 60px;
+$vdm-icon-social-media-padding-right: 10px;
+$vdm-icon-social-media-padding-right-lists: 1em;
 
 //== Font Awesome character
 $fontawesome-icon-font-path: '../fonts/font-awesome-4.7.0';
@@ -79,13 +90,15 @@ $fontawesome-icon-font-family : 'fontawesome-fonticon';
 //== Form elements
 
 // Form generalities
-$vdm-form-bg-color: $vdm-brand;
-$vdm-form-text-color: $vdm-white;
-$vdm-form-border: none;
+$vdm-form-bg-color:         $vdm-brand;
+$vdm-form-text-color:       $vdm-white;
+$vdm-form-border:           none;
+$vdm-error-color:           $vdm-sub-brand;
 
 // Form elements - generic
 $vdm-element-border-width: 2px;
 $vdm-element-padding: 2px;
+$vdm-element-base-height: 34px;
 
 // Secondary element states
 $vdm-form-alt-bg-color: $vdm-white;
@@ -110,6 +123,9 @@ $vdm-switch-height: 40px;
 $vdm-switch-width: 75px;
 $vdm-switch-width-inside: 30px;
 $vdm-switch-padding: 5px;
+
+// Textfields
+$vdm-textfield-border-radius: 5px;
 
 // Checkboxes
 // $vdm-checkbox-border-radius: 40px;

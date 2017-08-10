@@ -3,11 +3,10 @@
 label {
     font-family: $vdm-font-family;
     font-weight: $vdm-font-weight-regular;
-    //font-size: $vdm-font-size-smaller;
     line-height: $vdm-line-height-base;
 }
 
-
+///////////////////////////////////////////////////////////////////
 // Radios and checkboxes - common rules
 .checkbox, 
 .radio {
@@ -45,7 +44,8 @@ label {
     }
 }
 
-
+///////////////////////////////////////////////////////////////////
+// Checkboxes
 .checkbox {
     &.vdm-checkbox {
         label {
@@ -97,6 +97,8 @@ label {
     }
 }
 
+///////////////////////////////////////////////////////////////////
+// Radio buttons
 .radio {
     &.vdm-radio {
         label {
@@ -148,10 +150,205 @@ label {
     }
 }
 
-// Fix the inline margin-tops
+// Fix the inline margin-tops for inline display;
 .vdm-checkbox, .vdm-radio {
     &.checkbox-inline, 
     &.radio-inline {
         margin-top: 0;
     }
 }
+
+///////////////////////////////////////////////////////////////////
+// Textfields and textareas
+
+// select,
+// textarea,
+// input[type="text"],
+// input[type="password"],
+// input[type="datetime"],
+// input[type="datetime-local"],
+// input[type="date"],
+// input[type="month"],
+// input[type="time"],
+// input[type="week"],
+// input[type="number"],
+// input[type="email"],
+// input[type="url"],
+// input[type="search"],
+// input[type="tel"],
+// input[type="color"] {
+
+// }
+
+
+.form-group {
+    &.vdm-form-group {
+        position: relative;
+        margin-top: 3rem;
+
+        // input, 
+        // textarea,
+        // select {
+            .form-control {
+                &.vdm-form-control {
+                    font-size: $vdm-font-size-base;
+                    box-shadow: none;
+                    transition: none;
+                    border: 1px solid $vdm-grey-light;
+                    border-radius: 0;
+                    // border-radius: $vdm-textfield-border-radius;
+
+                    &:focus {
+                        border: 1px solid $vdm-brand;
+                    }
+
+                    // Move the label
+                    // When the field is selected
+                    // Once the field is filled (js toggle class "used")
+                    &:focus, &.used {
+                        & ~ label {
+                            top: -26px;
+                            left: 10px;
+                            font-size: $vdm-font-size-smaller;
+                            color: $vdm-black;
+                        }
+                       
+                    }
+                    &.used {
+                        color: $vdm-black;
+                        border: 1px solid $vdm-black;
+                    }
+                }
+            }
+
+        // }
+
+        label {
+            color:$vdm-grey; 
+            position: absolute;
+            pointer-events: none;
+            left: 10px;
+            top: 8px;
+            transition:0.2s ease all; 
+        }
+
+        .help-block {
+            margin-left: 10px;
+            font-size: $vdm-font-size-smaller;
+        }
+
+
+        &.has-error {
+            
+            .vdm-form-control {
+                color: $vdm-error-color !important;
+                border: 1px solid $vdm-error-color;
+                &:focus,  
+                &.used  {
+                    border: 1px solid $vdm-error-color;
+                }
+            }
+
+            .help-block {
+                color: $vdm-error-color;
+                margin-left: 0;
+            }
+
+        } // Errors
+
+        // Feedback icons
+        &.has-feedback {
+            .vdm-form-control {
+                & ~ .form-control-feedback {
+                    font-family: $vdm-icon-font-family;
+                    font-size: 3rem;
+                    top: 0;
+
+                    &.glyphicon-remove {
+                        &:before {
+                           content: "\E202"; 
+                           color: $vdm-error-color;
+                        }
+                    } 
+                    &.glyphicon-ok {
+                        &:before {
+                           content: "\E20B"; 
+                           color: $vdm-brand;
+                        }
+                    } 
+                }
+            }
+
+        } // Feedback
+    }
+}
+
+///////////////////////////////////////////////////////////////////
+// Select
+
+.vdm-select-wrapper {
+    background-color: #FFF;
+    display: inline-block;
+    position: relative;
+    margin-top: 26px;
+    &:after {
+        background: $vdm-white;
+        font-family: $vdm-icon-font-family;
+        font-size: 2.6rem;
+        content: "\E038"; 
+        position: absolute;
+        top: 0.1rem;
+        right: 0.2rem;
+        z-index: 2;
+        display: block;
+        width: $vdm-element-base-height;
+        height: floor($vdm-element-base-height  *  0.95);
+        line-height: floor($vdm-element-base-height *  0.95);
+        text-align: center;
+        pointer-events: none;
+    }
+    // Change arrow direction 
+    // @see $( "select.vdm-select" ).mouseup(function()) {}
+    &.select-open {
+        &:after {
+            content: "\E036"; 
+        }
+    }
+    // @to-do - implement a 'has-label' class on parent element? Inline vs block label?
+    label {
+        font-size: $vdm-font-size-smaller;
+        color: $vdm-black;
+        position: absolute;
+        pointer-events: none;
+        left: 18px;
+        top: -26px;
+    }
+}
+
+select {
+    max-width: 300px;
+    &.form-control {
+        
+        &.vdm-select {
+            border-radius: 0;
+            box-shadow: none;
+            border: 1px solid $vdm-grey-light;
+            &:focus {
+                box-shadow: none;
+                border: 1px solid $vdm-brand;
+            }
+            option {
+                
+            }
+        }
+        
+    }
+    
+}
+
+
+
+
+
+
+
