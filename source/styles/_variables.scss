@@ -65,13 +65,14 @@ $vdm-line-height-base:        floor(($vdm-font-size-base * 1.3125));   // 21px
 
 //== Icons fonts -vdm-font-icon character
 $vdm-icon-font-path: '../fonts/';
+
 $vdm-icon-font-version: '0.5';
 $vdm-icon-font-family : 'vdm-fonticon';
 
 //== Icons fonts -vdm-font-icon character
 $vdm-icon-social-media-scale: 60px;
-$vdm-icon-social-media-padding-right: 10px;
-$vdm-icon-social-media-padding-right-lists: 1em;
+$vdm-icon-social-media-padding-right: 10px;         // in patternal.scss ?
+$vdm-icon-social-media-padding-right-lists: 1em;    // in patternal.scss ?
 
 //== Font Awesome character
 $fontawesome-icon-font-path: '../fonts/font-awesome-4.7.0';
@@ -126,6 +127,12 @@ $vdm-switch-padding: 5px;
 
 // Textfields
 $vdm-textfield-border-radius: 5px;
+
+// Tabs 
+$vdm-tabs-spacing: 4px;
+$vdm-tabs-line-height: $font-size-base * 3.6;
+$vdm-tabs-h-padding: $font-size-base * 1.62;
+$vdm-tabs-v-padding: $font-size-base * 0.375;
 
 // Checkboxes
 // $vdm-checkbox-border-radius: 40px;

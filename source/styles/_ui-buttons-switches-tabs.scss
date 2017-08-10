@@ -221,21 +221,22 @@ a {
 
 
 // @ to-do : make variables out of paddings, border heights &&
-
-
 .vdm-tabs {
     border: 0;
     >li {
         margin-bottom: 0;
         >a {
             color: $vdm-neutral-mid;
-            background: transparent;
+            background: $vdm-grey-light;
             border: 0;
-            padding: 6px 25px;
+            padding: $vdm-tabs-v-padding $vdm-tabs-h-padding;
+            border-radius: 0;
+            margin-right: $vdm-tabs-spacing;
+            line-height: $vdm-tabs-line-height;
             
             &:hover,
             &:focus {
-                background: transparent;
+                background: $vdm-white;
                 border: 0;
                 color: $vdm-link;
             }
@@ -249,11 +250,12 @@ a {
                 content: " ";
                 position: absolute;
                 display: block;
-                height: 4px;
-                border-radius: 4px;
-                width: 100%;
+                height: $vdm-tabs-spacing;
+                border-radius: $vdm-tabs-spacing;
+                width: calc(100% - #{$vdm-tabs-spacing});
                 background: $vdm-brand;
-                bottom: -4px;
+                bottom: 0;
+                z-index: 2;
             }
             
 
@@ -272,7 +274,14 @@ a {
 
         }
     } // >li
-
+    >li {
+        &:last-of-type {
+            >a {
+                margin-right: 0;
+            }
+        }
+    }
+    
     // Justified tabs
     &.nav-tabs {
         &.nav-justified {
@@ -280,13 +289,15 @@ a {
                 >a {
                     margin-bottom: 0;
                     border-bottom: 0;
+                    border-radius: 0;
+                    margin-right: $vdm-tabs-spacing;
                 }
             }
             >.active {
                 @media screen and (max-width: $screen-sm-max) {
                     &:before {
-                        height: 2px;
-                        border-radius: 2px;
+                        height: $vdm-tabs-spacing;
+                        border-radius: $vdm-tabs-spacing;
                         bottom: -2px;
                     }
                 }
@@ -295,6 +306,38 @@ a {
                     border: 0;
                     border-bottom: 0;
                 }
+            }
+            >li {
+                &:last-of-type {
+                    >a {
+                        margin-right: 0;
+                    }
+                }
+            }
+        }
+    }
+
+    // Red borders on top;
+    &.nav-tabs {
+        &.vdm-tabs-border-top {
+            >li {
+                >a {
+                    &:hover, 
+                    &:active {
+                        color: $vdm-black;
+                    }
+                }
+                &.active {
+                    >a {
+                        color: $vdm-black;
+                    }
+                
+                    &:before {
+                        background: $vdm-sub-brand;
+                        top: 0;
+                    }
+                }
+              
             }
         }
     }

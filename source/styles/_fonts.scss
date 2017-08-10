@@ -3,10 +3,11 @@
 @import "mixins.scss";
 
 html {
+  font-size: $vdm-font-size-base; // This is THE reference value for all rem units
   body {
     font-family: $vdm-font-family;
     font-weight: $vdm-font-weight-regular;
-    font-size: $vdm-font-size-base;
+    font-size: $vdm-font-size-base;   // Override inherited font-sizes
 
     h1 {
       @include header(1);
@@ -51,9 +52,11 @@ html {
       font-weight: bold;
     }
     p {
-      // line-height: $vdm-line-height-base;
-      line-height: 42px;
-      margin-bottom: 24px;
+      line-height: $vdm-line-height-base;
+      margin-bottom: ceil($vdm-font-size-base * 1.5);
+
+      // margin-bottom: 24px;
+      // line-height: 42px;
     }
   }
 }

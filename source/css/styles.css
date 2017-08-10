@@ -4073,50 +4073,42 @@ html body {
  * == Forms
  * - - - - - - - - - -
  */
-html body {
-  font-family: "Nunito Sans", Helvetica, Arial, sans-serif;
-  font-weight: 400;
+html {
   font-size: 16px; }
-  html body h1 {
+  html body {
     font-family: "Nunito Sans", Helvetica, Arial, sans-serif;
-    font-size: 67px;
-    line-height: 118.125px;
     font-weight: 400;
-    display: block;
-    margin-top: 0;
-    margin-bottom: 0; }
-  html body h2 {
-    font-family: "Nunito Sans", Helvetica, Arial, sans-serif;
-    font-size: 67px;
-    line-height: 118.125px;
-    font-weight: 400;
-    display: block;
-    margin-top: 0;
-    margin-bottom: 0;
-    font-weight: 300;
-    font-size: 50px;
-    line-height: 68.9997px; }
-  html body h3 {
-    font-family: "Nunito Sans", Helvetica, Arial, sans-serif;
-    font-size: 67px;
-    line-height: 118.125px;
-    font-weight: 400;
-    display: block;
-    margin-top: 0;
-    margin-bottom: 0;
-    font-size: 37px;
-    line-height: 49.9989px; }
-  html body h4 {
-    font-family: "Nunito Sans", Helvetica, Arial, sans-serif;
-    font-size: 67px;
-    line-height: 118.125px;
-    font-weight: 400;
-    display: block;
-    margin-top: 0;
-    margin-bottom: 0;
-    font-size: 28px;
-    line-height: 37.9995px; }
-    html body h4.strong {
+    font-size: 16px; }
+    html body h1 {
+      font-family: "Nunito Sans", Helvetica, Arial, sans-serif;
+      font-size: 67px;
+      line-height: 118.125px;
+      font-weight: 400;
+      display: block;
+      margin-top: 0;
+      margin-bottom: 0; }
+    html body h2 {
+      font-family: "Nunito Sans", Helvetica, Arial, sans-serif;
+      font-size: 67px;
+      line-height: 118.125px;
+      font-weight: 400;
+      display: block;
+      margin-top: 0;
+      margin-bottom: 0;
+      font-weight: 300;
+      font-size: 50px;
+      line-height: 68.9997px; }
+    html body h3 {
+      font-family: "Nunito Sans", Helvetica, Arial, sans-serif;
+      font-size: 67px;
+      line-height: 118.125px;
+      font-weight: 400;
+      display: block;
+      margin-top: 0;
+      margin-bottom: 0;
+      font-size: 37px;
+      line-height: 49.9989px; }
+    html body h4 {
       font-family: "Nunito Sans", Helvetica, Arial, sans-serif;
       font-size: 67px;
       line-height: 118.125px;
@@ -4125,47 +4117,57 @@ html body {
       margin-top: 0;
       margin-bottom: 0;
       font-size: 28px;
-      line-height: 37.9995px;
-      font-weight: 1225;
       line-height: 37.9995px; }
-  html body h5 {
-    font-family: "Nunito Sans", Helvetica, Arial, sans-serif;
-    font-size: 67px;
-    line-height: 118.125px;
-    font-weight: 400;
-    display: block;
-    margin-top: 0;
-    margin-bottom: 0;
-    font-size: 21px;
-    line-height: 27.9993px; }
-  html body h6 {
-    font-family: "Nunito Sans", Helvetica, Arial, sans-serif;
-    font-size: 67px;
-    line-height: 118.125px;
-    font-weight: 400;
-    display: block;
-    margin-top: 0;
-    margin-bottom: 0;
-    font-size: 16px;
-    line-height: 21px; }
-  html body .regular {
-    font-weight: 400; }
-  html body .bold {
-    font-weight: 700; }
-  html body .light {
-    font-weight: 300; }
-  html body .intro {
-    font-family: "Nunito Sans", Helvetica, Arial, sans-serif;
-    font-weight: 400;
-    font-size: 12px;
-    line-height: 21px; }
-  html body em {
-    font-style: italic; }
-  html body strong {
-    font-weight: bold; }
-  html body p {
-    line-height: 42px;
-    margin-bottom: 24px; }
+      html body h4.strong {
+        font-family: "Nunito Sans", Helvetica, Arial, sans-serif;
+        font-size: 67px;
+        line-height: 118.125px;
+        font-weight: 400;
+        display: block;
+        margin-top: 0;
+        margin-bottom: 0;
+        font-size: 28px;
+        line-height: 37.9995px;
+        font-weight: 1225;
+        line-height: 37.9995px; }
+    html body h5 {
+      font-family: "Nunito Sans", Helvetica, Arial, sans-serif;
+      font-size: 67px;
+      line-height: 118.125px;
+      font-weight: 400;
+      display: block;
+      margin-top: 0;
+      margin-bottom: 0;
+      font-size: 21px;
+      line-height: 27.9993px; }
+    html body h6 {
+      font-family: "Nunito Sans", Helvetica, Arial, sans-serif;
+      font-size: 67px;
+      line-height: 118.125px;
+      font-weight: 400;
+      display: block;
+      margin-top: 0;
+      margin-bottom: 0;
+      font-size: 16px;
+      line-height: 21px; }
+    html body .regular {
+      font-weight: 400; }
+    html body .bold {
+      font-weight: 700; }
+    html body .light {
+      font-weight: 300; }
+    html body .intro {
+      font-family: "Nunito Sans", Helvetica, Arial, sans-serif;
+      font-weight: 400;
+      font-size: 12px;
+      line-height: 21px; }
+    html body em {
+      font-style: italic; }
+    html body strong {
+      font-weight: bold; }
+    html body p {
+      line-height: 21px;
+      margin-bottom: 24px; }
 
 @font-face {
   font-family: "vdm-fonticon";
@@ -4800,11 +4802,14 @@ a.vdm-btn {
     margin-bottom: 0; }
     .vdm-tabs > li > a {
       color: #80807F;
-      background: transparent;
+      background: #F2F2F1;
       border: 0;
-      padding: 6px 25px; }
+      padding: 5.25px 22.68px;
+      border-radius: 0;
+      margin-right: 4px;
+      line-height: 50.4px; }
       .vdm-tabs > li > a:hover, .vdm-tabs > li > a:focus {
-        background: transparent;
+        background: #FFFFFF;
         border: 0;
         color: #429A8E; }
     .vdm-tabs > li.active:before {
@@ -4813,9 +4818,10 @@ a.vdm-btn {
       display: block;
       height: 4px;
       border-radius: 4px;
-      width: 100%;
+      width: calc(100% - 4px);
       background: #429A8E;
-      bottom: -4px; }
+      bottom: 0;
+      z-index: 2; }
     .vdm-tabs > li.active > a {
       color: #429A8E;
       border: 0; }
@@ -4823,16 +4829,29 @@ a.vdm-btn {
         border: 0;
         color: #429A8E;
         margin-bottom: 0; }
+  .vdm-tabs > li:last-of-type > a {
+    margin-right: 0; }
   .vdm-tabs.nav-tabs.nav-justified > li > a {
     margin-bottom: 0;
-    border-bottom: 0; }
+    border-bottom: 0;
+    border-radius: 0;
+    margin-right: 4px; }
   @media screen and (max-width: 991px) {
     .vdm-tabs.nav-tabs.nav-justified > .active:before {
-      height: 2px;
-      border-radius: 2px;
+      height: 4px;
+      border-radius: 4px;
       bottom: -2px; } }
   .vdm-tabs.nav-tabs.nav-justified > .active a {
     border: 0;
     border-bottom: 0; }
+  .vdm-tabs.nav-tabs.nav-justified > li:last-of-type > a {
+    margin-right: 0; }
+  .vdm-tabs.nav-tabs.vdm-tabs-border-top > li > a:hover, .vdm-tabs.nav-tabs.vdm-tabs-border-top > li > a:active {
+    color: #000000; }
+  .vdm-tabs.nav-tabs.vdm-tabs-border-top > li.active > a {
+    color: #000000; }
+  .vdm-tabs.nav-tabs.vdm-tabs-border-top > li.active:before {
+    background: #E00000;
+    top: 0; }
 
 /*# sourceMappingURL=source/css/maps/styles.css.map */

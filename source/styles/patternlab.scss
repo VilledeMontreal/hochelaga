@@ -51,6 +51,163 @@
   }
 }
 
+// Block level presentational utilities
+
+// Backgrounds : to show the overlay effect
+.pl-background {
+  &.pl-grey-light {
+    background: darken($vdm-grey-light, 10%);
+  }
+  &.pl-grey{
+    background: $vdm-grey;
+  }
+}
+
+// Utility vertical spacer : margin-bottom
+.pl-vspacer {
+  margin-bottom: 1rem;
+  &.pl-vspacer-5 {
+    margin-bottom: 0.33rem;
+  }
+  &.pl-vspacer-10 {
+    margin-bottom: 0.33rem;
+  }
+  &.pl-vspacer-25 {
+    margin-bottom: 1.7rem;
+  }
+  &.pl-vspacer-50 {
+     margin-bottom: 4rem;
+  }
+}
+
+// Block level paddings
+.pl-padding-5 {
+    padding: 0.33rem;
+}
+.pl-padding-10 {
+  padding: 0.7rem;
+}
+.pl-padding-25 {
+  padding: 1.5rem;
+}
+
+// Size demontration blocks for font-size, paddings and margins
+.pl-size-wrapper {
+  &.pl-size-2x-root {
+    font-size: 2rem;
+  }
+  &.pl-size-2x {
+    font-size: 2em;
+  }
+}
+
+.pl-size-block {
+  border-top: 1px solid $vdm-grey;
+  border-bottom: 1px solid $vdm-grey;
+  background: $vdm-grey-light;
+  text-align: center;
+  position: relative;
+  margin-bottom: 30px;
+
+  &:last-of-type {
+    margin-right: 0;
+  }
+
+  .pl-size-unit { // The inner span contianing the descriptive text
+    position: absolute;
+    bottom: -30px;
+    left: 0.3em;
+    font-size: $vdm-font-size-small;
+  }
+
+  &.pl-size-inline {
+    display: inline-block;
+    margin-right: 1rem;
+    width: 10%;
+  }
+  &.pl-size-5 {
+    width: 5%;
+  }
+  &.pl-size-75 {
+    width: 7.5%;
+  }
+  &.pl-size-10 {
+    width: 10%;
+  }
+  &.pl-size-15 {
+    width: 15%;
+  }
+  &.pl-size-20 {
+    width: 20%;
+  }
+}
+
+
+// Box demos for units
+$pl-size-box-wrapper-size: 20rem;
+$pl-size-box-wrapper-padding: 1rem;
+
+.pl-size-box-wrapper {
+  width: $pl-size-box-wrapper-size;
+  height: $pl-size-box-wrapper-size;
+  border: 1px solid $vdm-grey;
+  float: left;
+  margin-right: $pl-size-box-wrapper-padding;
+
+  
+  .pl-size-box {
+    text-align: center;
+    margin: $pl-size-box-wrapper-padding/2 auto $pl-size-box-wrapper-padding/2 auto;
+  }
+  .pl-size-box-margin {
+    background: darken($vdm-grey-light, 20%);
+    border: 1px solid $vdm-grey;
+    z-index: -5;
+    width: $pl-size-box-wrapper-size - $pl-size-box-wrapper-padding;
+    height: $pl-size-box-wrapper-size - $pl-size-box-wrapper-padding;
+    .pl-size-box-base {
+      background: $vdm-grey-light;
+      border: 1px solid $vdm-grey;
+      z-index: 0;
+      width: $pl-size-box-wrapper-size - $pl-size-box-wrapper-padding * 2;
+      height: $pl-size-box-wrapper-size - $pl-size-box-wrapper-padding * 2;
+
+      .pl-size-box-padding {
+        background: lighten($vdm-grey-light, 20%);
+        border: 1px solid $vdm-grey;
+        z-index: 5;
+        width: $pl-size-box-wrapper-size - $pl-size-box-wrapper-padding * 3;
+        height: $pl-size-box-wrapper-size - $pl-size-box-wrapper-padding * 3;
+        
+      }
+    }
+  }
+
+  // 2 rem modifier
+  &.pl-size-box-2rem {
+    font-size: 2rem;
+
+    .pl-size-box {
+      margin: $pl-size-box-wrapper-padding auto $pl-size-box-wrapper-padding auto;
+    }
+
+    .pl-size-box-margin {
+      width: $pl-size-box-wrapper-size - 2rem;
+      height: $pl-size-box-wrapper-size - 2rem;
+      .pl-size-box-base {
+        width: $pl-size-box-wrapper-size - 4rem;
+        height: $pl-size-box-wrapper-size - 4rem;
+        .pl-size-box-padding {
+          width: $pl-size-box-wrapper-size - 6rem;
+          height: $pl-size-box-wrapper-size - 6rem;
+        }
+      }
+    }
+  }
+}
+
+
+
 // Documentation
 // - - - - - - - - - -  - - - - - -
 .pl-document {
