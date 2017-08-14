@@ -206,6 +206,22 @@ $pl-size-box-wrapper-padding: 1rem;
   }
 }
 
+// Lists
+.pl-list-stacked-block {
+  margin: 0;
+  padding: 0;
+  li {
+    margin: 0;
+    padding: 0;
+  }
+  &.plain {
+    list-style-type: none;
+  }
+  &.pl-width-20 {
+    max-width: 20%;
+  }
+} 
+
 
 
 // Documentation

@@ -14,7 +14,7 @@ label {
     &.vdm-radio {
         input {
             position: relative;
-            margin: 0 2rem 0 0;
+            margin: 0 1.6rem 0 0;
 
             &:before, 
             &:after {
@@ -29,9 +29,18 @@ label {
                 top: -0.3rem;
                 width: 1.8rem;
                 height: 1.8rem;
+
+                left: -0.2rem;
+                top: -0.2rem;
+                width: 1.4rem;
+                height: 1.4rem;
+
+
                 background: $vdm-form-disabled-bg-color;
                 cursor: pointer;
                 border-radius: 0.3rem;
+
+                border-radius: 0.2rem;
             }
 
             // The selection
@@ -39,6 +48,9 @@ label {
                 z-index: 1;
                 width: 1.3rem;
                 height: 1.3rem;
+
+                width: 1rem;
+                height: 1rem;
             }
         }
     }
@@ -62,10 +74,10 @@ label {
             // The checkmark
             &:after {
                 top: 0.125em;
+                left: 0.09em;
                 transform: rotate(-45deg);
-                width: 1.15rem;
-                height: .5rem;
-
+                width: 0.85rem;
+                height: 0.35rem;
             }
 
             // The patch on top of the input
@@ -110,7 +122,6 @@ label {
             &:before, 
             &:after {
                 border-radius: 50%;
-
             }
     
             // The background of the input
@@ -119,15 +130,19 @@ label {
                 height: 2.1rem;
                 left: -0.4rem;
                 top: -0.4rem;
+
+                width: 1.5rem;
+                height: 1.5rem;
+                left: -0.25rem;
+                top: -0.25rem;
             }
 
             // The inner circle for the checked checkbox
             &:after {
-                width:  70%;
-                height: 70%;
+                width: 0.65rem;
+                height: 0.65rem;
                 // transform: scale(0.75, 0.75);
-                transform: translate(0.23rem, 0.18rem);
-                
+                transform: translate(0.2rem, 0.2rem);
             }
 
             // The selected, circular input
@@ -261,7 +276,7 @@ label {
             .vdm-form-control {
                 & ~ .form-control-feedback {
                     font-family: $vdm-icon-font-family;
-                    font-size: 3rem;
+                    font-size: 2rem;
                     top: 0;
 
                     &.glyphicon-remove {
@@ -294,7 +309,7 @@ label {
     &:after {
         background: $vdm-white;
         font-family: $vdm-icon-font-family;
-        font-size: 2.6rem;
+        font-size: 1.9rem;
         content: "\E038"; 
         position: absolute;
         top: 0.1rem;

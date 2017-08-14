@@ -273,14 +273,18 @@ a {
             }
 
         }
-    } // >li
-    >li {
         &:last-of-type {
             >a {
                 margin-right: 0;
             }
+            &.active {
+                &:before {
+                    width: 100%;
+                }
+            }
         }
-    }
+    } // >li
+
     
     // Justified tabs
     &.nav-tabs {

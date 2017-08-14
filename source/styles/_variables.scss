@@ -98,6 +98,7 @@ $vdm-error-color:           $vdm-sub-brand;
 
 // Form elements - generic
 $vdm-element-border-width: 2px;
+$vdm-element-border-radius: 5px;
 $vdm-element-padding: 2px;
 $vdm-element-base-height: 34px;
 
@@ -126,7 +127,7 @@ $vdm-switch-width-inside: 30px;
 $vdm-switch-padding: 5px;
 
 // Textfields
-$vdm-textfield-border-radius: 5px;
+$vdm-textfield-border-radius: $vdm-element-border-radius;
 
 // Tabs 
 $vdm-tabs-spacing: 4px;

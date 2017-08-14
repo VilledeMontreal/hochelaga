@@ -11,6 +11,20 @@ html {
 
     h1 {
       @include header(1);
+      &.vdm-title {
+        position: relative;
+        &:after {
+          position: absolute;
+          min-width: 3rem;
+          max-width: 4rem;
+          content: " ";
+          left: 0;
+          bottom: 0.1em;
+          border-radius: $vdm-font-size-base / 4;
+          height: $vdm-font-size-base / 3;
+          background: $vdm-brand;
+        }
+      }
     }
     h2 {
       @include header(2);
@@ -58,6 +72,121 @@ html {
       // margin-bottom: 24px;
       // line-height: 42px;
     }
+    // Hyperlinks - generic
+    a {
+      color: $vdm-brand;
+      &:hover, 
+      &:active {
+        color: $vdm-black;
+        text-decoration: underline;
+      }
+      // Inline links with icons
+      &.icon {
+        
+        i {
+            &.vdmi {
+              font-size: 1.5em;
+              position: relative;
+              top: 0.2em;
+            }
+        }
+        &.right {
+          i {
+            &.vdmi {
+                padding-left: 0.15em;
+              }
+          }
+        }
+        &.left {
+          i {
+            &.vdmi {
+                padding-right: 0.15em;
+              }
+          }
+        }
+      }
+
+      &.block {
+        display: block;
+        background: transparent;
+        line-height: 1.6em;
+        padding: 0.6em 0.6em;
+        
+
+        &.arrow {
+          position: relative;
+          padding-right: 4em;
+          
+          &:after {
+            position: absolute;
+            content: "\E103";
+            font-family: "vdm-fonticon";
+            font-size: 2.5em;
+            // top: 0.03em;
+            // left: calc(100% - 1.25em);
+            margin: auto;
+            top: 0; 
+            left: calc(100% - 1.25em); 
+            bottom: 0; 
+            right: 0;
+            height: 50%;
+
+            background: transparent;
+            &:hover, 
+            &:active {
+              background: transparent;
+              text-decoration: none;
+            }
+          }
+          
+        }
+        &.inverse {
+          background: $vdm-black;
+          color: $vdm-white;
+          &:hover, 
+          &:active {
+            color: $vdm-brand;
+            text-decoration: none;
+          }
+
+        }
+      }
+
+
+    }
+    // Inline links with icons - Headers : a tad smaller
+    h1, h2, h3, h4, h5, h6 {
+      a {
+        &.icon {
+          i {
+            &.vdmi {
+              font-size: 1.2em;
+            }
+          }
+        }
+      }
+    }
   }
 }
+
+/**
+ *
+ * More inline text classes
+ *
+ *
+ */
+
+ .vdm-label {
+    font-weight: $vdm-font-weight-regular;
+    font-size: $vdm-font-size-smaller;
+    background: $vdm-white;
+    border: $vdm-element-border-width/2 solid $vdm-brand;
+    color: $vdm-brand;
+    border-radius: $vdm-element-border-radius;
+    padding: $vdm-btn-padding-y $vdm-btn-padding-x * 0.75;
+    &.selected {
+      border: $vdm-element-border-width/2 solid $vdm-black;
+      color: $vdm-black;
+    }
+ }
 
