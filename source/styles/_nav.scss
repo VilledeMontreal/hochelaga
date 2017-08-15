@@ -25,16 +25,26 @@
 // Breadcrumb
 // @todo -- review this code with a real reference, this is imaginary
 .vdm-pagination {
-  border: none;
   border-radius: 0;
+
   >li {
      border: none;
     a {
-      color: $vdm-brand;
-      border: none;
+      color: $vdm-grey;
+      // border: none;
+      border: 1px solid lighten($vdm-grey, 9%);
+      background: $vdm-white;
+      padding : $vdm-element-padding * 4  $vdm-element-padding * 8.5;
+      font-size: floor($vdm-font-size-base * 1.3125);
+      line-height: floor($vdm-line-height-base * 1.3125);
+      
       &:hover, 
       &:active {
         color: $vdm-black;
+        border: 1px solid lighten($vdm-grey, 9%);
+        text-decoration: none;
+        color: $vdm-brand;
+        background-color: $vdm-grey-light;
       }
     }
     &.active {
@@ -44,6 +54,8 @@
         &:hover, 
         &:active {
           background-color: $vdm-brand;
+          border: 1px solid lighten($vdm-grey, 9%);
+          text-decoration: none;
         }
       }
      
@@ -51,11 +63,18 @@
     // @todo -- get thisfirst & last selector working
     &:first-child, 
     &:last-child {
-        > a {
+        >a {
           border-bottom-left-radius: 0;
           border-top-left-radius: 0;
           border-bottom-right-radius: 0;
           border-top-right-radius: 0;
+          color: $vdm-brand;
+          padding : $vdm-element-padding * 4  $vdm-element-padding * 7;
+          font-size: 1.2em;
+          .vdmi {
+            position: relative;
+            top: 0.2em;
+          }
         }
     }
 

@@ -4066,26 +4066,41 @@ html body {
     padding: 0 1.1rem; }
 
 .vdm-pagination {
-  border: none;
   border-radius: 0; }
   .vdm-pagination > li {
     border: none; }
     .vdm-pagination > li a {
-      color: #429A8E;
-      border: none; }
+      color: #80807F;
+      border: 1px solid #979796;
+      background: #FFFFFF;
+      padding: 8px 17px;
+      font-size: 21px;
+      line-height: 27px; }
       .vdm-pagination > li a:hover, .vdm-pagination > li a:active {
-        color: #000000; }
+        color: #000000;
+        border: 1px solid #979796;
+        text-decoration: none;
+        color: #429A8E;
+        background-color: #F2F2F1; }
     .vdm-pagination > li.active {
       color: #000000; }
       .vdm-pagination > li.active a {
         background-color: #429A8E; }
         .vdm-pagination > li.active a:hover, .vdm-pagination > li.active a:active {
-          background-color: #429A8E; }
-    .vdm-pagination > li:first-child >  a, .vdm-pagination > li:last-child >  a {
+          background-color: #429A8E;
+          border: 1px solid #979796;
+          text-decoration: none; }
+    .vdm-pagination > li:first-child > a, .vdm-pagination > li:last-child > a {
       border-bottom-left-radius: 0;
       border-top-left-radius: 0;
       border-bottom-right-radius: 0;
-      border-top-right-radius: 0; }
+      border-top-right-radius: 0;
+      color: #429A8E;
+      padding: 8px 14px;
+      font-size: 1.2em; }
+      .vdm-pagination > li:first-child > a .vdmi, .vdm-pagination > li:last-child > a .vdmi {
+        position: relative;
+        top: 0.2em; }
 
 /**
  * - - - - - - - - - -
