@@ -37,7 +37,7 @@
       padding : $vdm-element-padding * 4  $vdm-element-padding * 8.5;
       font-size: floor($vdm-font-size-base * 1.3125);
       line-height: floor($vdm-line-height-base * 1.3125);
-      
+
       &:hover, 
       &:active {
         color: $vdm-black;
@@ -63,20 +63,100 @@
     // @todo -- get thisfirst & last selector working
     &:first-child, 
     &:last-child {
-        >a {
-          border-bottom-left-radius: 0;
-          border-top-left-radius: 0;
-          border-bottom-right-radius: 0;
-          border-top-right-radius: 0;
-          color: $vdm-brand;
-          padding : $vdm-element-padding * 4  $vdm-element-padding * 7;
-          font-size: 1.2em;
-          .vdmi {
-            position: relative;
-            top: 0.2em;
-          }
+      >a {
+        border-bottom-left-radius: 0;
+        border-top-left-radius: 0;
+        border-bottom-right-radius: 0;
+        border-top-right-radius: 0;
+        color: $vdm-brand;
+        padding : $vdm-element-padding * 4  $vdm-element-padding * 7;
+        font-size: 1.2em;
+        .vdmi {
+          position: relative;
+          top: 0.2em;
         }
+      }
     }
+  }
+}
 
+// Breadcrumb
+// @todo -- review this code with a real reference, this is imaginary
+.vdm-collapsible-list {
+  list-style-type : none;
+  margin: 0;
+  padding: 0;
+  &ul {
+      list-style-type : none;
+      margin: 0;
+      padding: 0;
+    li {
+      margin: 0;
+      padding: 0;
+    }
+  }
+}
+
+.vdm-collapsible-item {
+  padding: 0;
+
+  .object {
+
+    >a {
+      @include header(5);
+      background: $vdm-grey-light;
+      color: $vdm-black;
+      position: relative;
+      display: block;
+      padding-left: 1.3em;
+      line-height: 3.85em;
+
+      &[aria-expanded="true"] {
+        color: $vdm-brand;
+        &:after {
+          content: "\E207"; 
+        }
+      }
+
+      &:hover, 
+      &:active {
+        color: $vdm-brand;
+        text-decoration: none;
+
+        &:after {
+          color: $vdm-black;
+        }
+
+      }
+
+      &:after {
+        font-family: "vdm-fonticon";
+        font-size: 2.6rem;
+        content: "\E203"; 
+        position: absolute;
+        bottom: 0.9em;
+        right: 0.5rem;
+        display: block;
+        width: 2.6rem;
+        height: 2.6rem;
+        text-align: center;
+        pointer-events: none;
+        color: $vdm-brand;
+      }
+
+      &:before {
+        content : "";
+        display: inline-block;
+        width: 1rem;
+        height: 1rem; 
+        border-radius: 1rem;
+        background: $vdm-brand;
+        margin-right: 1.1em;
+      }
+
+    }
+  }
+  .subject {
+    padding-left: 4.3rem;
   }
 }

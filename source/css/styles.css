@@ -4102,6 +4102,69 @@ html body {
         position: relative;
         top: 0.2em; }
 
+.vdm-collapsible-list {
+  list-style-type: none;
+  margin: 0;
+  padding: 0; }
+  .vdm-collapsible-listul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0; }
+    .vdm-collapsible-listul li {
+      margin: 0;
+      padding: 0; }
+
+.vdm-collapsible-item {
+  padding: 0; }
+  .vdm-collapsible-item .object > a {
+    font-family: "Nunito Sans", Helvetica, Arial, sans-serif;
+    font-size: 67px;
+    line-height: 118.125px;
+    font-weight: 400;
+    display: block;
+    margin-top: 0;
+    margin-bottom: 0;
+    font-size: 21px;
+    line-height: 27.9993px;
+    background: #F2F2F1;
+    color: #000000;
+    position: relative;
+    display: block;
+    padding-left: 1.3em;
+    line-height: 3.85em; }
+    .vdm-collapsible-item .object > a[aria-expanded="true"] {
+      color: #429A8E; }
+      .vdm-collapsible-item .object > a[aria-expanded="true"]:after {
+        content: "\E207"; }
+    .vdm-collapsible-item .object > a:hover, .vdm-collapsible-item .object > a:active {
+      color: #429A8E;
+      text-decoration: none; }
+      .vdm-collapsible-item .object > a:hover:after, .vdm-collapsible-item .object > a:active:after {
+        color: #000000; }
+    .vdm-collapsible-item .object > a:after {
+      font-family: "vdm-fonticon";
+      font-size: 2.6rem;
+      content: "\E203";
+      position: absolute;
+      bottom: 0.9em;
+      right: 0.5rem;
+      display: block;
+      width: 2.6rem;
+      height: 2.6rem;
+      text-align: center;
+      pointer-events: none;
+      color: #429A8E; }
+    .vdm-collapsible-item .object > a:before {
+      content: "";
+      display: inline-block;
+      width: 1rem;
+      height: 1rem;
+      border-radius: 1rem;
+      background: #429A8E;
+      margin-right: 1.1em; }
+  .vdm-collapsible-item .subject {
+    padding-left: 4.3rem; }
+
 /**
  * - - - - - - - - - -
  * == Typography
