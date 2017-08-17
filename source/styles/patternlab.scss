@@ -565,7 +565,6 @@ $pl-size-box-wrapper-padding: 1rem;
 // - - - - - - - - - -  - - - - - -
 .pl-atom-cards {
   @extend .container;
-  //@include container-fixed();
     .pl-cards-index {
         @include make-row();
         >li {
@@ -573,14 +572,25 @@ $pl-size-box-wrapper-padding: 1rem;
           @include make-xs-column(12);
           @include make-sm-column(4);
           @include make-md-column(3);
-          // @include make-lg-column(3);
 
           margin-bottom: $grid-gutter-width;
-          
         
-          //  display: inline-block;
-          //  margin-right: 15px;
-          //   margin-bottom: 15px;
+        }
+    }
+}
+
+.pl-atom-cards-large {
+  @extend .container;
+    .pl-cards-index {
+        @include make-row();
+        >li {
+         
+          @include make-xs-column(12);
+          @include make-sm-column(6);
+          @include make-md-column(6);
+
+          margin-bottom: $grid-gutter-width;
+        
         }
     }
 }

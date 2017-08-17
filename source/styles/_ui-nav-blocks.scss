@@ -40,6 +40,62 @@
         }
     }
 
+    // Large card, icon on left, ttle & teaser features at least, 
+    &.card-large {
+        background: $vdm-grey-light;
+        padding: 2.3rem 2.3em 3rem 7.75rem;
+        border: 0;
+        text-align: left;
+        min-height: 12rem;
+
+        @media only screen and (max-width: $screen-xs-max) {
+            padding: 8rem 2.3rem 2.5rem 2.3rem;
+        }
+
+        // Fonticon
+        &:before {
+            font-size: 3.6rem;
+            left: 3.25rem;
+            top: calc(50% - 1.8rem);
+            @media only screen and (max-width: $screen-xs-max) {
+                top: 2.5rem;
+                left: calc(50% - 1.8rem);
+            }
+        }
+
+        &:hover,
+        &:active {
+            background: $vdm-brand;
+        }
+
+        .title {
+           @include header(4);
+           font-weight: $vdm-font-weight-bold;
+           padding-top: 0;
+           margin-top: 0;
+           margin-bottom: 2.4rem;
+           @media only screen and (max-width: $screen-xs-max) {
+                margin-bottom: 1.8rem;
+            }
+        }
+
+        .content {
+            font-size: $vdm-font-size-base;
+            line-height: floor(($vdm-font-size-base * 1.625));
+
+            &:first-of-type {
+                margin-top: 0;
+                padding-top: 0
+            }
+            &:last-of-type {
+                margin-bottom: 0;
+                padding-bottom: 0
+            }
+            
+        }
+
+    }
+
     // Loop over all icons in the set to produce the classes & invoke the icon() mixin
     @each $name, $char in $icons {
         &.ic-#{$name} {
@@ -48,6 +104,8 @@
     }
 
 }
+
+
 // Base pseudo-element : tile
 .tile {
     display: block;

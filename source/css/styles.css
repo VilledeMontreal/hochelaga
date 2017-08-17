@@ -4920,27 +4920,6 @@ i.vdmi {
   text-rendering: auto;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale; }
-  i.vdmi.ic-lg {
-    font-size: 1.33333333em;
-    line-height: 0.75em;
-    vertical-align: -15%; }
-  i.vdmi.ic-2x {
-    font-size: 2em; }
-  i.vdmi.ic-3x {
-    font-size: 3em; }
-  i.vdmi.ic-4x {
-    font-size: 4em; }
-  i.vdmi.ic-5x {
-    font-size: 5em; }
-  i.vdmi.ic-6x {
-    font-size: 6em; }
-  i.vdmi.ic-7x {
-    font-size: 7em; }
-  i.vdmi.ic-8x {
-    font-size: 8em; }
-  i.vdmi.ic-fw {
-    width: 1.28571429em;
-    text-align: center; }
   i.vdmi.ic-rosette:before {
     content: ""; }
   i.vdmi.ic-search:before {
@@ -5107,6 +5086,27 @@ i.vdmi {
     content: ""; }
   i.vdmi.ic-permit-pet:before {
     content: ""; }
+  i.vdmi.ic-lg {
+    font-size: 1.33333333em;
+    line-height: 0.75em;
+    vertical-align: -15%; }
+  i.vdmi.ic-2x {
+    font-size: 2em; }
+  i.vdmi.ic-3x {
+    font-size: 3em; }
+  i.vdmi.ic-4x {
+    font-size: 4em; }
+  i.vdmi.ic-5x {
+    font-size: 5em; }
+  i.vdmi.ic-6x {
+    font-size: 6em; }
+  i.vdmi.ic-7x {
+    font-size: 7em; }
+  i.vdmi.ic-8x {
+    font-size: 8em; }
+  i.vdmi.ic-fw {
+    width: 1.28571429em;
+    text-align: center; }
 
 .fa {
   display: inline-block;
@@ -5420,6 +5420,51 @@ select {
   .card.card-base:before {
     left: calc(50% - 1.8rem);
     top: 3.4rem; }
+  .card.card-large {
+    background: #F2F2F1;
+    padding: 2.3rem 2.3em 3rem 7.75rem;
+    border: 0;
+    text-align: left;
+    min-height: 12rem; }
+    @media only screen and (max-width: 767px) {
+      .card.card-large {
+        padding: 8rem 2.3rem 2.5rem 2.3rem; } }
+    .card.card-large:before {
+      font-size: 3.6rem;
+      left: 3.25rem;
+      top: calc(50% - 1.8rem); }
+      @media only screen and (max-width: 767px) {
+        .card.card-large:before {
+          top: 2.5rem;
+          left: calc(50% - 1.8rem); } }
+    .card.card-large:hover, .card.card-large:active {
+      background: #429A8E; }
+    .card.card-large .title {
+      font-family: "Nunito Sans", Helvetica, Arial, sans-serif;
+      font-size: 67px;
+      line-height: 118.125px;
+      font-weight: 400;
+      display: block;
+      margin-top: 0;
+      margin-bottom: 0;
+      font-size: 28px;
+      line-height: 37.9995px;
+      font-weight: 700;
+      padding-top: 0;
+      margin-top: 0;
+      margin-bottom: 2.4rem; }
+      @media only screen and (max-width: 767px) {
+        .card.card-large .title {
+          margin-bottom: 1.8rem; } }
+    .card.card-large .content {
+      font-size: 16px;
+      line-height: 26px; }
+      .card.card-large .content:first-of-type {
+        margin-top: 0;
+        padding-top: 0; }
+      .card.card-large .content:last-of-type {
+        margin-bottom: 0;
+        padding-bottom: 0; }
   .card.ic-rosette:before {
     content: "";
     font-weight: normal;
