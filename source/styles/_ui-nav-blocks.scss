@@ -1,5 +1,53 @@
 // @file ui-nav-blocks.scss
 
+
+.card {
+    background: $vdm-white;
+    display: block;
+    padding: 8rem 2rem 1rem 2rem;
+    border: 1px solid $vdm-brand;
+    text-align: center;
+    text-decoration: none;
+    color: $vdm-black;
+    cursor: pointer;
+    line-height: floor(($vdm-font-size-base * 1.2));
+
+    &:hover,
+    &:active {
+        color: $vdm-white;
+        background: $vdm-brand;
+        text-decoration: none;
+         &:before {
+            color: $vdm-white;
+         }
+    }
+
+    // Fonticon
+    &:before {
+        font-size: 3.6rem;
+        width: 3.6rem;
+        height: 3.6rem;
+        line-height: 3.6rem;
+        position: absolute;
+        text-decoration: none;
+        color: $vdm-brand;
+    }
+    
+    &.card-base {
+        &:before {
+            left: calc(50% - 1.8rem);
+            top: 3.4rem;
+        }
+    }
+
+    // Loop over all icons in the set to produce the classes & invoke the icon() mixin
+    @each $name, $char in $icons {
+        &.ic-#{$name} {
+            @include icon(before, $name);
+        }
+    }
+
+}
 // Base pseudo-element : tile
 .tile {
     display: block;

@@ -554,10 +554,33 @@ $pl-size-box-wrapper-padding: 1rem;
         @include make-row();
         @include clearfix();
         >li {
-           display: inline-block;
-           margin-right: 15px;
+          display: inline-block;
+          margin-right: 15px;
           margin-bottom: 15px;
         }
     }
 }
 
+// Tiles
+// - - - - - - - - - -  - - - - - -
+.pl-atom-cards {
+  @extend .container;
+  //@include container-fixed();
+    .pl-cards-index {
+        @include make-row();
+        >li {
+         
+          @include make-xs-column(12);
+          @include make-sm-column(4);
+          @include make-md-column(3);
+          // @include make-lg-column(3);
+
+          margin-bottom: $grid-gutter-width;
+          
+        
+          //  display: inline-block;
+          //  margin-right: 15px;
+          //   margin-bottom: 15px;
+        }
+    }
+}

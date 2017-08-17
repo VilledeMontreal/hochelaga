@@ -46,6 +46,75 @@
   }
  }
 
+
+
+
+ /**
+  * Vdm fonticon mixin
+  * Reference : http://jaydenseric.com/blog/fun-with-sass-and-font-icons
+  *
+  * @arg $position [string] - [before, after, both]
+  * @arg $icon [string or false] - a member of the $icons variable
+  * @arg $styles [boolean] - whther the extra styles rules shoudl be applied or just the content attribute
+  *
+  * Usage 
+  * <a href="#" class="some-class">Some text</a>
+  *
+  * .some-class {
+  *     @include icon(before, rosette);
+  * }
+  *
+  *
+  */
+
+
+// Generate all .ic-icon classnames : 
+[class^="ic-"]:before,
+[class*=" ic-"]:before {
+    font-weight: normal;
+    font-style: normal;
+    font-family: $vdm-icon-font-family;
+}
+
+// @see variable $icons in variables.scss -- contains all characters
+// mapping & object names as in   document: "\E012";
+@each $name, $char in $icons {
+    .ic-#{$name} {
+        content: $char;
+    }
+}
+
+
+@mixin icon($position: before, $icon: false, $styles: true) {
+    @if $position == both {
+        $position: 'before, &:after';
+    }
+    // Either a :before or :after pseudo-element, or both, defaulting to :before
+    &:#{$position} {
+
+        @if $icon {
+            // A particular icon has been specified
+            content: "#{map-get($icons, $icon)}";
+        }
+
+        @if $styles {
+            font-weight: normal;
+            font-style: normal;
+            font-family: $vdm-icon-font-family;
+            text-decoration: none;
+            display: inline-block;
+            text-rendering: auto;
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+        }
+
+        @content;
+    }
+}
+
+
+
+
 /**
  * - - - - - - - - - -
  * == UI

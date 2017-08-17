@@ -3922,6 +3922,278 @@ button.list-group-item-danger {
  * - - - - - - - - - -
  */
 /**
+  * Vdm fonticon mixin
+  * Reference : http://jaydenseric.com/blog/fun-with-sass-and-font-icons
+  *
+  * @arg $position [string] - [before, after, both]
+  * @arg $icon [string or false] - a member of the $icons variable
+  * @arg $styles [boolean] - whther the extra styles rules shoudl be applied or just the content attribute
+  *
+  * Usage 
+  * <a href="#" class="some-class">Some text</a>
+  *
+  * .some-class {
+  *     @include icon(before, rosette);
+  * }
+  *
+  *
+  */
+[class^="ic-"]:before,
+[class*=" ic-"]:before {
+  font-weight: normal;
+  font-style: normal;
+  font-family: "vdm-fonticon"; }
+
+.ic-rosette {
+  content: ""; }
+
+.ic-search {
+  content: ""; }
+
+.ic-profile {
+  content: ""; }
+
+.ic-flag {
+  content: ""; }
+
+.ic-calendar {
+  content: ""; }
+
+.ic-sun {
+  content: ""; }
+
+.ic-ticket {
+  content: ""; }
+
+.ic-eye {
+  content: ""; }
+
+.ic-people {
+  content: ""; }
+
+.ic-doc-holder {
+  content: ""; }
+
+.ic-bus {
+  content: ""; }
+
+.ic-phone {
+  content: ""; }
+
+.ic-book {
+  content: ""; }
+
+.ic-arrow-play {
+  content: ""; }
+
+.ic-arrow-select {
+  content: ""; }
+
+.ic-news-item {
+  content: ""; }
+
+.ic-location-star {
+  content: ""; }
+
+.ic-permit-id {
+  content: ""; }
+
+.ic-document {
+  content: ""; }
+
+.ic-credit-card {
+  content: ""; }
+
+.ic-folder {
+  content: ""; }
+
+.ic-bell {
+  content: ""; }
+
+.ic-settings {
+  content: ""; }
+
+.ic-plus-circle-dot {
+  content: ""; }
+
+.ic-minus-circle-dot {
+  content: ""; }
+
+.ic-steps-checked {
+  content: ""; }
+
+.ic-ellipsis-circle-dot {
+  content: ""; }
+
+.ic-enveloppe {
+  content: ""; }
+
+.ic-folder-add {
+  content: ""; }
+
+.ic-warning-triangle {
+  content: ""; }
+
+.ic-computer {
+  content: ""; }
+
+.ic-nut {
+  content: ""; }
+
+.ic-pencil {
+  content: ""; }
+
+.ic-lightbulb {
+  content: ""; }
+
+.ic-pen {
+  content: ""; }
+
+.ic-warning-circle {
+  content: ""; }
+
+.ic-clock {
+  content: ""; }
+
+.ic-target {
+  content: ""; }
+
+.ic-broom {
+  content: ""; }
+
+.ic-permit {
+  content: ""; }
+
+.ic-arrow-circle-up {
+  content: ""; }
+
+.ic-arrow-circle-right {
+  content: ""; }
+
+.ic-arrow-circle-down {
+  content: ""; }
+
+.ic-arrow-circle-left {
+  content: ""; }
+
+.ic-house {
+  content: ""; }
+
+.ic-x-close {
+  content: ""; }
+
+.ic-circle-progress-done {
+  content: ""; }
+
+.ic-circle-progress-a {
+  content: ""; }
+
+.ic-circle-progress-ab {
+  content: ""; }
+
+.ic-circle-progress-abc {
+  content: ""; }
+
+.ic-circle-progress-c {
+  content: ""; }
+
+.ic-circle-progress-bc {
+  content: ""; }
+
+.ic-circle-progress-checked {
+  content: ""; }
+
+.ic-circle-progress-folder {
+  content: ""; }
+
+.ic-chevron-up {
+  content: ""; }
+
+.ic-chevron-right {
+  content: ""; }
+
+.ic-chevron-down {
+  content: ""; }
+
+.ic-chevron-left {
+  content: ""; }
+
+.ic-circle-checked {
+  content: ""; }
+
+.ic-menu {
+  content: ""; }
+
+.ic-location {
+  content: ""; }
+
+.ic-arrow-up {
+  content: ""; }
+
+.ic-arrow-right {
+  content: ""; }
+
+.ic-arrow-down {
+  content: ""; }
+
+.ic-arrow-left {
+  content: ""; }
+
+.ic-plus {
+  content: ""; }
+
+.ic-minus {
+  content: ""; }
+
+.ic-multiply {
+  content: ""; }
+
+.ic-circle-plus {
+  content: ""; }
+
+.ic-circle-minus {
+  content: ""; }
+
+.ic-circle-multiply {
+  content: ""; }
+
+.ic-circle-plus-invert {
+  content: ""; }
+
+.ic-circle-minus-invert {
+  content: ""; }
+
+.ic-circle-multiply-invert {
+  content: ""; }
+
+.ic-checkbox-checked {
+  content: ""; }
+
+.ic-checkbox-empty {
+  content: ""; }
+
+.ic-checkbox-checked-trans {
+  content: ""; }
+
+.ic-checkbox-checked-invert {
+  content: ""; }
+
+.ic-trash {
+  content: ""; }
+
+.ic-recycle {
+  content: ""; }
+
+.ic-compost {
+  content: ""; }
+
+.ic-greens {
+  content: ""; }
+
+.ic-permit-pet {
+  content: ""; }
+
+/**
  * - - - - - - - - - -
  * == UI
  * - - - - - - - - - -
@@ -4173,6 +4445,278 @@ html body {
  * - - - - - - - - - -
  */
 /**
+  * Vdm fonticon mixin
+  * Reference : http://jaydenseric.com/blog/fun-with-sass-and-font-icons
+  *
+  * @arg $position [string] - [before, after, both]
+  * @arg $icon [string or false] - a member of the $icons variable
+  * @arg $styles [boolean] - whther the extra styles rules shoudl be applied or just the content attribute
+  *
+  * Usage 
+  * <a href="#" class="some-class">Some text</a>
+  *
+  * .some-class {
+  *     @include icon(before, rosette);
+  * }
+  *
+  *
+  */
+[class^="ic-"]:before,
+[class*=" ic-"]:before {
+  font-weight: normal;
+  font-style: normal;
+  font-family: "vdm-fonticon"; }
+
+.ic-rosette {
+  content: ""; }
+
+.ic-search {
+  content: ""; }
+
+.ic-profile {
+  content: ""; }
+
+.ic-flag {
+  content: ""; }
+
+.ic-calendar {
+  content: ""; }
+
+.ic-sun {
+  content: ""; }
+
+.ic-ticket {
+  content: ""; }
+
+.ic-eye {
+  content: ""; }
+
+.ic-people {
+  content: ""; }
+
+.ic-doc-holder {
+  content: ""; }
+
+.ic-bus {
+  content: ""; }
+
+.ic-phone {
+  content: ""; }
+
+.ic-book {
+  content: ""; }
+
+.ic-arrow-play {
+  content: ""; }
+
+.ic-arrow-select {
+  content: ""; }
+
+.ic-news-item {
+  content: ""; }
+
+.ic-location-star {
+  content: ""; }
+
+.ic-permit-id {
+  content: ""; }
+
+.ic-document {
+  content: ""; }
+
+.ic-credit-card {
+  content: ""; }
+
+.ic-folder {
+  content: ""; }
+
+.ic-bell {
+  content: ""; }
+
+.ic-settings {
+  content: ""; }
+
+.ic-plus-circle-dot {
+  content: ""; }
+
+.ic-minus-circle-dot {
+  content: ""; }
+
+.ic-steps-checked {
+  content: ""; }
+
+.ic-ellipsis-circle-dot {
+  content: ""; }
+
+.ic-enveloppe {
+  content: ""; }
+
+.ic-folder-add {
+  content: ""; }
+
+.ic-warning-triangle {
+  content: ""; }
+
+.ic-computer {
+  content: ""; }
+
+.ic-nut {
+  content: ""; }
+
+.ic-pencil {
+  content: ""; }
+
+.ic-lightbulb {
+  content: ""; }
+
+.ic-pen {
+  content: ""; }
+
+.ic-warning-circle {
+  content: ""; }
+
+.ic-clock {
+  content: ""; }
+
+.ic-target {
+  content: ""; }
+
+.ic-broom {
+  content: ""; }
+
+.ic-permit {
+  content: ""; }
+
+.ic-arrow-circle-up {
+  content: ""; }
+
+.ic-arrow-circle-right {
+  content: ""; }
+
+.ic-arrow-circle-down {
+  content: ""; }
+
+.ic-arrow-circle-left {
+  content: ""; }
+
+.ic-house {
+  content: ""; }
+
+.ic-x-close {
+  content: ""; }
+
+.ic-circle-progress-done {
+  content: ""; }
+
+.ic-circle-progress-a {
+  content: ""; }
+
+.ic-circle-progress-ab {
+  content: ""; }
+
+.ic-circle-progress-abc {
+  content: ""; }
+
+.ic-circle-progress-c {
+  content: ""; }
+
+.ic-circle-progress-bc {
+  content: ""; }
+
+.ic-circle-progress-checked {
+  content: ""; }
+
+.ic-circle-progress-folder {
+  content: ""; }
+
+.ic-chevron-up {
+  content: ""; }
+
+.ic-chevron-right {
+  content: ""; }
+
+.ic-chevron-down {
+  content: ""; }
+
+.ic-chevron-left {
+  content: ""; }
+
+.ic-circle-checked {
+  content: ""; }
+
+.ic-menu {
+  content: ""; }
+
+.ic-location {
+  content: ""; }
+
+.ic-arrow-up {
+  content: ""; }
+
+.ic-arrow-right {
+  content: ""; }
+
+.ic-arrow-down {
+  content: ""; }
+
+.ic-arrow-left {
+  content: ""; }
+
+.ic-plus {
+  content: ""; }
+
+.ic-minus {
+  content: ""; }
+
+.ic-multiply {
+  content: ""; }
+
+.ic-circle-plus {
+  content: ""; }
+
+.ic-circle-minus {
+  content: ""; }
+
+.ic-circle-multiply {
+  content: ""; }
+
+.ic-circle-plus-invert {
+  content: ""; }
+
+.ic-circle-minus-invert {
+  content: ""; }
+
+.ic-circle-multiply-invert {
+  content: ""; }
+
+.ic-checkbox-checked {
+  content: ""; }
+
+.ic-checkbox-empty {
+  content: ""; }
+
+.ic-checkbox-checked-trans {
+  content: ""; }
+
+.ic-checkbox-checked-invert {
+  content: ""; }
+
+.ic-trash {
+  content: ""; }
+
+.ic-recycle {
+  content: ""; }
+
+.ic-compost {
+  content: ""; }
+
+.ic-greens {
+  content: ""; }
+
+.ic-permit-pet {
+  content: ""; }
+
+/**
  * - - - - - - - - - -
  * == UI
  * - - - - - - - - - -
@@ -4307,6 +4851,9 @@ html {
         background: transparent;
         line-height: 1.6em;
         padding: 0.6em 0.6em; }
+        html body a.block.inline {
+          display: inline-block;
+          padding-left: 0; }
         html body a.block.arrow {
           position: relative;
           padding-right: 4em; }
@@ -4395,183 +4942,171 @@ i.vdmi {
     width: 1.28571429em;
     text-align: center; }
   i.vdmi.ic-rosette:before {
-    content: "\E000"; }
+    content: ""; }
   i.vdmi.ic-search:before {
-    content: "\E001"; }
+    content: ""; }
   i.vdmi.ic-profile:before {
-    content: "\E002"; }
+    content: ""; }
   i.vdmi.ic-flag:before {
-    content: "\E003"; }
+    content: ""; }
   i.vdmi.ic-calendar:before {
-    content: "\E004"; }
+    content: ""; }
   i.vdmi.ic-sun:before {
-    content: "\E005"; }
+    content: ""; }
   i.vdmi.ic-ticket:before {
-    content: "\E006"; }
+    content: ""; }
   i.vdmi.ic-eye:before {
-    content: "\E007"; }
+    content: ""; }
   i.vdmi.ic-people:before {
-    content: "\E008"; }
+    content: ""; }
   i.vdmi.ic-doc-holder:before {
-    content: "\E009"; }
+    content: ""; }
   i.vdmi.ic-bus:before {
-    content: "\E00A"; }
+    content: ""; }
   i.vdmi.ic-phone:before {
-    content: "\E00B"; }
+    content: ""; }
   i.vdmi.ic-book:before {
-    content: "\E00C"; }
+    content: ""; }
   i.vdmi.ic-arrow-play:before {
-    content: "\E00D"; }
+    content: ""; }
   i.vdmi.ic-arrow-select:before {
-    content: "\E00E"; }
+    content: ""; }
   i.vdmi.ic-news-item:before {
-    content: "\E00F"; }
+    content: ""; }
   i.vdmi.ic-location-star:before {
-    content: "\E010"; }
-  i.vdmi.ic-permit:before {
-    content: "\E011"; }
+    content: ""; }
+  i.vdmi.ic-permit-id:before {
+    content: ""; }
   i.vdmi.ic-document:before {
-    content: "\E012"; }
+    content: ""; }
   i.vdmi.ic-credit-card:before {
-    content: "\E013"; }
+    content: ""; }
   i.vdmi.ic-folder:before {
-    content: "\E014"; }
+    content: ""; }
   i.vdmi.ic-bell:before {
-    content: "\E015"; }
+    content: ""; }
   i.vdmi.ic-settings:before {
-    content: "\E016"; }
+    content: ""; }
   i.vdmi.ic-plus-circle-dot:before {
-    content: "\E017"; }
+    content: ""; }
   i.vdmi.ic-minus-circle-dot:before {
-    content: "\E018"; }
+    content: ""; }
   i.vdmi.ic-steps-checked:before {
-    content: "\E019"; }
+    content: ""; }
   i.vdmi.ic-ellipsis-circle-dot:before {
-    content: "\E01A"; }
+    content: ""; }
   i.vdmi.ic-enveloppe:before {
-    content: "\E01B"; }
+    content: ""; }
   i.vdmi.ic-folder-add:before {
-    content: "\E01C"; }
+    content: ""; }
   i.vdmi.ic-warning-triangle:before {
-    content: "\E01D"; }
+    content: ""; }
   i.vdmi.ic-computer:before {
-    content: "\E01E"; }
+    content: ""; }
   i.vdmi.ic-nut:before {
-    content: "\E01F"; }
+    content: ""; }
   i.vdmi.ic-pencil:before {
-    content: "\E020"; }
+    content: ""; }
   i.vdmi.ic-lightbulb:before {
-    content: "\E021"; }
+    content: ""; }
   i.vdmi.ic-pen:before {
-    content: "\E022"; }
+    content: ""; }
   i.vdmi.ic-warning-circle:before {
-    content: "\E023"; }
+    content: ""; }
   i.vdmi.ic-clock:before {
-    content: "\E024"; }
+    content: ""; }
   i.vdmi.ic-target:before {
-    content: "\E025"; }
+    content: ""; }
   i.vdmi.ic-broom:before {
-    content: "\E026"; }
+    content: ""; }
   i.vdmi.ic-permit:before {
-    content: "\E027"; }
+    content: ""; }
   i.vdmi.ic-arrow-circle-up:before {
-    content: "\E028"; }
+    content: ""; }
   i.vdmi.ic-arrow-circle-right:before {
-    content: "\E029"; }
+    content: ""; }
   i.vdmi.ic-arrow-circle-down:before {
-    content: "\E02A"; }
+    content: ""; }
   i.vdmi.ic-arrow-circle-left:before {
-    content: "\E02B"; }
+    content: ""; }
   i.vdmi.ic-house:before {
-    content: "\E02C"; }
+    content: ""; }
   i.vdmi.ic-x-close:before {
-    content: "\E02D"; }
+    content: ""; }
   i.vdmi.ic-circle-progress-done:before {
-    content: "\E02E"; }
+    content: ""; }
   i.vdmi.ic-circle-progress-a:before {
-    content: "\E02F"; }
+    content: ""; }
   i.vdmi.ic-circle-progress-ab:before {
-    content: "\E030"; }
+    content: ""; }
   i.vdmi.ic-circle-progress-abc:before {
-    content: "\E031"; }
+    content: ""; }
   i.vdmi.ic-circle-progress-c:before {
-    content: "\E032"; }
+    content: ""; }
   i.vdmi.ic-circle-progress-bc:before {
-    content: "\E033"; }
+    content: ""; }
   i.vdmi.ic-circle-progress-checked:before {
-    content: "\E034"; }
+    content: ""; }
   i.vdmi.ic-circle-progress-folder:before {
-    content: "\E035"; }
+    content: ""; }
   i.vdmi.ic-chevron-up:before {
-    content: "\E036"; }
+    content: ""; }
   i.vdmi.ic-chevron-right:before {
-    content: "\E037"; }
+    content: ""; }
   i.vdmi.ic-chevron-down:before {
-    content: "\E038"; }
+    content: ""; }
   i.vdmi.ic-chevron-left:before {
-    content: "\E039"; }
+    content: ""; }
   i.vdmi.ic-circle-checked:before {
-    content: "\E03A"; }
+    content: ""; }
   i.vdmi.ic-menu:before {
-    content: "\E100"; }
+    content: ""; }
   i.vdmi.ic-location:before {
-    content: "\E101"; }
+    content: ""; }
   i.vdmi.ic-arrow-up:before {
-    content: "\E102"; }
+    content: ""; }
   i.vdmi.ic-arrow-right:before {
-    content: "\E103"; }
+    content: ""; }
   i.vdmi.ic-arrow-down:before {
-    content: "\E104"; }
+    content: ""; }
   i.vdmi.ic-arrow-left:before {
-    content: "\E105"; }
+    content: ""; }
   i.vdmi.ic-plus:before {
-    content: "\E200"; }
+    content: ""; }
   i.vdmi.ic-minus:before {
-    content: "\E201"; }
+    content: ""; }
   i.vdmi.ic-multiply:before {
-    content: "\E202"; }
+    content: ""; }
   i.vdmi.ic-circle-plus:before {
-    content: "\E203"; }
+    content: ""; }
   i.vdmi.ic-circle-minus:before {
-    content: "\E204"; }
+    content: ""; }
   i.vdmi.ic-circle-multiply:before {
-    content: "\E205"; }
+    content: ""; }
   i.vdmi.ic-circle-plus-invert:before {
-    content: "\E206"; }
+    content: ""; }
   i.vdmi.ic-circle-minus-invert:before {
-    content: "\E207"; }
+    content: ""; }
   i.vdmi.ic-circle-multiply-invert:before {
-    content: "\E208"; }
+    content: ""; }
   i.vdmi.ic-checkbox-checked:before {
-    content: "\E209"; }
+    content: ""; }
   i.vdmi.ic-checkbox-empty:before {
-    content: "\E20A"; }
+    content: ""; }
   i.vdmi.ic-checkbox-checked-trans:before {
-    content: "\E20B"; }
+    content: ""; }
   i.vdmi.ic-checkbox-checked-invert:before {
-    content: "\E20C"; }
+    content: ""; }
   i.vdmi.ic-trash:before {
-    content: "\E400"; }
+    content: ""; }
   i.vdmi.ic-recycle:before {
-    content: "\E401"; }
+    content: ""; }
   i.vdmi.ic-compost:before {
-    content: "\E402"; }
+    content: ""; }
   i.vdmi.ic-greens:before {
-    content: "\E403"; }
+    content: ""; }
   i.vdmi.ic-permit-pet:before {
-    content: "\E404"; }
-  i.vdmi.ic-facebook:before {
-    content: ""; }
-  i.vdmi.ic-youtube:before {
-    content: ""; }
-  i.vdmi.ic-google-plus:before {
-    content: ""; }
-  i.vdmi.ic-twitter:before {
-    content: ""; }
-  i.vdmi.ic-linkedin:before {
-    content: ""; }
-  i.vdmi.ic-instagram:before {
-    content: ""; }
+    content: ""; }
 
 .fa {
   display: inline-block;
@@ -4857,6 +5392,864 @@ select {
     opacity: 0.1;
     width: 100%;
     height: 100%; }
+
+.card {
+  background: #FFFFFF;
+  display: block;
+  padding: 8rem 2rem 1rem 2rem;
+  border: 1px solid #429A8E;
+  text-align: center;
+  text-decoration: none;
+  color: #000000;
+  cursor: pointer;
+  line-height: 19px; }
+  .card:hover, .card:active {
+    color: #FFFFFF;
+    background: #429A8E;
+    text-decoration: none; }
+    .card:hover:before, .card:active:before {
+      color: #FFFFFF; }
+  .card:before {
+    font-size: 3.6rem;
+    width: 3.6rem;
+    height: 3.6rem;
+    line-height: 3.6rem;
+    position: absolute;
+    text-decoration: none;
+    color: #429A8E; }
+  .card.card-base:before {
+    left: calc(50% - 1.8rem);
+    top: 3.4rem; }
+  .card.ic-rosette:before {
+    content: "";
+    font-weight: normal;
+    font-style: normal;
+    font-family: "vdm-fonticon";
+    text-decoration: none;
+    display: inline-block;
+    text-rendering: auto;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale; }
+  .card.ic-search:before {
+    content: "";
+    font-weight: normal;
+    font-style: normal;
+    font-family: "vdm-fonticon";
+    text-decoration: none;
+    display: inline-block;
+    text-rendering: auto;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale; }
+  .card.ic-profile:before {
+    content: "";
+    font-weight: normal;
+    font-style: normal;
+    font-family: "vdm-fonticon";
+    text-decoration: none;
+    display: inline-block;
+    text-rendering: auto;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale; }
+  .card.ic-flag:before {
+    content: "";
+    font-weight: normal;
+    font-style: normal;
+    font-family: "vdm-fonticon";
+    text-decoration: none;
+    display: inline-block;
+    text-rendering: auto;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale; }
+  .card.ic-calendar:before {
+    content: "";
+    font-weight: normal;
+    font-style: normal;
+    font-family: "vdm-fonticon";
+    text-decoration: none;
+    display: inline-block;
+    text-rendering: auto;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale; }
+  .card.ic-sun:before {
+    content: "";
+    font-weight: normal;
+    font-style: normal;
+    font-family: "vdm-fonticon";
+    text-decoration: none;
+    display: inline-block;
+    text-rendering: auto;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale; }
+  .card.ic-ticket:before {
+    content: "";
+    font-weight: normal;
+    font-style: normal;
+    font-family: "vdm-fonticon";
+    text-decoration: none;
+    display: inline-block;
+    text-rendering: auto;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale; }
+  .card.ic-eye:before {
+    content: "";
+    font-weight: normal;
+    font-style: normal;
+    font-family: "vdm-fonticon";
+    text-decoration: none;
+    display: inline-block;
+    text-rendering: auto;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale; }
+  .card.ic-people:before {
+    content: "";
+    font-weight: normal;
+    font-style: normal;
+    font-family: "vdm-fonticon";
+    text-decoration: none;
+    display: inline-block;
+    text-rendering: auto;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale; }
+  .card.ic-doc-holder:before {
+    content: "";
+    font-weight: normal;
+    font-style: normal;
+    font-family: "vdm-fonticon";
+    text-decoration: none;
+    display: inline-block;
+    text-rendering: auto;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale; }
+  .card.ic-bus:before {
+    content: "";
+    font-weight: normal;
+    font-style: normal;
+    font-family: "vdm-fonticon";
+    text-decoration: none;
+    display: inline-block;
+    text-rendering: auto;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale; }
+  .card.ic-phone:before {
+    content: "";
+    font-weight: normal;
+    font-style: normal;
+    font-family: "vdm-fonticon";
+    text-decoration: none;
+    display: inline-block;
+    text-rendering: auto;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale; }
+  .card.ic-book:before {
+    content: "";
+    font-weight: normal;
+    font-style: normal;
+    font-family: "vdm-fonticon";
+    text-decoration: none;
+    display: inline-block;
+    text-rendering: auto;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale; }
+  .card.ic-arrow-play:before {
+    content: "";
+    font-weight: normal;
+    font-style: normal;
+    font-family: "vdm-fonticon";
+    text-decoration: none;
+    display: inline-block;
+    text-rendering: auto;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale; }
+  .card.ic-arrow-select:before {
+    content: "";
+    font-weight: normal;
+    font-style: normal;
+    font-family: "vdm-fonticon";
+    text-decoration: none;
+    display: inline-block;
+    text-rendering: auto;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale; }
+  .card.ic-news-item:before {
+    content: "";
+    font-weight: normal;
+    font-style: normal;
+    font-family: "vdm-fonticon";
+    text-decoration: none;
+    display: inline-block;
+    text-rendering: auto;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale; }
+  .card.ic-location-star:before {
+    content: "";
+    font-weight: normal;
+    font-style: normal;
+    font-family: "vdm-fonticon";
+    text-decoration: none;
+    display: inline-block;
+    text-rendering: auto;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale; }
+  .card.ic-permit-id:before {
+    content: "";
+    font-weight: normal;
+    font-style: normal;
+    font-family: "vdm-fonticon";
+    text-decoration: none;
+    display: inline-block;
+    text-rendering: auto;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale; }
+  .card.ic-document:before {
+    content: "";
+    font-weight: normal;
+    font-style: normal;
+    font-family: "vdm-fonticon";
+    text-decoration: none;
+    display: inline-block;
+    text-rendering: auto;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale; }
+  .card.ic-credit-card:before {
+    content: "";
+    font-weight: normal;
+    font-style: normal;
+    font-family: "vdm-fonticon";
+    text-decoration: none;
+    display: inline-block;
+    text-rendering: auto;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale; }
+  .card.ic-folder:before {
+    content: "";
+    font-weight: normal;
+    font-style: normal;
+    font-family: "vdm-fonticon";
+    text-decoration: none;
+    display: inline-block;
+    text-rendering: auto;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale; }
+  .card.ic-bell:before {
+    content: "";
+    font-weight: normal;
+    font-style: normal;
+    font-family: "vdm-fonticon";
+    text-decoration: none;
+    display: inline-block;
+    text-rendering: auto;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale; }
+  .card.ic-settings:before {
+    content: "";
+    font-weight: normal;
+    font-style: normal;
+    font-family: "vdm-fonticon";
+    text-decoration: none;
+    display: inline-block;
+    text-rendering: auto;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale; }
+  .card.ic-plus-circle-dot:before {
+    content: "";
+    font-weight: normal;
+    font-style: normal;
+    font-family: "vdm-fonticon";
+    text-decoration: none;
+    display: inline-block;
+    text-rendering: auto;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale; }
+  .card.ic-minus-circle-dot:before {
+    content: "";
+    font-weight: normal;
+    font-style: normal;
+    font-family: "vdm-fonticon";
+    text-decoration: none;
+    display: inline-block;
+    text-rendering: auto;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale; }
+  .card.ic-steps-checked:before {
+    content: "";
+    font-weight: normal;
+    font-style: normal;
+    font-family: "vdm-fonticon";
+    text-decoration: none;
+    display: inline-block;
+    text-rendering: auto;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale; }
+  .card.ic-ellipsis-circle-dot:before {
+    content: "";
+    font-weight: normal;
+    font-style: normal;
+    font-family: "vdm-fonticon";
+    text-decoration: none;
+    display: inline-block;
+    text-rendering: auto;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale; }
+  .card.ic-enveloppe:before {
+    content: "";
+    font-weight: normal;
+    font-style: normal;
+    font-family: "vdm-fonticon";
+    text-decoration: none;
+    display: inline-block;
+    text-rendering: auto;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale; }
+  .card.ic-folder-add:before {
+    content: "";
+    font-weight: normal;
+    font-style: normal;
+    font-family: "vdm-fonticon";
+    text-decoration: none;
+    display: inline-block;
+    text-rendering: auto;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale; }
+  .card.ic-warning-triangle:before {
+    content: "";
+    font-weight: normal;
+    font-style: normal;
+    font-family: "vdm-fonticon";
+    text-decoration: none;
+    display: inline-block;
+    text-rendering: auto;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale; }
+  .card.ic-computer:before {
+    content: "";
+    font-weight: normal;
+    font-style: normal;
+    font-family: "vdm-fonticon";
+    text-decoration: none;
+    display: inline-block;
+    text-rendering: auto;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale; }
+  .card.ic-nut:before {
+    content: "";
+    font-weight: normal;
+    font-style: normal;
+    font-family: "vdm-fonticon";
+    text-decoration: none;
+    display: inline-block;
+    text-rendering: auto;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale; }
+  .card.ic-pencil:before {
+    content: "";
+    font-weight: normal;
+    font-style: normal;
+    font-family: "vdm-fonticon";
+    text-decoration: none;
+    display: inline-block;
+    text-rendering: auto;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale; }
+  .card.ic-lightbulb:before {
+    content: "";
+    font-weight: normal;
+    font-style: normal;
+    font-family: "vdm-fonticon";
+    text-decoration: none;
+    display: inline-block;
+    text-rendering: auto;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale; }
+  .card.ic-pen:before {
+    content: "";
+    font-weight: normal;
+    font-style: normal;
+    font-family: "vdm-fonticon";
+    text-decoration: none;
+    display: inline-block;
+    text-rendering: auto;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale; }
+  .card.ic-warning-circle:before {
+    content: "";
+    font-weight: normal;
+    font-style: normal;
+    font-family: "vdm-fonticon";
+    text-decoration: none;
+    display: inline-block;
+    text-rendering: auto;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale; }
+  .card.ic-clock:before {
+    content: "";
+    font-weight: normal;
+    font-style: normal;
+    font-family: "vdm-fonticon";
+    text-decoration: none;
+    display: inline-block;
+    text-rendering: auto;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale; }
+  .card.ic-target:before {
+    content: "";
+    font-weight: normal;
+    font-style: normal;
+    font-family: "vdm-fonticon";
+    text-decoration: none;
+    display: inline-block;
+    text-rendering: auto;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale; }
+  .card.ic-broom:before {
+    content: "";
+    font-weight: normal;
+    font-style: normal;
+    font-family: "vdm-fonticon";
+    text-decoration: none;
+    display: inline-block;
+    text-rendering: auto;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale; }
+  .card.ic-permit:before {
+    content: "";
+    font-weight: normal;
+    font-style: normal;
+    font-family: "vdm-fonticon";
+    text-decoration: none;
+    display: inline-block;
+    text-rendering: auto;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale; }
+  .card.ic-arrow-circle-up:before {
+    content: "";
+    font-weight: normal;
+    font-style: normal;
+    font-family: "vdm-fonticon";
+    text-decoration: none;
+    display: inline-block;
+    text-rendering: auto;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale; }
+  .card.ic-arrow-circle-right:before {
+    content: "";
+    font-weight: normal;
+    font-style: normal;
+    font-family: "vdm-fonticon";
+    text-decoration: none;
+    display: inline-block;
+    text-rendering: auto;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale; }
+  .card.ic-arrow-circle-down:before {
+    content: "";
+    font-weight: normal;
+    font-style: normal;
+    font-family: "vdm-fonticon";
+    text-decoration: none;
+    display: inline-block;
+    text-rendering: auto;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale; }
+  .card.ic-arrow-circle-left:before {
+    content: "";
+    font-weight: normal;
+    font-style: normal;
+    font-family: "vdm-fonticon";
+    text-decoration: none;
+    display: inline-block;
+    text-rendering: auto;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale; }
+  .card.ic-house:before {
+    content: "";
+    font-weight: normal;
+    font-style: normal;
+    font-family: "vdm-fonticon";
+    text-decoration: none;
+    display: inline-block;
+    text-rendering: auto;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale; }
+  .card.ic-x-close:before {
+    content: "";
+    font-weight: normal;
+    font-style: normal;
+    font-family: "vdm-fonticon";
+    text-decoration: none;
+    display: inline-block;
+    text-rendering: auto;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale; }
+  .card.ic-circle-progress-done:before {
+    content: "";
+    font-weight: normal;
+    font-style: normal;
+    font-family: "vdm-fonticon";
+    text-decoration: none;
+    display: inline-block;
+    text-rendering: auto;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale; }
+  .card.ic-circle-progress-a:before {
+    content: "";
+    font-weight: normal;
+    font-style: normal;
+    font-family: "vdm-fonticon";
+    text-decoration: none;
+    display: inline-block;
+    text-rendering: auto;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale; }
+  .card.ic-circle-progress-ab:before {
+    content: "";
+    font-weight: normal;
+    font-style: normal;
+    font-family: "vdm-fonticon";
+    text-decoration: none;
+    display: inline-block;
+    text-rendering: auto;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale; }
+  .card.ic-circle-progress-abc:before {
+    content: "";
+    font-weight: normal;
+    font-style: normal;
+    font-family: "vdm-fonticon";
+    text-decoration: none;
+    display: inline-block;
+    text-rendering: auto;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale; }
+  .card.ic-circle-progress-c:before {
+    content: "";
+    font-weight: normal;
+    font-style: normal;
+    font-family: "vdm-fonticon";
+    text-decoration: none;
+    display: inline-block;
+    text-rendering: auto;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale; }
+  .card.ic-circle-progress-bc:before {
+    content: "";
+    font-weight: normal;
+    font-style: normal;
+    font-family: "vdm-fonticon";
+    text-decoration: none;
+    display: inline-block;
+    text-rendering: auto;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale; }
+  .card.ic-circle-progress-checked:before {
+    content: "";
+    font-weight: normal;
+    font-style: normal;
+    font-family: "vdm-fonticon";
+    text-decoration: none;
+    display: inline-block;
+    text-rendering: auto;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale; }
+  .card.ic-circle-progress-folder:before {
+    content: "";
+    font-weight: normal;
+    font-style: normal;
+    font-family: "vdm-fonticon";
+    text-decoration: none;
+    display: inline-block;
+    text-rendering: auto;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale; }
+  .card.ic-chevron-up:before {
+    content: "";
+    font-weight: normal;
+    font-style: normal;
+    font-family: "vdm-fonticon";
+    text-decoration: none;
+    display: inline-block;
+    text-rendering: auto;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale; }
+  .card.ic-chevron-right:before {
+    content: "";
+    font-weight: normal;
+    font-style: normal;
+    font-family: "vdm-fonticon";
+    text-decoration: none;
+    display: inline-block;
+    text-rendering: auto;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale; }
+  .card.ic-chevron-down:before {
+    content: "";
+    font-weight: normal;
+    font-style: normal;
+    font-family: "vdm-fonticon";
+    text-decoration: none;
+    display: inline-block;
+    text-rendering: auto;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale; }
+  .card.ic-chevron-left:before {
+    content: "";
+    font-weight: normal;
+    font-style: normal;
+    font-family: "vdm-fonticon";
+    text-decoration: none;
+    display: inline-block;
+    text-rendering: auto;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale; }
+  .card.ic-circle-checked:before {
+    content: "";
+    font-weight: normal;
+    font-style: normal;
+    font-family: "vdm-fonticon";
+    text-decoration: none;
+    display: inline-block;
+    text-rendering: auto;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale; }
+  .card.ic-menu:before {
+    content: "";
+    font-weight: normal;
+    font-style: normal;
+    font-family: "vdm-fonticon";
+    text-decoration: none;
+    display: inline-block;
+    text-rendering: auto;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale; }
+  .card.ic-location:before {
+    content: "";
+    font-weight: normal;
+    font-style: normal;
+    font-family: "vdm-fonticon";
+    text-decoration: none;
+    display: inline-block;
+    text-rendering: auto;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale; }
+  .card.ic-arrow-up:before {
+    content: "";
+    font-weight: normal;
+    font-style: normal;
+    font-family: "vdm-fonticon";
+    text-decoration: none;
+    display: inline-block;
+    text-rendering: auto;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale; }
+  .card.ic-arrow-right:before {
+    content: "";
+    font-weight: normal;
+    font-style: normal;
+    font-family: "vdm-fonticon";
+    text-decoration: none;
+    display: inline-block;
+    text-rendering: auto;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale; }
+  .card.ic-arrow-down:before {
+    content: "";
+    font-weight: normal;
+    font-style: normal;
+    font-family: "vdm-fonticon";
+    text-decoration: none;
+    display: inline-block;
+    text-rendering: auto;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale; }
+  .card.ic-arrow-left:before {
+    content: "";
+    font-weight: normal;
+    font-style: normal;
+    font-family: "vdm-fonticon";
+    text-decoration: none;
+    display: inline-block;
+    text-rendering: auto;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale; }
+  .card.ic-plus:before {
+    content: "";
+    font-weight: normal;
+    font-style: normal;
+    font-family: "vdm-fonticon";
+    text-decoration: none;
+    display: inline-block;
+    text-rendering: auto;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale; }
+  .card.ic-minus:before {
+    content: "";
+    font-weight: normal;
+    font-style: normal;
+    font-family: "vdm-fonticon";
+    text-decoration: none;
+    display: inline-block;
+    text-rendering: auto;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale; }
+  .card.ic-multiply:before {
+    content: "";
+    font-weight: normal;
+    font-style: normal;
+    font-family: "vdm-fonticon";
+    text-decoration: none;
+    display: inline-block;
+    text-rendering: auto;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale; }
+  .card.ic-circle-plus:before {
+    content: "";
+    font-weight: normal;
+    font-style: normal;
+    font-family: "vdm-fonticon";
+    text-decoration: none;
+    display: inline-block;
+    text-rendering: auto;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale; }
+  .card.ic-circle-minus:before {
+    content: "";
+    font-weight: normal;
+    font-style: normal;
+    font-family: "vdm-fonticon";
+    text-decoration: none;
+    display: inline-block;
+    text-rendering: auto;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale; }
+  .card.ic-circle-multiply:before {
+    content: "";
+    font-weight: normal;
+    font-style: normal;
+    font-family: "vdm-fonticon";
+    text-decoration: none;
+    display: inline-block;
+    text-rendering: auto;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale; }
+  .card.ic-circle-plus-invert:before {
+    content: "";
+    font-weight: normal;
+    font-style: normal;
+    font-family: "vdm-fonticon";
+    text-decoration: none;
+    display: inline-block;
+    text-rendering: auto;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale; }
+  .card.ic-circle-minus-invert:before {
+    content: "";
+    font-weight: normal;
+    font-style: normal;
+    font-family: "vdm-fonticon";
+    text-decoration: none;
+    display: inline-block;
+    text-rendering: auto;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale; }
+  .card.ic-circle-multiply-invert:before {
+    content: "";
+    font-weight: normal;
+    font-style: normal;
+    font-family: "vdm-fonticon";
+    text-decoration: none;
+    display: inline-block;
+    text-rendering: auto;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale; }
+  .card.ic-checkbox-checked:before {
+    content: "";
+    font-weight: normal;
+    font-style: normal;
+    font-family: "vdm-fonticon";
+    text-decoration: none;
+    display: inline-block;
+    text-rendering: auto;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale; }
+  .card.ic-checkbox-empty:before {
+    content: "";
+    font-weight: normal;
+    font-style: normal;
+    font-family: "vdm-fonticon";
+    text-decoration: none;
+    display: inline-block;
+    text-rendering: auto;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale; }
+  .card.ic-checkbox-checked-trans:before {
+    content: "";
+    font-weight: normal;
+    font-style: normal;
+    font-family: "vdm-fonticon";
+    text-decoration: none;
+    display: inline-block;
+    text-rendering: auto;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale; }
+  .card.ic-checkbox-checked-invert:before {
+    content: "";
+    font-weight: normal;
+    font-style: normal;
+    font-family: "vdm-fonticon";
+    text-decoration: none;
+    display: inline-block;
+    text-rendering: auto;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale; }
+  .card.ic-trash:before {
+    content: "";
+    font-weight: normal;
+    font-style: normal;
+    font-family: "vdm-fonticon";
+    text-decoration: none;
+    display: inline-block;
+    text-rendering: auto;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale; }
+  .card.ic-recycle:before {
+    content: "";
+    font-weight: normal;
+    font-style: normal;
+    font-family: "vdm-fonticon";
+    text-decoration: none;
+    display: inline-block;
+    text-rendering: auto;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale; }
+  .card.ic-compost:before {
+    content: "";
+    font-weight: normal;
+    font-style: normal;
+    font-family: "vdm-fonticon";
+    text-decoration: none;
+    display: inline-block;
+    text-rendering: auto;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale; }
+  .card.ic-greens:before {
+    content: "";
+    font-weight: normal;
+    font-style: normal;
+    font-family: "vdm-fonticon";
+    text-decoration: none;
+    display: inline-block;
+    text-rendering: auto;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale; }
+  .card.ic-permit-pet:before {
+    content: "";
+    font-weight: normal;
+    font-style: normal;
+    font-family: "vdm-fonticon";
+    text-decoration: none;
+    display: inline-block;
+    text-rendering: auto;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale; }
 
 .tile {
   display: block;
