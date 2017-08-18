@@ -169,7 +169,42 @@ html {
           }
         }
       }
+    } 
+
+    // Lists
+    // All lists
+    ul, ol {
+      li {
+
+      }
+      &.vdm-list-plain {
+        list-style-type: none;
+        margin: 0;
+        padding: 0;
+        li {
+          margin: 0;
+          padding: 0 0 0.3em 0;
+        }
+      }
+      &.vdm-list-date {
+        margin: 0;
+        padding: 0;
+        li {
+          margin: 0;
+          padding: 0 0 0.3em 0;
+        }
+      }
     }
+
+    // Ordered list overrides
+    ol {
+      li {
+
+      }
+    }
+
+
+
   }
 }
 
@@ -194,3 +229,16 @@ html {
     }
  }
 
+
+
+ // Dates display -- for the rendering of dates in general
+
+.vdm-date {
+
+    // Fat day, discrete month, block level headings
+    &.day-month {
+        >.day {
+
+        }
+    }
+} 

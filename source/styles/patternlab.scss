@@ -549,7 +549,7 @@ $pl-size-box-wrapper-padding: 1rem;
 
 // Tiles
 // - - - - - - - - - -  - - - - - -
-.pl-atom-tiles {
+.pl-molecule-tiles {
     .pl-tiles-index {
         @include make-row();
         @include clearfix();
@@ -563,7 +563,7 @@ $pl-size-box-wrapper-padding: 1rem;
 
 // Tiles
 // - - - - - - - - - -  - - - - - -
-.pl-atom-cards {
+.pl-molecule-cards {
   @extend .container;
     .pl-cards-index {
         @include make-row();
@@ -579,7 +579,7 @@ $pl-size-box-wrapper-padding: 1rem;
     }
 }
 
-.pl-atom-cards-large {
+.pl-molecule-cards-large {
   @extend .container;
     .pl-cards-index {
         @include make-row();
@@ -594,3 +594,31 @@ $pl-size-box-wrapper-padding: 1rem;
         }
     }
 }
+
+.pl-teasers-index {
+  >ul {
+    >li {
+      @extend .container;
+    }
+  }
+}
+
+/*
+
+.pl-molecule-teaser-picture {
+  @extend .container;
+    .pl-cards-index {
+        @include make-row();
+        >li {
+         
+          @include make-xs-column(12);
+          @include make-sm-column(6);
+          @include make-md-column(6);
+
+          margin-bottom: $grid-gutter-width;
+        
+        }
+    }
+}
+
+*/

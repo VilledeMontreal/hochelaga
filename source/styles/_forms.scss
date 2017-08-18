@@ -201,6 +201,16 @@ label {
         position: relative;
         margin-top: 3rem;
 
+        &.required {
+            label {
+                &:after {
+                content: "*";
+                    color: $vdm-sub-brand;
+                    display: inline-block;
+                    margin-left: 0.25em;
+                }
+            }
+        }
         // input, 
         // textarea,
         // select {

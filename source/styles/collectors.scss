@@ -1,0 +1,41 @@
+/**
+ * Collector pages styles
+ * Block level elements
+ *  
+ *
+ *
+ */
+
+
+// Block level units
+// - - - - - - - - - - - - 
+
+// Date lists
+// A list of items grouped under dates 
+// vdm-date-list> ul > li > { day-month-year } ul > li { item one } /li |  li { item two } /li ...
+.vdm-date-list {
+    >ul {
+        >li {
+            .vdm-date {
+
+            }
+            ul {
+                margin-bottom: 2em;
+                
+                &.list-items {
+                    li {
+                        margin-bottom: 2em;
+                        
+                        &:last-of-type {
+                            margin-bottom: 0;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+
+
+
