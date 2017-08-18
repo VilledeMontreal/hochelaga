@@ -211,10 +211,13 @@
             @include make-md-column(9);
             
         }
-        img {
+        >img {
             @include make-xs-column(12);
             @include make-sm-column(4);
             @include make-md-column(3);
+            @extend .img-responsive;
+            max-width: 100%;
+            max-height: 100%;
         }
         @media only screen and (min-width: $screen-sm-min) {
             .content {
@@ -222,11 +225,66 @@
                 @include make-md-column-pull(3);
                 
             }
-            img {
+            >img {
                @include make-sm-column-push(8);
                @include make-md-column-push(9);
             }
         }
+
+        // Resolve image that wont-fit the container
+        // Let it be clipped by 20%
+        // @see https://developer.mozilla.org/en-US/docs/Web/CSS/object-fit
+        &.media-wrapper {
+           .media {
+               // position: relative;
+               height: 100%;
+               border: 1px solid lime;
+                @include make-xs-column(12);
+                @include make-sm-column(4);
+                @include make-md-column(3);
+           }
+
+            @media only screen and (min-width: $screen-sm-min) {
+                .media  {
+                    @include make-sm-column-push(8);
+                    @include make-md-column-push(9);
+                    img {
+                        // fill | contain | cover | none | scale-down
+                        object-fit: cover;
+                        max-width: 122%;
+                        max-height: 122%;
+                        object-position: 50% 50%;
+                    }
+                }
+            }
+        }
+        // Increase inner image max with
+        // Overflow-hidden on parent wrapper
+        &.media-wrapper-overflow {
+            .media {
+                overflow: hidden;
+                height: 100%;
+                border: 1px solid orange;
+                @include make-xs-column(12);
+                @include make-sm-column(4);
+                @include make-md-column(3);
+                img {
+                        max-width: 100%;
+                }
+           }
+
+            @media only screen and (min-width: $screen-sm-min) {
+                .media  {
+                    @include make-sm-column-push(8);
+                    @include make-md-column-push(9);
+                    img {
+                        max-width: 116%;
+                    }
+                }
+            }
+        }
+
+
     }
 }
 
