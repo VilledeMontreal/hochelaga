@@ -6386,7 +6386,8 @@ select {
   overflow: hidden;
   cursor: pointer; }
   .teaser:hover, .teaser:active {
-    text-decoration: underline; }
+    text-decoration: underline;
+    background: #e8e8e6; }
   .teaser .content {
     padding: 1.9rem 1.9rem 1.2rem 1.9rem;
     width: 100%;
@@ -6558,6 +6559,123 @@ select {
     @media only screen and (min-width: 768px) {
       .teaser.teaser-picture.media-wrapper-overflow .media img {
         max-width: 116%; } }
+  .teaser.teaser-alert {
+    position: relative;
+    padding: 1.7rem 4rem 1.7rem 6.4rem;
+    min-height: 4rem; }
+    .teaser.teaser-alert:before {
+      content: "";
+      font-weight: normal;
+      font-style: normal;
+      font-family: "vdm-fonticon";
+      text-decoration: none;
+      display: inline-block;
+      text-rendering: auto;
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale; }
+    .teaser.teaser-alert:after {
+      content: "";
+      font-weight: normal;
+      font-style: normal;
+      font-family: "vdm-fonticon";
+      text-decoration: none;
+      display: inline-block;
+      text-rendering: auto;
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale; }
+    .teaser.teaser-alert:hover, .teaser.teaser-alert:active {
+      text-decoration: none; }
+      .teaser.teaser-alert:hover:after, .teaser.teaser-alert:active:after {
+        color: #000000; }
+    .teaser.teaser-alert:before {
+      position: absolute;
+      font-size: 4rem;
+      line-height: 4rem;
+      width: 4rem;
+      height: 4rem;
+      top: calc(50% - 2rem);
+      left: 1.4rem;
+      width: 4rem;
+      height: 4rem;
+      pointer-events: none;
+      color: #000000; }
+    .teaser.teaser-alert:after {
+      font-size: 4rem;
+      line-height: 4rem;
+      width: 4rem;
+      height: 4rem;
+      position: absolute;
+      top: calc(50% - 2rem);
+      right: 1.4rem;
+      display: block;
+      text-align: center;
+      pointer-events: none;
+      color: #429A8E; }
+    .teaser.teaser-alert .content {
+      display: inline-block;
+      vertical-align: middle;
+      width: 80%;
+      padding: 0;
+      margin-right: 3%; }
+      .teaser.teaser-alert .content .what {
+        font-family: "Nunito Sans", Helvetica, Arial, sans-serif;
+        font-size: 67px;
+        line-height: 118.125px;
+        font-weight: 400;
+        display: block;
+        margin-top: 0;
+        margin-bottom: 0;
+        font-size: 28px;
+        line-height: 37.9995px;
+        margin-top: 0;
+        margin-bottom: 0.75rem; }
+      .teaser.teaser-alert .content .where {
+        font-size: 21px;
+        line-height: 27px;
+        margin-bottom: 1.5rem; }
+      .teaser.teaser-alert .content .when {
+        font-size: 21px;
+        line-height: 27px;
+        margin-bottom: 0;
+        padding-bottom: 0;
+        color: #9b9b9b; }
+    .teaser.teaser-alert .metadata {
+      display: inline-block;
+      vertical-align: middle;
+      color: #4a4a4a;
+      position: relative;
+      font-size: 16px;
+      width: 12%;
+      text-decoration: none; }
+    @media only screen and (max-width: 991px) {
+      .teaser.teaser-alert {
+        padding: 1.7rem 1.7rem 4.8rem 6.4rem; }
+        .teaser.teaser-alert:after {
+          top: calc(100% - 4.8rem);
+          left: calc(50% - 2rem);
+          right: auto; }
+        .teaser.teaser-alert .content {
+          display: block;
+          width: 100%;
+          margin-bottom: 2rem; }
+          .teaser.teaser-alert .content .where {
+            margin-bottom: 2.5rem; }
+        .teaser.teaser-alert .metadata {
+          display: block;
+          width: 100%; } }
+    @media only screen and (max-width: 480px) {
+      .teaser.teaser-alert {
+        padding: 1.7rem 1.7rem 6.4rem 1.7rem; }
+        .teaser.teaser-alert:before {
+          display: none; }
+        .teaser.teaser-alert:after {
+          top: calc(100% - 4.8rem); }
+        .teaser.teaser-alert .content {
+          margin-bottom: 3rem; }
+          .teaser.teaser-alert .content .what {
+            margin-bottom: 1.2rem; }
+        .teaser.teaser-alert .metadata {
+          text-align: center; } }
 
 .vdm-btn {
   display: inline-block;
@@ -6740,6 +6858,8 @@ a.vdm-btn {
  */
 .vdm-date-list > ul {
   margin-bottom: 1.5em; }
+  .vdm-date-list > ul:last-of-type {
+    margin-bottom: 0; }
   .vdm-date-list > ul > li .vdm-date {
     margin-bottom: 1.5em; }
   .vdm-date-list > ul > li ul {

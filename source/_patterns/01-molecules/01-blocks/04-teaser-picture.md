@@ -1,5 +1,5 @@
 ---
-title: Tiles
+title: Teaser with picture
 ---
 
 A picture block to be nested into a teaser list

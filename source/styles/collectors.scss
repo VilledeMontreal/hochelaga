@@ -16,6 +16,9 @@
 .vdm-date-list {
     >ul {
         margin-bottom: 1.5em;
+        &:last-of-type {
+            margin-bottom: 0;
+        }
         >li {
             .vdm-date {
                 margin-bottom: 1.5em;

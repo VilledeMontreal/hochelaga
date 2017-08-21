@@ -181,6 +181,7 @@
     &:hover, 
     &:active {
         text-decoration: underline;
+        background: darken($vdm-grey-light, 4%);
     }
 
     .content {
@@ -269,7 +270,7 @@
                 @include make-sm-column(4);
                 @include make-md-column(3);
                 img {
-                        max-width: 100%;
+                    max-width: 100%;
                 }
            }
 
@@ -284,8 +285,164 @@
             }
         }
 
-
     }
+
+    &.teaser-alert {
+            position: relative;
+            // font-size: 125%; // -- Use this to tests scalability 
+            padding: 1.7rem 4rem 1.7rem 6.4rem;
+            min-height: 4rem;
+
+            @include icon(before, rosette);
+            @include icon(after, arrow-right);
+
+            &:hover, 
+            &:active {
+
+                text-decoration: none;
+                &:after {
+                    color: $vdm-black;
+                }
+
+                .content {
+                    .what {
+                       // text-decoration: underline; 
+                    }
+                }
+
+            }
+
+            &:before {
+                position: absolute;
+                font-size: 4rem;
+                line-height: 4rem;
+                width: 4rem;
+                height: 4rem;
+                top: calc(50% - 2rem); // Perceptual -- should work out to 0.65
+                left: 1.4rem;
+                width: 4rem;
+                height: 4rem; 
+                pointer-events: none;
+                color: $vdm-black;
+            }
+
+            &:after {
+                font-size: 4rem;
+                line-height: 4rem;
+                width: 4rem;
+                height: 4rem;
+                position: absolute;
+                top: calc(50% - 2rem);
+                right: 1.4rem;
+                display: block;
+                text-align: center;
+                pointer-events: none;
+                color: $vdm-brand;
+            }
+
+
+            .content {
+                display: inline-block;
+                vertical-align: middle; // key for vertical centering w/inline-block;
+                width: 80%;
+                padding: 0;
+                margin-right: 3%;
+                
+
+                .what {
+                    @include header(4);
+                    margin-top: 0;
+                    margin-bottom: 0.75rem;
+
+                }
+                .where {
+                    font-size: $vdm-font-size-larger;
+                    line-height: floor(($vdm-font-size-larger * 1.3125));
+                    margin-bottom: 1.5rem;
+                }
+                .when {
+                    font-size: $vdm-font-size-larger;
+                    line-height: floor(($vdm-font-size-larger * 1.3125));
+                    margin-bottom: 0;
+                    padding-bottom: 0;
+                    color: #9b9b9b; // !warning - color out of range
+                    
+                }
+               
+                
+            }
+            .metadata {
+                display: inline-block;
+                vertical-align: middle; // key for vertical centering w/inline-block;
+                
+                color: #4a4a4a; // !warning - color out of range
+                position: relative;
+                font-size: $vdm-font-size-base;
+                width: 12%;
+                text-decoration: none;
+
+                // border: 1px solid turquoise;
+
+                .identifier {
+
+                }
+            }
+           
+            // Small and x-small - mobile
+            @media only screen and (max-width: $screen-sm-max) {
+                padding: 1.7rem 1.7rem 4.8rem 6.4rem;
+                &:after {
+                    top: calc(100% - 4.8rem);
+                    left: calc(50% - 2rem);
+                    right: auto;
+                }
+                .content {
+                    // border: 1px solid lime;
+                    display: block;
+                    width: 100%;
+                    margin-bottom: 2rem;
+
+                    
+                    .where {
+                        margin-bottom: 2.5rem;
+                    }
+                    
+                }
+                .metadata {
+                    // border: 1px solid violet;
+                    display: block;
+                    width: 100%;
+                    
+                }
+            }
+
+            // X-small - mobile only
+            @media only screen and (max-width: $screen-xs-min) {
+                padding: 1.7rem 1.7rem 6.4rem 1.7rem;
+                &:before {
+                    display: none;
+                }
+                &:after {
+                    top: calc(100% - 4.8rem);
+                }
+
+                .content {
+                    // border: 1px solid orange;
+                    margin-bottom: 3rem;
+                    .what {
+                        margin-bottom: 1.2rem;
+                    }
+                }
+                .metadata {
+                    text-align: center;
+                    // border: 1px solid yellow;
+                }
+
+            }
+         
+         
+            
+        } // Teaser alert
 }
 
 
