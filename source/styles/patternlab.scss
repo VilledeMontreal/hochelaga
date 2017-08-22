@@ -6,9 +6,9 @@
  * @see pattern-scaffolding.css in mustache demo starterkit for reference
  */
 
-// Import a custom bootstrap import file
+// Import a custom bootstrap import file - duplicate but required
 @import "bootstrap-imports.scss";
-// Import an override file for bootstrap variables
+// Import an override file for bootstrap variables - duplicate but required
 @import "bootstrap-variables.scss";
 // Import our local project variables
 @import "variables.scss";
@@ -311,8 +311,15 @@ $pl-size-box-wrapper-padding: 1rem;
       padding-left:12px;
     }
     .pl-swatches {
-      @include make-xs-column(12);
-      @include make-md-column(6);
+      // @include make-xs-column(12);
+      // @include make-md-column(6);
+      @include make-col-ready();
+      @include media-breakpoint-up(xs) {
+        @include make-col(12);
+      }
+      @include media-breakpoint-up(md) {
+        @include make-col(6);
+      }
 
       .pl-swatch-list {
 
@@ -569,9 +576,20 @@ $pl-size-box-wrapper-padding: 1rem;
         @include make-row();
         >li {
          
-          @include make-xs-column(12);
-          @include make-sm-column(4);
-          @include make-md-column(3);
+          // @include make-xs-column(12);
+          // @include make-sm-column(4);
+          // @include make-md-column(3);
+
+          @include make-col-ready();
+          @include media-breakpoint-up(xs) {
+            @include make-col(12);
+          }
+          @include media-breakpoint-up(sm) {
+            @include make-col(4);
+          }
+          @include media-breakpoint-up(md) {
+            @include make-col(3);
+          }
 
           margin-bottom: $grid-gutter-width;
         
@@ -585,9 +603,20 @@ $pl-size-box-wrapper-padding: 1rem;
         @include make-row();
         >li {
          
-          @include make-xs-column(12);
-          @include make-sm-column(6);
-          @include make-md-column(6);
+          // @include make-xs-column(12);
+          // @include make-sm-column(6);
+          // @include make-md-column(6);
+
+          @include make-col-ready();
+          @include media-breakpoint-up(xs) {
+            @include make-col(12);
+          }
+          @include media-breakpoint-up(sm) {
+            @include make-col(6);
+          }
+          @include media-breakpoint-up(md) {
+            @include make-col(6);
+          }
 
           margin-bottom: $grid-gutter-width;
         

@@ -207,28 +207,55 @@
     &.teaser-picture {
         @include make-row();
         .content {
-            @include make-xs-column(12);
-            @include make-sm-column(8);
-            @include make-md-column(9);
+            // @include make-xs-column(12);
+            // @include make-sm-column(8);
+            // @include make-md-column(9);
+
+            @include make-col-ready();
+            @include media-breakpoint-up(xs) {
+                @include make-col(12);
+            }
+            @include media-breakpoint-up(sm) {
+                @include make-col(8);
+            }
+            @include media-breakpoint-up(md) {
+                @include make-col(9);
+            }
             
         }
         >img {
-            @include make-xs-column(12);
-            @include make-sm-column(4);
-            @include make-md-column(3);
-            @extend .img-responsive;
+            // @include make-xs-column(12);
+            // @include make-sm-column(4);
+            // @include make-md-column(3);
+
+
+            @include make-col-ready();
+            @include media-breakpoint-up(xs) {
+                @include make-col(12);
+            }
+            @include media-breakpoint-up(sm) {
+                @include make-col(4);
+            }
+            @include media-breakpoint-up(md) {
+                @include make-col(3);
+            }
+
+
+            @extend .img-fluid;
             max-width: 100%;
             max-height: 100%;
         }
         @media only screen and (min-width: $screen-sm-min) {
             .content {
-                @include make-sm-column-pull(4);
-                @include make-md-column-pull(3);
+                // FIX this
+                // @include make-sm-column-pull(4);
+                // @include make-md-column-pull(3);
                 
             }
             >img {
-               @include make-sm-column-push(8);
-               @include make-md-column-push(9);
+                // FIX this
+            //    @include make-sm-column-push(8);
+            //    @include make-md-column-push(9);
             }
         }
 
@@ -240,15 +267,27 @@
                // position: relative;
                height: 100%;
                border: 1px solid lime;
-                @include make-xs-column(12);
-                @include make-sm-column(4);
-                @include make-md-column(3);
+                // @include make-xs-column(12);
+                // @include make-sm-column(4);
+                // @include make-md-column(3);
+
+                @include make-col-ready();
+                @include media-breakpoint-up(xs) {
+                    @include make-col(12);
+                }
+                @include media-breakpoint-up(sm) {
+                    @include make-col(4);
+                }
+                @include media-breakpoint-up(md) {
+                    @include make-col(3);
+                }
            }
 
             @media only screen and (min-width: $screen-sm-min) {
                 .media  {
-                    @include make-sm-column-push(8);
-                    @include make-md-column-push(9);
+                    // FIX this
+                    // @include make-sm-column-push(8);
+                    // @include make-md-column-push(9);
                     img {
                         // fill | contain | cover | none | scale-down
                         object-fit: cover;
@@ -266,9 +305,21 @@
                 overflow: hidden;
                 height: 100%;
                 border: 1px solid orange;
-                @include make-xs-column(12);
-                @include make-sm-column(4);
-                @include make-md-column(3);
+                // @include make-xs-column(12);
+                // @include make-sm-column(4);
+                // @include make-md-column(3);
+
+                @include make-col-ready();
+                @include media-breakpoint-up(xs) {
+                    @include make-col(12);
+                }
+                @include media-breakpoint-up(sm) {
+                    @include make-col(4);
+                }
+                @include media-breakpoint-up(md) {
+                    @include make-col(3);
+                }
+                
                 img {
                     max-width: 100%;
                 }
@@ -276,8 +327,10 @@
 
             @media only screen and (min-width: $screen-sm-min) {
                 .media  {
-                    @include make-sm-column-push(8);
-                    @include make-md-column-push(9);
+                    // FIX this
+                    // @include make-sm-column-push(8);
+                    // @include make-md-column-push(9);
+
                     img {
                         max-width: 116%;
                     }
