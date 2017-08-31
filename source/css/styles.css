@@ -8369,141 +8369,12 @@ a.vdm-btn {
     .vdm-checkbox.vdm-toggle input[type="checkbox"][disabled="disabled"][checked="checked"] + label:before {
       background-color: #E7E5E5; }
 
-/*
-
-.vdm-tabs {
-    border: 0;
-    >li {
-        margin-bottom: 0;
-        >a {
-            color: $vdm-neutral-mid;
-            background: $vdm-grey-light;
-            border: 0;
-            padding: $vdm-tabs-v-padding $vdm-tabs-h-padding;
-            border-radius: 0;
-            margin-right: $vdm-tabs-spacing;
-            line-height: $vdm-tabs-line-height;
-            
-            &:hover,
-            &:focus {
-                background: $vdm-white;
-                border: 0;
-                color: $vdm-link;
-            }
-        }
-
-        &.active {
-            // border-bottom: 4px solid $vdm-brand;
-
-            // Simulated border with background color & border raduis
-            &:before {
-                content: " ";
-                position: absolute;
-                display: block;
-                height: $vdm-tabs-spacing;
-                border-radius: $vdm-tabs-spacing;
-                width: calc(100% - 4px);
-                background: $vdm-brand;
-                bottom: 0;
-                z-index: 2;
-            }
-            
-
-            >a {      
-                color: $vdm-link;
-                border: 0;
-
-                &:hover,
-                &:focus {
-                    border: 0;
-                    color:  $vdm-link;
-                    margin-bottom: 0;
-                }
-
-            }
-
-        }
-        &:last-of-type {
-            >a {
-                margin-right: 0;
-            }
-            &.active {
-                &:before {
-                    width: 100%;
-                }
-            }
-        }
-    } // >li
-
-    
-    // Justified tabs
-    &.nav-tabs {
-        &.nav-justified {
-            >li {
-                >a {
-                    margin-bottom: 0;
-                    border-bottom: 0;
-                    border-radius: 0;
-                    margin-right: $vdm-tabs-spacing;
-                }
-            }
-            >.active {
-                @media screen and (max-width: $screen-sm-max) {
-                    &:before {
-                        height: $vdm-tabs-spacing;
-                        border-radius: $vdm-tabs-spacing;
-                        bottom: -2px;
-                    }
-                }
-                
-                a { 
-                    border: 0;
-                    border-bottom: 0;
-                }
-            }
-            >li {
-                &:last-of-type {
-                    >a {
-                        margin-right: 0;
-                    }
-                }
-            }
-        }
-    }
-
-    // Red borders on top;
-    &.nav-tabs {
-        &.vdm-tabs-border-top {
-            >li {
-                >a {
-                    &:hover, 
-                    &:active {
-                        color: $vdm-black;
-                    }
-                }
-                &.active {
-                    >a {
-                        color: $vdm-black;
-                    }
-                
-                    &:before {
-                        background: $vdm-sub-brand;
-                        top: 0;
-                    }
-                }
-              
-            }
-        }
-    }
-}// vdm
-
-*/
 .vdm-tabs {
   border: 0; }
   .vdm-tabs .nav-item {
     margin-bottom: 1px; }
     .vdm-tabs .nav-item:last-of-type .nav-link {
-      margin-right: 0; }
+      margin: 0; }
   .vdm-tabs .nav-link {
     position: relative;
     color: #000000;
@@ -8521,22 +8392,19 @@ a.vdm-btn {
       color: #868e96;
       background-color: transparent;
       border-color: transparent; }
-    .vdm-tabs .nav-link.active, .vdm-tabs .nav-item.show .nav-link {
-      border-bottom: 1px solid orange; }
-      .vdm-tabs .nav-link.active:before, .vdm-tabs .nav-item.show .nav-link:before {
-        content: " ";
-        position: absolute;
-        display: block;
-        height: 4px;
-        width: 100%;
-        background: #E00000;
-        top: 0;
-        left: 0;
-        z-index: 2; }
-  .vdm-tabs .dropdown-menu {
-    margin-top: -1px;
-    border-top-left-radius: 0;
-    border-top-right-radius: 0; }
+    .vdm-tabs .nav-link.active:before, .vdm-tabs .nav-item.show .nav-link:before {
+      content: " ";
+      position: absolute;
+      display: block;
+      height: 4px;
+      width: 100%;
+      background: #E00000;
+      top: 0;
+      left: 0;
+      z-index: 2; }
+  @media (max-width: 767px) {
+    .vdm-tabs.flex-column .nav-link {
+      margin-right: 0; } }
 
 /**
  * Collector pages styles
