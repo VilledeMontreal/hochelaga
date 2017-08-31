@@ -1,5 +1,5 @@
 ---
-title: Navs
+title: Collapsible
 ---
 
 @ todo - Normalize units : pick one, rem or em. Evaluate font size change in practice.

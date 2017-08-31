@@ -219,9 +219,11 @@ $vdm-textfield-border-radius: $vdm-element-border-radius;
 
 // Tabs 
 $vdm-tabs-spacing: 4px;
-$vdm-tabs-line-height: $font-size-base * 3.6;
-$vdm-tabs-h-padding: $font-size-base * 1.62;
-$vdm-tabs-v-padding: $font-size-base * 0.375;
+
+$vdm-tabs-line-height: $vdm-font-size-base * 3.6;
+// $vdm-tabs-line-height: $vdm-font-size-base * 3;
+$vdm-tabs-h-padding: $vdm-font-size-base * 1.62;
+$vdm-tabs-v-padding: $vdm-font-size-base * 0.375;
 
 // Checkboxes
 // $vdm-checkbox-border-radius: 40px;

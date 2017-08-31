@@ -221,6 +221,9 @@ a {
 
 
 // @ to-do : make variables out of paddings, border heights &&
+
+/*
+
 .vdm-tabs {
     border: 0;
     >li {
@@ -346,6 +349,82 @@ a {
         }
     }
 }// vdm
+
+*/
+
+
+// BS4 nav tabs
+.vdm-tabs {
+    border: 0;
+
+    .nav-item {
+        margin-bottom: $nav-tabs-border-width;
+        // "show" class on item element (li, nav)
+        &.show {
+            .nav-link {
+                @extend .nav-link.active;
+            }
+        }
+
+        &:last-of-type {
+            .nav-link {
+                margin-right: 0;
+            }
+        }
+    }// Item
+
+    .nav-link {
+
+        position: relative;
+        color: $vdm-black;
+        background: $vdm-grey-light;
+        border: 0;
+        padding: $vdm-tabs-v-padding $vdm-tabs-h-padding;
+        border-radius: 0;
+        margin-right: $vdm-tabs-spacing;
+        line-height: $vdm-tabs-line-height;
+
+        &:hover,
+        &:focus {
+            background: $vdm-white;
+            border: 0;
+            color: $vdm-black;
+        }
+
+
+        &.disabled {
+            color: $nav-link-disabled-color;
+            background-color: transparent;
+            border-color: transparent;
+        }
+
+        &.active {
+            border-bottom: 1px solid orange;
+            // Simulated border with background color
+            &:before {
+                content: " ";
+                position: absolute;
+                display: block;
+                height: $vdm-tabs-spacing;
+                // width: calc(100% - #{$vdm-tabs-h-padding});
+                width: 100%;
+                background: $vdm-sub-brand;
+                top: 0;
+                left: 0;
+                z-index: 2;
+            }
+        }
+    }// Link
+
+
+  .dropdown-menu {
+    // Make dropdown border overlap tab border
+    margin-top: -$nav-tabs-border-width;
+    // Remove the top rounded corners here since there is a hard edge above the menu
+    @include border-top-radius(0);
+  }
+
+}
 
 
 

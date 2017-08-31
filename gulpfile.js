@@ -54,8 +54,27 @@ gulp.task('pl-sass-patternlab', function(){
 
 
 /******************************************************
+ * COPY TASKS - stream assets from node modules to source
+******************************************************/
+/*
+
+gulp.task('pl-copy-source-node-modules:js', function() {
+    return gulp.src(['node_modules/bootstrap/dist/js/bootstrap.min.js', 'node_modules/jquery/dist/jquery.min.js', 'node_modules/popper.js/dist/popper.min.js'])
+        .pipe(gulp.dest("source/js/vendor"));
+});
+*/
+
+gulp.task('pl-copy-source-node-modules:js', function() {
+    return gulp.src(['node_modules/jquery/dist/jquery.slim.min.js', 'node_modules/popper.js/dist/umd/popper.min.js', 'node_modules/bootstrap/dist/js/bootstrap.min.js'])
+        .pipe(gulp.dest("source/js/vendor"));
+});
+
+
+
+/******************************************************
  * COPY TASKS - stream assets from source to destination
 ******************************************************/
+
 // JS copy
 gulp.task('pl-copy:js', function () {
   return gulp.src('**/*.js', {cwd: normalizePath(paths().source.js)} )
@@ -138,6 +157,10 @@ function build(done) {
   return null;
 }
 
+gulp.task('pl-source-assets', gulp.series(
+  'pl-copy-source-node-modules:js'
+));
+
 gulp.task('pl-assets', gulp.series(
   'pl-copy:js',
   'pl-copy:img',
@@ -174,7 +197,8 @@ gulp.task('patternlab:loadstarterkit', function (done) {
   done();
 });
 
-gulp.task('patternlab:build', gulp.series('pl-assets', build));
+
+gulp.task('patternlab:build', gulp.series('pl-source-assets', 'pl-assets', build));
 
 gulp.task('patternlab:installplugin', function (done) {
   patternlab.installplugin(argv.plugin);

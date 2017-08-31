@@ -6,8 +6,6 @@
         $(this).val() ? $(this).addClass('used') : $(this).removeClass('used');
     });
 
-
-
     // Add remove an open state class for the <select> wrapper
     // $( "select.vdm-select", ".vdm-select-wrapper > label" )
     // @to-do - implement a 'has-label' class? Inline vs block label?
