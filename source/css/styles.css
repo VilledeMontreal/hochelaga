@@ -5979,32 +5979,83 @@ html body {
     color: #429A8E;
     padding: 0 1.1rem; }
 
+/*
+
+.vdm-pagination {
+  border-radius: 0;
+
+  >li {
+     border: none;
+    a {
+      color: $vdm-grey;
+      // border: none;
+      border: 1px solid lighten($vdm-grey, 9%);
+      background: $vdm-white;
+      padding : $vdm-element-padding * 4  $vdm-element-padding * 8.5;
+      font-size: floor($vdm-font-size-base * 1.3125);
+      line-height: floor($vdm-line-height-base * 1.3125);
+
+      &:hover, 
+      &:active {
+        color: $vdm-black;
+        border: 1px solid lighten($vdm-grey, 9%);
+        text-decoration: none;
+        color: $vdm-brand;
+        background-color: $vdm-grey-light;
+      }
+    }
+    &.active {
+      color: $vdm-black;
+      a {
+        background-color: $vdm-brand;
+        &:hover, 
+        &:active {
+          background-color: $vdm-brand;
+          border: 1px solid lighten($vdm-grey, 9%);
+          text-decoration: none;
+        }
+      }
+     
+    }
+    // @todo -- get thisfirst & last selector working
+    &:first-child, 
+    &:last-child {
+      >a {
+        border-bottom-left-radius: 0;
+        border-top-left-radius: 0;
+        border-bottom-right-radius: 0;
+        border-top-right-radius: 0;
+        color: $vdm-brand;
+        padding : $vdm-element-padding * 4  $vdm-element-padding * 7;
+        font-size: 1.2em;
+        .vdmi {
+          position: relative;
+          top: 0.2em;
+        }
+      }
+    }
+  }
+}
+
+*/
 .vdm-pagination {
   border-radius: 0; }
-  .vdm-pagination > li {
+  .vdm-pagination > .page-item {
     border: none; }
-    .vdm-pagination > li a {
+    .vdm-pagination > .page-item .page-link {
       color: #80807F;
       border: 1px solid #979796;
       background: #FFFFFF;
       padding: 8px 17px;
       font-size: 21px;
       line-height: 27px; }
-      .vdm-pagination > li a:hover, .vdm-pagination > li a:active {
+      .vdm-pagination > .page-item .page-link:hover, .vdm-pagination > .page-item .page-link:active {
         color: #000000;
         border: 1px solid #979796;
         text-decoration: none;
         color: #429A8E;
         background-color: #F2F2F1; }
-    .vdm-pagination > li.active {
-      color: #000000; }
-      .vdm-pagination > li.active a {
-        background-color: #429A8E; }
-        .vdm-pagination > li.active a:hover, .vdm-pagination > li.active a:active {
-          background-color: #429A8E;
-          border: 1px solid #979796;
-          text-decoration: none; }
-    .vdm-pagination > li:first-child > a, .vdm-pagination > li:last-child > a {
+    .vdm-pagination > .page-item:first-child > .page-link, .vdm-pagination > .page-item:last-child > .page-link {
       border-bottom-left-radius: 0;
       border-top-left-radius: 0;
       border-bottom-right-radius: 0;
@@ -6012,9 +6063,43 @@ html body {
       color: #429A8E;
       padding: 8px 14px;
       font-size: 1.2em; }
-      .vdm-pagination > li:first-child > a .vdmi, .vdm-pagination > li:last-child > a .vdmi {
+      .vdm-pagination > .page-item:first-child > .page-link .vdmi, .vdm-pagination > .page-item:last-child > .page-link .vdmi {
         position: relative;
         top: 0.2em; }
+    .vdm-pagination > .page-item:first-child.icon > .page-link {
+      line-height: 27px;
+      content: " "; }
+      .vdm-pagination > .page-item:first-child.icon > .page-link:before {
+        content: "";
+        font-weight: normal;
+        font-style: normal;
+        font-family: "vdm-fonticon";
+        text-decoration: none;
+        display: inline-block;
+        text-rendering: auto;
+        -webkit-font-smoothing: antialiased;
+        -moz-osx-font-smoothing: grayscale; }
+    .vdm-pagination > .page-item:last-child.icon > .page-link {
+      line-height: 27px;
+      content: " "; }
+      .vdm-pagination > .page-item:last-child.icon > .page-link:before {
+        content: "";
+        font-weight: normal;
+        font-style: normal;
+        font-family: "vdm-fonticon";
+        text-decoration: none;
+        display: inline-block;
+        text-rendering: auto;
+        -webkit-font-smoothing: antialiased;
+        -moz-osx-font-smoothing: grayscale; }
+    .vdm-pagination > .page-item.active .page-link {
+      background-color: #429A8E;
+      color: #FFFFFF; }
+      .vdm-pagination > .page-item.active .page-link:hover, .vdm-pagination > .page-item.active .page-link:active {
+        background-color: #429A8E;
+        border: 1px solid #979796;
+        text-decoration: none;
+        color: #FFFFFF; }
 
 .vdm-collapsible-list {
   list-style-type: none;

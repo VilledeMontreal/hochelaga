@@ -24,6 +24,9 @@
 
 // Breadcrumb
 // @todo -- review this code with a real reference, this is imaginary
+
+/*
+
 .vdm-pagination {
   border-radius: 0;
 
@@ -76,6 +79,93 @@
           top: 0.2em;
         }
       }
+    }
+  }
+}
+
+*/
+
+
+// Breadcrumb
+// Reference used : https://projects.invisionapp.com/d/main#/console/11533069/245898997/inspect
+.vdm-pagination {
+  border-radius: 0;
+
+  >.page-item {
+     border: none;
+
+    .page-link {
+      color: $vdm-grey;
+      // border: none;
+      border: 1px solid lighten($vdm-grey, 9%);
+      background: $vdm-white;
+      padding : $vdm-element-padding * 4  $vdm-element-padding * 8.5;
+      font-size: floor($vdm-font-size-base * 1.3125);
+      line-height: floor($vdm-line-height-base * 1.3125);
+
+      &:hover, 
+      &:active {
+        color: $vdm-black;
+        border: 1px solid lighten($vdm-grey, 9%);
+        text-decoration: none;
+        color: $vdm-brand;
+        background-color: $vdm-grey-light;
+      }
+    }
+    
+    // @todo -- get thisfirst & last selector working
+    &:first-child, 
+    &:last-child {
+      >.page-link {
+        border-bottom-left-radius: 0;
+        border-top-left-radius: 0;
+        border-bottom-right-radius: 0;
+        border-top-right-radius: 0;
+        color: $vdm-brand;
+        padding : $vdm-element-padding * 4  $vdm-element-padding * 7;
+        font-size: 1.2em;
+        .vdmi {
+          position: relative;
+          top: 0.2em;
+        }
+      }
+    }
+
+    &:first-child {
+      &.icon {
+          >.page-link {
+            @include icon(before, chevron-left);
+            line-height: floor($vdm-line-height-base * 1.3125);
+            content: " ";
+          }
+      }
+    }
+
+    &:last-child {
+      &.icon {
+          >.page-link {
+            @include icon(before, chevron-right);
+            line-height: floor($vdm-line-height-base * 1.3125);
+            content: " ";
+          }
+      }
+    }
+
+    
+
+    &.active {
+      .page-link {
+        background-color: $vdm-brand;
+        color: $vdm-white;
+        &:hover, 
+        &:active {
+          background-color: $vdm-brand;
+          border: 1px solid lighten($vdm-grey, 9%);
+          text-decoration: none;
+          color: $vdm-white;
+        }
+      }
+     
     }
   }
 }
