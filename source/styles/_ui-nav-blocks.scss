@@ -189,7 +189,6 @@
         padding: 1.9rem 1.9rem 1.2rem 1.9rem;
         width: 100%;
         height: 100%;
-        border: 1px solid pink;
         .title {
             @include header(4);
             margin-top: 0;
@@ -201,144 +200,35 @@
             text-decoration: none;
         }
     }
-    
-
-
 
     &.teaser-picture {
-        @include make-row();
-        .content {
-            // @include make-xs-column(12);
-            // @include make-sm-column(8);
-            // @include make-md-column(9);
+        display: flex;
+        align-items: flex-end;
 
-            @include make-col-ready();
-            @include media-breakpoint-up(xs) {
-                @include make-col(12);
-            }
-            @include media-breakpoint-up(sm) {
-                @include make-col(8);
-            }
-            @include media-breakpoint-up(md) {
-                @include make-col(9);
-            }
-            
+        >img, 
+        .content {
+            // Vertically align each flex slave
+            align-self: flex-start;
+        }
+        .content {
+            // Grow content to fill unallocated space
+            flex: 1;
         }
         >img {
-            // @include make-xs-column(12);
-            // @include make-sm-column(4);
-            // @include make-md-column(3);
+            margin-left: 1rem;
+            max-width: 300px;
 
-
-            @include make-col-ready();
-            @include media-breakpoint-up(xs) {
-                @include make-col(12);
-            }
-            @include media-breakpoint-up(sm) {
-                @include make-col(4);
-            }
-            @include media-breakpoint-up(md) {
-                @include make-col(3);
-            }
-
-
-            @extend .img-fluid;
-            max-width: 100%;
-            max-height: 100%;
+            order: 1;
         }
-        @media only screen and (min-width: $screen-sm-min) {
-            .content {
-                // FIX this
-                // @include make-sm-column-pull(4);
-                // @include make-md-column-pull(3);
-                
-            }
+        // Position picture first, reset margins, change flex-axis
+         @include media-breakpoint-down(sm) {
+            flex-direction: column;
             >img {
-                // FIX this
-            //    @include make-sm-column-push(8);
-            //    @include make-md-column-push(9);
+                margin: 0;
+                max-width: 100%;
+                order: -1;
             }
         }
-
-        // Resolve image that wont-fit the container
-        // Let it be clipped by 20%
-        // @see https://developer.mozilla.org/en-US/docs/Web/CSS/object-fit
-        &.media-wrapper {
-           .media {
-               // position: relative;
-               height: 100%;
-               border: 1px solid lime;
-                // @include make-xs-column(12);
-                // @include make-sm-column(4);
-                // @include make-md-column(3);
-
-                @include make-col-ready();
-                @include media-breakpoint-up(xs) {
-                    @include make-col(12);
-                }
-                @include media-breakpoint-up(sm) {
-                    @include make-col(4);
-                }
-                @include media-breakpoint-up(md) {
-                    @include make-col(3);
-                }
-           }
-
-            @media only screen and (min-width: $screen-sm-min) {
-                .media  {
-                    // FIX this
-                    // @include make-sm-column-push(8);
-                    // @include make-md-column-push(9);
-                    img {
-                        // fill | contain | cover | none | scale-down
-                        object-fit: cover;
-                        max-width: 122%;
-                        max-height: 122%;
-                        object-position: 50% 50%;
-                    }
-                }
-            }
-        }
-        // Increase inner image max with
-        // Overflow-hidden on parent wrapper
-        &.media-wrapper-overflow {
-            .media {
-                overflow: hidden;
-                height: 100%;
-                border: 1px solid orange;
-                // @include make-xs-column(12);
-                // @include make-sm-column(4);
-                // @include make-md-column(3);
-
-                @include make-col-ready();
-                @include media-breakpoint-up(xs) {
-                    @include make-col(12);
-                }
-                @include media-breakpoint-up(sm) {
-                    @include make-col(4);
-                }
-                @include media-breakpoint-up(md) {
-                    @include make-col(3);
-                }
-                
-                img {
-                    max-width: 100%;
-                }
-           }
-
-            @media only screen and (min-width: $screen-sm-min) {
-                .media  {
-                    // FIX this
-                    // @include make-sm-column-push(8);
-                    // @include make-md-column-push(9);
-
-                    img {
-                        max-width: 116%;
-                    }
-                }
-            }
-        }
-
     }
 
     &.teaser-alert {

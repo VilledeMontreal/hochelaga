@@ -217,6 +217,8 @@ a {
 
 
 // Navigation tabs
+// ul.vdm-tabs > li.nav-item > a.nav-link
+// nav.vdm-tabs > a.nav-item+nav-link
 // -------------------------
 .vdm-tabs {
     border: 0;
@@ -267,7 +269,7 @@ a {
                 content: " ";
                 position: absolute;
                 display: block;
-                height: $vdm-tabs-spacing;
+                height: $vdm-tabs-border-width;
                 width: 100%;
                 background: $vdm-sub-brand;
                 top: 0;

@@ -1,119 +1,39 @@
 
 
 // Breadcrumb
+// Reference used : https://projects.invisionapp.com/d/main#/console/11533069/245898997/inspect
 .vdm-breadcrumb {
   background-color: $vdm-white;
   font-size: $vdm-font-size-smaller;
-  color: $vdm-brand;
-  >li {
-
-    a {
-      
-    }
-    &.active {
-      color: $vdm-black;
-    }
-  }
-  >li + li {
+  
+   
+  .breadcrumb-item {
     &:before {
-      color: $vdm-brand;
-      padding: 0 1.1rem;
+      padding-right: $vdm-breadcrumb-item-padding;
+      padding-left: $vdm-breadcrumb-item-padding;
+      color: $vdm-brand; 
     }
-  }
-}
 
-// Breadcrumb
-// @todo -- review this code with a real reference, this is imaginary
-
-/*
-
-.vdm-pagination {
-  border-radius: 0;
-
-  >li {
-     border: none;
-    a {
-      color: $vdm-grey;
-      // border: none;
-      border: 1px solid lighten($vdm-grey, 9%);
-      background: $vdm-white;
-      padding : $vdm-element-padding * 4  $vdm-element-padding * 8.5;
-      font-size: floor($vdm-font-size-base * 1.3125);
-      line-height: floor($vdm-line-height-base * 1.3125);
-
-      &:hover, 
-      &:active {
-        color: $vdm-black;
-        border: 1px solid lighten($vdm-grey, 9%);
-        text-decoration: none;
-        color: $vdm-brand;
-        background-color: $vdm-grey-light;
-      }
-    }
     &.active {
       color: $vdm-black;
-      a {
-        background-color: $vdm-brand;
-        &:hover, 
-        &:active {
-          background-color: $vdm-brand;
-          border: 1px solid lighten($vdm-grey, 9%);
-          text-decoration: none;
-        }
-      }
-     
     }
-    // @todo -- get thisfirst & last selector working
-    &:first-child, 
-    &:last-child {
-      >a {
-        border-bottom-left-radius: 0;
-        border-top-left-radius: 0;
-        border-bottom-right-radius: 0;
-        border-top-right-radius: 0;
-        color: $vdm-brand;
-        padding : $vdm-element-padding * 4  $vdm-element-padding * 7;
-        font-size: 1.2em;
-        .vdmi {
-          position: relative;
-          top: 0.2em;
-        }
-      }
+
+    a {
+      color: $vdm-brand;
     }
   }
 }
 
-*/
 
 
-// Breadcrumb
+// Pagination
 // Reference used : https://projects.invisionapp.com/d/main#/console/11533069/245898997/inspect
 .vdm-pagination {
   border-radius: 0;
 
-  >.page-item {
+  .page-item {
      border: none;
 
-    .page-link {
-      color: $vdm-grey;
-      // border: none;
-      border: 1px solid lighten($vdm-grey, 9%);
-      background: $vdm-white;
-      padding : $vdm-element-padding * 4  $vdm-element-padding * 8.5;
-      font-size: floor($vdm-font-size-base * 1.3125);
-      line-height: floor($vdm-line-height-base * 1.3125);
-
-      &:hover, 
-      &:active {
-        color: $vdm-black;
-        border: 1px solid lighten($vdm-grey, 9%);
-        text-decoration: none;
-        color: $vdm-brand;
-        background-color: $vdm-grey-light;
-      }
-    }
-    
-    // @todo -- get thisfirst & last selector working
     &:first-child, 
     &:last-child {
       >.page-link {
@@ -123,40 +43,29 @@
         border-top-right-radius: 0;
         color: $vdm-brand;
         padding : $vdm-element-padding * 4  $vdm-element-padding * 7;
-        font-size: 1.2em;
-        .vdmi {
-          position: relative;
-          top: 0.2em;
+        &:before {
+          font-size: 1em;
         }
       }
     }
 
     &:first-child {
-      &.icon {
-          >.page-link {
-            @include icon(before, chevron-left);
-            line-height: floor($vdm-line-height-base * 1.3125);
-            content: " ";
-          }
+      .icon {
+        @include icon(before, chevron-left);
       }
     }
-
     &:last-child {
-      &.icon {
-          >.page-link {
-            @include icon(before, chevron-right);
-            line-height: floor($vdm-line-height-base * 1.3125);
-            content: " ";
-          }
+      .icon {
+        @include icon(before, chevron-right);
       }
     }
-
-    
 
     &.active {
       .page-link {
         background-color: $vdm-brand;
         color: $vdm-white;
+        border: 1px solid lighten($vdm-grey, 9%);
+        padding : $vdm-element-padding * 5  $vdm-element-padding * 9;
         &:hover, 
         &:active {
           background-color: $vdm-brand;
@@ -164,13 +73,31 @@
           text-decoration: none;
           color: $vdm-white;
         }
+        
       }
-     
     }
-  }
+  } // page-item
+
+  .page-link {
+    color: $vdm-grey;
+    border: 1px solid lighten($vdm-grey, 9%);
+    background: $vdm-white;
+    padding : $vdm-element-padding * 5  $vdm-element-padding * 9;
+    font-size: floor($vdm-font-size-base * 1.3125);
+    line-height: floor($vdm-line-height-base * 1.3125);
+
+    &:hover, 
+    &:active {
+      color: $vdm-black;
+      border: 1px solid lighten($vdm-grey, 9%);
+      text-decoration: none;
+      color: $vdm-brand;
+      background-color: $vdm-grey-light;
+    }
+  } // page-link
 }
 
-// Breadcrumb
+// Collapsible list
 // @todo -- review this code with a real reference, this is imaginary
 .vdm-collapsible-list {
   list-style-type : none;
@@ -185,6 +112,13 @@
       padding: 0;
     }
   }
+  .vdm-collapsible-item {
+     border-bottom: $vdm-element-border-width/2 solid $vdm-white;
+      &:last-of-type {
+        border-bottom: none;
+      }
+  }
+
 }
 
 .vdm-collapsible-item {
@@ -196,8 +130,9 @@
       color: $vdm-black;
       position: relative;
       display: block;
-      // font-size: 125%; // -- Use this to tests scalability 
-      padding: 1.7rem 4rem 1.7rem 4rem;
+      line-height: 1.9rem;
+      padding: 1.4rem 5rem 1.4rem 4rem;
+      cursor: pointer;
       
 
       &[aria-expanded="true"] {
@@ -244,7 +179,16 @@
         height: 1rem; 
         border-radius: 1rem;
         background: $vdm-brand;
-        margin-right: 1.1em;
+        margin-right: 1.5rem;
+      }
+
+      // Hide dots on x-small screens, rearrange paddings
+      @include media-breakpoint-down(xs) { 
+        &:before {
+          display: none;
+        }
+        padding-left: 1.1rem;
+        padding-right: 6rem;
       }
 
     }
@@ -252,4 +196,6 @@
   .subject {
     padding-left: 4.3rem;
   }
+
+
 }
