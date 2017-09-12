@@ -186,7 +186,7 @@
     }
 
     .content {
-        padding: 1.9rem 1.9rem 1.2rem 1.9rem;
+        padding: 1.9rem 1.9rem 1.3rem 1.9rem;
         width: 100%;
         height: 100%;
         .title {
@@ -232,161 +232,166 @@
     }
 
     &.teaser-alert {
-            position: relative;
-            // font-size: 125%; // -- Use this to tests scalability 
-            padding: 1.7rem 4rem 1.7rem 6.4rem;
-            min-height: 4rem;
+        box-sizing: border-box;
+        position: relative;
+        // font-size: 125%; // -- Use this to tests scalability 
+        // padding-left: 9rem;
+        min-height: 4rem;
 
-            @include icon(before, rosette);
-            @include icon(after, arrow-right);
+        @include icon(before, rosette);
+        @include icon(after, arrow-right);
 
-            &:hover, 
-            &:active {
+        &:hover, 
+        &:active {
 
-                text-decoration: none;
-                &:after {
-                    color: $vdm-black;
-                }
-
-                .content {
-                    .what {
-                       // text-decoration: underline; 
-                    }
-                }
-
-            }
-
-            &:before {
-                position: absolute;
-                font-size: 4rem;
-                line-height: 4rem;
-                width: 4rem;
-                height: 4rem;
-                top: calc(50% - 2rem); // Perceptual -- should work out to 0.65
-                left: 1.4rem;
-                width: 4rem;
-                height: 4rem; 
-                pointer-events: none;
+            text-decoration: none;
+            &:after {
                 color: $vdm-black;
             }
 
-            &:after {
-                font-size: 4rem;
-                line-height: 4rem;
-                width: 4rem;
-                height: 4rem;
-                position: absolute;
-                top: calc(50% - 2rem);
-                right: 1.4rem;
-                display: block;
-                text-align: center;
-                pointer-events: none;
-                color: $vdm-brand;
+            .content {
+                .what {
+                    // text-decoration: underline; 
+                }
             }
 
+        }
+
+        &:before {
+            position: absolute;
+            font-size: 4.9rem;
+            line-height: 4.9rem;
+            width: 4.9rem;
+            height: 4.9rem;
+            top: calc(50% - 2rem); // Perceptual -- should work out to 0.65
+            left: 2rem;
+            pointer-events: none;
+            color: $vdm-black;
+        }
+
+        &:after {
+            font-size: 5.2rem;
+            line-height: 5.2rem;
+            width: 5.2rem;
+            height: 5.2rem;
+            position: absolute;
+            top: calc(50% - 2.6rem);
+            right: 2rem;
+            display: block;
+            text-align: center;
+            pointer-events: none;
+            color: $vdm-brand;
+        }
+
+
+        .content {
+            display: inline-block;
+            vertical-align: middle; // key for vertical centering w/inline-block;
+            width: 70.5%;
+            padding: 2.75rem 1.7rem 4.8rem 9rem;
+            margin-right: 3%;
+            
+            .what {
+                @include header(4);
+                margin-top: 0;
+                margin-bottom: 0.25rem;
+
+            }
+            .where {
+                font-size: $vdm-font-size-larger;
+                line-height: floor(($vdm-font-size-larger * 1.3125));
+                margin-bottom: 1.5rem;
+            }
+            .when {
+                font-size: $vdm-font-size-larger;
+                line-height: floor(($vdm-font-size-larger * 1.3125));
+                margin-bottom: 0;
+                padding-bottom: 0;
+                color: #9b9b9b; // !warning - color out of range
+                
+            }
+            
+            
+        }
+        .metadata {
+            display: inline-block;
+            vertical-align: middle; // key for vertical centering w/inline-block;
+            
+            color: #4a4a4a; // !warning - color out of range
+            position: relative;
+            font-size: $vdm-font-size-base;
+            width: 12%;
+            text-decoration: none;
+
+            // border: 1px solid turquoise;
+
+            .identifier {
+
+            }
+        }
+        
+        // Small and x-small - mobile
+        @media only screen and (max-width: $screen-sm-max) {
+            
+            &:before {
+                top: 1.7rem;
+            }
+            &:after {
+                top: calc(100% - 6rem);
+                left: calc(50% - 2.6rem);
+                right: auto;
+            }
 
             .content {
-                display: inline-block;
-                vertical-align: middle; // key for vertical centering w/inline-block;
-                width: 80%;
-                padding: 0;
-                margin-right: 3%;
+                border: 1px solid lime;
+                padding: 1.7rem 1.7rem 5.5rem 9rem;
+                display: block;
+                width: 100%;
+                margin-bottom: 2rem;
+
                 
-
-                .what {
-                    @include header(4);
-                    margin-top: 0;
-                    margin-bottom: 0.75rem;
-
-                }
                 .where {
-                    font-size: $vdm-font-size-larger;
-                    line-height: floor(($vdm-font-size-larger * 1.3125));
-                    margin-bottom: 1.5rem;
+                    margin-bottom: 2.5rem;
                 }
-                .when {
-                    font-size: $vdm-font-size-larger;
-                    line-height: floor(($vdm-font-size-larger * 1.3125));
-                    margin-bottom: 0;
-                    padding-bottom: 0;
-                    color: #9b9b9b; // !warning - color out of range
-                    
-                }
-               
                 
             }
             .metadata {
-                display: inline-block;
-                vertical-align: middle; // key for vertical centering w/inline-block;
+                // border: 1px solid violet;
+                display: none;
+                width: 100%;
                 
-                color: #4a4a4a; // !warning - color out of range
-                position: relative;
-                font-size: $vdm-font-size-base;
-                width: 12%;
-                text-decoration: none;
-
-                // border: 1px solid turquoise;
-
-                .identifier {
-
-                }
             }
-           
-            // Small and x-small - mobile
-            @media only screen and (max-width: $screen-sm-max) {
-                padding: 1.7rem 1.7rem 4.8rem 6.4rem;
-                &:after {
-                    top: calc(100% - 4.8rem);
-                    left: calc(50% - 2rem);
-                    right: auto;
-                }
-                .content {
-                    // border: 1px solid lime;
-                    display: block;
-                    width: 100%;
-                    margin-bottom: 2rem;
+        }
 
-                    
-                    .where {
-                        margin-bottom: 2.5rem;
-                    }
-                    
-                }
-                .metadata {
-                    // border: 1px solid violet;
-                    display: block;
-                    width: 100%;
-                    
-                }
+        // X-small - mobile only
+        @media only screen and (max-width: $screen-xs-min) {
+            border: 1px solid orange;
+            
+            &:before {
+                display: none;
+            }
+            &:after {
+                top: calc(100% - 6rem);
             }
 
-            // X-small - mobile only
-            @media only screen and (max-width: $screen-xs-min) {
-                padding: 1.7rem 1.7rem 6.4rem 1.7rem;
-                &:before {
-                    display: none;
+            .content {
+                // border: 1px solid orange;
+                padding: 1.7rem 1.7rem 3rem 1.7rem;
+                margin-bottom: 3rem;
+                .what {
+                    margin-bottom: 1.2rem;
                 }
-                &:after {
-                    top: calc(100% - 4.8rem);
-                }
-
-                .content {
-                    // border: 1px solid orange;
-                    margin-bottom: 3rem;
-                    .what {
-                        margin-bottom: 1.2rem;
-                    }
-                }
-                .metadata {
-                    text-align: center;
-                    // border: 1px solid yellow;
-                }
-
             }
+            .metadata {
+                text-align: center;
+                // border: 1px solid yellow;
+            }
+
+        }
          
          
             
-        } // Teaser alert
+    } // Teaser alert
 }
 
 
