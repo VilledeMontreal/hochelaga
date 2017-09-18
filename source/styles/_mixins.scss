@@ -15,8 +15,10 @@
   line-height: $vdm-line-height-base * 5.6250;    // 92px
   font-weight: $vdm-font-weight-regular;
   display: block;
-  margin-top: 0;
-  margin-bottom: 0;
+
+  // WTF is this, should we, really, reset all headers vertical margins?
+  // margin-top: 0;
+  // margin-bottom: 0;
 
   @if $level == 2 {
     font-weight: $vdm-font-weight-light;
@@ -32,8 +34,7 @@
     line-height: $vdm-line-height-base * 1.8095;  // 38px
 
     @if $weight == 'bold' {
-      font-weight: $vdm-font-weight-bold * 1.750; // 28px
-      line-height: $vdm-line-height-base * 1.8095;// 38px
+      font-weight: $vdm-font-weight-bold;
     }
 
   } @else if $level == 5 {
@@ -183,4 +184,18 @@
   font-size: $font-size;
   line-height: $line-height;
   border-radius: $border-radius;
+}
+
+/**
+ * - - - - - - - - - -
+ * == DEBUG
+ * - - - - - - - - - -
+ */
+
+//== Debugging mixins
+
+// - - - - - - - - - -
+// Debug : quickly add border to element
+@mixin db-border($color: $vdm-grey) {
+  border: 1px solid $color;
 }

@@ -411,7 +411,7 @@ mark,
   .blockquote-footer::before {
     content: "\2014 \00A0"; }
 
-.img-fluid, .vdm-avatar > img {
+.img-fluid, .vdm-avatar > img, .vdm-teaser .vdm-teaser-body .vdm-teaser-mediaimg, .vdm-card .vdm-card-body .vdm-card-mediaimg, .vdm-card-media, .vdm-card.vdm-card-image.media-top .vdm-card-body img {
   max-width: 100%;
   height: auto; }
 
@@ -480,23 +480,23 @@ pre {
   max-height: 340px;
   overflow-y: scroll; }
 
-.container {
+.container, .vdm-cards-wrapper, .vdm-teasers-wrapper {
   margin-right: auto;
   margin-left: auto;
   padding-right: 15px;
   padding-left: 15px;
   width: 100%; }
   @media (min-width: 576px) {
-    .container {
+    .container, .vdm-cards-wrapper, .vdm-teasers-wrapper {
       max-width: 540px; } }
   @media (min-width: 768px) {
-    .container {
+    .container, .vdm-cards-wrapper, .vdm-teasers-wrapper {
       max-width: 720px; } }
   @media (min-width: 992px) {
-    .container {
+    .container, .vdm-cards-wrapper, .vdm-teasers-wrapper {
       max-width: 960px; } }
   @media (min-width: 1200px) {
-    .container {
+    .container, .vdm-cards-wrapper, .vdm-teasers-wrapper {
       max-width: 1140px; } }
 
 .container-fluid {
@@ -2298,7 +2298,7 @@ tbody.collapse.show {
   align-items: center;
   justify-content: space-between;
   padding: 0.5rem 1rem; }
-  .navbar > .container,
+  .navbar > .container, .navbar > .vdm-cards-wrapper, .navbar > .vdm-teasers-wrapper,
   .navbar > .container-fluid {
     display: flex;
     flex-wrap: wrap;
@@ -2358,7 +2358,7 @@ tbody.collapse.show {
   background-size: 100% 100%; }
 
 @media (max-width: 575px) {
-  .navbar-expand-sm > .container,
+  .navbar-expand-sm > .container, .navbar-expand-sm > .vdm-cards-wrapper, .navbar-expand-sm > .vdm-teasers-wrapper,
   .navbar-expand-sm > .container-fluid {
     padding-right: 0;
     padding-left: 0; } }
@@ -2378,7 +2378,7 @@ tbody.collapse.show {
       .navbar-expand-sm .navbar-nav .nav-link {
         padding-right: .5rem;
         padding-left: .5rem; }
-    .navbar-expand-sm > .container,
+    .navbar-expand-sm > .container, .navbar-expand-sm > .vdm-cards-wrapper, .navbar-expand-sm > .vdm-teasers-wrapper,
     .navbar-expand-sm > .container-fluid {
       flex-wrap: nowrap; }
     .navbar-expand-sm .navbar-collapse {
@@ -2387,7 +2387,7 @@ tbody.collapse.show {
       display: none; } }
 
 @media (max-width: 767px) {
-  .navbar-expand-md > .container,
+  .navbar-expand-md > .container, .navbar-expand-md > .vdm-cards-wrapper, .navbar-expand-md > .vdm-teasers-wrapper,
   .navbar-expand-md > .container-fluid {
     padding-right: 0;
     padding-left: 0; } }
@@ -2407,7 +2407,7 @@ tbody.collapse.show {
       .navbar-expand-md .navbar-nav .nav-link {
         padding-right: .5rem;
         padding-left: .5rem; }
-    .navbar-expand-md > .container,
+    .navbar-expand-md > .container, .navbar-expand-md > .vdm-cards-wrapper, .navbar-expand-md > .vdm-teasers-wrapper,
     .navbar-expand-md > .container-fluid {
       flex-wrap: nowrap; }
     .navbar-expand-md .navbar-collapse {
@@ -2416,7 +2416,7 @@ tbody.collapse.show {
       display: none; } }
 
 @media (max-width: 991px) {
-  .navbar-expand-lg > .container,
+  .navbar-expand-lg > .container, .navbar-expand-lg > .vdm-cards-wrapper, .navbar-expand-lg > .vdm-teasers-wrapper,
   .navbar-expand-lg > .container-fluid {
     padding-right: 0;
     padding-left: 0; } }
@@ -2436,7 +2436,7 @@ tbody.collapse.show {
       .navbar-expand-lg .navbar-nav .nav-link {
         padding-right: .5rem;
         padding-left: .5rem; }
-    .navbar-expand-lg > .container,
+    .navbar-expand-lg > .container, .navbar-expand-lg > .vdm-cards-wrapper, .navbar-expand-lg > .vdm-teasers-wrapper,
     .navbar-expand-lg > .container-fluid {
       flex-wrap: nowrap; }
     .navbar-expand-lg .navbar-collapse {
@@ -2445,7 +2445,7 @@ tbody.collapse.show {
       display: none; } }
 
 @media (max-width: 1199px) {
-  .navbar-expand-xl > .container,
+  .navbar-expand-xl > .container, .navbar-expand-xl > .vdm-cards-wrapper, .navbar-expand-xl > .vdm-teasers-wrapper,
   .navbar-expand-xl > .container-fluid {
     padding-right: 0;
     padding-left: 0; } }
@@ -2465,7 +2465,7 @@ tbody.collapse.show {
       .navbar-expand-xl .navbar-nav .nav-link {
         padding-right: .5rem;
         padding-left: .5rem; }
-    .navbar-expand-xl > .container,
+    .navbar-expand-xl > .container, .navbar-expand-xl > .vdm-cards-wrapper, .navbar-expand-xl > .vdm-teasers-wrapper,
     .navbar-expand-xl > .container-fluid {
       flex-wrap: nowrap; }
     .navbar-expand-xl .navbar-collapse {
@@ -2477,7 +2477,7 @@ tbody.collapse.show {
   flex-direction: row;
   flex-wrap: nowrap;
   justify-content: flex-start; }
-  .navbar-expand > .container,
+  .navbar-expand > .container, .navbar-expand > .vdm-cards-wrapper, .navbar-expand > .vdm-teasers-wrapper,
   .navbar-expand > .container-fluid {
     padding-right: 0;
     padding-left: 0; }
@@ -2491,7 +2491,7 @@ tbody.collapse.show {
     .navbar-expand .navbar-nav .nav-link {
       padding-right: .5rem;
       padding-left: .5rem; }
-  .navbar-expand > .container,
+  .navbar-expand > .container, .navbar-expand > .vdm-cards-wrapper, .navbar-expand > .vdm-teasers-wrapper,
   .navbar-expand > .container-fluid {
     flex-wrap: nowrap; }
   .navbar-expand .navbar-collapse {
@@ -3819,7 +3819,7 @@ a.bg-dark:focus, a.bg-dark:hover {
   border-top-left-radius: 0.25rem !important;
   border-bottom-left-radius: 0.25rem !important; }
 
-.rounded-circle, .vdm-avatar > img {
+.rounded-circle, .vdm-avatar > img, .vdm-card.vdm-card-image.rounded .vdm-card-body > img {
   border-radius: 50%; }
 
 .rounded-0 {
@@ -5845,6 +5845,11 @@ a.text-dark:focus, a.text-dark:hover {
  * == Forms
  * - - - - - - - - - -
  */
+/**
+ * - - - - - - - - - -
+ * == DEBUG
+ * - - - - - - - - - -
+ */
 header {
   background-color: #E00000;
   height: 100px; }
@@ -6068,8 +6073,6 @@ html body {
     line-height: 118.125px;
     font-weight: 400;
     display: block;
-    margin-top: 0;
-    margin-bottom: 0;
     font-size: 21px;
     line-height: 27.9993px;
     background: #F2F2F1;
@@ -6408,6 +6411,11 @@ html body {
  * == Forms
  * - - - - - - - - - -
  */
+/**
+ * - - - - - - - - - -
+ * == DEBUG
+ * - - - - - - - - - -
+ */
 html {
   font-size: 16px; }
   html body {
@@ -6419,9 +6427,7 @@ html {
       font-size: 67px;
       line-height: 118.125px;
       font-weight: 400;
-      display: block;
-      margin-top: 0;
-      margin-bottom: 0; }
+      display: block; }
       html body h1.vdm-title {
         position: relative; }
         html body h1.vdm-title:after {
@@ -6440,8 +6446,6 @@ html {
       line-height: 118.125px;
       font-weight: 400;
       display: block;
-      margin-top: 0;
-      margin-bottom: 0;
       font-weight: 300;
       font-size: 50px;
       line-height: 68.9997px; }
@@ -6451,8 +6455,6 @@ html {
       line-height: 118.125px;
       font-weight: 400;
       display: block;
-      margin-top: 0;
-      margin-bottom: 0;
       font-size: 37px;
       line-height: 49.9989px; }
     html body h4 {
@@ -6461,8 +6463,6 @@ html {
       line-height: 118.125px;
       font-weight: 400;
       display: block;
-      margin-top: 0;
-      margin-bottom: 0;
       font-size: 28px;
       line-height: 37.9995px; }
       html body h4.strong {
@@ -6471,20 +6471,15 @@ html {
         line-height: 118.125px;
         font-weight: 400;
         display: block;
-        margin-top: 0;
-        margin-bottom: 0;
         font-size: 28px;
         line-height: 37.9995px;
-        font-weight: 1225;
-        line-height: 37.9995px; }
+        font-weight: 700; }
     html body h5 {
       font-family: "Nunito Sans", Helvetica, Arial, sans-serif;
       font-size: 67px;
       line-height: 118.125px;
       font-weight: 400;
       display: block;
-      margin-top: 0;
-      margin-bottom: 0;
       font-size: 21px;
       line-height: 27.9993px; }
     html body h6 {
@@ -6493,8 +6488,6 @@ html {
       line-height: 118.125px;
       font-weight: 400;
       display: block;
-      margin-top: 0;
-      margin-bottom: 0;
       font-size: 16px;
       line-height: 21px; }
     html body .regular {
@@ -6602,8 +6595,6 @@ html {
     line-height: 118.125px;
     font-weight: 400;
     display: block;
-    margin-top: 0;
-    margin-bottom: 0;
     font-weight: 300;
     font-size: 50px;
     line-height: 68.9997px;
@@ -7119,6 +7110,2216 @@ select {
     width: 100%;
     height: 100%; }
 
+.vdm-cards-wrapper.neutral-light, .vdm-teasers-wrapper.neutral-light {
+  background-color: #F2F2F1; }
+
+.vdm-teasers {
+  list-style-type: none;
+  padding-left: 0;
+  display: flex;
+  flex-wrap: wrap;
+  margin-right: -15px;
+  margin-left: -15px;
+  margin-top: 0;
+  margin-bottom: 0; }
+  .vdm-teasers .vdm-teaser {
+    position: relative;
+    width: 100%;
+    min-height: 1px;
+    padding-right: 15px;
+    padding-left: 15px;
+    margin-bottom: 30px;
+    flex: 0 0 100%;
+    max-width: 100%; }
+
+.vdm-teaser {
+  /*
+
+    Cases studied : 
+    https://projects.invisionapp.com/d/main#/console/11533069/247010233/preview
+    https://projects.invisionapp.com/d/main#/console/11533069/248691983/preview
+    https://projects.invisionapp.com/d/main#/console/11533069/245247105/preview
+    https://projects.invisionapp.com/d/main#/console/11533069/245692118/preview
+
+    Image heights : 190, 252 & 252 pixels
+
+    */ }
+  .vdm-teaser .vdm-teaser-body {
+    display: flex;
+    flex-direction: column;
+    background: #F2F2F1;
+    border: none;
+    cursor: pointer;
+    line-height: 19px;
+    text-decoration: none;
+    color: #000000; }
+    .vdm-teaser .vdm-teaser-body.ic-rosette:before {
+      content: "";
+      font-weight: normal;
+      font-style: normal;
+      font-family: "vdm-fonticon";
+      text-decoration: none;
+      display: inline-block;
+      text-rendering: auto;
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale; }
+    .vdm-teaser .vdm-teaser-body.ic-search:before {
+      content: "";
+      font-weight: normal;
+      font-style: normal;
+      font-family: "vdm-fonticon";
+      text-decoration: none;
+      display: inline-block;
+      text-rendering: auto;
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale; }
+    .vdm-teaser .vdm-teaser-body.ic-profile:before {
+      content: "";
+      font-weight: normal;
+      font-style: normal;
+      font-family: "vdm-fonticon";
+      text-decoration: none;
+      display: inline-block;
+      text-rendering: auto;
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale; }
+    .vdm-teaser .vdm-teaser-body.ic-flag:before {
+      content: "";
+      font-weight: normal;
+      font-style: normal;
+      font-family: "vdm-fonticon";
+      text-decoration: none;
+      display: inline-block;
+      text-rendering: auto;
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale; }
+    .vdm-teaser .vdm-teaser-body.ic-calendar:before {
+      content: "";
+      font-weight: normal;
+      font-style: normal;
+      font-family: "vdm-fonticon";
+      text-decoration: none;
+      display: inline-block;
+      text-rendering: auto;
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale; }
+    .vdm-teaser .vdm-teaser-body.ic-sun:before {
+      content: "";
+      font-weight: normal;
+      font-style: normal;
+      font-family: "vdm-fonticon";
+      text-decoration: none;
+      display: inline-block;
+      text-rendering: auto;
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale; }
+    .vdm-teaser .vdm-teaser-body.ic-ticket:before {
+      content: "";
+      font-weight: normal;
+      font-style: normal;
+      font-family: "vdm-fonticon";
+      text-decoration: none;
+      display: inline-block;
+      text-rendering: auto;
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale; }
+    .vdm-teaser .vdm-teaser-body.ic-eye:before {
+      content: "";
+      font-weight: normal;
+      font-style: normal;
+      font-family: "vdm-fonticon";
+      text-decoration: none;
+      display: inline-block;
+      text-rendering: auto;
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale; }
+    .vdm-teaser .vdm-teaser-body.ic-people:before {
+      content: "";
+      font-weight: normal;
+      font-style: normal;
+      font-family: "vdm-fonticon";
+      text-decoration: none;
+      display: inline-block;
+      text-rendering: auto;
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale; }
+    .vdm-teaser .vdm-teaser-body.ic-doc-holder:before {
+      content: "";
+      font-weight: normal;
+      font-style: normal;
+      font-family: "vdm-fonticon";
+      text-decoration: none;
+      display: inline-block;
+      text-rendering: auto;
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale; }
+    .vdm-teaser .vdm-teaser-body.ic-bus:before {
+      content: "";
+      font-weight: normal;
+      font-style: normal;
+      font-family: "vdm-fonticon";
+      text-decoration: none;
+      display: inline-block;
+      text-rendering: auto;
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale; }
+    .vdm-teaser .vdm-teaser-body.ic-phone:before {
+      content: "";
+      font-weight: normal;
+      font-style: normal;
+      font-family: "vdm-fonticon";
+      text-decoration: none;
+      display: inline-block;
+      text-rendering: auto;
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale; }
+    .vdm-teaser .vdm-teaser-body.ic-book:before {
+      content: "";
+      font-weight: normal;
+      font-style: normal;
+      font-family: "vdm-fonticon";
+      text-decoration: none;
+      display: inline-block;
+      text-rendering: auto;
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale; }
+    .vdm-teaser .vdm-teaser-body.ic-arrow-play:before {
+      content: "";
+      font-weight: normal;
+      font-style: normal;
+      font-family: "vdm-fonticon";
+      text-decoration: none;
+      display: inline-block;
+      text-rendering: auto;
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale; }
+    .vdm-teaser .vdm-teaser-body.ic-arrow-select:before {
+      content: "";
+      font-weight: normal;
+      font-style: normal;
+      font-family: "vdm-fonticon";
+      text-decoration: none;
+      display: inline-block;
+      text-rendering: auto;
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale; }
+    .vdm-teaser .vdm-teaser-body.ic-news-item:before {
+      content: "";
+      font-weight: normal;
+      font-style: normal;
+      font-family: "vdm-fonticon";
+      text-decoration: none;
+      display: inline-block;
+      text-rendering: auto;
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale; }
+    .vdm-teaser .vdm-teaser-body.ic-location-star:before {
+      content: "";
+      font-weight: normal;
+      font-style: normal;
+      font-family: "vdm-fonticon";
+      text-decoration: none;
+      display: inline-block;
+      text-rendering: auto;
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale; }
+    .vdm-teaser .vdm-teaser-body.ic-permit-id:before {
+      content: "";
+      font-weight: normal;
+      font-style: normal;
+      font-family: "vdm-fonticon";
+      text-decoration: none;
+      display: inline-block;
+      text-rendering: auto;
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale; }
+    .vdm-teaser .vdm-teaser-body.ic-document:before {
+      content: "";
+      font-weight: normal;
+      font-style: normal;
+      font-family: "vdm-fonticon";
+      text-decoration: none;
+      display: inline-block;
+      text-rendering: auto;
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale; }
+    .vdm-teaser .vdm-teaser-body.ic-credit-card:before {
+      content: "";
+      font-weight: normal;
+      font-style: normal;
+      font-family: "vdm-fonticon";
+      text-decoration: none;
+      display: inline-block;
+      text-rendering: auto;
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale; }
+    .vdm-teaser .vdm-teaser-body.ic-folder:before {
+      content: "";
+      font-weight: normal;
+      font-style: normal;
+      font-family: "vdm-fonticon";
+      text-decoration: none;
+      display: inline-block;
+      text-rendering: auto;
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale; }
+    .vdm-teaser .vdm-teaser-body.ic-bell:before {
+      content: "";
+      font-weight: normal;
+      font-style: normal;
+      font-family: "vdm-fonticon";
+      text-decoration: none;
+      display: inline-block;
+      text-rendering: auto;
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale; }
+    .vdm-teaser .vdm-teaser-body.ic-settings:before {
+      content: "";
+      font-weight: normal;
+      font-style: normal;
+      font-family: "vdm-fonticon";
+      text-decoration: none;
+      display: inline-block;
+      text-rendering: auto;
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale; }
+    .vdm-teaser .vdm-teaser-body.ic-plus-circle-dot:before {
+      content: "";
+      font-weight: normal;
+      font-style: normal;
+      font-family: "vdm-fonticon";
+      text-decoration: none;
+      display: inline-block;
+      text-rendering: auto;
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale; }
+    .vdm-teaser .vdm-teaser-body.ic-minus-circle-dot:before {
+      content: "";
+      font-weight: normal;
+      font-style: normal;
+      font-family: "vdm-fonticon";
+      text-decoration: none;
+      display: inline-block;
+      text-rendering: auto;
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale; }
+    .vdm-teaser .vdm-teaser-body.ic-steps-checked:before {
+      content: "";
+      font-weight: normal;
+      font-style: normal;
+      font-family: "vdm-fonticon";
+      text-decoration: none;
+      display: inline-block;
+      text-rendering: auto;
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale; }
+    .vdm-teaser .vdm-teaser-body.ic-ellipsis-circle-dot:before {
+      content: "";
+      font-weight: normal;
+      font-style: normal;
+      font-family: "vdm-fonticon";
+      text-decoration: none;
+      display: inline-block;
+      text-rendering: auto;
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale; }
+    .vdm-teaser .vdm-teaser-body.ic-enveloppe:before {
+      content: "";
+      font-weight: normal;
+      font-style: normal;
+      font-family: "vdm-fonticon";
+      text-decoration: none;
+      display: inline-block;
+      text-rendering: auto;
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale; }
+    .vdm-teaser .vdm-teaser-body.ic-folder-add:before {
+      content: "";
+      font-weight: normal;
+      font-style: normal;
+      font-family: "vdm-fonticon";
+      text-decoration: none;
+      display: inline-block;
+      text-rendering: auto;
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale; }
+    .vdm-teaser .vdm-teaser-body.ic-warning-triangle:before {
+      content: "";
+      font-weight: normal;
+      font-style: normal;
+      font-family: "vdm-fonticon";
+      text-decoration: none;
+      display: inline-block;
+      text-rendering: auto;
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale; }
+    .vdm-teaser .vdm-teaser-body.ic-computer:before {
+      content: "";
+      font-weight: normal;
+      font-style: normal;
+      font-family: "vdm-fonticon";
+      text-decoration: none;
+      display: inline-block;
+      text-rendering: auto;
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale; }
+    .vdm-teaser .vdm-teaser-body.ic-nut:before {
+      content: "";
+      font-weight: normal;
+      font-style: normal;
+      font-family: "vdm-fonticon";
+      text-decoration: none;
+      display: inline-block;
+      text-rendering: auto;
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale; }
+    .vdm-teaser .vdm-teaser-body.ic-pencil:before {
+      content: "";
+      font-weight: normal;
+      font-style: normal;
+      font-family: "vdm-fonticon";
+      text-decoration: none;
+      display: inline-block;
+      text-rendering: auto;
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale; }
+    .vdm-teaser .vdm-teaser-body.ic-lightbulb:before {
+      content: "";
+      font-weight: normal;
+      font-style: normal;
+      font-family: "vdm-fonticon";
+      text-decoration: none;
+      display: inline-block;
+      text-rendering: auto;
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale; }
+    .vdm-teaser .vdm-teaser-body.ic-pen:before {
+      content: "";
+      font-weight: normal;
+      font-style: normal;
+      font-family: "vdm-fonticon";
+      text-decoration: none;
+      display: inline-block;
+      text-rendering: auto;
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale; }
+    .vdm-teaser .vdm-teaser-body.ic-warning-circle:before {
+      content: "";
+      font-weight: normal;
+      font-style: normal;
+      font-family: "vdm-fonticon";
+      text-decoration: none;
+      display: inline-block;
+      text-rendering: auto;
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale; }
+    .vdm-teaser .vdm-teaser-body.ic-clock:before {
+      content: "";
+      font-weight: normal;
+      font-style: normal;
+      font-family: "vdm-fonticon";
+      text-decoration: none;
+      display: inline-block;
+      text-rendering: auto;
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale; }
+    .vdm-teaser .vdm-teaser-body.ic-target:before {
+      content: "";
+      font-weight: normal;
+      font-style: normal;
+      font-family: "vdm-fonticon";
+      text-decoration: none;
+      display: inline-block;
+      text-rendering: auto;
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale; }
+    .vdm-teaser .vdm-teaser-body.ic-broom:before {
+      content: "";
+      font-weight: normal;
+      font-style: normal;
+      font-family: "vdm-fonticon";
+      text-decoration: none;
+      display: inline-block;
+      text-rendering: auto;
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale; }
+    .vdm-teaser .vdm-teaser-body.ic-permit:before {
+      content: "";
+      font-weight: normal;
+      font-style: normal;
+      font-family: "vdm-fonticon";
+      text-decoration: none;
+      display: inline-block;
+      text-rendering: auto;
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale; }
+    .vdm-teaser .vdm-teaser-body.ic-arrow-circle-up:before {
+      content: "";
+      font-weight: normal;
+      font-style: normal;
+      font-family: "vdm-fonticon";
+      text-decoration: none;
+      display: inline-block;
+      text-rendering: auto;
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale; }
+    .vdm-teaser .vdm-teaser-body.ic-arrow-circle-right:before {
+      content: "";
+      font-weight: normal;
+      font-style: normal;
+      font-family: "vdm-fonticon";
+      text-decoration: none;
+      display: inline-block;
+      text-rendering: auto;
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale; }
+    .vdm-teaser .vdm-teaser-body.ic-arrow-circle-down:before {
+      content: "";
+      font-weight: normal;
+      font-style: normal;
+      font-family: "vdm-fonticon";
+      text-decoration: none;
+      display: inline-block;
+      text-rendering: auto;
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale; }
+    .vdm-teaser .vdm-teaser-body.ic-arrow-circle-left:before {
+      content: "";
+      font-weight: normal;
+      font-style: normal;
+      font-family: "vdm-fonticon";
+      text-decoration: none;
+      display: inline-block;
+      text-rendering: auto;
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale; }
+    .vdm-teaser .vdm-teaser-body.ic-house:before {
+      content: "";
+      font-weight: normal;
+      font-style: normal;
+      font-family: "vdm-fonticon";
+      text-decoration: none;
+      display: inline-block;
+      text-rendering: auto;
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale; }
+    .vdm-teaser .vdm-teaser-body.ic-x-close:before {
+      content: "";
+      font-weight: normal;
+      font-style: normal;
+      font-family: "vdm-fonticon";
+      text-decoration: none;
+      display: inline-block;
+      text-rendering: auto;
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale; }
+    .vdm-teaser .vdm-teaser-body.ic-circle-progress-done:before {
+      content: "";
+      font-weight: normal;
+      font-style: normal;
+      font-family: "vdm-fonticon";
+      text-decoration: none;
+      display: inline-block;
+      text-rendering: auto;
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale; }
+    .vdm-teaser .vdm-teaser-body.ic-circle-progress-a:before {
+      content: "";
+      font-weight: normal;
+      font-style: normal;
+      font-family: "vdm-fonticon";
+      text-decoration: none;
+      display: inline-block;
+      text-rendering: auto;
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale; }
+    .vdm-teaser .vdm-teaser-body.ic-circle-progress-ab:before {
+      content: "";
+      font-weight: normal;
+      font-style: normal;
+      font-family: "vdm-fonticon";
+      text-decoration: none;
+      display: inline-block;
+      text-rendering: auto;
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale; }
+    .vdm-teaser .vdm-teaser-body.ic-circle-progress-abc:before {
+      content: "";
+      font-weight: normal;
+      font-style: normal;
+      font-family: "vdm-fonticon";
+      text-decoration: none;
+      display: inline-block;
+      text-rendering: auto;
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale; }
+    .vdm-teaser .vdm-teaser-body.ic-circle-progress-c:before {
+      content: "";
+      font-weight: normal;
+      font-style: normal;
+      font-family: "vdm-fonticon";
+      text-decoration: none;
+      display: inline-block;
+      text-rendering: auto;
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale; }
+    .vdm-teaser .vdm-teaser-body.ic-circle-progress-bc:before {
+      content: "";
+      font-weight: normal;
+      font-style: normal;
+      font-family: "vdm-fonticon";
+      text-decoration: none;
+      display: inline-block;
+      text-rendering: auto;
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale; }
+    .vdm-teaser .vdm-teaser-body.ic-circle-progress-checked:before {
+      content: "";
+      font-weight: normal;
+      font-style: normal;
+      font-family: "vdm-fonticon";
+      text-decoration: none;
+      display: inline-block;
+      text-rendering: auto;
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale; }
+    .vdm-teaser .vdm-teaser-body.ic-circle-progress-folder:before {
+      content: "";
+      font-weight: normal;
+      font-style: normal;
+      font-family: "vdm-fonticon";
+      text-decoration: none;
+      display: inline-block;
+      text-rendering: auto;
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale; }
+    .vdm-teaser .vdm-teaser-body.ic-chevron-up:before {
+      content: "";
+      font-weight: normal;
+      font-style: normal;
+      font-family: "vdm-fonticon";
+      text-decoration: none;
+      display: inline-block;
+      text-rendering: auto;
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale; }
+    .vdm-teaser .vdm-teaser-body.ic-chevron-right:before {
+      content: "";
+      font-weight: normal;
+      font-style: normal;
+      font-family: "vdm-fonticon";
+      text-decoration: none;
+      display: inline-block;
+      text-rendering: auto;
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale; }
+    .vdm-teaser .vdm-teaser-body.ic-chevron-down:before {
+      content: "";
+      font-weight: normal;
+      font-style: normal;
+      font-family: "vdm-fonticon";
+      text-decoration: none;
+      display: inline-block;
+      text-rendering: auto;
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale; }
+    .vdm-teaser .vdm-teaser-body.ic-chevron-left:before {
+      content: "";
+      font-weight: normal;
+      font-style: normal;
+      font-family: "vdm-fonticon";
+      text-decoration: none;
+      display: inline-block;
+      text-rendering: auto;
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale; }
+    .vdm-teaser .vdm-teaser-body.ic-circle-checked:before {
+      content: "";
+      font-weight: normal;
+      font-style: normal;
+      font-family: "vdm-fonticon";
+      text-decoration: none;
+      display: inline-block;
+      text-rendering: auto;
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale; }
+    .vdm-teaser .vdm-teaser-body.ic-menu:before {
+      content: "";
+      font-weight: normal;
+      font-style: normal;
+      font-family: "vdm-fonticon";
+      text-decoration: none;
+      display: inline-block;
+      text-rendering: auto;
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale; }
+    .vdm-teaser .vdm-teaser-body.ic-location:before {
+      content: "";
+      font-weight: normal;
+      font-style: normal;
+      font-family: "vdm-fonticon";
+      text-decoration: none;
+      display: inline-block;
+      text-rendering: auto;
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale; }
+    .vdm-teaser .vdm-teaser-body.ic-arrow-up:before {
+      content: "";
+      font-weight: normal;
+      font-style: normal;
+      font-family: "vdm-fonticon";
+      text-decoration: none;
+      display: inline-block;
+      text-rendering: auto;
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale; }
+    .vdm-teaser .vdm-teaser-body.ic-arrow-right:before {
+      content: "";
+      font-weight: normal;
+      font-style: normal;
+      font-family: "vdm-fonticon";
+      text-decoration: none;
+      display: inline-block;
+      text-rendering: auto;
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale; }
+    .vdm-teaser .vdm-teaser-body.ic-arrow-down:before {
+      content: "";
+      font-weight: normal;
+      font-style: normal;
+      font-family: "vdm-fonticon";
+      text-decoration: none;
+      display: inline-block;
+      text-rendering: auto;
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale; }
+    .vdm-teaser .vdm-teaser-body.ic-arrow-left:before {
+      content: "";
+      font-weight: normal;
+      font-style: normal;
+      font-family: "vdm-fonticon";
+      text-decoration: none;
+      display: inline-block;
+      text-rendering: auto;
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale; }
+    .vdm-teaser .vdm-teaser-body.ic-plus:before {
+      content: "";
+      font-weight: normal;
+      font-style: normal;
+      font-family: "vdm-fonticon";
+      text-decoration: none;
+      display: inline-block;
+      text-rendering: auto;
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale; }
+    .vdm-teaser .vdm-teaser-body.ic-minus:before {
+      content: "";
+      font-weight: normal;
+      font-style: normal;
+      font-family: "vdm-fonticon";
+      text-decoration: none;
+      display: inline-block;
+      text-rendering: auto;
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale; }
+    .vdm-teaser .vdm-teaser-body.ic-multiply:before {
+      content: "";
+      font-weight: normal;
+      font-style: normal;
+      font-family: "vdm-fonticon";
+      text-decoration: none;
+      display: inline-block;
+      text-rendering: auto;
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale; }
+    .vdm-teaser .vdm-teaser-body.ic-circle-plus:before {
+      content: "";
+      font-weight: normal;
+      font-style: normal;
+      font-family: "vdm-fonticon";
+      text-decoration: none;
+      display: inline-block;
+      text-rendering: auto;
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale; }
+    .vdm-teaser .vdm-teaser-body.ic-circle-minus:before {
+      content: "";
+      font-weight: normal;
+      font-style: normal;
+      font-family: "vdm-fonticon";
+      text-decoration: none;
+      display: inline-block;
+      text-rendering: auto;
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale; }
+    .vdm-teaser .vdm-teaser-body.ic-circle-multiply:before {
+      content: "";
+      font-weight: normal;
+      font-style: normal;
+      font-family: "vdm-fonticon";
+      text-decoration: none;
+      display: inline-block;
+      text-rendering: auto;
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale; }
+    .vdm-teaser .vdm-teaser-body.ic-circle-plus-invert:before {
+      content: "";
+      font-weight: normal;
+      font-style: normal;
+      font-family: "vdm-fonticon";
+      text-decoration: none;
+      display: inline-block;
+      text-rendering: auto;
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale; }
+    .vdm-teaser .vdm-teaser-body.ic-circle-minus-invert:before {
+      content: "";
+      font-weight: normal;
+      font-style: normal;
+      font-family: "vdm-fonticon";
+      text-decoration: none;
+      display: inline-block;
+      text-rendering: auto;
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale; }
+    .vdm-teaser .vdm-teaser-body.ic-circle-multiply-invert:before {
+      content: "";
+      font-weight: normal;
+      font-style: normal;
+      font-family: "vdm-fonticon";
+      text-decoration: none;
+      display: inline-block;
+      text-rendering: auto;
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale; }
+    .vdm-teaser .vdm-teaser-body.ic-checkbox-checked:before {
+      content: "";
+      font-weight: normal;
+      font-style: normal;
+      font-family: "vdm-fonticon";
+      text-decoration: none;
+      display: inline-block;
+      text-rendering: auto;
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale; }
+    .vdm-teaser .vdm-teaser-body.ic-checkbox-empty:before {
+      content: "";
+      font-weight: normal;
+      font-style: normal;
+      font-family: "vdm-fonticon";
+      text-decoration: none;
+      display: inline-block;
+      text-rendering: auto;
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale; }
+    .vdm-teaser .vdm-teaser-body.ic-checkbox-checked-trans:before {
+      content: "";
+      font-weight: normal;
+      font-style: normal;
+      font-family: "vdm-fonticon";
+      text-decoration: none;
+      display: inline-block;
+      text-rendering: auto;
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale; }
+    .vdm-teaser .vdm-teaser-body.ic-checkbox-checked-invert:before {
+      content: "";
+      font-weight: normal;
+      font-style: normal;
+      font-family: "vdm-fonticon";
+      text-decoration: none;
+      display: inline-block;
+      text-rendering: auto;
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale; }
+    .vdm-teaser .vdm-teaser-body.ic-trash:before {
+      content: "";
+      font-weight: normal;
+      font-style: normal;
+      font-family: "vdm-fonticon";
+      text-decoration: none;
+      display: inline-block;
+      text-rendering: auto;
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale; }
+    .vdm-teaser .vdm-teaser-body.ic-recycle:before {
+      content: "";
+      font-weight: normal;
+      font-style: normal;
+      font-family: "vdm-fonticon";
+      text-decoration: none;
+      display: inline-block;
+      text-rendering: auto;
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale; }
+    .vdm-teaser .vdm-teaser-body.ic-compost:before {
+      content: "";
+      font-weight: normal;
+      font-style: normal;
+      font-family: "vdm-fonticon";
+      text-decoration: none;
+      display: inline-block;
+      text-rendering: auto;
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale; }
+    .vdm-teaser .vdm-teaser-body.ic-greens:before {
+      content: "";
+      font-weight: normal;
+      font-style: normal;
+      font-family: "vdm-fonticon";
+      text-decoration: none;
+      display: inline-block;
+      text-rendering: auto;
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale; }
+    .vdm-teaser .vdm-teaser-body.ic-permit-pet:before {
+      content: "";
+      font-weight: normal;
+      font-style: normal;
+      font-family: "vdm-fonticon";
+      text-decoration: none;
+      display: inline-block;
+      text-rendering: auto;
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale; }
+    .vdm-teaser .vdm-teaser-body:before, .vdm-teaser .vdm-teaser-body:after {
+      font-size: 3.6rem;
+      width: 3.6rem;
+      height: 3.6rem;
+      line-height: 3.6rem;
+      text-decoration: none;
+      color: #429A8E; }
+    .vdm-teaser .vdm-teaser-body:hover.vdm-teaser-body, .vdm-teaser .vdm-teaser-body:active.vdm-teaser-body {
+      color: #FFFFFF;
+      background: #429A8E;
+      text-decoration: none; }
+      .vdm-teaser .vdm-teaser-body:hover.vdm-teaser-body:before, .vdm-teaser .vdm-teaser-body:active.vdm-teaser-body:before {
+        color: #FFFFFF; }
+      .vdm-teaser .vdm-teaser-body:hover.vdm-teaser-body > *, .vdm-teaser .vdm-teaser-body:active.vdm-teaser-body > * {
+        color: #FFFFFF; }
+      .vdm-teaser .vdm-teaser-body:hover.vdm-teaser-body .arrow-link,
+      .vdm-teaser .vdm-teaser-body:hover.vdm-teaser-body .location-pin,
+      .vdm-teaser .vdm-teaser-body:hover.vdm-teaser-body .vdm-label, .vdm-teaser .vdm-teaser-body:active.vdm-teaser-body .arrow-link,
+      .vdm-teaser .vdm-teaser-body:active.vdm-teaser-body .location-pin,
+      .vdm-teaser .vdm-teaser-body:active.vdm-teaser-body .vdm-label {
+        color: #FFFFFF;
+        color: #FFFFFF; }
+        .vdm-teaser .vdm-teaser-body:hover.vdm-teaser-body .arrow-link:before, .vdm-teaser .vdm-teaser-body:hover.vdm-teaser-body .arrow-link:after,
+        .vdm-teaser .vdm-teaser-body:hover.vdm-teaser-body .location-pin:before,
+        .vdm-teaser .vdm-teaser-body:hover.vdm-teaser-body .location-pin:after,
+        .vdm-teaser .vdm-teaser-body:hover.vdm-teaser-body .vdm-label:before,
+        .vdm-teaser .vdm-teaser-body:hover.vdm-teaser-body .vdm-label:after, .vdm-teaser .vdm-teaser-body:active.vdm-teaser-body .arrow-link:before, .vdm-teaser .vdm-teaser-body:active.vdm-teaser-body .arrow-link:after,
+        .vdm-teaser .vdm-teaser-body:active.vdm-teaser-body .location-pin:before,
+        .vdm-teaser .vdm-teaser-body:active.vdm-teaser-body .location-pin:after,
+        .vdm-teaser .vdm-teaser-body:active.vdm-teaser-body .vdm-label:before,
+        .vdm-teaser .vdm-teaser-body:active.vdm-teaser-body .vdm-label:after {
+          color: #FFFFFF;
+          color: #FFFFFF; }
+      .vdm-teaser .vdm-teaser-body:hover.vdm-teaser-body .vdm-label, .vdm-teaser .vdm-teaser-body:active.vdm-teaser-body .vdm-label {
+        border: 1px solid #FFFFFF; }
+    .vdm-teaser .vdm-teaser-body .date {
+      font-size: 12px;
+      margin-bottom: 2rem; }
+    .vdm-teaser .vdm-teaser-body .title {
+      font-family: "Nunito Sans", Helvetica, Arial, sans-serif;
+      font-size: 67px;
+      line-height: 118.125px;
+      font-weight: 400;
+      display: block;
+      font-size: 28px;
+      line-height: 37.9995px;
+      margin-bottom: 1em; }
+      .vdm-teaser .vdm-teaser-body .title.arrow-link {
+        line-height: 1.7em; }
+      .vdm-teaser .vdm-teaser-body .title:last-child {
+        margin-bottom: 0; }
+    .vdm-teaser .vdm-teaser-body .content {
+      margin-bottom: 1.3em;
+      flex: 1; }
+      .vdm-teaser .vdm-teaser-body .content:last-child {
+        margin-bottom: 0; }
+    .vdm-teaser .vdm-teaser-body .footer {
+      margin-bottom: 0;
+      margin-top: auto; }
+      .vdm-teaser .vdm-teaser-body .footer.inline-items .location-pin {
+        margin-right: 2em; }
+      .vdm-teaser .vdm-teaser-body .footer .vdm-label {
+        background: transparent; }
+  .vdm-teaser.arrow-block .vdm-teaser-body {
+    padding: 2.3rem 5rem 2.3rem 2.3rem;
+    position: relative; }
+    .vdm-teaser.arrow-block .vdm-teaser-body:after {
+      content: "";
+      font-weight: normal;
+      font-style: normal;
+      font-family: "vdm-fonticon";
+      text-decoration: none;
+      display: inline-block;
+      text-rendering: auto;
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale; }
+    .vdm-teaser.arrow-block .vdm-teaser-body:after {
+      position: absolute;
+      top: calc(50% - 1.7rem);
+      left: calc(100% - 4.5rem); }
+    .vdm-teaser.arrow-block .vdm-teaser-body:hover, .vdm-teaser.arrow-block .vdm-teaser-body:active {
+      color: #000000; }
+      .vdm-teaser.arrow-block .vdm-teaser-body:hover > *, .vdm-teaser.arrow-block .vdm-teaser-body:active > * {
+        color: #000000; }
+      .vdm-teaser.arrow-block .vdm-teaser-body:hover:after, .vdm-teaser.arrow-block .vdm-teaser-body:active:after {
+        color: #000000; }
+  .vdm-teaser.arrow-block.compact .vdm-teaser-body {
+    padding: 1rem 3.5rem 1rem 1rem; }
+    .vdm-teaser.arrow-block.compact .vdm-teaser-body:after {
+      position: absolute;
+      top: calc(50% - 1.7rem);
+      left: calc(100% - 4rem);
+      font-size: 2.8rem;
+      width: 2.8rem;
+      height: 2.8rem;
+      line-height: 2.8rem; }
+    .vdm-teaser.arrow-block.compact .vdm-teaser-body .title {
+      font-family: "Nunito Sans", Helvetica, Arial, sans-serif;
+      font-size: 67px;
+      line-height: 118.125px;
+      font-weight: 400;
+      display: block;
+      font-size: 21px;
+      line-height: 27.9993px; }
+  .vdm-teaser.arrow-block.inline-flex .vdm-teaser-body {
+    flex-direction: column; }
+    .vdm-teaser.arrow-block.inline-flex .vdm-teaser-body .content-wrapper {
+      flex-direction: row; }
+  .vdm-teaser.light-scheme .vdm-teaser-body {
+    background: #FFFFFF;
+    border: 1px solid #429A8E; }
+    .vdm-teaser.light-scheme .vdm-teaser-body:before {
+      color: #000000; }
+  .vdm-teaser.white-scheme .vdm-teaser-body {
+    background: #FFFFFF;
+    border: none; }
+    .vdm-teaser.white-scheme .vdm-teaser-body:hover, .vdm-teaser.white-scheme .vdm-teaser-body:active {
+      background: #FFFFFF;
+      border: none;
+      color: #000000; }
+      .vdm-teaser.white-scheme .vdm-teaser-body:hover:before, .vdm-teaser.white-scheme .vdm-teaser-body:active:before {
+        color: #429A8E; }
+  .vdm-teaser.icon-left .vdm-teaser-body, .vdm-teaser.icon-right .vdm-teaser-body {
+    position: relative; }
+    .vdm-teaser.icon-left .vdm-teaser-body:before, .vdm-teaser.icon-right .vdm-teaser-body:before {
+      position: absolute;
+      top: calc(50% - 1.8rem); }
+    .vdm-teaser.icon-left .vdm-teaser-body .title, .vdm-teaser.icon-right .vdm-teaser-body .title {
+      font-weight: 700; }
+  .vdm-teaser.icon-left .vdm-teaser-body {
+    padding: 2.3rem 2.3rem 3rem 7.75rem; }
+    .vdm-teaser.icon-left .vdm-teaser-body:before {
+      left: 3rem; }
+    @media (max-width: 575px) {
+      .vdm-teaser.icon-left .vdm-teaser-body {
+        padding: 7.75rem 2.3rem 3rem 2.3rem; }
+        .vdm-teaser.icon-left .vdm-teaser-body:before {
+          top: 3rem;
+          left: calc(50% - 1.8rem); } }
+  .vdm-teaser.icon-right .vdm-teaser-body {
+    padding: 2.3rem 7.75rem 3rem 2.3rem; }
+    .vdm-teaser.icon-right .vdm-teaser-body:before {
+      left: calc(100% - 6.8rem); }
+    @media (max-width: 575px) {
+      .vdm-teaser.icon-right .vdm-teaser-body {
+        padding: 7.75rem 2.3rem 3rem 2.3rem; }
+        .vdm-teaser.icon-right .vdm-teaser-body:before {
+          top: 3rem;
+          left: calc(50% - 1.8rem); } }
+  .vdm-teaser.image-left .vdm-teaser-body, .vdm-teaser.image-right .vdm-teaser-body {
+    flex-direction: row; }
+    .vdm-teaser.image-left .vdm-teaser-body > img, .vdm-teaser.image-right .vdm-teaser-body > img {
+      max-height: 10rem;
+      margin: 0; }
+  .vdm-teaser.image-left.large .vdm-teaser-body > img, .vdm-teaser.image-right.large .vdm-teaser-body > img {
+    max-height: 16rem; }
+  .vdm-teaser.image-left.larger .vdm-teaser-body > img, .vdm-teaser.image-right.larger .vdm-teaser-body > img {
+    max-height: 22rem; }
+  .vdm-teaser.image-left.small .content-wrapper, .vdm-teaser.image-right.small .content-wrapper {
+    padding: 1.5rem 1.5rem 1.8rem 1.5rem; }
+  .vdm-teaser.image-left .content-wrapper, .vdm-teaser.image-right .content-wrapper {
+    padding: 1em;
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    padding: 2.3rem 2.3rem 3rem 2.3rem; }
+    .vdm-teaser.image-left .content-wrapper .title, .vdm-teaser.image-right .content-wrapper .title {
+      font-family: "Nunito Sans", Helvetica, Arial, sans-serif;
+      font-size: 67px;
+      line-height: 118.125px;
+      font-weight: 400;
+      display: block;
+      font-size: 21px;
+      line-height: 27.9993px; }
+      .vdm-teaser.image-left .content-wrapper .title.arrow-link, .vdm-teaser.image-right .content-wrapper .title.arrow-link {
+        line-height: 1.7em; }
+  @media (max-width: 991px) {
+    .vdm-teaser.image-left.large .vdm-teaser-body, .vdm-teaser.image-left.larger .vdm-teaser-body, .vdm-teaser.image-right.large .vdm-teaser-body, .vdm-teaser.image-right.larger .vdm-teaser-body {
+      flex-direction: column; }
+      .vdm-teaser.image-left.large .vdm-teaser-body > img, .vdm-teaser.image-left.larger .vdm-teaser-body > img, .vdm-teaser.image-right.large .vdm-teaser-body > img, .vdm-teaser.image-right.larger .vdm-teaser-body > img {
+        order: 0;
+        width: 100%;
+        max-height: none; } }
+  @media (max-width: 575px) {
+    .vdm-teaser.image-left .vdm-teaser-body, .vdm-teaser.image-right .vdm-teaser-body {
+      flex-direction: column; }
+      .vdm-teaser.image-left .vdm-teaser-body > img, .vdm-teaser.image-right .vdm-teaser-body > img {
+        order: 0;
+        width: 100%;
+        max-height: none; } }
+  .vdm-teaser.image-right .vdm-teaser-body > img {
+    order: 1; }
+  @media (max-width: 575px) {
+    .vdm-teaser.image-right .vdm-teaser-body {
+      flex-direction: column; }
+      .vdm-teaser.image-right .vdm-teaser-body > img {
+        order: 0;
+        width: 100%;
+        max-height: none; } }
+
+.vdm-cards {
+  list-style-type: none;
+  padding-left: 0;
+  display: flex;
+  flex-wrap: wrap;
+  margin-right: -15px;
+  margin-left: -15px;
+  margin-top: 0;
+  margin-bottom: 0; }
+  .vdm-cards.grid-type-grid .vdm-card .vdm-card-body {
+    height: 100%; }
+  .vdm-cards .vdm-card {
+    position: relative;
+    width: 100%;
+    min-height: 1px;
+    padding-right: 15px;
+    padding-left: 15px;
+    margin-bottom: 30px; }
+
+.vdm-card .vdm-card-body {
+  display: flex;
+  flex-direction: column;
+  background: #F2F2F1;
+  border: none;
+  cursor: pointer;
+  line-height: 19px;
+  text-decoration: none;
+  color: #000000; }
+  .vdm-card .vdm-card-body.ic-rosette:before {
+    content: "";
+    font-weight: normal;
+    font-style: normal;
+    font-family: "vdm-fonticon";
+    text-decoration: none;
+    display: inline-block;
+    text-rendering: auto;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale; }
+  .vdm-card .vdm-card-body.ic-search:before {
+    content: "";
+    font-weight: normal;
+    font-style: normal;
+    font-family: "vdm-fonticon";
+    text-decoration: none;
+    display: inline-block;
+    text-rendering: auto;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale; }
+  .vdm-card .vdm-card-body.ic-profile:before {
+    content: "";
+    font-weight: normal;
+    font-style: normal;
+    font-family: "vdm-fonticon";
+    text-decoration: none;
+    display: inline-block;
+    text-rendering: auto;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale; }
+  .vdm-card .vdm-card-body.ic-flag:before {
+    content: "";
+    font-weight: normal;
+    font-style: normal;
+    font-family: "vdm-fonticon";
+    text-decoration: none;
+    display: inline-block;
+    text-rendering: auto;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale; }
+  .vdm-card .vdm-card-body.ic-calendar:before {
+    content: "";
+    font-weight: normal;
+    font-style: normal;
+    font-family: "vdm-fonticon";
+    text-decoration: none;
+    display: inline-block;
+    text-rendering: auto;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale; }
+  .vdm-card .vdm-card-body.ic-sun:before {
+    content: "";
+    font-weight: normal;
+    font-style: normal;
+    font-family: "vdm-fonticon";
+    text-decoration: none;
+    display: inline-block;
+    text-rendering: auto;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale; }
+  .vdm-card .vdm-card-body.ic-ticket:before {
+    content: "";
+    font-weight: normal;
+    font-style: normal;
+    font-family: "vdm-fonticon";
+    text-decoration: none;
+    display: inline-block;
+    text-rendering: auto;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale; }
+  .vdm-card .vdm-card-body.ic-eye:before {
+    content: "";
+    font-weight: normal;
+    font-style: normal;
+    font-family: "vdm-fonticon";
+    text-decoration: none;
+    display: inline-block;
+    text-rendering: auto;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale; }
+  .vdm-card .vdm-card-body.ic-people:before {
+    content: "";
+    font-weight: normal;
+    font-style: normal;
+    font-family: "vdm-fonticon";
+    text-decoration: none;
+    display: inline-block;
+    text-rendering: auto;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale; }
+  .vdm-card .vdm-card-body.ic-doc-holder:before {
+    content: "";
+    font-weight: normal;
+    font-style: normal;
+    font-family: "vdm-fonticon";
+    text-decoration: none;
+    display: inline-block;
+    text-rendering: auto;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale; }
+  .vdm-card .vdm-card-body.ic-bus:before {
+    content: "";
+    font-weight: normal;
+    font-style: normal;
+    font-family: "vdm-fonticon";
+    text-decoration: none;
+    display: inline-block;
+    text-rendering: auto;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale; }
+  .vdm-card .vdm-card-body.ic-phone:before {
+    content: "";
+    font-weight: normal;
+    font-style: normal;
+    font-family: "vdm-fonticon";
+    text-decoration: none;
+    display: inline-block;
+    text-rendering: auto;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale; }
+  .vdm-card .vdm-card-body.ic-book:before {
+    content: "";
+    font-weight: normal;
+    font-style: normal;
+    font-family: "vdm-fonticon";
+    text-decoration: none;
+    display: inline-block;
+    text-rendering: auto;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale; }
+  .vdm-card .vdm-card-body.ic-arrow-play:before {
+    content: "";
+    font-weight: normal;
+    font-style: normal;
+    font-family: "vdm-fonticon";
+    text-decoration: none;
+    display: inline-block;
+    text-rendering: auto;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale; }
+  .vdm-card .vdm-card-body.ic-arrow-select:before {
+    content: "";
+    font-weight: normal;
+    font-style: normal;
+    font-family: "vdm-fonticon";
+    text-decoration: none;
+    display: inline-block;
+    text-rendering: auto;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale; }
+  .vdm-card .vdm-card-body.ic-news-item:before {
+    content: "";
+    font-weight: normal;
+    font-style: normal;
+    font-family: "vdm-fonticon";
+    text-decoration: none;
+    display: inline-block;
+    text-rendering: auto;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale; }
+  .vdm-card .vdm-card-body.ic-location-star:before {
+    content: "";
+    font-weight: normal;
+    font-style: normal;
+    font-family: "vdm-fonticon";
+    text-decoration: none;
+    display: inline-block;
+    text-rendering: auto;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale; }
+  .vdm-card .vdm-card-body.ic-permit-id:before {
+    content: "";
+    font-weight: normal;
+    font-style: normal;
+    font-family: "vdm-fonticon";
+    text-decoration: none;
+    display: inline-block;
+    text-rendering: auto;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale; }
+  .vdm-card .vdm-card-body.ic-document:before {
+    content: "";
+    font-weight: normal;
+    font-style: normal;
+    font-family: "vdm-fonticon";
+    text-decoration: none;
+    display: inline-block;
+    text-rendering: auto;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale; }
+  .vdm-card .vdm-card-body.ic-credit-card:before {
+    content: "";
+    font-weight: normal;
+    font-style: normal;
+    font-family: "vdm-fonticon";
+    text-decoration: none;
+    display: inline-block;
+    text-rendering: auto;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale; }
+  .vdm-card .vdm-card-body.ic-folder:before {
+    content: "";
+    font-weight: normal;
+    font-style: normal;
+    font-family: "vdm-fonticon";
+    text-decoration: none;
+    display: inline-block;
+    text-rendering: auto;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale; }
+  .vdm-card .vdm-card-body.ic-bell:before {
+    content: "";
+    font-weight: normal;
+    font-style: normal;
+    font-family: "vdm-fonticon";
+    text-decoration: none;
+    display: inline-block;
+    text-rendering: auto;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale; }
+  .vdm-card .vdm-card-body.ic-settings:before {
+    content: "";
+    font-weight: normal;
+    font-style: normal;
+    font-family: "vdm-fonticon";
+    text-decoration: none;
+    display: inline-block;
+    text-rendering: auto;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale; }
+  .vdm-card .vdm-card-body.ic-plus-circle-dot:before {
+    content: "";
+    font-weight: normal;
+    font-style: normal;
+    font-family: "vdm-fonticon";
+    text-decoration: none;
+    display: inline-block;
+    text-rendering: auto;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale; }
+  .vdm-card .vdm-card-body.ic-minus-circle-dot:before {
+    content: "";
+    font-weight: normal;
+    font-style: normal;
+    font-family: "vdm-fonticon";
+    text-decoration: none;
+    display: inline-block;
+    text-rendering: auto;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale; }
+  .vdm-card .vdm-card-body.ic-steps-checked:before {
+    content: "";
+    font-weight: normal;
+    font-style: normal;
+    font-family: "vdm-fonticon";
+    text-decoration: none;
+    display: inline-block;
+    text-rendering: auto;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale; }
+  .vdm-card .vdm-card-body.ic-ellipsis-circle-dot:before {
+    content: "";
+    font-weight: normal;
+    font-style: normal;
+    font-family: "vdm-fonticon";
+    text-decoration: none;
+    display: inline-block;
+    text-rendering: auto;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale; }
+  .vdm-card .vdm-card-body.ic-enveloppe:before {
+    content: "";
+    font-weight: normal;
+    font-style: normal;
+    font-family: "vdm-fonticon";
+    text-decoration: none;
+    display: inline-block;
+    text-rendering: auto;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale; }
+  .vdm-card .vdm-card-body.ic-folder-add:before {
+    content: "";
+    font-weight: normal;
+    font-style: normal;
+    font-family: "vdm-fonticon";
+    text-decoration: none;
+    display: inline-block;
+    text-rendering: auto;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale; }
+  .vdm-card .vdm-card-body.ic-warning-triangle:before {
+    content: "";
+    font-weight: normal;
+    font-style: normal;
+    font-family: "vdm-fonticon";
+    text-decoration: none;
+    display: inline-block;
+    text-rendering: auto;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale; }
+  .vdm-card .vdm-card-body.ic-computer:before {
+    content: "";
+    font-weight: normal;
+    font-style: normal;
+    font-family: "vdm-fonticon";
+    text-decoration: none;
+    display: inline-block;
+    text-rendering: auto;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale; }
+  .vdm-card .vdm-card-body.ic-nut:before {
+    content: "";
+    font-weight: normal;
+    font-style: normal;
+    font-family: "vdm-fonticon";
+    text-decoration: none;
+    display: inline-block;
+    text-rendering: auto;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale; }
+  .vdm-card .vdm-card-body.ic-pencil:before {
+    content: "";
+    font-weight: normal;
+    font-style: normal;
+    font-family: "vdm-fonticon";
+    text-decoration: none;
+    display: inline-block;
+    text-rendering: auto;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale; }
+  .vdm-card .vdm-card-body.ic-lightbulb:before {
+    content: "";
+    font-weight: normal;
+    font-style: normal;
+    font-family: "vdm-fonticon";
+    text-decoration: none;
+    display: inline-block;
+    text-rendering: auto;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale; }
+  .vdm-card .vdm-card-body.ic-pen:before {
+    content: "";
+    font-weight: normal;
+    font-style: normal;
+    font-family: "vdm-fonticon";
+    text-decoration: none;
+    display: inline-block;
+    text-rendering: auto;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale; }
+  .vdm-card .vdm-card-body.ic-warning-circle:before {
+    content: "";
+    font-weight: normal;
+    font-style: normal;
+    font-family: "vdm-fonticon";
+    text-decoration: none;
+    display: inline-block;
+    text-rendering: auto;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale; }
+  .vdm-card .vdm-card-body.ic-clock:before {
+    content: "";
+    font-weight: normal;
+    font-style: normal;
+    font-family: "vdm-fonticon";
+    text-decoration: none;
+    display: inline-block;
+    text-rendering: auto;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale; }
+  .vdm-card .vdm-card-body.ic-target:before {
+    content: "";
+    font-weight: normal;
+    font-style: normal;
+    font-family: "vdm-fonticon";
+    text-decoration: none;
+    display: inline-block;
+    text-rendering: auto;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale; }
+  .vdm-card .vdm-card-body.ic-broom:before {
+    content: "";
+    font-weight: normal;
+    font-style: normal;
+    font-family: "vdm-fonticon";
+    text-decoration: none;
+    display: inline-block;
+    text-rendering: auto;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale; }
+  .vdm-card .vdm-card-body.ic-permit:before {
+    content: "";
+    font-weight: normal;
+    font-style: normal;
+    font-family: "vdm-fonticon";
+    text-decoration: none;
+    display: inline-block;
+    text-rendering: auto;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale; }
+  .vdm-card .vdm-card-body.ic-arrow-circle-up:before {
+    content: "";
+    font-weight: normal;
+    font-style: normal;
+    font-family: "vdm-fonticon";
+    text-decoration: none;
+    display: inline-block;
+    text-rendering: auto;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale; }
+  .vdm-card .vdm-card-body.ic-arrow-circle-right:before {
+    content: "";
+    font-weight: normal;
+    font-style: normal;
+    font-family: "vdm-fonticon";
+    text-decoration: none;
+    display: inline-block;
+    text-rendering: auto;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale; }
+  .vdm-card .vdm-card-body.ic-arrow-circle-down:before {
+    content: "";
+    font-weight: normal;
+    font-style: normal;
+    font-family: "vdm-fonticon";
+    text-decoration: none;
+    display: inline-block;
+    text-rendering: auto;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale; }
+  .vdm-card .vdm-card-body.ic-arrow-circle-left:before {
+    content: "";
+    font-weight: normal;
+    font-style: normal;
+    font-family: "vdm-fonticon";
+    text-decoration: none;
+    display: inline-block;
+    text-rendering: auto;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale; }
+  .vdm-card .vdm-card-body.ic-house:before {
+    content: "";
+    font-weight: normal;
+    font-style: normal;
+    font-family: "vdm-fonticon";
+    text-decoration: none;
+    display: inline-block;
+    text-rendering: auto;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale; }
+  .vdm-card .vdm-card-body.ic-x-close:before {
+    content: "";
+    font-weight: normal;
+    font-style: normal;
+    font-family: "vdm-fonticon";
+    text-decoration: none;
+    display: inline-block;
+    text-rendering: auto;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale; }
+  .vdm-card .vdm-card-body.ic-circle-progress-done:before {
+    content: "";
+    font-weight: normal;
+    font-style: normal;
+    font-family: "vdm-fonticon";
+    text-decoration: none;
+    display: inline-block;
+    text-rendering: auto;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale; }
+  .vdm-card .vdm-card-body.ic-circle-progress-a:before {
+    content: "";
+    font-weight: normal;
+    font-style: normal;
+    font-family: "vdm-fonticon";
+    text-decoration: none;
+    display: inline-block;
+    text-rendering: auto;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale; }
+  .vdm-card .vdm-card-body.ic-circle-progress-ab:before {
+    content: "";
+    font-weight: normal;
+    font-style: normal;
+    font-family: "vdm-fonticon";
+    text-decoration: none;
+    display: inline-block;
+    text-rendering: auto;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale; }
+  .vdm-card .vdm-card-body.ic-circle-progress-abc:before {
+    content: "";
+    font-weight: normal;
+    font-style: normal;
+    font-family: "vdm-fonticon";
+    text-decoration: none;
+    display: inline-block;
+    text-rendering: auto;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale; }
+  .vdm-card .vdm-card-body.ic-circle-progress-c:before {
+    content: "";
+    font-weight: normal;
+    font-style: normal;
+    font-family: "vdm-fonticon";
+    text-decoration: none;
+    display: inline-block;
+    text-rendering: auto;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale; }
+  .vdm-card .vdm-card-body.ic-circle-progress-bc:before {
+    content: "";
+    font-weight: normal;
+    font-style: normal;
+    font-family: "vdm-fonticon";
+    text-decoration: none;
+    display: inline-block;
+    text-rendering: auto;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale; }
+  .vdm-card .vdm-card-body.ic-circle-progress-checked:before {
+    content: "";
+    font-weight: normal;
+    font-style: normal;
+    font-family: "vdm-fonticon";
+    text-decoration: none;
+    display: inline-block;
+    text-rendering: auto;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale; }
+  .vdm-card .vdm-card-body.ic-circle-progress-folder:before {
+    content: "";
+    font-weight: normal;
+    font-style: normal;
+    font-family: "vdm-fonticon";
+    text-decoration: none;
+    display: inline-block;
+    text-rendering: auto;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale; }
+  .vdm-card .vdm-card-body.ic-chevron-up:before {
+    content: "";
+    font-weight: normal;
+    font-style: normal;
+    font-family: "vdm-fonticon";
+    text-decoration: none;
+    display: inline-block;
+    text-rendering: auto;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale; }
+  .vdm-card .vdm-card-body.ic-chevron-right:before {
+    content: "";
+    font-weight: normal;
+    font-style: normal;
+    font-family: "vdm-fonticon";
+    text-decoration: none;
+    display: inline-block;
+    text-rendering: auto;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale; }
+  .vdm-card .vdm-card-body.ic-chevron-down:before {
+    content: "";
+    font-weight: normal;
+    font-style: normal;
+    font-family: "vdm-fonticon";
+    text-decoration: none;
+    display: inline-block;
+    text-rendering: auto;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale; }
+  .vdm-card .vdm-card-body.ic-chevron-left:before {
+    content: "";
+    font-weight: normal;
+    font-style: normal;
+    font-family: "vdm-fonticon";
+    text-decoration: none;
+    display: inline-block;
+    text-rendering: auto;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale; }
+  .vdm-card .vdm-card-body.ic-circle-checked:before {
+    content: "";
+    font-weight: normal;
+    font-style: normal;
+    font-family: "vdm-fonticon";
+    text-decoration: none;
+    display: inline-block;
+    text-rendering: auto;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale; }
+  .vdm-card .vdm-card-body.ic-menu:before {
+    content: "";
+    font-weight: normal;
+    font-style: normal;
+    font-family: "vdm-fonticon";
+    text-decoration: none;
+    display: inline-block;
+    text-rendering: auto;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale; }
+  .vdm-card .vdm-card-body.ic-location:before {
+    content: "";
+    font-weight: normal;
+    font-style: normal;
+    font-family: "vdm-fonticon";
+    text-decoration: none;
+    display: inline-block;
+    text-rendering: auto;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale; }
+  .vdm-card .vdm-card-body.ic-arrow-up:before {
+    content: "";
+    font-weight: normal;
+    font-style: normal;
+    font-family: "vdm-fonticon";
+    text-decoration: none;
+    display: inline-block;
+    text-rendering: auto;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale; }
+  .vdm-card .vdm-card-body.ic-arrow-right:before {
+    content: "";
+    font-weight: normal;
+    font-style: normal;
+    font-family: "vdm-fonticon";
+    text-decoration: none;
+    display: inline-block;
+    text-rendering: auto;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale; }
+  .vdm-card .vdm-card-body.ic-arrow-down:before {
+    content: "";
+    font-weight: normal;
+    font-style: normal;
+    font-family: "vdm-fonticon";
+    text-decoration: none;
+    display: inline-block;
+    text-rendering: auto;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale; }
+  .vdm-card .vdm-card-body.ic-arrow-left:before {
+    content: "";
+    font-weight: normal;
+    font-style: normal;
+    font-family: "vdm-fonticon";
+    text-decoration: none;
+    display: inline-block;
+    text-rendering: auto;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale; }
+  .vdm-card .vdm-card-body.ic-plus:before {
+    content: "";
+    font-weight: normal;
+    font-style: normal;
+    font-family: "vdm-fonticon";
+    text-decoration: none;
+    display: inline-block;
+    text-rendering: auto;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale; }
+  .vdm-card .vdm-card-body.ic-minus:before {
+    content: "";
+    font-weight: normal;
+    font-style: normal;
+    font-family: "vdm-fonticon";
+    text-decoration: none;
+    display: inline-block;
+    text-rendering: auto;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale; }
+  .vdm-card .vdm-card-body.ic-multiply:before {
+    content: "";
+    font-weight: normal;
+    font-style: normal;
+    font-family: "vdm-fonticon";
+    text-decoration: none;
+    display: inline-block;
+    text-rendering: auto;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale; }
+  .vdm-card .vdm-card-body.ic-circle-plus:before {
+    content: "";
+    font-weight: normal;
+    font-style: normal;
+    font-family: "vdm-fonticon";
+    text-decoration: none;
+    display: inline-block;
+    text-rendering: auto;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale; }
+  .vdm-card .vdm-card-body.ic-circle-minus:before {
+    content: "";
+    font-weight: normal;
+    font-style: normal;
+    font-family: "vdm-fonticon";
+    text-decoration: none;
+    display: inline-block;
+    text-rendering: auto;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale; }
+  .vdm-card .vdm-card-body.ic-circle-multiply:before {
+    content: "";
+    font-weight: normal;
+    font-style: normal;
+    font-family: "vdm-fonticon";
+    text-decoration: none;
+    display: inline-block;
+    text-rendering: auto;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale; }
+  .vdm-card .vdm-card-body.ic-circle-plus-invert:before {
+    content: "";
+    font-weight: normal;
+    font-style: normal;
+    font-family: "vdm-fonticon";
+    text-decoration: none;
+    display: inline-block;
+    text-rendering: auto;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale; }
+  .vdm-card .vdm-card-body.ic-circle-minus-invert:before {
+    content: "";
+    font-weight: normal;
+    font-style: normal;
+    font-family: "vdm-fonticon";
+    text-decoration: none;
+    display: inline-block;
+    text-rendering: auto;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale; }
+  .vdm-card .vdm-card-body.ic-circle-multiply-invert:before {
+    content: "";
+    font-weight: normal;
+    font-style: normal;
+    font-family: "vdm-fonticon";
+    text-decoration: none;
+    display: inline-block;
+    text-rendering: auto;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale; }
+  .vdm-card .vdm-card-body.ic-checkbox-checked:before {
+    content: "";
+    font-weight: normal;
+    font-style: normal;
+    font-family: "vdm-fonticon";
+    text-decoration: none;
+    display: inline-block;
+    text-rendering: auto;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale; }
+  .vdm-card .vdm-card-body.ic-checkbox-empty:before {
+    content: "";
+    font-weight: normal;
+    font-style: normal;
+    font-family: "vdm-fonticon";
+    text-decoration: none;
+    display: inline-block;
+    text-rendering: auto;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale; }
+  .vdm-card .vdm-card-body.ic-checkbox-checked-trans:before {
+    content: "";
+    font-weight: normal;
+    font-style: normal;
+    font-family: "vdm-fonticon";
+    text-decoration: none;
+    display: inline-block;
+    text-rendering: auto;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale; }
+  .vdm-card .vdm-card-body.ic-checkbox-checked-invert:before {
+    content: "";
+    font-weight: normal;
+    font-style: normal;
+    font-family: "vdm-fonticon";
+    text-decoration: none;
+    display: inline-block;
+    text-rendering: auto;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale; }
+  .vdm-card .vdm-card-body.ic-trash:before {
+    content: "";
+    font-weight: normal;
+    font-style: normal;
+    font-family: "vdm-fonticon";
+    text-decoration: none;
+    display: inline-block;
+    text-rendering: auto;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale; }
+  .vdm-card .vdm-card-body.ic-recycle:before {
+    content: "";
+    font-weight: normal;
+    font-style: normal;
+    font-family: "vdm-fonticon";
+    text-decoration: none;
+    display: inline-block;
+    text-rendering: auto;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale; }
+  .vdm-card .vdm-card-body.ic-compost:before {
+    content: "";
+    font-weight: normal;
+    font-style: normal;
+    font-family: "vdm-fonticon";
+    text-decoration: none;
+    display: inline-block;
+    text-rendering: auto;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale; }
+  .vdm-card .vdm-card-body.ic-greens:before {
+    content: "";
+    font-weight: normal;
+    font-style: normal;
+    font-family: "vdm-fonticon";
+    text-decoration: none;
+    display: inline-block;
+    text-rendering: auto;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale; }
+  .vdm-card .vdm-card-body.ic-permit-pet:before {
+    content: "";
+    font-weight: normal;
+    font-style: normal;
+    font-family: "vdm-fonticon";
+    text-decoration: none;
+    display: inline-block;
+    text-rendering: auto;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale; }
+  .vdm-card .vdm-card-body:before, .vdm-card .vdm-card-body:after {
+    font-size: 3.6rem;
+    width: 3.6rem;
+    height: 3.6rem;
+    line-height: 3.6rem;
+    text-decoration: none;
+    color: #429A8E; }
+  .vdm-card .vdm-card-body:hover.vdm-card-body, .vdm-card .vdm-card-body:active.vdm-card-body {
+    color: #FFFFFF;
+    background: #429A8E;
+    text-decoration: none; }
+    .vdm-card .vdm-card-body:hover.vdm-card-body:before, .vdm-card .vdm-card-body:active.vdm-card-body:before {
+      color: #FFFFFF; }
+    .vdm-card .vdm-card-body:hover.vdm-card-body > *, .vdm-card .vdm-card-body:active.vdm-card-body > * {
+      color: #FFFFFF; }
+    .vdm-card .vdm-card-body:hover.vdm-card-body .arrow-link:before, .vdm-card .vdm-card-body:hover.vdm-card-body .arrow-link:after,
+    .vdm-card .vdm-card-body:hover.vdm-card-body .category:before,
+    .vdm-card .vdm-card-body:hover.vdm-card-body .category:after, .vdm-card .vdm-card-body:active.vdm-card-body .arrow-link:before, .vdm-card .vdm-card-body:active.vdm-card-body .arrow-link:after,
+    .vdm-card .vdm-card-body:active.vdm-card-body .category:before,
+    .vdm-card .vdm-card-body:active.vdm-card-body .category:after {
+      color: #FFFFFF;
+      color: #FFFFFF; }
+    .vdm-card .vdm-card-body:hover.vdm-card-body .category:before, .vdm-card .vdm-card-body:hover.vdm-card-body .category:after, .vdm-card .vdm-card-body:active.vdm-card-body .category:before, .vdm-card .vdm-card-body:active.vdm-card-body .category:after {
+      background-color: #FFFFFF; }
+  .vdm-card .vdm-card-body .title {
+    margin-bottom: 1.3em; }
+  .vdm-card .vdm-card-body .content {
+    margin-bottom: 1.3em; }
+    .vdm-card .vdm-card-body .content:last-child {
+      margin-bottom: 0; }
+  .vdm-card .vdm-card-body .footer {
+    margin-bottom: 0; }
+  .vdm-card .vdm-card-body .category {
+    font-weight: 700;
+    color: #429A8E;
+    display: block; }
+    .vdm-card .vdm-card-body .category.bullet-left {
+      position: relative;
+      padding-left: 1.5em; }
+      .vdm-card .vdm-card-body .category.bullet-left:before {
+        position: absolute;
+        left: 0.1em;
+        top: 0.2em;
+        content: "";
+        background: #429A8E;
+        width: 0.75em;
+        height: 0.75em;
+        border-radius: 100%; }
+    .vdm-card .vdm-card-body .category:first-of-type {
+      margin-bottom: 0.75rem; }
+
+.vdm-card.thumb {
+  text-align: center; }
+
+.vdm-card.light-scheme .vdm-card-body {
+  background: #FFFFFF;
+  border: 1px solid #429A8E; }
+  .vdm-card.light-scheme .vdm-card-body:before {
+    color: #000000; }
+
+.vdm-card.white-scheme .vdm-card-body {
+  background: #FFFFFF;
+  border: none; }
+  .vdm-card.white-scheme .vdm-card-body:hover, .vdm-card.white-scheme .vdm-card-body:active {
+    background: #FFFFFF;
+    border: none;
+    color: #000000; }
+    .vdm-card.white-scheme .vdm-card-body:hover:before, .vdm-card.white-scheme .vdm-card-body:active:before {
+      color: #429A8E; }
+
+.vdm-card.vdm-card-image {
+  text-align: left; }
+  .vdm-card.vdm-card-image.media-top .vdm-card-body {
+    padding: 0 0 1.3rem 0; }
+    .vdm-card.vdm-card-image.media-top .vdm-card-body > * {
+      margin-right: 1.3rem;
+      margin-left: 1.3rem; }
+    .vdm-card.vdm-card-image.media-top .vdm-card-body img {
+      margin-bottom: 1.3rem;
+      margin-right: 0;
+      margin-left: 0; }
+    .vdm-card.vdm-card-image.media-top .vdm-card-body .title {
+      font-family: "Nunito Sans", Helvetica, Arial, sans-serif;
+      font-size: 67px;
+      line-height: 118.125px;
+      font-weight: 400;
+      display: block;
+      font-size: 28px;
+      line-height: 37.9995px;
+      font-weight: 700; }
+  .vdm-card.vdm-card-image.media-top.thumb {
+    flex: 0 0 100%;
+    max-width: 100%; }
+    .vdm-card.vdm-card-image.media-top.thumb:hover > *, .vdm-card.vdm-card-image.media-top.thumb:active > * {
+      color: #000000; }
+    .vdm-card.vdm-card-image.media-top.thumb:hover .footer, .vdm-card.vdm-card-image.media-top.thumb:active .footer {
+      color: #000000; }
+    .vdm-card.vdm-card-image.media-top.thumb:hover .title, .vdm-card.vdm-card-image.media-top.thumb:active .title {
+      color: #429A8E; }
+    @media (min-width: 576px) {
+      .vdm-card.vdm-card-image.media-top.thumb {
+        flex: 0 0 50%;
+        max-width: 50%; } }
+    @media (min-width: 992px) {
+      .vdm-card.vdm-card-image.media-top.thumb {
+        flex: 0 0 25%;
+        max-width: 25%; } }
+  .vdm-card.vdm-card-image.media-top.large .title {
+    margin-bottom: 0.4em; }
+  .vdm-card.vdm-card-image.media-top.large .content {
+    margin-bottom: 3.6rem; }
+  @media (min-width: 576px) {
+    .vdm-card.vdm-card-image.media-top.large {
+      flex: 0 0 100%;
+      max-width: 100%; } }
+  @media (min-width: 768px) {
+    .vdm-card.vdm-card-image.media-top.large {
+      flex: 0 0 50%;
+      max-width: 50%; } }
+  .vdm-card.vdm-card-image.media-top.large .footer {
+    margin-top: auto; }
+  .vdm-card.vdm-card-image.media-left .vdm-card-body, .vdm-card.vdm-card-image.media-right .vdm-card-body {
+    flex-direction: row; }
+    .vdm-card.vdm-card-image.media-left .vdm-card-body > img, .vdm-card.vdm-card-image.media-right .vdm-card-body > img {
+      order: 1;
+      max-height: 10rem;
+      margin: 0; }
+    .vdm-card.vdm-card-image.media-left .vdm-card-body:first-child, .vdm-card.vdm-card-image.media-right .vdm-card-body:first-child {
+      margin-top: 3.75rem; }
+    .vdm-card.vdm-card-image.media-left .vdm-card-body:last-child, .vdm-card.vdm-card-image.media-right .vdm-card-body:last-child {
+      margin-bottom: 4.65rem; }
+    .vdm-card.vdm-card-image.media-left .vdm-card-body .arrow-link:after, .vdm-card.vdm-card-image.media-right .vdm-card-body .arrow-link:after {
+      top: calc(50% - 1rem); }
+  .vdm-card.vdm-card-image.media-left.wrapper .vdm-card-body, .vdm-card.vdm-card-image.media-right.wrapper .vdm-card-body {
+    flex-direction: row; }
+    .vdm-card.vdm-card-image.media-left.wrapper .vdm-card-body > img, .vdm-card.vdm-card-image.media-right.wrapper .vdm-card-body > img {
+      order: 1;
+      max-height: 10rem;
+      margin: 0; }
+    .vdm-card.vdm-card-image.media-left.wrapper .vdm-card-body .card-content-wrapper, .vdm-card.vdm-card-image.media-right.wrapper .vdm-card-body .card-content-wrapper {
+      margin-top: 0;
+      margin-bottom: 0;
+      padding: 2rem 2rem 1rem 3.5rem; }
+      .vdm-card.vdm-card-image.media-left.wrapper .vdm-card-body .card-content-wrapper .title, .vdm-card.vdm-card-image.media-right.wrapper .vdm-card-body .card-content-wrapper .title {
+        margin-bottom: 0; }
+      .vdm-card.vdm-card-image.media-left.wrapper .vdm-card-body .card-content-wrapper:first-child, .vdm-card.vdm-card-image.media-right.wrapper .vdm-card-body .card-content-wrapper:first-child {
+        margin-top: 0; }
+      .vdm-card.vdm-card-image.media-left.wrapper .vdm-card-body .card-content-wrapper:last-child, .vdm-card.vdm-card-image.media-right.wrapper .vdm-card-body .card-content-wrapper:last-child {
+        margin-bottom: 0; }
+  .vdm-card.vdm-card-image.rounded .vdm-card-body > img {
+    margin: 2em auto 1em auto;
+    width: 61.5%; }
+  .vdm-card.vdm-card-image.rounded .vdm-card-body .title {
+    margin-bottom: auto; }
+    .vdm-card.vdm-card-image.rounded .vdm-card-body .title .weight-regular {
+      font-weight: 400;
+      display: block; }
+  .vdm-card.vdm-card-image.rounded .vdm-card-body .footer {
+    margin-top: auto;
+    padding-top: 0.5rem;
+    margin-bottom: 0; }
+
+.vdm-card.icon-left .vdm-card-body:before, .vdm-card.icon-right .vdm-card-body:before {
+  position: absolute;
+  top: calc(50% - 1.8rem); }
+
+.vdm-card.icon-left .vdm-card-body .title, .vdm-card.icon-right .vdm-card-body .title {
+  font-family: "Nunito Sans", Helvetica, Arial, sans-serif;
+  font-size: 67px;
+  line-height: 118.125px;
+  font-weight: 400;
+  display: block;
+  font-size: 28px;
+  line-height: 37.9995px;
+  font-weight: 700; }
+
+.vdm-card.icon-left .vdm-card-body {
+  padding: 2.3rem 2.3rem 3rem 7.75rem; }
+  .vdm-card.icon-left .vdm-card-body:before {
+    left: 3rem; }
+  @media (max-width: 575px) {
+    .vdm-card.icon-left .vdm-card-body {
+      padding: 7.75rem 2.3rem 3rem 2.3rem; }
+      .vdm-card.icon-left .vdm-card-body:before {
+        top: 3rem;
+        left: calc(50% - 1.8rem); } }
+
+.vdm-card.icon-right .vdm-card-body {
+  padding: 2.3rem 7.75rem 3rem 2.3rem; }
+  .vdm-card.icon-right .vdm-card-body:before {
+    left: calc(100% - 6.8rem); }
+  @media (max-width: 575px) {
+    .vdm-card.icon-right .vdm-card-body {
+      padding: 7.75rem 2.3rem 3rem 2.3rem; }
+      .vdm-card.icon-right .vdm-card-body:before {
+        top: 3rem;
+        left: calc(50% - 1.8rem); } }
+
+.vdm-card.icon-center {
+  flex: 0 0 100%;
+  max-width: 100%; }
+  .vdm-card.icon-center .vdm-card-body {
+    padding: 3rem 2rem 1rem 2rem; }
+    .vdm-card.icon-center .vdm-card-body:before {
+      margin-right: auto;
+      margin-left: auto;
+      margin-bottom: 1.15rem; }
+    .vdm-card.icon-center .vdm-card-body .title {
+      font-size: 16px;
+      font-weight: 400;
+      line-height: 19px; }
+  @media (min-width: 768px) {
+    .vdm-card.icon-center {
+      flex: 0 0 50%;
+      max-width: 50%; } }
+  @media (min-width: 992px) {
+    .vdm-card.icon-center {
+      flex: 0 0 33.33333%;
+      max-width: 33.33333%; } }
+
+.is-grid-row {
+  display: flex;
+  flex-wrap: wrap; }
+
+.is-grid-col {
+  display: flex;
+  flex-direction: column; }
+
+.arrow-link {
+  position: relative;
+  padding-right: 2.5em;
+  line-height: 1.7em; }
+  .arrow-link:after {
+    content: "";
+    font-weight: normal;
+    font-style: normal;
+    font-family: "vdm-fonticon";
+    text-decoration: none;
+    display: inline-block;
+    text-rendering: auto;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale; }
+  .arrow-link:after {
+    position: absolute;
+    font-size: 2.5em;
+    width: 1.35em;
+    padding-left: 0.35em;
+    left: auto;
+    background: transparent;
+    color: #429A8E; }
+
+.location-pin {
+  color: #429A8E;
+  position: relative;
+  padding-left: 2em; }
+  .location-pin:before {
+    content: "";
+    font-weight: normal;
+    font-style: normal;
+    font-family: "vdm-fonticon";
+    text-decoration: none;
+    display: inline-block;
+    text-rendering: auto;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale; }
+  .location-pin:before {
+    font-size: 2em;
+    background: transparent;
+    color: #429A8E;
+    left: -0.2em;
+    position: absolute; }
+
+.inline-items > * {
+  display: inline-block;
+  margin-right: 0.8em;
+  margin-bottom: 0.5em; }
+  .inline-items > *:last-of-type {
+    margin-right: 0; }
+
 .card {
   background: #FFFFFF;
   border-radius: 0;
@@ -7149,10 +9350,11 @@ select {
     top: 3.4rem; }
   .card.card-large {
     background: #F2F2F1;
-    padding: 2.3rem 2.3em 3rem 7.75rem;
+    padding: 2.3rem 2.3rem 3rem 7.75rem;
     border: 0;
     text-align: left;
-    min-height: 12rem; }
+    min-height: 12rem;
+    display: flex; }
     @media only screen and (max-width: 767px) {
       .card.card-large {
         padding: 8rem 2.3rem 2.5rem 2.3rem; } }
@@ -7172,8 +9374,6 @@ select {
       line-height: 118.125px;
       font-weight: 400;
       display: block;
-      margin-top: 0;
-      margin-bottom: 0;
       font-size: 28px;
       line-height: 37.9995px;
       font-weight: 700;
@@ -7192,6 +9392,18 @@ select {
       .card.card-large .content:last-of-type {
         margin-bottom: 0;
         padding-bottom: 0; }
+    .card.card-large.card-reverse {
+      padding: 2.3rem 7.75rem 3rem 2.3rem; }
+      .card.card-large.card-reverse:before {
+        display: none; }
+      .card.card-large.card-reverse:after {
+        font-size: 3.6rem;
+        right: 3.25rem;
+        top: calc(50% - 1.8rem); }
+        @media only screen and (max-width: 767px) {
+          .card.card-large.card-reverse:after {
+            top: 2.3rem;
+            left: calc(50% - 1.8rem); } }
   .card.ic-rosette:before {
     content: "";
     font-weight: normal;
@@ -8081,8 +10293,6 @@ select {
       line-height: 118.125px;
       font-weight: 400;
       display: block;
-      margin-top: 0;
-      margin-bottom: 0;
       font-size: 28px;
       line-height: 37.9995px;
       margin-top: 0;
@@ -8172,8 +10382,6 @@ select {
         line-height: 118.125px;
         font-weight: 400;
         display: block;
-        margin-top: 0;
-        margin-bottom: 0;
         font-size: 28px;
         line-height: 37.9995px;
         margin-top: 0;

@@ -575,10 +575,9 @@ $pl-size-box-wrapper-padding: 1rem;
     .pl-cards-index {
         @include make-row();
         >li {
-         
-          // @include make-xs-column(12);
-          // @include make-sm-column(4);
-          // @include make-md-column(3);
+
+          // display: flex;
+          // Provide equal height behaviour, vertical sizing
 
           @include make-col-ready();
           @include media-breakpoint-up(xs) {
@@ -602,10 +601,7 @@ $pl-size-box-wrapper-padding: 1rem;
     .pl-cards-index {
         @include make-row();
         >li {
-         
-          // @include make-xs-column(12);
-          // @include make-sm-column(6);
-          // @include make-md-column(6);
+        
 
           @include make-col-ready();
           @include media-breakpoint-up(xs) {
