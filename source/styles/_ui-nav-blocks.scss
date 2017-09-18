@@ -115,7 +115,6 @@
         }
 
         // Standard fixtures, first children, title content footer
-
         .date {
             font-size: $vdm-font-size-smaller;
             margin-bottom: 2rem;
@@ -154,16 +153,19 @@
         }
     }// END teaser-body
 
-    // This is yet another type
-    // The space on the far right is occupied by an arrow icon
-    // Should not be applied at the same time as the icon and image classes
+
+    // Should not be applied at the same time as image classes
+    ////////////////////////
+    /////// Begin right arrow cases
+    ////////////////////////
+
     &.arrow-block {
+        // Base arrow block properties
         .vdm-teaser-body {
             @include icon(after, arrow-right);
-            // padding: 0.5rem 5rem 0.5rem 0.5rem;
-            padding: 2.3rem 5rem 2.3rem 2.3rem;
+            padding: 2.3rem 6rem 2.3rem 2.3rem;
             position: relative; 
-            // flex-direction: row;
+
 
             &:after {
                 position: absolute;
@@ -174,14 +176,40 @@
             &:hover, 
             &:active {
                 color: $vdm-black;
+                background: $vdm-grey-light;
                 >* {
                     color: $vdm-black;
                 }
-                &:after {
+                &:after, 
+                &:before {
                     color: $vdm-black;
                 }
             }
 
+            .title {
+                @include header(4);
+                // margin-bottom: 0.3em;
+                margin-bottom: 0;
+            }
+            .footer {
+                .date {
+                    color: $vdm-grey;
+                    font-size: $vdm-font-size-base; 
+                }
+            }
+
+            .feedback {
+                text-transform: uppercase;
+                color: $vdm-grey;
+            }
+
+            @include media-breakpoint-down(sm) {
+                padding: 2.3rem 2.3rem 5.5rem 2.3rem;
+                &:after {
+                    top: calc(100% - 5rem);
+                    left: calc(50% - 1.8rem); 
+                } 
+            }
 
         }
         
@@ -202,31 +230,106 @@
 
                 .title {
                     @include header(5);
+                    margin-bottom: 0.5em;
                 }
                 .content {
 
                 }
                 .footer {
-
+                    
+                }
+                @include media-breakpoint-down(sm) {
+                    padding: 1rem 5rem 1rem 1rem;
                 }
             }
         }
 
         // Flip the flex direction, provide an inner container for vertical flow
+        // Will often contain an identifier on the right
         &.inline-flex {
-
             .vdm-teaser-body {
-                flex-direction: column;
+
+                flex-direction: row;
+                padding-right: 5rem;
+                align-items: center;
+
                 .content-wrapper {
-                    flex-direction: row;
+                    flex-direction: column;
+                    padding-right: 2rem;
+                }
+            }
+            .identifier {
+                text-transform: uppercase;
+                color: $vdm-grey;
+                font-size: $vdm-font-size-base;
+                width: 30%;
+                text-align: center;
+                margin-top: 0.9rem;
+            }
+
+            @include media-breakpoint-down(sm) {
+                .vdm-teaser-body {
+                    flex-direction: column;
+                    align-items: left;
+                    .content-wrapper {
+                        padding-right: 0;
+                    }
+                }
+                .identifier {
+                    align-self: center;
+                    width: auto;
+                    margin-top: 2rem;
+                }
+                
+            }
+
+            // Special use case, branded
+            // Move the main paragraph outside the .content-wrapper block;
+            &.category-block {
+                .vdm-teaser-body {
+                    align-items: start;
+                    .content-wrapper {
+                        min-width: 35%;
+                        margin-right: 1rem;
+                        .title {
+                            color: $vdm-brand;
+                        }
+                    }
+                    .category-description {
+                        @include header(5);
+                    }
                 }
             }
 
-            
+
         }
 
+        // @ to-do : balance margin and icon scale left and right;
+        // Includes an icon on the left and right side
         &.icon-left {
+            .vdm-teaser-body {
+                padding-left: 7rem;
+                &:before {
+                    left: 2rem;
+                }
+                .title {
+                    @include header(4);
+                }
 
+                @include media-breakpoint-down(sm) {
+                   
+                    padding: 6.5rem 2.3rem 5.5rem 2.3rem;
+                    // border: 1px solid orange;
+                    &:after {
+                        top: calc(100% - 4.5rem);
+                        left: calc(50% - 1.8rem); 
+                    } 
+                    &:before {
+                        top: calc(1.8rem);
+                        left: calc(50% - 1.8rem); 
+                    }
+                }
+            }
         }
 
     }
@@ -281,12 +384,12 @@
 
     &.icon-left {
         .vdm-teaser-body {
-            padding: 2.3rem 2.3rem 3rem 7.75rem;
+            padding: 2.3rem 2.3rem 2.3rem 7.75rem;
             &:before {
                 left: 3rem;
             }
             @include media-breakpoint-down(xs) {
-                padding: 7.75rem 2.3rem 3rem 2.3rem;
+                padding: 7.75rem 2.3rem 2.3rem 2.3rem;
                 &:before {
                     top: 3rem;
                     left: calc(50% - 1.8rem);
@@ -297,12 +400,12 @@
 
     &.icon-right {
         .vdm-teaser-body {
-            padding: 2.3rem 7.75rem 3rem 2.3rem;
+            padding: 2.3rem 7.75rem 2.3rem 2.3rem;
             &:before {
                 left: calc(100% - 6.8rem); // Perceptual
             }
             @include media-breakpoint-down(xs) {
-                padding: 7.75rem 2.3rem 3rem 2.3rem;
+                padding: 7.75rem 2.3rem 2.3rem 2.3rem;
                 &:before {
                     top: 3rem;
                     left: calc(50% - 1.8rem); 

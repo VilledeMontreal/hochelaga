@@ -30,13 +30,13 @@
     line-height: $vdm-line-height-base * 2.3809;  // 50px
 
   } @else if $level == 4 {
-    font-size: $vdm-font-size-base * 1.750;       // 28px
-    line-height: $vdm-line-height-base * 1.8095;  // 38px
+      font-size: $vdm-font-size-base * 1.750;       // 28px
+      line-height: $vdm-line-height-base * 1.8095;  // 38px
+      font-weight: $vdm-font-weight-regular;
 
-    @if $weight == 'bold' {
-      font-weight: $vdm-font-weight-bold;
-    }
-
+      @if $weight == 'bold' {
+        font-weight: $vdm-font-weight-bold;
+      }
   } @else if $level == 5 {
     font-size: $vdm-font-size-base * 1.3125;      // 21px
     line-height: $vdm-line-height-base * 1.3333;  // 28px
