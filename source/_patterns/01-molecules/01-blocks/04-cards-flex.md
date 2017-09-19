@@ -29,8 +29,8 @@ vdm-card +
     alignement (media-specific)
 
 Add initial axis class (lateral, vertical)?
-- - - - - - - - - - - - - - - - 
 
+- - - - - - - - - - - - - - - - 
 @see references used : 
 
 - - - - - - - - - - - - - - - - - -

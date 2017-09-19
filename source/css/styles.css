@@ -411,7 +411,7 @@ mark,
   .blockquote-footer::before {
     content: "\2014 \00A0"; }
 
-.img-fluid, .vdm-avatar > img, .vdm-teaser .vdm-teaser-body .vdm-teaser-mediaimg, .vdm-card .vdm-card-body .vdm-card-mediaimg, .vdm-card-media, .vdm-card.vdm-card-image.media-top .vdm-card-body img {
+.img-fluid, .vdm-avatar > img, .vdm-teasers-mixin .vdm-teaser-mixin .vdm-teaser-body-mixin > img, .vdm-teaser .vdm-teaser-body .vdm-teaser-mediaimg, .vdm-card .vdm-card-body .vdm-card-mediaimg, .vdm-card-media, .vdm-card.vdm-card-image.media-top .vdm-card-body img {
   max-width: 100%;
   height: auto; }
 
@@ -5837,6 +5837,11 @@ a.text-dark:focus, a.text-dark:hover {
 
 /**
  * - - - - - - - - - -
+ * == Collector blocks : teasers and cards
+ * - - - - - - - - - -
+ */
+/**
+ * - - - - - - - - - -
  * == UI
  * - - - - - - - - - -
  */
@@ -6401,6 +6406,11 @@ html body {
 .ic-permit-pet {
   content: ""; }
 
+/**
+ * - - - - - - - - - -
+ * == Collector blocks : teasers and cards
+ * - - - - - - - - - -
+ */
 /**
  * - - - - - - - - - -
  * == UI
@@ -7115,7 +7125,7 @@ select {
 .vdm-cards-wrapper.neutral-light, .vdm-teasers-wrapper.neutral-light {
   background-color: #F2F2F1; }
 
-.vdm-teasers {
+.vdm-teasers, .vdm-teasers-mixin {
   list-style-type: none;
   padding-left: 0;
   display: flex;
@@ -7124,7 +7134,7 @@ select {
   margin-left: -15px;
   margin-top: 0;
   margin-bottom: 0; }
-  .vdm-teasers .vdm-teaser {
+  .vdm-teasers .vdm-teaser, .vdm-teasers .vdm-teaser-mixin, .vdm-teasers-mixin .vdm-teaser, .vdm-teasers-mixin .vdm-teaser-mixin {
     position: relative;
     width: 100%;
     min-height: 1px;
@@ -7133,6 +7143,1754 @@ select {
     margin-bottom: 30px;
     flex: 0 0 100%;
     max-width: 100%; }
+
+.vdm-teasers-mixin .vdm-teaser-mixin .vdm-teaser-body-mixin {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  cursor: pointer;
+  line-height: 21px;
+  background: #F2F2F1;
+  border: none;
+  text-decoration: none;
+  color: #000000;
+  padding: 2.3rem 2.3rem 2.3rem 2.3rem; }
+  .vdm-teasers-mixin .vdm-teaser-mixin .vdm-teaser-body-mixin:after, .vdm-teasers-mixin .vdm-teaser-mixin .vdm-teaser-body-mixin:before {
+    font-size: 3.6rem;
+    width: 3.6rem;
+    height: 3.6rem;
+    line-height: 3.6rem;
+    text-decoration: none;
+    color: #429A8E; }
+  .vdm-teasers-mixin .vdm-teaser-mixin .vdm-teaser-body-mixin:hover, .vdm-teasers-mixin .vdm-teaser-mixin .vdm-teaser-body-mixin:active {
+    background: #429A8E;
+    color: #FFFFFF; }
+    .vdm-teasers-mixin .vdm-teaser-mixin .vdm-teaser-body-mixin:hover > *, .vdm-teasers-mixin .vdm-teaser-mixin .vdm-teaser-body-mixin:active > * {
+      color: #FFFFFF; }
+    .vdm-teasers-mixin .vdm-teaser-mixin .vdm-teaser-body-mixin:hover:before, .vdm-teasers-mixin .vdm-teaser-mixin .vdm-teaser-body-mixin:hover:after, .vdm-teasers-mixin .vdm-teaser-mixin .vdm-teaser-body-mixin:active:before, .vdm-teasers-mixin .vdm-teaser-mixin .vdm-teaser-body-mixin:active:after {
+      color: #FFFFFF; }
+  .vdm-teasers-mixin .vdm-teaser-mixin .vdm-teaser-body-mixin title {
+    font-family: "Nunito Sans", Helvetica, Arial, sans-serif;
+    font-size: 67px;
+    line-height: 118.125px;
+    font-weight: 400;
+    display: block;
+    font-size: 28px;
+    line-height: 37.9995px;
+    font-weight: 400;
+    margin-bottom: 1em; }
+    .vdm-teasers-mixin .vdm-teaser-mixin .vdm-teaser-body-mixin title.arrow-link {
+      line-height: 1.7em; }
+    .vdm-teasers-mixin .vdm-teaser-mixin .vdm-teaser-body-mixin title:last-child {
+      margin-bottom: 0; }
+  .vdm-teasers-mixin .vdm-teaser-mixin .vdm-teaser-body-mixin .content {
+    margin-bottom: 1.3em;
+    flex: 1; }
+    .vdm-teasers-mixin .vdm-teaser-mixin .vdm-teaser-body-mixin .content:last-child {
+      margin-bottom: 0; }
+  .vdm-teasers-mixin .vdm-teaser-mixin .vdm-teaser-body-mixin .footer {
+    margin-bottom: 0;
+    margin-top: auto; }
+
+.vdm-teasers-mixin .vdm-teaser-mixin.light-scheme .vdm-teaser-body-mixin {
+  background: #FFFFFF;
+  border: 1px solid #429A8E; }
+  .vdm-teasers-mixin .vdm-teaser-mixin.light-scheme .vdm-teaser-body-mixin:hover, .vdm-teasers-mixin .vdm-teaser-mixin.light-scheme .vdm-teaser-body-mixin:active {
+    background: #429A8E;
+    color: #FFFFFF; }
+    .vdm-teasers-mixin .vdm-teaser-mixin.light-scheme .vdm-teaser-body-mixin:hover > *, .vdm-teasers-mixin .vdm-teaser-mixin.light-scheme .vdm-teaser-body-mixin:active > * {
+      color: #FFFFFF; }
+    .vdm-teasers-mixin .vdm-teaser-mixin.light-scheme .vdm-teaser-body-mixin:hover:before, .vdm-teasers-mixin .vdm-teaser-mixin.light-scheme .vdm-teaser-body-mixin:hover:after, .vdm-teasers-mixin .vdm-teaser-mixin.light-scheme .vdm-teaser-body-mixin:active:before, .vdm-teasers-mixin .vdm-teaser-mixin.light-scheme .vdm-teaser-body-mixin:active:after {
+      color: #FFFFFF; }
+
+.vdm-teasers-mixin .vdm-teaser-mixin.white-scheme .vdm-teaser-body-mixin {
+  background: #FFFFFF;
+  border: none; }
+  .vdm-teasers-mixin .vdm-teaser-mixin.white-scheme .vdm-teaser-body-mixin:hover, .vdm-teasers-mixin .vdm-teaser-mixin.white-scheme .vdm-teaser-body-mixin:active {
+    background: #429A8E;
+    color: #FFFFFF; }
+    .vdm-teasers-mixin .vdm-teaser-mixin.white-scheme .vdm-teaser-body-mixin:hover > *, .vdm-teasers-mixin .vdm-teaser-mixin.white-scheme .vdm-teaser-body-mixin:active > * {
+      color: #FFFFFF; }
+    .vdm-teasers-mixin .vdm-teaser-mixin.white-scheme .vdm-teaser-body-mixin:hover:before, .vdm-teasers-mixin .vdm-teaser-mixin.white-scheme .vdm-teaser-body-mixin:hover:after, .vdm-teasers-mixin .vdm-teaser-mixin.white-scheme .vdm-teaser-body-mixin:active:before, .vdm-teasers-mixin .vdm-teaser-mixin.white-scheme .vdm-teaser-body-mixin:active:after {
+      color: #FFFFFF; }
+
+.vdm-teasers-mixin .vdm-teaser-mixin.icon-right .vdm-teaser-body-mixin {
+  padding: 2.3rem 2.3rem 2.3rem 2.3rem;
+  padding-right: 7rem; }
+  .vdm-teasers-mixin .vdm-teaser-mixin.icon-right .vdm-teaser-body-mixin.ic-rosette:after {
+    content: "";
+    font-weight: normal;
+    font-style: normal;
+    font-family: "vdm-fonticon";
+    text-decoration: none;
+    display: inline-block;
+    text-rendering: auto;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale; }
+  .vdm-teasers-mixin .vdm-teaser-mixin.icon-right .vdm-teaser-body-mixin.ic-search:after {
+    content: "";
+    font-weight: normal;
+    font-style: normal;
+    font-family: "vdm-fonticon";
+    text-decoration: none;
+    display: inline-block;
+    text-rendering: auto;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale; }
+  .vdm-teasers-mixin .vdm-teaser-mixin.icon-right .vdm-teaser-body-mixin.ic-profile:after {
+    content: "";
+    font-weight: normal;
+    font-style: normal;
+    font-family: "vdm-fonticon";
+    text-decoration: none;
+    display: inline-block;
+    text-rendering: auto;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale; }
+  .vdm-teasers-mixin .vdm-teaser-mixin.icon-right .vdm-teaser-body-mixin.ic-flag:after {
+    content: "";
+    font-weight: normal;
+    font-style: normal;
+    font-family: "vdm-fonticon";
+    text-decoration: none;
+    display: inline-block;
+    text-rendering: auto;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale; }
+  .vdm-teasers-mixin .vdm-teaser-mixin.icon-right .vdm-teaser-body-mixin.ic-calendar:after {
+    content: "";
+    font-weight: normal;
+    font-style: normal;
+    font-family: "vdm-fonticon";
+    text-decoration: none;
+    display: inline-block;
+    text-rendering: auto;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale; }
+  .vdm-teasers-mixin .vdm-teaser-mixin.icon-right .vdm-teaser-body-mixin.ic-sun:after {
+    content: "";
+    font-weight: normal;
+    font-style: normal;
+    font-family: "vdm-fonticon";
+    text-decoration: none;
+    display: inline-block;
+    text-rendering: auto;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale; }
+  .vdm-teasers-mixin .vdm-teaser-mixin.icon-right .vdm-teaser-body-mixin.ic-ticket:after {
+    content: "";
+    font-weight: normal;
+    font-style: normal;
+    font-family: "vdm-fonticon";
+    text-decoration: none;
+    display: inline-block;
+    text-rendering: auto;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale; }
+  .vdm-teasers-mixin .vdm-teaser-mixin.icon-right .vdm-teaser-body-mixin.ic-eye:after {
+    content: "";
+    font-weight: normal;
+    font-style: normal;
+    font-family: "vdm-fonticon";
+    text-decoration: none;
+    display: inline-block;
+    text-rendering: auto;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale; }
+  .vdm-teasers-mixin .vdm-teaser-mixin.icon-right .vdm-teaser-body-mixin.ic-people:after {
+    content: "";
+    font-weight: normal;
+    font-style: normal;
+    font-family: "vdm-fonticon";
+    text-decoration: none;
+    display: inline-block;
+    text-rendering: auto;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale; }
+  .vdm-teasers-mixin .vdm-teaser-mixin.icon-right .vdm-teaser-body-mixin.ic-doc-holder:after {
+    content: "";
+    font-weight: normal;
+    font-style: normal;
+    font-family: "vdm-fonticon";
+    text-decoration: none;
+    display: inline-block;
+    text-rendering: auto;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale; }
+  .vdm-teasers-mixin .vdm-teaser-mixin.icon-right .vdm-teaser-body-mixin.ic-bus:after {
+    content: "";
+    font-weight: normal;
+    font-style: normal;
+    font-family: "vdm-fonticon";
+    text-decoration: none;
+    display: inline-block;
+    text-rendering: auto;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale; }
+  .vdm-teasers-mixin .vdm-teaser-mixin.icon-right .vdm-teaser-body-mixin.ic-phone:after {
+    content: "";
+    font-weight: normal;
+    font-style: normal;
+    font-family: "vdm-fonticon";
+    text-decoration: none;
+    display: inline-block;
+    text-rendering: auto;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale; }
+  .vdm-teasers-mixin .vdm-teaser-mixin.icon-right .vdm-teaser-body-mixin.ic-book:after {
+    content: "";
+    font-weight: normal;
+    font-style: normal;
+    font-family: "vdm-fonticon";
+    text-decoration: none;
+    display: inline-block;
+    text-rendering: auto;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale; }
+  .vdm-teasers-mixin .vdm-teaser-mixin.icon-right .vdm-teaser-body-mixin.ic-arrow-play:after {
+    content: "";
+    font-weight: normal;
+    font-style: normal;
+    font-family: "vdm-fonticon";
+    text-decoration: none;
+    display: inline-block;
+    text-rendering: auto;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale; }
+  .vdm-teasers-mixin .vdm-teaser-mixin.icon-right .vdm-teaser-body-mixin.ic-arrow-select:after {
+    content: "";
+    font-weight: normal;
+    font-style: normal;
+    font-family: "vdm-fonticon";
+    text-decoration: none;
+    display: inline-block;
+    text-rendering: auto;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale; }
+  .vdm-teasers-mixin .vdm-teaser-mixin.icon-right .vdm-teaser-body-mixin.ic-news-item:after {
+    content: "";
+    font-weight: normal;
+    font-style: normal;
+    font-family: "vdm-fonticon";
+    text-decoration: none;
+    display: inline-block;
+    text-rendering: auto;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale; }
+  .vdm-teasers-mixin .vdm-teaser-mixin.icon-right .vdm-teaser-body-mixin.ic-location-star:after {
+    content: "";
+    font-weight: normal;
+    font-style: normal;
+    font-family: "vdm-fonticon";
+    text-decoration: none;
+    display: inline-block;
+    text-rendering: auto;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale; }
+  .vdm-teasers-mixin .vdm-teaser-mixin.icon-right .vdm-teaser-body-mixin.ic-permit-id:after {
+    content: "";
+    font-weight: normal;
+    font-style: normal;
+    font-family: "vdm-fonticon";
+    text-decoration: none;
+    display: inline-block;
+    text-rendering: auto;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale; }
+  .vdm-teasers-mixin .vdm-teaser-mixin.icon-right .vdm-teaser-body-mixin.ic-document:after {
+    content: "";
+    font-weight: normal;
+    font-style: normal;
+    font-family: "vdm-fonticon";
+    text-decoration: none;
+    display: inline-block;
+    text-rendering: auto;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale; }
+  .vdm-teasers-mixin .vdm-teaser-mixin.icon-right .vdm-teaser-body-mixin.ic-credit-card:after {
+    content: "";
+    font-weight: normal;
+    font-style: normal;
+    font-family: "vdm-fonticon";
+    text-decoration: none;
+    display: inline-block;
+    text-rendering: auto;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale; }
+  .vdm-teasers-mixin .vdm-teaser-mixin.icon-right .vdm-teaser-body-mixin.ic-folder:after {
+    content: "";
+    font-weight: normal;
+    font-style: normal;
+    font-family: "vdm-fonticon";
+    text-decoration: none;
+    display: inline-block;
+    text-rendering: auto;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale; }
+  .vdm-teasers-mixin .vdm-teaser-mixin.icon-right .vdm-teaser-body-mixin.ic-bell:after {
+    content: "";
+    font-weight: normal;
+    font-style: normal;
+    font-family: "vdm-fonticon";
+    text-decoration: none;
+    display: inline-block;
+    text-rendering: auto;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale; }
+  .vdm-teasers-mixin .vdm-teaser-mixin.icon-right .vdm-teaser-body-mixin.ic-settings:after {
+    content: "";
+    font-weight: normal;
+    font-style: normal;
+    font-family: "vdm-fonticon";
+    text-decoration: none;
+    display: inline-block;
+    text-rendering: auto;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale; }
+  .vdm-teasers-mixin .vdm-teaser-mixin.icon-right .vdm-teaser-body-mixin.ic-plus-circle-dot:after {
+    content: "";
+    font-weight: normal;
+    font-style: normal;
+    font-family: "vdm-fonticon";
+    text-decoration: none;
+    display: inline-block;
+    text-rendering: auto;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale; }
+  .vdm-teasers-mixin .vdm-teaser-mixin.icon-right .vdm-teaser-body-mixin.ic-minus-circle-dot:after {
+    content: "";
+    font-weight: normal;
+    font-style: normal;
+    font-family: "vdm-fonticon";
+    text-decoration: none;
+    display: inline-block;
+    text-rendering: auto;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale; }
+  .vdm-teasers-mixin .vdm-teaser-mixin.icon-right .vdm-teaser-body-mixin.ic-steps-checked:after {
+    content: "";
+    font-weight: normal;
+    font-style: normal;
+    font-family: "vdm-fonticon";
+    text-decoration: none;
+    display: inline-block;
+    text-rendering: auto;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale; }
+  .vdm-teasers-mixin .vdm-teaser-mixin.icon-right .vdm-teaser-body-mixin.ic-ellipsis-circle-dot:after {
+    content: "";
+    font-weight: normal;
+    font-style: normal;
+    font-family: "vdm-fonticon";
+    text-decoration: none;
+    display: inline-block;
+    text-rendering: auto;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale; }
+  .vdm-teasers-mixin .vdm-teaser-mixin.icon-right .vdm-teaser-body-mixin.ic-enveloppe:after {
+    content: "";
+    font-weight: normal;
+    font-style: normal;
+    font-family: "vdm-fonticon";
+    text-decoration: none;
+    display: inline-block;
+    text-rendering: auto;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale; }
+  .vdm-teasers-mixin .vdm-teaser-mixin.icon-right .vdm-teaser-body-mixin.ic-folder-add:after {
+    content: "";
+    font-weight: normal;
+    font-style: normal;
+    font-family: "vdm-fonticon";
+    text-decoration: none;
+    display: inline-block;
+    text-rendering: auto;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale; }
+  .vdm-teasers-mixin .vdm-teaser-mixin.icon-right .vdm-teaser-body-mixin.ic-warning-triangle:after {
+    content: "";
+    font-weight: normal;
+    font-style: normal;
+    font-family: "vdm-fonticon";
+    text-decoration: none;
+    display: inline-block;
+    text-rendering: auto;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale; }
+  .vdm-teasers-mixin .vdm-teaser-mixin.icon-right .vdm-teaser-body-mixin.ic-computer:after {
+    content: "";
+    font-weight: normal;
+    font-style: normal;
+    font-family: "vdm-fonticon";
+    text-decoration: none;
+    display: inline-block;
+    text-rendering: auto;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale; }
+  .vdm-teasers-mixin .vdm-teaser-mixin.icon-right .vdm-teaser-body-mixin.ic-nut:after {
+    content: "";
+    font-weight: normal;
+    font-style: normal;
+    font-family: "vdm-fonticon";
+    text-decoration: none;
+    display: inline-block;
+    text-rendering: auto;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale; }
+  .vdm-teasers-mixin .vdm-teaser-mixin.icon-right .vdm-teaser-body-mixin.ic-pencil:after {
+    content: "";
+    font-weight: normal;
+    font-style: normal;
+    font-family: "vdm-fonticon";
+    text-decoration: none;
+    display: inline-block;
+    text-rendering: auto;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale; }
+  .vdm-teasers-mixin .vdm-teaser-mixin.icon-right .vdm-teaser-body-mixin.ic-lightbulb:after {
+    content: "";
+    font-weight: normal;
+    font-style: normal;
+    font-family: "vdm-fonticon";
+    text-decoration: none;
+    display: inline-block;
+    text-rendering: auto;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale; }
+  .vdm-teasers-mixin .vdm-teaser-mixin.icon-right .vdm-teaser-body-mixin.ic-pen:after {
+    content: "";
+    font-weight: normal;
+    font-style: normal;
+    font-family: "vdm-fonticon";
+    text-decoration: none;
+    display: inline-block;
+    text-rendering: auto;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale; }
+  .vdm-teasers-mixin .vdm-teaser-mixin.icon-right .vdm-teaser-body-mixin.ic-warning-circle:after {
+    content: "";
+    font-weight: normal;
+    font-style: normal;
+    font-family: "vdm-fonticon";
+    text-decoration: none;
+    display: inline-block;
+    text-rendering: auto;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale; }
+  .vdm-teasers-mixin .vdm-teaser-mixin.icon-right .vdm-teaser-body-mixin.ic-clock:after {
+    content: "";
+    font-weight: normal;
+    font-style: normal;
+    font-family: "vdm-fonticon";
+    text-decoration: none;
+    display: inline-block;
+    text-rendering: auto;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale; }
+  .vdm-teasers-mixin .vdm-teaser-mixin.icon-right .vdm-teaser-body-mixin.ic-target:after {
+    content: "";
+    font-weight: normal;
+    font-style: normal;
+    font-family: "vdm-fonticon";
+    text-decoration: none;
+    display: inline-block;
+    text-rendering: auto;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale; }
+  .vdm-teasers-mixin .vdm-teaser-mixin.icon-right .vdm-teaser-body-mixin.ic-broom:after {
+    content: "";
+    font-weight: normal;
+    font-style: normal;
+    font-family: "vdm-fonticon";
+    text-decoration: none;
+    display: inline-block;
+    text-rendering: auto;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale; }
+  .vdm-teasers-mixin .vdm-teaser-mixin.icon-right .vdm-teaser-body-mixin.ic-permit:after {
+    content: "";
+    font-weight: normal;
+    font-style: normal;
+    font-family: "vdm-fonticon";
+    text-decoration: none;
+    display: inline-block;
+    text-rendering: auto;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale; }
+  .vdm-teasers-mixin .vdm-teaser-mixin.icon-right .vdm-teaser-body-mixin.ic-arrow-circle-up:after {
+    content: "";
+    font-weight: normal;
+    font-style: normal;
+    font-family: "vdm-fonticon";
+    text-decoration: none;
+    display: inline-block;
+    text-rendering: auto;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale; }
+  .vdm-teasers-mixin .vdm-teaser-mixin.icon-right .vdm-teaser-body-mixin.ic-arrow-circle-right:after {
+    content: "";
+    font-weight: normal;
+    font-style: normal;
+    font-family: "vdm-fonticon";
+    text-decoration: none;
+    display: inline-block;
+    text-rendering: auto;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale; }
+  .vdm-teasers-mixin .vdm-teaser-mixin.icon-right .vdm-teaser-body-mixin.ic-arrow-circle-down:after {
+    content: "";
+    font-weight: normal;
+    font-style: normal;
+    font-family: "vdm-fonticon";
+    text-decoration: none;
+    display: inline-block;
+    text-rendering: auto;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale; }
+  .vdm-teasers-mixin .vdm-teaser-mixin.icon-right .vdm-teaser-body-mixin.ic-arrow-circle-left:after {
+    content: "";
+    font-weight: normal;
+    font-style: normal;
+    font-family: "vdm-fonticon";
+    text-decoration: none;
+    display: inline-block;
+    text-rendering: auto;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale; }
+  .vdm-teasers-mixin .vdm-teaser-mixin.icon-right .vdm-teaser-body-mixin.ic-house:after {
+    content: "";
+    font-weight: normal;
+    font-style: normal;
+    font-family: "vdm-fonticon";
+    text-decoration: none;
+    display: inline-block;
+    text-rendering: auto;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale; }
+  .vdm-teasers-mixin .vdm-teaser-mixin.icon-right .vdm-teaser-body-mixin.ic-x-close:after {
+    content: "";
+    font-weight: normal;
+    font-style: normal;
+    font-family: "vdm-fonticon";
+    text-decoration: none;
+    display: inline-block;
+    text-rendering: auto;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale; }
+  .vdm-teasers-mixin .vdm-teaser-mixin.icon-right .vdm-teaser-body-mixin.ic-circle-progress-done:after {
+    content: "";
+    font-weight: normal;
+    font-style: normal;
+    font-family: "vdm-fonticon";
+    text-decoration: none;
+    display: inline-block;
+    text-rendering: auto;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale; }
+  .vdm-teasers-mixin .vdm-teaser-mixin.icon-right .vdm-teaser-body-mixin.ic-circle-progress-a:after {
+    content: "";
+    font-weight: normal;
+    font-style: normal;
+    font-family: "vdm-fonticon";
+    text-decoration: none;
+    display: inline-block;
+    text-rendering: auto;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale; }
+  .vdm-teasers-mixin .vdm-teaser-mixin.icon-right .vdm-teaser-body-mixin.ic-circle-progress-ab:after {
+    content: "";
+    font-weight: normal;
+    font-style: normal;
+    font-family: "vdm-fonticon";
+    text-decoration: none;
+    display: inline-block;
+    text-rendering: auto;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale; }
+  .vdm-teasers-mixin .vdm-teaser-mixin.icon-right .vdm-teaser-body-mixin.ic-circle-progress-abc:after {
+    content: "";
+    font-weight: normal;
+    font-style: normal;
+    font-family: "vdm-fonticon";
+    text-decoration: none;
+    display: inline-block;
+    text-rendering: auto;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale; }
+  .vdm-teasers-mixin .vdm-teaser-mixin.icon-right .vdm-teaser-body-mixin.ic-circle-progress-c:after {
+    content: "";
+    font-weight: normal;
+    font-style: normal;
+    font-family: "vdm-fonticon";
+    text-decoration: none;
+    display: inline-block;
+    text-rendering: auto;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale; }
+  .vdm-teasers-mixin .vdm-teaser-mixin.icon-right .vdm-teaser-body-mixin.ic-circle-progress-bc:after {
+    content: "";
+    font-weight: normal;
+    font-style: normal;
+    font-family: "vdm-fonticon";
+    text-decoration: none;
+    display: inline-block;
+    text-rendering: auto;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale; }
+  .vdm-teasers-mixin .vdm-teaser-mixin.icon-right .vdm-teaser-body-mixin.ic-circle-progress-checked:after {
+    content: "";
+    font-weight: normal;
+    font-style: normal;
+    font-family: "vdm-fonticon";
+    text-decoration: none;
+    display: inline-block;
+    text-rendering: auto;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale; }
+  .vdm-teasers-mixin .vdm-teaser-mixin.icon-right .vdm-teaser-body-mixin.ic-circle-progress-folder:after {
+    content: "";
+    font-weight: normal;
+    font-style: normal;
+    font-family: "vdm-fonticon";
+    text-decoration: none;
+    display: inline-block;
+    text-rendering: auto;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale; }
+  .vdm-teasers-mixin .vdm-teaser-mixin.icon-right .vdm-teaser-body-mixin.ic-chevron-up:after {
+    content: "";
+    font-weight: normal;
+    font-style: normal;
+    font-family: "vdm-fonticon";
+    text-decoration: none;
+    display: inline-block;
+    text-rendering: auto;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale; }
+  .vdm-teasers-mixin .vdm-teaser-mixin.icon-right .vdm-teaser-body-mixin.ic-chevron-right:after {
+    content: "";
+    font-weight: normal;
+    font-style: normal;
+    font-family: "vdm-fonticon";
+    text-decoration: none;
+    display: inline-block;
+    text-rendering: auto;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale; }
+  .vdm-teasers-mixin .vdm-teaser-mixin.icon-right .vdm-teaser-body-mixin.ic-chevron-down:after {
+    content: "";
+    font-weight: normal;
+    font-style: normal;
+    font-family: "vdm-fonticon";
+    text-decoration: none;
+    display: inline-block;
+    text-rendering: auto;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale; }
+  .vdm-teasers-mixin .vdm-teaser-mixin.icon-right .vdm-teaser-body-mixin.ic-chevron-left:after {
+    content: "";
+    font-weight: normal;
+    font-style: normal;
+    font-family: "vdm-fonticon";
+    text-decoration: none;
+    display: inline-block;
+    text-rendering: auto;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale; }
+  .vdm-teasers-mixin .vdm-teaser-mixin.icon-right .vdm-teaser-body-mixin.ic-circle-checked:after {
+    content: "";
+    font-weight: normal;
+    font-style: normal;
+    font-family: "vdm-fonticon";
+    text-decoration: none;
+    display: inline-block;
+    text-rendering: auto;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale; }
+  .vdm-teasers-mixin .vdm-teaser-mixin.icon-right .vdm-teaser-body-mixin.ic-menu:after {
+    content: "";
+    font-weight: normal;
+    font-style: normal;
+    font-family: "vdm-fonticon";
+    text-decoration: none;
+    display: inline-block;
+    text-rendering: auto;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale; }
+  .vdm-teasers-mixin .vdm-teaser-mixin.icon-right .vdm-teaser-body-mixin.ic-location:after {
+    content: "";
+    font-weight: normal;
+    font-style: normal;
+    font-family: "vdm-fonticon";
+    text-decoration: none;
+    display: inline-block;
+    text-rendering: auto;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale; }
+  .vdm-teasers-mixin .vdm-teaser-mixin.icon-right .vdm-teaser-body-mixin.ic-arrow-up:after {
+    content: "";
+    font-weight: normal;
+    font-style: normal;
+    font-family: "vdm-fonticon";
+    text-decoration: none;
+    display: inline-block;
+    text-rendering: auto;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale; }
+  .vdm-teasers-mixin .vdm-teaser-mixin.icon-right .vdm-teaser-body-mixin.ic-arrow-right:after {
+    content: "";
+    font-weight: normal;
+    font-style: normal;
+    font-family: "vdm-fonticon";
+    text-decoration: none;
+    display: inline-block;
+    text-rendering: auto;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale; }
+  .vdm-teasers-mixin .vdm-teaser-mixin.icon-right .vdm-teaser-body-mixin.ic-arrow-down:after {
+    content: "";
+    font-weight: normal;
+    font-style: normal;
+    font-family: "vdm-fonticon";
+    text-decoration: none;
+    display: inline-block;
+    text-rendering: auto;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale; }
+  .vdm-teasers-mixin .vdm-teaser-mixin.icon-right .vdm-teaser-body-mixin.ic-arrow-left:after {
+    content: "";
+    font-weight: normal;
+    font-style: normal;
+    font-family: "vdm-fonticon";
+    text-decoration: none;
+    display: inline-block;
+    text-rendering: auto;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale; }
+  .vdm-teasers-mixin .vdm-teaser-mixin.icon-right .vdm-teaser-body-mixin.ic-plus:after {
+    content: "";
+    font-weight: normal;
+    font-style: normal;
+    font-family: "vdm-fonticon";
+    text-decoration: none;
+    display: inline-block;
+    text-rendering: auto;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale; }
+  .vdm-teasers-mixin .vdm-teaser-mixin.icon-right .vdm-teaser-body-mixin.ic-minus:after {
+    content: "";
+    font-weight: normal;
+    font-style: normal;
+    font-family: "vdm-fonticon";
+    text-decoration: none;
+    display: inline-block;
+    text-rendering: auto;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale; }
+  .vdm-teasers-mixin .vdm-teaser-mixin.icon-right .vdm-teaser-body-mixin.ic-multiply:after {
+    content: "";
+    font-weight: normal;
+    font-style: normal;
+    font-family: "vdm-fonticon";
+    text-decoration: none;
+    display: inline-block;
+    text-rendering: auto;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale; }
+  .vdm-teasers-mixin .vdm-teaser-mixin.icon-right .vdm-teaser-body-mixin.ic-circle-plus:after {
+    content: "";
+    font-weight: normal;
+    font-style: normal;
+    font-family: "vdm-fonticon";
+    text-decoration: none;
+    display: inline-block;
+    text-rendering: auto;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale; }
+  .vdm-teasers-mixin .vdm-teaser-mixin.icon-right .vdm-teaser-body-mixin.ic-circle-minus:after {
+    content: "";
+    font-weight: normal;
+    font-style: normal;
+    font-family: "vdm-fonticon";
+    text-decoration: none;
+    display: inline-block;
+    text-rendering: auto;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale; }
+  .vdm-teasers-mixin .vdm-teaser-mixin.icon-right .vdm-teaser-body-mixin.ic-circle-multiply:after {
+    content: "";
+    font-weight: normal;
+    font-style: normal;
+    font-family: "vdm-fonticon";
+    text-decoration: none;
+    display: inline-block;
+    text-rendering: auto;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale; }
+  .vdm-teasers-mixin .vdm-teaser-mixin.icon-right .vdm-teaser-body-mixin.ic-circle-plus-invert:after {
+    content: "";
+    font-weight: normal;
+    font-style: normal;
+    font-family: "vdm-fonticon";
+    text-decoration: none;
+    display: inline-block;
+    text-rendering: auto;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale; }
+  .vdm-teasers-mixin .vdm-teaser-mixin.icon-right .vdm-teaser-body-mixin.ic-circle-minus-invert:after {
+    content: "";
+    font-weight: normal;
+    font-style: normal;
+    font-family: "vdm-fonticon";
+    text-decoration: none;
+    display: inline-block;
+    text-rendering: auto;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale; }
+  .vdm-teasers-mixin .vdm-teaser-mixin.icon-right .vdm-teaser-body-mixin.ic-circle-multiply-invert:after {
+    content: "";
+    font-weight: normal;
+    font-style: normal;
+    font-family: "vdm-fonticon";
+    text-decoration: none;
+    display: inline-block;
+    text-rendering: auto;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale; }
+  .vdm-teasers-mixin .vdm-teaser-mixin.icon-right .vdm-teaser-body-mixin.ic-checkbox-checked:after {
+    content: "";
+    font-weight: normal;
+    font-style: normal;
+    font-family: "vdm-fonticon";
+    text-decoration: none;
+    display: inline-block;
+    text-rendering: auto;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale; }
+  .vdm-teasers-mixin .vdm-teaser-mixin.icon-right .vdm-teaser-body-mixin.ic-checkbox-empty:after {
+    content: "";
+    font-weight: normal;
+    font-style: normal;
+    font-family: "vdm-fonticon";
+    text-decoration: none;
+    display: inline-block;
+    text-rendering: auto;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale; }
+  .vdm-teasers-mixin .vdm-teaser-mixin.icon-right .vdm-teaser-body-mixin.ic-checkbox-checked-trans:after {
+    content: "";
+    font-weight: normal;
+    font-style: normal;
+    font-family: "vdm-fonticon";
+    text-decoration: none;
+    display: inline-block;
+    text-rendering: auto;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale; }
+  .vdm-teasers-mixin .vdm-teaser-mixin.icon-right .vdm-teaser-body-mixin.ic-checkbox-checked-invert:after {
+    content: "";
+    font-weight: normal;
+    font-style: normal;
+    font-family: "vdm-fonticon";
+    text-decoration: none;
+    display: inline-block;
+    text-rendering: auto;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale; }
+  .vdm-teasers-mixin .vdm-teaser-mixin.icon-right .vdm-teaser-body-mixin.ic-trash:after {
+    content: "";
+    font-weight: normal;
+    font-style: normal;
+    font-family: "vdm-fonticon";
+    text-decoration: none;
+    display: inline-block;
+    text-rendering: auto;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale; }
+  .vdm-teasers-mixin .vdm-teaser-mixin.icon-right .vdm-teaser-body-mixin.ic-recycle:after {
+    content: "";
+    font-weight: normal;
+    font-style: normal;
+    font-family: "vdm-fonticon";
+    text-decoration: none;
+    display: inline-block;
+    text-rendering: auto;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale; }
+  .vdm-teasers-mixin .vdm-teaser-mixin.icon-right .vdm-teaser-body-mixin.ic-compost:after {
+    content: "";
+    font-weight: normal;
+    font-style: normal;
+    font-family: "vdm-fonticon";
+    text-decoration: none;
+    display: inline-block;
+    text-rendering: auto;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale; }
+  .vdm-teasers-mixin .vdm-teaser-mixin.icon-right .vdm-teaser-body-mixin.ic-greens:after {
+    content: "";
+    font-weight: normal;
+    font-style: normal;
+    font-family: "vdm-fonticon";
+    text-decoration: none;
+    display: inline-block;
+    text-rendering: auto;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale; }
+  .vdm-teasers-mixin .vdm-teaser-mixin.icon-right .vdm-teaser-body-mixin.ic-permit-pet:after {
+    content: "";
+    font-weight: normal;
+    font-style: normal;
+    font-family: "vdm-fonticon";
+    text-decoration: none;
+    display: inline-block;
+    text-rendering: auto;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale; }
+  .vdm-teasers-mixin .vdm-teaser-mixin.icon-right .vdm-teaser-body-mixin:before, .vdm-teasers-mixin .vdm-teaser-mixin.icon-right .vdm-teaser-body-mixin:after {
+    position: absolute; }
+  .vdm-teasers-mixin .vdm-teaser-mixin.icon-right .vdm-teaser-body-mixin:after {
+    top: calc(50% - 1.7rem);
+    left: calc(100% - 7rem); }
+
+.vdm-teasers-mixin .vdm-teaser-mixin.icon-left .vdm-teaser-body-mixin {
+  padding: 2.3rem 2.3rem 2.3rem 2.3rem;
+  padding-left: 7rem; }
+  .vdm-teasers-mixin .vdm-teaser-mixin.icon-left .vdm-teaser-body-mixin.ic-rosette:before {
+    content: "";
+    font-weight: normal;
+    font-style: normal;
+    font-family: "vdm-fonticon";
+    text-decoration: none;
+    display: inline-block;
+    text-rendering: auto;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale; }
+  .vdm-teasers-mixin .vdm-teaser-mixin.icon-left .vdm-teaser-body-mixin.ic-search:before {
+    content: "";
+    font-weight: normal;
+    font-style: normal;
+    font-family: "vdm-fonticon";
+    text-decoration: none;
+    display: inline-block;
+    text-rendering: auto;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale; }
+  .vdm-teasers-mixin .vdm-teaser-mixin.icon-left .vdm-teaser-body-mixin.ic-profile:before {
+    content: "";
+    font-weight: normal;
+    font-style: normal;
+    font-family: "vdm-fonticon";
+    text-decoration: none;
+    display: inline-block;
+    text-rendering: auto;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale; }
+  .vdm-teasers-mixin .vdm-teaser-mixin.icon-left .vdm-teaser-body-mixin.ic-flag:before {
+    content: "";
+    font-weight: normal;
+    font-style: normal;
+    font-family: "vdm-fonticon";
+    text-decoration: none;
+    display: inline-block;
+    text-rendering: auto;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale; }
+  .vdm-teasers-mixin .vdm-teaser-mixin.icon-left .vdm-teaser-body-mixin.ic-calendar:before {
+    content: "";
+    font-weight: normal;
+    font-style: normal;
+    font-family: "vdm-fonticon";
+    text-decoration: none;
+    display: inline-block;
+    text-rendering: auto;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale; }
+  .vdm-teasers-mixin .vdm-teaser-mixin.icon-left .vdm-teaser-body-mixin.ic-sun:before {
+    content: "";
+    font-weight: normal;
+    font-style: normal;
+    font-family: "vdm-fonticon";
+    text-decoration: none;
+    display: inline-block;
+    text-rendering: auto;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale; }
+  .vdm-teasers-mixin .vdm-teaser-mixin.icon-left .vdm-teaser-body-mixin.ic-ticket:before {
+    content: "";
+    font-weight: normal;
+    font-style: normal;
+    font-family: "vdm-fonticon";
+    text-decoration: none;
+    display: inline-block;
+    text-rendering: auto;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale; }
+  .vdm-teasers-mixin .vdm-teaser-mixin.icon-left .vdm-teaser-body-mixin.ic-eye:before {
+    content: "";
+    font-weight: normal;
+    font-style: normal;
+    font-family: "vdm-fonticon";
+    text-decoration: none;
+    display: inline-block;
+    text-rendering: auto;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale; }
+  .vdm-teasers-mixin .vdm-teaser-mixin.icon-left .vdm-teaser-body-mixin.ic-people:before {
+    content: "";
+    font-weight: normal;
+    font-style: normal;
+    font-family: "vdm-fonticon";
+    text-decoration: none;
+    display: inline-block;
+    text-rendering: auto;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale; }
+  .vdm-teasers-mixin .vdm-teaser-mixin.icon-left .vdm-teaser-body-mixin.ic-doc-holder:before {
+    content: "";
+    font-weight: normal;
+    font-style: normal;
+    font-family: "vdm-fonticon";
+    text-decoration: none;
+    display: inline-block;
+    text-rendering: auto;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale; }
+  .vdm-teasers-mixin .vdm-teaser-mixin.icon-left .vdm-teaser-body-mixin.ic-bus:before {
+    content: "";
+    font-weight: normal;
+    font-style: normal;
+    font-family: "vdm-fonticon";
+    text-decoration: none;
+    display: inline-block;
+    text-rendering: auto;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale; }
+  .vdm-teasers-mixin .vdm-teaser-mixin.icon-left .vdm-teaser-body-mixin.ic-phone:before {
+    content: "";
+    font-weight: normal;
+    font-style: normal;
+    font-family: "vdm-fonticon";
+    text-decoration: none;
+    display: inline-block;
+    text-rendering: auto;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale; }
+  .vdm-teasers-mixin .vdm-teaser-mixin.icon-left .vdm-teaser-body-mixin.ic-book:before {
+    content: "";
+    font-weight: normal;
+    font-style: normal;
+    font-family: "vdm-fonticon";
+    text-decoration: none;
+    display: inline-block;
+    text-rendering: auto;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale; }
+  .vdm-teasers-mixin .vdm-teaser-mixin.icon-left .vdm-teaser-body-mixin.ic-arrow-play:before {
+    content: "";
+    font-weight: normal;
+    font-style: normal;
+    font-family: "vdm-fonticon";
+    text-decoration: none;
+    display: inline-block;
+    text-rendering: auto;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale; }
+  .vdm-teasers-mixin .vdm-teaser-mixin.icon-left .vdm-teaser-body-mixin.ic-arrow-select:before {
+    content: "";
+    font-weight: normal;
+    font-style: normal;
+    font-family: "vdm-fonticon";
+    text-decoration: none;
+    display: inline-block;
+    text-rendering: auto;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale; }
+  .vdm-teasers-mixin .vdm-teaser-mixin.icon-left .vdm-teaser-body-mixin.ic-news-item:before {
+    content: "";
+    font-weight: normal;
+    font-style: normal;
+    font-family: "vdm-fonticon";
+    text-decoration: none;
+    display: inline-block;
+    text-rendering: auto;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale; }
+  .vdm-teasers-mixin .vdm-teaser-mixin.icon-left .vdm-teaser-body-mixin.ic-location-star:before {
+    content: "";
+    font-weight: normal;
+    font-style: normal;
+    font-family: "vdm-fonticon";
+    text-decoration: none;
+    display: inline-block;
+    text-rendering: auto;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale; }
+  .vdm-teasers-mixin .vdm-teaser-mixin.icon-left .vdm-teaser-body-mixin.ic-permit-id:before {
+    content: "";
+    font-weight: normal;
+    font-style: normal;
+    font-family: "vdm-fonticon";
+    text-decoration: none;
+    display: inline-block;
+    text-rendering: auto;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale; }
+  .vdm-teasers-mixin .vdm-teaser-mixin.icon-left .vdm-teaser-body-mixin.ic-document:before {
+    content: "";
+    font-weight: normal;
+    font-style: normal;
+    font-family: "vdm-fonticon";
+    text-decoration: none;
+    display: inline-block;
+    text-rendering: auto;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale; }
+  .vdm-teasers-mixin .vdm-teaser-mixin.icon-left .vdm-teaser-body-mixin.ic-credit-card:before {
+    content: "";
+    font-weight: normal;
+    font-style: normal;
+    font-family: "vdm-fonticon";
+    text-decoration: none;
+    display: inline-block;
+    text-rendering: auto;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale; }
+  .vdm-teasers-mixin .vdm-teaser-mixin.icon-left .vdm-teaser-body-mixin.ic-folder:before {
+    content: "";
+    font-weight: normal;
+    font-style: normal;
+    font-family: "vdm-fonticon";
+    text-decoration: none;
+    display: inline-block;
+    text-rendering: auto;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale; }
+  .vdm-teasers-mixin .vdm-teaser-mixin.icon-left .vdm-teaser-body-mixin.ic-bell:before {
+    content: "";
+    font-weight: normal;
+    font-style: normal;
+    font-family: "vdm-fonticon";
+    text-decoration: none;
+    display: inline-block;
+    text-rendering: auto;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale; }
+  .vdm-teasers-mixin .vdm-teaser-mixin.icon-left .vdm-teaser-body-mixin.ic-settings:before {
+    content: "";
+    font-weight: normal;
+    font-style: normal;
+    font-family: "vdm-fonticon";
+    text-decoration: none;
+    display: inline-block;
+    text-rendering: auto;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale; }
+  .vdm-teasers-mixin .vdm-teaser-mixin.icon-left .vdm-teaser-body-mixin.ic-plus-circle-dot:before {
+    content: "";
+    font-weight: normal;
+    font-style: normal;
+    font-family: "vdm-fonticon";
+    text-decoration: none;
+    display: inline-block;
+    text-rendering: auto;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale; }
+  .vdm-teasers-mixin .vdm-teaser-mixin.icon-left .vdm-teaser-body-mixin.ic-minus-circle-dot:before {
+    content: "";
+    font-weight: normal;
+    font-style: normal;
+    font-family: "vdm-fonticon";
+    text-decoration: none;
+    display: inline-block;
+    text-rendering: auto;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale; }
+  .vdm-teasers-mixin .vdm-teaser-mixin.icon-left .vdm-teaser-body-mixin.ic-steps-checked:before {
+    content: "";
+    font-weight: normal;
+    font-style: normal;
+    font-family: "vdm-fonticon";
+    text-decoration: none;
+    display: inline-block;
+    text-rendering: auto;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale; }
+  .vdm-teasers-mixin .vdm-teaser-mixin.icon-left .vdm-teaser-body-mixin.ic-ellipsis-circle-dot:before {
+    content: "";
+    font-weight: normal;
+    font-style: normal;
+    font-family: "vdm-fonticon";
+    text-decoration: none;
+    display: inline-block;
+    text-rendering: auto;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale; }
+  .vdm-teasers-mixin .vdm-teaser-mixin.icon-left .vdm-teaser-body-mixin.ic-enveloppe:before {
+    content: "";
+    font-weight: normal;
+    font-style: normal;
+    font-family: "vdm-fonticon";
+    text-decoration: none;
+    display: inline-block;
+    text-rendering: auto;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale; }
+  .vdm-teasers-mixin .vdm-teaser-mixin.icon-left .vdm-teaser-body-mixin.ic-folder-add:before {
+    content: "";
+    font-weight: normal;
+    font-style: normal;
+    font-family: "vdm-fonticon";
+    text-decoration: none;
+    display: inline-block;
+    text-rendering: auto;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale; }
+  .vdm-teasers-mixin .vdm-teaser-mixin.icon-left .vdm-teaser-body-mixin.ic-warning-triangle:before {
+    content: "";
+    font-weight: normal;
+    font-style: normal;
+    font-family: "vdm-fonticon";
+    text-decoration: none;
+    display: inline-block;
+    text-rendering: auto;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale; }
+  .vdm-teasers-mixin .vdm-teaser-mixin.icon-left .vdm-teaser-body-mixin.ic-computer:before {
+    content: "";
+    font-weight: normal;
+    font-style: normal;
+    font-family: "vdm-fonticon";
+    text-decoration: none;
+    display: inline-block;
+    text-rendering: auto;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale; }
+  .vdm-teasers-mixin .vdm-teaser-mixin.icon-left .vdm-teaser-body-mixin.ic-nut:before {
+    content: "";
+    font-weight: normal;
+    font-style: normal;
+    font-family: "vdm-fonticon";
+    text-decoration: none;
+    display: inline-block;
+    text-rendering: auto;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale; }
+  .vdm-teasers-mixin .vdm-teaser-mixin.icon-left .vdm-teaser-body-mixin.ic-pencil:before {
+    content: "";
+    font-weight: normal;
+    font-style: normal;
+    font-family: "vdm-fonticon";
+    text-decoration: none;
+    display: inline-block;
+    text-rendering: auto;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale; }
+  .vdm-teasers-mixin .vdm-teaser-mixin.icon-left .vdm-teaser-body-mixin.ic-lightbulb:before {
+    content: "";
+    font-weight: normal;
+    font-style: normal;
+    font-family: "vdm-fonticon";
+    text-decoration: none;
+    display: inline-block;
+    text-rendering: auto;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale; }
+  .vdm-teasers-mixin .vdm-teaser-mixin.icon-left .vdm-teaser-body-mixin.ic-pen:before {
+    content: "";
+    font-weight: normal;
+    font-style: normal;
+    font-family: "vdm-fonticon";
+    text-decoration: none;
+    display: inline-block;
+    text-rendering: auto;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale; }
+  .vdm-teasers-mixin .vdm-teaser-mixin.icon-left .vdm-teaser-body-mixin.ic-warning-circle:before {
+    content: "";
+    font-weight: normal;
+    font-style: normal;
+    font-family: "vdm-fonticon";
+    text-decoration: none;
+    display: inline-block;
+    text-rendering: auto;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale; }
+  .vdm-teasers-mixin .vdm-teaser-mixin.icon-left .vdm-teaser-body-mixin.ic-clock:before {
+    content: "";
+    font-weight: normal;
+    font-style: normal;
+    font-family: "vdm-fonticon";
+    text-decoration: none;
+    display: inline-block;
+    text-rendering: auto;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale; }
+  .vdm-teasers-mixin .vdm-teaser-mixin.icon-left .vdm-teaser-body-mixin.ic-target:before {
+    content: "";
+    font-weight: normal;
+    font-style: normal;
+    font-family: "vdm-fonticon";
+    text-decoration: none;
+    display: inline-block;
+    text-rendering: auto;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale; }
+  .vdm-teasers-mixin .vdm-teaser-mixin.icon-left .vdm-teaser-body-mixin.ic-broom:before {
+    content: "";
+    font-weight: normal;
+    font-style: normal;
+    font-family: "vdm-fonticon";
+    text-decoration: none;
+    display: inline-block;
+    text-rendering: auto;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale; }
+  .vdm-teasers-mixin .vdm-teaser-mixin.icon-left .vdm-teaser-body-mixin.ic-permit:before {
+    content: "";
+    font-weight: normal;
+    font-style: normal;
+    font-family: "vdm-fonticon";
+    text-decoration: none;
+    display: inline-block;
+    text-rendering: auto;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale; }
+  .vdm-teasers-mixin .vdm-teaser-mixin.icon-left .vdm-teaser-body-mixin.ic-arrow-circle-up:before {
+    content: "";
+    font-weight: normal;
+    font-style: normal;
+    font-family: "vdm-fonticon";
+    text-decoration: none;
+    display: inline-block;
+    text-rendering: auto;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale; }
+  .vdm-teasers-mixin .vdm-teaser-mixin.icon-left .vdm-teaser-body-mixin.ic-arrow-circle-right:before {
+    content: "";
+    font-weight: normal;
+    font-style: normal;
+    font-family: "vdm-fonticon";
+    text-decoration: none;
+    display: inline-block;
+    text-rendering: auto;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale; }
+  .vdm-teasers-mixin .vdm-teaser-mixin.icon-left .vdm-teaser-body-mixin.ic-arrow-circle-down:before {
+    content: "";
+    font-weight: normal;
+    font-style: normal;
+    font-family: "vdm-fonticon";
+    text-decoration: none;
+    display: inline-block;
+    text-rendering: auto;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale; }
+  .vdm-teasers-mixin .vdm-teaser-mixin.icon-left .vdm-teaser-body-mixin.ic-arrow-circle-left:before {
+    content: "";
+    font-weight: normal;
+    font-style: normal;
+    font-family: "vdm-fonticon";
+    text-decoration: none;
+    display: inline-block;
+    text-rendering: auto;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale; }
+  .vdm-teasers-mixin .vdm-teaser-mixin.icon-left .vdm-teaser-body-mixin.ic-house:before {
+    content: "";
+    font-weight: normal;
+    font-style: normal;
+    font-family: "vdm-fonticon";
+    text-decoration: none;
+    display: inline-block;
+    text-rendering: auto;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale; }
+  .vdm-teasers-mixin .vdm-teaser-mixin.icon-left .vdm-teaser-body-mixin.ic-x-close:before {
+    content: "";
+    font-weight: normal;
+    font-style: normal;
+    font-family: "vdm-fonticon";
+    text-decoration: none;
+    display: inline-block;
+    text-rendering: auto;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale; }
+  .vdm-teasers-mixin .vdm-teaser-mixin.icon-left .vdm-teaser-body-mixin.ic-circle-progress-done:before {
+    content: "";
+    font-weight: normal;
+    font-style: normal;
+    font-family: "vdm-fonticon";
+    text-decoration: none;
+    display: inline-block;
+    text-rendering: auto;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale; }
+  .vdm-teasers-mixin .vdm-teaser-mixin.icon-left .vdm-teaser-body-mixin.ic-circle-progress-a:before {
+    content: "";
+    font-weight: normal;
+    font-style: normal;
+    font-family: "vdm-fonticon";
+    text-decoration: none;
+    display: inline-block;
+    text-rendering: auto;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale; }
+  .vdm-teasers-mixin .vdm-teaser-mixin.icon-left .vdm-teaser-body-mixin.ic-circle-progress-ab:before {
+    content: "";
+    font-weight: normal;
+    font-style: normal;
+    font-family: "vdm-fonticon";
+    text-decoration: none;
+    display: inline-block;
+    text-rendering: auto;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale; }
+  .vdm-teasers-mixin .vdm-teaser-mixin.icon-left .vdm-teaser-body-mixin.ic-circle-progress-abc:before {
+    content: "";
+    font-weight: normal;
+    font-style: normal;
+    font-family: "vdm-fonticon";
+    text-decoration: none;
+    display: inline-block;
+    text-rendering: auto;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale; }
+  .vdm-teasers-mixin .vdm-teaser-mixin.icon-left .vdm-teaser-body-mixin.ic-circle-progress-c:before {
+    content: "";
+    font-weight: normal;
+    font-style: normal;
+    font-family: "vdm-fonticon";
+    text-decoration: none;
+    display: inline-block;
+    text-rendering: auto;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale; }
+  .vdm-teasers-mixin .vdm-teaser-mixin.icon-left .vdm-teaser-body-mixin.ic-circle-progress-bc:before {
+    content: "";
+    font-weight: normal;
+    font-style: normal;
+    font-family: "vdm-fonticon";
+    text-decoration: none;
+    display: inline-block;
+    text-rendering: auto;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale; }
+  .vdm-teasers-mixin .vdm-teaser-mixin.icon-left .vdm-teaser-body-mixin.ic-circle-progress-checked:before {
+    content: "";
+    font-weight: normal;
+    font-style: normal;
+    font-family: "vdm-fonticon";
+    text-decoration: none;
+    display: inline-block;
+    text-rendering: auto;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale; }
+  .vdm-teasers-mixin .vdm-teaser-mixin.icon-left .vdm-teaser-body-mixin.ic-circle-progress-folder:before {
+    content: "";
+    font-weight: normal;
+    font-style: normal;
+    font-family: "vdm-fonticon";
+    text-decoration: none;
+    display: inline-block;
+    text-rendering: auto;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale; }
+  .vdm-teasers-mixin .vdm-teaser-mixin.icon-left .vdm-teaser-body-mixin.ic-chevron-up:before {
+    content: "";
+    font-weight: normal;
+    font-style: normal;
+    font-family: "vdm-fonticon";
+    text-decoration: none;
+    display: inline-block;
+    text-rendering: auto;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale; }
+  .vdm-teasers-mixin .vdm-teaser-mixin.icon-left .vdm-teaser-body-mixin.ic-chevron-right:before {
+    content: "";
+    font-weight: normal;
+    font-style: normal;
+    font-family: "vdm-fonticon";
+    text-decoration: none;
+    display: inline-block;
+    text-rendering: auto;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale; }
+  .vdm-teasers-mixin .vdm-teaser-mixin.icon-left .vdm-teaser-body-mixin.ic-chevron-down:before {
+    content: "";
+    font-weight: normal;
+    font-style: normal;
+    font-family: "vdm-fonticon";
+    text-decoration: none;
+    display: inline-block;
+    text-rendering: auto;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale; }
+  .vdm-teasers-mixin .vdm-teaser-mixin.icon-left .vdm-teaser-body-mixin.ic-chevron-left:before {
+    content: "";
+    font-weight: normal;
+    font-style: normal;
+    font-family: "vdm-fonticon";
+    text-decoration: none;
+    display: inline-block;
+    text-rendering: auto;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale; }
+  .vdm-teasers-mixin .vdm-teaser-mixin.icon-left .vdm-teaser-body-mixin.ic-circle-checked:before {
+    content: "";
+    font-weight: normal;
+    font-style: normal;
+    font-family: "vdm-fonticon";
+    text-decoration: none;
+    display: inline-block;
+    text-rendering: auto;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale; }
+  .vdm-teasers-mixin .vdm-teaser-mixin.icon-left .vdm-teaser-body-mixin.ic-menu:before {
+    content: "";
+    font-weight: normal;
+    font-style: normal;
+    font-family: "vdm-fonticon";
+    text-decoration: none;
+    display: inline-block;
+    text-rendering: auto;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale; }
+  .vdm-teasers-mixin .vdm-teaser-mixin.icon-left .vdm-teaser-body-mixin.ic-location:before {
+    content: "";
+    font-weight: normal;
+    font-style: normal;
+    font-family: "vdm-fonticon";
+    text-decoration: none;
+    display: inline-block;
+    text-rendering: auto;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale; }
+  .vdm-teasers-mixin .vdm-teaser-mixin.icon-left .vdm-teaser-body-mixin.ic-arrow-up:before {
+    content: "";
+    font-weight: normal;
+    font-style: normal;
+    font-family: "vdm-fonticon";
+    text-decoration: none;
+    display: inline-block;
+    text-rendering: auto;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale; }
+  .vdm-teasers-mixin .vdm-teaser-mixin.icon-left .vdm-teaser-body-mixin.ic-arrow-right:before {
+    content: "";
+    font-weight: normal;
+    font-style: normal;
+    font-family: "vdm-fonticon";
+    text-decoration: none;
+    display: inline-block;
+    text-rendering: auto;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale; }
+  .vdm-teasers-mixin .vdm-teaser-mixin.icon-left .vdm-teaser-body-mixin.ic-arrow-down:before {
+    content: "";
+    font-weight: normal;
+    font-style: normal;
+    font-family: "vdm-fonticon";
+    text-decoration: none;
+    display: inline-block;
+    text-rendering: auto;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale; }
+  .vdm-teasers-mixin .vdm-teaser-mixin.icon-left .vdm-teaser-body-mixin.ic-arrow-left:before {
+    content: "";
+    font-weight: normal;
+    font-style: normal;
+    font-family: "vdm-fonticon";
+    text-decoration: none;
+    display: inline-block;
+    text-rendering: auto;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale; }
+  .vdm-teasers-mixin .vdm-teaser-mixin.icon-left .vdm-teaser-body-mixin.ic-plus:before {
+    content: "";
+    font-weight: normal;
+    font-style: normal;
+    font-family: "vdm-fonticon";
+    text-decoration: none;
+    display: inline-block;
+    text-rendering: auto;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale; }
+  .vdm-teasers-mixin .vdm-teaser-mixin.icon-left .vdm-teaser-body-mixin.ic-minus:before {
+    content: "";
+    font-weight: normal;
+    font-style: normal;
+    font-family: "vdm-fonticon";
+    text-decoration: none;
+    display: inline-block;
+    text-rendering: auto;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale; }
+  .vdm-teasers-mixin .vdm-teaser-mixin.icon-left .vdm-teaser-body-mixin.ic-multiply:before {
+    content: "";
+    font-weight: normal;
+    font-style: normal;
+    font-family: "vdm-fonticon";
+    text-decoration: none;
+    display: inline-block;
+    text-rendering: auto;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale; }
+  .vdm-teasers-mixin .vdm-teaser-mixin.icon-left .vdm-teaser-body-mixin.ic-circle-plus:before {
+    content: "";
+    font-weight: normal;
+    font-style: normal;
+    font-family: "vdm-fonticon";
+    text-decoration: none;
+    display: inline-block;
+    text-rendering: auto;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale; }
+  .vdm-teasers-mixin .vdm-teaser-mixin.icon-left .vdm-teaser-body-mixin.ic-circle-minus:before {
+    content: "";
+    font-weight: normal;
+    font-style: normal;
+    font-family: "vdm-fonticon";
+    text-decoration: none;
+    display: inline-block;
+    text-rendering: auto;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale; }
+  .vdm-teasers-mixin .vdm-teaser-mixin.icon-left .vdm-teaser-body-mixin.ic-circle-multiply:before {
+    content: "";
+    font-weight: normal;
+    font-style: normal;
+    font-family: "vdm-fonticon";
+    text-decoration: none;
+    display: inline-block;
+    text-rendering: auto;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale; }
+  .vdm-teasers-mixin .vdm-teaser-mixin.icon-left .vdm-teaser-body-mixin.ic-circle-plus-invert:before {
+    content: "";
+    font-weight: normal;
+    font-style: normal;
+    font-family: "vdm-fonticon";
+    text-decoration: none;
+    display: inline-block;
+    text-rendering: auto;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale; }
+  .vdm-teasers-mixin .vdm-teaser-mixin.icon-left .vdm-teaser-body-mixin.ic-circle-minus-invert:before {
+    content: "";
+    font-weight: normal;
+    font-style: normal;
+    font-family: "vdm-fonticon";
+    text-decoration: none;
+    display: inline-block;
+    text-rendering: auto;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale; }
+  .vdm-teasers-mixin .vdm-teaser-mixin.icon-left .vdm-teaser-body-mixin.ic-circle-multiply-invert:before {
+    content: "";
+    font-weight: normal;
+    font-style: normal;
+    font-family: "vdm-fonticon";
+    text-decoration: none;
+    display: inline-block;
+    text-rendering: auto;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale; }
+  .vdm-teasers-mixin .vdm-teaser-mixin.icon-left .vdm-teaser-body-mixin.ic-checkbox-checked:before {
+    content: "";
+    font-weight: normal;
+    font-style: normal;
+    font-family: "vdm-fonticon";
+    text-decoration: none;
+    display: inline-block;
+    text-rendering: auto;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale; }
+  .vdm-teasers-mixin .vdm-teaser-mixin.icon-left .vdm-teaser-body-mixin.ic-checkbox-empty:before {
+    content: "";
+    font-weight: normal;
+    font-style: normal;
+    font-family: "vdm-fonticon";
+    text-decoration: none;
+    display: inline-block;
+    text-rendering: auto;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale; }
+  .vdm-teasers-mixin .vdm-teaser-mixin.icon-left .vdm-teaser-body-mixin.ic-checkbox-checked-trans:before {
+    content: "";
+    font-weight: normal;
+    font-style: normal;
+    font-family: "vdm-fonticon";
+    text-decoration: none;
+    display: inline-block;
+    text-rendering: auto;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale; }
+  .vdm-teasers-mixin .vdm-teaser-mixin.icon-left .vdm-teaser-body-mixin.ic-checkbox-checked-invert:before {
+    content: "";
+    font-weight: normal;
+    font-style: normal;
+    font-family: "vdm-fonticon";
+    text-decoration: none;
+    display: inline-block;
+    text-rendering: auto;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale; }
+  .vdm-teasers-mixin .vdm-teaser-mixin.icon-left .vdm-teaser-body-mixin.ic-trash:before {
+    content: "";
+    font-weight: normal;
+    font-style: normal;
+    font-family: "vdm-fonticon";
+    text-decoration: none;
+    display: inline-block;
+    text-rendering: auto;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale; }
+  .vdm-teasers-mixin .vdm-teaser-mixin.icon-left .vdm-teaser-body-mixin.ic-recycle:before {
+    content: "";
+    font-weight: normal;
+    font-style: normal;
+    font-family: "vdm-fonticon";
+    text-decoration: none;
+    display: inline-block;
+    text-rendering: auto;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale; }
+  .vdm-teasers-mixin .vdm-teaser-mixin.icon-left .vdm-teaser-body-mixin.ic-compost:before {
+    content: "";
+    font-weight: normal;
+    font-style: normal;
+    font-family: "vdm-fonticon";
+    text-decoration: none;
+    display: inline-block;
+    text-rendering: auto;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale; }
+  .vdm-teasers-mixin .vdm-teaser-mixin.icon-left .vdm-teaser-body-mixin.ic-greens:before {
+    content: "";
+    font-weight: normal;
+    font-style: normal;
+    font-family: "vdm-fonticon";
+    text-decoration: none;
+    display: inline-block;
+    text-rendering: auto;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale; }
+  .vdm-teasers-mixin .vdm-teaser-mixin.icon-left .vdm-teaser-body-mixin.ic-permit-pet:before {
+    content: "";
+    font-weight: normal;
+    font-style: normal;
+    font-family: "vdm-fonticon";
+    text-decoration: none;
+    display: inline-block;
+    text-rendering: auto;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale; }
+  .vdm-teasers-mixin .vdm-teaser-mixin.icon-left .vdm-teaser-body-mixin:before, .vdm-teasers-mixin .vdm-teaser-mixin.icon-left .vdm-teaser-body-mixin:after {
+    position: absolute; }
+  .vdm-teasers-mixin .vdm-teaser-mixin.icon-left .vdm-teaser-body-mixin:before {
+    left: 3rem;
+    top: calc(50% - 1.7rem); }
 
 .vdm-teaser {
   /*
@@ -7143,7 +8901,7 @@ select {
     https://projects.invisionapp.com/d/main#/console/11533069/245247105/preview
     https://projects.invisionapp.com/d/main#/console/11533069/245692118/preview
 
-    Image heights : 190, 252 & 252 pixels
+    Image heights : 432, 487 & 768 pixels, all widths are 768px.
 
     */ }
   .vdm-teaser .vdm-teaser-body {
@@ -8156,6 +9914,11 @@ select {
       display: block;
       font-size: 21px;
       line-height: 27.9993px; }
+  @media (max-width: 767px) {
+    .vdm-teaser.arrow-block.inline-flex.category-block .vdm-teaser-body .content-wrapper {
+      width: 100%;
+      margin-right: 0;
+      margin-bottom: 1em; } }
   .vdm-teaser.arrow-block.icon-left .vdm-teaser-body {
     padding-left: 7rem; }
     .vdm-teaser.arrow-block.icon-left .vdm-teaser-body:before {
@@ -8228,6 +9991,24 @@ select {
     max-height: 16rem; }
   .vdm-teaser.image-left.larger .vdm-teaser-body > img, .vdm-teaser.image-right.larger .vdm-teaser-body > img {
     max-height: 22rem; }
+  .vdm-teaser.image-left.larger .vdm-teaser-body .title, .vdm-teaser.image-right.larger .vdm-teaser-body .title {
+    font-family: "Nunito Sans", Helvetica, Arial, sans-serif;
+    font-size: 67px;
+    line-height: 118.125px;
+    font-weight: 400;
+    display: block;
+    font-size: 28px;
+    line-height: 37.9995px;
+    font-weight: 400;
+    font-weight: 700; }
+  .vdm-teaser.image-left.larger .vdm-teaser-body .content, .vdm-teaser.image-right.larger .vdm-teaser-body .content {
+    font-family: "Nunito Sans", Helvetica, Arial, sans-serif;
+    font-size: 67px;
+    line-height: 118.125px;
+    font-weight: 400;
+    display: block;
+    font-size: 21px;
+    line-height: 27.9993px; }
   .vdm-teaser.image-left.small .content-wrapper, .vdm-teaser.image-right.small .content-wrapper {
     padding: 1.5rem 1.5rem 1.8rem 1.5rem; }
   .vdm-teaser.image-left .content-wrapper, .vdm-teaser.image-right .content-wrapper {

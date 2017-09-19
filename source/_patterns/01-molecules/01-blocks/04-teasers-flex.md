@@ -6,39 +6,69 @@ Flexbox implementation for all teasers.
 
 * A teaser can be defined as a repeatable hyperlinked responsive block with a lateral layout, collapsing to a vertical layout on smaller screens.
 * The teaser will contain a title, a content and a footer default area. The footer will always stick to the bottom.
-* It will contain an extra inner container when featuring an image. 
+* It will contain an extra inner container when featuring an image and dual icons with floating identifiers. 
+* The teaser bock with an inner container uses a dual axis flex, sometimes flipped for responsive layouts.
 * The image will alway collapse to the top of the block;
-* The teaser may contain an arrow-link on any element.
-
-Teaser
-    Teaser body
-        Icon or image
-        Title
-        Content
-        Footer
-
-Icon [Optional] [First and/or last] [Implemented with ::before, ::after]
-Image [Optional] [Left, top or right] [Responsive sizing and position change]
-Title [Required] [Inside card body] [Heading tag or any]
-Content [Optional][any tag][May have multiple children]
-Footer [Optional][any tag]
+* The teaser may contain an .arrow-link on any element.
 
 - - - - - - - - - - - - - - - - - - - - - - - - 
+## Markup structure
 
-Classes
+The most complex form fo the markup structure is expressed below. Items with a star are required. Inner .content-wrapper used only for most complex cases. 
+
+.teasers *
+    .teaser * 
+        a.teaser-body *
+            :before, :after = icons
+            image
+            .content-wrapper [optional]
+                .xyz-extra-element
+                .title *
+                .content
+                .footer
+            .identifier
+
+
+- - - - - - - - - - - - - - - - - - - - - - - - 
+## Classes
 
 vdm-teasers +   
     vdm-teaser-type
     color-scheme
     alignement
+    special-case-xyz
+        extra fixture : date, identifier, category
+
+
+- - - - - - - - - - - - - - - - - - - - - - - - 
+## Issues
+
+* Difficult scaling with the images model at various breakpoints when the text gets long.
+* Management of the line height & bottom margin is touchy and critical for titles.
+* Footer needs to be sticky at all times, or :last-child on any last element?
+
+- - - - - - - - - - - - - - - - - - - - - - - - 
+## Tests, questions and todo's
+
+* What is the least amount of usage we can make of the inner wrapper?
+* All blocks have to be able to withstand large or very small amounts of text in their various elements
+* Markup has to be made optimal and accessible, using the proper tags, aria attributesand the like
+* Mesurement have to be made exact, scale is currently totally approximative.
+* Vertical spacing has to be reviewd throughout, with a special attention to responsive layout.
+* Mixins, variables (units, settings) , generic classes that may be used elsewhere need to be packaged and extracted.
+* Make recommandations for maximum character lenghts for soem elements.
+
+
+More to implement?
+
+* 311 call blocks https://projects.invisionapp.com/d/main#/console/11533069/245897449/preview
+* Right column cameo https://projects.invisionapp.com/d/main#/console/11533069/248714900/preview
+
 
 - - - - - - - - - - - - - - - - 
+## References
 
 @see references used : 
-
-- - - - - - - - - - - - - - - - - -
-Teasers
-- - - - - - - - -
 
 Side-by-side teaser block, big link : 
 https://projects.invisionapp.com/d/main#/console/11533069/246771810/preview
@@ -75,9 +105,9 @@ https://projects.invisionapp.com/d/main#/console/11533069/247024121/preview
 
 
 - - - - - - - - - - - - - - - - 
-- 
-Helpful documentation
+## Helpful documentation
 
-@see https://codepen.io/team/css-tricks/pen/EKEYob
-@see https://css-tricks.com/snippets/css/a-guide-to-flexbox/
-@see https://demo.agektmr.com/flexbox/
+* @see https://codepen.io/team/css-tricks/pen/EKEYob
+* @see https://css-tricks.com/snippets/css/a-guide-to-flexbox/
+* @see https://demo.agektmr.com/flexbox/
+* @see https://philipwalton.github.io/solved-by-flexbox/demos/vertical-centering/

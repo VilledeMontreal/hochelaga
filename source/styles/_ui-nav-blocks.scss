@@ -23,18 +23,106 @@
 
 // Grid wrapper styles only for teasers
 // More wrapper rules, may or may not belong to the base object styles
-.vdm-teasers {
+.vdm-teasers, .vdm-teasers-mixin {
     list-style-type: none;
     padding-left: 0;
     @include make-row();
     margin-top: 0;
     margin-bottom: 0;
-    .vdm-teaser {
+    .vdm-teaser, .vdm-teaser-mixin {
         @include make-col-ready();
         margin-bottom: $grid-gutter-width;
         @include make-col(12);
     }
 }
+
+// Mixin application tests
+// Call he mixin functions and see what happens
+.vdm-teasers-mixin {
+    .vdm-teaser-mixin {
+        .vdm-teaser-body-mixin {
+            @include teaser-base();
+
+            .title {
+
+            }
+            .content {
+
+            }
+            .footer {
+
+            }
+            .content-wrapper {
+
+            }
+        }
+
+        // Color modifiers
+        &.light-scheme {
+            .vdm-teaser-body-mixin {
+                @include teaser-light-scheme();
+            } 
+        }
+
+        &.white-scheme {
+            .vdm-teaser-body-mixin {
+                @include teaser-white-scheme();
+            } 
+        }
+
+        // Case 1, icons
+        &.icon-right {
+            .vdm-teaser-body-mixin {
+                @include teaser-padding(right);
+            }
+        }
+        &.icon-left {
+            .vdm-teaser-body-mixin {
+                @include teaser-padding(left);
+            } 
+        }
+
+        // Case 2, images
+
+        // Case 3, arrow blocks
+    }
+}
+
+// And here are some variables we may or may nor define...
+
+// Fonts...
+$vdm-teaser-icon-font-size: "";
+$vdm-teaser-icon-lateral-pull-left: "";
+$vdm-teaser-icon-lateral-pull-right: "";
+$vdm-teaser-icon-vertical-pull-top: "";
+$vdm-teaser-icon-vertical-pull-bottom: "";
+
+// Paddings
+$vdm-teaser-ptop: "";
+$vdm-teaser-pright: "";
+$vdm-teaser-pbottom: "";
+$vdm-teaser-pleft: "";
+
+// Vertical, responsive layout, repeat
+$vdm-teaser-stacked-ptop: "";
+$vdm-teaser-stacked-pright: "";
+$vdm-teaser-stacked-pbottom: "";
+$vdm-teaser-stacked-pleft: "";
+
+// Inner wrapper
+$vdm-teaser-inner-ptop: "";
+$vdm-teaser-inner-pright: "";
+$vdm-teaser-inner-pbottom: "";
+$vdm-teaser-inner-pleft: "";
+
+$vdm-teaser-arrow-block-padding: "";
+$vdm-teaser-icon-padding: "";
+
+// End paddings
+
+
+$vdm-teaser-title-margin-bottom : "";
+$vdm-teaser- : "";
 
 
 // Base teaser styles
@@ -299,6 +387,17 @@
                         @include header(5);
                     }
                 }
+
+                @include media-breakpoint-down(sm) {
+                    .vdm-teaser-body {
+                        .content-wrapper {
+                            width: 100%;
+                            margin-right: 0;
+                            margin-bottom:1em;
+                        }
+                    }
+                    
+                }
             }
 
 
@@ -425,7 +524,7 @@
     https://projects.invisionapp.com/d/main#/console/11533069/245247105/preview
     https://projects.invisionapp.com/d/main#/console/11533069/245692118/preview
 
-    Image heights : 190, 252 & 252 pixels
+    Image heights : 432, 487 & 768 pixels, all widths are 768px.
 
     */
 
@@ -453,6 +552,12 @@
             .vdm-teaser-body {
                 >img {
                     max-height: 22rem;
+                }
+                .title {
+                    @include header(4, bold)
+                }
+                .content {
+                    @include header(5)
                 }
             }
         }
@@ -536,12 +641,6 @@
 //////////////////////////////////////////////////////
 // End Teaser rules
 /////////////////////////////////////////////////////
-
-
-
-
-
-
 
 
 // Cards are set up to be displayed in a grid with equal heights

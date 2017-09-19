@@ -115,6 +115,200 @@
 
 
 
+/**
+ * - - - - - - - - - -
+ * == Collector blocks : teasers and cards
+ * - - - - - - - - - -
+ */
+
+ // Set all base teaser properties
+ // To be applied to top-level hyperlink
+@mixin teaser-base() {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  cursor: pointer;
+  line-height: $vdm-line-height-base;
+
+  @include teaser-icons();
+  @include teaser-scheme();
+  @include teaser-padding();
+
+
+  // Base fixture behaviours
+  >img {
+    @extend .img-fluid;
+  }
+
+  title { 
+      @include header(4);
+      margin-bottom: 1em; 
+      &.arrow-link {
+          line-height: 1.7em;
+      }
+      &:last-child {
+          margin-bottom: 0;
+      }
+  }
+  .content {
+      margin-bottom: 1.3em;
+      flex: 1;
+      &:last-child {
+          margin-bottom: 0;
+      }
+  }
+  .footer {
+      margin-bottom: 0;  
+      margin-top: auto;
+  }
+
+}
+
+
+// Set all common properties for icons, for the :after & :before pseudo-elements
+ // To be applied to top-level hyperlink
+@mixin teaser-icons() {
+  &:after, &:before {
+    font-size: 3.6rem;
+    width: 3.6rem;
+    height: 3.6rem;
+    line-height: 3.6rem;
+    text-decoration: none;
+    color: $vdm-brand;
+  }
+}
+
+// Sets icon position
+// To be involed from the teaser-padding : after & before mixin
+// $where [none, left, right, top]
+// $case [none, arrow-block]
+@mixin teaser-icon-position($where: none, $case: none) {
+  
+  // Provide icon classes, invoke icon mixin, using :before or :after
+  @each $name, $char in $icons {
+      &.ic-#{$name} {
+        @if $where == left {
+          @include icon(before, $name);
+        }
+        @if $where == right {
+          @include icon(after, $name);
+        }
+          
+      }
+  }
+
+  &:before, &:after {
+    position: absolute;
+    
+    @if $where == top {
+
+    }
+  }
+
+  @if $where == left {
+    &:before {
+      left: 3rem;
+      top: calc(50% - 1.7rem);
+    }
+  }
+  @if $where == right {
+    &:after {
+      top: calc(50% - 1.7rem);
+      left: calc(100% - 7rem);
+    }
+  }
+
+  @if $case == arrow-block {
+    &:after {
+      left: calc(100% - 4.5rem);
+    }
+  }
+
+}
+
+// $icon [none,right,left]
+// $image [none,right,left]
+// $case [none, compact,  identifier, green-title, etc]
+// Include the beakpoint declarations into this system
+ // To be applied to top-level hyperlink 
+ // Another solution will have to be applied for the inner warpper, maybe?
+ @mixin teaser-padding($icon: none, $image: none, $case: none) {
+  
+  padding: 2.3rem 2.3rem 2.3rem 2.3rem;
+  
+  @if $icon == left {
+
+    padding-left: 7rem;
+    @include teaser-icon-position(left);
+
+  } @else if $icon == right {
+
+    padding-right: 7rem;
+    @include teaser-icon-position(right);
+
+  }
+
+  @if($case = compact) {
+
+  }
+
+}
+
+
+ // Color schemes, to be applied to top-level hyperlink
+@mixin teaser-scheme() {
+  @debug "In teaser-scheme()";
+  background: $vdm-grey-light;
+  border: none;
+  text-decoration: none;
+  color: $vdm-text;
+
+  &:hover, &:active {
+    background: $vdm-brand;
+    color: $vdm-white;
+    > * {
+      color: $vdm-white;
+    }
+
+    &:before, &:after {
+      color: $vdm-white;
+    }
+  }
+}
+
+@mixin teaser-light-scheme() {
+  background: $vdm-white;
+  border: 1px solid $vdm-brand;
+  @include teaser-scheme-hover();
+}
+
+@mixin teaser-white-scheme() {
+  background: $vdm-white;
+  border: none;
+  @include teaser-scheme-hover();
+}
+
+@mixin teaser-scheme-hover() {
+  &:hover, &:active {
+    background: $vdm-brand;
+    color: $vdm-white;
+    > * {
+      color: $vdm-white;
+    }
+
+    &:before, &:after {
+      color: $vdm-white;
+    }
+  }
+} 
+
+
+// See footers with multiple tags for application, work on children
+@mixin teaser-inline-items() {
+
+}
+
+
 
 /**
  * - - - - - - - - - -
