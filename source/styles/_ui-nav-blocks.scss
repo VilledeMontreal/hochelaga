@@ -55,6 +55,7 @@
             .content-wrapper {
 
             }
+
         }
 
         // Color modifiers
@@ -73,16 +74,85 @@
         // Case 1, icons
         &.icon-right {
             .vdm-teaser-body-mixin {
-                @include teaser-padding(right);
+                @include teaser-variant(right);
             }
         }
         &.icon-left {
             .vdm-teaser-body-mixin {
-                @include teaser-padding(left);
+                @include teaser-variant(left);
             } 
         }
 
+        &.arrow-block {
+            .vdm-teaser-body-mixin {
+                @include teaser-variant(false, false, arrow-block);
+                // @include teaser-scheme-hover(false, arrow-block);
+            }
+            &.light-scheme {
+                .vdm-teaser-body-mixin {
+                    // @include teaser-scheme-hover(false, false); 
+                }
+            }
+            &.icon-left {
+                .vdm-teaser-body-mixin {
+                    @include teaser-variant(left, false, arrow-block);
+                } 
+            }
+        }
+
         // Case 2, images
+
+        &.image-right, 
+        &.image-left {
+            
+            .vdm-teaser-body-mixin {
+                @include teaser-variant(false, left);
+            }
+
+            &.small {
+                .vdm-teaser-body-mixin {
+                    @include teaser-variant(false, left, false, small);
+                }
+            }
+            &.large {
+                .vdm-teaser-body-mixin {
+                    @include teaser-variant(false, left, false, large);
+                }
+            }
+            &.larger {
+                .vdm-teaser-body-mixin {
+                    @include teaser-variant(false, left, false, larger);
+                }
+            }
+
+
+            // .content-wrapper {
+            //     padding: 1em;
+            //     display: flex;
+            //     flex-direction: column;
+            //     flex: 1;
+            //     padding: 2.3rem 2.3rem 3rem 2.3rem;
+                
+            //     .title {
+            //         @include header(5); 
+            //         &.arrow-link {
+            //             line-height: 1.7em;
+            //         }
+            //     }
+            // }
+
+        }
+
+        // Images, left and right overides
+        &.image-left {
+            // No need to call it, it is the default case
+        }
+    
+        &.image-right {
+            .vdm-teaser-body-mixin {
+                @include teaser-variant(false, right);
+            }
+        }
 
         // Case 3, arrow blocks
     }

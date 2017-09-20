@@ -124,15 +124,17 @@
  // Set all base teaser properties
  // To be applied to top-level hyperlink
 @mixin teaser-base() {
+  
   position: relative;
   display: flex;
   flex-direction: column;
   cursor: pointer;
   line-height: $vdm-line-height-base;
 
+
   @include teaser-icons();
   @include teaser-scheme();
-  @include teaser-padding();
+  @include teaser-variant();
 
 
   // Base fixture behaviours
@@ -140,7 +142,7 @@
     @extend .img-fluid;
   }
 
-  title { 
+  .title { 
       @include header(4);
       margin-bottom: 1em; 
       &.arrow-link {
@@ -179,7 +181,7 @@
 }
 
 // Sets icon position
-// To be involed from the teaser-padding : after & before mixin
+// To be involed from the teaser-variant : after & before mixin
 // $where [none, left, right, top]
 // $case [none, arrow-block]
 @mixin teaser-icon-position($where: none, $case: none) {
@@ -193,7 +195,9 @@
         @if $where == right {
           @include icon(after, $name);
         }
-          
+        @if $case == arrow-block {
+          @include icon(after, arrow-right);
+        }
       }
   }
 
@@ -219,6 +223,11 @@
   }
 
   @if $case == arrow-block {
+    @if $where == left {
+      &:before  {
+        left: 2rem;
+      }
+    }
     &:after {
       left: calc(100% - 4.5rem);
     }
@@ -226,38 +235,177 @@
 
 }
 
-// $icon [none,right,left]
-// $image [none,right,left]
-// $case [none, compact,  identifier, green-title, etc]
-// Include the beakpoint declarations into this system
- // To be applied to top-level hyperlink 
- // Another solution will have to be applied for the inner warpper, maybe?
- @mixin teaser-padding($icon: none, $image: none, $case: none) {
+
+
+ /**
+  * Master function for styling this block type
+  *
+  * @arg $icon [false ,right, left]
+  * @arg $image [false ,right, left]
+  * @arg $case [false, arrow-block, content-wrapper, compact,  identifier, green-title, etc]
+  * @arg $scale [false, small, large, larger] -- images for now
+  *
+  * Always called from the hyperlink level -- all styles are returned inside .vdm-teaser-body-mixin {}
+  * The left side for icons and images is the default case, it is implicit on styling
+  *
+  *
+  **/
+
+ @mixin teaser-variant($icon: false, $image: false, $case: false, $scale: false) {
   
   padding: 2.3rem 2.3rem 2.3rem 2.3rem;
   
-  @if $icon == left {
+  // ICONS  
+  // The block has one or many icons
+  @if $icon  {
+    .title {
+      @include header(4, bold);
+      margin-bottom: 1em; 
+    }
 
-    padding-left: 7rem;
-    @include teaser-icon-position(left);
-
-  } @else if $icon == right {
-
-    padding-right: 7rem;
-    @include teaser-icon-position(right);
-
+    @if ($icon == left) {
+      
+      padding-left: 7rem;
+      @include teaser-icon-position(left);
+  
+    } @else if ($icon == right) {
+      padding-right: 7rem;
+      @include teaser-icon-position(right);
+    }
   }
 
-  @if($case = compact) {
+  // ARROW BLOCK
+  // The block has a specific icon on the right, the arrow
+  @if $case  {
+    @if($case == arrow-block) {
 
+      padding-right: 5rem;
+      @include icon(after, arrow-right);
+      @include teaser-icon-position(right, arrow-block);
+      @include teaser-scheme-hover(arrow-block);
+
+      .title {
+        @include header(5);
+        margin-bottom: 0.5em; 
+      }
+    }
   }
 
-}
+  // The block has a left icon and is an arrow block
+  @if($icon == left and $case == arrow-block) {
+    @include teaser-icon-position(left, arrow-block);
+    padding-right: 5rem;
+  }
+
+  // IMAGES
+  // Begin images
+  @if $image  {
+
+    flex-direction: row;
+    padding: 0 !important; // Paramount to the workings of the system, a small hack
+    >img {
+        max-height: 10rem;
+        margin: 0;
+    }
+
+    .content-wrapper {
+        padding: 1em;
+        display: flex;
+        flex-direction: column;
+        flex: 1;
+        padding: 2.3rem 2.3rem 3rem 2.3rem;
+        
+        .title {
+            @include header(5); 
+            &.arrow-link {
+                line-height: 1.7em;
+            }
+        }
+    }
+
+    // Scale modifiers
+    @if $scale  {
+      @if($scale == small) {
+        >img {
+          max-height: 10rem;
+        }
+        .content-wrapper {
+          padding:1.5rem 1.5rem 1.8rem 1.5rem;
+        }
+      }
+
+      @if($scale == large) {
+        >img {
+          max-height: 16rem;
+        } 
+      }
+
+      @if($scale == larger) {
+        >img {
+            max-height: 22rem;
+        }
+        .title {
+            @include header(4, bold)
+        }
+        .content {
+            @include header(5)
+        }
+      } 
+
+      @if $scale == large or $scale == larger {
+        // Careful, the 768 px image is being scaled-up!
+        @include media-breakpoint-down(md) {
+          flex-direction: column;
+          >img {
+              order:0;
+              width: 100%;
+              max-height: none;
+          }
+        }
+      }
+
+
+    }// Scale
+
+    // Left and right overrides
+    @if($image == left) {
+      // No fuss, is the default case
+    }
+
+    @if($image == right) {
+      >img {
+        order: 1; // Change source order
+      }
+
+      @include media-breakpoint-down(xs) {
+        flex-direction: column;
+        >img {
+            order:0;
+            width: 100%;
+            max-height: none;
+        }
+      }
+    } // Left & right
+
+    // Grid styles
+    
+    @include media-breakpoint-down(xs) {
+        flex-direction: column;
+        >img {
+            order:0;
+            width: 100%;
+            max-height: none;
+        } 
+    }
+
+
+  } // Images
+} // Mixin
 
 
  // Color schemes, to be applied to top-level hyperlink
 @mixin teaser-scheme() {
-  @debug "In teaser-scheme()";
+  
   background: $vdm-grey-light;
   border: none;
   text-decoration: none;
@@ -279,16 +427,20 @@
 @mixin teaser-light-scheme() {
   background: $vdm-white;
   border: 1px solid $vdm-brand;
-  @include teaser-scheme-hover();
+  @include teaser-scheme-hover(light, false);
 }
 
 @mixin teaser-white-scheme() {
   background: $vdm-white;
   border: none;
-  @include teaser-scheme-hover();
+  @include teaser-scheme-hover(white, false);
 }
 
-@mixin teaser-scheme-hover() {
+// @arg $scheme [false, light, white]
+// @arg $mode [false, arrow-block]
+@mixin teaser-scheme-hover($scheme:false, $mode: false) {
+
+  // Default hover case
   &:hover, &:active {
     background: $vdm-brand;
     color: $vdm-white;
@@ -300,6 +452,79 @@
       color: $vdm-white;
     }
   }
+
+
+  // Scheme overrides, light and white 
+  @if $scheme  {
+    // Light
+    @if($scheme = light) {
+      border: 1px solid pink;
+      // &:hover, &:active {
+      //   background: $vdm-brand;
+      //   color: $vdm-white;
+      //   > * {
+      //     color: $vdm-white;
+      //   }
+    
+      //   &:before, &:after {
+      //     color: $vdm-white;
+      //   }
+      // }
+    } 
+    // White
+    @if($scheme = white) {
+      border: 1px solid lime;
+      // &:hover, &:active {
+      //   background: $vdm-white;
+      //   color: $vdm-black;
+      //   > * {
+      //     color: $vdm-black;
+      //   }
+    
+      //   &:before, &:after {
+      //     color: $vdm-black;
+      //   }
+      // }
+    } 
+  }
+
+  // Arrow-block, hover effect on icons only
+  @if $mode  {
+    @if($mode = arrow-block) {
+      border: 1px solid orange;
+
+      // &:hover, &:active {
+      //   color: $vdm-black;
+      //   > * {
+      //     color: $vdm-black;
+      //   }
+    
+      //   &:before, &:after {
+      //     color: $vdm-black;
+      //   }
+      // }
+    } 
+  }
+
+
+  // Arrow-block, hover effect on icons only
+  // @if $mode  {
+  //   @if($mode = arrow-block) {
+  //     @debug "arrow-block in hover effects";
+  //     &:hover, &:active {
+  //       background: $vdm-white;
+  //       color: $vdm-black;
+  //       > * {
+  //         color: $vdm-black;
+  //       }
+    
+  //       &:before, &:after {
+  //         color: $vdm-black;
+  //       }
+  //     }
+  //   } 
+  // }
+
 } 
 
 

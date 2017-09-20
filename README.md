@@ -2,16 +2,22 @@
 
 ## What this is
 
-A basic installation of the nodejs mustache Patternlab project. The [starterkit-mustache-bootstrap](https://github.com/pattern-lab/starterkit-mustache-bootstrap) starterkit was loaded into the initial installation and populated the /source folder.
+A basic installation of the nodejs mustache Patternlab project. 
 
 ## Installation
 
 Clone this repo into a local folder and follow instructions @[https://github.com/pattern-lab/edition-node-gulp](https://github.com/pattern-lab/edition-node-gulp).
 
-All development happens on the `dev` branch for now.
+Updating the node version you will us to v4 is essential. See https://github.com/pattern-lab/edition-node-gulp/wiki/Updating-to-Gulp-4.
+
+
+
+The `dev` branch is the initial project using bootstrap 3. Developement continues with bootstrap 4 on the bs4 branche, whios is now the main developement branch.
 
 Essentially, cd into the directory and issue the following commands : 
+
 ```
+npm i
 gulp patternlab:build
 gulp patternlab:serve
 ```
@@ -22,22 +28,8 @@ And get to work.
 
 Remember that loading a new startkit wipes the /source directory. As it is our main playground, it is advisable to do this in a separate Patternlab instance.
 
-## Current objectives
-
-* Get along on a common language convention for files, variables, classnames, comments, annotations;
-* Get along on the usage of Bootstrap, why, when, which parts;
 
 
-## Work in progress
-
-* Color swatches
-* Font families, variables, weight, default sizing
-
-
-## Done, needs review
-
-* Fonticon family demo, atoms & grid directory.
-* Effective sass pipeline for the main stylesheet & the patternlab stylesheet w/bootstrap inheritance.
 
 ----
 
