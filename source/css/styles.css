@@ -411,7 +411,7 @@ mark,
   .blockquote-footer::before {
     content: "\2014 \00A0"; }
 
-.img-fluid, .vdm-avatar > img, .vdm-teasers-mixin .vdm-teaser-mixin .vdm-teaser-body-mixin > img, .vdm-teaser .vdm-teaser-body .vdm-teaser-mediaimg, .vdm-card .vdm-card-body .vdm-card-mediaimg, .vdm-card-media, .vdm-card.vdm-card-image.media-top .vdm-card-body img {
+.img-fluid, .vdm-avatar > img, .vdm-teasers-mixin .vdm-teaser-mixin .vdm-teaser-body-mixin > img, .vdm-teaser .vdm-teaser-body .vdm-teaser-mediaimg, .vdm-card .vdm-card-body > img, .vdm-card.vdm-card-image .vdm-card-body img {
   max-width: 100%;
   height: auto; }
 
@@ -5845,7 +5845,7 @@ a.text-dark:focus, a.text-dark:hover {
   *
   * @arg $icon [false ,right, left]
   * @arg $image [false ,right, left]
-  * @arg $case [false, arrow-block, content-wrapper, compact,  identifier, green-title, etc]
+  * @arg $case [false, arrow-block, compact, inline-flex, category-block]
   * @arg $scale [false, small, large, larger] -- images for now
   *
   * Always called from the hyperlink level -- all styles are returned inside .vdm-teaser-body-mixin {}
@@ -6429,7 +6429,7 @@ html body {
   *
   * @arg $icon [false ,right, left]
   * @arg $image [false ,right, left]
-  * @arg $case [false, arrow-block, content-wrapper, compact,  identifier, green-title, etc]
+  * @arg $case [false, arrow-block, compact, inline-flex, category-block]
   * @arg $scale [false, small, large, larger] -- images for now
   *
   * Always called from the hyperlink level -- all styles are returned inside .vdm-teaser-body-mixin {}
@@ -7170,6 +7170,21 @@ select {
     flex: 0 0 100%;
     max-width: 100%; }
 
+/**
+  * 
+  *
+  * @mixin teaser-variant($icon: false, $image: false, $case: false, $scale: false)
+  *
+  * @arg $icon [false ,right, left]
+  * @arg $image [false ,right, left]
+  * @arg $case [false, arrow-block, compact, inline-flex, category-block]
+  * @arg $scale [false, small, large, larger] -- images for now
+  *
+  * Always called from the hyperlink level -- all styles are returned inside .vdm-teaser-body-mixin {}
+  * The left side for icons and images is the default case, it is implicit on styling
+  *
+  *
+  **/
 .vdm-teasers-mixin .vdm-teaser-mixin .vdm-teaser-body-mixin {
   position: relative;
   display: flex;
@@ -7220,9 +7235,7 @@ select {
 
 .vdm-teasers-mixin .vdm-teaser-mixin.light-scheme .vdm-teaser-body-mixin {
   background: #FFFFFF;
-  border: 1px solid #429A8E;
-  border: 1px solid pink;
-  border: 1px solid lime; }
+  border: 1px solid #429A8E; }
   .vdm-teasers-mixin .vdm-teaser-mixin.light-scheme .vdm-teaser-body-mixin:hover, .vdm-teasers-mixin .vdm-teaser-mixin.light-scheme .vdm-teaser-body-mixin:active {
     background: #429A8E;
     color: #FFFFFF; }
@@ -7233,9 +7246,7 @@ select {
 
 .vdm-teasers-mixin .vdm-teaser-mixin.white-scheme .vdm-teaser-body-mixin {
   background: #FFFFFF;
-  border: none;
-  border: 1px solid pink;
-  border: 1px solid lime; }
+  border: none; }
   .vdm-teasers-mixin .vdm-teaser-mixin.white-scheme .vdm-teaser-body-mixin:hover, .vdm-teasers-mixin .vdm-teaser-mixin.white-scheme .vdm-teaser-body-mixin:active {
     background: #429A8E;
     color: #FFFFFF; }
@@ -7246,7 +7257,7 @@ select {
 
 .vdm-teasers-mixin .vdm-teaser-mixin.icon-right .vdm-teaser-body-mixin {
   padding: 2.3rem 2.3rem 2.3rem 2.3rem;
-  padding-right: 7rem; }
+  padding-right: 7.75rem; }
   .vdm-teasers-mixin .vdm-teaser-mixin.icon-right .vdm-teaser-body-mixin .title {
     font-family: "Nunito Sans", Helvetica, Arial, sans-serif;
     font-size: 67px;
@@ -7258,7 +7269,10 @@ select {
     font-weight: 400;
     font-weight: 700;
     margin-bottom: 1em; }
-  .vdm-teasers-mixin .vdm-teaser-mixin.icon-right .vdm-teaser-body-mixin.ic-rosette:after {
+  @media (max-width: 767px) {
+    .vdm-teasers-mixin .vdm-teaser-mixin.icon-right .vdm-teaser-body-mixin {
+      padding: 7.75rem 2.3rem 2.3rem 2.3rem; } }
+  .vdm-teasers-mixin .vdm-teaser-mixin.icon-right .vdm-teaser-body-mixin.ic-rosette:before {
     content: "";
     font-weight: normal;
     font-style: normal;
@@ -7268,7 +7282,7 @@ select {
     text-rendering: auto;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale; }
-  .vdm-teasers-mixin .vdm-teaser-mixin.icon-right .vdm-teaser-body-mixin.ic-search:after {
+  .vdm-teasers-mixin .vdm-teaser-mixin.icon-right .vdm-teaser-body-mixin.ic-search:before {
     content: "";
     font-weight: normal;
     font-style: normal;
@@ -7278,7 +7292,7 @@ select {
     text-rendering: auto;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale; }
-  .vdm-teasers-mixin .vdm-teaser-mixin.icon-right .vdm-teaser-body-mixin.ic-profile:after {
+  .vdm-teasers-mixin .vdm-teaser-mixin.icon-right .vdm-teaser-body-mixin.ic-profile:before {
     content: "";
     font-weight: normal;
     font-style: normal;
@@ -7288,7 +7302,7 @@ select {
     text-rendering: auto;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale; }
-  .vdm-teasers-mixin .vdm-teaser-mixin.icon-right .vdm-teaser-body-mixin.ic-flag:after {
+  .vdm-teasers-mixin .vdm-teaser-mixin.icon-right .vdm-teaser-body-mixin.ic-flag:before {
     content: "";
     font-weight: normal;
     font-style: normal;
@@ -7298,7 +7312,7 @@ select {
     text-rendering: auto;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale; }
-  .vdm-teasers-mixin .vdm-teaser-mixin.icon-right .vdm-teaser-body-mixin.ic-calendar:after {
+  .vdm-teasers-mixin .vdm-teaser-mixin.icon-right .vdm-teaser-body-mixin.ic-calendar:before {
     content: "";
     font-weight: normal;
     font-style: normal;
@@ -7308,7 +7322,7 @@ select {
     text-rendering: auto;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale; }
-  .vdm-teasers-mixin .vdm-teaser-mixin.icon-right .vdm-teaser-body-mixin.ic-sun:after {
+  .vdm-teasers-mixin .vdm-teaser-mixin.icon-right .vdm-teaser-body-mixin.ic-sun:before {
     content: "";
     font-weight: normal;
     font-style: normal;
@@ -7318,7 +7332,7 @@ select {
     text-rendering: auto;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale; }
-  .vdm-teasers-mixin .vdm-teaser-mixin.icon-right .vdm-teaser-body-mixin.ic-ticket:after {
+  .vdm-teasers-mixin .vdm-teaser-mixin.icon-right .vdm-teaser-body-mixin.ic-ticket:before {
     content: "";
     font-weight: normal;
     font-style: normal;
@@ -7328,7 +7342,7 @@ select {
     text-rendering: auto;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale; }
-  .vdm-teasers-mixin .vdm-teaser-mixin.icon-right .vdm-teaser-body-mixin.ic-eye:after {
+  .vdm-teasers-mixin .vdm-teaser-mixin.icon-right .vdm-teaser-body-mixin.ic-eye:before {
     content: "";
     font-weight: normal;
     font-style: normal;
@@ -7338,7 +7352,7 @@ select {
     text-rendering: auto;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale; }
-  .vdm-teasers-mixin .vdm-teaser-mixin.icon-right .vdm-teaser-body-mixin.ic-people:after {
+  .vdm-teasers-mixin .vdm-teaser-mixin.icon-right .vdm-teaser-body-mixin.ic-people:before {
     content: "";
     font-weight: normal;
     font-style: normal;
@@ -7348,7 +7362,7 @@ select {
     text-rendering: auto;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale; }
-  .vdm-teasers-mixin .vdm-teaser-mixin.icon-right .vdm-teaser-body-mixin.ic-doc-holder:after {
+  .vdm-teasers-mixin .vdm-teaser-mixin.icon-right .vdm-teaser-body-mixin.ic-doc-holder:before {
     content: "";
     font-weight: normal;
     font-style: normal;
@@ -7358,7 +7372,7 @@ select {
     text-rendering: auto;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale; }
-  .vdm-teasers-mixin .vdm-teaser-mixin.icon-right .vdm-teaser-body-mixin.ic-bus:after {
+  .vdm-teasers-mixin .vdm-teaser-mixin.icon-right .vdm-teaser-body-mixin.ic-bus:before {
     content: "";
     font-weight: normal;
     font-style: normal;
@@ -7368,7 +7382,7 @@ select {
     text-rendering: auto;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale; }
-  .vdm-teasers-mixin .vdm-teaser-mixin.icon-right .vdm-teaser-body-mixin.ic-phone:after {
+  .vdm-teasers-mixin .vdm-teaser-mixin.icon-right .vdm-teaser-body-mixin.ic-phone:before {
     content: "";
     font-weight: normal;
     font-style: normal;
@@ -7378,7 +7392,7 @@ select {
     text-rendering: auto;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale; }
-  .vdm-teasers-mixin .vdm-teaser-mixin.icon-right .vdm-teaser-body-mixin.ic-book:after {
+  .vdm-teasers-mixin .vdm-teaser-mixin.icon-right .vdm-teaser-body-mixin.ic-book:before {
     content: "";
     font-weight: normal;
     font-style: normal;
@@ -7388,7 +7402,7 @@ select {
     text-rendering: auto;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale; }
-  .vdm-teasers-mixin .vdm-teaser-mixin.icon-right .vdm-teaser-body-mixin.ic-arrow-play:after {
+  .vdm-teasers-mixin .vdm-teaser-mixin.icon-right .vdm-teaser-body-mixin.ic-arrow-play:before {
     content: "";
     font-weight: normal;
     font-style: normal;
@@ -7398,7 +7412,7 @@ select {
     text-rendering: auto;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale; }
-  .vdm-teasers-mixin .vdm-teaser-mixin.icon-right .vdm-teaser-body-mixin.ic-arrow-select:after {
+  .vdm-teasers-mixin .vdm-teaser-mixin.icon-right .vdm-teaser-body-mixin.ic-arrow-select:before {
     content: "";
     font-weight: normal;
     font-style: normal;
@@ -7408,7 +7422,7 @@ select {
     text-rendering: auto;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale; }
-  .vdm-teasers-mixin .vdm-teaser-mixin.icon-right .vdm-teaser-body-mixin.ic-news-item:after {
+  .vdm-teasers-mixin .vdm-teaser-mixin.icon-right .vdm-teaser-body-mixin.ic-news-item:before {
     content: "";
     font-weight: normal;
     font-style: normal;
@@ -7418,7 +7432,7 @@ select {
     text-rendering: auto;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale; }
-  .vdm-teasers-mixin .vdm-teaser-mixin.icon-right .vdm-teaser-body-mixin.ic-location-star:after {
+  .vdm-teasers-mixin .vdm-teaser-mixin.icon-right .vdm-teaser-body-mixin.ic-location-star:before {
     content: "";
     font-weight: normal;
     font-style: normal;
@@ -7428,7 +7442,7 @@ select {
     text-rendering: auto;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale; }
-  .vdm-teasers-mixin .vdm-teaser-mixin.icon-right .vdm-teaser-body-mixin.ic-permit-id:after {
+  .vdm-teasers-mixin .vdm-teaser-mixin.icon-right .vdm-teaser-body-mixin.ic-permit-id:before {
     content: "";
     font-weight: normal;
     font-style: normal;
@@ -7438,7 +7452,7 @@ select {
     text-rendering: auto;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale; }
-  .vdm-teasers-mixin .vdm-teaser-mixin.icon-right .vdm-teaser-body-mixin.ic-document:after {
+  .vdm-teasers-mixin .vdm-teaser-mixin.icon-right .vdm-teaser-body-mixin.ic-document:before {
     content: "";
     font-weight: normal;
     font-style: normal;
@@ -7448,7 +7462,7 @@ select {
     text-rendering: auto;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale; }
-  .vdm-teasers-mixin .vdm-teaser-mixin.icon-right .vdm-teaser-body-mixin.ic-credit-card:after {
+  .vdm-teasers-mixin .vdm-teaser-mixin.icon-right .vdm-teaser-body-mixin.ic-credit-card:before {
     content: "";
     font-weight: normal;
     font-style: normal;
@@ -7458,7 +7472,7 @@ select {
     text-rendering: auto;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale; }
-  .vdm-teasers-mixin .vdm-teaser-mixin.icon-right .vdm-teaser-body-mixin.ic-folder:after {
+  .vdm-teasers-mixin .vdm-teaser-mixin.icon-right .vdm-teaser-body-mixin.ic-folder:before {
     content: "";
     font-weight: normal;
     font-style: normal;
@@ -7468,7 +7482,7 @@ select {
     text-rendering: auto;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale; }
-  .vdm-teasers-mixin .vdm-teaser-mixin.icon-right .vdm-teaser-body-mixin.ic-bell:after {
+  .vdm-teasers-mixin .vdm-teaser-mixin.icon-right .vdm-teaser-body-mixin.ic-bell:before {
     content: "";
     font-weight: normal;
     font-style: normal;
@@ -7478,7 +7492,7 @@ select {
     text-rendering: auto;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale; }
-  .vdm-teasers-mixin .vdm-teaser-mixin.icon-right .vdm-teaser-body-mixin.ic-settings:after {
+  .vdm-teasers-mixin .vdm-teaser-mixin.icon-right .vdm-teaser-body-mixin.ic-settings:before {
     content: "";
     font-weight: normal;
     font-style: normal;
@@ -7488,7 +7502,7 @@ select {
     text-rendering: auto;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale; }
-  .vdm-teasers-mixin .vdm-teaser-mixin.icon-right .vdm-teaser-body-mixin.ic-plus-circle-dot:after {
+  .vdm-teasers-mixin .vdm-teaser-mixin.icon-right .vdm-teaser-body-mixin.ic-plus-circle-dot:before {
     content: "";
     font-weight: normal;
     font-style: normal;
@@ -7498,7 +7512,7 @@ select {
     text-rendering: auto;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale; }
-  .vdm-teasers-mixin .vdm-teaser-mixin.icon-right .vdm-teaser-body-mixin.ic-minus-circle-dot:after {
+  .vdm-teasers-mixin .vdm-teaser-mixin.icon-right .vdm-teaser-body-mixin.ic-minus-circle-dot:before {
     content: "";
     font-weight: normal;
     font-style: normal;
@@ -7508,7 +7522,7 @@ select {
     text-rendering: auto;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale; }
-  .vdm-teasers-mixin .vdm-teaser-mixin.icon-right .vdm-teaser-body-mixin.ic-steps-checked:after {
+  .vdm-teasers-mixin .vdm-teaser-mixin.icon-right .vdm-teaser-body-mixin.ic-steps-checked:before {
     content: "";
     font-weight: normal;
     font-style: normal;
@@ -7518,7 +7532,7 @@ select {
     text-rendering: auto;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale; }
-  .vdm-teasers-mixin .vdm-teaser-mixin.icon-right .vdm-teaser-body-mixin.ic-ellipsis-circle-dot:after {
+  .vdm-teasers-mixin .vdm-teaser-mixin.icon-right .vdm-teaser-body-mixin.ic-ellipsis-circle-dot:before {
     content: "";
     font-weight: normal;
     font-style: normal;
@@ -7528,7 +7542,7 @@ select {
     text-rendering: auto;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale; }
-  .vdm-teasers-mixin .vdm-teaser-mixin.icon-right .vdm-teaser-body-mixin.ic-enveloppe:after {
+  .vdm-teasers-mixin .vdm-teaser-mixin.icon-right .vdm-teaser-body-mixin.ic-enveloppe:before {
     content: "";
     font-weight: normal;
     font-style: normal;
@@ -7538,7 +7552,7 @@ select {
     text-rendering: auto;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale; }
-  .vdm-teasers-mixin .vdm-teaser-mixin.icon-right .vdm-teaser-body-mixin.ic-folder-add:after {
+  .vdm-teasers-mixin .vdm-teaser-mixin.icon-right .vdm-teaser-body-mixin.ic-folder-add:before {
     content: "";
     font-weight: normal;
     font-style: normal;
@@ -7548,7 +7562,7 @@ select {
     text-rendering: auto;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale; }
-  .vdm-teasers-mixin .vdm-teaser-mixin.icon-right .vdm-teaser-body-mixin.ic-warning-triangle:after {
+  .vdm-teasers-mixin .vdm-teaser-mixin.icon-right .vdm-teaser-body-mixin.ic-warning-triangle:before {
     content: "";
     font-weight: normal;
     font-style: normal;
@@ -7558,7 +7572,7 @@ select {
     text-rendering: auto;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale; }
-  .vdm-teasers-mixin .vdm-teaser-mixin.icon-right .vdm-teaser-body-mixin.ic-computer:after {
+  .vdm-teasers-mixin .vdm-teaser-mixin.icon-right .vdm-teaser-body-mixin.ic-computer:before {
     content: "";
     font-weight: normal;
     font-style: normal;
@@ -7568,7 +7582,7 @@ select {
     text-rendering: auto;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale; }
-  .vdm-teasers-mixin .vdm-teaser-mixin.icon-right .vdm-teaser-body-mixin.ic-nut:after {
+  .vdm-teasers-mixin .vdm-teaser-mixin.icon-right .vdm-teaser-body-mixin.ic-nut:before {
     content: "";
     font-weight: normal;
     font-style: normal;
@@ -7578,7 +7592,7 @@ select {
     text-rendering: auto;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale; }
-  .vdm-teasers-mixin .vdm-teaser-mixin.icon-right .vdm-teaser-body-mixin.ic-pencil:after {
+  .vdm-teasers-mixin .vdm-teaser-mixin.icon-right .vdm-teaser-body-mixin.ic-pencil:before {
     content: "";
     font-weight: normal;
     font-style: normal;
@@ -7588,7 +7602,7 @@ select {
     text-rendering: auto;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale; }
-  .vdm-teasers-mixin .vdm-teaser-mixin.icon-right .vdm-teaser-body-mixin.ic-lightbulb:after {
+  .vdm-teasers-mixin .vdm-teaser-mixin.icon-right .vdm-teaser-body-mixin.ic-lightbulb:before {
     content: "";
     font-weight: normal;
     font-style: normal;
@@ -7598,7 +7612,7 @@ select {
     text-rendering: auto;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale; }
-  .vdm-teasers-mixin .vdm-teaser-mixin.icon-right .vdm-teaser-body-mixin.ic-pen:after {
+  .vdm-teasers-mixin .vdm-teaser-mixin.icon-right .vdm-teaser-body-mixin.ic-pen:before {
     content: "";
     font-weight: normal;
     font-style: normal;
@@ -7608,7 +7622,7 @@ select {
     text-rendering: auto;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale; }
-  .vdm-teasers-mixin .vdm-teaser-mixin.icon-right .vdm-teaser-body-mixin.ic-warning-circle:after {
+  .vdm-teasers-mixin .vdm-teaser-mixin.icon-right .vdm-teaser-body-mixin.ic-warning-circle:before {
     content: "";
     font-weight: normal;
     font-style: normal;
@@ -7618,7 +7632,7 @@ select {
     text-rendering: auto;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale; }
-  .vdm-teasers-mixin .vdm-teaser-mixin.icon-right .vdm-teaser-body-mixin.ic-clock:after {
+  .vdm-teasers-mixin .vdm-teaser-mixin.icon-right .vdm-teaser-body-mixin.ic-clock:before {
     content: "";
     font-weight: normal;
     font-style: normal;
@@ -7628,7 +7642,7 @@ select {
     text-rendering: auto;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale; }
-  .vdm-teasers-mixin .vdm-teaser-mixin.icon-right .vdm-teaser-body-mixin.ic-target:after {
+  .vdm-teasers-mixin .vdm-teaser-mixin.icon-right .vdm-teaser-body-mixin.ic-target:before {
     content: "";
     font-weight: normal;
     font-style: normal;
@@ -7638,7 +7652,7 @@ select {
     text-rendering: auto;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale; }
-  .vdm-teasers-mixin .vdm-teaser-mixin.icon-right .vdm-teaser-body-mixin.ic-broom:after {
+  .vdm-teasers-mixin .vdm-teaser-mixin.icon-right .vdm-teaser-body-mixin.ic-broom:before {
     content: "";
     font-weight: normal;
     font-style: normal;
@@ -7648,7 +7662,7 @@ select {
     text-rendering: auto;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale; }
-  .vdm-teasers-mixin .vdm-teaser-mixin.icon-right .vdm-teaser-body-mixin.ic-permit:after {
+  .vdm-teasers-mixin .vdm-teaser-mixin.icon-right .vdm-teaser-body-mixin.ic-permit:before {
     content: "";
     font-weight: normal;
     font-style: normal;
@@ -7658,7 +7672,7 @@ select {
     text-rendering: auto;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale; }
-  .vdm-teasers-mixin .vdm-teaser-mixin.icon-right .vdm-teaser-body-mixin.ic-arrow-circle-up:after {
+  .vdm-teasers-mixin .vdm-teaser-mixin.icon-right .vdm-teaser-body-mixin.ic-arrow-circle-up:before {
     content: "";
     font-weight: normal;
     font-style: normal;
@@ -7668,7 +7682,7 @@ select {
     text-rendering: auto;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale; }
-  .vdm-teasers-mixin .vdm-teaser-mixin.icon-right .vdm-teaser-body-mixin.ic-arrow-circle-right:after {
+  .vdm-teasers-mixin .vdm-teaser-mixin.icon-right .vdm-teaser-body-mixin.ic-arrow-circle-right:before {
     content: "";
     font-weight: normal;
     font-style: normal;
@@ -7678,7 +7692,7 @@ select {
     text-rendering: auto;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale; }
-  .vdm-teasers-mixin .vdm-teaser-mixin.icon-right .vdm-teaser-body-mixin.ic-arrow-circle-down:after {
+  .vdm-teasers-mixin .vdm-teaser-mixin.icon-right .vdm-teaser-body-mixin.ic-arrow-circle-down:before {
     content: "";
     font-weight: normal;
     font-style: normal;
@@ -7688,7 +7702,7 @@ select {
     text-rendering: auto;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale; }
-  .vdm-teasers-mixin .vdm-teaser-mixin.icon-right .vdm-teaser-body-mixin.ic-arrow-circle-left:after {
+  .vdm-teasers-mixin .vdm-teaser-mixin.icon-right .vdm-teaser-body-mixin.ic-arrow-circle-left:before {
     content: "";
     font-weight: normal;
     font-style: normal;
@@ -7698,7 +7712,7 @@ select {
     text-rendering: auto;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale; }
-  .vdm-teasers-mixin .vdm-teaser-mixin.icon-right .vdm-teaser-body-mixin.ic-house:after {
+  .vdm-teasers-mixin .vdm-teaser-mixin.icon-right .vdm-teaser-body-mixin.ic-house:before {
     content: "";
     font-weight: normal;
     font-style: normal;
@@ -7708,7 +7722,7 @@ select {
     text-rendering: auto;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale; }
-  .vdm-teasers-mixin .vdm-teaser-mixin.icon-right .vdm-teaser-body-mixin.ic-x-close:after {
+  .vdm-teasers-mixin .vdm-teaser-mixin.icon-right .vdm-teaser-body-mixin.ic-x-close:before {
     content: "";
     font-weight: normal;
     font-style: normal;
@@ -7718,7 +7732,7 @@ select {
     text-rendering: auto;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale; }
-  .vdm-teasers-mixin .vdm-teaser-mixin.icon-right .vdm-teaser-body-mixin.ic-circle-progress-done:after {
+  .vdm-teasers-mixin .vdm-teaser-mixin.icon-right .vdm-teaser-body-mixin.ic-circle-progress-done:before {
     content: "";
     font-weight: normal;
     font-style: normal;
@@ -7728,7 +7742,7 @@ select {
     text-rendering: auto;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale; }
-  .vdm-teasers-mixin .vdm-teaser-mixin.icon-right .vdm-teaser-body-mixin.ic-circle-progress-a:after {
+  .vdm-teasers-mixin .vdm-teaser-mixin.icon-right .vdm-teaser-body-mixin.ic-circle-progress-a:before {
     content: "";
     font-weight: normal;
     font-style: normal;
@@ -7738,7 +7752,7 @@ select {
     text-rendering: auto;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale; }
-  .vdm-teasers-mixin .vdm-teaser-mixin.icon-right .vdm-teaser-body-mixin.ic-circle-progress-ab:after {
+  .vdm-teasers-mixin .vdm-teaser-mixin.icon-right .vdm-teaser-body-mixin.ic-circle-progress-ab:before {
     content: "";
     font-weight: normal;
     font-style: normal;
@@ -7748,7 +7762,7 @@ select {
     text-rendering: auto;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale; }
-  .vdm-teasers-mixin .vdm-teaser-mixin.icon-right .vdm-teaser-body-mixin.ic-circle-progress-abc:after {
+  .vdm-teasers-mixin .vdm-teaser-mixin.icon-right .vdm-teaser-body-mixin.ic-circle-progress-abc:before {
     content: "";
     font-weight: normal;
     font-style: normal;
@@ -7758,7 +7772,7 @@ select {
     text-rendering: auto;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale; }
-  .vdm-teasers-mixin .vdm-teaser-mixin.icon-right .vdm-teaser-body-mixin.ic-circle-progress-c:after {
+  .vdm-teasers-mixin .vdm-teaser-mixin.icon-right .vdm-teaser-body-mixin.ic-circle-progress-c:before {
     content: "";
     font-weight: normal;
     font-style: normal;
@@ -7768,7 +7782,7 @@ select {
     text-rendering: auto;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale; }
-  .vdm-teasers-mixin .vdm-teaser-mixin.icon-right .vdm-teaser-body-mixin.ic-circle-progress-bc:after {
+  .vdm-teasers-mixin .vdm-teaser-mixin.icon-right .vdm-teaser-body-mixin.ic-circle-progress-bc:before {
     content: "";
     font-weight: normal;
     font-style: normal;
@@ -7778,7 +7792,7 @@ select {
     text-rendering: auto;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale; }
-  .vdm-teasers-mixin .vdm-teaser-mixin.icon-right .vdm-teaser-body-mixin.ic-circle-progress-checked:after {
+  .vdm-teasers-mixin .vdm-teaser-mixin.icon-right .vdm-teaser-body-mixin.ic-circle-progress-checked:before {
     content: "";
     font-weight: normal;
     font-style: normal;
@@ -7788,7 +7802,7 @@ select {
     text-rendering: auto;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale; }
-  .vdm-teasers-mixin .vdm-teaser-mixin.icon-right .vdm-teaser-body-mixin.ic-circle-progress-folder:after {
+  .vdm-teasers-mixin .vdm-teaser-mixin.icon-right .vdm-teaser-body-mixin.ic-circle-progress-folder:before {
     content: "";
     font-weight: normal;
     font-style: normal;
@@ -7798,7 +7812,7 @@ select {
     text-rendering: auto;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale; }
-  .vdm-teasers-mixin .vdm-teaser-mixin.icon-right .vdm-teaser-body-mixin.ic-chevron-up:after {
+  .vdm-teasers-mixin .vdm-teaser-mixin.icon-right .vdm-teaser-body-mixin.ic-chevron-up:before {
     content: "";
     font-weight: normal;
     font-style: normal;
@@ -7808,7 +7822,7 @@ select {
     text-rendering: auto;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale; }
-  .vdm-teasers-mixin .vdm-teaser-mixin.icon-right .vdm-teaser-body-mixin.ic-chevron-right:after {
+  .vdm-teasers-mixin .vdm-teaser-mixin.icon-right .vdm-teaser-body-mixin.ic-chevron-right:before {
     content: "";
     font-weight: normal;
     font-style: normal;
@@ -7818,7 +7832,7 @@ select {
     text-rendering: auto;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale; }
-  .vdm-teasers-mixin .vdm-teaser-mixin.icon-right .vdm-teaser-body-mixin.ic-chevron-down:after {
+  .vdm-teasers-mixin .vdm-teaser-mixin.icon-right .vdm-teaser-body-mixin.ic-chevron-down:before {
     content: "";
     font-weight: normal;
     font-style: normal;
@@ -7828,7 +7842,7 @@ select {
     text-rendering: auto;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale; }
-  .vdm-teasers-mixin .vdm-teaser-mixin.icon-right .vdm-teaser-body-mixin.ic-chevron-left:after {
+  .vdm-teasers-mixin .vdm-teaser-mixin.icon-right .vdm-teaser-body-mixin.ic-chevron-left:before {
     content: "";
     font-weight: normal;
     font-style: normal;
@@ -7838,7 +7852,7 @@ select {
     text-rendering: auto;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale; }
-  .vdm-teasers-mixin .vdm-teaser-mixin.icon-right .vdm-teaser-body-mixin.ic-circle-checked:after {
+  .vdm-teasers-mixin .vdm-teaser-mixin.icon-right .vdm-teaser-body-mixin.ic-circle-checked:before {
     content: "";
     font-weight: normal;
     font-style: normal;
@@ -7848,7 +7862,7 @@ select {
     text-rendering: auto;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale; }
-  .vdm-teasers-mixin .vdm-teaser-mixin.icon-right .vdm-teaser-body-mixin.ic-menu:after {
+  .vdm-teasers-mixin .vdm-teaser-mixin.icon-right .vdm-teaser-body-mixin.ic-menu:before {
     content: "";
     font-weight: normal;
     font-style: normal;
@@ -7858,7 +7872,7 @@ select {
     text-rendering: auto;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale; }
-  .vdm-teasers-mixin .vdm-teaser-mixin.icon-right .vdm-teaser-body-mixin.ic-location:after {
+  .vdm-teasers-mixin .vdm-teaser-mixin.icon-right .vdm-teaser-body-mixin.ic-location:before {
     content: "";
     font-weight: normal;
     font-style: normal;
@@ -7868,7 +7882,7 @@ select {
     text-rendering: auto;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale; }
-  .vdm-teasers-mixin .vdm-teaser-mixin.icon-right .vdm-teaser-body-mixin.ic-arrow-up:after {
+  .vdm-teasers-mixin .vdm-teaser-mixin.icon-right .vdm-teaser-body-mixin.ic-arrow-up:before {
     content: "";
     font-weight: normal;
     font-style: normal;
@@ -7878,7 +7892,7 @@ select {
     text-rendering: auto;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale; }
-  .vdm-teasers-mixin .vdm-teaser-mixin.icon-right .vdm-teaser-body-mixin.ic-arrow-right:after {
+  .vdm-teasers-mixin .vdm-teaser-mixin.icon-right .vdm-teaser-body-mixin.ic-arrow-right:before {
     content: "";
     font-weight: normal;
     font-style: normal;
@@ -7888,7 +7902,7 @@ select {
     text-rendering: auto;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale; }
-  .vdm-teasers-mixin .vdm-teaser-mixin.icon-right .vdm-teaser-body-mixin.ic-arrow-down:after {
+  .vdm-teasers-mixin .vdm-teaser-mixin.icon-right .vdm-teaser-body-mixin.ic-arrow-down:before {
     content: "";
     font-weight: normal;
     font-style: normal;
@@ -7898,7 +7912,7 @@ select {
     text-rendering: auto;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale; }
-  .vdm-teasers-mixin .vdm-teaser-mixin.icon-right .vdm-teaser-body-mixin.ic-arrow-left:after {
+  .vdm-teasers-mixin .vdm-teaser-mixin.icon-right .vdm-teaser-body-mixin.ic-arrow-left:before {
     content: "";
     font-weight: normal;
     font-style: normal;
@@ -7908,7 +7922,7 @@ select {
     text-rendering: auto;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale; }
-  .vdm-teasers-mixin .vdm-teaser-mixin.icon-right .vdm-teaser-body-mixin.ic-plus:after {
+  .vdm-teasers-mixin .vdm-teaser-mixin.icon-right .vdm-teaser-body-mixin.ic-plus:before {
     content: "";
     font-weight: normal;
     font-style: normal;
@@ -7918,7 +7932,7 @@ select {
     text-rendering: auto;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale; }
-  .vdm-teasers-mixin .vdm-teaser-mixin.icon-right .vdm-teaser-body-mixin.ic-minus:after {
+  .vdm-teasers-mixin .vdm-teaser-mixin.icon-right .vdm-teaser-body-mixin.ic-minus:before {
     content: "";
     font-weight: normal;
     font-style: normal;
@@ -7928,7 +7942,7 @@ select {
     text-rendering: auto;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale; }
-  .vdm-teasers-mixin .vdm-teaser-mixin.icon-right .vdm-teaser-body-mixin.ic-multiply:after {
+  .vdm-teasers-mixin .vdm-teaser-mixin.icon-right .vdm-teaser-body-mixin.ic-multiply:before {
     content: "";
     font-weight: normal;
     font-style: normal;
@@ -7938,7 +7952,7 @@ select {
     text-rendering: auto;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale; }
-  .vdm-teasers-mixin .vdm-teaser-mixin.icon-right .vdm-teaser-body-mixin.ic-circle-plus:after {
+  .vdm-teasers-mixin .vdm-teaser-mixin.icon-right .vdm-teaser-body-mixin.ic-circle-plus:before {
     content: "";
     font-weight: normal;
     font-style: normal;
@@ -7948,7 +7962,7 @@ select {
     text-rendering: auto;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale; }
-  .vdm-teasers-mixin .vdm-teaser-mixin.icon-right .vdm-teaser-body-mixin.ic-circle-minus:after {
+  .vdm-teasers-mixin .vdm-teaser-mixin.icon-right .vdm-teaser-body-mixin.ic-circle-minus:before {
     content: "";
     font-weight: normal;
     font-style: normal;
@@ -7958,7 +7972,7 @@ select {
     text-rendering: auto;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale; }
-  .vdm-teasers-mixin .vdm-teaser-mixin.icon-right .vdm-teaser-body-mixin.ic-circle-multiply:after {
+  .vdm-teasers-mixin .vdm-teaser-mixin.icon-right .vdm-teaser-body-mixin.ic-circle-multiply:before {
     content: "";
     font-weight: normal;
     font-style: normal;
@@ -7968,7 +7982,7 @@ select {
     text-rendering: auto;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale; }
-  .vdm-teasers-mixin .vdm-teaser-mixin.icon-right .vdm-teaser-body-mixin.ic-circle-plus-invert:after {
+  .vdm-teasers-mixin .vdm-teaser-mixin.icon-right .vdm-teaser-body-mixin.ic-circle-plus-invert:before {
     content: "";
     font-weight: normal;
     font-style: normal;
@@ -7978,7 +7992,7 @@ select {
     text-rendering: auto;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale; }
-  .vdm-teasers-mixin .vdm-teaser-mixin.icon-right .vdm-teaser-body-mixin.ic-circle-minus-invert:after {
+  .vdm-teasers-mixin .vdm-teaser-mixin.icon-right .vdm-teaser-body-mixin.ic-circle-minus-invert:before {
     content: "";
     font-weight: normal;
     font-style: normal;
@@ -7988,7 +8002,7 @@ select {
     text-rendering: auto;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale; }
-  .vdm-teasers-mixin .vdm-teaser-mixin.icon-right .vdm-teaser-body-mixin.ic-circle-multiply-invert:after {
+  .vdm-teasers-mixin .vdm-teaser-mixin.icon-right .vdm-teaser-body-mixin.ic-circle-multiply-invert:before {
     content: "";
     font-weight: normal;
     font-style: normal;
@@ -7998,7 +8012,7 @@ select {
     text-rendering: auto;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale; }
-  .vdm-teasers-mixin .vdm-teaser-mixin.icon-right .vdm-teaser-body-mixin.ic-checkbox-checked:after {
+  .vdm-teasers-mixin .vdm-teaser-mixin.icon-right .vdm-teaser-body-mixin.ic-checkbox-checked:before {
     content: "";
     font-weight: normal;
     font-style: normal;
@@ -8008,7 +8022,7 @@ select {
     text-rendering: auto;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale; }
-  .vdm-teasers-mixin .vdm-teaser-mixin.icon-right .vdm-teaser-body-mixin.ic-checkbox-empty:after {
+  .vdm-teasers-mixin .vdm-teaser-mixin.icon-right .vdm-teaser-body-mixin.ic-checkbox-empty:before {
     content: "";
     font-weight: normal;
     font-style: normal;
@@ -8018,7 +8032,7 @@ select {
     text-rendering: auto;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale; }
-  .vdm-teasers-mixin .vdm-teaser-mixin.icon-right .vdm-teaser-body-mixin.ic-checkbox-checked-trans:after {
+  .vdm-teasers-mixin .vdm-teaser-mixin.icon-right .vdm-teaser-body-mixin.ic-checkbox-checked-trans:before {
     content: "";
     font-weight: normal;
     font-style: normal;
@@ -8028,7 +8042,7 @@ select {
     text-rendering: auto;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale; }
-  .vdm-teasers-mixin .vdm-teaser-mixin.icon-right .vdm-teaser-body-mixin.ic-checkbox-checked-invert:after {
+  .vdm-teasers-mixin .vdm-teaser-mixin.icon-right .vdm-teaser-body-mixin.ic-checkbox-checked-invert:before {
     content: "";
     font-weight: normal;
     font-style: normal;
@@ -8038,7 +8052,7 @@ select {
     text-rendering: auto;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale; }
-  .vdm-teasers-mixin .vdm-teaser-mixin.icon-right .vdm-teaser-body-mixin.ic-trash:after {
+  .vdm-teasers-mixin .vdm-teaser-mixin.icon-right .vdm-teaser-body-mixin.ic-trash:before {
     content: "";
     font-weight: normal;
     font-style: normal;
@@ -8048,7 +8062,7 @@ select {
     text-rendering: auto;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale; }
-  .vdm-teasers-mixin .vdm-teaser-mixin.icon-right .vdm-teaser-body-mixin.ic-recycle:after {
+  .vdm-teasers-mixin .vdm-teaser-mixin.icon-right .vdm-teaser-body-mixin.ic-recycle:before {
     content: "";
     font-weight: normal;
     font-style: normal;
@@ -8058,7 +8072,7 @@ select {
     text-rendering: auto;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale; }
-  .vdm-teasers-mixin .vdm-teaser-mixin.icon-right .vdm-teaser-body-mixin.ic-compost:after {
+  .vdm-teasers-mixin .vdm-teaser-mixin.icon-right .vdm-teaser-body-mixin.ic-compost:before {
     content: "";
     font-weight: normal;
     font-style: normal;
@@ -8068,7 +8082,7 @@ select {
     text-rendering: auto;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale; }
-  .vdm-teasers-mixin .vdm-teaser-mixin.icon-right .vdm-teaser-body-mixin.ic-greens:after {
+  .vdm-teasers-mixin .vdm-teaser-mixin.icon-right .vdm-teaser-body-mixin.ic-greens:before {
     content: "";
     font-weight: normal;
     font-style: normal;
@@ -8078,7 +8092,7 @@ select {
     text-rendering: auto;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale; }
-  .vdm-teasers-mixin .vdm-teaser-mixin.icon-right .vdm-teaser-body-mixin.ic-permit-pet:after {
+  .vdm-teasers-mixin .vdm-teaser-mixin.icon-right .vdm-teaser-body-mixin.ic-permit-pet:before {
     content: "";
     font-weight: normal;
     font-style: normal;
@@ -8090,13 +8104,27 @@ select {
     -moz-osx-font-smoothing: grayscale; }
   .vdm-teasers-mixin .vdm-teaser-mixin.icon-right .vdm-teaser-body-mixin:before, .vdm-teasers-mixin .vdm-teaser-mixin.icon-right .vdm-teaser-body-mixin:after {
     position: absolute; }
-  .vdm-teasers-mixin .vdm-teaser-mixin.icon-right .vdm-teaser-body-mixin:after {
+    @media (max-width: 767px) {
+      .vdm-teasers-mixin .vdm-teaser-mixin.icon-right .vdm-teaser-body-mixin:before, .vdm-teasers-mixin .vdm-teaser-mixin.icon-right .vdm-teaser-body-mixin:after {
+        left: calc(50% - 1.8rem); } }
+    @media (max-width: 575px) {
+      .vdm-teasers-mixin .vdm-teaser-mixin.icon-right .vdm-teaser-body-mixin:before, .vdm-teasers-mixin .vdm-teaser-mixin.icon-right .vdm-teaser-body-mixin:after {
+        left: calc(50% - 1.8rem); } }
+  .vdm-teasers-mixin .vdm-teaser-mixin.icon-right .vdm-teaser-body-mixin:before {
     top: calc(50% - 1.7rem);
     left: calc(100% - 7rem); }
+    @media (max-width: 767px) {
+      .vdm-teasers-mixin .vdm-teaser-mixin.icon-right .vdm-teaser-body-mixin:before {
+        top: 1.8rem;
+        left: calc(50% - 1.8rem); } }
+    @media (max-width: 575px) {
+      .vdm-teasers-mixin .vdm-teaser-mixin.icon-right .vdm-teaser-body-mixin:before {
+        top: 3rem;
+        left: calc(50% - 1.8rem); } }
 
 .vdm-teasers-mixin .vdm-teaser-mixin.icon-left .vdm-teaser-body-mixin {
   padding: 2.3rem 2.3rem 2.3rem 2.3rem;
-  padding-left: 7rem; }
+  padding-left: 7.75rem; }
   .vdm-teasers-mixin .vdm-teaser-mixin.icon-left .vdm-teaser-body-mixin .title {
     font-family: "Nunito Sans", Helvetica, Arial, sans-serif;
     font-size: 67px;
@@ -8108,6 +8136,9 @@ select {
     font-weight: 400;
     font-weight: 700;
     margin-bottom: 1em; }
+  @media (max-width: 767px) {
+    .vdm-teasers-mixin .vdm-teaser-mixin.icon-left .vdm-teaser-body-mixin {
+      padding: 7.75rem 2.3rem 2.3rem 2.3rem; } }
   .vdm-teasers-mixin .vdm-teaser-mixin.icon-left .vdm-teaser-body-mixin.ic-rosette:before {
     content: "";
     font-weight: normal;
@@ -8940,15 +8971,27 @@ select {
     -moz-osx-font-smoothing: grayscale; }
   .vdm-teasers-mixin .vdm-teaser-mixin.icon-left .vdm-teaser-body-mixin:before, .vdm-teasers-mixin .vdm-teaser-mixin.icon-left .vdm-teaser-body-mixin:after {
     position: absolute; }
+    @media (max-width: 767px) {
+      .vdm-teasers-mixin .vdm-teaser-mixin.icon-left .vdm-teaser-body-mixin:before, .vdm-teasers-mixin .vdm-teaser-mixin.icon-left .vdm-teaser-body-mixin:after {
+        left: calc(50% - 1.8rem); } }
+    @media (max-width: 575px) {
+      .vdm-teasers-mixin .vdm-teaser-mixin.icon-left .vdm-teaser-body-mixin:before, .vdm-teasers-mixin .vdm-teaser-mixin.icon-left .vdm-teaser-body-mixin:after {
+        left: calc(50% - 1.8rem); } }
   .vdm-teasers-mixin .vdm-teaser-mixin.icon-left .vdm-teaser-body-mixin:before {
     left: 3rem;
     top: calc(50% - 1.7rem); }
+    @media (max-width: 767px) {
+      .vdm-teasers-mixin .vdm-teaser-mixin.icon-left .vdm-teaser-body-mixin:before {
+        top: 1.8rem;
+        left: calc(50% - 1.8rem); } }
+    @media (max-width: 575px) {
+      .vdm-teasers-mixin .vdm-teaser-mixin.icon-left .vdm-teaser-body-mixin:before {
+        top: 3rem;
+        left: calc(50% - 1.8rem); } }
 
 .vdm-teasers-mixin .vdm-teaser-mixin.arrow-block .vdm-teaser-body-mixin {
   padding: 2.3rem 2.3rem 2.3rem 2.3rem;
-  padding-right: 5rem;
-  border: 1px solid pink;
-  border: 1px solid lime; }
+  padding-right: 5rem; }
   .vdm-teasers-mixin .vdm-teaser-mixin.arrow-block .vdm-teaser-body-mixin:after {
     content: "";
     font-weight: normal;
@@ -8959,7 +9002,7 @@ select {
     text-rendering: auto;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale; }
-  .vdm-teasers-mixin .vdm-teaser-mixin.arrow-block .vdm-teaser-body-mixin.ic-rosette:after {
+  .vdm-teasers-mixin .vdm-teaser-mixin.arrow-block .vdm-teaser-body-mixin.ic-rosette:before {
     content: "";
     font-weight: normal;
     font-style: normal;
@@ -8979,7 +9022,7 @@ select {
     text-rendering: auto;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale; }
-  .vdm-teasers-mixin .vdm-teaser-mixin.arrow-block .vdm-teaser-body-mixin.ic-search:after {
+  .vdm-teasers-mixin .vdm-teaser-mixin.arrow-block .vdm-teaser-body-mixin.ic-search:before {
     content: "";
     font-weight: normal;
     font-style: normal;
@@ -8999,7 +9042,7 @@ select {
     text-rendering: auto;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale; }
-  .vdm-teasers-mixin .vdm-teaser-mixin.arrow-block .vdm-teaser-body-mixin.ic-profile:after {
+  .vdm-teasers-mixin .vdm-teaser-mixin.arrow-block .vdm-teaser-body-mixin.ic-profile:before {
     content: "";
     font-weight: normal;
     font-style: normal;
@@ -9019,7 +9062,7 @@ select {
     text-rendering: auto;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale; }
-  .vdm-teasers-mixin .vdm-teaser-mixin.arrow-block .vdm-teaser-body-mixin.ic-flag:after {
+  .vdm-teasers-mixin .vdm-teaser-mixin.arrow-block .vdm-teaser-body-mixin.ic-flag:before {
     content: "";
     font-weight: normal;
     font-style: normal;
@@ -9039,7 +9082,7 @@ select {
     text-rendering: auto;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale; }
-  .vdm-teasers-mixin .vdm-teaser-mixin.arrow-block .vdm-teaser-body-mixin.ic-calendar:after {
+  .vdm-teasers-mixin .vdm-teaser-mixin.arrow-block .vdm-teaser-body-mixin.ic-calendar:before {
     content: "";
     font-weight: normal;
     font-style: normal;
@@ -9059,7 +9102,7 @@ select {
     text-rendering: auto;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale; }
-  .vdm-teasers-mixin .vdm-teaser-mixin.arrow-block .vdm-teaser-body-mixin.ic-sun:after {
+  .vdm-teasers-mixin .vdm-teaser-mixin.arrow-block .vdm-teaser-body-mixin.ic-sun:before {
     content: "";
     font-weight: normal;
     font-style: normal;
@@ -9079,7 +9122,7 @@ select {
     text-rendering: auto;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale; }
-  .vdm-teasers-mixin .vdm-teaser-mixin.arrow-block .vdm-teaser-body-mixin.ic-ticket:after {
+  .vdm-teasers-mixin .vdm-teaser-mixin.arrow-block .vdm-teaser-body-mixin.ic-ticket:before {
     content: "";
     font-weight: normal;
     font-style: normal;
@@ -9099,7 +9142,7 @@ select {
     text-rendering: auto;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale; }
-  .vdm-teasers-mixin .vdm-teaser-mixin.arrow-block .vdm-teaser-body-mixin.ic-eye:after {
+  .vdm-teasers-mixin .vdm-teaser-mixin.arrow-block .vdm-teaser-body-mixin.ic-eye:before {
     content: "";
     font-weight: normal;
     font-style: normal;
@@ -9119,7 +9162,7 @@ select {
     text-rendering: auto;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale; }
-  .vdm-teasers-mixin .vdm-teaser-mixin.arrow-block .vdm-teaser-body-mixin.ic-people:after {
+  .vdm-teasers-mixin .vdm-teaser-mixin.arrow-block .vdm-teaser-body-mixin.ic-people:before {
     content: "";
     font-weight: normal;
     font-style: normal;
@@ -9139,7 +9182,7 @@ select {
     text-rendering: auto;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale; }
-  .vdm-teasers-mixin .vdm-teaser-mixin.arrow-block .vdm-teaser-body-mixin.ic-doc-holder:after {
+  .vdm-teasers-mixin .vdm-teaser-mixin.arrow-block .vdm-teaser-body-mixin.ic-doc-holder:before {
     content: "";
     font-weight: normal;
     font-style: normal;
@@ -9159,7 +9202,7 @@ select {
     text-rendering: auto;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale; }
-  .vdm-teasers-mixin .vdm-teaser-mixin.arrow-block .vdm-teaser-body-mixin.ic-bus:after {
+  .vdm-teasers-mixin .vdm-teaser-mixin.arrow-block .vdm-teaser-body-mixin.ic-bus:before {
     content: "";
     font-weight: normal;
     font-style: normal;
@@ -9179,7 +9222,7 @@ select {
     text-rendering: auto;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale; }
-  .vdm-teasers-mixin .vdm-teaser-mixin.arrow-block .vdm-teaser-body-mixin.ic-phone:after {
+  .vdm-teasers-mixin .vdm-teaser-mixin.arrow-block .vdm-teaser-body-mixin.ic-phone:before {
     content: "";
     font-weight: normal;
     font-style: normal;
@@ -9199,7 +9242,7 @@ select {
     text-rendering: auto;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale; }
-  .vdm-teasers-mixin .vdm-teaser-mixin.arrow-block .vdm-teaser-body-mixin.ic-book:after {
+  .vdm-teasers-mixin .vdm-teaser-mixin.arrow-block .vdm-teaser-body-mixin.ic-book:before {
     content: "";
     font-weight: normal;
     font-style: normal;
@@ -9219,7 +9262,7 @@ select {
     text-rendering: auto;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale; }
-  .vdm-teasers-mixin .vdm-teaser-mixin.arrow-block .vdm-teaser-body-mixin.ic-arrow-play:after {
+  .vdm-teasers-mixin .vdm-teaser-mixin.arrow-block .vdm-teaser-body-mixin.ic-arrow-play:before {
     content: "";
     font-weight: normal;
     font-style: normal;
@@ -9239,7 +9282,7 @@ select {
     text-rendering: auto;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale; }
-  .vdm-teasers-mixin .vdm-teaser-mixin.arrow-block .vdm-teaser-body-mixin.ic-arrow-select:after {
+  .vdm-teasers-mixin .vdm-teaser-mixin.arrow-block .vdm-teaser-body-mixin.ic-arrow-select:before {
     content: "";
     font-weight: normal;
     font-style: normal;
@@ -9259,7 +9302,7 @@ select {
     text-rendering: auto;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale; }
-  .vdm-teasers-mixin .vdm-teaser-mixin.arrow-block .vdm-teaser-body-mixin.ic-news-item:after {
+  .vdm-teasers-mixin .vdm-teaser-mixin.arrow-block .vdm-teaser-body-mixin.ic-news-item:before {
     content: "";
     font-weight: normal;
     font-style: normal;
@@ -9279,7 +9322,7 @@ select {
     text-rendering: auto;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale; }
-  .vdm-teasers-mixin .vdm-teaser-mixin.arrow-block .vdm-teaser-body-mixin.ic-location-star:after {
+  .vdm-teasers-mixin .vdm-teaser-mixin.arrow-block .vdm-teaser-body-mixin.ic-location-star:before {
     content: "";
     font-weight: normal;
     font-style: normal;
@@ -9299,7 +9342,7 @@ select {
     text-rendering: auto;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale; }
-  .vdm-teasers-mixin .vdm-teaser-mixin.arrow-block .vdm-teaser-body-mixin.ic-permit-id:after {
+  .vdm-teasers-mixin .vdm-teaser-mixin.arrow-block .vdm-teaser-body-mixin.ic-permit-id:before {
     content: "";
     font-weight: normal;
     font-style: normal;
@@ -9319,7 +9362,7 @@ select {
     text-rendering: auto;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale; }
-  .vdm-teasers-mixin .vdm-teaser-mixin.arrow-block .vdm-teaser-body-mixin.ic-document:after {
+  .vdm-teasers-mixin .vdm-teaser-mixin.arrow-block .vdm-teaser-body-mixin.ic-document:before {
     content: "";
     font-weight: normal;
     font-style: normal;
@@ -9339,7 +9382,7 @@ select {
     text-rendering: auto;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale; }
-  .vdm-teasers-mixin .vdm-teaser-mixin.arrow-block .vdm-teaser-body-mixin.ic-credit-card:after {
+  .vdm-teasers-mixin .vdm-teaser-mixin.arrow-block .vdm-teaser-body-mixin.ic-credit-card:before {
     content: "";
     font-weight: normal;
     font-style: normal;
@@ -9359,7 +9402,7 @@ select {
     text-rendering: auto;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale; }
-  .vdm-teasers-mixin .vdm-teaser-mixin.arrow-block .vdm-teaser-body-mixin.ic-folder:after {
+  .vdm-teasers-mixin .vdm-teaser-mixin.arrow-block .vdm-teaser-body-mixin.ic-folder:before {
     content: "";
     font-weight: normal;
     font-style: normal;
@@ -9379,7 +9422,7 @@ select {
     text-rendering: auto;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale; }
-  .vdm-teasers-mixin .vdm-teaser-mixin.arrow-block .vdm-teaser-body-mixin.ic-bell:after {
+  .vdm-teasers-mixin .vdm-teaser-mixin.arrow-block .vdm-teaser-body-mixin.ic-bell:before {
     content: "";
     font-weight: normal;
     font-style: normal;
@@ -9399,7 +9442,7 @@ select {
     text-rendering: auto;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale; }
-  .vdm-teasers-mixin .vdm-teaser-mixin.arrow-block .vdm-teaser-body-mixin.ic-settings:after {
+  .vdm-teasers-mixin .vdm-teaser-mixin.arrow-block .vdm-teaser-body-mixin.ic-settings:before {
     content: "";
     font-weight: normal;
     font-style: normal;
@@ -9419,7 +9462,7 @@ select {
     text-rendering: auto;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale; }
-  .vdm-teasers-mixin .vdm-teaser-mixin.arrow-block .vdm-teaser-body-mixin.ic-plus-circle-dot:after {
+  .vdm-teasers-mixin .vdm-teaser-mixin.arrow-block .vdm-teaser-body-mixin.ic-plus-circle-dot:before {
     content: "";
     font-weight: normal;
     font-style: normal;
@@ -9439,7 +9482,7 @@ select {
     text-rendering: auto;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale; }
-  .vdm-teasers-mixin .vdm-teaser-mixin.arrow-block .vdm-teaser-body-mixin.ic-minus-circle-dot:after {
+  .vdm-teasers-mixin .vdm-teaser-mixin.arrow-block .vdm-teaser-body-mixin.ic-minus-circle-dot:before {
     content: "";
     font-weight: normal;
     font-style: normal;
@@ -9459,7 +9502,7 @@ select {
     text-rendering: auto;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale; }
-  .vdm-teasers-mixin .vdm-teaser-mixin.arrow-block .vdm-teaser-body-mixin.ic-steps-checked:after {
+  .vdm-teasers-mixin .vdm-teaser-mixin.arrow-block .vdm-teaser-body-mixin.ic-steps-checked:before {
     content: "";
     font-weight: normal;
     font-style: normal;
@@ -9479,7 +9522,7 @@ select {
     text-rendering: auto;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale; }
-  .vdm-teasers-mixin .vdm-teaser-mixin.arrow-block .vdm-teaser-body-mixin.ic-ellipsis-circle-dot:after {
+  .vdm-teasers-mixin .vdm-teaser-mixin.arrow-block .vdm-teaser-body-mixin.ic-ellipsis-circle-dot:before {
     content: "";
     font-weight: normal;
     font-style: normal;
@@ -9499,7 +9542,7 @@ select {
     text-rendering: auto;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale; }
-  .vdm-teasers-mixin .vdm-teaser-mixin.arrow-block .vdm-teaser-body-mixin.ic-enveloppe:after {
+  .vdm-teasers-mixin .vdm-teaser-mixin.arrow-block .vdm-teaser-body-mixin.ic-enveloppe:before {
     content: "";
     font-weight: normal;
     font-style: normal;
@@ -9519,7 +9562,7 @@ select {
     text-rendering: auto;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale; }
-  .vdm-teasers-mixin .vdm-teaser-mixin.arrow-block .vdm-teaser-body-mixin.ic-folder-add:after {
+  .vdm-teasers-mixin .vdm-teaser-mixin.arrow-block .vdm-teaser-body-mixin.ic-folder-add:before {
     content: "";
     font-weight: normal;
     font-style: normal;
@@ -9539,7 +9582,7 @@ select {
     text-rendering: auto;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale; }
-  .vdm-teasers-mixin .vdm-teaser-mixin.arrow-block .vdm-teaser-body-mixin.ic-warning-triangle:after {
+  .vdm-teasers-mixin .vdm-teaser-mixin.arrow-block .vdm-teaser-body-mixin.ic-warning-triangle:before {
     content: "";
     font-weight: normal;
     font-style: normal;
@@ -9559,7 +9602,7 @@ select {
     text-rendering: auto;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale; }
-  .vdm-teasers-mixin .vdm-teaser-mixin.arrow-block .vdm-teaser-body-mixin.ic-computer:after {
+  .vdm-teasers-mixin .vdm-teaser-mixin.arrow-block .vdm-teaser-body-mixin.ic-computer:before {
     content: "";
     font-weight: normal;
     font-style: normal;
@@ -9579,7 +9622,7 @@ select {
     text-rendering: auto;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale; }
-  .vdm-teasers-mixin .vdm-teaser-mixin.arrow-block .vdm-teaser-body-mixin.ic-nut:after {
+  .vdm-teasers-mixin .vdm-teaser-mixin.arrow-block .vdm-teaser-body-mixin.ic-nut:before {
     content: "";
     font-weight: normal;
     font-style: normal;
@@ -9599,7 +9642,7 @@ select {
     text-rendering: auto;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale; }
-  .vdm-teasers-mixin .vdm-teaser-mixin.arrow-block .vdm-teaser-body-mixin.ic-pencil:after {
+  .vdm-teasers-mixin .vdm-teaser-mixin.arrow-block .vdm-teaser-body-mixin.ic-pencil:before {
     content: "";
     font-weight: normal;
     font-style: normal;
@@ -9619,7 +9662,7 @@ select {
     text-rendering: auto;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale; }
-  .vdm-teasers-mixin .vdm-teaser-mixin.arrow-block .vdm-teaser-body-mixin.ic-lightbulb:after {
+  .vdm-teasers-mixin .vdm-teaser-mixin.arrow-block .vdm-teaser-body-mixin.ic-lightbulb:before {
     content: "";
     font-weight: normal;
     font-style: normal;
@@ -9639,7 +9682,7 @@ select {
     text-rendering: auto;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale; }
-  .vdm-teasers-mixin .vdm-teaser-mixin.arrow-block .vdm-teaser-body-mixin.ic-pen:after {
+  .vdm-teasers-mixin .vdm-teaser-mixin.arrow-block .vdm-teaser-body-mixin.ic-pen:before {
     content: "";
     font-weight: normal;
     font-style: normal;
@@ -9659,7 +9702,7 @@ select {
     text-rendering: auto;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale; }
-  .vdm-teasers-mixin .vdm-teaser-mixin.arrow-block .vdm-teaser-body-mixin.ic-warning-circle:after {
+  .vdm-teasers-mixin .vdm-teaser-mixin.arrow-block .vdm-teaser-body-mixin.ic-warning-circle:before {
     content: "";
     font-weight: normal;
     font-style: normal;
@@ -9679,7 +9722,7 @@ select {
     text-rendering: auto;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale; }
-  .vdm-teasers-mixin .vdm-teaser-mixin.arrow-block .vdm-teaser-body-mixin.ic-clock:after {
+  .vdm-teasers-mixin .vdm-teaser-mixin.arrow-block .vdm-teaser-body-mixin.ic-clock:before {
     content: "";
     font-weight: normal;
     font-style: normal;
@@ -9699,7 +9742,7 @@ select {
     text-rendering: auto;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale; }
-  .vdm-teasers-mixin .vdm-teaser-mixin.arrow-block .vdm-teaser-body-mixin.ic-target:after {
+  .vdm-teasers-mixin .vdm-teaser-mixin.arrow-block .vdm-teaser-body-mixin.ic-target:before {
     content: "";
     font-weight: normal;
     font-style: normal;
@@ -9719,7 +9762,7 @@ select {
     text-rendering: auto;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale; }
-  .vdm-teasers-mixin .vdm-teaser-mixin.arrow-block .vdm-teaser-body-mixin.ic-broom:after {
+  .vdm-teasers-mixin .vdm-teaser-mixin.arrow-block .vdm-teaser-body-mixin.ic-broom:before {
     content: "";
     font-weight: normal;
     font-style: normal;
@@ -9739,7 +9782,7 @@ select {
     text-rendering: auto;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale; }
-  .vdm-teasers-mixin .vdm-teaser-mixin.arrow-block .vdm-teaser-body-mixin.ic-permit:after {
+  .vdm-teasers-mixin .vdm-teaser-mixin.arrow-block .vdm-teaser-body-mixin.ic-permit:before {
     content: "";
     font-weight: normal;
     font-style: normal;
@@ -9759,7 +9802,7 @@ select {
     text-rendering: auto;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale; }
-  .vdm-teasers-mixin .vdm-teaser-mixin.arrow-block .vdm-teaser-body-mixin.ic-arrow-circle-up:after {
+  .vdm-teasers-mixin .vdm-teaser-mixin.arrow-block .vdm-teaser-body-mixin.ic-arrow-circle-up:before {
     content: "";
     font-weight: normal;
     font-style: normal;
@@ -9779,7 +9822,7 @@ select {
     text-rendering: auto;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale; }
-  .vdm-teasers-mixin .vdm-teaser-mixin.arrow-block .vdm-teaser-body-mixin.ic-arrow-circle-right:after {
+  .vdm-teasers-mixin .vdm-teaser-mixin.arrow-block .vdm-teaser-body-mixin.ic-arrow-circle-right:before {
     content: "";
     font-weight: normal;
     font-style: normal;
@@ -9799,7 +9842,7 @@ select {
     text-rendering: auto;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale; }
-  .vdm-teasers-mixin .vdm-teaser-mixin.arrow-block .vdm-teaser-body-mixin.ic-arrow-circle-down:after {
+  .vdm-teasers-mixin .vdm-teaser-mixin.arrow-block .vdm-teaser-body-mixin.ic-arrow-circle-down:before {
     content: "";
     font-weight: normal;
     font-style: normal;
@@ -9819,7 +9862,7 @@ select {
     text-rendering: auto;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale; }
-  .vdm-teasers-mixin .vdm-teaser-mixin.arrow-block .vdm-teaser-body-mixin.ic-arrow-circle-left:after {
+  .vdm-teasers-mixin .vdm-teaser-mixin.arrow-block .vdm-teaser-body-mixin.ic-arrow-circle-left:before {
     content: "";
     font-weight: normal;
     font-style: normal;
@@ -9839,7 +9882,7 @@ select {
     text-rendering: auto;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale; }
-  .vdm-teasers-mixin .vdm-teaser-mixin.arrow-block .vdm-teaser-body-mixin.ic-house:after {
+  .vdm-teasers-mixin .vdm-teaser-mixin.arrow-block .vdm-teaser-body-mixin.ic-house:before {
     content: "";
     font-weight: normal;
     font-style: normal;
@@ -9859,7 +9902,7 @@ select {
     text-rendering: auto;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale; }
-  .vdm-teasers-mixin .vdm-teaser-mixin.arrow-block .vdm-teaser-body-mixin.ic-x-close:after {
+  .vdm-teasers-mixin .vdm-teaser-mixin.arrow-block .vdm-teaser-body-mixin.ic-x-close:before {
     content: "";
     font-weight: normal;
     font-style: normal;
@@ -9879,7 +9922,7 @@ select {
     text-rendering: auto;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale; }
-  .vdm-teasers-mixin .vdm-teaser-mixin.arrow-block .vdm-teaser-body-mixin.ic-circle-progress-done:after {
+  .vdm-teasers-mixin .vdm-teaser-mixin.arrow-block .vdm-teaser-body-mixin.ic-circle-progress-done:before {
     content: "";
     font-weight: normal;
     font-style: normal;
@@ -9899,7 +9942,7 @@ select {
     text-rendering: auto;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale; }
-  .vdm-teasers-mixin .vdm-teaser-mixin.arrow-block .vdm-teaser-body-mixin.ic-circle-progress-a:after {
+  .vdm-teasers-mixin .vdm-teaser-mixin.arrow-block .vdm-teaser-body-mixin.ic-circle-progress-a:before {
     content: "";
     font-weight: normal;
     font-style: normal;
@@ -9919,7 +9962,7 @@ select {
     text-rendering: auto;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale; }
-  .vdm-teasers-mixin .vdm-teaser-mixin.arrow-block .vdm-teaser-body-mixin.ic-circle-progress-ab:after {
+  .vdm-teasers-mixin .vdm-teaser-mixin.arrow-block .vdm-teaser-body-mixin.ic-circle-progress-ab:before {
     content: "";
     font-weight: normal;
     font-style: normal;
@@ -9939,7 +9982,7 @@ select {
     text-rendering: auto;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale; }
-  .vdm-teasers-mixin .vdm-teaser-mixin.arrow-block .vdm-teaser-body-mixin.ic-circle-progress-abc:after {
+  .vdm-teasers-mixin .vdm-teaser-mixin.arrow-block .vdm-teaser-body-mixin.ic-circle-progress-abc:before {
     content: "";
     font-weight: normal;
     font-style: normal;
@@ -9959,7 +10002,7 @@ select {
     text-rendering: auto;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale; }
-  .vdm-teasers-mixin .vdm-teaser-mixin.arrow-block .vdm-teaser-body-mixin.ic-circle-progress-c:after {
+  .vdm-teasers-mixin .vdm-teaser-mixin.arrow-block .vdm-teaser-body-mixin.ic-circle-progress-c:before {
     content: "";
     font-weight: normal;
     font-style: normal;
@@ -9979,7 +10022,7 @@ select {
     text-rendering: auto;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale; }
-  .vdm-teasers-mixin .vdm-teaser-mixin.arrow-block .vdm-teaser-body-mixin.ic-circle-progress-bc:after {
+  .vdm-teasers-mixin .vdm-teaser-mixin.arrow-block .vdm-teaser-body-mixin.ic-circle-progress-bc:before {
     content: "";
     font-weight: normal;
     font-style: normal;
@@ -9999,7 +10042,7 @@ select {
     text-rendering: auto;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale; }
-  .vdm-teasers-mixin .vdm-teaser-mixin.arrow-block .vdm-teaser-body-mixin.ic-circle-progress-checked:after {
+  .vdm-teasers-mixin .vdm-teaser-mixin.arrow-block .vdm-teaser-body-mixin.ic-circle-progress-checked:before {
     content: "";
     font-weight: normal;
     font-style: normal;
@@ -10019,7 +10062,7 @@ select {
     text-rendering: auto;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale; }
-  .vdm-teasers-mixin .vdm-teaser-mixin.arrow-block .vdm-teaser-body-mixin.ic-circle-progress-folder:after {
+  .vdm-teasers-mixin .vdm-teaser-mixin.arrow-block .vdm-teaser-body-mixin.ic-circle-progress-folder:before {
     content: "";
     font-weight: normal;
     font-style: normal;
@@ -10039,7 +10082,7 @@ select {
     text-rendering: auto;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale; }
-  .vdm-teasers-mixin .vdm-teaser-mixin.arrow-block .vdm-teaser-body-mixin.ic-chevron-up:after {
+  .vdm-teasers-mixin .vdm-teaser-mixin.arrow-block .vdm-teaser-body-mixin.ic-chevron-up:before {
     content: "";
     font-weight: normal;
     font-style: normal;
@@ -10059,7 +10102,7 @@ select {
     text-rendering: auto;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale; }
-  .vdm-teasers-mixin .vdm-teaser-mixin.arrow-block .vdm-teaser-body-mixin.ic-chevron-right:after {
+  .vdm-teasers-mixin .vdm-teaser-mixin.arrow-block .vdm-teaser-body-mixin.ic-chevron-right:before {
     content: "";
     font-weight: normal;
     font-style: normal;
@@ -10079,7 +10122,7 @@ select {
     text-rendering: auto;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale; }
-  .vdm-teasers-mixin .vdm-teaser-mixin.arrow-block .vdm-teaser-body-mixin.ic-chevron-down:after {
+  .vdm-teasers-mixin .vdm-teaser-mixin.arrow-block .vdm-teaser-body-mixin.ic-chevron-down:before {
     content: "";
     font-weight: normal;
     font-style: normal;
@@ -10099,7 +10142,7 @@ select {
     text-rendering: auto;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale; }
-  .vdm-teasers-mixin .vdm-teaser-mixin.arrow-block .vdm-teaser-body-mixin.ic-chevron-left:after {
+  .vdm-teasers-mixin .vdm-teaser-mixin.arrow-block .vdm-teaser-body-mixin.ic-chevron-left:before {
     content: "";
     font-weight: normal;
     font-style: normal;
@@ -10119,7 +10162,7 @@ select {
     text-rendering: auto;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale; }
-  .vdm-teasers-mixin .vdm-teaser-mixin.arrow-block .vdm-teaser-body-mixin.ic-circle-checked:after {
+  .vdm-teasers-mixin .vdm-teaser-mixin.arrow-block .vdm-teaser-body-mixin.ic-circle-checked:before {
     content: "";
     font-weight: normal;
     font-style: normal;
@@ -10139,7 +10182,7 @@ select {
     text-rendering: auto;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale; }
-  .vdm-teasers-mixin .vdm-teaser-mixin.arrow-block .vdm-teaser-body-mixin.ic-menu:after {
+  .vdm-teasers-mixin .vdm-teaser-mixin.arrow-block .vdm-teaser-body-mixin.ic-menu:before {
     content: "";
     font-weight: normal;
     font-style: normal;
@@ -10159,7 +10202,7 @@ select {
     text-rendering: auto;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale; }
-  .vdm-teasers-mixin .vdm-teaser-mixin.arrow-block .vdm-teaser-body-mixin.ic-location:after {
+  .vdm-teasers-mixin .vdm-teaser-mixin.arrow-block .vdm-teaser-body-mixin.ic-location:before {
     content: "";
     font-weight: normal;
     font-style: normal;
@@ -10179,7 +10222,7 @@ select {
     text-rendering: auto;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale; }
-  .vdm-teasers-mixin .vdm-teaser-mixin.arrow-block .vdm-teaser-body-mixin.ic-arrow-up:after {
+  .vdm-teasers-mixin .vdm-teaser-mixin.arrow-block .vdm-teaser-body-mixin.ic-arrow-up:before {
     content: "";
     font-weight: normal;
     font-style: normal;
@@ -10199,7 +10242,7 @@ select {
     text-rendering: auto;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale; }
-  .vdm-teasers-mixin .vdm-teaser-mixin.arrow-block .vdm-teaser-body-mixin.ic-arrow-right:after {
+  .vdm-teasers-mixin .vdm-teaser-mixin.arrow-block .vdm-teaser-body-mixin.ic-arrow-right:before {
     content: "";
     font-weight: normal;
     font-style: normal;
@@ -10219,7 +10262,7 @@ select {
     text-rendering: auto;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale; }
-  .vdm-teasers-mixin .vdm-teaser-mixin.arrow-block .vdm-teaser-body-mixin.ic-arrow-down:after {
+  .vdm-teasers-mixin .vdm-teaser-mixin.arrow-block .vdm-teaser-body-mixin.ic-arrow-down:before {
     content: "";
     font-weight: normal;
     font-style: normal;
@@ -10239,7 +10282,7 @@ select {
     text-rendering: auto;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale; }
-  .vdm-teasers-mixin .vdm-teaser-mixin.arrow-block .vdm-teaser-body-mixin.ic-arrow-left:after {
+  .vdm-teasers-mixin .vdm-teaser-mixin.arrow-block .vdm-teaser-body-mixin.ic-arrow-left:before {
     content: "";
     font-weight: normal;
     font-style: normal;
@@ -10259,7 +10302,7 @@ select {
     text-rendering: auto;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale; }
-  .vdm-teasers-mixin .vdm-teaser-mixin.arrow-block .vdm-teaser-body-mixin.ic-plus:after {
+  .vdm-teasers-mixin .vdm-teaser-mixin.arrow-block .vdm-teaser-body-mixin.ic-plus:before {
     content: "";
     font-weight: normal;
     font-style: normal;
@@ -10279,7 +10322,7 @@ select {
     text-rendering: auto;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale; }
-  .vdm-teasers-mixin .vdm-teaser-mixin.arrow-block .vdm-teaser-body-mixin.ic-minus:after {
+  .vdm-teasers-mixin .vdm-teaser-mixin.arrow-block .vdm-teaser-body-mixin.ic-minus:before {
     content: "";
     font-weight: normal;
     font-style: normal;
@@ -10299,7 +10342,7 @@ select {
     text-rendering: auto;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale; }
-  .vdm-teasers-mixin .vdm-teaser-mixin.arrow-block .vdm-teaser-body-mixin.ic-multiply:after {
+  .vdm-teasers-mixin .vdm-teaser-mixin.arrow-block .vdm-teaser-body-mixin.ic-multiply:before {
     content: "";
     font-weight: normal;
     font-style: normal;
@@ -10319,7 +10362,7 @@ select {
     text-rendering: auto;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale; }
-  .vdm-teasers-mixin .vdm-teaser-mixin.arrow-block .vdm-teaser-body-mixin.ic-circle-plus:after {
+  .vdm-teasers-mixin .vdm-teaser-mixin.arrow-block .vdm-teaser-body-mixin.ic-circle-plus:before {
     content: "";
     font-weight: normal;
     font-style: normal;
@@ -10339,7 +10382,7 @@ select {
     text-rendering: auto;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale; }
-  .vdm-teasers-mixin .vdm-teaser-mixin.arrow-block .vdm-teaser-body-mixin.ic-circle-minus:after {
+  .vdm-teasers-mixin .vdm-teaser-mixin.arrow-block .vdm-teaser-body-mixin.ic-circle-minus:before {
     content: "";
     font-weight: normal;
     font-style: normal;
@@ -10359,7 +10402,7 @@ select {
     text-rendering: auto;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale; }
-  .vdm-teasers-mixin .vdm-teaser-mixin.arrow-block .vdm-teaser-body-mixin.ic-circle-multiply:after {
+  .vdm-teasers-mixin .vdm-teaser-mixin.arrow-block .vdm-teaser-body-mixin.ic-circle-multiply:before {
     content: "";
     font-weight: normal;
     font-style: normal;
@@ -10379,7 +10422,7 @@ select {
     text-rendering: auto;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale; }
-  .vdm-teasers-mixin .vdm-teaser-mixin.arrow-block .vdm-teaser-body-mixin.ic-circle-plus-invert:after {
+  .vdm-teasers-mixin .vdm-teaser-mixin.arrow-block .vdm-teaser-body-mixin.ic-circle-plus-invert:before {
     content: "";
     font-weight: normal;
     font-style: normal;
@@ -10399,7 +10442,7 @@ select {
     text-rendering: auto;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale; }
-  .vdm-teasers-mixin .vdm-teaser-mixin.arrow-block .vdm-teaser-body-mixin.ic-circle-minus-invert:after {
+  .vdm-teasers-mixin .vdm-teaser-mixin.arrow-block .vdm-teaser-body-mixin.ic-circle-minus-invert:before {
     content: "";
     font-weight: normal;
     font-style: normal;
@@ -10419,7 +10462,7 @@ select {
     text-rendering: auto;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale; }
-  .vdm-teasers-mixin .vdm-teaser-mixin.arrow-block .vdm-teaser-body-mixin.ic-circle-multiply-invert:after {
+  .vdm-teasers-mixin .vdm-teaser-mixin.arrow-block .vdm-teaser-body-mixin.ic-circle-multiply-invert:before {
     content: "";
     font-weight: normal;
     font-style: normal;
@@ -10439,7 +10482,7 @@ select {
     text-rendering: auto;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale; }
-  .vdm-teasers-mixin .vdm-teaser-mixin.arrow-block .vdm-teaser-body-mixin.ic-checkbox-checked:after {
+  .vdm-teasers-mixin .vdm-teaser-mixin.arrow-block .vdm-teaser-body-mixin.ic-checkbox-checked:before {
     content: "";
     font-weight: normal;
     font-style: normal;
@@ -10459,7 +10502,7 @@ select {
     text-rendering: auto;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale; }
-  .vdm-teasers-mixin .vdm-teaser-mixin.arrow-block .vdm-teaser-body-mixin.ic-checkbox-empty:after {
+  .vdm-teasers-mixin .vdm-teaser-mixin.arrow-block .vdm-teaser-body-mixin.ic-checkbox-empty:before {
     content: "";
     font-weight: normal;
     font-style: normal;
@@ -10479,7 +10522,7 @@ select {
     text-rendering: auto;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale; }
-  .vdm-teasers-mixin .vdm-teaser-mixin.arrow-block .vdm-teaser-body-mixin.ic-checkbox-checked-trans:after {
+  .vdm-teasers-mixin .vdm-teaser-mixin.arrow-block .vdm-teaser-body-mixin.ic-checkbox-checked-trans:before {
     content: "";
     font-weight: normal;
     font-style: normal;
@@ -10499,7 +10542,7 @@ select {
     text-rendering: auto;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale; }
-  .vdm-teasers-mixin .vdm-teaser-mixin.arrow-block .vdm-teaser-body-mixin.ic-checkbox-checked-invert:after {
+  .vdm-teasers-mixin .vdm-teaser-mixin.arrow-block .vdm-teaser-body-mixin.ic-checkbox-checked-invert:before {
     content: "";
     font-weight: normal;
     font-style: normal;
@@ -10519,7 +10562,7 @@ select {
     text-rendering: auto;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale; }
-  .vdm-teasers-mixin .vdm-teaser-mixin.arrow-block .vdm-teaser-body-mixin.ic-trash:after {
+  .vdm-teasers-mixin .vdm-teaser-mixin.arrow-block .vdm-teaser-body-mixin.ic-trash:before {
     content: "";
     font-weight: normal;
     font-style: normal;
@@ -10539,7 +10582,7 @@ select {
     text-rendering: auto;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale; }
-  .vdm-teasers-mixin .vdm-teaser-mixin.arrow-block .vdm-teaser-body-mixin.ic-recycle:after {
+  .vdm-teasers-mixin .vdm-teaser-mixin.arrow-block .vdm-teaser-body-mixin.ic-recycle:before {
     content: "";
     font-weight: normal;
     font-style: normal;
@@ -10559,7 +10602,7 @@ select {
     text-rendering: auto;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale; }
-  .vdm-teasers-mixin .vdm-teaser-mixin.arrow-block .vdm-teaser-body-mixin.ic-compost:after {
+  .vdm-teasers-mixin .vdm-teaser-mixin.arrow-block .vdm-teaser-body-mixin.ic-compost:before {
     content: "";
     font-weight: normal;
     font-style: normal;
@@ -10579,7 +10622,7 @@ select {
     text-rendering: auto;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale; }
-  .vdm-teasers-mixin .vdm-teaser-mixin.arrow-block .vdm-teaser-body-mixin.ic-greens:after {
+  .vdm-teasers-mixin .vdm-teaser-mixin.arrow-block .vdm-teaser-body-mixin.ic-greens:before {
     content: "";
     font-weight: normal;
     font-style: normal;
@@ -10599,7 +10642,7 @@ select {
     text-rendering: auto;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale; }
-  .vdm-teasers-mixin .vdm-teaser-mixin.arrow-block .vdm-teaser-body-mixin.ic-permit-pet:after {
+  .vdm-teasers-mixin .vdm-teaser-mixin.arrow-block .vdm-teaser-body-mixin.ic-permit-pet:before {
     content: "";
     font-weight: normal;
     font-style: normal;
@@ -10621,11 +10664,30 @@ select {
     -moz-osx-font-smoothing: grayscale; }
   .vdm-teasers-mixin .vdm-teaser-mixin.arrow-block .vdm-teaser-body-mixin:before, .vdm-teasers-mixin .vdm-teaser-mixin.arrow-block .vdm-teaser-body-mixin:after {
     position: absolute; }
-  .vdm-teasers-mixin .vdm-teaser-mixin.arrow-block .vdm-teaser-body-mixin:after {
+    @media (max-width: 767px) {
+      .vdm-teasers-mixin .vdm-teaser-mixin.arrow-block .vdm-teaser-body-mixin:before, .vdm-teasers-mixin .vdm-teaser-mixin.arrow-block .vdm-teaser-body-mixin:after {
+        left: calc(50% - 1.8rem); } }
+    @media (max-width: 575px) {
+      .vdm-teasers-mixin .vdm-teaser-mixin.arrow-block .vdm-teaser-body-mixin:before, .vdm-teasers-mixin .vdm-teaser-mixin.arrow-block .vdm-teaser-body-mixin:after {
+        left: calc(50% - 1.8rem); } }
+  .vdm-teasers-mixin .vdm-teaser-mixin.arrow-block .vdm-teaser-body-mixin:before {
     top: calc(50% - 1.7rem);
     left: calc(100% - 7rem); }
+    @media (max-width: 767px) {
+      .vdm-teasers-mixin .vdm-teaser-mixin.arrow-block .vdm-teaser-body-mixin:before {
+        top: 1.8rem;
+        left: calc(50% - 1.8rem); } }
+    @media (max-width: 575px) {
+      .vdm-teasers-mixin .vdm-teaser-mixin.arrow-block .vdm-teaser-body-mixin:before {
+        top: 3rem;
+        left: calc(50% - 1.8rem); } }
   .vdm-teasers-mixin .vdm-teaser-mixin.arrow-block .vdm-teaser-body-mixin:after {
-    left: calc(100% - 4.5rem); }
+    left: calc(100% - 4.5rem);
+    top: calc(50% - 1.7rem); }
+    @media (max-width: 767px) {
+      .vdm-teasers-mixin .vdm-teaser-mixin.arrow-block .vdm-teaser-body-mixin:after {
+        left: calc(50% - 1.8rem);
+        top: calc(100% - 4.5rem); } }
   .vdm-teasers-mixin .vdm-teaser-mixin.arrow-block .vdm-teaser-body-mixin:hover, .vdm-teasers-mixin .vdm-teaser-mixin.arrow-block .vdm-teaser-body-mixin:active {
     background: #429A8E;
     color: #FFFFFF; }
@@ -10642,13 +10704,15 @@ select {
     font-size: 21px;
     line-height: 27.9993px;
     margin-bottom: 0.5em; }
+  @media (max-width: 767px) {
+    .vdm-teasers-mixin .vdm-teaser-mixin.arrow-block .vdm-teaser-body-mixin {
+      padding-bottom: 5.5rem;
+      border: 1px solid lime; } }
 
 .vdm-teasers-mixin .vdm-teaser-mixin.arrow-block.icon-left .vdm-teaser-body-mixin {
   padding: 2.3rem 2.3rem 2.3rem 2.3rem;
-  padding-left: 7rem;
+  padding-left: 7.75rem;
   padding-right: 5rem;
-  border: 1px solid pink;
-  border: 1px solid lime;
   padding-right: 5rem; }
   .vdm-teasers-mixin .vdm-teaser-mixin.arrow-block.icon-left .vdm-teaser-body-mixin .title {
     font-family: "Nunito Sans", Helvetica, Arial, sans-serif;
@@ -10661,6 +10725,9 @@ select {
     font-weight: 400;
     font-weight: 700;
     margin-bottom: 1em; }
+  @media (max-width: 767px) {
+    .vdm-teasers-mixin .vdm-teaser-mixin.arrow-block.icon-left .vdm-teaser-body-mixin {
+      padding: 7.75rem 2.3rem 2.3rem 2.3rem; } }
   .vdm-teasers-mixin .vdm-teaser-mixin.arrow-block.icon-left .vdm-teaser-body-mixin.ic-rosette:before {
     content: "";
     font-weight: normal;
@@ -11493,9 +11560,23 @@ select {
     -moz-osx-font-smoothing: grayscale; }
   .vdm-teasers-mixin .vdm-teaser-mixin.arrow-block.icon-left .vdm-teaser-body-mixin:before, .vdm-teasers-mixin .vdm-teaser-mixin.arrow-block.icon-left .vdm-teaser-body-mixin:after {
     position: absolute; }
+    @media (max-width: 767px) {
+      .vdm-teasers-mixin .vdm-teaser-mixin.arrow-block.icon-left .vdm-teaser-body-mixin:before, .vdm-teasers-mixin .vdm-teaser-mixin.arrow-block.icon-left .vdm-teaser-body-mixin:after {
+        left: calc(50% - 1.8rem); } }
+    @media (max-width: 575px) {
+      .vdm-teasers-mixin .vdm-teaser-mixin.arrow-block.icon-left .vdm-teaser-body-mixin:before, .vdm-teasers-mixin .vdm-teaser-mixin.arrow-block.icon-left .vdm-teaser-body-mixin:after {
+        left: calc(50% - 1.8rem); } }
   .vdm-teasers-mixin .vdm-teaser-mixin.arrow-block.icon-left .vdm-teaser-body-mixin:before {
     left: 3rem;
     top: calc(50% - 1.7rem); }
+    @media (max-width: 767px) {
+      .vdm-teasers-mixin .vdm-teaser-mixin.arrow-block.icon-left .vdm-teaser-body-mixin:before {
+        top: 1.8rem;
+        left: calc(50% - 1.8rem); } }
+    @media (max-width: 575px) {
+      .vdm-teasers-mixin .vdm-teaser-mixin.arrow-block.icon-left .vdm-teaser-body-mixin:before {
+        top: 3rem;
+        left: calc(50% - 1.8rem); } }
   .vdm-teasers-mixin .vdm-teaser-mixin.arrow-block.icon-left .vdm-teaser-body-mixin:after {
     content: "";
     font-weight: normal;
@@ -11506,7 +11587,7 @@ select {
     text-rendering: auto;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale; }
-  .vdm-teasers-mixin .vdm-teaser-mixin.arrow-block.icon-left .vdm-teaser-body-mixin.ic-rosette:after {
+  .vdm-teasers-mixin .vdm-teaser-mixin.arrow-block.icon-left .vdm-teaser-body-mixin.ic-rosette:before {
     content: "";
     font-weight: normal;
     font-style: normal;
@@ -11526,7 +11607,7 @@ select {
     text-rendering: auto;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale; }
-  .vdm-teasers-mixin .vdm-teaser-mixin.arrow-block.icon-left .vdm-teaser-body-mixin.ic-search:after {
+  .vdm-teasers-mixin .vdm-teaser-mixin.arrow-block.icon-left .vdm-teaser-body-mixin.ic-search:before {
     content: "";
     font-weight: normal;
     font-style: normal;
@@ -11546,7 +11627,7 @@ select {
     text-rendering: auto;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale; }
-  .vdm-teasers-mixin .vdm-teaser-mixin.arrow-block.icon-left .vdm-teaser-body-mixin.ic-profile:after {
+  .vdm-teasers-mixin .vdm-teaser-mixin.arrow-block.icon-left .vdm-teaser-body-mixin.ic-profile:before {
     content: "";
     font-weight: normal;
     font-style: normal;
@@ -11566,7 +11647,7 @@ select {
     text-rendering: auto;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale; }
-  .vdm-teasers-mixin .vdm-teaser-mixin.arrow-block.icon-left .vdm-teaser-body-mixin.ic-flag:after {
+  .vdm-teasers-mixin .vdm-teaser-mixin.arrow-block.icon-left .vdm-teaser-body-mixin.ic-flag:before {
     content: "";
     font-weight: normal;
     font-style: normal;
@@ -11586,7 +11667,7 @@ select {
     text-rendering: auto;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale; }
-  .vdm-teasers-mixin .vdm-teaser-mixin.arrow-block.icon-left .vdm-teaser-body-mixin.ic-calendar:after {
+  .vdm-teasers-mixin .vdm-teaser-mixin.arrow-block.icon-left .vdm-teaser-body-mixin.ic-calendar:before {
     content: "";
     font-weight: normal;
     font-style: normal;
@@ -11606,7 +11687,7 @@ select {
     text-rendering: auto;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale; }
-  .vdm-teasers-mixin .vdm-teaser-mixin.arrow-block.icon-left .vdm-teaser-body-mixin.ic-sun:after {
+  .vdm-teasers-mixin .vdm-teaser-mixin.arrow-block.icon-left .vdm-teaser-body-mixin.ic-sun:before {
     content: "";
     font-weight: normal;
     font-style: normal;
@@ -11626,7 +11707,7 @@ select {
     text-rendering: auto;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale; }
-  .vdm-teasers-mixin .vdm-teaser-mixin.arrow-block.icon-left .vdm-teaser-body-mixin.ic-ticket:after {
+  .vdm-teasers-mixin .vdm-teaser-mixin.arrow-block.icon-left .vdm-teaser-body-mixin.ic-ticket:before {
     content: "";
     font-weight: normal;
     font-style: normal;
@@ -11646,7 +11727,7 @@ select {
     text-rendering: auto;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale; }
-  .vdm-teasers-mixin .vdm-teaser-mixin.arrow-block.icon-left .vdm-teaser-body-mixin.ic-eye:after {
+  .vdm-teasers-mixin .vdm-teaser-mixin.arrow-block.icon-left .vdm-teaser-body-mixin.ic-eye:before {
     content: "";
     font-weight: normal;
     font-style: normal;
@@ -11666,7 +11747,7 @@ select {
     text-rendering: auto;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale; }
-  .vdm-teasers-mixin .vdm-teaser-mixin.arrow-block.icon-left .vdm-teaser-body-mixin.ic-people:after {
+  .vdm-teasers-mixin .vdm-teaser-mixin.arrow-block.icon-left .vdm-teaser-body-mixin.ic-people:before {
     content: "";
     font-weight: normal;
     font-style: normal;
@@ -11686,7 +11767,7 @@ select {
     text-rendering: auto;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale; }
-  .vdm-teasers-mixin .vdm-teaser-mixin.arrow-block.icon-left .vdm-teaser-body-mixin.ic-doc-holder:after {
+  .vdm-teasers-mixin .vdm-teaser-mixin.arrow-block.icon-left .vdm-teaser-body-mixin.ic-doc-holder:before {
     content: "";
     font-weight: normal;
     font-style: normal;
@@ -11706,7 +11787,7 @@ select {
     text-rendering: auto;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale; }
-  .vdm-teasers-mixin .vdm-teaser-mixin.arrow-block.icon-left .vdm-teaser-body-mixin.ic-bus:after {
+  .vdm-teasers-mixin .vdm-teaser-mixin.arrow-block.icon-left .vdm-teaser-body-mixin.ic-bus:before {
     content: "";
     font-weight: normal;
     font-style: normal;
@@ -11726,7 +11807,7 @@ select {
     text-rendering: auto;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale; }
-  .vdm-teasers-mixin .vdm-teaser-mixin.arrow-block.icon-left .vdm-teaser-body-mixin.ic-phone:after {
+  .vdm-teasers-mixin .vdm-teaser-mixin.arrow-block.icon-left .vdm-teaser-body-mixin.ic-phone:before {
     content: "";
     font-weight: normal;
     font-style: normal;
@@ -11746,7 +11827,7 @@ select {
     text-rendering: auto;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale; }
-  .vdm-teasers-mixin .vdm-teaser-mixin.arrow-block.icon-left .vdm-teaser-body-mixin.ic-book:after {
+  .vdm-teasers-mixin .vdm-teaser-mixin.arrow-block.icon-left .vdm-teaser-body-mixin.ic-book:before {
     content: "";
     font-weight: normal;
     font-style: normal;
@@ -11766,7 +11847,7 @@ select {
     text-rendering: auto;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale; }
-  .vdm-teasers-mixin .vdm-teaser-mixin.arrow-block.icon-left .vdm-teaser-body-mixin.ic-arrow-play:after {
+  .vdm-teasers-mixin .vdm-teaser-mixin.arrow-block.icon-left .vdm-teaser-body-mixin.ic-arrow-play:before {
     content: "";
     font-weight: normal;
     font-style: normal;
@@ -11786,7 +11867,7 @@ select {
     text-rendering: auto;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale; }
-  .vdm-teasers-mixin .vdm-teaser-mixin.arrow-block.icon-left .vdm-teaser-body-mixin.ic-arrow-select:after {
+  .vdm-teasers-mixin .vdm-teaser-mixin.arrow-block.icon-left .vdm-teaser-body-mixin.ic-arrow-select:before {
     content: "";
     font-weight: normal;
     font-style: normal;
@@ -11806,7 +11887,7 @@ select {
     text-rendering: auto;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale; }
-  .vdm-teasers-mixin .vdm-teaser-mixin.arrow-block.icon-left .vdm-teaser-body-mixin.ic-news-item:after {
+  .vdm-teasers-mixin .vdm-teaser-mixin.arrow-block.icon-left .vdm-teaser-body-mixin.ic-news-item:before {
     content: "";
     font-weight: normal;
     font-style: normal;
@@ -11826,7 +11907,7 @@ select {
     text-rendering: auto;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale; }
-  .vdm-teasers-mixin .vdm-teaser-mixin.arrow-block.icon-left .vdm-teaser-body-mixin.ic-location-star:after {
+  .vdm-teasers-mixin .vdm-teaser-mixin.arrow-block.icon-left .vdm-teaser-body-mixin.ic-location-star:before {
     content: "";
     font-weight: normal;
     font-style: normal;
@@ -11846,7 +11927,7 @@ select {
     text-rendering: auto;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale; }
-  .vdm-teasers-mixin .vdm-teaser-mixin.arrow-block.icon-left .vdm-teaser-body-mixin.ic-permit-id:after {
+  .vdm-teasers-mixin .vdm-teaser-mixin.arrow-block.icon-left .vdm-teaser-body-mixin.ic-permit-id:before {
     content: "";
     font-weight: normal;
     font-style: normal;
@@ -11866,7 +11947,7 @@ select {
     text-rendering: auto;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale; }
-  .vdm-teasers-mixin .vdm-teaser-mixin.arrow-block.icon-left .vdm-teaser-body-mixin.ic-document:after {
+  .vdm-teasers-mixin .vdm-teaser-mixin.arrow-block.icon-left .vdm-teaser-body-mixin.ic-document:before {
     content: "";
     font-weight: normal;
     font-style: normal;
@@ -11886,7 +11967,7 @@ select {
     text-rendering: auto;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale; }
-  .vdm-teasers-mixin .vdm-teaser-mixin.arrow-block.icon-left .vdm-teaser-body-mixin.ic-credit-card:after {
+  .vdm-teasers-mixin .vdm-teaser-mixin.arrow-block.icon-left .vdm-teaser-body-mixin.ic-credit-card:before {
     content: "";
     font-weight: normal;
     font-style: normal;
@@ -11906,7 +11987,7 @@ select {
     text-rendering: auto;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale; }
-  .vdm-teasers-mixin .vdm-teaser-mixin.arrow-block.icon-left .vdm-teaser-body-mixin.ic-folder:after {
+  .vdm-teasers-mixin .vdm-teaser-mixin.arrow-block.icon-left .vdm-teaser-body-mixin.ic-folder:before {
     content: "";
     font-weight: normal;
     font-style: normal;
@@ -11926,7 +12007,7 @@ select {
     text-rendering: auto;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale; }
-  .vdm-teasers-mixin .vdm-teaser-mixin.arrow-block.icon-left .vdm-teaser-body-mixin.ic-bell:after {
+  .vdm-teasers-mixin .vdm-teaser-mixin.arrow-block.icon-left .vdm-teaser-body-mixin.ic-bell:before {
     content: "";
     font-weight: normal;
     font-style: normal;
@@ -11946,7 +12027,7 @@ select {
     text-rendering: auto;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale; }
-  .vdm-teasers-mixin .vdm-teaser-mixin.arrow-block.icon-left .vdm-teaser-body-mixin.ic-settings:after {
+  .vdm-teasers-mixin .vdm-teaser-mixin.arrow-block.icon-left .vdm-teaser-body-mixin.ic-settings:before {
     content: "";
     font-weight: normal;
     font-style: normal;
@@ -11966,7 +12047,7 @@ select {
     text-rendering: auto;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale; }
-  .vdm-teasers-mixin .vdm-teaser-mixin.arrow-block.icon-left .vdm-teaser-body-mixin.ic-plus-circle-dot:after {
+  .vdm-teasers-mixin .vdm-teaser-mixin.arrow-block.icon-left .vdm-teaser-body-mixin.ic-plus-circle-dot:before {
     content: "";
     font-weight: normal;
     font-style: normal;
@@ -11986,7 +12067,7 @@ select {
     text-rendering: auto;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale; }
-  .vdm-teasers-mixin .vdm-teaser-mixin.arrow-block.icon-left .vdm-teaser-body-mixin.ic-minus-circle-dot:after {
+  .vdm-teasers-mixin .vdm-teaser-mixin.arrow-block.icon-left .vdm-teaser-body-mixin.ic-minus-circle-dot:before {
     content: "";
     font-weight: normal;
     font-style: normal;
@@ -12006,7 +12087,7 @@ select {
     text-rendering: auto;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale; }
-  .vdm-teasers-mixin .vdm-teaser-mixin.arrow-block.icon-left .vdm-teaser-body-mixin.ic-steps-checked:after {
+  .vdm-teasers-mixin .vdm-teaser-mixin.arrow-block.icon-left .vdm-teaser-body-mixin.ic-steps-checked:before {
     content: "";
     font-weight: normal;
     font-style: normal;
@@ -12026,7 +12107,7 @@ select {
     text-rendering: auto;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale; }
-  .vdm-teasers-mixin .vdm-teaser-mixin.arrow-block.icon-left .vdm-teaser-body-mixin.ic-ellipsis-circle-dot:after {
+  .vdm-teasers-mixin .vdm-teaser-mixin.arrow-block.icon-left .vdm-teaser-body-mixin.ic-ellipsis-circle-dot:before {
     content: "";
     font-weight: normal;
     font-style: normal;
@@ -12046,7 +12127,7 @@ select {
     text-rendering: auto;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale; }
-  .vdm-teasers-mixin .vdm-teaser-mixin.arrow-block.icon-left .vdm-teaser-body-mixin.ic-enveloppe:after {
+  .vdm-teasers-mixin .vdm-teaser-mixin.arrow-block.icon-left .vdm-teaser-body-mixin.ic-enveloppe:before {
     content: "";
     font-weight: normal;
     font-style: normal;
@@ -12066,7 +12147,7 @@ select {
     text-rendering: auto;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale; }
-  .vdm-teasers-mixin .vdm-teaser-mixin.arrow-block.icon-left .vdm-teaser-body-mixin.ic-folder-add:after {
+  .vdm-teasers-mixin .vdm-teaser-mixin.arrow-block.icon-left .vdm-teaser-body-mixin.ic-folder-add:before {
     content: "";
     font-weight: normal;
     font-style: normal;
@@ -12086,7 +12167,7 @@ select {
     text-rendering: auto;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale; }
-  .vdm-teasers-mixin .vdm-teaser-mixin.arrow-block.icon-left .vdm-teaser-body-mixin.ic-warning-triangle:after {
+  .vdm-teasers-mixin .vdm-teaser-mixin.arrow-block.icon-left .vdm-teaser-body-mixin.ic-warning-triangle:before {
     content: "";
     font-weight: normal;
     font-style: normal;
@@ -12106,7 +12187,7 @@ select {
     text-rendering: auto;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale; }
-  .vdm-teasers-mixin .vdm-teaser-mixin.arrow-block.icon-left .vdm-teaser-body-mixin.ic-computer:after {
+  .vdm-teasers-mixin .vdm-teaser-mixin.arrow-block.icon-left .vdm-teaser-body-mixin.ic-computer:before {
     content: "";
     font-weight: normal;
     font-style: normal;
@@ -12126,7 +12207,7 @@ select {
     text-rendering: auto;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale; }
-  .vdm-teasers-mixin .vdm-teaser-mixin.arrow-block.icon-left .vdm-teaser-body-mixin.ic-nut:after {
+  .vdm-teasers-mixin .vdm-teaser-mixin.arrow-block.icon-left .vdm-teaser-body-mixin.ic-nut:before {
     content: "";
     font-weight: normal;
     font-style: normal;
@@ -12146,7 +12227,7 @@ select {
     text-rendering: auto;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale; }
-  .vdm-teasers-mixin .vdm-teaser-mixin.arrow-block.icon-left .vdm-teaser-body-mixin.ic-pencil:after {
+  .vdm-teasers-mixin .vdm-teaser-mixin.arrow-block.icon-left .vdm-teaser-body-mixin.ic-pencil:before {
     content: "";
     font-weight: normal;
     font-style: normal;
@@ -12166,7 +12247,7 @@ select {
     text-rendering: auto;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale; }
-  .vdm-teasers-mixin .vdm-teaser-mixin.arrow-block.icon-left .vdm-teaser-body-mixin.ic-lightbulb:after {
+  .vdm-teasers-mixin .vdm-teaser-mixin.arrow-block.icon-left .vdm-teaser-body-mixin.ic-lightbulb:before {
     content: "";
     font-weight: normal;
     font-style: normal;
@@ -12186,7 +12267,7 @@ select {
     text-rendering: auto;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale; }
-  .vdm-teasers-mixin .vdm-teaser-mixin.arrow-block.icon-left .vdm-teaser-body-mixin.ic-pen:after {
+  .vdm-teasers-mixin .vdm-teaser-mixin.arrow-block.icon-left .vdm-teaser-body-mixin.ic-pen:before {
     content: "";
     font-weight: normal;
     font-style: normal;
@@ -12206,7 +12287,7 @@ select {
     text-rendering: auto;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale; }
-  .vdm-teasers-mixin .vdm-teaser-mixin.arrow-block.icon-left .vdm-teaser-body-mixin.ic-warning-circle:after {
+  .vdm-teasers-mixin .vdm-teaser-mixin.arrow-block.icon-left .vdm-teaser-body-mixin.ic-warning-circle:before {
     content: "";
     font-weight: normal;
     font-style: normal;
@@ -12226,7 +12307,7 @@ select {
     text-rendering: auto;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale; }
-  .vdm-teasers-mixin .vdm-teaser-mixin.arrow-block.icon-left .vdm-teaser-body-mixin.ic-clock:after {
+  .vdm-teasers-mixin .vdm-teaser-mixin.arrow-block.icon-left .vdm-teaser-body-mixin.ic-clock:before {
     content: "";
     font-weight: normal;
     font-style: normal;
@@ -12246,7 +12327,7 @@ select {
     text-rendering: auto;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale; }
-  .vdm-teasers-mixin .vdm-teaser-mixin.arrow-block.icon-left .vdm-teaser-body-mixin.ic-target:after {
+  .vdm-teasers-mixin .vdm-teaser-mixin.arrow-block.icon-left .vdm-teaser-body-mixin.ic-target:before {
     content: "";
     font-weight: normal;
     font-style: normal;
@@ -12266,7 +12347,7 @@ select {
     text-rendering: auto;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale; }
-  .vdm-teasers-mixin .vdm-teaser-mixin.arrow-block.icon-left .vdm-teaser-body-mixin.ic-broom:after {
+  .vdm-teasers-mixin .vdm-teaser-mixin.arrow-block.icon-left .vdm-teaser-body-mixin.ic-broom:before {
     content: "";
     font-weight: normal;
     font-style: normal;
@@ -12286,7 +12367,7 @@ select {
     text-rendering: auto;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale; }
-  .vdm-teasers-mixin .vdm-teaser-mixin.arrow-block.icon-left .vdm-teaser-body-mixin.ic-permit:after {
+  .vdm-teasers-mixin .vdm-teaser-mixin.arrow-block.icon-left .vdm-teaser-body-mixin.ic-permit:before {
     content: "";
     font-weight: normal;
     font-style: normal;
@@ -12306,7 +12387,7 @@ select {
     text-rendering: auto;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale; }
-  .vdm-teasers-mixin .vdm-teaser-mixin.arrow-block.icon-left .vdm-teaser-body-mixin.ic-arrow-circle-up:after {
+  .vdm-teasers-mixin .vdm-teaser-mixin.arrow-block.icon-left .vdm-teaser-body-mixin.ic-arrow-circle-up:before {
     content: "";
     font-weight: normal;
     font-style: normal;
@@ -12326,7 +12407,7 @@ select {
     text-rendering: auto;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale; }
-  .vdm-teasers-mixin .vdm-teaser-mixin.arrow-block.icon-left .vdm-teaser-body-mixin.ic-arrow-circle-right:after {
+  .vdm-teasers-mixin .vdm-teaser-mixin.arrow-block.icon-left .vdm-teaser-body-mixin.ic-arrow-circle-right:before {
     content: "";
     font-weight: normal;
     font-style: normal;
@@ -12346,7 +12427,7 @@ select {
     text-rendering: auto;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale; }
-  .vdm-teasers-mixin .vdm-teaser-mixin.arrow-block.icon-left .vdm-teaser-body-mixin.ic-arrow-circle-down:after {
+  .vdm-teasers-mixin .vdm-teaser-mixin.arrow-block.icon-left .vdm-teaser-body-mixin.ic-arrow-circle-down:before {
     content: "";
     font-weight: normal;
     font-style: normal;
@@ -12366,7 +12447,7 @@ select {
     text-rendering: auto;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale; }
-  .vdm-teasers-mixin .vdm-teaser-mixin.arrow-block.icon-left .vdm-teaser-body-mixin.ic-arrow-circle-left:after {
+  .vdm-teasers-mixin .vdm-teaser-mixin.arrow-block.icon-left .vdm-teaser-body-mixin.ic-arrow-circle-left:before {
     content: "";
     font-weight: normal;
     font-style: normal;
@@ -12386,7 +12467,7 @@ select {
     text-rendering: auto;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale; }
-  .vdm-teasers-mixin .vdm-teaser-mixin.arrow-block.icon-left .vdm-teaser-body-mixin.ic-house:after {
+  .vdm-teasers-mixin .vdm-teaser-mixin.arrow-block.icon-left .vdm-teaser-body-mixin.ic-house:before {
     content: "";
     font-weight: normal;
     font-style: normal;
@@ -12406,7 +12487,7 @@ select {
     text-rendering: auto;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale; }
-  .vdm-teasers-mixin .vdm-teaser-mixin.arrow-block.icon-left .vdm-teaser-body-mixin.ic-x-close:after {
+  .vdm-teasers-mixin .vdm-teaser-mixin.arrow-block.icon-left .vdm-teaser-body-mixin.ic-x-close:before {
     content: "";
     font-weight: normal;
     font-style: normal;
@@ -12426,7 +12507,7 @@ select {
     text-rendering: auto;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale; }
-  .vdm-teasers-mixin .vdm-teaser-mixin.arrow-block.icon-left .vdm-teaser-body-mixin.ic-circle-progress-done:after {
+  .vdm-teasers-mixin .vdm-teaser-mixin.arrow-block.icon-left .vdm-teaser-body-mixin.ic-circle-progress-done:before {
     content: "";
     font-weight: normal;
     font-style: normal;
@@ -12446,7 +12527,7 @@ select {
     text-rendering: auto;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale; }
-  .vdm-teasers-mixin .vdm-teaser-mixin.arrow-block.icon-left .vdm-teaser-body-mixin.ic-circle-progress-a:after {
+  .vdm-teasers-mixin .vdm-teaser-mixin.arrow-block.icon-left .vdm-teaser-body-mixin.ic-circle-progress-a:before {
     content: "";
     font-weight: normal;
     font-style: normal;
@@ -12466,7 +12547,7 @@ select {
     text-rendering: auto;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale; }
-  .vdm-teasers-mixin .vdm-teaser-mixin.arrow-block.icon-left .vdm-teaser-body-mixin.ic-circle-progress-ab:after {
+  .vdm-teasers-mixin .vdm-teaser-mixin.arrow-block.icon-left .vdm-teaser-body-mixin.ic-circle-progress-ab:before {
     content: "";
     font-weight: normal;
     font-style: normal;
@@ -12486,7 +12567,7 @@ select {
     text-rendering: auto;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale; }
-  .vdm-teasers-mixin .vdm-teaser-mixin.arrow-block.icon-left .vdm-teaser-body-mixin.ic-circle-progress-abc:after {
+  .vdm-teasers-mixin .vdm-teaser-mixin.arrow-block.icon-left .vdm-teaser-body-mixin.ic-circle-progress-abc:before {
     content: "";
     font-weight: normal;
     font-style: normal;
@@ -12506,7 +12587,7 @@ select {
     text-rendering: auto;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale; }
-  .vdm-teasers-mixin .vdm-teaser-mixin.arrow-block.icon-left .vdm-teaser-body-mixin.ic-circle-progress-c:after {
+  .vdm-teasers-mixin .vdm-teaser-mixin.arrow-block.icon-left .vdm-teaser-body-mixin.ic-circle-progress-c:before {
     content: "";
     font-weight: normal;
     font-style: normal;
@@ -12526,7 +12607,7 @@ select {
     text-rendering: auto;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale; }
-  .vdm-teasers-mixin .vdm-teaser-mixin.arrow-block.icon-left .vdm-teaser-body-mixin.ic-circle-progress-bc:after {
+  .vdm-teasers-mixin .vdm-teaser-mixin.arrow-block.icon-left .vdm-teaser-body-mixin.ic-circle-progress-bc:before {
     content: "";
     font-weight: normal;
     font-style: normal;
@@ -12546,7 +12627,7 @@ select {
     text-rendering: auto;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale; }
-  .vdm-teasers-mixin .vdm-teaser-mixin.arrow-block.icon-left .vdm-teaser-body-mixin.ic-circle-progress-checked:after {
+  .vdm-teasers-mixin .vdm-teaser-mixin.arrow-block.icon-left .vdm-teaser-body-mixin.ic-circle-progress-checked:before {
     content: "";
     font-weight: normal;
     font-style: normal;
@@ -12566,7 +12647,7 @@ select {
     text-rendering: auto;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale; }
-  .vdm-teasers-mixin .vdm-teaser-mixin.arrow-block.icon-left .vdm-teaser-body-mixin.ic-circle-progress-folder:after {
+  .vdm-teasers-mixin .vdm-teaser-mixin.arrow-block.icon-left .vdm-teaser-body-mixin.ic-circle-progress-folder:before {
     content: "";
     font-weight: normal;
     font-style: normal;
@@ -12586,7 +12667,7 @@ select {
     text-rendering: auto;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale; }
-  .vdm-teasers-mixin .vdm-teaser-mixin.arrow-block.icon-left .vdm-teaser-body-mixin.ic-chevron-up:after {
+  .vdm-teasers-mixin .vdm-teaser-mixin.arrow-block.icon-left .vdm-teaser-body-mixin.ic-chevron-up:before {
     content: "";
     font-weight: normal;
     font-style: normal;
@@ -12606,7 +12687,7 @@ select {
     text-rendering: auto;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale; }
-  .vdm-teasers-mixin .vdm-teaser-mixin.arrow-block.icon-left .vdm-teaser-body-mixin.ic-chevron-right:after {
+  .vdm-teasers-mixin .vdm-teaser-mixin.arrow-block.icon-left .vdm-teaser-body-mixin.ic-chevron-right:before {
     content: "";
     font-weight: normal;
     font-style: normal;
@@ -12626,7 +12707,7 @@ select {
     text-rendering: auto;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale; }
-  .vdm-teasers-mixin .vdm-teaser-mixin.arrow-block.icon-left .vdm-teaser-body-mixin.ic-chevron-down:after {
+  .vdm-teasers-mixin .vdm-teaser-mixin.arrow-block.icon-left .vdm-teaser-body-mixin.ic-chevron-down:before {
     content: "";
     font-weight: normal;
     font-style: normal;
@@ -12646,7 +12727,7 @@ select {
     text-rendering: auto;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale; }
-  .vdm-teasers-mixin .vdm-teaser-mixin.arrow-block.icon-left .vdm-teaser-body-mixin.ic-chevron-left:after {
+  .vdm-teasers-mixin .vdm-teaser-mixin.arrow-block.icon-left .vdm-teaser-body-mixin.ic-chevron-left:before {
     content: "";
     font-weight: normal;
     font-style: normal;
@@ -12666,7 +12747,7 @@ select {
     text-rendering: auto;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale; }
-  .vdm-teasers-mixin .vdm-teaser-mixin.arrow-block.icon-left .vdm-teaser-body-mixin.ic-circle-checked:after {
+  .vdm-teasers-mixin .vdm-teaser-mixin.arrow-block.icon-left .vdm-teaser-body-mixin.ic-circle-checked:before {
     content: "";
     font-weight: normal;
     font-style: normal;
@@ -12686,7 +12767,7 @@ select {
     text-rendering: auto;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale; }
-  .vdm-teasers-mixin .vdm-teaser-mixin.arrow-block.icon-left .vdm-teaser-body-mixin.ic-menu:after {
+  .vdm-teasers-mixin .vdm-teaser-mixin.arrow-block.icon-left .vdm-teaser-body-mixin.ic-menu:before {
     content: "";
     font-weight: normal;
     font-style: normal;
@@ -12706,7 +12787,7 @@ select {
     text-rendering: auto;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale; }
-  .vdm-teasers-mixin .vdm-teaser-mixin.arrow-block.icon-left .vdm-teaser-body-mixin.ic-location:after {
+  .vdm-teasers-mixin .vdm-teaser-mixin.arrow-block.icon-left .vdm-teaser-body-mixin.ic-location:before {
     content: "";
     font-weight: normal;
     font-style: normal;
@@ -12726,7 +12807,7 @@ select {
     text-rendering: auto;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale; }
-  .vdm-teasers-mixin .vdm-teaser-mixin.arrow-block.icon-left .vdm-teaser-body-mixin.ic-arrow-up:after {
+  .vdm-teasers-mixin .vdm-teaser-mixin.arrow-block.icon-left .vdm-teaser-body-mixin.ic-arrow-up:before {
     content: "";
     font-weight: normal;
     font-style: normal;
@@ -12746,7 +12827,7 @@ select {
     text-rendering: auto;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale; }
-  .vdm-teasers-mixin .vdm-teaser-mixin.arrow-block.icon-left .vdm-teaser-body-mixin.ic-arrow-right:after {
+  .vdm-teasers-mixin .vdm-teaser-mixin.arrow-block.icon-left .vdm-teaser-body-mixin.ic-arrow-right:before {
     content: "";
     font-weight: normal;
     font-style: normal;
@@ -12766,7 +12847,7 @@ select {
     text-rendering: auto;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale; }
-  .vdm-teasers-mixin .vdm-teaser-mixin.arrow-block.icon-left .vdm-teaser-body-mixin.ic-arrow-down:after {
+  .vdm-teasers-mixin .vdm-teaser-mixin.arrow-block.icon-left .vdm-teaser-body-mixin.ic-arrow-down:before {
     content: "";
     font-weight: normal;
     font-style: normal;
@@ -12786,7 +12867,7 @@ select {
     text-rendering: auto;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale; }
-  .vdm-teasers-mixin .vdm-teaser-mixin.arrow-block.icon-left .vdm-teaser-body-mixin.ic-arrow-left:after {
+  .vdm-teasers-mixin .vdm-teaser-mixin.arrow-block.icon-left .vdm-teaser-body-mixin.ic-arrow-left:before {
     content: "";
     font-weight: normal;
     font-style: normal;
@@ -12806,7 +12887,7 @@ select {
     text-rendering: auto;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale; }
-  .vdm-teasers-mixin .vdm-teaser-mixin.arrow-block.icon-left .vdm-teaser-body-mixin.ic-plus:after {
+  .vdm-teasers-mixin .vdm-teaser-mixin.arrow-block.icon-left .vdm-teaser-body-mixin.ic-plus:before {
     content: "";
     font-weight: normal;
     font-style: normal;
@@ -12826,7 +12907,7 @@ select {
     text-rendering: auto;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale; }
-  .vdm-teasers-mixin .vdm-teaser-mixin.arrow-block.icon-left .vdm-teaser-body-mixin.ic-minus:after {
+  .vdm-teasers-mixin .vdm-teaser-mixin.arrow-block.icon-left .vdm-teaser-body-mixin.ic-minus:before {
     content: "";
     font-weight: normal;
     font-style: normal;
@@ -12846,7 +12927,7 @@ select {
     text-rendering: auto;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale; }
-  .vdm-teasers-mixin .vdm-teaser-mixin.arrow-block.icon-left .vdm-teaser-body-mixin.ic-multiply:after {
+  .vdm-teasers-mixin .vdm-teaser-mixin.arrow-block.icon-left .vdm-teaser-body-mixin.ic-multiply:before {
     content: "";
     font-weight: normal;
     font-style: normal;
@@ -12866,7 +12947,7 @@ select {
     text-rendering: auto;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale; }
-  .vdm-teasers-mixin .vdm-teaser-mixin.arrow-block.icon-left .vdm-teaser-body-mixin.ic-circle-plus:after {
+  .vdm-teasers-mixin .vdm-teaser-mixin.arrow-block.icon-left .vdm-teaser-body-mixin.ic-circle-plus:before {
     content: "";
     font-weight: normal;
     font-style: normal;
@@ -12886,7 +12967,7 @@ select {
     text-rendering: auto;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale; }
-  .vdm-teasers-mixin .vdm-teaser-mixin.arrow-block.icon-left .vdm-teaser-body-mixin.ic-circle-minus:after {
+  .vdm-teasers-mixin .vdm-teaser-mixin.arrow-block.icon-left .vdm-teaser-body-mixin.ic-circle-minus:before {
     content: "";
     font-weight: normal;
     font-style: normal;
@@ -12906,7 +12987,7 @@ select {
     text-rendering: auto;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale; }
-  .vdm-teasers-mixin .vdm-teaser-mixin.arrow-block.icon-left .vdm-teaser-body-mixin.ic-circle-multiply:after {
+  .vdm-teasers-mixin .vdm-teaser-mixin.arrow-block.icon-left .vdm-teaser-body-mixin.ic-circle-multiply:before {
     content: "";
     font-weight: normal;
     font-style: normal;
@@ -12926,7 +13007,7 @@ select {
     text-rendering: auto;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale; }
-  .vdm-teasers-mixin .vdm-teaser-mixin.arrow-block.icon-left .vdm-teaser-body-mixin.ic-circle-plus-invert:after {
+  .vdm-teasers-mixin .vdm-teaser-mixin.arrow-block.icon-left .vdm-teaser-body-mixin.ic-circle-plus-invert:before {
     content: "";
     font-weight: normal;
     font-style: normal;
@@ -12946,7 +13027,7 @@ select {
     text-rendering: auto;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale; }
-  .vdm-teasers-mixin .vdm-teaser-mixin.arrow-block.icon-left .vdm-teaser-body-mixin.ic-circle-minus-invert:after {
+  .vdm-teasers-mixin .vdm-teaser-mixin.arrow-block.icon-left .vdm-teaser-body-mixin.ic-circle-minus-invert:before {
     content: "";
     font-weight: normal;
     font-style: normal;
@@ -12966,7 +13047,7 @@ select {
     text-rendering: auto;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale; }
-  .vdm-teasers-mixin .vdm-teaser-mixin.arrow-block.icon-left .vdm-teaser-body-mixin.ic-circle-multiply-invert:after {
+  .vdm-teasers-mixin .vdm-teaser-mixin.arrow-block.icon-left .vdm-teaser-body-mixin.ic-circle-multiply-invert:before {
     content: "";
     font-weight: normal;
     font-style: normal;
@@ -12986,7 +13067,7 @@ select {
     text-rendering: auto;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale; }
-  .vdm-teasers-mixin .vdm-teaser-mixin.arrow-block.icon-left .vdm-teaser-body-mixin.ic-checkbox-checked:after {
+  .vdm-teasers-mixin .vdm-teaser-mixin.arrow-block.icon-left .vdm-teaser-body-mixin.ic-checkbox-checked:before {
     content: "";
     font-weight: normal;
     font-style: normal;
@@ -13006,7 +13087,7 @@ select {
     text-rendering: auto;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale; }
-  .vdm-teasers-mixin .vdm-teaser-mixin.arrow-block.icon-left .vdm-teaser-body-mixin.ic-checkbox-empty:after {
+  .vdm-teasers-mixin .vdm-teaser-mixin.arrow-block.icon-left .vdm-teaser-body-mixin.ic-checkbox-empty:before {
     content: "";
     font-weight: normal;
     font-style: normal;
@@ -13026,7 +13107,7 @@ select {
     text-rendering: auto;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale; }
-  .vdm-teasers-mixin .vdm-teaser-mixin.arrow-block.icon-left .vdm-teaser-body-mixin.ic-checkbox-checked-trans:after {
+  .vdm-teasers-mixin .vdm-teaser-mixin.arrow-block.icon-left .vdm-teaser-body-mixin.ic-checkbox-checked-trans:before {
     content: "";
     font-weight: normal;
     font-style: normal;
@@ -13046,7 +13127,7 @@ select {
     text-rendering: auto;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale; }
-  .vdm-teasers-mixin .vdm-teaser-mixin.arrow-block.icon-left .vdm-teaser-body-mixin.ic-checkbox-checked-invert:after {
+  .vdm-teasers-mixin .vdm-teaser-mixin.arrow-block.icon-left .vdm-teaser-body-mixin.ic-checkbox-checked-invert:before {
     content: "";
     font-weight: normal;
     font-style: normal;
@@ -13066,7 +13147,7 @@ select {
     text-rendering: auto;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale; }
-  .vdm-teasers-mixin .vdm-teaser-mixin.arrow-block.icon-left .vdm-teaser-body-mixin.ic-trash:after {
+  .vdm-teasers-mixin .vdm-teaser-mixin.arrow-block.icon-left .vdm-teaser-body-mixin.ic-trash:before {
     content: "";
     font-weight: normal;
     font-style: normal;
@@ -13086,7 +13167,7 @@ select {
     text-rendering: auto;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale; }
-  .vdm-teasers-mixin .vdm-teaser-mixin.arrow-block.icon-left .vdm-teaser-body-mixin.ic-recycle:after {
+  .vdm-teasers-mixin .vdm-teaser-mixin.arrow-block.icon-left .vdm-teaser-body-mixin.ic-recycle:before {
     content: "";
     font-weight: normal;
     font-style: normal;
@@ -13106,7 +13187,7 @@ select {
     text-rendering: auto;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale; }
-  .vdm-teasers-mixin .vdm-teaser-mixin.arrow-block.icon-left .vdm-teaser-body-mixin.ic-compost:after {
+  .vdm-teasers-mixin .vdm-teaser-mixin.arrow-block.icon-left .vdm-teaser-body-mixin.ic-compost:before {
     content: "";
     font-weight: normal;
     font-style: normal;
@@ -13126,7 +13207,7 @@ select {
     text-rendering: auto;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale; }
-  .vdm-teasers-mixin .vdm-teaser-mixin.arrow-block.icon-left .vdm-teaser-body-mixin.ic-greens:after {
+  .vdm-teasers-mixin .vdm-teaser-mixin.arrow-block.icon-left .vdm-teaser-body-mixin.ic-greens:before {
     content: "";
     font-weight: normal;
     font-style: normal;
@@ -13146,7 +13227,7 @@ select {
     text-rendering: auto;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale; }
-  .vdm-teasers-mixin .vdm-teaser-mixin.arrow-block.icon-left .vdm-teaser-body-mixin.ic-permit-pet:after {
+  .vdm-teasers-mixin .vdm-teaser-mixin.arrow-block.icon-left .vdm-teaser-body-mixin.ic-permit-pet:before {
     content: "";
     font-weight: normal;
     font-style: normal;
@@ -13168,11 +13249,30 @@ select {
     -moz-osx-font-smoothing: grayscale; }
   .vdm-teasers-mixin .vdm-teaser-mixin.arrow-block.icon-left .vdm-teaser-body-mixin:before, .vdm-teasers-mixin .vdm-teaser-mixin.arrow-block.icon-left .vdm-teaser-body-mixin:after {
     position: absolute; }
-  .vdm-teasers-mixin .vdm-teaser-mixin.arrow-block.icon-left .vdm-teaser-body-mixin:after {
+    @media (max-width: 767px) {
+      .vdm-teasers-mixin .vdm-teaser-mixin.arrow-block.icon-left .vdm-teaser-body-mixin:before, .vdm-teasers-mixin .vdm-teaser-mixin.arrow-block.icon-left .vdm-teaser-body-mixin:after {
+        left: calc(50% - 1.8rem); } }
+    @media (max-width: 575px) {
+      .vdm-teasers-mixin .vdm-teaser-mixin.arrow-block.icon-left .vdm-teaser-body-mixin:before, .vdm-teasers-mixin .vdm-teaser-mixin.arrow-block.icon-left .vdm-teaser-body-mixin:after {
+        left: calc(50% - 1.8rem); } }
+  .vdm-teasers-mixin .vdm-teaser-mixin.arrow-block.icon-left .vdm-teaser-body-mixin:before {
     top: calc(50% - 1.7rem);
     left: calc(100% - 7rem); }
+    @media (max-width: 767px) {
+      .vdm-teasers-mixin .vdm-teaser-mixin.arrow-block.icon-left .vdm-teaser-body-mixin:before {
+        top: 1.8rem;
+        left: calc(50% - 1.8rem); } }
+    @media (max-width: 575px) {
+      .vdm-teasers-mixin .vdm-teaser-mixin.arrow-block.icon-left .vdm-teaser-body-mixin:before {
+        top: 3rem;
+        left: calc(50% - 1.8rem); } }
   .vdm-teasers-mixin .vdm-teaser-mixin.arrow-block.icon-left .vdm-teaser-body-mixin:after {
-    left: calc(100% - 4.5rem); }
+    left: calc(100% - 4.5rem);
+    top: calc(50% - 1.7rem); }
+    @media (max-width: 767px) {
+      .vdm-teasers-mixin .vdm-teaser-mixin.arrow-block.icon-left .vdm-teaser-body-mixin:after {
+        left: calc(50% - 1.8rem);
+        top: calc(100% - 4.5rem); } }
   .vdm-teasers-mixin .vdm-teaser-mixin.arrow-block.icon-left .vdm-teaser-body-mixin:hover, .vdm-teasers-mixin .vdm-teaser-mixin.arrow-block.icon-left .vdm-teaser-body-mixin:active {
     background: #429A8E;
     color: #FFFFFF; }
@@ -13189,6 +13289,10 @@ select {
     font-size: 21px;
     line-height: 27.9993px;
     margin-bottom: 0.5em; }
+  @media (max-width: 767px) {
+    .vdm-teasers-mixin .vdm-teaser-mixin.arrow-block.icon-left .vdm-teaser-body-mixin {
+      padding-bottom: 5.5rem;
+      border: 1px solid lime; } }
   .vdm-teasers-mixin .vdm-teaser-mixin.arrow-block.icon-left .vdm-teaser-body-mixin.ic-rosette:before {
     content: "";
     font-weight: normal;
@@ -14851,13 +14955,39 @@ select {
     -moz-osx-font-smoothing: grayscale; }
   .vdm-teasers-mixin .vdm-teaser-mixin.arrow-block.icon-left .vdm-teaser-body-mixin:before, .vdm-teasers-mixin .vdm-teaser-mixin.arrow-block.icon-left .vdm-teaser-body-mixin:after {
     position: absolute; }
+    @media (max-width: 767px) {
+      .vdm-teasers-mixin .vdm-teaser-mixin.arrow-block.icon-left .vdm-teaser-body-mixin:before, .vdm-teasers-mixin .vdm-teaser-mixin.arrow-block.icon-left .vdm-teaser-body-mixin:after {
+        left: calc(50% - 1.8rem); } }
+    @media (max-width: 575px) {
+      .vdm-teasers-mixin .vdm-teaser-mixin.arrow-block.icon-left .vdm-teaser-body-mixin:before, .vdm-teasers-mixin .vdm-teaser-mixin.arrow-block.icon-left .vdm-teaser-body-mixin:after {
+        left: calc(50% - 1.8rem); } }
   .vdm-teasers-mixin .vdm-teaser-mixin.arrow-block.icon-left .vdm-teaser-body-mixin:before {
     left: 3rem;
     top: calc(50% - 1.7rem); }
+    @media (max-width: 767px) {
+      .vdm-teasers-mixin .vdm-teaser-mixin.arrow-block.icon-left .vdm-teaser-body-mixin:before {
+        top: 1.8rem;
+        left: calc(50% - 1.8rem); } }
+    @media (max-width: 575px) {
+      .vdm-teasers-mixin .vdm-teaser-mixin.arrow-block.icon-left .vdm-teaser-body-mixin:before {
+        top: 3rem;
+        left: calc(50% - 1.8rem); } }
+  .vdm-teasers-mixin .vdm-teaser-mixin.arrow-block.icon-left .vdm-teaser-body-mixin:after {
+    left: calc(100% - 4.5rem);
+    top: calc(50% - 1.7rem); }
+    @media (max-width: 767px) {
+      .vdm-teasers-mixin .vdm-teaser-mixin.arrow-block.icon-left .vdm-teaser-body-mixin:after {
+        left: calc(50% - 1.8rem);
+        top: calc(100% - 4.5rem); } }
   .vdm-teasers-mixin .vdm-teaser-mixin.arrow-block.icon-left .vdm-teaser-body-mixin:before {
     left: 2rem; }
-  .vdm-teasers-mixin .vdm-teaser-mixin.arrow-block.icon-left .vdm-teaser-body-mixin:after {
-    left: calc(100% - 4.5rem); }
+  @media (max-width: 767px) {
+    .vdm-teasers-mixin .vdm-teaser-mixin.arrow-block.icon-left .vdm-teaser-body-mixin:before, .vdm-teasers-mixin .vdm-teaser-mixin.arrow-block.icon-left .vdm-teaser-body-mixin:after {
+      left: calc(50% - 1.8rem); } }
+  @media (max-width: 767px) {
+    .vdm-teasers-mixin .vdm-teaser-mixin.arrow-block.icon-left .vdm-teaser-body-mixin:after {
+      top: calc(100% - 4.5rem);
+      left: calc(50% - 1.8rem); } }
 
 .vdm-teasers-mixin .vdm-teaser-mixin.image-right .vdm-teaser-body-mixin, .vdm-teasers-mixin .vdm-teaser-mixin.image-left .vdm-teaser-body-mixin {
   padding: 2.3rem 2.3rem 2.3rem 2.3rem;
@@ -14882,6 +15012,9 @@ select {
       line-height: 27.9993px; }
       .vdm-teasers-mixin .vdm-teaser-mixin.image-right .vdm-teaser-body-mixin .content-wrapper .title.arrow-link, .vdm-teasers-mixin .vdm-teaser-mixin.image-left .vdm-teaser-body-mixin .content-wrapper .title.arrow-link {
         line-height: 1.7em; }
+  @media (max-width: 575px) {
+    .vdm-teasers-mixin .vdm-teaser-mixin.image-right .vdm-teaser-body-mixin .content-wrapper, .vdm-teasers-mixin .vdm-teaser-mixin.image-left .vdm-teaser-body-mixin .content-wrapper {
+      padding-bottom: 2.5rem; } }
   @media (max-width: 575px) {
     .vdm-teasers-mixin .vdm-teaser-mixin.image-right .vdm-teaser-body-mixin, .vdm-teasers-mixin .vdm-teaser-mixin.image-left .vdm-teaser-body-mixin {
       flex-direction: column; }
@@ -14917,6 +15050,9 @@ select {
     max-height: 10rem; }
   .vdm-teasers-mixin .vdm-teaser-mixin.image-right.small .vdm-teaser-body-mixin .content-wrapper, .vdm-teasers-mixin .vdm-teaser-mixin.image-left.small .vdm-teaser-body-mixin .content-wrapper {
     padding: 1.5rem 1.5rem 1.8rem 1.5rem; }
+  @media (max-width: 575px) {
+    .vdm-teasers-mixin .vdm-teaser-mixin.image-right.small .vdm-teaser-body-mixin .content-wrapper, .vdm-teasers-mixin .vdm-teaser-mixin.image-left.small .vdm-teaser-body-mixin .content-wrapper {
+      padding-bottom: 2.5rem; } }
   @media (max-width: 575px) {
     .vdm-teasers-mixin .vdm-teaser-mixin.image-right.small .vdm-teaser-body-mixin, .vdm-teasers-mixin .vdm-teaser-mixin.image-left.small .vdm-teaser-body-mixin {
       flex-direction: column; }
@@ -14956,7 +15092,12 @@ select {
       .vdm-teasers-mixin .vdm-teaser-mixin.image-right.large .vdm-teaser-body-mixin > img, .vdm-teasers-mixin .vdm-teaser-mixin.image-left.large .vdm-teaser-body-mixin > img {
         order: 0;
         width: 100%;
-        max-height: none; } }
+        max-height: none; }
+      .vdm-teasers-mixin .vdm-teaser-mixin.image-right.large .vdm-teaser-body-mixin .content-wrapper, .vdm-teasers-mixin .vdm-teaser-mixin.image-left.large .vdm-teaser-body-mixin .content-wrapper {
+        padding-bottom: 2.5rem; } }
+  @media (max-width: 575px) {
+    .vdm-teasers-mixin .vdm-teaser-mixin.image-right.large .vdm-teaser-body-mixin .content-wrapper, .vdm-teasers-mixin .vdm-teaser-mixin.image-left.large .vdm-teaser-body-mixin .content-wrapper {
+      padding-bottom: 2.5rem; } }
   @media (max-width: 575px) {
     .vdm-teasers-mixin .vdm-teaser-mixin.image-right.large .vdm-teaser-body-mixin, .vdm-teasers-mixin .vdm-teaser-mixin.image-left.large .vdm-teaser-body-mixin {
       flex-direction: column; }
@@ -15014,7 +15155,12 @@ select {
       .vdm-teasers-mixin .vdm-teaser-mixin.image-right.larger .vdm-teaser-body-mixin > img, .vdm-teasers-mixin .vdm-teaser-mixin.image-left.larger .vdm-teaser-body-mixin > img {
         order: 0;
         width: 100%;
-        max-height: none; } }
+        max-height: none; }
+      .vdm-teasers-mixin .vdm-teaser-mixin.image-right.larger .vdm-teaser-body-mixin .content-wrapper, .vdm-teasers-mixin .vdm-teaser-mixin.image-left.larger .vdm-teaser-body-mixin .content-wrapper {
+        padding-bottom: 2.5rem; } }
+  @media (max-width: 575px) {
+    .vdm-teasers-mixin .vdm-teaser-mixin.image-right.larger .vdm-teaser-body-mixin .content-wrapper, .vdm-teasers-mixin .vdm-teaser-mixin.image-left.larger .vdm-teaser-body-mixin .content-wrapper {
+      padding-bottom: 2.5rem; } }
   @media (max-width: 575px) {
     .vdm-teasers-mixin .vdm-teaser-mixin.image-right.larger .vdm-teaser-body-mixin, .vdm-teasers-mixin .vdm-teaser-mixin.image-left.larger .vdm-teaser-body-mixin {
       flex-direction: column; }
@@ -15046,6 +15192,9 @@ select {
       line-height: 27.9993px; }
       .vdm-teasers-mixin .vdm-teaser-mixin.image-right .vdm-teaser-body-mixin .content-wrapper .title.arrow-link {
         line-height: 1.7em; }
+  @media (max-width: 575px) {
+    .vdm-teasers-mixin .vdm-teaser-mixin.image-right .vdm-teaser-body-mixin .content-wrapper {
+      padding-bottom: 2.5rem; } }
   .vdm-teasers-mixin .vdm-teaser-mixin.image-right .vdm-teaser-body-mixin > img {
     order: 1; }
   @media (max-width: 575px) {
@@ -15062,6 +15211,57 @@ select {
         order: 0;
         width: 100%;
         max-height: none; } }
+
+.vdm-teasers-mixin .vdm-teaser-mixin.compact .vdm-teaser-body-mixin {
+  padding: 2.3rem 2.3rem 2.3rem 2.3rem;
+  padding: 1rem 3.5rem 1rem 1rem; }
+  .vdm-teasers-mixin .vdm-teaser-mixin.compact .vdm-teaser-body-mixin:after {
+    position: absolute;
+    top: calc(50% - 1.7rem);
+    left: calc(100% - 4rem);
+    font-size: 2.8rem;
+    width: 2.8rem;
+    height: 2.8rem;
+    line-height: 2.8rem; }
+  .vdm-teasers-mixin .vdm-teaser-mixin.compact .vdm-teaser-body-mixin .title {
+    font-family: "Nunito Sans", Helvetica, Arial, sans-serif;
+    font-size: 67px;
+    line-height: 118.125px;
+    font-weight: 400;
+    display: block;
+    font-size: 21px;
+    line-height: 27.9993px;
+    margin-bottom: 0.5em; }
+  @media (max-width: 767px) {
+    .vdm-teasers-mixin .vdm-teaser-mixin.compact .vdm-teaser-body-mixin {
+      padding: 1rem 5rem 1rem 1rem; } }
+
+.vdm-teasers-mixin .vdm-teaser-mixin.inline-flex .vdm-teaser-body-mixin {
+  padding: 2.3rem 2.3rem 2.3rem 2.3rem;
+  flex-direction: row;
+  padding-right: 5rem;
+  align-items: center; }
+  .vdm-teasers-mixin .vdm-teaser-mixin.inline-flex .vdm-teaser-body-mixin .content-wrapper {
+    flex-direction: column;
+    padding-right: 2rem; }
+  .vdm-teasers-mixin .vdm-teaser-mixin.inline-flex .vdm-teaser-body-mixin .identifier {
+    text-transform: uppercase;
+    color: #80807F;
+    font-size: 16px;
+    width: 30%;
+    text-align: center;
+    margin-top: 0.9rem; }
+  @media (max-width: 767px) {
+    .vdm-teasers-mixin .vdm-teaser-mixin.inline-flex .vdm-teaser-body-mixin {
+      flex-direction: column;
+      align-items: left;
+      padding-bottom: 5.5rem; }
+      .vdm-teasers-mixin .vdm-teaser-mixin.inline-flex .vdm-teaser-body-mixin .content-wrapper {
+        padding-right: 0; }
+      .vdm-teasers-mixin .vdm-teaser-mixin.inline-flex .vdm-teaser-body-mixin .identifier {
+        align-self: center;
+        width: auto;
+        margin-top: 2rem; } }
 
 .vdm-teaser {
   /*
@@ -17080,7 +17280,7 @@ select {
     text-rendering: auto;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale; }
-  .vdm-card .vdm-card-body:before, .vdm-card .vdm-card-body:after {
+  .vdm-card .vdm-card-body:before {
     font-size: 3.6rem;
     width: 3.6rem;
     height: 3.6rem;
@@ -17131,37 +17331,48 @@ select {
     .vdm-card .vdm-card-body .category:first-of-type {
       margin-bottom: 0.75rem; }
 
-.vdm-card.thumb {
-  text-align: center; }
-
-.vdm-card.light-scheme .vdm-card-body {
-  background: #FFFFFF;
-  border: 1px solid #429A8E; }
-  .vdm-card.light-scheme .vdm-card-body:before {
-    color: #000000; }
-
-.vdm-card.white-scheme .vdm-card-body {
-  background: #FFFFFF;
-  border: none; }
-  .vdm-card.white-scheme .vdm-card-body:hover, .vdm-card.white-scheme .vdm-card-body:active {
-    background: #FFFFFF;
-    border: none;
-    color: #000000; }
-    .vdm-card.white-scheme .vdm-card-body:hover:before, .vdm-card.white-scheme .vdm-card-body:active:before {
+.vdm-card.minimal {
+  flex: 0 0 100%;
+  max-width: 100%; }
+  .vdm-card.minimal .vdm-card-body {
+    text-align: left;
+    height: 100%;
+    padding: 1.3rem; }
+    .vdm-card.minimal .vdm-card-body .title {
+      font-family: "Nunito Sans", Helvetica, Arial, sans-serif;
+      font-size: 67px;
+      line-height: 118.125px;
+      font-weight: 400;
+      display: block;
+      font-size: 21px;
+      line-height: 27.9993px;
       color: #429A8E; }
+    .vdm-card.minimal .vdm-card-body .content {
+      font-family: "Nunito Sans", Helvetica, Arial, sans-serif;
+      font-size: 67px;
+      line-height: 118.125px;
+      font-weight: 400;
+      display: block;
+      font-size: 16px;
+      line-height: 21px;
+      margin-bottom: 0;
+      margin-top: auto; }
+  @media (min-width: 768px) {
+    .vdm-card.minimal {
+      flex: 0 0 50%;
+      max-width: 50%; } }
+  @media (min-width: 992px) {
+    .vdm-card.minimal {
+      flex: 0 0 33.33333%;
+      max-width: 33.33333%; } }
 
-.vdm-card.vdm-card-image {
-  text-align: left; }
-  .vdm-card.vdm-card-image.media-top .vdm-card-body {
-    padding: 0 0 1.3rem 0; }
-    .vdm-card.vdm-card-image.media-top .vdm-card-body > * {
-      margin-right: 1.3rem;
-      margin-left: 1.3rem; }
-    .vdm-card.vdm-card-image.media-top .vdm-card-body img {
-      margin-bottom: 1.3rem;
-      margin-right: 0;
-      margin-left: 0; }
-    .vdm-card.vdm-card-image.media-top .vdm-card-body .title {
+.vdm-card.featured {
+  flex: 0 0 100%;
+  max-width: 100%; }
+  .vdm-card.featured .vdm-card-body {
+    height: 100%;
+    padding: 1.5rem 1.3rem; }
+    .vdm-card.featured .vdm-card-body .title {
       font-family: "Nunito Sans", Helvetica, Arial, sans-serif;
       font-size: 67px;
       line-height: 118.125px;
@@ -17171,114 +17382,31 @@ select {
       line-height: 37.9995px;
       font-weight: 400;
       font-weight: 700; }
-  .vdm-card.vdm-card-image.media-top.thumb {
-    flex: 0 0 100%;
-    max-width: 100%; }
-    .vdm-card.vdm-card-image.media-top.thumb:hover > *, .vdm-card.vdm-card-image.media-top.thumb:active > * {
-      color: #000000; }
-    .vdm-card.vdm-card-image.media-top.thumb:hover .footer, .vdm-card.vdm-card-image.media-top.thumb:active .footer {
-      color: #000000; }
-    .vdm-card.vdm-card-image.media-top.thumb:hover .title, .vdm-card.vdm-card-image.media-top.thumb:active .title {
-      color: #429A8E; }
-    @media (min-width: 576px) {
-      .vdm-card.vdm-card-image.media-top.thumb {
-        flex: 0 0 50%;
-        max-width: 50%; } }
-    @media (min-width: 992px) {
-      .vdm-card.vdm-card-image.media-top.thumb {
-        flex: 0 0 25%;
-        max-width: 25%; } }
-  .vdm-card.vdm-card-image.media-top.large .title {
-    margin-bottom: 0.4em; }
-  .vdm-card.vdm-card-image.media-top.large .content {
-    margin-bottom: 3.6rem; }
-  @media (min-width: 576px) {
-    .vdm-card.vdm-card-image.media-top.large {
-      flex: 0 0 100%;
-      max-width: 100%; } }
+    .vdm-card.featured .vdm-card-body .content {
+      font-family: "Nunito Sans", Helvetica, Arial, sans-serif;
+      font-size: 67px;
+      line-height: 118.125px;
+      font-weight: 400;
+      display: block;
+      font-size: 28px;
+      line-height: 37.9995px;
+      font-weight: 400;
+      flex: 1;
+      margin-bottom: 4em; }
+    .vdm-card.featured .vdm-card-body .footer {
+      font-family: "Nunito Sans", Helvetica, Arial, sans-serif;
+      font-size: 67px;
+      line-height: 118.125px;
+      font-weight: 400;
+      display: block;
+      font-size: 16px;
+      line-height: 21px;
+      margin-bottom: 0;
+      margin-top: auto; }
   @media (min-width: 768px) {
-    .vdm-card.vdm-card-image.media-top.large {
+    .vdm-card.featured {
       flex: 0 0 50%;
       max-width: 50%; } }
-  .vdm-card.vdm-card-image.media-top.large .footer {
-    margin-top: auto; }
-  .vdm-card.vdm-card-image.media-left .vdm-card-body, .vdm-card.vdm-card-image.media-right .vdm-card-body {
-    flex-direction: row; }
-    .vdm-card.vdm-card-image.media-left .vdm-card-body > img, .vdm-card.vdm-card-image.media-right .vdm-card-body > img {
-      order: 1;
-      max-height: 10rem;
-      margin: 0; }
-    .vdm-card.vdm-card-image.media-left .vdm-card-body:first-child, .vdm-card.vdm-card-image.media-right .vdm-card-body:first-child {
-      margin-top: 3.75rem; }
-    .vdm-card.vdm-card-image.media-left .vdm-card-body:last-child, .vdm-card.vdm-card-image.media-right .vdm-card-body:last-child {
-      margin-bottom: 4.65rem; }
-    .vdm-card.vdm-card-image.media-left .vdm-card-body .arrow-link:after, .vdm-card.vdm-card-image.media-right .vdm-card-body .arrow-link:after {
-      top: calc(50% - 1rem); }
-  .vdm-card.vdm-card-image.media-left.wrapper .vdm-card-body, .vdm-card.vdm-card-image.media-right.wrapper .vdm-card-body {
-    flex-direction: row; }
-    .vdm-card.vdm-card-image.media-left.wrapper .vdm-card-body > img, .vdm-card.vdm-card-image.media-right.wrapper .vdm-card-body > img {
-      order: 1;
-      max-height: 10rem;
-      margin: 0; }
-    .vdm-card.vdm-card-image.media-left.wrapper .vdm-card-body .card-content-wrapper, .vdm-card.vdm-card-image.media-right.wrapper .vdm-card-body .card-content-wrapper {
-      margin-top: 0;
-      margin-bottom: 0;
-      padding: 2rem 2rem 1rem 3.5rem; }
-      .vdm-card.vdm-card-image.media-left.wrapper .vdm-card-body .card-content-wrapper .title, .vdm-card.vdm-card-image.media-right.wrapper .vdm-card-body .card-content-wrapper .title {
-        margin-bottom: 0; }
-      .vdm-card.vdm-card-image.media-left.wrapper .vdm-card-body .card-content-wrapper:first-child, .vdm-card.vdm-card-image.media-right.wrapper .vdm-card-body .card-content-wrapper:first-child {
-        margin-top: 0; }
-      .vdm-card.vdm-card-image.media-left.wrapper .vdm-card-body .card-content-wrapper:last-child, .vdm-card.vdm-card-image.media-right.wrapper .vdm-card-body .card-content-wrapper:last-child {
-        margin-bottom: 0; }
-  .vdm-card.vdm-card-image.rounded .vdm-card-body > img {
-    margin: 2em auto 1em auto;
-    width: 61.5%; }
-  .vdm-card.vdm-card-image.rounded .vdm-card-body .title {
-    margin-bottom: auto; }
-    .vdm-card.vdm-card-image.rounded .vdm-card-body .title .weight-regular {
-      font-weight: 400;
-      display: block; }
-  .vdm-card.vdm-card-image.rounded .vdm-card-body .footer {
-    margin-top: auto;
-    padding-top: 0.5rem;
-    margin-bottom: 0; }
-
-.vdm-card.icon-left .vdm-card-body:before, .vdm-card.icon-right .vdm-card-body:before {
-  position: absolute;
-  top: calc(50% - 1.8rem); }
-
-.vdm-card.icon-left .vdm-card-body .title, .vdm-card.icon-right .vdm-card-body .title {
-  font-family: "Nunito Sans", Helvetica, Arial, sans-serif;
-  font-size: 67px;
-  line-height: 118.125px;
-  font-weight: 400;
-  display: block;
-  font-size: 28px;
-  line-height: 37.9995px;
-  font-weight: 400;
-  font-weight: 700; }
-
-.vdm-card.icon-left .vdm-card-body {
-  padding: 2.3rem 2.3rem 3rem 7.75rem; }
-  .vdm-card.icon-left .vdm-card-body:before {
-    left: 3rem; }
-  @media (max-width: 575px) {
-    .vdm-card.icon-left .vdm-card-body {
-      padding: 7.75rem 2.3rem 3rem 2.3rem; }
-      .vdm-card.icon-left .vdm-card-body:before {
-        top: 3rem;
-        left: calc(50% - 1.8rem); } }
-
-.vdm-card.icon-right .vdm-card-body {
-  padding: 2.3rem 7.75rem 3rem 2.3rem; }
-  .vdm-card.icon-right .vdm-card-body:before {
-    left: calc(100% - 6.8rem); }
-  @media (max-width: 575px) {
-    .vdm-card.icon-right .vdm-card-body {
-      padding: 7.75rem 2.3rem 3rem 2.3rem; }
-      .vdm-card.icon-right .vdm-card-body:before {
-        top: 3rem;
-        left: calc(50% - 1.8rem); } }
 
 .vdm-card.icon-center {
   flex: 0 0 100%;
@@ -17301,6 +17429,106 @@ select {
     .vdm-card.icon-center {
       flex: 0 0 33.33333%;
       max-width: 33.33333%; } }
+
+.vdm-card.thumb {
+  text-align: center; }
+
+.vdm-card.light-scheme .vdm-card-body {
+  background: #FFFFFF;
+  border: 1px solid #429A8E; }
+  .vdm-card.light-scheme .vdm-card-body:before {
+    color: #000000; }
+
+.vdm-card.white-scheme .vdm-card-body {
+  background: #FFFFFF;
+  border: none; }
+  .vdm-card.white-scheme .vdm-card-body:hover, .vdm-card.white-scheme .vdm-card-body:active {
+    background: #FFFFFF;
+    border: none;
+    color: #000000; }
+    .vdm-card.white-scheme .vdm-card-body:hover > *, .vdm-card.white-scheme .vdm-card-body:active > * {
+      color: #000000; }
+    .vdm-card.white-scheme .vdm-card-body:hover:before, .vdm-card.white-scheme .vdm-card-body:hover:after, .vdm-card.white-scheme .vdm-card-body:active:before, .vdm-card.white-scheme .vdm-card-body:active:after {
+      color: #429A8E; }
+
+.vdm-card.vdm-card-image {
+  text-align: left; }
+  .vdm-card.vdm-card-image .vdm-card-body {
+    flex-direction: column;
+    margin: 0;
+    padding: 0; }
+    .vdm-card.vdm-card-image .vdm-card-body img {
+      margin-bottom: 1.3rem;
+      margin-right: 0;
+      margin-left: 0; }
+    .vdm-card.vdm-card-image .vdm-card-body .card-content-wrapper {
+      display: flex;
+      flex-direction: column;
+      height: 100%;
+      margin-top: 0;
+      margin-bottom: 0;
+      padding: 0 1.3rem 1.3rem 1.3rem; }
+      .vdm-card.vdm-card-image .vdm-card-body .card-content-wrapper:first-child {
+        margin-top: 0; }
+      .vdm-card.vdm-card-image .vdm-card-body .card-content-wrapper:last-child {
+        margin-bottom: 0; }
+      .vdm-card.vdm-card-image .vdm-card-body .card-content-wrapper .title {
+        font-family: "Nunito Sans", Helvetica, Arial, sans-serif;
+        font-size: 67px;
+        line-height: 118.125px;
+        font-weight: 400;
+        display: block;
+        font-size: 28px;
+        line-height: 37.9995px;
+        font-weight: 400;
+        font-weight: 700; }
+      .vdm-card.vdm-card-image .vdm-card-body .card-content-wrapper .content {
+        flex: 1; }
+      .vdm-card.vdm-card-image .vdm-card-body .card-content-wrapper .footer {
+        margin-top: auto; }
+  .vdm-card.vdm-card-image.thumb {
+    flex: 0 0 100%;
+    max-width: 100%; }
+    .vdm-card.vdm-card-image.thumb:hover > *, .vdm-card.vdm-card-image.thumb:active > * {
+      color: #000000; }
+    .vdm-card.vdm-card-image.thumb:hover .footer, .vdm-card.vdm-card-image.thumb:active .footer {
+      color: #000000; }
+    .vdm-card.vdm-card-image.thumb:hover .title, .vdm-card.vdm-card-image.thumb:active .title {
+      color: #429A8E; }
+    @media (min-width: 576px) {
+      .vdm-card.vdm-card-image.thumb {
+        flex: 0 0 50%;
+        max-width: 50%; } }
+    @media (min-width: 992px) {
+      .vdm-card.vdm-card-image.thumb {
+        flex: 0 0 25%;
+        max-width: 25%; } }
+  .vdm-card.vdm-card-image.large .card-content-wrapper .title {
+    margin-bottom: 0.4em; }
+  .vdm-card.vdm-card-image.large .card-content-wrapper .content {
+    margin-bottom: 3.6rem; }
+  .vdm-card.vdm-card-image.large .card-content-wrapper .footer {
+    margin-top: auto; }
+  @media (min-width: 576px) {
+    .vdm-card.vdm-card-image.large {
+      flex: 0 0 100%;
+      max-width: 100%; } }
+  @media (min-width: 768px) {
+    .vdm-card.vdm-card-image.large {
+      flex: 0 0 50%;
+      max-width: 50%; } }
+  .vdm-card.vdm-card-image.rounded .vdm-card-body > img {
+    margin: 2em auto 1em auto;
+    width: 61.5%; }
+  .vdm-card.vdm-card-image.rounded .vdm-card-body .card-content-wrapper .title {
+    margin-bottom: auto; }
+    .vdm-card.vdm-card-image.rounded .vdm-card-body .card-content-wrapper .title .weight-regular {
+      font-weight: 400;
+      display: block; }
+  .vdm-card.vdm-card-image.rounded .vdm-card-body .card-content-wrapper .footer {
+    margin-top: auto;
+    padding-top: 0.5rem;
+    margin-bottom: 0; }
 
 .is-grid-row {
   display: flex;

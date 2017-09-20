@@ -37,25 +37,28 @@
 }
 
 // Mixin application tests
-// Call he mixin functions and see what happens
+// Function reference for the master function for styling this block type 
+
+/**
+  * 
+  *
+  * @mixin teaser-variant($icon: false, $image: false, $case: false, $scale: false)
+  *
+  * @arg $icon [false ,right, left]
+  * @arg $image [false ,right, left]
+  * @arg $case [false, arrow-block, compact, inline-flex, category-block]
+  * @arg $scale [false, small, large, larger] -- images for now
+  *
+  * Always called from the hyperlink level -- all styles are returned inside .vdm-teaser-body-mixin {}
+  * The left side for icons and images is the default case, it is implicit on styling
+  *
+  *
+  **/
+
 .vdm-teasers-mixin {
     .vdm-teaser-mixin {
         .vdm-teaser-body-mixin {
             @include teaser-base();
-
-            .title {
-
-            }
-            .content {
-
-            }
-            .footer {
-
-            }
-            .content-wrapper {
-
-            }
-
         }
 
         // Color modifiers
@@ -83,6 +86,7 @@
             } 
         }
 
+        // Major case 2, arrow blocks
         &.arrow-block {
             .vdm-teaser-body-mixin {
                 @include teaser-variant(false, false, arrow-block);
@@ -100,7 +104,7 @@
             }
         }
 
-        // Case 2, images
+        // Case 3, images
 
         &.image-right, 
         &.image-left {
@@ -124,23 +128,6 @@
                     @include teaser-variant(false, left, false, larger);
                 }
             }
-
-
-            // .content-wrapper {
-            //     padding: 1em;
-            //     display: flex;
-            //     flex-direction: column;
-            //     flex: 1;
-            //     padding: 2.3rem 2.3rem 3rem 2.3rem;
-                
-            //     .title {
-            //         @include header(5); 
-            //         &.arrow-link {
-            //             line-height: 1.7em;
-            //         }
-            //     }
-            // }
-
         }
 
         // Images, left and right overides
@@ -154,45 +141,22 @@
             }
         }
 
-        // Case 3, arrow blocks
+        // Other cases, exceptions
+        &.compact {
+            .vdm-teaser-body-mixin {
+                @include teaser-variant(false, false, compact);
+            }
+        }
+
+        &.inline-flex {
+            .vdm-teaser-body-mixin {
+                @include teaser-variant(false, false, inline-flex);
+            }
+        }
+
+        
     }
 }
-
-// And here are some variables we may or may nor define...
-
-// Fonts...
-$vdm-teaser-icon-font-size: "";
-$vdm-teaser-icon-lateral-pull-left: "";
-$vdm-teaser-icon-lateral-pull-right: "";
-$vdm-teaser-icon-vertical-pull-top: "";
-$vdm-teaser-icon-vertical-pull-bottom: "";
-
-// Paddings
-$vdm-teaser-ptop: "";
-$vdm-teaser-pright: "";
-$vdm-teaser-pbottom: "";
-$vdm-teaser-pleft: "";
-
-// Vertical, responsive layout, repeat
-$vdm-teaser-stacked-ptop: "";
-$vdm-teaser-stacked-pright: "";
-$vdm-teaser-stacked-pbottom: "";
-$vdm-teaser-stacked-pleft: "";
-
-// Inner wrapper
-$vdm-teaser-inner-ptop: "";
-$vdm-teaser-inner-pright: "";
-$vdm-teaser-inner-pbottom: "";
-$vdm-teaser-inner-pleft: "";
-
-$vdm-teaser-arrow-block-padding: "";
-$vdm-teaser-icon-padding: "";
-
-// End paddings
-
-
-$vdm-teaser-title-margin-bottom : "";
-$vdm-teaser- : "";
 
 
 // Base teaser styles
@@ -764,10 +728,8 @@ $vdm-teaser- : "";
             }
         }
 
-        // Left and right icons
-        // Shared with teasers, mixin
-        &:before, 
-        &:after {
+        // Mixin potential
+        &:before  {
             font-size: 3.6rem;
             width: 3.6rem;
             height: 3.6rem;
@@ -807,16 +769,13 @@ $vdm-teaser- : "";
                         background-color: $vdm-white;
                     }
                 }
-
-
             }
         }
 
-        .vdm-card-media {
-            &img {
-                @extend .img-fluid;
-            }
+        >img {
+            @extend .img-fluid;
         }
+
 
         // Standard fixtures, first children, title content footer
         .title { 
@@ -835,7 +794,7 @@ $vdm-teaser- : "";
         // Special fixtures, text and deeper elements
 
         // Category tags
-        // Shared with teasers, mixin
+        // Shared with teasers, mixin, does this really belong to cards or is it a generic text style?
         .category {
             font-weight: $vdm-font-weight-bold;
             color: $vdm-brand;
@@ -859,264 +818,70 @@ $vdm-teaser- : "";
             &:first-of-type {
                 margin-bottom: 0.75rem;
             }
-        } 
-
-        
-
-            
+        }     
     }// card-body
-
-
-
     // End generic rules
 
 
     // *******
     // Modifiers & cases below
-
-
-    // Scale modifiers
-    &.thumb {
-        text-align: center;
-    }
-
-    // Color scheme modifiers
-    // Shared with teasers, mixin
-    &.light-scheme {
+    // @see https://projects.invisionapp.com/d/main#/console/11533069/248716747/preview
+    &.minimal {
         .vdm-card-body {
-            background: $vdm-white;
-            border: 1px solid $vdm-brand;
+            text-align: left;
+            height: 100%;
+            padding: 1.3rem;
 
-            &:before {
-                color: $vdm-black;
-            }
-        }
-    }
-    // Shared with teasers, mixin
-    &.white-scheme {
-        .vdm-card-body {
-            background: $vdm-white;
-            border: none;
-            &:hover, 
-            &:active {
-                background: $vdm-white;
-                border: none;
-                color: $vdm-black;
-                &:before {
-                    color: $vdm-brand;
-                }
-            }
-        }
-    }
-
-    // Media and icon position modifiers
-
-    // Begin media styles : images
-    // Media top
-
-    &.vdm-card-image {
-        text-align: left;
-
-        // @see https://projects.invisionapp.com/d/main#/console/11533069/245692118/preview
-        &.media-top {
-            .vdm-card-body {
-                // Add lateral margin to all inner elements but the image
-                padding: 0 0 1.3rem 0;
-
-                >* {
-                    margin-right: 1.3rem;
-                    margin-left: 1.3rem
-                }
-
-                img {
-                    @extend .vdm-card-media;
-                    margin-bottom : 1.3rem;
-                    margin-right: 0;
-                    margin-left: 0;
-                }
-                
-                .title {
-                    @include header(4, bold);
-                }
-                
-            } // Card body
-
-
-            &.thumb {
-
-                &:hover, 
-                &:active {
-                    >* {
-                        color: $vdm-black;  
-                    }
-                    .footer {
-                        color: $vdm-black; 
-                    }
-                    .title {
-                        color: $vdm-brand;
-                    }
-                }
-
-                // Grid styles
-                @include media-breakpoint-up(xs) {
-                    @include make-col(12);
-                }
-                @include media-breakpoint-up(sm) {
-                    @include make-col(6);
-                }
-                @include media-breakpoint-up(lg) {
-                    @include make-col(3);
-                } 
-
-            }
-
-            &.large {
-
-                // Set header margins for this type of cards
-                .title {
-                    margin-bottom: 0.4em;
-                }
-                .content {
-                    margin-bottom: 3.6rem;
-                }
-
-                // Grid styles
-                @include media-breakpoint-up(sm) {
-                    @include make-col(12);
-                }
-                @include media-breakpoint-up(md) {
-                    @include make-col(6);
-                }
-                .footer {
-                    margin-top: auto;
-                }
-            }
-            
-            
-        }
-
-        // Efforts will go into making Teasers with lateral images, not cards,
-        // See teasers code and erase this block if no longer used later on
-        &.media-left, 
-        &.media-right {
-            .vdm-card-body {
-                flex-direction: row;
-                >img {
-                    order: 1;
-                    max-height: 10rem;
-                    margin: 0;
-                }
-                &:first-child {
-                    margin-top: 3.75rem;
-                }
-                &:last-child {
-                    margin-bottom: 4.65rem;
-                }
-
-                .arrow-link {
-                    &:after {
-                        top: calc(50% - 1rem);
-                    }
-                }
-            }
-
-            &.wrapper {
-                .vdm-card-body {
-                    flex-direction: row;
-                    >img {
-                        order: 1;
-                        max-height: 10rem;
-                        margin: 0;
-                    }
-                    .card-content-wrapper {
-                        margin-top: 0;
-                        margin-bottom: 0;
-                        padding: 2rem 2rem 1rem 3.5rem;
-                        .title {
-                            margin-bottom: 0;
-                        }
-                        &:first-child {
-                            margin-top: 0;
-                        }
-                        &:last-child {
-                            margin-bottom: 0;
-                        }
-                    }
-                }
-            }
-        }
-
-        // @see https://projects.invisionapp.com/d/main#/console/11533069/244609142/preview
-        &.rounded {
-            .vdm-card-body {
-                >img {
-                    @extend .rounded-circle;
-                    margin: 2em auto 1em auto;
-                    width: 61.5%;
-                }
-                .title {
-                    .weight-regular {
-                        font-weight: $vdm-font-weight-regular;
-                        display: block;
-                    }
-                    margin-bottom: auto;    // for sticky footer
-                }
-                .footer {
-                    margin-top: auto;   // for sticky footer
-                    padding-top: 0.5rem;
-                    margin-bottom: 0;
-                }
-            }
-        }
-    
-    }
-
-
-
-    // Larger tiles
-    &.icon-left, 
-    &.icon-right {
-        .vdm-card-body {
-            &:before {
-                position: absolute;
-                top: calc(50% - 1.8rem);
-            }
             .title {
+                @include header(5);
+                color: $vdm-brand;
+            }
+            .content {
+                @include header(6);
+                margin-bottom: 0;
+                margin-top: auto;
+            }
+        } 
+
+        // Grid styles
+        @include media-breakpoint-up(xs) {
+            @include make-col(12);
+        }
+        @include media-breakpoint-up(md) {
+            @include make-col(6);
+        }
+        @include media-breakpoint-up(lg) {
+            @include make-col(4);
+        }
+    }
+
+    // @see https://projects.invisionapp.com/d/main#/console/11533069/248716747/preview
+    &.featured {
+        .vdm-card-body {
+            height: 100%;
+            padding: 1.5rem 1.3rem;
+
+            .title {
+                @include header(4, bold);
+            }
+            .content {
                 @include header(4);
-                font-weight: $vdm-font-weight-bold;
+                flex: 1;
+                margin-bottom: 4em;
             }
-        }
-    }
+            .footer {
+                @include header(6);
+                margin-bottom: 0;
+                margin-top: auto;
+            }
+        } 
 
-    &.icon-left {
-        .vdm-card-body {
-            padding: 2.3rem 2.3rem 3rem 7.75rem;
-            &:before {
-                left: 3rem;
-            }
-            @include media-breakpoint-down(xs) {
-                padding: 7.75rem 2.3rem 3rem 2.3rem;
-                &:before {
-                    top: 3rem;
-                    left: calc(50% - 1.8rem);
-                } 
-            }
+        // Grid styles
+        @include media-breakpoint-up(xs) {
+            @include make-col(12);
         }
-    }
-
-    &.icon-right {
-        .vdm-card-body {
-            padding: 2.3rem 7.75rem 3rem 2.3rem;
-            &:before {
-                left: calc(100% - 6.8rem); // Perceptual
-            }
-            @include media-breakpoint-down(xs) {
-                padding: 7.75rem 2.3rem 3rem 2.3rem;
-                &:before {
-                    top: 3rem;
-                    left: calc(50% - 1.8rem); 
-                } 
-            }
+        @include media-breakpoint-up(md) {
+            @include make-col(6);
         }
     }
 
@@ -1150,6 +915,176 @@ $vdm-teaser- : "";
             @include make-col(4);
         }
     }
+
+
+    // Scale modifiers
+    &.thumb {
+        text-align: center;
+    }
+
+    // Color scheme modifiers
+    // Shared with teasers, mixin
+    &.light-scheme {
+        .vdm-card-body {
+            background: $vdm-white;
+            border: 1px solid $vdm-brand;
+
+            &:before {
+                color: $vdm-black;
+            }
+        }
+    }
+    // Shared with teasers, mixin
+    &.white-scheme {
+        .vdm-card-body {
+            background: $vdm-white;
+            border: none;
+            &:hover, 
+            &:active {
+                background: $vdm-white;
+                border: none;
+                color: $vdm-black;
+                > * {
+                    color: $vdm-black;  
+                }
+                &:before, &:after {
+                    color: $vdm-brand;
+                }
+            }
+        }
+    }
+
+    // Begin media styles : images
+    // Media top
+    // All image type cards MUST have an innner .card-content-wrapper tag
+    &.vdm-card-image {
+        text-align: left;
+
+        // @see https://projects.invisionapp.com/d/main#/console/11533069/245692118/preview
+        .vdm-card-body {
+
+            // Reset padding + margin on the link
+            flex-direction: column;
+            margin: 0;
+            padding: 0;
+
+            img {
+                @extend .img-fluid;
+                margin-bottom : 1.3rem;
+                margin-right: 0;
+                margin-left: 0;
+            }
+
+            .card-content-wrapper {
+                display: flex;
+                flex-direction: column;
+                height: 100%;
+
+                margin-top: 0;
+                margin-bottom: 0;
+                padding: 0 1.3rem 1.3rem 1.3rem;
+                &:first-child {
+                    margin-top: 0;
+                }
+                &:last-child {
+                    margin-bottom: 0;
+                }
+
+                .title {
+                    @include header(4, bold);
+                }
+
+                .content {
+                    flex: 1;
+                }
+    
+                .footer {
+                    margin-top: auto;
+                }
+
+            }
+        
+        } // Card body
+
+        &.thumb {
+
+            &:hover, 
+            &:active {
+                >* {
+                    color: $vdm-black;  
+                }
+                .footer {
+                    color: $vdm-black; 
+                }
+                .title {
+                    color: $vdm-brand;
+                }
+            }
+
+            // Grid styles
+            @include media-breakpoint-up(xs) {
+                @include make-col(12);
+            }
+            @include media-breakpoint-up(sm) {
+                @include make-col(6);
+            }
+            @include media-breakpoint-up(lg) {
+                @include make-col(3);
+            } 
+
+        }
+
+
+        &.large {
+            .card-content-wrapper {
+                .title {
+                    margin-bottom: 0.4em;
+                }
+                .content {
+                    margin-bottom: 3.6rem;
+                }
+                .footer {
+                    margin-top: auto;
+                }
+            }
+    
+            // Grid styles
+            @include media-breakpoint-up(sm) {
+                @include make-col(12);
+            }
+            @include media-breakpoint-up(md) {
+                @include make-col(6);
+            }
+            
+        }
+
+
+        // @see https://projects.invisionapp.com/d/main#/console/11533069/244609142/preview
+        &.rounded {
+            .vdm-card-body {
+                >img {
+                    @extend .rounded-circle;
+                    margin: 2em auto 1em auto;
+                    width: 61.5%;
+                }
+                .card-content-wrapper {
+                    .title {
+                        .weight-regular {
+                            font-weight: $vdm-font-weight-regular;
+                            display: block;
+                        }
+                        margin-bottom: auto;    // for sticky footer
+                    }
+                    .footer {
+                        margin-top: auto;   // for sticky footer
+                        padding-top: 0.5rem;
+                        margin-bottom: 0;
+                    }
+                }
+            }
+        }
+    }
+
 }
 
 
@@ -1165,9 +1100,6 @@ $vdm-teaser- : "";
     flex-direction: column;
 }
 
-.vdm-card-media {
-    @extend .img-fluid;
-}
 
 // Arrow links, all types , all tags
 // Make this generic, into a mixin
