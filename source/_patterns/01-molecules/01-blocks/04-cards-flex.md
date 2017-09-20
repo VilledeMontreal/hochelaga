@@ -4,19 +4,26 @@ title: Cards, flex
 
 Flexbox implementation for all cards. 
 
+What defines cards, as opposition to teasers is that they are always aligned on a vertical axis, 
+the is no lateral component. Thay have exta icons and images of different type, 
+always on top in both cases. They will be showcased in a grid layout on desktop displays, always.
+
+
+
 Card
-    
-    Card body
-        Icon or image
+    Card body (link)
+        Image
         Title
         Content
         Footer
 
-Icon [Optional] [First and/or last] [Implemented with ::before, ::after]
-Image [Optional] [Left, top or right] [Responsive sizing and position change]
-Title [Required] [Inside card body] [Heading tag or any]
-Content [Optional][any tag][May have multiple children]
-Footer [Optional][any tag]
+        OR
+        
+        Image
+        .card-content-wrapper (only with images)
+            Title
+            Content
+            Footer
 
 - - - - - - - - - - - - - - - - - - - - - - - - 
 
@@ -28,7 +35,6 @@ vdm-card +
     color-scheme
     alignement (media-specific)
 
-Add initial axis class (lateral, vertical)?
 
 - - - - - - - - - - - - - - - - 
 @see references used : 
