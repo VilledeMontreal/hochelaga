@@ -7143,14 +7143,11 @@ label {
   display: inline-block;
   position: relative;
   margin-top: 26px; }
-  .vdm-select-wrapper:after {
+  .vdm-select-wrapper:before, .vdm-select-wrapper:after {
     background: #FFFFFF;
-    font-family: "vdm-fonticon";
     font-size: 1.9rem;
-    content: "\E038";
     position: absolute;
     top: 0.1rem;
-    right: 0.2rem;
     z-index: 2;
     display: block;
     width: 34px;
@@ -7158,8 +7155,45 @@ label {
     line-height: 32px;
     text-align: center;
     pointer-events: none; }
+  .vdm-select-wrapper:after {
+    content: "";
+    font-weight: normal;
+    font-style: normal;
+    font-family: "vdm-fonticon";
+    text-decoration: none;
+    display: inline-block;
+    text-rendering: auto;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale; }
+  .vdm-select-wrapper.icon-left.location:before {
+    content: "";
+    font-weight: normal;
+    font-style: normal;
+    font-family: "vdm-fonticon";
+    text-decoration: none;
+    display: inline-block;
+    text-rendering: auto;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale; }
+  .vdm-select-wrapper.icon-left .vdm-select {
+    padding-left: 2.5rem; }
+  .vdm-select-wrapper.icon-left.select-open {
+    color: #80807F; }
   .vdm-select-wrapper.select-open:after {
-    content: "\E036"; }
+    content: "";
+    font-weight: normal;
+    font-style: normal;
+    font-family: "vdm-fonticon";
+    text-decoration: none;
+    display: inline-block;
+    text-rendering: auto;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale; }
+  .vdm-select-wrapper:before {
+    left: 0.4rem;
+    color: #429A8E; }
+  .vdm-select-wrapper:after {
+    right: 0.2rem; }
   .vdm-select-wrapper label {
     font-size: 12px;
     color: #000000;

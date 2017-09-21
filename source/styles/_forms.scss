@@ -362,14 +362,13 @@ label {
     display: inline-block;
     position: relative;
     margin-top: 26px;
+
+    &:before, 
     &:after {
         background: $vdm-white;
-        font-family: $vdm-icon-font-family;
         font-size: 1.9rem;
-        content: "\E038";
         position: absolute;
         top: 0.1rem;
-        right: 0.2rem;
         z-index: 2;
         display: block;
         width: $vdm-element-base-height;
@@ -378,13 +377,33 @@ label {
         text-align: center;
         pointer-events: none;
     }
-    // Change arrow direction
-    // @see $( "select.vdm-select" ).mouseup(function()) {}
-    &.select-open {
-        &:after {
-            content: "\E036";
+
+    @include icon(after, chevron-down);
+
+    &.icon-left {
+        &.location {
+            @include icon(before, location);
+        }
+        .vdm-select {
+            padding-left: 2.5rem;
+        }
+        &.select-open {
+            color: $vdm-grey;
         }
     }
+
+    &.select-open {
+        @include icon(after, chevron-up);
+    }
+
+    &:before {
+        left: 0.4rem;
+        color: $vdm-brand;
+    }
+    &:after {
+        right: 0.2rem;
+    }
+
     // @to-do - implement a 'has-label' class on parent element? Inline vs block label?
     label {
         font-size: $vdm-font-size-smaller;
