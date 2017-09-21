@@ -34,6 +34,7 @@ function normalizePath() {
  * SASS compilation 
 ******************************************************/
 var sourcemaps = require('gulp-sourcemaps');
+var sourcemapsDest= './';                     // Relative to ./source/css folder
 var saasPath = './source/styles/styles.scss';
 var sassAllPath = './source/styles/**/*.scss';
 var saasPatternalbPath = './source/styles/patternlab.scss';
@@ -42,7 +43,7 @@ gulp.task('pl-sass', function(){
   return gulp.src(saasPath)
     .pipe(sourcemaps.init())
     .pipe(sass({}).on('error', sass.logError))
-    .pipe(sourcemaps.write('./source/css/maps'))
+    .pipe(sourcemaps.write(sourcemapsDest))
     .pipe(gulp.dest('./source/css'));
 });
 
@@ -65,8 +66,11 @@ gulp.task('pl-copy-source-node-modules:js', function() {
 */
 
 gulp.task('pl-copy-source-node-modules:js', function() {
-    return gulp.src(['node_modules/jquery/dist/jquery.slim.min.js', 'node_modules/popper.js/dist/umd/popper.min.js', 'node_modules/bootstrap/dist/js/bootstrap.min.js'])
-        .pipe(gulp.dest("source/js/vendor"));
+    return gulp.src([ 
+      'node_modules/jquery/dist/jquery.slim.min.js', 
+      'node_modules/popper.js/dist/umd/popper.min.js', 
+      'node_modules/bootstrap/dist/js/bootstrap.min.js'
+    ]).pipe(gulp.dest("source/js/vendor"));
 });
 
 
@@ -99,9 +103,17 @@ gulp.task('pl-copy:font', function () {
     .pipe(gulp.dest(normalizePath(paths().public.fonts)));
 });
 
-// CSS Copy
+// CSS copy
 gulp.task('pl-copy:css', function () {
   return gulp.src(normalizePath(paths().source.css) + '/*.css')
+    .pipe(gulp.dest(normalizePath(paths().public.css)))
+    .pipe(browserSync.stream());
+});
+
+
+// CSS Sourcemap copy 
+gulp.task('pl-copy:css-maps', function () {
+  return gulp.src(normalizePath(paths().source.css) + '/*.map')
     .pipe(gulp.dest(normalizePath(paths().public.css)))
     .pipe(browserSync.stream());
 });
@@ -166,9 +178,10 @@ gulp.task('pl-assets', gulp.series(
   'pl-copy:img',
   'pl-copy:favicon',
   'pl-copy:font',
-  gulp.series('pl-sass', 'pl-copy:css', function(done){done();}),
+  gulp.series('pl-sass', 'pl-copy:css', 'pl-copy:css-maps', function(done){done();}),
   gulp.series('pl-sass-patternlab', 'pl-copy:css', function(done){done();}),
-  'pl-copy:css',
+  // 'pl-copy:css',
+  // 'pl-copy:css-maps',
   'pl-copy:styleguide',
   'pl-copy:styleguide-css'
 ));
