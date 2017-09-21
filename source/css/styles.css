@@ -7154,6 +7154,68 @@ select {
       box-shadow: none;
       border: 1px solid #429A8E; }
 
+.form-combo {
+  padding: 1.8rem;
+  flex-wrap: wrap;
+  align-items: center; }
+  .form-combo.icon-combo .vdmi {
+    font-size: 2.4rem;
+    width: 2.4rem;
+    height: 2.4rem; }
+  .form-combo .title {
+    font-size: 16px;
+    line-height: 31.5px;
+    font-weight: 700;
+    width: 100%; }
+  .form-combo .vdm-btn {
+    margin-bottom: 0;
+    position: relative;
+    margin-top: 0.1rem; }
+  .form-combo .input-wrapper {
+    padding: 1rem 0.5rem 0.5rem 0.5rem;
+    align-items: center;
+    flex: 1 0;
+    margin-right: 1rem; }
+    .form-combo .input-wrapper > * {
+      margin-right: 0.5rem; }
+    .form-combo .input-wrapper :last-child {
+      margin-right: 0; }
+    .form-combo .input-wrapper.stroked {
+      border-bottom: 3px solid #000000; }
+    .form-combo .input-wrapper .vdm-form-group {
+      margin-top: 0;
+      margin-bottom: 0;
+      width: 100%; }
+      .form-combo .input-wrapper .vdm-form-group label {
+        top: 16px; }
+      .form-combo .input-wrapper .vdm-form-group .vdm-form-control {
+        border: none;
+        line-height: 2.1; }
+        .form-combo .input-wrapper .vdm-form-group .vdm-form-control:focus {
+          border: none; }
+        .form-combo .input-wrapper .vdm-form-group .vdm-form-control:focus ~ label, .form-combo .input-wrapper .vdm-form-group .vdm-form-control.used ~ label {
+          display: none; }
+  .form-combo.inline-button .input-wrapper {
+    width: 100%;
+    margin-right: 0; }
+  .form-combo.inline-button .vdm-btn {
+    position: static; }
+  @media (max-width: 575px) {
+    .form-combo .input-wrapper {
+      flex-basis: 100%; }
+    .form-combo .vdm-btn {
+      margin: 1rem auto 0 auto;
+      align-self: center; }
+    .form-combo.inline-button .input-wrapper {
+      flex-basis: 100%;
+      position: relative;
+      margin-bottom: 79.5px; }
+    .form-combo.inline-button .vdm-btn {
+      position: absolute;
+      top: 79.5px;
+      left: 50%;
+      transform: translateX(-50%); } }
+
 .vdm-avatar {
   position: relative;
   display: inline-block; }
@@ -7169,6 +7231,44 @@ select {
     opacity: 0.1;
     width: 100%;
     height: 100%; }
+
+/**
+  * Try to derive color palettes from large tendencies in the layouts
+  *
+  * @see implementation of theses schemes under the flex teasers molecules
+  *
+  *
+  *
+  *
+  */
+.color-scheme-base {
+  background: #F2F2F1;
+  border: none;
+  color: #000000; }
+  .color-scheme-base:before, .color-scheme-base:after {
+    color: #429A8E; }
+  .color-scheme-base > * {
+    color: #000000; }
+
+.color-scheme-light {
+  background: transparent;
+  border: 1px solid #429A8E;
+  color: #000000; }
+  .color-scheme-light:before, .color-scheme-light:after {
+    color: #429A8E; }
+  .color-scheme-light > * {
+    color: #000000; }
+  .color-scheme-light .vdmi {
+    color: #429A8E; }
+
+.color-scheme-white {
+  background: #FFFFFF;
+  color: #000000;
+  border: none; }
+  .color-scheme-white:before, .color-scheme-white:after {
+    color: #429A8E; }
+  .color-scheme-white > * {
+    color: #000000; }
 
 .vdm-cards-wrapper.neutral-light, .vdm-teasers-wrapper.neutral-light {
   background-color: #F2F2F1; }
@@ -18884,7 +18984,7 @@ a.vdm-btn {
  * Collector pages styles
  * Block level elements
  *  
- *
+ * Question : should cards and teasers be migrated in there?
  *
  */
 .vdm-date-list > ul {

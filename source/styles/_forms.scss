@@ -8,7 +8,7 @@ label {
 
 ///////////////////////////////////////////////////////////////////
 // Radios and checkboxes - common rules
-.checkbox, 
+.checkbox,
 .radio {
     &.vdm-checkbox,
     &.vdm-radio {
@@ -16,7 +16,7 @@ label {
             position: relative;
             margin: 0 1.6rem 0 0;
 
-            &:before, 
+            &:before,
             &:after {
                 position: absolute;
                 content: '';
@@ -66,7 +66,7 @@ label {
         input {
 
 
-            &:before, 
+            &:before,
             &:after {
 
             }
@@ -97,12 +97,12 @@ label {
             }
 
             &[disabled="disabled"] {
-                
+
             }
 
             &[checked="checked"] {
                 &[disabled="disabled"] {
-                
+
                 }
             }
         }
@@ -119,11 +119,11 @@ label {
         input {
 
 
-            &:before, 
+            &:before,
             &:after {
                 border-radius: 50%;
             }
-    
+
             // The background of the input
             &:before {
                 width: 2.1rem;
@@ -153,12 +153,12 @@ label {
                 }
             }
             &[disabled="disabled"] {
-                
+
             }
 
             &[checked="checked"] {
                 &[disabled="disabled"] {
-                
+
                 }
             }
         }
@@ -167,7 +167,7 @@ label {
 
 // Fix the inline margin-tops for inline display;
 .vdm-checkbox, .vdm-radio {
-    &.checkbox-inline, 
+    &.checkbox-inline,
     &.radio-inline {
         margin-top: 0;
     }
@@ -211,7 +211,7 @@ label {
                 }
             }
         }
-        // input, 
+        // input,
         // textarea,
         // select {
             .form-control {
@@ -237,7 +237,7 @@ label {
                             font-size: $vdm-font-size-smaller;
                             color: $vdm-black;
                         }
-                       
+
                     }
                     &.used {
                         color: $vdm-black;
@@ -249,12 +249,12 @@ label {
         // }
 
         label {
-            color:$vdm-grey; 
+            color:$vdm-grey;
             position: absolute;
             pointer-events: none;
             left: 10px;
             top: 8px;
-            transition:0.2s ease all; 
+            transition:0.2s ease all;
         }
 
         .help-block {
@@ -264,11 +264,11 @@ label {
 
 
         &.has-error {
-            
+
             .vdm-form-control {
                 color: $vdm-error-color !important;
                 border: 1px solid $vdm-error-color;
-                &:focus,  
+                &:focus,
                 &.used  {
                     border: 1px solid $vdm-error-color;
                 }
@@ -291,16 +291,16 @@ label {
 
                     &.glyphicon-remove {
                         &:before {
-                           content: "\E202"; 
+                           content: "\E202";
                            color: $vdm-error-color;
                         }
-                    } 
+                    }
                     &.glyphicon-ok {
                         &:before {
-                           content: "\E20B"; 
+                           content: "\E20B";
                            color: $vdm-brand;
                         }
-                    } 
+                    }
                 }
             }
 
@@ -367,7 +367,7 @@ label {
         background: $vdm-white;
         font-family: $vdm-icon-font-family;
         font-size: 1.9rem;
-        content: "\E038"; 
+        content: "\E038";
         position: absolute;
         top: 0.1rem;
         right: 0.2rem;
@@ -379,11 +379,11 @@ label {
         text-align: center;
         pointer-events: none;
     }
-    // Change arrow direction 
+    // Change arrow direction
     // @see $( "select.vdm-select" ).mouseup(function()) {}
     &.select-open {
         &:after {
-            content: "\E036"; 
+            content: "\E036";
         }
     }
     // @to-do - implement a 'has-label' class on parent element? Inline vs block label?
@@ -400,7 +400,7 @@ label {
 select {
     max-width: 300px;
     &.form-control {
-        
+
         &.vdm-select {
             border-radius: 0;
             box-shadow: none;
@@ -410,12 +410,121 @@ select {
                 border: 1px solid $vdm-brand;
             }
             option {
-                
+
             }
         }
-        
+
     }
-    
+
+}
+
+// Search box combo with a header, a wrapper with a fat bottom stroke
+// containing an icon and a seach field. A submit button complete the picture.
+// @see molecules-search-field-combo
+.form-combo {
+    padding: 1.8rem;
+    flex-wrap: wrap;
+    align-items: center;
+
+    &.icon-combo {
+        .vdmi {
+            font-size: 2.4rem;
+            width: 2.4rem;
+            height: 2.4rem;
+        }
+    }
+
+    .title {
+        font-size: $vdm-font-size-base;
+        line-height: $vdm-line-height-base * 1.5;
+        font-weight: $vdm-font-weight-bold;
+        width: 100%;
+    }
+
+    .vdm-btn {
+        margin-bottom: 0;
+        position: relative;
+        margin-top: 0.1rem;
+    }
+
+    .input-wrapper {
+        padding: 1rem 0.5rem 0.5rem 0.5rem;
+        align-items: center;
+        flex: 1 0;
+        margin-right: 1rem;
+
+        >* {
+            margin-right: 0.5rem;
+        }
+
+        :last-child {
+            margin-right: 0;
+        }
+
+        &.stroked {
+            border-bottom: 3px solid $vdm-black;
+        }
+
+        .vdm-form-group {
+
+            margin-top: 0;
+            margin-bottom:0;
+            width: 100%;
+
+            label {
+                top: 16px;
+            }
+            .vdm-form-control {
+                border: none;
+                line-height: 2.1;
+                &:focus {
+                    border: none;
+                }
+
+                &:focus, &.used {
+                    & ~ label {
+                        display: none;
+                    }
+
+                }
+            }
+        }
+    }
+
+    &.inline-button {
+        .input-wrapper {
+            width: 100%;
+            margin-right: 0;
+        }
+        .vdm-btn {
+            position: static;
+        }
+    }
+
+
+    @include media-breakpoint-down(xs) {
+        .input-wrapper {
+            flex-basis: 100%;
+        }
+        .vdm-btn {
+            margin: 1rem auto 0 auto;
+            align-self: center;
+        }
+
+        &.inline-button {
+            .input-wrapper {
+                flex-basis: 100%;
+                position: relative;
+                margin-bottom: 1.5 * $vdm-btn-height;
+            }
+            .vdm-btn {
+                position: absolute;
+                top: 1.5 * $vdm-btn-height;
+                left: 50%;
+                transform: translateX(-50%);
+            }
+        }
+    }
 }
 
 
