@@ -7091,6 +7091,28 @@ label {
     .form-group.vdm-form-group.has-feedback .vdm-form-control ~ .form-control-feedback.glyphicon-ok:before {
       content: "\E20B";
       color: #429A8E; }
+  .form-group.vdm-form-group.has-icon .vdmi {
+    font-size: 2.2rem;
+    position: absolute;
+    color: #80807F;
+    position: absolute;
+    pointer-events: none;
+    top: 0;
+    color: #429A8E; }
+  .form-group.vdm-form-group.has-icon.ic-left .vdmi {
+    left: 0.3rem; }
+  .form-group.vdm-form-group.has-icon.ic-left label {
+    left: calc(10px + 2.1rem); }
+  .form-group.vdm-form-group.has-icon.ic-left .vdm-form-control {
+    padding-left: 3rem; }
+  .form-group.vdm-form-group.has-icon.ic-right .vdmi {
+    left: calc(100% - 2.4rem); }
+  .form-group.vdm-form-group.has-icon.ic-right .vdm-form-control {
+    padding-right: 3rem; }
+  .form-group.vdm-form-group.has-icon.has-error .vdmi {
+    color: #000000; }
+  .form-group.vdm-form-group.ghost .vdm-form-control {
+    border: 0; }
 
 .vdm-select-wrapper {
   background-color: #FFF;

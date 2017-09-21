@@ -305,6 +305,53 @@ label {
             }
 
         } // Feedback
+
+        // Defines a textfield with an icon inside the field directly, as in a password field
+        &.has-icon {
+            .vdmi {
+                font-size: 2.2rem;
+                position: absolute;
+                color: $vdm-grey;
+                position: absolute;
+                pointer-events: none;
+                top: 0;
+                color: $vdm-brand;
+            }
+
+            &.ic-left {
+                .vdmi {
+                    left: 0.3rem;
+                }
+                label {
+                    left: calc(10px + 2.1rem);
+                }
+                .vdm-form-control {
+                    padding-left: 3rem;
+                }
+            }
+            &.ic-right {
+                .vdmi {
+                    left: calc(100% - 2.4rem);
+                }
+                .vdm-form-control {
+                    padding-right: 3rem;
+                }
+            }
+
+            &.has-error {
+                .vdmi {
+                    color: $vdm-black;
+                }
+            }
+        }
+
+        &.ghost {
+            .vdm-form-control {
+                border: 0;
+            }
+        }
+
+
     }
 }
 

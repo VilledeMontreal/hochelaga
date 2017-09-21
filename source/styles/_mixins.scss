@@ -707,9 +707,3 @@
  */
 
 //== Debugging mixins
-
-// - - - - - - - - - -
-// Debug : quickly add border to element
-@mixin db-border($color: $vdm-grey) {
-  border: 1px solid $color;
-}
