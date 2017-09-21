@@ -7073,24 +7073,48 @@ label {
   .form-group.vdm-form-group .help-block {
     margin-left: 10px;
     font-size: 12px; }
-  .form-group.vdm-form-group.has-error .vdm-form-control {
-    color: #E00000 !important;
-    border: 1px solid #E00000; }
-    .form-group.vdm-form-group.has-error .vdm-form-control:focus, .form-group.vdm-form-group.has-error .vdm-form-control.used {
-      border: 1px solid #E00000; }
-  .form-group.vdm-form-group.has-error .help-block {
-    color: #E00000;
-    margin-left: 0; }
-  .form-group.vdm-form-group.has-feedback .vdm-form-control ~ .form-control-feedback {
-    font-family: "vdm-fonticon";
+  .form-group.vdm-form-group.has-feedback .vdm-form-control {
+    padding-right: 2em;
+    position: relative; }
+  .form-group.vdm-form-group.has-feedback:after {
     font-size: 2rem;
-    top: 0; }
-    .form-group.vdm-form-group.has-feedback .vdm-form-control ~ .form-control-feedback.glyphicon-remove:before {
-      content: "\E202";
-      color: #E00000; }
-    .form-group.vdm-form-group.has-feedback .vdm-form-control ~ .form-control-feedback.glyphicon-ok:before {
-      content: "\E20B";
-      color: #429A8E; }
+    width: 2rem;
+    height: 2rem;
+    position: absolute;
+    left: calc(100% - 2.3rem);
+    top: -0.3rem; }
+  .form-group.vdm-form-group.has-feedback.has-error {
+    color: #E00000; }
+    .form-group.vdm-form-group.has-feedback.has-error:after {
+      content: "";
+      font-weight: normal;
+      font-style: normal;
+      font-family: "vdm-fonticon";
+      text-decoration: none;
+      display: inline-block;
+      text-rendering: auto;
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale; }
+    .form-group.vdm-form-group.has-feedback.has-error .vdm-form-control {
+      color: #E00000 !important;
+      border: 1px solid #E00000; }
+      .form-group.vdm-form-group.has-feedback.has-error .vdm-form-control:focus, .form-group.vdm-form-group.has-feedback.has-error .vdm-form-control.used {
+        border: 1px solid #E00000; }
+    .form-group.vdm-form-group.has-feedback.has-error .help-block {
+      color: #E00000;
+      margin-left: 0; }
+  .form-group.vdm-form-group.has-feedback.has-success {
+    color: #429A8E; }
+    .form-group.vdm-form-group.has-feedback.has-success:after {
+      content: "";
+      font-weight: normal;
+      font-style: normal;
+      font-family: "vdm-fonticon";
+      text-decoration: none;
+      display: inline-block;
+      text-rendering: auto;
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale; }
   .form-group.vdm-form-group.has-icon .vdmi {
     font-size: 2.2rem;
     position: absolute;
@@ -7206,6 +7230,8 @@ select {
     .form-combo .vdm-btn {
       margin: 1rem auto 0 auto;
       align-self: center; }
+      .form-combo .vdm-btn:last-of-type {
+        margin: 1rem auto 0 auto; }
     .form-combo.inline-button .input-wrapper {
       flex-basis: 100%;
       position: relative;

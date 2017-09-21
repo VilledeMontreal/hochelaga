@@ -263,48 +263,47 @@ label {
         }
 
 
-        &.has-error {
-
-            .vdm-form-control {
-                color: $vdm-error-color !important;
-                border: 1px solid $vdm-error-color;
-                &:focus,
-                &.used  {
-                    border: 1px solid $vdm-error-color;
-                }
-            }
-
-            .help-block {
-                color: $vdm-error-color;
-                margin-left: 0;
-            }
-
-        } // Errors
-
         // Feedback icons
         &.has-feedback {
             .vdm-form-control {
-                & ~ .form-control-feedback {
-                    font-family: $vdm-icon-font-family;
-                    font-size: 2rem;
-                    top: 0;
-
-                    &.glyphicon-remove {
-                        &:before {
-                           content: "\E202";
-                           color: $vdm-error-color;
-                        }
-                    }
-                    &.glyphicon-ok {
-                        &:before {
-                           content: "\E20B";
-                           color: $vdm-brand;
-                        }
-                    }
-                }
+                padding-right: 2em;
+                position: relative;
+            }
+            
+            &:after {
+                font-size: 2rem;
+                width: 2rem;
+                height: 2rem;
+                position: absolute;
+                left: calc(100% - 2.3rem);
+                top: -0.3rem; 
             }
 
+            &.has-error {
+                @include icon(after, multiply);
+                color: $vdm-sub-brand;
+
+                .vdm-form-control {
+                    color: $vdm-error-color !important;
+                    border: 1px solid $vdm-error-color;
+                    &:focus,
+                    &.used  {
+                        border: 1px solid $vdm-error-color;
+                    }
+                }
+    
+                .help-block {
+                    color: $vdm-error-color;
+                    margin-left: 0;
+                }
+                
+            }
+            &.has-success {
+                @include icon(after, checkbox-checked-trans);
+                color: $vdm-brand;
+            }
         } // Feedback
+
 
         // Defines a textfield with an icon inside the field directly, as in a password field
         &.has-icon {
@@ -419,7 +418,7 @@ select {
 }
 
 // Search box combo with a header, a wrapper with a fat bottom stroke
-// containing an icon and a seach field. A submit button complete the picture.
+// containing an icon and a seach field. A submit button completes the picture.
 // @see molecules-search-field-combo
 .form-combo {
     padding: 1.8rem;
@@ -491,6 +490,7 @@ select {
         }
     }
 
+    // Extra modifier classes when the button is inside the inner wrapper
     &.inline-button {
         .input-wrapper {
             width: 100%;
@@ -501,7 +501,6 @@ select {
         }
     }
 
-
     @include media-breakpoint-down(xs) {
         .input-wrapper {
             flex-basis: 100%;
@@ -509,8 +508,12 @@ select {
         .vdm-btn {
             margin: 1rem auto 0 auto;
             align-self: center;
+            &:last-of-type {
+                margin: 1rem auto 0 auto;
+            }
         }
 
+        // Extra modifier classes when the button is inside the inner wrapper
         &.inline-button {
             .input-wrapper {
                 flex-basis: 100%;
