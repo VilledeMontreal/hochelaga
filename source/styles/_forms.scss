@@ -380,6 +380,8 @@ label {
 
     @include icon(after, chevron-down);
 
+    // Case with a left icon as well
+    // Ex : select borough
     &.icon-left {
         &.location {
             @include icon(before, location);
@@ -392,6 +394,7 @@ label {
         }
     }
 
+    // See javascript file for this behaviour.
     &.select-open {
         @include icon(after, chevron-up);
     }

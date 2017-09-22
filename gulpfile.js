@@ -8,7 +8,11 @@ var gulp = require('gulp'),
   browserSync = require('browser-sync').create(),
   sass = require('gulp-sass'),
   argv = require('minimist')(process.argv.slice(2)),
-  chalk = require('chalk');
+  chalk = require('chalk'),
+  sourcemaps = require('gulp-sourcemaps'), 
+  postcss = require('gulp-postcss'),
+  autoprefixer = require('autoprefixer');
+
 
 /**
  * Normalize all paths to be plain, paths with no leading './',
@@ -33,17 +37,22 @@ function normalizePath() {
 /******************************************************
  * SASS compilation 
 ******************************************************/
-var sourcemaps = require('gulp-sourcemaps');
+
 var sourcemapsDest= './';                     // Relative to ./source/css folder
 var saasPath = './source/styles/styles.scss';
 var sassAllPath = './source/styles/**/*.scss';
 var saasPatternalbPath = './source/styles/patternlab.scss';
 
 gulp.task('pl-sass', function(){
+  var plugins = [
+    autoprefixer({browsers: ['last 1 version']})
+  ];
+
   return gulp.src(saasPath)
     .pipe(sourcemaps.init())
     .pipe(sass({}).on('error', sass.logError))
     .pipe(sourcemaps.write(sourcemapsDest))
+    //.pipe(postcss(plugins)) -- crashes with errors, why?
     .pipe(gulp.dest('./source/css'));
 });
 

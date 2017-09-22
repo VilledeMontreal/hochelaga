@@ -1,0 +1,27 @@
+<h3 class="pl-stroked-header">Collapsible - single</h3>
+<div class="vdm-collapsible-item">
+	<h4 class="object">
+		<a role="tab" data-toggle="collapse" href="#vdmCollapseSubject" aria-expanded="false" aria-controls="vdmCollapseSubject">Collapsible object</a>
+	</h4>
+	<div id="vdmCollapseSubject" class="collapse subject" role="tabpanel">Collapsible subject</div>
+</div>
+
+<h3 class="pl-stroked-header">Collapsible - multi</h3>
+<ul class="vdm-collapsible-list" id="collapseListBS4" data-children=".vdm-collapsible-item" role="tablist">
+	<li class="vdm-collapsible-item">
+		<h4 class="object">
+			<a data-parent="#collapseListBS4" role="tab" data-toggle="collapse" href="#vdmCollapseSubject01" aria-expanded="false" aria-controls="vdmCollapseSubject3">Collapsible object - Collapsible object</a>
+		</h4>
+		<div id="vdmCollapseSubject01" class="collapse subject" role="tabpanel">
+			Collapsible subject 01
+		</div>
+	</li>
+	<li class="vdm-collapsible-item panel">
+		<h4 class="object">
+			<a data-parent="#collapseListBS4" role="tab" data-toggle="collapse" href="#vdmCollapseSubject02" aria-expanded="false" aria-controls="vdmCollapseSubject2">Collapsible object</a>
+		</h4>
+		<div id="vdmCollapseSubject02" class="collapse subject" role="tabpanel">
+			Collapsible subject
+		</div>
+	</li>
+</ul>
