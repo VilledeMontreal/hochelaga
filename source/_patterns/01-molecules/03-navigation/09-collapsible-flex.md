@@ -2,14 +2,14 @@
 title: Collapsible items with flexbox
 ---
 
+### References 
+
 see https://getbootstrap.com/docs/4.0/components/collapse/#accordion-example
 see http://accessibility.athena-ict.com/aria/examples/tabpanel2.shtml
 todo : Provide sm- & xs- responsive behaviour, remove dots, change paddings
 
 
---------
-References 
---------
+### Source layouts
 
 Q & A, collapsible
 https://projects.invisionapp.com/d/main#/console/11533069/247235512/preview

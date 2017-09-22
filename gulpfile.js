@@ -51,8 +51,8 @@ gulp.task('pl-sass', function(){
   return gulp.src(saasPath)
     .pipe(sourcemaps.init())
     .pipe(sass({}).on('error', sass.logError))
+    .pipe(postcss(plugins))
     .pipe(sourcemaps.write(sourcemapsDest))
-    //.pipe(postcss(plugins)) -- crashes with errors, why?
     .pipe(gulp.dest('./source/css'));
 });
 
