@@ -1,8 +1,1162 @@
 // @file ui-nav-blocks.scss
 
 
+// Grid rules for cards and teasers 
+// May or may not be part of this stylesheet
+.vdm-cards-wrapper, .vdm-teasers-wrapper {
+    @extend .container;
+    &.neutral-light {
+        background-color: $vdm-grey-light;
+    }
+}
+
+
+
+
+// Teasers are stacked horizontally and are not displayed side by side in a grid, ever
+// Teasers may contain lateral images, these images will move up on smaller breakpoints
+// Teasers are laid out in a horizontal flex axis
+
+// Add extra classes here that need to be invoked for responsible or semnatic purposes
+// Ex : icon-left, image top
+
+
+// Grid wrapper styles only for teasers
+// More wrapper rules, may or may not belong to the base object styles
+.vdm-teasers, .vdm-teasers-mixin {
+    list-style-type: none;
+    padding-left: 0;
+    @include make-row();
+    margin-top: 0;
+    margin-bottom: 0;
+    .vdm-teaser, .vdm-teaser-mixin {
+        @include make-col-ready();
+        margin-bottom: $grid-gutter-width;
+        @include make-col(12);
+    }
+}
+
+// Mixin application tests
+// Function reference for the master function for styling this block type 
+
+/**
+  * 
+  *
+  * @mixin teaser-variant($icon: false, $image: false, $case: false, $scale: false)
+  *
+  * @arg $icon [false ,right, left]
+  * @arg $image [false ,right, left]
+  * @arg $case [false, arrow-block, compact, inline-flex, category-block]
+  * @arg $scale [false, small, large, larger] -- images for now
+  *
+  * Always called from the hyperlink level -- all styles are returned inside .vdm-teaser-body-mixin {}
+  * The left side for icons and images is the default case, it is implicit on styling
+  *
+  *
+  **/
+
+.vdm-teasers-mixin {
+    .vdm-teaser-mixin {
+        .vdm-teaser-body-mixin {
+            @include teaser-base();
+        }
+
+        // Color modifiers
+        &.light-scheme {
+            .vdm-teaser-body-mixin {
+                @include teaser-light-scheme();
+            } 
+        }
+
+        &.white-scheme {
+            .vdm-teaser-body-mixin {
+                @include teaser-white-scheme();
+            } 
+        }
+
+        // Case 1, icons
+        &.icon-right {
+            .vdm-teaser-body-mixin {
+                @include teaser-variant(right);
+            }
+        }
+        &.icon-left {
+            .vdm-teaser-body-mixin {
+                @include teaser-variant(left);
+            } 
+        }
+
+        // Major case 2, arrow blocks
+        &.arrow-block {
+            .vdm-teaser-body-mixin {
+                @include teaser-variant(false, false, arrow-block);
+                // @include teaser-scheme-hover(false, arrow-block);
+            }
+            &.light-scheme {
+                .vdm-teaser-body-mixin {
+                    // @include teaser-scheme-hover(false, false); 
+                }
+            }
+            &.icon-left {
+                .vdm-teaser-body-mixin {
+                    @include teaser-variant(left, false, arrow-block);
+                } 
+            }
+        }
+
+        // Case 3, images
+
+        &.image-right, 
+        &.image-left {
+            
+            .vdm-teaser-body-mixin {
+                @include teaser-variant(false, left);
+            }
+
+            &.small {
+                .vdm-teaser-body-mixin {
+                    @include teaser-variant(false, left, false, small);
+                }
+            }
+            &.large {
+                .vdm-teaser-body-mixin {
+                    @include teaser-variant(false, left, false, large);
+                }
+            }
+            &.larger {
+                .vdm-teaser-body-mixin {
+                    @include teaser-variant(false, left, false, larger);
+                }
+            }
+        }
+
+        // Images, left and right overides
+        &.image-left {
+            // No need to call it, it is the default case
+        }
+    
+        &.image-right {
+            .vdm-teaser-body-mixin {
+                @include teaser-variant(false, right);
+            }
+        }
+
+        // Other cases, exceptions
+        &.compact {
+            .vdm-teaser-body-mixin {
+                @include teaser-variant(false, false, compact);
+            }
+        }
+
+        &.inline-flex {
+            .vdm-teaser-body-mixin {
+                @include teaser-variant(false, false, inline-flex);
+            }
+        }
+
+        
+    }
+}
+
+
+// Base teaser styles
+// Teasers are stacked horizontally and are not displayed side by side in a grid, ever
+// Teasers may contain lateral images, these images will move up on smaller breakpoints
+// Teasers are laid out in a horizontal flex axis
+
+// Review opportunities for shared mixins with cards later on
+.vdm-teaser {
+    .vdm-teaser-body {
+        // Flex properties
+        display: flex;
+        flex-direction: column;
+
+        background: $vdm-grey-light;
+        border: none;
+
+        cursor: pointer;
+        line-height: floor(($vdm-font-size-base * 1.2));
+        text-decoration: none;
+        color: $vdm-black;
+
+        // Loop over all icons in the set to produce the classes & invoke the icon() mixin
+        @each $name, $char in $icons {
+            &.ic-#{$name} {
+                @include icon(before, $name);
+            }
+        }
+
+        // Left and right icons
+        &:before, 
+        &:after {
+            font-size: 3.6rem;
+            width: 3.6rem;
+            height: 3.6rem;
+            line-height: 3.6rem;
+            text-decoration: none;
+            color: $vdm-brand;
+            // border: 1px solid yellow;
+        }
+
+        // Active states, general
+        &:hover, 
+        &:active {
+            &.vdm-teaser-body {
+                color: $vdm-white;
+                background: $vdm-brand;
+                text-decoration: none;
+                &:before {
+                    color: $vdm-white;
+                }
+                >* {
+                    color: $vdm-white;
+                }
+
+                // Specific pseudo-elements overrides.
+                .arrow-link, 
+                .location-pin, 
+                .vdm-label {
+                    color: $vdm-white;
+                    color: $vdm-white;
+                    &:before, 
+                    &:after {
+                        color: $vdm-white;
+                        color: $vdm-white;
+                    }
+                }
+                .vdm-label {
+                    border: 1px solid $vdm-white;
+                }
+            }
+        }
+
+        .vdm-teaser-media {
+            &img {
+                @extend .img-fluid;
+            }
+        }
+
+        // Standard fixtures, first children, title content footer
+        .date {
+            font-size: $vdm-font-size-smaller;
+            margin-bottom: 2rem;
+
+        }
+        .title { 
+            @include header(4);
+            margin-bottom: 1em; 
+        //   border: 1px solid yellow;
+            &.arrow-link {
+                line-height: 1.7em;
+            }
+            &:last-child {
+                margin-bottom: 0;
+            }
+        }
+        .content {
+            margin-bottom: 1.3em;
+            flex: 1;
+            &:last-child {
+                margin-bottom: 0;
+            }
+        }
+        .footer {
+            margin-bottom: 0;  
+            margin-top: auto;
+
+            &.inline-items {
+                .location-pin {
+                    margin-right: 2em;
+                }
+            }
+            .vdm-label {
+                background: transparent;
+            }
+        }
+    }// END teaser-body
+
+
+    // Should not be applied at the same time as image classes
+    ////////////////////////
+    /////// Begin right arrow cases
+    ////////////////////////
+
+    &.arrow-block {
+        // Base arrow block properties
+        .vdm-teaser-body {
+            @include icon(after, arrow-right);
+            padding: 2.3rem 6rem 2.3rem 2.3rem;
+            position: relative; 
+
+
+            &:after {
+                position: absolute;
+                top: calc(50% - 1.7rem);
+                left: calc(100% - 4.5rem);
+            }
+
+            &:hover, 
+            &:active {
+                color: $vdm-black;
+                background: $vdm-grey-light;
+                >* {
+                    color: $vdm-black;
+                }
+                &:after, 
+                &:before {
+                    color: $vdm-black;
+                }
+            }
+
+            .title {
+                @include header(4);
+                // margin-bottom: 0.3em;
+                margin-bottom: 0;
+            }
+            .footer {
+                .date {
+                    color: $vdm-grey;
+                    font-size: $vdm-font-size-base; 
+                }
+            }
+
+            .feedback {
+                text-transform: uppercase;
+                color: $vdm-grey;
+            }
+
+            @include media-breakpoint-down(sm) {
+                padding: 2.3rem 2.3rem 5.5rem 2.3rem;
+                &:after {
+                    top: calc(100% - 5rem);
+                    left: calc(50% - 1.8rem); 
+                } 
+            }
+
+        }
+        
+        // Search results types, compact scale
+        &.compact {
+            .vdm-teaser-body {
+                // flex-direction: column;
+                padding: 1rem 3.5rem 1rem 1rem;
+                &:after {
+                    position: absolute;
+                    top: calc(50% - 1.7rem);
+                    left: calc(100% - 4rem);
+                    font-size: 2.8rem;
+                    width: 2.8rem;
+                    height: 2.8rem;
+                    line-height: 2.8rem; 
+                }
+
+                .title {
+                    @include header(5);
+                    margin-bottom: 0.5em;
+                }
+                .content {
+
+                }
+                .footer {
+                    
+                }
+                @include media-breakpoint-down(sm) {
+                    padding: 1rem 5rem 1rem 1rem;
+                }
+            }
+        }
+
+        // Flip the flex direction, provide an inner container for vertical flow
+        // Will often contain an identifier on the right
+        &.inline-flex {
+            .vdm-teaser-body {
+
+                flex-direction: row;
+                padding-right: 5rem;
+                align-items: center;
+
+                .content-wrapper {
+                    flex-direction: column;
+                    padding-right: 2rem;
+                }
+            }
+            .identifier {
+                text-transform: uppercase;
+                color: $vdm-grey;
+                font-size: $vdm-font-size-base;
+                width: 30%;
+                text-align: center;
+                margin-top: 0.9rem;
+            }
+
+            @include media-breakpoint-down(sm) {
+                .vdm-teaser-body {
+                    flex-direction: column;
+                    align-items: left;
+                    .content-wrapper {
+                        padding-right: 0;
+                    }
+                }
+                .identifier {
+                    align-self: center;
+                    width: auto;
+                    margin-top: 2rem;
+                }
+                
+            }
+
+            // Special use case, branded
+            // Move the main paragraph outside the .content-wrapper block;
+            &.category-block {
+                .vdm-teaser-body {
+                    align-items: start;
+                    .content-wrapper {
+                        min-width: 35%;
+                        margin-right: 1rem;
+                        .title {
+                            color: $vdm-brand;
+                        }
+                    }
+                    .category-description {
+                        @include header(5);
+                    }
+                }
+
+                @include media-breakpoint-down(sm) {
+                    .vdm-teaser-body {
+                        .content-wrapper {
+                            width: 100%;
+                            margin-right: 0;
+                            margin-bottom:1em;
+                        }
+                    }
+                    
+                }
+            }
+
+
+        }
+
+        // @ to-do : balance margin and icon scale left and right;
+        // Includes an icon on the left and right side
+        &.icon-left {
+            .vdm-teaser-body {
+                padding-left: 7rem;
+                &:before {
+                    left: 2rem;
+                }
+                .title {
+                    @include header(4);
+                }
+
+                @include media-breakpoint-down(sm) {
+                   
+                    padding: 6.5rem 2.3rem 5.5rem 2.3rem;
+                    // border: 1px solid orange;
+                    &:after {
+                        top: calc(100% - 4.5rem);
+                        left: calc(50% - 1.8rem); 
+                    } 
+                    &:before {
+                        top: calc(1.8rem);
+                        left: calc(50% - 1.8rem); 
+                    }
+                }
+            }
+        }
+
+    }
+
+    // Color scheme modifiers
+    // Shared with teasers, mixin
+    &.light-scheme {
+        .vdm-teaser-body {
+            background: $vdm-white;
+            border: 1px solid $vdm-brand;
+
+            &:before {
+                color: $vdm-black;
+            }
+        }
+    }
+    // Shared with teasers, mixin
+    &.white-scheme {
+        .vdm-teaser-body {
+            background: $vdm-white;
+            border: none;
+            &:hover, 
+            &:active {
+                background: $vdm-white;
+                border: none;
+                color: $vdm-black;
+                &:before {
+                    color: $vdm-brand;
+                }
+            }
+        }
+    }
+
+    ////////////////////////
+    /////// Begin icon cases
+    ////////////////////////
+
+    &.icon-left, 
+    &.icon-right {
+        .vdm-teaser-body {
+            position: relative;
+            &:before {
+                position: absolute;
+                top: calc(50% - 1.8rem);
+            }
+            .title {
+                // margin-bottom: 0.3em; 
+                font-weight: $vdm-font-weight-bold;
+            }
+        }
+    }
+
+    &.icon-left {
+        .vdm-teaser-body {
+            padding: 2.3rem 2.3rem 2.3rem 7.75rem;
+            &:before {
+                left: 3rem;
+            }
+            @include media-breakpoint-down(xs) {
+                padding: 7.75rem 2.3rem 2.3rem 2.3rem;
+                &:before {
+                    top: 3rem;
+                    left: calc(50% - 1.8rem);
+                } 
+            }
+        }
+    }
+
+    &.icon-right {
+        .vdm-teaser-body {
+            padding: 2.3rem 7.75rem 2.3rem 2.3rem;
+            &:before {
+                left: calc(100% - 6.8rem); // Perceptual
+            }
+            @include media-breakpoint-down(xs) {
+                padding: 7.75rem 2.3rem 2.3rem 2.3rem;
+                &:before {
+                    top: 3rem;
+                    left: calc(50% - 1.8rem); 
+                } 
+            }
+        }
+    }
+
+    ////////////////////////
+    /////// Begin teaser image cases
+    ////////////////////////
+    /*
+
+    Cases studied : 
+    https://projects.invisionapp.com/d/main#/console/11533069/247010233/preview
+    https://projects.invisionapp.com/d/main#/console/11533069/248691983/preview
+    https://projects.invisionapp.com/d/main#/console/11533069/245247105/preview
+    https://projects.invisionapp.com/d/main#/console/11533069/245692118/preview
+
+    Image heights : 432, 487 & 768 pixels, all widths are 768px.
+
+    */
+
+
+    &.image-left, 
+    &.image-right {
+
+        .vdm-teaser-body {
+            flex-direction: row;
+            >img {
+                max-height: 10rem;
+                margin: 0;
+            }
+        }
+
+        &.large {
+            .vdm-teaser-body {
+                >img {
+                    max-height: 16rem;
+                }
+            }
+        }
+
+        &.larger {
+            .vdm-teaser-body {
+                >img {
+                    max-height: 22rem;
+                }
+                .title {
+                    @include header(4, bold)
+                }
+                .content {
+                    @include header(5)
+                }
+            }
+        }
+
+        &.small {
+            .content-wrapper {
+                padding:1.5rem 1.5rem 1.8rem 1.5rem;
+            }
+            
+        }
+
+        // Inner content wrapper - required for teasers with images.
+        // What for ?  ->  to change the flex axis & provide padding, independent from image
+        .content-wrapper {
+            padding: 1em;
+            display: flex;
+            flex-direction: column;
+            flex: 1;
+            padding: 2.3rem 2.3rem 3rem 2.3rem;
+            
+            .title {
+                @include header(5); 
+                &.arrow-link {
+                    line-height: 1.7em;
+                }
+            }
+
+        }
+
+        // Grid styles
+        // Careful, the 768 px image is being scaled-up!
+        @include media-breakpoint-down(md) {
+            &.large, &.larger {
+                .vdm-teaser-body {
+                    flex-direction: column;
+                    >img {
+                        order:0;
+                        width: 100%;
+                        max-height: none;
+                    }
+                }
+            }
+        }
+        @include media-breakpoint-down(xs) {
+            .vdm-teaser-body {
+                flex-direction: column;
+                >img {
+                    order:0;
+                    width: 100%;
+                    max-height: none;
+                }
+            }  
+        }
+        
+    }
+
+    &.image-left {
+        
+    }
+
+    &.image-right {
+        .vdm-teaser-body {
+            >img {
+                order: 1; // Change source order
+            }
+        }
+
+        @include media-breakpoint-down(xs) {
+            .vdm-teaser-body {
+                flex-direction: column;
+                >img {
+                    order:0;
+                    width: 100%;
+                    max-height: none;
+                }
+            }  
+        }
+    }
+}
+
+//////////////////////////////////////////////////////
+// End Teaser rules
+/////////////////////////////////////////////////////
+
+
+// Cards are set up to be displayed in a grid with equal heights
+// Cards are laid out on the vertical axis when they have images, all the time
+// Cards can have icons and be laid out on the horiontal axis when they only have icons
+
+.vdm-cards {
+    list-style-type: none;
+    padding-left: 0;
+    @include make-row();
+    margin-top: 0;
+    margin-bottom: 0;
+
+    // Vertical grid types, equal heights
+    &.grid-type-grid {
+        .vdm-card {
+            .vdm-card-body {
+                height: 100%;
+            }
+        }
+    }
+
+    .vdm-card {
+        @include make-col-ready();
+        margin-bottom: $grid-gutter-width;
+    }
+}
+
+// Root style definitions for cards
+// Grid column implementation is strictly and only per specific layouts.
+
+
+.vdm-card {
+    .vdm-card-body {
+        // Flex properties
+        display: flex;
+        flex-direction: column;
+
+        background: $vdm-grey-light;
+        border: none;
+
+        cursor: pointer;
+        line-height: floor(($vdm-font-size-base * 1.2));
+        text-decoration: none;
+        color: $vdm-black;
+
+        // Loop over all icons in the set to produce the classes & invoke the icon() mixin
+        @each $name, $char in $icons {
+            &.ic-#{$name} {
+                @include icon(before, $name);
+            }
+        }
+
+        // Mixin potential
+        &:before  {
+            font-size: 3.6rem;
+            width: 3.6rem;
+            height: 3.6rem;
+            line-height: 3.6rem;
+            text-decoration: none;
+            color: $vdm-brand;
+            // border: 1px solid yellow;
+        }
+
+        // Active states, general
+        // Shared with teasers ?, mixin ?
+        &:hover, 
+        &:active {
+            &.vdm-card-body {
+                color: $vdm-white;
+                background: $vdm-brand;
+                text-decoration: none;
+                &:before {
+                    color: $vdm-white;
+                }
+                >* {
+                    color: $vdm-white;
+                }
+
+                // Specific pseudo-elements overrides.
+                .arrow-link, 
+                .category {
+                    &:before, 
+                    &:after {
+                        color: $vdm-white;
+                        color: $vdm-white;
+                    }
+                }
+                .category {
+                    &:before, 
+                    &:after {
+                        background-color: $vdm-white;
+                    }
+                }
+            }
+        }
+
+        >img {
+            @extend .img-fluid;
+        }
+
+
+        // Standard fixtures, first children, title content footer
+        .title { 
+          margin-bottom: 1.3em; 
+        }
+        .content {
+            margin-bottom: 1.3em;
+            &:last-child {
+                margin-bottom: 0;
+            }
+        }
+        .footer {
+            margin-bottom: 0;  
+        }
+
+        // Special fixtures, text and deeper elements
+
+        // Category tags
+        // Shared with teasers, mixin, does this really belong to cards or is it a generic text style?
+        .category {
+            font-weight: $vdm-font-weight-bold;
+            color: $vdm-brand;
+            display: block;
+            &.bullet-left {
+                position: relative;
+                padding-left: 1.5em;
+                &:before {
+                    position: absolute;
+                    left: 0.1em;
+                    top: 0.2em;
+                    content: "";
+                    background:  $vdm-brand;
+                    width: 0.75em;
+                    height: 0.75em;
+                    // display: inline-block;
+                    border-radius: 100%;
+
+                }
+            }
+            &:first-of-type {
+                margin-bottom: 0.75rem;
+            }
+        }     
+    }// card-body
+    // End generic rules
+
+
+    // *******
+    // Modifiers & cases below
+    // @see https://projects.invisionapp.com/d/main#/console/11533069/248716747/preview
+    &.minimal {
+        .vdm-card-body {
+            text-align: left;
+            height: 100%;
+            padding: 1.3rem;
+
+            .title {
+                @include header(5);
+                color: $vdm-brand;
+            }
+            .content {
+                @include header(6);
+                margin-bottom: 0;
+                margin-top: auto;
+            }
+        } 
+
+        // Grid styles
+        @include media-breakpoint-up(xs) {
+            @include make-col(12);
+        }
+        @include media-breakpoint-up(md) {
+            @include make-col(6);
+        }
+        @include media-breakpoint-up(lg) {
+            @include make-col(4);
+        }
+    }
+
+    // @see https://projects.invisionapp.com/d/main#/console/11533069/248716747/preview
+    &.featured {
+        .vdm-card-body {
+            height: 100%;
+            padding: 1.5rem 1.3rem;
+
+            .title {
+                @include header(4, bold);
+            }
+            .content {
+                @include header(4);
+                flex: 1;
+                margin-bottom: 4em;
+            }
+            .footer {
+                @include header(6);
+                margin-bottom: 0;
+                margin-top: auto;
+            }
+        } 
+
+        // Grid styles
+        @include media-breakpoint-up(xs) {
+            @include make-col(12);
+        }
+        @include media-breakpoint-up(md) {
+            @include make-col(6);
+        }
+    }
+
+    // Small tiles with top icon and title only
+    // Layd out in vertical grids
+    &.icon-center {
+        .vdm-card-body {
+            padding: 3rem 2rem 1rem 2rem;
+
+            &:before {
+                margin-right: auto;
+                margin-left: auto;
+                margin-bottom: 1.15rem;
+            }
+
+            .title {
+                font-size: $vdm-font-size-base;
+                font-weight: $vdm-font-weight-regular;
+                line-height: $vdm-font-size-base * 1.1875;
+            }
+        }
+
+        // Grid styles
+        @include media-breakpoint-up(xs) {
+            @include make-col(12);
+        }
+        @include media-breakpoint-up(md) {
+            @include make-col(6);
+        }
+        @include media-breakpoint-up(lg) {
+            @include make-col(4);
+        }
+    }
+
+
+    // Scale modifiers
+    &.thumb {
+        text-align: center;
+    }
+
+    // Color scheme modifiers
+    // Shared with teasers, mixin
+    &.light-scheme {
+        .vdm-card-body {
+            background: $vdm-white;
+            border: 1px solid $vdm-brand;
+
+            &:before {
+                color: $vdm-black;
+            }
+        }
+    }
+    // Shared with teasers, mixin
+    &.white-scheme {
+        .vdm-card-body {
+            background: $vdm-white;
+            border: none;
+            &:hover, 
+            &:active {
+                background: $vdm-white;
+                border: none;
+                color: $vdm-black;
+                > * {
+                    color: $vdm-black;  
+                }
+                &:before, &:after {
+                    color: $vdm-brand;
+                }
+            }
+        }
+    }
+
+    // Begin media styles : images
+    // Media top
+    // All image type cards MUST have an innner .card-content-wrapper tag
+    &.vdm-card-image {
+        text-align: left;
+
+        // @see https://projects.invisionapp.com/d/main#/console/11533069/245692118/preview
+        .vdm-card-body {
+
+            // Reset padding + margin on the link
+            flex-direction: column;
+            margin: 0;
+            padding: 0;
+
+            img {
+                @extend .img-fluid;
+                margin-bottom : 1.3rem;
+                margin-right: 0;
+                margin-left: 0;
+            }
+
+            .card-content-wrapper {
+                display: flex;
+                flex-direction: column;
+                height: 100%;
+
+                margin-top: 0;
+                margin-bottom: 0;
+                padding: 0 1.3rem 1.3rem 1.3rem;
+                &:first-child {
+                    margin-top: 0;
+                }
+                &:last-child {
+                    margin-bottom: 0;
+                }
+
+                .title {
+                    @include header(4, bold);
+                }
+
+                .content {
+                    flex: 1;
+                }
+    
+                .footer {
+                    margin-top: auto;
+                }
+
+            }
+        
+        } // Card body
+
+        &.thumb {
+
+            &:hover, 
+            &:active {
+                >* {
+                    color: $vdm-black;  
+                }
+                .footer {
+                    color: $vdm-black; 
+                }
+                .title {
+                    color: $vdm-brand;
+                }
+            }
+
+            // Grid styles
+            @include media-breakpoint-up(xs) {
+                @include make-col(12);
+            }
+            @include media-breakpoint-up(sm) {
+                @include make-col(6);
+            }
+            @include media-breakpoint-up(lg) {
+                @include make-col(3);
+            } 
+
+        }
+
+
+        &.large {
+            .card-content-wrapper {
+                .title {
+                    margin-bottom: 0.4em;
+                }
+                .content {
+                    margin-bottom: 3.6rem;
+                }
+                .footer {
+                    margin-top: auto;
+                }
+            }
+    
+            // Grid styles
+            @include media-breakpoint-up(sm) {
+                @include make-col(12);
+            }
+            @include media-breakpoint-up(md) {
+                @include make-col(6);
+            }
+            
+        }
+
+
+        // @see https://projects.invisionapp.com/d/main#/console/11533069/244609142/preview
+        &.rounded {
+            .vdm-card-body {
+                >img {
+                    @extend .rounded-circle;
+                    margin: 2em auto 1em auto;
+                    width: 61.5%;
+                }
+                .card-content-wrapper {
+                    .title {
+                        .weight-regular {
+                            font-weight: $vdm-font-weight-regular;
+                            display: block;
+                        }
+                        margin-bottom: auto;    // for sticky footer
+                    }
+                    .footer {
+                        margin-top: auto;   // for sticky footer
+                        padding-top: 0.5rem;
+                        margin-bottom: 0;
+                    }
+                }
+            }
+        }
+    }
+
+}
+
+
+// Utility class to have a Bootstrap row's children all be the same height
+// @see https://scotch.io/quick-tips/different-tricks-on-how-to-make-bootstrap-columns-all-the-same-height
+// @see https://codepen.io/ncerminara/pen/qZvYgR
+.is-grid-row {
+    display: flex;
+    flex-wrap: wrap; 
+}
+.is-grid-col {
+    display: flex;
+    flex-direction: column;
+}
+
+
+// Arrow links, all types , all tags
+// Make this generic, into a mixin
+.arrow-link {
+    position: relative;
+    padding-right: 2.5em;
+    line-height: 1.7em;
+    @include icon(after, arrow-right);
+    &:after {
+        position: absolute;
+        font-size: 2.5em;
+        width:1.35em;
+        padding-left: 0.35em;
+        left: auto;
+        background: transparent;
+        color: $vdm-brand;
+    }
+}
+
+// Mixin potential
+.location-pin {
+    @include icon(before, location);
+    color: $vdm-brand;
+    position: relative;
+    padding-left: 2em;
+    &:before {
+        font-size: 2em;
+        background: transparent;
+        color: $vdm-brand;
+        left: -0.2em;
+        position: absolute;
+    }
+}
+
+// Mixin potential
+.inline-items {
+    >* {
+        display: inline-block;
+        margin-right: 0.8em;
+        margin-bottom: 0.5em;
+        &:last-of-type {
+            margin-right: 0;
+        }
+    }
+}
+
+
+
+
+
+/////////////////////////////////////////////////////////////////////////////
+
+
+
 .card {
     background: $vdm-white;
+    border-radius: 0;
     display: block;
     padding: 8rem 2rem 1rem 2rem;
     border: 1px solid $vdm-brand;
@@ -43,10 +1197,16 @@
     // Large card, icon on left, ttle & teaser features at least, 
     &.card-large {
         background: $vdm-grey-light;
-        padding: 2.3rem 2.3em 3rem 7.75rem;
+        padding: 2.3rem 2.3rem 3rem 7.75rem;
         border: 0;
         text-align: left;
         min-height: 12rem;
+
+        display: flex;
+        // flex-direction: column;
+
+        // justify-content: center;
+        // align-items: center;
 
         @media only screen and (max-width: $screen-xs-max) {
             padding: 8rem 2.3rem 2.5rem 2.3rem;
@@ -82,6 +1242,8 @@
         .content {
             font-size: $vdm-font-size-base;
             line-height: floor(($vdm-font-size-base * 1.625));
+            // flex: 1 0 auto;
+            // flex-grow: 1;
 
             &:first-of-type {
                 margin-top: 0;
@@ -94,7 +1256,24 @@
             
         }
 
+        &.card-reverse {
+            padding: 2.3rem 7.75rem 3rem 2.3rem;
+            &:before {
+                display: none;
+            }
+            &:after {
+                font-size: 3.6rem;
+                right: 3.25rem;
+                top: calc(50% - 1.8rem);
+                @media only screen and (max-width: $screen-xs-max) {
+                    top: 2.3rem;
+                    left: calc(50% - 1.8rem);
+                } 
+            }
+        }
+
     }
+
 
     // Loop over all icons in the set to produce the classes & invoke the icon() mixin
     @each $name, $char in $icons {
@@ -185,10 +1364,9 @@
     }
 
     .content {
-        padding: 1.9rem 1.9rem 1.2rem 1.9rem;
+        padding: 1.9rem 1.9rem 1.3rem 1.9rem;
         width: 100%;
         height: 100%;
-        border: 1px solid pink;
         .title {
             @include header(4);
             margin-top: 0;
@@ -200,249 +1378,198 @@
             text-decoration: none;
         }
     }
-    
-
-
 
     &.teaser-picture {
-        @include make-row();
+        display: flex;
+        align-items: flex-end;
+
+        >img, 
         .content {
-            @include make-xs-column(12);
-            @include make-sm-column(8);
-            @include make-md-column(9);
-            
+            // Vertically align each flex slave
+            align-self: flex-start;
+        }
+        .content {
+            // Grow content to fill unallocated space
+            flex: 1;
         }
         >img {
-            @include make-xs-column(12);
-            @include make-sm-column(4);
-            @include make-md-column(3);
-            @extend .img-responsive;
-            max-width: 100%;
-            max-height: 100%;
+            margin-left: 1rem;
+            max-width: 300px;
+
+            order: 1;
         }
-        @media only screen and (min-width: $screen-sm-min) {
-            .content {
-                @include make-sm-column-pull(4);
-                @include make-md-column-pull(3);
-                
-            }
+        // Position picture first, reset margins, change flex-axis
+         @include media-breakpoint-down(sm) {
+            flex-direction: column;
             >img {
-               @include make-sm-column-push(8);
-               @include make-md-column-push(9);
+                margin: 0;
+                max-width: 100%;
+                order: -1;
             }
         }
-
-        // Resolve image that wont-fit the container
-        // Let it be clipped by 20%
-        // @see https://developer.mozilla.org/en-US/docs/Web/CSS/object-fit
-        &.media-wrapper {
-           .media {
-               // position: relative;
-               height: 100%;
-               border: 1px solid lime;
-                @include make-xs-column(12);
-                @include make-sm-column(4);
-                @include make-md-column(3);
-           }
-
-            @media only screen and (min-width: $screen-sm-min) {
-                .media  {
-                    @include make-sm-column-push(8);
-                    @include make-md-column-push(9);
-                    img {
-                        // fill | contain | cover | none | scale-down
-                        object-fit: cover;
-                        max-width: 122%;
-                        max-height: 122%;
-                        object-position: 50% 50%;
-                    }
-                }
-            }
-        }
-        // Increase inner image max with
-        // Overflow-hidden on parent wrapper
-        &.media-wrapper-overflow {
-            .media {
-                overflow: hidden;
-                height: 100%;
-                border: 1px solid orange;
-                @include make-xs-column(12);
-                @include make-sm-column(4);
-                @include make-md-column(3);
-                img {
-                    max-width: 100%;
-                }
-           }
-
-            @media only screen and (min-width: $screen-sm-min) {
-                .media  {
-                    @include make-sm-column-push(8);
-                    @include make-md-column-push(9);
-                    img {
-                        max-width: 116%;
-                    }
-                }
-            }
-        }
-
     }
 
     &.teaser-alert {
-            position: relative;
-            // font-size: 125%; // -- Use this to tests scalability 
-            padding: 1.7rem 4rem 1.7rem 6.4rem;
-            min-height: 4rem;
+        box-sizing: border-box;
+        position: relative;
+        // font-size: 125%; // -- Use this to tests scalability 
+        // padding-left: 9rem;
+        min-height: 4rem;
 
-            @include icon(before, rosette);
-            @include icon(after, arrow-right);
+        @include icon(before, rosette);
+        @include icon(after, arrow-right);
 
-            &:hover, 
-            &:active {
+        &:hover, 
+        &:active {
 
-                text-decoration: none;
-                &:after {
-                    color: $vdm-black;
-                }
-
-                .content {
-                    .what {
-                       // text-decoration: underline; 
-                    }
-                }
-
-            }
-
-            &:before {
-                position: absolute;
-                font-size: 4rem;
-                line-height: 4rem;
-                width: 4rem;
-                height: 4rem;
-                top: calc(50% - 2rem); // Perceptual -- should work out to 0.65
-                left: 1.4rem;
-                width: 4rem;
-                height: 4rem; 
-                pointer-events: none;
+            text-decoration: none;
+            &:after {
                 color: $vdm-black;
             }
 
-            &:after {
-                font-size: 4rem;
-                line-height: 4rem;
-                width: 4rem;
-                height: 4rem;
-                position: absolute;
-                top: calc(50% - 2rem);
-                right: 1.4rem;
-                display: block;
-                text-align: center;
-                pointer-events: none;
-                color: $vdm-brand;
+            .content {
+                .what {
+                    // text-decoration: underline; 
+                }
             }
 
+        }
+
+        &:before {
+            position: absolute;
+            font-size: 4.9rem;
+            line-height: 4.9rem;
+            width: 4.9rem;
+            height: 4.9rem;
+            top: calc(50% - 2rem); // Perceptual -- should work out to 0.65
+            left: 2rem;
+            pointer-events: none;
+            color: $vdm-black;
+        }
+
+        &:after {
+            font-size: 5.2rem;
+            line-height: 5.2rem;
+            width: 5.2rem;
+            height: 5.2rem;
+            position: absolute;
+            top: calc(50% - 2.6rem);
+            right: 2rem;
+            display: block;
+            text-align: center;
+            pointer-events: none;
+            color: $vdm-brand;
+        }
+
+
+        .content {
+            display: inline-block;
+            vertical-align: middle; // key for vertical centering w/inline-block;
+            width: 70.5%;
+            padding: 2.75rem 1.7rem 4.8rem 9rem;
+            margin-right: 3%;
+            
+            .what {
+                @include header(4);
+                margin-top: 0;
+                margin-bottom: 0.25rem;
+
+            }
+            .where {
+                font-size: $vdm-font-size-larger;
+                line-height: floor(($vdm-font-size-larger * 1.3125));
+                margin-bottom: 1.5rem;
+            }
+            .when {
+                font-size: $vdm-font-size-larger;
+                line-height: floor(($vdm-font-size-larger * 1.3125));
+                margin-bottom: 0;
+                padding-bottom: 0;
+                color: #9b9b9b; // !warning - color out of range
+                
+            }
+            
+            
+        }
+        .metadata {
+            display: inline-block;
+            vertical-align: middle; // key for vertical centering w/inline-block;
+            
+            color: #4a4a4a; // !warning - color out of range
+            position: relative;
+            font-size: $vdm-font-size-base;
+            width: 12%;
+            text-decoration: none;
+
+            // border: 1px solid turquoise;
+
+            .identifier {
+
+            }
+        }
+        
+        // Small and x-small - mobile
+        @media only screen and (max-width: $screen-sm-max) {
+            
+            &:before {
+                top: 1.7rem;
+            }
+            &:after {
+                top: calc(100% - 6rem);
+                left: calc(50% - 2.6rem);
+                right: auto;
+            }
 
             .content {
-                display: inline-block;
-                vertical-align: middle; // key for vertical centering w/inline-block;
-                width: 80%;
-                padding: 0;
-                margin-right: 3%;
+                border: 1px solid lime;
+                padding: 1.7rem 1.7rem 5.5rem 9rem;
+                display: block;
+                width: 100%;
+                margin-bottom: 2rem;
+
                 
-
-                .what {
-                    @include header(4);
-                    margin-top: 0;
-                    margin-bottom: 0.75rem;
-
-                }
                 .where {
-                    font-size: $vdm-font-size-larger;
-                    line-height: floor(($vdm-font-size-larger * 1.3125));
-                    margin-bottom: 1.5rem;
+                    margin-bottom: 2.5rem;
                 }
-                .when {
-                    font-size: $vdm-font-size-larger;
-                    line-height: floor(($vdm-font-size-larger * 1.3125));
-                    margin-bottom: 0;
-                    padding-bottom: 0;
-                    color: #9b9b9b; // !warning - color out of range
-                    
-                }
-               
                 
             }
             .metadata {
-                display: inline-block;
-                vertical-align: middle; // key for vertical centering w/inline-block;
+                // border: 1px solid violet;
+                display: none;
+                width: 100%;
                 
-                color: #4a4a4a; // !warning - color out of range
-                position: relative;
-                font-size: $vdm-font-size-base;
-                width: 12%;
-                text-decoration: none;
-
-                // border: 1px solid turquoise;
-
-                .identifier {
-
-                }
             }
-           
-            // Small and x-small - mobile
-            @media only screen and (max-width: $screen-sm-max) {
-                padding: 1.7rem 1.7rem 4.8rem 6.4rem;
-                &:after {
-                    top: calc(100% - 4.8rem);
-                    left: calc(50% - 2rem);
-                    right: auto;
-                }
-                .content {
-                    // border: 1px solid lime;
-                    display: block;
-                    width: 100%;
-                    margin-bottom: 2rem;
+        }
 
-                    
-                    .where {
-                        margin-bottom: 2.5rem;
-                    }
-                    
-                }
-                .metadata {
-                    // border: 1px solid violet;
-                    display: block;
-                    width: 100%;
-                    
-                }
+        // X-small - mobile only
+        @media only screen and (max-width: $screen-xs-min) {
+            border: 1px solid orange;
+            
+            &:before {
+                display: none;
+            }
+            &:after {
+                top: calc(100% - 6rem);
             }
 
-            // X-small - mobile only
-            @media only screen and (max-width: $screen-xs-min) {
-                padding: 1.7rem 1.7rem 6.4rem 1.7rem;
-                &:before {
-                    display: none;
+            .content {
+                // border: 1px solid orange;
+                padding: 1.7rem 1.7rem 3rem 1.7rem;
+                margin-bottom: 3rem;
+                .what {
+                    margin-bottom: 1.2rem;
                 }
-                &:after {
-                    top: calc(100% - 4.8rem);
-                }
-
-                .content {
-                    // border: 1px solid orange;
-                    margin-bottom: 3rem;
-                    .what {
-                        margin-bottom: 1.2rem;
-                    }
-                }
-                .metadata {
-                    text-align: center;
-                    // border: 1px solid yellow;
-                }
-
             }
+            .metadata {
+                text-align: center;
+                // border: 1px solid yellow;
+            }
+
+        }
          
          
             
-        } // Teaser alert
+    } // Teaser alert
 }
 
 

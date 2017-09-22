@@ -2,4 +2,4 @@
 title: Search
 ---
 
-[Insert description here]
+Stricly for inclusion into temporary header.

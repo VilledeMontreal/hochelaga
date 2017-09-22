@@ -21,7 +21,8 @@
         }
         
     }
-    img {
-
+    >img {
+        @extend .img-fluid;
+        @extend .rounded-circle;
     }
 }

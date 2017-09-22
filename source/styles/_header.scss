@@ -1,5 +1,7 @@
 // @file header.scss
 
+
+// @ see http://192.168.56.101:3000/?p=organisms-header
 header {
   background-color: $vdm-sub-brand;
   height: 100px;
@@ -11,7 +13,7 @@ header {
       padding-top:30px;
       background-color: #222222;
       i {
-        color: $vdm-sarcelle;
+        color: $vdm-brand;
       }
     }
     ul.primary {

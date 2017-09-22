@@ -218,7 +218,7 @@ html {
  .vdm-label {
     font-weight: $vdm-font-weight-regular;
     font-size: $vdm-font-size-smaller;
-    background: $vdm-white;
+    background: transparent;
     border: $vdm-element-border-width/2 solid $vdm-brand;
     color: $vdm-brand;
     border-radius: $vdm-element-border-radius;
@@ -230,9 +230,7 @@ html {
  }
 
 
-
  // Dates display -- for the rendering of dates in general
-
 .vdm-date {
     font-size: $vdm-font-size-larger;
     // Fat day, discrete month, block level headings

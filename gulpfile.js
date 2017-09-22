@@ -8,7 +8,11 @@ var gulp = require('gulp'),
   browserSync = require('browser-sync').create(),
   sass = require('gulp-sass'),
   argv = require('minimist')(process.argv.slice(2)),
-  chalk = require('chalk');
+  chalk = require('chalk'),
+  sourcemaps = require('gulp-sourcemaps'), 
+  postcss = require('gulp-postcss'),
+  autoprefixer = require('autoprefixer');
+
 
 /**
  * Normalize all paths to be plain, paths with no leading './',
@@ -33,16 +37,22 @@ function normalizePath() {
 /******************************************************
  * SASS compilation 
 ******************************************************/
-var sourcemaps = require('gulp-sourcemaps');
+
+var sourcemapsDest= './';                     // Relative to ./source/css folder
 var saasPath = './source/styles/styles.scss';
 var sassAllPath = './source/styles/**/*.scss';
 var saasPatternalbPath = './source/styles/patternlab.scss';
 
 gulp.task('pl-sass', function(){
+  var plugins = [
+    autoprefixer({browsers: ['last 1 version']})
+  ];
+
   return gulp.src(saasPath)
     .pipe(sourcemaps.init())
     .pipe(sass({}).on('error', sass.logError))
-    .pipe(sourcemaps.write('./source/css/maps'))
+    .pipe(sourcemaps.write(sourcemapsDest))
+    //.pipe(postcss(plugins)) -- crashes with errors, why?
     .pipe(gulp.dest('./source/css'));
 });
 
@@ -54,8 +64,30 @@ gulp.task('pl-sass-patternlab', function(){
 
 
 /******************************************************
+ * COPY TASKS - stream assets from node modules to source
+******************************************************/
+/*
+
+gulp.task('pl-copy-source-node-modules:js', function() {
+    return gulp.src(['node_modules/bootstrap/dist/js/bootstrap.min.js', 'node_modules/jquery/dist/jquery.min.js', 'node_modules/popper.js/dist/popper.min.js'])
+        .pipe(gulp.dest("source/js/vendor"));
+});
+*/
+
+gulp.task('pl-copy-source-node-modules:js', function() {
+    return gulp.src([ 
+      'node_modules/jquery/dist/jquery.slim.min.js', 
+      'node_modules/popper.js/dist/umd/popper.min.js', 
+      'node_modules/bootstrap/dist/js/bootstrap.min.js'
+    ]).pipe(gulp.dest("source/js/vendor"));
+});
+
+
+
+/******************************************************
  * COPY TASKS - stream assets from source to destination
 ******************************************************/
+
 // JS copy
 gulp.task('pl-copy:js', function () {
   return gulp.src('**/*.js', {cwd: normalizePath(paths().source.js)} )
@@ -80,9 +112,17 @@ gulp.task('pl-copy:font', function () {
     .pipe(gulp.dest(normalizePath(paths().public.fonts)));
 });
 
-// CSS Copy
+// CSS copy
 gulp.task('pl-copy:css', function () {
   return gulp.src(normalizePath(paths().source.css) + '/*.css')
+    .pipe(gulp.dest(normalizePath(paths().public.css)))
+    .pipe(browserSync.stream());
+});
+
+
+// CSS Sourcemap copy 
+gulp.task('pl-copy:css-maps', function () {
+  return gulp.src(normalizePath(paths().source.css) + '/*.map')
     .pipe(gulp.dest(normalizePath(paths().public.css)))
     .pipe(browserSync.stream());
 });
@@ -138,14 +178,19 @@ function build(done) {
   return null;
 }
 
+gulp.task('pl-source-assets', gulp.series(
+  'pl-copy-source-node-modules:js'
+));
+
 gulp.task('pl-assets', gulp.series(
   'pl-copy:js',
   'pl-copy:img',
   'pl-copy:favicon',
   'pl-copy:font',
-  gulp.series('pl-sass', 'pl-copy:css', function(done){done();}),
+  gulp.series('pl-sass', 'pl-copy:css', 'pl-copy:css-maps', function(done){done();}),
   gulp.series('pl-sass-patternlab', 'pl-copy:css', function(done){done();}),
-  'pl-copy:css',
+  // 'pl-copy:css',
+  // 'pl-copy:css-maps',
   'pl-copy:styleguide',
   'pl-copy:styleguide-css'
 ));
@@ -174,7 +219,8 @@ gulp.task('patternlab:loadstarterkit', function (done) {
   done();
 });
 
-gulp.task('patternlab:build', gulp.series('pl-assets', build));
+
+gulp.task('patternlab:build', gulp.series('pl-source-assets', 'pl-assets', build));
 
 gulp.task('patternlab:installplugin', function (done) {
   patternlab.installplugin(argv.plugin);

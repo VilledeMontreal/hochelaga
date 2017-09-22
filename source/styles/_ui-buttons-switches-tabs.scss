@@ -217,135 +217,76 @@ a {
 
 
 // Navigation tabs
+// ul.vdm-tabs > li.nav-item > a.nav-link
+// nav.vdm-tabs > a.nav-item+nav-link
 // -------------------------
-
-
-// @ to-do : make variables out of paddings, border heights &&
 .vdm-tabs {
     border: 0;
-    >li {
-        margin-bottom: 0;
-        >a {
-            color: $vdm-neutral-mid;
-            background: $vdm-grey-light;
-            border: 0;
-            padding: $vdm-tabs-v-padding $vdm-tabs-h-padding;
-            border-radius: 0;
-            margin-right: $vdm-tabs-spacing;
-            line-height: $vdm-tabs-line-height;
-            
-            &:hover,
-            &:focus {
-                background: $vdm-white;
-                border: 0;
-                color: $vdm-link;
+
+    .nav-item {
+        margin-bottom: $nav-tabs-border-width;
+        // "show" class on item element (li, nav)
+        &.show {
+            .nav-link {
+                @extend .nav-link.active;
             }
         }
 
-        &.active {
-            // border-bottom: 4px solid $vdm-brand;
+        &:last-of-type {
+            .nav-link {
+                margin: 0;
+            }
+        }
+    }// Item
 
-            // Simulated border with background color & border raduis
+    .nav-link {
+
+        position: relative;
+        color: $vdm-black;
+        background: $vdm-grey-light;
+        border: 0;
+        padding: $vdm-tabs-v-padding $vdm-tabs-h-padding;
+        border-radius: 0;
+        margin-right: $vdm-tabs-spacing;
+        line-height: $vdm-tabs-line-height;
+
+        &:hover,
+        &:focus {
+            background: $vdm-white;
+            border: 0;
+            color: $vdm-black;
+        }
+
+
+        &.disabled {
+            color: $nav-link-disabled-color;
+            background-color: transparent;
+            border-color: transparent;
+        }
+
+        &.active {
             &:before {
                 content: " ";
                 position: absolute;
                 display: block;
-                height: $vdm-tabs-spacing;
-                border-radius: $vdm-tabs-spacing;
-                width: calc(100% - #{$vdm-tabs-spacing});
-                background: $vdm-brand;
-                bottom: 0;
+                height: $vdm-tabs-border-width;
+                width: 100%;
+                background: $vdm-sub-brand;
+                top: 0;
+                left: 0;
                 z-index: 2;
             }
-            
-
-            >a {      
-                color: $vdm-link;
-                border: 0;
-
-                &:hover,
-                &:focus {
-                    border: 0;
-                    color:  $vdm-link;
-                    margin-bottom: 0;
-                }
-
-            }
-
         }
-        &:last-of-type {
-            >a {
+    }// Link
+
+    &.flex-column {
+        .nav-link {
+            @include media-breakpoint-down(sm) {
                 margin-right: 0;
             }
-            &.active {
-                &:before {
-                    width: 100%;
-                }
-            }
-        }
-    } // >li
-
-    
-    // Justified tabs
-    &.nav-tabs {
-        &.nav-justified {
-            >li {
-                >a {
-                    margin-bottom: 0;
-                    border-bottom: 0;
-                    border-radius: 0;
-                    margin-right: $vdm-tabs-spacing;
-                }
-            }
-            >.active {
-                @media screen and (max-width: $screen-sm-max) {
-                    &:before {
-                        height: $vdm-tabs-spacing;
-                        border-radius: $vdm-tabs-spacing;
-                        bottom: -2px;
-                    }
-                }
-                
-                a { 
-                    border: 0;
-                    border-bottom: 0;
-                }
-            }
-            >li {
-                &:last-of-type {
-                    >a {
-                        margin-right: 0;
-                    }
-                }
-            }
         }
     }
-
-    // Red borders on top;
-    &.nav-tabs {
-        &.vdm-tabs-border-top {
-            >li {
-                >a {
-                    &:hover, 
-                    &:active {
-                        color: $vdm-black;
-                    }
-                }
-                &.active {
-                    >a {
-                        color: $vdm-black;
-                    }
-                
-                    &:before {
-                        background: $vdm-sub-brand;
-                        top: 0;
-                    }
-                }
-              
-            }
-        }
-    }
-}// vdm
+}
 
 
 
