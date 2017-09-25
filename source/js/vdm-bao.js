@@ -38,7 +38,6 @@
     
     // Find all link submenu links, set callback functions for child elements
     function findSubMenuLinks($menu, setActiveSubmenuLinks) {
-        // console.log("In function findSubMenuLinks!");
         $submenuTriggers = $menu.find(".has-children > .menu-link");
         $submenuTriggers
             .on( "click", function() {
@@ -55,13 +54,11 @@
     }
 
     function setActiveSubmenuLinks($object, $subject, resetActiveSubmenuLinks) {
-        // console.log("In function setActiveSubmenuLinks!");
         $backLink = $subject.find(".back-link");
         showChildMenu($subject, $backLink);
     }
 
     function showChildMenu($subMenu, $backlink ) {
-        // console.log("In function showChildMenu!");
         $menuRoot.addClass("invisible");
         $subMenu.addClass("show");
 
@@ -75,7 +72,6 @@
     }
 
     function hideChildMenu($subMenu, resetActiveSubmenuLinks) {
-        // console.log("In function hideChildMenu!");
         $menuRoot.removeClass("invisible");
         $subMenu.removeClass("show");
         // Reset active items
@@ -85,7 +81,6 @@
     }
 
     function resetActiveSubmenuLinks() {
-        // console.log("In function resetActiveSubmenuLinks!");
         $subMenu = null;
         $backLink = null;
     }
