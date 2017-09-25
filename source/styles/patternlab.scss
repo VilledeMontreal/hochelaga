@@ -63,6 +63,12 @@
   }
 }
 
+.pl-placeholder-block {
+  @extend .pl-padding-10;
+  background: $vdm-grey-light;
+  margin-bottom: 1rem;
+}
+
 // Utility vertical spacer : margin-bottom
 .pl-vspacer {
   margin-bottom: 1rem;

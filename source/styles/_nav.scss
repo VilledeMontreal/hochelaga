@@ -198,6 +198,9 @@
   }
 }
 
+
+// Dropdown component
+// @see https://projects.invisionapp.com/d/main#/console/11533069/248706245/preview
 .vdm-dropdown {
   background: $vdm-white;
   padding: 0.75rem 1.7rem 0.75rem 1.1rem;
@@ -238,6 +241,12 @@
     margin: 1.7rem 0 1rem 0;
     padding: 0;
   }
+  
+  // Controls bootstrap collapsing animation speed
+  .collapsing {
+    transition: height .1s ease;
+  }
+
   .dropdown-element{
     
     >a {
@@ -266,7 +275,7 @@
         width: 1.5em;
         height: 1.5em;
         line-height: 1.5em;
-        color: $vdm-brand;
+        // color: $vdm-brand;
       }
 
 
@@ -278,7 +287,9 @@
 
 
 
-
+// To delete after decision is made
+// Draft from https://projects.invisionapp.com/d/main#/console/11533069/248706245/preview
+// Uses the Bootstrap component dropdown
 .vdm-dropdown-bs {
   background: $vdm-white;
   padding: 0.75rem;

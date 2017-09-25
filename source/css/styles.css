@@ -7035,6 +7035,9 @@ html body {
     list-style-type: none;
     margin: 1.7rem 0 1rem 0;
     padding: 0; }
+  .vdm-dropdown .collapsing {
+    -webkit-transition: height .1s ease;
+    transition: height .1s ease; }
   .vdm-dropdown .dropdown-element > a {
     font-size: 35px;
     color: #000000;
@@ -7065,8 +7068,7 @@ html body {
       display: block;
       width: 1.5em;
       height: 1.5em;
-      line-height: 1.5em;
-      color: #429A8E; }
+      line-height: 1.5em; }
 
 .vdm-dropdown-bs {
   background: #FFFFFF;
