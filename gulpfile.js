@@ -45,7 +45,8 @@ var saasPatternalbPath = './source/styles/patternlab.scss';
 
 gulp.task('pl-sass', function(){
   var plugins = [
-    autoprefixer({browsers: ['last 1 version']})
+    // autoprefixer({browsers: ['last 1 version']})
+    autoprefixer()
   ];
 
   return gulp.src(saasPath)

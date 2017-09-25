@@ -21,6 +21,80 @@
         }
     );
 
+
+    // ******************************
+    // Begin side submenus interactivity
+
+    var $menuRoot = $(".side-menu.wrapper > .menu-links");
+    var $submenuTriggers = $menuRoot.find(".has-children > .menu-link");
+    var $subMenu = null;
+    var $backLink = null;
+
+
+    if(!$subMenu && !$backLink && $menuRoot) {
+        findSubMenuLinks($menuRoot, setActiveSubmenuLinks); 
+    }
+
+    
+    // Find all link submenu links, set callback functions for child elements
+    function findSubMenuLinks($menu, setActiveSubmenuLinks) {
+        // console.log("In function findSubMenuLinks!");
+        $submenuTriggers = $menu.find(".has-children > .menu-link");
+        $submenuTriggers
+            .on( "click", function() {
+                $submenuToggleLink = $(this);
+                $subMenu = $(this).parent(".has-children").find(".submenu");
+                
+
+                // Call active function 
+                if(typeof setActiveSubmenuLinks == 'function') {
+                    setActiveSubmenuLinks.call(this, $submenuToggleLink, $subMenu );
+                }
+            }
+        );
+    }
+
+    function setActiveSubmenuLinks($object, $subject, resetActiveSubmenuLinks) {
+        // console.log("In function setActiveSubmenuLinks!");
+        $backLink = $subject.find(".back-link");
+        showChildMenu($subject, $backLink);
+    }
+
+    function showChildMenu($subMenu, $backlink ) {
+        // console.log("In function showChildMenu!");
+        $menuRoot.addClass("invisible");
+        $subMenu.addClass("show");
+
+        // Attach hide events once show events are completed
+        $backLink
+            .on( "click", function() {
+                hideChildMenu($subMenu, resetActiveSubmenuLinks)
+            }
+        );
+
+    }
+
+    function hideChildMenu($subMenu, resetActiveSubmenuLinks) {
+        // console.log("In function hideChildMenu!");
+        $menuRoot.removeClass("invisible");
+        $subMenu.removeClass("show");
+        // Reset active items
+        if(typeof resetActiveSubmenuLinks == 'function') {
+            resetActiveSubmenuLinks.call(this);
+        }
+    }
+
+    function resetActiveSubmenuLinks() {
+        // console.log("In function resetActiveSubmenuLinks!");
+        $subMenu = null;
+        $backLink = null;
+    }
+
+    // ******************************
+    // End side submenus interactivity
+
+
+
     // Password visibility (type toggle) - adapt & knit this
     // https://bootsnipp.com/snippets/featured/show-password
     $("#passwordfield").on("keyup",function(){

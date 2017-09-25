@@ -15,6 +15,7 @@ $vdm-black:               #000000;
 $vdm-sarcelle:            #429A8E;
 $vdm-grey-light:          #F2F2F1;
 $vdm-grey:                #80807F;
+$vdm-grey-dark:           #222222; // First occurence : side menu bg & borders
 $vdm-red:                 #E00000;
 
 $vdm-neutral-mid:         #80807F;
@@ -145,6 +146,14 @@ $vdm-switch-padding: 5px;
 
 // Textfields
 $vdm-textfield-border-radius: $vdm-element-border-radius;
+
+
+// Menus
+$vdm-side-menu-width: 300px;
+$vdm-side-menu-border-width: 2px;
+$vdm-side-menu-icon-size: 3rem;
+$vdm-side-menu-link-h-padding: 1rem;
+$vdm-side-menu-link-v-padding: 1.75rem;
 
 
 // Checkboxes
