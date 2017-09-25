@@ -196,6 +196,127 @@
   .subject {
     padding-left: 4.3rem;
   }
+}
+
+.vdm-dropdown {
+  background: $vdm-white;
+  padding: 0.75rem 1.7rem 0.75rem 1.1rem;
+  @include drop-shadow;
+  display: inline-block;
+  font-size: $vdm-font-size-base * 2.1875;
+
+  .dropdown-trigger {
+    position: relative;
+    padding: 0.5rem 2em 0.5rem 0.5rem;
+    @include icon(after, chevron-down);
+    border-bottom: 2px solid $vdm-grey;
+    display: block;
+    width: 100%;
+    text-decoration: none;
+    color: $vdm-black;
+
+    &:after {
+        font-size: 1em;
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        left: calc(100% - 1em);
+        display: block;
+        width: 1em;
+        height: 1em;
+        line-height: 1em;
+    }
+
+    &[aria-expanded=true] {
+      @include icon(after, chevron-up);
+    }
+  
+   
+  }
+  .dropdown-elements {
+    list-style-type: none;
+    margin: 1.7rem 0 1rem 0;
+    padding: 0;
+  }
+  .dropdown-element{
+    
+    >a {
+      font-size: $vdm-font-size-base * 2.1875;
+      color: $vdm-black;
+      display: block;
+      line-height: 4rem;
+      list-style-type: none;
+      padding-right: 2em;
+      position: relative;
+      
+     
+  
+      &:hover, &:active {
+        @include icon(after, arrow-right);
+        text-decoration: none;
+      }
+
+      &:after {
+        font-size: 1.5em;
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        left: calc(100% - 0.9em);
+        display: block;
+        width: 1.5em;
+        height: 1.5em;
+        line-height: 1.5em;
+        color: $vdm-brand;
+      }
 
 
+    }
+  }
+  
+}
+
+
+
+
+
+.vdm-dropdown-bs {
+  background: $vdm-white;
+  padding: 0.75rem;
+  @include drop-shadow;
+  display: inline-block;
+  font-size: $vdm-font-size-base * 2.1875;
+
+  .dropdown-toggle {
+    background: transparent;
+    border-radius: 0;
+    padding: 0.5rem 2em 0.5rem 0.5rem;
+    border: 0;
+    @include icon(before, chevron-down);
+    border-bottom: 1px solid $vdm-grey;
+    display: block;
+    width: 100%;
+
+    &:before {
+        font-size: 1.3em;
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        left: calc(100% - 1.3em);
+        display: block;
+        width: 1.3em;
+        height: 1.3em;
+        line-height: 1.3em;
+    }
+    &:after {
+      display: none;
+  }
+
+   
+  }
+  .dropdown-menu {
+
+  }
+  .dropdown-item {
+    font-size: $vdm-font-size-base * 2.1875;
+  }
 }
