@@ -7677,6 +7677,68 @@ html {
       html body ul.vdm-list-date li, html body ol.vdm-list-date li {
         margin: 0;
         padding: 0 0 0.3em 0; }
+    html body ul.vdm-list {
+      list-style-type: none;
+      padding: 0; }
+      html body ul.vdm-list li {
+        padding-left: 0.7em;
+        position: relative;
+        margin-bottom: 0.7em; }
+        html body ul.vdm-list li:before {
+          content: "";
+          width: 0.3em;
+          height: 0.3em;
+          border-radius: 100%;
+          background: #000000;
+          position: absolute;
+          top: 0.6em;
+          left: 0; }
+        html body ul.vdm-list li ul {
+          list-style-type: none;
+          padding: 0.5em 0 0 1em; }
+          html body ul.vdm-list li ul li {
+            padding-left: 1.25em; }
+            html body ul.vdm-list li ul li:before {
+              width: 0.8em;
+              top: 0.7em;
+              height: 1px;
+              border-radius: 0; }
+            html body ul.vdm-list li ul li:last-of-type {
+              margin-bottom: 0; }
+    html body ol.vdm-numbered-list {
+      list-style-type: none;
+      counter-reset: ol-counter;
+      padding-left: 6em;
+      position: relative; }
+      html body ol.vdm-numbered-list .title {
+        font-family: "Nunito Sans", Helvetica, Arial, sans-serif;
+        font-size: 67px;
+        line-height: 118.125px;
+        font-weight: 400;
+        display: block;
+        font-size: 28px;
+        line-height: 37.9995px;
+        font-weight: 400;
+        font-weight: 700; }
+      html body ol.vdm-numbered-list > li:before {
+        content: counter(ol-counter, decimal);
+        counter-increment: ol-counter;
+        position: absolute;
+        font-family: "Nunito Sans", Helvetica, Arial, sans-serif;
+        font-size: 67px;
+        line-height: 118.125px;
+        font-weight: 400;
+        display: block;
+        font-size: 28px;
+        line-height: 37.9995px;
+        font-weight: 400;
+        font-weight: 700;
+        width: 1.5em;
+        height: 1.6em;
+        padding: 0 2.15em 0 0;
+        left: 0;
+        line-height: 37.9995px;
+        border-bottom: 4px solid #E00000; }
 
 /**
  *

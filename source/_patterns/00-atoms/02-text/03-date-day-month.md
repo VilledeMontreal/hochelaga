@@ -1,5 +1,5 @@
 ---
-title: Date : day and month
+title: Date - day and month
 ---
 
 * @see https://projects.invisionapp.com/d/main#/console/11533069/244422964/preview

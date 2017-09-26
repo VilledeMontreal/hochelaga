@@ -174,9 +174,12 @@ html {
     // Lists
     // All lists
     ul, ol {
+
       li {
 
       }
+
+
       &.vdm-list-plain {
         list-style-type: none;
         margin: 0;
@@ -186,6 +189,7 @@ html {
           padding: 0 0 0.3em 0;
         }
       }
+
       &.vdm-list-date {
         margin: 0;
         padding: 0;
@@ -194,12 +198,86 @@ html {
           padding: 0 0 0.3em 0;
         }
       }
+
+
+    }
+
+    // Plain list overrides
+    // Should all lists carry this look and feel, really?
+    ul {
+      &.vdm-list {
+        list-style-type: none;
+        padding: 0;
+        
+        li {
+          padding-left: 0.7em;
+          position: relative;
+          margin-bottom: 0.7em;
+  
+          &:before {
+            content : "";
+            width: 0.3em;
+            height: 0.3em;
+            border-radius:100%;
+            background: $vdm-black;
+            position: absolute;
+            top: 0.6em;
+            left: 0;
+          }
+          // Level 2
+          ul {
+            list-style-type: none;
+            padding: 0.5em 0 0 1em;
+            li {
+              padding-left: 1.25em;
+              &:before {
+                width: 0.8em;
+                top: 0.7em;
+                height: 1px;
+                border-radius:0;
+              }
+              &:last-of-type {
+                margin-bottom: 0;
+              }
+            }
+          }
+        }
+      }
     }
 
     // Ordered list overrides
     ol {
       li {
 
+      }
+
+      &.vdm-numbered-list {
+        list-style-type: none; // Not sure this remains accessible
+        counter-reset: ol-counter;
+        padding-left: 6em;
+        position: relative;
+        .title {
+          @include header(4, bold);
+        }
+
+        >li {
+          &:before {
+            content: counter(ol-counter, decimal);
+            counter-increment: ol-counter;
+            position: absolute;
+            @include header(4, bold);
+            width: 1.5em;
+            height: 1.6em;
+            padding: 0 2.15em 0 0;
+            left: 0;
+            line-height: $vdm-line-height-base * 1.8095;
+            border-bottom: 4px solid $vdm-sub-brand;
+            
+          }
+          
+
+          
+        }
       }
     }
 
