@@ -1,86 +1,91 @@
 // @file footer.scss
 
 footer {
-  background-color: $vdm-sub-brand;
-  // height: 340px;
-  padding-top: 45px;
-  ul {
-    float:left;
-    padding:0;
-    margin:0;
-    list-style-type: none;
-    width:100%;
-    li {
-      // padding-bottom: 12px;
-      // padding-top: 12px;
+
+  &.footer {
+    background-color: $vdm-sub-brand;
+    padding-top: 45px;
+
+
+
+    ul {
       float:left;
+      padding:0;
+      margin:0;
+      list-style-type: none;
       width:100%;
-      .link {
+      li {
+        // padding-bottom: 12px;
+        // padding-top: 12px;
         float:left;
-        padding-top:4px;
-      }
-      .link-arrow {
-        float:right;
-      }
-    }
-  }
-  hr {
-    border: solid 2px $vdm-white;
-  }
-  span {
-    color: $vdm-white;
-  }
-  i {
-    color: $vdm-white;
-  }
-  a {
-    color: $vdm-white;
-  }
-  a:hover {
-    color: $vdm-white;
-  }
-  .services-citoyen {
-    float:left;
-    margin-bottom:40px;
-    .services-citoyen-311 {
-      .number311 {
-        float:left;
-        font-size: 350%;
-      }
-      .title {
-        float:right;
-        padding-top: 18px;
-        padding-left:25px;
+        width:100%;
+        .link {
+          float:left;
+          padding-top:4px;
+        }
+        .link-arrow {
+          float:right;
+        }
       }
     }
-    .services-citoyen-horaires {
-      .open {
-        background: $vdm-sarcelle;
-        display: inline-block;
-        border-radius: 50%;
-        width: 14px;
-        height: 14px;
-      }
-      .hours {
-        font-size: $vdm-font-size-smaller;
-      }
+    hr {
+      border: solid 2px $vdm-white;
     }
-  }
-  .horaires {
-    .link-arrow {
+    span {
+      color: $vdm-white;
+    }
+    i {
+      color: $vdm-white;
+    }
+    a {
+      color: $vdm-white;
+    }
+    a:hover {
+      color: $vdm-white;
+    }
+    .services-citoyen {
       float:left;
-      padding-left:20px;
+      margin-bottom:40px;
+      .services-citoyen-311 {
+        .number311 {
+          float:left;
+          font-size: 350%;
+        }
+        .title {
+          float:right;
+          padding-top: 18px;
+          padding-left:25px;
+        }
+      }
+      .services-citoyen-horaires {
+        .open {
+          background: $vdm-sarcelle;
+          display: inline-block;
+          border-radius: 50%;
+          width: 14px;
+          height: 14px;
+        }
+        .hours {
+          font-size: $vdm-font-size-smaller;
+        }
+      }
     }
-  }
-  .language {
-    text-align:right;
-  }
-  .social-media {
-    text-align: right;
-    margin-top:90px;
-  }
-  .copyright {
-    font-size: $vdm-font-size-smaller;
-    padding-bottom:20px;
-  }
+    .horaires {
+      .link-arrow {
+        float:left;
+        padding-left:20px;
+      }
+    }
+    .language {
+      text-align:right;
+    }
+    .social-media {
+      text-align: right;
+      margin-top:90px;
+    }
+    .copyright {
+      font-size: $vdm-font-size-smaller;
+      padding-bottom:20px;
+    }
+  } // .footer
 }

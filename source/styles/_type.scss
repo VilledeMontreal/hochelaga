@@ -11,20 +11,6 @@ html {
 
     h1 {
       @include header(1);
-      &.vdm-title {
-        position: relative;
-        &:after {
-          position: absolute;
-          min-width: 3rem;
-          max-width: 4rem;
-          content: " ";
-          left: 0;
-          bottom: 0.1em;
-          border-radius: $vdm-font-size-base / 4;
-          height: $vdm-font-size-base / 3;
-          background: $vdm-brand;
-        }
-      }
     }
     h2 {
       @include header(2);
@@ -44,6 +30,47 @@ html {
     h6 {
       @include header(6);
     }
+
+    .vdm-title {
+      position: relative;
+      &:after {
+        position: absolute;
+        min-width: 3rem;
+        max-width: 4rem;
+        content: " ";
+        left: 0;
+        top: calc(100% - 0.3rem);
+        border-radius: $vdm-font-size-base / 4;
+        height: $vdm-font-size-base / 3;
+        background: $vdm-brand;
+        
+      }
+      &.sidebar {
+        @include header(4, bold);
+        margin-bottom: 0.8em;
+        &:after {
+          background: $vdm-black;
+          color: $vdm-black;
+          max-width: 1.7rem;
+          top: calc(100% + 0.3rem);
+        }
+        &.icon-right {
+          padding-right: 4rem;
+          .vdmi {
+              font-size: 3.6rem;
+              width: 3.6rem;
+              height: 3.6rem;
+              color: $vdm-brand;
+              position: absolute;
+              top: 0;
+              right: 0;
+          }
+        }
+      }
+    }
+
+
+
     .regular {
       font-weight: $vdm-font-weight-regular;
     }
@@ -66,11 +93,8 @@ html {
       font-weight: bold;
     }
     p {
-      line-height: $vdm-line-height-base;
+      line-height: 1.35em;
       margin-bottom: ceil($vdm-font-size-base * 1.5);
-
-      // margin-bottom: 24px;
-      // line-height: 42px;
     }
     // Hyperlinks - generic
     a {
@@ -174,11 +198,9 @@ html {
     // Lists
     // All lists
     ul, ol {
-
       li {
 
       }
-
 
       &.vdm-list-plain {
         list-style-type: none;
@@ -198,8 +220,6 @@ html {
           padding: 0 0 0.3em 0;
         }
       }
-
-
     }
 
     // Plain list overrides
@@ -210,18 +230,18 @@ html {
         padding: 0;
         
         li {
-          padding-left: 0.7em;
+          padding-left: 0.8em;
           position: relative;
           margin-bottom: 0.7em;
   
           &:before {
             content : "";
-            width: 0.3em;
-            height: 0.3em;
-            border-radius:100%;
+            width: 0.35em;
+            height: 0.35em;
+            @extend .rounded-circle;
             background: $vdm-black;
             position: absolute;
-            top: 0.6em;
+            top: 0.5em;
             left: 0;
           }
           // Level 2
@@ -248,7 +268,6 @@ html {
     // Ordered list overrides
     ol {
       li {
-
       }
 
       &.vdm-numbered-list {
@@ -280,11 +299,74 @@ html {
         }
       }
     }
+    dl {
+      dt {
+        
+      }
+      dd {
 
+      }
+      
+      &.vdm-definition-list {
+        margin-bottom: 2em;
+        dt {
+          @include header(4, bold);
+          color: $vdm-brand;
+        }
+        dd {
+          padding-bottom: 2em;
+          border-bottom: 1px solid $vdm-grey-light;
+          margin-bottom: 2em;
+          &:last-of-type {
+            padding-bottom: 0;
+            margin-bottom: 0;
+            border: 0;
+          }
+        }
+      }
+    }
 
+    // Odd elements
 
-  }
-}
+    blockquote {
+      &.vdm-blockquote {
+
+        @extend .blockquote;
+
+        padding-left: 1.75em;
+        font-size: $vdm-font-size-larger;
+        font-weight: normal;
+        font-style: italic;
+        position: relative;
+        
+        &:before {
+          width: 8px;
+          height: 35%;
+          position: absolute;
+          background: $vdm-sub-brand;
+          content: "";
+          left: 0;
+          top: 0;
+        }
+
+        .vdm-blockquote-footer {
+          @extend .blockquote-footer;
+          font-style: normal;
+          color: $vdm-grey;
+          font-size: $vdm-font-size-smaller;
+          text-align: right;
+          &:before {
+            display: none;
+          }
+        }
+        cite {
+          color: $vdm-black;
+          font-style: normal;
+        }
+      }
+    }
+  } //  Body
+} // Html
 
 /**
  *

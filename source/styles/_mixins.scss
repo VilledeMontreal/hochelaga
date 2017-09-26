@@ -9,10 +9,7 @@
 // @arg $level - integrer [1-6]
 // @arg $weight - string ['light','regular','bold']
  @mixin header($level: 1, $weight: 'regular') {
-
   font-family: $vdm-font-family;
-  font-size: $vdm-font-size-base * 4.1875;        // 67px
-  line-height: $vdm-line-height-base * 5.6250;    // 92px
   font-weight: $vdm-font-weight-regular;
   display: block;
 
@@ -20,6 +17,12 @@
   // margin-top: 0;
   // margin-bottom: 0;
 
+  @if $level == 1 {
+    font-weight: $vdm-font-weight-light;
+    font-size: $vdm-font-size-base * 4.1875;        // 67px
+    line-height: $vdm-line-height-base * 4.381;    // 92px
+
+  }
   @if $level == 2 {
     font-weight: $vdm-font-weight-light;
     font-size: $vdm-font-size-base * 3.125;       // 50px

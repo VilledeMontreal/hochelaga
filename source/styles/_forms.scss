@@ -200,6 +200,10 @@ label {
     &.vdm-form-group {
         position: relative;
         margin-top: 3rem;
+        
+        &.compact {
+            margin-top: 2rem; // The smallest possible value to accomodate the label
+        }
 
         &.required {
             label {

@@ -406,15 +406,15 @@ mark,
   font-size: 90%;
   text-transform: uppercase; }
 
-.blockquote {
+.blockquote, html body blockquote.vdm-blockquote {
   margin-bottom: 1rem;
   font-size: 1.25rem; }
 
-.blockquote-footer {
+.blockquote-footer, html body blockquote.vdm-blockquote .vdm-blockquote-footer {
   display: block;
   font-size: 80%;
   color: #868e96; }
-  .blockquote-footer::before {
+  .blockquote-footer::before, html body blockquote.vdm-blockquote .vdm-blockquote-footer::before {
     content: "\2014 \00A0"; }
 
 .img-fluid, .vdm-avatar > img, .vdm-teasers-mixin .vdm-teaser-mixin .vdm-teaser-body-mixin > img, .vdm-teaser .vdm-teaser-body .vdm-teaser-mediaimg, .vdm-card .vdm-card-body > img, .vdm-card.vdm-card-image .vdm-card-body img {
@@ -4408,7 +4408,7 @@ a.bg-dark:focus, a.bg-dark:hover {
   border-top-left-radius: 0.25rem !important;
   border-bottom-left-radius: 0.25rem !important; }
 
-.rounded-circle, .vdm-avatar > img, .vdm-card.vdm-card-image.rounded .vdm-card-body > img {
+.rounded-circle, html body ul.vdm-list li:before, .vdm-avatar > img, .vdm-card.vdm-card-image.rounded .vdm-card-body > img {
   border-radius: 50%; }
 
 .rounded-0 {
@@ -5514,7 +5514,8 @@ a.bg-dark:focus, a.bg-dark:hover {
   margin-top: auto !important; }
 
 .mr-auto,
-.mx-auto {
+.mx-auto,
+.sidebar-box.form .vdm-btn {
   margin-right: auto !important; }
 
 .mb-auto,
@@ -5522,7 +5523,8 @@ a.bg-dark:focus, a.bg-dark:hover {
   margin-bottom: auto !important; }
 
 .ml-auto,
-.mx-auto {
+.mx-auto,
+.sidebar-box.form .vdm-btn {
   margin-left: auto !important; }
 
 @media (min-width: 576px) {
@@ -6775,60 +6777,60 @@ header {
       header .header-nav .header-search i {
         color: #FFFFFF; }
 
-footer {
+footer.footer {
   background-color: #E00000;
   padding-top: 45px; }
-  footer ul {
+  footer.footer ul {
     float: left;
     padding: 0;
     margin: 0;
     list-style-type: none;
     width: 100%; }
-    footer ul li {
+    footer.footer ul li {
       float: left;
       width: 100%; }
-      footer ul li .link {
+      footer.footer ul li .link {
         float: left;
         padding-top: 4px; }
-      footer ul li .link-arrow {
+      footer.footer ul li .link-arrow {
         float: right; }
-  footer hr {
+  footer.footer hr {
     border: solid 2px #FFFFFF; }
-  footer span {
+  footer.footer span {
     color: #FFFFFF; }
-  footer i {
+  footer.footer i {
     color: #FFFFFF; }
-  footer a {
+  footer.footer a {
     color: #FFFFFF; }
-  footer a:hover {
+  footer.footer a:hover {
     color: #FFFFFF; }
-  footer .services-citoyen {
+  footer.footer .services-citoyen {
     float: left;
     margin-bottom: 40px; }
-    footer .services-citoyen .services-citoyen-311 .number311 {
+    footer.footer .services-citoyen .services-citoyen-311 .number311 {
       float: left;
       font-size: 350%; }
-    footer .services-citoyen .services-citoyen-311 .title {
+    footer.footer .services-citoyen .services-citoyen-311 .title {
       float: right;
       padding-top: 18px;
       padding-left: 25px; }
-    footer .services-citoyen .services-citoyen-horaires .open {
+    footer.footer .services-citoyen .services-citoyen-horaires .open {
       background: #429A8E;
       display: inline-block;
       border-radius: 50%;
       width: 14px;
       height: 14px; }
-    footer .services-citoyen .services-citoyen-horaires .hours {
+    footer.footer .services-citoyen .services-citoyen-horaires .hours {
       font-size: 12px; }
-  footer .horaires .link-arrow {
+  footer.footer .horaires .link-arrow {
     float: left;
     padding-left: 20px; }
-  footer .language {
+  footer.footer .language {
     text-align: right; }
-  footer .social-media {
+  footer.footer .social-media {
     text-align: right;
     margin-top: 90px; }
-  footer .copyright {
+  footer.footer .copyright {
     font-size: 12px;
     padding-bottom: 20px; }
 
@@ -6840,6 +6842,9 @@ footer {
 */
 html body {
   background-color: #FFFFFF; }
+
+html .sidebar > * {
+  background-color: #F2F2F1; }
 
 .vdm-breadcrumb {
   background-color: #FFFFFF;
@@ -6930,8 +6935,6 @@ html body {
   padding: 0; }
   .vdm-collapsible-item .object > a {
     font-family: "Nunito Sans", Helvetica, Arial, sans-serif;
-    font-size: 67px;
-    line-height: 118.125px;
     font-weight: 400;
     display: block;
     font-size: 21px;
@@ -7212,6 +7215,26 @@ html body {
           left: 0;
           opacity: 1;
           visibility: visible; }
+
+.sidebar-box {
+  padding: 1rem 1.75rem;
+  padding-bottom: 3rem; }
+  .sidebar-box:last-of-type {
+    padding-bottom: 0; }
+  .sidebar-box .vdm-title {
+    margin-bottom: 2em; }
+  .sidebar-box.form form {
+    width: 96%;
+    padding-left: 2%;
+    padding-right: 2%;
+    margin-top: 2.5rem; }
+  .sidebar-box.form .vdm-btn {
+    display: block;
+    margin-top: 2rem; }
+  .sidebar-box.form.wide-buttons .vdm-btn {
+    width: 100%; }
+  .sidebar-box.form.wide-buttons.stacked-buttons .vdm-btn {
+    margin-top: 1.35rem; }
 
 /**
  * - - - - - - - - - -
@@ -7531,26 +7554,13 @@ html {
     font-size: 16px; }
     html body h1 {
       font-family: "Nunito Sans", Helvetica, Arial, sans-serif;
-      font-size: 67px;
-      line-height: 118.125px;
       font-weight: 400;
-      display: block; }
-      html body h1.vdm-title {
-        position: relative; }
-        html body h1.vdm-title:after {
-          position: absolute;
-          min-width: 3rem;
-          max-width: 4rem;
-          content: " ";
-          left: 0;
-          bottom: 0.1em;
-          border-radius: 4px;
-          height: 5.33333px;
-          background: #429A8E; }
+      display: block;
+      font-weight: 300;
+      font-size: 67px;
+      line-height: 92.001px; }
     html body h2 {
       font-family: "Nunito Sans", Helvetica, Arial, sans-serif;
-      font-size: 67px;
-      line-height: 118.125px;
       font-weight: 400;
       display: block;
       font-weight: 300;
@@ -7558,16 +7568,12 @@ html {
       line-height: 68.9997px; }
     html body h3 {
       font-family: "Nunito Sans", Helvetica, Arial, sans-serif;
-      font-size: 67px;
-      line-height: 118.125px;
       font-weight: 400;
       display: block;
       font-size: 37px;
       line-height: 49.9989px; }
     html body h4 {
       font-family: "Nunito Sans", Helvetica, Arial, sans-serif;
-      font-size: 67px;
-      line-height: 118.125px;
       font-weight: 400;
       display: block;
       font-size: 28px;
@@ -7575,8 +7581,6 @@ html {
       font-weight: 400; }
       html body h4.strong {
         font-family: "Nunito Sans", Helvetica, Arial, sans-serif;
-        font-size: 67px;
-        line-height: 118.125px;
         font-weight: 400;
         display: block;
         font-size: 28px;
@@ -7585,20 +7589,52 @@ html {
         font-weight: 700; }
     html body h5 {
       font-family: "Nunito Sans", Helvetica, Arial, sans-serif;
-      font-size: 67px;
-      line-height: 118.125px;
       font-weight: 400;
       display: block;
       font-size: 21px;
       line-height: 27.9993px; }
     html body h6 {
       font-family: "Nunito Sans", Helvetica, Arial, sans-serif;
-      font-size: 67px;
-      line-height: 118.125px;
       font-weight: 400;
       display: block;
       font-size: 16px;
       line-height: 21px; }
+    html body .vdm-title {
+      position: relative; }
+      html body .vdm-title:after {
+        position: absolute;
+        min-width: 3rem;
+        max-width: 4rem;
+        content: " ";
+        left: 0;
+        top: calc(100% - 0.3rem);
+        border-radius: 4px;
+        height: 5.33333px;
+        background: #429A8E; }
+      html body .vdm-title.sidebar {
+        font-family: "Nunito Sans", Helvetica, Arial, sans-serif;
+        font-weight: 400;
+        display: block;
+        font-size: 28px;
+        line-height: 37.9995px;
+        font-weight: 400;
+        font-weight: 700;
+        margin-bottom: 0.8em; }
+        html body .vdm-title.sidebar:after {
+          background: #000000;
+          color: #000000;
+          max-width: 1.7rem;
+          top: calc(100% + 0.3rem); }
+        html body .vdm-title.sidebar.icon-right {
+          padding-right: 4rem; }
+          html body .vdm-title.sidebar.icon-right .vdmi {
+            font-size: 3.6rem;
+            width: 3.6rem;
+            height: 3.6rem;
+            color: #429A8E;
+            position: absolute;
+            top: 0;
+            right: 0; }
     html body .regular {
       font-weight: 400; }
     html body .bold {
@@ -7615,7 +7651,7 @@ html {
     html body strong {
       font-weight: bold; }
     html body p {
-      line-height: 21px;
+      line-height: 1.35em;
       margin-bottom: 24px; }
     html body a {
       color: #429A8E; }
@@ -7681,17 +7717,16 @@ html {
       list-style-type: none;
       padding: 0; }
       html body ul.vdm-list li {
-        padding-left: 0.7em;
+        padding-left: 0.8em;
         position: relative;
         margin-bottom: 0.7em; }
         html body ul.vdm-list li:before {
           content: "";
-          width: 0.3em;
-          height: 0.3em;
-          border-radius: 100%;
+          width: 0.35em;
+          height: 0.35em;
           background: #000000;
           position: absolute;
-          top: 0.6em;
+          top: 0.5em;
           left: 0; }
         html body ul.vdm-list li ul {
           list-style-type: none;
@@ -7712,8 +7747,6 @@ html {
       position: relative; }
       html body ol.vdm-numbered-list .title {
         font-family: "Nunito Sans", Helvetica, Arial, sans-serif;
-        font-size: 67px;
-        line-height: 118.125px;
         font-weight: 400;
         display: block;
         font-size: 28px;
@@ -7725,8 +7758,6 @@ html {
         counter-increment: ol-counter;
         position: absolute;
         font-family: "Nunito Sans", Helvetica, Arial, sans-serif;
-        font-size: 67px;
-        line-height: 118.125px;
         font-weight: 400;
         display: block;
         font-size: 28px;
@@ -7739,6 +7770,49 @@ html {
         left: 0;
         line-height: 37.9995px;
         border-bottom: 4px solid #E00000; }
+    html body dl.vdm-definition-list {
+      margin-bottom: 2em; }
+      html body dl.vdm-definition-list dt {
+        font-family: "Nunito Sans", Helvetica, Arial, sans-serif;
+        font-weight: 400;
+        display: block;
+        font-size: 28px;
+        line-height: 37.9995px;
+        font-weight: 400;
+        font-weight: 700;
+        color: #429A8E; }
+      html body dl.vdm-definition-list dd {
+        padding-bottom: 2em;
+        border-bottom: 1px solid #F2F2F1;
+        margin-bottom: 2em; }
+        html body dl.vdm-definition-list dd:last-of-type {
+          padding-bottom: 0;
+          margin-bottom: 0;
+          border: 0; }
+    html body blockquote.vdm-blockquote {
+      padding-left: 1.75em;
+      font-size: 21px;
+      font-weight: normal;
+      font-style: italic;
+      position: relative; }
+      html body blockquote.vdm-blockquote:before {
+        width: 8px;
+        height: 35%;
+        position: absolute;
+        background: #E00000;
+        content: "";
+        left: 0;
+        top: 0; }
+      html body blockquote.vdm-blockquote .vdm-blockquote-footer {
+        font-style: normal;
+        color: #80807F;
+        font-size: 12px;
+        text-align: right; }
+        html body blockquote.vdm-blockquote .vdm-blockquote-footer:before {
+          display: none; }
+      html body blockquote.vdm-blockquote cite {
+        color: #000000;
+        font-style: normal; }
 
 /**
  *
@@ -7762,8 +7836,6 @@ html {
   font-size: 21px; }
   .vdm-date.day-month > .day {
     font-family: "Nunito Sans", Helvetica, Arial, sans-serif;
-    font-size: 67px;
-    line-height: 118.125px;
     font-weight: 400;
     display: block;
     font-weight: 300;
@@ -8177,6 +8249,8 @@ label {
 .form-group.vdm-form-group {
   position: relative;
   margin-top: 3rem; }
+  .form-group.vdm-form-group.compact {
+    margin-top: 2rem; }
   .form-group.vdm-form-group.required label:after {
     content: "*";
     color: #E00000;
@@ -8555,8 +8629,6 @@ select {
       color: #FFFFFF; }
   .vdm-teasers-mixin .vdm-teaser-mixin .vdm-teaser-body-mixin .title {
     font-family: "Nunito Sans", Helvetica, Arial, sans-serif;
-    font-size: 67px;
-    line-height: 118.125px;
     font-weight: 400;
     display: block;
     font-size: 28px;
@@ -8605,8 +8677,6 @@ select {
   padding-right: 7.75rem; }
   .vdm-teasers-mixin .vdm-teaser-mixin.icon-right .vdm-teaser-body-mixin .title {
     font-family: "Nunito Sans", Helvetica, Arial, sans-serif;
-    font-size: 67px;
-    line-height: 118.125px;
     font-weight: 400;
     display: block;
     font-size: 28px;
@@ -9472,8 +9542,6 @@ select {
   padding-left: 7.75rem; }
   .vdm-teasers-mixin .vdm-teaser-mixin.icon-left .vdm-teaser-body-mixin .title {
     font-family: "Nunito Sans", Helvetica, Arial, sans-serif;
-    font-size: 67px;
-    line-height: 118.125px;
     font-weight: 400;
     display: block;
     font-size: 28px;
@@ -12042,8 +12110,6 @@ select {
       color: #FFFFFF; }
   .vdm-teasers-mixin .vdm-teaser-mixin.arrow-block .vdm-teaser-body-mixin .title {
     font-family: "Nunito Sans", Helvetica, Arial, sans-serif;
-    font-size: 67px;
-    line-height: 118.125px;
     font-weight: 400;
     display: block;
     font-size: 21px;
@@ -12061,8 +12127,6 @@ select {
   padding-right: 5rem; }
   .vdm-teasers-mixin .vdm-teaser-mixin.arrow-block.icon-left .vdm-teaser-body-mixin .title {
     font-family: "Nunito Sans", Helvetica, Arial, sans-serif;
-    font-size: 67px;
-    line-height: 118.125px;
     font-weight: 400;
     display: block;
     font-size: 28px;
@@ -14627,8 +14691,6 @@ select {
       color: #FFFFFF; }
   .vdm-teasers-mixin .vdm-teaser-mixin.arrow-block.icon-left .vdm-teaser-body-mixin .title {
     font-family: "Nunito Sans", Helvetica, Arial, sans-serif;
-    font-size: 67px;
-    line-height: 118.125px;
     font-weight: 400;
     display: block;
     font-size: 21px;
@@ -16359,8 +16421,6 @@ select {
     padding: 2.3rem 2.3rem 3rem 2.3rem; }
     .vdm-teasers-mixin .vdm-teaser-mixin.image-right .vdm-teaser-body-mixin .content-wrapper .title, .vdm-teasers-mixin .vdm-teaser-mixin.image-left .vdm-teaser-body-mixin .content-wrapper .title {
       font-family: "Nunito Sans", Helvetica, Arial, sans-serif;
-      font-size: 67px;
-      line-height: 118.125px;
       font-weight: 400;
       display: block;
       font-size: 21px;
@@ -16408,8 +16468,6 @@ select {
     padding: 2.3rem 2.3rem 3rem 2.3rem; }
     .vdm-teasers-mixin .vdm-teaser-mixin.image-right.small .vdm-teaser-body-mixin .content-wrapper .title, .vdm-teasers-mixin .vdm-teaser-mixin.image-left.small .vdm-teaser-body-mixin .content-wrapper .title {
       font-family: "Nunito Sans", Helvetica, Arial, sans-serif;
-      font-size: 67px;
-      line-height: 118.125px;
       font-weight: 400;
       display: block;
       font-size: 21px;
@@ -16461,8 +16519,6 @@ select {
     padding: 2.3rem 2.3rem 3rem 2.3rem; }
     .vdm-teasers-mixin .vdm-teaser-mixin.image-right.large .vdm-teaser-body-mixin .content-wrapper .title, .vdm-teasers-mixin .vdm-teaser-mixin.image-left.large .vdm-teaser-body-mixin .content-wrapper .title {
       font-family: "Nunito Sans", Helvetica, Arial, sans-serif;
-      font-size: 67px;
-      line-height: 118.125px;
       font-weight: 400;
       display: block;
       font-size: 21px;
@@ -16526,8 +16582,6 @@ select {
     padding: 2.3rem 2.3rem 3rem 2.3rem; }
     .vdm-teasers-mixin .vdm-teaser-mixin.image-right.larger .vdm-teaser-body-mixin .content-wrapper .title, .vdm-teasers-mixin .vdm-teaser-mixin.image-left.larger .vdm-teaser-body-mixin .content-wrapper .title {
       font-family: "Nunito Sans", Helvetica, Arial, sans-serif;
-      font-size: 67px;
-      line-height: 118.125px;
       font-weight: 400;
       display: block;
       font-size: 21px;
@@ -16538,8 +16592,6 @@ select {
     max-height: 22rem; }
   .vdm-teasers-mixin .vdm-teaser-mixin.image-right.larger .vdm-teaser-body-mixin .title, .vdm-teasers-mixin .vdm-teaser-mixin.image-left.larger .vdm-teaser-body-mixin .title {
     font-family: "Nunito Sans", Helvetica, Arial, sans-serif;
-    font-size: 67px;
-    line-height: 118.125px;
     font-weight: 400;
     display: block;
     font-size: 28px;
@@ -16548,8 +16600,6 @@ select {
     font-weight: 700; }
   .vdm-teasers-mixin .vdm-teaser-mixin.image-right.larger .vdm-teaser-body-mixin .content, .vdm-teasers-mixin .vdm-teaser-mixin.image-left.larger .vdm-teaser-body-mixin .content {
     font-family: "Nunito Sans", Helvetica, Arial, sans-serif;
-    font-size: 67px;
-    line-height: 118.125px;
     font-weight: 400;
     display: block;
     font-size: 21px;
@@ -16609,8 +16659,6 @@ select {
     padding: 2.3rem 2.3rem 3rem 2.3rem; }
     .vdm-teasers-mixin .vdm-teaser-mixin.image-right .vdm-teaser-body-mixin .content-wrapper .title {
       font-family: "Nunito Sans", Helvetica, Arial, sans-serif;
-      font-size: 67px;
-      line-height: 118.125px;
       font-weight: 400;
       display: block;
       font-size: 21px;
@@ -16662,8 +16710,6 @@ select {
     line-height: 2.8rem; }
   .vdm-teasers-mixin .vdm-teaser-mixin.compact .vdm-teaser-body-mixin .title {
     font-family: "Nunito Sans", Helvetica, Arial, sans-serif;
-    font-size: 67px;
-    line-height: 118.125px;
     font-weight: 400;
     display: block;
     font-size: 21px;
@@ -17610,8 +17656,6 @@ select {
       margin-bottom: 2rem; }
     .vdm-teaser .vdm-teaser-body .title {
       font-family: "Nunito Sans", Helvetica, Arial, sans-serif;
-      font-size: 67px;
-      line-height: 118.125px;
       font-weight: 400;
       display: block;
       font-size: 28px;
@@ -17662,8 +17706,6 @@ select {
         color: #000000; }
     .vdm-teaser.arrow-block .vdm-teaser-body .title {
       font-family: "Nunito Sans", Helvetica, Arial, sans-serif;
-      font-size: 67px;
-      line-height: 118.125px;
       font-weight: 400;
       display: block;
       font-size: 28px;
@@ -17694,8 +17736,6 @@ select {
       line-height: 2.8rem; }
     .vdm-teaser.arrow-block.compact .vdm-teaser-body .title {
       font-family: "Nunito Sans", Helvetica, Arial, sans-serif;
-      font-size: 67px;
-      line-height: 118.125px;
       font-weight: 400;
       display: block;
       font-size: 21px;
@@ -17753,8 +17793,6 @@ select {
         color: #429A8E; }
     .vdm-teaser.arrow-block.inline-flex.category-block .vdm-teaser-body .category-description {
       font-family: "Nunito Sans", Helvetica, Arial, sans-serif;
-      font-size: 67px;
-      line-height: 118.125px;
       font-weight: 400;
       display: block;
       font-size: 21px;
@@ -17770,8 +17808,6 @@ select {
       left: 2rem; }
     .vdm-teaser.arrow-block.icon-left .vdm-teaser-body .title {
       font-family: "Nunito Sans", Helvetica, Arial, sans-serif;
-      font-size: 67px;
-      line-height: 118.125px;
       font-weight: 400;
       display: block;
       font-size: 28px;
@@ -17841,8 +17877,6 @@ select {
     max-height: 22rem; }
   .vdm-teaser.image-left.larger .vdm-teaser-body .title, .vdm-teaser.image-right.larger .vdm-teaser-body .title {
     font-family: "Nunito Sans", Helvetica, Arial, sans-serif;
-    font-size: 67px;
-    line-height: 118.125px;
     font-weight: 400;
     display: block;
     font-size: 28px;
@@ -17851,8 +17885,6 @@ select {
     font-weight: 700; }
   .vdm-teaser.image-left.larger .vdm-teaser-body .content, .vdm-teaser.image-right.larger .vdm-teaser-body .content {
     font-family: "Nunito Sans", Helvetica, Arial, sans-serif;
-    font-size: 67px;
-    line-height: 118.125px;
     font-weight: 400;
     display: block;
     font-size: 21px;
@@ -17874,8 +17906,6 @@ select {
     padding: 2.3rem 2.3rem 3rem 2.3rem; }
     .vdm-teaser.image-left .content-wrapper .title, .vdm-teaser.image-right .content-wrapper .title {
       font-family: "Nunito Sans", Helvetica, Arial, sans-serif;
-      font-size: 67px;
-      line-height: 118.125px;
       font-weight: 400;
       display: block;
       font-size: 21px;
@@ -18851,8 +18881,6 @@ select {
     padding: 1.3rem; }
     .vdm-card.minimal .vdm-card-body .title {
       font-family: "Nunito Sans", Helvetica, Arial, sans-serif;
-      font-size: 67px;
-      line-height: 118.125px;
       font-weight: 400;
       display: block;
       font-size: 21px;
@@ -18860,8 +18888,6 @@ select {
       color: #429A8E; }
     .vdm-card.minimal .vdm-card-body .content {
       font-family: "Nunito Sans", Helvetica, Arial, sans-serif;
-      font-size: 67px;
-      line-height: 118.125px;
       font-weight: 400;
       display: block;
       font-size: 16px;
@@ -18891,8 +18917,6 @@ select {
     padding: 1.5rem 1.3rem; }
     .vdm-card.featured .vdm-card-body .title {
       font-family: "Nunito Sans", Helvetica, Arial, sans-serif;
-      font-size: 67px;
-      line-height: 118.125px;
       font-weight: 400;
       display: block;
       font-size: 28px;
@@ -18901,8 +18925,6 @@ select {
       font-weight: 700; }
     .vdm-card.featured .vdm-card-body .content {
       font-family: "Nunito Sans", Helvetica, Arial, sans-serif;
-      font-size: 67px;
-      line-height: 118.125px;
       font-weight: 400;
       display: block;
       font-size: 28px;
@@ -18914,8 +18936,6 @@ select {
       margin-bottom: 4em; }
     .vdm-card.featured .vdm-card-body .footer {
       font-family: "Nunito Sans", Helvetica, Arial, sans-serif;
-      font-size: 67px;
-      line-height: 118.125px;
       font-weight: 400;
       display: block;
       font-size: 16px;
@@ -19009,8 +19029,6 @@ select {
         margin-bottom: 0; }
       .vdm-card.vdm-card-image .vdm-card-body .card-content-wrapper .title {
         font-family: "Nunito Sans", Helvetica, Arial, sans-serif;
-        font-size: 67px;
-        line-height: 118.125px;
         font-weight: 400;
         display: block;
         font-size: 28px;
@@ -19196,8 +19214,6 @@ select {
       background: #429A8E; }
     .card.card-large .title {
       font-family: "Nunito Sans", Helvetica, Arial, sans-serif;
-      font-size: 67px;
-      line-height: 118.125px;
       font-weight: 400;
       display: block;
       font-size: 28px;
@@ -20122,8 +20138,6 @@ select {
     height: 100%; }
     .teaser .content .title {
       font-family: "Nunito Sans", Helvetica, Arial, sans-serif;
-      font-size: 67px;
-      line-height: 118.125px;
       font-weight: 400;
       display: block;
       font-size: 28px;
@@ -20227,8 +20241,6 @@ select {
       margin-right: 3%; }
       .teaser.teaser-alert .content .what {
         font-family: "Nunito Sans", Helvetica, Arial, sans-serif;
-        font-size: 67px;
-        line-height: 118.125px;
         font-weight: 400;
         display: block;
         font-size: 28px;
