@@ -1,8 +1,8 @@
 ---
-title: Search box combos, stacked
+title: Search box combo, button inside search widget
 ---
 
-Combo box lalaid out to accomodate the following items: 
+Combo box laid out to accomodate the following items: 
 * A heading level title
 * A stroked container including an icon and a plain text input.
 * A submit button

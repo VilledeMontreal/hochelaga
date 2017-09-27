@@ -1,5 +1,5 @@
 ---
-title: Menu icon 
+title: Logo Image
 ---
 
 [Insert description here]

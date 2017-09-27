@@ -116,6 +116,30 @@
     }
 }
 
+// Sets the icon font size, generally 3.6rem;
+@mixin icon-size( $all : false, 
+                  $fsize : $vdm-icon-font-size, 
+                  $height:  $vdm-icon-font-height, 
+                  $width: $vdm-icon-font-width, 
+                  $lheight: $vdm-icon-font-line-height ) {
+
+  @if $all {
+    &:after, &:before {
+      font-size: $all;
+      height: $all;
+      width: $all;
+      line-height: $all;
+    }
+  }@else {
+    &:after, &:before {
+      font-size: $fsize;
+      height: $height;
+      width: $width;
+      line-height: $lheight;
+    }
+  }
+}
+
 
 
 /**
