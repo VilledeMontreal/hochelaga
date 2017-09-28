@@ -1,5 +1,5 @@
 ---
-title: Footer
+title: Footer for the main portal
 ---
 
-[Insert description here]
+A skeleton for the main portal.
