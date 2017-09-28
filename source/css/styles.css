@@ -8511,7 +8511,8 @@ a {
     text-decoration: none; }
     a.social-icon:hover, a.social-icon:active {
       color: #000000;
-      text-decoration: underline; }
+      text-decoration: underline;
+      cursor: pointer; }
       a.social-icon:hover:before, a.social-icon:active:before {
         text-decoration: none; }
     a.social-icon.facebook:before {
@@ -8526,8 +8527,8 @@ a {
       content: "\E804"; }
     a.social-icon.googleplus:before {
       content: "\E805"; }
-    a.social-icon.inverse.facebook {
-      color: white; }
+    a.social-icon.inverted {
+      color: #FFFFFF; }
     a.social-icon:before {
       display: inline-block;
       font-size: 30px;

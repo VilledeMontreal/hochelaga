@@ -293,6 +293,7 @@ a {
     &:active {
       color: $vdm-black;
       text-decoration: underline;
+      cursor: pointer;
       &:before {
         text-decoration: none;
       }
@@ -328,10 +329,8 @@ a {
         content: "\E805";
       }
     }
-    &.inverse {
-      &.facebook {
-        color: white;
-      }
+    &.inverted {
+      color: $vdm-white;
     }
     &:before {
       display: inline-block;
