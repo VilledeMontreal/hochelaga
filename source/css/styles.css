@@ -7423,7 +7423,8 @@ html .region.main-container.col-both .content {
   width: 300px;
   background: #222222;
   height: 100%;
-  min-height: 100vh; }
+  min-height: 100vh;
+  overflow: hidden; }
   .side-menu .menu-links {
     width: 100%;
     margin: 0;
@@ -8167,6 +8168,20 @@ html {
   font-style: normal; }
 
 @font-face {
+  font-family: "vdm-fonticon";
+  src: url("../fonts//vdm-font-icon.eot?v=0.5");
+  src: url("../fonts//vdm-font-icon.eot?v=0.5") format("embedded-opentype"), url("../fonts//vdm-font-icon.woff2?v=0.5") format("woff2"), url("../fonts//vdm-font-icon.woff?v=0.5") format("woff"), url("../fonts//vdm-font-icon.ttf?v=0.5") format("truetype");
+  font-weight: normal;
+  font-style: normal; }
+
+@font-face {
+  font-family: "ic-social";
+  src: url("../fonts//ic-social.eot?v=1.0");
+  src: url("../fonts//ic-social.eot?v=1.0") format("embedded-opentype"), url("../fonts//ic-social.woff2?v=1.0") format("woff2"), url("../fonts//ic-social.woff?v=1.0") format("woff"), url("../fonts//ic-social.ttf?v=1.0") format("truetype");
+  font-weight: normal;
+  font-style: normal; }
+
+@font-face {
   font-family: "fontawesome-fonticon";
   src: url("../fonts/font-awesome-4.7.0/fontawesome-webfont.eot?v=4.7.0");
   src: url("../fonts/font-awesome-4.7.0/fontawesome-webfont.eot?v=4.7.0") format("embedded-opentype"), url("../fonts/font-awesome-4.7.0/fontawesome-webfont.woff2?v=4.7.0") format("woff2"), url("../fonts/font-awesome-4.7.0/fontawesome-webfont.woff?v=4.7.0") format("woff"), url("../fonts/font-awesome-4.7.0/fontawesome-webfont.ttf?v=4.7.0") format("truetype");
@@ -8446,31 +8461,79 @@ ul.vdm-social-media {
     ul.vdm-social-media li a.social-icon {
       display: block; }
 
-a.social-icon {
-  height: 60px;
-  padding-left: 70px;
-  line-height: 60px;
-  display: inline-block;
-  color: #000000;
-  text-decoration: none; }
-  a.social-icon:hover, a.social-icon:active {
+/* a {
+  &.social-icon {
+    height: $vdm-icon-social-media-scale;
+    padding-left: $vdm-icon-social-media-scale + $vdm-icon-social-media-padding-right;
+    line-height: $vdm-icon-social-media-scale;
+    display: inline-block;
+
+    color: $vdm-black;
+    text-decoration: none;
+    &:hover, 
+    &:active {
+      color: $vdm-black;
+      text-decoration: underline;
+    }
+  
+    &.facebook {
+      background: url('../../../images/icons/ic-facebook.png');
+      background: url('../../../images/icons/ic-facebook.svg') no-repeat 0 0;
+    }
+    &.linkedin {
+      background: url('../../../images/icons/ic-linkedin.png');
+      background: url('../../../images/icons/ic-linkedin.svg') no-repeat 0 0;
+    }
+    &.twitter {
+      background: url('../../../images/icons/ic-twitter.png');
+      background: url('../../../images/icons/ic-twitter.svg') no-repeat 0 0;
+    }
+    &.youtube {
+      background: url('../../../images/icons/ic-youtube.png');
+      background: url('../../../images/icons/ic-youtube.svg') no-repeat 0 0;
+    }
+    &.inverse {
+      &.facebook {
+        background: url('../../../images/icons/ic-facebook-black-white.png');
+        background: url('../../../images/icons/ic-facebook-black-white.svg') no-repeat 0 -65px;
+      }
+    }
+  }
+} */
+a {
+  position: relative; }
+  a.social-icon {
+    display: inline-block;
+    font-size: 1rem;
     color: #000000;
-    text-decoration: underline; }
-  a.social-icon.facebook {
-    background: url("../../../images/icons/ic-facebook.png");
-    background: url("../../../images/icons/ic-facebook.svg") no-repeat 0 0; }
-  a.social-icon.linkedin {
-    background: url("../../../images/icons/ic-linkedin.png");
-    background: url("../../../images/icons/ic-linkedin.svg") no-repeat 0 0; }
-  a.social-icon.twitter {
-    background: url("../../../images/icons/ic-twitter.png");
-    background: url("../../../images/icons/ic-twitter.svg") no-repeat 0 0; }
-  a.social-icon.youtube {
-    background: url("../../../images/icons/ic-youtube.png");
-    background: url("../../../images/icons/ic-youtube.svg") no-repeat 0 0; }
-  a.social-icon.inverse.facebook {
-    background: url("../../../images/icons/ic-facebook-black-white.png");
-    background: url("../../../images/icons/ic-facebook-black-white.svg") no-repeat 0 -65px; }
+    line-height: 30px;
+    margin-left: 34.5px;
+    text-decoration: none; }
+    a.social-icon:hover, a.social-icon:active {
+      color: #000000;
+      text-decoration: underline; }
+      a.social-icon:hover:before, a.social-icon:active:before {
+        text-decoration: none; }
+    a.social-icon.facebook:before {
+      content: "\E800"; }
+    a.social-icon.linkedin:before {
+      content: "\E801"; }
+    a.social-icon.twitter:before {
+      content: "\E802"; }
+    a.social-icon.youtube:before {
+      content: "\E803"; }
+    a.social-icon.instagram:before {
+      content: "\E804"; }
+    a.social-icon.googleplus:before {
+      content: "\E805"; }
+    a.social-icon.inverse.facebook {
+      color: white; }
+    a.social-icon:before {
+      display: inline-block;
+      font-size: 30px;
+      font-family: "ic-social";
+      position: absolute;
+      left: -34.5px; }
 
 label {
   font-family: "Nunito Sans", Helvetica, Arial, sans-serif;
@@ -19477,7 +19540,8 @@ select {
   text-decoration: none;
   color: #000000;
   cursor: pointer;
-  line-height: 19px; }
+  line-height: 19px;
+  height: 100%; }
   .card:hover, .card:active {
     color: #FFFFFF;
     background: #429A8E;
