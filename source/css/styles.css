@@ -7145,6 +7145,11 @@ html .region.main-container {
       max-width: 100%; }
     html .region.main-container .content-wrapper .sidebar-right,
     html .region.main-container .content-wrapper .sidebar-left {
+      position: relative;
+      width: 100%;
+      min-height: 1px;
+      padding-right: 15px;
+      padding-left: 15px;
       -webkit-box-flex: 0;
           -ms-flex: 0 0 33.33333%;
               flex: 0 0 33.33333%;
