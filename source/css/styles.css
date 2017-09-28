@@ -8408,33 +8408,40 @@ ul.vdm-social-media {
     }
   }
 } */
-a.social-icon {
-  display: inline-block;
-  color: #000000;
-  text-decoration: none; }
-  a.social-icon:hover, a.social-icon:active {
-    color: #000000;
-    text-decoration: underline; }
-    a.social-icon:hover:before, a.social-icon:active:before {
-      text-decoration: none; }
-  a.social-icon.facebook:before {
-    content: "\E800"; }
-  a.social-icon.linkedin:before {
-    content: "\E801"; }
-  a.social-icon.twitter:before {
-    content: "\E802"; }
-  a.social-icon.youtube:before {
-    content: "\E803"; }
-  a.social-icon.instagram:before {
-    content: "\E804"; }
-  a.social-icon.googleplus:before {
-    content: "\E805"; }
-  a.social-icon.inverse.facebook {
-    color: white; }
-  a.social-icon:before {
+a {
+  position: relative; }
+  a.social-icon {
     display: inline-block;
-    font-size: 60px;
-    font-family: "ic-social"; }
+    font-size: 1rem;
+    color: #000000;
+    line-height: 30px;
+    margin-left: 34.5px;
+    text-decoration: none; }
+    a.social-icon:hover, a.social-icon:active {
+      color: #000000;
+      text-decoration: underline; }
+      a.social-icon:hover:before, a.social-icon:active:before {
+        text-decoration: none; }
+    a.social-icon.facebook:before {
+      content: "\E800"; }
+    a.social-icon.linkedin:before {
+      content: "\E801"; }
+    a.social-icon.twitter:before {
+      content: "\E802"; }
+    a.social-icon.youtube:before {
+      content: "\E803"; }
+    a.social-icon.instagram:before {
+      content: "\E804"; }
+    a.social-icon.googleplus:before {
+      content: "\E805"; }
+    a.social-icon.inverse.facebook {
+      color: white; }
+    a.social-icon:before {
+      display: inline-block;
+      font-size: 30px;
+      font-family: "ic-social";
+      position: absolute;
+      left: -34.5px; }
 
 label {
   font-family: "Nunito Sans", Helvetica, Arial, sans-serif;

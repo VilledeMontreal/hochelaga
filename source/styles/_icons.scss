@@ -278,13 +278,16 @@ ul {
 
 // test social icon font
 a {
+  position: relative;
   &.social-icon {
     //height: $vdm-icon-social-media-scale;
     //padding-left: $vdm-icon-social-media-scale + $vdm-icon-social-media-padding-right;
     //line-height: $vdm-icon-social-media-scale;
     display: inline-block;
-
+    font-size: 1rem;
     color: $vdm-black;
+    line-height: $social-icon-font-size;
+    margin-left: $social-icon-font-size * 1.15;
     text-decoration: none;
     &:hover, 
     &:active {
@@ -334,6 +337,8 @@ a {
       display: inline-block;
       font-size: $social-icon-font-size;
       font-family: $social-icon-font-family;
+      position: absolute;
+      left: -$social-icon-font-size * 1.15;
     }
   }
 }
