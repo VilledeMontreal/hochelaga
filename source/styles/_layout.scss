@@ -50,7 +50,8 @@ html {
   .region {
     // Main content region and columns here
     &.main-container {
-      @extend .container;
+      @include make-container();
+      @include make-container-max-widths();
       .content-wrapper {
         >* {
           border: 1px solid $vdm-grey-light;
@@ -66,7 +67,7 @@ html {
         }
 
       }
-      // 3 column layout
+      
       &.col-left, 
       &.col-right {
         .content {
@@ -74,6 +75,7 @@ html {
         }
       }
     
+      // 3 column layout, not sure this should exist
       &.col-both {
         .sidebar-right,
         .sidebar-left {
