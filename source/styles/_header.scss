@@ -3,11 +3,8 @@
 
 // @ see http://192.168.56.101:3000/?p=organisms-header
 
-
-
 .vdm-header {
   @extend .fixed-top;
-
   ul {
     list-style-type: none;
     margin: 0;
@@ -20,7 +17,7 @@
   .navbar-banner {
     background: $vdm-black;
     color: $vdm-white; 
-    height: 50px;
+    height: $vdm-header-banner-portal-height;
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -74,14 +71,13 @@
     justify-content: space-between;
     background: $vdm-white;
     border-bottom: 1px solid $vdm-grey-light;
-    height: 60px;
+    height: $vdm-header-portal-height;
     padding: 0;
     width: 100%;
     position: relative;
 
     .menu-trigger-wrapper {
       flex-basis: calc(50% - 80px);
-      
     }
 
     .menu-trigger {
@@ -134,9 +130,11 @@
           display: none;
         }
         
-
         .search {
-
+          display: none;
+          @include media-breakpoint-up(sm) { 
+            @extend .d-sm-inline-block;
+          }
         }
         .user {
           
@@ -147,10 +145,10 @@
           
           a {
             display: block;
-            line-height: 60px;
+            line-height: $vdm-header-portal-height;
             text-align: center;
-            width: 60px;
-            height: 60px;
+            width: $vdm-header-portal-height;
+            height: $vdm-header-portal-height;
           }
         }
 
@@ -162,8 +160,6 @@
             display: block;
           }
         }
-
-
       }
     }
 
@@ -186,7 +182,7 @@
 
     .button-label {
       color: $vdm-black;
-      line-height: 60px;
+      line-height: $vdm-header-portal-height;
       display: inline-block;
       vertical-align: top;
       display: none;
@@ -214,7 +210,6 @@
       @include icon(after, profile);
       @include icon-size(3.7rem);
     } 
-    
   }
 
   // Language switcher component

@@ -90,6 +90,19 @@ $fontawesome-icon-font-version: '4.7.0';
 $fontawesome-icon-font-family : 'fontawesome-fonticon';
 
 // - - - - - - - - - -
+// == Layout - top-level structures
+// - - - - - - - - - -
+
+$vdm-header-banner-portal-height : 50px;
+$vdm-header-portal-height : 60px;
+$vdm-header-total-portal-height : $vdm-header-banner-portal-height + $vdm-header-portal-height;
+// $vdm-footer-portal-height : 330px;
+// $vdm-footer-portal-light-height : 110px;
+// $vdm-footer-portal-height-mobile : 250px;
+// $vdm-footer-portal-light-height-mobile : 110px;
+
+
+// - - - - - - - - - -
 // == UI - general -- split this cat. later
 // - - - - - - - - - -
 

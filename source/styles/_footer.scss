@@ -1,8 +1,101 @@
 // @file footer.scss
 
+
+// Main portal footer, the fat version with all bells & whistles present in the Sketch mockups
+footer {
+  &.vdm-footer {
+    background-color: $vdm-sub-brand;
+    color: $vdm-white;
+    // Links
+    a {
+      color: $vdm-white;
+      &:before, 
+      &:after {
+        color: $vdm-white;
+      }
+      &:hover, 
+      &:active {
+        color: $vdm-white;
+        text-decoration: underline;
+        &:before, 
+        &:after {
+          color: $vdm-white;
+        }
+      }
+      
+    }
+    // List items
+    ul {
+      margin: 0;
+      padding: 0;
+      border: 1px solid white;
+      >li {
+        margin: 0;
+        padding: 0;
+        a {
+          display: block;
+          .label {
+
+          }
+          
+        }
+      }
+    }
+
+
+    .main {
+
+      .featured {
+
+      }
+
+      .vdm-footer-links {
+        >li {
+          >a {
+            .label {
+
+            }
+          }
+        }
+      }// ul
+
+      .vdm-social-media {
+        &.footer {
+          >li {
+            >a {
+              .label {
+  
+              }
+            }
+          }// li
+        } // ul
+      } 
+    } // Main wrapper
+
+    .sub {
+      .first {
+
+      }
+      .last {
+        .vdm-sub-footer-links {
+          >li {
+            >a {
+              .label {
+  
+              }
+            }
+          }
+        }// ul
+      }
+    } // Secondary wrapper, sub-footer section
+  }
+}
+
+
+// Martino's first shot at creating a footer below 
 footer {
 
-  &.footer {
+  &.footer-martino {
     background-color: $vdm-sub-brand;
     padding-top: 45px;
 

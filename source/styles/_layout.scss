@@ -11,16 +11,82 @@ html {
   body {
     background-color: $vdm-white;
   }
-  // Header here
 
-  // Footer here
+  // @see https://philipwalton.github.io/solved-by-flexbox/demos/sticky-footer/
+  // @see https://github.com/philipwalton/solved-by-flexbox/blob/master/assets/css/components/site.css
+  &.sticky {
+    >body {
+      display: flex;
+      flex-direction: column;
+      //height: calc(100vh - $vdm-header-total-portal-height);
+      height: 100vh;
+      padding-top: $vdm-header-total-portal-height;
+    }
+    .main-container {
+      flex: 1 0 auto;
+    }
+    .vdm-header,
+    .vdm-footer {
+      flex: none; 
+    }
+  }
 
-  // Main region and columns here
+  .vdm-header {
+
+  }
+  .vdm-footer {
+    
+  }
+
+  
+  
   .sidebar {
     >* {
       background-color: $vdm-grey-light
     }
-  }
+  } // Sidebar
+
+  // All regions in page templates should have at least a "region" class
+  .region {
+    // Main content region and columns here
+    &.main-container {
+      @extend .container;
+      .content-wrapper {
+        >* {
+          border: 1px solid $vdm-grey-light;
+        }
+        @include make-row();
+        .content {
+          @include make-col-ready();
+          @include make-col(12);
+        }
+        .sidebar-right,
+        .sidebar-left {
+          @include make-col(4);
+        }
+
+      }
+      // 3 column layout
+      &.col-left, 
+      &.col-right {
+        .content {
+          @include make-col(8);
+        }
+      }
+    
+      &.col-both {
+        .sidebar-right,
+        .sidebar-left {
+          @include make-col(3);
+        }
+        .content {
+          @include make-col(6);
+        }
+      }
+    }
+    
+  } // Region
+  
 
 }
 

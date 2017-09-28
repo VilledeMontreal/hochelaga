@@ -1,5 +1,5 @@
 ---
-title: Footer for the main portal
+title: Footer - first shot with Martino
 ---
 
-A skeleton for the main portal.
+Martino's footer.
