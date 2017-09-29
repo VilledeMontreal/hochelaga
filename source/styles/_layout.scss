@@ -47,8 +47,22 @@ html {
 
   // All regions in page templates should have at least a "region" class
   .region {
+    // Image , title and teaser container, portal
+    &.header-container {
+      @include make-container();
+      @include make-container-max-widths();
+      .content-wrapper {
+        @include make-row();
+        .content {
+          @include make-col-ready();
+          @include make-col(12);
+        }
+      }
+    }
+
     // Main content region and columns here
     &.main-container {
+
       @include make-container();
       @include make-container-max-widths();
 
@@ -63,6 +77,7 @@ html {
         .sidebar-left {
           @include make-col-ready();
           @include make-col(12);
+        }
       }
       
       &.col-left, 
@@ -92,6 +107,7 @@ html {
 
       // Medium breakpoint and above, grid this stuff
       @include media-breakpoint-up(md) {
+
         .content-wrapper {
           .content {
             @include make-col(12);
@@ -100,16 +116,8 @@ html {
           .sidebar-left {
             @include make-col(4);
           }
-  
         }
         
-        &.col-left, 
-        &.col-right {
-          .content {
-            @include make-col(8);
-          }
-        }
-
         &.col-left, 
         &.col-right {
           .content {
@@ -132,17 +140,8 @@ html {
             @include make-col(6);
           }
         }
-
       } // md-up
-
-    }
-
-    
-
-
-    
+    } // main-container
   } // Region
-  
 
-}
-
+}// html
