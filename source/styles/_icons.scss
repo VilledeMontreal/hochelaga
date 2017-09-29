@@ -339,5 +339,13 @@ a {
       position: absolute;
       left: -$social-icon-font-size * 1.15;
     }
+    &.ic-only {
+      margin-left: 0;
+      overflow: visible;
+      &:before {
+        position: relative;
+        left: auto;
+      }
+    }
   }
 }

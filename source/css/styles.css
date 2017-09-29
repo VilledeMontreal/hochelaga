@@ -8550,6 +8550,12 @@ a {
       font-family: "ic-social";
       position: absolute;
       left: -34.5px; }
+    a.social-icon.ic-only {
+      margin-left: 0;
+      overflow: visible; }
+      a.social-icon.ic-only:before {
+        position: relative;
+        left: auto; }
 
 label {
   font-family: "Nunito Sans", Helvetica, Arial, sans-serif;
