@@ -51,11 +51,10 @@ html {
     &.main-container {
       @include make-container();
       @include make-container-max-widths();
+
       .content-wrapper {
-        >* {
-          border: 1px solid $vdm-grey-light;
-        }
         @include make-row();
+
         .content {
           @include make-col-ready();
           @include make-col(12);
@@ -63,29 +62,84 @@ html {
         .sidebar-right,
         .sidebar-left {
           @include make-col-ready();
-          @include make-col(4);
-        }
-
+          @include make-col(12);
       }
       
       &.col-left, 
       &.col-right {
         .content {
-          @include make-col(8);
+          @include make-col(12);
         }
       }
     
-      // 3 column layout, not sure this should exist
+      // 3 column layout, not sure this should exist, advise
       &.col-both {
         .sidebar-right,
         .sidebar-left {
-          @include make-col(3);
+          @include make-col(12);
+        }
+        .sidebar-left {
+          order: 1;
+        }
+        .sidebar-right {
+          order: 2;
         }
         .content {
-          @include make-col(6);
+          @include make-col(12);
+          order: 0;
         }
       }
+
+      // Medium breakpoint and above, grid this stuff
+      @include media-breakpoint-up(md) {
+        .content-wrapper {
+          .content {
+            @include make-col(12);
+          }
+          .sidebar-right,
+          .sidebar-left {
+            @include make-col(4);
+          }
+  
+        }
+        
+        &.col-left, 
+        &.col-right {
+          .content {
+            @include make-col(8);
+          }
+        }
+
+        &.col-left, 
+        &.col-right {
+          .content {
+            @include make-col(8);
+          }
+        }
+
+        &.col-both {
+          .sidebar-right,
+          .sidebar-left {
+            @include make-col(3);
+          }
+          .sidebar-left {
+            order: 0;
+          }
+          .sidebar-right {
+            order: 0;
+          }
+          .content {
+            @include make-col(6);
+          }
+        }
+
+      } // md-up
+
     }
+
+    
+
+
     
   } // Region
   
