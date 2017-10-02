@@ -6797,7 +6797,10 @@ a.text-dark:focus, a.text-dark:hover {
     background: #E00000;
     color: #FFFFFF;
     vertical-align: middle;
-    cursor: pointer; }
+    cursor: pointer;
+    outline-width: 0;
+    width: 60px;
+    height: 60px; }
     .vdm-header .vdm-navbar .menu-trigger:before {
       content: "";
       font-weight: normal;
@@ -7767,11 +7770,14 @@ html .region.main-container {
     font-size: 35px; }
 
 html.sticky > body.menu-open {
-  padding-top: 0; }
+  padding-top: 0;
+  overflow-x: hidden; }
   html.sticky > body.menu-open .vdm-header {
     position: static; }
-    html.sticky > body.menu-open .vdm-header .vdm-navbar .menu-trigger:before {
-      content: "\E202"; }
+    html.sticky > body.menu-open .vdm-header .vdm-navbar {
+      border: none; }
+      html.sticky > body.menu-open .vdm-header .vdm-navbar .menu-trigger:before {
+        content: "\E202"; }
   html.sticky > body.menu-open .side-menu {
     display: block;
     position: fixed;
@@ -7783,9 +7789,11 @@ html.sticky > body.menu-open {
     -webkit-transition: left .3s;
     transition: left .3s; }
     html.sticky > body.menu-open .vdm-page > * {
-      margin-left: 0; }
+      margin-left: 0;
+      margin-right: 0; }
     html.sticky > body.menu-open .vdm-page .region {
-      margin-left: 0; }
+      margin-left: 0;
+      margin-right: 0; }
 
 .side-menu {
   width: 300px;
@@ -8909,6 +8917,8 @@ a {
       content: "\E804"; }
     a.social-icon.googleplus:before {
       content: "\E805"; }
+    a.social-icon.instagram-sm:before {
+      content: "\E806"; }
     a.social-icon.inverted {
       color: #FFFFFF; }
     a.social-icon:before {

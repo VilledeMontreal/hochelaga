@@ -5,9 +5,11 @@ html {
         >body {
             &.menu-open {
                 padding-top: 0;
+                overflow-x: hidden;
                 .vdm-header {
                      position: static;
                     .vdm-navbar {
+                        border: none;
                         .menu-trigger {
                             &:before {
                                 content: "\E202";
@@ -29,9 +31,11 @@ html {
                     // Reset left margin for all bootstrap containers
                     >* {
                         margin-left: 0;
+                        margin-right: 0;
                     }
                     .region {
                         margin-left: 0;
+                        margin-right: 0;
                     }
                 }
             

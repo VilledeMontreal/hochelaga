@@ -91,6 +91,9 @@
       color: $vdm-white;
       vertical-align: middle;
       cursor: pointer;
+      outline-width: 0;
+      width: 60px;
+      height: 60px;
 
       &:after {
         color: $vdm-sub-brand;
