@@ -329,6 +329,11 @@ a {
         content: "\E805";
       }
     }
+    &.instagram-sm {
+      &:before {
+        content: "\E806";
+      }
+    }
     &.inverted {
       color: $vdm-white;
     }
