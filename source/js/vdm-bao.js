@@ -21,19 +21,53 @@
         }
     );
 
+    
+    // ******************************
+    // Begin side menu push
+    
+    var $menuTrigger = $(".menu-trigger");
+
+    $menuTrigger.on( "click", function() { 
+       $("body").toggleClass("menu-open");
+        if($("body").hasClass("menu-open")) {
+                $(this).attr("aria-expanded", "true");
+        }else {
+            $(this).attr("aria-expanded", "false");
+        }
+    });
+
+     
 
     // ******************************
     // Begin side submenus interactivity
 
     var $menuRoot = $(".side-menu.wrapper > .menu-links");
     var $submenuTriggers = $menuRoot.find(".has-children > .menu-link");
+    var $childrenLinks = $(".side-menu.wrapper > .menu-links .child-link");
+    var $closeLinks = $(".menu-link").not(".parent-link").not(".back-link");
     var $subMenu = null;
     var $backLink = null;
-
-
+    
     if(!$subMenu && !$backLink && $menuRoot) {
+        // Set actions for all sub-menu links
         findSubMenuLinks($menuRoot, setActiveSubmenuLinks); 
+
+        // Close sub-menu when the link clicked was the last tip of a branch : there is nowhere else to go
+        $closeLinks.on( "click", function() { 
+            if($("body").hasClass("menu-open")) {
+
+                // Close second level menus inside side menus
+                $subMenu = $(this).parents(".has-children").find(".submenu");
+                hideChildMenu($subMenu, resetActiveSubmenuLinks);
+
+                // Hide menu sidebar
+                $menuTrigger.attr("aria-expanded", "true");
+                $("body").removeClass("menu-open");
+            }
+        });
     }
+
+    
 
     
     // Find all link submenu links, set callback functions for child elements

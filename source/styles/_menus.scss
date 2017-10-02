@@ -1,11 +1,53 @@
 // @file _menus.scss
 
+html {
+    &.sticky {
+        >body {
+            &.menu-open {
+                padding-top: 0;
+                .vdm-header {
+                     position: static;
+                    .vdm-navbar {
+                        .menu-trigger {
+                            &:before {
+                                content: "\E202";
+                            }
+                        }
+                    } 
+                } 
+                
+                .side-menu {
+                    display: block;
+                    position: fixed;
+                    top: 0;
+                    bottom: 0;
+                    overflow-y: auto;
+                }
+                .vdm-page {
+                    left: 300px;
+                    transition: left .3s;
+                    // Reset left margin for all bootstrap containers
+                    >* {
+                        margin-left: 0;
+                    }
+                    .region {
+                        margin-left: 0;
+                    }
+                }
+            
+            }
+        }
+    }
+}
+
+
 .side-menu {
     width: $vdm-side-menu-width;
     background: $vdm-grey-dark;
     height: 100%;
     min-height: 100vh;
     overflow: hidden;
+    display: none;
 
     .menu-links {
 
