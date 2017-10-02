@@ -33,6 +33,9 @@ html {
 
     .vdm-title {
       position: relative;
+      padding-bottom: 0.5rem;
+      margin-bottom: 3rem;
+
       &:after {
         position: absolute;
         min-width: 3rem;
@@ -374,6 +377,21 @@ html {
  *
  *
  */
+
+  // Teaser text
+ .teaser-text {
+    font-size: $vdm-font-size-base * 1.3125; // 21px
+    line-height: $vdm-line-height-base * 1.619;  // 34px
+    background: transparent;
+ }
+
+ .meta {
+    font-size: $vdm-font-size-smaller;
+ }
+
+ .date-time {
+    font-size: $vdm-font-size-smaller;
+ }
 
  .vdm-label {
     font-weight: $vdm-font-weight-regular;
