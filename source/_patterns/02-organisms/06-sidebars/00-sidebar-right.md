@@ -1,0 +1,9 @@
+---
+title: Sidebar right and variants
+---
+
+### References
+
+* ...
+* ...
+* ...

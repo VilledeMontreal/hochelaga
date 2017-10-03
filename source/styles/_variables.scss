@@ -67,7 +67,6 @@ $vdm-line-height-base:        floor(($vdm-font-size-base * 1.3125));   // 21px
 
 //== Icons fonts -vdm-font-icon character
 $vdm-icon-font-path: '../fonts/';
-
 $vdm-icon-font-version: '0.5';
 $vdm-icon-font-family : 'vdm-fonticon';
 // @see variable $icon all the way at the end for symbols definition
@@ -76,8 +75,6 @@ $vdm-icon-font-size: 3.6rem;
 $vdm-icon-font-height : 3.6rem;
 $vdm-icon-font-width : 3.6rem;
 $vdm-icon-font-line-height : 3.6rem;
-
-
 
 //== Icons fonts -vdm-font-icon character
 $vdm-icon-social-media-scale: 60px;
@@ -186,7 +183,10 @@ $vdm-side-menu-link-v-padding: 1.75rem;
 $vdm-sidebar-box-h-padding : 1.75rem;
 $vdm-sidebar-box-v-padding : 1rem;
 
-$region-main-padding-bottom: 4rem;
+// Vertical spacing between regions and sections
+$region-last-padding-bottom: 4rem;
+$region-padding-bottom: 3rem;
+$section-padding-bottom: 2.5rem;
 
 // Checkboxes
 // $vdm-checkbox-border-radius: 40px;

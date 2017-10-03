@@ -29,7 +29,7 @@ html {
       flex: none; 
     }
   }
-  
+
   .vdm-page {
     position: relative;
   }
@@ -50,7 +50,14 @@ html {
   } // Sidebar
 
   // All regions in page templates should have at least a "region" class
+  // A region is anything that has implements a bootstrap grid on the first level
+  // in an html document.
   .region {
+    padding-bottom: $region-padding-bottom;
+    &:last-of-type {
+      padding-bottom: $region-last-padding-bottom;
+    }
+
     // Image , title and teaser container, portal
     &.header-container {
       @include make-container();
@@ -75,6 +82,27 @@ html {
         }
       }
     }
+
+    &.full-width-container {
+      @extend .container-fluid;
+      .content-wrapper {
+        @include make-row();
+        .content {
+          @include make-col-ready();
+          @include make-col(12);
+        }
+      }
+    }
+    &.footer-container {
+      @extend .container;
+      .content-wrapper {
+        @include make-row();
+        .content {
+          @include make-col-ready();
+          @include make-col(12);
+        }
+      }
+    }
     
 
     // Main content region and columns here
@@ -85,17 +113,26 @@ html {
 
       .content-wrapper {
         @include make-row();
-
+        >section {
+          padding-bottom: $section-padding-bottom;
+          &:last-of-type {
+            padding-bottom: 0;
+          }
+        }
         .content {
           @include make-col-ready();
           @include make-col(12);
-          padding-bottom: $region-main-padding-bottom;
+          padding-bottom: $region-padding-bottom;
         }
         .sidebar-right,
         .sidebar-left {
           @include make-col-ready();
           @include make-col(12);
-          padding-bottom: $region-main-padding-bottom;
+          padding-bottom: $region-padding-bottom;
+        }
+        .full-width {
+          @include make-col-ready();
+          @include make-col(12);
         }
       }
       

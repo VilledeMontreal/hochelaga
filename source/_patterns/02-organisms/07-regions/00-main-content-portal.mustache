@@ -1,23 +1,21 @@
 <div class="main-container region {{ mainContainerClasses }}">
     <div class="content-wrapper">
-        {{# 2colsleft}}
-        <div class="sidebar sidebar-left">
-            <div class="">Block 1</div>
-            <div class="">Block 2</div>
-            <div class="">Block 3</div>
-        </div>
+        {{# fullTop }}
+            {{> organisms-section-top-portal }}
+        {{/ fullTop }}
+        {{# 2colsleft }}
+            {{> organisms-sidebar-left }}
         {{/ 2colsleft }}
-        <div class="content">
+        <article class="content">
             {{> atoms-paragraph }}
             {{> atoms-paragraph }}
             {{> atoms-paragraph }}
-        </div>
+        </article>
         {{# 2colsright }}
-        <div class="sidebar sidebar-right">
-            <div class="">Block 1</div>
-            <div class="">Block 2</div>
-            <div class="">Block 3</div>
-        </div>
+            {{> organisms-sidebar-right }}
         {{/ 2colsright }}
+        {{# fullBottom }}
+            {{> organisms-section-bottom-portal }}
+        {{/ fullBottom }}
     </div>
 </div>
