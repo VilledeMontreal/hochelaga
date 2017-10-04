@@ -3,7 +3,7 @@
 @import "mixins.scss";
 
 html {
-  font-size: $vdm-font-size-base; // This is THE reference value for all rem units
+  font-size: $vdm-font-size-base; // This is THE reference value for all rem units (16px)
   body {
     font-family: $vdm-font-family;
     font-weight: $vdm-font-weight-regular;
@@ -48,28 +48,6 @@ html {
         background: $vdm-brand;
         
       }
-      &.sidebar {
-        @include header(4, bold);
-        margin-bottom: 0.8em;
-        &:after {
-          background: $vdm-black;
-          color: $vdm-black;
-          max-width: 1.7rem;
-          top: calc(100% + 0.3rem);
-        }
-        &.icon-right {
-          padding-right: 4rem;
-          .vdmi {
-              font-size: 3.6rem;
-              width: 3.6rem;
-              height: 3.6rem;
-              color: $vdm-brand;
-              position: absolute;
-              top: 0;
-              right: 0;
-          }
-        }
-      }
     }
 
 
@@ -93,12 +71,13 @@ html {
       font-style: italic;
     }
     strong {
-      font-weight: bold;
+      font-weight: $vdm-font-weight-bold;
     }
     p {
       line-height: 1.35em;
       margin-bottom: ceil($vdm-font-size-base * 1.5);
     }
+
     // Hyperlinks - generic
     a {
       color: $vdm-brand;
@@ -141,7 +120,6 @@ html {
         &.inline {
           display: inline-block;
           padding-left: 0;
-
         }
         
         &.arrow {
@@ -153,14 +131,11 @@ html {
             content: "\E103";
             font-family: "vdm-fonticon";
             font-size: 2.5em;
-            // top: 0.03em;
-            // left: calc(100% - 1.25em);
-            margin: auto;
-            top: 0; 
+            top: 50%;
+            transform: translateY(-50%);
             left: calc(100% - 1.25em); 
-            bottom: 0; 
             right: 0;
-            height: 50%;
+            
 
             background: transparent;
             &:hover, 
@@ -181,9 +156,10 @@ html {
           }
 
         }
+        &.brand {
+          color: $vdm-brand;
+        }
       }
-
-
     }
     // Inline links with icons - Headers : a tad smaller
     h1, h2, h3, h4, h5, h6 {
@@ -210,8 +186,8 @@ html {
         margin: 0;
         padding: 0;
         li {
-          margin: 0;
-          padding: 0 0 0.3em 0;
+          margin: 0 0 0.3em 0;
+          padding: 0;
         }
       }
 
@@ -368,6 +344,22 @@ html {
         }
       }
     }
+
+    // Mostly applied to the hr element
+    .divider {
+      margin-top: 0.75rem;
+      margin-bottom: 0.75rem;
+      border-style: none;
+      border-width: 0; 
+      height: $vdm-font-size-base / 3;
+      background: $vdm-black;
+      border-radius: $vdm-font-size-base / 4;
+      &.mock-title {
+        width: 3rem;
+        margin-left: 0;
+      }
+    }
+
   } //  Body
 } // Html
 

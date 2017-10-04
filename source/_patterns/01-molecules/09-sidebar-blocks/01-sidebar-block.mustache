@@ -1,0 +1,273 @@
+<!-- 
+
+Have a look at the markdown document for the documentation.
+
+ -->
+
+<!-- 
+
+Provides a bootstrap container for debugging away from templates
+Remove when publishing & clean-up!
+
+-->
+<!-- **************************************************** -->
+{{# sidebar-blocks-demo-debug }}
+    <div class="container">
+        <div class="row">
+            <div class="col-12 col-md-4 sidebar">
+{{/ sidebar-blocks-demo-debug }}
+<!-- **************************************************** -->
+
+<!-- Variant : quicklinks, arrow-right, block, long text -->
+{{# has-sb-quicklinks-short }}
+    <section class="sb-block {{ sb-classes }}">
+        {{> atoms-heading-sidebar }}
+        <ul class="arrow-blocks p-small">
+            <li>
+                <a href="#" class="block arrow">
+                    Who can tousle?
+                </a>
+            </li>
+            <li>
+                <a href="#" class="block arrow">
+                   Why can't I get a mustache ?
+                </a>
+            </li>
+            <li>
+                <a href="#" class="block arrow">
+                    Who is flexitarian?
+                </a>
+            </li>
+            <li>
+                <a href="#" class="block arrow">
+                    What may one do with a fixie?
+                </a>
+            </li>
+            <li>
+                <a href="#" class="block arrow">
+                    For the cliche artisan!
+                </a>
+            </li>
+        </ul>
+    </section>
+{{/ has-sb-quicklinks-short }}
+
+ <!-- Variant : quicklinks, arrow-right, block, long text -->
+{{# has-sb-quicklinks }}
+    <section class="sb-block {{ sb-classes }}">
+        {{> atoms-heading-sidebar }}
+        <ul>
+            <li>
+                <a href="#" class="block arrow">
+                    Heirloom jean shorts locavore pug shoreditch (03-4567)
+                </a>
+            </li>
+            <li>
+                <a href="#" class="block arrow">
+                    Kitsch shabby chic +1, master cleanse iceland shoreditch retro normcore four dollar (03-32)
+                </a>
+            </li>
+            <li>
+                <a href="#" class="block arrow">
+                    Brooklyn blue bottle gastropub (03-765)
+                </a>
+            </li>
+            <li>
+                <a href="#" class="block arrow">
+                    Goth lo-fi chartreuse art party post-ironic fixie banh mi kale chips bitters. (03-467)
+                </a>
+            </li>
+            <li>
+                <a href="#" class="block arrow">
+                    Migas air plant drinking vinegar twee leggings blue bottle pop-up heirloom jean shorts locavore pug shoreditch lumbersexual tousled.  (03-567)
+                </a>
+            </li>
+        </ul>
+    </section>
+{{/ has-sb-quicklinks }}
+
+<!-- Variant : contact block -->
+{{# has-sb-contact-block }}
+    <section class="sb-block {{ sb-classes }}">
+        {{> atoms-heading-sidebar }}
+        <div class="subsection person-card">
+            <strong class="name">Marc-André Gosselin</strong><br>
+            Attaché de presse<br>
+            Cabinet du maire et du comité exécutif
+            <ul>
+                <li>
+                    <a href="tel:+15142223456" class="icon left">
+                    <i class="vdmi ic-phone" aria-hidden="true"></i>
+                        514 222-3456 
+                    </a>
+                </li>
+            </ul>
+        </div>
+        <div class="subsection person-card">
+            <strong class="name">Linda Boutin</strong><br>
+            Relationiste<br>
+            Service des communications
+            <ul>
+                <li>
+                    <a href="tel:+15143333456"  class="icon left">
+                    <i class="vdmi ic-phone" aria-hidden="true"></i>
+                    514 333-34567
+                    </a>
+                </li>
+                <li>
+                    <a href="mailto:linda.boutin@ville.montreal.qc.ca" class="icon left">
+                    <i class="vdmi ic-enveloppe" aria-hidden="true"></i>
+                    linda.boutin@ville.montreal.qc.ca
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </section>
+{{/ has-sb-contact-block }}
+
+<!-- Variant : Forms 01  - email registration form -->
+{{# has-sb-forms-01 }}
+    <section class="sb-block {{ sb-classes }}">
+        {{> atoms-heading-sidebar }}
+        <p>Leggings ugh pickled messenger bag. Art party swag marfa next level mustache flexitarian. DIY polaroid trust fund cliche artisan.</p>
+        {{> organisms-email-subscribe-form }} 
+    </section>
+{{/ has-sb-forms-01 }}
+
+<!-- Variant : Forms 02 - wide buttons -->
+{{# has-sb-forms-02 }}
+    <section class="sb-block {{ sb-classes }}">
+        {{> atoms-heading-sidebar-icon}}
+        <p>Leggings ugh pickled messenger bag. Art party swag marfa next level mustache flexitarian. DIY polaroid trust fund cliche artisan.</p>
+        <!-- Replace w/ button atom whenenver possible -->
+        <button type="button" class="vdm-btn vdm-btn-sm vdm-btn-wide">Primary button</button>
+        <button type="button" class="vdm-btn vdm-btn-secondary vdm-btn-sm vdm-btn-wide">Secondary button</button>
+
+    </section>
+{{/ has-sb-forms-02 }}
+
+<!-- Variant : Information bloc 01 : a short list, a divider, vertical social media icons -->
+{{# has-sb-info-block-01 }}
+    <section class="sb-block {{ sb-classes }}">
+        {{> atoms-heading-sidebar }}
+        <ul class="mb-3">
+            <li>
+                <a href="#"  class="icon left brand">
+                <i class="vdmi ic-arrow-select" aria-hidden="true"></i>
+                simplicite.montreal.ca
+                </a>
+            </li>
+        </ul>
+        {{> atoms-horizontal-divider }}
+        {{> atoms-social-media-icons-shortlist }}
+        {{> atoms-sidebar-list-inline }}
+    </section>
+{{/ has-sb-info-block-01 }}
+
+<!-- Variant : Information bloc 02 : long list, fat padding bottom on elements -->
+{{# has-sb-info-block-02 }}
+    <section class="sb-block {{ sb-classes }}">
+        {{> atoms-heading-sidebar }}
+        <ul class="p-larger">
+            <li>
+                <span class="icon left">
+                    <i class="vdmi ic-calendar" aria-hidden="true"></i>
+                    26 juillet 2018
+                </span>
+            </li>
+            <li>
+                <span class="icon left">
+                    <i class="vdmi ic-sun" aria-hidden="true"></i>
+                    De 21 h 30 à 23 h 30
+                </span>
+            </li>
+            <li>
+                <span class="icon left">
+                    <i class="vdmi ic-flag" aria-hidden="true"></i>
+                    123, bord de l'eau<br>
+                    Montéal, QC, H3K 2T5
+                </span>
+            </li>
+            <li>
+                <a href="mailto:ti-guy-tremblay@ville.montreal.qc.ca" class="icon left">
+                <i class="vdmi ic-enveloppe" aria-hidden="true"></i>
+                ti-guy-tremblay@ville.montreal.qc.ca
+                </a>
+            </li>
+            <li>
+                <a href="tel:+15144443456"  class="icon left">
+                <i class="vdmi ic-phone" aria-hidden="true"></i>
+                514 444-3456
+                </a>
+            </li>
+            <li>
+                <span class="icon left">
+                <i class="vdmi ic-arrow-select" aria-hidden="true"></i>
+                Contact : Tsi-Guy Tremblay
+                </a>
+            </li>
+        </ul>
+    </section>
+{{/ has-sb-info-block-02 }}
+
+<!-- Variant : Information bloc 03 : a stack of similare large text blocks -->
+{{# has-sb-info-block-03 }}
+    <section class="sb-block {{ sb-classes }}">
+        {{> atoms-heading-sidebar }}
+        <div class="subsection">
+            <h3 class="subtitle">Ville de Montréal</h3>
+            <p>IPhone messenger bag gastropub, health goth lo-fi chartreuse art party post-ironic fixie banh mi kale chips bitters.</p>
+            <ul>
+                <li>
+                    <a href="tel:+15142223456" class="icon left">
+                    <i class="vdmi ic-phone" aria-hidden="true"></i>
+                        514 222-3456 
+                    </a>
+                </li>
+            </ul>
+        </div>
+        <div class="subsection">
+            <h3 class="subtitle">Société d'habitation du Québec</h3>
+            <p>Taxidermy flannel hammock, schlitz cloud bread direct trade tote bag skateboard readymade vexillologist meditation sartorial.</p>
+            <ul>
+                <li>
+                    <a href="tel:+1800111456"  class="icon left">
+                    <i class="vdmi ic-phone" aria-hidden="true"></i>
+                    1 800 111-34567
+                    </a>
+                </li>
+                <li>
+                    <a href="mailto:infoshq@shq.gouv.qc.ca" class="icon left">
+                    <i class="vdmi ic-enveloppe" aria-hidden="true"></i>
+                    infoshq@shq.gouv.qc.ca
+                    </a>
+                </li>
+            </ul>
+        </div>
+        <div class="subsection">
+            <h3 class="subtitle">Autres ressources</h3>
+            <p>Paleo ugh blog truffaut kinfolk XOXO tousled cliche chia four dollar toast shoreditch deep v pok pok viral.</p>
+        </div>
+    </section>
+{{/ has-sb-info-block-03 }}
+
+
+Sidebar infos will display here if conditionsa allow it in json data files.
+
+<!-- 
+
+Provides a bootstrap container for debugging away from templates
+Remove when publishing & clean-up!
+
+-->
+
+<!-- **************************************************** -->
+{{# sidebar-blocks-demo-debug }}
+            </div>
+        </div>
+    </div>
+{{/ sidebar-blocks-demo-debug }}
+<!-- **************************************************** -->
+
+
+

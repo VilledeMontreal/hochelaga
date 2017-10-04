@@ -393,13 +393,13 @@ mark,
   padding-left: 0;
   list-style: none; }
 
-.list-inline {
+.list-inline, .sidebar ul.inline {
   padding-left: 0;
   list-style: none; }
 
-.list-inline-item {
+.list-inline-item, .sidebar ul.inline > li {
   display: inline-block; }
-  .list-inline-item:not(:last-child) {
+  .list-inline-item:not(:last-child), .sidebar ul.inline > li:not(:last-child) {
     margin-right: 5px; }
 
 .initialism {
@@ -5525,8 +5525,7 @@ a.bg-dark:focus, a.bg-dark:hover {
   margin-top: auto !important; }
 
 .mr-auto,
-.mx-auto,
-.sidebar-box.form .vdm-btn {
+.mx-auto {
   margin-right: auto !important; }
 
 .mb-auto,
@@ -5534,8 +5533,7 @@ a.bg-dark:focus, a.bg-dark:hover {
   margin-bottom: auto !important; }
 
 .ml-auto,
-.mx-auto,
-.sidebar-box.form .vdm-btn {
+.mx-auto {
   margin-left: auto !important; }
 
 @media (min-width: 576px) {
@@ -7963,25 +7961,141 @@ html.sticky > body.menu-open {
           opacity: 1;
           visibility: visible; }
 
-.sidebar-box {
-  padding: 1rem 1.75rem;
-  padding-bottom: 3rem; }
-  .sidebar-box:last-of-type {
-    padding-bottom: 0; }
-  .sidebar-box .vdm-title {
-    margin-bottom: 2em; }
-  .sidebar-box.form form {
+.sidebar a {
+  color: #000000; }
+  .sidebar a.brand {
+    color: #429A8E; }
+  .sidebar a:after, .sidebar a:before {
+    color: #429A8E; }
+  .sidebar a .vdmi {
+    color: #429A8E; }
+  .sidebar a:hover, .sidebar a:active {
+    color: #000000; }
+    .sidebar a:hover:after, .sidebar a:hover:before, .sidebar a:active:after, .sidebar a:active:before {
+      color: #429A8E; }
+    .sidebar a:hover .vdmi, .sidebar a:active .vdmi {
+      color: #000000; }
+  .sidebar a.block.arrow {
+    padding: 0.4em 3.5em 0.4em 0.6em; }
+
+.sidebar .vdmi {
+  font-size: 1.5em;
+  color: #429A8E; }
+  .sidebar .vdmi:after, .sidebar .vdmi:before {
+    color: #429A8E; }
+
+.sidebar .icon {
+  display: block;
+  position: relative; }
+  .sidebar .icon .vdmi {
+    position: absolute;
+    top: 0; }
+    .sidebar .icon .vdmi:before {
+      font-size: 1em; }
+  .sidebar .icon.left {
+    padding-left: 2em; }
+    .sidebar .icon.left .vdmi {
+      left: 0; }
+  .sidebar .icon.right {
+    display: inline-block;
+    padding-right: 2em; }
+    .sidebar .icon.right .vdmi {
+      right: 0; }
+
+.sidebar ul.p-small {
+  margin-bottom: 0.2em; }
+
+.sidebar ul.p-large > li {
+  margin-bottom: 0.85em; }
+
+.sidebar ul.p-larger > li {
+  margin-bottom: 1.3em; }
+
+.sidebar ul.arrow-blocks.p-small .block.arrow {
+  padding: 0.15em 3.5em 0.15em 0.6em; }
+
+.sidebar ul.vdm-social-media > li {
+  display: block;
+  margin-bottom: 1rem; }
+
+.sidebar p {
+  margin-bottom: 21px; }
+
+.sidebar form {
+  width: 96%;
+  padding-left: 2%;
+  padding-right: 2%;
+  margin-top: 2.5rem; }
+
+.sidebar .vdm-btn {
+  display: block;
+  margin-top: 2rem;
+  margin-left: auto !important;
+  margin-right: auto !important; }
+
+.sidebar .subtitle {
+  font-family: "Nunito Sans", Helvetica, Arial, sans-serif;
+  font-weight: 400;
+  display: block;
+  font-size: 21px;
+  line-height: 27.9993px;
+  line-height: 36.75px; }
+
+.sidebar .vdm-title {
+  margin-bottom: 2em;
+  font-family: "Nunito Sans", Helvetica, Arial, sans-serif;
+  font-weight: 400;
+  display: block;
+  font-size: 28px;
+  line-height: 37.9995px;
+  font-weight: 400;
+  font-weight: 700; }
+  .sidebar .vdm-title:after {
+    background: #000000;
+    color: #000000;
+    max-width: 1.7rem;
+    top: calc(100% + 0.3rem); }
+  .sidebar .vdm-title.icon-right {
+    padding-right: 4rem; }
+    .sidebar .vdm-title.icon-right .vdmi {
+      font-size: 3.6rem;
+      width: 3.6rem;
+      height: 3.6rem;
+      color: #429A8E;
+      position: absolute;
+      top: 0;
+      right: 0; }
+  .sidebar .vdm-title.discrete {
+    margin-bottom: 1.4em; }
+    .sidebar .vdm-title.discrete:after {
+      display: none; }
+
+.sidebar.theme-top-stroke .sb-block {
+  border-top: 4px solid #000000;
+  background-color: transparent; }
+
+.sidebar.theme-border-brand .sb-block {
+  border: 1px solid #80807F;
+  background-color: transparent; }
+
+.sb-block {
+  padding: 1.5rem 1.75rem 2rem 1.75rem; }
+  .sb-block:last-of-type {
+    margin-bottom: 1.5rem; }
+  .sb-block .subsection {
+    padding-bottom: 1.5rem; }
+    .sb-block .subsection:last-of-type {
+      padding-bottom: 0; }
+  .sb-block .divider {
+    margin-top: 1.5rem;
+    margin-bottom: 1.5rem;
+    margin-left: 0;
+    width: 3rem;
+    border-radius: 4px; }
+  .sb-block > .vdm-btn-wide {
     width: 96%;
-    padding-left: 2%;
-    padding-right: 2%;
-    margin-top: 2.5rem; }
-  .sidebar-box.form .vdm-btn {
-    display: block;
-    margin-top: 2rem; }
-  .sidebar-box.form.wide-buttons .vdm-btn {
-    width: 100%; }
-  .sidebar-box.form.wide-buttons.stacked-buttons .vdm-btn {
-    margin-top: 1.35rem; }
+    margin-left: 2%;
+    margin-right: 2%; }
 
 /**
  * - - - - - - - - - -
@@ -8360,30 +8474,6 @@ html {
         border-radius: 4px;
         height: 5.33333px;
         background: #429A8E; }
-      html body .vdm-title.sidebar {
-        font-family: "Nunito Sans", Helvetica, Arial, sans-serif;
-        font-weight: 400;
-        display: block;
-        font-size: 28px;
-        line-height: 37.9995px;
-        font-weight: 400;
-        font-weight: 700;
-        margin-bottom: 0.8em; }
-        html body .vdm-title.sidebar:after {
-          background: #000000;
-          color: #000000;
-          max-width: 1.7rem;
-          top: calc(100% + 0.3rem); }
-        html body .vdm-title.sidebar.icon-right {
-          padding-right: 4rem; }
-          html body .vdm-title.sidebar.icon-right .vdmi {
-            font-size: 3.6rem;
-            width: 3.6rem;
-            height: 3.6rem;
-            color: #429A8E;
-            position: absolute;
-            top: 0;
-            right: 0; }
     html body .regular {
       font-weight: 400; }
     html body .bold {
@@ -8398,7 +8488,7 @@ html {
     html body em {
       font-style: italic; }
     html body strong {
-      font-weight: bold; }
+      font-weight: 700; }
     html body p {
       line-height: 1.35em;
       margin-bottom: 24px; }
@@ -8431,12 +8521,11 @@ html {
             content: "\E103";
             font-family: "vdm-fonticon";
             font-size: 2.5em;
-            margin: auto;
-            top: 0;
+            top: 50%;
+            -webkit-transform: translateY(-50%);
+                    transform: translateY(-50%);
             left: calc(100% - 1.25em);
-            bottom: 0;
             right: 0;
-            height: 50%;
             background: transparent; }
             html body a.block.arrow:after:hover, html body a.block.arrow:after:active {
               background: transparent;
@@ -8447,15 +8536,17 @@ html {
           html body a.block.inverse:hover, html body a.block.inverse:active {
             color: #429A8E;
             text-decoration: none; }
+        html body a.block.brand {
+          color: #429A8E; }
     html body h1 a.icon i.vdmi, html body h2 a.icon i.vdmi, html body h3 a.icon i.vdmi, html body h4 a.icon i.vdmi, html body h5 a.icon i.vdmi, html body h6 a.icon i.vdmi {
       font-size: 1.2em; }
-    html body ul.vdm-list-plain, html body ol.vdm-list-plain {
+    html body ul.vdm-list-plain, html body .sidebar ul, .sidebar html body ul, html body ol.vdm-list-plain {
       list-style-type: none;
       margin: 0;
       padding: 0; }
-      html body ul.vdm-list-plain li, html body ol.vdm-list-plain li {
-        margin: 0;
-        padding: 0 0 0.3em 0; }
+      html body ul.vdm-list-plain li, html body .sidebar ul li, .sidebar html body ul li, html body ol.vdm-list-plain li {
+        margin: 0 0 0.3em 0;
+        padding: 0; }
     html body ul.vdm-list-date, html body ol.vdm-list-date {
       margin: 0;
       padding: 0; }
@@ -8562,6 +8653,17 @@ html {
       html body blockquote.vdm-blockquote cite {
         color: #000000;
         font-style: normal; }
+    html body .divider {
+      margin-top: 0.75rem;
+      margin-bottom: 0.75rem;
+      border-style: none;
+      border-width: 0;
+      height: 5.33333px;
+      background: #000000;
+      border-radius: 4px; }
+      html body .divider.mock-title {
+        width: 3rem;
+        margin-left: 0; }
 
 /**
  *
@@ -21213,6 +21315,8 @@ select {
     height: 40px;
     font-size: 12px;
     border-radius: 40px; }
+  .vdm-btn.vdm-btn-wide {
+    width: 100%; }
   .vdm-btn[disabled="disabled"] {
     color: #80807F;
     border: none;

@@ -40,6 +40,10 @@
         border-radius: $vdm-btn-small-height;	
     }
 
+    &.vdm-btn-wide {
+        width: 100%;
+    }
+
     &[disabled="disabled"] {
         color: $vdm-form-disabled-text-color;
         border: $vdm-form-border;
