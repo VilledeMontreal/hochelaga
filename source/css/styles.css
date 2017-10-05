@@ -1544,10 +1544,10 @@ select.form-control-lg:not([size]):not([multiple]), .input-group-lg > select.for
 .was-validated .form-check-input:valid + .form-check-label, .form-check-input.is-valid + .form-check-label {
   color: #28a745; }
 
-.was-validated .custom-control-input:valid ~ .custom-control-indicator, .custom-control-input.is-valid ~ .custom-control-indicator {
+.was-validated .custom-control-input:valid ~ .custom-control-indicator, .was-validated .form-check.vdm-checkbox-vdmi input[type="checkbox"]:valid ~ .custom-control-indicator, .form-check.vdm-checkbox-vdmi .was-validated input[type="checkbox"]:valid ~ .custom-control-indicator, .was-validated .form-check.vdm-radio-vdmi input[type="radio"]:valid ~ .custom-control-indicator, .form-check.vdm-radio-vdmi .was-validated input[type="radio"]:valid ~ .custom-control-indicator, .custom-control-input.is-valid ~ .custom-control-indicator, .form-check.vdm-checkbox-vdmi input.is-valid[type="checkbox"] ~ .custom-control-indicator, .form-check.vdm-radio-vdmi input.is-valid[type="radio"] ~ .custom-control-indicator {
   background-color: rgba(40, 167, 69, 0.25); }
 
-.was-validated .custom-control-input:valid ~ .custom-control-description, .custom-control-input.is-valid ~ .custom-control-description {
+.was-validated .custom-control-input:valid ~ .custom-control-description, .was-validated .form-check.vdm-checkbox-vdmi input[type="checkbox"]:valid ~ .custom-control-description, .form-check.vdm-checkbox-vdmi .was-validated input[type="checkbox"]:valid ~ .custom-control-description, .was-validated .form-check.vdm-radio-vdmi input[type="radio"]:valid ~ .custom-control-description, .form-check.vdm-radio-vdmi .was-validated input[type="radio"]:valid ~ .custom-control-description, .custom-control-input.is-valid ~ .custom-control-description, .form-check.vdm-checkbox-vdmi input.is-valid[type="checkbox"] ~ .custom-control-description, .form-check.vdm-radio-vdmi input.is-valid[type="radio"] ~ .custom-control-description {
   color: #28a745; }
 
 .was-validated .custom-file-input:valid ~ .custom-file-control, .custom-file-input.is-valid ~ .custom-file-control {
@@ -1581,10 +1581,10 @@ select.form-control-lg:not([size]):not([multiple]), .input-group-lg > select.for
 .was-validated .form-check-input:invalid + .form-check-label, .form-check-input.is-invalid + .form-check-label {
   color: #dc3545; }
 
-.was-validated .custom-control-input:invalid ~ .custom-control-indicator, .custom-control-input.is-invalid ~ .custom-control-indicator {
+.was-validated .custom-control-input:invalid ~ .custom-control-indicator, .was-validated .form-check.vdm-checkbox-vdmi input[type="checkbox"]:invalid ~ .custom-control-indicator, .form-check.vdm-checkbox-vdmi .was-validated input[type="checkbox"]:invalid ~ .custom-control-indicator, .was-validated .form-check.vdm-radio-vdmi input[type="radio"]:invalid ~ .custom-control-indicator, .form-check.vdm-radio-vdmi .was-validated input[type="radio"]:invalid ~ .custom-control-indicator, .custom-control-input.is-invalid ~ .custom-control-indicator, .form-check.vdm-checkbox-vdmi input.is-invalid[type="checkbox"] ~ .custom-control-indicator, .form-check.vdm-radio-vdmi input.is-invalid[type="radio"] ~ .custom-control-indicator {
   background-color: rgba(220, 53, 69, 0.25); }
 
-.was-validated .custom-control-input:invalid ~ .custom-control-description, .custom-control-input.is-invalid ~ .custom-control-description {
+.was-validated .custom-control-input:invalid ~ .custom-control-description, .was-validated .form-check.vdm-checkbox-vdmi input[type="checkbox"]:invalid ~ .custom-control-description, .form-check.vdm-checkbox-vdmi .was-validated input[type="checkbox"]:invalid ~ .custom-control-description, .was-validated .form-check.vdm-radio-vdmi input[type="radio"]:invalid ~ .custom-control-description, .form-check.vdm-radio-vdmi .was-validated input[type="radio"]:invalid ~ .custom-control-description, .custom-control-input.is-invalid ~ .custom-control-description, .form-check.vdm-checkbox-vdmi input.is-invalid[type="checkbox"] ~ .custom-control-description, .form-check.vdm-radio-vdmi input.is-invalid[type="radio"] ~ .custom-control-description {
   color: #dc3545; }
 
 .was-validated .custom-file-input:invalid ~ .custom-file-control, .custom-file-input.is-invalid ~ .custom-file-control {
@@ -2472,22 +2472,22 @@ tbody.collapse.show {
   padding-left: 1.5rem;
   margin-right: 1rem; }
 
-.custom-control-input {
+.custom-control-input, .form-check.vdm-checkbox-vdmi input[type="checkbox"], .form-check.vdm-radio-vdmi input[type="radio"] {
   position: absolute;
   z-index: -1;
   opacity: 0; }
-  .custom-control-input:checked ~ .custom-control-indicator {
+  .custom-control-input:checked ~ .custom-control-indicator, .form-check.vdm-checkbox-vdmi input[type="checkbox"]:checked ~ .custom-control-indicator, .form-check.vdm-radio-vdmi input[type="radio"]:checked ~ .custom-control-indicator {
     color: #fff;
     background-color: #007bff; }
-  .custom-control-input:focus ~ .custom-control-indicator {
+  .custom-control-input:focus ~ .custom-control-indicator, .form-check.vdm-checkbox-vdmi input[type="checkbox"]:focus ~ .custom-control-indicator, .form-check.vdm-radio-vdmi input[type="radio"]:focus ~ .custom-control-indicator {
     -webkit-box-shadow: 0 0 0 1px #fff, 0 0 0 3px #007bff;
             box-shadow: 0 0 0 1px #fff, 0 0 0 3px #007bff; }
-  .custom-control-input:active ~ .custom-control-indicator {
+  .custom-control-input:active ~ .custom-control-indicator, .form-check.vdm-checkbox-vdmi input[type="checkbox"]:active ~ .custom-control-indicator, .form-check.vdm-radio-vdmi input[type="radio"]:active ~ .custom-control-indicator {
     color: #fff;
     background-color: #b3d7ff; }
-  .custom-control-input:disabled ~ .custom-control-indicator {
+  .custom-control-input:disabled ~ .custom-control-indicator, .form-check.vdm-checkbox-vdmi input[type="checkbox"]:disabled ~ .custom-control-indicator, .form-check.vdm-radio-vdmi input[type="radio"]:disabled ~ .custom-control-indicator {
     background-color: #e9ecef; }
-  .custom-control-input:disabled ~ .custom-control-description {
+  .custom-control-input:disabled ~ .custom-control-description, .form-check.vdm-checkbox-vdmi input[type="checkbox"]:disabled ~ .custom-control-description, .form-check.vdm-radio-vdmi input[type="radio"]:disabled ~ .custom-control-description {
     color: #868e96; }
 
 .custom-control-indicator {
@@ -2510,17 +2510,17 @@ tbody.collapse.show {
 .custom-checkbox .custom-control-indicator {
   border-radius: 0.25rem; }
 
-.custom-checkbox .custom-control-input:checked ~ .custom-control-indicator {
+.custom-checkbox .custom-control-input:checked ~ .custom-control-indicator, .custom-checkbox .form-check.vdm-checkbox-vdmi input[type="checkbox"]:checked ~ .custom-control-indicator, .form-check.vdm-checkbox-vdmi .custom-checkbox input[type="checkbox"]:checked ~ .custom-control-indicator, .custom-checkbox .form-check.vdm-radio-vdmi input[type="radio"]:checked ~ .custom-control-indicator, .form-check.vdm-radio-vdmi .custom-checkbox input[type="radio"]:checked ~ .custom-control-indicator {
   background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 8 8'%3E%3Cpath fill='%23fff' d='M6.564.75l-3.59 3.612-1.538-1.55L0 4.26 2.974 7.25 8 2.193z'/%3E%3C/svg%3E"); }
 
-.custom-checkbox .custom-control-input:indeterminate ~ .custom-control-indicator {
+.custom-checkbox .custom-control-input:indeterminate ~ .custom-control-indicator, .custom-checkbox .form-check.vdm-checkbox-vdmi input[type="checkbox"]:indeterminate ~ .custom-control-indicator, .form-check.vdm-checkbox-vdmi .custom-checkbox input[type="checkbox"]:indeterminate ~ .custom-control-indicator, .custom-checkbox .form-check.vdm-radio-vdmi input[type="radio"]:indeterminate ~ .custom-control-indicator, .form-check.vdm-radio-vdmi .custom-checkbox input[type="radio"]:indeterminate ~ .custom-control-indicator {
   background-color: #007bff;
   background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 4 4'%3E%3Cpath stroke='%23fff' d='M0 2h4'/%3E%3C/svg%3E"); }
 
 .custom-radio .custom-control-indicator {
   border-radius: 50%; }
 
-.custom-radio .custom-control-input:checked ~ .custom-control-indicator {
+.custom-radio .custom-control-input:checked ~ .custom-control-indicator, .custom-radio .form-check.vdm-checkbox-vdmi input[type="checkbox"]:checked ~ .custom-control-indicator, .form-check.vdm-checkbox-vdmi .custom-radio input[type="checkbox"]:checked ~ .custom-control-indicator, .custom-radio .form-check.vdm-radio-vdmi input[type="radio"]:checked ~ .custom-control-indicator, .form-check.vdm-radio-vdmi .custom-radio input[type="radio"]:checked ~ .custom-control-indicator {
   background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='-4 -4 8 8'%3E%3Ccircle r='3' fill='%23fff'/%3E%3C/svg%3E"); }
 
 .custom-controls-stacked {
@@ -7962,13 +7962,17 @@ html.sticky > body.menu-open {
           visibility: visible; }
 
 .sidebar a {
-  color: #000000; }
+  color: #000000;
+  word-break: break-all;
+  word-wrap: break-word; }
   .sidebar a.brand {
     color: #429A8E; }
   .sidebar a:after, .sidebar a:before {
     color: #429A8E; }
   .sidebar a .vdmi {
     color: #429A8E; }
+    .sidebar a .vdmi:after, .sidebar a .vdmi:before {
+      background: transparent; }
   .sidebar a:hover, .sidebar a:active {
     color: #000000; }
     .sidebar a:hover:after, .sidebar a:hover:before, .sidebar a:active:after, .sidebar a:active:before {
@@ -8014,6 +8018,9 @@ html.sticky > body.menu-open {
 .sidebar ul.arrow-blocks.p-small .block.arrow {
   padding: 0.15em 3.5em 0.15em 0.6em; }
 
+.sidebar ul.inline > li {
+  margin-bottom: 0.85rem; }
+
 .sidebar ul.vdm-social-media > li {
   display: block;
   margin-bottom: 1rem; }
@@ -8029,7 +8036,7 @@ html.sticky > body.menu-open {
 
 .sidebar .vdm-btn {
   display: block;
-  margin-top: 2rem;
+  margin-top: 1.35rem;
   margin-left: auto !important;
   margin-right: auto !important; }
 
@@ -8078,6 +8085,9 @@ html.sticky > body.menu-open {
   border: 1px solid #80807F;
   background-color: transparent; }
 
+.sidebar .bullet-left.brand {
+  color: #429A8E; }
+
 .sb-block {
   padding: 1.5rem 1.75rem 2rem 1.75rem; }
   .sb-block:last-of-type {
@@ -8096,6 +8106,15 @@ html.sticky > body.menu-open {
     width: 96%;
     margin-left: 2%;
     margin-right: 2%; }
+  .sb-block.search-filters {
+    background: #FFFFFF; }
+    .sb-block.search-filters .vdm-title.discrete {
+      font-family: "Nunito Sans", Helvetica, Arial, sans-serif;
+      font-weight: 400;
+      display: block;
+      font-size: 28px;
+      line-height: 37.9995px;
+      font-weight: 400; }
 
 /**
  * - - - - - - - - - -
@@ -8676,6 +8695,24 @@ html {
   line-height: 33.999px;
   background: transparent; }
 
+.bullet-left {
+  display: inline-block;
+  position: relative;
+  padding-left: 1.4em;
+  color: #000000; }
+  .bullet-left:before {
+    content: " ";
+    position: absolute;
+    display: block;
+    left: 0;
+    top: 46%;
+    -webkit-transform: translateY(-50%);
+            transform: translateY(-50%);
+    background: #429A8E;
+    border-radius: 0.8em;
+    width: 0.8em;
+    height: 0.8em; }
+
 .meta {
   font-size: 12px; }
 
@@ -9153,6 +9190,102 @@ label {
   border: 1px solid #429A8E;
   border-top-style: none;
   border-right-style: none; }
+
+.form-check.vdm-checkbox-vdmi label {
+  /*
+   Alternative : use the bootstrap technique and free up the ligne height
+
+    * Display label inline flex & align items center (@extend .d-inline-flex)
+    * Display pseudo elememtns as block
+    * Remove the nasty line-height declaration for the label
+    * Tweak the :after for the ckebox ($size * 0.075)
+
+    *
+  */
+  position: relative;
+  display: inline-block;
+  padding-left: 2.625em;
+  line-height: 1.875em; }
+  .form-check.vdm-checkbox-vdmi label:before, .form-check.vdm-checkbox-vdmi label:after {
+    position: absolute;
+    content: "";
+    display: inline-block;
+    color: #429A8E;
+    left: 0;
+    top: 0; }
+  .form-check.vdm-checkbox-vdmi label:before {
+    background: #F2F2F1;
+    width: 1.875em;
+    height: 1.875em;
+    border-radius: 0.375em; }
+  .form-check.vdm-checkbox-vdmi label:after {
+    content: "";
+    font-weight: normal;
+    font-style: normal;
+    font-family: "vdm-fonticon";
+    text-decoration: none;
+    display: inline-block;
+    text-rendering: auto;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale; }
+  .form-check.vdm-checkbox-vdmi label:after {
+    font-size: 1.875em; }
+
+.form-check.vdm-checkbox-vdmi input[type="checkbox"] + label:after {
+  content: none; }
+
+.form-check.vdm-checkbox-vdmi input[type="checkbox"]:checked + label:after {
+  content: ""; }
+
+.form-check.vdm-checkbox-vdmi input[type="checkbox"]:focus + label:after {
+  outline: #429A8E auto 5px; }
+
+.form-check.vdm-radio-vdmi label {
+  /*
+   Alternative : use the bootstrap technique and free up the ligne height
+
+    * Display label inline flex & align items center (@extend .d-inline-flex)
+    * Display pseudo elememtns as block
+    * Remove the nasty line-height declaration for the label
+    * Tweak the :after for the ckebox ($size * 0.075)
+
+    *
+  */
+  position: relative;
+  display: inline-block;
+  padding-left: 2.625em;
+  line-height: 1.875em; }
+  .form-check.vdm-radio-vdmi label:before, .form-check.vdm-radio-vdmi label:after {
+    position: absolute;
+    content: "";
+    display: inline-block;
+    color: #429A8E;
+    left: 0;
+    top: 0; }
+  .form-check.vdm-radio-vdmi label:before {
+    background: #F2F2F1;
+    width: 1.875em;
+    height: 1.875em;
+    border-radius: 0.375em; }
+  .form-check.vdm-radio-vdmi label:before, .form-check.vdm-radio-vdmi label:after {
+    border-radius: 1.875em; }
+  .form-check.vdm-radio-vdmi label:after {
+    background: #429A8E;
+    width: 0.9375em;
+    height: 0.9375em;
+    left: 0.9375em;
+    top: 0.9375em;
+    -webkit-transform: translate(-0.46875em, -0.46875em);
+            transform: translate(-0.46875em, -0.46875em); }
+
+.form-check.vdm-radio-vdmi input[type="radio"] + label:after {
+  content: none; }
+
+.form-check.vdm-radio-vdmi input[type="radio"]:checked + label:after {
+  content: ""; }
+
+.form-check.vdm-radio-vdmi input[type="radio"]:focus + label:before {
+  outline: #429A8E auto 5px; }
 
 .radio.vdm-radio input:before, .radio.vdm-radio input:after {
   border-radius: 50%; }

@@ -11,11 +11,11 @@ Remove when publishing & clean-up!
 
 -->
 <!-- **************************************************** -->
-{{# sidebar-blocks-demo-debug }}
+{{# sidebar-blocks-demo-debug-wrapper }}
     <div class="container">
         <div class="row">
-            <div class="col-12 col-md-4 sidebar">
-{{/ sidebar-blocks-demo-debug }}
+            <div class="col-12 col-md-4 sidebar {{ sidebar-right-classes }}">
+{{/ sidebar-blocks-demo-debug-wrapper }}
 <!-- **************************************************** -->
 
 <!-- Variant : quicklinks, arrow-right, block, long text -->
@@ -125,6 +125,16 @@ Remove when publishing & clean-up!
     </section>
 {{/ has-sb-contact-block }}
 
+<!-- Variant : Institution block -->
+{{# has-sb-institution }}
+    <section class="sb-block {{ sb-classes }}">
+        {{> atoms-heading-sidebar-icon}}
+        <p class="bullet-left brand">Ouvert aujourd'hui jusqu'à 19 h 00</p>
+        <p>123, bord de l'eau<br>
+         Montéal, QC, H3K 2T5</p>
+    </section>
+{{/ has-sb-institution }}
+
 <!-- Variant : Forms 01  - email registration form -->
 {{# has-sb-forms-01 }}
     <section class="sb-block {{ sb-classes }}">
@@ -145,6 +155,15 @@ Remove when publishing & clean-up!
 
     </section>
 {{/ has-sb-forms-02 }}
+
+<!-- Variant : Forms 03 - search combo box -->
+<!-- Variant : Forms 03 - Search filter checkboxes -->
+{{# has-sb-forms-03-search-filters }}
+    <section class="sb-block {{ sb-classes }}">
+        {{> atoms-heading-sidebar }}
+        {{> atoms-checkbox-fonticon }}
+    </section>               
+{{/ has-sb-forms-03-search-filters }}
 
 <!-- Variant : Information bloc 01 : a short list, a divider, vertical social media icons -->
 {{# has-sb-info-block-01 }}
@@ -252,7 +271,13 @@ Remove when publishing & clean-up!
 {{/ has-sb-info-block-03 }}
 
 
-Sidebar infos will display here if conditions allow it in json data files.
+
+
+<!-- **************************************************** -->
+{{# sidebar-blocks-demo-debug-message }}
+     Sidebar infos will display here if conditions allow it in json data files.
+{{/ sidebar-blocks-demo-debug-message }}
+<!-- **************************************************** -->
 
 <!-- 
 
@@ -262,11 +287,11 @@ Remove when publishing & clean-up!
 -->
 
 <!-- **************************************************** -->
-{{# sidebar-blocks-demo-debug }}
+{{# sidebar-blocks-demo-debug-wrapper }}
             </div>
         </div>
     </div>
-{{/ sidebar-blocks-demo-debug }}
+{{/ sidebar-blocks-demo-debug-wrapper }}
 <!-- **************************************************** -->
 
 

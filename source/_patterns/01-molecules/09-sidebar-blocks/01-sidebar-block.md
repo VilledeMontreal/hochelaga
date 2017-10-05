@@ -5,7 +5,13 @@ title: Sidebar block and variable content
 A list of content blocks for the sidebar. A bunch of variants and themeatic blocks are represented.
 
 On the json side of things, there are a bunch of things to watchout for in terms of modifier classes.
-Have a look at 01-base-page-portal.json fo an idea.
+Have a look at 01-base-page-portal.json of an idea.
+
+### Questions and issues
+
+* There is a 96% width directive for all forms in sidebars. If this causes issues and overides are needed, sidebar forms will need classes.
+* Responsibeve bahavious has to be implemented for the medium breakpoint, when the column narrows. Problems arise with right side icons, then. Have a look at teasers and cards for inspiration.
+* 
 
 ### Links
 

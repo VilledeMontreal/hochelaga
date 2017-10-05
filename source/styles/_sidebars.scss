@@ -7,6 +7,9 @@
     // Links in sidebars
     a {
         color: $vdm-black;
+        word-break: break-all;
+        word-wrap: break-word;
+        
         &.brand {
             color: $vdm-brand; 
         }
@@ -15,6 +18,9 @@
         }
         .vdmi {
             color: $vdm-brand; 
+            &:after, &:before {
+                background: transparent;
+            }
         }
         &:hover, &:active {
             color: $vdm-black;
@@ -116,6 +122,7 @@
             @extend .list-inline;
             >li {
                 @extend .list-inline-item;
+                margin-bottom: 0.85rem;
             }
         }
 
@@ -139,7 +146,7 @@
     }
     .vdm-btn {
         display: block;
-        margin-top: 2rem;
+        margin-top: 1.35rem;
         margin-left: auto !important;
         margin-right: auto !important;
         
@@ -186,18 +193,23 @@
 
     // Color theme variants
     // Transparent top stroke theme variant
-
-    // Transparent border brand
     &.theme-top-stroke {
         .sb-block {
             border-top: 4px solid $vdm-black;
             background-color: transparent;
         }
     }
+     // Transparent border brand
     &.theme-border-brand {
         .sb-block {
             border: 1px solid $vdm-grey;
             background-color: transparent;
+        }
+    }
+
+    .bullet-left {
+        &.brand {
+            color: $vdm-brand;
         }
     }
 }
@@ -226,12 +238,26 @@
         border-radius: 4px;
     }
 
+    // Special cases management, may or may not end up here...
+
     // Utility buttons not wrapped in a form tag look like they where in a form wrapper @96%
     >.vdm-btn-wide {
         width: 96%;
         margin-left: 2%;
         margin-right: 2%;
     } 
+
+    // Search filters  block override - white background, tweaked title
+    &.search-filters {
+        background: $vdm-white;
+        .vdm-title {
+            &.discrete {
+                @include header(4);
+            }
+        }
+    }
+
+
 }
 
 

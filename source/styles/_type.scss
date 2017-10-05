@@ -81,6 +81,7 @@ html {
     // Hyperlinks - generic
     a {
       color: $vdm-brand;
+      
       &:hover, 
       &:active {
         color: $vdm-black;
@@ -120,6 +121,7 @@ html {
         &.inline {
           display: inline-block;
           padding-left: 0;
+          
         }
         
         &.arrow {
@@ -375,6 +377,10 @@ html {
     font-size: $vdm-font-size-base * 1.3125; // 21px
     line-height: $vdm-line-height-base * 1.619;  // 34px
     background: transparent;
+ }
+
+ .bullet-left {
+   @include bullet-left();
  }
 
  .meta {

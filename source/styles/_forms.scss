@@ -107,7 +107,81 @@ label {
             }
         }
     }
+
+    
 }
+
+.form-check {
+    &.vdm-checkbox-vdmi {
+        label {
+            // @extend .custom-control;
+            // @extend .custom-checkbox;
+            @include pseudo-form-element();
+            
+        }
+        input[type="checkbox"] {
+            @extend .custom-control-input;
+            
+            &+label {
+                &:after {
+                    content: none;
+                }
+            }
+
+            &:checked {
+            &+label {
+                &:after {
+                    content: map-get($icons , checkbox-checked-trans);
+                }
+            }
+            }
+
+            &:focus {
+            &+label {
+                &:after {
+                    outline: $vdm-brand auto 5px;
+                }
+            }
+            }
+
+        }
+    }
+
+    &.vdm-radio-vdmi {
+        label {
+            // @extend .custom-control;
+            // @extend .custom-checkbox;
+            @include pseudo-form-element(radio);
+        }
+        input[type="radio"] {
+            @extend .custom-control-input;
+            
+            &+label {
+                &:after {
+                    content: none;
+                }
+            }
+
+            &:checked {
+            &+label {
+                &:after {
+                    content: ""
+                }
+            }
+            }
+
+            &:focus {
+            &+label {
+                &:before {
+                    outline: $vdm-brand auto 5px;
+                }
+            }
+            }
+        }
+    }
+}
+
+
 
 ///////////////////////////////////////////////////////////////////
 // Radio buttons

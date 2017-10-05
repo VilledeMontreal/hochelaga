@@ -50,6 +50,29 @@
   }
  }
 
+//  @arg $size - string - any valid text size declaration
+//  @arg $color - string any valid color declaration
+//  @arg $color - string any valid color declaration
+@mixin bullet-left($size: .8em, $color: $vdm-brand, $textcolor: $vdm-black) {
+    display: inline-block;
+    position: relative;
+    padding-left: $size * 1.75;
+    color: $textcolor;
+    &:before {
+      content : " ";
+      position: absolute;
+      display: block;
+      left: 0;
+      top: 46%; // Perceptual
+      transform: translateY(-50%);
+      background: $color;
+      border-radius: $size;
+      width: $size;
+      height: $size;
+    }
+ }
+
+
 
 
 
@@ -114,6 +137,76 @@
 
         @content;
     }
+}
+
+// Applies to vdmi radios and lables
+// To be invoked from within the label element
+// The input has to come BEFORE the label for this code to work
+
+@mixin pseudo-form-element( $type: checkbox, $size: 1.875em ) {
+
+
+  /*
+   Alternative : use the bootstrap technique and free up the ligne height
+
+    * Display label inline flex & align items center (@extend .d-inline-flex)
+    * Display pseudo elememtns as block
+    * Remove the nasty line-height declaration for the label
+    * Tweak the :after for the ckebox ($size * 0.075)
+
+    *
+  */
+
+
+  position: relative;
+  display: inline-block;
+  padding-left: $size * 1.4;
+  line-height: $size;
+
+  &:before, &:after {
+      position: absolute;
+      content: "";
+      display: inline-block;
+      color: $vdm-brand;
+      left: 0;
+      top: 0;
+  }
+
+  &:before {
+      background: $vdm-grey-light;
+      width: $size;
+      height: $size;
+      border-radius: $size * 0.2;
+  }
+
+  
+  @if $type == 'checkbox' {
+
+    @include icon(after, checkbox-checked-trans);
+    &:after {
+        font-size: $size;
+        // top: $size * 0.075;
+    }
+
+  }
+  @if $type == 'radio' {
+      &:before, &:after {
+        border-radius: $size;
+      }
+      &:after {
+
+        $half: $size * 0.5;
+        $quarter: $size * 0.25;
+
+        background: $vdm-brand;
+        width: $half;
+        height: $half;
+        left: $half;
+        top: $half;
+        transform: translate(-$quarter, -$quarter);
+        
+      }
+  }
 }
 
 // Sets the icon font size, generally 3.6rem;
