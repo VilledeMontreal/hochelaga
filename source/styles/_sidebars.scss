@@ -9,7 +9,7 @@
         color: $vdm-black;
         word-break: break-all;
         word-wrap: break-word;
-        
+
         &.brand {
             color: $vdm-brand; 
         }
@@ -210,6 +210,50 @@
     .bullet-left {
         &.brand {
             color: $vdm-brand;
+        }
+    }
+
+    // The breakpoint production the narrowest column needs attention
+    // Right-side icons need to go below
+    @include media-breakpoint-only(md) {
+        ul {
+            &.arrow-blocks {
+                &.p-small {
+                    .block {
+                        &.arrow {
+                            padding: 0.15em 0.6em 2.5em 0.6em;
+                        }
+                    }
+                }
+                .block {
+                    &.arrow {
+                        padding: 0.15em 0.6em 2.5em 0.6em;
+                        &:after {
+                            top: calc(100% - 0.85em);
+                            left: 50%;
+                            height: 1em;
+                            transform: translateX(-50%);
+                        }
+                    }
+                }
+            }
+        }
+        .vdm-title {
+            &.icon-right {
+                padding-right: 0;
+                padding-bottom: 5rem;
+                // Move the icon
+                .vdmi {
+                    top: calc(100% - 1.25em);
+                    left: 50%;
+                    height: 1em;
+                    transform: translateX(-50%); 
+                }
+                &:after {
+                    display: none;
+                }
+                margin-bottom: 1rem;
+            }
         }
     }
 }

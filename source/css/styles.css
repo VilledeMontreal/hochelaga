@@ -8088,6 +8088,30 @@ html.sticky > body.menu-open {
 .sidebar .bullet-left.brand {
   color: #429A8E; }
 
+@media (min-width: 768px) and (max-width: 991px) {
+  .sidebar ul.arrow-blocks.p-small .block.arrow {
+    padding: 0.15em 0.6em 2.5em 0.6em; }
+  .sidebar ul.arrow-blocks .block.arrow {
+    padding: 0.15em 0.6em 2.5em 0.6em; }
+    .sidebar ul.arrow-blocks .block.arrow:after {
+      top: calc(100% - 0.85em);
+      left: 50%;
+      height: 1em;
+      -webkit-transform: translateX(-50%);
+              transform: translateX(-50%); }
+  .sidebar .vdm-title.icon-right {
+    padding-right: 0;
+    padding-bottom: 5rem;
+    margin-bottom: 1rem; }
+    .sidebar .vdm-title.icon-right .vdmi {
+      top: calc(100% - 1.25em);
+      left: 50%;
+      height: 1em;
+      -webkit-transform: translateX(-50%);
+              transform: translateX(-50%); }
+    .sidebar .vdm-title.icon-right:after {
+      display: none; } }
+
 .sb-block {
   padding: 1.5rem 1.75rem 2rem 1.75rem; }
   .sb-block:last-of-type {
@@ -8544,7 +8568,6 @@ html {
             -webkit-transform: translateY(-50%);
                     transform: translateY(-50%);
             left: calc(100% - 1.25em);
-            right: 0;
             background: transparent; }
             html body a.block.arrow:after:hover, html body a.block.arrow:after:active {
               background: transparent;
