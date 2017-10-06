@@ -310,7 +310,10 @@ function watch() {
 gulp.task('patternlab:connect', gulp.series(function (done) {
   browserSync.init({
     server: {
-      baseDir: normalizePath(paths().public.root)
+      baseDir: normalizePath(paths().public.root),
+      routes: {
+        "/boite-outils": normalizePath(paths().public.root)
+      }
     },
     snippetOptions: {
       // Ignore all HTML files within the templates folder
