@@ -33,7 +33,7 @@ ctx = pipeline.createContext([
 
 try {
     
-	pipeline.start(ctx, env.BRANCH_NAME) {
+	pipeline.start(ctx) {
 
         pipeline.installDependanciesStage(ctx) {
         	sh "echo testing installDependancies";
