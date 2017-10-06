@@ -4,5 +4,5 @@ boite-outils-web:
   environment:
     - NODE_ENV=development
   ports:
-    - "3022:4200"
+    - "3022:3000"
   restart: always
