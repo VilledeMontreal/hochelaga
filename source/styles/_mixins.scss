@@ -139,7 +139,8 @@
     }
 }
 
-// Applies to vdmi radios and lables
+// Applies to the vdmi radios and labels
+// Candidate to replace the current, previous solution
 // To be invoked from within the label element
 // The input has to come BEFORE the label for this code to work
 
@@ -156,7 +157,6 @@
 
     *
   */
-
 
   position: relative;
   display: inline-block;

@@ -151,6 +151,10 @@
         margin-right: auto !important;
         
     }
+    .vdm-avatar {
+        display: block;
+        margin-bottom: 2rem;
+    }
 
 
     // Other fixtures
@@ -184,6 +188,12 @@
         // No bottom stroke, reduced bottom margin
         &.discrete {
             margin-bottom: 1.4em;
+            &:after {
+                display: none;
+            }
+        }
+        &.in-between {
+            margin-bottom: 0.4em;
             &:after {
                 display: none;
             }
