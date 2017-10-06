@@ -50,7 +50,7 @@ try {
 
     pipeline.promptForDeploymentStage(ctx);
 
-    pipeline.end(ctx, env.BRANCH_NAME) {
+    pipeline.end(ctx) {
 
         pipeline.deploymentStage(ctx) {
         	sh "echo testing deployment";
