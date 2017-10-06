@@ -12,7 +12,7 @@ Updating the node version you will us to v4 is essential. See https://github.com
 
 
 
-The `dev` branch is the initial project using bootstrap 3. Developement continues with bootstrap 4 on the bs4 branche, whios is now the main developement branch.
+The `dev` branch is where all development takes place. A starter project using bootstrap 3 is archived on the `bs3` branch. 
 
 Essentially, cd into the directory and issue the following commands : 
 
