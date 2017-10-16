@@ -1,5 +1,5 @@
 ---
-title: Checkbox set
+title: Radio set
 ---
 
 *  @see https://codepen.io/takeradi/pen/rjJpKK
