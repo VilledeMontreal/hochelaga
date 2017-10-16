@@ -168,6 +168,7 @@
       content: "";
       display: inline-block;
       color: $vdm-brand;
+      // border: 1px solid orange;
       left: 0;
       top: 0;
   }
@@ -196,7 +197,7 @@
       &:after {
 
         $half: $size * 0.45;
-        $quarter: $size * 0.2;
+        $quarter: $size * 0.175;
 
         background: $vdm-brand;
         width: $half;

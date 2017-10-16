@@ -67,13 +67,7 @@ gulp.task('pl-sass-patternlab', function(){
 /******************************************************
  * COPY TASKS - stream assets from node modules to source
 ******************************************************/
-/*
 
-gulp.task('pl-copy-source-node-modules:js', function() {
-    return gulp.src(['node_modules/bootstrap/dist/js/bootstrap.min.js', 'node_modules/jquery/dist/jquery.min.js', 'node_modules/popper.js/dist/popper.min.js'])
-        .pipe(gulp.dest("source/js/vendor"));
-});
-*/
 
 gulp.task('pl-copy-source-node-modules:js', function() {
     return gulp.src([ 
