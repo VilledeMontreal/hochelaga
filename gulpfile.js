@@ -12,7 +12,7 @@ var gulp = require('gulp'),
   sourcemaps = require('gulp-sourcemaps'), 
   postcss = require('gulp-postcss'),
   autoprefixer = require('autoprefixer'),
-  cssnano = require('cssnano'),
+  // cssnano = require('cssnano'),
   del = require('del');
 
 
@@ -49,7 +49,7 @@ gulp.task('pl-sass', function(){
   var plugins = [
     // autoprefixer({browsers: ['last 1 version']})
     autoprefixer(),
-    cssnano()
+    // cssnano()
   ];
 
   return gulp.src(saasPath)
