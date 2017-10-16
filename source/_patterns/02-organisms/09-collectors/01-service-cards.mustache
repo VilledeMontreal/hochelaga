@@ -1,9 +1,7 @@
-
-{{# listItems.two }}
-    <div class="col-6">
-   {{ collectors-services-icon }}<br>
-    {{ collectors-services-header-text }}<br>
-	{{ collectors-services-body-text }}
+<div class="vdm-teasers-wrapper">
+    <div class="vdm-teasers">
+        {{# listItems.two }}
+        {{> molecules-service-teaser-block }}
+        {{/ listItems.two }}
     </div>
-    <p>{{ collectors.services.icon }}</p>
-{{/ listItems.two }}
+</div>
