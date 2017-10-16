@@ -11,7 +11,9 @@ var gulp = require('gulp'),
   chalk = require('chalk'),
   sourcemaps = require('gulp-sourcemaps'), 
   postcss = require('gulp-postcss'),
-  autoprefixer = require('autoprefixer');
+  autoprefixer = require('autoprefixer'),
+  cssnano = require('cssnano'),
+  del = require('del');
 
 
 /**
@@ -46,7 +48,8 @@ var saasPatternalbPath = './source/styles/patternlab.scss';
 gulp.task('pl-sass', function(){
   var plugins = [
     // autoprefixer({browsers: ['last 1 version']})
-    autoprefixer()
+    autoprefixer(),
+    cssnano()
   ];
 
   return gulp.src(saasPath)
@@ -223,6 +226,50 @@ gulp.task('patternlab:installplugin', function (done) {
 });
 
 /******************************************************
+ * PACKAGE GENERATED FILES TASKS
+******************************************************/
+gulp.task('patternlab:copyToDist:clean', function () {
+  return del([
+    'dist/**/*',
+    'scss/**/*'
+  ]);
+});
+
+gulp.task('patternlab:copyToDist:css', function () {
+  return gulp.src([
+    './source/css/styles.css',
+    './source/css/styles.css.map'
+  ]).pipe(gulp.dest('./dist/css'))
+});
+
+gulp.task('patternlab:copyToDist:js', function () {
+  return gulp.src([
+    './source/fonts/**/*'
+  ]).pipe(gulp.dest('./dist/fonts'));
+});
+
+gulp.task('patternlab:copyToDist:fonts', function () {
+  return gulp.src([
+    './source/js/**/*'
+  ]).pipe(gulp.dest('./dist/js'));
+});
+
+gulp.task('patternlab:copyToDist:scss', function () {
+  return gulp.src([
+    './source/styles/**/*.scss',
+    '!./source/styles/patternlab.scss'
+  ]).pipe(gulp.dest('./scss'));
+});
+
+gulp.task('patternlab:copyToDist', gulp.series('patternlab:copyToDist:clean',
+  'patternlab:copyToDist:css',
+  'patternlab:copyToDist:js',
+  'patternlab:copyToDist:fonts',
+  'patternlab:copyToDist:scss'
+));
+
+
+/******************************************************
  * SERVER AND WATCH TASKS
 ******************************************************/
 // watch task utility functions
@@ -342,3 +389,4 @@ gulp.task('patternlab:connect', gulp.series(function (done) {
 gulp.task('default', gulp.series('patternlab:build'));
 gulp.task('patternlab:watch', gulp.series('patternlab:build', watch));
 gulp.task('patternlab:serve', gulp.series('patternlab:build', 'patternlab:connect', watch));
+gulp.task('patternlab:package', gulp.series('patternlab:build', 'patternlab:copyToDist'));
