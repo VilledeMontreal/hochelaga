@@ -32,7 +32,22 @@
     .vdm-teaser, .vdm-teaser-mixin {
         @include make-col-ready();
         margin-bottom: $grid-gutter-width;
-        @include make-col(12);
+    }
+    // Vertical grid types, equal heights
+    &.grid-type-grid {
+        .vdm-teaser, .vdm-teaser-mixin {
+            @include make-col(12);
+            @include media-breakpoint-up(md) {
+                @include make-col(6);
+            }
+        }
+        // equal heights
+        .vdm-teaser-body {
+            height: 100%;
+            &:last-child {
+                margin-top: auto;
+            }
+        }
     }
 }
 
@@ -166,6 +181,8 @@
 
 // Review opportunities for shared mixins with cards later on
 .vdm-teaser {
+
+
     .vdm-teaser-body {
         // Flex properties
         display: flex;

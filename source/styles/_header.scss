@@ -41,6 +41,7 @@
       }
       .link {
         display: none;
+        margin-left: 1rem;
         @include media-breakpoint-up(md) { 
           display: block;
         }
