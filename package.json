@@ -1,5 +1,5 @@
 {
-  "name": "boite-outils-web",
+  "name": "@villemontreal/boite-outils-web",
   "description": "La boite à outils web",
   "version": "0.0.1",
   "dependencies": {
@@ -15,24 +15,16 @@
     "styleguidekit-assets-default": "^3.0.0",
     "styleguidekit-mustache-default": "^3.0.0"
   },
-  "keywords": [
-    "Pattern Lab",
-    "Atomic Web Design",
-    "Node",
-    "Gulp",
-    "Javascript"
-  ],
   "repository": {
     "type": "git",
-    "url": "git://github.com/pattern-lab/edition-node-gulp.git"
+    "url": "git://bitbucket.org/villemontreal/boite-outils-web.git"
   },
-  "bugs": "https://github.com/pattern-lab/edition-node-gulp/issues",
-  "author": "Brian Muenzenmeyer",
+  "bugs": "https://bitbucket.org/villemontreal/boite-outils-web",
+  "author": "Ville de Montréal",
   "scripts": {
     "start": "gulp patternlab:serve",
     "build": "gulp patternlab:build",
     "package": "gulp patternlab:package",
-    "postinstall": "node scripts/postinstall.js",
     "gulp": "gulp -- "
   },
   "license": "MIT",
@@ -46,6 +38,7 @@
     "gulp-postcss": "^7.0.0",
     "gulp-sass": "^3.1.0",
     "gulp-sourcemaps": "^2.6.0",
+    "node-sass-tilde-importer": "1.0.0",
     "postcss-cli": "^4.1.0"
   }
 }
