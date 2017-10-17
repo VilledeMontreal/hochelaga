@@ -1,7 +1,7 @@
 {
-  "name": "edition-node-gulp",
-  "description": "The gulp wrapper around patternlab-node core, providing tasks to interact with the core library and move supporting frontend assets.",
-  "version": "1.4.0",
+  "name": "boite-outils-web",
+  "description": "La boite à outils web",
+  "version": "0.0.1",
   "dependencies": {
     "bootstrap": "^4.0.0-beta",
     "bootstrap-sass": "^3.3.7",
@@ -30,6 +30,8 @@
   "author": "Brian Muenzenmeyer",
   "scripts": {
     "start": "gulp patternlab:serve",
+    "build": "gulp patternlab:build",
+    "package": "gulp patternlab:package",
     "postinstall": "node scripts/postinstall.js",
     "gulp": "gulp -- "
   },
@@ -39,6 +41,8 @@
   },
   "devDependencies": {
     "autoprefixer": "^7.1.2",
+    "cssnano": "^3.10.0",
+    "del": "^3.0.0",
     "gulp-postcss": "^7.0.0",
     "gulp-sass": "^3.1.0",
     "gulp-sourcemaps": "^2.6.0",
