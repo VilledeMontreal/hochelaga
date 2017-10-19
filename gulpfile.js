@@ -13,7 +13,8 @@ var gulp = require('gulp'),
   postcss = require('gulp-postcss'),
   autoprefixer = require('autoprefixer'),
   // cssnano = require('cssnano'),
-  del = require('del');
+  del = require('del'),
+  tildeImporter = require('node-sass-tilde-importer');
 
 
 /**
@@ -54,7 +55,9 @@ gulp.task('pl-sass', function(){
 
   return gulp.src(saasPath)
     .pipe(sourcemaps.init())
-    .pipe(sass({}).on('error', sass.logError))
+    .pipe(sass({
+      importer: tildeImporter
+    }).on('error', sass.logError))
     .pipe(postcss(plugins))
     .pipe(sourcemaps.write(sourcemapsDest))
     .pipe(gulp.dest('./source/css'));
@@ -62,7 +65,7 @@ gulp.task('pl-sass', function(){
 
 gulp.task('pl-sass-patternlab', function(){
   return gulp.src(saasPatternalbPath)
-    .pipe(sass({outputStyle: 'compressed'}).on('error', sass.logError))
+    .pipe(sass({importer: tildeImporter, outputStyle: 'compressed'}).on('error', sass.logError))
     .pipe(gulp.dest('./source/css'));
 });
 
