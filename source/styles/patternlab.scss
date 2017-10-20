@@ -563,6 +563,10 @@ $pl-size-box-wrapper-padding: 1rem;
   &:nth-child(even) {
     background: $vdm-white;
     border: 1px solid lighten($vdm-grey, 35%);
+    .pl-demo-region-content {
+      background: lighten($vdm-grey-light, 5%);
+      
+    }
   }
 }
 
@@ -571,6 +575,7 @@ $pl-size-box-wrapper-padding: 1rem;
   background: $vdm-white;
   padding-top: 3rem;
   padding-bottom: 3rem;
+  margin-top: 0.5rem;
 }
 
 
