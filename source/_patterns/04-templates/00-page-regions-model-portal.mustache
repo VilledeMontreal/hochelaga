@@ -76,7 +76,11 @@
     </nav>
   </header>
   <!-- End main page header -->
-  <!-- Begin header region -->
+  <!-- Begin breadcrumb -->
+  <nav class="breadcrumb-wrapper" aria-label="Breadcrumb">
+    {{> molecules-breadcrumbs }}
+  </nav>
+  <!-- Begin breadcrumb -->
   <main class="main-content regions" id="main-content" aria-label="Main Content">
     <!-- Begin mock regions-->
     <!-- Begin content header region-->
@@ -130,6 +134,17 @@
             <div class="row"><!-- .row -->
                 <div class="col-12 pl-demo-region-content">
                     Region after content
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- End after-content region-->
+    <!-- Begin after-content region-->
+    <div class="region region-prefooter pl-demo-region">
+        <div class="container"> <!-- .container -->
+            <div class="row"><!-- .row -->
+                <div class="col-12 pl-demo-region-content">
+                    Pre-footer region
                 </div>
             </div>
         </div>

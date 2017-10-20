@@ -49,6 +49,12 @@ html {
     }
   } // Sidebar
 
+  
+  .breadcrumb-wrapper {
+    padding: 0 $vdm-side-menu-icon-size * 2 ;
+    margin: 0 auto;
+  }
+
   // All regions in page templates should have at least a "region" class
   // A region is anything that implements a bootstrap grid on the first level
   // in an html document.
