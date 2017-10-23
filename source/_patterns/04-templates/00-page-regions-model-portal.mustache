@@ -31,7 +31,7 @@
 <!-- End side navigation menu -->
 <!-- *********************************************** -->
 <!-- Begin main page skeleton wrapper -->
-<div class="vdm-page has-side-menu">
+<!-- <div class="vdm-page has-side-menu"> -->
  <!-- Begin main page header -->
   <header class="vdm-header">
     <div class="navbar-banner">
@@ -77,8 +77,10 @@
   </header>
   <!-- End main page header -->
   <!-- Begin breadcrumb -->
-  <nav class="breadcrumb-wrapper" aria-label="Breadcrumb">
-    {{> molecules-breadcrumbs }}
+  <nav class="breadcrumb-wrapper container" aria-label="Breadcrumb">
+    <div class="row">
+      {{> molecules-breadcrumbs }}
+    </div>
   </nav>
   <!-- Begin breadcrumb -->
   <main class="main-content regions" id="main-content" aria-label="Main Content">
@@ -186,6 +188,6 @@
     </div>
   </footer>
   <!-- End footer -->
-</div>
+<!-- </div> -->
 <!-- End main page skeleton wrapper -->
 <!-- *********************************************** -->
