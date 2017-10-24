@@ -277,6 +277,8 @@ ul {
 } */
 
 // test social icon font
+// Create a mixin with this bloc, loop over the $social-media-icons variable with map-get
+// Mixin opportunity
 a {
   position: relative;
   &.social-icon {
@@ -298,42 +300,17 @@ a {
         text-decoration: none;
       }
     }
-  
-    &.facebook {
-      &:before {
-        content: "\E800";
+
+    // Individual symbol instance styles
+    // @see variable $social-media-icons in variables.scss -- contains all characters
+    @each $name, $char in $social-media-icons {
+      &.#{$name} {
+        &:before {
+          content: $char;
+        }
       }
     }
-    &.linkedin {
-      &:before {
-        content: "\E801";
-      }
-    }
-    &.twitter {
-      &:before {
-        content: "\E802";
-      }
-    }
-    &.youtube {
-      &:before {
-        content: "\E803";
-      }
-    }
-    &.instagram {
-      &:before {
-        content: "\E804";
-      }
-    }
-    &.googleplus {
-      &:before {
-        content: "\E805";
-      }
-    }
-    &.instagram-sm {
-      &:before {
-        content: "\E806";
-      }
-    }
+
     &.inverted {
       color: $vdm-white;
     }

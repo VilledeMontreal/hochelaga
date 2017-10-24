@@ -12,7 +12,8 @@ html {
                         border: none;
                         .menu-trigger {
                             &:before {
-                                content: "\E202";
+                                // content: "\E202";
+                                content: map-get($icons , multiply);
                             }
                         }
                     } 

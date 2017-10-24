@@ -140,7 +140,7 @@
       &[aria-expanded="true"] {
         color: $vdm-brand;
         &:after {
-          content: "\E207"; 
+          content: map-get($icons , circle-minus-invert); 
         }
       }
 
@@ -161,7 +161,7 @@
         line-height: 2.6rem;
         width: 2.6rem;
         height: 2.6rem;
-        content: "\E203"; 
+        content: map-get($icons , circle-plus);
         position: absolute;
         top: calc(50% - 1.3rem);
         right: 1.4rem;

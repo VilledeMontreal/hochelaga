@@ -130,7 +130,8 @@ html {
           
           &:after {
             position: absolute;
-            content: "\E103";
+            // content: "\E103";
+            content: map-get($icons , arrow-right);
             font-family: "vdm-fonticon";
             font-size: 2.5em;
             top: 50%;
