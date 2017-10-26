@@ -30,164 +30,181 @@
 <!-- ********************** -->
 <!-- End side navigation menu -->
 <!-- *********************************************** -->
-<!-- Begin main page skeleton wrapper -->
-<!-- <div class="vdm-page has-side-menu"> -->
- <!-- Begin main page header -->
-  <header class="vdm-header">
-    <div class="navbar-banner">
-      <div class="main"> <span class="" "description"="">Beta version of Montréal's Web site</span> <a href="#" class="link">Learn more</a> </div>
-      <div class="secondary"> <a href="#">Exit beta version of the site</a> </div>
+<!-- Begin main page header -->
+<header class="vdm-header">
+  <div class="navbar-banner">
+    <div class="main"> <span class="" "description"="">Beta version of Montréal's Web site</span> <a href="#" class="link">Learn more</a> </div>
+    <div class="secondary"> <a href="#">Exit beta version of the site</a> </div>
+  </div>
+  <nav class="vdm-navbar" data-component-type="navigation" role="menu">
+    <div class="menu-trigger-wrapper">
+      <button type="button" class="menu-trigger" data-target="#sideNav" aria-controls="sideNav" aria-expanded="false" aria-label="Toggle navigation"> <span class="sr-only">Toggle main navigation</span> </button>
     </div>
-    <nav class="vdm-navbar" data-component-type="navigation" role="menu">
-      <div class="menu-trigger-wrapper">
-        <button type="button" class="menu-trigger" data-target="#sideNav" aria-controls="sideNav" aria-expanded="false" aria-label="Toggle navigation"> <span class="sr-only">Toggle main navigation</span> </button>
-      </div>
-      <img src="../../images/logos/vdm-logo.svg" class="brand-logo top-nav" alt="">
-      <div class="navbar-icons">
-        <ul class="icons">
-          <li class="search">
-            <button type="button" class="navbar-button search" aria-haspopup="true" aria-controls="searchform"> <span class="button-label">Search</span> </button>
-          </li>
-          <li class="user">
-            <button type="button" class="navbar-button account"> <span class="button-label">Mon compte</span> </button>
-          </li>
-          <li class="language">
-            <ul class="language-list">
-              <li class="lang active"> <a href="/fr" title="Voir ce site en français">fr</a> </li>
-              <li class="lang"> <a href="/en" title="View this site in English">en</a> </li>
-            </ul>
-          </li>
-        </ul>
-      </div>
-      <div class="invisible searchbar-wrapper">
-        <form id="searchform">
-          <div class="form-combo icon-combo color-scheme-light inline-button">
-            <h3 class="title">Combo block title - inline button</h3>
-            <div class="input-wrapper stroked d-flex d-inline-flex"> <i class="vdmi ic-search" aria-hidden="true"></i>
-              <div class="form-group vdm-form-group">
-                <input type="text" class="form-control vdm-form-control" id="text">
-                <label for="text">Textfield</label>
-              </div>
-              <button type="button" class="vdm-btn vdm-btn-sm">Button</button>
+    <img src="../../images/logos/vdm-logo.svg" class="brand-logo top-nav" alt="">
+    <div class="navbar-icons">
+      <ul class="icons">
+        <li class="search">
+          <button type="button" class="navbar-button search" aria-haspopup="true" aria-controls="searchform"> <span class="button-label">Search</span> </button>
+        </li>
+        <li class="user">
+          <button type="button" class="navbar-button account"> <span class="button-label">Mon compte</span> </button>
+        </li>
+        <li class="language">
+          <ul class="language-list">
+            <li class="lang active"> <a href="/fr" title="Voir ce site en français">fr</a> </li>
+            <li class="lang"> <a href="/en" title="View this site in English">en</a> </li>
+          </ul>
+        </li>
+      </ul>
+    </div>
+    <div class="invisible searchbar-wrapper">
+      <form id="searchform">
+        <div class="form-combo icon-combo color-scheme-light inline-button">
+          <h3 class="title">Combo block title - inline button</h3>
+          <div class="input-wrapper stroked d-flex d-inline-flex"> <i class="vdmi ic-search" aria-hidden="true"></i>
+            <div class="form-group vdm-form-group">
+              <input type="text" class="form-control vdm-form-control" id="text">
+              <label for="text">Textfield</label>
             </div>
+            <button type="button" class="vdm-btn vdm-btn-sm">Button</button>
           </div>
-        </form>
-      </div>
-    </nav>
-  </header>
-  <!-- End main page header -->
+        </div>
+      </form>
+    </div>
+  </nav>
+</header>
+<!-- End main page header -->
+<main class="main-content regions" id="main-content" aria-label="Main Content">
   <!-- Begin breadcrumb -->
-  <nav class="breadcrumb-wrapper container" aria-label="Breadcrumb">
-    <div class="row">
+  <nav class="breadcrumb-container" aria-label="Breadcrumb">
+    <div class="breadcrumb-row">
       {{> molecules-breadcrumbs }}
     </div>
   </nav>
-  <!-- Begin breadcrumb -->
-  <main class="main-content regions" id="main-content" aria-label="Main Content">
-    <!-- Begin mock regions-->
-    <!-- Begin content header region-->
-    <div class="region region-content-header pl-demo-region">
-      <div class="container">
-          <div class="row">
-            <div class="col-12 pl-demo-region-content">
-                <h1 class="vdm-title">Page title</h1>
-                <p class="teaser-text">Page teaser text -- Quinoa succulents gastropub butcher YOLO tilde dreamcatcher aesthetic.</p>
+  <!-- End breadcrumb -->
+  <!-- Begin mock regions-->
+  <!-- Begin content header region-->
+  <div class="region region-content-header has-image pl-demo-region">
+    <div class="region-container">
+        <div class="region-row">
+          <div class="media">
+            <div class="header-image">
+              <img src="../../images/content/1200/1.5/mangouste-ratio-1.5-1200.jpg" alt="Image alt">
+              <button type="button" class="pl-button vdm-btn vdm-btn-secondary vdm-btn-sm">Secondary button</button>
             </div>
           </div>
+          <div class="text">
+            <div class="title-block">
+              <div class="meta copyright">
+                ©Larry Paquette
+              </div>
+              <h1 class="vdm-title">Heading 1 headin 1 heading 1</h1>
+              <div class="date-time updated">
+                Mis à jour le 23 octembre 2037
+              </div>
+            </div>
+            <p class="teaser-text">Quinoa succulents gastropub butcher YOLO tilde dreamcatcher aesthetic. You probably haven't heard of them hot chicken fam, banh mi flexitarian pitchfork sartorial deep v lyft. Pok pok af vape PBR&amp;B flexitarian.</p>
+          </div>
+          <!-- 
+          <div class="col-12 pl-demo-region-content">
+              <h1 class="vdm-title">Page title</h1>
+              <p class="teaser-text">Page teaser text -- Quinoa succulents gastropub butcher YOLO tilde dreamcatcher aesthetic.</p>
+          </div>
+          -->
+        </div><!-- .row -->
+    </div><!-- .container -->
+  </div><!-- .region -->
+  
+  <!-- End content header region-->
+  <!-- Begin before-content region-->
+  <div class="region region-before pl-demo-region">
+      <div class="region-container">
+          <div class="region-row">
+              <div class="col-12 pl-demo-region-content">
+                  Region before content
+              </div>
+          </div>
       </div>
+  </div>
+  <!-- End before-content region-->
+  <!-- Begin main-content region-->
+  <div class="region main-region pl-demo-region">
+      <div class="region-container"> <!-- .container -->
+          <div class="region-row"><!-- .row -->
+              <article class="col-9 pl-demo-region-content">
+              Main content
+              </article>
+              <aside class="col-3 pl-demo-region-content">
+                <section class="sb-block">
+                  <p>Section.sb-block 01</p>
+                </section>
+                <section class="sb-block">
+                  <p>Section.sb-block 02</p>
+                </section>
+                <section class="sb-block">
+                  <p>Section.sb-block 03</p>
+                </section>
+              </aside>
+          </div>
+      </div>
+  </div>
+  <!-- End main-content region-->
+  <!-- Begin after-content region-->
+  <div class="region region-after pl-demo-region">
+      <div class="region-container"> <!-- .container -->
+          <div class="region-row"><!-- .row -->
+              <div class="col-12 pl-demo-region-content">
+                  Region after content
+              </div>
+          </div>
+      </div>
+  </div>
+  <!-- End after-content region-->
+  <!-- Begin after-content region-->
+  <div class="region region-prefooter pl-demo-region">
+      <div class="region-container"> <!-- .container -->
+          <div class="region-row"><!-- .row -->
+              <div class="col-12 pl-demo-region-content">
+                  Pre-footer region
+              </div>
+          </div>
+      </div>
+  </div>
+  <!-- End after-content region-->
+  <!-- End mock regions-->
+</main>
+<!-- End post-content container - after columns -->
+<!-- Begin footer -->
+<footer class="vdm-footer">
+  <div class="footer-wrapper">
+    <div class="main"> <a class="featured"> <span class="icon-text">311</span> <span class="text">Services au citoyen</span> </a>
+      <ul class="vdm-footer-links">
+        <li><a href="#" title="Link title">Link 1</a></li>
+        <li><a href="#" title="Link title">Link 2</a></li>
+        <li><a href="#" title="Link title">Link 3</a></li>
+        <li><a href="#" title="Link title">Link 4</a></li>
+        <li><a href="#" title="Link title">Link 5</a></li>
+        <li><a href="#" title="Link title">Link 6</a></li>
+      </ul>
+      <ul class="vdm-social-media footer">
+        <li><a href="#" title="Facebook" class="social-icon facebook"><span class="label">Facebook</span></a></li>
+        <li><a href="#" title="Linkedin" class="social-icon linkedin"><span class="label">Linkedin</span></a></li>
+        <li><a href="#" title="Twitter" class="social-icon twitter"><span class="label">Twitter</span></a></li>
+        <li><a href="#" title="YouTube" class="social-icon youtube"><span class="label">YouTube</span></a></li>
+        <li><a href="#" title="Instagram" class="social-icon instagram"><span class="label">Instagram</span></a></li>
+        <li><a href="#" title="Google+" class="social-icon googleplus"><span class="label">Google+</span></a></li>
+      </ul>
     </div>
-    <!-- End content header region-->
-    <!-- Begin before-content region-->
-    <div class="region region-before pl-demo-region">
-        <div class="container">
-            <div class="row">
-                <div class="col-12 pl-demo-region-content">
-                    Region before content
-                </div>
-            </div>
-        </div>
-    </div>
-    <!-- End before-content region-->
-    <!-- Begin main-content region-->
-    <div class="region main-region pl-demo-region">
-        <div class="container"> <!-- .container -->
-            <div class="row"><!-- .row -->
-                <article class="col-9 pl-demo-region-content">
-                Main content
-                </article>
-                <aside class="col-3 pl-demo-region-content">
-                  <section class="sb-block">
-                    <p>Section.sb-block 01</p>
-                  </section>
-                  <section class="sb-block">
-                    <p>Section.sb-block 02</p>
-                  </section>
-                  <section class="sb-block">
-                    <p>Section.sb-block 03</p>
-                  </section>
-                </aside>
-            </div>
-        </div>
-    </div>
-    <!-- End main-content region-->
-    <!-- Begin after-content region-->
-    <div class="region region-after pl-demo-region">
-        <div class="container"> <!-- .container -->
-            <div class="row"><!-- .row -->
-                <div class="col-12 pl-demo-region-content">
-                    Region after content
-                </div>
-            </div>
-        </div>
-    </div>
-    <!-- End after-content region-->
-    <!-- Begin after-content region-->
-    <div class="region region-prefooter pl-demo-region">
-        <div class="container"> <!-- .container -->
-            <div class="row"><!-- .row -->
-                <div class="col-12 pl-demo-region-content">
-                    Pre-footer region
-                </div>
-            </div>
-        </div>
-    </div>
-    <!-- End after-content region-->
-    <!-- End mock regions-->
-  </main>
-  <!-- End post-content container - after columns -->
-  <!-- Begin footer -->
-  <footer class="vdm-footer">
-    <div class="footer-wrapper">
-      <div class="main"> <a class="featured"> <span class="icon-text">311</span> <span class="text">Services au citoyen</span> </a>
-        <ul class="vdm-footer-links">
-          <li><a href="#" title="Link title">Link 1</a></li>
-          <li><a href="#" title="Link title">Link 2</a></li>
-          <li><a href="#" title="Link title">Link 3</a></li>
-          <li><a href="#" title="Link title">Link 4</a></li>
-          <li><a href="#" title="Link title">Link 5</a></li>
-          <li><a href="#" title="Link title">Link 6</a></li>
+    <div class="sub">
+      <div class="first"> First text </div>
+      <div class="last">
+        <ul class="vdm-sub-footer-links">
+          <li><a href="#" title="Link title">Last - Link 1</a></li>
+          <li><a href="#" title="Link title">Last - Link 2</a></li>
         </ul>
-        <ul class="vdm-social-media footer">
-          <li><a href="#" title="Facebook" class="social-icon facebook"><span class="label">Facebook</span></a></li>
-          <li><a href="#" title="Linkedin" class="social-icon linkedin"><span class="label">Linkedin</span></a></li>
-          <li><a href="#" title="Twitter" class="social-icon twitter"><span class="label">Twitter</span></a></li>
-          <li><a href="#" title="YouTube" class="social-icon youtube"><span class="label">YouTube</span></a></li>
-          <li><a href="#" title="Instagram" class="social-icon instagram"><span class="label">Instagram</span></a></li>
-          <li><a href="#" title="Google+" class="social-icon googleplus"><span class="label">Google+</span></a></li>
-        </ul>
-      </div>
-      <div class="sub">
-        <div class="first"> First text </div>
-        <div class="last">
-          <ul class="vdm-sub-footer-links">
-            <li><a href="#" title="Link title">Last - Link 1</a></li>
-            <li><a href="#" title="Link title">Last - Link 2</a></li>
-          </ul>
-        </div>
       </div>
     </div>
-  </footer>
-  <!-- End footer -->
-<!-- </div> -->
-<!-- End main page skeleton wrapper -->
+  </div>
+</footer>
+<!-- End footer -->
 <!-- *********************************************** -->

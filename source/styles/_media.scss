@@ -51,7 +51,10 @@
 // Header container with image, title and teaser text
 // Where do these rule belong, I have a feeling there are bits all over ?
 
-.header-container  {
+//*** -- Remove the .header-container parent class once refactor is complete
+
+.header-container, 
+.region-content-header {
     &.has-image {
         .text {
             position: relative;

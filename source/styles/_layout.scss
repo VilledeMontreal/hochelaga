@@ -1,12 +1,5 @@
 // @file layout.scss
 
-/*
-
-* {
-  box-sizing: border-box;
-}
-*/
-
 html {
   body {
     background-color: $vdm-white;
@@ -21,7 +14,8 @@ html {
       height: 100vh;
       padding-top: $vdm-header-total-portal-height;
     }
-    .main-container {
+    // Only .regions will be left, after refactor
+    .main-container, .regions {
       flex: 1 0 auto;
     }
     .vdm-header,
@@ -30,184 +24,225 @@ html {
     }
   }
 
-  .vdm-page {
-    position: relative;
-  }
 
-  .vdm-header {
+}// html
 
-  }
-  .vdm-footer {
-    
-  }
 
+.vdm-header {
   
+}
+
+.vdm-footer {
   
-  .sidebar {
-    >* {
-      background-color: $vdm-grey-light
+}
+
+
+.sidebar {
+  >* {
+    background-color: $vdm-grey-light
+  }
+} // Sidebar
+
+
+
+.breadcrumb-container {
+  @include make-container();
+  @include make-container-max-widths();
+  .breadcrumb-row {
+    @include make-row();
+    .vdm-breadcrumb {
+      @include make-col-ready();
+      @include make-col(12);
     }
-  } // Sidebar
-
+  }
+}
   
-  .breadcrumb-wrapper {
-   // padding: 0 $vdm-side-menu-icon-size * 2 ;
-   .vdm-breadcrumb {
-    @include make-col-ready();
-    @include make-col(12);
-   }
 
+// Make all base regions Bootstrap containers & rows
+// with these standardized classes
+.region {
+  padding-bottom: $region-padding-bottom;
+  &:last-of-type {
+    padding-bottom: $region-last-padding-bottom;
   }
 
-  // All regions in page templates should have at least a "region" class
-  // A region is anything that implements a bootstrap grid on the first level
-  // in an html document.
-  .region {
-    padding-bottom: $region-padding-bottom;
-    &:last-of-type {
-      padding-bottom: $region-last-padding-bottom;
+  .region-container {
+    @include make-container();
+    @include make-container-max-widths();
+    .region-row {
+      @include make-row();
     }
+  }
+}
 
-    // Image , title and teaser container, portal
-    &.header-container {
-      @include make-container();
-      @include make-container-max-widths();
+// All regions in page templates should have at least a "region" class
+// A region is anything that implements a bootstrap grid on the first level
+// in an html document.
+.region {
+
+  // Image , title and teaser container, portal
+  // Main header, always includes at least the page Title
+  // Keeper styles
+  &.region-content-header {
+    .media {
+      @include make-col-ready();
+      @include make-col(12);
+    }
+    .text {
+      @include make-col-ready();
+      @include make-col(12);
+    }
+    &.has-image {
+      .media {
+        padding-left: 0;
+        padding-right: 0;
+      }
+    }
+  }
+
+  // Replace all this block with the &.region-content-header  code after regions refactor complete.
+  &.header-container {
+    @include make-container();
+    @include make-container-max-widths();
+    .content-wrapper {
+      @include make-row();
+      .media {
+        @include make-col-ready();
+        @include make-col(12);
+      }
+      .text {
+        @include make-col-ready();
+        @include make-col(12);
+      }
+    }
+    &.has-image {
       .content-wrapper {
-        @include make-row();
         .media {
-          @include make-col-ready();
-          @include make-col(12);
-        }
-        .text {
-          @include make-col-ready();
-          @include make-col(12);
-        }
-      }
-      &.has-image {
-        .content-wrapper {
-          .media {
-            padding-left: 0;
-            padding-right: 0;
-          }
+          padding-left: 0;
+          padding-right: 0;
         }
       }
     }
+  }
 
-    &.full-width-container {
-      @extend .container-fluid;
-      .content-wrapper {
-        @include make-row();
-        .main-content {
-          @include make-col-ready();
-          @include make-col(12);
-        }
+  // Manage this with refactor, think of it.
+  &.full-width-container {
+    @extend .container-fluid;
+    .content-wrapper {
+      @include make-row();
+      .main-content {
+        @include make-col-ready();
+        @include make-col(12);
       }
     }
-    &.footer-container {
-      @extend .container;
-      .content-wrapper {
-        @include make-row();
-        .main-content {
-          @include make-col-ready();
-          @include make-col(12);
+  }
+
+  /*
+  &.footer-container {
+    @extend .container;
+    .content-wrapper {
+      @include make-row();
+      .main-content {
+        @include make-col-ready();
+        @include make-col(12);
+      }
+    }
+  }
+  */
+
+  
+
+  // Main content region and columns here
+  &.main-container {
+
+    @include make-container();
+    @include make-container-max-widths();
+
+    .content-wrapper {
+      @include make-row();
+      >section {
+        padding-bottom: $section-padding-bottom;
+        &:last-of-type {
+          padding-bottom: 0;
         }
+      }
+      .main-content {
+        @include make-col-ready();
+        @include make-col(12);
+        padding-bottom: $region-padding-bottom;
+      }
+      .sidebar-right,
+      .sidebar-left {
+        @include make-col-ready();
+        @include make-col(12);
+        padding-bottom: $region-padding-bottom;
+      }
+      .full-width {
+        @include make-col-ready();
+        @include make-col(12);
       }
     }
     
+    &.col-left, 
+    &.col-right {
+      .main-content {
+        @include make-col(12);
+      }
+    }
+  
+    // 3 column layout, not sure this should exist, advise
+    &.col-both {
+      .sidebar-right,
+      .sidebar-left {
+        @include make-col(12);
+      }
+      .sidebar-left {
+        order: 1;
+      }
+      .sidebar-right {
+        order: 2;
+      }
+      .main-content {
+        @include make-col(12);
+        order: 0;
+      }
+    }
 
-    // Main content region and columns here
-    &.main-container {
-
-      @include make-container();
-      @include make-container-max-widths();
+    // Medium breakpoint and above, grid this stuff
+    @include media-breakpoint-up(md) {
 
       .content-wrapper {
-        @include make-row();
-        >section {
-          padding-bottom: $section-padding-bottom;
-          &:last-of-type {
-            padding-bottom: 0;
-          }
-        }
         .main-content {
-          @include make-col-ready();
           @include make-col(12);
-          padding-bottom: $region-padding-bottom;
         }
         .sidebar-right,
         .sidebar-left {
-          @include make-col-ready();
-          @include make-col(12);
-          padding-bottom: $region-padding-bottom;
-        }
-        .full-width {
-          @include make-col-ready();
-          @include make-col(12);
+          @include make-col(4);
         }
       }
       
       &.col-left, 
       &.col-right {
         .main-content {
-          @include make-col(12);
+          @include make-col(8);
         }
       }
-    
-      // 3 column layout, not sure this should exist, advise
+
       &.col-both {
         .sidebar-right,
         .sidebar-left {
-          @include make-col(12);
+          @include make-col(3);
         }
         .sidebar-left {
-          order: 1;
-        }
-        .sidebar-right {
-          order: 2;
-        }
-        .main-content {
-          @include make-col(12);
           order: 0;
         }
+        .sidebar-right {
+          order: 0;
+        }
+        .main-content {
+          @include make-col(6);
+        }
       }
-
-      // Medium breakpoint and above, grid this stuff
-      @include media-breakpoint-up(md) {
-
-        .content-wrapper {
-          .main-content {
-            @include make-col(12);
-          }
-          .sidebar-right,
-          .sidebar-left {
-            @include make-col(4);
-          }
-        }
-        
-        &.col-left, 
-        &.col-right {
-          .main-content {
-            @include make-col(8);
-          }
-        }
-
-        &.col-both {
-          .sidebar-right,
-          .sidebar-left {
-            @include make-col(3);
-          }
-          .sidebar-left {
-            order: 0;
-          }
-          .sidebar-right {
-            order: 0;
-          }
-          .main-content {
-            @include make-col(6);
-          }
-        }
-      } // md-up
-    } // main-container
-  } // Region
-
-}// html
+    } // md-up
+  } // main-container
+} // Region
