@@ -69,16 +69,40 @@ html {
   .region-container {
     @include make-container();
     @include make-container-max-widths();
-    .region-row {
-      @include make-row();
-    }
   }
+
+  .region-row {
+    @include make-row();
+  }
+
+  &.full-width {
+    @extend .container-fluid;
+  }
+
 }
+
+
+
 
 // All regions in page templates should have at least a "region" class
 // A region is anything that implements a bootstrap grid on the first level
 // in an html document.
 .region {
+
+  // Sections : sub-sections inside regions
+  // Sections will always be inside a bootstrap row
+  .region-row {
+    >.section {
+      @include make-col-ready();
+      &.full-width {
+        @include make-col(12);
+      }
+      padding-bottom: $section-padding-bottom;
+      &:last-of-type {
+        padding-bottom: 0;
+      }
+    }
+  }
 
   // Image , title and teaser container, portal
   // Main header, always includes at least the page Title
@@ -150,9 +174,68 @@ html {
   }
   */
 
+  // Refactor block
+  // Replaces everything that is under the &.main-container entry
+  // This is the 3 columns region, with a potential for left and right sidebars
+  &.main-region {
+
+    // Mobile first, everything is 12 initially
+    .main-content {
+      @include make-col-ready();
+      @include make-col(12);
+      padding-bottom: $region-padding-bottom;
+    }
+    .sidebar {
+      @include make-col-ready();
+      @include make-col(12);
+    }
+
+    // Swap the source order for the 3 column case
+    .col-both {
+      .sidebar-left {
+        order: 1;
+      }
+      .sidebar-right {
+        order: 2;
+      }
+      .main-content {
+        order: 0;
+      }
+    }
+
+    // Medium breakpoint and above (768)
+    @include media-breakpoint-up(md) {
+      
+      .col-left, 
+      .col-right {
+        .main-content {
+          @include make-col(8);
+        }
+        .sidebar {
+          @include make-col(4);
+        }
+      }
+      // Reorder the source for medium + displays -- 3 columns override
+      .col-both {
+        .main-content {
+          @include make-col(6);
+        }
+        .sidebar {
+          @include make-col(3);
+        }
+        .sidebar-left {
+          order: 0;
+        }
+        .sidebar-right {
+          order: 0;
+        }
+      }
+    } // md-up
+  }
   
 
   // Main content region and columns here
+  // Delete everything under &.main-container on refactor is done
   &.main-container {
 
     @include make-container();
@@ -245,4 +328,6 @@ html {
       }
     } // md-up
   } // main-container
+
+
 } // Region

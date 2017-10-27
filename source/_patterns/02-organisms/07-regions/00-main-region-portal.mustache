@@ -1,0 +1,23 @@
+<div class="region main-region pl-demo-region {{ mainRegionClasses }}">
+    <div class="region-container {{ mainContainerClasses }}"> <!-- .container -->
+        <div class="region-row"><!-- .row -->
+            {{# fullTop }}
+                {{> organisms-section-top-portal }}
+            {{/ fullTop }}
+            {{# colLeft }}
+                {{> organisms-sidebar-left }}
+            {{/ colLeft }}
+            <article class="main-content {{ main-content-classes }}">
+                {{> atoms-paragraph }}
+                {{> atoms-paragraph }}
+                {{> atoms-paragraph }}
+            </article>
+            {{# colRight }}
+                {{> organisms-sidebar-right }}
+            {{/ colRight }}
+            {{# fullBottom }}
+                {{> organisms-section-bottom-portal }}
+            {{/ fullBottom }}
+        </div>
+    </div>
+</div>

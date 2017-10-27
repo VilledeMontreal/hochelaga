@@ -29,6 +29,7 @@ html {
                 .vdm-page {
                     left: 300px;
                     transition: left .3s;
+                    position: absolute;
                     // Reset left margin for all bootstrap containers
                     >* {
                         margin-left: 0;
@@ -39,7 +40,6 @@ html {
                         margin-right: 0;
                     }
                 }
-            
             }
         }
     }
