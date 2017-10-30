@@ -1,0 +1,17 @@
+<div class="region main-region {{ regionMainClasses }}">
+    <div class="region-container {{ regionMainContainerClasses }}">
+        <div class="region-row">
+            {{# fullTopSection }}
+                {{> organisms-section-top-portal }}
+            {{/ fullTopSection }}
+            <article class="main-content {{ regionMainContentClasses }}">
+                {{# collectorServicesContent }}
+                    {{> organisms-service-cards }}
+                {{/ collectorServicesContent }}
+            </article>
+            {{# fullBottomSection }}
+                {{> organisms-section-bottom-portal }}
+            {{/ fullBottomSection }}
+        </div>
+    </div>
+</div>

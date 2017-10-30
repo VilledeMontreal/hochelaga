@@ -1,5 +1,3 @@
-
-<!-- ********************** -->
 <!-- Skip to main navigation -->
 <a href="#main-content" class="sr-only sr-only-focusable d-print-none">Skip to main content</a>
 <!-- Begin side navigation menu -->
@@ -8,93 +6,44 @@
 <!-- End side navigation menu -->
 <!-- *********************************************** -->
 <!-- Begin main page wrapper -->
-<div class="vdm-page">
+<div class="vdm-page {{ pageClasses }}">
   <!-- Begin main page header -->
   {{> organisms-header-portal }}
   <!-- End main page header -->
   <main class="main-content regions" id="main-content" aria-label="Main Content">
+
     <!-- Begin breadcrumb -->
-    <nav class="breadcrumb-container" aria-label="Breadcrumb">
-      <div class="breadcrumb-row">
-        {{> molecules-breadcrumbs }}
-      </div>
-    </nav>
+    {{> organisms-breadcrumb-region }}
     <!-- End breadcrumb -->
+
     <!-- Begin mock regions-->
+
     <!-- Begin content header region-->
-    <div class="region region-content-header has-image pl-demo-region">
-      <div class="region-container">
-          <div class="region-row">
-            <div class="media">
-              <div class="header-image">
-                <img src="../../images/content/1200/1.5/mangouste-ratio-1.5-1200.jpg" alt="Image alt">
-                <button type="button" class="pl-button vdm-btn vdm-btn-secondary vdm-btn-sm">Secondary button</button>
-              </div>
-            </div>
-            <div class="text">
-              <div class="title-block">
-                <div class="meta copyright">
-                  ©Larry Paquette
-                </div>
-                <h1 class="vdm-title">Heading 1 headin 1 heading 1</h1>
-                <div class="date-time updated">
-                  Mis à jour le 23 octembre 2037
-                </div>
-              </div>
-              <p class="teaser-text">Quinoa succulents gastropub butcher YOLO tilde dreamcatcher aesthetic. You probably haven't heard of them hot chicken fam, banh mi flexitarian pitchfork sartorial deep v lyft. Pok pok af vape PBR&amp;B flexitarian.</p>
-            </div>
-            <!-- 
-            <div class="col-12 pl-demo-region-content">
-                <h1 class="vdm-title">Page title</h1>
-                <p class="teaser-text">Page teaser text -- Quinoa succulents gastropub butcher YOLO tilde dreamcatcher aesthetic.</p>
-            </div>
-            -->
-          </div><!-- .row -->
-      </div><!-- .container -->
-    </div><!-- .region -->
-    
+    {{> organisms-region-header-portal }}
     <!-- End content header region-->
+
     <!-- Begin before-content region-->
-    <div class="region region-before pl-demo-region">
-        <div class="region-container">
-            <div class="region-row">
-                <div class="col-12 pl-demo-region-content">
-                    Region before content
-                </div>
-            </div>
-        </div>
-    </div>
+    {{> organisms-region-before-portal }}
     <!-- End before-content region-->
 
     <!-- Begin fluid container full width region -->
     <!-- {{> organisms-region-full-width-portal }} -->
     <!-- End fluid container full width region -->
 
+
     <!-- Begin main-content region-->
-    {{> organisms-main-region-portal }}
+    {{> organisms-region-main-portal }}
     <!-- End main-content region-->
+   
     <!-- Begin after-content region-->
-    <div class="region region-after pl-demo-region">
-        <div class="region-container"> <!-- .container -->
-            <div class="region-row"><!-- .row -->
-                <div class="col-12 pl-demo-region-content">
-                    Region after content
-                </div>
-            </div>
-        </div>
-    </div>
+    {{> organisms-region-before-portal }}
     <!-- End after-content region-->
-    <!-- Begin after-content region-->
-    <div class="region region-prefooter pl-demo-region">
-        <div class="region-container"> <!-- .container -->
-            <div class="region-row"><!-- .row -->
-                <div class="col-12 pl-demo-region-content">
-                    Pre-footer region
-                </div>
-            </div>
-        </div>
-    </div>
+
     <!-- End after-content region-->
+
+    <!-- Begin pre-footer region-->
+    {{> organisms-region-prefooter-portal }}
+    <!-- End pre-footer region-->
     <!-- End mock regions-->
   </main>
   <!-- End post-content container - after columns -->

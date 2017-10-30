@@ -75,6 +75,12 @@ html {
     @include make-row();
   }
 
+  // Default state for the first tag inside a region row, to be orverriden
+  .region-content {
+    @include make-col-ready();
+    @include make-col(12);
+  }
+
   &.full-width {
     @extend .container-fluid;
   }
@@ -125,6 +131,7 @@ html {
   }
 
   // Replace all this block with the &.region-content-header  code after regions refactor complete.
+  /*
   &.header-container {
     @include make-container();
     @include make-container-max-widths();
@@ -148,8 +155,9 @@ html {
       }
     }
   }
+  */
 
-  // Manage this with refactor, think of it.
+  // The container fluid version of the region
   &.full-width-container {
     @extend .container-fluid;
     .content-wrapper {
@@ -236,6 +244,7 @@ html {
 
   // Main content region and columns here
   // Delete everything under &.main-container on refactor is done
+  /*
   &.main-container {
 
     @include make-container();
@@ -328,6 +337,8 @@ html {
       }
     } // md-up
   } // main-container
+
+  */
 
 
 } // Region
