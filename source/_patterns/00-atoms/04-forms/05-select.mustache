@@ -1,3 +1,18 @@
+<div class="vdm-select-wrapper {{ selectWrapperClasses }}">
+    <!-- "selectHasLabel" : true inside local data file to show select label  -->
+    {{# selectHasLabel }}
+    <label for="{{ formAttributes.selectID }}">Label</label>
+    {{/ selectHasLabel }}
+    <select class="form-control vdm-select {{ selectWrapperClasses }}" name="{{ formAttributes.selectID }}" id="{{ formAttributes.selectID }}"> 
+        <option value="">Filter by</option> 
+        {{# listItems.five }}
+            {{> atoms-option }}
+        {{/ listItems.five }}
+    </select>
+</div>
+
+<!--
+
 <form>
     <div class="vdm-select-wrapper">
         <label for="select">Label</label>
@@ -23,3 +38,6 @@
         </select>
     </div>
 <form>
+
+-->
+

@@ -3,7 +3,12 @@
         <div class="region-row">
             <div class="region-content">
                 {{> atoms-heading-1 }}
-                {{> atoms-teaser }}
+                {{# has-subtitle }}
+                    {{> atoms-heading-2 }}
+                {{/ has-subtitle }}
+                {{# has-teaser-text }}
+                    {{> atoms-teaser }}
+                {{/ has-teaser-text }}
             </div>
         </div>
     </div>

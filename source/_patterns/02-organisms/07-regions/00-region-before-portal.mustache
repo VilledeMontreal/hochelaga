@@ -2,7 +2,22 @@
     <div class="region-container">
         <div class="region-row">
             <div class="region-content">
-                Region before content
+                {{# regionsDemoContent }}
+                    Region before content
+                {{/ regionsDemoContent }}
+
+                <!-- Begin collector page variants -->
+
+                {{# collectorServicesContent }}
+                    {{> organisms-service-cards }}
+                {{/ collectorServicesContent }}
+
+                {{# collectorTransactionsContent }}
+                    {{> organisms-transaction-cards-thumbs }}
+                {{/ collectorTransactionsContent }}
+
+                <!-- End collector page variants -->
+                
             </div>
         </div>
     </div>

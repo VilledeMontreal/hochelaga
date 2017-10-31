@@ -926,10 +926,10 @@
             @include make-col(12);
         }
         @include media-breakpoint-up(md) {
-            @include make-col(6);
+            @include make-col(4);
         }
         @include media-breakpoint-up(lg) {
-            @include make-col(4);
+            @include make-col(3);
         }
     }
 

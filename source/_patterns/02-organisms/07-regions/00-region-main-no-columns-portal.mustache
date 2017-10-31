@@ -5,13 +5,28 @@
                 {{> organisms-section-top-portal }}
             {{/ fullTopSection }}
             <article class="main-content {{ regionMainContentClasses }}">
+
+                <!-- Begin collector page variants -->
                 {{# collectorServicesContent }}
                     {{> organisms-service-cards }}
                 {{/ collectorServicesContent }}
+
+
+                {{# collectorTransactionsContent }}
+                    {{> organisms-transaction-filters }}
+                    {{> organisms-transaction-teasers-requests }}
+                {{/ collectorTransactionsContent }}
+
+                <!-- Begin collector page variants -->
             </article>
+
             {{# fullBottomSection }}
                 {{> organisms-section-bottom-portal }}
             {{/ fullBottomSection }}
+
+            {{# hasPagination }}
+                {{> molecules-pagination }}
+            {{/ hasPagination }}
         </div>
     </div>
 </div>
