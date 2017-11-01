@@ -8,23 +8,22 @@ html {
   // @see https://philipwalton.github.io/solved-by-flexbox/demos/sticky-footer/
   // @see https://github.com/philipwalton/solved-by-flexbox/blob/master/assets/css/components/site.css
   &.sticky {
-    >body {
+    .vdm-page { 
       display: flex;
       flex-direction: column;
       height: 100vh;
       padding-top: $vdm-header-total-portal-height;
     }
-    // Only .regions will be left, after refactor
-    .main-container, .regions {
-      flex: 1 0 auto;
+    .main-content {
+      &.regions {
+        flex: 1 0 auto;
+      }
     }
     .vdm-header,
     .vdm-footer {
       flex: none; 
     }
   }
-
-
 }// html
 
 

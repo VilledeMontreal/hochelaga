@@ -1,5 +1,5 @@
 ---
-title: Cards, flex
+title: Teasers, flex
 ---
 
 Flexbox implementation for all teasers. 

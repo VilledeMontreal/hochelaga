@@ -1,11 +1,11 @@
 <div class="region region-content-header {{ headerContainerClasses }}">
     <div class="region-container">
         <div class="region-row">
+            {{# hasimage }}
             <div class="media">
-                {{# hasimage }}
-                    {{> molecules-header-image-portal }}
-                {{/ hasimage }}
+                {{> molecules-header-image-portal }}
             </div>
+             {{/ hasimage }}
             <div class="text">
                 {{> molecules-teaser-text }}
             </div>
