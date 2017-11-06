@@ -28,6 +28,10 @@ ctx = pipeline.createContext([
         "submitter1" : [ "id" : "udall98", "mailto" : "chdallaire" ],
 
     ],
+    "nexusLib" : [
+        "buildCommand" : "npm run package",
+        "publishFromDistDirectory" : false
+    ],
 
 ]);
 
@@ -41,6 +45,10 @@ try {
 
         pipeline.runUnitTestsStage(ctx) {
         	sh "echo testing unitTests";
+        }
+
+        pipeline.publishLibStage(ctx) {
+            sh "publishing in nexus";
         }
 
         pipeline.buildImageStage(ctx) {
