@@ -32,7 +32,7 @@ ctx = pipeline.createContext([
         "buildCommand" : "npm run package",
         "publishFromDistDirectory" : false
     ],
-
+    "debug" : "1",
 ]);
 
 try {
