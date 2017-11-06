@@ -1,85 +1,197 @@
-<div class="container pl-atom-color pl-columns">
-	<div class="pl-swatches-wrapper">
-	<h2>Brand</h2>
-		<div class="pl-swatches">
-			<ul class="pl-swatch-list">
-				<li class="pl-brand-dark pl-swatch">brand-neutral<span class="pl-hex">#000000</span></li>
-			</ul>
-		</div>
-		<div class="pl-swatches">
-			<ul class="pl-swatch-list">
-				<li class="pl-brand pl-swatch">brand<span class="pl-hex">#E00000</span></li>
-			</ul>
-		</div>
-	</div>
-	<div class="pl-swatches-wrapper">
-		<h2>Neutrals</h2>
-		<div class="pl-swatches">
-			<ul class="pl-swatch-list pl-neutral">
-				<li class="pl-neutral-lightest pl-swatch">neutral-lightest<span class="pl-hex">#F2F2F1</span></li>
-				<li class="pl-neutral-lighter pl-swatch">neutral-lighter<span class="pl-hex">#E7E5E5</span></li>
-				<li class="pl-neutral-light pl-swatch">neutral-light<span class="pl-hex">#D0D0CE</span></li>
-				<li class="pl-neutral pl-swatch">neutral<span class="pl-hex">#A2A3A1</span></li>
-				<li class="pl-neutral-dark pl-swatch">neutral-dark<span class="pl-hex">#727271</span></li>
-				<li class="pl-neutral-base pl-swatch">neutral-base<span class="pl-hex">#000000</span></li>
-			</ul>
-		</div>
-	</div>
-	<div class="pl-swatches-wrapper">
-		<h2>Secondary - UI</h2>
-		<div class="pl-swatches">
-			<ul class="pl-swatch-list pl-ui">
-				<li class="pl-neutral-lightest pl-swatch">neutral-lightest<span class="pl-hex">#F2F2F1</span></li>
-				<li class="pl-neutral-lighter pl-swatch">neutral-lighter<span class="pl-hex">#E7E5E5</span></li>
-				<li class="pl-neutral-light pl-swatch">neutral-light<span class="pl-hex">#D0D0CE</span></li>
-				<li class="pl-neutral pl-swatch">neutral<span class="pl-hex">#A2A3A1</span></li>
-				<li class="pl-neutral-dark pl-swatch">neutral-dark<span class="pl-hex">#727271</span></li>
-				<li class="pl-neutral-base pl-swatch">neutral-base<span class="pl-hex">#000000</span></li>
-			</ul>
-		</div>
+<!-- Color swatches & function table -->
+<div class="pl-atom-color">
+	<div class="swatches-index">
+		<h2>Utilisation des couleurs</h2><br/>
+		<table class="table table-condensed pl-atom-color pl-swatches-color-table">
+			<tr>
+				<th class="pl-color-table-column-swatch"></th>
+				<th class="pl-color-table-column-name">Couleur</th>
+				<th class="pl-color-table-column-variable">Variable</th>
+				<th class="pl-color-table-column-function">HEX</th>
+				<th class="pl-color-table-column-accessibility">RGB</th>
+			</tr>
+			<tr>
+				<td><span class="pl-swatch-round pl-black"></span></td>
+				<td>Black</td>
+				<td>$vdm-black</td>
+				<td>#000000</td>
+				<td>rgba(0, 0, 0, 1)</td>
+			</tr>
+      <tr>
+        <td><span class="pl-swatch-round pl-white"></span></td>
+        <td>White</td>
+		<td>$vdm-white</td>
+        <td>#FFFFFF</td>
+        <td>rgba(255, 255, 255, 1)</td>
+      </tr>
+      <tr>
+        <td><span class="pl-swatch-round pl-sarcelle"></span></td>
+        <td>Sarcelle</td>
+		<td>$vdm-sarcelle<br />$vdm-brand</td>
+        <td>#429A8E</td>
+        <td>rgba(66, 154, 142, 1)</td>
+      </tr>
+      <tr>
+        <td><span class="pl-swatch-round pl-grey-light"></span></td>
+        <td>Grey-light</td>
+		<td>$vdm-grey-light</td>
+        <td>#F2F2F1</td>
+        <td>rgba(242, 242, 242, 1)</td>
+      </tr>
+      <tr>
+        <td><span class="pl-swatch-round pl-grey"></span></td>
+        <td>Grey</td>
+		<td>$vdm-grey</td>
+        <td>#80807F</td>
+        <td>rgba(128, 128, 127, 1)</td>
+      </tr>
+      <tr>
+        <td><span class="pl-swatch-round pl-red"></span></td>
+        <td>Red</td>
+		<td>$vdm-red<br />$vdm-sub-brand</td>
+        <td>#E00000</td>
+        <td>rgba(224, 0, 0, 1)</td>
+      </tr>
+
+      <!--<tr>-->
+				<!--<td><span class="pl-swatch-round pl-brand"></span></td>-->
+				<!--<td>Brand<span class="pl-sass-name">brand</span></td>-->
+				<!--<td>Couleur de fond. Entête et pied de page. Grand dossier. Signet. Iconographie.</td>-->
+				<!--<td><span class="pl-swatch-round pl-swatch-accessibility" title="Respect des contrastes sur fond clair"></span></td>-->
+			<!--</tr>-->
+			<!--<tr>-->
+				<!--<td><span class="pl-swatch-round pl-sub-brand"></span></td>-->
+				<!--<td>Sub brand<span class="pl-sass-name">ui-alt-warm-dark</span></td>-->
+				<!--<td>NA</td>-->
+				<!--<td><span class="pl-swatch-round pl-swatch-accessibility" title="Respect des contrastes sur fond clair"></span></td>-->
+			<!--</tr>-->
+			<!--<tr>-->
+				<!--<td><span class="pl-swatch-round pl-neutral-dark"></span></td>-->
+				<!--<td>Gris foncé<span class="pl-sass-name">neutral-dark</span></td>-->
+				<!--<td>NA</td>-->
+				<!--<td><span class="pl-swatch-round pl-swatch-accessibility-invert" title="Respect des contrastes sur fond foncé"></span><span class="pl-swatch-round pl-swatch-accessibility" title="Respect des contrastes sur fond clair"></span></td>-->
+			<!--</tr>-->
+			<!--<tr>-->
+				<!--<td><span class="pl-swatch-round pl-neutral"></span></td>-->
+				<!--<td>Gris moyen<span class="pl-sass-name">neutral</span></td>-->
+				<!--<td>Arrière plan - N/A</td>-->
+				<!--<td><span class="pl-swatch-round pl-swatch-accessibility-invert" title="Respect des contrastes sur fond foncé"></span></td>-->
+			<!--</tr>-->
+			<!--<tr>-->
+				<!--<td><span class="pl-swatch-round pl-neutral-light"></span></td>-->
+				<!--<td>Gris clair<span class="pl-sass-name">neutral-light</span></td>-->
+				<!--<td>Arrière plan - N/A</td>-->
+				<!--<td><span class="pl-swatch-round pl-swatch-accessibility-invert" title="Respect des contrastes sur fond foncé"></span></td>-->
+			<!--</tr>-->
+			<!--<tr>-->
+				<!--<td><span class="pl-swatch-round pl-neutral-lighter"></span></td>-->
+				<!--<td>Gris pâle<span class="pl-sass-name">neutral-lighter</span></td>-->
+				<!--<td>Arrière plan - N/A</td>-->
+				<!--<td><span class="pl-swatch-round pl-swatch-accessibility-invert" title="Respect des contrastes sur fond foncé"></span></span></td>-->
+			<!--</tr>-->
+			<!--<tr>-->
+				<!--<td><span class="pl-swatch-round pl-neutral-lightest"></span></td>-->
+				<!--<td>Gris très pâle<span class="pl-sass-name">neutral-lightest</span></td>-->
+				<!--<td>Arrière plan - N/A</td>-->
+				<!--<td><span class="pl-swatch-round pl-swatch-accessibility-invert" title="Respect des contrastes sur fond foncé"></span></td>-->
+			<!--</tr>-->
+			<!--<tr>-->
+				<!--<td><span class="pl-swatch-round pl-ui"></span></td>-->
+				<!--<td>Sarcelle foncé<span class="pl-sass-name">ui</span></td>-->
+				<!--<td>Couleur par défaut des atômes principaux, boutons, liens, flèches, commutateurs, fil d'ariane.</td>-->
+				<!--<td><span class="pl-swatch-round pl-swatch-accessibility-invert" title="Respect des contrastes sur fond foncé"></span><span class="pl-swatch-round pl-swatch-accessibility" title="Respect des contrastes sur fond clair"></span></td>-->
+			<!--</tr>-->
+			<!--<tr>-->
+				<!--<td><span class="pl-swatch-round pl-ui-medium"></span></td>-->
+				<!--<td>Sarcelle moyen<span class="pl-sass-name">ui-medium</span></td>-->
+				<!--<td>Couleur secondaire à utiliser pour les états de survol et de sélection. Couleur de fond pour tutoriels. Icônes de confirmation.</td>-->
+				<!--<td><span class="pl-swatch-round pl-swatch-accessibility-invert" title="Respect des contrastes sur fond foncé"></span></td>-->
+			<!--</tr>-->
+			<!--<tr>-->
+				<!--<td><span class="pl-swatch-round pl-ui-light"></span></td>-->
+				<!--<td>Sarcelle clair<span class="pl-sass-name">ui-light</span></td>-->
+				<!--<td>États sélectionnés.</td>-->
+				<!--<td><span class="pl-swatch-round pl-swatch-accessibility-invert" title="Respect des contrastes sur fond foncé"></span></td>-->
+			<!--</tr>-->
+			<!--<tr>-->
+				<!--<td><span class="pl-swatch-round pl-ui-lighter"></span></td>-->
+				<!--<td>Sarcelle pâle<span class="pl-sass-name">ui-lighter</span></td>-->
+				<!--<td>Fond de carte</td>-->
+				<!--<td><span class="pl-swatch-round pl-swatch-accessibility-invert" title="Respect des contrastes sur fond foncé"></span></td>-->
+			<!--</tr>-->
+			<!--<tr>-->
+				<!--<td><span class="pl-swatch-round pl-ui-alt-danger"></span></td>-->
+				<!--<td>Orange<span class="pl-sass-name">ui-alt-danger</span></td>-->
+				<!--<td>Erreurs et avertissements</td>-->
+				<!--<td><span class="pl-swatch-round pl-swatch-accessibility-invert" title="Respect des contrastes sur fond foncé"></span><span class="pl-swatch-round pl-swatch-accessibility" title="Respect des contrastes sur fond clair"></span></td>-->
+			<!--</tr>-->
+		</table>
 	</div>
 </div>
-
-
-<ul class="sg-colors">
-	<li>
-		<span class="sg-swatch" style="background: #222;"></span>
-		<span class="sg-label">#222</span>
-	</li>
-	<li>
-		<span class="sg-swatch" style="background: #333;"></span>
-		<span class="sg-label">#333</span>
-	</li>
-	<li>
-		<span class="sg-swatch" style="background: #555;"></span>
-		<span class="sg-label">#555</span>
-	</li>
-	<li>
-		<span class="sg-swatch" style="background: #777;"></span>
-		<span class="sg-label">#777</span>
-	</li>
-	<li>
-		<span class="sg-swatch" style="background: #eee;"></span>
-		<span class="sg-label">#eee</span>
-	</li>
-	<li>
-		<span class="sg-swatch" style="background: #337ab7;"></span>
-		<span class="sg-label">#337ab7</span>
-	</li>
-	<li>
-		<span class="sg-swatch" style="background: #5cb85c;"></span>
-		<span class="sg-label">#5cb85c</span>
-	</li>
-	<li>
-		<span class="sg-swatch" style="background: #5bc0de;"></span>
-		<span class="sg-label">#5bc0de</span>
-	</li>
-		<li>
-		<span class="sg-swatch" style="background: #f0ad4e;"></span>
-		<span class="sg-label">#f0ad4e</span>
-	</li>
-		<li>
-		<span class="sg-swatch" style="background: #d9534f;"></span>
-		<span class="sg-label">#d9534f</span>
-	</li>
-</ul>
+<!-- Accessibility table -->
+<!--<div class="container-fluid pl-atom-color">-->
+	<!--<div class="swatches-index">-->
+		<!--<h2>Accessibilité</h2>-->
+		<!--<table class="table table-condensed pl-atom-color pl-accessibility-table">-->
+			<!--<tr>-->
+        <!--<td colspan="2" class="pl-acc-demo"><span class="pl-swatch-round pl-swatch-accessibility" title="Respect des contrastes sur fond clair"></span>Respect des contrastes sur fond clair</td>-->
+				<!--<td colspan="2" class="pl-acc-demo"><span class="pl-swatch-round pl-swatch-accessibility-invert" title="Respect des contrastes sur fond foncé"></span>Respect des contrastes sur fond foncé</td>-->
+			<!--</tr>-->
+		<!--</table>-->
+	<!--</div>-->
+<!--</div>-->
+<!-- Color sampler swatches -->
+<!--<div class="pl-atom-color pl-columns">-->
+	<!--<div class="pl-swatches-wrapper">-->
+	<!--<h2>Brand</h2><br/>-->
+		<!--<div class="pl-swatches">-->
+			<!--<ul class="pl-swatch-list">-->
+        <!--<li class="pl-brand pl-swatch">brand<span class="pl-hex">#429A8E</span></li>-->
+			  <!--<li class="pl-sub-brand pl-swatch">sub-brand<span class="pl-hex">#E00000</span></li>-->
+			<!--</ul>-->
+		<!--</div>-->
+	<!--</div>-->
+	<!--<div class="pl-swatches-wrapper">-->
+		<!--<h2>Neutrals</h2><br/>-->
+		<!--<div class="pl-swatches">-->
+			<!--<ul class="pl-swatch-list">-->
+        <!--<li class="pl-brand-dark pl-swatch" style="border:solid 1px #E7E5E5;">brand-neutral<span class="pl-hex">#000000</span></li>-->
+        <!--&lt;!&ndash;<li class="pl-neutral-lightest pl-swatch">neutral-lightest<span class="pl-hex">#F2F2F1</span></li>&ndash;&gt;-->
+				<!--&lt;!&ndash;<li class="pl-neutral-lighter pl-swatch">neutral-lighter<span class="pl-hex">#E7E5E5</span></li>&ndash;&gt;-->
+				<!--<li class="pl-neutral-light pl-swatch">grey-light<span class="pl-hex">#E7E5E5</span></li>-->
+				<!--&lt;!&ndash;<li class="pl-neutral pl-swatch">neutral<span class="pl-hex">#A2A3A1</span></li>&ndash;&gt;-->
+				<!--<li class="pl-neutral-dark pl-swatch">grey-dark<span class="pl-hex">#80807F</span></li>-->
+				<!--<li class="pl-neutral-base pl-swatch">black<span class="pl-hex">#000000</span></li>-->
+			<!--</ul>-->
+		<!--</div>-->
+	<!--</div>-->
+	<!--<div class="pl-swatches-wrapper">-->
+		<!--<h2>Secondary && UI</h2>-->
+		<!--<div class="pl-swatches">-->
+			<!--<ul class="pl-swatch-list">-->
+				<!--<li class="pl-ui-lighter pl-swatch">ui-lighter<span class="pl-hex">#87DFD3</span></li>-->
+				<!--<li class="pl-ui-light pl-swatch">ui-light<span class="pl-hex">#B4EBE3</span></li>-->
+				<!--<li class="pl-ui-medium pl-swatch">ui-medium<span class="pl-hex">#5AD3C3</span></li>-->
+				<!--<li class="pl-ui pl-swatch">ui<span class="pl-hex">#429A8E</span></li>-->
+			<!--</ul>-->
+		<!--</div>-->
+		<!--<div class="pl-swatches">-->
+			<!--<ul class="pl-swatch-list">-->
+				<!--<li class="pl-ui-alt-danger pl-swatch">ui-alt-danger<span class="pl-hex">#FF3200</span></li>-->
+				<!--<li class="pl-ui-alt-warm-dark pl-swatch">ui-alt-warm-dark<span class="pl-hex">#A30000</span></li>-->
+			<!--</ul>-->
+		<!--</div>-->
+	<!--</div>-->
+	<!--<div class="pl-document">-->
+		<!--<ul>-->
+			<!--<li>Ignore all classes starting with 'pl-', they are patternlab presentation classes.</li>-->
+			<!--<li>The color name is the sass variable name.-->
+				<!--<ul>-->
+					<!--<li>Example :-->
+            <!--<pre>.my-class {color: $neutral-light; background: $neutral-base}</pre>-->
+					<!--</li>-->
+				<!--</ul>-->
+			<!--</li>-->
+		<!--</ul>-->
+	<!--</div>-->
+</div>

@@ -3,16 +3,22 @@
 
 ## What this is
 
-A basic installation of the nodejs mustache Patternlab project. The [starterkit-mustache-bootstrap](https://github.com/pattern-lab/starterkit-mustache-bootstrap) starterkit was loaded into the initial installation and populated the /source folder.
+A basic installation of the nodejs mustache Patternlab project. 
 
 ## Installation
 
 Clone this repo into a local folder and follow instructions @[https://github.com/pattern-lab/edition-node-gulp](https://github.com/pattern-lab/edition-node-gulp).
 
-All development happens on the `dev` branch for now.
+Updating the node version you will us to v4 is essential. See https://github.com/pattern-lab/edition-node-gulp/wiki/Updating-to-Gulp-4.
+
+
+
+The `dev` branch is where all development takes place. A starter project using bootstrap 3 is archived on the `bs3` branch. 
 
 Essentially, cd into the directory and issue the following commands : 
+
 ```
+npm i
 gulp patternlab:build
 gulp patternlab:serve
 ```
@@ -23,11 +29,8 @@ And get to work.
 
 Remember that loading a new startkit wipes the /source directory. As it is our main playground, it is advisable to do this in a separate Patternlab instance.
 
-## Initial objectives
 
-* Load a copy of bootstrap SASS and get the SASS compilation jobs working from the gulpfile.
-* Reorganize the gulpfile into a /gulp directory, split subtasks.
-* Import the Montreal font and create a working atom and an icons directory [WIP Martin B].
+
 
 ----
 

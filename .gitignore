@@ -1,7 +1,15 @@
-# Local configuration files
+# Local  files
 # -------------------------------------------------
 # src/config/env.js
 # gulpfile.js
+
+source/css/
+source/css/*
+*.css
+*.map
+patternlab.css
+styles.css
+source/css/styles.css
 
 
 # Chef generated files
@@ -58,4 +66,7 @@ patternlab.json
 .idea/
 public
 
-
+# Package files
+# ------------------------------------------------------------------------------
+/dist
+/scss

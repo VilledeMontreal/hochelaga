@@ -1,0 +1,335 @@
+
+
+// Breadcrumb
+// Reference used : https://projects.invisionapp.com/d/main#/console/11533069/245898997/inspect
+.vdm-breadcrumb {
+  background-color: $vdm-white;
+  font-size: $vdm-font-size-smaller;
+  margin-bottom: 0;
+  background-color: transparent;
+  
+   
+  .breadcrumb-item {
+    &:before {
+      padding-right: $vdm-breadcrumb-item-padding;
+      padding-left: $vdm-breadcrumb-item-padding;
+      color: $vdm-brand; 
+    }
+
+    &.active {
+      color: $vdm-black;
+    }
+
+    a {
+      color: $vdm-brand;
+    }
+  }
+}
+
+
+
+// Pagination
+// Reference used : https://projects.invisionapp.com/d/main#/console/11533069/245898997/inspect
+.vdm-pagination {
+  border-radius: 0;
+
+  .page-item {
+     border: none;
+
+    &:first-child, 
+    &:last-child {
+      >.page-link {
+        border-bottom-left-radius: 0;
+        border-top-left-radius: 0;
+        border-bottom-right-radius: 0;
+        border-top-right-radius: 0;
+        color: $vdm-brand;
+        padding : $vdm-element-padding * 4  $vdm-element-padding * 7;
+        &:before {
+          font-size: 1em;
+        }
+      }
+    }
+
+    &:first-child {
+      .icon {
+        @include icon(before, chevron-left);
+      }
+    }
+    &:last-child {
+      .icon {
+        @include icon(before, chevron-right);
+      }
+    }
+
+    &.active {
+      .page-link {
+        background-color: $vdm-brand;
+        color: $vdm-white;
+        border: 1px solid lighten($vdm-grey, 9%);
+        padding : $vdm-element-padding * 5  $vdm-element-padding * 9;
+        &:hover, 
+        &:active {
+          background-color: $vdm-brand;
+          border: 1px solid lighten($vdm-grey, 9%);
+          text-decoration: none;
+          color: $vdm-white;
+        }
+        
+      }
+    }
+  } // page-item
+
+  .page-link {
+    color: $vdm-grey;
+    border: 1px solid lighten($vdm-grey, 9%);
+    background: $vdm-white;
+    padding : $vdm-element-padding * 5  $vdm-element-padding * 9;
+    font-size: floor($vdm-font-size-base * 1.3125);
+    line-height: floor($vdm-line-height-base * 1.3125);
+
+    &:hover, 
+    &:active {
+      color: $vdm-black;
+      border: 1px solid lighten($vdm-grey, 9%);
+      text-decoration: none;
+      color: $vdm-brand;
+      background-color: $vdm-grey-light;
+    }
+  } // page-link
+}
+
+// Collapsible list
+// @todo -- review this code with a real reference, this is imaginary
+.vdm-collapsible-list {
+  list-style-type : none;
+  margin: 0;
+  padding: 0;
+  &ul {
+      list-style-type : none;
+      margin: 0;
+      padding: 0;
+    li {
+      margin: 0;
+      padding: 0;
+    }
+  }
+  .vdm-collapsible-item {
+     border-bottom: $vdm-element-border-width/2 solid $vdm-white;
+      &:last-of-type {
+        border-bottom: none;
+      }
+  }
+
+}
+
+.vdm-collapsible-item {
+  padding: 0;
+  .object {
+    >a {
+      @include header(5);
+      background: $vdm-grey-light;
+      color: $vdm-black;
+      position: relative;
+      display: block;
+      line-height: 1.9rem;
+      padding: 1.4rem 5rem 1.4rem 4rem;
+      cursor: pointer;
+      
+
+      &[aria-expanded="true"] {
+        color: $vdm-brand;
+        &:after {
+          content: map-get($icons , circle-minus-invert); 
+        }
+      }
+
+      &:hover, 
+      &:active {
+        color: $vdm-brand;
+        text-decoration: none;
+
+        &:after {
+          color: $vdm-black;
+        }
+
+      }
+
+      &:after {
+        font-family: "vdm-fonticon";
+        font-size: 2.6rem;
+        line-height: 2.6rem;
+        width: 2.6rem;
+        height: 2.6rem;
+        content: map-get($icons , circle-plus);
+        position: absolute;
+        top: calc(50% - 1.3rem);
+        right: 1.4rem;
+        display: block;
+        
+        text-align: center;
+        pointer-events: none;
+        color: $vdm-brand;
+      }
+
+      &:before {
+        content : "";
+        position: absolute;
+        top: calc(50% - 0.6rem); // Perceptual -- should work out to 0.65
+        left: 1.3rem;
+        width: 1rem;
+        height: 1rem; 
+        border-radius: 1rem;
+        background: $vdm-brand;
+        margin-right: 1.5rem;
+      }
+
+      // Hide dots on x-small screens, rearrange paddings
+      @include media-breakpoint-down(xs) { 
+        &:before {
+          display: none;
+        }
+        padding-left: 1.1rem;
+        padding-right: 6rem;
+      }
+
+    }
+  }
+  .subject {
+    padding-left: 4.3rem;
+  }
+}
+
+
+// Dropdown component
+// @see https://projects.invisionapp.com/d/main#/console/11533069/248706245/preview
+.vdm-dropdown {
+  background: $vdm-white;
+  padding: 0.75rem 1.7rem 0.75rem 1.1rem;
+  @include drop-shadow;
+  display: inline-block;
+  font-size: $vdm-font-size-base * 2.1875;
+
+  .dropdown-trigger {
+    position: relative;
+    padding: 0.5rem 2em 0.5rem 0.5rem;
+    @include icon(after, chevron-down);
+    border-bottom: 2px solid $vdm-grey;
+    display: block;
+    width: 100%;
+    text-decoration: none;
+    color: $vdm-black;
+
+    &:after {
+        font-size: 1em;
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        left: calc(100% - 1em);
+        display: block;
+        width: 1em;
+        height: 1em;
+        line-height: 1em;
+    }
+
+    &[aria-expanded=true] {
+      @include icon(after, chevron-up);
+    }
+  
+   
+  }
+  .dropdown-elements {
+    list-style-type: none;
+    margin: 1.7rem 0 1rem 0;
+    padding: 0;
+  }
+  
+  // Controls bootstrap collapsing animation speed
+  .collapsing {
+    transition: height .1s ease;
+  }
+
+  .dropdown-element{
+    
+    >a {
+      font-size: $vdm-font-size-base * 2.1875;
+      color: $vdm-black;
+      display: block;
+      line-height: 4rem;
+      list-style-type: none;
+      padding-right: 2em;
+      position: relative;
+      
+     
+  
+      &:hover, &:active {
+        @include icon(after, arrow-right);
+        text-decoration: none;
+      }
+
+      &:after {
+        font-size: 1.5em;
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        left: calc(100% - 0.9em);
+        display: block;
+        width: 1.5em;
+        height: 1.5em;
+        line-height: 1.5em;
+        // color: $vdm-brand;
+      }
+
+
+    }
+  }
+  
+}
+
+
+
+
+// To delete after decision is made
+// Draft from https://projects.invisionapp.com/d/main#/console/11533069/248706245/preview
+// Uses the Bootstrap component dropdown
+.vdm-dropdown-bs {
+  background: $vdm-white;
+  padding: 0.75rem;
+  @include drop-shadow;
+  display: inline-block;
+  font-size: $vdm-font-size-base * 2.1875;
+
+  .dropdown-toggle {
+    background: transparent;
+    border-radius: 0;
+    padding: 0.5rem 2em 0.5rem 0.5rem;
+    border: 0;
+    @include icon(before, chevron-down);
+    border-bottom: 1px solid $vdm-grey;
+    display: block;
+    width: 100%;
+
+    &:before {
+        font-size: 1.3em;
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        left: calc(100% - 1.3em);
+        display: block;
+        width: 1.3em;
+        height: 1.3em;
+        line-height: 1.3em;
+    }
+    &:after {
+      display: none;
+  }
+
+   
+  }
+  .dropdown-menu {
+
+  }
+  .dropdown-item {
+    font-size: $vdm-font-size-base * 2.1875;
+  }
+}

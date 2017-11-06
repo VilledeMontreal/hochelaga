@@ -8,7 +8,14 @@ var gulp = require('gulp'),
   browserSync = require('browser-sync').create(),
   sass = require('gulp-sass'),
   argv = require('minimist')(process.argv.slice(2)),
-  chalk = require('chalk');
+  chalk = require('chalk'),
+  sourcemaps = require('gulp-sourcemaps'), 
+  postcss = require('gulp-postcss'),
+  autoprefixer = require('autoprefixer'),
+  // cssnano = require('cssnano'),
+  del = require('del'),
+  tildeImporter = require('node-sass-tilde-importer');
+
 
 /**
  * Normalize all paths to be plain, paths with no leading './',
@@ -33,26 +40,55 @@ function normalizePath() {
 /******************************************************
  * SASS compilation 
 ******************************************************/
+
+var sourcemapsDest= './';                     // Relative to ./source/css folder
 var saasPath = './source/styles/styles.scss';
 var sassAllPath = './source/styles/**/*.scss';
 var saasPatternalbPath = './source/styles/patternlab.scss';
 
 gulp.task('pl-sass', function(){
+  var plugins = [
+    // autoprefixer({browsers: ['last 1 version']})
+    autoprefixer(),
+    // cssnano()
+  ];
+
   return gulp.src(saasPath)
-    .pipe(sass({outputStyle: 'compressed'}).on('error', sass.logError))
+    .pipe(sourcemaps.init())
+    .pipe(sass({
+      importer: tildeImporter
+    }).on('error', sass.logError))
+    .pipe(postcss(plugins))
+    .pipe(sourcemaps.write(sourcemapsDest))
     .pipe(gulp.dest('./source/css'));
 });
 
 gulp.task('pl-sass-patternlab', function(){
   return gulp.src(saasPatternalbPath)
-    .pipe(sass({outputStyle: 'compressed'}).on('error', sass.logError))
+    .pipe(sass({importer: tildeImporter, outputStyle: 'compressed'}).on('error', sass.logError))
     .pipe(gulp.dest('./source/css'));
 });
 
 
 /******************************************************
+ * COPY TASKS - stream assets from node modules to source
+******************************************************/
+
+
+gulp.task('pl-copy-source-node-modules:js', function() {
+    return gulp.src([ 
+      'node_modules/jquery/dist/jquery.slim.min.js', 
+      'node_modules/popper.js/dist/umd/popper.min.js', 
+      'node_modules/bootstrap/dist/js/bootstrap.min.js'
+    ]).pipe(gulp.dest("source/js/vendor"));
+});
+
+
+
+/******************************************************
  * COPY TASKS - stream assets from source to destination
 ******************************************************/
+
 // JS copy
 gulp.task('pl-copy:js', function () {
   return gulp.src('**/*.js', {cwd: normalizePath(paths().source.js)} )
@@ -77,9 +113,17 @@ gulp.task('pl-copy:font', function () {
     .pipe(gulp.dest(normalizePath(paths().public.fonts)));
 });
 
-// CSS Copy
+// CSS copy
 gulp.task('pl-copy:css', function () {
   return gulp.src(normalizePath(paths().source.css) + '/*.css')
+    .pipe(gulp.dest(normalizePath(paths().public.css)))
+    .pipe(browserSync.stream());
+});
+
+
+// CSS Sourcemap copy 
+gulp.task('pl-copy:css-maps', function () {
+  return gulp.src(normalizePath(paths().source.css) + '/*.map')
     .pipe(gulp.dest(normalizePath(paths().public.css)))
     .pipe(browserSync.stream());
 });
@@ -135,14 +179,19 @@ function build(done) {
   return null;
 }
 
+gulp.task('pl-source-assets', gulp.series(
+  'pl-copy-source-node-modules:js'
+));
+
 gulp.task('pl-assets', gulp.series(
   'pl-copy:js',
   'pl-copy:img',
   'pl-copy:favicon',
   'pl-copy:font',
-  gulp.series('pl-sass', 'pl-copy:css', function(done){done();}),
+  gulp.series('pl-sass', 'pl-copy:css', 'pl-copy:css-maps', function(done){done();}),
   gulp.series('pl-sass-patternlab', 'pl-copy:css', function(done){done();}),
-  'pl-copy:css',
+  // 'pl-copy:css',
+  // 'pl-copy:css-maps',
   'pl-copy:styleguide',
   'pl-copy:styleguide-css'
 ));
@@ -171,12 +220,57 @@ gulp.task('patternlab:loadstarterkit', function (done) {
   done();
 });
 
-gulp.task('patternlab:build', gulp.series('pl-assets', build));
+
+gulp.task('patternlab:build', gulp.series('pl-source-assets', 'pl-assets', build));
 
 gulp.task('patternlab:installplugin', function (done) {
   patternlab.installplugin(argv.plugin);
   done();
 });
+
+/******************************************************
+ * PACKAGE GENERATED FILES TASKS
+******************************************************/
+gulp.task('patternlab:copyToDist:clean', function () {
+  return del([
+    'dist/**/*',
+    'scss/**/*'
+  ]);
+});
+
+gulp.task('patternlab:copyToDist:css', function () {
+  return gulp.src([
+    './source/css/styles.css',
+    './source/css/styles.css.map'
+  ]).pipe(gulp.dest('./dist/css'))
+});
+
+gulp.task('patternlab:copyToDist:js', function () {
+  return gulp.src([
+    './source/fonts/**/*'
+  ]).pipe(gulp.dest('./dist/fonts'));
+});
+
+gulp.task('patternlab:copyToDist:fonts', function () {
+  return gulp.src([
+    './source/js/**/*'
+  ]).pipe(gulp.dest('./dist/js'));
+});
+
+gulp.task('patternlab:copyToDist:scss', function () {
+  return gulp.src([
+    './source/styles/**/*.scss',
+    '!./source/styles/patternlab.scss'
+  ]).pipe(gulp.dest('./scss'));
+});
+
+gulp.task('patternlab:copyToDist', gulp.series('patternlab:copyToDist:clean',
+  'patternlab:copyToDist:css',
+  'patternlab:copyToDist:js',
+  'patternlab:copyToDist:fonts',
+  'patternlab:copyToDist:scss'
+));
+
 
 /******************************************************
  * SERVER AND WATCH TASKS
@@ -260,7 +354,10 @@ function watch() {
 gulp.task('patternlab:connect', gulp.series(function (done) {
   browserSync.init({
     server: {
-      baseDir: normalizePath(paths().public.root)
+      baseDir: normalizePath(paths().public.root),
+      routes: {
+        "/boite-outils": normalizePath(paths().public.root)
+      }
     },
     snippetOptions: {
       // Ignore all HTML files within the templates folder
@@ -295,3 +392,4 @@ gulp.task('patternlab:connect', gulp.series(function (done) {
 gulp.task('default', gulp.series('patternlab:build'));
 gulp.task('patternlab:watch', gulp.series('patternlab:build', watch));
 gulp.task('patternlab:serve', gulp.series('patternlab:build', 'patternlab:connect', watch));
+gulp.task('patternlab:package', gulp.series('patternlab:build', 'patternlab:copyToDist'));

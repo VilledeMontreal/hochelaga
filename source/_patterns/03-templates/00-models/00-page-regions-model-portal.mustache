@@ -1,0 +1,55 @@
+<!-- Skip to main navigation -->
+<a href="#main-content" class="sr-only sr-only-focusable d-print-none">Skip to main content</a>
+<!-- Begin side navigation menu -->
+{{> molecules-menu-open-side }}
+<!-- ********************** -->
+<!-- End side navigation menu -->
+<!-- *********************************************** -->
+<!-- Begin main page wrapper -->
+<div class="vdm-page {{ pageClasses }}">
+  <!-- Begin main page header -->
+  {{> organisms-header-portal }}
+  <!-- End main page header -->
+  <main class="main-content regions" id="main-content" aria-label="Main Content">
+
+    <!-- Begin breadcrumb -->
+    {{> organisms-breadcrumb-region }}
+    <!-- End breadcrumb -->
+
+    <!-- Begin mock regions-->
+
+    <!-- Begin content header region-->
+    {{> organisms-region-header-portal }}
+    <!-- End content header region-->
+
+    <!-- Begin before-content region-->
+    {{> organisms-region-before-portal }}
+    <!-- End before-content region-->
+
+    <!-- Begin fluid container full width region -->
+    <!-- {{> organisms-region-full-width-portal }} -->
+    <!-- End fluid container full width region -->
+
+
+    <!-- Begin main-content region-->
+    {{> organisms-region-main-portal }}
+    <!-- End main-content region-->
+   
+    <!-- Begin after-content region-->
+    {{> organisms-region-before-portal }}
+    <!-- End after-content region-->
+
+    <!-- End after-content region-->
+
+    <!-- Begin pre-footer region-->
+    {{> organisms-region-prefooter-portal }}
+    <!-- End pre-footer region-->
+    <!-- End mock regions-->
+  </main>
+  <!-- End post-content container - after columns -->
+  <!-- Begin footer -->
+  {{> organisms-footer-portal }}
+  <!-- End footer -->
+  <!-- *********************************************** -->
+</div>
+<!-- End main page wrapper -->
