@@ -4,7 +4,6 @@
 	"metaDescription" : "Meta description content goes here",
 	"heading" : "Page Header",
 	"subheading" : "Subtext For Header",
-	"text" : "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
 	"placeholder" : "Placeholder Text",
 	"url" : "#",
 	"cta" : "Call To Action",
@@ -24,7 +23,7 @@
 	"ariaMax" : 100,
 	"ariaNow" : 60,
 	"src" : "../../images/bootstrapthumb.jpg",
-	"alt" : "Bootstrap Thumbnail",
+	"alt" : "Image alt attribute",
 	"caption" : "Caption Text",
 	"panelClass" : "panel-default",
 	"panelHeading" : false,
@@ -33,8 +32,32 @@
 	"pageClasses" : "",
 	"headerContainerClasses" : "",
 	"mainContainerClasses" : "",
+	"text-h1" : "H1 header H1 header",
+	"text-h2" : "H2 header H2 header",
+	"text-h3" : "H3 header H3 header",
+	"text-h4" : "H4 header H4 header H4 header",
+	"text-h5" : "H5 header H5 header H5 header",
+	"text-paragraph" : "Mustache irony plaid edison bulb photo booth. Paleo ugh blog truffaut kinfolk XOXO tousled cliche chia four dollar toast shoreditch deep v pok pok viral. Air plant ramps cloud bread, humblebrag kogi adaptogen sriracha vegan offal poutine letterpress skateboard truffaut.",
+	"text-teaser" : "Migas air plant drinking vinegar twee leggings blue bottle pop-up heirloom jean shorts locavore pug shoreditch lumbersexual tousled.",
+
+	"text" : {
+		"headings" : {
+			"h1" : "H1 header H1 header",
+			"h2" : "H2 header H2 header",
+			"h3" : "H3 header H3 header",
+			"h4" : "H4 header H4 header H4 header",
+			"h5" : "H5 header H5 header H5 header"
+		}
+	},
 	"formAttributes":  { 
-		"selectID" : "selectid",
+		"select":  { 
+			"id" : "selectid",
+			"defaultOptionLabel" : "Filter by"
+		},
+		"button":  { 
+			"labelDefault" : "Button",
+			"labelShowMore" : "Show more"
+		},
 		"input":  { 
 			"type-text": {
 				"id" : "inputtextfieldid",
@@ -42,6 +65,7 @@
 			}
 		}
 	 },
+	 
 	"htmlLang":  { 
 		"fr" : "fr",
 		"en" : "en"
