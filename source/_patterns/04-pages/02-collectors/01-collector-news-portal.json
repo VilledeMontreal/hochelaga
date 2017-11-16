@@ -9,12 +9,17 @@
     "inputTextFgClasses" : "has-icon ic-right",
     "inputTextHasIcon" : true,
     "inputTextIconClasses" : "ic-search",
-    "formAttributes":  { 
-		"input":  { 
-			"type-text": {
-				"id" : "searchfield",
-				"label" : "Adresse ou numéro de dossier"
-			}
-		}
+    "formAttributes":  {
+      "input":  {
+        "type-text": {
+          "id" : "searchfield",
+          "label" : "Recherche dans les titres"
+        }
+      },
+      "text" : {
+        "headings" : {
+          "h1" : "News"
+        }
+      }
 	 }
 }
