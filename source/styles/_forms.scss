@@ -498,9 +498,11 @@ label {
 }
 
 select {
-    max-width: 300px;
+    appearance: none;
+    -moz-appearance: none;
+    -webkit-appearance: none;
+    //max-width: 300px;
     &.form-control {
-
         &.vdm-select {
             border-radius: 0;
             box-shadow: none;
