@@ -3,34 +3,26 @@
 
 ## What this is
 
-A basic installation of the nodejs mustache Patternlab project. 
+A node js mustache patternlab installation customized for the Ville de Montreal web styleguide.
 
 ## Installation
 
 Clone this repo into a local folder and follow instructions @[https://github.com/pattern-lab/edition-node-gulp](https://github.com/pattern-lab/edition-node-gulp).
 
-Updating the node version you will us to v4 is essential. See https://github.com/pattern-lab/edition-node-gulp/wiki/Updating-to-Gulp-4.
+Updating the ulp version you will us to v4 is essential. See https://github.com/pattern-lab/edition-node-gulp/wiki/Updating-to-Gulp-4.
 
+The `dev` branch is where all development takes place. A starter project using bootstrap 3 is archived on the `bs3` branch.
 
-
-The `dev` branch is where all development takes place. A starter project using bootstrap 3 is archived on the `bs3` branch. 
-
-Essentially, cd into the directory and issue the following commands : 
+Essentially, cd into the directory and issue the following commands :
 
 ```
+nvm use
 npm i
 gulp patternlab:build
 gulp patternlab:serve
 ```
 
-And get to work.
-
-### Gotchas
-
-Remember that loading a new startkit wipes the /source directory. As it is our main playground, it is advisable to do this in a separate Patternlab instance.
-
-
-
+And get to work ;-)
 
 ----
 
