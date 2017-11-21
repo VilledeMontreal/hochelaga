@@ -1,4 +1,18 @@
 {
+	"dummy":  {
+		"dummy-atom":  {
+			"classes" : "dummy-atom-base-classes",
+			"content" : "dummy-atom-base-content"
+		},
+		"dummy-organism":  {
+			"classes" : "dummy-organism-base-classes",
+			"content" : "dummy-organism-base-content"
+		},
+		"dummy-template":  {
+			"classes" : "dummy-template-base-classes",
+			"content" : "dummy-template-base-content"
+		}
+	},
 	"title" : "Ville de Montréal - Toolbox",
 	"metaAuthor" : "Ville de Montréal",
 	"metaDescription" : "Meta description content goes here",
@@ -32,23 +46,32 @@
 	"pageClasses" : "",
 	"headerContainerClasses" : "",
 	"mainContainerClasses" : "",
-	"text-h1" : "H1 header H1 header",
-	"text-h2" : "H2 header H2 header",
-	"text-h3" : "H3 header H3 header",
-	"text-h4" : "H4 header H4 header H4 header",
-	"text-h5" : "H5 header H5 header H5 header",
 	"text-paragraph" : "Mustache irony plaid edison bulb photo booth. Paleo ugh blog truffaut kinfolk XOXO tousled cliche chia four dollar toast shoreditch deep v pok pok viral. Air plant ramps cloud bread, humblebrag kogi adaptogen sriracha vegan offal poutine letterpress skateboard truffaut.",
 	"text-teaser" : "Migas air plant drinking vinegar twee leggings blue bottle pop-up heirloom jean shorts locavore pug shoreditch lumbersexual tousled.",
-	"text" : {
+	"text-elements" : {
 		"headings" : {
-			"h1" : "H1 header H1 header - ",
-			"h2" : "H2 header H2 header - ",
-			"h3" : "H3 header H3 header - ",
-			"h4" : "H4 header H4 header H4 header - ",
-			"h5" : "H5 header H5 header H5 header - "
+			"h1" : {
+				"classes" : "vdm-title",
+				"content" : "H1 header H1 header"
+			},
+			"h2" : {
+				"classes" : "",
+				"content" : "H2 header H2 header"
+			},
+			"h3" : {
+				"classes" : "",
+				"content" : "H3 header H3 header"
+			},
+			"h4" : {
+				"classes" : "",
+				"content" : "H4 header H4 header"
+			},
+			"h5" : {
+				"classes" : "",
+				"content" : "H4 header H4 header"
+			}
 		}
 	},
-	"toto" : "tata",
 	"formAttributes":  {
 		"select":  {
 			"id" : "selectid",
