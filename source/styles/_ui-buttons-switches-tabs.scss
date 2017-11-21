@@ -5,10 +5,10 @@
 // -------------------------
 .vdm-btn {
     display: inline-block;
-    height: $vdm-btn-height;	
+    height: $vdm-btn-height;
     width: auto;
     padding: $vdm-btn-padding-y $vdm-btn-padding-x;
-    border-radius: $vdm-btn-height;	
+    border-radius: $vdm-btn-height;
     background-color: $vdm-brand;
     text-align: center;
     font-size: $vdm-font-size-base;
@@ -21,11 +21,11 @@
     cursor: pointer;
     // Reset unusual Firefox-on-Android default style; see https://github.com/necolas/normalize.css/issues/214
     white-space: nowrap;
-    background-image: none; 
+    background-image: none;
     &:last-of-type {
         margin-right: 0;
     }
-    
+
     &:active,
     &:hover {
         @include drop-shadow();
@@ -37,14 +37,14 @@
     &.vdm-btn-sm {
         height: $vdm-btn-small-height;
         font-size: $vdm-font-size-smaller;
-        border-radius: $vdm-btn-small-height;	
+        border-radius: $vdm-btn-small-height;
     }
 
     &.vdm-btn-wide {
         width: 100%;
     }
 
-    &[disabled="disabled"] {
+    &:disabled {
         color: $vdm-form-disabled-text-color;
         border: $vdm-form-border;
         background-color: $vdm-form-disabled-bg-color;
@@ -54,7 +54,20 @@
             color: $vdm-form-disabled-text-color;
             background-color: $vdm-form-disabled-bg-color;
         }
-        
+
+    }
+
+    &:disabled {
+        color: $vdm-form-disabled-text-color;
+        border: $vdm-form-border;
+        background-color: $vdm-form-disabled-bg-color;
+        &:active,
+        &:hover {
+            box-shadow: unset;
+            color: $vdm-form-disabled-text-color;
+            background-color: $vdm-form-disabled-bg-color;
+        }
+
     }
 
     &.vdm-btn-secondary {
@@ -62,11 +75,11 @@
         border: $vdm-form-alt-border;
         background-color: $vdm-form-alt-bg-color;
         padding: ( $vdm-btn-padding-y - $vdm-btn-border-width ) ( $vdm-btn-padding-x - $vdm-btn-border-width );
-        &[disabled="disabled"] {
+        &:disabled {
             color: $vdm-form-disabled-text-color;
             border: $vdm-form-disabled-secondary-border;
             background-color: $vdm-form-alt-bg-color;
-            
+
             &:active,
             &:hover {
                 box-shadow: unset;
@@ -74,16 +87,16 @@
                 background-color: $vdm-form-alt-bg-color;
                 border: $vdm-form-disabled-secondary-border;
                 padding: ( $vdm-btn-padding-y - $vdm-btn-border-width ) ( $vdm-btn-padding-x - $vdm-btn-border-width );
-                
+
             }
         }
-        
+
         &:active,
         &:hover {
              @include drop-shadow(
-                3px, 
-                5px, 
-                11px, 
+                3px,
+                5px,
+                11px,
                 2px,
                 0,
                 0,
@@ -115,7 +128,7 @@ a {
     &.vdm-toggle {
         position: relative;
         input {
-            &[type="checkbox"] {  
+            &[type="checkbox"] {
                 position: absolute;
                 left: -10000px;
                 visibility: hidden;
@@ -164,7 +177,7 @@ a {
                     & + label {
                         // Inside button
                         &:after {
-                           background-color: $vdm-white; 
+                           background-color: $vdm-white;
                            margin-left: $vdm-switch-width-inside + $vdm-switch-padding;
                         }
 
@@ -173,17 +186,17 @@ a {
                             background-color: $vdm-form-bg-color;
                             border: 0;
                         }
-                        
+
                     }
 
                 }   //  Checked
 
-                &[disabled="disabled"] {
+                &:disabled {
                     & + label {
 
                         // Inside button
                         &:after {
-                           background-color: $vdm-white; 
+                           background-color: $vdm-white;
                            margin-left: 0;
                         }
 
@@ -192,11 +205,11 @@ a {
                             background-color: $vdm-form-disabled-bg-color;
                             border: 0;
                         }
-                        
+
                     }
                 }   //  Disabled
 
-                &[disabled="disabled"] {
+                &:disabled {
                     &[checked="checked"] {
                         & + label {
                             // Inside button
@@ -208,7 +221,7 @@ a {
                             &:before {
                                 background-color: $vdm-form-disabled-bg-color;
                             }
-                            
+
                         }
 
                     }

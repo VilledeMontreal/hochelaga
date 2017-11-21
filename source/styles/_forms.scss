@@ -96,19 +96,19 @@ label {
                 }
             }
 
-            &[disabled="disabled"] {
+            &:disabled {
 
             }
 
             &[checked="checked"] {
-                &[disabled="disabled"] {
+                &:disabled {
 
                 }
             }
         }
     }
 
-    
+
 }
 
 .form-check {
@@ -117,11 +117,11 @@ label {
             // @extend .custom-control;
             // @extend .custom-checkbox;
             @include pseudo-form-element();
-            
+
         }
         input[type="checkbox"] {
             @extend .custom-control-input;
-            
+
             &+label {
                 &:after {
                     content: none;
@@ -155,7 +155,7 @@ label {
         }
         input[type="radio"] {
             @extend .custom-control-input;
-            
+
             &+label {
                 &:after {
                     content: none;
@@ -222,16 +222,15 @@ label {
             // The selected, circular input
             &[checked="checked"] {
                 &:after {
-
                     background: $vdm-brand;
                 }
             }
-            &[disabled="disabled"] {
+            &:disabled {
 
             }
 
             &[checked="checked"] {
-                &[disabled="disabled"] {
+                &:disabled {
 
                 }
             }
@@ -274,7 +273,7 @@ label {
     &.vdm-form-group {
         position: relative;
         margin-top: 3rem;
-        
+
         &.compact {
             margin-top: 2rem; // The smallest possible value to accomodate the label
         }
@@ -347,14 +346,14 @@ label {
                 padding-right: 2em;
                 position: relative;
             }
-            
+
             &:after {
                 font-size: 2rem;
                 width: 2rem;
                 height: 2rem;
                 position: absolute;
                 left: calc(100% - 2.3rem);
-                top: -0.3rem; 
+                top: -0.3rem;
             }
 
             &.has-error {
@@ -369,12 +368,12 @@ label {
                         border: 1px solid $vdm-error-color;
                     }
                 }
-    
+
                 .help-block {
                     color: $vdm-error-color;
                     margin-left: 0;
                 }
-                
+
             }
             &.has-success {
                 @include icon(after, checkbox-checked-trans);
@@ -442,7 +441,7 @@ label {
     // margin-top: 26px;
     margin-top: 3em;
 
-    &:before, 
+    &:before,
     &:after {
         background: $vdm-white;
         font-size: 1.9rem;
