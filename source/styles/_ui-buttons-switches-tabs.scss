@@ -191,6 +191,24 @@ a {
 
                 }   //  Checked
 
+                &:checked {
+                    & + label {
+                        // Inside button
+                        &:after {
+                           background-color: $vdm-white;
+                           margin-left: $vdm-switch-width-inside + $vdm-switch-padding;
+                        }
+
+                        // Outside pill
+                        &:before {
+                            background-color: $vdm-form-bg-color;
+                            border: 0;
+                        }
+
+                    }
+
+                }   //  Checked
+
                 &:disabled {
                     & + label {
 
@@ -210,7 +228,23 @@ a {
                 }   //  Disabled
 
                 &:disabled {
-                    &[checked="checked"] {
+                    &:checked  {
+                        & + label {
+                            // Inside button
+                            &:after {
+                                margin-left: $vdm-switch-width-inside + $vdm-switch-padding;
+                            }
+
+                            // Outside pill
+                            &:before {
+                                background-color: $vdm-form-disabled-bg-color;
+                            }
+
+                        }
+
+                    }
+
+                    &:checked {
                         & + label {
                             // Inside button
                             &:after {

@@ -87,7 +87,7 @@ label {
             }
 
             // The tranformed rectangle, titled 45 degrees with 2 out of 4 borders
-            &[checked="checked"] {
+            &:checked {
                 &:after {
                     border: 1px solid $vdm-brand;
                     border-top-style: none;
@@ -100,7 +100,7 @@ label {
 
             }
 
-            &[checked="checked"] {
+            &:checked  {
                 &:disabled {
 
                 }
@@ -129,11 +129,11 @@ label {
             }
 
             &:checked {
-            &+label {
-                &:after {
-                    content: map-get($icons , checkbox-checked-trans);
+                &+label {
+                    &:after {
+                        content: map-get($icons , checkbox-checked-trans);
+                    }
                 }
-            }
             }
 
             &:focus {
@@ -220,7 +220,7 @@ label {
             }
 
             // The selected, circular input
-            &[checked="checked"] {
+            &:checked {
                 &:after {
                     background: $vdm-brand;
                 }
@@ -229,7 +229,7 @@ label {
 
             }
 
-            &[checked="checked"] {
+            &:checked  {
                 &:disabled {
 
                 }

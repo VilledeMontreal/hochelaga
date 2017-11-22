@@ -1,5 +1,5 @@
 ---
-title: Select
+title: Selects - Variants
 ---
 
 @todo :
