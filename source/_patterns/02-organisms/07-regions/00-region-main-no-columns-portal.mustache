@@ -1,0 +1,38 @@
+<div class="region main-region {{ regionMainClasses }}">
+    <div class="region-container {{ regionMainContainerClasses }}">
+        <div class="region-row">
+            {{# fullTopSection }}
+                {{> organisms-section-top-portal }}
+            {{/ fullTopSection }}
+            <article class="main-content {{ regionMainContentClasses }}">
+
+                <!-- Begin collector page variants -->
+                {{# collectorServicesContent }}
+                    {{> organisms-service-cards }}
+                {{/ collectorServicesContent }}
+
+
+                {{# collectorTransactionsContent }}
+                    {{> organisms-transaction-filters }}
+                    {{> organisms-transaction-teasers-requests }}
+                {{/ collectorTransactionsContent }}
+
+                {{# collectorNewsContent }}
+                    {{> organisms-transaction-filters }}
+                    {{> organisms-news-teasers }}
+                {{/ collectorNewsContent }}
+
+                <!-- Begin collector page variants -->
+                
+            </article>
+
+            {{# fullBottomSection }}
+                {{> organisms-section-bottom-portal }}
+            {{/ fullBottomSection }}
+
+            {{# hasPagination }}
+                {{> molecules-pagination }}
+            {{/ hasPagination }}
+        </div>
+    </div>
+</div>

@@ -1,0 +1,94 @@
+{
+    "root": "./public",
+    "deployment": {
+      "local": {
+        "path": "public"
+      },
+      "remote": {
+        "host": "localhost"
+      },
+      "rsync": {
+        "options": "-avzh --delete -e ssh"
+      }
+    },
+    "assets": {
+      "base": "source/",
+      "dest": "public/",
+      "distribution": "dist/"
+    },
+    "versioning": {
+      "files": [
+        "./package.json",
+        "./bower.json"
+      ]
+    },
+    "nodemodulescripts": {
+      "base"  : "node_modules/",
+      "files" : [
+        "node_modules/jquery/dist/jquery.slim.min.js", 
+        "node_modules/popper.js/dist/umd/popper.min.js", 
+        "node_modules/bootstrap/dist/js/bootstrap.min.js"
+      ],
+      "dest"  : "source/js/vendor/",
+      "distribution"  : "dist/js/vendor/"
+    },
+    "scripts": {
+      "base"  : "source/js/",
+      "files" : [
+        "source/js/**/*.js"
+      ],
+      "dest"  : "public/js/",
+      "distribution"  : "dist/js/"
+    },
+    "sourcemaps": {
+        "base" : "source/css/",
+        "files": [
+          "source/css/**/**.map"
+        ],
+        "dest" : "./"
+    },
+    "scss": {
+      "base" : "source/css/",
+      "files": [
+        "source/css/**/**.scss"
+      ],
+      "dest" : "public/css/",
+      "distribution"  : "dist/css/"
+    },
+    "fonts": {
+      "base" : "source/fonts/",
+      "files": [
+        "source/fonts/**/*"
+      ],
+      "dest" : "public/fonts/",
+      "distribution"  : "dist/fonts/"
+    },
+    "images": {
+      "base" : "source/images/",
+      "files": [
+        "source/images/**/*"
+      ],
+      "dest" : "public/images/"
+    },
+    "imagesdist": {
+      "base" : "source/images/dist",
+      "files": [
+        "source/images/dist/**/*"
+      ],
+      "dest" : "dist/images/dist"
+    },
+    "patternlab": {
+      "styleguide": {
+        "files": [
+          "core/styleguide/**"
+        ],
+        "dest": "public/styleguide/"
+      },
+      "files": [
+        "source/_patterns/**/*.mustache",
+        "source/_patterns/**/*.json",
+        "source/_data/*.json",
+        "source/_annotations/*.js"
+      ]
+    }
+  }

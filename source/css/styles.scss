@@ -1,0 +1,31 @@
+// @file styles.scss
+
+// This is the summit of the pyramid && the only compiled stylesheet
+
+// Import bootstrap imports file
+@import "scss/bootstrap-imports.scss";
+
+// import bootstrap variables file
+@import "scss/bootstrap-variables.scss";
+
+// Import VDM variables file
+@import "scss/variables.scss";
+
+// Import VDM styles files
+@import "scss/breakpoints.scss";
+@import "scss/mixins.scss";
+@import "scss/header.scss";
+@import "scss/footer.scss";
+@import "scss/layout.scss";
+@import "scss/nav.scss";
+@import "scss/menus.scss";
+@import "scss/sidebars.scss";
+@import "scss/type.scss";
+@import "scss/icons.scss";
+@import "scss/forms.scss";
+@import "scss/media.scss";
+@import "scss/color-schemes.scss";
+@import "scss/ui-nav-blocks.scss";
+@import "scss/ui-buttons-switches-tabs.scss";
+@import "scss/collectors.scss";
+

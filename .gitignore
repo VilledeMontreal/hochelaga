@@ -1,0 +1,70 @@
+
+# Patternlab directories
+# -------------------------------
+# core/*
+public/*
+export/*
+patternlab.json
+.sass-cache/*
+/sass-cache
+.idea/
+
+# Exlusions by file type
+# -------------------------------
+*.css
+*.map
+
+
+# Installables, PHP & node
+# -------------------------------
+vendor/*
+node_modules/*
+*.log
+composer.lock
+
+
+# Packaged files
+# ------------------------------------------------------------------------------
+/dist
+
+# OS generated files
+# -------------------------------
+*~
+.directory
+.DS_Store*
+.project
+.settings
+.svn
+ehthumbs.db
+Icon?
+Thumbs.db
+
+# IDE generated files
+# ------------------------------------------------------------------------------
+*.bbprojectd
+*.mode1v3
+*.mode2v3
+*.pbxuser
+*.perspective
+*.perspectivev3
+*.sublime-project
+*.sublime-workspace
+*.swp
+*.tmproj
+*~.nib
+.idea
+.komodotools
+.project
+.settings
+nbproject
+
+
+# Chef generated files
+# ------------------------------------------------------------------------------
+cookbooks
+tmp
+
+# Vagrant generated files
+# ------------------------------------------------------------------------------
+.vagrant
+

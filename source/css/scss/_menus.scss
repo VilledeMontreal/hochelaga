@@ -1,0 +1,190 @@
+// @file _menus.scss
+
+html {
+    &.sticky {
+        >body {
+            &.menu-open {
+                padding-top: 0;
+                overflow-x: hidden;
+                .vdm-header {
+                     position: static;
+                    .vdm-navbar {
+                        border: none;
+                        .menu-trigger {
+                            &:before {
+                                // content: "\E202";
+                                content: map-get($icons , multiply);
+                            }
+                        }
+                    } 
+                } 
+                
+                .side-menu {
+                    display: block;
+                    position: fixed;
+                    top: 0;
+                    bottom: 0;
+                    overflow-y: auto;
+                }
+                .vdm-page {
+                    left: 300px;
+                    transition: left .3s;
+                    position: absolute;
+                    // Reset left margin for all bootstrap containers
+                    >* {
+                        margin-left: 0;
+                        margin-right: 0;
+                    }
+                    .region {
+                        margin-left: 0;
+                        margin-right: 0;
+                    }
+                }
+            }
+        }
+    }
+}
+
+
+.side-menu {
+    width: $vdm-side-menu-width;
+    background: $vdm-grey-dark;
+    height: 100%;
+    min-height: 100vh;
+    overflow: hidden;
+    display: none;
+
+    .menu-links {
+
+        width: 100%;
+        margin: 0;
+        padding: 0;
+        list-style: none;
+        position: relative;
+        transition: all 0.5s ease;
+        padding-top: 50px;
+
+        .menu-item {
+            background: $vdm-black;
+            display: flex;
+            border-bottom: $vdm-side-menu-border-width solid  $vdm-grey-dark;
+            &:first-child {
+                border-top: $vdm-side-menu-border-width solid  $vdm-grey-dark;
+            }
+            &:last-child {
+                border: 0;
+            }
+
+            .menu-link {
+                color: $vdm-white;
+                display: block;
+                flex-grow: 1;
+                padding: $vdm-side-menu-link-v-padding $vdm-side-menu-link-h-padding;
+                &:hover, &:active {
+                    color: $vdm-brand;
+                    text-decoration: none;
+                }
+                .vdmi {
+                    font-size: $vdm-side-menu-icon-size;
+                    width: $vdm-side-menu-icon-size;
+                    height: $vdm-side-menu-icon-size;
+                    color: $vdm-brand;
+                    position: absolute;
+                }
+
+                // Level 2 link styles
+                &.back-link {
+                    background: $vdm-grey-dark;
+                    position: relative;
+                    padding-left: 4.5rem;
+                    .vdmi {
+                        left: 0.5rem;
+                        top: calc(50% - 1.5rem );
+                    }
+                }
+                &.parent-link {
+                    position: relative;
+                    &:before {
+                        content: '';
+                        width: 4px;
+                        height: 100%;
+                        position: absolute;
+                        left: 0;
+                        top: 0;
+                        background: $vdm-brand;
+                    }
+                }
+                &.child-link {
+                    padding-left: 3rem;
+                }
+
+            }
+
+            // This list item has a child submenu
+            &.has-children {
+                
+                // Direct child link of this pregnant list item
+                >.menu-link {
+                    position: relative;
+                    .vdmi {
+                        left: calc(100% - 4rem);
+                        top: calc(50% - 1.5rem );
+                    }
+
+                    @include icon(after, arrow-right);
+                    &:after {
+                        display: none;
+                        font-size: $vdm-side-menu-icon-size;
+                        width: $vdm-side-menu-icon-size;
+                        height: $vdm-side-menu-icon-size;
+                        color: $vdm-brand;
+                        position: absolute;
+                        left: calc(100% - 4rem);
+                        top: calc(50% - 2.1rem );
+                    }
+                }
+
+                
+                .menu-links {
+
+                    // Level 2 sub menu list
+                    // Initially hidden
+                    &.submenu {
+                        position: absolute;
+                        top: 0;
+                        left: 100%;
+                        width: 100%;
+                        height: 100vh;
+                        margin: 0;
+                        padding: 0;
+                        list-style: none;
+                        overflow-y: auto;
+                        opacity: 0;
+                        visibility: hidden;
+                        transition: all 0.5s ease;
+                        
+
+                        &.show {
+                           left: 0;
+                           opacity: 1;
+                           visibility: visible; 
+                        }
+
+                        // Nested list list item
+                        .menu-item {
+                           
+
+                            // Nested list link
+                            .menu-link {
+                                
+                            }
+                                
+                        }
+
+                    }
+                    
+                }        
+            }
+        }
+    }
+}

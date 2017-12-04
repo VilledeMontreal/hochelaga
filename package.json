@@ -1,0 +1,47 @@
+{
+  "name": "@villemontreal/boite-outils-web",
+  "description": "La boite à outils web",
+  "version": "0.0.1",
+  "dependencies": {
+    "bootstrap": "^4.0.0-beta.2",
+    "browser-sync": "^2.18.13",
+    "del": "^3.0.0",
+    "gulp": "^3.9.1",
+    "gulp-autoprefixer": "^4.0.0",
+    "gulp-bump": "^2.8.0",
+    "gulp-clean": "^0.3.2",
+    "gulp-concat": "^2.6.1",
+    "gulp-cssmin": "^0.2.0",
+    "gulp-filter": "^5.0.1",
+    "gulp-git": "^2.4.2",
+    "gulp-if": "^2.0.2",
+    "gulp-imagemin": "^4.0.0",
+    "gulp-postcss": "^7.0.0",
+    "gulp-rename": "^1.2.2",
+    "gulp-sass": "^3.1.0",
+    "gulp-shell": "^0.6.3",
+    "gulp-sourcemaps": "^2.6.1",
+    "gulp-tag-version": "^1.3.0",
+    "gulp-uglify": "^3.0.0",
+    "gulp-watch": "^4.3.11",
+    "node-sass-tilde-importer": "1.0.0",
+    "popper.js": "^1.12.9"
+  },
+  "publishConfig": {
+    "registry": "https://nexus.interne.montreal.ca/repository/npm-vdmtl"
+  },
+  "bugs": "https://bitbucket.org/villemontreal/boite-outils-web",
+  "author": "Ville de Montréal",
+  "scripts": {
+    "start": "gulp default",
+    "build": "gulp serve",
+    "package": "gulp distribute",
+    "serve": "gulp deploy",
+    "gulp": "gulp release"
+  },
+  "license": "MIT",
+  "engines": {
+    "node": ">=7.5.0"
+  },
+  "devDependencies": {}
+}
