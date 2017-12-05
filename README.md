@@ -1,4 +1,6 @@
 
+# Boîte à outils web - Ville de Montréal
+
 ## Requirements
 
 * PHP 5.4 + and a global composer installation. 
@@ -8,6 +10,7 @@
 
 * Clone this repo locally
 * Run `composer install`
+* Refuse to load the default mustache starterkit when asked -- (N).
 * Run `nvm use` if you use nvm and make sure v7.5.0 is the active version.
 * Run `npm i`
 * Run `gulp serve`
@@ -22,7 +25,8 @@ The gulp tasks used in this project were largely inspired by the methods propose
 * [View git repo](https://github.com/neoskop/patternlab-php/)
 
 
----------
+---------  
+# Patternlab php-mustache documentation
 
 ## Standard Patternlab PHP Mustache documentation starts below
 

@@ -35,7 +35,7 @@ var distribution;
 gulp.task('clean:before', function () {
     return gulp.src( config.assets.dest )
       .pipe(clean({
-        force: true
+          force: true
       }))
 });
 
