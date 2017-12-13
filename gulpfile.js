@@ -1,4 +1,4 @@
-// Source of this recipe : 
+// Source of this recipe :
 // https://webdesign.tutsplus.com/tutorials/combining-pattern-lab-with-gulp-for-improved-workflow--cms-22187
 
 // PLEASE SEE ALSO
@@ -7,7 +7,7 @@
 var gulp            = require('gulp'),
     autoprefixer    = require('gulp-autoprefixer'),
     bump            = require('gulp-bump'),
-    clean           = require('gulp-clean'), 
+    clean           = require('gulp-clean'),
     concat          = require('gulp-concat'),
     browserSync     = require('browser-sync'),
     cssmin          = require('gulp-cssmin'),
@@ -20,7 +20,7 @@ var gulp            = require('gulp'),
     rename          = require('gulp-rename'),
     sass            = require('gulp-sass'),
     shell           = require('gulp-shell'),
-    sourcemaps      = require('gulp-sourcemaps'), 
+    sourcemaps      = require('gulp-sourcemaps'),
     tagversion      = require('gulp-tag-version'),
     tildeImporter   = require('node-sass-tilde-importer'),
     uglify          = require('gulp-uglify'),
@@ -170,11 +170,11 @@ gulp.task('sass', function () {
 
 
 gulp.task('sass-dist', function () {
-  
+
       var processors = [
           autoprefixer
       ];
-  
+
       return gulp.src(config.scss.files)
         .pipe(sourcemaps.init())
         .pipe(sass( { importer: tildeImporter } ).on('error', sass.logError))
@@ -210,7 +210,7 @@ gulp.task('styleguide', function() {
       .pipe(gulp.dest(config.patternlab.styleguide.dest));
 });
 
-   
+
   // task: BrowserSync
   // Description: Run BrowserSync server with disabled ghost mode
   gulp.task('browsersync', function() {
@@ -222,46 +222,46 @@ gulp.task('styleguide', function() {
       open: "external"
     });
   });
-   
+
   // Task: Watch files
   gulp.task('watch', function () {
-   
+
     // Watch Pattern Lab files
     gulp.watch(
       config.patternlab.files,
       ['patternlab']
     );
-   
+
     // Watch scripts
     gulp.watch(
       config.scripts.files,
       ['scripts']
     );
-   
+
     // Watch images
     gulp.watch(
       config.images.files,
       ['images']
     );
-   
+
     // Watch Sass
     gulp.watch(
       config.scss.files,
       ['sass']
     );
-   
+
     // Watch fonts
     gulp.watch(
       config.fonts.files,
       ['fonts']
     );
   });
-   
+
   // Task: Default
   // Description: Build all stuff of the project once
   gulp.task('default', ['clean:before'], function () {
     production = false;
-   
+
     gulp.start(
       'patternlab',
       'styleguide',
@@ -272,12 +272,12 @@ gulp.task('styleguide', function() {
       'scripts'
     );
   });
-   
+
   // Task: Start your production-process
   // Description: Typ 'gulp' in the terminal
   gulp.task('serve', function () {
     production = false;
-   
+
     gulp.start(
       'browsersync',
       'default',
@@ -285,11 +285,11 @@ gulp.task('styleguide', function() {
     );
 });
 
-  // Task: Default
+  // Task: Distribute
   // Description: Build all stuff of the project once
   gulp.task('distribute', ['clean-dist:before'], function () {
     production = true;
-   
+
     gulp.start(
       'nodemodulescripts-dist',
       'scripts-dist',
@@ -299,12 +299,12 @@ gulp.task('styleguide', function() {
       'scss-dist'
     );
   });
-   
+
   // Task: Start your production-process
   // Description: Typ 'gulp' in the terminal
   gulp.task('serve', function () {
     production = false;
-   
+
     gulp.start(
       'browsersync',
       'default',
@@ -312,7 +312,7 @@ gulp.task('styleguide', function() {
     );
 });
 
- 
+
 // Task: Deploy static content
 // Description: Deploy static content using rsync shell command
 gulp.task('deploy', function () {
@@ -321,25 +321,25 @@ gulp.task('deploy', function () {
         'rsync '+ config.deployment.rsync.options +' '+ config.deployment.local.path +'/ '+ config.deployment.remote.host
       ]))
   });
-   
+
   // Function: Releasing (Bump & Tagging)
   // Description: Bump npm versions, create Git tag and push to origin
 gulp.task('release', function () {
   production = true;
-  
+
   return gulp.src(config.versioning.files)
     .pipe(bump({
       type: gulp.env.type || 'patch'
     }))
     .pipe(gulp.dest('./'))
     .pipe(git.commit('Release a ' + gulp.env.type + '-update'))
-  
+
     // read only one file to get version number
     .pipe(filter('package.json'))
-  
+
     // Tag it
     .pipe(tagversion())
-  
+
     // Publish files and tags to endpoint
     .pipe(shell([
       'git push origin develop',
