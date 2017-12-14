@@ -1,8 +1,23 @@
-# Usage
+# -- Usage tips and directives
+
+# Always launch on a a freshly clone repo, not installed
+
+# -- Build the image without cache (required)
 # docker build  --no-cache -t php-node:latest .
+
+# -- Enter the image using commande line to explore & debug
 # docker run -it php-node:latest bash
+
+# -- Serve the content on localhost:3000 from a detached volume, no edits possible  (docker run run of some kind required)
 # docker run -d -p 3000:3000 php-node:latest
+
+# -- Serve the content on localhost:3000 binding your local voluem for edits and dev work
+# docker run -d -p 3000:3000 --mount source=bao-docker,target=/usr/src/app php-node:latest #(with local workdir mounted)
+
+# -- Liste active containers, use 'docker kill CONTAINER_ID' to stop
 # docker container ls
+
+# - - - - - - - - - - - - - - - - - -
 
 FROM php:7.2-cli
 ENV NODE_VERSION 8.9.1
@@ -37,19 +52,6 @@ RUN mv composer.phar /usr/local/bin/composer
 # Create a node user ADD RUN groupadd --gid 1000 node \
 RUN groupadd --gid 1000 node \
   && useradd --uid 1000 --gid node --shell /bin/bash --create-home node
-
-## Install Node
-#RUN ARCH= && dpkgArch="$(dpkg --print-architecture)" \
-#  && case "${dpkgArch##*-}" in \
-#    amd64) ARCH='x64';; \
-##    ppc64el) ARCH='ppc64le';; \
-#    *) echo "unsupported architecture"; exit 1 ;; \
-#  esac \
-#  && curl -SLO "https://nodejs.org/dist/v$NODE_VERSION/node-v$NODE_VERSION-linux-$ARCH.tar.xz" \
-#  && grep " node-v$NODE_VERSION-linux-$ARCH.tar.xz\$" \
-#  && tar -xJf "node-v$NODE_VERSION-linux-$ARCH.tar.xz" -C /usr/local --strip-components=1 --no-same-owner \
-#  && rm "node-v$NODE_VERSION-linux-$ARCH.tar.xz" \
-#  && ln -s /usr/local/bin/node /usr/local/bin/nodejs
 
 RUN dpkg --print-architecture
 RUN curl -SLO $NODE_URL
