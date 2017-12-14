@@ -127,6 +127,10 @@ html {
         padding-right: 0;
       }
     }
+    &.content-header-dark {
+      background-color: $vdm-grey-dark;
+      color: $white;
+    }
   }
 
 
@@ -208,6 +212,10 @@ html {
     &.shaded-black {
       background: $vdm-neutral-light;
     }
+  }
+
+  &.has-nav-tabs {
+    padding-bottom: 0;
   }
 
 

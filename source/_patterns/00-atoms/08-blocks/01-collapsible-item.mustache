@@ -1,0 +1,8 @@
+{{# collapsibleItem }}
+    <div class="vdm-collapsible-item">
+        <h4 class="object">
+            <a role="tab" data-toggle="collapse" href="#vdmCollapseSubject" aria-expanded="false" aria-controls="vdmCollapseSubject" class="{{ has-icon-class }}">{{# collapsible-icon }}<i class="vdmi {{ collapsible-icon }}" aria-hidden="true"></i>{{/ collapsible-icon }}<span>{{ title }}</span></a>
+        </h4>
+        <div id="vdmCollapseSubject" class="collapse subject" role="tabpanel">{{ content }}</div>
+    </div>
+{{/ collapsibleItem }}

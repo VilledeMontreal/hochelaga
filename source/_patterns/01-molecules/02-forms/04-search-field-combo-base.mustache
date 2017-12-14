@@ -1,8 +1,8 @@
 <form>
   <div class="form-combo icon-combo color-scheme-light d-flex">
-    <h3 class="title">Combo block title</h3>
+    <h3 class="title">{{ combo-box-text }}</h3>
     <div class="input-wrapper stroked d-flex d-inline-flex">
-      <i class="vdmi ic-search" aria-hidden="true"></i>
+      <i class="vdmi {{ combo-box-icon }}" aria-hidden="true"></i>
       {{> atoms-input }}
     </div>
     {{> atoms-button }}

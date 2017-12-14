@@ -1,8 +1,21 @@
 <nav>
   <ul class="nav nav-tabs nav-fill vdm-tabs flex-column flex-sm-row" role="tablist">
-    <li class="nav-item flex-sm-fill text-sm-center" role="presentation">
-      <a href="#home" class="nav-link" role="tab" data-toggle="tab">Home</a>
-    </li>
+    {{# navTabsList }}
+      <li class="nav-item flex-sm-fill text-sm-center" role="presentation">
+        <a href="#home" class="nav-link" role="tab" data-toggle="tab">{{ title }}</a>
+      </li>
+    {{/ navTabsList }}
+    <!--{{# listItems.five }}
+      <li class="nav-item flex-sm-fill text-sm-center" role="presentation">
+        <a href="#home" class="nav-link" role="tab" data-toggle="tab">{{ title }}</a>
+      </li>
+    {{/ listItems.five }}
+    -->
+
+  </ul>
+</nav>
+    
+    <!--
     <li class="nav-item flex-sm-fill text-sm-center" role="presentation">
       <a href="#profile" class="nav-link" role="tab" data-toggle="tab">Profile</a>
     </li>
@@ -15,5 +28,4 @@
     <li class="nav-item flex-sm-fill text-sm-center" role="presentation">
       <a href="#tasks" class="nav-link" role="tab" data-toggle="tab">Tasks</a>
     </li>
-  </ul>
-</nav>
+    -->

@@ -1,0 +1,27 @@
+{{> atoms-link-skip-to-main-content }}
+{{> molecules-menu-open-side }}
+<div class="vdm-page {{ pageClasses }}">
+    {{> organisms-header-portal }}
+    {{> organisms-breadcrumb-region }}
+    <main class="main-content regions" id="main-content" aria-label="Main Content">
+        {{> organisms-region-header-simple-portal }}
+        {{> atoms-main-container-start }}
+            <article class="main-content {{ regionMainContentClasses }}">
+                {{# searchBox }}
+                    {{> molecules-search-field-combo-base }}
+                {{/ searchBox }}
+                {{> organisms-how-to-content }}
+            </article>
+            {{# colRight }}
+                {{> organisms-sidebar-right }}
+            {{/ colRight }}
+            {{# fullBottomSection }}
+                {{> organisms-section-bottom-portal }}
+            {{/ fullBottomSection }}
+        {{> atoms-main-container-end }}
+        
+    </main>
+    {{> organisms-footer-portal }}
+</div>
+
+

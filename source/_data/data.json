@@ -46,6 +46,9 @@
 	"pageClasses" : "",
 	"headerContainerClasses" : "",
 	"mainContainerClasses" : "",
+	"combo-box-text" : "Combo block title",
+	"combo-box-icon" : "ic-search",
+	"combo-box-placeholder" : "textfield label",
 	"text-paragraph" : "Mustache irony plaid edison bulb photo booth. Paleo ugh blog truffaut kinfolk XOXO tousled cliche chia four dollar toast shoreditch deep v pok pok viral. Air plant ramps cloud bread, humblebrag kogi adaptogen sriracha vegan offal poutine letterpress skateboard truffaut.",
 	"text-teaser" : "Migas air plant drinking vinegar twee leggings blue bottle pop-up heirloom jean shorts locavore pug shoreditch lumbersexual tousled.",
 	"text-elements" : {
@@ -132,6 +135,7 @@
 	"inputAddonBefore" : "Addon",
 	"inputAddonAfter" : false,
 	"buttonClass" :"btn-default",
+	"buttonText" : "Button",
 	"breadcrumbs" : [
 		{
 			"url" : "#",
@@ -333,5 +337,34 @@
       "label": "EN",
       "url": ""
     }
-  ]
+  ],
+  "navTabsList" : [
+	{ "title" : "Nav item #1" }
+ ],
+ "orderedList" : [
+	{ 
+		"title" : "List item #1",
+		"content" : "List item #1 content"
+	},
+	{
+		"title" : "List item #2",
+		"content" : "List item #2 content"
+	},
+	{
+		"title" : "List item #3",
+		"content" : "List item #3 content"
+	},
+	{
+		"title" : "List item #4",
+		"content" : "List item #4 content"
+	}
+ ],
+ "collapsibleItem" : [
+	{ 
+		"title" : "Collapsible item",
+		"content" : "Collapsible content",
+		"has-icon-class": "has-icon",
+		"collapsible-icon": "ic-enveloppe"
+	}
+ ]
 }
