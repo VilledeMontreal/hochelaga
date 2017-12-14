@@ -16,6 +16,18 @@
       "dest": "public/",
       "distribution": "dist/"
     },
+    "cleanable": {
+      "base"  : "public/",
+      "files" : [
+        "public/annotations/*", 
+        "public/css/*", 
+        "public/images/*", 
+        "public/fonts/*",
+        "public/js/*", 
+        "public/patterns/*", 
+        "public/images/*"
+      ]
+    },
     "versioning": {
       "files": [
         "./package.json",
