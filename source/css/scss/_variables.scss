@@ -117,6 +117,17 @@ $vdm-tabs-line-height: $vdm-font-size-base * 3.6;
 $vdm-tabs-h-padding: $vdm-font-size-base * 1.62;
 $vdm-tabs-v-padding: $vdm-font-size-base * 0.375;
 
+// Navs
+
+$nav-tabs-border-color:                       $vdm-white;
+$nav-tabs-border-width:                       0;
+$nav-tabs-border-radius:                      0;
+$nav-tabs-link-hover-border-color:            $vdm-sub-brand;
+$nav-tabs-link-active-color:                  $vdm-black;
+$nav-tabs-link-active-bg:                     $body-bg;
+$nav-tabs-link-active-border-color:           $vdm-sub-brand;
+
+
 // Pagination
 $vdm-breadcrumb-item-padding : 1.25rem;
 

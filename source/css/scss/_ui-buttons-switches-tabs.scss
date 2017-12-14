@@ -272,73 +272,67 @@ a {
 // nav.vdm-tabs > a.nav-item+nav-link
 // -------------------------
 .vdm-tabs {
-    border: 0;
 
-    .nav-item {
-        margin-bottom: $nav-tabs-border-width;
-        // "show" class on item element (li, nav)
-        &.show {
-            .nav-link {
-                @extend .nav-link.active;
+    &.nav-tabs {
+        border-bottom: none;
+
+        .nav-item {
+            margin-bottom: 0;
+            // "show" class on item element (li, nav)
+            &.show {
+                .nav-link {
+                    @extend .nav-link.active;
+                }
             }
-        }
 
-        &:last-of-type {
-            .nav-link {
-                margin: 0;
+            &:last-of-type {
+                .nav-link {
+                    margin: 0;
+                }
             }
-        }
-    }// Item
+        }// Item
 
-    .nav-link {
-
-        position: relative;
-        color: $vdm-black;
-        background: $vdm-grey-light;
-        border: 0;
-        padding: $vdm-tabs-v-padding $vdm-tabs-h-padding;
-        border-radius: 0;
-        margin-right: $vdm-tabs-spacing;
-        line-height: $vdm-tabs-line-height;
-
-        &:hover,
-        &:focus {
-            background: $vdm-white;
-            border: 0;
-            color: $vdm-black;
-        }
-
-
-        &.disabled {
-            color: $dropdown-link-disabled-color;
-            background-color: transparent;
-            border-color: transparent;
-        }
-
-        &.active {
-            &:before {
-                content: " ";
-                position: absolute;
-                display: block;
-                height: $vdm-tabs-border-width;
-                width: 100%;
-                background: $vdm-sub-brand;
-                top: 0;
-                left: 0;
-                z-index: 2;
-            }
-        }
-    }// Link
-
-    &.flex-column {
         .nav-link {
-            @include media-breakpoint-down(sm) {
-                margin-right: 0;
+            background: $vdm-grey-light;
+            border: none;
+            color: $vdm-black;
+            font-weight: $vdm-font-weight-bold;
+            line-height: $vdm-tabs-line-height;
+            margin-right: $vdm-tabs-spacing;
+            padding: $vdm-tabs-v-padding $vdm-tabs-h-padding $vdm-tabs-v-padding $vdm-tabs-h-padding;
+            position: relative;
+            @include border-top-radius(0);
+
+            &.active,
+            &:hover,
+            &:focus {
+                border: none;
+                color: $vdm-black;
+                background-color: $vdm-white;
+                border-top: $vdm-tabs-border-width solid $vdm-sub-brand;
+                padding-top: $vdm-tabs-v-padding - $vdm-tabs-border-width;
+            }
+
+            &.disabled {
+                color: $dropdown-link-disabled-color;
+                background-color: transparent;
+                border-color: transparent;
+            }
+
+            &:not(.active){
+                @include media-breakpoint-up(md) {
+                    box-shadow: 0px -10px 10px -10px rgba(0, 0, 0, 0.3) inset;
+                }
+            }
+
+        }// Link
+
+        &.flex-column {
+            .nav-link {
+                @include media-breakpoint-down(sm) {
+                    margin-right: 0;
+                }
             }
         }
     }
 }
-
-
-
-

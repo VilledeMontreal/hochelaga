@@ -8,6 +8,9 @@
                 {{> organisms-sidebar-left }}
             {{/ colLeft }}
             <article class="main-content {{ regionMainContentClasses }}">
+                {{# searchBox }}
+                    {{> molecules-search-field-combo-base }}
+                {{/ searchBox }}
                 {{> atoms-paragraph }}
                 {{> atoms-paragraph }}
                 {{> atoms-paragraph }}
