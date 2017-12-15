@@ -8,11 +8,11 @@
 # -- Enter the image using commande line to explore & debug
 # docker run -it php-node:latest bash
 
-# -- Serve the content on localhost:3000 from a detached volume, no edits possible  (docker run run of some kind required)
+# -- Serve the content on localhost:3000 from a detached volume, no edits possible  (docker run command of some kind required)
 # docker run -d -p 3000:3000 php-node:latest
 
 # -- Serve the content on localhost:3000 binding your local voluem for edits and dev work
-# docker run -d -p 3000:3000 --mount source=bao-docker,target=/usr/src/app php-node:latest #(with local workdir mounted)
+# docker run -d -p 3000:3000 -v $(pwd)/source:/usr/src/app/source  php-node:latest 
 
 # -- Liste active containers, use 'docker kill CONTAINER_ID' to stop
 # docker container ls

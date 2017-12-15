@@ -39,6 +39,14 @@ gulp.task('clean:before', function () {
       }))
 });
 
+
+gulp.task('cleanable:before', function () {
+  return gulp.src( config.cleanable.files )
+    .pipe(clean({
+        force: true
+    }))
+});
+
 // Description: Clear distribution folder
 gulp.task('clean-dist:before', function () {
   return gulp.src( config.assets.distribution )
@@ -219,7 +227,7 @@ gulp.task('styleguide', function() {
           baseDir: config.root
       },
       ghostMode: true,
-      open: "external"
+      open: "internal"
     });
   });
 
@@ -259,7 +267,7 @@ gulp.task('styleguide', function() {
 
   // Task: Default
   // Description: Build all stuff of the project once
-  gulp.task('default', ['clean:before'], function () {
+  gulp.task('default', ['cleanable:before'], function () {
     production = false;
 
     gulp.start(
