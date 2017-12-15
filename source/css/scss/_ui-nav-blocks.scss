@@ -31,7 +31,7 @@
     margin-bottom: 0;
     .vdm-teaser, .vdm-teaser-mixin {
         @include make-col-ready();
-        margin-bottom: $grid-gutter-width-base;
+        margin-bottom: $grid-gutter-width;
     }
     // Vertical grid types, equal heights
     &.grid-type-grid {
@@ -716,7 +716,7 @@
 
     .vdm-card {
         @include make-col-ready();
-        margin-bottom: $grid-gutter-width-base;
+        margin-bottom: $grid-gutter-width;
     }
 }
 
