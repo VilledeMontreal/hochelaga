@@ -39,7 +39,7 @@ gulp.task('clean:before', function () {
       }))
 });
 
-
+// Description: clears the public folder file by file, leaving p.l. files intact
 gulp.task('cleanable:before', function () {
   return gulp.src( config.cleanable.files )
     .pipe(clean({
