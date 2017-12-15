@@ -6,12 +6,11 @@
  * @see pattern-scaffolding.css in mustache demo starterkit for reference
  */
 
-// Import a custom bootstrap import file - duplicate but required
-@import "scss/bootstrap-imports.scss";
-// Import an override file for bootstrap variables - duplicate but required
-@import "scss/bootstrap-variables.scss";
-// Import our local project variables
-@import "scss/variables.scss";
+// Import variables and bootstrap framework - duplicate but required
+@import "scss/variables";
+
+// Bootstrap Framework.
+@import '~bootstrap/scss/bootstrap';
 
 .sg-main {
   padding:20px 20px;
@@ -296,7 +295,7 @@ $pl-size-box-wrapper-padding: 1rem;
           font-size: $vdm-font-size-small;
         }
         .ic-name {
-          color: $vdm-black;
+          color: $black;
         }
 
       }
@@ -363,10 +362,10 @@ $pl-size-box-wrapper-padding: 1rem;
     // Colors
 
     .pl-black {
-      background: $vdm-black;
+      background: $black;
     }
     .pl-white {
-      background: $vdm-white;
+      background: $white;
       border:solid 1px silver;
     }
     .pl-sarcelle {
@@ -383,11 +382,11 @@ $pl-size-box-wrapper-padding: 1rem;
     }
     .pl-brand {
         background: $vdm-brand;
-        color: $vdm-white;
+        color: $white;
     }
     .pl-sub-brand {
       background: $vdm-sub-brand;
-      color: $vdm-white;
+      color: $white;
     }
 
     // Columns
@@ -419,7 +418,7 @@ $pl-size-box-wrapper-padding: 1rem;
         width: 30px;
         height: 30px;
         background: $vdm-neutral-light;
-        color: $vdm-black;
+        color: $black;
         float: right;
         text-align: center;
         padding-top: 6px;
@@ -433,8 +432,8 @@ $pl-size-box-wrapper-padding: 1rem;
         }
       }
       &.pl-swatch-accessibility-invert {
-        background: $vdm-black;
-        color: $vdm-white;
+        background: $black;
+        color: $white;
         float: left;
       }
 
@@ -460,7 +459,7 @@ $pl-size-box-wrapper-padding: 1rem;
           width: 30px;
           height: 30px;
           background: $vdm-neutral-light;
-          color: $vdm-black;
+          color: $black;
           float: left;
           text-align: center;
           padding-top: 6px;
@@ -471,8 +470,8 @@ $pl-size-box-wrapper-padding: 1rem;
           }
         }
         &.pl-swatch-accessibility-invert {
-          background: $vdm-black;
-          color: $vdm-white;
+          background: $black;
+          color: $white;
         }
 
       }
@@ -483,11 +482,11 @@ $pl-size-box-wrapper-padding: 1rem;
   // Brand
   .pl-brand {
     background: $vdm-brand;
-    color: $vdm-white;
+    color: $white;
   }
   .pl-sub-brand {
     background: $vdm-sub-brand;
-    color: $vdm-white;
+    color: $white;
   }
 
   // Neutrals
@@ -505,25 +504,25 @@ $pl-size-box-wrapper-padding: 1rem;
   }
   .pl-neutral {
     background: $vdm-neutral-mid;
-    color: $vdm-white;
+    color: $white;
   }
   .pl-neutral-dark {
     background: $vdm-neutral-mid;
-    color: $vdm-white;
+    color: $white;
   }
   .pl-neutral-base {
-    background: $vdm-black;
-    color: $vdm-white;
+    background: $black;
+    color: $white;
   }
 
   // UI & Alerts
   .pl-ui {
     background: $vdm-brand;
-    color: $vdm-white;
+    color: $white;
   }
   // .pl-ui-medium {
   //   background: $vdm-brand-medium;
-  //   color: $vdm-white;
+  //   color: $white;
   // }
   // .pl-ui-light {
   //   background: $vdm-brand-light;
@@ -537,11 +536,11 @@ $pl-size-box-wrapper-padding: 1rem;
   // Alternate UI colors
   // .pl-ui-alt-danger{
   //   background:$vdm-brand-alt-danger;
-  //   color: $vdm-white;
+  //   color: $white;
   // }
   // .pl-ui-alt-warm-dark{
   //   background: $vdm-brand-alt-warm-dark;
-  //   color: $vdm-white;
+  //   color: $white;
   // }
 }// .pl-atom-color
 
@@ -567,7 +566,7 @@ $pl-size-box-wrapper-padding: 1rem;
     .region-row {
       .region-content {
         border: 1px solid $vdm-grey-light;
-        background: $vdm-white;
+        background: $white;
         padding-top: 3rem;
         padding-bottom: 3rem;
         margin-top: 0.5rem;
@@ -576,7 +575,7 @@ $pl-size-box-wrapper-padding: 1rem;
 
     // Shade alterning regions so as to emphasise their limits
     &:nth-child(even) {
-      background: $vdm-white;
+      background-color: $white;
       border: 1px solid lighten($vdm-grey, 35%);
       .region-row {
         .region-content {
@@ -629,7 +628,7 @@ $pl-size-box-wrapper-padding: 1rem;
             @include make-col(3);
           }
 
-          margin-bottom: $grid-gutter-width-base;
+          margin-bottom: $grid-gutter-width;
         
         }
     }
@@ -653,7 +652,7 @@ $pl-size-box-wrapper-padding: 1rem;
             @include make-col(6);
           }
 
-          margin-bottom: $grid-gutter-width-base;
+          margin-bottom: $grid-gutter-width;
         
         }
     }

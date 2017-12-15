@@ -165,7 +165,7 @@ i {
   &.fa-circle {
     &:before {
       content: "\f111";
-      color: $vdm-white;
+      color: $white;
     }
   }
 }
@@ -243,11 +243,11 @@ ul {
     line-height: $vdm-icon-social-media-scale;
     display: inline-block;
 
-    color: $vdm-black;
+    color: $black;
     text-decoration: none;
     &:hover, 
     &:active {
-      color: $vdm-black;
+      color: $black;
       text-decoration: underline;
     }
   
@@ -287,13 +287,13 @@ a {
     //line-height: $vdm-icon-social-media-scale;
     display: inline-block;
     font-size: 1rem;
-    color: $vdm-black;
+    color: $black;
     line-height: $social-icon-font-size;
     margin-left: $social-icon-font-size * 1.15;
     text-decoration: none;
     &:hover, 
     &:active {
-      color: $vdm-black;
+      color: $black;
       text-decoration: underline;
       cursor: pointer;
       &:before {
@@ -312,7 +312,7 @@ a {
     }
 
     &.inverted {
-      color: $vdm-white;
+      color: $white;
     }
     &:before {
       display: inline-block;

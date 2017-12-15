@@ -84,7 +84,7 @@ html {
       
       &:hover, 
       &:active {
-        color: $vdm-black;
+        color: $black;
         text-decoration: underline;
       }
       // Inline links with icons
@@ -143,15 +143,15 @@ html {
             background: transparent;
             &:hover, 
             &:active {
-              background: transparent;
+              background-color: transparent;
               text-decoration: none;
             }
           }
           
         }
         &.inverse {
-          background: $vdm-black;
-          color: $vdm-white;
+          background: $black;
+          color: $white;
           &:hover, 
           &:active {
             color: $vdm-brand;
@@ -221,7 +221,7 @@ html {
             width: 0.35em;
             height: 0.35em;
             @extend .rounded-circle;
-            background: $vdm-black;
+            background: $black;
             position: absolute;
             top: 0.5em;
             left: 0;
@@ -342,7 +342,7 @@ html {
           }
         }
         cite {
-          color: $vdm-black;
+          color: $black;
           font-style: normal;
         }
       }
@@ -355,7 +355,7 @@ html {
       border-style: none;
       border-width: 0; 
       height: $vdm-font-size-base / 3;
-      background: $vdm-black;
+      background: $black;
       border-radius: $vdm-font-size-base / 4;
       &.mock-title {
         width: 3rem;
@@ -401,8 +401,8 @@ html {
     border-radius: $vdm-element-border-radius;
     padding: $vdm-btn-padding-y $vdm-btn-padding-x * 0.75;
     &.selected {
-      border: $vdm-element-border-width/2 solid $vdm-black;
-      color: $vdm-black;
+      border: $vdm-element-border-width/2 solid $black;
+      color: $black;
     }
  }
 
@@ -425,7 +425,7 @@ html {
             bottom: -0.075em;
             border-radius: $vdm-element-border-radius;
             height: 4px;
-            background: $vdm-black;
+            background: $black;
           }
         }
     }

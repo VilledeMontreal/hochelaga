@@ -13,13 +13,13 @@
 .color-scheme-base {
     background : $vdm-grey-light;
     border: none;
-    color: $vdm-black;
+    color: $black;
     &:before, 
     &:after {
         color: $vdm-brand;
     }
     >* {
-        color: $vdm-black; 
+        color: $black; 
     }
 
     a {
@@ -34,13 +34,13 @@
 .color-scheme-light {
     background : transparent;
     border: 1px solid $vdm-brand;
-    color: $vdm-black;
+    color: $black;
     &:before, 
     &:after {
         color: $vdm-brand;
     }
     >* {
-        color: $vdm-black; 
+        color: $black; 
     }
     
     a {
@@ -55,15 +55,15 @@
 }
 
 .color-scheme-white {
-    background : $vdm-white;
-    color: $vdm-black;
+    background : $white;
+    color: $black;
     border: none;
     &:before, 
     &:after {
         color: $vdm-brand;
     }
     >* {
-        color: $vdm-black; 
+        color: $black; 
     }
     
     a {
