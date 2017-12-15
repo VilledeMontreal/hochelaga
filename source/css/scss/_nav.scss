@@ -125,8 +125,8 @@
 
 .vdm-collapsible-item {
   padding: 0;
-  .object {
-    >a {
+  .collapsible-header {
+    a {
       @include header(5);
       background: $vdm-grey-light;
       color: $vdm-black;
@@ -136,7 +136,6 @@
       padding: 1.4rem 5rem 1.4rem 4rem;
       cursor: pointer;
       
-
       &[aria-expanded="true"] {
         color: $vdm-brand;
         &:after {
@@ -171,34 +170,32 @@
         pointer-events: none;
         color: $vdm-brand;
       }
-      /*
-      &.has-icon {
-        span {
-          align-self: center;
-        }
-        i {
-          color: $vdm-brand;
-          flex-grow: 0;
-          font-size: 50px;
-          align-self: center;
-        }
+
+      span {
+        align-self: center;
       }
-      &:not(.has-icon) {
-        */
-        &:before {
+      i {
+        color: $vdm-brand;
+        flex-grow: 0;
+        font-size: 2rem;
+        align-self: center;
+        font-weight: $font-weight-bold;
+        content : "";
+        position: absolute;
+        left: 1.3rem;
+
+        &.circle {
           content : "";
-          position: absolute;
-          top: calc(50% - 0.6rem); // Perceptual -- should work out to 0.65
-          left: 1.3rem;
           width: 1rem;
           height: 1rem; 
-          border-radius: 1rem;
+          border-radius: 50%;
           background: $vdm-brand;
-          margin-right: 1.5rem;
+          margin-left: 0.5rem;
         }
-      //}
+      }
 
       // Hide dots on x-small screens, rearrange paddings
+      /*
       @include media-breakpoint-down(xs) { 
         &:before {
           display: none;
@@ -206,10 +203,11 @@
         padding-left: 1.1rem;
         padding-right: 6rem;
       }
+      */
 
     }
   }
-  .subject {
+  .collapsible-block {
     padding-left: 4.3rem;
   }
 }

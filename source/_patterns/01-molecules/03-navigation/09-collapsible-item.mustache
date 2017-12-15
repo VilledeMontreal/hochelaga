@@ -1,0 +1,22 @@
+{{# collapsibleItem }}
+    <div class="vdm-collapsible-item">
+        <div class="collapsible-header" role="tab" id="{{ heading-id }}">
+            <h4>
+                <a data-toggle="collapse" href="#" data-target="#{{ block-id }}" aria-controls="{{ block-id }}">
+                    {{# icon }}
+                        <i class="vdmi {{ icon }}" aria-hidden="true"></i>
+                    {{/ icon }}
+                    {{^ icon }}
+                        <i class="circle" aria-hidden="true"></i>
+                    {{/ icon }}
+                    <span>{{ title }}</span>
+                </a>
+            </h4>
+        </div>
+        <div id="{{ block-id }}" class="collapse" role="tabpanel" aria-labelledby="{{ heading-id }}">
+            <div class="collapsible-block">
+                {{ content }}
+            </div>
+        </div>
+    </div>
+{{/ collapsibleItem }}
