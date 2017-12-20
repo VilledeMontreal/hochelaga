@@ -44,6 +44,24 @@
       "dest"  : "source/js/vendor/",
       "distribution"  : "dist/js/vendor/"
     },
+    "nodemodulesfonts": {
+      "base"  : "node_modules/",
+      "files" : [
+        "node_modules/@villemontreal/font-icon/icon-dist/vdm.eot", 
+        "node_modules/@villemontreal/font-icon/icon-dist/vdm.svg",
+        "node_modules/@villemontreal/font-icon/icon-dist/vdm.ttf",
+        "node_modules/@villemontreal/font-icon/icon-dist/vdm.woff2",
+        "node_modules/@villemontreal/font-icon/icon-dist/vdm.woff"
+      ],
+      "dest"  : "source/fonts/",
+      "distribution"  : "dist/fonts/"
+    },
+    "nodemodulesfontsdata": {
+      "input": "node_modules/@villemontreal/font-icon/icon-dist/vdm.json",
+      "json": "./source/_data/icons.json",
+      "sass": "./source/css/scss/vdm-icons.scss",
+      "sassdist": "./dist/css/scss/vdm-icons.scss"
+    },
     "scripts": {
       "base"  : "source/js/",
       "files" : [
