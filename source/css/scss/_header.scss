@@ -15,8 +15,8 @@
     }
   }
   .navbar-banner {
-    background: $vdm-black;
-    color: $vdm-white; 
+    background: $black;
+    color: $white; 
     height: $vdm-header-banner-portal-height;
     display: flex;
     align-items: center;
@@ -55,11 +55,11 @@
     }
 
     a {
-      color: $vdm-white;
+      color: $white;
       text-decoration: underline;
       &:active, 
       &:hover {
-        color: $vdm-white;
+        color: $white;
         text-decoration: underline;
       }
     }
@@ -70,7 +70,7 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
-    background: $vdm-white;
+    background: $white;
     border-bottom: 1px solid $vdm-grey-light;
     height: $vdm-header-portal-height;
     padding: 0;
@@ -89,7 +89,7 @@
       padding: 0;
       line-height: 1;
       background: $vdm-sub-brand;
-      color: $vdm-white;
+      color: $white;
       vertical-align: middle;
       cursor: pointer;
       outline-width: 0;
@@ -106,11 +106,11 @@
     }
 
     a {
-      color: $vdm-black;
+      color: $black;
       text-decoration: none;
       &:active, 
       &:hover {
-        color: $vdm-black;
+        color: $black;
         text-decoration: none;
       }
     }
@@ -185,7 +185,7 @@
     cursor: pointer;
 
     .button-label {
-      color: $vdm-black;
+      color: $black;
       line-height: $vdm-header-portal-height;
       display: inline-block;
       vertical-align: top;
@@ -202,7 +202,7 @@
 
     &:hover, &:active {
       &:after {
-        color: $vdm-black;
+        color: $black;
       }
     }
 
@@ -256,7 +256,7 @@ header {
     height: 100px;
     .left-nav {
       float:left;
-      color: $vdm-white;
+      color: $white;
       .back {
         height: 100px;
         padding-top:30px;
@@ -268,7 +268,7 @@ header {
       ul.primary {
         padding-left:0;
         list-style-type: none;
-        background-color: $vdm-black;
+        background-color: $black;
         li {
           color: $vdm-grey;
           border-bottom: solid 1px $vdm-grey;
@@ -289,10 +289,10 @@ header {
     }
     .left-nav-icon {
       float:left;
-      color: $vdm-white;
+      color: $white;
     }
     .header-logo {
-      background-color: $vdm-white;
+      background-color: $white;
       float:left;
       height:100px;
       img {
@@ -310,7 +310,7 @@ header {
         li {
           padding-right:40px;
           a {
-            color: $vdm-white;
+            color: $white;
           }
         }
       }
@@ -331,7 +331,7 @@ header {
           display:inline;
         }
         i {
-          color:$vdm-white;
+          color:$white;
         }
       }
     }

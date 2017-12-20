@@ -11,8 +11,8 @@ $assets-font-path: '../fonts' !default;
 //
 //== Neutrals
 
-$vdm-white:               #FFFFFF;
-$vdm-black:               #000000;
+$white:               #FFFFFF;
+$black:               #000000;
 $vdm-sarcelle:            #429A8E;
 $vdm-grey-light:          #F2F2F1;
 $vdm-grey:                #80807F;
@@ -34,12 +34,12 @@ $vdm-sub-brand:             #E00000;
 //== Links
 
 //** Global text color on `<body>`
-$vdm-text:            $vdm-black;
+$vdm-text:            $black;
 //** Global textual link color
 $vdm-link:            $vdm-brand;
-$vdm-icon-link:       $vdm-black; // Arrow link
+$vdm-icon-link:       $black; // Arrow link
 //** Link hover color
-$vdm-link-hover:      $vdm-black;
+$vdm-link-hover:      $black;
 //** Link hover decoration
 $vdm-link-hover-decoration: underline;
 $vdm-icon-link-hover-decoration: none;  // Arrow link
@@ -82,16 +82,22 @@ $vdm-icon-social-media-scale: 60px;
 $vdm-icon-social-media-padding-right: 10px;         // in patternal.scss ?
 $vdm-icon-social-media-padding-right-lists: 1em;    // in patternal.scss ?
 
-//== test social icon font
+// Test social icon font
 $social-icon-font-path: $assets-font-path;
 $social-icon-font-version: '1.0';
 $social-icon-font-family : 'ic-social';
 $social-icon-font-size: 30px;
 
-//== Font Awesome character
+// Font Awesome character
 $fontawesome-icon-font-path: $assets-font-path + '/font-awesome-4.7.0';
 $fontawesome-icon-font-version: '4.7.0';
 $fontawesome-icon-font-family : 'fontawesome-fonticon';
+
+// Body
+//
+// Settings for the `<body>` element.
+
+$body-bg:                   $white;
 
 // - - - - - - - - - -
 // == Layout - top-level structures
@@ -119,11 +125,11 @@ $vdm-tabs-v-padding: $vdm-font-size-base * 0.375;
 
 // Navs
 
-$nav-tabs-border-color:                       $vdm-white;
+$nav-tabs-border-color:                       $white;
 $nav-tabs-border-width:                       0;
 $nav-tabs-border-radius:                      0;
 $nav-tabs-link-hover-border-color:            $vdm-sub-brand;
-$nav-tabs-link-active-color:                  $vdm-black;
+$nav-tabs-link-active-color:                  $black;
 $nav-tabs-link-active-bg:                     $body-bg;
 $nav-tabs-link-active-border-color:           $vdm-sub-brand;
 
@@ -135,6 +141,14 @@ $breadcrumb-bg: transparent;
 
 $vdm-navbar-height: 60px;
 
+// Breadcrumbs
+
+$breadcrumb-item-padding:           1.25rem;
+
+$breadcrumb-bg:                     $white;
+//$breadcrumb-divider-color:          $black;
+$breadcrumb-active-color:           $black;
+
 
 // - - - - - - - - - -
 // == Forms
@@ -144,7 +158,7 @@ $vdm-navbar-height: 60px;
 
 // Form generalities
 $vdm-form-bg-color:         $vdm-brand;
-$vdm-form-text-color:       $vdm-white;
+$vdm-form-text-color:       $white;
 $vdm-form-border:           none;
 $vdm-error-color:           $vdm-sub-brand;
 
@@ -155,7 +169,7 @@ $vdm-element-padding: 2px;
 $vdm-element-base-height: 34px;
 
 // Secondary element states
-$vdm-form-alt-bg-color: $vdm-white;
+$vdm-form-alt-bg-color: $white;
 $vdm-form-alt-text-color: $vdm-brand;
 $vdm-form-alt-border: 2px solid $vdm-brand;
 

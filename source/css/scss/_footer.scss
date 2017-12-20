@@ -5,7 +5,7 @@
 footer {
   &.vdm-footer {
     background-color: $vdm-sub-brand;
-    color: $vdm-white;
+    color: $white;
     padding-top: 2rem;
     padding-bottom: 1rem;
 
@@ -16,18 +16,18 @@ footer {
     
     // Links
     a {
-      color: $vdm-white;
+      color: $white;
       &:before, 
       &:after {
-        color: $vdm-white;
+        color: $white;
       }
       &:hover, 
       &:active {
-        color: $vdm-white;
+        color: $white;
         text-decoration: underline;
         &:before, 
         &:after {
-          color: $vdm-white;
+          color: $white;
         }
       }
       
@@ -131,7 +131,7 @@ footer {
       @include make-row();
       font-size: $vdm-font-size-smaller;
       padding-top: 0.6rem;
-      border-top: 2px solid $vdm-white;
+      border-top: 2px solid $white;
 
       .first {
         @include make-col-ready();
@@ -151,7 +151,7 @@ footer {
               content : "";
               width: 1px;
               height: 70%;
-              background: $vdm-white;
+              background: $white;
               position: absolute;
               left: 0;
               top: 50%;
@@ -251,19 +251,19 @@ footer {
       }
     }
     hr {
-      border: solid 2px $vdm-white;
+      border: solid 2px $white;
     }
     span {
-      color: $vdm-white;
+      color: $white;
     }
     i {
-      color: $vdm-white;
+      color: $white;
     }
     a {
-      color: $vdm-white;
+      color: $white;
     }
     a:hover {
-      color: $vdm-white;
+      color: $white;
     }
     .services-citoyen {
       float:left;

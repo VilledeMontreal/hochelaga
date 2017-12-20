@@ -65,7 +65,7 @@ html {
         padding-top: 50px;
 
         .menu-item {
-            background: $vdm-black;
+            background: $black;
             display: flex;
             border-bottom: $vdm-side-menu-border-width solid  $vdm-grey-dark;
             &:first-child {
@@ -76,7 +76,7 @@ html {
             }
 
             .menu-link {
-                color: $vdm-white;
+                color: $white;
                 display: block;
                 flex-grow: 1;
                 padding: $vdm-side-menu-link-v-padding $vdm-side-menu-link-h-padding;

@@ -6,7 +6,7 @@
 
     // Links in sidebars
     a {
-        color: $vdm-black;
+        color: $black;
         word-break: break-all;
         word-wrap: break-word;
 
@@ -23,13 +23,13 @@
             }
         }
         &:hover, &:active {
-            color: $vdm-black;
+            color: $black;
             &:after, &:before {
                 color: $vdm-brand;
             }
             .vdmi {
                 // color: $vdm-brand; 
-                color: $vdm-black; 
+                color: $black; 
             }
         }
         &.block {
@@ -168,8 +168,8 @@
         @include header(4, bold);
         // margin-bottom: 0.8em;
         &:after {
-          background: $vdm-black;
-          color: $vdm-black;
+          background-color: $black;
+          color: $black;
           max-width: 1.7rem;
           top: calc(100% + 0.3rem);
         }
@@ -205,7 +205,7 @@
     // Transparent top stroke theme variant
     &.theme-top-stroke {
         .sb-block {
-            border-top: 4px solid $vdm-black;
+            border-top: 4px solid $black;
             background-color: transparent;
         }
     }
@@ -303,7 +303,7 @@
 
     // Search filters  block override - white background, tweaked title
     &.search-filters {
-        background: $vdm-white;
+        background: $white;
         .vdm-title {
             &.discrete {
                 @include header(4);

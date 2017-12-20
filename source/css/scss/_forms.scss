@@ -312,13 +312,13 @@ label {
                             top: -26px;
                             left: 10px;
                             font-size: $vdm-font-size-smaller;
-                            color: $vdm-black;
+                            color: $black;
                         }
 
                     }
                     &.used {
-                        color: $vdm-black;
-                        border: 1px solid $vdm-black;
+                        color: $black;
+                        border: 1px solid $black;
                     }
                 }
             }
@@ -416,7 +416,7 @@ label {
 
             &.has-error {
                 .vdmi {
-                    color: $vdm-black;
+                    color: $black;
                 }
             }
         }
@@ -443,7 +443,7 @@ label {
 
     &:before,
     &:after {
-        background: $vdm-white;
+        background-color: $white;
         font-size: 1.9rem;
         position: absolute;
         top: 0.1rem;
@@ -488,7 +488,7 @@ label {
     // @to-do - implement a 'has-label' class on parent element? Inline vs block label?
     label {
         font-size: $vdm-font-size-smaller;
-        color: $vdm-black;
+        color: $black;
         position: absolute;
         pointer-events: none;
         left: 18px;
@@ -563,7 +563,7 @@ select {
         }
 
         &.stroked {
-            border-bottom: 3px solid $vdm-black;
+            border-bottom: 3px solid $black;
         }
 
         .vdm-form-group {

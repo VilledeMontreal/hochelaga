@@ -12,10 +12,10 @@
     background-color: $vdm-brand;
     text-align: center;
     font-size: $vdm-font-size-base;
-    color: $vdm-white;
+    color: $white;
     border: $vdm-form-border;
     text-shadow: none;
-    margin-right:0.725em;
+    margin-right: 0.725em;
     vertical-align: middle;
     touch-action: manipulation;
     cursor: pointer;
@@ -29,7 +29,7 @@
     &:active,
     &:hover {
         @include drop-shadow();
-        color: $vdm-white;
+        color: $white;
         background-color: $vdm-brand;
 
     }
@@ -177,7 +177,7 @@ a {
                     & + label {
                         // Inside button
                         &:after {
-                           background-color: $vdm-white;
+                           background-color: $white;
                            margin-left: $vdm-switch-width-inside + $vdm-switch-padding;
                         }
 
@@ -195,7 +195,7 @@ a {
                     & + label {
                         // Inside button
                         &:after {
-                           background-color: $vdm-white;
+                           background-color: $white;
                            margin-left: $vdm-switch-width-inside + $vdm-switch-padding;
                         }
 
@@ -214,7 +214,7 @@ a {
 
                         // Inside button
                         &:after {
-                           background-color: $vdm-white;
+                           background-color: $white;
                            margin-left: 0;
                         }
 
@@ -295,7 +295,7 @@ a {
         .nav-link {
             background: $vdm-grey-light;
             border: none;
-            color: $vdm-black;
+            color: $black;
             font-weight: $vdm-font-weight-bold;
             line-height: $vdm-tabs-line-height;
             margin-right: $vdm-tabs-spacing;
@@ -307,8 +307,8 @@ a {
             &:hover,
             &:focus {
                 border: none;
-                color: $vdm-black;
-                background-color: $vdm-white;
+                color: $black;
+                background-color: $white;
                 border-top: $vdm-tabs-border-width solid $vdm-sub-brand;
                 padding-top: $vdm-tabs-v-padding - $vdm-tabs-border-width;
             }

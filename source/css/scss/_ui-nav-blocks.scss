@@ -194,7 +194,7 @@
         cursor: pointer;
         line-height: floor(($vdm-font-size-base * 1.2));
         text-decoration: none;
-        color: $vdm-black;
+        color: $black;
 
         // Loop over all icons in the set to produce the classes & invoke the icon() mixin
         @each $name, $char in $icons {
@@ -219,30 +219,29 @@
         &:hover, 
         &:active {
             &.vdm-teaser-body {
-                color: $vdm-white;
+                color: $white;
                 background: $vdm-brand;
                 text-decoration: none;
                 &:before {
-                    color: $vdm-white;
+                    color: $white;
                 }
                 >* {
-                    color: $vdm-white;
+                    color: $white;
                 }
 
                 // Specific pseudo-elements overrides.
                 .arrow-link, 
                 .location-pin, 
                 .vdm-label {
-                    color: $vdm-white;
-                    color: $vdm-white;
+                    color: $white;
+                    color: $white;
                     &:before, 
                     &:after {
-                        color: $vdm-white;
-                        color: $vdm-white;
+                        color: $white;
                     }
                 }
                 .vdm-label {
-                    border: 1px solid $vdm-white;
+                    border: 1px solid $white;
                 }
             }
         }
@@ -314,14 +313,14 @@
 
             &:hover, 
             &:active {
-                color: $vdm-black;
+                color: $black;
                 background: $vdm-grey-light;
                 >* {
-                    color: $vdm-black;
+                    color: $black;
                 }
                 &:after, 
                 &:before {
-                    color: $vdm-black;
+                    color: $black;
                 }
             }
 
@@ -488,24 +487,24 @@
     // Shared with teasers, mixin
     &.light-scheme {
         .vdm-teaser-body {
-            background: $vdm-white;
+            background: $white;
             border: 1px solid $vdm-brand;
 
             &:before {
-                color: $vdm-black;
+                color: $black;
             }
         }
     }
     // Shared with teasers, mixin
     &.white-scheme {
         .vdm-teaser-body {
-            background: $vdm-white;
+            background: $white;
             border: none;
             &:hover, 
             &:active {
-                background: $vdm-white;
+                background-color: $white;
                 border: none;
-                color: $vdm-black;
+                color: $black;
                 &:before {
                     color: $vdm-brand;
                 }
@@ -736,7 +735,7 @@
         cursor: pointer;
         line-height: floor(($vdm-font-size-base * 1.2));
         text-decoration: none;
-        color: $vdm-black;
+        color: $black;
 
         // Loop over all icons in the set to produce the classes & invoke the icon() mixin
         @each $name, $char in $icons {
@@ -761,14 +760,14 @@
         &:hover, 
         &:active {
             &.vdm-card-body {
-                color: $vdm-white;
+                color: $white;
                 background: $vdm-brand;
                 text-decoration: none;
                 &:before {
-                    color: $vdm-white;
+                    color: $white;
                 }
                 >* {
-                    color: $vdm-white;
+                    color: $white;
                 }
 
                 // Specific pseudo-elements overrides.
@@ -776,14 +775,13 @@
                 .category {
                     &:before, 
                     &:after {
-                        color: $vdm-white;
-                        color: $vdm-white;
+                        color: $white;
                     }
                 }
                 .category {
                     &:before, 
                     &:after {
-                        background-color: $vdm-white;
+                        background-color: $white;
                     }
                 }
             }
@@ -943,26 +941,26 @@
     // Shared with teasers, mixin
     &.light-scheme {
         .vdm-card-body {
-            background: $vdm-white;
+            background: $white;
             border: 1px solid $vdm-brand;
 
             &:before {
-                color: $vdm-black;
+                color: $black;
             }
         }
     }
     // Shared with teasers, mixin
     &.white-scheme {
         .vdm-card-body {
-            background: $vdm-white;
+            background: $white;
             border: none;
             &:hover, 
             &:active {
-                background: $vdm-white;
+                background-color: $white;
                 border: none;
-                color: $vdm-black;
+                color: $black;
                 > * {
-                    color: $vdm-black;  
+                    color: $black;  
                 }
                 &:before, &:after {
                     color: $vdm-brand;
@@ -1028,10 +1026,10 @@
             &:hover, 
             &:active {
                 >* {
-                    color: $vdm-black;  
+                    color: $black;  
                 }
                 .footer {
-                    color: $vdm-black; 
+                    color: $black; 
                 }
                 .title {
                     color: $vdm-brand;
@@ -1172,14 +1170,14 @@
 
 
 .card {
-    background: $vdm-white;
+    background: $white;
     border-radius: 0;
     display: block;
     padding: 8rem 2rem 1rem 2rem;
     border: 1px solid $vdm-brand;
     text-align: center;
     text-decoration: none;
-    color: $vdm-black;
+    color: $black;
     cursor: pointer;
     line-height: floor(($vdm-font-size-base * 1.2));
     //test
@@ -1187,11 +1185,11 @@
 
     &:hover,
     &:active {
-        color: $vdm-white;
+        color: $white;
         background: $vdm-brand;
         text-decoration: none;
          &:before {
-            color: $vdm-white;
+            color: $white;
          }
     }
 
@@ -1316,18 +1314,18 @@
     // Navigation tile : this element is always hyperlinked
     &.tile-nav {
         text-decoration: none;
-        color: $vdm-black;
+        color: $black;
         &:hover,
         &:active {
-            color: $vdm-white;
+            color: $white;
             background: $vdm-brand;
             .wrapper {
                 h3 {
-                    color: $vdm-white;
+                    color: $white;
                 }
                 .vdmi {
 
-                    color: $vdm-white;
+                    color: $white;
                 }
             }
         }
@@ -1443,7 +1441,7 @@
 
             text-decoration: none;
             &:after {
-                color: $vdm-black;
+                color: $black;
             }
 
             .content {
@@ -1463,7 +1461,7 @@
             top: calc(50% - 2rem); // Perceptual -- should work out to 0.65
             left: 2rem;
             pointer-events: none;
-            color: $vdm-black;
+            color: $black;
         }
 
         &:after {

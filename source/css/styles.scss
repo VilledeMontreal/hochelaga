@@ -1,15 +1,11 @@
 // @file styles.scss
 
-// This is the summit of the pyramid && the only compiled stylesheet
+// Default variables override.
+// MUST come before bootstrap variables in SASS because of !default tags used in framework variables
+@import "scss/variables";
 
-// Import bootstrap imports file
-@import "scss/bootstrap-imports.scss";
-
-// import bootstrap variables file
-@import "scss/bootstrap-variables.scss";
-
-// Import VDM variables file
-@import "scss/variables.scss";
+// Bootstrap Framework.
+@import '~bootstrap/scss/bootstrap';
 
 // Import VDM styles files
 @import "scss/breakpoints.scss";

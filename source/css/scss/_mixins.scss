@@ -53,7 +53,7 @@
 //  @arg $size - string - any valid text size declaration
 //  @arg $color - string any valid color declaration
 //  @arg $color - string any valid color declaration
-@mixin bullet-left($size: .8em, $color: $vdm-brand, $textcolor: $vdm-black) {
+@mixin bullet-left($size: .8em, $color: $vdm-brand, $textcolor: $black) {
     display: inline-block;
     position: relative;
     padding-left: $size * 1.75;
@@ -743,26 +743,26 @@
   color: $vdm-text;
 
   &:hover, &:active {
-    background: $vdm-brand;
-    color: $vdm-white;
+    background-color: $vdm-brand;
+    color: $white;
     > * {
-      color: $vdm-white;
+      color: $white;
     }
 
     &:before, &:after {
-      color: $vdm-white;
+      color: $white;
     }
   }
 }
 
 @mixin teaser-light-scheme() {
-  background: $vdm-white;
+  background: $white;
   border: 1px solid $vdm-brand;
   @include teaser-scheme-hover(light, false);
 }
 
 @mixin teaser-white-scheme() {
-  background: $vdm-white;
+  background: $white;
   border: none;
   @include teaser-scheme-hover(white, false);
 }
@@ -773,14 +773,14 @@
 
   // Default hover case
   &:hover, &:active {
-    background: $vdm-brand;
-    color: $vdm-white;
+    background-color: $vdm-brand;
+    color: $white;
     > * {
-      color: $vdm-white;
+      color: $white;
     }
 
     &:before, &:after {
-      color: $vdm-white;
+      color: $white;
     }
   }
 
