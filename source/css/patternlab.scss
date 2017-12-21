@@ -248,7 +248,16 @@ $pl-size-box-wrapper-padding: 1rem;
 
 // Icons
 // - - - - - - - - - -  - - - - - -
+
 .pl-atom-icons-grid {
+  // Exception code for the new version
+  &.pl-latest{
+    ul {
+      li {
+        width: 133px;
+      }
+    }
+  }
   .wrapper{
     @include make-row();
     @include clearfix();
@@ -266,7 +275,7 @@ $pl-size-box-wrapper-padding: 1rem;
       font-size: 13px;
       line-height: 1;
       >li {
-        width: 133px;
+        
         margin: 0 5px 10px 0;
         border: 0;
         padding: 0;
@@ -289,7 +298,7 @@ $pl-size-box-wrapper-padding: 1rem;
           }
         }
         
-        
+        // Duplicate code for the new version
         .vfi {
           font-family: $vfi-icon-font-family !important;
           display: block;
