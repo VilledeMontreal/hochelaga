@@ -1,9 +1,8 @@
 // @file forms.scss
 
 label {
-    font-family: $vdm-font-family;
-    font-weight: $vdm-font-weight-regular;
-    line-height: $vdm-line-height-base;
+    font-weight: $font-weight-regular;
+    line-height: $line-height-lg;
 }
 
 ///////////////////////////////////////////////////////////////////
@@ -222,7 +221,7 @@ label {
             // The selected, circular input
             &:checked {
                 &:after {
-                    background: $vdm-brand;
+                    background-color: $vdm-brand;
                 }
             }
             &:disabled {
@@ -293,7 +292,7 @@ label {
         // select {
             .form-control {
                 &.vdm-form-control {
-                    font-size: $vdm-font-size-base;
+                    font-size: $font-size-base;
                     box-shadow: none;
                     transition: none;
                     border: 1px solid $vdm-grey-light;
@@ -311,7 +310,7 @@ label {
                         & ~ label {
                             top: -26px;
                             left: 10px;
-                            font-size: $vdm-font-size-smaller;
+                            font-size: $font-size-xs;
                             color: $black;
                         }
 
@@ -326,7 +325,7 @@ label {
         // }
 
         label {
-            color:$vdm-grey;
+            color: $vdm-grey;
             position: absolute;
             pointer-events: none;
             left: 10px;
@@ -336,7 +335,7 @@ label {
 
         .help-block {
             margin-left: 10px;
-            font-size: $vdm-font-size-smaller;
+            font-size: $font-size-xs;
         }
 
 
@@ -487,7 +486,7 @@ label {
 
     // @to-do - implement a 'has-label' class on parent element? Inline vs block label?
     label {
-        font-size: $vdm-font-size-smaller;
+        font-size: $font-size-xs;
         color: $black;
         position: absolute;
         pointer-events: none;
@@ -536,9 +535,9 @@ select {
     }
 
     .title {
-        font-size: $vdm-font-size-base;
-        line-height: $vdm-line-height-base * 1.5;
-        font-weight: $vdm-font-weight-bold;
+        font-size: $font-size-base;
+        line-height: $line-height-lg;
+        font-weight: $font-weight-bold;
         width: 100%;
     }
 

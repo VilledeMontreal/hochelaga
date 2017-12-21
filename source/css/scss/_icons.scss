@@ -64,10 +64,10 @@
 
 // VDM ICONS
 
-i {
+i,span {
   &.vdmi {
     display: inline-block;
-    font: normal normal normal $vdm-font-size-base/1 $vdm-icon-font-family;
+    font: normal normal normal $font-size-base/1 $vdm-icon-font-family;
     font-size: inherit;
     text-rendering: auto;
     -webkit-font-smoothing: antialiased;
@@ -127,7 +127,7 @@ i {
 .fa {
   display: inline-block;
   color: $vdm-sub-brand;
-  font: normal normal normal $vdm-font-size-base/1 $fontawesome-icon-font-family;
+  font: normal normal normal $font-size-base/1 $fontawesome-icon-font-family;
   font-size: inherit;
   text-rendering: auto;
   -webkit-font-smoothing: antialiased;

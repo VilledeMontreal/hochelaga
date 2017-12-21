@@ -1,72 +1,85 @@
-// @file variables.scss
-
-//= = = = Environment setup = = = =
+// Variables
 //
-//== Assets
+// Variables should follow the `$component-state-property-size` formula for
+// consistent naming. Ex: $nav-link-disabled-color and $modal-content-box-shadow-xs.
+
+// Assets path
+
 $assets-img-paths : "../../../images" !default;
 $assets-icons-path : "../../../images/icons" !default;
 $assets-font-path: '../fonts' !default;
 
-//= = = = Colors = = = =
+// Color system
 //
-//== Neutrals
+// To-Do: Refactor and blend nicely with bootstrap variables
+// Neutrals
 
-$white:               #FFFFFF;
-$black:               #000000;
-$vdm-sarcelle:            #429A8E;
-$vdm-grey-light:          #F2F2F1;
-$vdm-grey:                #80807F;
-$vdm-grey-dark:           #222222; // First occurence : side menu bg & borders
-$vdm-red:                 #E00000;
+$white:                 #FFFFFF;
+$black:                 #000000;
+$vdm-sarcelle:          #429A8E;
+$vdm-grey-light:        #F2F2F1;
+$vdm-grey:              #80807F;
+$vdm-grey-dark:         #222222; // First occurence : side menu bg & borders
+$vdm-red:               #E00000;
 
-$vdm-neutral-mid:         #80807F;
-$vdm-neutral-light:       #E7E5E5;
+$vdm-neutral-mid:       #80807F;
+$vdm-neutral-light:     #E7E5E5;
 
 //== Brand
 
-$vdm-brand:                 #429A8E;
-$vdm-sub-brand:             #E00000;
+$vdm-brand:             #429A8E;
+$vdm-sub-brand:         #E00000;
 
-// - - - - - - - - - -
-// == Scaffolding
-// - - - - - - - - - -
+// Body
+//
+// Settings for the `<body>` element.
 
-//== Links
+$body-bg:               $white;
+$body-color:            $black;
 
-//** Global text color on `<body>`
-$vdm-text:            $black;
-//** Global textual link color
-$vdm-link:            $vdm-brand;
-$vdm-icon-link:       $black; // Arrow link
-//** Link hover color
-$vdm-link-hover:      $black;
-//** Link hover decoration
-$vdm-link-hover-decoration: underline;
-$vdm-icon-link-hover-decoration: none;  // Arrow link
+// Links
+//
+// Style anchor elements.
 
-// - - - - - - - - - -
-// == Typography
-// - - - - - - - - - -
+$link-color:                  $vdm-brand;
+$link-decoration:             none !default;
+$link-hover-color:            $black;
+$link-hover-decoration:       underline;
 
-//== Font Family
-$vdm-font-family:             'Nunito Sans', Helvetica, Arial, sans-serif;
+// Paragraphs
+//
+// Style p element.
 
-//== Font Weight
-$vdm-font-weight-light:        300; // Nunito Sans Light
-$vdm-font-weight-regular:      400; // Nunito Sans Regular
-$vdm-font-weight-bold:         700; // Nunito Sans Bold
+$paragraph-margin-bottom:     1.5rem;
 
-//== Fonts Size
-$vdm-font-size-base:          16px;                                   // 16px
-$vdm-font-size-larger:        ceil(($vdm-font-size-base * 1.3125));  // ~21px
-$vdm-font-size-large:         ceil(($vdm-font-size-base * 1.125));    // ~18px
-$vdm-font-size-small:         ceil(($vdm-font-size-base * 0.85));     // ~14px
-$vdm-font-size-smaller:       ceil(($vdm-font-size-base * 0.75));     // ~12px
+// Components
+//
+// Define common padding and border radius sizes and more.
 
-//== Line Height
-$vdm-line-height-base:        floor(($vdm-font-size-base * 1.3125));   // 21px
+$line-height-lg:              1.625;
+$line-height-sm:              1.3125;
 
-//== Icons fonts -vdm-font-icon character
+// Fonts
+//
+// Font, line-height, and color for body text, headings, and more.
+
+$font-family-base:            'Nunito Sans', Helvetica, Arial, sans-serif;
+
+$font-weight-light:           300; // Nunito Sans Light
+$font-weight-regular:         400; // Nunito Sans Regular
+$font-weight-bold:            700; // Nunito Sans Bold
+
+$font-size-base:              1rem;       // Assumes the browser default, typically `16px`
+$font-size-xl:                1.25rem;    // ~20px
+$font-size-lg:                1.125rem;      // ~18px
+$font-size-sm:                0.875rem;   // ~14px
+$font-size-xs:                0.75rem;    // ~12px
+
+$lead-font-size:              ($font-size-base * 1.25);
+$lead-font-weight:            $font-weight-regular;
+
+//Icons fonts -vdm-font-icon character
+
 $vdm-icon-font-path: $assets-font-path;
 $vdm-icon-font-version: '0.5';
 $vdm-icon-font-family : 'vdm-fonticon';
@@ -77,76 +90,92 @@ $vdm-icon-font-height : 3.6rem;
 $vdm-icon-font-width : 3.6rem;
 $vdm-icon-font-line-height : 3.6rem;
 
-//== Icons fonts -vdm-font-icon character
+// Icons fonts -vdm-font-icon character
+
 $vdm-icon-social-media-scale: 60px;
 $vdm-icon-social-media-padding-right: 10px;         // in patternal.scss ?
 $vdm-icon-social-media-padding-right-lists: 1em;    // in patternal.scss ?
 
 // Test social icon font
+
 $social-icon-font-path: $assets-font-path;
 $social-icon-font-version: '1.0';
 $social-icon-font-family : 'ic-social';
 $social-icon-font-size: 30px;
 
 // Font Awesome character
+
 $fontawesome-icon-font-path: $assets-font-path + '/font-awesome-4.7.0';
 $fontawesome-icon-font-version: '4.7.0';
 $fontawesome-icon-font-family : 'fontawesome-fonticon';
 
-// Body
-//
-// Settings for the `<body>` element.
+// Header
 
-$body-bg:                   $white;
-
-// - - - - - - - - - -
-// == Layout - top-level structures
-// - - - - - - - - - -
-
-$vdm-header-banner-portal-height : 50px;
-$vdm-header-portal-height : 60px;
-$vdm-header-total-portal-height : $vdm-header-banner-portal-height + $vdm-header-portal-height;
-
-
-// - - - - - - - - - -
-// == UI - general -- split this cat. later
-// - - - - - - - - - -
-
-// - - - - - - - - - -
-// == Navigation
-// - - - - - - - - - -
-
-// Tabs 
-$vdm-tabs-spacing: 4px;
-$vdm-tabs-border-width: 4px;
-$vdm-tabs-line-height: $vdm-font-size-base * 3.6;
-$vdm-tabs-h-padding: $vdm-font-size-base * 1.62;
-$vdm-tabs-v-padding: $vdm-font-size-base * 0.375;
+$header-banner-portal-height : 50px;
+$header-portal-height : 60px;
+$header-total-portal-height : $header-banner-portal-height + $header-portal-height;
 
 // Navs
 
-$nav-tabs-border-color:                       $white;
-$nav-tabs-border-width:                       0;
-$nav-tabs-border-radius:                      0;
-$nav-tabs-link-hover-border-color:            $vdm-sub-brand;
-$nav-tabs-link-active-color:                  $black;
-$nav-tabs-link-active-bg:                     $body-bg;
-$nav-tabs-link-active-border-color:           $vdm-sub-brand;
+$nav-link-padding-y:                1rem;
+$nav-link-padding-x:                2rem;
 
+$nav-tabs-border-color:             $white;
+$nav-tabs-border-width:             0;
+$nav-tabs-border-radius:            0;
+$nav-tabs-link-hover-border-color:  $vdm-sub-brand;
+$nav-tabs-link-active-color:        $black;
+$nav-tabs-link-active-bg:           $body-bg;
+$nav-tabs-link-active-border-color: $vdm-sub-brand;
+
+$nav-tabs-spacing:                  4px;
+$nav-tabs-active-border-width:      4px;
+
+// Navbar
+
+$navbar-height: 60px;
 
 // Pagination
-$vdm-breadcrumb-item-padding : 1.25rem;
 
-$vdm-navbar-height: 60px;
+$pagination-padding-y:              .625rem;
+$pagination-padding-x:              1.125rem;
+$pagination-padding-y-sm:           .3rem;
+$pagination-padding-x-sm:           .6rem;
+$pagination-padding-y-lg:           .75rem;
+$pagination-padding-x-lg:           1.563rem;
+$pagination-line-height:            1.25;
+
+$pagination-icon-padding:           .785rem;
+$pagination-icon-padding-sm:        .425rem;
+$pagination-icon-padding-lg:        1.075rem;
+
+$pagination-color:                  $vdm-grey;
+$pagination-bg:                     $white;
+$pagination-border-width:           1px;
+$pagination-border-color:           lighten($vdm-grey, 9%);
+
+$pagination-hover-color:            $vdm-brand;
+$pagination-hover-bg:               $vdm-grey-light;
+$pagination-hover-border-color:     lighten($vdm-grey, 9%);
+
+$pagination-active-color:           $white;
+$pagination-active-bg:              $vdm-brand;
+$pagination-active-border-color:    lighten($vdm-grey, 9%);
+
+//$pagination-disabled-color:         $gray-600;
+$pagination-disabled-bg:            $white;
+$pagination-disabled-border-color:  lighten($vdm-grey, 9%);
 
 // Breadcrumbs
 
 $breadcrumb-item-padding:           1.25rem;
-
 $breadcrumb-bg:                     $white;
-//$breadcrumb-divider-color:          $black;
 $breadcrumb-active-color:           $black;
 
+// Figures
+
+$figure-caption-font-size:          90%;
+$figure-caption-color:              $vdm-grey;
 
 // - - - - - - - - - -
 // == Forms

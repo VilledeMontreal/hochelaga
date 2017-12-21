@@ -17,7 +17,7 @@
   .navbar-banner {
     background: $black;
     color: $white; 
-    height: $vdm-header-banner-portal-height;
+    height: $header-banner-portal-height;
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -72,7 +72,7 @@
     justify-content: space-between;
     background: $white;
     border-bottom: 1px solid $vdm-grey-light;
-    height: $vdm-header-portal-height;
+    height: $header-portal-height;
     padding: 0;
     width: 100%;
     position: relative;
@@ -149,10 +149,10 @@
           
           a {
             display: block;
-            line-height: $vdm-header-portal-height;
+            line-height: $header-portal-height;
             text-align: center;
-            width: $vdm-header-portal-height;
-            height: $vdm-header-portal-height;
+            width: $header-portal-height;
+            height: $header-portal-height;
           }
         }
 
@@ -174,26 +174,20 @@
   .navbar-button {
     background: transparent;
     border: 0;
+    cursor: pointer;
+    height: $navbar-height;
     margin: 0;
-    padding: 0;
-    position: relative;
-    height: $vdm-navbar-height;
     padding: 0 15px 0 15px;
+    position: relative;
     text-align: center;
     vertical-align: middle;
 
-    cursor: pointer;
-
     .button-label {
       color: $black;
-      line-height: $vdm-header-portal-height;
       display: inline-block;
+      line-height: $header-portal-height;
       vertical-align: top;
       display: none;
-      // @include media-breakpoint-up(lg) { 
-        
-      // }
-
     }
 
     &:after {

@@ -2,82 +2,87 @@
 // Reference used : https://projects.invisionapp.com/d/main#/console/11533069/245898997/inspect
 .breadcrumb {
   border-radius: 0;
-  font-size: $vdm-font-size-smaller;
+  font-size: $font-size-xs;
 }
 
 // Pagination
 // Reference used : https://projects.invisionapp.com/d/main#/console/11533069/245898997/inspect
-.vdm-pagination {
-  border-radius: 0;
 
+.pagination {
+  @include border-radius(0);
+}
+
+// Page item
+
+.page-item {
+
+  &:first-child {
+    .page-link {
+      @include border-left-radius(0);
+    }
+  }
+
+  &:last-child {
+    .page-link {
+      @include border-right-radius(0);
+    }
+  }
+
+  &:first-child, 
+  &:last-child {
+    > .page-link {
+      padding : $pagination-icon-padding;
+      .vdmi {
+        display: block;
+        font-size: 1em;
+      }
+    }
+  }
+}
+
+// Page link
+
+.page-link {
+  font-size: $font-size-xl;
+}
+
+//
+// Sizing
+//
+
+.pagination-lg {
+  @include pagination-size($pagination-padding-y-lg, $pagination-padding-x-lg, 1.5rem, $line-height-lg, 0);
+  
   .page-item {
-     border: none;
-
     &:first-child, 
     &:last-child {
-      >.page-link {
-        border-bottom-left-radius: 0;
-        border-top-left-radius: 0;
-        border-bottom-right-radius: 0;
-        border-top-right-radius: 0;
-        color: $vdm-brand;
-        padding : $vdm-element-padding * 4  $vdm-element-padding * 7;
-        &:before {
-          font-size: 1em;
+      > .page-link {
+        padding: $pagination-icon-padding-lg;
+        .vdmi {
+          font-size: 1.2em;
         }
       }
     }
+  }
+}
 
-    &:first-child {
-      .icon {
-        @include icon(before, chevron-left);
-      }
-    }
+.pagination-sm {
+  @include pagination-size($pagination-padding-y-sm, $pagination-padding-x-sm, $font-size-sm, $line-height-sm, 0);
+
+  .page-item {
+    &:first-child, 
     &:last-child {
-      .icon {
-        @include icon(before, chevron-right);
+      > .page-link {
+        padding: $pagination-icon-padding-sm;
       }
     }
+  }
 
-    &.active {
-      .page-link {
-        background-color: $vdm-brand;
-        color: $white;
-        border: 1px solid lighten($vdm-grey, 9%);
-        padding : $vdm-element-padding * 5  $vdm-element-padding * 9;
-        &:hover, 
-        &:active {
-          background-color: $vdm-brand;
-          border: 1px solid lighten($vdm-grey, 9%);
-          text-decoration: none;
-          color: $white;
-        }
-        
-      }
-    }
-  } // page-item
-
-  .page-link {
-    color: $vdm-grey;
-    border: 1px solid lighten($vdm-grey, 9%);
-    background: $white;
-    padding : $vdm-element-padding * 5  $vdm-element-padding * 9;
-    font-size: floor($vdm-font-size-base * 1.3125);
-    line-height: floor($vdm-line-height-base * 1.3125);
-
-    &:hover, 
-    &:active {
-      color: $black;
-      border: 1px solid lighten($vdm-grey, 9%);
-      text-decoration: none;
-      color: $vdm-brand;
-      background-color: $vdm-grey-light;
-    }
-  } // page-link
 }
 
 // Collapsible list
 // @todo -- review this code with a real reference, this is imaginary
+
 .vdm-collapsible-list {
   list-style-type : none;
   margin: 0;
@@ -189,6 +194,68 @@
   }
 }
 
+//
+// Tabs
+//
+
+.nav-tabs {
+  border-bottom: none;
+    .nav-item {
+      margin-bottom: 0;
+      &.show {
+        .nav-link {
+          @extend .nav-link.active;
+        }
+      }
+      &:last-of-type {
+        .nav-link {
+          margin: 0;
+        }
+      }
+    }
+    .nav-link {
+      background: $vdm-grey-light;
+      border: none;
+      color: $black;
+      font-weight: $font-weight-bold;
+      margin-right: $nav-tabs-spacing;
+      position: relative;
+      &.active,
+      &:hover,
+      &:focus {
+        &:not(.disabled){
+          border: none;
+          color: $black;
+          background-color: $white;
+          &:before {
+            content: " ";
+            width: 100%;
+            height: $nav-tabs-active-border-width;
+            background-color: $vdm-sub-brand;
+            position: absolute;
+            top: 0;
+            left: 0;
+            display: block;
+          }
+        }
+      }
+      &.disabled {
+        background-color: $vdm-grey-light;
+      }
+      &:not(.active){
+        @include media-breakpoint-up(md) {
+        box-shadow: 0px -10px 10px -10px rgba(0, 0, 0, 0.3) inset;
+      }
+    }
+  }
+  &.flex-column {
+    .nav-link {
+      @include media-breakpoint-down(sm) {
+        margin-right: 0;
+      }
+    }
+  }
+}
 
 // Dropdown component
 // @see https://projects.invisionapp.com/d/main#/console/11533069/248706245/preview
@@ -197,7 +264,7 @@
   padding: 0.75rem 1.7rem 0.75rem 1.1rem;
   @include drop-shadow;
   display: inline-block;
-  font-size: $vdm-font-size-base * 2.1875;
+  font-size: $font-size-base * 2.1875;
 
   .dropdown-trigger {
     position: relative;
@@ -218,7 +285,7 @@
         display: block;
         width: 1em;
         height: 1em;
-        line-height: 1em;
+        line-height: 1;
     }
 
     &[aria-expanded=true] {
@@ -240,8 +307,8 @@
 
   .dropdown-element{
     
-    >a {
-      font-size: $vdm-font-size-base * 2.1875;
+    > a {
+      font-size: $font-size-base * 2.1875;
       color: $black;
       display: block;
       line-height: 4rem;
@@ -265,7 +332,7 @@
         display: block;
         width: 1.5em;
         height: 1.5em;
-        line-height: 1.5em;
+        line-height: 1.5;
         // color: $vdm-brand;
       }
 
@@ -286,7 +353,7 @@
   padding: 0.75rem;
   @include drop-shadow;
   display: inline-block;
-  font-size: $vdm-font-size-base * 2.1875;
+  font-size: $font-size-base * 2.1875;
 
   .dropdown-toggle {
     background: transparent;
@@ -307,7 +374,7 @@
         display: block;
         width: 1.3em;
         height: 1.3em;
-        line-height: 1.3em;
+        line-height: 1.3;
     }
     &:after {
       display: none;
@@ -319,6 +386,6 @@
 
   }
   .dropdown-item {
-    font-size: $vdm-font-size-base * 2.1875;
+    font-size: $font-size-base * 2.1875;
   }
 }
