@@ -27,6 +27,7 @@
 	"term" : "Term",
 	"definition" : "This is the definition of the term.",
 	"badge" : "23",
+	"badgeClass" : "badge-secondary",
 	"label" : "New Label",
 	"labelClass" : "label-default",
 	"progressBarClass" : "",
@@ -49,12 +50,13 @@
 	"combo-box-text" : "Combo block title",
 	"combo-box-icon" : "ic-search",
 	"combo-box-placeholder" : "textfield label",
+	"paragraphClass" : "lead",
 	"text-paragraph" : "Mustache irony plaid edison bulb photo booth. Paleo ugh blog truffaut kinfolk XOXO tousled cliche chia four dollar toast shoreditch deep v pok pok viral. Air plant ramps cloud bread, humblebrag kogi adaptogen sriracha vegan offal poutine letterpress skateboard truffaut.",
 	"text-teaser" : "Migas air plant drinking vinegar twee leggings blue bottle pop-up heirloom jean shorts locavore pug shoreditch lumbersexual tousled.",
 	"text-elements" : {
 		"headings" : {
 			"h1" : {
-				"classes" : "vdm-title",
+				"classes" : "",
 				"content" : "H1 header H1 header"
 			},
 			"h2" : {
@@ -103,22 +105,45 @@
 
 	,
 	"table" : {
-	  "thead" : {
-		  "th" : [
-			  { "title" : "Table Heading 1" },
-			  { "title" : "Table Heading 2" },
-			  { "title" : "Table Heading 3" },
-			  { "title" : "Table Heading 4" }
-		  ]
-	  },
+		"caption" : "",
+		"tableClass" : "",
+		"thead" : {
+			"theadClass" : "",
+			"th" : [
+				{ "title" : "#" },
+				{ "title" : "Table Heading 1" },
+				{ "title" : "Table Heading 2" },
+				{ "title" : "Table Heading 3" },
+				{ "title" : "Table Heading 4" }
+			]
+		},
 		"tbody" : {
 			"tr" : [
 				{
+					"th" : "1",
 					"td" : [
 						{ "text" : "row 1 cell 1" },
 						{ "text" : "row 1 cell 2" },
 						{ "text" : "row 1 cell 3" },
 						{ "text" : "row 1 cell 4" }
+					]
+				},
+				{
+					"th" : "2",
+					"td" : [
+						{ "text" : "row 2 cell 1" },
+						{ "text" : "row 2 cell 2" },
+						{ "text" : "row 2 cell 3" },
+						{ "text" : "row 2 cell 4" }
+					]
+				},
+				{
+					"th" : "3",
+					"td" : [
+						{ "text" : "row 3 cell 1" },
+						{ "text" : "row 3 cell 2" },
+						{ "text" : "row 3 cell 3" },
+						{ "text" : "row 3 cell 4" }
 					]
 				}
 			]
@@ -198,7 +223,8 @@
 		},
 		{
 			"url" : "#",
-			"text" : "3"
+			"text" : "3",
+			"class" : "active"
 		},
 		{
 			"url" : "#",
