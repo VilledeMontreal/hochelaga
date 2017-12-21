@@ -266,6 +266,7 @@ $pl-size-box-wrapper-padding: 1rem;
       font-size: 13px;
       line-height: 1;
       >li {
+        width: 133px;
         margin: 0 5px 10px 0;
         border: 0;
         padding: 0;
@@ -287,6 +288,18 @@ $pl-size-box-wrapper-padding: 1rem;
             text-transform: none;
           }
         }
+        
+        
+        .vfi {
+          font-family: $vfi-icon-font-family !important;
+          display: block;
+          width: 128px;
+          height: 128px;
+          background-color: rgba(0, 0, 0, 0.05);
+          &:before {
+            font-size: 128px;
+          }
+        }
         .ic-name,
         .ic-charcode {
           display: block;
@@ -297,7 +310,6 @@ $pl-size-box-wrapper-padding: 1rem;
         .ic-name {
           color: $black;
         }
-
       }
     }
   }
