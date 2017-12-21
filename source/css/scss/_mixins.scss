@@ -9,8 +9,8 @@
 // @arg $level - integrer [1-6]
 // @arg $weight - string ['light','regular','bold']
  @mixin header($level: 1, $weight: 'regular') {
-  font-family: $vdm-font-family;
-  font-weight: $vdm-font-weight-regular;
+  font-family: $font-family-base;
+  font-weight: $font-weight-regular;
   display: block;
 
   // WTF is this, should we, really, reset all headers vertical margins?
@@ -18,35 +18,35 @@
   // margin-bottom: 0;
 
   @if $level == 1 {
-    font-weight: $vdm-font-weight-light;
-    font-size: $vdm-font-size-base * 4.1875;        // 67px
-    line-height: $vdm-line-height-base * 4.381;    // 92px
+    font-weight: $font-weight-light;
+    font-size: $font-size-base * 4.1875;    // 67px
+    line-height: $line-height-sm;               // 92px
 
   }
   @if $level == 2 {
-    font-weight: $vdm-font-weight-light;
-    font-size: $vdm-font-size-base * 3.125;       // 50px
-    line-height: $vdm-line-height-base * 3.2857;  // 69px
+    font-weight: $font-weight-light;
+    font-size: $font-size-base * 3.125;     // 50px
+    line-height: $line-height-sm;               // 69px
 
   } @else if $level == 3 {
-    font-size: $vdm-font-size-base * 2.3125;      // 37px
-    line-height: $vdm-line-height-base * 2.3809;  // 50px
+    font-size: $font-size-base * 2.3125;    // 37px
+    line-height: $line-height-sm;               // 50px
 
   } @else if $level == 4 {
-      font-size: $vdm-font-size-base * 1.750;       // 28px
-      line-height: $vdm-line-height-base * 1.8095;  // 38px
-      font-weight: $vdm-font-weight-regular;
+    font-size: $font-size-base * 1.750;     // 28px
+    line-height: $line-height-sm;               // 38px
+    font-weight: $font-weight-regular;
 
-      @if $weight == 'bold' {
-        font-weight: $vdm-font-weight-bold;
-      }
+    @if $weight == 'bold' {
+      font-weight: $font-weight-bold;
+    }
   } @else if $level == 5 {
-    font-size: $vdm-font-size-base * 1.3125;      // 21px
-    line-height: $vdm-line-height-base * 1.3333;  // 28px
+    font-size: $font-size-base * 1.3125;    // 21px
+    line-height: $line-height-sm;               // 28px
 
   } @else if $level == 6 {
-    font-size: $vdm-font-size-base * 1.0000;      // 16px
-    line-height: $vdm-line-height-base * 1.0000;  // 26px
+    font-size: $font-size-base;             // 16px
+    line-height: $line-height-lg;               // 26px
   }
  }
 
@@ -316,7 +316,7 @@
   display: flex;
   flex-direction: column;
   cursor: pointer;
-  line-height: $vdm-line-height-base;
+  line-height: $line-height-sm;
 
 
   @include teaser-icons();
@@ -679,7 +679,7 @@
       .identifier {
           text-transform: uppercase;
           color: $vdm-grey;
-          font-size: $vdm-font-size-base;
+          font-size: $font-size-base;
           width: 30%;
           text-align: center;
           margin-top: 0.9rem;
@@ -740,7 +740,7 @@
   background: $vdm-grey-light;
   border: none;
   text-decoration: none;
-  color: $vdm-text;
+  color: $body-color;
 
   &:hover, &:active {
     background-color: $vdm-brand;

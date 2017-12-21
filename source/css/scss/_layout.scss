@@ -12,7 +12,7 @@ html {
       display: flex;
       flex-direction: column;
       height: 100vh;
-      padding-top: $vdm-header-total-portal-height;
+      padding-top: $header-total-portal-height;
     }
     .main-content {
       &.regions {
@@ -42,21 +42,6 @@ html {
   }
 } // Sidebar
 
-
-/*
-.breadcrumb-container {
-  @include make-container();
-  @include make-container-max-widths();
-  .breadcrumb-row {
-    @include make-row();
-    .vdm-breadcrumb {
-      @include make-col-ready();
-      @include make-col(12);
-    }
-  }
-}
-*/
-  
 
 // Make all base regions Bootstrap containers & rows
 // with these standardized classes

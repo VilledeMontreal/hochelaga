@@ -1,6 +1,5 @@
 // @file ui-nav-blocks.scss
 
-
 // Grid rules for cards and teasers 
 // May or may not be part of this stylesheet
 .vdm-cards-wrapper, .vdm-teasers-wrapper {
@@ -9,9 +8,6 @@
         background-color: $vdm-grey-light;
     }
 }
-
-
-
 
 // Teasers are stacked horizontally and are not displayed side by side in a grid, ever
 // Teasers may contain lateral images, these images will move up on smaller breakpoints
@@ -182,7 +178,6 @@
 // Review opportunities for shared mixins with cards later on
 .vdm-teaser {
 
-
     .vdm-teaser-body {
         // Flex properties
         display: flex;
@@ -192,7 +187,7 @@
         border: none;
 
         cursor: pointer;
-        line-height: floor(($vdm-font-size-base * 1.2));
+        line-height: floor(($font-size-base * 1.2));
         text-decoration: none;
         color: $black;
 
@@ -234,7 +229,6 @@
                 .location-pin, 
                 .vdm-label {
                     color: $white;
-                    color: $white;
                     &:before, 
                     &:after {
                         color: $white;
@@ -254,7 +248,7 @@
 
         // Standard fixtures, first children, title content footer
         .date {
-            font-size: $vdm-font-size-smaller;
+            font-size: $font-size-xs;
             margin-bottom: 2rem;
 
         }
@@ -332,7 +326,7 @@
             .footer {
                 .date {
                     color: $vdm-grey;
-                    font-size: $vdm-font-size-base; 
+                    font-size: $font-size-base; 
                 }
             }
 
@@ -399,7 +393,7 @@
             .identifier {
                 text-transform: uppercase;
                 color: $vdm-grey;
-                font-size: $vdm-font-size-base;
+                font-size: $font-size-base;
                 width: 30%;
                 text-align: center;
                 margin-top: 0.9rem;
@@ -526,7 +520,7 @@
             }
             .title {
                 // margin-bottom: 0.3em; 
-                font-weight: $vdm-font-weight-bold;
+                font-weight: $font-weight-bold;
             }
         }
     }
@@ -733,7 +727,7 @@
         border: none;
 
         cursor: pointer;
-        line-height: floor(($vdm-font-size-base * 1.2));
+        line-height: floor(($font-size-base * 1.2));
         text-decoration: none;
         color: $black;
 
@@ -811,7 +805,7 @@
         // Category tags
         // Shared with teasers, mixin, does this really belong to cards or is it a generic text style?
         .category {
-            font-weight: $vdm-font-weight-bold;
+            font-weight: $font-weight-bold;
             color: $vdm-brand;
             display: block;
             &.bullet-left {
@@ -913,9 +907,9 @@
             }
 
             .title {
-                font-size: $vdm-font-size-base;
-                font-weight: $vdm-font-weight-regular;
-                line-height: $vdm-font-size-base * 1.1875;
+                font-size: $font-size-base;
+                font-weight: $font-weight-regular;
+                line-height: $font-size-base * 1.1875;
             }
         }
 
@@ -1085,7 +1079,7 @@
                 .card-content-wrapper {
                     .title {
                         .weight-regular {
-                            font-weight: $vdm-font-weight-regular;
+                            font-weight: $font-weight-regular;
                             display: block;
                         }
                         margin-bottom: auto;    // for sticky footer
@@ -1179,7 +1173,7 @@
     text-decoration: none;
     color: $black;
     cursor: pointer;
-    line-height: floor(($vdm-font-size-base * 1.2));
+    line-height: floor(($font-size-base * 1.2));
     //test
     height: 100%;
 
@@ -1247,7 +1241,7 @@
 
         .title {
            @include header(4);
-           font-weight: $vdm-font-weight-bold;
+           font-weight: $font-weight-bold;
            padding-top: 0;
            margin-top: 0;
            margin-bottom: 2.4rem;
@@ -1257,8 +1251,8 @@
         }
 
         .content {
-            font-size: $vdm-font-size-base;
-            line-height: floor(($vdm-font-size-base * 1.625));
+            font-size: $font-size-base;
+            line-height: floor(($font-size-base * 1.625));
             // flex: 1 0 auto;
             // flex-grow: 1;
 
@@ -1354,10 +1348,10 @@
         }
         // Label
         h3 {
-            font-size: $vdm-font-size-base;
-            $font-weight: $vdm-font-weight-regular;
+            font-size: $font-size-base;
+            $font-weight: $font-weight-regular;
             cursor: pointer;
-            line-height: 1.6em;
+            line-height: $line-height-lg;
         }
 
     }
@@ -1370,7 +1364,7 @@
     padding: 0;
     background: $vdm-grey-light;
     text-decoration: none;
-    color: $vdm-text;
+    color: $body-color;
     overflow: hidden;
     cursor: pointer;
 
@@ -1444,12 +1438,6 @@
                 color: $black;
             }
 
-            .content {
-                .what {
-                    // text-decoration: underline; 
-                }
-            }
-
         }
 
         &:before {
@@ -1493,13 +1481,13 @@
 
             }
             .where {
-                font-size: $vdm-font-size-larger;
-                line-height: floor(($vdm-font-size-larger * 1.3125));
+                font-size: $font-size-xl;
+                line-height: floor(($font-size-xl * 1.3125));
                 margin-bottom: 1.5rem;
             }
             .when {
-                font-size: $vdm-font-size-larger;
-                line-height: floor(($vdm-font-size-larger * 1.3125));
+                font-size: $font-size-xl;
+                line-height: floor(($font-size-xl * 1.3125));
                 margin-bottom: 0;
                 padding-bottom: 0;
                 color: #9b9b9b; // !warning - color out of range
@@ -1514,7 +1502,7 @@
             
             color: #4a4a4a; // !warning - color out of range
             position: relative;
-            font-size: $vdm-font-size-base;
+            font-size: $font-size-base;
             width: 12%;
             text-decoration: none;
 

@@ -122,7 +122,7 @@
     position: absolute;
     bottom: -30px;
     left: 0.3em;
-    font-size: $vdm-font-size-small;
+    font-size: $font-size-sm;
   }
 
   &.pl-size-inline {
@@ -233,7 +233,7 @@ $pl-size-box-wrapper-padding: 1rem;
 // - - - - - - - - - -  - - - - - -
 .pl-document {
   color: $vdm-neutral-mid;
-  font-size: $vdm-font-size-small;
+  font-size: $font-size-sm;
   ul {
     li {
       line-height: 1.3em;
@@ -305,7 +305,7 @@ $pl-size-box-wrapper-padding: 1rem;
           display: block;
           color: $vdm-neutral-mid;
           margin-top: 0.5em;
-          font-size: $vdm-font-size-small;
+          font-size: $font-size-sm;
         }
         .ic-name {
           color: $black;
@@ -352,7 +352,7 @@ $pl-size-box-wrapper-padding: 1rem;
             display: block;
             float: right;
             width: 30%;
-            font-size: $vdm-font-size-small;
+            font-size: $font-size-sm;
             text-align: right;
           }
         }
@@ -363,8 +363,8 @@ $pl-size-box-wrapper-padding: 1rem;
   .pl-swatches-color-table {
     tr {
       th {
-        font-weight: $vdm-font-weight-bold;
-        font-size: $vdm-font-size-base;
+        font-weight: $font-weight-bold;
+        font-size: $font-size-base;
       }
       td {
         text-align: left;
@@ -407,7 +407,7 @@ $pl-size-box-wrapper-padding: 1rem;
     }
     .pl-color-table-column-name {
       width: 20%;
-      font-weight: $vdm-font-weight-bold;
+      font-weight: $font-weight-bold;
     }
     .pl-color-table-column-variable {
       width: 20%;
@@ -434,7 +434,7 @@ $pl-size-box-wrapper-padding: 1rem;
         float: right;
         text-align: center;
         padding-top: 6px;
-        font-size: $vdm-font-size-small;
+        font-size: $font-size-sm;
         margin-right: 0.8em;
         &:after {
           content: 'AA';
@@ -452,8 +452,8 @@ $pl-size-box-wrapper-padding: 1rem;
     }
     .pl-sass-name {
       display: block;
-      font-size: $vdm-font-size-small;
-      font-weight: $vdm-font-weight-light;
+      font-size: $font-size-sm;
+      font-weight: $font-weight-light;
     }
 
   }
@@ -475,7 +475,7 @@ $pl-size-box-wrapper-padding: 1rem;
           float: left;
           text-align: center;
           padding-top: 6px;
-          font-size: $vdm-font-size-small;
+          font-size: $font-size-sm;
           margin-right: 0.8em;
           &:after {
             content: 'AA';

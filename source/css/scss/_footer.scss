@@ -129,7 +129,7 @@ footer {
     // Second section of the footer : under the white line;
     .sub {
       @include make-row();
-      font-size: $vdm-font-size-smaller;
+      font-size: $font-size-xs;
       padding-top: 0.6rem;
       border-top: 2px solid $white;
 
@@ -288,7 +288,7 @@ footer {
           height: 14px;
         }
         .hours {
-          font-size: $vdm-font-size-smaller;
+          font-size: $font-size-xs;
         }
       }
     }
@@ -306,7 +306,7 @@ footer {
       margin-top:90px;
     }
     .copyright {
-      font-size: $vdm-font-size-smaller;
+      font-size: $font-size-xs;
       padding-bottom:20px;
     }
   } // .footer

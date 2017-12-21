@@ -1,5 +1,5 @@
 ---
-title: Blockquot
+title: Blockquote
 ---
 
 ### Source
