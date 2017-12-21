@@ -113,7 +113,7 @@ gulp.task('nodemodulesfontsdata', function() {
     var output = {
         'icons': []
     };
-    var sass = '$newicons : (\n';
+    var sass = '$vdmicons : (\n';
 
     for (var key in source) {
       var label = `${key}`.replace(pattern,'');
