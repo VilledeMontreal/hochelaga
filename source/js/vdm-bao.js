@@ -146,6 +146,8 @@
         return $(document.activeElement);
     }
 
+    $('[data-toggle="popover"]').popover();
+
 
 
 })(jQuery);
