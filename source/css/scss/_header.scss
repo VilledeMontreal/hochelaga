@@ -186,6 +186,7 @@
   }
 }
 
+// Header banner
 .header-banner {
   background: $black;
   color: $white; 
@@ -198,10 +199,7 @@
   @include media-breakpoint-up(md) { 
     justify-content: space-between;
   }
-  
-  .banner-description {
-    //margin-right: 1rem;
-  }
+
   .banner-link {
     display: none;
     @include media-breakpoint-up(md) { 
@@ -226,7 +224,7 @@
       text-decoration: underline;
     }
   }
-} // Navbar banner
+}
 
 
 
