@@ -1,5 +1,5 @@
 ---
-title: The account button for the navbar
+title: The account link for the navbar
 ---
 
-The user account text and its icon in a button element.
+The user account text and its icon.
