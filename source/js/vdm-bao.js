@@ -146,6 +146,8 @@
         return $(document.activeElement);
     }
 
+
+    // Toggle popover from data-toggle
     $('[data-toggle="popover"]').popover();
 
 

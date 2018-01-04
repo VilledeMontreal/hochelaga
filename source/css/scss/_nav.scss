@@ -105,7 +105,7 @@
 
 }
 
-.vdm-collapsible-item {
+.collapsible-item {
   padding: 0;
   .collapsible-header {
     a {
@@ -166,6 +166,12 @@
         position: absolute;
         left: 1.3rem;
 
+        &.vfi {
+          &:before {
+            font-size: 2rem;
+          }
+        }
+
         &.circle {
           content : "";
           width: 1rem;
@@ -191,6 +197,8 @@
   }
   .collapsible-block {
     padding-left: 4.3rem;
+    padding-top: 1rem;
+    padding-bottom: 1.5rem;
   }
 }
 
