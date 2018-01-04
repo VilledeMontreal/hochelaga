@@ -74,6 +74,10 @@
 			"h5" : {
 				"classes" : "",
 				"content" : "H4 header H4 header"
+			},
+			"display": {
+				"classes" : "display-1",
+				"content" : "Display 1"
 			}
 		}
 	},
@@ -149,7 +153,6 @@
 			]
 		}
 	},
-	"wellClass" : "",
 	"mediaClass" : "",
 	"mediaLeft" : true,
 	"mediaRight" : false,
@@ -392,5 +395,25 @@
 		"block-id" : "collapseOne",
 		"heading-id" : "HeadingOne"
 	}
- ]
+ ],
+ "carousel" : {
+	"carouselID" : "carousel-base",
+	"hasIndicators": false,
+	"hasControls": false,
+ 	"carouselItem" : [
+		{ 
+			"item-is-active" : "active",
+			"url": "https://picsum.photos/768/320?image=1074",
+			"alt" : "First slide"
+		},
+		{
+			"url": "https://picsum.photos/768/320?image=783",
+			"alt" : "Second slide"
+		},
+		{
+			"url": "https://picsum.photos/768/320?image=1025&gravity=north",
+			"alt" : "Third slide"
+		}
+	]
+ }
 }
