@@ -16,7 +16,8 @@
         &:after, &:before {
             color: $vdm-brand;
         }
-        .vdmi {
+        .vdmi, 
+        .vfi {
             color: $vdm-brand; 
             &:after, &:before {
                 background: transparent;
@@ -27,7 +28,8 @@
             &:after, &:before {
                 color: $vdm-brand;
             }
-            .vdmi {
+            .vdmi, 
+            .vfi {
                 // color: $vdm-brand; 
                 color: $black; 
             }
@@ -43,9 +45,11 @@
 
 
     // Generic icon links : may or may not be applied to a hyperlink
-    .vdmi {
+    .vdmi, 
+    .vfi {
         font-size: 1.5em;
         color: $vdm-brand; 
+        background: transparent;
         &:after, &:before {
             color: $vdm-brand;
         }
@@ -57,7 +61,8 @@
         display: block;
         position: relative;
 
-        .vdmi {
+        .vdmi, 
+        .vfi {
             &:before {
                font-size: 1em; 
             }
@@ -67,14 +72,16 @@
 
         &.left {
             padding-left: 2em;
-            .vdmi {
+            .vdmi, 
+            .vfi {
                 left: 0;
             }
         }
         &.right {
             display: inline-block;
             padding-right: 2em;
-            .vdmi {
+            .vdmi, 
+            .vfi {
                 right: 0;
             }
         }
@@ -175,7 +182,8 @@
         }
         &.icon-right {
           padding-right: 4rem;
-          .vdmi {
+          .vdmi, 
+          .vfi {
               font-size: 3.6rem;
               width: 3.6rem;
               height: 3.6rem;
@@ -253,7 +261,8 @@
                 padding-right: 0;
                 padding-bottom: 5rem;
                 // Move the icon
-                .vdmi {
+                .vdmi, 
+                .vfi {
                     top: calc(100% - 1.25em);
                     left: 50%;
                     height: 1em;

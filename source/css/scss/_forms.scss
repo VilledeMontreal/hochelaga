@@ -130,7 +130,7 @@ label {
             &:checked {
                 &+label {
                     &:after {
-                        content: map-get($icons , checkbox-checked-trans);
+                        content: map-get($vdmicons , mini-case-coche-coche);
                     }
                 }
             }
@@ -356,7 +356,7 @@ label {
             }
 
             &.has-error {
-                @include icon(after, multiply);
+                @include iconvfi(after, mini-x);
                 color: $vdm-sub-brand;
 
                 .vdm-form-control {
@@ -375,7 +375,7 @@ label {
 
             }
             &.has-success {
-                @include icon(after, checkbox-checked-trans);
+                @include iconvfi(after, mini-case-coche-coche);
                 color: $vdm-brand;
             }
         } // Feedback
@@ -383,7 +383,18 @@ label {
 
         // Defines a textfield with an icon inside the field directly, as in a password field
         &.has-icon {
+            // Garbage
             .vdmi {
+                font-size: 2.2rem;
+                position: absolute;
+                color: $vdm-grey;
+                position: absolute;
+                pointer-events: none;
+                top: 0;
+                color: $vdm-brand;
+            }
+            // Keeper
+            .vfi {
                 font-size: 2.2rem;
                 position: absolute;
                 color: $vdm-grey;
@@ -397,6 +408,9 @@ label {
                 .vdmi {
                     left: 0.3rem;
                 }
+                .vfi {
+                    left: 0.3rem;
+                }
                 label {
                     left: calc(10px + 2.1rem);
                 }
@@ -408,6 +422,9 @@ label {
                 .vdmi {
                     left: calc(100% - 2.4rem);
                 }
+                .vfi {
+                    left: calc(100% - 2.4rem);
+                }
                 .vdm-form-control {
                     padding-right: 3rem;
                 }
@@ -415,6 +432,9 @@ label {
 
             &.has-error {
                 .vdmi {
+                    color: $black;
+                }
+                .vfi {
                     color: $black;
                 }
             }
@@ -455,13 +475,19 @@ label {
         pointer-events: none;
     }
 
-    @include icon(after, chevron-down);
+    @include iconvfi(after, chevron-bas);
 
     // Case with a left icon as well
     // Ex : select borough
     &.icon-left {
-        &.location {
-            @include icon(before, location);
+        .vfi {
+            //display: inline-block;
+            position: absolute;
+            left: 0.2rem;
+            top: 50%;
+            transform: translateY(-50%);
+            color: #429A8E;
+            font-size: 1.9em;
         }
         .vdm-select {
             padding-left: 2.5rem;
@@ -473,7 +499,7 @@ label {
 
     // See javascript file for this behaviour.
     &.select-open {
-        @include icon(after, chevron-up);
+        @include iconvfi(after, chevron-haut);
     }
 
     &:before {

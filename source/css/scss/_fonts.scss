@@ -1,9 +1,6 @@
 @import url('https://fonts.googleapis.com/css?family=Nunito+Sans:300,400,600,700');
 
-//== Icons fonts vfi class, imported from "@villemontreal/font-icon
-
-$vfi-icon-font-path: $assets-font-path;
-$vfi-icon-font-family : 'vdm';
+//== Icons fonts w/ vfi class, imported from "@villemontreal/font-icon
 @font-face {
   font-family: $vfi-icon-font-family;
   src: url('#{$vfi-icon-font-path}/vdm.eot?c81cd1b7c58db7a73be82e1052585cc0?#iefix') format("embedded-opentype"),
@@ -14,7 +11,7 @@ $vfi-icon-font-family : 'vdm';
 }
 
 .vfi {
-    display: flex;
+    // display: flex;
     line-height: 1;
     text-rendering: auto;
     -webkit-font-smoothing: antialiased;
@@ -23,13 +20,9 @@ $vfi-icon-font-family : 'vdm';
 }
   
 @each $name, $char in $vdmicons {
-    // @debug($name);
-    // @debug($char);
-    
     &.#{$name} {
         &:before {
             content: $char;
-            // @debug($char);
         }
     }
 }

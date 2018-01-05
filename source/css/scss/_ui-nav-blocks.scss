@@ -1321,6 +1321,9 @@
 
                     color: $white;
                 }
+                .vfi {
+                    color: $white;
+                }
             }
         }
     }
@@ -1341,6 +1344,12 @@
         text-align: center;
         // Icon
         .vdmi {
+            font-size: 3em;
+            color: $vdm-brand;
+            cursor: pointer;
+            margin-bottom: 0.15em;
+        }
+        .vfi {
             font-size: 3em;
             color: $vdm-brand;
             cursor: pointer;

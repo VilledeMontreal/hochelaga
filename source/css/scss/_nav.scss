@@ -36,6 +36,10 @@
         display: block;
         font-size: 1em;
       }
+      .vfi {
+        display: block;
+        font-size: 1em;
+      }
     }
   }
 }
@@ -59,6 +63,9 @@
       > .page-link {
         padding: $pagination-icon-padding-lg;
         .vdmi {
+          font-size: 1.2em;
+        }
+        .vfi {
           font-size: 1.2em;
         }
       }
@@ -121,7 +128,7 @@
       &[aria-expanded="true"] {
         color: $vdm-brand;
         &:after {
-          content: map-get($icons , circle-minus-invert); 
+          content: map-get($vdmicons , mini-moins-circulaire-plein); 
         }
       }
 
@@ -143,6 +150,7 @@
         width: 2.6rem;
         height: 2.6rem;
         content: map-get($icons , circle-plus);
+        content: map-get($vdmicons , circle-plus);
         position: absolute;
         top: calc(50% - 1.3rem);
         right: 1.4rem;

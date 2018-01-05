@@ -43,42 +43,25 @@
 
 
 // test social icon font
-@font-face {
-  font-family: $social-icon-font-family;
-  src: url('#{$social-icon-font-path}/ic-social.eot?v=#{$social-icon-font-version}');
-  src: url('#{$social-icon-font-path}/ic-social.eot?v=#{$social-icon-font-version}') format('embedded-opentype'),
-    url('#{$social-icon-font-path}/ic-social.woff2?v=#{$social-icon-font-version}') format('woff2'),
-    url('#{$social-icon-font-path}/ic-social.woff?v=#{$social-icon-font-version}') format('woff'),
-    url('#{$social-icon-font-path}/ic-social.ttf?v=#{$social-icon-font-version}') format('truetype');
+// @font-face {
+//   font-family: $social-icon-font-family;
+//   src: url('#{$social-icon-font-path}/ic-social.eot?v=#{$social-icon-font-version}');
+//   src: url('#{$social-icon-font-path}/ic-social.eot?v=#{$social-icon-font-version}') format('embedded-opentype'),
+//     url('#{$social-icon-font-path}/ic-social.woff2?v=#{$social-icon-font-version}') format('woff2'),
+//     url('#{$social-icon-font-path}/ic-social.woff?v=#{$social-icon-font-version}') format('woff'),
+//     url('#{$social-icon-font-path}/ic-social.ttf?v=#{$social-icon-font-version}') format('truetype');
 
-  font-weight: normal;
-  font-style: normal;
-}
+//   font-weight: normal;
+//   font-style: normal;
+// }
 // fin test
-
-@font-face {
-  font-family: $fontawesome-icon-font-family;
-  src: url('#{$fontawesome-icon-font-path}/fontawesome-webfont.eot?v=#{$fontawesome-icon-font-version}');
-  src: url('#{$fontawesome-icon-font-path}/fontawesome-webfont.eot?v=#{$fontawesome-icon-font-version}') format('embedded-opentype'),
-  url('#{$fontawesome-icon-font-path}/fontawesome-webfont.woff2?v=#{$fontawesome-icon-font-version}') format('woff2'),
-  url('#{$fontawesome-icon-font-path}/fontawesome-webfont.woff?v=#{$fontawesome-icon-font-version}') format('woff'),
-  url('#{$fontawesome-icon-font-path}/fontawesome-webfont.ttf?v=#{$fontawesome-icon-font-version}') format('truetype');
-
-  font-weight: normal;
-  font-style: normal;
-}
-
-
-
-
 // >> Begin custom inline vdm code
 // - - - - - -
 // @ see primary reference for this implementation : http://fontawesome.io/examples/
 // @ TO-DO : implement more modifiers (scale,etc), fetching inspiration from the main fa stylesheet
 
 
-// VDM ICONS
-
+// VDM ICONS, initial version with english key names
 i,span {
   &.vdmi {
     display: inline-block;
@@ -137,106 +120,7 @@ i,span {
   }
 }
 
-
-
-
-
-
-
-
-// FONTAWESOME ICONS
-
-.fa {
-  display: inline-block;
-  color: $vdm-sub-brand;
-  font: normal normal normal $font-size-base/1 $fontawesome-icon-font-family;
-  font-size: inherit;
-  text-rendering: auto;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  &.fa-facebook {
-    &:before {
-      content: "\f09a";
-    }
-  }
-  &.fa-youtube {
-    &:before {
-      content: "\f167";
-    }
-  }
-  &.fa-google-plus {
-    &:before {
-      content: "\f0d5";
-    }
-  }
-  &.fa-twitter {
-    &:before {
-      content: "\f099";
-    }
-  }
-  &.fa-linkedin {
-    &:before {
-      content: "\f0e1";
-    }
-  }
-  &.fa-instagram {
-    &:before {
-      content: "\f16d";
-    }
-  }
-  &.fa-circle {
-    &:before {
-      content: "\f111";
-      color: $white;
-    }
-  }
-}
-
-.fa-lg {
-  font-size: 1.33333333em;
-  line-height: 0.75em;
-  vertical-align: -15%;
-}
-.fa-xl {
-  font-size: 1.66666666em;
-  line-height: 1em;
-  vertical-align: -15%;
-}
-.fa-2x {
-  font-size: 2em;
-}
-.fa-stack {
-  position: relative;
-  display: inline-block;
-  width: 2em;
-  height: 2em;
-  line-height: 2em;
-  vertical-align: middle;
-}
-.fa-stack-1x,
-.fa-stack-2x,
-.fa-stack-3x {
-  position: absolute;
-  left: 0;
-  width: 100%;
-  text-align: center;
-}
-.fa-stack-1x {
-  line-height: inherit;
-}
-.fa-stack-2x {
-  font-size: 2em;
-}
-.fa-stack-3x {
-  font-size: 3em;
-}
-.fa-inverse {
-  color: #ffffff;
-}
-
-
 // Social media
-
 ul {
   &.social-media-list {
     margin: 0;
@@ -278,46 +162,6 @@ ul {
     }
   }
 }
-
-/* a {
-  &.social-icon {
-    height: $vdm-icon-social-media-scale;
-    padding-left: $vdm-icon-social-media-scale + $vdm-icon-social-media-padding-right;
-    line-height: $vdm-icon-social-media-scale;
-    display: inline-block;
-
-    color: $black;
-    text-decoration: none;
-    &:hover, 
-    &:active {
-      color: $black;
-      text-decoration: underline;
-    }
-  
-    &.facebook {
-      background: url('#{$assets-icons-path}/ic-facebook.png');
-      background: url('#{$assets-icons-path}/ic-facebook.svg') no-repeat 0 0;
-    }
-    &.linkedin {
-      background: url('#{$assets-icons-path}/ic-linkedin.png');
-      background: url('#{$assets-icons-path}/ic-linkedin.svg') no-repeat 0 0;
-    }
-    &.twitter {
-      background: url('#{$assets-icons-path}/ic-twitter.png');
-      background: url('#{$assets-icons-path}/ic-twitter.svg') no-repeat 0 0;
-    }
-    &.youtube {
-      background: url('#{$assets-icons-path}/ic-youtube.png');
-      background: url('#{$assets-icons-path}/ic-youtube.svg') no-repeat 0 0;
-    }
-    &.inverse {
-      &.facebook {
-        background: url('#{$assets-icons-path}/ic-facebook-black-white.png');
-        background: url('#{$assets-icons-path}/ic-facebook-black-white.svg') no-repeat 0 -65px;
-      }
-    }
-  }
-} */
 
 // test social icon font
 // Create a mixin with this bloc, loop over the $social-media-icons variable with map-get
