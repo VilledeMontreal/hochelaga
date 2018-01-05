@@ -1,0 +1,847 @@
+/**
+ * Cards are set up to be displayed in a grid with equal heights
+ * Cards are laid out on the vertical axis when they have images, all the time
+ * Cards can have icons and be laid out on the horiontal axis when they only have icons
+ */
+
+.vdm-cards {
+  list-style-type: none;
+  padding-left: 0;
+  @include make-row();
+  margin-top: 0;
+  margin-bottom: 0;
+
+  // Vertical grid types, equal heights
+  &.grid-type-grid {
+    .vdm-card {
+      .vdm-card-body {
+        height: 100%;
+      }
+    }
+  }
+
+  .vdm-card {
+    @include make-col-ready();
+    margin-bottom: $grid-gutter-width;
+  }
+}
+
+// Root style definitions for cards
+// Grid column implementation is strictly and only per specific layouts.
+
+.vdm-card {
+  .vdm-card-body {
+    // Flex properties
+    display: flex;
+    flex-direction: column;
+
+    background: $vdm-grey-light;
+    border: none;
+
+    cursor: pointer;
+    line-height: floor(($font-size-base * 1.2));
+    text-decoration: none;
+    color: $black;
+
+    // Loop over all icons in the set to produce the classes & invoke the icon() mixin
+    @each $name, $char in $icons {
+      &.ic-#{$name} {
+        @include icon(before, $name);
+      }
+    }
+
+    // Mixin potential
+    &:before {
+      font-size: 3.6rem;
+      width: 3.6rem;
+      height: 3.6rem;
+      line-height: 3.6rem;
+      text-decoration: none;
+      color: $vdm-brand;
+      // border: 1px solid yellow;
+    }
+
+    // Active states, general
+    // Shared with teasers ?, mixin ?
+    &:hover,
+    &:active {
+      &.vdm-card-body {
+        color: $white;
+        background: $vdm-brand;
+        text-decoration: none;
+        &:before {
+          color: $white;
+        }
+        > * {
+          color: $white;
+        }
+
+        // Specific pseudo-elements overrides.
+        .arrow-link,
+        .category {
+          &:before,
+          &:after {
+            color: $white;
+          }
+        }
+        .category {
+          &:before,
+          &:after {
+            background-color: $white;
+          }
+        }
+      }
+    }
+
+    > img {
+      @extend .img-fluid;
+    }
+
+    // Standard fixtures, first children, title content footer
+    .title {
+      margin-bottom: 1.3em;
+    }
+    .content {
+      margin-bottom: 1.3em;
+      &:last-child {
+        margin-bottom: 0;
+      }
+    }
+    .footer {
+      margin-bottom: 0;
+    }
+
+    // Special fixtures, text and deeper elements
+
+    // Category tags
+    // Shared with teasers, mixin, does this really belong to cards or is it a generic text style?
+    .category {
+      font-weight: $font-weight-bold;
+      color: $vdm-brand;
+      display: block;
+      &.bullet-left {
+        position: relative;
+        padding-left: 1.5em;
+        &:before {
+          position: absolute;
+          left: 0.1em;
+          top: 0.2em;
+          content: "";
+          background: $vdm-brand;
+          width: 0.75em;
+          height: 0.75em;
+          // display: inline-block;
+          border-radius: 100%;
+        }
+      }
+      &:first-of-type {
+        margin-bottom: 0.75rem;
+      }
+    }
+  } // card-body
+  // End generic rules
+
+  // *******
+  // Modifiers & cases below
+  // @see https://projects.invisionapp.com/d/main#/console/11533069/248716747/preview
+  &.minimal {
+    .vdm-card-body {
+      text-align: left;
+      height: 100%;
+      padding: 1.3rem;
+
+      .title {
+        @include header(5);
+        color: $vdm-brand;
+      }
+      .content {
+        @include header(6);
+        margin-bottom: 0;
+        margin-top: auto;
+      }
+    }
+
+    // Grid styles
+    @include media-breakpoint-up(xs) {
+      @include make-col(12);
+    }
+    @include media-breakpoint-up(md) {
+      @include make-col(6);
+    }
+    @include media-breakpoint-up(lg) {
+      @include make-col(4);
+    }
+  }
+
+  // @see https://projects.invisionapp.com/d/main#/console/11533069/248716747/preview
+  &.featured {
+    .vdm-card-body {
+      height: 100%;
+      padding: 1.5rem 1.3rem;
+
+      .title {
+        @include header(4, bold);
+      }
+      .content {
+        @include header(4);
+        flex: 1;
+        margin-bottom: 4em;
+      }
+      .footer {
+        @include header(6);
+        margin-bottom: 0;
+        margin-top: auto;
+      }
+    }
+
+    // Grid styles
+    @include media-breakpoint-up(xs) {
+      @include make-col(12);
+    }
+    @include media-breakpoint-up(md) {
+      @include make-col(6);
+    }
+  }
+
+  // Small tiles with top icon and title only
+  // Layd out in vertical grids
+  &.icon-center {
+    .vdm-card-body {
+      padding: 3rem 2rem 1rem 2rem;
+
+      &:before {
+        margin-right: auto;
+        margin-left: auto;
+        margin-bottom: 1.15rem;
+      }
+
+      .title {
+        font-size: $font-size-base;
+        font-weight: $font-weight-regular;
+        line-height: $font-size-base * 1.1875;
+      }
+    }
+
+    // Grid styles
+    @include media-breakpoint-up(xs) {
+      @include make-col(12);
+    }
+    @include media-breakpoint-up(md) {
+      @include make-col(4);
+    }
+    @include media-breakpoint-up(lg) {
+      @include make-col(3);
+    }
+  }
+
+  // Scale modifiers
+  &.thumb {
+    text-align: center;
+  }
+
+  // Color scheme modifiers
+  // Shared with teasers, mixin
+  &.light-scheme {
+    .vdm-card-body {
+      background: $white;
+      border: 1px solid $vdm-brand;
+
+      &:before {
+        color: $black;
+      }
+    }
+  }
+  // Shared with teasers, mixin
+  &.white-scheme {
+    .vdm-card-body {
+      background: $white;
+      border: none;
+      &:hover,
+      &:active {
+        background-color: $white;
+        border: none;
+        color: $black;
+        > * {
+          color: $black;
+        }
+        &:before,
+        &:after {
+          color: $vdm-brand;
+        }
+      }
+    }
+  }
+
+  // Begin media styles : images
+  // Media top
+  // All image type cards MUST have an innner .card-content-wrapper tag
+  &.vdm-card-image {
+    text-align: left;
+
+    // @see https://projects.invisionapp.com/d/main#/console/11533069/245692118/preview
+    .vdm-card-body {
+      // Reset padding + margin on the link
+      flex-direction: column;
+      margin: 0;
+      padding: 0;
+
+      img {
+        @extend .img-fluid;
+        margin-bottom: 1.3rem;
+        margin-right: 0;
+        margin-left: 0;
+      }
+
+      .card-content-wrapper {
+        display: flex;
+        flex-direction: column;
+        height: 100%;
+
+        margin-top: 0;
+        margin-bottom: 0;
+        padding: 0 1.3rem 1.3rem 1.3rem;
+        &:first-child {
+          margin-top: 0;
+        }
+        &:last-child {
+          margin-bottom: 0;
+        }
+
+        .title {
+          @include header(4, bold);
+        }
+
+        .content {
+          flex: 1;
+        }
+
+        .footer {
+          margin-top: auto;
+        }
+      }
+    } // Card body
+
+    &.thumb {
+      &:hover,
+      &:active {
+        > * {
+          color: $black;
+        }
+        .footer {
+          color: $black;
+        }
+        .title {
+          color: $vdm-brand;
+        }
+      }
+
+      // Grid styles
+      @include media-breakpoint-up(xs) {
+        @include make-col(12);
+      }
+      @include media-breakpoint-up(sm) {
+        @include make-col(6);
+      }
+      @include media-breakpoint-up(lg) {
+        @include make-col(3);
+      }
+    }
+
+    &.large {
+      .card-content-wrapper {
+        .title {
+          margin-bottom: 0.4em;
+        }
+        .content {
+          margin-bottom: 3.6rem;
+        }
+        .footer {
+          margin-top: auto;
+        }
+      }
+
+      // Grid styles
+      @include media-breakpoint-up(sm) {
+        @include make-col(12);
+      }
+      @include media-breakpoint-up(md) {
+        @include make-col(6);
+      }
+    }
+
+    // @see https://projects.invisionapp.com/d/main#/console/11533069/244609142/preview
+    &.rounded {
+      .vdm-card-body {
+        > img {
+          @extend .rounded-circle;
+          margin: 2em auto 1em auto;
+          width: 61.5%;
+        }
+        .card-content-wrapper {
+          .title {
+            .weight-regular {
+              font-weight: $font-weight-regular;
+              display: block;
+            }
+            margin-bottom: auto; // for sticky footer
+          }
+          .footer {
+            margin-top: auto; // for sticky footer
+            padding-top: 0.5rem;
+            margin-bottom: 0;
+          }
+        }
+      }
+    }
+  }
+}
+
+// Utility class to have a Bootstrap row's children all be the same height
+// @see https://scotch.io/quick-tips/different-tricks-on-how-to-make-bootstrap-columns-all-the-same-height
+// @see https://codepen.io/ncerminara/pen/qZvYgR
+.is-grid-row {
+  display: flex;
+  flex-wrap: wrap;
+}
+.is-grid-col {
+  display: flex;
+  flex-direction: column;
+}
+
+// Arrow links, all types , all tags
+// Make this generic, into a mixin
+.arrow-link {
+  position: relative;
+  padding-right: 2.5em;
+  line-height: 1.7em;
+  @include icon(after, arrow-right);
+  &:after {
+    position: absolute;
+    font-size: 2.5em;
+    width: 1.35em;
+    padding-left: 0.35em;
+    left: auto;
+    background: transparent;
+    color: $vdm-brand;
+  }
+}
+
+// Mixin potential
+.location-pin {
+  @include icon(before, location);
+  color: $vdm-brand;
+  position: relative;
+  padding-left: 2em;
+  &:before {
+    font-size: 2em;
+    background: transparent;
+    color: $vdm-brand;
+    left: -0.2em;
+    position: absolute;
+  }
+}
+
+// Mixin potential
+.inline-items {
+  > * {
+    display: inline-block;
+    margin-right: 0.8em;
+    margin-bottom: 0.5em;
+    &:last-of-type {
+      margin-right: 0;
+    }
+  }
+}
+
+/////////////////////////////////////////////////////////////////////////////
+
+.card {
+  background: $white;
+  border-radius: 0;
+  display: block;
+  padding: 8rem 2rem 1rem 2rem;
+  border: 1px solid $vdm-brand;
+  text-align: center;
+  text-decoration: none;
+  color: $black;
+  cursor: pointer;
+  line-height: floor(($font-size-base * 1.2));
+  //test
+  height: 100%;
+
+  &:hover,
+  &:active {
+    color: $white;
+    background: $vdm-brand;
+    text-decoration: none;
+    &:before {
+      color: $white;
+    }
+  }
+
+  // Fonticon
+  &:before {
+    font-size: 3.6rem;
+    width: 3.6rem;
+    height: 3.6rem;
+    line-height: 3.6rem;
+    position: absolute;
+    text-decoration: none;
+    color: $vdm-brand;
+  }
+
+  &.card-base {
+    &:before {
+      left: calc(50% - 1.8rem);
+      top: 3.4rem;
+    }
+  }
+
+  // Large card, icon on left, ttle & teaser features at least,
+  &.card-large {
+    background: $vdm-grey-light;
+    padding: 2.3rem 2.3rem 3rem 7.75rem;
+    border: 0;
+    text-align: left;
+    min-height: 12rem;
+
+    display: flex;
+    // flex-direction: column;
+
+    // justify-content: center;
+    // align-items: center;
+
+    @include media-breakpoint-down(xs) {
+      padding: 8rem 2.3rem 2.5rem 2.3rem;
+    }
+
+    // Fonticon
+    &:before {
+      font-size: 3.6rem;
+      left: 3.25rem;
+      top: calc(50% - 1.8rem);
+      @include media-breakpoint-down(xs) {
+        top: 2.3rem;
+        left: calc(50% - 1.8rem);
+      }
+    }
+
+    &:hover,
+    &:active {
+      background: $vdm-brand;
+    }
+
+    .title {
+      @include header(4);
+      font-weight: $font-weight-bold;
+      padding-top: 0;
+      margin-top: 0;
+      margin-bottom: 2.4rem;
+      @include media-breakpoint-down(xs) {
+        margin-bottom: 1.8rem;
+      }
+    }
+
+    .content {
+      font-size: $font-size-base;
+      line-height: floor(($font-size-base * 1.625));
+      // flex: 1 0 auto;
+      // flex-grow: 1;
+
+      &:first-of-type {
+        margin-top: 0;
+        padding-top: 0;
+      }
+      &:last-of-type {
+        margin-bottom: 0;
+        padding-bottom: 0;
+      }
+    }
+
+    &.card-reverse {
+      padding: 2.3rem 7.75rem 3rem 2.3rem;
+      &:before {
+        display: none;
+      }
+      &:after {
+        font-size: 3.6rem;
+        right: 3.25rem;
+        top: calc(50% - 1.8rem);
+        @include media-breakpoint-down(xs) {
+          top: 2.3rem;
+          left: calc(50% - 1.8rem);
+        }
+      }
+    }
+  }
+
+  // Loop over all icons in the set to produce the classes & invoke the icon() mixin
+  @each $name, $char in $icons {
+    &.ic-#{$name} {
+      @include icon(before, $name);
+    }
+  }
+}
+
+// Base block : tile -- keep ? Seems to be replaced with the card block type above
+.tile {
+  display: block;
+  background: $vdm-neutral-light;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid $vdm-brand;
+
+  // Navigation tile : this element is always hyperlinked
+  &.tile-nav {
+    text-decoration: none;
+    color: $black;
+    &:hover,
+    &:active {
+      color: $white;
+      background: $vdm-brand;
+      .wrapper {
+        h3 {
+          color: $white;
+        }
+        .vdmi {
+          color: $white;
+        }
+      }
+    }
+  }
+
+  // Implements vdm-fonticon
+  &.tile-icon {
+    width: 170px;
+    height: 170px;
+  }
+
+  // Insures bi-axial centering in the flex grid
+  .wrapper {
+    max-width: 100%;
+    padding-right: 15px;
+    padding-left: 15px;
+    margin-right: auto;
+    margin-left: auto;
+    text-align: center;
+    // Icon
+    .vdmi {
+      font-size: 3em;
+      color: $vdm-brand;
+      cursor: pointer;
+      margin-bottom: 0.15em;
+    }
+    // Label
+    h3 {
+      font-size: $font-size-base;
+      $font-weight: $font-weight-regular;
+      cursor: pointer;
+      line-height: $line-height-lg;
+    }
+  }
+}
+
+// Teasers
+// Teaser picture
+.teaser {
+  display: block;
+  padding: 0;
+  background: $vdm-grey-light;
+  text-decoration: none;
+  color: $body-color;
+  overflow: hidden;
+  cursor: pointer;
+
+  &:hover,
+  &:active {
+    text-decoration: underline;
+    background: darken($vdm-grey-light, 4%);
+  }
+
+  .content {
+    padding: 1.9rem 1.9rem 1.3rem 1.9rem;
+    width: 100%;
+    height: 100%;
+    .title {
+      @include header(4);
+      margin-top: 0;
+      padding-top: 0;
+      margin-bottom: 1.5rem;
+    }
+    .vdm-label {
+      background: transparent;
+      text-decoration: none;
+    }
+  }
+
+  &.teaser-picture {
+    display: flex;
+    align-items: flex-end;
+
+    > img,
+    .content {
+      // Vertically align each flex slave
+      align-self: flex-start;
+    }
+    .content {
+      // Grow content to fill unallocated space
+      flex: 1;
+    }
+    > img {
+      margin-left: 1rem;
+      max-width: 300px;
+
+      order: 1;
+    }
+    // Position picture first, reset margins, change flex-axis
+    @include media-breakpoint-down(sm) {
+      flex-direction: column;
+      > img {
+        margin: 0;
+        max-width: 100%;
+        order: -1;
+      }
+    }
+  }
+
+  &.teaser-alert {
+    box-sizing: border-box;
+    position: relative;
+    // font-size: 125%; // -- Use this to tests scalability
+    // padding-left: 9rem;
+    min-height: 4rem;
+
+    @include icon(before, rosette);
+    @include icon(after, arrow-right);
+
+    &:hover,
+    &:active {
+      text-decoration: none;
+      &:after {
+        color: $black;
+      }
+    }
+
+    &:before {
+      position: absolute;
+      font-size: 4.9rem;
+      line-height: 4.9rem;
+      width: 4.9rem;
+      height: 4.9rem;
+      top: calc(50% - 2rem); // Perceptual -- should work out to 0.65
+      left: 2rem;
+      pointer-events: none;
+      color: $black;
+    }
+
+    &:after {
+      font-size: 5.2rem;
+      line-height: 5.2rem;
+      width: 5.2rem;
+      height: 5.2rem;
+      position: absolute;
+      top: calc(50% - 2.6rem);
+      right: 2rem;
+      display: block;
+      text-align: center;
+      pointer-events: none;
+      color: $vdm-brand;
+    }
+
+    .content {
+      display: inline-block;
+      vertical-align: middle; // key for vertical centering w/inline-block;
+      width: 70.5%;
+      padding: 2.75rem 1.7rem 4.8rem 9rem;
+      margin-right: 3%;
+
+      .what {
+        @include header(4);
+        margin-top: 0;
+        margin-bottom: 0.25rem;
+      }
+      .where {
+        font-size: $font-size-xl;
+        line-height: floor(($font-size-xl * 1.3125));
+        margin-bottom: 1.5rem;
+      }
+      .when {
+        font-size: $font-size-xl;
+        line-height: floor(($font-size-xl * 1.3125));
+        margin-bottom: 0;
+        padding-bottom: 0;
+        color: #9b9b9b; // !warning - color out of range
+      }
+    }
+    .metadata {
+      display: inline-block;
+      vertical-align: middle; // key for vertical centering w/inline-block;
+
+      color: #4a4a4a; // !warning - color out of range
+      position: relative;
+      font-size: $font-size-base;
+      width: 12%;
+      text-decoration: none;
+
+      // border: 1px solid turquoise;
+
+      .identifier {
+      }
+    }
+
+    // Small and x-small - mobile
+    @include media-breakpoint-down(sm) {
+      &:before {
+        top: 1.7rem;
+      }
+      &:after {
+        top: calc(100% - 6rem);
+        left: calc(50% - 2.6rem);
+        right: auto;
+      }
+
+      .content {
+        border: 1px solid lime;
+        padding: 1.7rem 1.7rem 5.5rem 9rem;
+        display: block;
+        width: 100%;
+        margin-bottom: 2rem;
+
+        .where {
+          margin-bottom: 2.5rem;
+        }
+      }
+      .metadata {
+        // border: 1px solid violet;
+        display: none;
+        width: 100%;
+      }
+    }
+
+    // X-small - mobile only
+    @include media-breakpoint-down(xs) {
+      border: 1px solid orange;
+
+      &:before {
+        display: none;
+      }
+      &:after {
+        top: calc(100% - 6rem);
+      }
+
+      .content {
+        // border: 1px solid orange;
+        padding: 1.7rem 1.7rem 3rem 1.7rem;
+        margin-bottom: 3rem;
+        .what {
+          margin-bottom: 1.2rem;
+        }
+      }
+      .metadata {
+        text-align: center;
+        // border: 1px solid yellow;
+      }
+    }
+  } // Teaser alert
+}
