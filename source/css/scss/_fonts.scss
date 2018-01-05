@@ -1,35 +1,40 @@
-@import url('https://fonts.googleapis.com/css?family=Nunito+Sans:300,400,600,700');
+@import url("https://fonts.googleapis.com/css?family=Nunito+Sans:300,400,600,700");
 
 //== Icons fonts vfi class, imported from "@villemontreal/font-icon
 
 $vfi-icon-font-path: $assets-font-path;
-$vfi-icon-font-family : 'vdm';
+$vfi-icon-font-family: "vdm";
 @font-face {
   font-family: $vfi-icon-font-family;
-  src: url('#{$vfi-icon-font-path}/vdm.eot?c81cd1b7c58db7a73be82e1052585cc0?#iefix') format("embedded-opentype"),
-    url('#{$vfi-icon-font-path}/vdm.woff2?c81cd1b7c58db7a73be82e1052585cc0') format("woff2"),
-    url('#{$vfi-icon-font-path}/vdm.woff?c81cd1b7c58db7a73be82e1052585cc0') format("woff"),
-    url('#{$vfi-icon-font-path}/vdm.ttf?c81cd1b7c58db7a73be82e1052585cc0') format("truetype"),
-    url('#{$vfi-icon-font-path}/vdm.svg?c81cd1b7c58db7a73be82e1052585cc0#vdm') format("svg");
+  src: url("#{$vfi-icon-font-path}/vdm.eot?c81cd1b7c58db7a73be82e1052585cc0?#iefix")
+      format("embedded-opentype"),
+    url("#{$vfi-icon-font-path}/vdm.woff2?c81cd1b7c58db7a73be82e1052585cc0")
+      format("woff2"),
+    url("#{$vfi-icon-font-path}/vdm.woff?c81cd1b7c58db7a73be82e1052585cc0")
+      format("woff"),
+    url("#{$vfi-icon-font-path}/vdm.ttf?c81cd1b7c58db7a73be82e1052585cc0")
+      format("truetype"),
+    url("#{$vfi-icon-font-path}/vdm.svg?c81cd1b7c58db7a73be82e1052585cc0#vdm")
+      format("svg");
 }
 
 .vfi {
-    display: flex;
-    line-height: 1;
-    text-rendering: auto;
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
-    font: normal normal normal $font-size-base/1 $vfi-icon-font-family;
+  display: flex;
+  line-height: 1;
+  text-rendering: auto;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  font: normal normal normal $font-size-base/1 $vfi-icon-font-family;
 }
-  
+
 @each $name, $char in $vdmicons {
-    // @debug($name);
-    // @debug($char);
-    
-    &.#{$name} {
-        &:before {
-            content: $char;
-            // @debug($char);
-        }
+  // @debug($name);
+  // @debug($char);
+
+  &.#{$name} {
+    &:before {
+      content: $char;
+      // @debug($char);
     }
+  }
 }

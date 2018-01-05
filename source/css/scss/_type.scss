@@ -1,14 +1,5 @@
-
 @import "variables.scss";
 @import "mixins.scss";
-
-html {
-  //font-size: $font-size-base; // This is THE reference value for all rem units (16px)
-  body {
-    //font-weight: $font-weight-regular;
-    //font-size: $font-size-base;   // Override inherited font-sizes
-  }
-}
 
 h1 {
   @include header(1);
@@ -46,7 +37,6 @@ h6 {
     top: calc(100% - 0.3rem);
     height: $font-size-base / 3;
     background: $vdm-sub-brand;
-    
   }
 }
 
@@ -84,26 +74,25 @@ p {
 a {
   // Inline links with icons
   &.icon {
-    
     i {
-        &.vdmi {
-          font-size: 1.5em;
-          position: relative;
-          top: 0.2em;
-        }
+      &.vdmi {
+        font-size: 1.5em;
+        position: relative;
+        top: 0.2em;
+      }
     }
     &.right {
       i {
         &.vdmi {
-            padding-left: 0.15em;
-          }
+          padding-left: 0.15em;
+        }
       }
     }
     &.left {
       i {
         &.vdmi {
-            padding-right: 0.15em;
-          }
+          padding-right: 0.15em;
+        }
       }
     }
   }
@@ -116,26 +105,25 @@ a {
     &.inline {
       display: inline-block;
       padding-left: 0;
-      
     }
-    
+
     &.arrow {
       position: relative;
       padding-right: 4em;
-      
+
       &:after {
         position: absolute;
         // content: "\E103";
-        content: map-get($icons , arrow-right);
+        content: map-get($icons, arrow-right);
         font-family: "vdm-fonticon";
         font-size: 2.5em;
         top: 50%;
         transform: translateY(-50%);
-        left: calc(100% - 1.25em); 
+        left: calc(100% - 1.25em);
         // right: 0;
         background: transparent;
 
-        &:hover, 
+        &:hover,
         &:active {
           background-color: transparent;
           text-decoration: none;
@@ -146,12 +134,11 @@ a {
     &.inverse {
       background: $black;
       color: $white;
-      &:hover, 
+      &:hover,
       &:active {
         color: $vdm-brand;
         text-decoration: none;
       }
-
     }
     &.brand {
       color: $vdm-brand;
@@ -159,7 +146,12 @@ a {
   }
 }
 // Inline links with icons - Headers : a tad smaller
-h1, h2, h3, h4, h5, h6 {
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
   a {
     &.icon {
       i {
@@ -175,8 +167,8 @@ h1, h2, h3, h4, h5, h6 {
 //
 // ul, ol
 
-ul, ol {
-
+ul,
+ol {
   &.vdm-list-plain {
     list-style-type: none;
     margin: 0;
@@ -203,14 +195,14 @@ ul {
   &.vdm-list {
     list-style-type: none;
     padding: 0;
-    
+
     li {
       padding-left: 0.8em;
       position: relative;
       margin-bottom: 0.7em;
 
       &:before {
-        content : "";
+        content: "";
         width: 0.35em;
         height: 0.35em;
         @extend .rounded-circle;
@@ -229,7 +221,7 @@ ul {
             width: 0.8em;
             top: 0.7em;
             height: 1px;
-            border-radius:0;
+            border-radius: 0;
           }
           &:last-of-type {
             margin-bottom: 0;
@@ -242,7 +234,6 @@ ul {
 
 // Ordered list overrides
 ol {
-
   &.numbered-list {
     list-style-type: none; // Not sure this remains accessible
     counter-reset: ol-counter;
@@ -252,7 +243,7 @@ ol {
       @include header(4, bold);
     }
 
-    >li {
+    > li {
       padding-bottom: 1.5rem;
       &:before {
         @include header(4, bold);
@@ -269,7 +260,7 @@ ol {
   }
 }
 
-// Definition list 
+// Definition list
 
 dl {
   margin-bottom: 2em;
@@ -298,7 +289,7 @@ blockquote {
     font-weight: normal;
     font-style: italic;
     position: relative;
-    
+
     &:before {
       width: 8px;
       height: 35%;
@@ -330,7 +321,7 @@ blockquote {
   margin-top: 0.75rem;
   margin-bottom: 0.75rem;
   border-style: none;
-  border-width: 0; 
+  border-width: 0;
   height: $font-size-base / 3;
   background: $black;
   border-radius: $font-size-base / 4;
@@ -375,7 +366,7 @@ blockquote {
   font-size: $font-size-xl;
   // Fat day, discrete month, block level headings
   &.day-month {
-    >.day {
+    > .day {
       @include header(2);
       display: inline-block;
       position: relative;
@@ -392,4 +383,4 @@ blockquote {
       }
     }
   }
-} 
+}

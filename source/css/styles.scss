@@ -5,10 +5,9 @@
 @import "scss/variables";
 
 // Bootstrap Framework.
-@import '~bootstrap/scss/bootstrap';
+@import "~bootstrap/scss/bootstrap";
 
 // Import VDM styles files
-@import "scss/breakpoints.scss";
 @import "scss/vdm-icons-map.scss";
 @import "scss/fonts.scss";
 @import "scss/mixins.scss";
@@ -26,4 +25,3 @@
 @import "scss/ui-nav-blocks.scss";
 @import "scss/ui-buttons-switches-tabs.scss";
 @import "scss/collectors.scss";
-

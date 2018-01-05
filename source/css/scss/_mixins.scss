@@ -8,7 +8,7 @@
 
 // @arg $level - integrer [1-6]
 // @arg $weight - string ['light','regular','bold']
- @mixin header($level: 1, $weight: 'regular') {
+@mixin header($level: 1, $weight: "regular") {
   font-family: $font-family-base;
   font-weight: $font-weight-regular;
   display: block;
@@ -19,64 +19,56 @@
 
   @if $level == 1 {
     font-weight: $font-weight-light;
-    font-size: $font-size-base * 4.1875;    // 67px
-    line-height: $line-height-sm;               // 92px
-
+    font-size: $font-size-base * 4.1875; // 67px
+    line-height: $line-height-sm; // 92px
   }
   @if $level == 2 {
     font-weight: $font-weight-light;
-    font-size: $font-size-base * 3.125;     // 50px
-    line-height: $line-height-sm;               // 69px
-
+    font-size: $font-size-base * 3.125; // 50px
+    line-height: $line-height-sm; // 69px
   } @else if $level == 3 {
-    font-size: $font-size-base * 2.3125;    // 37px
-    line-height: $line-height-sm;               // 50px
-
+    font-size: $font-size-base * 2.3125; // 37px
+    line-height: $line-height-sm; // 50px
   } @else if $level == 4 {
-    font-size: $font-size-base * 1.750;     // 28px
-    line-height: $line-height-sm;               // 38px
+    font-size: $font-size-base * 1.75; // 28px
+    line-height: $line-height-sm; // 38px
     font-weight: $font-weight-regular;
 
-    @if $weight == 'bold' {
+    @if $weight == "bold" {
       font-weight: $font-weight-bold;
     }
   } @else if $level == 5 {
-    font-size: $font-size-base * 1.3125;    // 21px
-    line-height: $line-height-sm;               // 28px
-
+    font-size: $font-size-base * 1.3125; // 21px
+    line-height: $line-height-sm; // 28px
   } @else if $level == 6 {
-    font-size: $font-size-base;             // 16px
-    line-height: $line-height-lg;               // 26px
+    font-size: $font-size-base; // 16px
+    line-height: $line-height-lg; // 26px
   }
- }
+}
 
 //  @arg $size - string - any valid text size declaration
 //  @arg $color - string any valid color declaration
 //  @arg $color - string any valid color declaration
-@mixin bullet-left($size: .8em, $color: $vdm-brand, $textcolor: $black) {
-    display: inline-block;
-    position: relative;
-    padding-left: $size * 1.75;
-    color: $textcolor;
-    &:before {
-      content : " ";
-      position: absolute;
-      display: block;
-      left: 0;
-      top: 46%; // Perceptual
-      transform: translateY(-50%);
-      background: $color;
-      border-radius: $size;
-      width: $size;
-      height: $size;
-    }
- }
+@mixin bullet-left($size: 0.8em, $color: $vdm-brand, $textcolor: $black) {
+  display: inline-block;
+  position: relative;
+  padding-left: $size * 1.75;
+  color: $textcolor;
+  &:before {
+    content: " ";
+    position: absolute;
+    display: block;
+    left: 0;
+    top: 46%; // Perceptual
+    transform: translateY(-50%);
+    background: $color;
+    border-radius: $size;
+    width: $size;
+    height: $size;
+  }
+}
 
-
-
-
-
- /**
+/**
   * Vdm fonticon mixin
   * Reference : http://jaydenseric.com/blog/fun-with-sass-and-font-icons
   *
@@ -94,49 +86,46 @@
   *
   */
 
-
-// Generate all .ic-icon classnames : 
+// Generate all .ic-icon classnames :
 [class^="ic-"]:before,
 [class*=" ic-"]:before {
-    font-weight: normal;
-    font-style: normal;
-    font-family: $vdm-icon-font-family;
+  font-weight: normal;
+  font-style: normal;
+  font-family: $vdm-icon-font-family;
 }
 
 // @see variable $icons in variables.scss -- contains all characters
 // mapping & object names as in   document: "\E012";
 @each $name, $char in $icons {
-    .ic-#{$name} {
-        content: $char;
-    }
+  .ic-#{$name} {
+    content: $char;
+  }
 }
 
-
 @mixin icon($position: before, $icon: false, $styles: true) {
-    @if $position == both {
-        $position: 'before, &:after';
+  @if $position == both {
+    $position: "before, &:after";
+  }
+  // Either a :before or :after pseudo-element, or both, defaulting to :before
+  &:#{$position} {
+    @if $icon {
+      // A particular icon has been specified
+      content: "#{map-get($icons, $icon)}";
     }
-    // Either a :before or :after pseudo-element, or both, defaulting to :before
-    &:#{$position} {
 
-        @if $icon {
-            // A particular icon has been specified
-            content: "#{map-get($icons, $icon)}";
-        }
-
-        @if $styles {
-            font-weight: normal;
-            font-style: normal;
-            font-family: $vdm-icon-font-family;
-            text-decoration: none;
-            display: inline-block;
-            text-rendering: auto;
-            -webkit-font-smoothing: antialiased;
-            -moz-osx-font-smoothing: grayscale;
-        }
-
-        @content;
+    @if $styles {
+      font-weight: normal;
+      font-style: normal;
+      font-family: $vdm-icon-font-family;
+      text-decoration: none;
+      display: inline-block;
+      text-rendering: auto;
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
     }
+
+    @content;
+  }
 }
 
 // Applies to the vdmi radios and labels
@@ -145,8 +134,6 @@
 // The input has to come BEFORE the label for this code to work
 
 @mixin pseudo-form-element( $type: checkbox, $size: 1.875em ) {
-
-
   /*
    Alternative : use the bootstrap technique and free up the ligne height
 
@@ -163,50 +150,47 @@
   padding-left: $size * 1.4;
   line-height: $size;
 
-  &:before, &:after {
-      position: absolute;
-      content: "";
-      display: inline-block;
-      color: $vdm-brand;
-      // border: 1px solid orange;
-      left: 0;
-      top: 0;
+  &:before,
+  &:after {
+    position: absolute;
+    content: "";
+    display: inline-block;
+    color: $vdm-brand;
+    // border: 1px solid orange;
+    left: 0;
+    top: 0;
   }
 
   &:before {
-      background: $vdm-grey-light;
-      width: $size;
-      height: $size;
-      border-radius: $size * 0.2;
+    background: $vdm-grey-light;
+    width: $size;
+    height: $size;
+    border-radius: $size * 0.2;
   }
 
-  
-  @if $type == 'checkbox' {
-
+  @if $type == "checkbox" {
     @include icon(after, checkbox-checked-trans);
     &:after {
-        font-size: $size;
-        // top: $size * 0.075;
+      font-size: $size;
+      // top: $size * 0.075;
     }
-
   }
-  @if $type == 'radio' {
-      &:before, &:after {
-        border-radius: $size;
-      }
-      &:after {
+  @if $type == "radio" {
+    &:before,
+    &:after {
+      border-radius: $size;
+    }
+    &:after {
+      $half: $size * 0.45;
+      $quarter: $size * 0.175;
 
-        $half: $size * 0.45;
-        $quarter: $size * 0.175;
-
-        background: $vdm-brand;
-        width: $half;
-        height: $half;
-        left: $half;
-        top: $half;
-        transform: translate(-$quarter, -$quarter);
-        
-      }
+      background: $vdm-brand;
+      width: $half;
+      height: $half;
+      left: $half;
+      top: $half;
+      transform: translate(-$quarter, -$quarter);
+    }
   }
 }
 
@@ -216,16 +200,17 @@
                   $height:  $vdm-icon-font-height, 
                   $width: $vdm-icon-font-width, 
                   $lheight: $vdm-icon-font-line-height ) {
-
   @if $all {
-    &:after, &:before {
+    &:after,
+    &:before {
       font-size: $all;
       height: $all;
       width: $all;
       line-height: $all;
     }
-  }@else {
-    &:after, &:before {
+  } @else {
+    &:after,
+    &:before {
       font-size: $fsize;
       height: $height;
       width: $width;
@@ -236,7 +221,6 @@
 
 // Generates a block-level link with an icon in the after position;
 
-
 @mixin icon-block-link( $icon : arrow-right, $size: false ) {
   display: block;
   position: relative;
@@ -246,7 +230,7 @@
 
   &:after {
     position: absolute;
-    left: calc(100% - 1.25em); 
+    left: calc(100% - 1.25em);
     top: 50%;
     transform: translateY(-50%);
     right: 0;
@@ -256,7 +240,7 @@
   @if $size {
     &:after {
       font-size: $size;
-      left: calc(100% - #{ $size / 2 } ); 
+      left: calc(100% - #{ $size / 2 });
     }
   }
 }
@@ -264,43 +248,34 @@
 //@include n-columns(200px,  10px, true, 5);
 
 @mixin n-columns($child-selector, $min-width, $gutter, $last-equal: false, $max-cols: 5) {
-  
   // .vdm-footer-links {
-    display: flex;
-    flex-wrap: wrap;
-    margin-left: -$gutter;
-    margin-top: -$gutter;
+  display: flex;
+  flex-wrap: wrap;
+  margin-left: -$gutter;
+  margin-top: -$gutter;
 
-    > #{ $child-selector } {
-      flex: 1 0 $min-width;
-      margin-left: $gutter;
-      margin-top: $gutter;
+  > #{ $child-selector } {
+    flex: 1 0 $min-width;
+    margin-left: $gutter;
+    margin-top: $gutter;
 
-      @if $last-equal {
-        @for $i from 2 through $max-cols {
-          $screen-width: ($min-width*$i)+($gutter*$i);
-          $column-width: (100%/$i);
-          @media (min-width: $screen-width) {
-            max-width: calc(#{$column-width} - #{$gutter});
-          }
-        }
-    
-        $column-width: (100%/$max-cols);
-        @media (min-width: $min-width*$max-cols) {
-            min-width: calc(#{$column-width} - #{$gutter});
+    @if $last-equal {
+      @for $i from 2 through $max-cols {
+        $screen-width: ($min-width*$i)+($gutter*$i);
+        $column-width: (100%/$i);
+        @media (min-width: $screen-width) {
+          max-width: calc(#{$column-width} - #{$gutter});
         }
       }
+
+      $column-width: (100%/$max-cols);
+      @media (min-width: $min-width*$max-cols) {
+        min-width: calc(#{$column-width} - #{$gutter});
+      }
     }
+  }
   // }
-
 }
-
-
-
-
-
-
-
 
 /**
  * - - - - - - - - - -
@@ -308,55 +283,52 @@
  * - - - - - - - - - -
  */
 
- // Set all base teaser properties
- // To be applied to top-level hyperlink
+// Set all base teaser properties
+// To be applied to top-level hyperlink
 @mixin teaser-base() {
-  
   position: relative;
   display: flex;
   flex-direction: column;
   cursor: pointer;
   line-height: $line-height-sm;
 
-
   @include teaser-icons();
   @include teaser-scheme();
   @include teaser-variant();
 
-
   // Base fixture behaviours
-  >img {
+  > img {
     @extend .img-fluid;
   }
 
-  .title { 
-      @include header(4);
-      margin-bottom: 1em; 
-      &.arrow-link {
-          line-height: 1.7em;
-      }
-      &:last-child {
-          margin-bottom: 0;
-      }
+  .title {
+    @include header(4);
+    margin-bottom: 1em;
+    &.arrow-link {
+      line-height: 1.7em;
+    }
+    &:last-child {
+      margin-bottom: 0;
+    }
   }
   .content {
-      margin-bottom: 1.3em;
-      flex: 1;
-      &:last-child {
-          margin-bottom: 0;
-      }
+    margin-bottom: 1.3em;
+    flex: 1;
+    &:last-child {
+      margin-bottom: 0;
+    }
   }
   .footer {
-      margin-bottom: 0;  
-      margin-top: auto;
+    margin-bottom: 0;
+    margin-top: auto;
   }
 }
 
-
 // Set all common properties for icons, for the :after & :before pseudo-elements
- // To be applied to top-level hyperlink
+// To be applied to top-level hyperlink
 @mixin teaser-icons() {
-  &:after, &:before {
+  &:after,
+  &:before {
     font-size: 3.6rem;
     width: 3.6rem;
     height: 3.6rem;
@@ -371,27 +343,27 @@
 // $where [none, left, right, top]
 // $case [none, arrow-block]
 @mixin teaser-icon-position($where: none, $case: none) {
-  
   // Provide icon classes, invoke icon mixin, using :before or :after
   // Note that basic icon type always use the :before element;
   @each $name, $char in $icons {
-      &.ic-#{$name} {
-        @if $where == left or $where == right {
-          @include icon(before, $name);
-        }
-        
-        @if $case == arrow-block {
-          @include icon(after, arrow-right);
-        }
+    &.ic-#{$name} {
+      @if $where == left or $where == right {
+        @include icon(before, $name);
       }
+
+      @if $case == arrow-block {
+        @include icon(after, arrow-right);
+      }
+    }
   }
 
-  &:before, &:after {
+  &:before,
+  &:after {
     position: absolute;
-    
+
     // Manage the lateral position
     @include media-breakpoint-down(sm) {
-      left: calc(50% - 1.8rem); 
+      left: calc(50% - 1.8rem);
     }
     @include media-breakpoint-down(xs) {
       left: calc(50% - 1.8rem);
@@ -407,18 +379,17 @@
       // Manage the verticial position
       @include media-breakpoint-down(sm) {
         top: 1.8rem;
-        left: calc(50% - 1.8rem); 
+        left: calc(50% - 1.8rem);
       }
       @include media-breakpoint-down(xs) {
         top: 3rem;
-        left: calc(50% - 1.8rem); 
+        left: calc(50% - 1.8rem);
       }
     }
   }
 
   // RIGHT
   @if $where == right {
-    
     &:before {
       top: calc(50% - 1.7rem);
       left: calc(100% - 7rem);
@@ -426,14 +397,13 @@
       // Manage the verticial position
       @include media-breakpoint-down(sm) {
         top: 1.8rem;
-        left: calc(50% - 1.8rem); 
+        left: calc(50% - 1.8rem);
       }
       @include media-breakpoint-down(xs) {
         top: 3rem;
-        left: calc(50% - 1.8rem); 
+        left: calc(50% - 1.8rem);
       }
     }
-
   }
 
   // ARROW BLOCK , single and double icons cases
@@ -442,37 +412,35 @@
       left: calc(100% - 4.5rem);
       top: calc(50% - 1.7rem);
       @include media-breakpoint-down(sm) {
-        left: calc(50% - 1.8rem); 
-        top: calc(100% - 4.5rem); 
+        left: calc(50% - 1.8rem);
+        top: calc(100% - 4.5rem);
       }
     }
 
     // Double icons case management
     @if $where == left {
-      &:before  {
+      &:before {
         left: 2rem;
       }
 
       @include media-breakpoint-down(sm) {
-        &:before, &:after  {
-          left: calc(50% - 1.8rem); 
+        &:before,
+        &:after {
+          left: calc(50% - 1.8rem);
         }
       }
 
       &:after {
         @include media-breakpoint-down(sm) {
-          top: calc(100% - 4.5rem); 
-          left: calc(50% - 1.8rem); 
+          top: calc(100% - 4.5rem);
+          left: calc(50% - 1.8rem);
         }
       }
-
     }
   }
 }
 
-
-
- /**
+/**
   * Master function for styling this block type
   *
   * @arg $icon [false ,right, left]
@@ -486,22 +454,20 @@
   *
   **/
 
- @mixin teaser-variant($icon: false, $image: false, $case: false, $scale: false) {
-  
+@mixin teaser-variant($icon: false, $image: false, $case: false, $scale: false) {
   padding: 2.3rem 2.3rem 2.3rem 2.3rem;
-  
-  // ICONS  
+
+  // ICONS
   // The block has one or many icons
-  @if $icon  {
+  @if $icon {
     .title {
       @include header(4, bold);
-      margin-bottom: 1em; 
+      margin-bottom: 1em;
     }
 
     @include media-breakpoint-down(sm) {
-        padding: 7.75rem 2.3rem 2.3rem 2.3rem;
+      padding: 7.75rem 2.3rem 2.3rem 2.3rem;
     }
-
 
     @if ($icon == left) {
       padding-left: 7.75rem;
@@ -514,119 +480,115 @@
 
   // IMAGES
   // Begin images
-  @if $image  {
-    
-        flex-direction: row;
-        padding: 0 !important; // Paramount to the workings of the system, a small hack
-        >img {
-            max-height: 10rem;
-            margin: 0;
-        }
-    
-        .content-wrapper {
-            padding: 1em;
-            display: flex;
-            flex-direction: column;
-            flex: 1;
-            padding: 2.3rem 2.3rem 3rem 2.3rem;
-            
-            .title {
-                @include header(5); 
-                &.arrow-link {
-                    line-height: 1.7em;
-                }
-            }
-        }
-    
-        // Scale modifiers
-        @if $scale  {
-          @if($scale == small) {
-            >img {
-              max-height: 10rem;
-            }
-            .content-wrapper {
-              padding:1.5rem 1.5rem 1.8rem 1.5rem;
-            }
-          }
-    
-          @if($scale == large) {
-            >img {
-              max-height: 16rem;
-            } 
-          }
-    
-          @if($scale == larger) {
-            >img {
-                max-height: 22rem;
-            }
-            .title {
-                @include header(4, bold)
-            }
-            .content {
-                @include header(5)
-            }
-          } 
-    
-          @if $scale == large or $scale == larger {
-            // Careful, the 768 px image is being scaled-up!
-            @include media-breakpoint-down(md) {
-              flex-direction: column;
-              >img {
-                  order:0;
-                  width: 100%;
-                  max-height: none;
-              }
-              .content-wrapper {
-                  padding-bottom: 2.5rem;
-              }
-            }
-          }
-        }// Scale
+  @if $image {
+    flex-direction: row;
+    padding: 0 !important; // Paramount to the workings of the system, a small hack
+    > img {
+      max-height: 10rem;
+      margin: 0;
+    }
 
-        // All sizes -- padding
-        @include media-breakpoint-down(xs) {
-          .content-wrapper {
-              padding-bottom: 2.5rem;
-          }
+    .content-wrapper {
+      padding: 1em;
+      display: flex;
+      flex-direction: column;
+      flex: 1;
+      padding: 2.3rem 2.3rem 3rem 2.3rem;
+
+      .title {
+        @include header(5);
+        &.arrow-link {
+          line-height: 1.7em;
         }
-    
-        // Left and right overrides
-        @if($image == left) {
-          // No fuss, this is the default case
+      }
+    }
+
+    // Scale modifiers
+    @if $scale {
+      @if ($scale == small) {
+        > img {
+          max-height: 10rem;
         }
-    
-        @if($image == right) {
-          >img {
-            order: 1; // Change source order
-          }
-    
-          @include media-breakpoint-down(xs) {
-            flex-direction: column;
-            >img {
-                order:0;
-                width: 100%;
-                max-height: none;
-            }
-          }
-        } // Left & right
-    
-        
-        @include media-breakpoint-down(xs) {
+        .content-wrapper {
+          padding: 1.5rem 1.5rem 1.8rem 1.5rem;
+        }
+      }
+
+      @if ($scale == large) {
+        > img {
+          max-height: 16rem;
+        }
+      }
+
+      @if ($scale == larger) {
+        > img {
+          max-height: 22rem;
+        }
+        .title {
+          @include header(4, bold);
+        }
+        .content {
+          @include header(5);
+        }
+      }
+
+      @if $scale == large or $scale == larger {
+        // Careful, the 768 px image is being scaled-up!
+        @include media-breakpoint-down(md) {
           flex-direction: column;
-          >img {
-              order:0;
-              width: 100%;
-              max-height: none;
-          } 
+          > img {
+            order: 0;
+            width: 100%;
+            max-height: none;
+          }
+          .content-wrapper {
+            padding-bottom: 2.5rem;
+          }
         }
+      }
+    } // Scale
+
+    // All sizes -- padding
+    @include media-breakpoint-down(xs) {
+      .content-wrapper {
+        padding-bottom: 2.5rem;
+      }
+    }
+
+    // Left and right overrides
+    @if ($image == left) {
+      // No fuss, this is the default case
+    }
+
+    @if ($image == right) {
+      > img {
+        order: 1; // Change source order
+      }
+
+      @include media-breakpoint-down(xs) {
+        flex-direction: column;
+        > img {
+          order: 0;
+          width: 100%;
+          max-height: none;
+        }
+      }
+    } // Left & right
+
+    @include media-breakpoint-down(xs) {
+      flex-direction: column;
+      > img {
+        order: 0;
+        width: 100%;
+        max-height: none;
+      }
+    }
   } // Images
 
   // ARROW BLOCK
   // The block has a specific icon on the right, the arrow
-  @if $case  {
-
-    @if($case == arrow-block) {
-
+  @if $case {
+    @if ($case == arrow-block) {
       padding-right: 5rem;
       @include icon(after, arrow-right);
       @include teaser-icon-position(right, arrow-block);
@@ -634,122 +596,118 @@
 
       .title {
         @include header(5);
-        margin-bottom: 0.5em; 
+        margin-bottom: 0.5em;
       }
 
       @include media-breakpoint-down(sm) {
         padding-bottom: 5.5rem;
         border: 1px solid lime;
       }
-
     }
 
     // Smaller scale, as in search results
-    @if($case == compact) {
+    @if ($case == compact) {
       padding: 1rem 3.5rem 1rem 1rem;
       &:after {
-          position: absolute;
-          top: calc(50% - 1.7rem);
-          left: calc(100% - 4rem);
-          font-size: 2.8rem;
-          width: 2.8rem;
-          height: 2.8rem;
-          line-height: 2.8rem; 
+        position: absolute;
+        top: calc(50% - 1.7rem);
+        left: calc(100% - 4rem);
+        font-size: 2.8rem;
+        width: 2.8rem;
+        height: 2.8rem;
+        line-height: 2.8rem;
       }
       .title {
-          @include header(5);
-          margin-bottom: 0.5em;
+        @include header(5);
+        margin-bottom: 0.5em;
       }
       @include media-breakpoint-down(sm) {
-          padding: 1rem 5rem 1rem 1rem;
+        padding: 1rem 5rem 1rem 1rem;
       }
-    }// Compact
+    } // Compact
 
     // The block has an inner wrapper and a dual axis flex setup
-    @if($case == inline-flex) {
-      
+    @if ($case == inline-flex) {
       flex-direction: row;
       padding-right: 5rem;
       align-items: center;
-  
+
       .content-wrapper {
-          flex-direction: column;
-          padding-right: 2rem;
+        flex-direction: column;
+        padding-right: 2rem;
       }
       .identifier {
-          text-transform: uppercase;
-          color: $vdm-grey;
-          font-size: $font-size-base;
-          width: 30%;
-          text-align: center;
-          margin-top: 0.9rem;
+        text-transform: uppercase;
+        color: $vdm-grey;
+        font-size: $font-size-base;
+        width: 30%;
+        text-align: center;
+        margin-top: 0.9rem;
       }
 
       @include media-breakpoint-down(sm) {
         flex-direction: column;
         align-items: left;
         .content-wrapper {
-            padding-right: 0;
+          padding-right: 0;
         }
         .identifier {
-            align-self: center;
-            width: auto;
-            margin-top: 2rem;
+          align-self: center;
+          width: auto;
+          margin-top: 2rem;
         }
         padding-bottom: 5.5rem;
       }
-    }// Inline flex
+    } // Inline flex
 
     // Smaller scale, as in search results
-    @if($case == category-block) {
+    @if ($case == category-block) {
       align-items: start;
       .content-wrapper {
-          min-width: 35%;
-          margin-right: 1rem;
-          .title {
-              color: $vdm-brand;
-          }
+        min-width: 35%;
+        margin-right: 1rem;
+        .title {
+          color: $vdm-brand;
+        }
       }
       .category-description {
-          @include header(5);
+        @include header(5);
       }
 
       @include media-breakpoint-down(sm) {
         .content-wrapper {
-            width: 100%;
-            margin-right: 0;
-            margin-bottom: 1em;
+          width: 100%;
+          margin-right: 0;
+          margin-bottom: 1em;
         }
       }
-    }// Category block
+    } // Category block
   } // Case
 
   // The block has a left icon and is an arrow block
-  @if($icon == left and $case == arrow-block) {
+  @if ($icon == left and $case == arrow-block) {
     @include teaser-icon-position(left, arrow-block);
     padding-right: 5rem;
   }
-
-  
 } // Mixin
 
-
- // Color schemes, to be applied to top-level hyperlink
+// Color schemes, to be applied to top-level hyperlink
 @mixin teaser-scheme() {
-  
   background: $vdm-grey-light;
   border: none;
   text-decoration: none;
   color: $body-color;
 
-  &:hover, &:active {
+  &:hover,
+  &:active {
     background-color: $vdm-brand;
     color: $white;
     > * {
       color: $white;
     }
 
-    &:before, &:after {
+    &:before,
+    &:after {
       color: $white;
     }
   }
@@ -770,52 +728,42 @@
 // @arg $scheme [false, light, white]
 // @arg $mode [false, arrow-block] -- is mode really required, can we avoid it?
 @mixin teaser-scheme-hover($scheme: false, $mode: false) {
-
   // Default hover case
-  &:hover, &:active {
+  &:hover,
+  &:active {
     background-color: $vdm-brand;
     color: $white;
     > * {
       color: $white;
     }
 
-    &:before, &:after {
+    &:before,
+    &:after {
       color: $white;
     }
   }
 
-
-  // Scheme overrides, light and white 
-  @if $scheme  {
+  // Scheme overrides, light and white
+  @if $scheme {
     // Light
-    @if($scheme = light) {
-
-      
-    } 
+    @if ($scheme = light) {
+    }
     // White
-    @if($scheme = white) {
-
-      
-    } 
+    @if ($scheme = white) {
+    }
   }
 
   // Arrow-block, hover effect on icons only
-  @if $mode  {
-    @if($mode = arrow-block) {
+  @if $mode {
+    @if ($mode = arrow-block) {
       border: 1px solid orange;
-
-      
-    } 
+    }
   }
-} 
-
+}
 
 // See footers with multiple tags for application, work on children
 @mixin teaser-inline-items() {
-
 }
-
-
 
 /**
  * - - - - - - - - - -
@@ -836,22 +784,16 @@
     $color-b: 0,
     $opacity: 0.27
   ) {
+  box-shadow: $dist-top $dist-right $dist-bottom $dist-left
+    rgba($color-r, $color-g, $color-b, $opacity);
 
-    box-shadow: $dist-top $dist-right $dist-bottom $dist-left rgba(
-      $color-r,
-      $color-g,
-      $color-b,
-      $opacity
-    );
-
-    // $forms-ds-color-r: 0;
-    // $forms-ds-color-g: 0;
-    // $forms-ds-color-b: 0;
-    // $forms-ds-opacity: 0.27;
-    // $forms-ds-right-size: 5px;
-    // $forms-ds-bottom-size: 11px;
+  // $forms-ds-color-r: 0;
+  // $forms-ds-color-g: 0;
+  // $forms-ds-color-b: 0;
+  // $forms-ds-opacity: 0.27;
+  // $forms-ds-right-size: 5px;
+  // $forms-ds-bottom-size: 11px;
 }
-
 
 /**
  * - - - - - - - - - -
@@ -875,7 +817,7 @@
   &:hover {
     color: $color;
     background-color: darken($background, 10%);
-        border-color: darken($border, 12%);
+    border-color: darken($border, 12%);
   }
 }
 

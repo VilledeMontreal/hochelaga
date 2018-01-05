@@ -1,6 +1,5 @@
 // @file footer.scss
 
-
 // Main portal footer, the fat version with all bells & whistles present in the Sketch mockups
 footer {
   &.vdm-footer {
@@ -13,43 +12,40 @@ footer {
       @include make-container();
       @include make-container-max-widths();
     }
-    
+
     // Links
     a {
       color: $white;
-      &:before, 
+      &:before,
       &:after {
         color: $white;
       }
-      &:hover, 
+      &:hover,
       &:active {
         color: $white;
         text-decoration: underline;
-        &:before, 
+        &:before,
         &:after {
           color: $white;
         }
       }
-      
     }
     // List items
     ul {
       margin: 0;
       padding: 0;
-      border: 1px solid #FC1313;
+      border: 1px solid #fc1313;
       list-style-type: none;
-      >li {
+      > li {
         margin: 0;
         padding: 0;
         a {
           display: block;
           .label {
-
           }
         }
       }
     }
-
 
     .main {
       @include make-row();
@@ -72,13 +68,11 @@ footer {
         }
         .text {
           flex: 1;
-
         }
       }
 
       // Links laid out on 3 columns;
       .vdm-footer-links {
-        
         @include make-col-ready();
         @include make-col(12);
 
@@ -88,18 +82,18 @@ footer {
 
         // column-count: 3;
         @include n-columns("li", 33%, 0, false, 3);
-        
+
         margin-bottom: 1rem;
-        >li {
+        > li {
           margin-bottom: 0.3rem;
-          >a {
+          > a {
             @include icon-block-link(arrow-right, 2.5em);
             .label {
               display: none;
             }
           }
         }
-      }// ul
+      } // ul
 
       .vdm-social-media {
         order: 3;
@@ -113,17 +107,17 @@ footer {
         justify-content: space-between;
 
         &.footer {
-          >li {
+          > li {
             min-height: 2.3rem;
-            >a {
-              padding-left : 0.3rem;
+            > a {
+              padding-left: 0.3rem;
               .label {
                 display: none;
               }
             }
-          }// li
+          } // li
         } // ul
-      } 
+      }
     } // Main wrapper
 
     // Second section of the footer : under the white line;
@@ -143,12 +137,12 @@ footer {
         text-align: right;
 
         .vdm-sub-footer-links {
-          >li {
+          > li {
             display: inline-block;
             position: relative;
             padding: 0 1em;
             &:before {
-              content : "";
+              content: "";
               width: 1px;
               height: 70%;
               background: $white;
@@ -165,11 +159,11 @@ footer {
               }
             }
           }
-        }// ul
+        } // ul
       }
     } // Secondary wrapper, sub-footer section
 
-    @include media-breakpoint-up(sm) { 
+    @include media-breakpoint-up(sm) {
       border: 1px solid orange;
       .main {
         .featured {
@@ -185,27 +179,25 @@ footer {
       }
     } // sm-up
 
-    @include media-breakpoint-up(md) { 
+    @include media-breakpoint-up(md) {
       border: 1px solid turquoise;
       .main {
         .featured {
           @include make-col(3);
-          order: 0; 
-         
+          order: 0;
         }
         .vdm-footer-links {
           @include make-col(9);
         }
         .vdm-social-media {
-          
         }
       }
 
       .main {
         .vdm-social-media {
           &.footer {
-            >li {
-              >a {
+            > li {
+              > a {
                 .label {
                   display: inline;
                 }
@@ -215,38 +207,32 @@ footer {
         }
       }
     } // md-up
-
-
   } // vdm-footer
-} // Footer 
+} // Footer
 
-
-// Martino's first shot at creating a footer below 
+// Martino's first shot at creating a footer below
 footer {
-
   &.footer-martino {
     background-color: $vdm-sub-brand;
     padding-top: 45px;
 
-
-
     ul {
-      float:left;
-      padding:0;
-      margin:0;
+      float: left;
+      padding: 0;
+      margin: 0;
       list-style-type: none;
-      width:100%;
+      width: 100%;
       li {
         // padding-bottom: 12px;
         // padding-top: 12px;
-        float:left;
-        width:100%;
+        float: left;
+        width: 100%;
         .link {
-          float:left;
-          padding-top:4px;
+          float: left;
+          padding-top: 4px;
         }
         .link-arrow {
-          float:right;
+          float: right;
         }
       }
     }
@@ -266,17 +252,17 @@ footer {
       color: $white;
     }
     .services-citoyen {
-      float:left;
-      margin-bottom:40px;
+      float: left;
+      margin-bottom: 40px;
       .services-citoyen-311 {
         .number311 {
-          float:left;
+          float: left;
           font-size: 350%;
         }
         .title {
-          float:right;
+          float: right;
           padding-top: 18px;
-          padding-left:25px;
+          padding-left: 25px;
         }
       }
       .services-citoyen-horaires {
@@ -294,20 +280,20 @@ footer {
     }
     .horaires {
       .link-arrow {
-        float:left;
-        padding-left:20px;
+        float: left;
+        padding-left: 20px;
       }
     }
     .language {
-      text-align:right;
+      text-align: right;
     }
     .social-media {
       text-align: right;
-      margin-top:90px;
+      margin-top: 90px;
     }
     .copyright {
       font-size: $font-size-xs;
-      padding-bottom:20px;
+      padding-bottom: 20px;
     }
   } // .footer
 }

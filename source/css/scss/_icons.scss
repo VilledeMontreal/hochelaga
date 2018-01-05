@@ -1,17 +1,19 @@
 // @file icons.scss
 
-
 // >> Begin demo code for atoms-icons
 // - - - - - - - - - -  - - - - - -
 
-
 @font-face {
   font-family: $vdm-icon-font-family;
-  src: url('#{$vdm-icon-font-path}/vdm-font-icon.eot?v=#{$vdm-icon-font-version}');
-  src: url('#{$vdm-icon-font-path}/vdm-font-icon.eot?v=#{$vdm-icon-font-version}') format('embedded-opentype'),
-    url('#{$vdm-icon-font-path}/vdm-font-icon.woff2?v=#{$vdm-icon-font-version}') format('woff2'),
-    url('#{$vdm-icon-font-path}/vdm-font-icon.woff?v=#{$vdm-icon-font-version}') format('woff'),
-    url('#{$vdm-icon-font-path}/vdm-font-icon.ttf?v=#{$vdm-icon-font-version}') format('truetype');
+  src: url("#{$vdm-icon-font-path}/vdm-font-icon.eot?v=#{$vdm-icon-font-version}");
+  src: url("#{$vdm-icon-font-path}/vdm-font-icon.eot?v=#{$vdm-icon-font-version}")
+      format("embedded-opentype"),
+    url("#{$vdm-icon-font-path}/vdm-font-icon.woff2?v=#{$vdm-icon-font-version}")
+      format("woff2"),
+    url("#{$vdm-icon-font-path}/vdm-font-icon.woff?v=#{$vdm-icon-font-version}")
+      format("woff"),
+    url("#{$vdm-icon-font-path}/vdm-font-icon.ttf?v=#{$vdm-icon-font-version}")
+      format("truetype");
 
   font-weight: normal;
   font-style: normal;
@@ -19,11 +21,15 @@
 
 @font-face {
   font-family: $vdm-icon-font-family;
-  src: url('#{$vdm-icon-font-path}/vdm-font-icon.eot?v=#{$vdm-icon-font-version}');
-  src: url('#{$vdm-icon-font-path}/vdm-font-icon.eot?v=#{$vdm-icon-font-version}') format('embedded-opentype'),
-    url('#{$vdm-icon-font-path}/vdm-font-icon.woff2?v=#{$vdm-icon-font-version}') format('woff2'),
-    url('#{$vdm-icon-font-path}/vdm-font-icon.woff?v=#{$vdm-icon-font-version}') format('woff'),
-    url('#{$vdm-icon-font-path}/vdm-font-icon.ttf?v=#{$vdm-icon-font-version}') format('truetype');
+  src: url("#{$vdm-icon-font-path}/vdm-font-icon.eot?v=#{$vdm-icon-font-version}");
+  src: url("#{$vdm-icon-font-path}/vdm-font-icon.eot?v=#{$vdm-icon-font-version}")
+      format("embedded-opentype"),
+    url("#{$vdm-icon-font-path}/vdm-font-icon.woff2?v=#{$vdm-icon-font-version}")
+      format("woff2"),
+    url("#{$vdm-icon-font-path}/vdm-font-icon.woff?v=#{$vdm-icon-font-version}")
+      format("woff"),
+    url("#{$vdm-icon-font-path}/vdm-font-icon.ttf?v=#{$vdm-icon-font-version}")
+      format("truetype");
 
   font-weight: normal;
   font-style: normal;
@@ -41,15 +47,18 @@
 //     url('#{$vfi-icon-font-path}/vdm.svg?c81cd1b7c58db7a73be82e1052585cc0#vdm') format("svg");
 // }
 
-
 // test social icon font
 @font-face {
   font-family: $social-icon-font-family;
-  src: url('#{$social-icon-font-path}/ic-social.eot?v=#{$social-icon-font-version}');
-  src: url('#{$social-icon-font-path}/ic-social.eot?v=#{$social-icon-font-version}') format('embedded-opentype'),
-    url('#{$social-icon-font-path}/ic-social.woff2?v=#{$social-icon-font-version}') format('woff2'),
-    url('#{$social-icon-font-path}/ic-social.woff?v=#{$social-icon-font-version}') format('woff'),
-    url('#{$social-icon-font-path}/ic-social.ttf?v=#{$social-icon-font-version}') format('truetype');
+  src: url("#{$social-icon-font-path}/ic-social.eot?v=#{$social-icon-font-version}");
+  src: url("#{$social-icon-font-path}/ic-social.eot?v=#{$social-icon-font-version}")
+      format("embedded-opentype"),
+    url("#{$social-icon-font-path}/ic-social.woff2?v=#{$social-icon-font-version}")
+      format("woff2"),
+    url("#{$social-icon-font-path}/ic-social.woff?v=#{$social-icon-font-version}")
+      format("woff"),
+    url("#{$social-icon-font-path}/ic-social.ttf?v=#{$social-icon-font-version}")
+      format("truetype");
 
   font-weight: normal;
   font-style: normal;
@@ -58,28 +67,29 @@
 
 @font-face {
   font-family: $fontawesome-icon-font-family;
-  src: url('#{$fontawesome-icon-font-path}/fontawesome-webfont.eot?v=#{$fontawesome-icon-font-version}');
-  src: url('#{$fontawesome-icon-font-path}/fontawesome-webfont.eot?v=#{$fontawesome-icon-font-version}') format('embedded-opentype'),
-  url('#{$fontawesome-icon-font-path}/fontawesome-webfont.woff2?v=#{$fontawesome-icon-font-version}') format('woff2'),
-  url('#{$fontawesome-icon-font-path}/fontawesome-webfont.woff?v=#{$fontawesome-icon-font-version}') format('woff'),
-  url('#{$fontawesome-icon-font-path}/fontawesome-webfont.ttf?v=#{$fontawesome-icon-font-version}') format('truetype');
+  src: url("#{$fontawesome-icon-font-path}/fontawesome-webfont.eot?v=#{$fontawesome-icon-font-version}");
+  src: url("#{$fontawesome-icon-font-path}/fontawesome-webfont.eot?v=#{$fontawesome-icon-font-version}")
+      format("embedded-opentype"),
+    url("#{$fontawesome-icon-font-path}/fontawesome-webfont.woff2?v=#{$fontawesome-icon-font-version}")
+      format("woff2"),
+    url("#{$fontawesome-icon-font-path}/fontawesome-webfont.woff?v=#{$fontawesome-icon-font-version}")
+      format("woff"),
+    url("#{$fontawesome-icon-font-path}/fontawesome-webfont.ttf?v=#{$fontawesome-icon-font-version}")
+      format("truetype");
 
   font-weight: normal;
   font-style: normal;
 }
-
-
-
 
 // >> Begin custom inline vdm code
 // - - - - - -
 // @ see primary reference for this implementation : http://fontawesome.io/examples/
 // @ TO-DO : implement more modifiers (scale,etc), fetching inspiration from the main fa stylesheet
 
-
 // VDM ICONS
 
-i,span {
+i,
+span {
   &.vdmi {
     display: inline-block;
     font: normal normal normal $font-size-base/1 $vdm-icon-font-family;
@@ -98,8 +108,6 @@ i,span {
         }
       }
     }
-
-    
 
     // Scale modifiers
     &.ic-lg {
@@ -136,13 +144,6 @@ i,span {
     }
   }
 }
-
-
-
-
-
-
-
 
 // FONTAWESOME ICONS
 
@@ -234,7 +235,6 @@ i,span {
   color: #ffffff;
 }
 
-
 // Social media
 
 ul {
@@ -256,7 +256,7 @@ ul {
         //line-height: $social-icon-font-size;
         //margin-left: $social-icon-font-size * 1.15;
         text-decoration: none;
-        &:hover, 
+        &:hover,
         &:active {
           color: $black;
           //text-decoration: underline;
@@ -266,10 +266,10 @@ ul {
           &:before {
             font-size: 2em;
           }
-          padding-right: .5rem;
+          padding-right: 0.5rem;
         }
         .label {
-          &:hover, 
+          &:hover,
           &:active {
             text-decoration: underline;
           }
@@ -334,7 +334,7 @@ a {
     line-height: $social-icon-font-size;
     margin-left: $social-icon-font-size * 1.15;
     text-decoration: none;
-    &:hover, 
+    &:hover,
     &:active {
       color: $black;
       text-decoration: underline;

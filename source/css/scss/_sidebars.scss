@@ -1,317 +1,309 @@
-
 // Anything that is a top level sidebar in the layout.
 // See also base definition in the layout.scss document.
-.sidebar { 
+.sidebar {
+  // Links in sidebars
+  a {
+    color: $black;
+    word-break: break-all;
+    word-wrap: break-word;
 
-
-    // Links in sidebars
-    a {
-        color: $black;
-        word-break: break-all;
-        word-wrap: break-word;
-
-        &.brand {
-            color: $vdm-brand; 
-        }
-        &:after, &:before {
-            color: $vdm-brand;
-        }
-        .vdmi {
-            color: $vdm-brand; 
-            &:after, &:before {
-                background: transparent;
-            }
-        }
-        &:hover, &:active {
-            color: $black;
-            &:after, &:before {
-                color: $vdm-brand;
-            }
-            .vdmi {
-                // color: $vdm-brand; 
-                color: $black; 
-            }
-        }
-        &.block {
-            &.arrow {
-                // Is this left padding intentional in the maquette?
-                padding: 0.4em 3.5em 0.4em 0.6em;
-
-            }
-        }
+    &.brand {
+      color: $vdm-brand;
     }
-
-
-    // Generic icon links : may or may not be applied to a hyperlink
+    &:after,
+    &:before {
+      color: $vdm-brand;
+    }
     .vdmi {
-        font-size: 1.5em;
-        color: $vdm-brand; 
-        &:after, &:before {
-            color: $vdm-brand;
-        }
+      color: $vdm-brand;
+      &:after,
+      &:before {
+        background: transparent;
+      }
+    }
+    &:hover,
+    &:active {
+      color: $black;
+      &:after,
+      &:before {
+        color: $vdm-brand;
+      }
+      .vdmi {
+        // color: $vdm-brand;
+        color: $black;
+      }
+    }
+    &.block {
+      &.arrow {
+        // Is this left padding intentional in the maquette?
+        padding: 0.4em 3.5em 0.4em 0.6em;
+      }
+    }
+  }
+
+  // Generic icon links : may or may not be applied to a hyperlink
+  .vdmi {
+    font-size: 1.5em;
+    color: $vdm-brand;
+    &:after,
+    &:before {
+      color: $vdm-brand;
+    }
+  }
+
+  // Links and span tags, mind the inheritance
+  // All icon elements are block level
+  .icon {
+    display: block;
+    position: relative;
+
+    .vdmi {
+      &:before {
+        font-size: 1em;
+      }
+      position: absolute;
+      top: 0;
     }
 
-    // Links and span tags, mind the inheritance
-    // All icon elements are block level
-    .icon {
-        display: block;
-        position: relative;
+    &.left {
+      padding-left: 2em;
+      .vdmi {
+        left: 0;
+      }
+    }
+    &.right {
+      display: inline-block;
+      padding-right: 2em;
+      .vdmi {
+        right: 0;
+      }
+    }
+  }
 
-        .vdmi {
-            &:before {
-               font-size: 1em; 
-            }
-            position: absolute;
-            top: 0;
-        }
+  // Lists in sidebars
+  ul {
+    @extend .vdm-list-plain;
 
-        &.left {
-            padding-left: 2em;
-            .vdmi {
-                left: 0;
-            }
-        }
-        &.right {
-            display: inline-block;
-            padding-right: 2em;
-            .vdmi {
-                right: 0;
-            }
-        }
+    // Padding-bottom modifiers -- these may be moved up to the type.scc stylesheet?
+    &.p-small {
+      margin-bottom: 0.2em;
+    }
+    &.p-large {
+      > li {
+        margin-bottom: 0.85em;
+      }
     }
 
-    // Lists in sidebars
-    ul {
-        @extend .vdm-list-plain;
-
-        // Padding-bottom modifiers -- these may be moved up to the type.scc stylesheet?
-        &.p-small {
-            margin-bottom: 0.2em;
-        }
-        &.p-large {
-            >li {
-                margin-bottom: 0.85em;
-            }
-        }
-
-        &.p-larger {
-            >li {
-                margin-bottom: 1.3em;
-            }
-        }
-
-        // Softer top and bottom padding & line height for block links
-        &.arrow-blocks {
-            &.p-small {
-                .block {
-                    &.arrow {
-                        // Is this left padding intentional in the maquette?
-                        padding: 0.15em 3.5em 0.15em 0.6em
-                    }
-                }
-            }
-        }
-
-        >li {
-            &:last-of-type {
-                
-            }
-        }
-
-        &.inline {
-            @extend .list-inline;
-            >li {
-                @extend .list-inline-item;
-                margin-bottom: 0.85rem;
-            }
-        }
-
-        &.vdm-social-media {
-            >li {
-                display: block;
-                margin-bottom: 1rem;
-            }
-        }
-    }
-    p {
-        margin-bottom: ceil($font-size-base * 1.3);
-    }
-    // Forms in sidebars
-    form {
-        width: 96%;
-        padding-left: 2%;
-        padding-right: 2%;
-        margin-top: 2.5rem;
-        
-    }
-    .vdm-btn {
-        display: block;
-        margin-top: 1.35rem;
-        margin-left: auto !important;
-        margin-right: auto !important;
-        
-    }
-    .vdm-avatar {
-        display: block;
-        margin-bottom: 2rem;
+    &.p-larger {
+      > li {
+        margin-bottom: 1.3em;
+      }
     }
 
-
-    // Other fixtures
-    // Titles
-    .subtitle {
-        @include header(5);
-        line-height: $line-height-lg;
-    }
-    .vdm-title {
-        margin-bottom: 2em;
-        @include header(4, bold);
-        // margin-bottom: 0.8em;
-        &:after {
-          background-color: $black;
-          color: $black;
-          max-width: 1.7rem;
-          top: calc(100% + 0.3rem);
-        }
-        &.icon-right {
-          padding-right: 4rem;
-          .vdmi {
-              font-size: 3.6rem;
-              width: 3.6rem;
-              height: 3.6rem;
-              color: $vdm-brand;
-              position: absolute;
-              top: 0;
-              right: 0;
+    // Softer top and bottom padding & line height for block links
+    &.arrow-blocks {
+      &.p-small {
+        .block {
+          &.arrow {
+            // Is this left padding intentional in the maquette?
+            padding: 0.15em 3.5em 0.15em 0.6em;
           }
         }
-        // No bottom stroke, reduced bottom margin
-        &.discrete {
-            margin-bottom: 1.4em;
+      }
+    }
+
+    > li {
+      &:last-of-type {
+      }
+    }
+
+    &.inline {
+      @extend .list-inline;
+      > li {
+        @extend .list-inline-item;
+        margin-bottom: 0.85rem;
+      }
+    }
+
+    &.vdm-social-media {
+      > li {
+        display: block;
+        margin-bottom: 1rem;
+      }
+    }
+  }
+  p {
+    margin-bottom: ceil($font-size-base * 1.3);
+  }
+  // Forms in sidebars
+  form {
+    width: 96%;
+    padding-left: 2%;
+    padding-right: 2%;
+    margin-top: 2.5rem;
+  }
+  .vdm-btn {
+    display: block;
+    margin-top: 1.35rem;
+    margin-left: auto !important;
+    margin-right: auto !important;
+  }
+  .vdm-avatar {
+    display: block;
+    margin-bottom: 2rem;
+  }
+
+  // Other fixtures
+  // Titles
+  .subtitle {
+    @include header(5);
+    line-height: $line-height-lg;
+  }
+  .vdm-title {
+    margin-bottom: 2em;
+    @include header(4, bold);
+    // margin-bottom: 0.8em;
+    &:after {
+      background-color: $black;
+      color: $black;
+      max-width: 1.7rem;
+      top: calc(100% + 0.3rem);
+    }
+    &.icon-right {
+      padding-right: 4rem;
+      .vdmi {
+        font-size: 3.6rem;
+        width: 3.6rem;
+        height: 3.6rem;
+        color: $vdm-brand;
+        position: absolute;
+        top: 0;
+        right: 0;
+      }
+    }
+    // No bottom stroke, reduced bottom margin
+    &.discrete {
+      margin-bottom: 1.4em;
+      &:after {
+        display: none;
+      }
+    }
+    &.in-between {
+      margin-bottom: 0.4em;
+      &:after {
+        display: none;
+      }
+    }
+  }
+
+  // Color theme variants
+  // Transparent top stroke theme variant
+  &.theme-top-stroke {
+    .sb-block {
+      border-top: 4px solid $black;
+      background-color: transparent;
+    }
+  }
+  // Transparent border brand
+  &.theme-border-brand {
+    .sb-block {
+      border: 1px solid $vdm-grey;
+      background-color: transparent;
+    }
+  }
+
+  .bullet-left {
+    &.brand {
+      color: $vdm-brand;
+    }
+  }
+
+  // The breakpoint production the narrowest column needs attention
+  // Right-side icons need to go below
+  @include media-breakpoint-only(md) {
+    ul {
+      &.arrow-blocks {
+        &.p-small {
+          .block {
+            &.arrow {
+              padding: 0.15em 0.6em 2.5em 0.6em;
+            }
+          }
+        }
+        .block {
+          &.arrow {
+            padding: 0.15em 0.6em 2.5em 0.6em;
             &:after {
-                display: none;
+              top: calc(100% - 0.85em);
+              left: 50%;
+              height: 1em;
+              transform: translateX(-50%);
             }
+          }
         }
-        &.in-between {
-            margin-bottom: 0.4em;
-            &:after {
-                display: none;
-            }
-        }
+      }
     }
-
-
-    // Color theme variants
-    // Transparent top stroke theme variant
-    &.theme-top-stroke {
-        .sb-block {
-            border-top: 4px solid $black;
-            background-color: transparent;
+    .vdm-title {
+      &.icon-right {
+        padding-right: 0;
+        padding-bottom: 5rem;
+        // Move the icon
+        .vdmi {
+          top: calc(100% - 1.25em);
+          left: 50%;
+          height: 1em;
+          transform: translateX(-50%);
         }
+        &:after {
+          display: none;
+        }
+        margin-bottom: 1rem;
+      }
     }
-     // Transparent border brand
-    &.theme-border-brand {
-        .sb-block {
-            border: 1px solid $vdm-grey;
-            background-color: transparent;
-        }
-    }
-
-    .bullet-left {
-        &.brand {
-            color: $vdm-brand;
-        }
-    }
-
-    // The breakpoint production the narrowest column needs attention
-    // Right-side icons need to go below
-    @include media-breakpoint-only(md) {
-        ul {
-            &.arrow-blocks {
-                &.p-small {
-                    .block {
-                        &.arrow {
-                            padding: 0.15em 0.6em 2.5em 0.6em;
-                        }
-                    }
-                }
-                .block {
-                    &.arrow {
-                        padding: 0.15em 0.6em 2.5em 0.6em;
-                        &:after {
-                            top: calc(100% - 0.85em);
-                            left: 50%;
-                            height: 1em;
-                            transform: translateX(-50%);
-                        }
-                    }
-                }
-            }
-        }
-        .vdm-title {
-            &.icon-right {
-                padding-right: 0;
-                padding-bottom: 5rem;
-                // Move the icon
-                .vdmi {
-                    top: calc(100% - 1.25em);
-                    left: 50%;
-                    height: 1em;
-                    transform: translateX(-50%); 
-                }
-                &:after {
-                    display: none;
-                }
-                margin-bottom: 1rem;
-            }
-        }
-    }
+  }
 }
 
 // The base unit for a sidebar component, stacked
 .sb-block {
-    padding: $vdm-sidebar-box-v-padding $vdm-sidebar-box-h-padding 2rem $vdm-sidebar-box-h-padding;
+  padding: $vdm-sidebar-box-v-padding $vdm-sidebar-box-h-padding 2rem
+    $vdm-sidebar-box-h-padding;
+  &:last-of-type {
+    // padding-bottom: 0;
+    margin-bottom: $vdm-sidebar-box-v-padding;
+  }
+
+  // The basic grouping tool for visual effect, with a padding/margin-bottom;
+  .subsection {
+    padding-bottom: $vdm-sidebar-box-v-padding;
     &:last-of-type {
-        // padding-bottom: 0;
-        margin-bottom: $vdm-sidebar-box-v-padding;
+      padding-bottom: 0;
     }
+  }
 
-    // The basic grouping tool for visual effect, with a padding/margin-bottom;
-    .subsection {
-       padding-bottom: $vdm-sidebar-box-v-padding;
-       &:last-of-type {
-            padding-bottom: 0;
-        } 
+  .divider {
+    margin-top: 1.5rem;
+    margin-bottom: 1.5rem;
+    margin-left: 0;
+    width: 3rem;
+    border-radius: 4px;
+  }
+
+  // Special cases management, may or may not end up here...
+
+  // Utility buttons not wrapped in a form tag look like they where in a form wrapper @96%
+  > .vdm-btn-wide {
+    width: 96%;
+    margin-left: 2%;
+    margin-right: 2%;
+  }
+
+  // Search filters  block override - white background, tweaked title
+  &.search-filters {
+    background: $white;
+    .vdm-title {
+      &.discrete {
+        @include header(4);
+      }
     }
-    
-    .divider {
-        margin-top: 1.5rem;
-        margin-bottom: 1.5rem;
-        margin-left: 0;
-        width: 3rem;
-        border-radius: 4px;
-    }
-
-    // Special cases management, may or may not end up here...
-
-    // Utility buttons not wrapped in a form tag look like they where in a form wrapper @96%
-    >.vdm-btn-wide {
-        width: 96%;
-        margin-left: 2%;
-        margin-right: 2%;
-    } 
-
-    // Search filters  block override - white background, tweaked title
-    &.search-filters {
-        background: $white;
-        .vdm-title {
-            &.discrete {
-                @include header(4);
-            }
-        }
-    }
-
-
+  }
 }
-
-
