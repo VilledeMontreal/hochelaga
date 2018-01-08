@@ -44,7 +44,6 @@ footer {
         a {
           display: block;
           .label {
-
           }
         }
       }
@@ -101,25 +100,27 @@ footer {
         }
       }// ul
 
-      .vdm-social-media {
+      .social-media-list {
         order: 3;
         @include make-col-ready();
         @include make-col(12);
         min-height: 2.3rem;
         margin-top: 1rem;
-
         display: flex;
         align-items: center;
         justify-content: space-between;
+        
+        a {
+          display: flex;
+          align-items: center;
+          color: $white;
+        }
 
         &.footer {
           >li {
             min-height: 2.3rem;
             >a {
               padding-left : 0.3rem;
-              .label {
-                display: none;
-              }
             }
           }// li
         } // ul

@@ -33,8 +33,9 @@
   }
 
   .menu-trigger {
-    @include icon(before, menu);
-    @include icon-size(3.5rem);
+    @include iconvfi(before, menu);
+    font-size: 3.5rem;
+    
     border: 0;
     margin: 0;
     padding: 0;
@@ -147,11 +148,12 @@
   }
 
   &.search {
-    @include icon(after, search);
+    // @include icon(after, search);
+    @include iconvfi(after, recherche);
     @include icon-size(3.7rem);
   }
   &.account {
-    @include icon(after, profile);
+    @include iconvfi(after, profil);
     @include icon-size(3.7rem);
   } 
 }

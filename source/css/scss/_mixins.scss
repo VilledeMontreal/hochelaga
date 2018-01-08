@@ -396,12 +396,12 @@
       &.ic-#{$name} {
         @if $where == left or $where == right {
           // @include icon(before, $name);
-          @include vdmicon(before, $name);
+          @include iconvfi(before, $name);
         }
         
         @if $case == arrow-block {
           // @include icon(after, arrow-right);
-          @include vdmicon(before, fleche-droite);
+          @include iconvfi(before, fleche-droite);
         }
       }
   }
@@ -648,7 +648,7 @@
 
       padding-right: 5rem;
       // @include icon(after, arrow-right);
-      @include vdmicon(before, fleche-droite);
+      @include iconvfi(before, fleche-droite);
       @include teaser-icon-position(right, arrow-block);
       @include teaser-scheme-hover(arrow-block);
 
