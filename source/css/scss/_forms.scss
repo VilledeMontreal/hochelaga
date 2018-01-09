@@ -423,7 +423,6 @@ label {
   background-color: #fff;
   display: inline-block;
   position: relative;
-  // margin-top: 26px;
   margin-top: 3em;
 
   &:before,
@@ -456,7 +455,10 @@ label {
       font-size: 1.9em;
     }
     &.location {
-      @include iconvfi(after, localisation);
+      @include iconvfi(after, chevron-bas);
+      &.select-open {
+        @include iconvfi(after, chevron-haut);
+      }
     }
     .vdm-select {
       padding-left: 2.5rem;
