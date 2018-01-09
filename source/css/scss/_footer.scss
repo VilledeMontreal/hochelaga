@@ -175,9 +175,6 @@ footer {
         .vdm-footer-links {
           margin-bottom: 0;
         }
-        .vdm-social-media {
-          margin-top: 2rem;
-        }
       }
     } // sm-up
 
@@ -190,22 +187,6 @@ footer {
         }
         .vdm-footer-links {
           @include make-col(9);
-        }
-        .vdm-social-media {
-        }
-      }
-
-      .main {
-        .vdm-social-media {
-          &.footer {
-            > li {
-              > a {
-                .label {
-                  display: inline;
-                }
-              }
-            }
-          }
         }
       }
     } // md-up

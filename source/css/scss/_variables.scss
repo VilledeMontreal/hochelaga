@@ -28,7 +28,7 @@ $gray-800: #343a40;
 $gray-900: #212529;
 $black:    #000;
 
-// We keep those custom grays ? 
+// We keep those custom grays ? -> I am not attached, I much prefer a decimal system with flexibility
 $vdm-grey-light:    #f2f2f1;
 $vdm-grey:          #80807f;
 $vdm-grey-dark:     #222222; // First occurence : side menu bg & borders
@@ -36,7 +36,6 @@ $vdm-neutral-mid:   #80807f;
 $vdm-neutral-light: #e7e5e5;
 
 // VDM specific
-
 $vdm-sarcelle:      #429a8e; // will become $sarcelle 
 $sarcelle:          #429a8e;
 $sarcelle-light:    #429a8e;
@@ -108,19 +107,6 @@ $vdm-icon-font-size: 3.6rem;
 $vdm-icon-font-height : 3.6rem;
 $vdm-icon-font-width : 3.6rem;
 $vdm-icon-font-line-height : 3.6rem;
-
-// Icons fonts -vdm-font-icon character
-
-$vdm-icon-social-media-scale: 60px;
-$vdm-icon-social-media-padding-right: 10px;         // in patternal.scss ?
-$vdm-icon-social-media-padding-right-lists: 1em;    // in patternal.scss ?
-
-// Test social icon font
-
-$social-icon-font-path: $assets-font-path;
-$social-icon-font-version: '1.0';
-$social-icon-font-family : 'ic-social';
-$social-icon-font-size: 30px;
 
 //== Icons fonts vfi class, imported from "@villemontreal/font-icon
 $vfi-icon-font-path: $assets-font-path;
@@ -355,16 +341,6 @@ $icons: (
   compost: "\E402",
   greens: "\E403",
   permit-pet: "\E404"
-);
-
-$social-media-icons: (
-  facebook: "\E800",
-  linkedin: "\E801",
-  twitter: "\E802",
-  youtube: "\E803",
-  instagram: "\E804",
-  googleplus: "\E805",
-  instagram-sm: "\E806"
 );
 
 

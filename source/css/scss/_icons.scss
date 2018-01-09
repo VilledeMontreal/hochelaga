@@ -104,7 +104,7 @@ ul {
     list-style-type: none;
     li {
       margin: 0;
-      padding: 0 $vdm-icon-social-media-padding-right-lists 0 0;
+      padding: 0 0.65rem 0 0;
       display: inline-block;
       &:last-of-type {
         margin: 0;
@@ -113,13 +113,10 @@ ul {
         display: flex;
         align-items: center;
         color: $black;
-        //line-height: $social-icon-font-size;
-        //margin-left: $social-icon-font-size * 1.15;
         text-decoration: none;
         &:hover,
         &:active {
           color: $black;
-          //text-decoration: underline;
           cursor: pointer;
         }
         .vfi {
@@ -134,62 +131,6 @@ ul {
             text-decoration: underline;
           }
         }
-      }
-    }
-  }
-}
-
-// test social icon font
-// Create a mixin with this bloc, loop over the $social-media-icons variable with map-get
-// Mixin opportunity
-a {
-  position: relative;
-  &.social-icon {
-    //height: $vdm-icon-social-media-scale;
-    //padding-left: $vdm-icon-social-media-scale + $vdm-icon-social-media-padding-right;
-    //line-height: $vdm-icon-social-media-scale;
-    display: inline-block;
-    font-size: 1rem;
-    color: $black;
-    line-height: $social-icon-font-size;
-    margin-left: $social-icon-font-size * 1.15;
-    text-decoration: none;
-    &:hover,
-    &:active {
-      color: $black;
-      text-decoration: underline;
-      cursor: pointer;
-      &:before {
-        text-decoration: none;
-      }
-    }
-
-    // Individual symbol instance styles
-    // @see variable $social-media-icons in variables.scss -- contains all characters
-    @each $name, $char in $social-media-icons {
-      &.#{$name} {
-        &:before {
-          content: $char;
-        }
-      }
-    }
-
-    &.inverted {
-      color: $white;
-    }
-    &:before {
-      display: inline-block;
-      font-size: $social-icon-font-size;
-      font-family: $social-icon-font-family;
-      position: absolute;
-      left: -$social-icon-font-size * 1.15;
-    }
-    &.ic-only {
-      margin-left: 0;
-      overflow: visible;
-      &:before {
-        position: relative;
-        left: auto;
       }
     }
   }

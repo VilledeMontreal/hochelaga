@@ -123,9 +123,9 @@
   height: $navbar-height;
   margin: 0;
   padding: 0 15px 0 15px;
-  position: relative;
-  text-align: center;
   vertical-align: middle;
+  display: flex;
+  align-items: center;
 
   .button-label {
     color: $black;
@@ -135,10 +135,6 @@
     display: none;
   }
 
-  &:after {
-    color: $vdm-sub-brand;
-  }
-
   &:hover,
   &:active {
     &:after {
@@ -146,14 +142,18 @@
     }
   }
 
-  &.search {
-    // @include icon(after, search);
-    @include iconvfi(after, recherche);
-    @include icon-size(3.7rem);
+  &:after {
+    font-size: 3.7rem;
+    line-height: 1;
+    color: $vdm-sub-brand;
   }
+
+  &.search {
+    @include iconvfi(after, recherche);
+  }
+
   &.account {
     @include iconvfi(after, profil);
-    @include icon-size(3.7rem);
   }
 }
 
@@ -267,6 +267,9 @@ header {
     .left-nav-icon {
       float: left;
       color: $white;
+      .vfi {
+        font-size: 6em;
+      }
     }
     .header-logo {
       background-color: $white;
