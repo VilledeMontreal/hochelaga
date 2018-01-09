@@ -7,13 +7,13 @@
  */
 
 // Import variables and bootstrap framework - duplicate but required
-@import "scss/variables";
+@import 'scss/variables';
 
 // Bootstrap Framework.
 @import '~bootstrap/scss/bootstrap';
 
 .sg-main {
-  padding:20px 20px;
+  padding: 20px 20px;
 }
 
 // - - - - - - - - - -  - - - - - -
@@ -44,7 +44,7 @@
 
 .pl-headers-wrapper {
   .pl-headers {
-    >li {
+    > li {
       margin-bottom: 1.5rem;
     }
   }
@@ -57,7 +57,7 @@
   &.pl-grey-light {
     background: darken($vdm-grey-light, 10%);
   }
-  &.pl-grey{
+  &.pl-grey {
     background: $vdm-grey;
   }
 }
@@ -81,13 +81,13 @@
     margin-bottom: 1.7rem;
   }
   &.pl-vspacer-50 {
-     margin-bottom: 4rem;
+    margin-bottom: 4rem;
   }
 }
 
 // Block level paddings
 .pl-padding-5 {
-    padding: 0.33rem;
+  padding: 0.33rem;
 }
 .pl-padding-10 {
   padding: 0.7rem;
@@ -118,7 +118,8 @@
     margin-right: 0;
   }
 
-  .pl-size-unit { // The inner span contianing the descriptive text
+  .pl-size-unit {
+    // The inner span contianing the descriptive text
     position: absolute;
     bottom: -30px;
     left: 0.3em;
@@ -147,7 +148,6 @@
   }
 }
 
-
 // Box demos for units
 $pl-size-box-wrapper-size: 20rem;
 $pl-size-box-wrapper-padding: 1rem;
@@ -159,10 +159,10 @@ $pl-size-box-wrapper-padding: 1rem;
   float: left;
   margin-right: $pl-size-box-wrapper-padding;
 
-  
   .pl-size-box {
     text-align: center;
-    margin: $pl-size-box-wrapper-padding/2 auto $pl-size-box-wrapper-padding/2 auto;
+    margin: $pl-size-box-wrapper-padding/2 auto $pl-size-box-wrapper-padding/2
+      auto;
   }
   .pl-size-box-margin {
     background: darken($vdm-grey-light, 20%);
@@ -183,7 +183,6 @@ $pl-size-box-wrapper-padding: 1rem;
         z-index: 5;
         width: $pl-size-box-wrapper-size - $pl-size-box-wrapper-padding * 3;
         height: $pl-size-box-wrapper-size - $pl-size-box-wrapper-padding * 3;
-        
       }
     }
   }
@@ -193,7 +192,8 @@ $pl-size-box-wrapper-padding: 1rem;
     font-size: 2rem;
 
     .pl-size-box {
-      margin: $pl-size-box-wrapper-padding auto $pl-size-box-wrapper-padding auto;
+      margin: $pl-size-box-wrapper-padding auto $pl-size-box-wrapper-padding
+        auto;
     }
 
     .pl-size-box-margin {
@@ -225,9 +225,7 @@ $pl-size-box-wrapper-padding: 1rem;
   &.pl-width-20 {
     max-width: 20%;
   }
-} 
-
-
+}
 
 // Documentation
 // - - - - - - - - - -  - - - - - -
@@ -251,14 +249,14 @@ $pl-size-box-wrapper-padding: 1rem;
 
 .pl-atom-icons-grid {
   // Exception code for the new version
-  &.pl-latest{
+  &.pl-latest {
     ul {
       li {
         width: 133px;
       }
     }
   }
-  .wrapper{
+  .wrapper {
     @include make-row();
     @include clearfix();
     ul {
@@ -274,15 +272,14 @@ $pl-size-box-wrapper-padding: 1rem;
       // Reset font-size & line height : important!
       font-size: 13px;
       line-height: 1;
-      >li {
-        
+      > li {
         margin: 0 5px 10px 0;
         border: 0;
         padding: 0;
         display: inline-block;
 
         // Keeper
-        >.vfi {
+        > .vfi {
           font-family: $vfi-icon-font-family !important;
           display: block;
           width: 128px;
@@ -296,22 +293,22 @@ $pl-size-box-wrapper-padding: 1rem;
           font-weight: normal;
           font-variant: normal;
           text-transform: none;
-      }
-      
-      // Duplicate code for the new version
-      .vfi {
-        font-family: $vfi-icon-font-family !important;
-        display: block;
-        width: 128px;
-        height: 128px;
-        background-color: rgba(0, 0, 0, 0.05);
-        &:before {
-          font-size: 128px;
         }
-      }
-      
+
+        // Duplicate code for the new version
+        .vfi {
+          font-family: $vfi-icon-font-family !important;
+          display: block;
+          width: 128px;
+          height: 128px;
+          background-color: rgba(0, 0, 0, 0.05);
+          &:before {
+            font-size: 128px;
+          }
+        }
+
         // Garbage
-        >i {
+        > i {
           &.vdmi {
             font-family: $vdm-icon-font-family !important;
             display: block;
@@ -328,7 +325,18 @@ $pl-size-box-wrapper-padding: 1rem;
             text-transform: none;
           }
         }
-        
+
+        // Duplicate code for the new version
+        .vfi {
+          font-family: $vfi-icon-font-family !important;
+          display: block;
+          width: 128px;
+          height: 128px;
+          background-color: rgba(0, 0, 0, 0.05);
+          &:before {
+            font-size: 128px;
+          }
+        }
         .ic-name,
         .ic-charcode {
           display: block;
@@ -344,7 +352,6 @@ $pl-size-box-wrapper-padding: 1rem;
   }
 }
 
-
 // Colors
 // - - - - - - - - - -  - - - - - -
 
@@ -352,9 +359,9 @@ $pl-size-box-wrapper-padding: 1rem;
   .pl-swatches-wrapper {
     @include make-row();
     @include clearfix();
-    margin-top:30px;
+    margin-top: 30px;
     h2 {
-      padding-left:12px;
+      padding-left: 12px;
     }
     .pl-swatches {
       // @include make-xs-column(12);
@@ -368,7 +375,6 @@ $pl-size-box-wrapper-padding: 1rem;
       }
 
       .pl-swatch-list {
-
         list-style-type: none;
         padding: 0;
         margin: 0;
@@ -407,7 +413,7 @@ $pl-size-box-wrapper-padding: 1rem;
     }
     .pl-white {
       background: $white;
-      border:solid 1px silver;
+      border: solid 1px silver;
     }
     .pl-sarcelle {
       background: $vdm-sarcelle;
@@ -419,11 +425,11 @@ $pl-size-box-wrapper-padding: 1rem;
       background: $vdm-grey;
     }
     .pl-red {
-      background: $vdm-red;
+      background: $montreal-red;
     }
     .pl-brand {
-        background: $vdm-brand;
-        color: $white;
+      background: $vdm-brand;
+      color: $white;
     }
     .pl-sub-brand {
       background: $vdm-sub-brand;
@@ -466,7 +472,7 @@ $pl-size-box-wrapper-padding: 1rem;
         font-size: $font-size-sm;
         margin-right: 0.8em;
         &:after {
-          content: 'AA';
+          content: "AA";
         }
         &:last-of-type {
           margin-right: 0;
@@ -477,14 +483,12 @@ $pl-size-box-wrapper-padding: 1rem;
         color: $white;
         float: left;
       }
-
     }
     .pl-sass-name {
       display: block;
       font-size: $font-size-sm;
       font-weight: $font-weight-light;
     }
-
   }
 
   .pl-accessibility-table {
@@ -507,14 +511,13 @@ $pl-size-box-wrapper-padding: 1rem;
           font-size: $font-size-sm;
           margin-right: 0.8em;
           &:after {
-            content: 'AA';
+            content: "AA";
           }
         }
         &.pl-swatch-accessibility-invert {
           background: $black;
           color: $white;
         }
-
       }
     }
   }
@@ -583,9 +586,7 @@ $pl-size-box-wrapper-padding: 1rem;
   //   background: $vdm-brand-alt-warm-dark;
   //   color: $white;
   // }
-}// .pl-atom-color
-
-
+} // .pl-atom-color
 
 // Form-elements
 // - - - - - - - - - -  - - - - - -
@@ -600,7 +601,6 @@ $pl-size-box-wrapper-padding: 1rem;
 //  For regions demonstration pages -- highlits empty regions.
 .pl-regions-demo-page {
   .region {
-    
     background: lighten($vdm-grey-light, 4%);
     border: 1px solid lighten($vdm-grey, 40%);
 
@@ -627,13 +627,11 @@ $pl-size-box-wrapper-padding: 1rem;
   }
 }
 
-
 // Examples styling
 
 .sg-pattern .progress + .progress {
   margin-top: 1rem;
 }
-
 
 // - - - - - - - - - -  - - - - - -
 //  * * * MOLECULES * * *
@@ -642,72 +640,67 @@ $pl-size-box-wrapper-padding: 1rem;
 // Tiles
 // - - - - - - - - - -  - - - - - -
 .pl-molecule-tiles {
-    .pl-tiles-index {
-        @include make-row();
-        @include clearfix();
-        >li {
-          display: inline-block;
-          margin-right: 15px;
-          margin-bottom: 15px;
-        }
+  .pl-tiles-index {
+    @include make-row();
+    @include clearfix();
+    > li {
+      display: inline-block;
+      margin-right: 15px;
+      margin-bottom: 15px;
     }
+  }
 }
 
 // Tiles
 // - - - - - - - - - -  - - - - - -
 .pl-molecule-cards {
   @extend .container;
-    .pl-cards-index {
-        @include make-row();
-        >li {
+  .pl-cards-index {
+    @include make-row();
+    > li {
+      // display: flex;
+      // Provide equal height behaviour, vertical sizing
 
-          // display: flex;
-          // Provide equal height behaviour, vertical sizing
+      @include make-col-ready();
+      @include media-breakpoint-up(xs) {
+        @include make-col(12);
+      }
+      @include media-breakpoint-up(sm) {
+        @include make-col(4);
+      }
+      @include media-breakpoint-up(md) {
+        @include make-col(3);
+      }
 
-          @include make-col-ready();
-          @include media-breakpoint-up(xs) {
-            @include make-col(12);
-          }
-          @include media-breakpoint-up(sm) {
-            @include make-col(4);
-          }
-          @include media-breakpoint-up(md) {
-            @include make-col(3);
-          }
-
-          margin-bottom: $grid-gutter-width;
-        
-        }
+      margin-bottom: $grid-gutter-width;
     }
+  }
 }
 
 .pl-molecule-cards-large {
   @extend .container;
-    .pl-cards-index {
-        @include make-row();
-        >li {
-        
+  .pl-cards-index {
+    @include make-row();
+    > li {
+      @include make-col-ready();
+      @include media-breakpoint-up(xs) {
+        @include make-col(12);
+      }
+      @include media-breakpoint-up(sm) {
+        @include make-col(6);
+      }
+      @include media-breakpoint-up(md) {
+        @include make-col(6);
+      }
 
-          @include make-col-ready();
-          @include media-breakpoint-up(xs) {
-            @include make-col(12);
-          }
-          @include media-breakpoint-up(sm) {
-            @include make-col(6);
-          }
-          @include media-breakpoint-up(md) {
-            @include make-col(6);
-          }
-
-          margin-bottom: $grid-gutter-width;
-        
-        }
+      margin-bottom: $grid-gutter-width;
     }
+  }
 }
 
 .pl-teasers-index {
-  >ul {
-    >li {
+  > ul {
+    > li {
       @extend .container;
     }
   }

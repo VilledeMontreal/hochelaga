@@ -1,14 +1,11 @@
 // @file layout.scss
 
 html {
-  body {
-    background-color: $white;
-  }
 
   // @see https://philipwalton.github.io/solved-by-flexbox/demos/sticky-footer/
   // @see https://github.com/philipwalton/solved-by-flexbox/blob/master/assets/css/components/site.css
   &.sticky {
-    .vdm-page { 
+    .vdm-page {
       display: flex;
       flex-direction: column;
       height: 100vh;
@@ -21,18 +18,16 @@ html {
     }
     .vdm-header,
     .vdm-footer {
-      flex: none; 
+      flex: none;
     }
   }
 }
 
-
 .sidebar {
   > * {
-    background-color: $vdm-grey-light
+    background-color: $vdm-grey-light;
   }
 } // Sidebar
-
 
 // Make all base regions Bootstrap containers & rows
 // with these standardized classes
@@ -60,21 +55,16 @@ html {
   &.full-width {
     @extend .container-fluid;
   }
-
 }
-
-
-
 
 // All regions in page templates should have at least a "region" class
 // A region is anything that implements a bootstrap grid on the first level
 // in an html document.
 .region {
-
   // Sections : sub-sections inside regions
   // Sections will always be inside a bootstrap row
   .region-row {
-    >.section {
+    > .section {
       @include make-col-ready();
       &.full-width {
         @include make-col(12);
@@ -110,7 +100,6 @@ html {
     }
   }
 
-
   // The container fluid version of the region
   &.full-width-container {
     @extend .container-fluid;
@@ -125,7 +114,6 @@ html {
 
   // This is the 3 columns region, with a potential for left and right sidebars
   &.main-region {
-
     // Mobile first, everything is 12 initially
     .main-content {
       @include make-col-ready();
@@ -152,8 +140,7 @@ html {
 
     // Medium breakpoint and above (768)
     @include media-breakpoint-up(md) {
-      
-      .col-left, 
+      .col-left,
       .col-right {
         .main-content {
           @include make-col(8);
@@ -179,7 +166,6 @@ html {
       }
     } // md-up
   }
-  
 
   // Background color variants
   &.shaded {
@@ -194,6 +180,4 @@ html {
   &.has-nav-tabs {
     padding-bottom: 0;
   }
-
-
 } // Region

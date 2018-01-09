@@ -5,25 +5,24 @@
 @import "scss/variables";
 
 // Bootstrap Framework.
-@import '~bootstrap/scss/bootstrap';
+@import "~bootstrap/scss/bootstrap";
 
 // Import VDM styles files
-@import "scss/breakpoints.scss";
-@import "scss/vdm-icons-map.scss";
-@import "scss/fonts.scss";
-@import "scss/mixins.scss";
-@import "scss/header.scss";
-@import "scss/footer.scss";
-@import "scss/layout.scss";
-@import "scss/nav.scss";
-@import "scss/menus.scss";
-@import "scss/sidebars.scss";
-@import "scss/type.scss";
-@import "scss/icons.scss";
-@import "scss/forms.scss";
-@import "scss/media.scss";
-@import "scss/color-schemes.scss";
-@import "scss/ui-nav-blocks.scss";
-@import "scss/ui-buttons-switches-tabs.scss";
-@import "scss/collectors.scss";
-
+@import "scss/vdm-icons-map";
+@import "scss/fonts";
+@import "scss/mixins";
+@import "scss/header";
+@import "scss/footer";
+@import "scss/layout";
+@import "scss/nav";
+@import "scss/menus";
+@import "scss/sidebars";
+@import "scss/type";
+@import "scss/icons";
+@import "scss/forms";
+@import "scss/media";
+@import "scss/color-schemes";
+@import "scss/card";
+@import "scss/ui-nav-blocks";
+@import "scss/buttons-switches";
+@import "scss/collectors";

@@ -1,4 +1,3 @@
-
 # VDM styleguide stylesheet architecture
 
 ## Variables and mixins
@@ -8,7 +7,6 @@
 * mixins
 * * <small>Main mixin file used to import sub-mixins</small>
 
-
 ## Low-level dependencies
 
 * reset
@@ -17,7 +15,6 @@
 * * <small>Basic print ruleset</small>
 * icons
 * * <small>Icons collection and variables that leverage the vdm-fonticon font & other iconic assets as needed.</small>
-
 
 ## Core CSS
 
@@ -41,7 +38,6 @@
 * forms-advanced
 * * <small>Higher level form layout strucres.</small>
 
-
 ## Components
 
 * buttons
@@ -61,8 +57,6 @@
 * navigation
 * breadcrumbs
 * pagination
-
-
 
 ## Applications
 
