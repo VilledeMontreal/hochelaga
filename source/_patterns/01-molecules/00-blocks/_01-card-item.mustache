@@ -1,0 +1,27 @@
+<div class="card {{ card.classes }}">
+  {{# card.url }}
+  <a href="{{ card.url }}" class="">
+  {{/ card.url }}
+    {{# card.card-media }}
+      {{# card.card-media.icon }}
+      <span class="card-icon-top vfi {{ card.card-media.icon }}" aria-hidden="true"></span>
+      {{/ card.card-media.icon }}
+      {{# card.card-media.img }}
+      <img class="card-img-top {{ card.card-media.img.classes }}" src="{{ card.card-media.img.url}}" alt="{{ card.card-media.img.alt }}">
+      {{/ card.card-media.img }}
+    {{/ card.card-media }}
+    <div class="card-body">
+      {{# card.card-title }}
+      <span class="card-title">{{ card.card-title }}</span>
+      {{/ card.card-title }}
+      {{# card.card-text }}
+      <p class="card-text">{{ card.card-text }}</p>
+      {{/ card.card-text }}
+      {{# card.card-button }}
+      <a href="#" class="btn btn-primary">Go somewhere</a>
+      {{/ card.card-button }}
+    </div>
+  {{# card.url }}
+  </a>
+  {{/ card.url }}
+</div>
