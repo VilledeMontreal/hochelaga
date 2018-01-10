@@ -190,9 +190,18 @@
     color: $black;
 
     // Loop over all icons in the set to produce the classes & invoke the icon() mixin
+    // Garbage
     @each $name, $char in $icons {
       &.ic-#{$name} {
         @include icon(before, $name);
+      }
+    }
+
+    // Loop over all icons in the set to produce the classes & invoke the iconvfi() mixin
+    // Keeper
+    @each $name, $char in $vdmicons {
+      &.ic-#{$name} {
+        @include iconvfi(before, $name);
       }
     }
 

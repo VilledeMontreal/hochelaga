@@ -73,6 +73,7 @@ p {
 // Hyperlinks - generic
 a {
   // Inline links with icons
+  // Clean-up this code to preserve onlu .vfi classes
   &.icon {
     i {
       &.vdmi {
@@ -81,11 +82,19 @@ a {
         top: 0.2em;
       }
     }
+    .vfi {
+      font-size: 1.5em;
+      position: relative;
+      top: 0.2em;
+    }
     &.right {
       i {
         &.vdmi {
           padding-left: 0.15em;
         }
+      }
+      .vfi {
+        padding-left: 0.15em;
       }
     }
     &.left {
@@ -94,13 +103,23 @@ a {
           padding-right: 0.15em;
         }
       }
+      .vfi {
+        padding-right: 0.15em;
+      }
     }
   }
+
+  // Refactor required for this block, considering the icon tag will be explicite in the markup
+  // Used in the side menu
   &.block {
     display: block;
     background: transparent;
     line-height: $line-height-lg;
     padding: 0.6em 0.6em;
+
+    .vfi {
+      font-size: 2.5em;
+    }
 
     &.inline {
       display: inline-block;
@@ -111,16 +130,14 @@ a {
       position: relative;
       padding-right: 4em;
 
-      &:after {
+      .vfi {
         position: absolute;
-        // content: "\E103";
-        content: map-get($icons, arrow-right);
-        font-family: "vdm-fonticon";
+        content: map-get($vdmicons, fleche-droite);
+        font-family: $vfi-icon-font-family;
         font-size: 2.5em;
         top: 50%;
         transform: translateY(-50%);
         left: calc(100% - 1.25em);
-        // right: 0;
         background: transparent;
 
         &:hover,
@@ -154,10 +171,15 @@ h5,
 h6 {
   a {
     &.icon {
+      // Garbage
       i {
         &.vdmi {
           font-size: 1.2em;
         }
+      }
+      // Keeper
+      .vfi {
+        font-size: 1.2em;
       }
     }
   }

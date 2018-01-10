@@ -2,7 +2,7 @@
   <ul class="pagination {{ paginationClass }}">
     <li class="page-item">
       <a class="page-link" href="#" aria-label="Previous">
-        <span class="vdmi ic-chevron-left" aria-hidden="true"></span>
+        {{> atoms-fonticon-item(label: "chevron-gauche") }}
         <span class="sr-only">Previous</span>
       </a>
     </li>
@@ -11,7 +11,7 @@
   {{/ paginationList }}
     <li class="page-item">
       <a class="page-link" href="#" aria-label="Next">
-        <span class="vdmi ic-chevron-right" aria-hidden="true"></span>
+        {{> atoms-fonticon-item(label: "chevron-droite") }}
         <span class="sr-only">Next</span>
       </a>
     </li>
