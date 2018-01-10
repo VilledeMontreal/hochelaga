@@ -128,6 +128,31 @@
   }
 }
 
+@mixin iconvfi($position: before, $icon: false, $styles: true) {
+  @if $position == both {
+    $position: "before, &:after";
+  }
+  // Either a :before or :after pseudo-element, or both, defaulting to :before
+  &:#{$position} {
+    @if $icon {
+      // A specific icon has been designated
+      content: "#{map-get($vdmicons, vfi- + $icon)}";
+    }
+
+    @if $styles {
+      font-weight: normal;
+      font-style: normal;
+      font-family: $vfi-icon-font-family;
+      text-decoration: none;
+      display: inline-block;
+      text-rendering: auto;
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+    }
+
+    @content;
+  }
+}
 // Applies to the vdmi radios and labels
 // Candidate to replace the current, previous solution
 // To be invoked from within the label element
@@ -169,7 +194,7 @@
   }
 
   @if $type == "checkbox" {
-    @include icon(after, checkbox-checked-trans);
+    @include iconvfi(after, mini-case-coche-coche);
     &:after {
       font-size: $size;
       // top: $size * 0.075;
@@ -194,39 +219,15 @@
   }
 }
 
-// Sets the icon font size, generally 3.6rem;
-@mixin icon-size( $all : false, 
-                  $fsize : $vdm-icon-font-size, 
-                  $height:  $vdm-icon-font-height, 
-                  $width: $vdm-icon-font-width, 
-                  $lheight: $vdm-icon-font-line-height ) {
-  @if $all {
-    &:after,
-    &:before {
-      font-size: $all;
-      height: $all;
-      width: $all;
-      line-height: $all;
-    }
-  } @else {
-    &:after,
-    &:before {
-      font-size: $fsize;
-      height: $height;
-      width: $width;
-      line-height: $lheight;
-    }
-  }
-}
 
 // Generates a block-level link with an icon in the after position;
-
 @mixin icon-block-link( $icon : arrow-right, $size: false ) {
   display: block;
   position: relative;
   background: transparent;
   // line-height: 1em;
-  @include icon(after, $icon);
+  // @include icon(after, $icon);
+  @include iconvfi(after, $icon);
 
   &:after {
     position: absolute;
@@ -246,7 +247,6 @@
 }
 
 //@include n-columns(200px,  10px, true, 5);
-
 @mixin n-columns($child-selector, $min-width, $gutter, $last-equal: false, $max-cols: 5) {
   // .vdm-footer-links {
   display: flex;
@@ -348,11 +348,13 @@
   @each $name, $char in $icons {
     &.ic-#{$name} {
       @if $where == left or $where == right {
-        @include icon(before, $name);
+        // @include icon(before, $name);
+        @include iconvfi(before, $name);
       }
 
       @if $case == arrow-block {
-        @include icon(after, arrow-right);
+        // @include icon(after, arrow-right);
+        @include iconvfi(before, fleche-droite);
       }
     }
   }
@@ -590,7 +592,8 @@
   @if $case {
     @if ($case == arrow-block) {
       padding-right: 5rem;
-      @include icon(after, arrow-right);
+      // @include icon(after, arrow-right);
+      @include iconvfi(before, fleche-droite);
       @include teaser-icon-position(right, arrow-block);
       @include teaser-scheme-hover(arrow-block);
 

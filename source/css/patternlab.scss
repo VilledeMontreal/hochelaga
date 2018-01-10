@@ -277,6 +277,37 @@ $pl-size-box-wrapper-padding: 1rem;
         border: 0;
         padding: 0;
         display: inline-block;
+
+        // Keeper
+        > .vfi {
+          font-family: $vfi-icon-font-family !important;
+          display: block;
+          width: 128px;
+          height: 128px;
+          font-size: 128px;
+          background-color: rgba(0, 0, 0, 0.05);
+          text-rendering: geometricPrecision;
+          -webkit-font-smoothing: antialiased;
+          vertical-align: middle;
+          font-smooth: always;
+          font-weight: normal;
+          font-variant: normal;
+          text-transform: none;
+        }
+
+        // Duplicate code for the new version
+        .vfi {
+          font-family: $vfi-icon-font-family !important;
+          display: block;
+          width: 128px;
+          height: 128px;
+          background-color: rgba(0, 0, 0, 0.05);
+          &:before {
+            font-size: 128px;
+          }
+        }
+
+        // Garbage
         > i {
           &.vdmi {
             font-family: $vdm-icon-font-family !important;

@@ -44,9 +44,17 @@
     color: $black;
 
     // Loop over all icons in the set to produce the classes & invoke the icon() mixin
+    // Garbage
     @each $name, $char in $icons {
       &.ic-#{$name} {
         @include icon(before, $name);
+      }
+    }
+
+    // Keeper
+    @each $name, $char in $vdmicons{
+      &.ic-#{$name} {
+        @include iconvfi(before, $name);
       }
     }
 
@@ -598,6 +606,20 @@
 //       @include icon(before, $name);
 //     }
 //   }
+
+  // Loop over all icons in the set to produce the classes & invoke the icon() mixin
+  // Garbage
+  @each $name, $char in $icons {
+    &.ic-#{$name} {
+      @include icon(before, $name);
+    }
+  }
+  // Keeper
+  @each $name, $char in $vdmicons {
+    &.ic-#{$name} {
+      @include iconvfi(before, $name);
+    }
+  }
 }
 
 .cards > div {
@@ -713,7 +735,6 @@
     > img {
       margin-left: 1rem;
       max-width: 300px;
-
       order: 1;
     }
     // Position picture first, reset margins, change flex-axis
