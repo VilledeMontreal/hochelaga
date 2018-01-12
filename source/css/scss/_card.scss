@@ -52,7 +52,7 @@
     }
 
     // Keeper
-    @each $name, $char in $vdmicons{
+    @each $name, $char in $vdmicons {
       &.ic-#{$name} {
         @include iconvfi(before, $name);
       }
@@ -461,40 +461,127 @@
   }
 }
 
-/////////////////////////////////////////////////////////////////////////////
+/**
+ * Generic cards styles and variants
+ * Built on bootstrap card component 
+ */
 
 .card {
   @extend .text-center;
   display: flex;
   margin-bottom: $grid-gutter-width;
+  width: 100%;
 
   .card-icon-top {
     font-size: 3.6rem;
     margin-top: 3rem;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
+  }
+
+  .card-tags {
+    color: $vdm-brand;
+    display: inline-block;
+    font-weight: $font-weight-bold;
+    margin-bottom: 1rem;
+    &:before {
+      content: "";
+      background-color: $vdm-brand;
+      width: 0.75em;
+      height: 0.75em;
+      border-radius: 100%;
+      display: inline-block;
+      margin-right: .5rem;
+    }
   }
 
   .card-title {
-    @include header(5, 'regular');
-
+    @include header(5, "regular");
   }
 
   .card-body {
     padding: 2rem 2rem 2rem 2rem;
   }
 
+  .card-footer {
+    border-top: none;
+    padding: 0 2rem 2rem 2rem;
+    background-color: inherit;
+    display: flex;
+    align-items: center;
+
+    .vfi {
+      color: $vdm-brand;
+      font-size: 2.5rem;
+      padding-left: .5rem;
+    }
+  }
+
   > a {
     color: $body-color;
+    display: flex;
+    flex-direction: column;
     height: 100%;
     &:hover,
     &:active {
       color: $white;
       background: $vdm-brand;
       text-decoration: none;
-      .card-icon-top {
+      .card-icon-top,
+      .card-footer .vfi,
+      .card-tags {
         color: $white;
+      }
+      .card-tags:before {
+        background-color: $white;
+      }
+    }
+  }
+
+  &.card-large {
+
+    .card-title {
+      @include header(4, "bold");
+    }
+    .card-body {
+      text-align: left;
+    }
+
+    // Row layout is used for icon placement to the left or right at larger breakpoint
+    &.card-row-layout {
+      .card-body {
+        text-align: center;
+      }
+
+      @include media-breakpoint-up(lg) {
+
+        flex-direction: row;
+        align-items: center;
+
+        .card-icon-top {
+          margin-top: 0;
+          margin-left: 2rem;
+          &.card-icon-right {
+            // Icon placement to the right on large breakpoint and up
+            order: 100;
+            margin-right: 2rem;
+          }
+        }
+
+        .card-body {
+          text-align: left;
+        }
+
+        .card-footer {
+          padding: 2rem;
+          .vfi {
+            font-size: 3.6rem;
+          }
+        }
+
+        > a {
+          flex-direction: row;
+          align-items: center;
+          width: 100%;
+        }
       }
     }
   }
@@ -504,187 +591,42 @@
     border: none;
   }
 
-//   // Fonticon
-//   &:before {
-//     font-size: 3.6rem;
-//     width: 3.6rem;
-//     height: 3.6rem;
-//     line-height: 3.6rem;
-//     position: absolute;
-//     text-decoration: none;
-//     color: $vdm-brand;
-//   }
-
-//   &.card-base {
-//     &:before {
-//       left: calc(50% - 1.8rem);
-//       top: 3.4rem;
-//     }
-//   }
-
-//   // Large card, icon on left, ttle & teaser features at least,
-//   &.card-large {
-//     background: $vdm-grey-light;
-//     padding: 2.3rem 2.3rem 3rem 7.75rem;
-//     border: 0;
-//     text-align: left;
-//     min-height: 12rem;
-
-//     display: flex;
-//     // flex-direction: column;
-
-//     // justify-content: center;
-//     // align-items: center;
-
-//     @include media-breakpoint-down(xs) {
-//       padding: 8rem 2.3rem 2.5rem 2.3rem;
-//     }
-
-//     // Fonticon
-//     &:before {
-//       font-size: 3.6rem;
-//       left: 3.25rem;
-//       top: calc(50% - 1.8rem);
-//       @include media-breakpoint-down(xs) {
-//         top: 2.3rem;
-//         left: calc(50% - 1.8rem);
-//       }
-//     }
-
-//     &:hover,
-//     &:active {
-//       background: $vdm-brand;
-//     }
-
-//     .title {
-//       @include header(4);
-//       font-weight: $font-weight-bold;
-//       padding-top: 0;
-//       margin-top: 0;
-//       margin-bottom: 2.4rem;
-//       @include media-breakpoint-down(xs) {
-//         margin-bottom: 1.8rem;
-//       }
-//     }
-
-//     .content {
-//       font-size: $font-size-base;
-//       line-height: floor(($font-size-base * 1.625));
-//       // flex: 1 0 auto;
-//       // flex-grow: 1;
-
-//       &:first-of-type {
-//         margin-top: 0;
-//         padding-top: 0;
-//       }
-//       &:last-of-type {
-//         margin-bottom: 0;
-//         padding-bottom: 0;
-//       }
-//     }
-
-//     &.card-reverse {
-//       padding: 2.3rem 7.75rem 3rem 2.3rem;
-//       &:before {
-//         display: none;
-//       }
-//       &:after {
-//         font-size: 3.6rem;
-//         right: 3.25rem;
-//         top: calc(50% - 1.8rem);
-//         @include media-breakpoint-down(xs) {
-//           top: 2.3rem;
-//           left: calc(50% - 1.8rem);
-//         }
-//       }
-//     }
-//   }
-
-//   // Loop over all icons in the set to produce the classes & invoke the icon() mixin
-//   @each $name, $char in $icons {
-//     &.ic-#{$name} {
-//       @include icon(before, $name);
-//     }
-//   }
-
-  // Loop over all icons in the set to produce the classes & invoke the icon() mixin
-  // Garbage
-  @each $name, $char in $icons {
-    &.ic-#{$name} {
-      @include icon(before, $name);
-    }
+  .rounded-circle {
+    margin: 2rem auto 1rem auto;
+    width: 61.5%;
   }
-  // Keeper
-  @each $name, $char in $vdmicons {
-    &.ic-#{$name} {
-      @include iconvfi(before, $name);
-    }
-  }
+
 }
 
-.cards > div {
-  // must add flex capacity to col to get equalheight
-  display: flex;
-}
-
-// Base block : tile -- keep ? Seems to be replaced with the card block type above
-.tile {
-  display: block;
-  background: $vdm-neutral-light;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  border: 1px solid $vdm-brand;
-
-  // Navigation tile : this element is always hyperlinked
-  &.tile-nav {
-    text-decoration: none;
-    color: $black;
-    &:hover,
-    &:active {
-      color: $white;
-      background: $vdm-brand;
-      .wrapper {
-        h3 {
-          color: $white;
-        }
-        .vdmi {
-          color: $white;
-        }
+.cards {
+  > div, .card-item {
+    // must add flex capacity to col to get equalheight
+    display: flex;
+  }
+  // Add bs-grid layout to any element, ie: ul>li, etc
+  // This is less customizable since cols are hard-coded in css.
+  &.cards-bs-grid {
+    @include make-row();
+    .card-item {
+      @include make-col-ready();
+      // Grid styles
+      @include media-breakpoint-up(xs) {
+        @include make-col(12);
+      }
+      @include media-breakpoint-up(md) {
+        @include make-col(6);
+      }
+      @include media-breakpoint-up(lg) {
+        @include make-col(4);
       }
     }
   }
-
-  // Implements vdm-fonticon
-  &.tile-icon {
-    width: 170px;
-    height: 170px;
-  }
-
-  // Insures bi-axial centering in the flex grid
-  .wrapper {
-    max-width: 100%;
-    padding-right: 15px;
-    padding-left: 15px;
-    margin-right: auto;
-    margin-left: auto;
-    text-align: center;
-    // Icon
-    .vdmi {
-      font-size: 3em;
-      color: $vdm-brand;
-      cursor: pointer;
-      margin-bottom: 0.15em;
-    }
-    // Label
-    h3 {
-      font-size: $font-size-base;
-      $font-weight: $font-weight-regular;
-      cursor: pointer;
-      line-height: $line-height-lg;
-    }
-  }
 }
+
+
+/**
+ * Teasers needs to becomes either cards or media object
+ */
 
 // Teasers
 // Teaser picture

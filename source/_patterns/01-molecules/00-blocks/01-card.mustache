@@ -1,8 +1,9 @@
 <div class="container">
-  <div class="row cards">
-  {{# listItems.one }}
+  <div class="row cards {{ cards.classes }}">
+  {{# cards.card-item }}
     <div class="col-12 col-md-6 col-lg-4">
       {{> molecules-card-item }}
     </div>
-  {{/ listItems.one }}
+  {{/ cards.card-item }}
+  <div>
 </div>

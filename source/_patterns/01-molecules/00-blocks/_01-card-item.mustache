@@ -1,27 +1,35 @@
-<div class="card {{ card.classes }}">
-  {{# card.url }}
-  <a href="{{ card.url }}" class="">
-  {{/ card.url }}
-    {{# card.card-media }}
-      {{# card.card-media.icon }}
-      <span class="card-icon-top vfi {{ card.card-media.icon }}" aria-hidden="true"></span>
-      {{/ card.card-media.icon }}
-      {{# card.card-media.img }}
-      <img class="card-img-top {{ card.card-media.img.classes }}" src="{{ card.card-media.img.url}}" alt="{{ card.card-media.img.alt }}">
-      {{/ card.card-media.img }}
-    {{/ card.card-media }}
+<div class="card {{ classes }}">
+  {{# url }}
+  <a href="{{ url }}" class="">
+  {{/ url }}
+    {{# card-media }}
+      {{# card-media.icon }}
+      <span class="card-icon-top {{ card-media.classes }} vfi {{ card-media.icon }}" aria-hidden="true"></span>
+      {{/ card-media.icon }}
+      {{# card-media.img }}
+      <img class="card-img-top {{ card-media.img.classes }}" src="{{ card-media.img.url}}" alt="{{ card-media.img.alt }}">
+      {{/ card-media.img }}
+    {{/ card-media }}
     <div class="card-body">
-      {{# card.card-title }}
-      <span class="card-title">{{ card.card-title }}</span>
-      {{/ card.card-title }}
-      {{# card.card-text }}
-      <p class="card-text">{{ card.card-text }}</p>
-      {{/ card.card-text }}
-      {{# card.card-button }}
+      {{# card-tags }}
+      <span class="card-tags">{{ tag }}</span>
+      {{/ card-tags }}
+      {{# card-title }}
+      <span class="card-title">{{ card-title }}</span>
+      {{/ card-title }}
+      {{# card-text }}
+      <p class="card-text">{{ card-text }}</p>
+      {{/ card-text }}
+      {{# card-button }}
       <a href="#" class="btn btn-primary">Go somewhere</a>
-      {{/ card.card-button }}
+      {{/ card-button }}
     </div>
-  {{# card.url }}
+    {{# footer }}
+    <div class="card-footer">
+      {{ footer.text }}<span class="vfi vfi-fleche-droite" aria-hidden="true"></span>
+    </div>
+    {{/ footer }}
+  {{# url }}
   </a>
-  {{/ card.url }}
+  {{/ url }}
 </div>
