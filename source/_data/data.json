@@ -415,6 +415,7 @@
   },
   "cards": {
     "classes": false,
+    "bsgrid-classes": "col-12 col-md-6 col-lg-4",
     "card-item": [
       {
         "classes": false,
@@ -424,6 +425,10 @@
           "Some quick example text to build on the card title and make up the bulk of the card's content.",
         "card-media": {
           "icon": "vfi-porte-voix"
+        },
+        "footer": {
+          "inside-body": false,
+          "outside-body": false
         }
       }
     ]

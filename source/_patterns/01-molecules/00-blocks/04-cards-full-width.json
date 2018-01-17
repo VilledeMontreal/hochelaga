@@ -1,9 +1,10 @@
 {
   "cards": {
     "classes": false,
+    "bsgrid-classes": "col-12",
     "card-item": [
       {
-        "classes": "card-large card-row-layout",
+        "classes": "card-fw card-row-layout",
         "url": "#",
         "card-title": "This is a random title from 01-card-test.json",
         "card-text":
@@ -13,7 +14,7 @@
         }
       },
       {
-        "classes": "card-large card-row-layout",
+        "classes": "card-fw card-row-layout",
         "url": "#",
         "card-title": "Card with icon placement to the right",
         "card-text":
@@ -24,7 +25,7 @@
         }
       },
       {
-        "classes": "card-large card-row-layout",
+        "classes": "card-fw card-row-layout",
         "url": false,
         "card-title": "Card with icon placement to the right - No link",
         "card-text":
@@ -35,8 +36,9 @@
         }
       },
       {
-        "classes": "card-large card-row-layout",
+        "classes": "card-fw card-row-layout",
         "url": "#",
+        "card-date": "20 février 2018",
         "card-title": "Card with a very long title. Footer is place to the right for larger breakpoint. How do we handle the arrow placement?",
         "card-text":
           "Some quick example text to build on the card title and make up the bulk of the card's content.",
@@ -45,11 +47,11 @@
           "icon": false
         },
         "footer" : {
-          "dummy-data": true
+          "outside-body": true
         }
       },
       {
-        "classes": "card-large card-row-layout",
+        "classes": "card-fw card-row-layout",
         "url": "#",
         "card-title": "Card with a very long title. Footer is place to the right for larger breakpoint. How do we handle the arrow placement?",
         "card-text":
@@ -58,7 +60,58 @@
           "icon": "vfi-porte-voix"
         },
         "footer" : {
-          "dummy-data": true
+          "outside-body": true
+        }
+      },
+      {
+        "classes": "card-fw card-row-layout",
+        "url": "#",
+        "card-title": "Card with extra metadata in a row layout",
+        "card-text":
+          "Some quick example text to build on the card title and make up the bulk of the card's content.",
+        "card-media": {
+          "icon": "vfi-porte-voix"
+        },
+        "card-metadata": "PP35-DFCS78",
+        "footer" : {
+          "outside-body": true
+        }
+      },
+      {
+        "classes": "card-fw card-row-layout",
+        "url": "#",
+        "card-title": "Full width card with image on right side",
+        "card-text":
+          "Some quick example text to build on the card title and make up the bulk of the card's content.",
+        "card-text-muted": "Some muted text.",
+        "card-media" : {
+          "icon" : false,
+          "img" : {
+            "url" : "https://picsum.photos/768/480?image=1074",
+            "alt" : "Card #2 img alt."
+          }
+        },
+        "footer" : {
+          "outside-body": true
+        }
+      },
+      {
+        "classes": "card-fw card-large-img card-row-layout",
+        "url": "#",
+        "card-title": "Full width card with large image on right side",
+        "card-text":
+          "Some quick example text to build on the card title and make up the bulk of the card's content.",
+        "card-text-muted": "Some muted text.",
+        "card-media" : {
+          "icon" : false,
+          "img" : {
+            "url" : "https://picsum.photos/768/480?image=1074",
+            "alt" : "Card #2 img alt."
+          }
+        },
+        "footer" : {
+          "inside-body": true,
+          "text": "Read more"
         }
       }
     ]

@@ -493,12 +493,20 @@
     }
   }
 
+  .card-date {
+    display: inline-block;
+    padding-bottom: 1rem;
+  }
   .card-title {
     @include header(5, "regular");
   }
 
   .card-body {
     padding: 2rem 2rem 2rem 2rem;
+  }
+
+  .card-metadata {
+    min-width: 10rem;
   }
 
   .card-footer {
@@ -527,8 +535,9 @@
       text-decoration: none;
       .card-icon-top,
       .card-footer .vfi,
-      .card-tags {
-        color: $white;
+      .card-tags,
+      .text-muted {
+        color: $white !important;
       }
       .card-tags:before {
         background-color: $white;
@@ -536,51 +545,96 @@
     }
   }
 
-  &.card-large {
+  // Row layout is used for icon placement to the left or right at larger breakpoint
+  &.card-row-layout {
+    .card-body {
+      text-align: center;
+    }
 
+    @include media-breakpoint-up(lg) {
+
+      flex-direction: row;
+      align-items: center;
+
+      .card-icon-top {
+        margin-top: 0;
+        margin-left: 2rem;
+        &.card-icon-right {
+          // Icon placement to the right on large breakpoint and up
+          order: 100;
+          margin-right: 2rem;
+        }
+      }
+
+      .card-body {
+        text-align: left;
+      }
+
+      .card-footer {
+        padding: 2rem;
+        .vfi {
+          font-size: 3.6rem;
+        }
+      }
+
+      > a {
+        flex-direction: row;
+        align-items: center;
+        width: 100%;
+      }
+    }
+  }
+
+  &.card-large,
+  &.card-large-img {
     .card-title {
       @include header(4, "bold");
     }
     .card-body {
       text-align: left;
     }
+  }
 
-    // Row layout is used for icon placement to the left or right at larger breakpoint
-    &.card-row-layout {
-      .card-body {
-        text-align: center;
+  &.card-fw {
+    @include media-breakpoint-up(lg) {
+      .card-img-top {
+        margin-left: 1rem;
+        max-width: 300px;
+        order: 100;
       }
+    }
+  }
 
+  &.card-large {
+    &.card-fw {
       @include media-breakpoint-up(lg) {
-
-        flex-direction: row;
-        align-items: center;
-
-        .card-icon-top {
-          margin-top: 0;
-          margin-left: 2rem;
-          &.card-icon-right {
-            // Icon placement to the right on large breakpoint and up
-            order: 100;
-            margin-right: 2rem;
-          }
+        .card-img-top {
+          margin-left: 1rem;
+          max-width: 400px;
+          order: 100;
         }
-
-        .card-body {
-          text-align: left;
+      }
+      @include media-breakpoint-up(xl) {
+        .card-img-top {
+          max-width: 500px;
         }
+      }
+    }
+  }
 
+  &.card-large-img {
+    @include media-breakpoint-up(lg) {
+      .card-img-top {
+        @include make-col(6);
+        margin: 0;
+      }
+      .card-body {
+        display: flex;
+        flex-flow: column nowrap;
+        height: 100%;
         .card-footer {
-          padding: 2rem;
-          .vfi {
-            font-size: 3.6rem;
-          }
-        }
-
-        > a {
-          flex-direction: row;
-          align-items: center;
-          width: 100%;
+          margin-top: auto;
+          padding: 0;
         }
       }
     }
@@ -619,6 +673,16 @@
       @include media-breakpoint-up(lg) {
         @include make-col(4);
       }
+    }
+  }
+}
+
+.light-bg {
+  .card {
+    background-color: $vdm-grey-light;
+    border: none;
+    .vfi {
+      color: $vdm-brand;
     }
   }
 }
