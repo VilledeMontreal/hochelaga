@@ -103,7 +103,6 @@
       &:active {
         color: $vdm-brand;
         text-decoration: none;
-
         &:after {
           color: $black;
         }
@@ -170,6 +169,9 @@
 
 .nav-tabs {
   border-bottom: none;
+  display: flex;
+  flex-direction: column;
+  @extend .flex-md-row;
   .nav-item {
     margin-bottom: 0;
     &.show {
@@ -188,8 +190,8 @@
     border: none;
     color: $black;
     font-weight: $font-weight-bold;
-    margin-right: $nav-tabs-spacing;
     position: relative;
+    text-align: center;
     &.active,
     &:hover,
     &:focus {
@@ -218,10 +220,17 @@
       }
     }
   }
-  &.flex-column {
-    .nav-link {
-      @include media-breakpoint-down(sm) {
-        margin-right: 0;
+  @include media-breakpoint-up(md) {
+    justify-content: center;
+    .nav-item {
+      flex: 0 1 25%;
+      .nav-link {
+        margin-right: $nav-tabs-spacing;
+      }
+      &:last-of-type {
+        .nav-link {
+          margin: 0;
+        }
       }
     }
   }

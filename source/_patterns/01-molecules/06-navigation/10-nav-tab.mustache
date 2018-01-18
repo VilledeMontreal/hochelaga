@@ -1,9 +1,9 @@
 <nav>
-  <ul class="nav nav-tabs nav-fill flex-column flex-sm-row" role="tablist">
-    {{# navTabsList }}
-      <li class="nav-item flex-sm-fill text-sm-center" role="presentation">
-        <a href="#home" class="nav-link" role="tab" data-toggle="tab">{{ title }}</a>
+  <ul class="nav nav-tabs" role="tablist">
+    {{# navTabs.navItem }}
+      <li class="nav-item" role="presentation">
+        <a href="#home" class="nav-link {{ class }}" role="tab" data-toggle="tab">{{ title }}</a>
       </li>
-    {{/ navTabsList }}
+    {{/ navTabs.navItem }}
   </ul>
 </nav>
