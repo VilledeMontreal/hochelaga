@@ -85,29 +85,7 @@
   }
 }
 
-// Collapsible list
-// @todo -- review this code with a real reference, this is imaginary
-
-.vdm-collapsible-list {
-  list-style-type: none;
-  margin: 0;
-  padding: 0;
-  &ul {
-    list-style-type: none;
-    margin: 0;
-    padding: 0;
-    li {
-      margin: 0;
-      padding: 0;
-    }
-  }
-  .vdm-collapsible-item {
-    border-bottom: $vdm-element-border-width/2 solid $white;
-    &:last-of-type {
-      border-bottom: none;
-    }
-  }
-}
+// Collapsible Item
 
 .collapsible-item {
   padding: 0;
@@ -121,12 +99,11 @@
       line-height: 1.9rem;
       padding: 1.4rem 5rem 1.4rem 4rem;
       cursor: pointer;
+      @include iconvfi(after, mini-plus-circulaire);
 
       &[aria-expanded="true"] {
         color: $vdm-brand;
-        &:after {
-          content: map-get($vdmicons, mini-moins-circulaire-plein);
-        }
+        @include iconvfi(after, mini-moins-circulaire-plein);
       }
 
       &:hover,
@@ -140,19 +117,15 @@
       }
 
       &:after {
-        font-family: "vdm-fonticon";
         font-size: 2.6rem;
-        line-height: 2.6rem;
+        line-height: 1;
         width: 2.6rem;
         height: 2.6rem;
-        content: map-get($vdmicons, plus-circulaire);
         position: absolute;
         top: calc(50% - 1.3rem);
         right: 1.4rem;
         display: block;
-
         text-align: center;
-        pointer-events: none;
         color: $vdm-brand;
       }
 
