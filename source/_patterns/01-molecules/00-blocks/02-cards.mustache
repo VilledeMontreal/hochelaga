@@ -1,0 +1,25 @@
+<div class="container">
+  <div class="row cards {{ cards.classes }}">
+  {{# cards.card-item }}
+    <div class="{{ cards.bsgrid-classes }}">
+      {{> molecules-card-item }}
+    </div>
+  {{/ cards.card-item }}
+  </div>
+</div>
+
+<!-- Demonstrate how we can add grid layout to ul>li structure -->
+
+<!--
+<div class="">
+  <div class="container">
+    <ul class="cards cards-bs-grid list-unstyled">
+    {{# cards }}
+      <li class="card-item">
+        {{> molecules-card-item }}
+      </li>
+    {{/ cards }}
+    </div>
+  </div>
+</div>
+-->

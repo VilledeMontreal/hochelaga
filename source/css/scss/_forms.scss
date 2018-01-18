@@ -603,3 +603,138 @@ select {
     }
   }
 }
+
+
+// Switches - Checkboxes as state toggles
+// -------------------------
+
+.vdm-checkbox {
+  // Massive negative offset clers the original checkbox & label.
+  &.vdm-toggle {
+    position: relative;
+    input {
+      &[type="checkbox"] {
+        position: absolute;
+        left: -10000px;
+        visibility: hidden;
+
+        // Graphics container
+        & + label {
+          position: relative;
+          text-indent: -10000px;
+          height: $vdm-switch-height;
+          width: $vdm-switch-width;
+          user-select: none;
+
+          &:before,
+          &:after {
+            display: block;
+            position: absolute;
+            content: "";
+          }
+
+          // Inside button
+          &:after {
+            top: $vdm-switch-padding;
+            left: $vdm-switch-padding;
+            bottom: $vdm-switch-padding;
+            right: $vdm-switch-padding;
+            background-color: $vdm-form-bg-color;
+            border-radius: $vdm-switch-border-radius;
+            width: $vdm-switch-width-inside;
+          }
+
+          // Outside pill
+          &:before {
+            top: 0;
+            left: 0;
+            bottom: 0;
+            right: 0;
+            background-color: transparent;
+            border: $vdm-element-border-width solid $vdm-form-bg-color;
+            border-radius: $vdm-switch-border-radius-inside;
+            width: $vdm-switch-width;
+          }
+        }
+
+        &[checked="checked"] {
+          & + label {
+            // Inside button
+            &:after {
+              background-color: $white;
+              margin-left: $vdm-switch-width-inside + $vdm-switch-padding;
+            }
+
+            // Outside pill
+            &:before {
+              background-color: $vdm-form-bg-color;
+              border: 0;
+            }
+          }
+        } //  Checked
+
+        &:checked {
+          & + label {
+            // Inside button
+            &:after {
+              background-color: $white;
+              margin-left: $vdm-switch-width-inside + $vdm-switch-padding;
+            }
+
+            // Outside pill
+            &:before {
+              background-color: $vdm-form-bg-color;
+              border: 0;
+            }
+          }
+        } //  Checked
+
+        &:disabled {
+          & + label {
+            // Inside button
+            &:after {
+              background-color: $white;
+              margin-left: 0;
+            }
+
+            // Outside pill
+            &:before {
+              background-color: $vdm-form-disabled-bg-color;
+              border: 0;
+            }
+          }
+        } //  Disabled
+
+        &:disabled {
+          &:checked {
+            & + label {
+              // Inside button
+              &:after {
+                margin-left: $vdm-switch-width-inside + $vdm-switch-padding;
+              }
+
+              // Outside pill
+              &:before {
+                background-color: $vdm-form-disabled-bg-color;
+              }
+            }
+          }
+
+          &:checked {
+            & + label {
+              // Inside button
+              &:after {
+                margin-left: $vdm-switch-width-inside + $vdm-switch-padding;
+              }
+
+              // Outside pill
+              &:before {
+                background-color: $vdm-form-disabled-bg-color;
+              }
+            }
+          }
+        } //  Disabled & checked
+      }
+    }
+  } // Toggle
+} //  Checkboxes
