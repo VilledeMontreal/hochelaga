@@ -353,17 +353,6 @@ label {
 
     // Defines a textfield with an icon inside the field directly, as in a password field
     &.has-icon {
-      // Garbage
-      .vdmi {
-        font-size: 2.2rem;
-        position: absolute;
-        color: $vdm-grey;
-        position: absolute;
-        pointer-events: none;
-        top: 0;
-        color: $vdm-brand;
-      }
-      // Keeper
       .vfi {
         font-size: 2.2rem;
         position: absolute;
@@ -375,9 +364,6 @@ label {
       }
 
       &.ic-left {
-        .vdmi {
-          left: 0.3rem;
-        }
         .vfi {
           left: 0.3rem;
         }
@@ -389,9 +375,6 @@ label {
         }
       }
       &.ic-right {
-        .vdmi {
-          left: calc(100% - 2.4rem);
-        }
         .vfi {
           left: calc(100% - 2.4rem);
         }
@@ -401,9 +384,6 @@ label {
       }
 
       &.has-error {
-        .vdmi {
-          color: $black;
-        }
         .vfi {
           color: $black;
         }
@@ -521,11 +501,6 @@ select {
   align-items: center;
 
   &.icon-combo {
-    .vdmi {
-      font-size: 2.4rem;
-      width: 2.4rem;
-      height: 2.4rem;
-    }
     .vfi {
       font-size: 2.4rem;
       width: 2.4rem;

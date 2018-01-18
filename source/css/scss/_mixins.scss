@@ -13,10 +13,6 @@
   font-weight: $font-weight-regular;
   display: block;
 
-  // WTF is this, should we, really, reset all headers vertical margins?
-  // margin-top: 0;
-  // margin-bottom: 0;
-
   @if $level == 1 {
     font-weight: $font-weight-light;
     font-size: $font-size-base * 4.1875; // 67px
@@ -68,66 +64,20 @@
   }
 }
 
+
 /**
   * Vdm fonticon mixin
-  * Reference : http://jaydenseric.com/blog/fun-with-sass-and-font-icons
   *
   * @arg $position [string] - [before, after, both]
-  * @arg $icon [string or false] - a member of the $icons variable
-  * @arg $styles [boolean] - whther the extra styles rules shoudl be applied or just the content attribute
+  * @arg $icon [string or false] - a member of the $vdmicons variable
+  * @arg $styles [boolean] - whether the extra styles rules should be applied or just the content attribute
   *
   * Usage 
-  * <a href="#" class="some-class">Some text</a>
-  *
   * .some-class {
-  *     @include icon(before, rosette);
+  *     @include iconvfi(before, rosace);
   * }
   *
-  *
   */
-
-// Generate all .ic-icon classnames :
-[class^="ic-"]:before,
-[class*=" ic-"]:before {
-  font-weight: normal;
-  font-style: normal;
-  font-family: $vdm-icon-font-family;
-}
-
-// @see variable $icons in variables.scss -- contains all characters
-// mapping & object names as in   document: "\E012";
-@each $name, $char in $icons {
-  .ic-#{$name} {
-    content: $char;
-  }
-}
-
-@mixin icon($position: before, $icon: false, $styles: true) {
-  @if $position == both {
-    $position: "before, &:after";
-  }
-  // Either a :before or :after pseudo-element, or both, defaulting to :before
-  &:#{$position} {
-    @if $icon {
-      // A particular icon has been specified
-      content: "#{map-get($icons, $icon)}";
-    }
-
-    @if $styles {
-      font-weight: normal;
-      font-style: normal;
-      font-family: $vdm-icon-font-family;
-      text-decoration: none;
-      display: inline-block;
-      text-rendering: auto;
-      -webkit-font-smoothing: antialiased;
-      -moz-osx-font-smoothing: grayscale;
-    }
-
-    @content;
-  }
-}
-
 @mixin iconvfi($position: before, $icon: false, $styles: true) {
   @if $position == both {
     $position: "before, &:after";
@@ -135,10 +85,17 @@
   // Either a :before or :after pseudo-element, or both, defaulting to :before
   &:#{$position} {
     @if $icon {
+      //  @debug($icon);
+      $index: str-index($icon, "vfi-");
+      @if $index {
+        $icon: str-replace($icon, "vfi-", "");
+        // @debug("replaced icon : " $icon);
+      }
       // A specific icon has been designated
       content: "#{map-get($vdmicons, vfi- + $icon)}";
+      // @debug(vfi- + $icon);
+      // @debug(#{map-get($vdmicons, vfi- + $icon)});
     }
-
     @if $styles {
       font-weight: normal;
       font-style: normal;
@@ -149,15 +106,136 @@
       -webkit-font-smoothing: antialiased;
       -moz-osx-font-smoothing: grayscale;
     }
-
     @content;
   }
 }
+
+// Generates a block-level link with an icon in the after position;
+@mixin icon-block-link( $icon : arrow-right, $size: false ) {
+  display: block;
+  position: relative;
+  background: transparent;
+  @include iconvfi(after, $icon);
+
+  &:after {
+    position: absolute;
+    left: calc(100% - 1.25em);
+    top: 50%;
+    transform: translateY(-50%);
+    right: 0;
+    line-height: 1;
+  }
+
+  @if $size {
+    &:after {
+      font-size: $size;
+      left: calc(100% - #{ $size / 2 });
+    }
+  }
+}
+
+/**
+ * - - - - - - - - - -
+ * == Collector blocks : teasers and cards
+ * - - - - - - - - - -
+ */
+
+// Color schemes, to be applied to top-level hyperlink
+@mixin teaser-scheme() {
+  background: $vdm-grey-light;
+  border: none;
+  text-decoration: none;
+  color: $body-color;
+
+  &:hover,
+  &:active {
+    background-color: $vdm-brand;
+    color: $white;
+    > * {
+      color: $white;
+    }
+
+    &:before,
+    &:after {
+      color: $white;
+    }
+  }
+}
+
+@mixin teaser-light-scheme() {
+  background: $white;
+  border: 1px solid $vdm-brand;
+  @include teaser-scheme-hover(light, false);
+}
+
+@mixin teaser-white-scheme() {
+  background: $white;
+  border: none;
+  @include teaser-scheme-hover(white, false);
+}
+
+
+/**
+ * - - - - - - - - - -
+ * == UI
+ * - - - - - - - - - -
+ */
+
+//== Accents
+// - - - - - - - - - -
+
+@mixin drop-shadow(
+    $dist-top: 0,
+    $dist-right: 5px,
+    $dist-bottom: 11px,
+    $dist-left: 0 ,
+    $color-r: 0,
+    $color-g: 0,
+    $color-b: 0,
+    $opacity: 0.27
+  ) {
+  box-shadow: $dist-top $dist-right $dist-bottom $dist-left
+    rgba($color-r, $color-g, $color-b, $opacity);
+}
+
+/**
+ * - - - - - - - - - -
+ * == Forms
+ * - - - - - - - - - -
+ */
+
+//== Buttons
+// - - - - - - - - - -
+@mixin button-alter($color, $background, $border) {
+  color: $color;
+  background-color: $background;
+  border-color: $border;
+
+  &:focus,
+  &.focus {
+    color: $color;
+    background-color: darken($background, 10%);
+    border-color: darken($border, 25%);
+  }
+  &:hover {
+    color: $color;
+    background-color: darken($background, 10%);
+    border-color: darken($border, 12%);
+  }
+}
+
+// Button sizes
+@mixin button-alter-size($padding-vertical, $padding-horizontal, $font-size, $line-height, $border-radius) {
+  padding: $padding-vertical $padding-horizontal;
+  font-size: $font-size;
+  line-height: $line-height;
+  border-radius: $border-radius;
+}
+
 // Applies to the vdmi radios and labels
 // Candidate to replace the current, previous solution
 // To be invoked from within the label element
 // The input has to come BEFORE the label for this code to work
-
 @mixin pseudo-form-element( $type: checkbox, $size: 1.875em ) {
   /*
    Alternative : use the bootstrap technique and free up the ligne height
@@ -220,35 +298,14 @@
 }
 
 
-// Generates a block-level link with an icon in the after position;
-@mixin icon-block-link( $icon : arrow-right, $size: false ) {
-  display: block;
-  position: relative;
-  background: transparent;
-  // line-height: 1em;
-  // @include icon(after, $icon);
-  @include iconvfi(after, $icon);
+/**
+ * - - - - - - - - - -
+ * == Utilities
+ * - - - - - - - - - -
+ */
 
-  &:after {
-    position: absolute;
-    left: calc(100% - 1.25em);
-    top: 50%;
-    transform: translateY(-50%);
-    right: 0;
-    line-height: 1;
-  }
-
-  @if $size {
-    &:after {
-      font-size: $size;
-      left: calc(100% - #{ $size / 2 });
-    }
-  }
-}
-
-//@include n-columns(200px,  10px, true, 5);
+ //@include n-columns(200px,  10px, true, 5);
 @mixin n-columns($child-selector, $min-width, $gutter, $last-equal: false, $max-cols: 5) {
-  // .vdm-footer-links {
   display: flex;
   flex-wrap: wrap;
   margin-left: -$gutter;
@@ -274,568 +331,21 @@
       }
     }
   }
-  // }
 }
 
-/**
- * - - - - - - - - - -
- * == Collector blocks : teasers and cards
- * - - - - - - - - - -
- */
-
-// Set all base teaser properties
-// To be applied to top-level hyperlink
-@mixin teaser-base() {
-  position: relative;
-  display: flex;
-  flex-direction: column;
-  cursor: pointer;
-  line-height: $line-height-sm;
-
-  @include teaser-icons();
-  @include teaser-scheme();
-  @include teaser-variant();
-
-  // Base fixture behaviours
-  > img {
-    @extend .img-fluid;
+/// Replace `$search` with `$replace` in `$string`
+/// @author Hugo Giraudel
+/// @param {String} $string - Initial string
+/// @param {String} $search - Substring to replace
+/// @param {String} $replace ('') - New value
+/// @return {String} - Updated string
+@function str-replace($string, $search, $replace: '') {
+  $index: str-index($string, $search);
+  
+  @if $index {
+    @return str-slice($string, 1, $index - 1) + $replace + str-replace(str-slice($string, $index + str-length($search)), $search, $replace);
   }
-
-  .title {
-    @include header(4);
-    margin-bottom: 1em;
-    &.arrow-link {
-      line-height: 1.7em;
-    }
-    &:last-child {
-      margin-bottom: 0;
-    }
-  }
-  .content {
-    margin-bottom: 1.3em;
-    flex: 1;
-    &:last-child {
-      margin-bottom: 0;
-    }
-  }
-  .footer {
-    margin-bottom: 0;
-    margin-top: auto;
-  }
+  
+  @return $string;
 }
 
-// Set all common properties for icons, for the :after & :before pseudo-elements
-// To be applied to top-level hyperlink
-@mixin teaser-icons() {
-  &:after,
-  &:before {
-    font-size: 3.6rem;
-    width: 3.6rem;
-    height: 3.6rem;
-    line-height: 3.6rem;
-    text-decoration: none;
-    color: $vdm-brand;
-  }
-}
-
-// Sets icon position
-// To be involed from the teaser-variant : after & before mixin
-// $where [none, left, right, top]
-// $case [none, arrow-block]
-@mixin teaser-icon-position($where: none, $case: none) {
-  // Provide icon classes, invoke icon mixin, using :before or :after
-  // Note that basic icon type always use the :before element;
-  @each $name, $char in $icons {
-    &.ic-#{$name} {
-      @if $where == left or $where == right {
-        // @include icon(before, $name);
-        @include iconvfi(before, $name);
-      }
-
-      @if $case == arrow-block {
-        // @include icon(after, arrow-right);
-        @include iconvfi(before, fleche-droite);
-      }
-    }
-  }
-
-  &:before,
-  &:after {
-    position: absolute;
-
-    // Manage the lateral position
-    @include media-breakpoint-down(sm) {
-      left: calc(50% - 1.8rem);
-    }
-    @include media-breakpoint-down(xs) {
-      left: calc(50% - 1.8rem);
-    }
-  }
-
-  // LEFT
-  @if $where == left {
-    &:before {
-      left: 3rem;
-      top: calc(50% - 1.7rem);
-
-      // Manage the verticial position
-      @include media-breakpoint-down(sm) {
-        top: 1.8rem;
-        left: calc(50% - 1.8rem);
-      }
-      @include media-breakpoint-down(xs) {
-        top: 3rem;
-        left: calc(50% - 1.8rem);
-      }
-    }
-  }
-
-  // RIGHT
-  @if $where == right {
-    &:before {
-      top: calc(50% - 1.7rem);
-      left: calc(100% - 7rem);
-
-      // Manage the verticial position
-      @include media-breakpoint-down(sm) {
-        top: 1.8rem;
-        left: calc(50% - 1.8rem);
-      }
-      @include media-breakpoint-down(xs) {
-        top: 3rem;
-        left: calc(50% - 1.8rem);
-      }
-    }
-  }
-
-  // ARROW BLOCK , single and double icons cases
-  @if $case == arrow-block {
-    &:after {
-      left: calc(100% - 4.5rem);
-      top: calc(50% - 1.7rem);
-      @include media-breakpoint-down(sm) {
-        left: calc(50% - 1.8rem);
-        top: calc(100% - 4.5rem);
-      }
-    }
-
-    // Double icons case management
-    @if $where == left {
-      &:before {
-        left: 2rem;
-      }
-
-      @include media-breakpoint-down(sm) {
-        &:before,
-        &:after {
-          left: calc(50% - 1.8rem);
-        }
-      }
-
-      &:after {
-        @include media-breakpoint-down(sm) {
-          top: calc(100% - 4.5rem);
-          left: calc(50% - 1.8rem);
-        }
-      }
-    }
-  }
-}
-
-/**
-  * Master function for styling this block type
-  *
-  * @arg $icon [false ,right, left]
-  * @arg $image [false ,right, left]
-  * @arg $case [false, arrow-block, compact, inline-flex, category-block]
-  * @arg $scale [false, small, large, larger] -- images for now
-  *
-  * Always called from the hyperlink level -- all styles are returned inside .vdm-teaser-body-mixin {}
-  * The left side for icons and images is the default case, it is implicit on styling
-  *
-  *
-  **/
-
-@mixin teaser-variant($icon: false, $image: false, $case: false, $scale: false) {
-  padding: 2.3rem 2.3rem 2.3rem 2.3rem;
-
-  // ICONS
-  // The block has one or many icons
-  @if $icon {
-    .title {
-      @include header(4, bold);
-      margin-bottom: 1em;
-    }
-
-    @include media-breakpoint-down(sm) {
-      padding: 7.75rem 2.3rem 2.3rem 2.3rem;
-    }
-
-    @if ($icon == left) {
-      padding-left: 7.75rem;
-      @include teaser-icon-position(left);
-    } @else if ($icon == right) {
-      padding-right: 7.75rem;
-      @include teaser-icon-position(right);
-    }
-  }
-
-  // IMAGES
-  // Begin images
-  @if $image {
-    flex-direction: row;
-    padding: 0 !important; // Paramount to the workings of the system, a small hack
-    > img {
-      max-height: 10rem;
-      margin: 0;
-    }
-
-    .content-wrapper {
-      padding: 1em;
-      display: flex;
-      flex-direction: column;
-      flex: 1;
-      padding: 2.3rem 2.3rem 3rem 2.3rem;
-
-      .title {
-        @include header(5);
-        &.arrow-link {
-          line-height: 1.7em;
-        }
-      }
-    }
-
-    // Scale modifiers
-    @if $scale {
-      @if ($scale == small) {
-        > img {
-          max-height: 10rem;
-        }
-        .content-wrapper {
-          padding: 1.5rem 1.5rem 1.8rem 1.5rem;
-        }
-      }
-
-      @if ($scale == large) {
-        > img {
-          max-height: 16rem;
-        }
-      }
-
-      @if ($scale == larger) {
-        > img {
-          max-height: 22rem;
-        }
-        .title {
-          @include header(4, bold);
-        }
-        .content {
-          @include header(5);
-        }
-      }
-
-      @if $scale == large or $scale == larger {
-        // Careful, the 768 px image is being scaled-up!
-        @include media-breakpoint-down(md) {
-          flex-direction: column;
-          > img {
-            order: 0;
-            width: 100%;
-            max-height: none;
-          }
-          .content-wrapper {
-            padding-bottom: 2.5rem;
-          }
-        }
-      }
-    } // Scale
-
-    // All sizes -- padding
-    @include media-breakpoint-down(xs) {
-      .content-wrapper {
-        padding-bottom: 2.5rem;
-      }
-    }
-
-    // Left and right overrides
-    @if ($image == left) {
-      // No fuss, this is the default case
-    }
-
-    @if ($image == right) {
-      > img {
-        order: 1; // Change source order
-      }
-
-      @include media-breakpoint-down(xs) {
-        flex-direction: column;
-        > img {
-          order: 0;
-          width: 100%;
-          max-height: none;
-        }
-      }
-    } // Left & right
-
-    @include media-breakpoint-down(xs) {
-      flex-direction: column;
-      > img {
-        order: 0;
-        width: 100%;
-        max-height: none;
-      }
-    }
-  } // Images
-
-  // ARROW BLOCK
-  // The block has a specific icon on the right, the arrow
-  @if $case {
-    @if ($case == arrow-block) {
-      padding-right: 5rem;
-      // @include icon(after, arrow-right);
-      @include iconvfi(before, fleche-droite);
-      @include teaser-icon-position(right, arrow-block);
-      @include teaser-scheme-hover(arrow-block);
-
-      .title {
-        @include header(5);
-        margin-bottom: 0.5em;
-      }
-
-      @include media-breakpoint-down(sm) {
-        padding-bottom: 5.5rem;
-        border: 1px solid lime;
-      }
-    }
-
-    // Smaller scale, as in search results
-    @if ($case == compact) {
-      padding: 1rem 3.5rem 1rem 1rem;
-      &:after {
-        position: absolute;
-        top: calc(50% - 1.7rem);
-        left: calc(100% - 4rem);
-        font-size: 2.8rem;
-        width: 2.8rem;
-        height: 2.8rem;
-        line-height: 2.8rem;
-      }
-      .title {
-        @include header(5);
-        margin-bottom: 0.5em;
-      }
-      @include media-breakpoint-down(sm) {
-        padding: 1rem 5rem 1rem 1rem;
-      }
-    } // Compact
-
-    // The block has an inner wrapper and a dual axis flex setup
-    @if ($case == inline-flex) {
-      flex-direction: row;
-      padding-right: 5rem;
-      align-items: center;
-
-      .content-wrapper {
-        flex-direction: column;
-        padding-right: 2rem;
-      }
-      .identifier {
-        text-transform: uppercase;
-        color: $vdm-grey;
-        font-size: $font-size-base;
-        width: 30%;
-        text-align: center;
-        margin-top: 0.9rem;
-      }
-
-      @include media-breakpoint-down(sm) {
-        flex-direction: column;
-        align-items: left;
-        .content-wrapper {
-          padding-right: 0;
-        }
-        .identifier {
-          align-self: center;
-          width: auto;
-          margin-top: 2rem;
-        }
-        padding-bottom: 5.5rem;
-      }
-    } // Inline flex
-
-    // Smaller scale, as in search results
-    @if ($case == category-block) {
-      align-items: start;
-      .content-wrapper {
-        min-width: 35%;
-        margin-right: 1rem;
-        .title {
-          color: $vdm-brand;
-        }
-      }
-      .category-description {
-        @include header(5);
-      }
-
-      @include media-breakpoint-down(sm) {
-        .content-wrapper {
-          width: 100%;
-          margin-right: 0;
-          margin-bottom: 1em;
-        }
-      }
-    } // Category block
-  } // Case
-
-  // The block has a left icon and is an arrow block
-  @if ($icon == left and $case == arrow-block) {
-    @include teaser-icon-position(left, arrow-block);
-    padding-right: 5rem;
-  }
-} // Mixin
-
-// Color schemes, to be applied to top-level hyperlink
-@mixin teaser-scheme() {
-  background: $vdm-grey-light;
-  border: none;
-  text-decoration: none;
-  color: $body-color;
-
-  &:hover,
-  &:active {
-    background-color: $vdm-brand;
-    color: $white;
-    > * {
-      color: $white;
-    }
-
-    &:before,
-    &:after {
-      color: $white;
-    }
-  }
-}
-
-@mixin teaser-light-scheme() {
-  background: $white;
-  border: 1px solid $vdm-brand;
-  @include teaser-scheme-hover(light, false);
-}
-
-@mixin teaser-white-scheme() {
-  background: $white;
-  border: none;
-  @include teaser-scheme-hover(white, false);
-}
-
-// @arg $scheme [false, light, white]
-// @arg $mode [false, arrow-block] -- is mode really required, can we avoid it?
-@mixin teaser-scheme-hover($scheme: false, $mode: false) {
-  // Default hover case
-  &:hover,
-  &:active {
-    background-color: $vdm-brand;
-    color: $white;
-    > * {
-      color: $white;
-    }
-
-    &:before,
-    &:after {
-      color: $white;
-    }
-  }
-
-  // Scheme overrides, light and white
-  @if $scheme {
-    // Light
-    @if ($scheme = light) {
-    }
-    // White
-    @if ($scheme = white) {
-    }
-  }
-
-  // Arrow-block, hover effect on icons only
-  @if $mode {
-    @if ($mode = arrow-block) {
-      border: 1px solid orange;
-    }
-  }
-}
-
-// See footers with multiple tags for application, work on children
-@mixin teaser-inline-items() {
-}
-
-/**
- * - - - - - - - - - -
- * == UI
- * - - - - - - - - - -
- */
-
-//== Accents
-// - - - - - - - - - -
-
-@mixin drop-shadow(
-    $dist-top: 0,
-    $dist-right: 5px,
-    $dist-bottom: 11px,
-    $dist-left: 0 ,
-    $color-r: 0,
-    $color-g: 0,
-    $color-b: 0,
-    $opacity: 0.27
-  ) {
-  box-shadow: $dist-top $dist-right $dist-bottom $dist-left
-    rgba($color-r, $color-g, $color-b, $opacity);
-
-  // $forms-ds-color-r: 0;
-  // $forms-ds-color-g: 0;
-  // $forms-ds-color-b: 0;
-  // $forms-ds-opacity: 0.27;
-  // $forms-ds-right-size: 5px;
-  // $forms-ds-bottom-size: 11px;
-}
-
-/**
- * - - - - - - - - - -
- * == Forms
- * - - - - - - - - - -
- */
-
-//== Buttons
-// - - - - - - - - - -
-@mixin button-alter($color, $background, $border) {
-  color: $color;
-  background-color: $background;
-  border-color: $border;
-
-  &:focus,
-  &.focus {
-    color: $color;
-    background-color: darken($background, 10%);
-    border-color: darken($border, 25%);
-  }
-  &:hover {
-    color: $color;
-    background-color: darken($background, 10%);
-    border-color: darken($border, 12%);
-  }
-}
-
-// Button sizes
-@mixin button-alter-size($padding-vertical, $padding-horizontal, $font-size, $line-height, $border-radius) {
-  padding: $padding-vertical $padding-horizontal;
-  font-size: $font-size;
-  line-height: $line-height;
-  border-radius: $border-radius;
-}
-
-/**
- * - - - - - - - - - -
- * == DEBUG
- * - - - - - - - - - -
- */
-
-//== Debugging mixins

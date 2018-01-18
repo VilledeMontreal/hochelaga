@@ -75,34 +75,17 @@ a {
   // Inline links with icons
   // Clean-up this code to preserve onlu .vfi classes
   &.icon {
-    i {
-      &.vdmi {
-        font-size: 1.5em;
-        position: relative;
-        top: 0.2em;
-      }
-    }
     .vfi {
       font-size: 1.5em;
       position: relative;
       top: 0.2em;
     }
     &.right {
-      i {
-        &.vdmi {
-          padding-left: 0.15em;
-        }
-      }
       .vfi {
         padding-left: 0.15em;
       }
     }
     &.left {
-      i {
-        &.vdmi {
-          padding-right: 0.15em;
-        }
-      }
       .vfi {
         padding-right: 0.15em;
       }
@@ -171,13 +154,6 @@ h5,
 h6 {
   a {
     &.icon {
-      // Garbage
-      i {
-        &.vdmi {
-          font-size: 1.2em;
-        }
-      }
-      // Keeper
       .vfi {
         font-size: 1.2em;
       }

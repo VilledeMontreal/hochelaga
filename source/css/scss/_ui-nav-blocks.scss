@@ -19,22 +19,19 @@
 
 // Grid wrapper styles only for teasers
 // More wrapper rules, may or may not belong to the base object styles
-.vdm-teasers,
-.vdm-teasers-mixin {
+.vdm-teasers {
   list-style-type: none;
   padding-left: 0;
   @include make-row();
   margin-top: 0;
   margin-bottom: 0;
-  .vdm-teaser,
-  .vdm-teaser-mixin {
+  .vdm-teaser {
     @include make-col-ready();
     margin-bottom: $grid-gutter-width;
   }
   // Vertical grid types, equal heights
   &.grid-type-grid {
-    .vdm-teaser,
-    .vdm-teaser-mixin {
+    .vdm-teaser {
       @include make-col(12);
       @include media-breakpoint-up(md) {
         @include make-col(6);
@@ -45,125 +42,6 @@
       height: 100%;
       &:last-child {
         margin-top: auto;
-      }
-    }
-  }
-}
-
-// Mixin application tests
-// Function reference for the master function for styling this block type
-
-/**
-  * 
-  *
-  * @mixin teaser-variant($icon: false, $image: false, $case: false, $scale: false)
-  *
-  * @arg $icon [false ,right, left]
-  * @arg $image [false ,right, left]
-  * @arg $case [false, arrow-block, compact, inline-flex, category-block]
-  * @arg $scale [false, small, large, larger] -- images for now
-  *
-  * Always called from the hyperlink level -- all styles are returned inside .vdm-teaser-body-mixin {}
-  * The left side for icons and images is the default case, it is implicit on styling
-  *
-  *
-  **/
-
-.vdm-teasers-mixin {
-  .vdm-teaser-mixin {
-    .vdm-teaser-body-mixin {
-      @include teaser-base();
-    }
-
-    // Color modifiers
-    &.light-scheme {
-      .vdm-teaser-body-mixin {
-        @include teaser-light-scheme();
-      }
-    }
-
-    &.white-scheme {
-      .vdm-teaser-body-mixin {
-        @include teaser-white-scheme();
-      }
-    }
-
-    // Case 1, icons
-    &.icon-right {
-      .vdm-teaser-body-mixin {
-        @include teaser-variant(right);
-      }
-    }
-    &.icon-left {
-      .vdm-teaser-body-mixin {
-        @include teaser-variant(left);
-      }
-    }
-
-    // Major case 2, arrow blocks
-    &.arrow-block {
-      .vdm-teaser-body-mixin {
-        @include teaser-variant(false, false, arrow-block);
-        // @include teaser-scheme-hover(false, arrow-block);
-      }
-      &.light-scheme {
-        .vdm-teaser-body-mixin {
-          // @include teaser-scheme-hover(false, false);
-        }
-      }
-      &.icon-left {
-        .vdm-teaser-body-mixin {
-          @include teaser-variant(left, false, arrow-block);
-        }
-      }
-    }
-
-    // Case 3, images
-
-    &.image-right,
-    &.image-left {
-      .vdm-teaser-body-mixin {
-        @include teaser-variant(false, left);
-      }
-
-      &.small {
-        .vdm-teaser-body-mixin {
-          @include teaser-variant(false, left, false, small);
-        }
-      }
-      &.large {
-        .vdm-teaser-body-mixin {
-          @include teaser-variant(false, left, false, large);
-        }
-      }
-      &.larger {
-        .vdm-teaser-body-mixin {
-          @include teaser-variant(false, left, false, larger);
-        }
-      }
-    }
-
-    // Images, left and right overides
-    &.image-left {
-      // No need to call it, it is the default case
-    }
-
-    &.image-right {
-      .vdm-teaser-body-mixin {
-        @include teaser-variant(false, right);
-      }
-    }
-
-    // Other cases, exceptions
-    &.compact {
-      .vdm-teaser-body-mixin {
-        @include teaser-variant(false, false, compact);
-      }
-    }
-
-    &.inline-flex {
-      .vdm-teaser-body-mixin {
-        @include teaser-variant(false, false, inline-flex);
       }
     }
   }
@@ -188,15 +66,6 @@
     line-height: floor(($font-size-base * 1.2));
     text-decoration: none;
     color: $black;
-
-    // Loop over all icons in the set to produce the classes & invoke the icon() mixin
-    // Garbage
-    @each $name, $char in $icons {
-      &.ic-#{$name} {
-        @include icon(before, $name);
-      }
-    }
-
     // Loop over all icons in the set to produce the classes & invoke the iconvfi() mixin
     // Keeper
     @each $name, $char in $vdmicons {
@@ -299,7 +168,7 @@
   &.arrow-block {
     // Base arrow block properties
     .vdm-teaser-body {
-      @include icon(after, arrow-right);
+      @include iconvfi(after, fleche-droite);
       padding: 2.3rem 6rem 2.3rem 2.3rem;
       position: relative;
 

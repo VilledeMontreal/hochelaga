@@ -82,15 +82,6 @@ html {
           color: $vdm-brand;
           text-decoration: none;
         }
-        // Garbage
-        .vdmi {
-          font-size: $vdm-side-menu-icon-size;
-          width: $vdm-side-menu-icon-size;
-          height: $vdm-side-menu-icon-size;
-          color: $vdm-brand;
-          position: absolute;
-        }
-        // Keeper
         .vfi {
           font-size: $vdm-side-menu-icon-size;
           width: $vdm-side-menu-icon-size;
@@ -104,10 +95,6 @@ html {
           background: $vdm-grey-dark;
           position: relative;
           padding-left: 4.5rem;
-          .vdmi {
-            left: 0.5rem;
-            top: calc(50% - 1.5rem);
-          }
           .vfi {
             left: 0.5rem;
             top: calc(50% - 1.5rem);
@@ -135,16 +122,11 @@ html {
         // Direct child link of this pregnant list item
         > .menu-link {
           position: relative;
-          .vdmi {
-            left: calc(100% - 4rem);
-            top: calc(50% - 1.5rem);
-          }
           .vfi {
             left: calc(100% - 4rem);
             top: calc(50% - 1.5rem);
           }
-
-          @include icon(after, arrow-right);
+          @include iconvfi(after, fleche-droite);
           &:after {
             display: none;
             font-size: $vdm-side-menu-icon-size;

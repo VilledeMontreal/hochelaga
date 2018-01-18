@@ -1,135 +1,36 @@
-// @file icons.scss
-
-// >> Begin demo code for atoms-icons
-// - - - - - - - - - -  - - - - - -
-
-@font-face {
-  font-family: $vdm-icon-font-family;
-  src: url("#{$vdm-icon-font-path}/vdm-font-icon.eot?v=#{$vdm-icon-font-version}");
-  src: url("#{$vdm-icon-font-path}/vdm-font-icon.eot?v=#{$vdm-icon-font-version}")
-      format("embedded-opentype"),
-    url("#{$vdm-icon-font-path}/vdm-font-icon.woff2?v=#{$vdm-icon-font-version}")
-      format("woff2"),
-    url("#{$vdm-icon-font-path}/vdm-font-icon.woff?v=#{$vdm-icon-font-version}")
-      format("woff"),
-    url("#{$vdm-icon-font-path}/vdm-font-icon.ttf?v=#{$vdm-icon-font-version}")
-      format("truetype");
-
-  font-weight: normal;
-  font-style: normal;
-}
-
-@font-face {
-  font-family: $vdm-icon-font-family;
-  src: url("#{$vdm-icon-font-path}/vdm-font-icon.eot?v=#{$vdm-icon-font-version}");
-  src: url("#{$vdm-icon-font-path}/vdm-font-icon.eot?v=#{$vdm-icon-font-version}")
-      format("embedded-opentype"),
-    url("#{$vdm-icon-font-path}/vdm-font-icon.woff2?v=#{$vdm-icon-font-version}")
-      format("woff2"),
-    url("#{$vdm-icon-font-path}/vdm-font-icon.woff?v=#{$vdm-icon-font-version}")
-      format("woff"),
-    url("#{$vdm-icon-font-path}/vdm-font-icon.ttf?v=#{$vdm-icon-font-version}")
-      format("truetype");
-
-  font-weight: normal;
-  font-style: normal;
-}
-
-
-// >> Begin custom inline vdm code
-// - - - - - -
-// VDM ICONS, initial version with english key names
-i,
-span {
-  &.vdmi {
-    display: inline-block;
-    font: normal normal normal $font-size-base/1 $vdm-icon-font-family;
-    font-size: inherit;
-    text-rendering: auto;
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
-
-    // Individual symbol instances
-    // @see variable $icons in variables.scss -- contains all characters
-    // mapping & object names as in { document: "\E012"; }
-    @each $name, $char in $icons {
-      &.ic-#{$name} {
-        &:before {
-          content: $char;
-        }
-      }
-    }
-
-    // Scale modifiers
-    &.ic-lg {
-      font-size: 1.33333333em;
-      line-height: 0.75em;
-      vertical-align: -15%;
-    }
-    &.ic-2x {
-      font-size: 2em;
-    }
-    &.ic-3x {
-      font-size: 3em;
-    }
-    &.ic-4x {
-      font-size: 4em;
-    }
-    &.ic-5x {
-      font-size: 5em;
-    }
-    &.ic-6x {
-      font-size: 6em;
-    }
-    &.ic-7x {
-      font-size: 7em;
-    }
-    &.ic-8x {
-      font-size: 8em;
-    }
-
-    // Fixed width
-    &.ic-fw {
-      width: 1.28571429em;
-      text-align: center;
-    }
-  }
-}
-
 // Social media
-ul {
-  &.social-media-list {
+// Move this block with other listss (numbered, date, etc)
+.social-media-list {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+  li { // give this a class
     margin: 0;
-    padding: 0;
-    list-style-type: none;
-    li {
+    padding: 0 0.65rem 0 0;
+    display: inline-block;
+    &:last-of-type {
       margin: 0;
-      padding: 0 0.65rem 0 0;
-      display: inline-block;
-      &:last-of-type {
-        margin: 0;
-      }
-      a {
-        display: flex;
-        align-items: center;
+    }
+    a { // give this a class
+      display: flex;
+      align-items: center;
+      color: $black;
+      text-decoration: none;
+      &:hover,
+      &:active {
         color: $black;
-        text-decoration: none;
+        cursor: pointer;
+      }
+      .vfi {
+        &:before {
+          font-size: 2em;
+        }
+        padding-right: 0.5rem;
+      }
+      .label {
         &:hover,
         &:active {
-          color: $black;
-          cursor: pointer;
-        }
-        .vfi {
-          &:before {
-            font-size: 2em;
-          }
-          padding-right: 0.5rem;
-        }
-        .label {
-          &:hover,
-          &:active {
-            text-decoration: underline;
-          }
+          text-decoration: underline;
         }
       }
     }

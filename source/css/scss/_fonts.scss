@@ -30,7 +30,6 @@ a {
   &:active,
   &:focus {
     .vfi {
-      display: inline-block; // -- required to avoid text-decoration inheritance
       text-decoration: none !important; // -- Prevent text-decoration for icons, e-ve-ry-whe-re
     }
   }

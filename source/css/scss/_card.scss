@@ -44,16 +44,8 @@
     color: $black;
 
     // Loop over all icons in the set to produce the classes & invoke the icon() mixin
-    // Garbage
-    @each $name, $char in $icons {
-      &.ic-#{$name} {
-        @include icon(before, $name);
-      }
-    }
-
-    // Keeper
-    @each $name, $char in $vdmicons{
-      &.ic-#{$name} {
+    @each $name, $char in $vdmicons {
+      &.vfi-#{$name} {
         @include iconvfi(before, $name);
       }
     }
@@ -66,7 +58,6 @@
       line-height: 3.6rem;
       text-decoration: none;
       color: $vdm-brand;
-      // border: 1px solid yellow;
     }
 
     // Active states, general
@@ -285,7 +276,6 @@
   // All image type cards MUST have an innner .card-content-wrapper tag
   &.vdm-card-image {
     text-align: left;
-
     // @see https://projects.invisionapp.com/d/main#/console/11533069/245692118/preview
     .vdm-card-body {
       // Reset padding + margin on the link
@@ -422,7 +412,7 @@
   position: relative;
   padding-right: 2.5em;
   line-height: 1.7em;
-  @include icon(after, arrow-right);
+  @include iconvfi(after, fleche-droite);
   &:after {
     position: absolute;
     font-size: 2.5em;
@@ -436,7 +426,7 @@
 
 // Mixin potential
 .location-pin {
-  @include icon(before, location);
+  @include iconvfi(before, localisation-plein);
   color: $vdm-brand;
   position: relative;
   padding-left: 2em;
@@ -584,12 +574,6 @@
   }
 
   // Loop over all icons in the set to produce the classes & invoke the icon() mixin
-  // Garbage
-  @each $name, $char in $icons {
-    &.ic-#{$name} {
-      @include icon(before, $name);
-    }
-  }
 // Keeper
   @each $name, $char in $vdmicons {
     &.ic-#{$name} {
@@ -619,7 +603,7 @@
         h3 {
           color: $white;
         }
-        .vdmi {
+        .vfi {
           color: $white;
         }
       }
@@ -641,7 +625,7 @@
     margin-left: auto;
     text-align: center;
     // Icon
-    .vdmi {
+    .vfi {
       font-size: 3em;
       color: $vdm-brand;
       cursor: pointer;
@@ -723,12 +707,9 @@
   &.teaser-alert {
     box-sizing: border-box;
     position: relative;
-    // font-size: 125%; // -- Use this to tests scalability
-    // padding-left: 9rem;
     min-height: 4rem;
-
-    @include icon(before, rosette);
-    @include icon(after, arrow-right);
+    @include iconvfi(before, rosace);
+    @include iconvfi(after, fleche-droite);
 
     &:hover,
     &:active {
