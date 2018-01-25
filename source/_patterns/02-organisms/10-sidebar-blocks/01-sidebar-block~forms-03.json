@@ -1,6 +1,23 @@
 {
-    "sidebar-blocks-demo-debug-message" : false,
-    "has-sb-forms-03-search-filters" : true,
-    "sb-classes": "search-filters",
-    "sidebar-title-classes": "discrete"
+  "sidebar-blocks-demo-debug-message": false,
+  "has-sb-forms-03-search-filters": true,
+  "sb-classes": "search-filters",
+  "sidebar-title-classes": "discrete",
+  "formCheckboxes": [
+    {
+      "class": "vdm-checkbox-vdmi",
+      "id": "sb03-chk01",
+      "label": "Checkbox"
+    },
+    {
+      "class": "vdm-checkbox-vdmi",
+      "id": "sb03-chk02",
+      "label": "Checkbox two"
+    },
+    {
+      "class": "vdm-checkbox-vdmi",
+      "id": "sb03-chk03",
+      "label": "Checkbox three"
+    }
+  ]
 }

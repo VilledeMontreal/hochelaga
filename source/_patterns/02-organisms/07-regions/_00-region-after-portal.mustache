@@ -1,11 +1,20 @@
-<div class="region region-before {{ regionAfterClasses }}">
-    <div class="region-container">
-        <div class="region-row">
-            <div class="region-content">
-                {{# regionsDemoContent }}
-                    Region after content
-                {{/ regionsDemoContent }}
-            </div>
-        </div>
+<div class="region region-after {{ regionAfterClasses }}">
+  <div class="region-container">
+    <div class="region-row">
+      <div class="region-content">
+        {{# regionsDemoContent }} 
+          Region after content
+        {{/ regionsDemoContent }}
+
+        <!-- Begin collector page variants -->
+
+        {{# howToInfos }}
+          {{> organisms-how-to-infos }}
+        {{/ howToInfos }}
+
+        <!-- Begin collector page variants -->
+
+      </div>
     </div>
+  </div>
 </div>

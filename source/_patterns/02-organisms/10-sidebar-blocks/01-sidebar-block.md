@@ -26,11 +26,6 @@ Have a look at 01-base-page-portal.json of an idea.
 * Each subsection may have one or many subtitles (hx.subtitle)
 * The subsection title inherits from the H5 styling.
 
-### Sections
-
-* The base unit to space out content blocks vertically is a div.subsection. 
-* Each subsection may have one or many subtitles (hx.subtitle)
-* The subsection title inherits from the H5 styling.
 
 ### Color schemes 
 
@@ -54,9 +49,6 @@ The title has modifier classes. The main sidebar title class is ".vdm-title", fo
 
 ### Lists
 
-
 * All lists are reset, inheriting from .vdm-list-plain automatically;
 * Some modifier classes are available to control the bottom padding of list items (.p-small, .p-large,.p-larger)
 * Bullet lists have have the vdm-bullet-list class applied in order to show visible bullets;
-
-

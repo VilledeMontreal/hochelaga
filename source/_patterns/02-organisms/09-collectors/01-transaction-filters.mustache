@@ -1,20 +1,6 @@
-<!-- 
-<h2>Toutes les demandes</h2>
---> 
+<!-- <h2>Toutes les demandes</h2> --> 
 {{# transactionFiltersHasHeading }}
-    {{> atoms-heading-2(
-            testdata: "test data here",
-            h2-text: "Toutes les demandes"
-        ) 
-    }}
+  {{> atoms-heading-2(testdata: "test data here",h2-text: "Toutes les demandes") }}
 {{/ transactionFiltersHasHeading }}
-<form>
-    <div class="form-row">
-        <div class="col-12 col-md-6">
-            {{> atoms-input }}
-        </div>
-        <div class="col-12 col-md-6">
-            {{> atoms-select }}
-        </div>
-    </div>
-</form>
+
+{{> molecules-search-field+dropdown }}
