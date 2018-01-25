@@ -30,6 +30,7 @@
   "badgeClass": "badge-secondary",
   "label": "New Label",
   "labelClass": "label-default",
+  "icon-label": "recherche",
   "progressBarClass": "",
   "progressCompleteText": "60% Complete",
   "progressMinWidth": false,
@@ -43,8 +44,9 @@
   "panelClass": "panel-default",
   "panelHeading": false,
   "panelFooter": false,
-  "htmlClass": "portal sticky",
+  "htmlClass": "",
   "pageClasses": "",
+  "headerClasses": "",
   "headerContainerClasses": "",
   "mainContainerClasses": "",
   "combo-box-text": "Combo block title",
@@ -99,7 +101,23 @@
       }
     }
   },
-
+  "formCheckboxes": [
+    {
+      "class": "vdm-checkbox-vdmi",
+      "id": "chk01",
+      "label": "Checkbox"
+    },
+    {
+      "class": "vdm-checkbox-vdmi",
+      "id": "chk02",
+      "label": "Checkbox two"
+    },
+    {
+      "class": "vdm-checkbox-vdmi",
+      "id": "chk03",
+      "label": "Checkbox three"
+    }
+  ],
   "htmlLang": {
     "fr": "fr",
     "en": "en"

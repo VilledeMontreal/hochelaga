@@ -121,8 +121,8 @@ gulp.task('nodemodulesfontsdata', function() {
       
       // Write the json line
       output.icons.push(  { 
-          label  : label,
-          content : content
+          "icon-label"  : label,
+          "icon-content" : content
         } 
       );
       
