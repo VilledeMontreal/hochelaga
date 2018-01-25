@@ -103,8 +103,10 @@
       &:active {
         color: $vdm-brand;
         text-decoration: none;
-        &:after {
-          color: $black;
+        @include iconvfi(after, mini-plus-circulaire-plein);
+
+        &[aria-expanded="true"] {
+          @include iconvfi(after, mini-moins-circulaire);
         }
       }
 
@@ -349,9 +351,117 @@
       display: none;
     }
   }
-  .dropdown-menu {
-  }
   .dropdown-item {
     font-size: $font-size-base * 2.1875;
+  }
+}
+
+/**
+ * Step Wizard
+ */
+
+.nav-steps {
+  display: flex;
+  flex-direction: column;
+  @extend .flex-md-row;
+  // Position the steps line and circle
+  li {
+    position: relative;
+    &:after {
+      background-color: $gray-600;
+      content: "";
+      display: block;
+      height: 100%;
+      position: absolute;
+      width: 1px;
+    }
+    &:after {
+      left: .5rem;
+    }
+    &:last-child {
+      &:after {
+        display: none;
+      }
+    }
+    &:not(.disabled) {
+      &:hover {
+        .circle {
+          background-color: $red;
+          border-color: $red;
+        }
+      }
+    }
+  }
+  .caption {
+    color: $vdm-grey;
+  }
+  .circle {
+    @include circle($background-color: $vdm-grey-light, $border: true);
+    z-index: 100;
+    position: relative;
+  }
+
+  .complete {
+    .circle {
+      background-color: $gray-600;
+    }
+  }
+
+  .active {
+    .circle {
+      background-color: $red;
+      border-color: $red;
+    }
+  }
+  .disabled {
+    .nav-link {
+      cursor: default;
+    }
+  }
+  //larger than 768px
+  @include media-breakpoint-up(md) {
+    justify-content: center;
+    // Position the steps line and circle
+    .nav-item {
+      text-align: center;
+      flex-basis: 0;
+      flex-grow: 1;
+      align-self: flex-end;
+    }
+    li {
+      &:after {
+        height: 1px;
+        bottom: 1.5rem;
+        width: 100%;
+      }
+      &:after {
+        left: 50%;
+      }
+    }
+    .circle {
+      margin: 0 auto;
+    }
+  }
+  // smaller than 768px
+  @include media-breakpoint-down(sm) {
+    li {
+      &:after {
+        top: 50%;
+      }
+      .nav-link {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        padding: .625rem 1rem .625rem 0;
+        .caption {
+          order: 2;
+          padding-left: 1rem;
+        }
+        .circle {
+          order: 1;
+          flex: 0 0 auto;
+        }
+      }
+    }
   }
 }

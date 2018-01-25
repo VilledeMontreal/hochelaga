@@ -55,8 +55,6 @@ label {
 // Checkboxes
 .checkbox {
   &.vdm-checkbox {
-    label {
-    }
 
     input {
       // The checkmark
@@ -66,10 +64,6 @@ label {
         transform: rotate(-45deg);
         width: 0.85rem;
         height: 0.35rem;
-      }
-
-      // The patch on top of the input
-      &:before {
       }
 
       // The tranformed rectangle, titled 45 degrees with 2 out of 4 borders
@@ -95,8 +89,6 @@ label {
 .form-check {
   &.vdm-checkbox-vdmi {
     label {
-      // @extend .custom-control;
-      // @extend .custom-checkbox;
       @include pseudo-form-element();
     }
     input[type="checkbox"] {
@@ -110,9 +102,7 @@ label {
 
       &:checked {
         & + label {
-          &:after {
-            content: map-get($vdmicons, mini-case-coche-coche);
-          }
+          @include iconvfi(after, mini-case-coche-coche);
         }
       }
 

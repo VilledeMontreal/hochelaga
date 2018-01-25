@@ -111,7 +111,7 @@
 }
 
 // Generates a block-level link with an icon in the after position;
-@mixin icon-block-link( $icon : arrow-right, $size: false ) {
+@mixin icon-block-link( $icon : fleche-droite, $size: false ) {
   display: block;
   position: relative;
   background: transparent;
@@ -347,5 +347,18 @@
   }
   
   @return $string;
+}
+
+@mixin circle($size: 1rem, $background-color: $vdm-brand, $border: false, $border-color: $gray-600) {
+  background-color: $background-color;
+  border-radius: 50%;
+  content: "";
+  display: block;
+  width: $size;
+  height: $size;
+
+  @if $border {
+    border: 1px solid $border-color;
+  }
 }
 
