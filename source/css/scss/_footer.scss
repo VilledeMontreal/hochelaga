@@ -1,17 +1,12 @@
-// @file footer.scss
-
-// Main portal footer, the fat version with all bells & whistles present in the Sketch mockups
+/**
+ * Main footer
+ */
 footer {
-  &.vdm-footer {
+  &.footer {
     background-color: $vdm-sub-brand;
     color: $white;
-    padding-top: 2rem;
-    padding-bottom: 1rem;
-
-    .footer-wrapper {
-      @include make-container();
-      @include make-container-max-widths();
-    }
+    padding-top: 3rem;
+    padding-bottom: 1.5rem;
 
     // Links
     a {
@@ -34,22 +29,19 @@ footer {
     ul {
       margin: 0;
       padding: 0;
-      border: 1px solid #fc1313;
       list-style-type: none;
       > li {
         margin: 0;
         padding: 0;
         a {
           display: block;
-          .label {
-          }
         }
       }
     }
 
     .main {
       @include make-row();
-      padding-bottom: 1rem;
+      padding-bottom: 2rem;
 
       // 311 block
       .featured {
@@ -57,37 +49,29 @@ footer {
         @include make-col(12);
         order: 2;
         display: flex;
-        align-items: center;
-        justify-content: space-between;
 
         .icon-text {
           font-size: 4rem;
-          flex-basis: 30%;
           padding-right: 1rem;
-          line-height: 1em;
+          line-height: 1;
         }
         .text {
-          flex: 1;
+          align-self: center;
+          font-size: 1.3125rem;
+          line-height: 1.3;
+          width: 6rem;
         }
       }
 
       // Links laid out on 3 columns;
-      .vdm-footer-links {
+      .footer-links {
         @include make-col-ready();
         @include make-col(12);
-
-        // Pick one of these 2 methods and stick to inspect
-        // Column count creates a weird bottom padding or height 100% effect,
-        // vertical alignement becomes a problem
-
-        // column-count: 3;
-        @include n-columns("li", 33%, 0, false, 3);
-
-        margin-bottom: 1rem;
+        margin-bottom: 3rem;
         > li {
           margin-bottom: 0.3rem;
           > a {
-            @include icon-block-link(arrow-right, 2.5em);
+            @include icon-block-link($size:2.5em);
             .label {
               display: none;
             }
@@ -99,26 +83,27 @@ footer {
         order: 3;
         @include make-col-ready();
         @include make-col(12);
-        min-height: 2.3rem;
-        margin-top: 1rem;
+        margin-top: 3rem;
         display: flex;
         align-items: center;
         justify-content: space-between;
+        flex-wrap: wrap;
+        li {
+          @include make-col(6);
+          margin-bottom: 1rem;
+        }
 
         a {
           display: flex;
           align-items: center;
           color: $white;
-        }
-
-        &.footer {
-          > li {
-            min-height: 2.3rem;
-            > a {
-              padding-left: 0.3rem;
+          &:hover {
+            text-decoration: none;
+            .label {
+              text-decoration: underline;
             }
-          } // li
-        } // ul
+          }
+        }
       }
     } // Main wrapper
 
@@ -126,19 +111,26 @@ footer {
     .sub {
       @include make-row();
       font-size: $font-size-xs;
-      padding-top: 0.6rem;
-      border-top: 2px solid $white;
+      &::before {
+        content: "";
+        background-color: $white;
+        margin: 0 $grid-gutter-width/2 .5rem $grid-gutter-width/2;
+        height: 4px;
+        width: 100%;
+      }
 
       .first {
         @include make-col-ready();
-        @include make-col(3);
+        @include make-col(12);
+        order: 1;
       }
       .last {
         @include make-col-ready();
-        @include make-col(9);
-        text-align: right;
+        @include make-col(12);
+        order: 0;
 
-        .vdm-sub-footer-links {
+        .sub-footer-links {
+          margin-bottom: .5rem;
           > li {
             display: inline-block;
             position: relative;
@@ -160,123 +152,72 @@ footer {
                 display: none;
               }
             }
+            &:last-of-type {
+              padding-right: 0;
+            }
           }
         } // ul
       }
     } // Secondary wrapper, sub-footer section
 
     @include media-breakpoint-up(sm) {
-      border: 1px solid orange;
       .main {
         .featured {
           order: 1;
           flex-wrap: wrap;
         }
-        .vdm-footer-links {
-          margin-bottom: 0;
+        .footer-links{
+          @include n-columns("li", 50%, 0, false, 2);
+        }
+        .social-media-list {
+          li {
+            @include make-col(4);
+          }
         }
       }
     } // sm-up
 
     @include media-breakpoint-up(md) {
-      border: 1px solid turquoise;
       .main {
-        .featured {
-          @include make-col(3);
+        .footer-links{
+          @include n-columns("li", 33%, 0, false, 3);
+        }
+        .social-media-list {
+          li {
+            flex: 0;
+            margin-bottom: 0;
+          }
+        }
+      }
+      .sub {
+        .first {
+          @include make-col-ready();
+          @include make-col(6);
           order: 0;
         }
-        .vdm-footer-links {
-          @include make-col(9);
+        .last {
+          @include make-col-ready();
+          @include make-col(6);
+          text-align: right;
+          order: 1;
+          .sub-footer-links {
+            margin-bottom: 0;
+          }
         }
       }
     } // md-up
-  } // vdm-footer
+    @include media-breakpoint-up(lg) {
+      .main {
+        .featured {
+          @include make-col(4);
+          order: 0;
+        }
+        .footer-links {
+          @include make-col(8);
+          margin-bottom: 0;
+        }
+      }
+    }
+  }
 } // Footer
 
-// Martino's first shot at creating a footer below
-footer {
-  &.footer-martino {
-    background-color: $vdm-sub-brand;
-    padding-top: 45px;
-
-    ul {
-      float: left;
-      padding: 0;
-      margin: 0;
-      list-style-type: none;
-      width: 100%;
-      li {
-        // padding-bottom: 12px;
-        // padding-top: 12px;
-        float: left;
-        width: 100%;
-        .link {
-          float: left;
-          padding-top: 4px;
-        }
-        .link-arrow {
-          float: right;
-        }
-      }
-    }
-    hr {
-      border: solid 2px $white;
-    }
-    span {
-      color: $white;
-    }
-    i {
-      color: $white;
-    }
-    a {
-      color: $white;
-    }
-    a:hover {
-      color: $white;
-    }
-    .services-citoyen {
-      float: left;
-      margin-bottom: 40px;
-      .services-citoyen-311 {
-        .number311 {
-          float: left;
-          font-size: 350%;
-        }
-        .title {
-          float: right;
-          padding-top: 18px;
-          padding-left: 25px;
-        }
-      }
-      .services-citoyen-horaires {
-        .open {
-          background: $vdm-sarcelle;
-          display: inline-block;
-          border-radius: 50%;
-          width: 14px;
-          height: 14px;
-        }
-        .hours {
-          font-size: $font-size-xs;
-        }
-      }
-    }
-    .horaires {
-      .link-arrow {
-        float: left;
-        padding-left: 20px;
-      }
-    }
-    .language {
-      text-align: right;
-    }
-    .social-media {
-      text-align: right;
-      margin-top: 90px;
-    }
-    .copyright {
-      font-size: $font-size-xs;
-      padding-bottom: 20px;
-    }
-  } // .footer
-}
