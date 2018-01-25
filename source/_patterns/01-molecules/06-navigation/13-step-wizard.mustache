@@ -1,0 +1,79 @@
+<div class="container">
+  <div class="row">
+    <div class="col">
+      <ul class="nav nav-steps" role="tablist">
+        <li role="presentation" class="nav-item">
+          <a href="#step1" class="nav-link active" data-toggle="tab" aria-controls="step1" role="tab" title="Step 1">
+            <span class="caption">Step 1 Name</span>
+            <span class="circle" aria-hidden="true"></span>
+          </a>
+        </li>
+        <li role="presentation" class="nav-item disabled">
+          <a href="#step2" class="nav-link disable" data-toggle="tab" aria-controls="step2" role="tab" title="Step 2">
+            <span class="caption">Step 2 Name</span>
+            <span class="circle" aria-hidden="true"></span>
+          </a>
+        </li>
+        <li role="presentation" class="nav-item disabled">
+          <a href="#step3" class="nav-link disable" data-toggle="tab" aria-controls="step3" role="tab" title="Step 3">
+            <span class="caption">Step 3 Name</span>
+            <span class="circle" aria-hidden="true"></span>
+          </a>
+        </li>
+
+        <li role="presentation" class="nav-item disabled">
+          <a href="#complete" class="nav-link disable" data-toggle="tab" aria-controls="complete" role="tab" title="Complete">
+            <span class="caption">Step 4 Name</span>
+            <span class="circle" aria-hidden="true"></span>
+          </a>
+        </li>
+      </ul>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col">
+      <!-- Steps content below -->
+      <form role="form">
+        <div class="tab-content">
+          <div class="tab-pane active" role="tabpanel" id="step1">
+            <h3>Step 1</h3>
+            <p>This is step 1</p>
+            <ul class="list-inline">
+              <li class="list-inline-item">
+                <button type="button" class="vdm-btn next-step">Save and continue</button>
+              </li>
+            </ul>
+          </div>
+          <div class="tab-pane" role="tabpanel" id="step2">
+            <h3>Step 2</h3>
+            <p>This is step 2</p>
+            <ul class="list-inline">
+              <li class="list-inline-item">
+                <button type="button" class="btn btn-default prev-step">Previous</button>
+              </li>
+              <li class="list-inline-item">
+                <button type="button" class="vdm-btn next-step">Save and continue</button>
+              </li>
+            </ul>
+          </div>
+          <div class="tab-pane" role="tabpanel" id="step3">
+            <h3>Step 3</h3>
+            <p>This is step 3</p>
+            <ul class="list-inline">
+              <li class="list-inline-item">
+                <button type="button" class="btn btn-default prev-step">Previous</button>
+              </li>
+              <li class="list-inline-item">
+                <button type="button" class="vdm-btn next-step">Save and continue</button>
+              </li>
+            </ul>
+          </div>
+          <div class="tab-pane" role="tabpanel" id="complete">
+            <h3>Complete</h3>
+            <p>You have successfully completed all steps.</p>
+          </div>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>

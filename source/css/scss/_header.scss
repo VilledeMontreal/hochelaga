@@ -3,7 +3,7 @@
 // @ see http://192.168.56.101:3000/?p=organisms-header
 
 .vdm-header {
-  @extend .fixed-top;
+  //@extend .fixed-top;
   ul {
     list-style-type: none;
     margin: 0;
@@ -90,17 +90,9 @@
           @extend .d-sm-inline-block;
         }
       }
+
       .language {
         display: none;
-        text-transform: uppercase;
-
-        a {
-          display: block;
-          line-height: $header-portal-height;
-          text-align: center;
-          width: $header-portal-height;
-          height: $header-portal-height;
-        }
       }
 
       @include media-breakpoint-up(lg) {
@@ -132,7 +124,6 @@
     display: inline-block;
     line-height: $header-portal-height;
     vertical-align: top;
-    display: none;
   }
 
   &:hover,
@@ -159,6 +150,25 @@
 
 // Language switcher component
 .language-list {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  a {
+    color: $black;
+    line-height: 1;
+    height: $header-portal-height;
+    width: $header-portal-height;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    text-transform: uppercase;
+    &:active,
+    &:hover {
+      color: $black;
+      text-decoration: none;
+    }
+  }
   .lang {
     &.active {
       display: none;
@@ -222,98 +232,6 @@
     &:hover {
       color: $white;
       text-decoration: underline;
-    }
-  }
-}
-
-// Martino - first shot on header template
-header {
-  &.martino-header {
-    background-color: $vdm-sub-brand;
-    height: 100px;
-    .left-nav {
-      float: left;
-      color: $white;
-      .back {
-        height: 100px;
-        padding-top: 30px;
-        background-color: #222222;
-        i {
-          color: $vdm-brand;
-        }
-      }
-      ul.primary {
-        padding-left: 0;
-        list-style-type: none;
-        background-color: $black;
-        li {
-          color: $vdm-grey;
-          border-bottom: solid 1px $vdm-grey;
-          padding-top: 1.5em;
-          padding-bottom: 1.5em;
-          padding-left: 1em;
-        }
-      }
-      ul.sub {
-        padding-left: 0;
-        padding-right: 0;
-        list-style-type: none;
-        li {
-          padding-left: 2em;
-          padding-right: 15px;
-        }
-      }
-    }
-    .left-nav-icon {
-      float: left;
-      color: $white;
-      .vfi {
-        font-size: 6em;
-      }
-    }
-    .header-logo {
-      background-color: $white;
-      float: left;
-      height: 100px;
-      img {
-        padding-top: 25px;
-        padding-left: 50px;
-        padding-right: 50px;
-        height: 75%;
-      }
-    }
-    .header-nav {
-      float: right;
-      ul {
-        padding-top: 35px;
-        list-style-type: none;
-        li {
-          padding-right: 40px;
-          a {
-            color: $white;
-          }
-        }
-      }
-      .header-primary-nav {
-        float: right;
-        ul {
-          li {
-            float: left;
-          }
-        }
-      }
-      .header-search {
-        float: right;
-        min-width: 100px;
-        padding-top: 14px;
-        padding-right: 40px;
-        form {
-          display: inline;
-        }
-        i {
-          color: $white;
-        }
-      }
     }
   }
 }
