@@ -1,0 +1,15 @@
+// Alert
+.alert-icon {
+  display: flex;
+  align-items: center;
+  .vfi {
+    padding-right: 1.5rem;
+    font-size: 3rem;
+  }
+}
+
+// Badges
+.badge-pill {
+  padding-top: $badge-pill-padding-y;
+  padding-bottom: $badge-pill-padding-y;
+}
