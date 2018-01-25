@@ -38,3 +38,30 @@
     }
   }
 }
+
+.link-box {
+
+  :hover,
+  :active {
+    text-decoration: none;
+  }
+  a {
+    display: flex;
+    flex-direction: row;
+    height: 100%;
+  }
+  .link-box-content {
+    color: $body-color;
+    display: flex;
+    flex: 1;
+    flex-direction: row;
+    background-color: $white;
+    margin-bottom: $grid-gutter-width;
+    padding: 20px;
+    align-items: center;
+    .vfi {
+      font-size: 2rem;
+      color: $vdm-brand;
+    }
+  }
+}
