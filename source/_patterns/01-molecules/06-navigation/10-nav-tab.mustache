@@ -1,9 +1,18 @@
 <nav>
-  <ul class="nav nav-tabs" role="tablist">
+  <ul class="nav nav-tabs d-none d-md-flex" role="tablist">
     {{# navTabs.navItem }}
-      <li class="nav-item" role="presentation">
-        <a href="{{ url }}" class="nav-link {{ class }}" role="tab" data-toggle="tab">{{ title }}</a>
-      </li>
+    <li class="nav-item" role="presentation">
+      <a href="{{ url }}" class="nav-link {{ class }}" role="tab" data-toggle="tab">{{ title }}</a>
+    </li>
+    {{/ navTabs.navItem }}
+  </ul>
+
+  <a href="#" class="nav-tabs-dropdown d-md-none active" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Tabs</a>
+  <ul class="dropdown-menu nav-tabs-dropdown-menu d-md-none">
+    {{# navTabs.navItem }}
+    <li class="dropdown-item nav-item">
+      <a href="{{ url }}" class="nav-link {{ class }}">{{ title }}</a>
+    </li>
     {{/ navTabs.navItem }}
   </ul>
 </nav>
