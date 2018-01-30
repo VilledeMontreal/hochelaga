@@ -1,22 +1,21 @@
 {{# collapsibleItem }}
-    <div class="collapsible-item">
-        <div class="collapsible-header" role="tab" id="{{ heading-id }}">
-            <h4>
-                <a data-toggle="collapse" href="#" data-target="#{{ block-id }}" aria-expanded="false" aria-controls="{{ block-id }}">
-                {{# icon }}
-                    <i class="vfi {{ icon }}" aria-hidden="true"></i>
-                {{/ icon }}
-                {{^ icon }}
-                    <i class="circle" aria-hidden="true"></i>
-                {{/ icon }}
-                    <span>{{ title }}</span>
-                </a>
-            </h4>
-        </div>
-        <div id="{{ block-id }}" class="collapse" role="tabpanel" aria-labelledby="{{ heading-id }}">
-            <div class="collapsible-block">
-                {{{ content }}}
-            </div>
-        </div>
+<div class="collapsible-item">
+  <div class="collapsible-header" role="tab" id="{{ heading-id }}">
+    <h4>
+      <a data-toggle="collapse" href="#" data-target="#{{ block-id }}" aria-expanded="false" aria-controls="{{ block-id }}">
+        {{# icon }}
+        <span class="collapsible-icon vfi {{ icon }}" aria-hidden="true"></span>
+        {{/ icon }} {{^ icon }}
+        <span class="collapsible-icon circle" aria-hidden="true"></span>
+        {{/ icon }}
+        <span>{{ title }}</span>
+      </a>
+    </h4>
+  </div>
+  <div id="{{ block-id }}" class="collapse" role="tabpanel" aria-labelledby="{{ heading-id }}">
+    <div class="collapsible-block">
+      {{{ content }}}
     </div>
+  </div>
+</div>
 {{/ collapsibleItem }}
