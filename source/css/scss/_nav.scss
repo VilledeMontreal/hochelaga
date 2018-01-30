@@ -78,7 +78,9 @@
   }
 }
 
+//
 // Collapsible Item
+//
 
 .collapsible-item {
   padding: 0;
@@ -125,16 +127,17 @@
 
       span {
         align-self: center;
-      }
-      i {
-        color: $vdm-brand;
-        flex-grow: 0;
-        font-size: 2rem;
-        align-self: center;
-        font-weight: $font-weight-bold;
-        content: "";
-        position: absolute;
-        left: 1.3rem;
+
+        &.collapsible-icon {
+          color: $vdm-brand;
+          flex-grow: 0;
+          font-size: 2rem;
+          align-self: center;
+          font-weight: $font-weight-bold;
+          content: "";
+          position: absolute;
+          left: 1.3rem;
+        }
 
         &.circle {
           content: "";
@@ -145,19 +148,9 @@
           margin-left: 0.5rem;
         }
       }
-
-      // Hide dots on x-small screens, rearrange paddings
-      /*
-      @include media-breakpoint-down(xs) { 
-        &:before {
-          display: none;
-        }
-        padding-left: 1.1rem;
-        padding-right: 6rem;
-      }
-      */
     }
   }
+  // Content block wrapper
   .collapsible-block {
     padding-left: 4.3rem;
     padding-top: 1rem;
@@ -168,6 +161,10 @@
 //
 // Tabs
 //
+
+nav {
+  position: relative;
+}
 
 .nav-tabs {
   border-bottom: none;
@@ -187,6 +184,24 @@
       }
     }
   }
+  @include media-breakpoint-up(md) {
+    justify-content: center;
+    .nav-item {
+      flex: 0 1 25%;
+      .nav-link {
+        margin-right: $nav-tabs-spacing;
+      }
+      &:last-of-type {
+        .nav-link {
+          margin: 0;
+        }
+      }
+    }
+  }
+}
+
+.nav-tabs,
+.nav-tabs-dropdown-menu {
   .nav-link {
     background: $vdm-grey-light;
     border: none;
@@ -222,17 +237,100 @@
       }
     }
   }
-  @include media-breakpoint-up(md) {
-    justify-content: center;
-    .nav-item {
-      flex: 0 1 25%;
-      .nav-link {
-        margin-right: $nav-tabs-spacing;
-      }
-      &:last-of-type {
-        .nav-link {
-          margin: 0;
-        }
+}
+
+// Mobile tabs becomes dropdown
+.nav-tabs-dropdown {
+  @include iconvfi(after, chevron-bas);
+  @extend .nav-link;
+  background: $vdm-grey-light;
+  border: none;
+  color: $black;
+  font-weight: $font-weight-bold;
+  position: relative;
+  text-align: center;
+
+  &.active,
+  &:hover,
+  &:focus {
+    border: none;
+    color: $black;
+    background-color: $white;
+    &:before {
+      content: " ";
+      width: 100%;
+      height: $nav-tabs-active-border-width;
+      background-color: $vdm-sub-brand;
+      position: absolute;
+      top: 0;
+      left: 0;
+      display: block;
+    }
+  }
+
+  &:after {
+    font-size: 1em;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    right: 2rem;
+    display: block;
+    width: 1em;
+    height: 1em;
+    line-height: 1;
+  }
+}
+
+.nav-tabs-dropdown-menu {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  width: 100%;
+  z-index: $zindex-dropdown;
+  display: none; // none by default, but block on "open" of the menu
+  float: left;
+  min-width: $dropdown-min-width;
+  padding: 0;
+  margin: 0;
+  margin-left: -15px;
+  text-align: center; // Ensures proper alignment if parent has it changed (e.g., modal footer)
+  list-style: none;
+  background-color: transparent;
+  border: none;
+  @include border-radius(0);
+  @include box-shadow(none);
+
+  .dropdown-item {
+    display: block;
+    width: 100%; // For `<button>`s
+    padding: 0;
+    clear: both;
+    font-weight: $font-weight-normal;
+    color: $dropdown-link-color;
+    text-align: inherit; // For `<button>`s
+    white-space: nowrap; // prevent links from randomly breaking onto new lines
+    background-color: transparent; // For `<button>`s
+    border: 0; // For `<button>`s
+
+    @include hover-focus {
+      color: $dropdown-link-hover-color;
+      text-decoration: none;
+      @include gradient-bg($dropdown-link-hover-bg);
+    }
+
+    .active {
+      display: none;
+      //color: $dropdown-link-active-color;
+      //text-decoration: none;
+      //@include gradient-bg($dropdown-link-active-bg);
+    }
+
+    .disabled {
+      color: $dropdown-link-disabled-color;
+      //background-color: transparent;
+      // Remove CSS gradients if they're enabled
+      @if $enable-gradients {
+        background-image: none;
       }
     }
   }
@@ -376,7 +474,7 @@
       width: 1px;
     }
     &:after {
-      left: .5rem;
+      left: 0.5rem;
     }
     &:last-child {
       &:after {
@@ -452,7 +550,7 @@
         display: flex;
         flex-direction: row;
         align-items: center;
-        padding: .625rem 1rem .625rem 0;
+        padding: 0.625rem 1rem 0.625rem 0;
         .caption {
           order: 2;
           padding-left: 1rem;

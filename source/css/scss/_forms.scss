@@ -23,28 +23,18 @@ label {
 
       // The background - centering w/ native element is key;
       &:before {
-        left: -0.3rem;
-        top: -0.3rem;
-        width: 1.8rem;
-        height: 1.8rem;
-
         left: -0.2rem;
         top: -0.2rem;
         width: 1.4rem;
         height: 1.4rem;
-
         background: $vdm-form-disabled-bg-color;
-        cursor: pointer;
-        border-radius: 0.3rem;
         border-radius: 0.2rem;
+        cursor: pointer;
       }
 
       // The selection
       &:after {
         z-index: 1;
-        width: 1.3rem;
-        height: 1.3rem;
-
         width: 1rem;
         height: 1rem;
       }
@@ -72,14 +62,6 @@ label {
           border: 1px solid $vdm-brand;
           border-top-style: none;
           border-right-style: none;
-        }
-      }
-
-      &:disabled {
-      }
-
-      &:checked {
-        &:disabled {
         }
       }
     }
@@ -164,11 +146,6 @@ label {
 
       // The background of the input
       &:before {
-        width: 2.1rem;
-        height: 2.1rem;
-        left: -0.4rem;
-        top: -0.4rem;
-
         width: 1.5rem;
         height: 1.5rem;
         left: -0.25rem;
@@ -189,13 +166,6 @@ label {
           background-color: $vdm-brand;
         }
       }
-      &:disabled {
-      }
-
-      &:checked {
-        &:disabled {
-        }
-      }
     }
   }
 }
@@ -211,25 +181,6 @@ label {
 
 ///////////////////////////////////////////////////////////////////
 // Textfields and textareas
-
-// select,
-// textarea,
-// input[type="text"],
-// input[type="password"],
-// input[type="datetime"],
-// input[type="datetime-local"],
-// input[type="date"],
-// input[type="month"],
-// input[type="time"],
-// input[type="week"],
-// input[type="number"],
-// input[type="email"],
-// input[type="url"],
-// input[type="search"],
-// input[type="tel"],
-// input[type="color"] {
-
-// }
 
 .form-group {
   &.vdm-form-group {
@@ -476,8 +427,6 @@ select {
         box-shadow: none;
         border: 1px solid $vdm-brand;
       }
-      option {
-      }
     }
   }
 }
@@ -599,7 +548,7 @@ select {
 // -------------------------
 
 .vdm-checkbox {
-  // Massive negative offset clers the original checkbox & label.
+  // Massive negative offset clears the original checkbox & label.
   &.vdm-toggle {
     position: relative;
     input {

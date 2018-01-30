@@ -24,6 +24,20 @@
   display: inline-block; // -- required to avoid text-decoration inheritance
 }
 
+// Icon Sizes
+// -------------------------
+
+/* makes the font 33% larger relative to the icon container */
+.vfi-lg {
+  font-size: (4em / 3);
+  line-height: (3em / 4);
+  vertical-align: -15%;
+}
+.vfi-2x { font-size: 2em; }
+.vfi-3x { font-size: 3em; }
+.vfi-4x { font-size: 4em; }
+.vfi-5x { font-size: 5em; }
+
 a {
   &:hover,
   &:active,

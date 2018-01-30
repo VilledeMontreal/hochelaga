@@ -13,3 +13,9 @@
   padding-top: $badge-pill-padding-y;
   padding-bottom: $badge-pill-padding-y;
 }
+
+
+// Add cursor to all element containing a popover
+[data-toggle="popover"] {
+  cursor: pointer;
+}
