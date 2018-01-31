@@ -138,6 +138,7 @@
   // Toggle popover from data-toggle
   $('[data-toggle="popover"]').popover();
 
+
   // Wizard
   $('a[data-toggle="tab"]').on("show.bs.tab", function(e) {
     var $target = $(e.target);
@@ -164,6 +165,23 @@
   function prevTab(elem) {
     $(elem).parent().prev().find('a[data-toggle="tab"]').click();
   }
+
+  // Nav-tabs-dropdown
+  $('.nav-tabs-dropdown').each(function(i, elm) {
+    $(elm).next('ul').find('li a.active').text().length == 0 ? $(elm).text($(elm).next('ul').find('li a:first').text()) : $(elm).text($(elm).next('ul').find('li a.active').text());
+    //$(elm).text($(elm).next('ul').find('li a.active').text());
+
+  });
+
+  $('.nav-tabs-dropdown-menu .dropdown-item').on('click', function(e) {
+      e.preventDefault();
+      $(e.target).closest('ul').prev('a').text($(this).text());
+      $(this).siblings().removeClass('active');
+
+      // Remove active class for all items and add it to current active item
+      $(this).siblings().children().removeClass('active');
+      $(this).children().addClass('active');
+  });
 
 
 })(jQuery);
