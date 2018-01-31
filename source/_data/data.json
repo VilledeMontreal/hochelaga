@@ -103,17 +103,17 @@
   },
   "formCheckboxes": [
     {
-      "class": "vdm-checkbox-vdmi",
+      "class": "checkbox-vfi",
       "id": "chk01",
       "label": "Checkbox"
     },
     {
-      "class": "vdm-checkbox-vdmi",
+      "class": "checkbox-vfi",
       "id": "chk02",
       "label": "Checkbox two"
     },
     {
-      "class": "vdm-checkbox-vdmi",
+      "class": "checkbox-vfi",
       "id": "chk03",
       "label": "Checkbox three"
     }
@@ -415,7 +415,9 @@
       "title": "Collapsible item",
       "content": "Collapsible content",
       "block-id": "collapseOne",
-      "heading-id": "HeadingOne"
+      "heading-id": "HeadingOne",
+      "has-default-icon": true,
+      "badge": false
     }
   ],
   "carousel": {

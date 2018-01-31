@@ -45,7 +45,7 @@ html {
 }
 
 .side-menu {
-  width: $vdm-side-menu-width;
+  width: $side-menu-width;
   background: $vdm-grey-dark;
   height: 100%;
   min-height: 100vh;
@@ -64,9 +64,9 @@ html {
     .menu-item {
       background: $black;
       display: flex;
-      border-bottom: $vdm-side-menu-border-width solid $vdm-grey-dark;
+      border-bottom: $side-menu-border-width solid $vdm-grey-dark;
       &:first-child {
-        border-top: $vdm-side-menu-border-width solid $vdm-grey-dark;
+        border-top: $side-menu-border-width solid $vdm-grey-dark;
       }
       &:last-child {
         border: 0;
@@ -76,16 +76,16 @@ html {
         color: $white;
         display: block;
         flex-grow: 1;
-        padding: $vdm-side-menu-link-v-padding $vdm-side-menu-link-h-padding;
+        padding: $side-menu-link-v-padding $side-menu-link-h-padding;
         &:hover,
         &:active {
           color: $vdm-brand;
           text-decoration: none;
         }
         .vfi {
-          font-size: $vdm-side-menu-icon-size;
-          width: $vdm-side-menu-icon-size;
-          height: $vdm-side-menu-icon-size;
+          font-size: $side-menu-icon-size;
+          width: $side-menu-icon-size;
+          height: $side-menu-icon-size;
           color: $vdm-brand;
           position: absolute;
         }
@@ -129,9 +129,9 @@ html {
           @include iconvfi(after, fleche-droite);
           &:after {
             display: none;
-            font-size: $vdm-side-menu-icon-size;
-            width: $vdm-side-menu-icon-size;
-            height: $vdm-side-menu-icon-size;
+            font-size: $side-menu-icon-size;
+            width: $side-menu-icon-size;
+            height: $side-menu-icon-size;
             color: $vdm-brand;
             position: absolute;
             left: calc(100% - 4rem);

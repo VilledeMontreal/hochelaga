@@ -5,71 +5,67 @@ label {
   line-height: $line-height-lg;
 }
 
+/*
 // Radios and checkboxes - common rules
 .checkbox,
 .radio {
-  &.vdm-checkbox,
-  &.vdm-radio {
-    input {
-      position: relative;
-      margin: 0 1.6rem 0 0;
+  input {
+    position: relative;
+    margin: 0 1.6rem 0 0;
 
-      &:before,
-      &:after {
-        position: absolute;
-        content: "";
-        // opacity: 0.5; // Debug : line it up with the original element
-      }
+    &:before,
+    &:after {
+      position: absolute;
+      content: "";
+    }
 
-      // The background - centering w/ native element is key;
-      &:before {
-        left: -0.2rem;
-        top: -0.2rem;
-        width: 1.4rem;
-        height: 1.4rem;
-        background: $vdm-form-disabled-bg-color;
-        border-radius: 0.2rem;
-        cursor: pointer;
-      }
+    // The background - centering w/ native element is key;
+    &:before {
+      left: -0.2rem;
+      top: -0.2rem;
+      width: 1.4rem;
+      height: 1.4rem;
+      background: $input-disabled-bg;
+      border-radius: 0.2rem;
+    }
 
-      // The selection
-      &:after {
-        z-index: 1;
-        width: 1rem;
-        height: 1rem;
-      }
+    // The selection
+    &:after {
+      z-index: 1;
+      width: 1rem;
+      height: 1rem;
     }
   }
 }
-
+*/
+/*
 // Checkboxes
 .checkbox {
-  &.vdm-checkbox {
+  input {
+    // The checkmark
+    &:after {
+      top: 0.125em;
+      left: 0.09em;
+      transform: rotate(-45deg);
+      width: 0.85rem;
+      height: 0.35rem;
+    }
 
-    input {
-      // The checkmark
+    // The tranformed rectangle, titled 45 degrees with 2 out of 4 borders
+    &:checked {
       &:after {
-        top: 0.125em;
-        left: 0.09em;
-        transform: rotate(-45deg);
-        width: 0.85rem;
-        height: 0.35rem;
-      }
-
-      // The tranformed rectangle, titled 45 degrees with 2 out of 4 borders
-      &:checked {
-        &:after {
-          border: 1px solid $vdm-brand;
-          border-top-style: none;
-          border-right-style: none;
-        }
+        border: 1px solid $vdm-brand;
+        border-top-style: none;
+        border-right-style: none;
       }
     }
   }
 }
+*/
 
+/*
 .form-check {
-  &.vdm-checkbox-vdmi {
+  &.checkbox-vfi {
     label {
       @include pseudo-form-element();
     }
@@ -97,244 +93,210 @@ label {
       }
     }
   }
-
-  &.vdm-radio-vdmi {
-    label {
-      // @extend .custom-control;
-      // @extend .custom-checkbox;
-      @include pseudo-form-element(radio);
-    }
-    input[type="radio"] {
-      @extend .custom-control-input;
-
-      & + label {
-        &:after {
-          content: none;
-        }
-      }
-
-      &:checked {
-        & + label {
-          &:after {
-            content: "";
-          }
-        }
-      }
-
-      &:focus {
-        & + label {
-          &:before {
-            outline: $vdm-brand auto 5px;
-          }
-        }
-      }
-    }
-  }
 }
 
-///////////////////////////////////////////////////////////////////
+*/
+
+//
 // Radio buttons
+//
+
+/*
 .radio {
-  &.vdm-radio {
-    label {
+  input {
+    &:before,
+    &:after {
+      border-radius: 50%;
     }
-    input {
-      &:before,
+
+    // The background of the input
+    &:before {
+      width: 1.5rem;
+      height: 1.5rem;
+      left: -0.25rem;
+      top: -0.25rem;
+    }
+
+    // The inner circle for the checked checkbox
+    &:after {
+      width: 0.65rem;
+      height: 0.65rem;
+      transform: translate(0.2rem, 0.2rem);
+    }
+
+    // The selected, circular input
+    &:checked {
       &:after {
-        border-radius: 50%;
-      }
-
-      // The background of the input
-      &:before {
-        width: 1.5rem;
-        height: 1.5rem;
-        left: -0.25rem;
-        top: -0.25rem;
-      }
-
-      // The inner circle for the checked checkbox
-      &:after {
-        width: 0.65rem;
-        height: 0.65rem;
-        // transform: scale(0.75, 0.75);
-        transform: translate(0.2rem, 0.2rem);
-      }
-
-      // The selected, circular input
-      &:checked {
-        &:after {
-          background-color: $vdm-brand;
-        }
+        background-color: $vdm-brand;
       }
     }
   }
 }
+*/
 
 // Fix the inline margin-tops for inline display;
-.vdm-checkbox,
-.vdm-radio {
+/*
+.checkbox,
+.radio {
   &.checkbox-inline,
   &.radio-inline {
     margin-top: 0;
   }
 }
+*/
 
 ///////////////////////////////////////////////////////////////////
 // Textfields and textareas
 
 .form-group {
-  &.vdm-form-group {
-    position: relative;
-    margin-top: 3rem;
+  position: relative;
+  margin-top: 3rem;
 
-    &.compact {
-      margin-top: 2rem; // The smallest possible value to accomodate the label
-    }
+  &.compact {
+    margin-top: 2rem; // The smallest possible value to accomodate the label
+  }
 
-    &.required {
-      label {
-        &:after {
-          content: "*";
-          color: $vdm-sub-brand;
-          display: inline-block;
-          margin-left: 0.25em;
-        }
+  &.required {
+    label {
+      &:after {
+        content: "*";
+        color: $vdm-sub-brand;
+        display: inline-block;
+        margin-left: 0.25em;
       }
     }
-    // input,
-    // textarea,
-    // select {
+  }
+  // input,
+  // textarea,
+  // select {
+  .form-control {
+    font-size: $font-size-base;
+    box-shadow: none;
+    transition: none;
+    border: 1px solid $vdm-grey-light;
+    border-radius: 0;
+
+    &:focus {
+      border: 1px solid $vdm-brand;
+    }
+
+    // Move the label
+    // When the field is selected
+    // Once the field is filled (js toggle class "used")
+    &:focus,
+    &.used {
+      & ~ label {
+        top: -26px;
+        left: 10px;
+        font-size: $font-size-xs;
+        color: $black;
+      }
+    }
+    &.used {
+      color: $black;
+      border: 1px solid $black;
+    }
+
+  }
+
+  // }
+
+  label {
+    color: $vdm-grey;
+    position: absolute;
+    pointer-events: none;
+    left: 10px;
+    top: 8px;
+    transition: 0.2s ease all;
+  }
+
+  .help-block {
+    margin-left: 10px;
+    font-size: $font-size-xs;
+  }
+
+  // Feedback icons
+  &.has-feedback {
     .form-control {
-      &.vdm-form-control {
-        font-size: $font-size-base;
-        box-shadow: none;
-        transition: none;
-        border: 1px solid $vdm-grey-light;
-        border-radius: 0;
-        // border-radius: $vdm-textfield-border-radius;
+      padding-right: 2em;
+      position: relative;
+    }
 
-        &:focus {
-          border: 1px solid $vdm-brand;
-        }
+    &:after {
+      font-size: 2rem;
+      width: 2rem;
+      height: 2rem;
+      position: absolute;
+      left: calc(100% - 2.3rem);
+      top: -0.3rem;
+    }
 
-        // Move the label
-        // When the field is selected
-        // Once the field is filled (js toggle class "used")
+    &.has-error {
+      @include iconvfi(after, mini-x);
+      color: $vdm-sub-brand;
+
+      .form-control {
+        color: $form-feedback-invalid-color !important;
+        border: 1px solid $form-feedback-invalid-color;
         &:focus,
         &.used {
-          & ~ label {
-            top: -26px;
-            left: 10px;
-            font-size: $font-size-xs;
-            color: $black;
-          }
-        }
-        &.used {
-          color: $black;
-          border: 1px solid $black;
+          border: 1px solid $form-feedback-invalid-color;
         }
       }
+
+      .help-block {
+        color: $form-feedback-invalid-color;
+        margin-left: 0;
+      }
     }
+    &.has-success {
+      @include iconvfi(after, mini-case-coche-coche);
+      color: $vdm-brand;
+    }
+  } // Feedback
 
-    // }
-
-    label {
+  // Defines a textfield with an icon inside the field directly, as in a password field
+  &.has-icon {
+    .vfi {
+      font-size: 2.2rem;
+      position: absolute;
       color: $vdm-grey;
       position: absolute;
       pointer-events: none;
-      left: 10px;
-      top: 8px;
-      transition: 0.2s ease all;
+      top: 0;
+      color: $vdm-brand;
     }
 
-    .help-block {
-      margin-left: 10px;
-      font-size: $font-size-xs;
-    }
-
-    // Feedback icons
-    &.has-feedback {
-      .vdm-form-control {
-        padding-right: 2em;
-        position: relative;
-      }
-
-      &:after {
-        font-size: 2rem;
-        width: 2rem;
-        height: 2rem;
-        position: absolute;
-        left: calc(100% - 2.3rem);
-        top: -0.3rem;
-      }
-
-      &.has-error {
-        @include iconvfi(after, mini-x);
-        color: $vdm-sub-brand;
-
-        .vdm-form-control {
-          color: $vdm-error-color !important;
-          border: 1px solid $vdm-error-color;
-          &:focus,
-          &.used {
-            border: 1px solid $vdm-error-color;
-          }
-        }
-
-        .help-block {
-          color: $vdm-error-color;
-          margin-left: 0;
-        }
-      }
-      &.has-success {
-        @include iconvfi(after, mini-case-coche-coche);
-        color: $vdm-brand;
-      }
-    } // Feedback
-
-    // Defines a textfield with an icon inside the field directly, as in a password field
-    &.has-icon {
+    &.ic-left {
       .vfi {
-        font-size: 2.2rem;
-        position: absolute;
-        color: $vdm-grey;
-        position: absolute;
-        pointer-events: none;
-        top: 0;
-        color: $vdm-brand;
+        left: 0.3rem;
       }
-
-      &.ic-left {
-        .vfi {
-          left: 0.3rem;
-        }
-        label {
-          left: calc(10px + 2.1rem);
-        }
-        .vdm-form-control {
-          padding-left: 3rem;
-        }
+      label {
+        left: calc(10px + 2.1rem);
       }
-      &.ic-right {
-        .vfi {
-          left: calc(100% - 2.4rem);
-        }
-        .vdm-form-control {
-          padding-right: 3rem;
-        }
+      .form-control {
+        padding-left: 3rem;
       }
-
-      &.has-error {
-        .vfi {
-          color: $black;
-        }
+    }
+    &.ic-right {
+      .vfi {
+        left: calc(100% - 2.4rem);
+      }
+      .form-control {
+        padding-right: 3rem;
       }
     }
 
-    &.ghost {
-      .vdm-form-control {
-        border: 0;
+    &.has-error {
+      .vfi {
+        color: $black;
       }
+    }
+  }
+
+  &.ghost {
+    .form-control {
+      border: 0;
     }
   }
 }
@@ -354,9 +316,9 @@ label {
     top: 0.1rem;
     z-index: 2;
     display: block;
-    width: $vdm-element-base-height;
-    height: floor($vdm-element-base-height * 0.95);
-    line-height: floor($vdm-element-base-height * 0.95);
+    width: 34px;
+    height: floor(34px * 0.95);
+    line-height: floor(34px * 0.95);
     text-align: center;
     pointer-events: none;
   }
@@ -478,7 +440,7 @@ select {
       border-bottom: 3px solid $black;
     }
 
-    .vdm-form-group {
+    .form-group {
       margin-top: 0;
       margin-bottom: 0;
       width: 100%;
@@ -486,7 +448,7 @@ select {
       label {
         top: 16px;
       }
-      .vdm-form-control {
+      .form-control {
         border: none;
         line-height: 2.1;
         &:focus {
@@ -543,137 +505,185 @@ select {
   }
 }
 
+// Checkboxes
+//
+// use vfi
+
+.custom-checkbox {
+  margin-bottom: $custom-control-spacer-y;
+
+  .custom-control-input:checked ~ .custom-control-label {
+    &::after {
+      background-image: none;
+      font-size: 2rem;
+      line-height: 1;
+      color: $vdm-brand;
+    }
+    @include iconvfi(after, mini-case-coche-coche);
+  }
+
+  .custom-control-input:indeterminate ~ .custom-control-label {
+    &::after {
+      background-image: none;
+    }
+  }
+}
+
+// Radios
+//
+// Tweak just a few things for radios.
+
+.custom-radio {
+  margin-bottom: $custom-control-spacer-y;
+
+  .custom-control-input:checked ~ .custom-control-label {
+    &::after {
+      border-radius: 50%;
+      width: 0.6875rem;
+      height: 0.6875rem;
+      transform: translate(0.59375rem, 0.59375rem);
+      background-color: $vdm-brand;
+    }
+  }
+}
 
 // Switches - Checkboxes as state toggles
 // -------------------------
 
-.vdm-checkbox {
+.checkbox-toggle {
   // Massive negative offset clears the original checkbox & label.
-  &.vdm-toggle {
-    position: relative;
-    input {
-      &[type="checkbox"] {
-        position: absolute;
-        left: -10000px;
-        visibility: hidden;
+  position: relative;
+  input {
+    &[type="checkbox"] {
+      position: absolute;
+      left: -10000px;
+      visibility: hidden;
 
-        // Graphics container
+      // Graphics container
+      & + label {
+        position: relative;
+        text-indent: -10000px;
+        height: $checkbox-toggle-height;
+        width: $checkbox-toggle-width;
+        user-select: none;
+        cursor: pointer;
+
+        &:before,
+        &:after {
+          display: block;
+          position: absolute;
+          content: "";
+        }
+
+        // Inside button
+        &:after {
+          top: $checkbox-toggle-padding;
+          left: $checkbox-toggle-padding;
+          bottom: $checkbox-toggle-padding;
+          right: $checkbox-toggle-padding;
+          background-color: $custom-control-indicator-checked-color;
+          border-radius: $checkbox-toggle-border-radius;
+          width: $checkbox-toggle-width-inside;
+          -webkit-transition: 0.3s;
+          transition: 0.3s;
+        }
+
+        // Outside pill
+        &:before {
+          top: 0;
+          left: 0;
+          bottom: 0;
+          right: 0;
+          background-color: transparent;
+          border: $checkbox-toggle-border-width solid
+            $custom-control-indicator-checked-color;
+          border-radius: $checkbox-toggle-border-radius-inside;
+          width: $checkbox-toggle-width;
+        }
+      }
+
+      &[checked="checked"] {
         & + label {
-          position: relative;
-          text-indent: -10000px;
-          height: $vdm-switch-height;
-          width: $vdm-switch-width;
-          user-select: none;
-
-          &:before,
-          &:after {
-            display: block;
-            position: absolute;
-            content: "";
-          }
-
           // Inside button
           &:after {
-            top: $vdm-switch-padding;
-            left: $vdm-switch-padding;
-            bottom: $vdm-switch-padding;
-            right: $vdm-switch-padding;
-            background-color: $vdm-form-bg-color;
-            border-radius: $vdm-switch-border-radius;
-            width: $vdm-switch-width-inside;
+            background-color: $white;
+            margin-left: $checkbox-toggle-width-inside +
+              $checkbox-toggle-padding;
           }
 
           // Outside pill
           &:before {
-            top: 0;
-            left: 0;
-            bottom: 0;
-            right: 0;
-            background-color: transparent;
-            border: $vdm-element-border-width solid $vdm-form-bg-color;
-            border-radius: $vdm-switch-border-radius-inside;
-            width: $vdm-switch-width;
+            background-color: $custom-control-indicator-checked-color;
+            border: 0;
           }
         }
+      } //  Checked
 
-        &[checked="checked"] {
+      &:checked {
+        & + label {
+          // Inside button
+          &:after {
+            background-color: $white;
+            margin-left: $checkbox-toggle-width-inside +
+              $checkbox-toggle-padding;
+          }
+
+          // Outside pill
+          &:before {
+            background-color: $custom-control-indicator-checked-color;
+            border: 0;
+          }
+        }
+      } //  Checked
+
+      &:disabled {
+        & + label {
+          cursor: not-allowed;
+          // Inside button
+          &:after {
+            background-color: $white;
+            margin-left: 0;
+          }
+
+          // Outside pill
+          &:before {
+            background-color: $custom-control-indicator-disabled-bg;
+            border: 0;
+          }
+        }
+      } //  Disabled
+
+      &:disabled {
+        &:checked {
           & + label {
             // Inside button
             &:after {
-              background-color: $white;
-              margin-left: $vdm-switch-width-inside + $vdm-switch-padding;
+              margin-left: $checkbox-toggle-width-inside +
+                $checkbox-toggle-padding;
             }
 
             // Outside pill
             &:before {
-              background-color: $vdm-form-bg-color;
-              border: 0;
+              background-color: $custom-control-indicator-disabled-bg;
             }
           }
-        } //  Checked
+        }
 
         &:checked {
           & + label {
             // Inside button
             &:after {
-              background-color: $white;
-              margin-left: $vdm-switch-width-inside + $vdm-switch-padding;
+              margin-left: $checkbox-toggle-width-inside +
+                $checkbox-toggle-padding;
             }
 
             // Outside pill
             &:before {
-              background-color: $vdm-form-bg-color;
-              border: 0;
+              background-color: $custom-control-indicator-disabled-bg;
             }
           }
-        } //  Checked
-
-        &:disabled {
-          & + label {
-            // Inside button
-            &:after {
-              background-color: $white;
-              margin-left: 0;
-            }
-
-            // Outside pill
-            &:before {
-              background-color: $vdm-form-disabled-bg-color;
-              border: 0;
-            }
-          }
-        } //  Disabled
-
-        &:disabled {
-          &:checked {
-            & + label {
-              // Inside button
-              &:after {
-                margin-left: $vdm-switch-width-inside + $vdm-switch-padding;
-              }
-
-              // Outside pill
-              &:before {
-                background-color: $vdm-form-disabled-bg-color;
-              }
-            }
-          }
-
-          &:checked {
-            & + label {
-              // Inside button
-              &:after {
-                margin-left: $vdm-switch-width-inside + $vdm-switch-padding;
-              }
-
-              // Outside pill
-              &:before {
-                background-color: $vdm-form-disabled-bg-color;
-              }
-            }
-          }
-        } //  Disabled & checked
-      }
+        }
+      } //  Disabled & checked
     }
-  } // Toggle
-} //  Checkboxes
+  }
+}

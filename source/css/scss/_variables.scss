@@ -28,6 +28,21 @@ $gray-800: #343a40;
 $gray-900: #212529;
 $black:    #000;
 
+
+// UI color
+
+$blue:    #005fc9;
+
+$indigo:  #6610f2 !default;
+$purple:  #6f42c1 !default;
+$pink:    #e83e8c !default;
+$red:     #dc3545 !default;
+$orange:  #fd7e14 !default;
+$yellow:  #ffc107 !default;
+$green:   #28a745 !default;
+$teal:    #20c997 !default;
+$cyan:    #17a2b8 !default;
+
 // We keep those custom grays ? -> I am not attached, I much prefer a decimal system with flexibility
 $vdm-grey-light:    #f2f2f1;
 $vdm-grey:          #80807f;
@@ -59,8 +74,8 @@ $body-color:            $black;
 //
 // Style anchor elements.
 
-$link-color:                  $vdm-brand;
-$link-decoration:             none !default;
+$link-color:                  $blue;
+$link-decoration:             underline;
 $link-hover-color:            $black;
 $link-hover-decoration:       underline;
 
@@ -76,6 +91,10 @@ $paragraph-margin-bottom:     1.5rem;
 
 $line-height-lg:              1.625;
 $line-height-sm:              1.3125;
+
+$border-radius:               .25rem;
+$border-radius-lg:            .3125rem;
+$border-radius-sm:            .2rem;
 
 // Fonts
 //
@@ -96,16 +115,6 @@ $font-size-xs:                0.75rem;    // ~12px
 $lead-font-size:              ($font-size-base * 1.25);
 $lead-font-weight:            $font-weight-regular;
 
-//Icons fonts -vdm-font-icon character
-$vdm-icon-font-path: $assets-font-path;
-$vdm-icon-font-version: '0.5';
-$vdm-icon-font-family : 'vdm-fonticon';
-// @see variable $icon all the way at the end for symbols definition
-
-$vdm-icon-font-size: 3.6rem;
-$vdm-icon-font-height : 3.6rem;
-$vdm-icon-font-width : 3.6rem;
-$vdm-icon-font-line-height : 3.6rem;
 
 //== Icons fonts vfi class, imported from "@villemontreal/font-icon
 $vfi-icon-font-path: $assets-font-path;
@@ -188,7 +197,7 @@ $card-border-color:                 $vdm-brand;
 $card-inner-border-radius:          0;
 //$card-bg:                           $gray-500;
 
-
+//
 // Alerts
 //
 // Define alert colors, border radius, and padding.
@@ -205,169 +214,84 @@ $alert-border-width:                0;
 $badge-pill-padding-x:              1em;
 $badge-pill-padding-y:              .5em;
 
-
-// - - - - - - - - - -
-// == Forms
-// - - - - - - - - - -
-
-//== Form elements
-
-// Form generalities
-$vdm-form-bg-color:         $vdm-brand;
-$vdm-form-text-color:       $white;
-$vdm-form-border:           none;
-$vdm-error-color:           $vdm-sub-brand;
-
-// Form elements - generic
-$vdm-element-border-width: 2px;
-$vdm-element-border-radius: 5px;
-$vdm-element-padding: 2px;
-$vdm-element-base-height: 34px;
-
-// Secondary element states
-$vdm-form-alt-bg-color: $white;
-$vdm-form-alt-text-color: $vdm-brand;
-$vdm-form-alt-border: 2px solid $vdm-brand;
-
-$vdm-form-disabled-bg-color: $vdm-neutral-light;
-$vdm-form-disabled-text-color: $vdm-neutral-mid;
-$vdm-form-disabled-secondary-border: 2px solid $vdm-neutral-light;
-
+//
 // Buttons
-$vdm-btn-padding-x: 40px;
-$vdm-btn-padding-y: 5px;
-$vdm-btn-border-width: 2px;
-$vdm-btn-height: 53px;
-$vdm-btn-small-height: 40px;
+//
 
-// False checkboxes :on/off switches
-$vdm-switch-border-radius: 40px;
-$vdm-switch-border-radius-inside: 30px;
-$vdm-switch-height: 40px;
-$vdm-switch-width: 75px;
-$vdm-switch-width-inside: 30px;
-$vdm-switch-padding: 5px;
+$btn-border-width:            none;
+
+$vdm-btn-padding-x:           40px;
+$vdm-btn-padding-y:           5px;
+$vdm-btn-border-width:        2px;
+$vdm-btn-height:              53px;
+$vdm-btn-small-height:        40px;
+
+$btn-link-disabled-color:     $vdm-neutral-mid;
+
+//
+// Forms
+//
+
+$input-border-width:                          2px;
+$input-disabled-bg:                             $vdm-neutral-light;
+
+$custom-control-indicator-disabled-bg:          $vdm-neutral-light;
+$custom-control-label-disabled-color:           $vdm-neutral-mid;
+
+$custom-control-gutter:                         3rem;
+$custom-control-spacer-y:                       1rem;
+
+$custom-control-indicator-size:                 1.875rem;
+$custom-control-indicator-bg:                   $vdm-grey-light;
+$custom-control-indicator-bg-size:              50% 50%;
+
+//$custom-control-indicator-focus-box-shadow:     0 0 0 1px $body-bg, 0 0 0 .2rem rgba($vdm-brand, .25);
+$custom-control-indicator-focus-box-shadow:     none;
+$custom-control-indicator-checked-color:        $vdm-brand;  
+$custom-control-indicator-checked-bg:           $custom-control-indicator-bg;  
+
+$custom-checkbox-indicator-border-radius:       $border-radius-lg;
+$custom-checkbox-indicator-icon-checked:        none;
+$custom-checkbox-indicator-indeterminate-bg:    $custom-control-indicator-bg;
+
+$custom-checkbox-indicator-icon-indeterminate:  none;
+$custom-checkbox-indicator-icon-checked:        none;
+
+$custom-radio-indicator-icon-checked:           none;
+
+
+// Checkbox Toggle :on/off switches
+
+$checkbox-toggle-border-width:          2px;
+$checkbox-toggle-border-radius:         40px;
+$checkbox-toggle-border-radius-inside:  30px;
+$checkbox-toggle-height:                40px;
+$checkbox-toggle-width:                 75px;
+$checkbox-toggle-width-inside:          30px;
+$checkbox-toggle-padding:               5px;
 
 // Textfields
-$vdm-textfield-border-radius: $vdm-element-border-radius;
 
 
+
+//
 // Menus
-$vdm-side-menu-width: 300px;
-$vdm-side-menu-border-width: 2px;
-$vdm-side-menu-icon-size: 3rem;
-$vdm-side-menu-link-h-padding: 1rem;
-$vdm-side-menu-link-v-padding: 1.75rem;
+//
+$side-menu-width:               300px;
+$side-menu-border-width:        2px;
+$side-menu-icon-size:           3rem;
+$side-menu-link-h-padding:      1rem;
+$side-menu-link-v-padding:      1.75rem;
 
 
 // - - - - - - - - - -
 // == Layout
 // - - - - - - - - - -
 
-$vdm-sidebar-box-h-padding : 1.75rem;
-$vdm-sidebar-box-v-padding : 1.5rem;
+$sidebar-box-h-padding:         1.75rem;
+$sidebar-box-v-padding:         1.5rem;
 
 // Vertical spacing between regions and sections
-$region-last-padding-bottom: 4rem;
-$region-padding-bottom: 3rem;
-$section-padding-bottom: 2.5rem;
-
-// Checkboxes
-// $vdm-checkbox-border-radius: 40px;
-// $vdm-checkbox-border-radius-inside: 30px;
-// $vdm-checkbox-height: 40px;
-// $vdm-checkbox-width: 75px;
-// $vdm-checkbox-width-inside: 30px;
-// $vdm-checkbox-padding: 3px;
-
-
-$icons: (
-  rosette: "\E000",
-  search: "\E001",
-  profile: "\E002",
-  flag: "\E003",
-  calendar: "\E004",
-  sun: "\E005",
-  ticket: "\E006",
-  eye: "\E007",
-  people: "\E008",
-  doc-holder: "\E009",
-  bus: "\E00A",
-  phone: "\E00B",
-  book: "\E00C",
-  arrow-play: "\E00D",
-  arrow-select: "\E00E",
-  news-item: "\E00F",
-  location-star: "\E010",
-  permit-id: "\E011",
-  document: "\E012",
-  credit-card: "\E013",
-  folder: "\E014",
-  bell: "\E015",
-  settings: "\E016",
-  plus-circle-dot: "\E017",
-  minus-circle-dot: "\E018",
-  steps-checked: "\E019",
-  ellipsis-circle-dot: "\E01A",
-  enveloppe: "\E01B",
-  folder-add: "\E01C",
-  warning-triangle: "\E01D",
-  computer: "\E01E",
-  nut: "\E01F",
-  pencil: "\E020",
-  lightbulb: "\E021",
-  pen: "\E022",
-  warning-circle: "\E023",
-  clock: "\E024",
-  target: "\E025",
-  broom: "\E026",
-  permit: "\E027",
-  arrow-circle-up: "\E028",
-  arrow-circle-right: "\E029",
-  arrow-circle-down: "\E02A",
-  arrow-circle-left: "\E02B",
-  house: "\E02C",
-  x-close: "\E02D",
-  circle-progress-done: "\E02E",
-  circle-progress-a: "\E02F",
-  circle-progress-ab: "\E030",
-  circle-progress-abc: "\E031",
-  circle-progress-c: "\E032",
-  circle-progress-bc: "\E033",
-  circle-progress-checked: "\E034",
-  circle-progress-folder: "\E035",
-  chevron-up: "\E036",
-  chevron-right: "\E037",
-  chevron-down: "\E038",
-  chevron-left: "\E039",
-  circle-checked: "\E03A",
-  menu: "\E100",
-  location: "\E101",
-  arrow-up: "\E102",
-  arrow-right: "\E103",
-  arrow-down: "\E104",
-  arrow-left: "\E105",
-  plus: "\E200",
-  minus: "\E201",
-  multiply: "\E202",
-  circle-plus: "\E203",
-  circle-minus: "\E204",
-  circle-multiply: "\E205",
-  circle-plus-invert: "\E206",
-  circle-minus-invert: "\E207",
-  circle-multiply-invert: "\E208",
-  checkbox-checked: "\E209",
-  checkbox-empty: "\E20A",
-  checkbox-checked-trans: "\E20B",
-  checkbox-checked-invert: "\E20C",
-  trash: "\E400",
-  recycle: "\E401",
-  compost: "\E402",
-  greens: "\E403",
-  permit-pet: "\E404"
-);
-
-
-
-
-
+$region-last-padding-bottom:    4rem;
+$region-padding-bottom:         3rem;
+$section-padding-bottom:        2.5rem;

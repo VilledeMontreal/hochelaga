@@ -258,16 +258,16 @@
 
 // The base unit for a sidebar component, stacked
 .sb-block {
-  padding: $vdm-sidebar-box-v-padding $vdm-sidebar-box-h-padding 2rem
-    $vdm-sidebar-box-h-padding;
+  padding: $sidebar-box-v-padding $sidebar-box-h-padding 2rem
+    $sidebar-box-h-padding;
   &:last-of-type {
     // padding-bottom: 0;
-    margin-bottom: $vdm-sidebar-box-v-padding;
+    margin-bottom: $sidebar-box-v-padding;
   }
 
   // The basic grouping tool for visual effect, with a padding/margin-bottom;
   .subsection {
-    padding-bottom: $vdm-sidebar-box-v-padding;
+    padding-bottom: $sidebar-box-v-padding;
     &:last-of-type {
       padding-bottom: 0;
     }

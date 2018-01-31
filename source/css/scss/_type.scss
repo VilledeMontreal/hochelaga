@@ -322,7 +322,7 @@ blockquote {
   border-width: 0;
   height: $font-size-base / 3;
   background: $black;
-  border-radius: $font-size-base / 4;
+  border-radius: 0;
   &.mock-title {
     width: 3rem;
     margin-left: 0;
@@ -345,12 +345,12 @@ blockquote {
   font-weight: $font-weight-regular;
   font-size: $font-size-xs;
   background: transparent;
-  border: $vdm-element-border-width/2 solid $vdm-brand;
+  border: $input-border-width/2 solid $vdm-brand;
   color: $vdm-brand;
-  border-radius: $vdm-element-border-radius;
+  border-radius: $border-radius-lg;
   padding: $vdm-btn-padding-y $vdm-btn-padding-x * 0.75;
   &.selected {
-    border: $vdm-element-border-width/2 solid $black;
+    border: $input-border-width/2 solid $black;
     color: $black;
   }
 }
@@ -360,7 +360,7 @@ blockquote {
 //
 // for the rendering of dates in general
 
-.vdm-date {
+.date {
   font-size: $font-size-xl;
   // Fat day, discrete month, block level headings
   &.day-month {
@@ -375,7 +375,7 @@ blockquote {
         content: " ";
         left: 0.05em;
         bottom: -0.075em;
-        border-radius: $vdm-element-border-radius;
+        //border-radius: $vdm-element-border-radius;
         height: 4px;
         background: $black;
       }
