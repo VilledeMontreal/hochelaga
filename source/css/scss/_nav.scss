@@ -84,7 +84,11 @@
 
 .collapsible-item {
   padding: 0;
+  margin-bottom: 30px;
   .collapsible-header {
+    h4 {
+      margin: 0;
+    }
     a {
       @include header(5);
       background: $vdm-grey-light;
@@ -152,10 +156,30 @@
   }
   // Content block wrapper
   .collapsible-block {
-    padding-left: 4.3rem;
-    padding-top: 1rem;
-    padding-bottom: 1.5rem;
+    padding: 1rem 4.3rem 1.5rem 4.3rem;
   }
+}
+
+.collapsible-variant {
+  .collapsible-item {
+    background-color: $white;
+    box-shadow: 0 2px 7px 4px rgba(232,232,232,0.5);
+    position: relative;
+    z-index: 100;
+  }
+  .collapsible-header {
+    position: relative;
+    a {
+      background: transparent;
+    }
+    span {
+      margin-right: 15px;
+    }
+    .badge-pill {
+      font-size: $font-size-xs;
+    }
+  }
+
 }
 
 //
