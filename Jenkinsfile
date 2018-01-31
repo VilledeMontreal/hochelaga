@@ -48,7 +48,7 @@ try {
         }
 
         pipeline.publishLibStage(ctx) {
-            sh "publishing in nexus";
+            sh "echo publishing in nexus";
         }
 
         pipeline.buildImageStage(ctx) {
