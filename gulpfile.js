@@ -367,7 +367,9 @@ gulp.task('default', ['cleanable:before'], function () {
 gulp.task('serve', function () {
   production = false;
   gulp.start(
-    'default'
+    'browsersync',
+    'default',
+    'watch'
   );
 });
 
