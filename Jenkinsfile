@@ -15,14 +15,14 @@ ctx = pipeline.createContext([
     "developmentBranch": "develop",
     "slave": "nodejs",
     "deploymentTargetHosts": [
-        //"PRODUCTION": "10.145.1.78", //prdldk01b.ile.montreal.qc.ca
+        //"PRODUCTION": "10.145.1.80", //prdldk02a.ile.montreal.qc.ca
     	"DEVELOPMENT": "10.145.10.62", //dvlldk02a.ile.montreal.qc.ca
-    	//"ACCEPTANCE": "10.145.10.41" //accldk01a.ile.montreal.qc.ca
+    	"ACCEPTANCE": "10.145.10.64" //accldk02a.ile.montreal.qc.ca
     ],
     "dockerComposeFiles": [
         //"PRODUCTION": "docker-compose-prod.yml",
     	"DEVELOPMENT": "docker-compose-dev.yml",
-    	//"ACCEPTANCE": "docker-compose-accept.yml"
+    	"ACCEPTANCE": "docker-compose-accept.yml"
     ],
     "acceptApprovers" : [
         "submitter1" : [ "id" : "udall98", "mailto" : "chdallaire" ],
