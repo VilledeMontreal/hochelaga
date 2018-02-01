@@ -366,11 +366,6 @@ gulp.task('default', ['cleanable:before'], function () {
 // Description: Clean all stale public files, build all componenents, serve and watch
 gulp.task('serve', function () {
   production = false;
-  //gulp.start(
-  //  'browsersync',
-  //  'default',
-  //  'watch'
-  //);
   gulp.start(
     'default'
   );
