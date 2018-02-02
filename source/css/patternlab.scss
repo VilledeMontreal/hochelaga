@@ -307,17 +307,6 @@ $pl-size-box-wrapper-padding: 1rem;
           }
         }
 
-        // Duplicate code for the new version
-        .vfi {
-          font-family: $vfi-icon-font-family !important;
-          display: block;
-          width: 128px;
-          height: 128px;
-          background-color: rgba(0, 0, 0, 0.05);
-          &:before {
-            font-size: 128px;
-          }
-        }
         .ic-name,
         .ic-charcode {
           display: block;
@@ -327,6 +316,59 @@ $pl-size-box-wrapper-padding: 1rem;
         }
         .ic-name {
           color: $black;
+        }
+      }
+    }
+  }
+}
+
+
+// Swatches - flexbox
+.pl-swatches-flex{
+  .pl-swatches-wrapper {
+    .pl-swatches {
+      display: flex;
+      flex-flow: column nowrap;
+      justify-content: space-between;
+      margin-bottom: 3rem;
+
+      // Header
+      .pl-swatch-header {
+        display: none;
+        font-weight: bold;
+      }
+
+      // Row
+      .pl-swatch {
+        width: 100%;
+        @include media-breakpoint-up(md) {
+          display: flex;
+          flex-flow: row nowrap;
+          justify-content: center;
+          border-top: 1px solid $gray-300;
+        }
+        // item
+        &-item {
+          display: flex;
+          flex-flow: row nowrap;
+          //flex-grow: 1;
+          //flex-basis: 0;
+          flex: 1;
+          padding: 0.5em;
+          //word-break: break-word;
+          align-items: center;
+          &:before {
+            content: attr(data-header);
+            width: 30%;
+            font-weight: 700;
+          }
+
+          @include media-breakpoint-up(md) {
+            padding: 0.5em;
+            &:before { 
+              content: none; 
+            }
+          }
         }
       }
     }
@@ -348,28 +390,27 @@ $pl-size-box-wrapper-padding: 1rem;
       // @include make-xs-column(12);
       // @include make-md-column(6);
       @include make-col-ready();
-      @include media-breakpoint-up(xs) {
-        @include make-col(12);
-      }
-      @include media-breakpoint-up(md) {
-        @include make-col(6);
-      }
+      @include make-col(12);
 
       .pl-swatch-list {
-        list-style-type: none;
-        padding: 0;
-        margin: 0;
+        @extend .list-unstyled;
+        display: flex;
+        flex-direction: column;
 
         .pl-swatch {
           padding: 1em;
+          //flex-grow: 1;
+
+          span {
+            display: inline-flex;
+            width: 20%;
+          }
+          .pl-swatch-round {
+            flex-grow: 0;
+          }
 
           // Hexadecimal identifier
           .pl-hex {
-            display: block;
-            float: right;
-            width: 30%;
-            font-size: $font-size-sm;
-            text-align: right;
           }
         }
       }
@@ -388,7 +429,7 @@ $pl-size-box-wrapper-padding: 1rem;
     }
 
     // Colors
-
+    /*
     .pl-black {
       background: $black;
     }
@@ -416,7 +457,7 @@ $pl-size-box-wrapper-padding: 1rem;
       background: $vdm-sub-brand;
       color: $white;
     }
-
+    */
     // Columns
     .pl-color-table-column-swatch {
       width: 20%;
@@ -569,6 +610,12 @@ $pl-size-box-wrapper-padding: 1rem;
   // }
 } // .pl-atom-color
 
+.pl-swatch-round {
+  border-radius: 50%;
+  @include size(60px);
+  display: inline-flex;
+}
+
 // Form-elements
 // - - - - - - - - - -  - - - - - -
 .pl-button {
@@ -705,4 +752,44 @@ $pl-size-box-wrapper-padding: 1rem;
     }
 }
 
+
 */
+
+// PL headings 
+
+.pl-h2 {
+ @extend .h2;
+}
+
+// Colors
+//
+// Contextual variations (linked badges get darker on :hover).
+
+@each $color, $value in $theme-colors {
+  .pl-#{$color} {
+    background: $value;
+  }
+}
+
+@each $color, $value in $grays {
+  .pl-gray-#{$color} {
+    background: $value;
+  }
+}
+
+.pl-sub-brand {
+  background: $vdm-sub-brand;
+}
+
+.pl-brand {
+  background: $vdm-brand;
+}
+
+.pl-black {
+  background: $black;
+}
+
+.pl-white {
+  background: $white
+}
+
