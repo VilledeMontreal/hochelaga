@@ -1,13 +1,15 @@
-<div class="container">
-  <div class="row">
-    <div class="col">
-      <ul class="nav nav-steps" role="tablist">
-        <li role="presentation" class="nav-item">
-          <a href="#step1" class="nav-link active" data-toggle="tab" aria-controls="step1" role="tab" title="Step 1">
-            <span class="caption">Step 1 Name</span>
-            <span class="circle" aria-hidden="true"></span>
-          </a>
-        </li>
+<ul class="nav nav-steps" role="tablist">
+  {{# wizardSteps }}
+  <li role="presentation" class="nav-item">
+    <a href="#{{ stepID }}" class="nav-link {{ is-active }}" data-toggle="tab" aria-controls="{{ stepID }}" role="tab" title="{{ stepName }}">
+      <span class="caption">{{ stepName }}</span>
+      <span class="circle" aria-hidden="true"></span>
+    </a>
+  </li>
+  {{/ wizardSteps }}
+</ul>
+
+<!--
         <li role="presentation" class="nav-item disabled">
           <a href="#step2" class="nav-link disable" data-toggle="tab" aria-controls="step2" role="tab" title="Step 2">
             <span class="caption">Step 2 Name</span>
@@ -26,13 +28,10 @@
             <span class="caption">Step 4 Name</span>
             <span class="circle" aria-hidden="true"></span>
           </a>
-        </li>
-      </ul>
-    </div>
-  </div>
+        </li>-->
+<!--
   <div class="row">
     <div class="col">
-      <!-- Steps content below -->
       <form role="form">
         <div class="tab-content">
           <div class="tab-pane active" role="tabpanel" id="step1">
@@ -77,3 +76,4 @@
     </div>
   </div>
 </div>
+-->
