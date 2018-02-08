@@ -1,0 +1,5 @@
+//Use background.scss logic to add bg-variants for grays
+
+@each $color, $value in $grays {
+  @include bg-variant(".bg-gray-#{$color}", $value);
+}

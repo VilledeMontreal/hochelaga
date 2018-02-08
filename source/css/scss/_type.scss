@@ -1,6 +1,3 @@
-@import "variables.scss";
-@import "mixins.scss";
-
 h1 {
   @include header(1);
 }
@@ -54,7 +51,7 @@ h6 {
 
 .intro {
   font-weight: $font-weight-regular;
-  font-size: $font-size-xs;
+  font-size: $font-size-sm;
   line-height: $line-height-lg;
 }
 
@@ -144,6 +141,8 @@ a {
       color: $vdm-brand;
     }
   }
+
+
 }
 // Inline links with icons - Headers : a tad smaller
 h1,
@@ -258,6 +257,35 @@ ol {
   }
 }
 
+// Date lists
+// A list of items grouped under dates
+// date-list> ul > li > { day-month-year } ul > li { item one } /li |  li { item two } /li ...
+.date-list {
+  margin-bottom: 1.5em;
+  @extend .list-unstyled;
+  &:last-of-type {
+    margin-bottom: 0;
+  }
+  > li {
+    .date {
+      margin-bottom: 1.5em;
+    }
+    ul {
+      margin-bottom: 2em;
+
+      &.list-items {
+        li {
+          margin-bottom: 2em;
+
+          &:last-of-type {
+            margin-bottom: 0;
+          }
+        }
+      }
+    }
+  }
+}
+
 // Definition list
 
 dl {
@@ -301,7 +329,7 @@ blockquote {
     .blockquote-footer {
       font-style: normal;
       color: $vdm-grey;
-      font-size: $font-size-xs;
+      font-size: $font-size-sm;
       text-align: right;
       &:before {
         display: none;
@@ -334,16 +362,16 @@ blockquote {
 }
 
 .meta {
-  font-size: $font-size-xs;
+  font-size: $font-size-sm;
 }
 
 .date-time {
-  font-size: $font-size-xs;
+  font-size: $font-size-sm;
 }
 
 .vdm-label {
   font-weight: $font-weight-regular;
-  font-size: $font-size-xs;
+  font-size: $font-size-sm;
   background: transparent;
   border: $input-border-width/2 solid $vdm-brand;
   color: $vdm-brand;
@@ -379,6 +407,35 @@ blockquote {
         height: 4px;
         background: $black;
       }
+    }
+  }
+}
+
+// Link box are used to build grid display of links
+//
+// Might not be in the right stylesheet
+.link-box {
+  :hover,
+  :active {
+    text-decoration: none;
+  }
+  a {
+    display: flex;
+    flex-direction: row;
+    height: 100%;
+  }
+  .link-box-content {
+    color: $body-color;
+    display: flex;
+    flex: 1;
+    flex-direction: row;
+    background-color: $white;
+    margin-bottom: $grid-gutter-width;
+    padding: 20px;
+    align-items: center;
+    .vfi {
+      font-size: 2rem;
+      color: $vdm-brand;
     }
   }
 }

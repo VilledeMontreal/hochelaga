@@ -2,7 +2,7 @@
 // Reference used : https://projects.invisionapp.com/d/main#/console/11533069/245898997/inspect
 .breadcrumb {
   border-radius: 0;
-  font-size: $font-size-xs;
+  font-size: $font-size-sm;
 }
 
 // Pagination
@@ -66,7 +66,7 @@
 }
 
 .pagination-sm {
-  @include pagination-size($pagination-padding-y-sm, $pagination-padding-x-sm, $font-size-sm, $line-height-sm, 0);
+  @include pagination-size($pagination-padding-y-sm, $pagination-padding-x-sm, $font-size-md, $line-height-sm, 0);
 
   .page-item {
     &:first-child,
@@ -176,7 +176,7 @@
       margin-right: 15px;
     }
     .badge-pill {
-      font-size: $font-size-xs;
+      font-size: $font-size-sm;
     }
   }
 
@@ -485,7 +485,7 @@ nav {
 .nav-steps {
   display: flex;
   flex-direction: column;
-  @extend .flex-md-row;
+  @extend .flex-sm-row;
   // Position the steps line and circle
   li {
     position: relative;
@@ -516,6 +516,8 @@ nav {
   }
   .caption {
     color: $vdm-grey;
+    display: inline-block;
+    padding-bottom: .5rem;
   }
   .circle {
     @include circle($background-color: $vdm-grey-light, $border: true);
@@ -541,7 +543,7 @@ nav {
     }
   }
   //larger than 768px
-  @include media-breakpoint-up(md) {
+  @include media-breakpoint-up(sm) {
     justify-content: center;
     // Position the steps line and circle
     .nav-item {
@@ -565,7 +567,7 @@ nav {
     }
   }
   // smaller than 768px
-  @include media-breakpoint-down(sm) {
+  @include media-breakpoint-down(xs) {
     li {
       &:after {
         top: 50%;
@@ -578,6 +580,7 @@ nav {
         .caption {
           order: 2;
           padding-left: 1rem;
+          padding-bottom: 0;
         }
         .circle {
           order: 1;

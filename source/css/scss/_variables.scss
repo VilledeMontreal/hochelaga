@@ -109,8 +109,8 @@ $font-weight-bold:            700; // Nunito Sans Bold
 $font-size-base:              1rem;       // Assumes the browser default, typically `16px`
 $font-size-xl:                1.25rem;    // ~20px
 $font-size-lg:                1.125rem;   // ~18px
-$font-size-sm:                0.875rem;   // ~14px
-$font-size-xs:                0.75rem;    // ~12px
+$font-size-md:                0.875rem;   // ~14px
+$font-size-sm:                0.75rem;    // ~12px
 
 $lead-font-size:              ($font-size-base * 1.25);
 $lead-font-weight:            $font-weight-regular;
@@ -209,6 +209,16 @@ $alert-border-radius:               0;
 $alert-link-font-weight:            $font-weight-bold !default;
 $alert-border-width:                0;
 
+
+// Progress circle bars
+
+$progress-circle-border-width:          5px;
+$progress-circle-border-color-default:  $gray-300;
+$progress-circle-border-color-fill:     $gray-700;
+$progress-circle-size:                  100px;
+$progress-circle-steps:                 100; //this needs to be even.
+$progress-circle-animation-timing:      .5s;
+
 // Badges
 
 $badge-pill-padding-x:              1em;
@@ -220,11 +230,16 @@ $badge-pill-padding-y:              .5em;
 
 //$btn-border-width:            none;
 
-$vdm-btn-padding-x:           40px;
-$vdm-btn-padding-y:           5px;
+//$vdm-btn-padding-x:           40px;
+//$vdm-btn-padding-y:           12px;
 $vdm-btn-border-width:        2px;
 $vdm-btn-height:              53px;
 $vdm-btn-small-height:        40px;
+
+$vdm-btn-padding-y:           .75rem;
+$vdm-btn-padding-x:           2.5rem;
+$vdm-btn-padding-y-sm:        .625rem;
+$vdm-btn-padding-x-sm:        2rem;
 
 $btn-link-disabled-color:     $vdm-neutral-mid;
 
@@ -232,8 +247,18 @@ $btn-link-disabled-color:     $vdm-neutral-mid;
 // Forms
 //
 
-$input-border-width:                            2px;
+$input-color:                                   $gray-800;
+$input-border-color:                            $gray-400;
+$input-border-width:                            1px;
+
 $input-disabled-bg:                             $vdm-neutral-light;
+
+$input-placeholder-color:                       $gray-600;
+
+$input-group-addon-bg:                          $white;
+
+
+// custom forms
 
 $custom-control-indicator-disabled-bg:          $vdm-neutral-light;
 $custom-control-label-disabled-color:           $vdm-neutral-mid;
@@ -246,9 +271,11 @@ $custom-control-indicator-bg:                   $vdm-grey-light;
 $custom-control-indicator-bg-size:              50% 50%;
 
 //$custom-control-indicator-focus-box-shadow:     0 0 0 1px $body-bg, 0 0 0 .2rem rgba($vdm-brand, .25);
-$custom-control-indicator-focus-box-shadow:     none;
+$custom-control-indicator-focus-box-shadow:     none !important;
+$custom-control-indicator-active-box-shadow:    none !important;
+$custom-control-indicator-active-bg:            none !important;
 $custom-control-indicator-checked-color:        $vdm-brand;  
-$custom-control-indicator-checked-bg:           $custom-control-indicator-bg;  
+$custom-control-indicator-checked-bg:           $custom-control-indicator-bg;
 
 $custom-checkbox-indicator-border-radius:       $border-radius-lg;
 $custom-checkbox-indicator-icon-checked:        none;
@@ -258,6 +285,7 @@ $custom-checkbox-indicator-icon-indeterminate:  none;
 $custom-checkbox-indicator-icon-checked:        none;
 
 $custom-radio-indicator-icon-checked:           none;
+$custom-control-indicator-checked-disabled-bg:  $custom-control-indicator-bg;
 
 
 // Checkbox Toggle :on/off switches

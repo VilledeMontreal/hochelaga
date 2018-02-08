@@ -15,30 +15,33 @@
 
   @if $level == 1 {
     font-weight: $font-weight-light;
-    font-size: $font-size-base * 4.1875; // 67px
+    font-size: 4.1875rem; // 67px
     line-height: $line-height-sm; // 92px
   }
   @if $level == 2 {
     font-weight: $font-weight-light;
-    font-size: $font-size-base * 3.125; // 50px
+    font-size: 3.125rem; // 50px
     line-height: $line-height-sm; // 69px
-  } @else if $level == 3 {
-    font-size: $font-size-base * 2.3125; // 37px
+  }
+  @if $level == 3 {
+    font-size: 2.3125rem; // 37px
     line-height: $line-height-sm; // 50px
-  } @else if $level == 4 {
-    font-size: $font-size-base * 1.75; // 28px
+  } 
+  @if $level == 4 {
+    font-size: 1.75rem; // 28px
     line-height: $line-height-sm; // 38px
-    font-weight: $font-weight-regular;
-
-    @if $weight == "bold" {
-      font-weight: $font-weight-bold;
-    }
-  } @else if $level == 5 {
-    font-size: $font-size-base * 1.3125; // 21px
+  } 
+  @if $level == 5 {
+    font-size: 1.3125rem; // 21px
     line-height: $line-height-sm; // 28px
-  } @else if $level == 6 {
-    font-size: $font-size-base; // 16px
+  } 
+  @if $level == 6 {
+    font-size: 1rem; // 16px
     line-height: $line-height-lg; // 26px
+  }
+
+  @if $weight == "bold" {
+    font-weight: $font-weight-bold;
   }
 }
 
@@ -131,6 +134,27 @@
       font-size: $size;
       left: calc(100% - #{ $size / 2 });
     }
+  }
+}
+
+// Add background variant to .header-banner.
+//
+// @see badge-variant mixins
+@mixin banner-variant($bg) {
+  color: color-yiq($bg);
+  background-color: $bg;
+  
+  a {
+    color: color-yiq($bg);
+  }
+}
+
+// Add color variant to .progress-bar.
+//
+// @see badge-variant mixins
+@mixin progress-variant($bg) {
+  .progress-bar {
+    border-color: $bg;
   }
 }
 
@@ -259,7 +283,6 @@
     content: "";
     display: inline-block;
     color: $vdm-brand;
-    // border: 1px solid orange;
     left: 0;
     top: 0;
   }
@@ -349,6 +372,7 @@
   @return $string;
 }
 
+// Creates a filled circle
 @mixin circle($size: 1rem, $background-color: $vdm-brand, $border: false, $border-color: $gray-600) {
   background-color: $background-color;
   border-radius: 50%;

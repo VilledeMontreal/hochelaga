@@ -32,10 +32,12 @@ html {
 // Make all base regions Bootstrap containers & rows
 // with these standardized classes
 .region {
-  padding-bottom: $region-padding-bottom;
+  //padding-bottom: $region-padding-bottom;
+  /*
   &:last-of-type {
     padding-bottom: $region-last-padding-bottom;
   }
+  */
 
   .region-container {
     @include make-container();
@@ -175,6 +177,10 @@ html {
     &.shaded-black {
       background: $vdm-neutral-light;
     }
+  }
+
+  &.region-border {
+    border-bottom: 1px solid $gray-400;
   }
 
   &.has-nav-tabs {

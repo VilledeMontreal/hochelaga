@@ -196,6 +196,48 @@
   }
 }
 
+
+// Wizard header
+//
+// Optimize and normalize - we can extend from banner and build more generic containers
+.wizard-header {
+  background-color: $white;
+  display: flex;
+  border-bottom: 1px solid $gray-400;
+  justify-content: space-between;
+  .hdr-container,
+  .hdr-links {
+    display: flex;
+    > * {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+  }
+  .home-link {
+    flex-shrink: 0;
+    @include size(60px);
+    background-color: $black;
+    color: $white;
+    text-decoration: none;
+    .vfi {
+      font-size: 3rem;
+    }
+  }
+  .hdr-title {
+    font-weight: $font-weight-bold;
+    font-size: 1.5rem; // 24px
+    padding-left: $grid-gutter-width;
+    padding-right: $grid-gutter-width;
+  }
+  .hdr-links {
+    ul {
+      margin-bottom: 0;
+    }
+  }
+}
+
+
 // Header banner
 .header-banner {
   background: $black;
@@ -206,6 +248,7 @@
   justify-content: center;
   padding: 0 $grid-gutter-width;
   line-height: 1;
+
   @include media-breakpoint-up(md) {
     justify-content: space-between;
   }
@@ -233,5 +276,14 @@
       color: $white;
       text-decoration: underline;
     }
+  }
+}
+
+// Colors
+//
+// Contextual variations.
+@each $color, $value in $theme-colors {
+  .banner-#{$color} {
+    @include banner-variant($value);
   }
 }

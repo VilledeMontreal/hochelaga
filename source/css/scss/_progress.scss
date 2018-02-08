@@ -1,0 +1,155 @@
+// Progress circle
+//
+// TO DO : fix animation
+//         Find a way to fix value over 100%
+
+.progress-circle {
+  width: $progress-circle-size;
+  height: $progress-circle-size;
+  line-height: $progress-circle-size;
+  background: none;
+  margin: 0 auto;
+  box-shadow: none;
+  position: relative;
+  &:after {
+    content: "";
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    border: $progress-circle-border-width solid $progress-circle-border-color-default;
+    position: absolute;
+    top: 0;
+    left: 0;
+  }
+  .progress-left,
+  .progress-right {
+    width: 50%;
+    height: 100%;
+    overflow: hidden;
+    position: absolute;
+    top: 0;
+    z-index: 1;
+  }
+
+  .progress-bar {
+    width: 100%;
+    height: 100%;
+    background: none;
+    border-width: $progress-circle-border-width;
+    border-style: solid;
+    position: absolute;
+    top: 0;
+    border-color: $progress-circle-border-color-fill;
+  }
+
+  .progress-left {
+    left: 0;
+    .progress-bar {
+      left: 100%;
+      border-top-right-radius: ($progress-circle-size/2);
+      border-bottom-right-radius: ($progress-circle-size/2);
+      border-left: 0;
+      -webkit-transform-origin: center left;
+      transform-origin: center left;
+    }
+  }
+  .progress-right {
+    right: 0;
+    .progress-bar {
+      left: -100%;
+      border-top-left-radius: ($progress-circle-size/2);
+      border-bottom-left-radius: ($progress-circle-size/2);
+      border-right: 0;
+      -webkit-transform-origin: center right;
+      transform-origin: center right;
+    }
+  }
+  .progress-value {
+    display: flex;
+    border-radius: 50%;
+    text-align: center;
+    line-height: 20px;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+  }
+}
+
+/**
+ * This for loop creates the necessary css animation names 
+ * Due to the split circle of progress-left and progress right, we must use the animations on each side. 
+ */
+
+@for $i from 1 through $progress-circle-steps {
+  $stepName: ($i*(100 / $progress-circle-steps));
+
+  $degrees: (180/($progress-circle-steps/2));
+  $degrees: ($degrees*$i);
+
+
+  //animation only the left side if below 50%
+  @if $i <= ($progress-circle-steps/2) {
+
+    .progress-circle[data-percentage="#{$stepName}"] {
+      .progress-right .progress-bar {
+        -webkit-transform: rotate($degrees);
+        transform: rotate(#{$degrees}deg);
+        //animation: loading-#{$i} $progress-circle-animation-timing linear forwards;
+      }
+      .progress-left .progress-bar {
+        //animation: 0;
+      }
+    }
+  }
+  //animation only the right side if above 50%
+  @if $i > ($progress-circle-steps/2) {
+
+    // reset $degrees for $i > 50
+    $degrees: (180/($progress-circle-steps/2));
+    $degrees: ($degrees*($stepName - ($progress-circle-steps/2)));
+
+    .progress-circle[data-percentage="#{$stepName}"] {
+      .progress-right .progress-bar {
+        -webkit-transform: rotate(180);
+        transform: rotate(180deg);
+        //animation: loading-#{($progress-circle-steps/2)} $progress-circle-animation-timing linear forwards; //set the animation to longest animation
+      }
+      .progress-left .progress-bar {
+        -webkit-transform: rotate($degrees);
+        transform: rotate(#{$degrees}deg);
+        //animation: loading-#{$i - ($progress-circle-steps/2)} $progress-circle-animation-timing linear forwards $progress-circle-animation-timing;
+      }
+    }
+  }
+}
+
+//animation
+@for $i from 1 through ($progress-circle-steps/2) {
+  $degrees: (180/($progress-circle-steps/2));
+  $degrees: ($degrees*$i);
+  @keyframes loading-#{$i} {
+    0% {
+      -webkit-transform: rotate(0deg);
+      transform: rotate(0deg);
+    }
+    100% {
+      -webkit-transform: rotate($degrees);
+      transform: rotate(#{$degrees}deg);
+    }
+  }
+}
+
+//additional styling
+.progress-circle {
+  margin-bottom: 1em;
+}
+
+
+// Colors
+//
+// Contextual variations.
+@each $color, $value in $theme-colors {
+  .progress-#{$color} {
+    @include progress-variant($value);
+  }
+}
