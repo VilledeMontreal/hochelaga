@@ -303,12 +303,16 @@ gulp.task('styleguide', function() {
 gulp.task('browsersync', function() {
   browserSync({
     server: {
-        baseDir: config.root
+      baseDir: config.root,
+      routes: {
+        "/boite-outils": config.root
+      }
     },
     ghostMode: true,
     open: "internal"
   });
 });
+
 
 // Task: Watch
 // Description: Watch all relevant files for changes
