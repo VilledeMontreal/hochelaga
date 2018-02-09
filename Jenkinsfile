@@ -26,7 +26,7 @@ ctx = pipeline.createContext([
     ],
     "acceptApprovers" : [
         "submitter1" : [ "id" : "udall98", "mailto" : "chdallaire" ],
-
+        "submitter2" : [ "id" : "uboul8b", "mailto" : "alexis.boulerice" ],
     ],
     "nexusLib" : [
         "buildCommand" : "npm run package",
