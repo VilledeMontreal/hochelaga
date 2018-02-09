@@ -1,0 +1,31 @@
+{{> atoms-link-skip-to-main-content }}
+{{> molecules-menu-open-side }}
+<div class="{{ pageClasses }}">
+  {{> organisms-header-portal }}
+  {{> organisms-breadcrumb-region }}
+  <main class="main-content regions" id="main-content" aria-label="Main Content">
+    {{> organisms-region-header-portal }}
+    <div class="container {{ regionMainContainerClasses }}">
+      <div class="row">
+        <article class="col {{ regionMainContentClasses }}">
+          {{> molecules-search-field+dropdown }}
+
+          {{# cards }}
+          <div class="cards {{ cards.classes }}">
+          {{# cards.card-item }}
+            {{> molecules-card-item }}
+          {{/ cards.card-item }}
+          </div>
+          {{/ cards }}
+          
+          {{# hasPagination }}
+            {{> molecules-pagination("paginationClass": justify-content-center) }}
+          {{/ hasPagination }}
+        </article>
+      </div>
+    </div>
+  </main>
+  {{> organisms-footer-portal }}
+</div>
+
+

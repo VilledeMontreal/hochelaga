@@ -1,18 +1,4 @@
 {
-  "dummy": {
-    "dummy-atom": {
-      "classes": "dummy-atom-base-classes",
-      "content": "dummy-atom-base-content"
-    },
-    "dummy-organism": {
-      "classes": "dummy-organism-base-classes",
-      "content": "dummy-organism-base-content"
-    },
-    "dummy-template": {
-      "classes": "dummy-template-base-classes",
-      "content": "dummy-template-base-content"
-    }
-  },
   "title": "Ville de Montréal - Toolbox",
   "metaAuthor": "Ville de Montréal",
   "metaDescription": "Meta description content goes here",
@@ -61,23 +47,23 @@
     "headings": {
       "h1": {
         "classes": "",
-        "content": "H1 header H1 header"
+        "content": "H1 heading"
       },
       "h2": {
         "classes": "",
-        "content": "H2 header H2 header"
+        "content": "H2 heading"
       },
       "h3": {
         "classes": "",
-        "content": "H3 header H3 header"
+        "content": "H3 heading"
       },
       "h4": {
         "classes": "",
-        "content": "H4 header H4 header"
+        "content": "H4 heading"
       },
       "h5": {
         "classes": "",
-        "content": "H4 header H4 header"
+        "content": "H5 heading"
       },
       "display": {
         "classes": "display-1",
@@ -98,7 +84,8 @@
       "type-text": {
         "id": "inputtextfieldid",
         "label": "Textfield label"
-      }
+      },
+      "placeholder": false
     }
   },
   "formCheckboxes": [
@@ -203,7 +190,8 @@
     },
     {
       "url": "#",
-      "text": "Link 3"
+      "text": "Link 3",
+      "is-active": true
     }
   ],
   "caret": "caret",
@@ -455,6 +443,7 @@
   "cards": {
     "classes": false,
     "bsgrid-classes": "col-12 col-md-6 col-lg-4",
+    "headings": false,
     "card-item": [
       {
         "classes": false,

@@ -1,0 +1,19 @@
+<div class="main-container region {{ mainContainerClasses }}">
+  <div class="content-wrapper">
+    {{# fullTopSection }} 
+      {{> organisms-section-top-portal }} 
+    {{/ fullTopSection }} 
+    {{# colLeft }} 
+      {{> organisms-sidebar-left }} 
+    {{/ colLeft }}
+    <article class="main-content">
+      {{> atoms-paragraph }}
+    </article>
+    {{# colRight }}
+      {{> organisms-sidebar-right }}
+    {{/ colRight }} 
+    {{# fullBottomSection }} 
+      {{> organisms-section-bottom-portal }}
+    {{/ fullBottomSection }}
+  </div>
+</div>

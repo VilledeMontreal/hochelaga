@@ -82,20 +82,7 @@ html {
   // Main header, always includes at least the page Title
   // Keeper styles
   &.region-content-header {
-    .media {
-      @include make-col-ready();
-      @include make-col(12);
-    }
-    .text {
-      @include make-col-ready();
-      @include make-col(12);
-    }
-    &.has-image {
-      .media {
-        padding-left: 0;
-        padding-right: 0;
-      }
-    }
+
     &.content-header-dark {
       background-color: $vdm-grey-dark;
       color: $white;

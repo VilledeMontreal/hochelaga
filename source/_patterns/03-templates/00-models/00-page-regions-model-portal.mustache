@@ -6,17 +6,14 @@
 <!-- End side navigation menu -->
 <!-- *********************************************** -->
 <!-- Begin main page wrapper -->
-<div class="vdm-page {{ pageClasses }}">
+<div class="{{ pageClasses }}">
   <!-- Begin main page header -->
   {{> organisms-header-portal }}
   <!-- End main page header -->
+  <!-- Begin breadcrumb -->
+  {{> organisms-breadcrumb-region }}
+  <!-- End breadcrumb -->
   <main class="main-content regions" id="main-content" aria-label="Main Content">
-
-    <!-- Begin breadcrumb -->
-    {{> organisms-breadcrumb-region }}
-    <!-- End breadcrumb -->
-
-    <!-- Begin mock regions-->
 
     <!-- Begin content header region-->
     {{> organisms-region-header-portal }}
@@ -25,11 +22,6 @@
     <!-- Begin before-content region-->
     {{> organisms-region-before-portal }}
     <!-- End before-content region-->
-
-    <!-- Begin fluid container full width region -->
-    <!-- {{> organisms-region-full-width-portal }} -->
-    <!-- End fluid container full width region -->
-
 
     <!-- Begin main-content region-->
     {{> organisms-region-main-portal }}
@@ -44,7 +36,7 @@
     <!-- Begin pre-footer region-->
     {{> organisms-region-prefooter-portal }}
     <!-- End pre-footer region-->
-    <!-- End mock regions-->
+
   </main>
   <!-- End post-content container - after columns -->
   <!-- Begin footer -->

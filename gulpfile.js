@@ -309,7 +309,7 @@ gulp.task('browsersync', function() {
       }
     },
     ghostMode: true,
-    open: "internal"
+    open: "local"
   });
 });
 

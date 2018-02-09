@@ -1,48 +1,3 @@
-// Utility class to have a Bootstrap row's children all be the same height
-// @see https://scotch.io/quick-tips/different-tricks-on-how-to-make-bootstrap-columns-all-the-same-height
-// @see https://codepen.io/ncerminara/pen/qZvYgR
-.is-grid-row {
-  display: flex;
-  flex-wrap: wrap;
-}
-.is-grid-col {
-  display: flex;
-  flex-direction: column;
-}
-
-// Arrow links, all types , all tags
-// Make this generic, into a mixin
-.arrow-link {
-  position: relative;
-  padding-right: 2.5em;
-  line-height: 1.7em;
-  @include iconvfi(after, fleche-droite);
-  &:after {
-    position: absolute;
-    font-size: 2.5em;
-    width: 1.35em;
-    padding-left: 0.35em;
-    left: auto;
-    background: transparent;
-    color: $vdm-brand;
-  }
-}
-
-// Mixin potential
-.location-pin {
-  @include iconvfi(before, localisation-plein);
-  color: $vdm-brand;
-  position: relative;
-  padding-left: 2em;
-  &:before {
-    font-size: 2em;
-    background: transparent;
-    color: $vdm-brand;
-    left: -0.2em;
-    position: absolute;
-  }
-}
-
 /**
  * Generic cards styles and variants
  * Built on bootstrap card component 
@@ -132,7 +87,8 @@
   // Row layout is used for icon placement to the left or right at larger breakpoint
   &.card-row-layout {
     .card-body {
-      text-align: center;
+      text-align: left;
+      //text-align: center;
     }
 
     @include media-breakpoint-up(lg) {
@@ -168,6 +124,7 @@
     }
   }
 
+  // Large and featured cards override
   &.card-large,
   &.card-featured {
     .card-title {
@@ -178,6 +135,7 @@
     }
   }
 
+  // Full-width card override
   &.card-fw {
     @include media-breakpoint-up(lg) {
       .card-img-top {
@@ -188,6 +146,7 @@
     }
   }
 
+  // Large cards specifc
   &.card-large {
     &.card-fw {
       @include media-breakpoint-up(lg) {
@@ -208,6 +167,7 @@
     }
   }
 
+  // Featured card specific
   &.card-featured {
     .card-body {
       .text-muted {
@@ -246,11 +206,26 @@
   }
 }
 
+// Color variant overrides
 .cards {
   > div,
   .card-item {
-    // must add flex capacity to col to get equalheight
-    display: flex;
+    display: flex; // must add flex capacity to col to get equalheight
+  }
+  &.bg-gray-light {
+    background-color: transparent;
+    .card {
+      background-color: $vdm-grey-light;
+      border: none;
+      .vfi {
+        color: $vdm-brand;
+      }
+      &:hover {
+        .vfi {
+          color: $white;
+        }
+      }
+    }
   }
   // Add bs-grid layout to any element, ie: ul>li, etc
   // This is less customizable since cols are hard-coded in css.
@@ -268,20 +243,6 @@
       @include media-breakpoint-up(lg) {
         @include make-col(4);
       }
-    }
-  }
-}
-
-/**
- * Color variants are dealt with a class at the cards container level.
- */
-
-.light-bg {
-  .card {
-    background-color: $vdm-grey-light;
-    border: none;
-    .vfi {
-      color: $vdm-brand;
     }
   }
 }

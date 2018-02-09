@@ -1,7 +1,14 @@
 <form>
   <div class="form-row">
     <div class="col-12 col-md-6">
-      {{> atoms-input }}
+      <div class="form-group">
+        <div class="input-group-icon">
+          <div class="input-group-icon-left">
+          {{> atoms-fonticon-item(icon-label: "recherche") }}
+          </div>
+          <input type="text" class="form-control" id="text-icon-left" placeholder="Recherche">
+        </div>
+      </div>
     </div>
     <div class="col-12 col-md-6">
       {{> atoms-select }}

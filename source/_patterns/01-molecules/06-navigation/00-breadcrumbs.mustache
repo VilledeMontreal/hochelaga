@@ -1,8 +1,7 @@
 <ul class="breadcrumb">
-	<li class="breadcrumb-item"><a href="#">Link 01</a></li>
-	<li class="breadcrumb-item"><a href="#">Link 02</a></li>
-	<li class="breadcrumb-item"><a href="#">Link 03</a></li>
-	<li class="breadcrumb-item active">Active item</li>
+  {{# breadcrumbs }}
+	<li class="breadcrumb-item{{# is-active }} active{{/ is-active }}"><a href="{{ url }}">{{ text }}</a></li>
+  {{/ breadcrumbs }}
 </ul>
 
 

@@ -226,11 +226,14 @@
   }
   .hdr-title {
     font-weight: $font-weight-bold;
-    font-size: 1.5rem; // 24px
     padding-left: $grid-gutter-width;
     padding-right: $grid-gutter-width;
+    @include media-breakpoint-up(lg) {
+      font-size: 1.5rem; // 24px
+    }
   }
   .hdr-links {
+    padding-right: $grid-gutter-width;
     ul {
       margin-bottom: 0;
     }

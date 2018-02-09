@@ -1,5 +1,4 @@
-
-<form>
+<form class="form-wizard">
   <div class="form-step">
     <fieldset>
       <legend>Responsable de l'entreprise</legend>
@@ -50,33 +49,15 @@
           <input type="text" class="form-control" id="inputCieName" placeholder="Holding Petoleum Canada Inc.">
         </div>
       </div>
-      <fieldset>
-        <legend>Est-ce que l’entreprise possède un numéro d’identification NEQ, TPS et TVQ?</legend>
-        <div class="form-group">
-          <div class="custom-control custom-radio">
-            <input type="radio" id="numeroRadio1" name="numeroRadio" class="custom-control-input" value="1" checked>
-            <label class="custom-control-label" for="numeroRadio1">Oui</label>
-          </div>
-          <div class="custom-control custom-radio">
-            <input type="radio" id="numeroRadio2" name="numeroRadio" class="custom-control-input" value="0">
-            <label class="custom-control-label" for="numeroRadio2">Non</label>
-          </div>
+      <div class="form-group"> 
+		    <label class="group-label">Est-ce que l’entreprise possède un numéro d’identification NEQ, TPS et TVQ?</label>
+        <div class="custom-control custom-radio">
+          <input type="radio" id="numeroRadio1" name="numeroRadio" class="custom-control-input" value="1" checked>
+          <label class="custom-control-label" for="numeroRadio1">Oui</label>
         </div>
-      </fieldset>
-      <div class="row">
-        <div class="form-group col-md-6">
-          <label for="inputNEQ">NEQ</label>
-          <input type="text" class="form-control" id="inputNEQ" placeholder="02-89483-084-93884">
-        </div>
-      </div>
-      <div class="row">
-        <div class="form-group col-md-6">
-          <label for="inputTPS">Numéro TPS</label>
-          <input type="text" class="form-control" id="inputTPS" placeholder="83758393">
-        </div>
-        <div class="form-group col-md-6">
-          <label for="inputTVQ">Numéro TVQ</label>
-          <input type="text" class="form-control" id="inputTVQ" placeholder="3663663">
+        <div class="custom-control custom-radio">
+          <input type="radio" id="numeroRadio2" name="numeroRadio" class="custom-control-input" value="0">
+          <label class="custom-control-label" for="numeroRadio2">Non</label>
         </div>
       </div>
     </fieldset>
@@ -84,7 +65,7 @@
   <div class="form-group form-action-group">
     <ul>
       <li>
-        {{> atoms-button("btnClasses": "vdm-btn-secondary prev-step", "buttonText": "Précédent" ) }}
+        {{> atoms-button("btnClasses": "vdm-btn-secondary", "buttonText": "Précédent" ) }}
       </li>
       <li>
         {{> atoms-button("buttonText": "Soumettre") }}

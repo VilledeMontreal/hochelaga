@@ -1,6 +1,8 @@
 // FORMS
 
-legend {
+legend,
+.group-label {
+  @extend legend;
   margin-bottom: 1rem;
   font-weight: $font-weight-bold;
 }
@@ -19,6 +21,7 @@ legend {
   }
 }
 
+// TO DO: Is this generic or specific to wizard forms
 .form-action-group {
   margin: 2rem auto;
   ul {
@@ -90,6 +93,49 @@ legend {
     }
   }
 }
+
+// Custom checkboxes themed as card
+.custom-checkbox-card {
+  border: 1px solid $gray-400;
+  padding: 0;
+
+  .custom-control-label {
+
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    padding: 2rem;
+    padding-right: 6rem;
+    position: relative;
+
+    // Background-color and (when enabled) gradient
+    &::before {
+      top: calc(50% - (#{$custom-control-indicator-size}/2));
+      left: auto;
+      right: 0;
+      margin-right: 2rem;
+    }
+
+    // Foreground (icon)
+    &::after {
+      top: calc(50% - (#{$custom-control-indicator-size}/2));
+      left: auto;
+      right: 0;
+      margin-right: 2rem;
+    }
+
+    @include media-breakpoint-up(md) {
+
+      padding-right: 9rem;
+      &::before,
+      &::after {
+        margin-right: 6rem;
+      }
+    }
+  }
+}
+
+
 
 // Radios
 //
@@ -229,6 +275,7 @@ legend {
       font-size: 2.4rem;
       width: 2.4rem;
       height: 2.4rem;
+      color: $vdm-brand;
     }
   }
 
