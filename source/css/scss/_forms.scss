@@ -37,6 +37,13 @@ legend,
   }
 }
 
+// Input Groups
+//
+.input-group-date {
+  .input-group-append {
+    cursor: pointer;
+  }
+}
 // Theme icon as input-group-icon for easy placement and scalability
 .input-group-icon {
   position: relative;
@@ -94,47 +101,45 @@ legend,
   }
 }
 
-// Custom checkboxes themed as card
-.custom-checkbox-card {
-  border: 1px solid $gray-400;
+// Custom checkboxes and radios themed as card
+.custom-control-card {
   padding: 0;
 
   .custom-control-label {
-
     display: flex;
     flex-direction: column;
     flex: 1;
     padding: 2rem;
-    padding-right: 6rem;
+    padding-left: 6rem;
     position: relative;
+    border: 1px solid $gray-400;
 
     // Background-color and (when enabled) gradient
     &::before {
       top: calc(50% - (#{$custom-control-indicator-size}/2));
-      left: auto;
-      right: 0;
-      margin-right: 2rem;
+      left: 0;
+      right: auto;
+      margin-left: 2rem;
     }
 
     // Foreground (icon)
     &::after {
       top: calc(50% - (#{$custom-control-indicator-size}/2));
-      left: auto;
-      right: 0;
-      margin-right: 2rem;
+      left: 0;
+      right: auto;
+      margin-left: 2rem;
     }
 
-    @include media-breakpoint-up(md) {
-
-      padding-right: 9rem;
-      &::before,
-      &::after {
-        margin-right: 6rem;
-      }
-    }
   }
-}
 
+  // Set checked styles here: change border-color or apply other styles to label
+  // See bootstrap .custom-forms.scss for examples
+  /*
+  .custom-control-input:checked ~ .custom-control-label {
+    border-color: $success;
+  }
+  */
+}
 
 
 // Radios

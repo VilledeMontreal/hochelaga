@@ -1,3 +1,12 @@
+// Global styles for all progress (bars and circles)
+
+.progress-info {
+  display: block;
+  font-weight: $font-weight-bold;
+  margin-top: 1rem;
+}
+
+
 // Progress circle
 //
 // TO DO : fix animation
@@ -138,12 +147,6 @@
     }
   }
 }
-
-//additional styling
-.progress-circle {
-  margin-bottom: 1em;
-}
-
 
 // Colors
 //

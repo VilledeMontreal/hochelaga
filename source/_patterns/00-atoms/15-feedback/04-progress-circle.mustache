@@ -5,13 +5,20 @@
 	</div>
 </div>
 -->
-
-<div class="progress-circle progress-warning" role="progessbar" data-percentage="75">
-  <div class="progress-left">
-    <span class="progress-bar"></span>
+<div class="progress-container">
+  <div class="progress-circle {{ progressCircleClass }}" role="progessbar" aria-valuenow="{{ ariaNow }}" aria-valuemin="{{ ariaMin }}" aria-valuemax="{{ ariaMax }}" data-percentage="{{ ariaNow }}">
+    <div class="progress-left">
+      <span class="progress-bar"></span>
+    </div>
+    <div class="progress-right">
+      <span class="progress-bar"></span>
+    </div>
+    <div class="progress-value">{{ ariaNow }}%</div>
   </div>
-  <div class="progress-right">
-    <span class="progress-bar"></span>
-  </div>
-  <div class="progress-value">75%</div>
+  {{# removeProgressText }}
+  <span class="sr-only">{{ progressCompleteText }}</span>
+  {{/ removeProgressText }}
+  {{^ removeProgressText }}
+  <span class="progress-info">{{ progressCompleteText }}</span>
+  {{/ removeProgressText }}
 </div>
