@@ -487,7 +487,25 @@ nav {
 /**
  * Step Wizard
  */
-
+.nav-wizard {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+.nav-steps-count {
+  display: none;
+  @include media-breakpoint-up(md) {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: $header-icon-width;
+    display: flex;
+    align-items: center;
+  }
+}
+.nav-steps-items {
+  flex: 1;
+}
 .nav-steps {
   display: flex;
   flex-direction: column;
@@ -594,5 +612,31 @@ nav {
         }
       }
     }
+  }
+}
+
+// Nav dashboard Steps
+//
+.nav-dashboard {}
+
+.nav-dashboard-item { 
+  border-bottom: 1px solid $gray-200;
+  margin-bottom: 3rem;
+  padding-bottom: 3rem;
+  .db-label {
+    display: inline-block;
+    font-size: $font-size-md;
+    font-weight: $font-weight-bold;
+    margin-bottom: .5rem;
+    text-transform: uppercase;
+  }
+  .db-title {
+    display: flex;
+    font-size: 24px;
+    font-weight: $font-weight-bold;
+    justify-content: space-between;
+  }
+  .progress-container {
+    padding-bottom: 1rem;
   }
 }

@@ -37,8 +37,20 @@
     @include header(5, "regular");
   }
 
+  .card-label {
+    @include header(5, "bold");
+  }
+
   .card-body {
     padding: 2rem 2rem 2rem 2rem;
+    align-self: center;
+
+    .popover-wrapper {
+      &.right {
+        position: absolute;
+        right: 0;
+      }
+    }
   }
 
   .card-metadata {

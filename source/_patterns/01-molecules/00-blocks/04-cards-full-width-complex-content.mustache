@@ -1,0 +1,41 @@
+
+<div class="cards {{ cards.classes }}">
+{{# cards.card-item-complex }}
+  <div class="card {{ classes }}">
+    {{# url }}
+    <a href="{{ url }}" class="">
+    {{/ url }}
+      <div class="card-body">
+        <div class="row">
+          
+          <div class="col-12 col-md-9 align-self-center">
+            <span class="card-label">{{ label1 }}</span>
+            <p class="card-text">{{ info1 }}</p>
+            <div class="row">
+              <div class="col-12 col-md-8">
+                <span class="card-label">{{ label2 }}</span>
+                <p class="card-text">{{ info2 }}</p>
+              </div>
+              <div class="col-12 col-md-4">
+                <span class="card-label">{{ label3 }}</span>
+                <p class="card-text">{{ info3 }}</p>
+              </div>
+            </div>
+          </div>
+          <div class="col-12 col-md-3">
+            {{> molecules-popovers-icon }}
+            {{# card-metadata }}
+            <div class="card-progress">
+              {{> atoms-progress-circle(ariaNow: 80, progressCircleClass: "progress-warning", progressCompleteText: "Inférieur à 20% de la quantité seuil réglementaire") }}
+            </div>
+            {{/ card-metadata }}
+          </div>
+        </div>
+      </div>
+    {{# url }}
+    </a>
+    {{/ url }}
+  </div>
+{{/ cards.card-item-complex }}
+</div>
+

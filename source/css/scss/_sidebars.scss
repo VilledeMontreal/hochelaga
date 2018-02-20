@@ -48,34 +48,32 @@
     background: transparent;
     &:after,
     &:before {
-      color: $vdm-brand;
+      //color: $vdm-brand;
     }
   }
 
   // Links and span tags, mind the inheritance
   // All icon elements are block level
   .icon {
-    display: block;
-    position: relative;
+    display: flex;
+    align-items: center;
     .vfi {
       &:before {
         font-size: 1em;
       }
-      position: absolute;
-      top: 0;
     }
 
     &.left {
-      padding-left: 2em;
+      //padding-left: 2em;
       .vfi {
-        left: 0;
+        padding-right: .5rem;
       }
     }
     &.right {
-      display: inline-block;
-      padding-right: 2em;
+      //display: inline-block;
+      //padding-right: 2em;
       .vfi {
-        right: 0;
+        padding-left: .5rem;
       }
     }
   }
@@ -258,8 +256,7 @@
 
 // The base unit for a sidebar component, stacked
 .sb-block {
-  padding: $sidebar-box-v-padding $sidebar-box-h-padding 2rem
-    $sidebar-box-h-padding;
+  padding: $sidebar-box-v-padding $sidebar-box-h-padding 2rem $sidebar-box-h-padding;
   &:last-of-type {
     // padding-bottom: 0;
     margin-bottom: $sidebar-box-v-padding;
@@ -298,5 +295,19 @@
         @include header(4);
       }
     }
+  }
+
+  &.sb-block-notes {
+    background-color: $white;
+    border: 1px solid $gray-200;
+
+    .sidebar-title {
+      @include header(4, bold);
+    }
+    .vfi {
+      color: $body-color;
+      font-size: 2.125rem;
+    }
+
   }
 }

@@ -26,7 +26,8 @@ legend,
   margin: 2rem auto;
   ul {
     @extend .list-inline;
-    @extend .text-center;
+    display: flex;
+    justify-content: space-between;
     li {
       @extend .list-inline-item;
       &:not(:last-child) {
@@ -378,4 +379,10 @@ legend,
       }
     }
   }
+}
+
+// Form Wizard
+.form-wizard {
+  padding-top: 3rem;
+  padding-bottom: 3rem;
 }

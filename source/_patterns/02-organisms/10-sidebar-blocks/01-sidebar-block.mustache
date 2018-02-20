@@ -1,18 +1,9 @@
 <!-- Have a look at the markdown document for the documentation. -->
-
-<!--
-
-Provides a bootstrap container for debugging away from templates
-Remove when publishing & clean-up!
-
--->
-<!-- **************************************************** -->
 {{# sidebar-blocks-demo-debug-wrapper }}
 <div class="container">
   <div class="row">
     <div class="col-12 col-md-4 sidebar {{ sidebar-right-classes }}">
-      {{/ sidebar-blocks-demo-debug-wrapper }}
-      <!-- **************************************************** -->
+{{/ sidebar-blocks-demo-debug-wrapper }}
 
       <!-- Variant : quicklinks, arrow-right, block, long text -->
       {{# has-sb-quicklinks-short }}
@@ -314,23 +305,13 @@ Remove when publishing & clean-up!
       </section>
       {{/ has-sb-info-block-03 }}
 
+      {{# sidebar-blocks-demo-debug-message }} 
+        Sidebar infos will display here if conditions allow it in json data files. 
+      {{/ sidebar-blocks-demo-debug-message }}
 
-      <!-- **************************************************** -->
-      {{# sidebar-blocks-demo-debug-message }} Sidebar infos will display here if conditions allow it in json data files. {{/ sidebar-blocks-demo-debug-message
-      }}
-      <!-- **************************************************** -->
-
-      <!--
-
-Provides a bootstrap container for debugging away from templates
-Remove when publishing & clean-up!
-
--->
-
-      <!-- **************************************************** -->
-      {{# sidebar-blocks-demo-debug-wrapper }}
+{{# sidebar-blocks-demo-debug-wrapper }}
     </div>
   </div>
 </div>
 {{/ sidebar-blocks-demo-debug-wrapper }}
-<!-- **************************************************** -->
+

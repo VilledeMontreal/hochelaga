@@ -62,13 +62,31 @@
       </div>
     </fieldset>
   </div>
+
+  <div class="form-step">
+    <div class="form-group"> 
+      <label class="group-label">Préciser qui est le reponsable de l'entreprise</label>
+      <div class="alert alert-warning alert-icon" role="alert">
+        <span class="vfi vfi-attention-circulaire" aria-hidden="true"></span>
+        <div>Responsable de la déclaration: Personne responsable des renseignements techniques, chargée de préparer la déclaration et de répondre à toute question relative à son contenu</div>
+      </div>
+      <div class="custom-control custom-radio">
+        <input type="radio" id="responsableRadio1" name="responsableRadio" class="custom-control-input" value="">
+        <label class="custom-control-label" for="responsableRadio1">Exploitant</label>
+      </div>
+      <div class="custom-control custom-radio">
+        <input type="radio" id="responsableRadio2" name="responsableRadio" class="custom-control-input" value="">
+        <label class="custom-control-label" for="responsableRadio2">Autre</label>
+      </div>
+    </div>
+  </div>
   <div class="form-group form-action-group">
     <ul>
       <li>
-        {{> atoms-button("btnClasses": "vdm-btn-secondary", "buttonText": "Précédent" ) }}
+        {{> atoms-button("btnClasses": "vdm-btn-secondary btn-prev", "buttonText": "Précédent" ) }}
       </li>
       <li>
-        {{> atoms-button("buttonText": "Soumettre") }}
+        {{> atoms-button("btnClasses": "btn-next", "buttonText": "Soumettre") }}
       </li>
     </ul>
   </div>

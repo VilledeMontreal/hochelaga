@@ -14,6 +14,7 @@
   "definition": "This is the definition of the term.",
   "badge": "23",
   "badgeClass": "badge-secondary",
+  "stateClass": "bg-success",
   "label": "New Label",
   "labelClass": "label-default",
   "icon-label": "recherche",
@@ -36,6 +37,9 @@
   "headerClasses": "",
   "headerContainerClasses": "",
   "mainContainerClasses": "",
+  "sidebarLeftClass": "col-md-4",
+  "sidebarRightClass": "col-md-4",
+  "hasTopBanner": true,
   "combo-box-text": "Combo block title",
   "combo-box-icon": "ic-search",
   "combo-box-placeholder": "textfield label",
@@ -273,6 +277,7 @@
   ],
 
   "alertClass": "alert-primary",
+  "alertIcon": false,
   "alertText":
     "This is a primary alert with <a href=\"#\" class=\"alert-link\">an example link</a>. Give it a click if you like.",
   "top-banner": {
@@ -393,6 +398,16 @@
       }
     ]
   },
+  "navDashboard": [
+    {
+      "navDashboardLabel": "Nav Dashboard Label",
+      "navDashboardTitle": "Nav Dashboard Title",
+      "navDashboardInfo": "Nav Dashboard Info",
+      "hasFeedback": false,
+      "hasButton": true,
+      "buttonText": "Commencer"
+    }
+  ],
   "orderedList": [
     {
       "title": "List item #1",

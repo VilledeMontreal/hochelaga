@@ -3,25 +3,38 @@
 <div class="{{ pageClasses }}">
   {{> organisms-header-portal }}
   {{> organisms-breadcrumb-region }}
-  <main class="main-content regions" id="main-content" aria-label="Main Content">
+  <main class="main-content" id="main-content" aria-label="Main Content">
     {{> organisms-region-header-portal }}
-
-    {{> atoms-main-container-start }}
-
-      <article class="main-content {{ regionMainContentClasses }}">
-        {{# searchBox }}
-          {{> molecules-search-field-combo-base }}
-        {{/ searchBox }}
-        {{> organisms-how-to-content }}
-      </article>
-      {{# colRight }}
-        {{> organisms-sidebar-right }}
-      {{/ colRight }}
-
-    {{> atoms-main-container-end }}
+    <div class="region {{ regionMainClasses }}">
+      <div class="container {{ regionMainContainerClasses }}">
+        <div class="row">
+          <article class="col-12 col-md-8 {{ regionMainContentClasses }}">
+            {{# searchBox }}
+              {{> molecules-search-field-combo-base }}
+            {{/ searchBox }}
+            {{> organisms-how-to-content }}
+          </article>
+          {{# sidebarRight }}
+          <aside class="col-12 col-md-4 sidebar sidebar-right">
+            How To Sidebar Right content
+          </aside>
+          {{/ sidebarRight }}
+        </div>
+      </div>
+    </div>
 
     <!-- Begin after-content region-->
-    {{> organisms-region-after-portal }}
+    <div class="region region-after {{ regionAfterClasses }}">
+      <div class="container">
+        <div class="row">
+          <div class="col-12">
+            {{# howToInfos }}
+              {{> organisms-how-to-infos }}
+            {{/ howToInfos }}
+          </div>
+        </div>
+      </div>
+    </div>
     <!-- End after-content region-->
 
   </main>

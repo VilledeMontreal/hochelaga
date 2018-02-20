@@ -11,7 +11,7 @@
 @mixin header($level: 1, $weight: "regular") {
   font-family: $font-family-base;
   font-weight: $font-weight-regular;
-  display: block;
+  //display: block;
 
   @if $level == 1 {
     font-weight: $font-weight-light;
