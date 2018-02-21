@@ -1,13 +1,14 @@
 <div class="alert {{ alertClass }}" role="alert">
-	{{# alertTitle }}
-	{{ alertTitle }}
-	{{/ alertTitle }}
+
   {{# alertIcon }}
   <span class="vfi vfi-{{ alertIcon }}" aria-hidden="true"></span>
   {{/ alertIcon }}
   {{# alertIcon }}
   <div class="">
   {{/ alertIcon }}
+  {{# alertTitle }}
+  <h4 class="alert-heading">{{ alertTitle }}</h4>
+	{{/ alertTitle }}
 	{{{ alertText }}}
   {{# alertIcon }}
   </div>

@@ -5,7 +5,7 @@
     "bsgrid-classes": "col-12",
     "card-item-complex": [
       {
-        "classes": "card-fw card-row-layout",
+        "classes": "card-fw card-row-layout border-secondary",
         "url": false,
         "label1": "13462-93-6",
         "info1": "ARSENIC ACID (H3ASO4), MONOAMMONIUM SALT",
@@ -13,10 +13,12 @@
         "info2": "Quantité maximale de matière dans le système de réservoir",
         "label3": "4,7 tonnes",
         "info3": "Seuils réglementaires",
-        "card-metadata": true
+        "card-metadata": {
+          "success": true
+        }
       },
       {
-        "classes": "card-fw card-row-layout",
+        "classes": "card-fw card-row-layout border-secondary",
         "url": false,
         "label1": "24937-78-8",
         "info1": "COLLE HOT MELT NATUREL 2002-3 (BATCH 01269 01267)",
@@ -24,7 +26,9 @@
         "info2": "Quantité maximale de matière dans le système de réservoir",
         "label3": "0,56 tonnes",
         "info3": "Seuils réglementaires",
-        "card-metadata": true
+        "card-metadata": {
+          "warning": true
+        }
       }
     ]
   }

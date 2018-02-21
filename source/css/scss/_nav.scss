@@ -640,3 +640,18 @@ nav {
     padding-bottom: 1rem;
   }
 }
+
+// Services sub-navigation
+.navbar-services {
+  border-bottom: 1px solid $vdm-grey-light;
+  .navbar-header {
+    margin-left: $header-icon-width;
+  }
+  .navbar-brand {
+    @include header(5, "bold");
+  }
+
+  .nav-item {
+    padding: 0 1rem;
+  }
+}

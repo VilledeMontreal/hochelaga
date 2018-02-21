@@ -1,0 +1,17 @@
+{{> atoms-link-skip-to-main-content }}
+<div class="{{ pageClasses }}">
+  {{> organisms-header-portal }}
+  {{> organisms-nav-services }}
+  <main class="main-content" id="main-content" aria-label="Main Content">
+    <div class="container">
+      <div class="row">
+        <div class="col-12">
+          {{# hasAlert }}
+            {{> molecules-alerts }}
+          {{/ hasAlert }}
+        </div>
+      </div>
+    </div>
+  </main>
+  {{> organisms-footer-portal }}
+</div>
