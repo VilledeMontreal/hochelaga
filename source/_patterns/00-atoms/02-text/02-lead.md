@@ -1,3 +1,3 @@
 ---
-title: Teaser text
+title: Lead text
 ---

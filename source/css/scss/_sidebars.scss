@@ -33,12 +33,6 @@
         color: $black;
       }
     }
-    &.block {
-      &.arrow {
-        // Is this left padding intentional in the maquette?
-        padding: 0.4em 3.5em 0.4em 0.6em;
-      }
-    }
   }
 
   // Generic icon links : may or may not be applied to a hyperlink
@@ -46,17 +40,14 @@
     font-size: 1.5em;
     color: $vdm-brand;
     background: transparent;
-    &:after,
-    &:before {
-      //color: $vdm-brand;
-    }
   }
 
   // Links and span tags, mind the inheritance
   // All icon elements are block level
   .icon {
-    display: flex;
-    align-items: center;
+    address {
+      margin-bottom: 0;
+    }
     .vfi {
       &:before {
         font-size: 1em;
@@ -64,54 +55,36 @@
     }
 
     &.left {
-      //padding-left: 2em;
       .vfi {
         padding-right: .5rem;
       }
     }
     &.right {
-      //display: inline-block;
-      //padding-right: 2em;
       .vfi {
         padding-left: .5rem;
       }
     }
   }
 
+  // Reset some button styles in sidebar
+  // TODO: Check if we need this more generic
+  button {
+    display: block;
+    margin: 0 auto;
+    margin-bottom: 1.35rem;
+    &.vdm-btn:last-of-type {
+      margin: 0 auto;
+    }
+  }
+
   // Lists in sidebars
   ul {
-    @extend .vdm-list-plain;
-
-    // Padding-bottom modifiers -- these may be moved up to the type.scc stylesheet?
-    &.p-small {
-      margin-bottom: 0.2em;
-    }
-    &.p-large {
-      > li {
-        margin-bottom: 0.85em;
-      }
-    }
-
-    &.p-larger {
-      > li {
-        margin-bottom: 1.3em;
-      }
-    }
-
-    // Softer top and bottom padding & line height for block links
-    &.arrow-blocks {
-      &.p-small {
-        .block {
-          &.arrow {
-            // Is this left padding intentional in the maquette?
-            padding: 0.15em 3.5em 0.15em 0.6em;
-          }
-        }
-      }
-    }
-
-    > li {
-      &:last-of-type {
+    @extend .list-unstyled;
+    margin-bottom: $paragraph-margin-bottom;
+    li {
+      padding-bottom: 1rem;
+      &:last-child {
+        padding-bottom: 0;
       }
     }
 
@@ -124,22 +97,10 @@
     }
   }
   p {
-    margin-bottom: ceil($font-size-base * 1.3);
+    margin-bottom: $paragraph-margin-bottom;
   }
-  // Forms in sidebars
-  form {
-    width: 96%;
-    padding-left: 2%;
-    padding-right: 2%;
-    margin-top: 2.5rem;
-  }
-  .vdm-btn {
-    display: block;
-    margin-top: 1.35rem;
-    margin-left: auto !important;
-    margin-right: auto !important;
-  }
-  .vdm-avatar {
+
+  .avatar {
     display: block;
     margin-bottom: 2rem;
   }
@@ -153,23 +114,27 @@
   .vdm-title {
     margin-bottom: 2em;
     @include header(4, bold);
-    // margin-bottom: 0.8em;
     &:after {
       background-color: $black;
       color: $black;
       max-width: 1.7rem;
       top: calc(100% + 0.3rem);
     }
-    &.icon-right {
-      padding-right: 4rem;
+    // Tweak some styles for icon inside title
+    &.icon {
+      &.right {
+        justify-content: space-between;
+        width: 100%;
+      }
       .vfi {
-        font-size: 3.6rem;
-        width: 3.6rem;
-        height: 3.6rem;
+        font-size: 2rem;
+        color: $body-color;
+      }
+    }
+    &.icon.icon-xl {
+      .vfi {
+        font-size: 3.5rem;
         color: $vdm-brand;
-        position: absolute;
-        top: 0;
-        right: 0;
       }
     }
     // No bottom stroke, reduced bottom margin
@@ -179,24 +144,18 @@
         display: none;
       }
     }
-    &.in-between {
-      margin-bottom: 0.4em;
-      &:after {
-        display: none;
-      }
-    }
   }
 
   // Color theme variants
   // Transparent top stroke theme variant
-  &.theme-top-stroke {
+  &.sidebar-top-stroke {
     .sb-block {
       border-top: 4px solid $black;
       background-color: transparent;
     }
   }
   // Transparent border brand
-  &.theme-border-brand {
+  &.sidebar-border {
     .sb-block {
       border: 1px solid $vdm-grey;
       background-color: transparent;
@@ -209,31 +168,9 @@
     }
   }
 
-  // The breakpoint production the narrowest column needs attention
-  // Right-side icons need to go below
+  // md breakpoint
+  //
   @include media-breakpoint-only(md) {
-    ul {
-      &.arrow-blocks {
-        &.p-small {
-          .block {
-            &.arrow {
-              padding: 0.15em 0.6em 2.5em 0.6em;
-            }
-          }
-        }
-        .block {
-          &.arrow {
-            padding: 0.15em 0.6em 2.5em 0.6em;
-            &:after {
-              top: calc(100% - 0.85em);
-              left: 50%;
-              height: 1em;
-              transform: translateX(-50%);
-            }
-          }
-        }
-      }
-    }
     .vdm-title {
       &.icon-right {
         padding-right: 0;
@@ -258,7 +195,6 @@
 .sb-block {
   padding: $sidebar-box-v-padding $sidebar-box-h-padding 2rem $sidebar-box-h-padding;
   &:last-of-type {
-    // padding-bottom: 0;
     margin-bottom: $sidebar-box-v-padding;
   }
 
@@ -276,25 +212,6 @@
     margin-left: 0;
     width: 3rem;
     border-radius: 4px;
-  }
-
-  // Special cases management, may or may not end up here...
-
-  // Utility buttons not wrapped in a form tag look like they where in a form wrapper @96%
-  > .vdm-btn-wide {
-    width: 96%;
-    margin-left: 2%;
-    margin-right: 2%;
-  }
-
-  // Search filters  block override - white background, tweaked title
-  &.search-filters {
-    background: $white;
-    .vdm-title {
-      &.discrete {
-        @include header(4);
-      }
-    }
   }
 
   &.sb-block-notes {

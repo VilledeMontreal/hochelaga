@@ -2,21 +2,18 @@
 title: Sidebar block and variable content
 ---
 
-A list of content blocks for the sidebar. A bunch of variants and themeatic blocks are represented.
+A list of content blocks for the sidebar. A bunch of variants and thematic blocks are represented.
 
-On the json side of things, there are a bunch of things to watchout for in terms of modifier classes.
-Have a look at 01-base-page-portal.json of an idea.
 
 ### Questions and issues
 
 * There is a 96% width directive for all forms in sidebars. If this causes issues and overides are needed, sidebar forms will need classes.
 * Responsibeve bahavious has to be implemented for the medium breakpoint, when the column narrows. Problems arise with right side icons, then. Have a look at teasers and cards for inspiration.
-* 
 
 ### Links
 
 * Links are always black, in sidebars, to make them the brand color, add the .brand modifier class;
-* The hover effect provides an undeline, that is it for a difference from surrounding inline elements;
+* The hover effect provides an underline, that is it for a difference from surrounding inline elements;
 * Icons for links with icons are always the brand color
 
 
@@ -33,7 +30,7 @@ There are 3 color schemes for child blocks inserted into sidebars, the add-on cl
 
 * The base theme, on a light grey background, 
 * The transparent theme with a fat black top stroke (.sidebar.theme-trans-top-stroke)
-* The transparent theme with a light stroke and bran color accents (.sidebar.theme-border-brand)
+* The transparent theme with a light stroke and brand color accents (.sidebar.theme-border-brand)
 
 
 ### Forms
@@ -49,6 +46,5 @@ The title has modifier classes. The main sidebar title class is ".vdm-title", fo
 
 ### Lists
 
-* All lists are reset, inheriting from .vdm-list-plain automatically;
 * Some modifier classes are available to control the bottom padding of list items (.p-small, .p-large,.p-larger)
-* Bullet lists have have the vdm-bullet-list class applied in order to show visible bullets;
+* Bullet lists have the vdm-bullet-list class applied in order to show visible bullets;

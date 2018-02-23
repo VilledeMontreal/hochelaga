@@ -2,28 +2,28 @@
 {{# sidebar-blocks-demo-debug-wrapper }}
 <div class="container">
   <div class="row">
-    <div class="col-12 col-md-4 sidebar {{ sidebar-right-classes }}">
+    <div class="col-12 col-md-4 sidebar {{ sidebar-classes }}">
 {{/ sidebar-blocks-demo-debug-wrapper }}
 
       <!-- Variant : quicklinks, arrow-right, block, long text -->
       {{# has-sb-quicklinks-short }}
       <section class="sb-block {{ sb-classes }}">
-        {{> atoms-heading-sidebar }}
-        <ul class="arrow-blocks p-small">
+        {{> organisms-heading-sidebar }}
+        <ul>
           <li>
-            <a href="#" class="block arrow">Who can tousle?</a>
+            <a href="#" class="icon left">{{> atoms-fonticon-item(icon-label: "fleche") }} Who can tousle?</a>
           </li>
           <li>
-            <a href="#" class="block arrow">Why can't I get a mustache ?</a>
+            <a href="#" class="icon left">{{> atoms-fonticon-item(icon-label: "fleche") }} Why can't I get a mustache ?</a>
           </li>
           <li>
-            <a href="#" class="block arrow">Who is flexitarian?</a>
+            <a href="#" class="icon left">{{> atoms-fonticon-item(icon-label: "fleche") }} Who is flexitarian?</a>
           </li>
           <li>
-            <a href="#" class="block arrow">What may one do with a fixie?</a>
+            <a href="#" class="icon left">{{> atoms-fonticon-item(icon-label: "fleche") }} What may one do with a fixie?</a>
           </li>
           <li>
-            <a href="#" class="block arrow">For the cliche artisan!</a>
+            <a href="#" class="icon left">{{> atoms-fonticon-item(icon-label: "fleche") }} For the cliche artisan!</a>
           </li>
         </ul>
       </section>
@@ -32,115 +32,38 @@
       <!-- Variant : quicklinks, arrow-right, block, long text -->
       {{# has-sb-quicklinks }}
       <section class="sb-block {{ sb-classes }}">
-        {{> atoms-heading-sidebar }}
-        <ul class="arrow-blocks">
+        {{> organisms-heading-sidebar }}
+        <ul>
           <li>
-            <a href="#" class="block arrow">
-              Heirloom jean shorts locavore pug shoreditch (03-4567)
-            </a>
+            <a href="#">Heirloom jean shorts locavore pug shoreditch (03-4567)</a>
           </li>
           <li>
-            <a href="#" class="block arrow">
-              Kitsch shabby chic +1, master cleanse iceland shoreditch retro normcore four dollar (03-32)
-            </a>
+            <a href="#">Kitsch shabby chic +1, master cleanse iceland shoreditch retro normcore four dollar (03-32)</a>
           </li>
           <li>
-            <a href="#" class="block arrow">
-              Brooklyn blue bottle gastropub (03-765)
-            </a>
+            <a href="#">Brooklyn blue bottle gastropub (03-765)</a>
           </li>
           <li>
-            <a href="#" class="block arrow">
-              Goth lo-fi chartreuse art party post-ironic fixie banh mi kale chips bitters. (03-467)
-            </a>
+            <a href="#">Goth lo-fi chartreuse art party post-ironic fixie banh mi kale chips bitters. (03-467)</a>
           </li>
           <li>
-            <a href="#" class="block arrow">
-              Migas air plant drinking vinegar twee leggings blue bottle pop-up heirloom jean shorts locavore pug shoreditch lumbersexual
-              tousled. (03-567)
-            </a>
+            <a href="#">Migas air plant drinking vinegar twee leggings blue bottle pop-up heirloom jean shorts locavore pug shoreditch lumbersexual
+              tousled. (03-567)</a>
           </li>
         </ul>
       </section>
       {{/ has-sb-quicklinks }}
 
-      <!-- Variant : quicklinks, arrow-right, block, long text -->
-      {{# has-sb-teaser-quicklinks }}
-      <section class="sb-block {{ sb-classes }}">
-        {{> atoms-heading-sidebar }}
-        {{> atoms-paragraph }}
-        <ul class="arrow-blocks p-small">
-          <li>
-            <a href="#" class="block arrow">Who can tousle?</a>
-          </li>
-          <li>
-            <a href="#" class="block arrow">Why can't I get a mustache ?</a>
-          </li>
-          <li>
-            <a href="#" class="block arrow">Who is flexitarian?</a>
-          </li>
-          <li>
-            <a href="#" class="block arrow">What may one do with a fixie?</a>
-          </li>
-          <li>
-            <a href="#" class="block arrow">For the cliche artisan!</a>
-          </li>
-        </ul>
-      </section>
-      {{/ has-sb-teaser-quicklinks }}
-      
-      {{# has-sb-city-official }}
-      <section class="sb-block {{ sb-classes }}">
-
-        <div class="subsection person-card">
-          {{> atoms-avatar }} {{> atoms-heading-sidebar }}
-
-          <ul class="p-larger">
-            <li>
-              <span class="icon left">
-                {{> atoms-fonticon-item(icon-label: "drapeau") }} 123, bord de l'eau
-                <br> Montréal, QC, H3K 2T5
-              </span>
-            </li>
-            <li>
-              <a href="tel:+15143333456" class="icon left">
-                {{> atoms-fonticon-item(icon-label: "telephone") }} 514 333-34567
-              </a>
-            </li>
-          </ul>
-        </div>
-        <div class="subsection person-card">
-          {{> atoms-heading-sidebar }} Relationiste
-          <br> Service des communications
-          <ul class="p-larger">
-            <li>
-              <span class="icon left">
-                {{> atoms-fonticon-item(icon-label: "drapeau") }} 123, bord de l'eau
-                <br> Montréal, QC, H3K 2T5
-              </span>
-            </li>
-            <li>
-              <a href="tel:+15143333456" class="icon left">
-                {{> atoms-fonticon-item(icon-label: "telephone") }} 514 333-34567
-              </a>
-            </li>
-          </ul>
-        </div>
-        <div class="subsection person-card">
-          {{> atoms-heading-sidebar }} {{> atoms-social-media-icons-shortlist }}
-          <button type="button" class="vdm-btn vdm-btn-secondary vdm-btn-sm">Secondary button</button>
-        </div>
-      </section>
-      {{/ has-sb-city-official }}
-
       <!-- Variant : contact block -->
       {{# has-sb-contact-block }}
       <section class="sb-block {{ sb-classes }}">
-        {{> atoms-heading-sidebar }}
+        {{> organisms-heading-sidebar }}
         <div class="subsection person-card">
-          <strong class="name">Marc-André Gosselin</strong>
-          <br> Attaché de presse
-          <br> Cabinet du maire et du comité exécutif
+          <p>
+            <strong class="name">Marc-André Gosselin</strong><br>
+            Attaché de presse<br>
+            Cabinet du maire et du comité exécutif
+          </p>
           <ul>
             <li>
               <a href="tel:+15142223456" class="icon left">
@@ -150,9 +73,11 @@
           </ul>
         </div>
         <div class="subsection person-card">
-          <strong class="name">Linda Boutin</strong>
-          <br> Relationiste
-          <br> Service des communications
+          <p>
+            <strong class="name">Linda Boutin</strong><br>
+            Relationiste<br>
+            Service des communications
+          </p>
           <ul>
             <li>
               <a href="tel:+15143333456" class="icon left">
@@ -169,20 +94,10 @@
       </section>
       {{/ has-sb-contact-block }}
 
-      <!-- Variant : Institution block -->
-      {{# has-sb-institution }}
-      <section class="sb-block {{ sb-classes }}">
-        {{> atoms-heading-sidebar-icon}}
-        <p class="bullet-left brand">Ouvert aujourd'hui jusqu'à 19 h 00</p>
-        <p>123, bord de l'eau
-          <br> Montréal, QC, H3K 2T5</p>
-      </section>
-      {{/ has-sb-institution }}
-
       <!-- Variant : Forms 01  - email registration form -->
       {{# has-sb-forms-01 }}
       <section class="sb-block {{ sb-classes }}">
-        {{> atoms-heading-sidebar }}
+        {{> organisms-heading-sidebar }}
         <p>Leggings ugh pickled messenger bag. Art party swag marfa next level mustache flexitarian. DIY polaroid trust fund
           cliche artisan.</p>
         {{> organisms-email-form }}
@@ -192,29 +107,27 @@
       <!-- Variant : Forms 02 - wide buttons -->
       {{# has-sb-forms-02 }}
       <section class="sb-block {{ sb-classes }}">
-        {{> atoms-heading-sidebar-icon}}
+        {{> organisms-heading-sidebar }}
         <p>Leggings ugh pickled messenger bag. Art party swag marfa next level mustache flexitarian. DIY polaroid trust fund
           cliche artisan.</p>
-        <!-- Replace w/ button atom whenenver possible -->
-        <button type="button" class="vdm-btn vdm-btn-sm vdm-btn-wide">Primary button</button>
-        <button type="button" class="vdm-btn vdm-btn-secondary vdm-btn-sm vdm-btn-wide">Secondary button</button>
-
+        {{> atoms-button("buttonClass": "vdm-btn vdm-btn-sm vdm-btn-wide")}}
+        {{> atoms-button("buttonClass": "vdm-btn vdm-btn-secondary vdm-btn-sm vdm-btn-wide")}}
       </section>
       {{/ has-sb-forms-02 }}
 
-      <!-- Variant : Forms 03 - search combo box -->
       <!-- Variant : Forms 03 - Search filter checkboxes -->
-      {{# has-sb-forms-03-search-filters }}
+      {{# has-sb-forms-03 }}
       <section class="sb-block {{ sb-classes }}">
-        {{> atoms-heading-sidebar }} {{> atoms-checkbox-fonticon }}
+        {{> organisms-heading-sidebar }}
+        {{> atoms-checkbox-custom-form }}
       </section>
-      {{/ has-sb-forms-03-search-filters }}
+      {{/ has-sb-forms-03 }}
 
       <!-- Variant : Information bloc 01 : a short list, a divider, vertical social media icons -->
       {{# has-sb-info-block-01 }}
       <section class="sb-block {{ sb-classes }}">
-        {{> atoms-heading-sidebar }}
-        <ul class="mb-3">
+        {{> organisms-heading-sidebar }}
+        <ul>
           <li>
             <a href="#" class="icon left brand">
               {{> atoms-fonticon-item(icon-label: "fleche") }} simplicite.montreal.ca
@@ -228,8 +141,8 @@
       <!-- Variant : Information bloc 02 : long list, fat padding bottom on elements -->
       {{# has-sb-info-block-02 }}
       <section class="sb-block {{ sb-classes }}">
-        {{> atoms-heading-sidebar }}
-        <ul class="p-larger">
+        {{> organisms-heading-sidebar }}
+        <ul>
           <li>
             <span class="icon left">
               {{> atoms-fonticon-item(icon-label: "calendrier") }} 26 juillet 2018
@@ -242,8 +155,8 @@
           </li>
           <li>
             <span class="icon left">
-              {{> atoms-fonticon-item(icon-label: "drapeau") }} 123, bord de l'eau
-              <br> Montréal, QC, H3K 2T5
+              {{> atoms-fonticon-item(icon-label: "drapeau") }}
+              {{> atoms-address }}
             </span>
           </li>
           <li>
@@ -268,7 +181,7 @@
       <!-- Variant : Information bloc 03 : a stack of similare large text blocks -->
       {{# has-sb-info-block-03 }}
       <section class="sb-block {{ sb-classes }}">
-        {{> atoms-heading-sidebar }}
+        {{> organisms-heading-sidebar }}
         <div class="subsection">
           <h3 class="subtitle">Ville de Montréal</h3>
           <p>IPhone messenger bag gastropub, health goth lo-fi chartreuse art party post-ironic fixie banh mi kale chips bitters.</p>
@@ -304,6 +217,72 @@
         </div>
       </section>
       {{/ has-sb-info-block-03 }}
+
+      <!-- Variant : Institution block -->
+      {{# has-sb-institution }}
+      <section class="sb-block {{ sb-classes }}">
+        {{> organisms-heading-sidebar }}
+        <p class="bullet-left brand">Ouvert aujourd'hui jusqu'à 19 h 00</p>
+        {{> atoms-address }}
+      </section>
+      {{/ has-sb-institution }}
+
+      <!-- Variant : Notes block with left icon -->
+      {{# has-sb-notes }}
+      <section class="sb-block {{ sb-classes }}">
+        {{> organisms-heading-sidebar }}
+        <p>Vous devez remplir cette section même si vous n’utilisez, n’entreposez ou ne produisez pas de matières dangereuses visées.</p>
+        <p>Avant de vous présenter au bureau de permis de la ville (pour obtenir un permis de construction ou de transformation, un certificat d’autorisation d’usage ou un certificat d’occupation) veuillez obtenir en remplissant la section déclaration une lettre de non assujettissement au règlement XXXXXX.</p>
+      </section>
+      {{/ has-sb-notes }}
+
+      <!-- Variant : city officials -->
+      {{# has-sb-city-official }}
+      <section class="sb-block {{ sb-classes }}">
+        <div class="subsection person-card">
+          <a href="#" class="avatar">{{> atoms-image-rounded-circle }}</a> 
+          {{> organisms-heading-sidebar }}
+          <ul>
+            <li>
+              <span class="icon left">
+                {{> atoms-fonticon-item(icon-label: "drapeau") }}
+                {{> atoms-address }}
+              </span>
+            </li>
+            <li>
+              <a href="tel:+15143333456" class="icon left">
+                {{> atoms-fonticon-item(icon-label: "telephone") }} 514 333-34567
+              </a>
+            </li>
+          </ul>
+        </div>
+        <div class="subsection person-card">
+          {{> organisms-heading-sidebar }}
+          <p>
+            Relationiste<br>
+            Service des communications
+          </p>
+          <ul>
+            <li>
+              <span class="icon left">
+                {{> atoms-fonticon-item(icon-label: "drapeau") }}
+                {{> atoms-address }}
+              </span>
+            </li>
+            <li>
+              <a href="tel:+15143333456" class="icon left">
+                {{> atoms-fonticon-item(icon-label: "telephone") }} 514 333-34567
+              </a>
+            </li>
+          </ul>
+        </div>
+        <div class="subsection person-card">
+          {{> organisms-heading-sidebar }}
+          {{> atoms-social-media-icons-shortlist }}
+          {{> atoms-button("buttonClass": "vdm-btn vdm-btn-secondary vdm-btn-sm") }}
+        </div>
+      </section>
+      {{/ has-sb-city-official }}
 
       {{# sidebar-blocks-demo-debug-message }} 
         Sidebar infos will display here if conditions allow it in json data files. 
