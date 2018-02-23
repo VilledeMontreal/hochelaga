@@ -15,7 +15,7 @@ ctx = pipeline.createContext([
     "developmentBranch": "develop",
     "slave": "nodejs",
     "deploymentTargetHosts": [
-        "PRODUCTION": "10.145.1.80", //prdldk02a.ile.montreal.qc.ca
+      "PRODUCTION": "10.145.1.80", //prdldk02a.ile.montreal.qc.ca
     	"DEVELOPMENT": "10.145.10.62", //dvlldk02a.ile.montreal.qc.ca
     	"ACCEPTANCE": "10.145.10.64" //accldk02a.ile.montreal.qc.ca
     ],
@@ -28,10 +28,7 @@ ctx = pipeline.createContext([
         "submitter1" : [ "id" : "udall98", "mailto" : "chdallaire" ],
         "submitter2" : [ "id" : "uboul8b", "mailto" : "alexis.boulerice" ],
     ],
-    "nexusLib" : [
-        "buildCommand" : "npm run package",
-        "publishFromDistDirectory" : false
-    ],
+
 
 ]);
 
@@ -45,10 +42,6 @@ try {
 
         pipeline.runUnitTestsStage(ctx) {
         	sh "echo testing unitTests";
-        }
-
-        pipeline.publishLibStage(ctx) {
-            sh "echo publishing in nexus";
         }
 
         pipeline.buildImageStage(ctx) {
