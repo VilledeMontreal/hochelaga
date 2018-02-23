@@ -26,6 +26,40 @@
       {{# card-text-muted }}
       <span class="text-muted">{{ card-text-muted }}</span>
       {{/ card-text-muted }}
+      {{# card-complex-content }}
+        <div class="row">
+          <div class="col-12 col-md-8 col-lg-9 align-self-center">
+            <span class="card-label">{{ label1 }}</span>
+            <p class="card-text">{{ info1 }}</p>
+            <div class="row">
+              <div class="col-12 col-lg-8">
+                <span class="card-label">{{ label2 }}</span>
+                <p class="card-text">{{ info2 }}</p>
+              </div>
+              <div class="col-12 col-lg-4">
+                <span class="card-label">{{ label3 }}</span>
+                <p class="card-text">{{ info3 }}</p>
+              </div>
+            </div>
+          </div>
+          <div class="col-12 col-md-4 col-lg-3">
+            {{> molecules-popovers-icon }}
+            {{# card-metadata }}
+              {{# card-metadata.success }}
+              <div class="card-progress">
+                {{> atoms-progress-circle(ariaNow: 20, progressCircleClass: "progress-success", progressCompleteText: "Inférieur à 20% de la quantité seuil réglementaire") }}
+              </div>
+              {{/ card-metadata.success }}
+              {{# card-metadata.warning }}
+                {{> atoms-progress-circle(ariaNow: 80, progressCircleClass: "progress-warning", progressCompleteText: "Inférieur à 80% de la quantité seuil réglementaire") }}
+              {{/ card-metadata.warning }}
+              {{# card-metadata.alert }}
+                {{> atoms-progress-circle(ariaNow: 100, progressCircleClass: "progress-warning", progressCompleteText: "100% de la quantité seuil réglementaire") }}
+              {{/ card-metadata.alert }}
+            {{/ card-metadata }}
+          </div>
+        </div>
+      {{/ card-complex-content }}
       {{# card-button }}
       <a href="#" class="btn btn-primary">Go somewhere</a>
       {{/ card-button }}

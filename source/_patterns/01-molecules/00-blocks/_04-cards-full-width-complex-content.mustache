@@ -1,13 +1,12 @@
 
 <div class="cards {{ cards.classes }}">
-{{# cards.card-item-complex }}
+{{# cards.card-item }}
   <div class="card {{ classes }}">
     {{# url }}
     <a href="{{ url }}" class="">
     {{/ url }}
       <div class="card-body">
         <div class="row">
-          
           <div class="col-12 col-md-9 align-self-center">
             <span class="card-label">{{ label1 }}</span>
             <p class="card-text">{{ info1 }}</p>
@@ -44,6 +43,6 @@
     </a>
     {{/ url }}
   </div>
-{{/ cards.card-item-complex }}
+{{/ cards.card-item }}
 </div>
 
