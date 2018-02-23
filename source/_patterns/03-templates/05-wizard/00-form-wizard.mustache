@@ -1,29 +1,24 @@
-<div class="page-wizard">
+{{> organisms-header-wizard }}
+{{> molecules-step-wizard }}
 
-  {{> organisms-header-wizard }}
-
-  {{> molecules-step-wizard }}
-
-  <main class="main-content" id="main-content" aria-label="Main Content">
-
-    <div class="region bg-gray-100">
-      <div class="container bg-white">
-        <div class="row">
-          <div class="col-12 col-md-8">
-            {{> organisms-multistep-form }}
-          </div>
-          {{# sidebarRight }}
-            <aside class="col-12 col-md-4 sidebar sidebar-right">
-              <div class="sb-block sb-block-notes">
-                <h2 class="sidebar-title">{{> atoms-fonticon-item("icon-label": "attention-circulaire") }} Notes</h2>
-                <p>Vous devez remplir cette section même si vous n’utilisez, n’entreposez ou ne produisez pas de matières dangereuses visées.</p>
-                <p>Avant de vous présenter au bureau de permis de la ville (pour obtenir un permis de construction ou de transformation, un certificat d’autorisation d’usage ou un certificat d’occupation) veuillez obtenir en remplissant la section déclaration une lettre de non assujettissement au règlement XXXXXX.</p>
-              </div>
-            </aside>
-          {{/ sidebarRight }}
+<main class="main-content {{ pageClasses }}" id="main-content" aria-label="Main Content" role="main">
+  <div class="region bg-gray-100">
+    <div class="container bg-white">
+      <div class="row">
+        <div class="col-12">
+          {{# hasSummary }}
+          {{> organisms-services-resultats-content }}
+          {{/ hasSummary }}
         </div>
+        <div class="col-12 col-md-8">
+          {{> organisms-multistep-form }}
+        </div>
+        {{# sidebarRight }}
+        <aside class="col-12 col-md-4 sidebar sidebar-right {{ sidebar-classes }}">
+          {{> organisms-sidebar-block }}
+        </aside>
+        {{/ sidebarRight }}
       </div>
     </div>
-
-  </main>
-</div>
+  </div>
+</main>

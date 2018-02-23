@@ -1,30 +1,24 @@
 {{> atoms-link-skip-to-main-content }}
-<div class="{{ pageClasses }}">
-  {{> organisms-header-portal }}
-  {{> organisms-nav-services }}
-  <main class="main-content" id="main-content" aria-label="Main Content">
-    <div class="container">
-      <div class="row">
-        <div class="col-12">
-          <div class="services-heading">
-            <h2 class="">Bonjour</h2>
-          </div>
+{{> organisms-header-portal }}
+{{> organisms-nav-services }}
+<main class="main-content {{ pageClasses }}" id="main-content" aria-label="Main Content" role="main">
+  <div class="container">
+    <div class="row">
+      <div class="col-12">
+        <div class="services-heading">
+          <h2 class="">Bonjour</h2>
         </div>
       </div>
-      <div class="row">
-        <aside class="col-12 col-md-4 sidebar sidebar-left">
-          <div class="sb-block sb-block-notes">
-            <h2 class="sidebar-title icon left">{{> atoms-fonticon-item("icon-label": "attention-circulaire") }} Notes</h2>
-            <p>Vous devez remplir cette section même si vous n’utilisez, n’entreposez ou ne produisez pas de matières dangereuses visées.</p>
-            <p>Avant de vous présenter au bureau de permis de la ville (pour obtenir un permis de construction ou de transformation, un certificat d’autorisation d’usage ou un certificat d’occupation) veuillez obtenir en remplissant la section déclaration une lettre de non assujettissement au règlement XXXXXX.</p>
-          </div>
-        </aside>
-        <article class="col-12 col-md-8">
-        <p class="lead">Pour compléter votre premiere déclaration, il suffit de remplir les informations suivantes.</p>
-          {{> organisms-dashboard-nav-step }}
-        </article>
-      </div>
     </div>
-  </main>
-  {{> organisms-footer-portal }}
-</div>
+    <div class="row">
+      <aside class="col-12 col-md-4 sidebar sidebar-left {{ sidebar-classes }}" role="complementary">
+        {{> organisms-sidebar-block }}
+      </aside>
+      <article class="col-12 col-md-8">
+        <p class="lead">Pour compléter votre premiere déclaration, il suffit de remplir les informations suivantes.</p>
+        {{> organisms-dashboard-nav-step }}
+      </article>
+    </div>
+  </div>
+</main>
+{{> organisms-footer-portal }}

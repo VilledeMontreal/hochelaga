@@ -1,35 +1,31 @@
 {{> atoms-link-skip-to-main-content }}
 {{> molecules-menu-open-side }}
-<div class="{{ pageClasses }}">
-  {{> organisms-header-portal }}
-  {{> organisms-breadcrumb-region }}
-  <main class="main-content" id="main-content" aria-label="Main Content">
-    {{> organisms-region-header-portal }}
-    <div class="region {{ regionMainClasses }}">
-      <article class="{{ regionMainContentClasses }}">
-      {{# featuredSection }}
-        <section class="bg-light">
-          {{# featuredSection.cards }}
-            {{> molecules-card}}
-          {{/ featuredSection.cards }}
-        </section>
-      {{/ featuredSection }}
-        <section>
-          <div class="container">
-            <div class="row">
-              <div class="col">
-                {{# hasPagination }}
-                  {{> molecules-pagination("paginationClass": justify-content-center) }}
-                {{/ hasPagination }}
-              </div>
+{{> organisms-header-portal }}
+{{> organisms-breadcrumb-region }}
+<main class="main-content {{ pageClasses }}" id="main-content" aria-label="Main Content">
+  {{> organisms-region-header-portal }}
+  <div class="region {{ regionMainClasses }}">
+    <article class="{{ regionMainContentClasses }}">
+    {{# featuredSection }}
+      <section class="bg-light">
+        {{# featuredSection.cards }}
+          {{> molecules-card}}
+        {{/ featuredSection.cards }}
+      </section>
+    {{/ featuredSection }}
+      <section>
+        <div class="container">
+          <div class="row">
+            <div class="col">
+              {{# hasPagination }}
+                {{> molecules-pagination("paginationClass": justify-content-center) }}
+              {{/ hasPagination }}
             </div>
           </div>
-        </section>
-            
-      </article>
-    </div>
-  </main>
-  {{> organisms-footer-portal }}
-</div>
-
-
+        </div>
+      </section>
+          
+    </article>
+  </div>
+</main>
+{{> organisms-footer-portal }}

@@ -1,46 +1,44 @@
 {{> atoms-link-skip-to-main-content }}
 {{> molecules-menu-open-side }}
-<div class="{{ pageClasses }}">
-  {{> organisms-header-portal }}
-  {{> organisms-breadcrumb-region }}
-  <main class="main-content" id="main-content" aria-label="Main Content">
-    {{> organisms-region-header-portal }}
+{{> organisms-header-portal }}
+{{> organisms-breadcrumb-region }}
+<main class="main-content {{ pageClasses }}" id="main-content" aria-label="Main Content">
+  {{> organisms-region-header-portal }}
 
-    <div class="region {{ regionMainClasses }}">
-      <div class="container {{ regionMainContainerClasses }}">
-        <div class="row">
-          {{# fullTopSection }}
-          <section class="col-12">
-            <p>Full width section -- Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc quis orci ac lorem bibendum blandit. Aenean lobortis, ex pulvinar commodo congue, orci ligula ullamcorper felis, porta pretium justo diam ut erat. Sed tempus elit non justo dictum cursus. Etiam scelerisque mauris nunc, in placerat erat dictum viverra. Aliquam et vestibulum lorem, id eleifend eros. Vestibulum non mauris vitae lorem aliquam convallis et eu nibh. Proin sollicitudin sodales odio. Nunc non ipsum ut diam tincidunt ullamcorper. Morbi sem lorem, rhoncus pretium nisi vitae, sagittis tempus arcu.</p>
-          </section>
-          {{/ fullTopSection }}
-          {{# sidebarLeft }}
-          <aside class="col-12 {{ sidebarLeftClass }} sidebar sidebar-left">
-            <div class="">Block 1</div>
-            <div class="">Block 2</div>
-            <div class="">Block 3</div>
-          </aside>
-          {{/ sidebarLeft }}
-          <article class="col-12 {{ regionMainContentClasses }}">
-            {{# searchBox }}
-              {{> molecules-search-field-combo-base }}
-            {{/ searchBox }}
-            {{> atoms-paragraph }}
-          </article>
-          {{# sidebarRight }}
-          <aside class="col-12 {{ sidebarLeftClass }} sidebar sidebar-right">
-            {{> organisms-sidebar-block }}
-          </aside>
-          {{/ sidebarRight }}
-          {{# fullBottomSection }}
-          <section class="col-12">
-            <p>Full width section -- Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc quis orci ac lorem bibendum blandit. Aenean lobortis, ex pulvinar commodo congue, orci ligula ullamcorper felis, porta pretium justo diam ut erat. Sed tempus elit non justo dictum cursus. Etiam scelerisque mauris nunc, in placerat erat dictum viverra. Aliquam et vestibulum lorem, id eleifend eros. Vestibulum non mauris vitae lorem aliquam convallis et eu nibh. Proin sollicitudin sodales odio. Nunc non ipsum ut diam tincidunt ullamcorper. Morbi sem lorem, rhoncus pretium nisi vitae, sagittis tempus arcu.</p>
-          </section>
-          {{/ fullBottomSection }}
-        </div>
+  <div class="region {{ regionMainClasses }}">
+    <div class="container {{ regionMainContainerClasses }}">
+      <div class="row">
+        {{# fullTopSection }}
+        <section class="col-12">
+          <p>Full width section -- Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc quis orci ac lorem bibendum blandit. Aenean lobortis, ex pulvinar commodo congue, orci ligula ullamcorper felis, porta pretium justo diam ut erat. Sed tempus elit non justo dictum cursus. Etiam scelerisque mauris nunc, in placerat erat dictum viverra. Aliquam et vestibulum lorem, id eleifend eros. Vestibulum non mauris vitae lorem aliquam convallis et eu nibh. Proin sollicitudin sodales odio. Nunc non ipsum ut diam tincidunt ullamcorper. Morbi sem lorem, rhoncus pretium nisi vitae, sagittis tempus arcu.</p>
+        </section>
+        {{/ fullTopSection }}
+        {{# sidebarLeft }}
+        <aside class="col-12 {{ sidebarLeftClass }} sidebar sidebar-left">
+          <div class="">Block 1</div>
+          <div class="">Block 2</div>
+          <div class="">Block 3</div>
+        </aside>
+        {{/ sidebarLeft }}
+        <article class="col-12 {{ regionMainContentClasses }}">
+          {{# searchBox }}
+            {{> molecules-search-field-combo-base }}
+          {{/ searchBox }}
+          {{> atoms-paragraph }}
+        </article>
+        {{# sidebarRight }}
+        <aside class="col-12 {{ sidebarLeftClass }} sidebar sidebar-right">
+          {{> organisms-sidebar-block }}
+        </aside>
+        {{/ sidebarRight }}
+        {{# fullBottomSection }}
+        <section class="col-12">
+          <p>Full width section -- Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc quis orci ac lorem bibendum blandit. Aenean lobortis, ex pulvinar commodo congue, orci ligula ullamcorper felis, porta pretium justo diam ut erat. Sed tempus elit non justo dictum cursus. Etiam scelerisque mauris nunc, in placerat erat dictum viverra. Aliquam et vestibulum lorem, id eleifend eros. Vestibulum non mauris vitae lorem aliquam convallis et eu nibh. Proin sollicitudin sodales odio. Nunc non ipsum ut diam tincidunt ullamcorper. Morbi sem lorem, rhoncus pretium nisi vitae, sagittis tempus arcu.</p>
+        </section>
+        {{/ fullBottomSection }}
       </div>
     </div>
-    {{> organisms-region-full-width-portal }}
-  </main>
-  {{> organisms-footer-portal }}
-</div>
+  </div>
+  {{> organisms-region-full-width-portal }}
+</main>
+{{> organisms-footer-portal }}

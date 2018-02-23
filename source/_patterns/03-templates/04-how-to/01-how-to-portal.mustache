@@ -1,42 +1,40 @@
 {{> atoms-link-skip-to-main-content }}
 {{> molecules-menu-open-side }}
-<div class="{{ pageClasses }}">
-  {{> organisms-header-portal }}
-  {{> organisms-breadcrumb-region }}
-  <main class="main-content" id="main-content" aria-label="Main Content">
-    {{> organisms-region-header-portal }}
-    <div class="region {{ regionMainClasses }}">
-      <div class="container {{ regionMainContainerClasses }}">
-        <div class="row">
-          <article class="col-12 col-md-8 {{ regionMainContentClasses }}">
-            {{# searchBox }}
-              {{> molecules-search-field-combo-base }}
-            {{/ searchBox }}
-            {{> organisms-how-to-content }}
-          </article>
-          {{# sidebarRight }}
-          <aside class="col-12 col-md-4 sidebar sidebar-right">
-            How To Sidebar Right content
-          </aside>
-          {{/ sidebarRight }}
+{{> organisms-header-portal }}
+{{> organisms-breadcrumb-region }}
+<main class="main-content {{ pageClasses }}" id="main-content" aria-label="Main Content">
+  {{> organisms-region-header-portal }}
+  <div class="region {{ regionMainClasses }}">
+    <div class="container {{ regionMainContainerClasses }}">
+      <div class="row">
+        <article class="col-12 col-md-8 {{ regionMainContentClasses }}">
+          {{# searchBox }}
+            {{> molecules-search-field-combo-base }}
+          {{/ searchBox }}
+          {{> organisms-how-to-content }}
+        </article>
+        {{# sidebarRight }}
+        <aside class="col-12 col-md-4 sidebar sidebar-right">
+          How To Sidebar Right content
+        </aside>
+        {{/ sidebarRight }}
+      </div>
+    </div>
+  </div>
+
+  <!-- Begin after-content region-->
+  <div class="region region-after {{ regionAfterClasses }}">
+    <div class="container">
+      <div class="row">
+        <div class="col-12">
+          {{# howToInfos }}
+            {{> organisms-how-to-infos }}
+          {{/ howToInfos }}
         </div>
       </div>
     </div>
+  </div>
+  <!-- End after-content region-->
 
-    <!-- Begin after-content region-->
-    <div class="region region-after {{ regionAfterClasses }}">
-      <div class="container">
-        <div class="row">
-          <div class="col-12">
-            {{# howToInfos }}
-              {{> organisms-how-to-infos }}
-            {{/ howToInfos }}
-          </div>
-        </div>
-      </div>
-    </div>
-    <!-- End after-content region-->
-
-  </main>
-  {{> organisms-footer-portal }}
-</div>
+</main>
+{{> organisms-footer-portal }}

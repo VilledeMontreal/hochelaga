@@ -6,58 +6,56 @@
 <!-- End side navigation menu -->
 <!-- *********************************************** -->
 <!-- Begin main page wrapper -->
-<div class="vdm-page {{ pageClasses }}">
-  <!-- Begin main page header -->
-  {{> organisms-header-portal }}
-  <!-- End main page header -->
-  <!-- Begin breadcrumb -->
-  {{> organisms-breadcrumb-region }}
-  <!-- End breadcrumb -->
-  <main class="main-content" id="main-content" aria-label="Main Content">
-    <!-- Begin content header region-->
-    {{> organisms-region-header-portal }}
-    <!-- End content header region-->
 
-    <!-- Begin before-content region-->
-    {{> organisms-region-before-portal }}
-    <!-- End before-content region-->
+<!-- Begin main page header -->
+{{> organisms-header-portal }}
+<!-- End main page header -->
+<!-- Begin breadcrumb -->
+{{> organisms-breadcrumb-region }}
+<!-- End breadcrumb -->
+<main class="main-content {{ pageClasses }}" id="main-content" aria-label="Main Content" role="main">
+  <!-- Begin content header region-->
+  {{> organisms-region-header-portal }}
+  <!-- End content header region-->
 
-    <!-- Begin main-content region-->
-    <div class="region {{ regionMainClasses }}">
-      <div class="container {{ regionMainContainerClasses }}">
-        <div class="row">
-          {{# fullTopSection }}
-          <section class="col-12">
-            <p>12 columns section -- Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc quis orci ac lorem bibendum blandit. Aenean lobortis, ex pulvinar commodo congue, orci ligula ullamcorper felis, porta pretium justo diam ut erat.</p>
-          </section>
-          {{/ fullTopSection }}
-          {{# sidebarLeft }}
-            {{> organisms-sidebar-left }}
-          {{/ sidebarLeft }}
-          <article class="col-12 {{ regionMainContentClasses }}">
-            {{> atoms-paragraph }}
-          </article>
-          {{# sidebarRight }}
-            {{> organisms-sidebar-right }}
-          {{/ sidebarRight }}
-          {{# fullBottomSection }}
-          <section class="col-12">
-            <p>12 columns section -- Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc quis orci ac lorem bibendum blandit. Aenean lobortis, ex pulvinar commodo congue, orci ligula ullamcorper felis, porta pretium justo diam ut erat.</p>
-          </section>
-          {{/ fullBottomSection }}
-        </div>
+  <!-- Begin before-content region-->
+  {{> organisms-region-before-portal }}
+  <!-- End before-content region-->
+
+  <!-- Begin main-content region-->
+  <div class="region {{ regionMainClasses }}">
+    <div class="container {{ regionMainContainerClasses }}">
+      <div class="row">
+        {{# fullTopSection }}
+        <section class="col-12">
+          <p>12 columns section -- Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc quis orci ac lorem bibendum blandit. Aenean lobortis, ex pulvinar commodo congue, orci ligula ullamcorper felis, porta pretium justo diam ut erat.</p>
+        </section>
+        {{/ fullTopSection }}
+        {{# sidebarLeft }}
+          {{> organisms-sidebar-left }}
+        {{/ sidebarLeft }}
+        <article class="col-12 {{ regionMainContentClasses }}">
+          {{> atoms-paragraph }}
+        </article>
+        {{# sidebarRight }}
+          {{> organisms-sidebar-right }}
+        {{/ sidebarRight }}
+        {{# fullBottomSection }}
+        <section class="col-12">
+          <p>12 columns section -- Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc quis orci ac lorem bibendum blandit. Aenean lobortis, ex pulvinar commodo congue, orci ligula ullamcorper felis, porta pretium justo diam ut erat.</p>
+        </section>
+        {{/ fullBottomSection }}
       </div>
     </div>
-  </main>
-  <!-- End main-content region-->
-  
-  <!-- Begin after-content region-->
-  {{> organisms-region-after-portal }}
-  <!-- End after-content region-->
+  </div>
+</main>
+<!-- End main-content region-->
 
-  <!-- Begin footer -->
-  {{> organisms-footer-portal }}
-  <!-- End footer -->
-  <!-- *********************************************** -->
-</div>
-<!-- End main page wrapper -->
+<!-- Begin after-content region-->
+{{> organisms-region-after-portal }}
+<!-- End after-content region-->
+
+<!-- Begin footer -->
+{{> organisms-footer-portal }}
+<!-- End footer -->
+<!-- *********************************************** -->
