@@ -82,3 +82,28 @@ html {
 .neutral-light {
   background-color: $vdm-grey-light;
 }
+
+// Services styles
+// Might migrate to own stylesheet if it becomes too long
+.summary {
+  .summary-heading {
+    display: flex;
+    justify-content: space-between;
+    padding: 1rem 0;
+    align-items: center;
+    h2 {
+      @include header(4, "bold");
+      display: inline-block;
+      margin-bottom: 0;
+    }
+  }
+  .summary-content {
+    border-top: 1px solid $gray-400;
+    border-bottom: 1px solid $gray-400;
+    margin-bottom: 2rem;
+    padding-top: 1.5rem;
+  }
+  .label {
+    font-weight: $font-weight-bold;
+  }
+}

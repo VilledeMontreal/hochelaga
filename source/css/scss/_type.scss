@@ -1,24 +1,45 @@
-h1 {
+//
+// Headings
+//
+
+h1, .h1 {
   @include header(1);
+  &.strong {
+    @include header(1, "bold");
+  }
 }
-h2 {
+h2, .h2 {
   @include header(2);
+  &.strong {
+    @include header(2, "bold");
+  }
 }
-h3 {
+h3, .h3 {
   @include header(3);
+  &.strong {
+    @include header(3, "bold");
+  }
 }
-h4 {
+h4, .h4 {
   @include header(4);
   &.strong {
     @include header(4, "bold");
   }
 }
-h5 {
+h5, .h5 {
   @include header(5);
+  &.strong {
+    @include header(5, "bold");
+  }
 }
-h6 {
+h6, .h6 {
   @include header(6);
+  &.strong {
+    @include header(6, "bold");
+  }
 }
+
+// TODO: Change vdm-title declaration
 
 .vdm-title {
   position: relative;
@@ -49,17 +70,11 @@ h6 {
   font-weight: $font-weight-light;
 }
 
-.intro {
-  font-weight: $font-weight-regular;
-  font-size: $font-size-sm;
-  line-height: $line-height-lg;
-}
-
 em {
   font-style: italic;
 }
 
-strong {
+b, strong {
   font-weight: $font-weight-bold;
 }
 
@@ -67,29 +82,9 @@ p {
   line-height: $line-height-lg;
 }
 
-// Hyperlinks - generic
+// Links - generic
 a {
-  // Inline links with icons
-  // Clean-up this code to preserve onlu .vfi classes
-  &.icon {
-    .vfi {
-      font-size: 1.5em;
-      position: relative;
-      top: 0.2em;
-    }
-    &.right {
-      .vfi {
-        padding-left: 0.15em;
-      }
-    }
-    &.left {
-      .vfi {
-        padding-right: 0.15em;
-      }
-    }
-  }
-
-  // Refactor required for this block, considering the icon tag will be explicite in the markup
+  // TODO: Refactor required for this block, considering the icon tag will be explicite in the markup
   // Used in the side menu
   &.block {
     display: block;
@@ -141,16 +136,36 @@ a {
       color: $vdm-brand;
     }
   }
-
-
 }
+
+// Add .icon class to display vertically centered icon and text
+.icon {
+  display: inline-flex;
+  align-items: center;
+  // we need this code to prevent icon from getting underlined on hover
+  .vfi {
+    display: inline-block;
+    text-decoration: none;
+    font-size: 1.5rem;
+    &:before {
+      display: inline-block;
+      text-decoration: none;
+    }
+  }
+  &.right {
+    .vfi {
+      padding-left: 0.15em;
+    }
+  }
+  &.left {
+    .vfi {
+      padding-right: 0.15em;
+    }
+  }
+}
+
 // Inline links with icons - Headers : a tad smaller
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
+h1, h2, h3, h4, h5, h6 {
   a {
     &.icon {
       .vfi {
@@ -164,32 +179,10 @@ h6 {
 //
 // ul, ol
 
-ul,
-ol {
-  &.vdm-list-plain {
-    list-style-type: none;
-    margin: 0;
-    padding: 0;
-    li {
-      margin: 0 0 0.3em 0;
-      padding: 0;
-    }
-  }
-
-  &.vdm-list-date {
-    margin: 0;
-    padding: 0;
-    li {
-      margin: 0;
-      padding: 0 0 0.3em 0;
-    }
-  }
-}
-
 // Plain list overrides
 // Should all lists carry this look and feel, really?
 ul {
-  &.vdm-list {
+  &.custom-list {
     list-style-type: none;
     padding: 0;
 
@@ -369,18 +362,10 @@ blockquote {
   font-size: $font-size-sm;
 }
 
-.vdm-label {
-  font-weight: $font-weight-regular;
-  font-size: $font-size-sm;
-  background: transparent;
-  border: $input-border-width/2 solid $vdm-brand;
-  color: $vdm-brand;
-  border-radius: $border-radius-lg;
-  padding: $vdm-btn-padding-y $vdm-btn-padding-x * 0.75;
-  &.selected {
-    border: $input-border-width/2 solid $black;
-    color: $black;
-  }
+.footer-notes {
+  border-top: 1px solid $vdm-grey;
+  padding-top: 2rem;
+  margin-bottom: 4rem;
 }
 
 //

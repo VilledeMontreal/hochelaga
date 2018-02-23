@@ -8,41 +8,42 @@
 
 // @arg $level - integrer [1-6]
 // @arg $weight - string ['light','regular','bold']
-@mixin header($level: 1, $weight: "regular") {
+@mixin header($level: 1, $weight: "regular", $display: "block") {
   font-family: $font-family-base;
   font-weight: $font-weight-regular;
-  //display: block;
+  display: $display;
 
   @if $level == 1 {
     font-weight: $font-weight-light;
-    font-size: 4.1875rem; // 67px
-    line-height: $line-height-sm; // 92px
+    font-size: $h1-font-size;         // 67px
+    line-height: $line-height-sm;     // 92px
   }
   @if $level == 2 {
     font-weight: $font-weight-light;
-    font-size: 3.125rem; // 50px
-    line-height: $line-height-sm; // 69px
+    font-size: $h1-font-size;         // 50px
+    line-height: $line-height-sm;     // 69px
   }
   @if $level == 3 {
-    font-size: 2.3125rem; // 37px
-    line-height: $line-height-sm; // 50px
+    font-size: $h3-font-size;         // 37px
+    line-height: $line-height-sm;     // 50px
   } 
   @if $level == 4 {
-    font-size: 1.75rem; // 28px
-    line-height: $line-height-sm; // 38px
+    font-size: $h4-font-size;         // 28px
+    line-height: $line-height-sm;     // 38px
   } 
   @if $level == 5 {
-    font-size: 1.3125rem; // 21px
-    line-height: $line-height-sm; // 28px
+    font-size: $h5-font-size;         // 21px
+    line-height: $line-height-sm;     // 28px
   } 
   @if $level == 6 {
-    font-size: 1rem; // 16px
-    line-height: $line-height-lg; // 26px
+    font-size: $h6-font-size;         // 16px
+    line-height: $line-height-lg;     // 26px
   }
 
   @if $weight == "bold" {
     font-weight: $font-weight-bold;
   }
+
 }
 
 //  @arg $size - string - any valid text size declaration
@@ -155,6 +156,32 @@
 @mixin progress-variant($bg) {
   .progress-bar {
     border-color: $bg;
+  }
+}
+
+// Badge variant
+
+@mixin badge-outline-variant($color) {
+  color: $color;
+  background-color: transparent;
+  border: 1px solid $color;
+
+  &[href] {
+    @include hover-focus {
+      color: $color;
+      text-decoration: none;
+      border-color: darken($color, 10%);
+    }
+  }
+}
+
+// Add badge outline variants
+//
+// Contextual variations (linked badges get darker on :hover).
+
+@each $color, $value in $theme-colors {
+  .badge-outline-#{$color} {
+    @include badge-outline-variant($value);
   }
 }
 
