@@ -89,12 +89,21 @@ html {
   .summary-heading {
     display: flex;
     justify-content: space-between;
-    padding: 1rem 0;
+    padding-bottom: 1rem;
     align-items: center;
     h2 {
       @include header(4, "bold");
       display: inline-block;
       margin-bottom: 0;
+    }
+    .nav {
+      .nav-item {
+        padding-right: 1rem;
+        padding-left: 1rem;
+        &:last-child {
+          padding-right: 0;
+        }
+      }
     }
   }
   .summary-content {
@@ -105,5 +114,15 @@ html {
   }
   .label {
     font-weight: $font-weight-bold;
+  }
+}
+
+// Coordinates
+.block-coordinates {
+  .title {
+    @extend .mb-4;
+  }
+  .item-label {
+    @include header(6, 'bold');
   }
 }

@@ -5,12 +5,10 @@
   <div class="region bg-gray-100">
     <div class="container bg-white">
       <div class="row">
-        <div class="col-12">
-          {{# hasSummary }}
-          {{> organisms-services-resultats-content }}
-          {{/ hasSummary }}
-        </div>
         <div class="col-12 col-md-8">
+          {{# hasSummary }}
+            {{> organisms-services-resultats-content }}
+          {{/ hasSummary }}
           {{> organisms-multistep-form }}
         </div>
         {{# sidebarRight }}

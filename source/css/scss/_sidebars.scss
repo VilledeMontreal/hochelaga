@@ -114,6 +114,7 @@
   .vdm-title {
     margin-bottom: 2em;
     @include header(4, bold);
+    display: flex;
     &:after {
       background-color: $black;
       color: $black;

@@ -8,7 +8,7 @@
 
 // @arg $level - integrer [1-6]
 // @arg $weight - string ['light','regular','bold']
-@mixin header($level: 1, $weight: "regular", $display: "block") {
+@mixin header($level: 1, $weight: "regular", $display: block) {
   font-family: $font-family-base;
   font-weight: $font-weight-regular;
   display: $display;

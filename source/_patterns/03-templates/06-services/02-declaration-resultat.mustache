@@ -2,21 +2,56 @@
 {{> organisms-header-portal }}
 {{> organisms-nav-services }}
 <main class="main-content {{ pageClasses }}" id="main-content" aria-label="Main Content" role="main">
-  <div class="container">
+  <div class="container my-5">
     <div class="row">
       <div class="col-12">
         {{# hasAlert }}
+          <div class="alert-container mb-5">
           {{> molecules-alerts }}
+          </div>
         {{/ hasAlert }}
         {{> organisms-services-resultats-content }}
-        <h2 class="h4">Substances visées présentes à l’établissement</h2>
+        <h2 class="h4 mb-4">Substances visées présentes à l’établissement</h2>
         {{# hasResults }}
 
           {{# cards }}
+            <div class="cards {{ cards.classes }}">
             {{# cards.card-item }}
               {{> molecules-card-item }}
             {{/ cards.card-item }}
+            </div>
           {{/ cards }}
+
+          {{# hasResultsOwner }}
+          <div class="row block-coordinates mb-6">
+            <div class="col-12">
+              <h2 class="h4 mb-4">Coordonnées</h2>
+            </div>
+            <div class="col-12 col-md-6">
+              <span class="item-label">Nom de la cie</span>
+              <p>Société en nom collectif</p>
+            </div>
+            <div class="col-12 col-md-6">
+              <span class="item-label">Personne contact</span>
+              <p>Gilles Bergeron</p>
+            </div>
+            <div class="col-12 col-md-6">
+              <span class="item-label">Courriel</span>
+              <p>email@gmail.com</p>
+            </div>
+            <div class="col-12 col-md-6">
+              <span class="item-label">Téléphone</span>
+              <p>514-990-7688</p>
+            </div>
+            <div class="col-12">
+              <span class="item-label">Adresse postale</span>
+              <address>50 Queen<br>
+              Suite 101<br>
+              Montréal, Québec<br>	
+              H3C 2N5</address>
+            </div>
+          </div>
+          {{/ hasResultsOwner }}
 
         {{/ hasResults }}
 
@@ -32,14 +67,14 @@
         {{/ hasResults }}
 
         {{# notes-bdp }}
-          <p>{{ notes-bdp }}</p>
+          <p class="mb-6">{{ notes-bdp }}</p>
         {{/ notes-bdp}}
 
         {{# hasFooterNotes }}
           {{> atoms-footer-notes }}
         {{/ hasFooterNotes }}
         {{# printButton }}
-        <div class="text-center">
+        <div class="text-center mb-6">
           {{> atoms-button("buttonText": "Imprimer") }}
         </div>
         {{/ printButton }}

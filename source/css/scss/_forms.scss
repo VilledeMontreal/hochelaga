@@ -21,6 +21,21 @@ legend,
   }
 }
 
+// wrapper around input that needs inline text addon
+.input-inline-addon {
+  @extend .form-inline;
+  // Allow folks to *not* use `.form-group`
+  .form-control {
+    display: inline-block;
+    width: 160px;
+    vertical-align: middle;
+  }
+  .input-inline-text {
+    color: $gray-500;
+    padding-left: 0.8125rem;
+  }
+}
+
 // TO DO: Is this generic or specific to wizard forms
 .form-action-group {
   margin: 2rem auto;
