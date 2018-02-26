@@ -3,13 +3,15 @@
 
 <main class="main-content {{ pageClasses }}" id="main-content" aria-label="Main Content" role="main">
   <div class="region bg-gray-100">
-    <div class="container bg-white">
+    <div class="container bg-white py-6">
       <div class="row">
         <div class="col-12 col-md-8">
           {{# hasSummary }}
             {{> organisms-services-resultats-content }}
           {{/ hasSummary }}
+
           {{> organisms-multistep-form }}
+
         </div>
         {{# sidebarRight }}
         <aside class="col-12 col-md-4 sidebar sidebar-right {{ sidebar-classes }}">

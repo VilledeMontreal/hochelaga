@@ -96,6 +96,22 @@
     </div>
   </div>
   {{/ hasStepDeclaration }}
+  {{# hasStepSelectYear }}
+  <div class="form-step">
+    <label class="group-label">Pour quelle année désirez-vous faire une déclaration?</label>
+    {{> atoms-select }}
+
+    {{# hasSummaryAfterForm }}
+      {{> organisms-services-resultats-content }}
+    {{/ hasSummaryAfterForm }}
+    <div class="alert-container mb-5">
+      <div class="alert alert-warning alert-icon" role="alert">
+        <span class="vfi vfi-attention-circulaire" aria-hidden="true"></span>
+        <div>Si l’année que vous cherchez ne se trouve pas dans cette liste, cela signifie que vous avez déjà fais cette déclaration. Vous pouvez la modifier directement via le tableau de bord.</div>
+      </div>
+    </div>
+  </div>
+  {{/ hasStepSelectYear }}
   {{# hasStepRadios }}
   <div class="form-step">
     <div class="form-group"> 
@@ -105,14 +121,6 @@
         <div>Responsable de la déclaration: Personne responsable des renseignements techniques, chargée de préparer la déclaration et de répondre à toute question relative à son contenu</div>
       </div>
       {{> atoms-radio-custom-form }}
-      <!--<div class="custom-control custom-radio">
-        <input type="radio" id="responsableRadio1" name="responsableRadio" class="custom-control-input" value="">
-        <label class="custom-control-label" for="responsableRadio1">Exploitant</label>
-      </div>
-      <div class="custom-control custom-radio">
-        <input type="radio" id="responsableRadio2" name="responsableRadio" class="custom-control-input" value="">
-        <label class="custom-control-label" for="responsableRadio2">Autre</label>
-      </div>-->
     </div>
   </div>
   {{/ hasStepRadios }}
@@ -160,7 +168,7 @@
         </div>
         {{/ cards.card-item }}
         <div class="{{ cards.bsgrid-classes }}">
-          <div class="card card-row-layout bg-gray-light" data-toggle="modal" data-target="#addReservoireModal">
+          <div class="card card-row-layout bg-gray-light text-center" data-toggle="modal" data-target="#addReservoireModal">
             <div class="card-body">
               <span class="card-title">Ajouter un système de réservoir</span>
             </div>
@@ -186,13 +194,13 @@
             <div class="form-group">
               <label for="inputConcentration">Concentration de la matière</label>
               <div class="input-inline-addon">
-                <input type="text" class="form-control input-inline-text" id="inputConcentration"><span class="input-inline-text">% massique</span>
+                <input type="text" class="form-control" id="inputConcentration"><span class="input-inline-text">% massique</span>
               </div>
             </div>
             <div class="form-group">
               <label for="inputCapacite">Capacité nominale du système de réservoir</label>
               <div class="input-inline-addon">
-                <input type="text" class="form-control input-inline-text" id="inputCapacite"><span class="input-inline-text">tonne(s)</span>
+                <input type="text" class="form-control" id="inputCapacite"><span class="input-inline-text">tonne(s)</span>
               </div>
             </div>
             <div class="form-group">
@@ -211,7 +219,7 @@
                 </div>
                 <div class="col-12 col-md-6">
                   <div class="input-inline-addon">
-                    <input type="text" class="form-control input-inline-text" id="inputGeolat"><span class="input-inline-text">lat.</span>
+                    <input type="text" class="form-control" id="inputGeolat"><span class="input-inline-text">lat.</span>
                   </div>
                 </div>
               </div>
@@ -224,7 +232,45 @@
       </div>
     </div>
   </div>
+  <!-- Modal END -->
   {{/ hasStepAddCardsModal }}
+
+  {{# hasStepDeclarationOwner }}
+    {{# checkboxDeclarationMatiere }}
+      <label class="group-label">Veuillez cocher les cases pour attester l'exactitude des informations avant de soumettre votre déclaration.</label>
+      <div class="form-group">
+        <label>Substances présentes à l’établissement</label>
+        {{> atoms-checkbox-custom-form-item }}
+      </div>
+    {{/ checkboxDeclarationMatiere }}
+
+    {{> organisms-block-coordinates }}
+
+    {{# checkboxDeclaration }}
+      <div class="form-group">
+        <label>Déclaration</label>
+        {{> atoms-checkbox-custom-form-item }}
+      </div>
+    {{/ checkboxDeclaration }}
+  {{/ hasStepDeclarationOwner }}
+
+  {{# hasStepDeclarationCards }}
+    <div class="form-step">
+      <label class="group-label">Veuillez cocher les cases pour attester l'exactitude des informations avant de soumettre votre déclaration.</label>
+      <div class="form-group">
+        <label>Substances présentes à l’établissement</label>
+        {{# checkboxDeclarationMatiere }}
+          {{> atoms-checkbox-custom-form-item }}
+        {{/ checkboxDeclarationMatiere }}
+      </div>
+      {{# checkboxDeclaration }}
+      <div class="form-group">
+        <label>Déclaration</label>
+        {{> atoms-checkbox-custom-form-item }}
+      </div>
+      {{/ checkboxDeclaration }}
+    </div>
+  {{/ hasStepDeclarationCards }}
   <div class="form-group form-action-group">
     <ul>
       <li>

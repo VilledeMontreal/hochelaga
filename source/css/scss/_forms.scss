@@ -120,6 +120,7 @@ legend,
 // Custom checkboxes and radios themed as card
 .custom-control-card {
   padding: 0;
+  margin-bottom: 1.5rem;
 
   .custom-control-label {
     display: flex;
@@ -144,6 +145,14 @@ legend,
       left: 0;
       right: auto;
       margin-left: 2rem;
+    }
+
+    .card-label {
+      @include header(5, "bold");
+    }
+
+    .card-title {
+      @include header(5);
     }
 
   }
@@ -394,10 +403,4 @@ legend,
       }
     }
   }
-}
-
-// Form Wizard
-.form-wizard {
-  padding-top: 3rem;
-  padding-bottom: 3rem;
 }

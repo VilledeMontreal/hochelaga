@@ -1,4 +1,5 @@
 <div class="summary mb-5">
+  {{# summaryHasHeading}}
   <div class="summary-heading">
     <h2>Année X</h2>
     {{# summaryHasNavButtons }}
@@ -8,6 +9,7 @@
     </ul>
     {{/ summaryHasNavButtons }}
   </div>
+  {{/ summaryHasHeading }}
   <div class="summary-content">
     <div class="row">
       {{# summaryFull }}

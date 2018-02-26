@@ -9,7 +9,7 @@
           <ul class="nav nav-steps" role="tablist">
             {{# wizardSteps }}
             <li role="presentation" class="nav-item">
-              <a href="#{{ stepID }}" class="nav-link {{ is-active }}" data-toggle="tab" aria-controls="{{ stepID }}" role="tab" title="{{ stepName }}">
+              <a href="#{{ stepID }}" class="nav-link {{# is-active }}active{{/ is-active}}" data-toggle="tab" aria-controls="{{ stepID }}" role="tab" title="{{ stepName }}">
                 <span class="caption">{{ stepName }}</span>
                 <span class="circle" aria-hidden="true"></span>
               </a>
