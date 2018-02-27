@@ -42,13 +42,16 @@ legend,
   ul {
     @extend .list-inline;
     display: flex;
-    justify-content: space-between;
+    //justify-content: space-between;
     li {
       @extend .list-inline-item;
       &:not(:last-child) {
         margin-right: inherit;
       }
 
+      &:last-child {
+        margin-left: auto;
+      }
     }
   }
 }

@@ -168,11 +168,11 @@
         </div>
         {{/ cards.card-item }}
         <div class="{{ cards.bsgrid-classes }}">
-          <div class="card card-row-layout bg-gray-light text-center" data-toggle="modal" data-target="#addReservoireModal">
+          <button type="button" class="card card-row-layout bg-gray-light text-center" data-toggle="modal" data-target="#addReservoireModal">
             <div class="card-body">
               <span class="card-title">Ajouter un système de réservoir</span>
             </div>
-          </div>
+          </button>
         </div>
       </div>
     </div>
@@ -273,10 +273,10 @@
   {{/ hasStepDeclarationCards }}
   <div class="form-group form-action-group">
     <ul>
-      <li>
+      <li class="first">
         {{> atoms-button("btnClasses": "vdm-btn-secondary btn-prev", "buttonText": "Précédent" ) }}
       </li>
-      <li>
+      <li class="last">
         {{> atoms-button("btnClasses": "btn-next", "buttonText": "Soumettre") }}
       </li>
     </ul>
