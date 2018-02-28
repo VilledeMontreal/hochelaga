@@ -11,15 +11,21 @@
 {{> organisms-header-portal }}
 <!-- End main page header -->
 <!-- Begin breadcrumb -->
-{{> organisms-breadcrumb-region }}
+{{> molecules-breadcrumb }}
 <!-- End breadcrumb -->
 <main class="main-content {{ pageClasses }}" id="main-content" aria-label="Main Content" role="main">
   <!-- Begin content header region-->
-  {{> organisms-region-header-portal }}
+  {{> organisms-content-header-portal }}
   <!-- End content header region-->
 
   <!-- Begin before-content region-->
-  {{> organisms-region-before-portal }}
+  <section class="region region-before {{ regionBeforeClasses }}">
+    <div class="container">
+      <div class="row">
+        <div class="col-12">Section before content</div>
+      </div>
+    </div>
+  </section>
   <!-- End before-content region-->
 
   <!-- Begin main-content region-->
@@ -48,12 +54,19 @@
       </div>
     </div>
   </div>
+
+  <!-- Begin after-content region-->
+  <section class="region region-after {{ regionAfterClasses }}">
+    <div class="container">
+      <div class="row">
+        <div class="col-12">Region after content</div>
+      </div>
+    </div>
+  </section>
+  <!-- End after-content region-->
+
 </main>
 <!-- End main-content region-->
-
-<!-- Begin after-content region-->
-{{> organisms-region-after-portal }}
-<!-- End after-content region-->
 
 <!-- Begin footer -->
 {{> organisms-footer-portal }}

@@ -3,14 +3,16 @@
   "regionMainClasses": "",
   "regionMainContainerClasses": "",
   "regionMainContentClasses": "",
+  "regionBeforeClasses": "page-section bg-gray-light",
   "has-lead-text" : true,
+  "hasPagination": true,
   "featuredSection": {
     "cards": {
       "classes": false,
       "bsgrid-classes": "col-12 col-md-6 col-lg-3",
       "headings": {
         "text": "Section headings",
-        "class": false
+        "class": "section-heading"
       },
       "card-item" : [
         {
@@ -87,6 +89,101 @@
         }
       ]
     }
+  },
+  "demandesListes": {
+    "cards": {
+      "classes": "bg-gray-light",
+      "bsgrid-classes": "col-12",
+      "headings": {
+        "text": "Section headings",
+        "class": "section-heading"
+      },
+      "card-item" : [
+        {
+          "classes": "card-fw card-row-layout",
+          "url": "#",
+          "card-title": "Card with a very long title. Footer is place to the right for larger breakpoint. How do we handle the arrow placement?",
+          "card-text":
+            "Some quick example text to build on the card title and make up the bulk of the card's content.",
+          "card-media": {
+            "classes" : false,
+            "icon": false
+          },
+          "footer" : {
+            "outside-body": true
+          }
+        },
+        {
+          "classes": "card-fw card-row-layout",
+          "url": "#",
+          "card-title": "Card with a very long title. Footer is place to the right for larger breakpoint. How do we handle the arrow placement?",
+          "card-text":
+            "Some quick example text to build on the card title and make up the bulk of the card's content.",
+          "card-media": {
+            "classes" : false,
+            "icon": false
+          },
+          "footer" : {
+            "outside-body": true
+          }
+        },
+        {
+          "classes": "card-fw card-row-layout",
+          "url": "#",
+          "card-title": "Card with a very long title. Footer is place to the right for larger breakpoint. How do we handle the arrow placement?",
+          "card-text":
+            "Some quick example text to build on the card title and make up the bulk of the card's content.",
+          "card-media": {
+            "classes" : false,
+            "icon": false
+          },
+          "footer" : {
+            "outside-body": true
+          }
+        },
+        {
+          "classes": "card-fw card-row-layout",
+          "url": "#",
+          "card-title": "Card with a very long title. Footer is place to the right for larger breakpoint. How do we handle the arrow placement?",
+          "card-text":
+            "Some quick example text to build on the card title and make up the bulk of the card's content.",
+          "card-media": {
+            "classes" : false,
+            "icon": false
+          },
+          "footer" : {
+            "outside-body": true
+          }
+        },
+        {
+          "classes": "card-fw card-row-layout",
+          "url": "#",
+          "card-title": "Card with a very long title. Footer is place to the right for larger breakpoint. How do we handle the arrow placement?",
+          "card-text":
+            "Some quick example text to build on the card title and make up the bulk of the card's content.",
+          "card-media": {
+            "classes" : false,
+            "icon": false
+          },
+          "footer" : {
+            "outside-body": true
+          }
+        },
+        {
+          "classes": "card-fw card-row-layout",
+          "url": "#",
+          "card-title": "Card with a very long title. Footer is place to the right for larger breakpoint. How do we handle the arrow placement?",
+          "card-text":
+            "Some quick example text to build on the card title and make up the bulk of the card's content.",
+          "card-media": {
+            "classes" : false,
+            "icon": false
+          },
+          "footer" : {
+            "outside-body": true
+          }
+        }
+      ]
+    }
   }
 }
-

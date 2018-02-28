@@ -32,21 +32,27 @@ html {
 .region {
 
   // Main header, always includes at least the page Title
-  &.content-header {
+  .region-content-header {
 
+  }
+  .content-header {
+    padding: 3rem 0;
     // Dark variant
     &.content-header-dark {
       background-color: $vdm-grey-dark;
       color: $white;
     }
-  }
+    &.region-border {
+      border-bottom: 1px solid $gray-400;
+    }
+  
+    &.has-nav-tabs {
+      padding-bottom: 0;
+    }
 
-  &.region-border {
-    border-bottom: 1px solid $gray-400;
-  }
-
-  &.has-nav-tabs {
-    padding-bottom: 0;
+    &.content-header-has-image {
+      margin-top: -150px;
+    }
   }
 } // Region
 
@@ -61,7 +67,21 @@ html {
   order: 2;
 }
 
+
+
 // Generic section layouts
+.page-section {
+  padding: map-get($spacers, 5);
+  .section-heading {
+    margin-bottom: map-get($spacers, 4);
+  }
+  &.bg-gray-light,
+  &.bg-light {
+    .card {
+      border: none;
+    }
+  }
+}
 .services-heading {
   padding-top: 3rem;
   padding-bottom: 3rem; 
@@ -76,11 +96,6 @@ html {
   .sidebar-right {
     order: 0;
   }
-}
-
-// Background-color for region or zone or anything really...
-.neutral-light {
-  background-color: $vdm-grey-light;
 }
 
 // Services styles
@@ -117,7 +132,9 @@ html {
   }
 }
 
+//
 // Coordinates
+//
 .block-coordinates {
   .title {
     font-size: 1.5rem;

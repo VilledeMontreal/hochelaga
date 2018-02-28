@@ -1,19 +1,23 @@
 {{> atoms-link-skip-to-main-content }}
 {{> organisms-header-portal }}
 {{> organisms-nav-services }}
+
 <main class="main-content {{ pageClasses }}" id="main-content" aria-label="Main Content" role="main">
   <div class="container my-5">
     <div class="row">
       <div class="col-12">
+
         {{# hasAlert }}
           <div class="alert-container mb-5">
           {{> molecules-alerts }}
           </div>
         {{/ hasAlert }}
-        {{> organisms-service-summary }}
-        <h2 class="h4 mb-4">Substances visées présentes à l’établissement</h2>
-        {{# hasResults }}
 
+        {{> organisms-service-summary }}
+
+        <h2 class="h4 mb-4">Substances visées présentes à l’établissement</h2>
+
+        {{# hasResults }}
           {{# cards }}
             <div class="cards {{ cards.classes }}">
             {{# cards.card-item }}
@@ -25,7 +29,6 @@
           {{# hasResultsOwner }}
             {{> organisms-block-coordinates }}
           {{/ hasResultsOwner }}
-
         {{/ hasResults }}
 
         {{^ hasResults }}
@@ -36,7 +39,6 @@
             {{/ cards.card-item-no-result }}
             </div>
           {{/ cards }}
-
         {{/ hasResults }}
 
         {{# notes-bdp }}
@@ -46,13 +48,16 @@
         {{# hasFooterNotes }}
           {{> atoms-footer-notes }}
         {{/ hasFooterNotes }}
+
         {{# printButton }}
         <div class="text-center mb-6">
           {{> atoms-button("buttonText": "Imprimer") }}
         </div>
         {{/ printButton }}
+
       </div>
     </div>
   </div>
 </main>
+
 {{> organisms-footer-portal }}

@@ -1,5 +1,5 @@
 ---
-title: Collector page -- services teaser tiles
+title: Services teaser tiles and content
 ---
 
 ## References used

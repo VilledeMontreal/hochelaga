@@ -21,6 +21,7 @@
 // Page item
 
 .page-item {
+  display: flex;
   &:first-child {
     .page-link {
       @include border-left-radius(0);
@@ -37,9 +38,11 @@
   &:last-child {
     > .page-link {
       padding: $pagination-icon-padding;
+      line-height: 1;
       .vfi {
         display: block;
         font-size: 1em;
+        line-height: 1;
       }
     }
   }
@@ -89,8 +92,9 @@
 //
 
 .collapsible-item {
-  padding: 0;
   margin-bottom: 30px;
+  padding: 0;
+  position: relative;
   .collapsible-header {
     h4 {
       margin: 0;

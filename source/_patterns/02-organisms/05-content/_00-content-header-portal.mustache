@@ -1,0 +1,25 @@
+<div class="region region-content-header {{ headerContainerClasses }}">
+  <div class="container">
+    <div class="row">
+      {{# has-image }}
+      <div class="media">
+        {{> molecules-header-image-portal }}
+      </div>
+      {{/ has-image }}
+      <div class="content-header">
+        <div class="col-12">
+          {{> atoms-heading-1 }} 
+          {{# has-subtitle }} 
+            {{> atoms-heading-2 }} 
+          {{/ has-subtitle }}
+          {{# has-lead-text }}
+            {{> atoms-lead }}
+          {{/ has-lead-text }}
+          {{# has-nav-tabs }}
+            {{> molecules-nav-tab }}
+          {{/ has-nav-tabs}}
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
