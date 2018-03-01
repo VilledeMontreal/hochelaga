@@ -140,7 +140,8 @@
     }
     // No bottom stroke, reduced bottom margin
     &.discrete {
-      margin-bottom: 1.4em;
+      margin-bottom: 1rem;
+      padding-top: .5rem;
       &:after {
         display: none;
       }

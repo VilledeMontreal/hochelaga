@@ -6,16 +6,16 @@ import vdmtl.cicd.MultibranchPipeline
 pipeline = new MultibranchPipeline();
 ctx = pipeline.createContext([
     "hipchatRoom" : [
-        "PRODUCTION": "0",
-        "DEVELOPMENT": "0",
-        "ACCEPTANCE": "0"
+        "PRODUCTION": "4285211",
+        "DEVELOPMENT": "4285211",
+        "ACCEPTANCE": "4285211"
     ],
     "dockerImageBaseName": "vdmtl/boite-outils-web",
     "workspaceDir": "/home/jenkins/boite-outils-web",
     "developmentBranch": "develop",
     "slave": "nodejs",
     "deploymentTargetHosts": [
-        "PRODUCTION": "10.145.1.80", //prdldk02a.ile.montreal.qc.ca
+      "PRODUCTION": "10.145.1.80", //prdldk02a.ile.montreal.qc.ca
     	"DEVELOPMENT": "10.145.10.62", //dvlldk02a.ile.montreal.qc.ca
     	"ACCEPTANCE": "10.145.10.64" //accldk02a.ile.montreal.qc.ca
     ],
@@ -25,12 +25,12 @@ ctx = pipeline.createContext([
     	"ACCEPTANCE": "docker-compose-accept.yml"
     ],
     "acceptApprovers" : [
-        "submitter1" : [ "id" : "udall98", "mailto" : "chdallaire" ],
-        "submitter2" : [ "id" : "uboul8b", "mailto" : "alexis.boulerice" ],
+      "submitter1" : [ "id" : "udall98", "mailto" : "chdallaire" ],
+      "submitter2" : [ "id" : "uboul8b", "mailto" : "alexis.boulerice" ],
     ],
     "nexusLib" : [
-        "buildCommand" : "npm run package",
-        "publishFromDistDirectory" : false
+      "buildCommand" : "npm run package",
+      "publishFromDistDirectory" : false
     ],
 
 ]);
