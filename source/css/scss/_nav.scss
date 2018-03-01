@@ -51,7 +51,7 @@
 // Page link
 
 .page-link {
-  font-size: $font-size-xl;
+  font-size: $h5-font-size;
 }
 
 //
@@ -638,11 +638,39 @@ nav {
 // Services sub-navigation
 .navbar-services {
   border-bottom: 1px solid $vdm-grey-light;
+
+  .navbar-brand,
+  .navbar-link {
+    font-size: $font-size-lg;
+    line-height: 1.333333;
+    padding: 0;
+    display: flex;
+  }
+
+  .navbar-brand {
+    font-size: $font-size-xl;
+    font-weight: $font-weight-bold;
+  }
+
+  .navbar-link {
+    padding-bottom: 5px;
+  }
+
   .navbar-header {
     margin-left: $header-icon-width;
-  }
-  .navbar-brand {
-    @include header(5, "bold");
+    padding-top: 1.25rem;
+    padding-bottom: 1.25rem; 
+    &.navbar-header-profile-link {
+      padding-top: .375rem;
+      padding-bottom: .375rem;
+      .navbar-brand {
+        font-size: $font-size-lg;
+      }
+    }
+    a {
+      color: $body-color;
+      text-decoration: underline;
+    }
   }
 
   .nav-item {
