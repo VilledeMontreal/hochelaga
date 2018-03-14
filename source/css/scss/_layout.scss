@@ -32,25 +32,28 @@ html {
 .region {
 
   // Main header, always includes at least the page Title
-  .region-content-header {
-
-  }
-  .content-header {
-    padding: 3rem 0;
+  &.region-content-header {
     // Dark variant
     &.content-header-dark {
       background-color: $vdm-grey-dark;
       color: $white;
     }
+
+    &.has-nav-tabs {
+      .content-header {
+        padding-bottom: 0;
+      }
+    }
+
     &.region-border {
       border-bottom: 1px solid $gray-400;
     }
-  
-    &.has-nav-tabs {
-      padding-bottom: 0;
-    }
 
-    &.content-header-has-image {
+  }
+  .content-header {
+    padding: 3rem 0;
+
+    &.has-image {
       margin-top: -150px;
     }
   }
