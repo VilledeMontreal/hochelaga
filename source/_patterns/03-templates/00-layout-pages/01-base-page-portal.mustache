@@ -1,9 +1,10 @@
 {{> atoms-link-skip-to-main-content }}
 {{> molecules-menu-open-side }}
 {{> organisms-header-portal }}
-{{> organisms-breadcrumb-region }}
+{{> molecules-breadcrumb }}
 <main class="main-content {{ pageClasses }}" id="main-content" aria-label="Main Content">
-  {{> organisms-region-header-portal }}
+
+  {{> organisms-content-header-portal }}
 
   <div class="region {{ regionMainClasses }}">
     <div class="container {{ regionMainContainerClasses }}">
@@ -15,9 +16,7 @@
         {{/ fullTopSection }}
         {{# sidebarLeft }}
         <aside class="col-12 {{ sidebarLeftClass }} sidebar sidebar-left">
-          <div class="">Block 1</div>
-          <div class="">Block 2</div>
-          <div class="">Block 3</div>
+          {{> organisms-sidebar-block }}
         </aside>
         {{/ sidebarLeft }}
         <article class="col-12 {{ regionMainContentClasses }}">

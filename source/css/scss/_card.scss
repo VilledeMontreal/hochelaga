@@ -44,6 +44,7 @@
   .card-body {
     padding: 2rem 2rem 2rem 2rem;
     align-self: center;
+    width: 100%;
 
     .popover-wrapper {
       &.right {
@@ -207,6 +208,16 @@
     }
   }
 
+  &.card-label-content {
+    @extend .text-left;
+    .card-title {
+      font-weight: $font-weight-bold;
+    }
+    .card-label {
+      font-size: $font-size-base;
+    }
+  }
+
   // Color variant - Is this tied with the card variant? or variant agnostic
   &.white-scheme {
     border: none;
@@ -216,6 +227,10 @@
     margin: 2rem auto 1rem auto;
     width: 61.5%;
   }
+
+  &[data-toggle="modal"] {
+    cursor: pointer;
+  }
 }
 
 // Color variant overrides
@@ -223,6 +238,9 @@
   > div,
   .card-item {
     display: flex; // must add flex capacity to col to get equalheight
+  }
+  .card.bg-gray-light {
+    border: none;
   }
   &.bg-gray-light {
     background-color: transparent;

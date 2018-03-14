@@ -114,6 +114,7 @@
   .vdm-title {
     margin-bottom: 2em;
     @include header(4, bold);
+    display: flex;
     &:after {
       background-color: $black;
       color: $black;
@@ -139,7 +140,8 @@
     }
     // No bottom stroke, reduced bottom margin
     &.discrete {
-      margin-bottom: 1.4em;
+      margin-bottom: 1rem;
+      padding-top: .5rem;
       &:after {
         display: none;
       }

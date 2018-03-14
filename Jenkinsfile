@@ -6,9 +6,9 @@ import vdmtl.cicd.MultibranchPipeline
 pipeline = new MultibranchPipeline();
 ctx = pipeline.createContext([
     "hipchatRoom" : [
-        "PRODUCTION": "0",
-        "DEVELOPMENT": "0",
-        "ACCEPTANCE": "0"
+        "PRODUCTION": "4285211",
+        "DEVELOPMENT": "4285211",
+        "ACCEPTANCE": "4285211"
     ],
     "dockerImageBaseName": "vdmtl/boite-outils-web",
     "workspaceDir": "/home/jenkins/boite-outils-web",
@@ -25,11 +25,14 @@ ctx = pipeline.createContext([
     	"ACCEPTANCE": "docker-compose-accept.yml"
     ],
     "acceptApprovers" : [
-        "submitter1" : [ "id" : "udall98", "mailto" : "chdallaire" ],
-        "submitter2" : [ "id" : "uboul8b", "mailto" : "alexis.boulerice" ],
+      "submitter1" : [ "id" : "udall98", "mailto" : "chdallaire" ],
+      "submitter2" : [ "id" : "uboul8b", "mailto" : "alexis.boulerice" ],
+      "submitter3" : [ "id" : "udeboya", "mailto" : "yann.debonnel" ],
     ],
-
-
+    "nexusLib" : [
+      "buildCommand" : "npm run package",
+      "publishFromDistDirectory" : false
+    ],
 ]);
 
 try {

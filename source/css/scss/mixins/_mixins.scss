@@ -8,7 +8,7 @@
 
 // @arg $level - integrer [1-6]
 // @arg $weight - string ['light','regular','bold']
-@mixin header($level: 1, $weight: "regular", $display: "block") {
+@mixin header($level: 1, $weight: "regular", $display: block) {
   font-family: $font-family-base;
   font-weight: $font-weight-regular;
   display: $display;
@@ -20,7 +20,7 @@
   }
   @if $level == 2 {
     font-weight: $font-weight-light;
-    font-size: $h1-font-size;         // 50px
+    font-size: $h2-font-size;         // 50px
     line-height: $line-height-sm;     // 69px
   }
   @if $level == 3 {
@@ -281,70 +281,6 @@
   font-size: $font-size;
   line-height: $line-height;
   border-radius: $border-radius;
-}
-
-// Applies to the vdmi radios and labels
-// Candidate to replace the current, previous solution
-// To be invoked from within the label element
-// The input has to come BEFORE the label for this code to work
-@mixin pseudo-form-element( $type: checkbox, $size: 1.875em ) {
-  /*
-   Alternative : use the bootstrap technique and free up the ligne height
-
-    * Display label inline flex & align items center (@extend .d-inline-flex)
-    * Display pseudo elememtns as block
-    * Remove the nasty line-height declaration for the label
-    * Tweak the :after for the ckebox ($size * 0.075)
-
-    *
-  */
-
-  position: relative;
-  display: inline-block;
-  padding-left: $size * 1.4;
-  line-height: $size;
-
-  &:before,
-  &:after {
-    position: absolute;
-    content: "";
-    display: inline-block;
-    color: $vdm-brand;
-    left: 0;
-    top: 0;
-  }
-
-  &:before {
-    background: $vdm-grey-light;
-    width: $size;
-    height: $size;
-    border-radius: $size * 0.2;
-  }
-
-  @if $type == "checkbox" {
-    @include iconvfi(after, mini-case-coche-coche);
-    &:after {
-      font-size: $size;
-      // top: $size * 0.075;
-    }
-  }
-  @if $type == "radio" {
-    &:before,
-    &:after {
-      border-radius: $size;
-    }
-    &:after {
-      $half: $size * 0.45;
-      $quarter: $size * 0.175;
-
-      background: $vdm-brand;
-      width: $half;
-      height: $half;
-      left: $half;
-      top: $half;
-      transform: translate(-$quarter, -$quarter);
-    }
-  }
 }
 
 

@@ -1,9 +1,12 @@
 {{> atoms-link-skip-to-main-content }}
 {{> molecules-menu-open-side }}
 {{> organisms-header-portal }}
-{{> organisms-breadcrumb-region }}
+{{> molecules-breadcrumb }}
+
 <main class="main-content {{ pageClasses }}" id="main-content" aria-label="Main Content">
-  {{> organisms-region-header-portal }}
+
+  {{> organisms-content-header-portal }}
+
   <div class="region {{ regionMainClasses }}">
     <div class="container {{ regionMainContainerClasses }}">
       <div class="row">
@@ -13,17 +16,18 @@
           {{/ searchBox }}
           {{> organisms-how-to-content }}
         </article>
+
         {{# sidebarRight }}
         <aside class="col-12 col-md-4 sidebar sidebar-right">
           How To Sidebar Right content
         </aside>
         {{/ sidebarRight }}
+
       </div>
     </div>
   </div>
 
-  <!-- Begin after-content region-->
-  <div class="region region-after {{ regionAfterClasses }}">
+  <section class="region region-after {{ regionAfterClasses }}">
     <div class="container">
       <div class="row">
         <div class="col-12">
@@ -33,8 +37,8 @@
         </div>
       </div>
     </div>
-  </div>
-  <!-- End after-content region-->
+  </section>
 
 </main>
+
 {{> organisms-footer-portal }}

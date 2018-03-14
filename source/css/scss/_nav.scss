@@ -21,6 +21,7 @@
 // Page item
 
 .page-item {
+  display: flex;
   &:first-child {
     .page-link {
       @include border-left-radius(0);
@@ -37,9 +38,11 @@
   &:last-child {
     > .page-link {
       padding: $pagination-icon-padding;
+      line-height: 1;
       .vfi {
         display: block;
         font-size: 1em;
+        line-height: 1;
       }
     }
   }
@@ -48,7 +51,7 @@
 // Page link
 
 .page-link {
-  font-size: $font-size-xl;
+  font-size: $h5-font-size;
 }
 
 //
@@ -89,8 +92,9 @@
 //
 
 .collapsible-item {
-  padding: 0;
   margin-bottom: 30px;
+  padding: 0;
+  position: relative;
   .collapsible-header {
     h4 {
       margin: 0;
@@ -99,7 +103,6 @@
       @include header(5);
       background: $vdm-grey-light;
       color: $black;
-      position: relative;
       display: flex;
       line-height: 1.9rem;
       padding: 1.4rem 5rem 1.4rem 4rem;
@@ -128,10 +131,9 @@
         width: 2.6rem;
         height: 2.6rem;
         position: absolute;
-        top: calc(50% - 1.3rem);
+        align-self: center;
         right: 1.4rem;
         display: block;
-        text-align: center;
         color: $vdm-brand;
       }
 
@@ -150,11 +152,7 @@
         }
 
         &.circle {
-          content: "";
-          width: 1rem;
-          height: 1rem;
-          border-radius: 50%;
-          background: $vdm-brand;
+          @include circle();
           margin-left: 0.5rem;
         }
       }
@@ -170,11 +168,9 @@
   .collapsible-item {
     background-color: $white;
     box-shadow: 0 2px 7px 4px rgba(232,232,232,0.5);
-    position: relative;
     z-index: 100;
   }
   .collapsible-header {
-    position: relative;
     a {
       background: transparent;
     }
@@ -617,8 +613,6 @@ nav {
 
 // Nav dashboard Steps
 //
-.nav-dashboard {}
-
 .nav-dashboard-item { 
   border-bottom: 1px solid $gray-200;
   margin-bottom: 3rem;
@@ -644,11 +638,39 @@ nav {
 // Services sub-navigation
 .navbar-services {
   border-bottom: 1px solid $vdm-grey-light;
+
+  .navbar-brand,
+  .navbar-link {
+    font-size: $font-size-lg;
+    line-height: 1.333333;
+    padding: 0;
+    display: flex;
+  }
+
+  .navbar-brand {
+    font-size: $font-size-xl;
+    font-weight: $font-weight-bold;
+  }
+
+  .navbar-link {
+    padding-bottom: 5px;
+  }
+
   .navbar-header {
     margin-left: $header-icon-width;
-  }
-  .navbar-brand {
-    @include header(5, "bold");
+    padding-top: 1.25rem;
+    padding-bottom: 1.25rem; 
+    &.navbar-header-profile-link {
+      padding-top: .375rem;
+      padding-bottom: .375rem;
+      .navbar-brand {
+        font-size: $font-size-lg;
+      }
+    }
+    a {
+      color: $body-color;
+      text-decoration: underline;
+    }
   }
 
   .nav-item {

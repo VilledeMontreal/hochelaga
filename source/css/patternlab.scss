@@ -278,23 +278,6 @@ $pl-size-box-wrapper-padding: 1rem;
         padding: 0;
         display: inline-block;
 
-        // Keeper
-        > .vfi {
-          font-family: $vfi-icon-font-family !important;
-          display: block;
-          width: 128px;
-          height: 128px;
-          font-size: 128px;
-          background-color: rgba(0, 0, 0, 0.05);
-          text-rendering: geometricPrecision;
-          -webkit-font-smoothing: antialiased;
-          vertical-align: middle;
-          font-smooth: always;
-          font-weight: normal;
-          font-variant: normal;
-          text-transform: none;
-        }
-
         // Duplicate code for the new version
         .vfi {
           font-family: $vfi-icon-font-family !important;
@@ -302,18 +285,7 @@ $pl-size-box-wrapper-padding: 1rem;
           width: 128px;
           height: 128px;
           background-color: rgba(0, 0, 0, 0.05);
-          &:before {
-            font-size: 128px;
-          }
-        }
-
-        // Duplicate code for the new version
-        .vfi {
-          font-family: $vfi-icon-font-family !important;
-          display: block;
-          width: 128px;
-          height: 128px;
-          background-color: rgba(0, 0, 0, 0.05);
+          line-height: 1;
           &:before {
             font-size: 128px;
           }

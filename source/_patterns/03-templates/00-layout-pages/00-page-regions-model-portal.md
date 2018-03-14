@@ -1,5 +1,5 @@
 ---
-title: Portal - Page regions and markup, base
+title: Page base template markup
 ---
 
 ## references 

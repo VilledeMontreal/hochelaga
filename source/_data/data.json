@@ -4,7 +4,7 @@
   "metaDescription": "Meta description content goes here",
   "heading": "Page Header",
   "subheading": "Subtext For Header",
-  "ServiceName": "Nom du service XYZ",
+  "serviceName": "Nom du service XYZ",
   "placeholder": "Placeholder Text",
   "url": "#",
   "cta": "Call To Action",
@@ -83,6 +83,7 @@
   "formAttributes": {
     "select": {
       "id": "selectid",
+      "formControlClass": false,
       "defaultOptionLabel": "Filter by"
     },
     "button": {
@@ -188,6 +189,7 @@
   "inputAddonAfter": false,
   "buttonClass": "vdm-btn",
   "buttonText": "Button",
+  "buttonType": "button",
   "breadcrumbs": [
     {
       "url": "#",

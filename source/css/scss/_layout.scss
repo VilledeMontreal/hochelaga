@@ -32,21 +32,27 @@ html {
 .region {
 
   // Main header, always includes at least the page Title
-  &.content-header {
+  .region-content-header {
 
+  }
+  .content-header {
+    padding: 3rem 0;
     // Dark variant
     &.content-header-dark {
       background-color: $vdm-grey-dark;
       color: $white;
     }
-  }
+    &.region-border {
+      border-bottom: 1px solid $gray-400;
+    }
+  
+    &.has-nav-tabs {
+      padding-bottom: 0;
+    }
 
-  &.region-border {
-    border-bottom: 1px solid $gray-400;
-  }
-
-  &.has-nav-tabs {
-    padding-bottom: 0;
+    &.content-header-has-image {
+      margin-top: -150px;
+    }
   }
 } // Region
 
@@ -61,7 +67,21 @@ html {
   order: 2;
 }
 
+
+
 // Generic section layouts
+.page-section {
+  padding: map-get($spacers, 5);
+  .section-heading {
+    margin-bottom: map-get($spacers, 4);
+  }
+  &.bg-gray-light,
+  &.bg-light {
+    .card {
+      border: none;
+    }
+  }
+}
 .services-heading {
   padding-top: 3rem;
   padding-bottom: 3rem; 
@@ -78,23 +98,27 @@ html {
   }
 }
 
-// Background-color for region or zone or anything really...
-.neutral-light {
-  background-color: $vdm-grey-light;
-}
-
 // Services styles
 // Might migrate to own stylesheet if it becomes too long
 .summary {
   .summary-heading {
     display: flex;
     justify-content: space-between;
-    padding: 1rem 0;
+    padding-bottom: 1rem;
     align-items: center;
     h2 {
       @include header(4, "bold");
       display: inline-block;
       margin-bottom: 0;
+    }
+    .nav {
+      .nav-item {
+        padding-right: 1rem;
+        padding-left: 1rem;
+        &:last-child {
+          padding-right: 0;
+        }
+      }
     }
   }
   .summary-content {
@@ -105,5 +129,19 @@ html {
   }
   .label {
     font-weight: $font-weight-bold;
+  }
+}
+
+//
+// Coordinates
+//
+.block-coordinates {
+  .title {
+    font-size: 1.5rem;
+    font-weight: $font-weight-bold;
+    margin-bottom: 1.5rem;
+  }
+  .item-label {
+    @include header(6, 'bold');
   }
 }
