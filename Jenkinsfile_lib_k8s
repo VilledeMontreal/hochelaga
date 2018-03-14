@@ -1,0 +1,76 @@
+#!groovy
+//@Library('cicd-lib@develop')
+@Library('cicd-lib@feature/developv2')
+import vdmtl.cicd.*
+import jenkins.model.*
+
+pipeline = new Pipeline()
+
+// For more information on the configuration options,
+// see https://bitbucket.org/villemontreal/cicd-lib/src/master/docs/Config.md
+ctx = pipeline.createContext([
+    namespace: ["sn", "boite-outils"],
+    application: [
+        name: "boite-outils-lib",
+        tier: "lib",
+        runtime: "nodejs", // Available Platforms: nodejs, drupal
+        framework: "NA",
+        description: "lib for core-utils-geo-nodejs",
+        icon: "https://cdnjs.cloudflare.com/ajax/libs/foundicons/3.0.0/svgs/fi-lightbulb.svg",
+        keywords: ["boite-outils", "lib"],
+        labels: [
+                key1: "boite-outils",
+                key2: "lib"
+        ],
+    ],
+    packaging: [
+        dockerfilePath: "Dockerfile"
+    ],
+    notifications: [
+        mail: [
+            to: [
+                // Full email, or prefix of the email address ville.montreal.qc.ca
+                // ex: "john.doe", "joe.doh@mailinator.com"
+                //"marc.khouzam",
+                //"marc.khouzam@gmail.com"
+            ]
+        ]
+    ],
+    debug: true  // If set to true, will print debug messages during the build
+])
+
+pipeline.start(ctx) {
+
+    pipeline.prepareDockerImage(ctx) {
+
+        pipeline.checkoutStage(ctx) {
+            checkout scm;
+        }
+
+        pipeline.buildStage(ctx) {
+            pipeline.buildDockerImage(ctx)
+        }
+
+        pipeline.prePublishStage(ctx) {
+            pipeline.publishDraftDockerImage(ctx)
+        }
+    }
+
+    pipeline.useDraftDockerImage(ctx) {
+        // pipeline.testStage(ctx) {
+        //     try {
+        //         sh """
+        //             cd /mtl/app
+        //             npm run test
+        //         """
+        //     } finally {
+
+        //     }
+        // }
+
+        pipeline.publishStage(ctx) {
+            pipeline.publishLibrary(ctx)
+        }
+
+    }
+}
