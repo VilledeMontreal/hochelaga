@@ -1,131 +1,132 @@
 
-# Pattern Lab VDM
+# Boîte à outils web - Ville de Montréal
 
-## What this is
+## Requirements
 
-A node js mustache patternlab installation customized for the Ville de Montreal web styleguide.
+* PHP 5.4 + and a global composer installation. 
+* Node 7.5.0, a globally installed copy of gulp and an [updated copy of gulp CLI 4].(https://github.com/pattern-lab/edition-node-gulp/wiki/Updating-to-Gulp-4) for this node version.
 
 ## Installation
 
-Clone this repo into a local folder and follow instructions @[https://github.com/pattern-lab/edition-node-gulp](https://github.com/pattern-lab/edition-node-gulp).
+* Clone this repo locally
+* Run `composer install`
+* Refuse to load the default mustache starterkit when asked -- (N).
+* Run `nvm use` if you use nvm and make sure v7.5.0 is the active version.
+* Run `npm i`
+* Run `gulp serve`
+* Visit [http://localhost:3000](http://localhost:3000) freshly launched in your browser.
 
-Updating the ulp version you will us to v4 is essential. See https://github.com/pattern-lab/edition-node-gulp/wiki/Updating-to-Gulp-4.
 
-The `dev` branch is where all development takes place. A starter project using bootstrap 3 is archived on the `bs3` branch.
+## Gulp tasks
 
-Essentially, cd into the directory and issue the following commands :
+The gulp tasks used in this project were largely inspired by the methods proposed by Timm Hartmann
 
-```
-nvm use
-npm i
-gulp patternlab:build
-gulp patternlab:serve
-```
+* [View detailed recipe](https://webdesign.tutsplus.com/tutorials/combining-pattern-lab-with-gulp-for-improved-workflow--cms-22187)
+* [View git repo](https://github.com/neoskop/patternlab-php/)
 
-And get to work ;-)
 
-----
+---------  
+# Patternlab php-mustache documentation
 
-# Pattern Lab Node - Gulp Edition
+## Standard Patternlab PHP Mustache documentation starts below
 
-The Gulp wrapper around [Pattern Lab Node Core](https://github.com/pattern-lab/patternlab-node) providing tasks to interact with the core library and move supporting frontend assets.
+![license](https://img.shields.io/github/license/pattern-lab/patternlab-php.svg)
+[![Packagist](https://img.shields.io/packagist/v/pattern-lab/edition-mustache-standard.svg)](https://packagist.org/packages/pattern-lab/edition-mustache-standard) [![Gitter](https://img.shields.io/gitter/room/pattern-lab/php.svg)](https://gitter.im/pattern-lab/php)
 
-## Packaged Components
+# Pattern Lab Standard Edition for Mustache
 
-The Gulp Edition comes with the following components:
+The Pattern Lab Standard Edition for Mustache is the evolution of Pattern Lab 1. Pattern Lab is still, at its core, a prototyping tool focused on encouraging communication between content creators, designers, devs, and clients. It combines platform-agnostic assets, like the [Mustache](http://mustache.github.io/)-based patterns, with a PHP-based "builder." Pattern Lab 2 introduces [the beginnings of an ecosystem](http://patternlab.io/docs/advanced-ecosystem-overview.html) that will allow teams to mix, match and extend Pattern Lab to meet their specific needs. It will also make it easier for the Pattern Lab team to push out new features. Pattern Lab Standard Edition for Mustache is just [one of the four PHP-based Editions currently available](http://patternlab.io/docs/installation.html).
 
-* `patternlab-node`: [GitHub](https://github.com/pattern-lab/patternlab-node), [npm](https://www.npmjs.com/package/patternlab-node)
-* `patternengine-node-mustache`: [GitHub](https://github.com/pattern-lab/patternengine-node-mustache), [npm](https://www.npmjs.com/package/patternengine-node-mustache)
-* `pattern-lab/styleguidekit-assets-default`: [GitHub](https://github.com/pattern-lab/styleguidekit-assets-default)
-* `pattern-lab/styleguidekit-mustache-default`: [GitHub](https://github.com/pattern-lab/styleguidekit-mustache-default)
+## Demo
 
-## Prerequisites
+You can play with a demo of the front-end of Pattern Lab at [demo.patternlab.io](http://demo.patternlab.io).
 
-The Pattern Lab Node - Gulp Edition uses [Node](https://nodejs.org) for core processing, [npm](https://www.npmjs.com/) to manage project dependencies, and [gulp.js](http://gulpjs.com/) to run tasks and interface with the core library. Node version 4 or higher suffices. You can follow the directions for [installing Node](https://nodejs.org/en/download/) on the Node website if you haven't done so already. Installation of Node will include npm.
+## Requirements
 
-It's also highly recommended that you [install gulp](hhttps://github.com/gulpjs/gulp/blob/4.0/docs/getting-started.md) globally.
+To use the basic features of Pattern Lab to compile patterns, you must have **PHP 5.4+** installed. On Mac OS X Pattern Lab should work "out of the box." If you're on Windows you can [download PHP from PHP.net](http://windows.php.net/download/). Pattern Lab comes with its own built-in web server.
 
-> Note: The Gulp Edition of Pattern Lab uses Gulp 4, which may require a new global install of the Gulp command line interface. Follow the [gulp upgrade instructions](https://github.com/pattern-lab/edition-node-gulp/wiki/Updating-to-Gulp-4) if you already have gulp installed and need to upgrade. Gulp 4 is in alpha, but brings many benefits to the table and is relatively stable. You can alternatively [run with local gulp instead of global gulp](https://github.com/pattern-lab/patternlab-node/wiki/Running-with-Local-Gulp-Instead-of-Global-Gulp), but commands are a bit more verbose. The rest of this documentation assumes a global install.
+Pattern Lab uses [Composer](https://getcomposer.org/) to manage project dependencies. It's required if you want to install Pattern Lab using Composer's `create-project` command or if you want to upgrade Pattern Lab in the future.
 
 ## Installing
 
-There are two methods for downloading and installing the Gulp Edition:
+There are two methods for downloading and installing the Standard Edition for Mustache:
 
-* [Download a pre-built package](#download-a-pre-built-package)
-* [Use npm](#use-npm)
+* Download a pre-built project
+* Create a project based on this Edition with Composer
 
-### Download a pre-built package
+### Download a pre-built project
 
-The fastest way to get started with the Gulp Edition is to [download the pre-built version](https://github.com/pattern-lab/edition-node-gulp/releases) from the [releases page](https://github.com/pattern-lab/edition-node-gulp/releases). The pre-built project comes with the [Base Starterkit for Mustache](https://github.com/pattern-lab/starterkit-mustache-base) installed by default.
+The fastest way to get started with Pattern Lab's Standard Edition for Mustache is to download the latest pre-built version from the [releases page](https://github.com/pattern-lab/patternlab-php/releases/latest).
 
-**Please note:** Pattern Lab Node uses [npm](https://www.npmjs.com/) to manage project dependencies. To upgrade the Gulp Edition or to install plug-ins you'll need to be familiar with npm.
+### Use Composer to create a project
 
-### Use npm
+Pattern Lab uses [Composer](https://getcomposer.org/) to manage project dependencies.
 
-`npm` is a dependency management and package system which can pull in all of the Gulp Edition's dependencies for you. To accomplish this:
+#### 1. Install Composer
 
-* download or `git clone` this repository to an install location.
+Please follow the directions for [installing Composer](https://getcomposer.org/doc/00-intro.md#installation-linux-unix-osx) on the Composer website. We recommend you [install it globally](https://getcomposer.org/doc/00-intro.md#globally).
 
-* run the following
+#### 2. Install the Standard Edition for Mustache
 
-    ```
-    cd install/location
-    npm install
-    ```
+Use Composer's [`create-project` command](https://getcomposer.org/doc/03-cli.md#create-project) to install the Standard Edition for Mustache into a location of your choosing. To create a project do the following:
 
-Running `npm install` from a directory containing a `package.json` file will download all dependencies defined within.
+1. In a terminal window navigate to where you want to install Pattern Lab
+2. Type `composer create-project pattern-lab/edition-mustache-standard patternlab2-example && cd $_`
 
-#### Install the Gulp Edition of Pattern Lab Node as a Dependency
+This will install the Standard Edition for Mustache into a directory called `patternlab2-example` in your install location. When prompted choose the "demo" StarterKit. You will be automatically dropped into the project directory after the process is finished.
 
-Most people want to run Pattern Lab Node standalone and not as a dependency. If you wish to install as a dependency you can do the following:
+**Note:** If you clone or download this repository and use `composer install` to install the project dependencies you'll need to type the following to install the demo StarterKit:
 
-Use npm's [`install` command](https://docs.npmjs.com/cli/install) with an argument to install the Gulp Edition into a location of your choosing. In Terminal type:
+    composer install-demo
 
-    cd install/location/
-    npm install edition-node-gulp
+Otherwise you'll have a very bare set-up of Pattern Lab.
 
-This will install the Gulp Edition into a directory called `node_modules` in `install/location/`.
+## Get Up and Running
 
-## Getting Started
+After installing do the following to start and view Pattern Lab:
 
-The Pattern Lab Node - Gulp Edition ships with a [base experience](https://github.com/pattern-lab/starterkit-mustache-base) which serves as clean place to start from scratch with Pattern Lab. But if you want to get rolling with a starterkit of your own, or use the [demo starterkit](https://github.com/pattern-lab/starterkit-mustache-demo) like the one on [demo.patternlab.io](http://demo.patternlab.io), you can do so automatically at time of `npm install` by adding your starterkit to the `package.json` file.
+1. In a terminal window navigate to the root of your project if you aren't there already
+2. Type `php core/console --server --with-watch`
 
-You can also [work with starterkits using the command line](https://github.com/pattern-lab/patternlab-node/wiki/Importing-Starterkits).
+You should now be able to open [http://localhost:8080](http://localhost:8080) to see your generated site. Any changes you make in `./source/` will automatically rebuild your site and reload your browser.
 
-## Updating Pattern Lab
+As you get more comfortable with Pattern Lab you can [integrate it with a Gulp or Grunt workflow](http://patternlab.io/docs/advanced-integration-with-grunt.html) and drop some of the native Pattern Lab features like automatic browser reload. You can also check out [the list of plugins](http://patternlab.io/download.html).
 
-To update Pattern Lab please refer to each component's GitHub repository, and the [master instructions for core](https://github.com/pattern-lab/patternlab-node/wiki/Upgrading). The components are listed at the top of the README.
+## More Documentation
 
-## Helpful Commands
+Obviously Pattern Lab is deeper than the install process. [Check out the documentation](https://patternlab.io/docs/) to learn about how to use patterns, how to modify the data used to populate those patterns, and about some advanced features.
 
-These are some helpful commands you can use on the command line for working with Pattern Lab.
+## Migrating from Pattern Lab 1 to Pattern Lab 2
 
-> Reminder: These commands assume a global installation of gulp 4.X, instead of a local installation. Depending on your preference, you may need to [upgrade your global version of gulp](https://github.com/pattern-lab/edition-node-gulp/wiki/Updating-to-Gulp-4) or [run with local gulp](https://github.com/pattern-lab/patternlab-node/wiki/Running-with-Local-Gulp-Instead-of-Global-Gulp).
+Pattern Lab 2 was a complete rewrite and reorganization of Pattern Lab 1. [Learn about the changes](http://patternlab.io/docs/changes-1-to-2.html). After installing the Standard Edition for Mustache do the following to migrate from Pattern Lab 1 to Pattern Lab 2:
 
-### List all of the available commands
+1. Copy `./source` from your old project to your new install
+2. Copy `./source/_patterns/00-atoms/00-meta/_00-head.mustache` to `./source/_meta/_00-head.mustache`
+3. Copy `./source/_patterns/00-atoms/00-meta/_01-foot.mustache` to `./source/_meta/_00-foot.mustache`
+4. Copy `./source/_data/annotations.js` to `./source/_annotations/annotations.js`
+
+Everything else should work without changes.
+
+## Need Pattern Lab 1?
+
+The [source code for Pattern Lab 1](https://github.com/pattern-lab/patternlab-php/releases/tag/v1.1.0) is still available for download.
+
+## Packaged Components
+
+The Standard Edition for Mustache installs the following components:
+
+* `pattern-lab/core`: [GitHub](https://github.com/pattern-lab/patternlab-php-core), [Packagist](https://packagist.org/packages/pattern-lab/core)
+* `pattern-lab/patternengine-mustache`: [documentation](https://github.com/pattern-lab/patternengine-php-mustache#mustache-patternengine-for-pattern-lab-php), [GitHub](https://github.com/pattern-lab/patternengine-php-mustache), [Packagist](https://packagist.org/packages/pattern-lab/patternengine-mustache)
+* `pattern-lab/plugin-reload`: [GitHub](https://github.com/pattern-lab/plugin-php-reload), [Packagist](https://packagist.org/packages/pattern-lab/plugin-reload)
+* `pattern-lab/styleguidekit-assets-default`: [GitHub](https://github.com/pattern-lab/styleguidekit-assets-default), [Packagist](https://packagist.org/packages/pattern-lab/styleguidekit-assets-default)
+* `pattern-lab/styleguidekit-mustache-default`: [GitHub](https://github.com/pattern-lab/styleguidekit-mustache-default), [Packagist](https://packagist.org/packages/pattern-lab/styleguidekit-mustache-default)
+
+## List All of the Available Commands and Their Options
 
 To list all available commands type:
 
-    gulp patternlab:help
+    php core/console --help
 
-### Generate Pattern Lab
+To list the options for a particular command type:
 
-To generate the front-end for Pattern Lab type:
-
-    gulp patternlab:build
-
-### Watch for changes and re-generate Pattern Lab
-
-To watch for changes, re-generate the front-end, and server it via a BrowserSync server,  type:
-
-    gulp patternlab:serve
-
-BrowserSync should open [http://localhost:3000](http://localhost:3000) in your browser.
-
-### Install a StarterKit
-
-To install a specific StarterKit from GitHub type:
-
-    npm install [starterkit-vendor/starterkit-name]
-
-    gulp patternlab:loadstarterkit --kit=[starterkit-name]
+    php core/console --help --[command]

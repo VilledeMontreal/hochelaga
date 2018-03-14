@@ -1,0 +1,50 @@
+{{> atoms-link-skip-to-main-content }}
+{{> organisms-header-portal }}
+{{> organisms-nav-services }}
+<main class="main-content {{ pageClasses }}" id="main-content" aria-label="Main Content" role="main">
+  <div class="container">
+    <div class="row">
+      <div class="col-12">
+        {{# hasAlert }}
+          {{> molecules-alerts }}
+        {{/ hasAlert }}
+        {{> organisms-services-resultats-content }}
+        <h2 class="h4">Substances visées présentes à l’établissement</h2>
+        {{# hasResults }}
+
+          {{# cards }}
+            {{# cards.card-item }}
+              {{> molecules-card-item }}
+            {{/ cards.card-item }}
+          {{/ cards }}
+
+        {{/ hasResults }}
+
+        {{^ hasResults }}
+          {{# cards }}
+            <div class="cards {{ cards.classes }}">
+            {{# cards.card-item-no-result }}
+              {{> molecules-card-item }}
+            {{/ cards.card-item-no-result }}
+            </div>
+          {{/ cards }}
+
+        {{/ hasResults }}
+
+        {{# notes-bdp }}
+          <p>{{ notes-bdp }}</p>
+        {{/ notes-bdp}}
+
+        {{# hasFooterNotes }}
+          {{> atoms-footer-notes }}
+        {{/ hasFooterNotes }}
+        {{# printButton }}
+        <div class="text-center">
+          {{> atoms-button("buttonText": "Imprimer") }}
+        </div>
+        {{/ printButton }}
+      </div>
+    </div>
+  </div>
+</main>
+{{> organisms-footer-portal }}

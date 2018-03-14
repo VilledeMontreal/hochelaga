@@ -1,0 +1,83 @@
+# -- Usage tips and directives
+
+# Always launch on a a freshly clone repo, not installed
+
+# -- Build the image without cache (required)
+# docker build  --no-cache -t php-node:latest .
+
+# -- Enter the image using commande line to explore & debug
+# docker run -it php-node:latest bash
+
+# -- Serve the content on localhost:3000 from a detached volume, no edits possible  (docker run command of some kind required)
+# docker run -d -p 3000:3000 php-node:latest
+
+# -- Serve the content on localhost:3000 binding your local voluem for edits and dev work
+# docker run -d -p 3000:3000 -v $(pwd)/source:/usr/src/app/source  php-node:latest 
+
+# -- Liste active containers, use 'docker kill CONTAINER_ID' to stop
+# docker container ls
+
+# - - - - - - - - - - - - - - - - - -
+
+FROM php:7.2-cli
+ENV NODE_VERSION 8.9.1
+ENV ARCH x64
+ENV NODE_PACKAGE node-v$NODE_VERSION-linux-$ARCH.tar.xz
+ENV NODE_URL "https://nodejs.org/dist/v$NODE_VERSION/$NODE_PACKAGE"
+
+
+MAINTAINER VdMtl
+
+RUN apt-get update \
+    && apt-get install -y zip \
+        git \
+        wget \
+        curl \
+        xz-utils
+
+#ARG ENV=unknown
+ARG GIT_COMMIT=unknown
+
+# GIT label of the packaged code
+LABEL GIT_COMMIT=${GIT_COMMIT}
+
+#Create app directory
+RUN mkdir -p /usr/src/app
+RUN ln -fs /usr/share/zoneinfo/America/New_York /etc/localtime && dpkg-reconfigure --frontend noninteractive tzdata
+
+# Install composer globally
+RUN curl -sS https://getcomposer.org/installer | php
+RUN mv composer.phar /usr/local/bin/composer
+
+# Create a node user ADD RUN groupadd --gid 1000 node \
+RUN groupadd --gid 1000 node \
+  && useradd --uid 1000 --gid node --shell /bin/bash --create-home node
+
+RUN dpkg --print-architecture
+RUN curl -SLO $NODE_URL
+# RUN grep node-v$NODE_VERSION-linux-$ARCH.tar.xz
+RUN echo " Node package installed :"  $NODE_PACKAGE
+RUN ls -al
+RUN echo " Node URL : "  $NODE_URL
+RUN tar -xJf "$NODE_PACKAGE" -C /usr/local --strip-components=1 --no-same-owner
+RUN rm $NODE_PACKAGE
+RUN ls -al
+RUN ln -s /usr/local/bin/node /usr/local/bin/nodejs
+
+RUN node -v
+RUN npm install gulp -g
+RUN npm install gulpjs/gulp-cli -g
+RUN gulp -v
+
+RUN chmod o+w /usr/src/app
+COPY . /usr/src/app
+WORKDIR /usr/src/app
+VOLUME /usr/src/app/source
+
+RUN ls -al
+RUN npm install
+RUN composer install
+
+EXPOSE 3000
+CMD ["gulp", "serve"]
+# CMD ["npm", "start"]

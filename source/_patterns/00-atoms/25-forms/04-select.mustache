@@ -1,0 +1,12 @@
+<div class="form-group {{ selectWrapperClasses }}">
+  {{# selectHasLabel }}
+  <label for="{{ formAttributes.select.id }}">Label</label>
+  {{/ selectHasLabel }}
+  <select class="form-control {{ selectWrapperClasses }}" name="{{ formAttributes.select.id }}" id="{{ formAttributes.select.id }}"> 
+    <option value="">{{ formAttributes.select.defaultOptionLabel  }}</option> 
+    {{# listItems.five }}
+      {{> atoms-option }}
+    {{/ listItems.five }}
+  </select>
+</div>
+

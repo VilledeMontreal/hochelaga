@@ -1,0 +1,260 @@
+/**
+ * Generic cards styles and variants
+ * Built on bootstrap card component 
+ */
+.card {
+  @extend .text-center;
+  display: flex;
+  margin-bottom: $grid-gutter-width;
+  width: 100%;
+
+  .card-icon-top {
+    font-size: 3.6rem;
+    margin-top: 3rem;
+  }
+
+  .card-tags {
+    color: $vdm-brand;
+    display: inline-block;
+    font-weight: $font-weight-bold;
+    margin-bottom: 1rem;
+    &:before {
+      content: "";
+      background-color: $vdm-brand;
+      width: 0.75em;
+      height: 0.75em;
+      border-radius: 100%;
+      display: inline-block;
+      margin-right: 0.5rem;
+    }
+  }
+
+  .card-date {
+    display: inline-block;
+    padding-bottom: 1rem;
+  }
+  .card-title {
+    @include header(5, "regular");
+  }
+
+  .card-label {
+    @include header(5, "bold");
+  }
+
+  .card-body {
+    padding: 2rem 2rem 2rem 2rem;
+    align-self: center;
+
+    .popover-wrapper {
+      &.right {
+        position: absolute;
+        right: 0;
+      }
+    }
+  }
+
+  .card-metadata {
+    min-width: 10rem;
+  }
+
+  .card-footer {
+    border-top: none;
+    padding: 0 2rem 2rem 2rem;
+    background-color: inherit;
+    display: flex;
+    align-items: center;
+
+    .vfi {
+      color: $vdm-brand;
+      font-size: 2.5rem;
+      padding-left: 0.5rem;
+    }
+  }
+
+  > a {
+    color: $body-color;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    &:hover,
+    &:active {
+      color: $white;
+      background: $vdm-brand;
+      text-decoration: none;
+      .card-icon-top,
+      .card-footer .vfi,
+      .card-tags {
+        color: $white;
+      }
+      // Text-muted is using the !important flag... sad but true
+      .text-muted {
+        color: $white !important;
+      }
+      .card-tags:before {
+        background-color: $white;
+      }
+    }
+  }
+
+  // Row layout is used for icon placement to the left or right at larger breakpoint
+  &.card-row-layout {
+    .card-body {
+      text-align: left;
+      //text-align: center;
+    }
+
+    @include media-breakpoint-up(lg) {
+      flex-direction: row;
+      align-items: center;
+
+      .card-icon-top {
+        margin-top: 0;
+        margin-left: 2rem;
+        &.card-icon-right {
+          // Icon placement to the right on large breakpoint and up
+          order: 100;
+          margin-right: 2rem;
+        }
+      }
+
+      .card-body {
+        text-align: left;
+      }
+
+      .card-footer {
+        padding: 2rem;
+        .vfi {
+          font-size: 3.6rem;
+        }
+      }
+
+      > a {
+        flex-direction: row;
+        align-items: center;
+        width: 100%;
+      }
+    }
+  }
+
+  // Large and featured cards override
+  &.card-large,
+  &.card-featured {
+    .card-title {
+      @include header(4, "bold");
+    }
+    .card-body {
+      text-align: left;
+    }
+  }
+
+  // Full-width card override
+  &.card-fw {
+    @include media-breakpoint-up(lg) {
+      .card-img-top {
+        margin-left: 1rem;
+        max-width: 300px;
+        order: 100;
+      }
+    }
+  }
+
+  // Large cards specifc
+  &.card-large {
+    &.card-fw {
+      @include media-breakpoint-up(lg) {
+        .card-img-top {
+          margin-left: 1rem;
+          max-width: 400px;
+          order: 100;
+        }
+        .vfi {
+          color: $white;
+        }
+      }
+      @include media-breakpoint-up(xl) {
+        .card-img-top {
+          max-width: 500px;
+        }
+      }
+    }
+  }
+
+  // Featured card specific
+  &.card-featured {
+    .card-body {
+      .text-muted {
+        display: inline-block;
+        margin-bottom: 1.5rem;
+      }
+      .card-footer {
+        padding: 0;
+      }
+    }
+    @include media-breakpoint-up(lg) {
+      .card-img-top {
+        @include make-col(6);
+        margin: 0;
+        align-self: start;
+      }
+      .card-body {
+        display: flex;
+        flex-flow: column nowrap;
+        height: 100%;
+        .card-footer {
+          margin-top: auto;
+        }
+      }
+    }
+  }
+
+  // Color variant - Is this tied with the card variant? or variant agnostic
+  &.white-scheme {
+    border: none;
+  }
+
+  .rounded-circle {
+    margin: 2rem auto 1rem auto;
+    width: 61.5%;
+  }
+}
+
+// Color variant overrides
+.cards {
+  > div,
+  .card-item {
+    display: flex; // must add flex capacity to col to get equalheight
+  }
+  &.bg-gray-light {
+    background-color: transparent;
+    .card {
+      background-color: $vdm-grey-light;
+      border: none;
+      .vfi {
+        color: $vdm-brand;
+      }
+      a:hover {
+        .vfi {
+          color: $white;
+        }
+      }
+    }
+  }
+  // Add bs-grid layout to any element, ie: ul>li, etc
+  // This is less customizable since cols are hard-coded in css.
+  &.cards-bs-grid {
+    @include make-row();
+    .card-item {
+      @include make-col-ready();
+      // Grid styles
+      @include media-breakpoint-up(xs) {
+        @include make-col(12);
+      }
+      @include media-breakpoint-up(md) {
+        @include make-col(6);
+      }
+      @include media-breakpoint-up(lg) {
+        @include make-col(4);
+      }
+    }
+  }
+}

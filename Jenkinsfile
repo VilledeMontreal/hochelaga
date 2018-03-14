@@ -1,6 +1,6 @@
 #!groovy
 
-@Library('cicd-shared-library') 
+@Library('cicd-shared-library')
 import vdmtl.cicd.MultibranchPipeline
 
 pipeline = new MultibranchPipeline();
@@ -12,31 +12,28 @@ ctx = pipeline.createContext([
     ],
     "dockerImageBaseName": "vdmtl/boite-outils-web",
     "workspaceDir": "/home/jenkins/boite-outils-web",
-    "developmentBranch": "dev",
+    "developmentBranch": "develop",
     "slave": "nodejs",
     "deploymentTargetHosts": [
-        //"PRODUCTION": "10.145.1.78", //prdldk01b.ile.montreal.qc.ca
+      "PRODUCTION": "10.145.1.80", //prdldk02a.ile.montreal.qc.ca
     	"DEVELOPMENT": "10.145.10.62", //dvlldk02a.ile.montreal.qc.ca
-    	//"ACCEPTANCE": "10.145.10.41" //accldk01a.ile.montreal.qc.ca
+    	"ACCEPTANCE": "10.145.10.64" //accldk02a.ile.montreal.qc.ca
     ],
     "dockerComposeFiles": [
-        //"PRODUCTION": "docker-compose-prod.yml",
+      "PRODUCTION": "docker-compose-prod.yml",
     	"DEVELOPMENT": "docker-compose-dev.yml",
-    	//"ACCEPTANCE": "docker-compose-accept.yml"
+    	"ACCEPTANCE": "docker-compose-accept.yml"
     ],
     "acceptApprovers" : [
         "submitter1" : [ "id" : "udall98", "mailto" : "chdallaire" ],
+        "submitter2" : [ "id" : "uboul8b", "mailto" : "alexis.boulerice" ],
+    ],
 
-    ],
-    "nexusLib" : [
-        "buildCommand" : "npm run package",
-        "publishFromDistDirectory" : false
-    ],
-    "debug" : "1",
+
 ]);
 
 try {
-    
+
 	pipeline.start(ctx) {
 
         pipeline.installDependanciesStage(ctx) {
@@ -45,10 +42,6 @@ try {
 
         pipeline.runUnitTestsStage(ctx) {
         	sh "echo testing unitTests";
-        }
-
-        pipeline.publishLibStage(ctx) {
-            sh "publishing in nexus";
         }
 
         pipeline.buildImageStage(ctx) {
@@ -84,4 +77,4 @@ try {
 
 
 
-    
+

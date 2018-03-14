@@ -1,0 +1,83 @@
+{
+  "pageClasses": "howto",
+  "regionMainClasses": "",
+  "regionMainContainerClasses": "",
+  "regionMainContentClasses": "",
+  "headerContainerClasses": "content-header-dark has-nav-tabs",
+  "sidebarRight": true,
+  "regionAfterClasses" : "bg-light",
+  "has-lead-text": true,
+  "has-nav-tabs": true,
+  "searchBox": true,
+  "combo-box-text":
+    "Entrez votre code postal pour connaître la démarche à suivre.",
+  "icon-label": "localisation",
+  "text-elements": {
+    "headings": {
+      "h1": {
+        "content": "How To"
+      }
+    }
+  },
+  "has-sb-teaser-quicklinks" : true,
+  "sidebar-right-classes": "theme-top-stroke",
+  "sb-classes": "",
+  "sidebar-title-classes": "discrete",
+  "navTabs": {
+    "navItem": [
+      {
+        "class": "active",
+        "title": "Nav item #1"
+      },
+      {
+        "class": false,
+        "title": "Nav item #2"
+      }
+    ]
+  },
+  "collapsibleItem": [
+    {
+      "title": "En ligne",
+      "content": 
+      "<ol class=\"numbered-list\"><li><h2 class=\"title\">Avant de faire votre demande en ligne</h2><ul><li>Déposez vos branches sur le trottoir.</li><li>Assurez-vous de connaître les consignes à respecter en consultant la <a href=\"#\">collecte des branches d'arbres</a>.</li></ul></li><li><h2 class=\"title\">Faire votre demande en ligne</h2><button type=\"button\" class=\"vdm-btn\">Demander une collecte</button></li></ol>",
+      "block-id": "howto-vm-enligne",
+      "heading-id": "Heading-howto-vm-enligne",
+      "icon": "vfi-ordinateur",
+      "badge": false
+    },
+    {
+      "title": "Au téléphone",
+      "content": "Collapsible content",
+      "block-id": "howto-vm-tel",
+      "heading-id": "heading-howto-vm-tel",
+      "icon": "vfi-telephone",
+      "badge": false
+    },
+    {
+      "title": "En personne",
+      "content": "Collapsible content",
+      "block-id": "howto-vm-personne",
+      "heading-id": "heading-howto-vm-personne",
+      "icon": "vfi-enveloppe",
+      "badge": false
+    }
+  ],
+  "howToInfos": true,
+  "link-box": [
+    {
+      "link-label": "Link box item #1"
+    },
+    {
+      "link-label": "Link box item #2 - This is a very long link title my friends."
+    },
+    {
+      "link-label": "Link box item #3"
+    },
+    {
+      "link-label": "Link box item #4"
+    },
+    {
+      "link-label": "Link box item #5"
+    }
+  ]
+}

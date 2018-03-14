@@ -1,22 +1,19 @@
-<ul class="vdm-list">
-    <li>
-        Level 1, item 1, succulents brooklyn kitsch, street art fingerstache fanny pack YOLO franzen edison bulb brunch.
-    </li>
-    <li>
-        Level 1, item 2
-        <ul>
-            <li>
-                Level 2, item 1
-            </li>
-            <li>
-                Level 2, item 2, chartreuse DIY cred VHS migas man braid everyday carry vinyl. Bespoke knausgaard adaptogen
-            </li>
-            <li>
-                Level 2, item 3
-            </li>
-        </ul>
-    </li>
-    <li>
-        Level 1, item 3
-    </li>
+<ul class="custom-list">
+	<li>{{ listItem }}</li>
+	<li>{{ listItem }}</li>
+	<li>
+		{{ listItem }}
+		<ul>
+			<li>{{ listItemNested }}</li>
+			<li>{{ listItemNested }}</li>
+			<li>
+				{{ listItem }}
+				<ul>
+					<li>{{ listItemNested }}</li>
+					<li>{{ listItemNested }}</li>
+					<li>{{ listItemNested }}</li>
+				</ul>
+			</li>
+		</ul>
+	</li>
 </ul>

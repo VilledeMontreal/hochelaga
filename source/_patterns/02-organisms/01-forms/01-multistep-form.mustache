@@ -1,0 +1,94 @@
+<form class="form-wizard">
+  <div class="form-step">
+    <fieldset>
+      <legend>Responsable de l'entreprise</legend>
+      <div class="row">
+        <div class="form-group col-md-6">
+          <label for="inputFirstName">Prénom</label>
+          <input type="text" class="form-control" id="inputFirstName" placeholder="Gilles">
+        </div>
+        <div class="form-group col-md-6">
+          <label for="inputLastName">Nom</label>
+          <input type="texgt" class="form-control" id="inputLastName" placeholder="Bergeron">
+        </div>
+        <div class="form-group col-md-6">
+          <label for="inputEmail">Nom</label>
+          <input type="email" class="form-control" id="inputEmail" placeholder="email@domain.com">
+        </div>
+      </div>
+
+      <div class="row form-repeatable-group">
+        <div class="form-group col-md-2">
+          <label for="inputPhoneType">Téléphone</label>
+          <select id="inputPhoneType" class="form-control">
+            <option selected>Type</option>
+            <option>...</option>
+          </select>
+        </div>
+        <div class="form-group col-md-5">
+          <label for="inputPhoneNumber">Numéro</label>
+          <input type="text" class="form-control" id="inputPhoneNumber">
+        </div>
+        <div class="form-group col-md-5">
+          <label for="inputPhoneExtra">Poste</label>
+          <input type="text" class="form-control" id="inputPhoneExtra">
+        </div>
+        <div class="form-group">
+          <button class="btn btn-link">Ajouter un numéro de téléphone</button>
+        </div>
+      </div>
+    </fieldset>
+  </div>
+
+  <div class="form-step">
+    <fieldset>
+      <legend>Identification de l'entreprise</legend>
+      <div class="row">
+        <div class="form-group col-md-6">
+          <label for="inputCieName">Nom de l'entreprise</label>
+          <input type="text" class="form-control" id="inputCieName" placeholder="Holding Petoleum Canada Inc.">
+        </div>
+      </div>
+      <div class="form-group"> 
+		    <label class="group-label">Est-ce que l’entreprise possède un numéro d’identification NEQ, TPS et TVQ?</label>
+        <div class="custom-control custom-radio">
+          <input type="radio" id="numeroRadio1" name="numeroRadio" class="custom-control-input" value="1" checked>
+          <label class="custom-control-label" for="numeroRadio1">Oui</label>
+        </div>
+        <div class="custom-control custom-radio">
+          <input type="radio" id="numeroRadio2" name="numeroRadio" class="custom-control-input" value="0">
+          <label class="custom-control-label" for="numeroRadio2">Non</label>
+        </div>
+      </div>
+    </fieldset>
+  </div>
+
+  <div class="form-step">
+    <div class="form-group"> 
+      <label class="group-label">Préciser qui est le reponsable de l'entreprise</label>
+      <div class="alert alert-warning alert-icon" role="alert">
+        <span class="vfi vfi-attention-circulaire" aria-hidden="true"></span>
+        <div>Responsable de la déclaration: Personne responsable des renseignements techniques, chargée de préparer la déclaration et de répondre à toute question relative à son contenu</div>
+      </div>
+      <div class="custom-control custom-radio">
+        <input type="radio" id="responsableRadio1" name="responsableRadio" class="custom-control-input" value="">
+        <label class="custom-control-label" for="responsableRadio1">Exploitant</label>
+      </div>
+      <div class="custom-control custom-radio">
+        <input type="radio" id="responsableRadio2" name="responsableRadio" class="custom-control-input" value="">
+        <label class="custom-control-label" for="responsableRadio2">Autre</label>
+      </div>
+    </div>
+  </div>
+  <div class="form-group form-action-group">
+    <ul>
+      <li>
+        {{> atoms-button("btnClasses": "vdm-btn-secondary btn-prev", "buttonText": "Précédent" ) }}
+      </li>
+      <li>
+        {{> atoms-button("btnClasses": "btn-next", "buttonText": "Soumettre") }}
+      </li>
+    </ul>
+  </div>
+  
+</form>

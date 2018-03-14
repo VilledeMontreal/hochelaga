@@ -1,0 +1,388 @@
+// FORMS
+
+legend,
+.group-label {
+  @extend legend;
+  margin-bottom: 1rem;
+  font-weight: $font-weight-bold;
+}
+
+.form-group {
+  margin-bottom: 2rem;
+  &.required {
+    label {
+      &:after {
+        content: "*";
+        color: $red;
+        display: inline-block;
+        margin-left: 0.25em;
+      }
+    }
+  }
+}
+
+// TO DO: Is this generic or specific to wizard forms
+.form-action-group {
+  margin: 2rem auto;
+  ul {
+    @extend .list-inline;
+    display: flex;
+    justify-content: space-between;
+    li {
+      @extend .list-inline-item;
+      &:not(:last-child) {
+        margin-right: inherit;
+      }
+
+    }
+  }
+}
+
+// Input Groups
+//
+.input-group-date {
+  .input-group-append {
+    cursor: pointer;
+  }
+}
+// Theme icon as input-group-icon for easy placement and scalability
+.input-group-icon {
+  position: relative;
+
+  .input-group-icon-left,
+  .input-group-icon-right {
+    position: absolute;
+    height: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    pointer-events: none;
+    top: 0;
+    color: $vdm-brand;
+    .vfi {
+      font-size: 2rem;
+    }
+  }
+  .input-group-icon-left {
+    left: 0;
+    padding-left: .3rem;
+  }
+  .input-group-icon-right {
+    right: 0;
+    padding-right: .3rem;
+  }
+  .input-group-icon-left + input {
+    padding-left: 2.625rem;
+  }
+  .input-group-icon-right + input {
+    padding-right: 2.625rem;
+  }
+}
+
+// Checkboxes
+//
+// use vfi
+.custom-checkbox {
+  margin-bottom: $custom-control-spacer-y;
+
+  .custom-control-input:checked ~ .custom-control-label {
+    &::after {
+      background-image: none;
+      font-size: 2rem;
+      line-height: 1;
+      color: $vdm-brand;
+    }
+    @include iconvfi(after, mini-case-coche-coche);
+  }
+
+  .custom-control-input:indeterminate ~ .custom-control-label {
+    &::after {
+      background-image: none;
+    }
+  }
+}
+
+// Custom checkboxes and radios themed as card
+.custom-control-card {
+  padding: 0;
+
+  .custom-control-label {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    padding: 2rem;
+    padding-left: 6rem;
+    position: relative;
+    border: 1px solid $gray-400;
+
+    // Background-color and (when enabled) gradient
+    &::before {
+      top: calc(50% - (#{$custom-control-indicator-size}/2));
+      left: 0;
+      right: auto;
+      margin-left: 2rem;
+    }
+
+    // Foreground (icon)
+    &::after {
+      top: calc(50% - (#{$custom-control-indicator-size}/2));
+      left: 0;
+      right: auto;
+      margin-left: 2rem;
+    }
+
+  }
+
+  // Set checked styles here: change border-color or apply other styles to label
+  // See bootstrap .custom-forms.scss for examples
+  /*
+  .custom-control-input:checked ~ .custom-control-label {
+    border-color: $success;
+  }
+  */
+}
+
+
+// Radios
+//
+// Tweak just a few things for radios.
+.custom-radio {
+  margin-bottom: $custom-control-spacer-y;
+
+  .custom-control-input:checked ~ .custom-control-label {
+    &::after {
+      border-radius: 50%;
+      width: 0.6875rem;
+      height: 0.6875rem;
+      transform: translate(0.59375rem, 0.59375rem);
+      background-color: $vdm-brand;
+    }
+  }
+}
+
+// Switches - Checkboxes as state toggles
+//
+
+.checkbox-toggle {
+  // Massive negative offset clears the original checkbox & label.
+  position: relative;
+  input {
+    &[type="checkbox"] {
+      position: absolute;
+      left: -10000px;
+      visibility: hidden;
+
+      // Graphics container
+      & + label {
+        position: relative;
+        text-indent: -10000px;
+        height: $checkbox-toggle-height;
+        width: $checkbox-toggle-width;
+        user-select: none;
+        cursor: pointer;
+
+        &:before,
+        &:after {
+          display: block;
+          position: absolute;
+          content: "";
+        }
+
+        // Inside button
+        &:after {
+          top: $checkbox-toggle-padding;
+          left: $checkbox-toggle-padding;
+          bottom: $checkbox-toggle-padding;
+          right: $checkbox-toggle-padding;
+          background-color: $custom-control-indicator-checked-color;
+          border-radius: $checkbox-toggle-border-radius;
+          width: $checkbox-toggle-width-inside;
+          -webkit-transition: 0.3s;
+          transition: 0.3s;
+        }
+
+        // Outside pill
+        &:before {
+          top: 0;
+          left: 0;
+          bottom: 0;
+          right: 0;
+          background-color: transparent;
+          border: $checkbox-toggle-border-width solid $custom-control-indicator-checked-color;
+          border-radius: $checkbox-toggle-border-radius-inside;
+          width: $checkbox-toggle-width;
+        }
+      }
+
+      // checked
+      &[checked="checked"],
+      &:checked {
+        & + label {
+          // Inside button
+          &:after {
+            background-color: $white;
+            margin-left: $checkbox-toggle-width-inside + $checkbox-toggle-padding;
+          }
+
+          // Outside pill
+          &:before {
+            background-color: $custom-control-indicator-checked-color;
+            border: 0;
+          }
+        }
+      }
+
+      // Disabled
+      &:disabled {
+        & + label {
+          cursor: not-allowed;
+          // Inside button
+          &:after {
+            background-color: $white;
+            margin-left: 0;
+          }
+
+          // Outside pill
+          &:before {
+            background-color: $custom-control-indicator-disabled-bg;
+            border: 0;
+          }
+        }
+        // Disabled & checked
+        &:checked {
+          & + label {
+            // Inside button
+            &:after {
+              margin-left: $checkbox-toggle-width-inside + $checkbox-toggle-padding;
+            }
+
+            // Outside pill
+            &:before {
+              background-color: $custom-control-indicator-disabled-bg;
+            }
+          }
+        }
+      }
+
+    }
+  }
+}
+
+// Search box combo with a header, a wrapper with a fat bottom stroke
+// containing an icon and a seach field. A submit button completes the picture.
+// @see molecules-search-field-combo
+.form-combo {
+  padding: 1.8rem;
+  flex-wrap: wrap;
+  align-items: center;
+
+  &.icon-combo {
+    .vfi {
+      font-size: 2.4rem;
+      width: 2.4rem;
+      height: 2.4rem;
+      color: $vdm-brand;
+    }
+  }
+
+  .title {
+    font-size: $font-size-base;
+    line-height: $line-height-lg;
+    font-weight: $font-weight-bold;
+    width: 100%;
+  }
+
+  .vdm-btn {
+    margin-bottom: 0;
+    position: relative;
+    margin-top: 0.1rem;
+  }
+
+  .input-wrapper {
+    padding: 1rem 0.5rem 0.5rem 0.5rem;
+    align-items: center;
+    flex: 1 0;
+    margin-right: 1rem;
+
+    > * {
+      margin-right: 0.5rem;
+    }
+
+    :last-child {
+      margin-right: 0;
+    }
+
+    &.stroked {
+      border-bottom: 3px solid $black;
+    }
+
+    .form-group {
+      margin-top: 0;
+      margin-bottom: 0;
+      width: 100%;
+
+      label {
+        top: 16px;
+      }
+      .form-control {
+        border: none;
+        line-height: 2.1;
+        &:focus {
+          border: none;
+        }
+
+        &:focus,
+        &.used {
+          & ~ label {
+            display: none;
+          }
+        }
+      }
+    }
+  }
+
+  // Extra modifier classes when the button is inside the inner wrapper
+  &.inline-button {
+    .input-wrapper {
+      width: 100%;
+      margin-right: 0;
+    }
+    .vdm-btn {
+      position: static;
+    }
+  }
+
+  @include media-breakpoint-down(xs) {
+    .input-wrapper {
+      flex-basis: 100%;
+    }
+    .vdm-btn {
+      margin: 1rem auto 0 auto;
+      align-self: center;
+      &:last-of-type {
+        margin: 1rem auto 0 auto;
+      }
+    }
+
+    // Extra modifier classes when the button is inside the inner wrapper
+    &.inline-button {
+      .input-wrapper {
+        flex-basis: 100%;
+        position: relative;
+        //margin-bottom: 1.5rem;
+      }
+      .vdm-btn {
+        position: absolute;
+        //top: 1.5rem;
+        left: 50%;
+        transform: translateX(-50%);
+      }
+    }
+  }
+}
+
+// Form Wizard
+.form-wizard {
+  padding-top: 3rem;
+  padding-bottom: 3rem;
+}

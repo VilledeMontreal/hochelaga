@@ -1,0 +1,707 @@
+// @file patternlab.scss
+
+/**
+ * Patternlab specific css -- all classes MUST begin w/ pl-
+ * The code below lives for the sake of the patternlab instance & is not compiled along with the main site stylesheet
+ * @see pattern-scaffolding.css in mustache demo starterkit for reference
+ */
+
+// Import variables and bootstrap framework - duplicate but required
+@import 'scss/variables';
+
+// Bootstrap Framework.
+@import '~bootstrap/scss/bootstrap';
+
+.sg-main {
+  padding: 20px 20px;
+}
+
+// - - - - - - - - - -  - - - - - -
+//  * * * ATOMS * * *
+// - - - - - - - - - -  - - - - - -
+
+// Fonts
+// - - - - - - - - - -  - - - - - -
+
+// Titles
+.pl-stroked-header {
+  padding-top: 0.25em;
+  // padding-left: 0.25em;
+  // border-top: 1px solid #ddd;
+  width: 93%;
+}
+
+// Scalers
+.pl-small {
+  font-size: 0.85em;
+}
+.pl-smaller {
+  font-size: 0.75em;
+}
+.pl-smallest {
+  font-size: 0.65em;
+}
+
+.pl-headers-wrapper {
+  .pl-headers {
+    > li {
+      margin-bottom: 1.5rem;
+    }
+  }
+}
+
+// Block level presentational utilities
+
+// Backgrounds : to show the overlay effect
+.pl-background {
+  &.pl-grey-light {
+    background: darken($vdm-grey-light, 10%);
+  }
+  &.pl-grey {
+    background: $vdm-grey;
+  }
+}
+
+.pl-placeholder-block {
+  @extend .pl-padding-10;
+  background: $vdm-grey-light;
+  margin-bottom: 1rem;
+}
+
+// Utility vertical spacer : margin-bottom
+.pl-vspacer {
+  margin-bottom: 1rem;
+  &.pl-vspacer-5 {
+    margin-bottom: 0.33rem;
+  }
+  &.pl-vspacer-10 {
+    margin-bottom: 0.33rem;
+  }
+  &.pl-vspacer-25 {
+    margin-bottom: 1.7rem;
+  }
+  &.pl-vspacer-50 {
+    margin-bottom: 4rem;
+  }
+}
+
+// Block level paddings
+.pl-padding-5 {
+  padding: 0.33rem;
+}
+.pl-padding-10 {
+  padding: 0.7rem;
+}
+.pl-padding-25 {
+  padding: 1.5rem;
+}
+
+// Size demontration blocks for font-size, paddings and margins
+.pl-size-wrapper {
+  &.pl-size-2x-root {
+    font-size: 2rem;
+  }
+  &.pl-size-2x {
+    font-size: 2em;
+  }
+}
+
+.pl-size-block {
+  border-top: 1px solid $vdm-grey;
+  border-bottom: 1px solid $vdm-grey;
+  background: $vdm-grey-light;
+  text-align: center;
+  position: relative;
+  margin-bottom: 30px;
+
+  &:last-of-type {
+    margin-right: 0;
+  }
+
+  .pl-size-unit {
+    // The inner span contianing the descriptive text
+    position: absolute;
+    bottom: -30px;
+    left: 0.3em;
+    font-size: $font-size-sm;
+  }
+
+  &.pl-size-inline {
+    display: inline-block;
+    margin-right: 1rem;
+    width: 10%;
+  }
+  &.pl-size-5 {
+    width: 5%;
+  }
+  &.pl-size-75 {
+    width: 7.5%;
+  }
+  &.pl-size-10 {
+    width: 10%;
+  }
+  &.pl-size-15 {
+    width: 15%;
+  }
+  &.pl-size-20 {
+    width: 20%;
+  }
+}
+
+// Box demos for units
+$pl-size-box-wrapper-size: 20rem;
+$pl-size-box-wrapper-padding: 1rem;
+
+.pl-size-box-wrapper {
+  width: $pl-size-box-wrapper-size;
+  height: $pl-size-box-wrapper-size;
+  border: 1px solid $vdm-grey;
+  float: left;
+  margin-right: $pl-size-box-wrapper-padding;
+
+  .pl-size-box {
+    text-align: center;
+    margin: $pl-size-box-wrapper-padding/2 auto $pl-size-box-wrapper-padding/2
+      auto;
+  }
+  .pl-size-box-margin {
+    background: darken($vdm-grey-light, 20%);
+    border: 1px solid $vdm-grey;
+    z-index: -5;
+    width: $pl-size-box-wrapper-size - $pl-size-box-wrapper-padding;
+    height: $pl-size-box-wrapper-size - $pl-size-box-wrapper-padding;
+    .pl-size-box-base {
+      background: $vdm-grey-light;
+      border: 1px solid $vdm-grey;
+      z-index: 0;
+      width: $pl-size-box-wrapper-size - $pl-size-box-wrapper-padding * 2;
+      height: $pl-size-box-wrapper-size - $pl-size-box-wrapper-padding * 2;
+
+      .pl-size-box-padding {
+        background: lighten($vdm-grey-light, 20%);
+        border: 1px solid $vdm-grey;
+        z-index: 5;
+        width: $pl-size-box-wrapper-size - $pl-size-box-wrapper-padding * 3;
+        height: $pl-size-box-wrapper-size - $pl-size-box-wrapper-padding * 3;
+      }
+    }
+  }
+
+  // 2 rem modifier
+  &.pl-size-box-2rem {
+    font-size: 2rem;
+
+    .pl-size-box {
+      margin: $pl-size-box-wrapper-padding auto $pl-size-box-wrapper-padding
+        auto;
+    }
+
+    .pl-size-box-margin {
+      width: $pl-size-box-wrapper-size - 2rem;
+      height: $pl-size-box-wrapper-size - 2rem;
+      .pl-size-box-base {
+        width: $pl-size-box-wrapper-size - 4rem;
+        height: $pl-size-box-wrapper-size - 4rem;
+        .pl-size-box-padding {
+          width: $pl-size-box-wrapper-size - 6rem;
+          height: $pl-size-box-wrapper-size - 6rem;
+        }
+      }
+    }
+  }
+}
+
+// Lists
+.pl-list-stacked-block {
+  margin: 0;
+  padding: 0;
+  li {
+    margin: 0;
+    padding: 0;
+  }
+  &.plain {
+    list-style-type: none;
+  }
+  &.pl-width-20 {
+    max-width: 20%;
+  }
+}
+
+// Documentation
+// - - - - - - - - - -  - - - - - -
+.pl-document {
+  color: $vdm-neutral-mid;
+  font-size: $font-size-sm;
+  ul {
+    li {
+      line-height: 1.3em;
+      pre {
+        width: 40%;
+        color: $vdm-neutral-mid;
+        background: $vdm-neutral-light;
+      }
+    }
+  }
+}
+
+// Icons
+// - - - - - - - - - -  - - - - - -
+
+.pl-atom-icons-grid {
+  // Exception code for the new version
+  &.pl-latest {
+    ul {
+      li {
+        width: 133px;
+      }
+    }
+  }
+  .wrapper {
+    @include make-row();
+    @include clearfix();
+    ul {
+      display: -ms-flexbox;
+      display: flex;
+      -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+      list-style: none;
+      text-align: -webkit-match-parent;
+      border: 0;
+      margin: 0;
+      padding: 0;
+      // Reset font-size & line height : important!
+      font-size: 13px;
+      line-height: 1;
+      > li {
+        margin: 0 5px 10px 0;
+        border: 0;
+        padding: 0;
+        display: inline-block;
+
+        // Keeper
+        > .vfi {
+          font-family: $vfi-icon-font-family !important;
+          display: block;
+          width: 128px;
+          height: 128px;
+          font-size: 128px;
+          background-color: rgba(0, 0, 0, 0.05);
+          text-rendering: geometricPrecision;
+          -webkit-font-smoothing: antialiased;
+          vertical-align: middle;
+          font-smooth: always;
+          font-weight: normal;
+          font-variant: normal;
+          text-transform: none;
+        }
+
+        // Duplicate code for the new version
+        .vfi {
+          font-family: $vfi-icon-font-family !important;
+          display: block;
+          width: 128px;
+          height: 128px;
+          background-color: rgba(0, 0, 0, 0.05);
+          &:before {
+            font-size: 128px;
+          }
+        }
+
+        // Duplicate code for the new version
+        .vfi {
+          font-family: $vfi-icon-font-family !important;
+          display: block;
+          width: 128px;
+          height: 128px;
+          background-color: rgba(0, 0, 0, 0.05);
+          &:before {
+            font-size: 128px;
+          }
+        }
+        .ic-name,
+        .ic-charcode {
+          display: block;
+          color: $vdm-neutral-mid;
+          margin-top: 0.5em;
+          font-size: $font-size-sm;
+        }
+        .ic-name {
+          color: $black;
+        }
+      }
+    }
+  }
+}
+
+// Colors
+// - - - - - - - - - -  - - - - - -
+
+.pl-atom-color {
+  .pl-swatches-wrapper {
+    @include make-row();
+    @include clearfix();
+    margin-top: 30px;
+    h2 {
+      padding-left: 12px;
+    }
+    .pl-swatches {
+      // @include make-xs-column(12);
+      // @include make-md-column(6);
+      @include make-col-ready();
+      @include media-breakpoint-up(xs) {
+        @include make-col(12);
+      }
+      @include media-breakpoint-up(md) {
+        @include make-col(6);
+      }
+
+      .pl-swatch-list {
+        list-style-type: none;
+        padding: 0;
+        margin: 0;
+
+        .pl-swatch {
+          padding: 1em;
+
+          // Hexadecimal identifier
+          .pl-hex {
+            display: block;
+            float: right;
+            width: 30%;
+            font-size: $font-size-sm;
+            text-align: right;
+          }
+        }
+      }
+    }
+  }
+
+  .pl-swatches-color-table {
+    tr {
+      th {
+        font-weight: $font-weight-bold;
+        font-size: $font-size-base;
+      }
+      td {
+        text-align: left;
+      }
+    }
+
+    // Colors
+
+    .pl-black {
+      background: $black;
+    }
+    .pl-white {
+      background: $white;
+      border: solid 1px silver;
+    }
+    .pl-sarcelle {
+      background: $vdm-sarcelle;
+    }
+    .pl-grey-light {
+      background: $vdm-grey-light;
+    }
+    .pl-grey {
+      background: $vdm-grey;
+    }
+    .pl-red {
+      background: $montreal-red;
+    }
+    .pl-brand {
+      background: $vdm-brand;
+      color: $white;
+    }
+    .pl-sub-brand {
+      background: $vdm-sub-brand;
+      color: $white;
+    }
+
+    // Columns
+    .pl-color-table-column-swatch {
+      width: 20%;
+    }
+    .pl-color-table-column-name {
+      width: 20%;
+      font-weight: $font-weight-bold;
+    }
+    .pl-color-table-column-variable {
+      width: 20%;
+    }
+    .pl-color-table-column-function {
+      width: 20%;
+    }
+    .pl-color-table-column-accessibility {
+      width: 20%;
+    }
+
+    .pl-swatch-round {
+      border-radius: 20px;
+      width: 40px;
+      height: 40px;
+      display: block;
+      &.pl-swatch-accessibility,
+      &.pl-swatch-accessibility-invert {
+        border-radius: 15px;
+        width: 30px;
+        height: 30px;
+        background: $vdm-neutral-light;
+        color: $black;
+        float: right;
+        text-align: center;
+        padding-top: 6px;
+        font-size: $font-size-sm;
+        margin-right: 0.8em;
+        &:after {
+          content: "AA";
+        }
+        &:last-of-type {
+          margin-right: 0;
+        }
+      }
+      &.pl-swatch-accessibility-invert {
+        background: $black;
+        color: $white;
+        float: left;
+      }
+    }
+    .pl-sass-name {
+      display: block;
+      font-size: $font-size-sm;
+      font-weight: $font-weight-light;
+    }
+  }
+
+  .pl-accessibility-table {
+    .pl-acc-demo {
+      width: 50%;
+      padding-left: 30px;
+
+      .pl-swatch-round {
+        display: block;
+        &.pl-swatch-accessibility,
+        &.pl-swatch-accessibility-invert {
+          border-radius: 15px;
+          width: 30px;
+          height: 30px;
+          background: $vdm-neutral-light;
+          color: $black;
+          float: left;
+          text-align: center;
+          padding-top: 6px;
+          font-size: $font-size-sm;
+          margin-right: 0.8em;
+          &:after {
+            content: "AA";
+          }
+        }
+        &.pl-swatch-accessibility-invert {
+          background: $black;
+          color: $white;
+        }
+      }
+    }
+  }
+
+  // Colors
+  // Brand
+  .pl-brand {
+    background: $vdm-brand;
+    color: $white;
+  }
+  .pl-sub-brand {
+    background: $vdm-sub-brand;
+    color: $white;
+  }
+
+  // Neutrals
+  .pl-neutral-lightest {
+    background: $vdm-neutral-light;
+    color: $vdm-neutral-mid;
+  }
+  .pl-neutral-lighter {
+    background: $vdm-neutral-light;
+    color: $vdm-neutral-mid;
+  }
+  .pl-neutral-light {
+    background: $vdm-neutral-light;
+    color: $vdm-neutral-mid;
+  }
+  .pl-neutral {
+    background: $vdm-neutral-mid;
+    color: $white;
+  }
+  .pl-neutral-dark {
+    background: $vdm-neutral-mid;
+    color: $white;
+  }
+  .pl-neutral-base {
+    background: $black;
+    color: $white;
+  }
+
+  // UI & Alerts
+  .pl-ui {
+    background: $vdm-brand;
+    color: $white;
+  }
+  // .pl-ui-medium {
+  //   background: $vdm-brand-medium;
+  //   color: $white;
+  // }
+  // .pl-ui-light {
+  //   background: $vdm-brand-light;
+  //   color: $vdm-neutral-mid;
+  // }
+  // .pl-ui-lighter{
+  //   background: $vdm-brand-lighter;
+  //   color: $vdm-neutral-mid;
+  // }
+
+  // Alternate UI colors
+  // .pl-ui-alt-danger{
+  //   background:$vdm-brand-alt-danger;
+  //   color: $white;
+  // }
+  // .pl-ui-alt-warm-dark{
+  //   background: $vdm-brand-alt-warm-dark;
+  //   color: $white;
+  // }
+} // .pl-atom-color
+
+// Form-elements
+// - - - - - - - - - -  - - - - - -
+.pl-button {
+  margin-bottom: 0.6em;
+}
+
+// - - - - - - - - - -  - - - - - -
+//  * * * LAYOUT * * *
+// - - - - - - - - - -  - - - - - -
+
+//  For regions demonstration pages -- highlights empty regions.
+.pl-regions-demo-page {
+  .region {
+    background: lighten($vdm-grey-light, 4%);
+    border: 1px solid lighten($vdm-grey, 40%);
+
+    .region-row {
+      .region-content {
+        border: 1px solid $vdm-grey-light;
+        background: $white;
+        padding-top: 3rem;
+        padding-bottom: 3rem;
+      }
+    }
+
+    // Shade alterning regions so as to emphasise their limits
+    &:nth-child(even) {
+      background-color: $white;
+      border: 1px solid lighten($vdm-grey, 35%);
+      .region-row {
+        .region-content {
+          background: lighten($vdm-grey-light, 5%);
+        }
+      }
+    }
+  }
+}
+
+// Examples styling
+
+.sg-pattern .progress + .progress {
+  margin-top: 1rem;
+}
+
+// - - - - - - - - - -  - - - - - -
+//  * * * MOLECULES * * *
+// - - - - - - - - - -  - - - - - -
+
+// Tiles
+// - - - - - - - - - -  - - - - - -
+.pl-molecule-tiles {
+  .pl-tiles-index {
+    @include make-row();
+    @include clearfix();
+    > li {
+      display: inline-block;
+      margin-right: 15px;
+      margin-bottom: 15px;
+    }
+  }
+}
+
+// Tiles
+// - - - - - - - - - -  - - - - - -
+.pl-molecule-cards {
+  @extend .container;
+  .pl-cards-index {
+    @include make-row();
+    > li {
+      // display: flex;
+      // Provide equal height behaviour, vertical sizing
+
+      @include make-col-ready();
+      @include media-breakpoint-up(xs) {
+        @include make-col(12);
+      }
+      @include media-breakpoint-up(sm) {
+        @include make-col(4);
+      }
+      @include media-breakpoint-up(md) {
+        @include make-col(3);
+      }
+
+      margin-bottom: $grid-gutter-width;
+    }
+  }
+}
+
+.pl-molecule-cards-large {
+  @extend .container;
+  .pl-cards-index {
+    @include make-row();
+    > li {
+      @include make-col-ready();
+      @include media-breakpoint-up(xs) {
+        @include make-col(12);
+      }
+      @include media-breakpoint-up(sm) {
+        @include make-col(6);
+      }
+      @include media-breakpoint-up(md) {
+        @include make-col(6);
+      }
+
+      margin-bottom: $grid-gutter-width;
+    }
+  }
+}
+
+.pl-teasers-index {
+  > ul {
+    > li {
+      @extend .container;
+    }
+  }
+}
+
+/*
+
+.pl-molecule-teaser-picture {
+  @extend .container;
+    .pl-cards-index {
+        @include make-row();
+        >li {
+         
+          @include make-xs-column(12);
+          @include make-sm-column(6);
+          @include make-md-column(6);
+
+          margin-bottom: $grid-gutter-width;
+        
+        }
+    }
+}
+
+*/

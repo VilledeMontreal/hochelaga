@@ -1,0 +1,24 @@
+{{> organisms-header-wizard }}
+{{> molecules-step-wizard }}
+
+<main class="main-content {{ pageClasses }}" id="main-content" aria-label="Main Content" role="main">
+  <div class="region bg-gray-100">
+    <div class="container bg-white">
+      <div class="row">
+        <div class="col-12">
+          {{# hasSummary }}
+          {{> organisms-services-resultats-content }}
+          {{/ hasSummary }}
+        </div>
+        <div class="col-12 col-md-8">
+          {{> organisms-multistep-form }}
+        </div>
+        {{# sidebarRight }}
+        <aside class="col-12 col-md-4 sidebar sidebar-right {{ sidebar-classes }}">
+          {{> organisms-sidebar-block }}
+        </aside>
+        {{/ sidebarRight }}
+      </div>
+    </div>
+  </div>
+</main>

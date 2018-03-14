@@ -1,34 +1,34 @@
-# Local  files
-# -------------------------------------------------
-# src/config/env.js
-# gulpfile.js
 
-source/css/
-source/css/*
+# Patternlab directories
+# -------------------------------
+# core/*
+public/*
+export/*
+patternlab.json
+.sass-cache/*
+/sass-cache
+.idea/
+
+# Exlusions by file type
+# -------------------------------
 *.css
 *.map
-patternlab.css
-styles.css
-source/css/styles.css
 
 
-# Chef generated files
-# ------------------------------------------------------------------------------
-cookbooks
-tmp
-
-# Vagrant generated files
-# ------------------------------------------------------------------------------
-.vagrant
-
-# Node generated files
-# ------------------------------------------------------------------------------
-node_modules
+# Installables, PHP & node
+# -------------------------------
+vendor/*
+node_modules/*
 *.log
+composer.lock
 
+
+# Packaged files
+# ------------------------------------------------------------------------------
+/dist
 
 # OS generated files
-# ------------------------------------------------------------------------------
+# -------------------------------
 *~
 .directory
 .DS_Store*
@@ -56,17 +56,16 @@ Thumbs.db
 .komodotools
 .project
 .settings
+.vscode
 nbproject
 
-# Patternlab files
-# ------------------------------------------------------------------------------
-patternlab.json
-.sass-cache/*
-/sass-cache
-.idea/
-public
 
-# Package files
+# Chef generated files
 # ------------------------------------------------------------------------------
-/dist
-/scss
+cookbooks
+tmp
+
+# Vagrant generated files
+# ------------------------------------------------------------------------------
+.vagrant
+

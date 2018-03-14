@@ -1,17 +1,16 @@
-<!-- <nav class="navbar navbar-toggleable-md navbar-inverse fixed-top bg-inverse vdm-navbar"> -->
-<nav class="vdm-navbar" data-component-type="navigation" role="menu">
-    <div class="menu-trigger-wrapper">
-        {{> molecules-main-menu-button }}
-    </div>
-    {{> atoms-logo-svg }}
-    <div class="navbar-icons">
-        <ul class="icons">
-            <li class="search">{{> molecules-search-button }}</li>
-            <li class="user">{{> molecules-account-button }}</li>
-            <li class="language">{{> molecules-language-switcher }}</li>
-        </ul>
-    </div>
-    <div class="invisible searchbar-wrapper">
-        {{> molecules-search-field-combo-button-inside }}
-    </div>
+<nav class="vdm-navbar" role="navigation">
+  <div class="menu-trigger-wrapper">
+    {{> molecules-main-menu-button }}
+  </div>
+  {{> atoms-logo-svg }}
+  <div class="navbar-icons">
+    <ul class="icons">
+      <li class="search">{{> molecules-search-button }}</li>
+      <li class="account">{{> molecules-account-button }}</li>
+      <li class="language">{{> molecules-language-switcher }}</li>
+    </ul>
+  </div>
+  <div class="invisible searchbar-wrapper">
+    {{> molecules-search-field-combo-button-inside }}
+  </div>
 </nav>

@@ -1,0 +1,96 @@
+// @file ui-buttons-switches-tabs.scss
+
+// Buttons
+//
+// To Do: Review all buttons implementations and theming. No need to overcomplicate this. Build on bootstrap please
+//        Find a way to blend nicely with ui buttons aka bootstrap default styles. 
+//        Dropshadows, animations, hovers, etc. needs to be harmonized.
+.vdm-btn {
+  display: inline-block;
+  width: auto;
+  padding: $vdm-btn-padding-y $vdm-btn-padding-x;
+  border-radius: 2rem;
+  background-color: $vdm-brand;
+  text-align: center;
+  font-size: $font-size-base;
+  color: $white;
+  border: $vdm-btn-border-width solid $vdm-brand;
+  text-shadow: none;
+  margin-right: 0.725em;
+  vertical-align: middle;
+  touch-action: manipulation;
+  cursor: pointer;
+  // Reset unusual Firefox-on-Android default style; see https://github.com/necolas/normalize.css/issues/214
+  white-space: nowrap;
+  background-image: none;
+  &:last-of-type {
+    margin-right: 0;
+  }
+
+  &:active,
+  &:hover {
+    @include drop-shadow();
+    color: $white;
+    background-color: $vdm-brand;
+  }
+
+  &:disabled {
+    color: $btn-link-disabled-color;
+    border: $vdm-btn-border-width solid $input-disabled-bg;
+    background-color: $input-disabled-bg;
+    &:active,
+    &:hover {
+      box-shadow: unset;
+      color: $btn-link-disabled-color;
+      background-color: $input-disabled-bg;
+    }
+  }
+
+  &.vdm-btn-secondary {
+    color: $vdm-brand;
+    border: $vdm-btn-border-width solid $vdm-brand;
+    background-color: $white;
+
+    &:disabled {
+      color: $btn-link-disabled-color;
+      border: $vdm-btn-border-width solid $input-disabled-bg;
+      background-color: $white;
+
+      &:active,
+      &:hover {
+        box-shadow: unset;
+        background-color: $white;
+        border: 2px solid $input-disabled-bg;
+      }
+    }
+
+    &:active,
+    &:hover {
+      @include drop-shadow(3px, 5px, 11px, 2px, 0, 0, 0, 0.27);
+      border: $vdm-btn-border-width solid $white;
+      background-color: $white;
+    }
+  }
+
+  &.vdm-btn-sm {
+    font-size: $font-size-sm;
+    border-width: 1px;
+    padding: $vdm-btn-padding-y-sm $vdm-btn-padding-x-sm;
+    &:active,
+    &:hover {
+      border-width: 1px;
+    }
+  }
+
+  &.vdm-btn-wide {
+    width: 100%;
+  }
+}
+
+a {
+  &.vdm-btn {
+    //padding-top: 1em;
+    display: inline-block;
+    text-decoration: none;
+  }
+}

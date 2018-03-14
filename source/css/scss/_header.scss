@@ -1,0 +1,289 @@
+// @file header.scss
+
+// @ see http://192.168.56.101:3000/?p=organisms-header
+
+.vdm-header {
+  //@extend .fixed-top;
+  ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    li {
+      margin: 0;
+      padding: 0;
+    }
+  }
+}
+
+// Main navigation
+.vdm-navbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: $white;
+  border-bottom: 1px solid $vdm-grey-light;
+  height: $header-portal-height;
+  padding: 0;
+  width: 100%;
+  position: relative;
+
+  .menu-trigger-wrapper {
+    flex-basis: calc(50% - 80px);
+  }
+
+  .menu-trigger {
+    @include iconvfi(before, menu);
+    @include size($header-icon-width);
+    font-size: 3.5rem;
+    border: 0;
+    margin: 0;
+    padding: 0;
+    line-height: 1;
+    background: $vdm-sub-brand;
+    color: $white;
+    vertical-align: middle;
+    cursor: pointer;
+    outline-width: 0;
+    &:after {
+      color: $vdm-sub-brand;
+    }
+  }
+
+  .brand-logo {
+    height: 34px;
+  }
+
+  a {
+    color: $black;
+    text-decoration: none;
+    &:active,
+    &:hover {
+      color: $black;
+      text-decoration: none;
+    }
+  }
+
+  .navbar-icons {
+    flex-basis: calc(50% - 80px);
+    .icons {
+      display: flex;
+      align-items: center;
+      flex-direction: row;
+      justify-content: flex-end;
+
+      > * {
+        @extend .d-sm-inline-block;
+        @include media-breakpoint-up(lg) {
+          border-left: 1px solid $vdm-grey-light;
+        }
+      }
+      .button-label {
+        display: none;
+      }
+
+      .search {
+        display: none;
+        @include media-breakpoint-up(sm) {
+          @extend .d-sm-inline-block;
+        }
+      }
+
+      .language {
+        display: none;
+      }
+
+      @include media-breakpoint-up(lg) {
+        .button-label {
+          display: inline-block;
+        }
+        .language {
+          display: block;
+        }
+      }
+    }
+  }
+} // vdm-navbar -- Main navbar
+
+// Navbar buttons styles
+.navbar-button {
+  background: transparent;
+  border: 0;
+  cursor: pointer;
+  height: $navbar-height;
+  margin: 0;
+  padding: 0 15px 0 15px;
+  vertical-align: middle;
+  display: flex;
+  align-items: center;
+
+  .button-label {
+    color: $black;
+    display: inline-block;
+    line-height: $header-portal-height;
+    vertical-align: top;
+  }
+
+  &:hover,
+  &:active {
+    &:after {
+      color: $black;
+    }
+  }
+
+  &:after {
+    font-size: 3.7rem;
+    line-height: 1;
+    color: $vdm-sub-brand;
+  }
+
+  &.search {
+    @include iconvfi(after, recherche);
+  }
+
+  &.account {
+    @include iconvfi(after, profil);
+  }
+}
+
+// Language switcher component
+.language-list {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  a {
+    color: $black;
+    line-height: 1;
+    height: $header-portal-height;
+    width: $header-portal-height;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    text-transform: uppercase;
+    &:active,
+    &:hover {
+      color: $black;
+      text-decoration: none;
+    }
+  }
+  .lang {
+    &.active {
+      display: none;
+    }
+  }
+}
+
+// Flyout js search combo box
+.searchbar-wrapper {
+  display: none;
+  // Responsive rules for larger displays
+  @include media-breakpoint-up(lg) {
+    display: block;
+  }
+  position: absolute;
+  .searchbar {
+  }
+}
+
+// Main lateral navigation menu
+.side-menu {
+  &.wrapper {
+    display: none;
+    position: absolute;
+  }
+}
+
+
+// Wizard header
+//
+// Optimize and normalize - we can extend from banner and build more generic containers
+.wizard-header {
+  background-color: $white;
+  display: flex;
+  border-bottom: 1px solid $gray-400;
+  justify-content: space-between;
+  .hdr-container,
+  .hdr-links {
+    display: flex;
+    > * {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+  }
+  .home-link {
+    flex-shrink: 0;
+    @include size($header-icon-width);
+    background-color: $black;
+    color: $white;
+    text-decoration: none;
+    .vfi {
+      font-size: 3rem;
+    }
+  }
+  .hdr-title {
+    font-weight: $font-weight-bold;
+    padding-left: $grid-gutter-width;
+    padding-right: $grid-gutter-width;
+    @include media-breakpoint-up(lg) {
+      font-size: 1.5rem; // 24px
+    }
+  }
+  .hdr-links {
+    padding-right: $grid-gutter-width;
+    ul {
+      margin-bottom: 0;
+    }
+  }
+}
+
+
+// Header banner
+.header-banner {
+  background: $black;
+  color: $white;
+  height: $header-banner-portal-height;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0 $grid-gutter-width;
+  line-height: 1;
+
+  @include media-breakpoint-up(md) {
+    justify-content: space-between;
+  }
+
+  .banner-link {
+    display: none;
+    @include media-breakpoint-up(md) {
+      display: inline-block;
+      margin-left: 1rem;
+    }
+  }
+
+  .back-link {
+    display: none;
+    @include media-breakpoint-up(md) {
+      display: inline-block;
+    }
+  }
+
+  a {
+    color: $white;
+    text-decoration: underline;
+    &:active,
+    &:hover {
+      color: $white;
+      text-decoration: underline;
+    }
+  }
+}
+
+// Colors
+//
+// Contextual variations.
+@each $color, $value in $theme-colors {
+  .banner-#{$color} {
+    @include banner-variant($value);
+  }
+}
