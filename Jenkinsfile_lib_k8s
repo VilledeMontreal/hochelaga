@@ -41,7 +41,7 @@ ctx = pipeline.createContext([
 
 pipeline.start(ctx) {
 
-    pipeline.prepareDockerImage(ctx) {
+    pipeline.withSourceCode(ctx) {
 
         pipeline.checkoutStage(ctx) {
             checkout scm;
@@ -56,8 +56,8 @@ pipeline.start(ctx) {
         }
     }
 
-    pipeline.useDraftDockerImage(ctx) {
-        // pipeline.testStage(ctx) {
+    pipeline.withDraftDockerImage(ctx) {
+        // pipeline.testInDraftDockerContainerStage(ctx) {
         //     try {
         //         sh """
         //             cd /mtl/app
