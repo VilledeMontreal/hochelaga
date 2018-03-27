@@ -4,8 +4,8 @@
   // Links in sidebars
   a {
     color: $black;
-    word-break: break-all;
-    word-wrap: break-word;
+    //word-break: break-all;
+    //word-wrap: break-word;
 
     &.brand {
       color: $vdm-brand;
@@ -45,6 +45,9 @@
   // Links and span tags, mind the inheritance
   // All icon elements are block level
   .icon {
+    display: flex;
+    align-items: flex-start;
+
     address {
       margin-bottom: 0;
     }
@@ -78,16 +81,10 @@
   }
 
   // Lists in sidebars
-  ul {
-    @extend .list-unstyled;
-    margin-bottom: $paragraph-margin-bottom;
-    li {
-      padding-bottom: 1rem;
-      &:last-child {
-        padding-bottom: 0;
-      }
-    }
 
+  // this is too generic! we need list in sidebars!
+  /*
+  ul {
     &.inline {
       @extend .list-inline;
       > li {
@@ -96,6 +93,18 @@
       }
     }
   }
+  */
+
+  .list-unstyled {
+    margin-bottom: $paragraph-margin-bottom;
+    li {
+      padding-bottom: 1rem;
+      &:last-child {
+        padding-bottom: 0;
+      }
+    }
+  }
+
   p {
     margin-bottom: $paragraph-margin-bottom;
   }
@@ -111,16 +120,10 @@
     @include header(5);
     line-height: $line-height-lg;
   }
-  .vdm-title {
-    margin-bottom: 2em;
+  .sidebar-title {
+    //margin-bottom: 2em;
     @include header(4, bold);
     display: flex;
-    &:after {
-      background-color: $black;
-      color: $black;
-      max-width: 1.7rem;
-      top: calc(100% + 0.3rem);
-    }
     // Tweak some styles for icon inside title
     &.icon {
       &.right {
@@ -154,6 +157,7 @@
     .sb-block {
       border-top: 4px solid $black;
       background-color: transparent;
+      padding-right: 0;
     }
   }
   // Transparent border brand
@@ -173,7 +177,7 @@
   // md breakpoint
   //
   @include media-breakpoint-only(md) {
-    .vdm-title {
+    .sidebar-title {
       &.icon-right {
         padding-right: 0;
         padding-bottom: 5rem;
@@ -206,6 +210,9 @@
     &:last-of-type {
       padding-bottom: 0;
     }
+    .subsection-content {
+      flex: 1;
+    }
   }
 
   .divider {
@@ -227,6 +234,25 @@
       color: $body-color;
       font-size: 2.125rem;
     }
-
+  }
+  // Schedule data
+  .schedule-data {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    .schedule-start-time,
+    .schedule-send-time {
+      white-space: nowrap
+    }
+    .schedule-start-time { 
+      margin-right: 10px;
+    }
+    .vfi {
+      margin: 0;
+      font-size: 1rem;
+    }
+  }
+  .note {
+    margin: 1rem 0;
   }
 }

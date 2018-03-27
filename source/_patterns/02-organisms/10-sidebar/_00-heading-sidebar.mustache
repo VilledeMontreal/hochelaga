@@ -1,9 +1,13 @@
-<h2 class="vdm-title {{ sidebar-title-classes }}">
+<h2 class="sidebar-title {{ sidebar-title-classes }}">
   {{# sidebarTitlePrependIcon }}
     {{> atoms-fonticon-item(icon-label: "attention-circulaire") }}
   {{/ sidebarTitlePrependIcon }}
-  Sidebar title
+  {{ sidebarTitle }}
   {{# sidebarTitleAppendIcon }}
     {{> atoms-fonticon-item(icon-label: "rosace") }}
   {{/ sidebarTitleAppendIcon }}
 </h2>
+
+{{# sidebarDivider }}
+{{> atoms-divider }}
+{{/ sidebarDivider }}

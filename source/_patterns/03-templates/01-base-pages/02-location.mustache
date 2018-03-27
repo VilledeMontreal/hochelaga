@@ -1,0 +1,110 @@
+{{> atoms-link-skip-to-main-content }}
+{{> molecules-menu-open-side }}
+{{> organisms-header-portal }}
+{{> molecules-breadcrumb }}
+<main class="main-content {{ pageClasses }}" id="main-content" aria-label="Main Content">
+
+  {{> organisms-content-header-portal }}
+
+  <div class="region {{ regionMainClasses }}">
+    <div class="container {{ regionMainContainerClasses }}">
+      <div class="row">
+        <div class="col-12 col-lg-8">
+          <!--  Services -->
+          <div class="row location-section">
+            <div class="col-12">
+              <h2 class="h3 subtitle">Services</h2>
+              <div class="row detail">
+                <div class="col-sm-5"></div>
+                <div class="col-sm-7">
+                  <ul>
+                    <li>Wi-Fi gratuit</li>
+                    <li>Vestiaire familial</li>
+                    <li>Toilettes</li>
+                    <li>Casse-croûte</li>
+                  </ul>
+                </div>
+              </div>
+              <div class="divider divider-fullwidth"></div>
+            </div>
+          </div>
+          <!--  Accessibility -->
+          <div class="row location-section">
+            <div class="col-12">
+              <h2 class="h3 subtitle">Accessibilité universelle</h2>
+              <div>
+                <div class="detail">
+                  <span class="h5">Lieu accessible</span>
+                </div>
+              </div>
+              <div class="divider divider-fullwidth"></div>
+            </div>
+          </div>
+          <!-- Access -->
+          <div class="row location-section">
+            <div class="col-12">
+              <h2 class="h3 subtitle">Accès</h2>
+              <div class="row detail">
+                <div class="col-sm-5">
+                  <span class="h5">Capacité d'accueil</span>
+                </div>
+                <div class="col-sm-7 mt-1">
+                  <span>899900 places</span>
+                </div>
+              </div>
+              <div class="row detail">
+                <div class="col-sm-5">
+                  <span class="h5">Condition d'admission</span>
+                </div>
+                <div class="col-sm-7 mt-1">
+                  <a class="elided-text" href="http://beta.montreal.ca">http://beta.montreal.ca</a>
+                </div>
+              </div>
+              <div class="divider divider-fullwidth"></div>
+            </div>
+          </div>
+          <!-- Rates -->
+          <div class="row location-section">
+            <div class="col-12">
+              <h2 class="h3 subtitle">Tarifs</h2>
+              <div class="detail">
+                <span class="h5">Gratuit</span>
+              </div>
+              <div class="row detail">
+                <div class="col-sm-5">
+                  <span class="h5">Mode(s) de paiement</span>
+                </div>
+                <div class="col-sm-7 mt-1">
+                  <ul>
+                    <li>Argent comptant</li>
+                    <li>Carte de débit</li>
+                    <li>Visa</li>
+                    <li>Mastercard</li>
+                    <li>American Express</li>
+                  </ul>
+                </div>
+              </div>
+              <div class="row detail">
+                <div class="col-sm-5">
+                  <span class="h5">Pour connaître tous les tarifs</span>
+                </div>
+                <div class="col-sm-7 mt-1">
+                  <a class="elided-text" href="http://montreal.ca/info-tarif-avec-un-url-super-long-quil-va-falloir-couper-un-jour-ou-lautre-du-moins-a-laffichage">http://montreal.ca/info-tarif-avec-un-url-super-long-quil-va-falloir-couper-un-jour-ou-lautre-du-moins-a-laffichage</a>
+                </div>
+              </div>
+              <div class="divider divider-fullwidth"></div>
+            </div>
+          </div>
+        </div>
+        {{# sidebarRight }}
+        <aside class="col-12 {{ sidebarRightClass }} sidebar sidebar-right">
+          {{> organisms-sidebar-block }}
+        </aside>
+        {{/ sidebarRight }}
+      </div>
+    </div>
+  </div>
+ <!-- Region-after section -->
+</main>
+
+{{> organisms-footer-portal }}

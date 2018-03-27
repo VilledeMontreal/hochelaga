@@ -43,6 +43,7 @@ html {
       .content-header {
         padding-bottom: 0;
       }
+      margin-bottom: 6rem;
     }
 
     &.region-border {
@@ -53,11 +54,20 @@ html {
   .content-header {
     padding: 3rem 0;
 
+    &-title {
+      margin-bottom: 3rem;
+    }
+
     &.has-image {
       margin-top: -150px;
     }
   }
 } // Region
+
+.region-content {
+  padding-top: 4rem;
+  padding-bottom: 4rem;
+}
 
 // Swap the source order for the 3 column case
 .main-content {
@@ -74,7 +84,8 @@ html {
 
 // Generic section layouts
 .page-section {
-  padding: map-get($spacers, 5);
+  padding-top: map-get($spacers, 5);
+  padding-bottom: map-get($spacers, 5);
   .section-heading {
     margin-bottom: map-get($spacers, 4);
   }

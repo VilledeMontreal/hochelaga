@@ -2,14 +2,14 @@
 {{# sidebar-blocks-demo-debug-wrapper }}
 <div class="container">
   <div class="row">
-    <div class="col-12 col-md-4 sidebar {{ sidebar-classes }}">
+    <div class="col-12 col-lg-4 sidebar {{ sidebar-classes }}">
 {{/ sidebar-blocks-demo-debug-wrapper }}
 
       <!-- Variant : quicklinks, arrow-right, block, long text -->
       {{# has-sb-quicklinks-short }}
       <section class="sb-block {{ sb-classes }}">
         {{> organisms-heading-sidebar }}
-        <ul>
+        <ul class="list-unstyled">
           <li>
             <a href="#" class="icon left">{{> atoms-fonticon-item(icon-label: "fleche") }} Who can tousle?</a>
           </li>
@@ -33,7 +33,7 @@
       {{# has-sb-quicklinks }}
       <section class="sb-block {{ sb-classes }}">
         {{> organisms-heading-sidebar }}
-        <ul>
+        <ul class="list-unstyled">
           <li>
             <a href="#">Heirloom jean shorts locavore pug shoreditch (03-4567)</a>
           </li>
@@ -64,7 +64,7 @@
             Attaché de presse<br>
             Cabinet du maire et du comité exécutif
           </p>
-          <ul>
+          <ul class="list-unstyled">
             <li>
               <a href="tel:+15142223456" class="icon left">
                 {{> atoms-fonticon-item(icon-label: "telephone") }} 514 222-3456
@@ -78,7 +78,7 @@
             Relationiste<br>
             Service des communications
           </p>
-          <ul>
+          <ul class="list-unstyled">
             <li>
               <a href="tel:+15143333456" class="icon left">
                 {{> atoms-fonticon-item(icon-label: "telephone") }} 514 333-34567
@@ -127,7 +127,7 @@
       {{# has-sb-info-block-01 }}
       <section class="sb-block {{ sb-classes }}">
         {{> organisms-heading-sidebar }}
-        <ul>
+        <ul class="list-unstyled">
           <li>
             <a href="#" class="icon left brand">
               {{> atoms-fonticon-item(icon-label: "fleche") }} simplicite.montreal.ca
@@ -142,7 +142,7 @@
       {{# has-sb-info-block-02 }}
       <section class="sb-block {{ sb-classes }}">
         {{> organisms-heading-sidebar }}
-        <ul>
+        <ul class="list-unstyled">
           <li>
             <span class="icon left">
               {{> atoms-fonticon-item(icon-label: "calendrier") }} 26 juillet 2018
@@ -185,7 +185,7 @@
         <div class="subsection">
           <h3 class="subtitle">Ville de Montréal</h3>
           <p>IPhone messenger bag gastropub, health goth lo-fi chartreuse art party post-ironic fixie banh mi kale chips bitters.</p>
-          <ul>
+          <ul class="list-unstyled">
             <li>
               <a href="tel:+15142223456" class="icon left">
                 {{> atoms-fonticon-item(icon-label: "telephone") }} 514 222-3456
@@ -198,7 +198,7 @@
           <p>Taxidermy flannel hammock, schlitz cloud bread direct trade tote bag skateboard readymade vexillologist meditation
             sartorial.
           </p>
-          <ul>
+          <ul class="list-unstyled">
             <li>
               <a href="tel:+1800111456" class="icon left">
                 {{> atoms-fonticon-item(icon-label: "telephone") }} 1 800 111-34567
@@ -217,6 +217,115 @@
         </div>
       </section>
       {{/ has-sb-info-block-03 }}
+
+      <!-- Variant : Information bloc 04 : a stack of similare large text blocks -->
+      {{# has-sb-schedule }}
+      <section class="sb-block {{ sb-classes }}">
+        {{> organisms-heading-sidebar }}
+        <div class="subsection">
+          <div class="icon left">
+            {{> atoms-fonticon-item(icon-label: "horloge") }}  
+            <div class="subsection-content">
+              <div class="row">
+                <div class="day-of-week col-4">
+                  <span class="elided-text">Lundi</span>
+                </div>
+                <div class="col-8">
+                  <div class="schedule-data">
+                    <span class="schedule-start-time">08 h 00</span>
+                    <span class="schedule-end-time">12 h 00</span>
+                  </div>
+                </div>
+              </div>
+              <div class="row">
+                <div class="day-of-week col-4"></div>
+                <div class="col-8">
+                  <div class="schedule-data">
+                    <span class="schedule-start-time">13 h 00</span>
+                    <span class="schedule-end-time">16 h 30</span>
+                    <span class="vfi vfi-mini-plus-circulaire collapsed" data-toggle="collapse" data-target="#collapse-0-0" aria-expanded="false" aria-controls="collapse-0-0"></span>
+                  </div>
+                </div>
+                <div class="col-12 collapse" id="collapse-0-0" style="">
+                  <em class="d-block note">Ceci est une note pour l'horaire du lundi 13 h 00 - 16 h 30</em>
+                </div>
+              </div>
+              <div class="row">
+                <div class="day-of-week col-4">
+                  <span class="elided-text">Mardi</span>
+                </div>
+                <div class="col-8">
+                  <div class="schedule-data">
+                    <span class="schedule-start-time">08 h 00</span>
+                    <span class="schedule-end-time">12 h 00</span>
+                  </div>
+                </div>
+              </div>
+              <div class="row">
+                <div class="day-of-week col-4"></div>
+                <div class="col-8">
+                  <div class="schedule-data">
+                    <span class="schedule-start-time">13 h 00</span>
+                    <span class="schedule-end-time">16 h 30</span>
+                  </div>
+                </div>
+              </div>
+              <div class="row">
+                <div class="day-of-week col-4">
+                  <span class="elided-text">Mercredi</span>
+                </div>
+                <div class="col-8">
+                  <div class="schedule-data">
+                    <span class="schedule-start-time">08 h 00</span>
+                    <span class="schedule-end-time">12 h 00</span>
+                  </div>
+                </div>
+              </div>
+              <div class="row">
+                <div class="day-of-week col-4"></div>
+                <div class="col-8">
+                  <div class="schedule-data">
+                    <span class="schedule-start-time">13 h 00</span>
+                    <span class="schedule-end-time">16 h 30</span>
+                  </div>
+                </div>
+              </div>
+              <div class="row">
+                <div class="day-of-week col-4">
+                  <span class="elided-text">Jeudi</span>
+                </div>
+                <div class="col-8">
+                  <div class="schedule-data">
+                    <span class="schedule-start-time">08 h 00</span>
+                    <span class="schedule-end-time">12 h 00</span>
+                  </div>
+                </div>
+              </div>
+              <div class="row">
+                <div class="day-of-week col-4"></div>
+                <div class="col-8">
+                  <div class="schedule-data">
+                    <span class="schedule-start-time">13 h 00</span>
+                    <span class="schedule-end-time">16 h 30</span>
+                  </div>
+                </div>
+              </div>
+              <div class="row">
+                <div class="day-of-week col-4">
+                  <span class="elided-text">Vendredi</span>
+                </div>
+                <div class="col-8">
+                  <div class="schedule-data">
+                    <span class="schedule-start-time">08 h 00</span>
+                    <span class="schedule-end-time">12 h 00</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      {{/ has-sb-schedule }}
 
       <!-- Variant : Institution block -->
       {{# has-sb-institution }}
@@ -242,7 +351,7 @@
         <div class="subsection person-card">
           <a href="#" class="avatar">{{> atoms-image-rounded-circle }}</a> 
           {{> organisms-heading-sidebar }}
-          <ul>
+          <ul class="list-unstyled">
             <li>
               <span class="icon left">
                 {{> atoms-fonticon-item(icon-label: "drapeau") }}
@@ -262,7 +371,7 @@
             Relationiste<br>
             Service des communications
           </p>
-          <ul>
+          <ul class="list-unstyled">
             <li>
               <span class="icon left">
                 {{> atoms-fonticon-item(icon-label: "drapeau") }}

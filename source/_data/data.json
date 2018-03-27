@@ -39,9 +39,10 @@
   "headerClasses": "",
   "headerContainerClasses": "",
   "mainContainerClasses": "",
-  "sidebarLeftClass": "col-md-4",
-  "sidebarRightClass": "col-md-4",
+  "sidebarLeftClass": "col-lg-4",
+  "sidebarRightClass": "col-lg-4",
   "sidebar-blocks-demo-debug-wrapper" : false,
+  "sidebarTitle": "Sidebar Title",
   "hasTopBanner": true,
   "combo-box-text": "Combo block title",
   "combo-box-icon": "ic-search",
@@ -55,11 +56,13 @@
   "text-elements": {
     "headings": {
       "h1": {
-        "classes": "",
-        "content": "H1 heading"
+        "classes": "display-3",
+        "content": "H1 heading",
+        "divider": true,
+        "dividerClass": "divider-title"
       },
       "h2": {
-        "classes": "",
+        "classes": "display-4",
         "content": "H2 heading"
       },
       "h3": {
@@ -79,6 +82,88 @@
         "content": "Display 1"
       }
     }
+  },
+  "dropdown": {
+    "title": "Les informations relatives aux collectes varient d'un arrondissement à l'autre. Sélectionnez votre arrondissement pour en savoir plus.",
+    "placeholder": "Sélectionnez votre arrondissement",
+    "options": [
+      {
+        "label": "Ahuntsic-Cartierville",
+        "value": "Ahuntsic-Cartierville"
+      },
+      {
+        "label": "Anjou",
+        "value": "Anjou"
+      },
+      {
+        "label": "Côte-des-Neiges–Notre-Dame-de-Grâce",
+        "value": "Côte-des-Neiges–Notre-Dame-de-Grâce"
+      },
+      {
+        "label": "L'Île-Bizard–Sainte-Geneviève",
+        "value": "L'Île-Bizard–Sainte-Geneviève"
+      },
+      {
+        "label": "Lachine",
+        "value": "Lachine"
+      },
+      {
+        "label": "LaSalle",
+        "value": "LaSalle"
+      },
+      {
+        "label": "Le Plateau-Mont-Royal",
+        "value": "Le Plateau-Mont-Royal"
+      },
+      {
+        "label": "Le Sud-Ouest",
+        "value": "Le Sud-Ouest"
+      },
+      {
+        "label": "Mercier–Hochelaga-Maisonneuve",
+        "value": "Mercier–Hochelaga-Maisonneuve"
+      },
+      {
+        "label": "Montréal-Nord",
+        "value": "Montréal-Nord"
+      },
+      {
+        "label": "Outremont",
+        "value": "Outremont"
+      },
+      {
+        "label": "Pierrefonds-Roxboro",
+        "value": "Pierrefonds-Roxboro"
+      },
+      {
+        "label": "Rivière-des-Prairies–Pointe-aux-Trembles",
+        "value": "Rivière-des-Prairies–Pointe-aux-Trembles"
+      },
+      {
+        "label": "Rosemont–La Petite-Patrie",
+        "value": "Rosemont–La Petite-Patrie"
+      },
+      {
+        "label": "Saint-Laurent",
+        "value": "Saint-Laurent"
+      },
+      {
+        "label": "Saint-Léonard",
+        "value": "Saint-Léonard"
+      },
+      {
+        "label": "Verdun",
+        "value": "Verdun"
+      },
+      {
+        "label": "Ville-Marie",
+        "value": "Ville-Marie"
+      },
+      {
+        "label": "Villeray–Saint-Michel–Parc-Extension",
+        "value": "Villeray–Saint-Michel–Parc-Extension"
+      }
+    ]
   },
   "formAttributes": {
     "select": {
