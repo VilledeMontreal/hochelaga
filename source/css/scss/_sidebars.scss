@@ -141,14 +141,6 @@
         color: $vdm-brand;
       }
     }
-    // No bottom stroke, reduced bottom margin
-    &.discrete {
-      margin-bottom: 1rem;
-      padding-top: .5rem;
-      &:after {
-        display: none;
-      }
-    }
   }
 
   // Color theme variants
@@ -158,6 +150,9 @@
       border-top: 4px solid $black;
       background-color: transparent;
       padding-right: 0;
+      .sidebar-title {
+        margin-bottom: 1rem;
+      }
     }
   }
   // Transparent border brand
@@ -165,6 +160,9 @@
     .sb-block {
       border: 1px solid $vdm-grey;
       background-color: transparent;
+      .sidebar-title {
+        margin-bottom: 1rem;
+      }
     }
   }
 
@@ -216,12 +214,33 @@
   }
 
   .divider {
+    margin-top: 0.75rem;
+    margin-bottom: 0.75rem;
+    border-style: none;
+    border-width: 0;
+    height: 2px;
+    background: $black;
+    border-radius: 0;
+
+    &.divider-title {
+      display: block;
+      height: .25rem;
+      width: 60px;
+      margin-top: 0;
+      margin-bottom: 2rem;
+      margin-right: 0;
+      background-color: $black;
+    }
+  }
+  /*
+  .divider {
     margin-top: 1.5rem;
     margin-bottom: 1.5rem;
     margin-left: 0;
     width: 3rem;
     border-radius: 4px;
   }
+  */
 
   &.sb-block-notes {
     background-color: $white;

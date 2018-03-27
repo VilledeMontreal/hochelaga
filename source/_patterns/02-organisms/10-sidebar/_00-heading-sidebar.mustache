@@ -1,13 +1,12 @@
 <h2 class="sidebar-title {{ sidebar-title-classes }}">
-  {{# sidebarTitlePrependIcon }}
-    {{> atoms-fonticon-item(icon-label: "attention-circulaire") }}
-  {{/ sidebarTitlePrependIcon }}
-  {{ sidebarTitle }}
-  {{# sidebarTitleAppendIcon }}
-    {{> atoms-fonticon-item(icon-label: "rosace") }}
-  {{/ sidebarTitleAppendIcon }}
+{{# sidebarTitlePrependIcon }}
+  {{> atoms-fonticon-item(icon-label: "attention-circulaire") }}
+{{/ sidebarTitlePrependIcon }}{{ sidebarTitle }}
+{{# sidebarTitleAppendIcon }}
+  {{> atoms-fonticon-item(icon-label: "rosace") }}
+{{/ sidebarTitleAppendIcon }}
 </h2>
 
-{{# sidebarDivider }}
-{{> atoms-divider }}
-{{/ sidebarDivider }}
+{{# has-sb-title-divider }}
+{{> atoms-divider(dividerClasses: "divider-title") }}
+{{/ has-sb-title-divider }}

@@ -52,14 +52,24 @@ html {
 
   }
   .content-header {
-    padding: 3rem 0;
+    margin-bottom: 3rem;
+    width: 100%;
 
     &-title {
-      margin-bottom: 3rem;
+      padding: 3rem 0;
     }
 
-    &.has-image {
-      margin-top: -150px;
+    .date-time {
+      display: inline-block;
+    }
+
+    @include media-breakpoint-up(lg) {
+      &.has-image {
+        margin-top: -180px;
+      }
+      .header-title-overlap {
+        background-color: $white;
+      }
     }
   }
 } // Region

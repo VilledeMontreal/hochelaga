@@ -510,6 +510,7 @@ nav {
   // Position the steps line and circle
   li {
     position: relative;
+    padding: inherit;
     &:after {
       background-color: $gray-600;
       content: "";
