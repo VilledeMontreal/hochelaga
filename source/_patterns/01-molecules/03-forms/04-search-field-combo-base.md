@@ -1,5 +1,5 @@
 ---
-title: Search box combo, button outside search widget
+title: Search box combo
 ---
 
 Combo box laid out to accomodate the following items: 

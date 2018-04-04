@@ -32,29 +32,52 @@ html {
 .region {
 
   // Main header, always includes at least the page Title
-  .region-content-header {
-
-  }
-  .content-header {
-    padding: 3rem 0;
+  &.region-content-header {
     // Dark variant
     &.content-header-dark {
       background-color: $vdm-grey-dark;
       color: $white;
     }
+
+    &.has-nav-tabs {
+      .content-header {
+        padding-bottom: 0;
+      }
+      margin-bottom: 6rem;
+    }
+
     &.region-border {
       border-bottom: 1px solid $gray-400;
     }
-  
-    &.has-nav-tabs {
-      padding-bottom: 0;
+
+  }
+  .content-header {
+    margin-bottom: 3rem;
+    width: 100%;
+
+    &-title {
+      padding: 3rem 0;
     }
 
-    &.content-header-has-image {
-      margin-top: -150px;
+    .date-time {
+      display: inline-block;
+    }
+
+    @include media-breakpoint-up(lg) {
+      &.has-image {
+        margin-top: -180px;
+      }
+      .header-title-overlap {
+        background-color: $white;
+      }
     }
   }
 } // Region
+
+.region-content {
+  padding-top: 4rem;
+  padding-bottom: 4rem;
+}
 
 // Swap the source order for the 3 column case
 .main-content {
@@ -71,7 +94,8 @@ html {
 
 // Generic section layouts
 .page-section {
-  padding: map-get($spacers, 5);
+  padding-top: map-get($spacers, 5);
+  padding-bottom: map-get($spacers, 5);
   .section-heading {
     margin-bottom: map-get($spacers, 4);
   }

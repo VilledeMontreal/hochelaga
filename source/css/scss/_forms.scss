@@ -295,11 +295,11 @@ legend,
   }
 }
 
-// Search box combo with a header, a wrapper with a fat bottom stroke
-// containing an icon and a seach field. A submit button completes the picture.
-// @see molecules-search-field-combo
+// Form box combo with a header, input-group
+// Variants for dropdown-combo and search-combo
 .form-combo {
   padding: 1.8rem;
+  display: flex;
   flex-wrap: wrap;
   align-items: center;
 
@@ -325,19 +325,7 @@ legend,
     margin-top: 0.1rem;
   }
 
-  .input-wrapper {
-    padding: 1rem 0.5rem 0.5rem 0.5rem;
-    align-items: center;
-    flex: 1 0;
-    margin-right: 1rem;
-
-    > * {
-      margin-right: 0.5rem;
-    }
-
-    :last-child {
-      margin-right: 0;
-    }
+  .input-group {
 
     &.stroked {
       border-bottom: 3px solid $black;
@@ -346,41 +334,33 @@ legend,
     .form-group {
       margin-top: 0;
       margin-bottom: 0;
-      width: 100%;
+      flex-grow: 1;
 
-      label {
-        top: 16px;
-      }
       .form-control {
         border: none;
-        line-height: 2.1;
-        &:focus {
-          border: none;
-        }
-
-        &:focus,
-        &.used {
-          & ~ label {
-            display: none;
-          }
-        }
       }
     }
   }
 
-  // Extra modifier classes when the button is inside the inner wrapper
-  &.inline-button {
-    .input-wrapper {
-      width: 100%;
+}
+.search-combo {
+  .input-group {
+    padding: 1rem 0.5rem 0.5rem 0.5rem;
+    align-items: center;
+    flex: 1 0;
+    margin-right: 1rem;
+    display: inline-flex;
+
+    > * {
+      margin-right: 0.5rem;
+    }
+
+    :last-child {
       margin-right: 0;
     }
-    .vdm-btn {
-      position: static;
-    }
   }
-
   @include media-breakpoint-down(xs) {
-    .input-wrapper {
+    .input-group {
       flex-basis: 100%;
     }
     .vdm-btn {
@@ -390,20 +370,75 @@ legend,
         margin: 1rem auto 0 auto;
       }
     }
+  }
+}
 
-    // Extra modifier classes when the button is inside the inner wrapper
-    &.inline-button {
-      .input-wrapper {
-        flex-basis: 100%;
-        position: relative;
-        //margin-bottom: 1.5rem;
-      }
-      .vdm-btn {
-        position: absolute;
-        //top: 1.5rem;
-        left: 50%;
-        transform: translateX(-50%);
-      }
+// Form-combo and variants
+
+.dropdown-combo {
+  position: relative;
+  .dropdown-combo-toggle {
+    border-bottom: 1px solid $black;
+    cursor: pointer;
+    display: flex;
+    flex: 1 1 100%;
+  }
+  .dropdown-combo-placeholder,
+  .select-container {
+    color: $gray-500;
+    flex-grow: 1;
+    align-self: center;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+  .select-container {
+    z-index: 1;
+  }
+  .dropdown-combo-select {
+    background: transparent;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    z-index: 1;
+    flex-shrink: 1;
+    width: 100%;
+    padding-right: 40px;
+    color: $vdm-brand;
+    border: none;
+    border-radius: 0px;
+  }
+
+  .dropdown-combo-select-button {
+    position: absolute;
+    right: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: transparent;
+    color: $vdm-brand;
+  }
+  .dropdown-menu {
+    border: none;
+    border-radius: 0;
+    margin: 0;
+    margin-top: 1px;
+    max-height: 235px;
+    overflow-x: hidden;
+    box-shadow: $dropdown-box-shadow; // Use available variables to normalize dropdown-box-shadow
+    width: 100%;
+    li {
+      padding-bottom: 0;
+    }
+    .dropdown-item {
+      display: inline-block;
+      padding: .625rem 1rem .625rem 2rem;
     }
   }
+}
+
+
+// Add border around form-combo
+
+.border-combo {
+  border: 2px solid $vdm-brand;
 }

@@ -6,12 +6,20 @@
         {{> molecules-header-image-portal }}
       </div>
       {{/ has-image }}
-      <div class="content-header">
+      <div class="content-header {{ content-header-classes }}">
+        <div class="col-12 col-lg-8 header-title-overlap">
+          <div class="content-header-title">
+            {{> atoms-heading-1 }}
+            {{# header-category }}
+              <span class="intro">{{ header-category }}</span>
+            {{/ header-category }}
+            {{# has-publication-date }}
+              {{> atoms-date-time-text }}
+            {{/ has-publication-date }}
+          </div>
+        </div>
         <div class="col-12">
-          {{> atoms-heading-1 }} 
-          {{# has-subtitle }} 
-            {{> atoms-heading-2 }} 
-          {{/ has-subtitle }}
+
           {{# has-lead-text }}
             {{> atoms-lead }}
           {{/ has-lead-text }}
