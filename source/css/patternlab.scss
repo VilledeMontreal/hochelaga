@@ -428,36 +428,6 @@ $pl-size-box-wrapper-padding: 1rem;
       }
     }
 
-    // Colors
-    /*
-    .pl-black {
-      background: $black;
-    }
-    .pl-white {
-      background: $white;
-      border: solid 1px silver;
-    }
-    .pl-sarcelle {
-      background: $vdm-sarcelle;
-    }
-    .pl-grey-light {
-      background: $vdm-grey-light;
-    }
-    .pl-grey {
-      background: $vdm-grey;
-    }
-    .pl-red {
-      background: $montreal-red;
-    }
-    .pl-brand {
-      background: $vdm-brand;
-      color: $white;
-    }
-    .pl-sub-brand {
-      background: $vdm-sub-brand;
-      color: $white;
-    }
-    */
     // Columns
     .pl-color-table-column-swatch {
       width: 20%;
@@ -546,14 +516,6 @@ $pl-size-box-wrapper-padding: 1rem;
 
   // Colors
   // Brand
-  .pl-brand {
-    background: $vdm-brand;
-    color: $white;
-  }
-  .pl-sub-brand {
-    background: $vdm-sub-brand;
-    color: $white;
-  }
 
   // Neutrals
   .pl-neutral-lightest {
@@ -586,29 +548,7 @@ $pl-size-box-wrapper-padding: 1rem;
     background: $vdm-brand;
     color: $white;
   }
-  // .pl-ui-medium {
-  //   background: $vdm-brand-medium;
-  //   color: $white;
-  // }
-  // .pl-ui-light {
-  //   background: $vdm-brand-light;
-  //   color: $vdm-neutral-mid;
-  // }
-  // .pl-ui-lighter{
-  //   background: $vdm-brand-lighter;
-  //   color: $vdm-neutral-mid;
-  // }
-
-  // Alternate UI colors
-  // .pl-ui-alt-danger{
-  //   background:$vdm-brand-alt-danger;
-  //   color: $white;
-  // }
-  // .pl-ui-alt-warm-dark{
-  //   background: $vdm-brand-alt-warm-dark;
-  //   color: $white;
-  // }
-} // .pl-atom-color
+}
 
 .pl-swatch-round {
   border-radius: 50%;
@@ -791,5 +731,18 @@ $pl-size-box-wrapper-padding: 1rem;
 
 .pl-white {
   background: $white
+}
+
+// Accent
+
+.pl-sarcelle {
+  background: $sarcelle;
+}
+.pl-sarcelle-dark {
+  background: $sarcelle-dark;
+}
+
+.pl-sarcelle-light {
+  background: $sarcelle-light;
 }
 
