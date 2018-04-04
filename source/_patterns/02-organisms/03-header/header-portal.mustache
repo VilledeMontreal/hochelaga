@@ -1,4 +1,6 @@
-<header class="vdm-header {{ headerClasses }}">
+<header class="vdm-header {{ headerClasses }}" role="banner">
+  {{# hasTopBanner}}
   {{> molecules-top-banner }}
+  {{/ hasTopBanner }}
   {{> organisms-navbar-portal-bootstrap }}
 </header>

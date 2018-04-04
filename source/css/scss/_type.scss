@@ -1,27 +1,46 @@
-@import "variables.scss";
-@import "mixins.scss";
+//
+// Headings
+//
 
-h1 {
+h1, .h1 {
   @include header(1);
+  &.strong {
+    @include header(1, "bold");
+  }
 }
-h2 {
+h2, .h2 {
   @include header(2);
+  &.strong {
+    @include header(2, "bold");
+  }
 }
-h3 {
+h3, .h3 {
   @include header(3);
+  &.strong {
+    @include header(3, "bold");
+  }
 }
-h4 {
+h4, .h4 {
   @include header(4);
   &.strong {
     @include header(4, "bold");
   }
 }
-h5 {
+h5, .h5 {
   @include header(5);
+  &.strong {
+    @include header(5, "bold");
+  }
 }
-h6 {
+h6, .h6 {
   @include header(6);
+  &.strong {
+    @include header(6, "bold");
+  }
 }
+
+// TODO: Change vdm-title declaration
+// Deprecated - we use .divider class to provide the decorative line under title or other element
 
 .vdm-title {
   position: relative;
@@ -52,17 +71,11 @@ h6 {
   font-weight: $font-weight-light;
 }
 
-.intro {
-  font-weight: $font-weight-regular;
-  font-size: $font-size-xs;
-  line-height: $line-height-lg;
-}
-
 em {
   font-style: italic;
 }
 
-strong {
+b, strong {
   font-weight: $font-weight-bold;
 }
 
@@ -70,29 +83,9 @@ p {
   line-height: $line-height-lg;
 }
 
-// Hyperlinks - generic
+// Links - generic
 a {
-  // Inline links with icons
-  // Clean-up this code to preserve onlu .vfi classes
-  &.icon {
-    .vfi {
-      font-size: 1.5em;
-      position: relative;
-      top: 0.2em;
-    }
-    &.right {
-      .vfi {
-        padding-left: 0.15em;
-      }
-    }
-    &.left {
-      .vfi {
-        padding-right: 0.15em;
-      }
-    }
-  }
-
-  // Refactor required for this block, considering the icon tag will be explicite in the markup
+  // TODO: Refactor required for this block, considering the icon tag will be explicite in the markup
   // Used in the side menu
   &.block {
     display: block;
@@ -145,13 +138,35 @@ a {
     }
   }
 }
+
+// Add .icon class to display vertically centered icon and text
+.icon {
+  display: inline-flex;
+  align-items: center;
+  // we need this code to prevent icon from getting underlined on hover
+  .vfi {
+    display: inline-block;
+    text-decoration: none;
+    font-size: 1.5rem;
+    &:before {
+      display: inline-block;
+      text-decoration: none;
+    }
+  }
+  &.right {
+    .vfi {
+      padding-left: 0.15em;
+    }
+  }
+  &.left {
+    .vfi {
+      padding-right: 0.15em;
+    }
+  }
+}
+
 // Inline links with icons - Headers : a tad smaller
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
+h1, h2, h3, h4, h5, h6 {
   a {
     &.icon {
       .vfi {
@@ -165,32 +180,14 @@ h6 {
 //
 // ul, ol
 
-ul,
-ol {
-  &.vdm-list-plain {
-    list-style-type: none;
-    margin: 0;
-    padding: 0;
-    li {
-      margin: 0 0 0.3em 0;
-      padding: 0;
-    }
-  }
-
-  &.vdm-list-date {
-    margin: 0;
-    padding: 0;
-    li {
-      margin: 0;
-      padding: 0 0 0.3em 0;
-    }
-  }
-}
-
 // Plain list overrides
 // Should all lists carry this look and feel, really?
 ul {
-  &.vdm-list {
+  padding-left:  1.25rem;
+  li {
+    padding-bottom: .5rem;
+  }
+  &.custom-list {
     list-style-type: none;
     padding: 0;
 
@@ -258,6 +255,64 @@ ol {
   }
 }
 
+// Date lists
+// A list of items grouped under dates
+// date-list> ul > li > { day-month-year } ul > li { item one } /li |  li { item two } /li ...
+.date-list {
+  margin-bottom: 1.5em;
+  @extend .list-unstyled;
+  &:last-of-type {
+    margin-bottom: 0;
+  }
+  > li {
+    .date {
+      margin-bottom: 1.5em;
+    }
+    ul {
+      margin-bottom: 2em;
+
+      &.list-items {
+        li {
+          margin-bottom: 2em;
+
+          &:last-of-type {
+            margin-bottom: 0;
+          }
+        }
+      }
+    }
+  }
+}
+
+// Hub Lists
+// A list of items with link and description
+.hub-list-container {
+  h3 {
+    margin-bottom: 2rem;
+  }
+}
+.hub-list {
+  @extend .list-unstyled;
+  margin-bottom: 3.5rem;
+}
+
+.hub-list-item {
+  margin-bottom: 2rem;
+  &:last-child {
+    margin-bottom: 0;
+  }
+  a {
+    @include header(4, bold);
+    color: $vdm-brand;
+  }
+  p {
+    margin-bottom: 1rem;
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+}
+
 // Definition list
 
 dl {
@@ -283,7 +338,7 @@ dl {
 blockquote {
   &.blockquote {
     padding-left: 1.75em;
-    font-size: $font-size-xl;
+    font-size: $font-size-lg;
     font-weight: normal;
     font-style: italic;
     position: relative;
@@ -301,7 +356,7 @@ blockquote {
     .blockquote-footer {
       font-style: normal;
       color: $vdm-grey;
-      font-size: $font-size-xs;
+      font-size: $font-size-sm;
       text-align: right;
       &:before {
         display: none;
@@ -320,12 +375,30 @@ blockquote {
   margin-bottom: 0.75rem;
   border-style: none;
   border-width: 0;
-  height: $font-size-base / 3;
+  height: 2px;
   background: $black;
   border-radius: 0;
   &.mock-title {
     width: 3rem;
     margin-left: 0;
+  }
+  &.divider-title {
+    display: inline-block;
+    height: .5rem;
+    width: 64px;
+    margin-top: 0;
+    margin-bottom: 0;
+    margin-right: 10px;
+    background-color: $vdm-sub-brand;
+  }
+  
+  &.divider-small {
+    height: 4px;
+    width: 50px;
+  }
+  
+  &.divider-fullwidth {
+    width: 100%;
   }
 }
 
@@ -334,25 +407,17 @@ blockquote {
 }
 
 .meta {
-  font-size: $font-size-xs;
+  font-size: $font-size-sm;
 }
 
 .date-time {
-  font-size: $font-size-xs;
+  font-size: $font-size-sm;
 }
 
-.vdm-label {
-  font-weight: $font-weight-regular;
-  font-size: $font-size-xs;
-  background: transparent;
-  border: $input-border-width/2 solid $vdm-brand;
-  color: $vdm-brand;
-  border-radius: $border-radius-lg;
-  padding: $vdm-btn-padding-y $vdm-btn-padding-x * 0.75;
-  &.selected {
-    border: $input-border-width/2 solid $black;
-    color: $black;
-  }
+.footer-notes {
+  border-top: 1px solid $vdm-grey;
+  padding-top: 2rem;
+  margin-bottom: 4rem;
 }
 
 //
@@ -361,7 +426,7 @@ blockquote {
 // for the rendering of dates in general
 
 .date {
-  font-size: $font-size-xl;
+  font-size: $h5-font-size;
   // Fat day, discrete month, block level headings
   &.day-month {
     > .day {
@@ -378,6 +443,51 @@ blockquote {
         //border-radius: $vdm-element-border-radius;
         height: 4px;
         background: $black;
+      }
+    }
+  }
+}
+
+// Link box are used to build grid display of links
+//
+// Might not be in the right stylesheet
+.link-box {
+  :hover,
+  :active {
+    text-decoration: none;
+  }
+  a {
+    display: flex;
+    flex-direction: row;
+    height: 100%;
+  }
+  .link-box-content {
+    color: $body-color;
+    display: flex;
+    flex: 1;
+    flex-direction: row;
+    background-color: $white;
+    margin-bottom: $grid-gutter-width;
+    padding: 20px;
+    align-items: center;
+    .vfi {
+      font-size: 2rem;
+      color: $vdm-brand;
+    }
+  }
+}
+
+// link with icons
+
+.link-with-icon {
+  a {
+    display: flex;
+    align-items: center;
+    .vfi {
+      font-size: 2rem;
+      &:before {
+        display: inline-block;
+        text-decoration: none;
       }
     }
   }

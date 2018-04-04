@@ -1,9 +1,10 @@
-<div class="form-group vdm-form-group {{ inputTextFgClasses }}">
-  <!-- inputTextHasIcon: true +  inputTextIconClasses : ic-something for icons in data file -->
+<div class="form-group {{ inputTextFgClasses }}">
+  {{^ inputHideLabel }}
+  <label for="{{ formAttributes.input.type-text.id }}">{{ formAttributes.input.type-text.label }}</label>
+  {{/ inputHideLabel }}
+  <input type="text" class="form-control" id="{{ formAttributes.input.type-text.id }}" placeholder="{{ formAttributes.input.placeholder }}">
   {{# inputTextHasIcon }}
     {{> atoms-fonticon-item }}
   {{/ inputTextHasIcon }}
-  <input type="text" class="form-control vdm-form-control" id="{{ formAttributes.input.type-text.id }}">
-  <label for="{{ formAttributes.input.type-text.id }}">{{ formAttributes.input.type-text.label }}</label>
 </div>
 

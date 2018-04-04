@@ -1,514 +1,105 @@
-// @file forms.scss
+// FORMS
 
-label {
-  font-weight: $font-weight-regular;
-  line-height: $line-height-lg;
+legend,
+.group-label {
+  @extend legend;
+  margin-bottom: 1rem;
+  font-weight: $font-weight-bold;
 }
-
-/*
-// Radios and checkboxes - common rules
-.checkbox,
-.radio {
-  input {
-    position: relative;
-    margin: 0 1.6rem 0 0;
-
-    &:before,
-    &:after {
-      position: absolute;
-      content: "";
-    }
-
-    // The background - centering w/ native element is key;
-    &:before {
-      left: -0.2rem;
-      top: -0.2rem;
-      width: 1.4rem;
-      height: 1.4rem;
-      background: $input-disabled-bg;
-      border-radius: 0.2rem;
-    }
-
-    // The selection
-    &:after {
-      z-index: 1;
-      width: 1rem;
-      height: 1rem;
-    }
-  }
-}
-*/
-/*
-// Checkboxes
-.checkbox {
-  input {
-    // The checkmark
-    &:after {
-      top: 0.125em;
-      left: 0.09em;
-      transform: rotate(-45deg);
-      width: 0.85rem;
-      height: 0.35rem;
-    }
-
-    // The tranformed rectangle, titled 45 degrees with 2 out of 4 borders
-    &:checked {
-      &:after {
-        border: 1px solid $vdm-brand;
-        border-top-style: none;
-        border-right-style: none;
-      }
-    }
-  }
-}
-*/
-
-/*
-.form-check {
-  &.checkbox-vfi {
-    label {
-      @include pseudo-form-element();
-    }
-    input[type="checkbox"] {
-      @extend .custom-control-input;
-
-      & + label {
-        &:after {
-          content: none;
-        }
-      }
-
-      &:checked {
-        & + label {
-          @include iconvfi(after, mini-case-coche-coche);
-        }
-      }
-
-      &:focus {
-        & + label {
-          &:after {
-            outline: $vdm-brand auto 5px;
-          }
-        }
-      }
-    }
-  }
-}
-
-*/
-
-//
-// Radio buttons
-//
-
-/*
-.radio {
-  input {
-    &:before,
-    &:after {
-      border-radius: 50%;
-    }
-
-    // The background of the input
-    &:before {
-      width: 1.5rem;
-      height: 1.5rem;
-      left: -0.25rem;
-      top: -0.25rem;
-    }
-
-    // The inner circle for the checked checkbox
-    &:after {
-      width: 0.65rem;
-      height: 0.65rem;
-      transform: translate(0.2rem, 0.2rem);
-    }
-
-    // The selected, circular input
-    &:checked {
-      &:after {
-        background-color: $vdm-brand;
-      }
-    }
-  }
-}
-*/
-
-// Fix the inline margin-tops for inline display;
-/*
-.checkbox,
-.radio {
-  &.checkbox-inline,
-  &.radio-inline {
-    margin-top: 0;
-  }
-}
-*/
-
-///////////////////////////////////////////////////////////////////
-// Textfields and textareas
 
 .form-group {
-  position: relative;
-  margin-top: 3rem;
-
-  &.compact {
-    margin-top: 2rem; // The smallest possible value to accomodate the label
-  }
-
+  margin-bottom: 2rem;
   &.required {
     label {
       &:after {
         content: "*";
-        color: $vdm-sub-brand;
+        color: $red;
         display: inline-block;
         margin-left: 0.25em;
       }
     }
   }
-  // input,
-  // textarea,
-  // select {
+}
+
+// wrapper around input that needs inline text addon
+.input-inline-addon {
+  @extend .form-inline;
+  // Allow folks to *not* use `.form-group`
   .form-control {
-    font-size: $font-size-base;
-    box-shadow: none;
-    transition: none;
-    border: 1px solid $vdm-grey-light;
-    border-radius: 0;
-
-    &:focus {
-      border: 1px solid $vdm-brand;
-    }
-
-    // Move the label
-    // When the field is selected
-    // Once the field is filled (js toggle class "used")
-    &:focus,
-    &.used {
-      & ~ label {
-        top: -26px;
-        left: 10px;
-        font-size: $font-size-xs;
-        color: $black;
-      }
-    }
-    &.used {
-      color: $black;
-      border: 1px solid $black;
-    }
-
+    display: inline-block;
+    width: 160px;
+    vertical-align: middle;
   }
-
-  // }
-
-  label {
-    color: $vdm-grey;
-    position: absolute;
-    pointer-events: none;
-    left: 10px;
-    top: 8px;
-    transition: 0.2s ease all;
+  .input-inline-text {
+    color: $gray-500;
+    padding-left: 0.8125rem;
   }
+}
 
-  .help-block {
-    margin-left: 10px;
-    font-size: $font-size-xs;
-  }
-
-  // Feedback icons
-  &.has-feedback {
-    .form-control {
-      padding-right: 2em;
-      position: relative;
-    }
-
-    &:after {
-      font-size: 2rem;
-      width: 2rem;
-      height: 2rem;
-      position: absolute;
-      left: calc(100% - 2.3rem);
-      top: -0.3rem;
-    }
-
-    &.has-error {
-      @include iconvfi(after, mini-x);
-      color: $vdm-sub-brand;
-
-      .form-control {
-        color: $form-feedback-invalid-color !important;
-        border: 1px solid $form-feedback-invalid-color;
-        &:focus,
-        &.used {
-          border: 1px solid $form-feedback-invalid-color;
-        }
+// TO DO: Is this generic or specific to wizard forms
+.form-action-group {
+  margin: 2rem auto;
+  ul {
+    @extend .list-inline;
+    display: flex;
+    //justify-content: space-between;
+    li {
+      @extend .list-inline-item;
+      &:not(:last-child) {
+        margin-right: inherit;
       }
 
-      .help-block {
-        color: $form-feedback-invalid-color;
-        margin-left: 0;
+      &:last-child {
+        margin-left: auto;
       }
-    }
-    &.has-success {
-      @include iconvfi(after, mini-case-coche-coche);
-      color: $vdm-brand;
-    }
-  } // Feedback
-
-  // Defines a textfield with an icon inside the field directly, as in a password field
-  &.has-icon {
-    .vfi {
-      font-size: 2.2rem;
-      position: absolute;
-      color: $vdm-grey;
-      position: absolute;
-      pointer-events: none;
-      top: 0;
-      color: $vdm-brand;
-    }
-
-    &.ic-left {
-      .vfi {
-        left: 0.3rem;
-      }
-      label {
-        left: calc(10px + 2.1rem);
-      }
-      .form-control {
-        padding-left: 3rem;
-      }
-    }
-    &.ic-right {
-      .vfi {
-        left: calc(100% - 2.4rem);
-      }
-      .form-control {
-        padding-right: 3rem;
-      }
-    }
-
-    &.has-error {
-      .vfi {
-        color: $black;
-      }
-    }
-  }
-
-  &.ghost {
-    .form-control {
-      border: 0;
     }
   }
 }
 
-// Select
-.vdm-select-wrapper {
-  background-color: #fff;
-  display: inline-block;
+// Input Groups
+//
+.input-group-date {
+  .input-group-append {
+    cursor: pointer;
+  }
+}
+// Theme icon as input-group-icon for easy placement and scalability
+.input-group-icon {
   position: relative;
-  margin-top: 3em;
 
-  &:before,
-  &:after {
-    background-color: $white;
-    font-size: 1.9rem;
+  .input-group-icon-left,
+  .input-group-icon-right {
     position: absolute;
-    top: 0.1rem;
-    z-index: 2;
-    display: block;
-    width: 34px;
-    height: floor(34px * 0.95);
-    line-height: floor(34px * 0.95);
-    text-align: center;
-    pointer-events: none;
-  }
-
-  @include iconvfi(after, chevron-bas);
-
-  // Case with a left icon as well
-  // Ex : select borough
-  &.icon-left {
-    .vfi {
-      //display: inline-block;
-      position: absolute;
-      left: 0.2rem;
-      top: 50%;
-      transform: translateY(-50%);
-      color: #429a8e;
-      font-size: 1.9em;
-    }
-    &.location {
-      @include iconvfi(after, chevron-bas);
-      &.select-open {
-        @include iconvfi(after, chevron-haut);
-      }
-    }
-    .vdm-select {
-      padding-left: 2.5rem;
-    }
-    &.select-open {
-      color: $vdm-grey;
-    }
-  }
-
-  // See javascript file for this behaviour.
-  &.select-open {
-    @include iconvfi(after, chevron-haut);
-  }
-
-  &:before {
-    left: 0.4rem;
-    color: $vdm-brand;
-  }
-  &:after {
-    right: 0.2rem;
-  }
-
-  // @to-do - implement a 'has-label' class on parent element? Inline vs block label?
-  label {
-    font-size: $font-size-xs;
-    color: $black;
-    position: absolute;
-    pointer-events: none;
-    left: 18px;
-    top: -26px;
-  }
-}
-
-select {
-  appearance: none;
-  -moz-appearance: none;
-  -webkit-appearance: none;
-  //max-width: 300px;
-  &.form-control {
-    &.vdm-select {
-      border-radius: 0;
-      box-shadow: none;
-      border: 1px solid $vdm-grey-light;
-      &:focus {
-        box-shadow: none;
-        border: 1px solid $vdm-brand;
-      }
-    }
-  }
-}
-
-// Search box combo with a header, a wrapper with a fat bottom stroke
-// containing an icon and a seach field. A submit button completes the picture.
-// @see molecules-search-field-combo
-.form-combo {
-  padding: 1.8rem;
-  flex-wrap: wrap;
-  align-items: center;
-
-  &.icon-combo {
-    .vfi {
-      font-size: 2.4rem;
-      width: 2.4rem;
-      height: 2.4rem;
-    }
-  }
-
-  .title {
-    font-size: $font-size-base;
-    line-height: $line-height-lg;
-    font-weight: $font-weight-bold;
-    width: 100%;
-  }
-
-  .vdm-btn {
-    margin-bottom: 0;
-    position: relative;
-    margin-top: 0.1rem;
-  }
-
-  .input-wrapper {
-    padding: 1rem 0.5rem 0.5rem 0.5rem;
+    height: 100%;
+    display: flex;
+    flex-wrap: wrap;
     align-items: center;
-    flex: 1 0;
-    margin-right: 1rem;
-
-    > * {
-      margin-right: 0.5rem;
-    }
-
-    :last-child {
-      margin-right: 0;
-    }
-
-    &.stroked {
-      border-bottom: 3px solid $black;
-    }
-
-    .form-group {
-      margin-top: 0;
-      margin-bottom: 0;
-      width: 100%;
-
-      label {
-        top: 16px;
-      }
-      .form-control {
-        border: none;
-        line-height: 2.1;
-        &:focus {
-          border: none;
-        }
-
-        &:focus,
-        &.used {
-          & ~ label {
-            display: none;
-          }
-        }
-      }
+    pointer-events: none;
+    top: 0;
+    color: $vdm-brand;
+    .vfi {
+      font-size: 2rem;
     }
   }
-
-  // Extra modifier classes when the button is inside the inner wrapper
-  &.inline-button {
-    .input-wrapper {
-      width: 100%;
-      margin-right: 0;
-    }
-    .vdm-btn {
-      position: static;
-    }
+  .input-group-icon-left {
+    left: 0;
+    padding-left: .3rem;
   }
-
-  @include media-breakpoint-down(xs) {
-    .input-wrapper {
-      flex-basis: 100%;
-    }
-    .vdm-btn {
-      margin: 1rem auto 0 auto;
-      align-self: center;
-      &:last-of-type {
-        margin: 1rem auto 0 auto;
-      }
-    }
-
-    // Extra modifier classes when the button is inside the inner wrapper
-    &.inline-button {
-      .input-wrapper {
-        flex-basis: 100%;
-        position: relative;
-        margin-bottom: 1.5 * $vdm-btn-height;
-      }
-      .vdm-btn {
-        position: absolute;
-        top: 1.5 * $vdm-btn-height;
-        left: 50%;
-        transform: translateX(-50%);
-      }
-    }
+  .input-group-icon-right {
+    right: 0;
+    padding-right: .3rem;
+  }
+  .input-group-icon-left + input {
+    padding-left: 2.625rem;
+  }
+  .input-group-icon-right + input {
+    padding-right: 2.625rem;
   }
 }
 
 // Checkboxes
 //
 // use vfi
-
 .custom-checkbox {
   margin-bottom: $custom-control-spacer-y;
 
@@ -529,10 +120,59 @@ select {
   }
 }
 
+// Custom checkboxes and radios themed as card
+.custom-control-card {
+  padding: 0;
+  margin-bottom: 1.5rem;
+
+  .custom-control-label {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    padding: 2rem;
+    padding-left: 6rem;
+    position: relative;
+    border: 1px solid $gray-400;
+
+    // Background-color and (when enabled) gradient
+    &::before {
+      top: calc(50% - (#{$custom-control-indicator-size}/2));
+      left: 0;
+      right: auto;
+      margin-left: 2rem;
+    }
+
+    // Foreground (icon)
+    &::after {
+      top: calc(50% - (#{$custom-control-indicator-size}/2));
+      left: 0;
+      right: auto;
+      margin-left: 2rem;
+    }
+
+    .card-label {
+      @include header(5, "bold");
+    }
+
+    .card-title {
+      @include header(5);
+    }
+
+  }
+
+  // Set checked styles here: change border-color or apply other styles to label
+  // See bootstrap .custom-forms.scss for examples
+  /*
+  .custom-control-input:checked ~ .custom-control-label {
+    border-color: $success;
+  }
+  */
+}
+
+
 // Radios
 //
 // Tweak just a few things for radios.
-
 .custom-radio {
   margin-bottom: $custom-control-spacer-y;
 
@@ -548,7 +188,7 @@ select {
 }
 
 // Switches - Checkboxes as state toggles
-// -------------------------
+//
 
 .checkbox-toggle {
   // Massive negative offset clears the original checkbox & label.
@@ -595,37 +235,20 @@ select {
           bottom: 0;
           right: 0;
           background-color: transparent;
-          border: $checkbox-toggle-border-width solid
-            $custom-control-indicator-checked-color;
+          border: $checkbox-toggle-border-width solid $custom-control-indicator-checked-color;
           border-radius: $checkbox-toggle-border-radius-inside;
           width: $checkbox-toggle-width;
         }
       }
 
-      &[checked="checked"] {
-        & + label {
-          // Inside button
-          &:after {
-            background-color: $white;
-            margin-left: $checkbox-toggle-width-inside +
-              $checkbox-toggle-padding;
-          }
-
-          // Outside pill
-          &:before {
-            background-color: $custom-control-indicator-checked-color;
-            border: 0;
-          }
-        }
-      } //  Checked
-
+      // checked
+      &[checked="checked"],
       &:checked {
         & + label {
           // Inside button
           &:after {
             background-color: $white;
-            margin-left: $checkbox-toggle-width-inside +
-              $checkbox-toggle-padding;
+            margin-left: $checkbox-toggle-width-inside + $checkbox-toggle-padding;
           }
 
           // Outside pill
@@ -634,8 +257,9 @@ select {
             border: 0;
           }
         }
-      } //  Checked
+      }
 
+      // Disabled
       &:disabled {
         & + label {
           cursor: not-allowed;
@@ -651,15 +275,12 @@ select {
             border: 0;
           }
         }
-      } //  Disabled
-
-      &:disabled {
+        // Disabled & checked
         &:checked {
           & + label {
             // Inside button
             &:after {
-              margin-left: $checkbox-toggle-width-inside +
-                $checkbox-toggle-padding;
+              margin-left: $checkbox-toggle-width-inside + $checkbox-toggle-padding;
             }
 
             // Outside pill
@@ -668,22 +289,156 @@ select {
             }
           }
         }
+      }
 
-        &:checked {
-          & + label {
-            // Inside button
-            &:after {
-              margin-left: $checkbox-toggle-width-inside +
-                $checkbox-toggle-padding;
-            }
-
-            // Outside pill
-            &:before {
-              background-color: $custom-control-indicator-disabled-bg;
-            }
-          }
-        }
-      } //  Disabled & checked
     }
   }
+}
+
+// Form box combo with a header, input-group
+// Variants for dropdown-combo and search-combo
+.form-combo {
+  padding: 1.8rem;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+
+  &.icon-combo {
+    .vfi {
+      font-size: 2.4rem;
+      width: 2.4rem;
+      height: 2.4rem;
+      color: $vdm-brand;
+    }
+  }
+
+  .title {
+    font-size: $font-size-base;
+    line-height: $line-height-lg;
+    font-weight: $font-weight-bold;
+    width: 100%;
+  }
+
+  .vdm-btn {
+    margin-bottom: 0;
+    position: relative;
+    margin-top: 0.1rem;
+  }
+
+  .input-group {
+
+    &.stroked {
+      border-bottom: 3px solid $black;
+    }
+
+    .form-group {
+      margin-top: 0;
+      margin-bottom: 0;
+      flex-grow: 1;
+
+      .form-control {
+        border: none;
+      }
+    }
+  }
+
+}
+.search-combo {
+  .input-group {
+    padding: 1rem 0.5rem 0.5rem 0.5rem;
+    align-items: center;
+    flex: 1 0;
+    margin-right: 1rem;
+    display: inline-flex;
+
+    > * {
+      margin-right: 0.5rem;
+    }
+
+    :last-child {
+      margin-right: 0;
+    }
+  }
+  @include media-breakpoint-down(xs) {
+    .input-group {
+      flex-basis: 100%;
+    }
+    .vdm-btn {
+      margin: 1rem auto 0 auto;
+      align-self: center;
+      &:last-of-type {
+        margin: 1rem auto 0 auto;
+      }
+    }
+  }
+}
+
+// Form-combo and variants
+
+.dropdown-combo {
+  position: relative;
+  .dropdown-combo-toggle {
+    border-bottom: 1px solid $black;
+    cursor: pointer;
+    display: flex;
+    flex: 1 1 100%;
+  }
+  .dropdown-combo-placeholder,
+  .select-container {
+    color: $gray-500;
+    flex-grow: 1;
+    align-self: center;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+  .select-container {
+    z-index: 1;
+  }
+  .dropdown-combo-select {
+    background: transparent;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    z-index: 1;
+    flex-shrink: 1;
+    width: 100%;
+    padding-right: 40px;
+    color: $vdm-brand;
+    border: none;
+    border-radius: 0px;
+  }
+
+  .dropdown-combo-select-button {
+    position: absolute;
+    right: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: transparent;
+    color: $vdm-brand;
+  }
+  .dropdown-menu {
+    border: none;
+    border-radius: 0;
+    margin: 0;
+    margin-top: 1px;
+    max-height: 235px;
+    overflow-x: hidden;
+    box-shadow: $dropdown-box-shadow; // Use available variables to normalize dropdown-box-shadow
+    width: 100%;
+    li {
+      padding-bottom: 0;
+    }
+    .dropdown-item {
+      display: inline-block;
+      padding: .625rem 1rem .625rem 2rem;
+    }
+  }
+}
+
+
+// Add border around form-combo
+
+.border-combo {
+  border: 2px solid $vdm-brand;
 }

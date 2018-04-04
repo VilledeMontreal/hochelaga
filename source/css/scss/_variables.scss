@@ -22,7 +22,7 @@ $gray-200: #e9ecef;
 $gray-300: #dee2e6;
 $gray-400: #ced4da;
 $gray-500: #adb5bd;
-$gray-600: #868e96;
+$gray-600: #6c757d;
 $gray-700: #495057;
 $gray-800: #343a40;
 $gray-900: #212529;
@@ -63,6 +63,23 @@ $montreal-red:      #e00000;
 $vdm-brand:         $sarcelle;
 $vdm-sub-brand:     $montreal-red;
 
+
+// Spacing
+//
+$spacer: 1rem;
+$spacers: ();
+$spacers: map-merge((
+  0: 0,
+  1: ($spacer * .25),
+  2: ($spacer * .5),
+  3: $spacer,
+  4: ($spacer * 2),
+  5: ($spacer * 3),
+  6: ($spacer * 4),
+  7: ($spacer * 5),
+  8: ($spacer * 6)
+), $spacers);
+
 // Body
 //
 // Settings for the `<body>` element.
@@ -89,9 +106,6 @@ $paragraph-margin-bottom:     1.5rem;
 //
 // Define common padding and border radius sizes and more.
 
-$line-height-lg:              1.625;
-$line-height-sm:              1.3125;
-
 $border-radius:               .25rem;
 $border-radius-lg:            .3125rem;
 $border-radius-sm:            .2rem;
@@ -106,11 +120,22 @@ $font-weight-light:           300; // Nunito Sans Light
 $font-weight-regular:         400; // Nunito Sans Regular
 $font-weight-bold:            700; // Nunito Sans Bold
 
+$line-height-base:            1.5;
+$line-height-lg:              1.625;
+$line-height-sm:              1.3125;
+
 $font-size-base:              1rem;       // Assumes the browser default, typically `16px`
-$font-size-xl:                1.25rem;    // ~20px
+$font-size-xl:                1.5rem;     // ~24px
 $font-size-lg:                1.125rem;   // ~18px
-$font-size-sm:                0.875rem;   // ~14px
-$font-size-xs:                0.75rem;    // ~12px
+$font-size-md:                0.875rem;   // ~14px
+$font-size-sm:                0.75rem;    // ~12px
+
+$h1-font-size:                $font-size-base * 4.1875;     // 67px
+$h2-font-size:                $font-size-base * 3.125;      // 50px
+$h3-font-size:                $font-size-base * 2.3125;     // 37px
+$h4-font-size:                $font-size-base * 1.75;       // 28px
+$h5-font-size:                $font-size-base * 1.3125;     // 21px
+$h6-font-size:                $font-size-base;              // 16px
 
 $lead-font-size:              ($font-size-base * 1.25);
 $lead-font-weight:            $font-weight-regular;
@@ -190,6 +215,13 @@ $breadcrumb-active-color:           $black;
 $figure-caption-font-size:          90%;
 $figure-caption-color:              $vdm-grey;
 
+
+// Jumbotron
+
+//$jumbotron-padding:                 2rem;
+$jumbotron-bg:                      $white;
+
+
 // Cards
 
 $card-border-radius:                0;
@@ -209,6 +241,16 @@ $alert-border-radius:               0;
 $alert-link-font-weight:            $font-weight-bold !default;
 $alert-border-width:                0;
 
+
+// Progress circle bars
+
+$progress-circle-border-width:          5px;
+$progress-circle-border-color-default:  $gray-300;
+$progress-circle-border-color-fill:     $gray-700;
+$progress-circle-size:                  100px;
+$progress-circle-steps:                 100; //this needs to be even.
+$progress-circle-animation-timing:      .5s;
+
 // Badges
 
 $badge-pill-padding-x:              1em;
@@ -218,13 +260,14 @@ $badge-pill-padding-y:              .5em;
 // Buttons
 //
 
-//$btn-border-width:            none;
-
-$vdm-btn-padding-x:           40px;
-$vdm-btn-padding-y:           5px;
 $vdm-btn-border-width:        2px;
 $vdm-btn-height:              53px;
 $vdm-btn-small-height:        40px;
+
+$vdm-btn-padding-y:           .75rem;
+$vdm-btn-padding-x:           2.5rem;
+$vdm-btn-padding-y-sm:        .625rem;
+$vdm-btn-padding-x-sm:        2rem;
 
 $btn-link-disabled-color:     $vdm-neutral-mid;
 
@@ -232,8 +275,16 @@ $btn-link-disabled-color:     $vdm-neutral-mid;
 // Forms
 //
 
-$input-border-width:                            2px;
+$input-color:                                   $gray-800;
+$input-border-color:                            $gray-400;
+$input-border-width:                            1px;
+
 $input-disabled-bg:                             $vdm-neutral-light;
+
+$input-placeholder-color:                       $gray-600;
+
+
+// custom forms
 
 $custom-control-indicator-disabled-bg:          $vdm-neutral-light;
 $custom-control-label-disabled-color:           $vdm-neutral-mid;
@@ -246,9 +297,11 @@ $custom-control-indicator-bg:                   $vdm-grey-light;
 $custom-control-indicator-bg-size:              50% 50%;
 
 //$custom-control-indicator-focus-box-shadow:     0 0 0 1px $body-bg, 0 0 0 .2rem rgba($vdm-brand, .25);
-$custom-control-indicator-focus-box-shadow:     none;
+//$custom-control-indicator-focus-box-shadow:     none !important;
+$custom-control-indicator-active-box-shadow:    none !important;
+$custom-control-indicator-active-bg:            none !important;
 $custom-control-indicator-checked-color:        $vdm-brand;  
-$custom-control-indicator-checked-bg:           $custom-control-indicator-bg;  
+$custom-control-indicator-checked-bg:           $custom-control-indicator-bg;
 
 $custom-checkbox-indicator-border-radius:       $border-radius-lg;
 $custom-checkbox-indicator-icon-checked:        none;
@@ -258,6 +311,7 @@ $custom-checkbox-indicator-icon-indeterminate:  none;
 $custom-checkbox-indicator-icon-checked:        none;
 
 $custom-radio-indicator-icon-checked:           none;
+$custom-control-indicator-checked-disabled-bg:  $custom-control-indicator-bg;
 
 
 // Checkbox Toggle :on/off switches
@@ -270,8 +324,16 @@ $checkbox-toggle-width:                 75px;
 $checkbox-toggle-width-inside:          30px;
 $checkbox-toggle-padding:               5px;
 
-// Textfields
 
+// Dropdowns
+
+$dropdown-link-active-bg:           $vdm-brand;
+
+// Modal
+
+//$modal-lg:                          800px;
+$modal-md:                          600px;;
+//$modal-sm:                          300px;
 
 
 //
@@ -282,6 +344,14 @@ $side-menu-border-width:        2px;
 $side-menu-icon-size:           3rem;
 $side-menu-link-h-padding:      1rem;
 $side-menu-link-v-padding:      1.75rem;
+
+$header-icon-width:             60px;
+$header-icon-height:            $header-icon-width;
+
+// Navbar
+
+//$navbar-padding-y:                  ($spacer / 2);
+$navbar-padding-x:                  0;
 
 
 // - - - - - - - - - -

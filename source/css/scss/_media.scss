@@ -1,28 +1,3 @@
-.vdm-avatar {
-  position: relative;
-  display: inline-block;
-  &:hover,
-  &:active {
-    &:before {
-      position: absolute;
-      content: "";
-      display: block;
-      top: 0;
-      left: 0;
-      right: 0;
-      bottom: 0;
-      background: $white;
-      opacity: 0.1;
-      width: 100%;
-      height: 100%;
-    }
-  }
-  > img {
-    @extend .img-fluid;
-    @extend .rounded-circle;
-  }
-}
-
 .header-image {
   position: relative;
   &:before {

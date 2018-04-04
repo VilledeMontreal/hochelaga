@@ -12,12 +12,10 @@ html {
       padding-top: $header-total-portal-height;
     }
     .main-content {
-      &.regions {
-        flex: 1 0 auto;
-      }
+      flex: 1 0 auto;
     }
     .vdm-header,
-    .vdm-footer {
+    .footer {
       flex: none;
     }
   }
@@ -29,162 +27,145 @@ html {
   }
 } // Sidebar
 
-// Make all base regions Bootstrap containers & rows
-// with these standardized classes
+
+// Do we really need this?
 .region {
-  padding-bottom: $region-padding-bottom;
-  &:last-of-type {
-    padding-bottom: $region-last-padding-bottom;
-  }
 
-  .region-container {
-    @include make-container();
-    @include make-container-max-widths();
-  }
-
-  .region-row {
-    @include make-row();
-  }
-
-  // Default state for the first tag inside a region row, to be orverriden
-  .region-content {
-    @include make-col-ready();
-    @include make-col(12);
-  }
-
-  &.full-width {
-    @extend .container-fluid;
-  }
-}
-
-// All regions in page templates should have at least a "region" class
-// A region is anything that implements a bootstrap grid on the first level
-// in an html document.
-.region {
-  // Sections : sub-sections inside regions
-  // Sections will always be inside a bootstrap row
-  .region-row {
-    > .section {
-      @include make-col-ready();
-      &.full-width {
-        @include make-col(12);
-      }
-      padding-bottom: $section-padding-bottom;
-      &:last-of-type {
-        padding-bottom: 0;
-      }
-    }
-  }
-
-  // Image , title and teaser container, portal
   // Main header, always includes at least the page Title
-  // Keeper styles
   &.region-content-header {
-    .media {
-      @include make-col-ready();
-      @include make-col(12);
-    }
-    .text {
-      @include make-col-ready();
-      @include make-col(12);
-    }
-    &.has-image {
-      .media {
-        padding-left: 0;
-        padding-right: 0;
-      }
-    }
+    // Dark variant
     &.content-header-dark {
       background-color: $vdm-grey-dark;
       color: $white;
     }
+
+    &.has-nav-tabs {
+      .content-header {
+        padding-bottom: 0;
+      }
+      margin-bottom: 6rem;
+    }
+
+    &.region-border {
+      border-bottom: 1px solid $gray-400;
+    }
+
   }
+  .content-header {
+    margin-bottom: 3rem;
+    width: 100%;
 
-  // The container fluid version of the region
-  &.full-width-container {
-    @extend .container-fluid;
-    .content-wrapper {
-      @include make-row();
-      .main-content {
-        @include make-col-ready();
-        @include make-col(12);
-      }
-    }
-  }
-
-  // This is the 3 columns region, with a potential for left and right sidebars
-  &.main-region {
-    // Mobile first, everything is 12 initially
-    .main-content {
-      @include make-col-ready();
-      @include make-col(12);
-      padding-bottom: $region-padding-bottom;
-    }
-    .sidebar {
-      @include make-col-ready();
-      @include make-col(12);
+    &-title {
+      padding: 3rem 0;
     }
 
-    // Swap the source order for the 3 column case
-    .col-both {
-      .sidebar-left {
-        order: 1;
-      }
-      .sidebar-right {
-        order: 2;
-      }
-      .main-content {
-        order: 0;
-      }
+    .date-time {
+      display: inline-block;
     }
 
-    // Medium breakpoint and above (768)
-    @include media-breakpoint-up(md) {
-      .col-left,
-      .col-right {
-        .main-content {
-          @include make-col(8);
-        }
-        .sidebar {
-          @include make-col(4);
-        }
+    @include media-breakpoint-up(lg) {
+      &.has-image {
+        margin-top: -180px;
       }
-      // Reorder the source for medium + displays -- 3 columns override
-      .col-both {
-        .main-content {
-          @include make-col(6);
-        }
-        .sidebar {
-          @include make-col(3);
-        }
-        .sidebar-left {
-          order: 0;
-        }
-        .sidebar-right {
-          order: 0;
-        }
+      .header-title-overlap {
+        background-color: $white;
       }
-    } // md-up
-  }
-
-  // Background color variants
-  &.shaded {
-    &.shaded-light {
-      background: $vdm-neutral-light;
     }
-    &.shaded-black {
-      background: $vdm-neutral-light;
-    }
-  }
-
-  &.has-nav-tabs {
-    padding-bottom: 0;
   }
 } // Region
 
+.region-content {
+  padding-top: 4rem;
+  padding-bottom: 4rem;
+}
 
-// Background-color for region or zone or anything really...
+// Swap the source order for the 3 column case
+.main-content {
+  order: 0;
+}
+.sidebar-left {
+  order: 1;
+}
+.sidebar-right {
+  order: 2;
+}
 
-.neutral-light {
-  background-color: $vdm-grey-light;
+
+
+// Generic section layouts
+.page-section {
+  padding-top: map-get($spacers, 5);
+  padding-bottom: map-get($spacers, 5);
+  .section-heading {
+    margin-bottom: map-get($spacers, 4);
+  }
+  &.bg-gray-light,
+  &.bg-light {
+    .card {
+      border: none;
+    }
+  }
+}
+.services-heading {
+  padding-top: 3rem;
+  padding-bottom: 3rem; 
+}
+
+// Medium breakpoint and above (768)
+@include media-breakpoint-up(md) {
+  // Reorder the source for medium + displays -- 3 columns override
+  .sidebar-left {
+    order: 0;
+  }
+  .sidebar-right {
+    order: 0;
+  }
+}
+
+// Services styles
+// Might migrate to own stylesheet if it becomes too long
+.summary {
+  .summary-heading {
+    display: flex;
+    justify-content: space-between;
+    padding-bottom: 1rem;
+    align-items: center;
+    h2 {
+      @include header(4, "bold");
+      display: inline-block;
+      margin-bottom: 0;
+    }
+    .nav {
+      .nav-item {
+        padding-right: 1rem;
+        padding-left: 1rem;
+        &:last-child {
+          padding-right: 0;
+        }
+      }
+    }
+  }
+  .summary-content {
+    border-top: 1px solid $gray-400;
+    border-bottom: 1px solid $gray-400;
+    margin-bottom: 2rem;
+    padding-top: 1.5rem;
+  }
+  .label {
+    font-weight: $font-weight-bold;
+  }
+}
+
+//
+// Coordinates
+//
+.block-coordinates {
+  .title {
+    font-size: 1.5rem;
+    font-weight: $font-weight-bold;
+    margin-bottom: 1.5rem;
+  }
+  .item-label {
+    @include header(6, 'bold');
+  }
 }

@@ -1,17 +1,15 @@
 {
-  "pageClasses": "howto",
-  "socialMediaClasses": "footer",
+  "pageClasses": "how-to",
   "regionMainClasses": "",
-  "regionMainContainerClasses": "col-right",
+  "regionMainContainerClasses": "",
   "regionMainContentClasses": "",
   "headerContainerClasses": "content-header-dark has-nav-tabs",
-  "colRight": true,
-  "regionAfterClasses" : "bg-light",
+  "regionAfterClasses" : "page-section bg-gray-light",
   "has-lead-text": true,
   "has-nav-tabs": true,
   "searchBox": true,
   "combo-box-text":
-    "Entrez votre code postal pour connaître la démarche à suivre.",
+    "Sélectionnez votre arrondissement pour connaître la démarche à suivre.",
   "icon-label": "localisation",
   "text-elements": {
     "headings": {
@@ -20,12 +18,13 @@
       }
     }
   },
-  "sidebar-blocks-demo-debug-wrapper" : false,
-  "sidebar-blocks-demo-debug-message" : false,
-  "has-sb-teaser-quicklinks" : true,
-  "sidebar-right-classes": "theme-top-stroke",
+  "sidebarRight": true,
+  "sidebar-blocks-demo-debug-wrapper": false,
+  "sidebar-blocks-demo-debug-message": false,
+  "sidebar-classes": "sidebar-top-stroke",
   "sb-classes": "",
   "sidebar-title-classes": "discrete",
+  "has-sb-quicklinks-short": true,
   "navTabs": {
     "navItem": [
       {
@@ -45,21 +44,24 @@
       "<ol class=\"numbered-list\"><li><h2 class=\"title\">Avant de faire votre demande en ligne</h2><ul><li>Déposez vos branches sur le trottoir.</li><li>Assurez-vous de connaître les consignes à respecter en consultant la <a href=\"#\">collecte des branches d'arbres</a>.</li></ul></li><li><h2 class=\"title\">Faire votre demande en ligne</h2><button type=\"button\" class=\"vdm-btn\">Demander une collecte</button></li></ol>",
       "block-id": "howto-vm-enligne",
       "heading-id": "Heading-howto-vm-enligne",
-      "icon": "vfi-ordinateur"
+      "icon": "vfi-ordinateur",
+      "badge": false
     },
     {
       "title": "Au téléphone",
       "content": "Collapsible content",
       "block-id": "howto-vm-tel",
       "heading-id": "heading-howto-vm-tel",
-      "icon": "vfi-telephone"
+      "icon": "vfi-telephone",
+      "badge": false
     },
     {
       "title": "En personne",
       "content": "Collapsible content",
       "block-id": "howto-vm-personne",
       "heading-id": "heading-howto-vm-personne",
-      "icon": "vfi-enveloppe"
+      "icon": "vfi-enveloppe",
+      "badge": false
     }
   ],
   "howToInfos": true,

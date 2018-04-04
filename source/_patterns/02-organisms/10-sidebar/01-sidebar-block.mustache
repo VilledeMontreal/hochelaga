@@ -1,0 +1,407 @@
+<!-- Have a look at the markdown document for the documentation. -->
+{{# sidebar-blocks-demo-debug-wrapper }}
+<div class="container">
+  <div class="row">
+    <div class="col-12 col-lg-4 sidebar {{ sidebar-classes }}">
+{{/ sidebar-blocks-demo-debug-wrapper }}
+
+      <!-- Variant : quicklinks, arrow-right, block, long text -->
+      {{# has-sb-quicklinks-short }}
+      <section class="sb-block {{ sb-classes }}">
+        {{> organisms-heading-sidebar }}
+        <ul class="list-unstyled">
+          <li>
+            <a href="#" class="icon left">{{> atoms-fonticon-item(icon-label: "fleche") }} Who can tousle?</a>
+          </li>
+          <li>
+            <a href="#" class="icon left">{{> atoms-fonticon-item(icon-label: "fleche") }} Why can't I get a mustache ?</a>
+          </li>
+          <li>
+            <a href="#" class="icon left">{{> atoms-fonticon-item(icon-label: "fleche") }} Who is flexitarian?</a>
+          </li>
+          <li>
+            <a href="#" class="icon left">{{> atoms-fonticon-item(icon-label: "fleche") }} What may one do with a fixie?</a>
+          </li>
+          <li>
+            <a href="#" class="icon left">{{> atoms-fonticon-item(icon-label: "fleche") }} For the cliche artisan!</a>
+          </li>
+        </ul>
+      </section>
+      {{/ has-sb-quicklinks-short }}
+
+      <!-- Variant : quicklinks, arrow-right, block, long text -->
+      {{# has-sb-quicklinks }}
+      <section class="sb-block {{ sb-classes }}">
+        {{> organisms-heading-sidebar }}
+        <ul class="list-unstyled">
+          <li>
+            <a href="#">Heirloom jean shorts locavore pug shoreditch (03-4567)</a>
+          </li>
+          <li>
+            <a href="#">Kitsch shabby chic +1, master cleanse iceland shoreditch retro normcore four dollar (03-32)</a>
+          </li>
+          <li>
+            <a href="#">Brooklyn blue bottle gastropub (03-765)</a>
+          </li>
+          <li>
+            <a href="#">Goth lo-fi chartreuse art party post-ironic fixie banh mi kale chips bitters. (03-467)</a>
+          </li>
+          <li>
+            <a href="#">Migas air plant drinking vinegar twee leggings blue bottle pop-up heirloom jean shorts locavore pug shoreditch lumbersexual
+              tousled. (03-567)</a>
+          </li>
+        </ul>
+      </section>
+      {{/ has-sb-quicklinks }}
+
+      <!-- Variant : contact block -->
+      {{# has-sb-contact-block }}
+      <section class="sb-block {{ sb-classes }}">
+        {{> organisms-heading-sidebar }}
+        <div class="subsection person-card">
+          <p>
+            <strong class="name">Marc-André Gosselin</strong><br>
+            Attaché de presse<br>
+            Cabinet du maire et du comité exécutif
+          </p>
+          <ul class="list-unstyled">
+            <li>
+              <a href="tel:+15142223456" class="icon left">
+                {{> atoms-fonticon-item(icon-label: "telephone") }} 514 222-3456
+              </a>
+            </li>
+          </ul>
+        </div>
+        <div class="subsection person-card">
+          <p>
+            <strong class="name">Linda Boutin</strong><br>
+            Relationiste<br>
+            Service des communications
+          </p>
+          <ul class="list-unstyled">
+            <li>
+              <a href="tel:+15143333456" class="icon left">
+                {{> atoms-fonticon-item(icon-label: "telephone") }} 514 333-34567
+              </a>
+            </li>
+            <li>
+              <a href="mailto:linda.boutin@ville.montreal.qc.ca" class="icon left">
+                {{> atoms-fonticon-item(icon-label: "enveloppe") }} linda.boutin@ville.montreal.qc.ca
+              </a>
+            </li>
+          </ul>
+        </div>
+      </section>
+      {{/ has-sb-contact-block }}
+
+      <!-- Variant : Forms 01  - email registration form -->
+      {{# has-sb-forms-01 }}
+      <section class="sb-block {{ sb-classes }}">
+        {{> organisms-heading-sidebar }}
+        <p>Leggings ugh pickled messenger bag. Art party swag marfa next level mustache flexitarian. DIY polaroid trust fund
+          cliche artisan.</p>
+        {{> organisms-email-form }}
+      </section>
+      {{/ has-sb-forms-01 }}
+
+      <!-- Variant : Forms 02 - wide buttons -->
+      {{# has-sb-forms-02 }}
+      <section class="sb-block {{ sb-classes }}">
+        {{> organisms-heading-sidebar }}
+        <p>Leggings ugh pickled messenger bag. Art party swag marfa next level mustache flexitarian. DIY polaroid trust fund
+          cliche artisan.</p>
+        {{> atoms-button("buttonClass": "vdm-btn vdm-btn-sm vdm-btn-wide")}}
+        {{> atoms-button("buttonClass": "vdm-btn vdm-btn-secondary vdm-btn-sm vdm-btn-wide")}}
+      </section>
+      {{/ has-sb-forms-02 }}
+
+      <!-- Variant : Forms 03 - Search filter checkboxes -->
+      {{# has-sb-forms-03 }}
+      <section class="sb-block {{ sb-classes }}">
+        {{> organisms-heading-sidebar }}
+        {{> atoms-checkbox-custom-form }}
+      </section>
+      {{/ has-sb-forms-03 }}
+
+      <!-- Variant : Information bloc 01 : a short list, a divider, vertical social media icons -->
+      {{# has-sb-info-block-01 }}
+      <section class="sb-block {{ sb-classes }}">
+        {{> organisms-heading-sidebar }}
+        <ul class="list-unstyled">
+          <li>
+            <a href="#" class="icon left brand">
+              {{> atoms-fonticon-item(icon-label: "fleche") }} simplicite.montreal.ca
+            </a>
+          </li>
+        </ul>
+        {{> atoms-horizontal-divider(dividerClasses: divider-title) }} 
+        {{> atoms-social-media-icons-shortlist }} 
+        {{> atoms-sidebar-list-inline }}
+      </section>
+      {{/ has-sb-info-block-01 }}
+
+      <!-- Variant : Information bloc 02 : long list, fat padding bottom on elements -->
+      {{# has-sb-info-block-02 }}
+      <section class="sb-block {{ sb-classes }}">
+        {{> organisms-heading-sidebar }}
+        <ul class="list-unstyled">
+          <li>
+            <span class="icon left">
+              {{> atoms-fonticon-item(icon-label: "calendrier") }} 26 juillet 2018
+            </span>
+          </li>
+          <li>
+            <span class="icon left">
+              {{> atoms-fonticon-item(icon-label: "soleil") }} De 21 h 30 à 23 h 30
+            </span>
+          </li>
+          <li>
+            <span class="icon left">
+              {{> atoms-fonticon-item(icon-label: "drapeau") }}
+              {{> atoms-address }}
+            </span>
+          </li>
+          <li>
+            <a href="mailto:ti-guy-tremblay@ville.montreal.qc.ca" class="icon left">
+              {{> atoms-fonticon-item(icon-label: "enveloppe") }} ti-guy-tremblay@ville.montreal.qc.ca
+            </a>
+          </li>
+          <li>
+            <a href="tel:+15144443456" class="icon left">
+              {{> atoms-fonticon-item(icon-label: "telephone") }} 514 444-3456
+            </a>
+          </li>
+          <li>
+            <span class="icon left">
+              {{> atoms-fonticon-item(icon-label: "fleche") }} Contact : Tsi-Guy Tremblay
+              </a>
+          </li>
+        </ul>
+      </section>
+      {{/ has-sb-info-block-02 }}
+
+      <!-- Variant : Information bloc 03 : a stack of similare large text blocks -->
+      {{# has-sb-info-block-03 }}
+      <section class="sb-block {{ sb-classes }}">
+        {{> organisms-heading-sidebar }}
+        <div class="subsection">
+          <h3 class="subtitle">Ville de Montréal</h3>
+          <p>IPhone messenger bag gastropub, health goth lo-fi chartreuse art party post-ironic fixie banh mi kale chips bitters.</p>
+          <ul class="list-unstyled">
+            <li>
+              <a href="tel:+15142223456" class="icon left">
+                {{> atoms-fonticon-item(icon-label: "telephone") }} 514 222-3456
+              </a>
+            </li>
+          </ul>
+        </div>
+        <div class="subsection">
+          <h3 class="subtitle">Société d'habitation du Québec</h3>
+          <p>Taxidermy flannel hammock, schlitz cloud bread direct trade tote bag skateboard readymade vexillologist meditation
+            sartorial.
+          </p>
+          <ul class="list-unstyled">
+            <li>
+              <a href="tel:+1800111456" class="icon left">
+                {{> atoms-fonticon-item(icon-label: "telephone") }} 1 800 111-34567
+              </a>
+            </li>
+            <li>
+              <a href="mailto:infoshq@shq.gouv.qc.ca" class="icon left">
+                {{> atoms-fonticon-item(icon-label: "enveloppe") }} infoshq@shq.gouv.qc.ca
+              </a>
+            </li>
+          </ul>
+        </div>
+        <div class="subsection">
+          <h3 class="subtitle">Autres ressources</h3>
+          <p>Paleo ugh blog truffaut kinfolk XOXO tousled cliche chia four dollar toast shoreditch deep v pok pok viral.</p>
+        </div>
+      </section>
+      {{/ has-sb-info-block-03 }}
+
+      <!-- Variant : Information bloc 04 : a stack of similare large text blocks -->
+      {{# has-sb-schedule }}
+      <section class="sb-block {{ sb-classes }}">
+        {{> organisms-heading-sidebar }}
+        <div class="subsection">
+          <div class="icon left">
+            {{> atoms-fonticon-item(icon-label: "horloge") }}  
+            <div class="subsection-content">
+              <div class="row">
+                <div class="day-of-week col-4">
+                  <span class="elided-text">Lundi</span>
+                </div>
+                <div class="col-8">
+                  <div class="schedule-data">
+                    <span class="schedule-start-time">08 h 00</span>
+                    <span class="schedule-end-time">12 h 00</span>
+                  </div>
+                </div>
+              </div>
+              <div class="row">
+                <div class="day-of-week col-4"></div>
+                <div class="col-8">
+                  <div class="schedule-data">
+                    <span class="schedule-start-time">13 h 00</span>
+                    <span class="schedule-end-time">16 h 30</span>
+                    <span class="vfi vfi-mini-plus-circulaire collapsed" data-toggle="collapse" data-target="#collapse-0-0" aria-expanded="false" aria-controls="collapse-0-0"></span>
+                  </div>
+                </div>
+                <div class="col-12 collapse" id="collapse-0-0" style="">
+                  <em class="d-block note">Ceci est une note pour l'horaire du lundi 13 h 00 - 16 h 30</em>
+                </div>
+              </div>
+              <div class="row">
+                <div class="day-of-week col-4">
+                  <span class="elided-text">Mardi</span>
+                </div>
+                <div class="col-8">
+                  <div class="schedule-data">
+                    <span class="schedule-start-time">08 h 00</span>
+                    <span class="schedule-end-time">12 h 00</span>
+                  </div>
+                </div>
+              </div>
+              <div class="row">
+                <div class="day-of-week col-4"></div>
+                <div class="col-8">
+                  <div class="schedule-data">
+                    <span class="schedule-start-time">13 h 00</span>
+                    <span class="schedule-end-time">16 h 30</span>
+                  </div>
+                </div>
+              </div>
+              <div class="row">
+                <div class="day-of-week col-4">
+                  <span class="elided-text">Mercredi</span>
+                </div>
+                <div class="col-8">
+                  <div class="schedule-data">
+                    <span class="schedule-start-time">08 h 00</span>
+                    <span class="schedule-end-time">12 h 00</span>
+                  </div>
+                </div>
+              </div>
+              <div class="row">
+                <div class="day-of-week col-4"></div>
+                <div class="col-8">
+                  <div class="schedule-data">
+                    <span class="schedule-start-time">13 h 00</span>
+                    <span class="schedule-end-time">16 h 30</span>
+                  </div>
+                </div>
+              </div>
+              <div class="row">
+                <div class="day-of-week col-4">
+                  <span class="elided-text">Jeudi</span>
+                </div>
+                <div class="col-8">
+                  <div class="schedule-data">
+                    <span class="schedule-start-time">08 h 00</span>
+                    <span class="schedule-end-time">12 h 00</span>
+                  </div>
+                </div>
+              </div>
+              <div class="row">
+                <div class="day-of-week col-4"></div>
+                <div class="col-8">
+                  <div class="schedule-data">
+                    <span class="schedule-start-time">13 h 00</span>
+                    <span class="schedule-end-time">16 h 30</span>
+                  </div>
+                </div>
+              </div>
+              <div class="row">
+                <div class="day-of-week col-4">
+                  <span class="elided-text">Vendredi</span>
+                </div>
+                <div class="col-8">
+                  <div class="schedule-data">
+                    <span class="schedule-start-time">08 h 00</span>
+                    <span class="schedule-end-time">12 h 00</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      {{/ has-sb-schedule }}
+
+      <!-- Variant : Institution block -->
+      {{# has-sb-institution }}
+      <section class="sb-block {{ sb-classes }}">
+        {{> organisms-heading-sidebar }}
+        <p class="bullet-left brand">Ouvert aujourd'hui jusqu'à 19 h 00</p>
+        {{> atoms-address }}
+      </section>
+      {{/ has-sb-institution }}
+
+      <!-- Variant : Notes block with left icon -->
+      {{# has-sb-notes }}
+      <section class="sb-block {{ sb-classes }}">
+        {{> organisms-heading-sidebar }}
+        <p>Vous devez remplir cette section même si vous n’utilisez, n’entreposez ou ne produisez pas de matières dangereuses visées.</p>
+        <p>Avant de vous présenter au bureau de permis de la ville (pour obtenir un permis de construction ou de transformation, un certificat d’autorisation d’usage ou un certificat d’occupation) veuillez obtenir en remplissant la section déclaration une lettre de non assujettissement au règlement XXXXXX.</p>
+      </section>
+      {{/ has-sb-notes }}
+
+      <!-- Variant : city officials -->
+      {{# has-sb-city-official }}
+      <section class="sb-block {{ sb-classes }}">
+        <div class="subsection person-card">
+          <a href="#" class="avatar">{{> atoms-image-rounded-circle }}</a> 
+          {{> organisms-heading-sidebar }}
+          <ul class="list-unstyled">
+            <li>
+              <span class="icon left">
+                {{> atoms-fonticon-item(icon-label: "drapeau") }}
+                {{> atoms-address }}
+              </span>
+            </li>
+            <li>
+              <a href="tel:+15143333456" class="icon left">
+                {{> atoms-fonticon-item(icon-label: "telephone") }} 514 333-34567
+              </a>
+            </li>
+          </ul>
+        </div>
+        <div class="subsection person-card">
+          {{> organisms-heading-sidebar }}
+          <p>
+            Relationiste<br>
+            Service des communications
+          </p>
+          <ul class="list-unstyled">
+            <li>
+              <span class="icon left">
+                {{> atoms-fonticon-item(icon-label: "drapeau") }}
+                {{> atoms-address }}
+              </span>
+            </li>
+            <li>
+              <a href="tel:+15143333456" class="icon left">
+                {{> atoms-fonticon-item(icon-label: "telephone") }} 514 333-34567
+              </a>
+            </li>
+          </ul>
+        </div>
+        <div class="subsection person-card">
+          {{> organisms-heading-sidebar }}
+          {{> atoms-social-media-icons-shortlist }}
+          {{> atoms-button("buttonClass": "vdm-btn vdm-btn-secondary vdm-btn-sm") }}
+        </div>
+      </section>
+      {{/ has-sb-city-official }}
+
+      {{# sidebar-blocks-demo-debug-message }} 
+        Sidebar infos will display here if conditions allow it in json data files. 
+      {{/ sidebar-blocks-demo-debug-message }}
+
+{{# sidebar-blocks-demo-debug-wrapper }}
+    </div>
+  </div>
+</div>
+{{/ sidebar-blocks-demo-debug-wrapper }}
+

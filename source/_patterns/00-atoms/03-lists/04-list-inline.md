@@ -1,5 +1,5 @@
 ---
-title: Sidebar list with inline elements
+title: List Inline
 ---
 
 Graphic sources

@@ -1,9 +1,0 @@
----
-title: Sidebar left and variants
----
-
-### References
-
-* ...
-* ...
-* ...

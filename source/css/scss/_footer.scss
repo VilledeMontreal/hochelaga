@@ -110,7 +110,7 @@ footer {
     // Second section of the footer : under the white line;
     .sub {
       @include make-row();
-      font-size: $font-size-xs;
+      font-size: $font-size-sm;
       &::before {
         content: "";
         background-color: $white;

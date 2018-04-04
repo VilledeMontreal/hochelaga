@@ -14,8 +14,29 @@
   padding-bottom: $badge-pill-padding-y;
 }
 
+// States
+.state {
+  @include size(2rem);
+  display: flex;
+  border-radius: 50%;
+  align-self: center;
+  .vfi {
+    text-align: right;
+    color: $white;
+    font-size: 2rem;
+    align-self: center;
+  }
+}
 
 // Add cursor to all element containing a popover
 [data-toggle="popover"] {
   cursor: pointer;
+}
+
+// Modal
+
+.modal {
+  .form-group {
+    margin-bottom: 1.3125rem; // 21px
+  }
 }

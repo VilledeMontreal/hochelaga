@@ -2,7 +2,13 @@
 // Reference used : https://projects.invisionapp.com/d/main#/console/11533069/245898997/inspect
 .breadcrumb {
   border-radius: 0;
-  font-size: $font-size-xs;
+  font-size: $font-size-sm;
+  margin-bottom: 0;
+}
+
+.nav-wizard {
+  background-color: $white;
+  border-bottom: 1px solid $gray-400;
 }
 
 // Pagination
@@ -15,6 +21,7 @@
 // Page item
 
 .page-item {
+  display: flex;
   &:first-child {
     .page-link {
       @include border-left-radius(0);
@@ -31,9 +38,11 @@
   &:last-child {
     > .page-link {
       padding: $pagination-icon-padding;
+      line-height: 1;
       .vfi {
         display: block;
         font-size: 1em;
+        line-height: 1;
       }
     }
   }
@@ -42,7 +51,7 @@
 // Page link
 
 .page-link {
-  font-size: $font-size-xl;
+  font-size: $h5-font-size;
 }
 
 //
@@ -66,7 +75,7 @@
 }
 
 .pagination-sm {
-  @include pagination-size($pagination-padding-y-sm, $pagination-padding-x-sm, $font-size-sm, $line-height-sm, 0);
+  @include pagination-size($pagination-padding-y-sm, $pagination-padding-x-sm, $font-size-md, $line-height-sm, 0);
 
   .page-item {
     &:first-child,
@@ -83,8 +92,9 @@
 //
 
 .collapsible-item {
-  padding: 0;
   margin-bottom: 30px;
+  padding: 0;
+  position: relative;
   .collapsible-header {
     h4 {
       margin: 0;
@@ -93,7 +103,6 @@
       @include header(5);
       background: $vdm-grey-light;
       color: $black;
-      position: relative;
       display: flex;
       line-height: 1.9rem;
       padding: 1.4rem 5rem 1.4rem 4rem;
@@ -122,10 +131,9 @@
         width: 2.6rem;
         height: 2.6rem;
         position: absolute;
-        top: calc(50% - 1.3rem);
+        align-self: center;
         right: 1.4rem;
         display: block;
-        text-align: center;
         color: $vdm-brand;
       }
 
@@ -144,11 +152,7 @@
         }
 
         &.circle {
-          content: "";
-          width: 1rem;
-          height: 1rem;
-          border-radius: 50%;
-          background: $vdm-brand;
+          @include circle();
           margin-left: 0.5rem;
         }
       }
@@ -164,11 +168,9 @@
   .collapsible-item {
     background-color: $white;
     box-shadow: 0 2px 7px 4px rgba(232,232,232,0.5);
-    position: relative;
     z-index: 100;
   }
   .collapsible-header {
-    position: relative;
     a {
       background: transparent;
     }
@@ -176,7 +178,7 @@
       margin-right: 15px;
     }
     .badge-pill {
-      font-size: $font-size-xs;
+      font-size: $font-size-sm;
     }
   }
 
@@ -197,6 +199,7 @@ nav {
   @extend .flex-md-row;
   .nav-item {
     margin-bottom: 0;
+    padding-bottom: 0;
     &.show {
       .nav-link {
         @extend .nav-link.active;
@@ -481,14 +484,33 @@ nav {
 /**
  * Step Wizard
  */
-
+.nav-wizard {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+.nav-steps-count {
+  display: none;
+  @include media-breakpoint-up(md) {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: $header-icon-width;
+    display: flex;
+    align-items: center;
+  }
+}
+.nav-steps-items {
+  flex: 1;
+}
 .nav-steps {
   display: flex;
   flex-direction: column;
-  @extend .flex-md-row;
+  @extend .flex-sm-row;
   // Position the steps line and circle
   li {
     position: relative;
+    padding: inherit;
     &:after {
       background-color: $gray-600;
       content: "";
@@ -516,6 +538,8 @@ nav {
   }
   .caption {
     color: $vdm-grey;
+    display: inline-block;
+    padding-bottom: .5rem;
   }
   .circle {
     @include circle($background-color: $vdm-grey-light, $border: true);
@@ -541,7 +565,7 @@ nav {
     }
   }
   //larger than 768px
-  @include media-breakpoint-up(md) {
+  @include media-breakpoint-up(sm) {
     justify-content: center;
     // Position the steps line and circle
     .nav-item {
@@ -565,7 +589,7 @@ nav {
     }
   }
   // smaller than 768px
-  @include media-breakpoint-down(sm) {
+  @include media-breakpoint-down(xs) {
     li {
       &:after {
         top: 50%;
@@ -578,6 +602,7 @@ nav {
         .caption {
           order: 2;
           padding-left: 1rem;
+          padding-bottom: 0;
         }
         .circle {
           order: 1;
@@ -585,5 +610,72 @@ nav {
         }
       }
     }
+  }
+}
+
+// Nav dashboard Steps
+//
+.nav-dashboard-item { 
+  border-bottom: 1px solid $gray-200;
+  margin-bottom: 3rem;
+  padding-bottom: 3rem;
+  .db-label {
+    display: inline-block;
+    font-size: $font-size-md;
+    font-weight: $font-weight-bold;
+    margin-bottom: .5rem;
+    text-transform: uppercase;
+  }
+  .db-title {
+    display: flex;
+    font-size: 24px;
+    font-weight: $font-weight-bold;
+    justify-content: space-between;
+  }
+  .progress-container {
+    padding-bottom: 1rem;
+  }
+}
+
+// Services sub-navigation
+.navbar-services {
+  border-bottom: 1px solid $vdm-grey-light;
+
+  .navbar-brand,
+  .navbar-link {
+    font-size: $font-size-lg;
+    line-height: 1.333333;
+    padding: 0;
+    display: flex;
+  }
+
+  .navbar-brand {
+    font-size: $font-size-xl;
+    font-weight: $font-weight-bold;
+  }
+
+  .navbar-link {
+    padding-bottom: 5px;
+  }
+
+  .navbar-header {
+    margin-left: $header-icon-width;
+    padding-top: 1.25rem;
+    padding-bottom: 1.25rem; 
+    &.navbar-header-profile-link {
+      padding-top: .375rem;
+      padding-bottom: .375rem;
+      .navbar-brand {
+        font-size: $font-size-lg;
+      }
+    }
+    a {
+      color: $body-color;
+      text-decoration: underline;
+    }
+  }
+
+  .nav-item {
+    padding: 0 1rem;
   }
 }

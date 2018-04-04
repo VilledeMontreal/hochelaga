@@ -302,11 +302,11 @@ $pl-size-box-wrapper-padding: 1rem;
           width: 128px;
           height: 128px;
           background-color: rgba(0, 0, 0, 0.05);
+          line-height: 1;
           &:before {
             font-size: 128px;
           }
         }
-
         .ic-name,
         .ic-charcode {
           display: block;
@@ -566,7 +566,7 @@ $pl-size-box-wrapper-padding: 1rem;
 //  * * * LAYOUT * * *
 // - - - - - - - - - -  - - - - - -
 
-//  For regions demonstration pages -- highlits empty regions.
+//  For regions demonstration pages -- highlights empty regions.
 .pl-regions-demo-page {
   .region {
     background: lighten($vdm-grey-light, 4%);
@@ -578,7 +578,6 @@ $pl-size-box-wrapper-padding: 1rem;
         background: $white;
         padding-top: 3rem;
         padding-bottom: 3rem;
-        margin-top: 0.5rem;
       }
     }
 

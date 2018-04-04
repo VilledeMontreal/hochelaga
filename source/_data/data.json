@@ -1,23 +1,10 @@
 {
-  "dummy": {
-    "dummy-atom": {
-      "classes": "dummy-atom-base-classes",
-      "content": "dummy-atom-base-content"
-    },
-    "dummy-organism": {
-      "classes": "dummy-organism-base-classes",
-      "content": "dummy-organism-base-content"
-    },
-    "dummy-template": {
-      "classes": "dummy-template-base-classes",
-      "content": "dummy-template-base-content"
-    }
-  },
   "title": "Ville de Montréal - Toolbox",
   "metaAuthor": "Ville de Montréal",
   "metaDescription": "Meta description content goes here",
   "heading": "Page Header",
   "subheading": "Subtext For Header",
+  "serviceName": "Nom du service XYZ",
   "placeholder": "Placeholder Text",
   "url": "#",
   "cta": "Call To Action",
@@ -28,17 +15,20 @@
   "definition": "This is the definition of the term.",
   "badge": "23",
   "badgeClass": "badge-secondary",
+  "stateClass": "bg-success",
   "label": "New Label",
   "labelClass": "label-default",
   "icon-label": "recherche",
-  "progressBarClass": "",
+  "progressBarClass": "bg-success",
+  "progressCircleClass": "progress-success",
   "progressCompleteText": "60% Complete",
   "progressMinWidth": false,
-  "removeProgressText": true,
+  "removeProgressText": false,
   "ariaMin": 0,
   "ariaMax": 100,
   "ariaNow": 60,
   "src": "https://picsum.photos/768/320?image=1074",
+  "imgClasses": "img-fluid",
   "alt": "Image alt attribute",
   "caption": "Caption Text",
   "panelClass": "panel-default",
@@ -49,10 +39,16 @@
   "headerClasses": "",
   "headerContainerClasses": "",
   "mainContainerClasses": "",
+  "sidebarLeftClass": "col-lg-4",
+  "sidebarRightClass": "col-lg-4",
+  "sidebar-blocks-demo-debug-wrapper" : false,
+  "sidebarTitle": "Sidebar Title",
+  "hasTopBanner": true,
   "combo-box-text": "Combo block title",
   "combo-box-icon": "ic-search",
   "combo-box-placeholder": "textfield label",
   "paragraphClass": "lead",
+  "footerNotes": "Nous vous rappelons que, en vertu du règlement NOM, la mise à jour de cette déclaration est exigée avant le 1er avril de chaque année. Veuillez conserver une copie de ce document dans vos dossiers pendant une période minimale de 5 ans et le fournir aux représentants de la Ville sur demande.",
   "text-paragraph":
     "Mustache irony plaid edison bulb photo booth. Paleo ugh blog truffaut kinfolk XOXO tousled cliche chia four dollar toast shoreditch deep v pok pok viral. Air plant ramps cloud bread, humblebrag kogi adaptogen sriracha vegan offal poutine letterpress skateboard truffaut.",
   "text-teaser":
@@ -60,24 +56,26 @@
   "text-elements": {
     "headings": {
       "h1": {
-        "classes": "",
-        "content": "H1 header H1 header"
+        "classes": "display-3",
+        "content": "H1 heading",
+        "divider": true,
+        "dividerClass": "divider-title"
       },
       "h2": {
-        "classes": "",
-        "content": "H2 header H2 header"
+        "classes": "display-4",
+        "content": "H2 heading"
       },
       "h3": {
         "classes": "",
-        "content": "H3 header H3 header"
+        "content": "H3 heading"
       },
       "h4": {
         "classes": "",
-        "content": "H4 header H4 header"
+        "content": "H4 heading"
       },
       "h5": {
         "classes": "",
-        "content": "H4 header H4 header"
+        "content": "H5 heading"
       },
       "display": {
         "classes": "display-1",
@@ -85,9 +83,92 @@
       }
     }
   },
+  "dropdown": {
+    "title": "Les informations relatives aux collectes varient d'un arrondissement à l'autre. Sélectionnez votre arrondissement pour en savoir plus.",
+    "placeholder": "Sélectionnez votre arrondissement",
+    "options": [
+      {
+        "label": "Ahuntsic-Cartierville",
+        "value": "Ahuntsic-Cartierville"
+      },
+      {
+        "label": "Anjou",
+        "value": "Anjou"
+      },
+      {
+        "label": "Côte-des-Neiges–Notre-Dame-de-Grâce",
+        "value": "Côte-des-Neiges–Notre-Dame-de-Grâce"
+      },
+      {
+        "label": "L'Île-Bizard–Sainte-Geneviève",
+        "value": "L'Île-Bizard–Sainte-Geneviève"
+      },
+      {
+        "label": "Lachine",
+        "value": "Lachine"
+      },
+      {
+        "label": "LaSalle",
+        "value": "LaSalle"
+      },
+      {
+        "label": "Le Plateau-Mont-Royal",
+        "value": "Le Plateau-Mont-Royal"
+      },
+      {
+        "label": "Le Sud-Ouest",
+        "value": "Le Sud-Ouest"
+      },
+      {
+        "label": "Mercier–Hochelaga-Maisonneuve",
+        "value": "Mercier–Hochelaga-Maisonneuve"
+      },
+      {
+        "label": "Montréal-Nord",
+        "value": "Montréal-Nord"
+      },
+      {
+        "label": "Outremont",
+        "value": "Outremont"
+      },
+      {
+        "label": "Pierrefonds-Roxboro",
+        "value": "Pierrefonds-Roxboro"
+      },
+      {
+        "label": "Rivière-des-Prairies–Pointe-aux-Trembles",
+        "value": "Rivière-des-Prairies–Pointe-aux-Trembles"
+      },
+      {
+        "label": "Rosemont–La Petite-Patrie",
+        "value": "Rosemont–La Petite-Patrie"
+      },
+      {
+        "label": "Saint-Laurent",
+        "value": "Saint-Laurent"
+      },
+      {
+        "label": "Saint-Léonard",
+        "value": "Saint-Léonard"
+      },
+      {
+        "label": "Verdun",
+        "value": "Verdun"
+      },
+      {
+        "label": "Ville-Marie",
+        "value": "Ville-Marie"
+      },
+      {
+        "label": "Villeray–Saint-Michel–Parc-Extension",
+        "value": "Villeray–Saint-Michel–Parc-Extension"
+      }
+    ]
+  },
   "formAttributes": {
     "select": {
       "id": "selectid",
+      "formControlClass": false,
       "defaultOptionLabel": "Filter by"
     },
     "button": {
@@ -98,7 +179,8 @@
       "type-text": {
         "id": "inputtextfieldid",
         "label": "Textfield label"
-      }
+      },
+      "placeholder": false
     }
   },
   "formCheckboxes": [
@@ -126,7 +208,16 @@
     "fr": "Voir ce site en français",
     "en": "View this site in English"
   },
-
+  "theme-colors": [
+    { "color": "primary" },
+    { "color": "secondary" },
+    { "color": "success" },
+    { "color": "info" },
+    { "color": "warning" },
+    { "color": "danger" },
+    { "color": "light" },
+    { "color": "dark" }
+  ],
   "table": {
     "caption": "",
     "tableClass": "",
@@ -181,8 +272,9 @@
   "inputClass": "",
   "inputAddonBefore": "Addon",
   "inputAddonAfter": false,
-  "buttonClass": "btn-default",
+  "buttonClass": "vdm-btn",
   "buttonText": "Button",
+  "buttonType": "button",
   "breadcrumbs": [
     {
       "url": "#",
@@ -194,7 +286,8 @@
     },
     {
       "url": "#",
-      "text": "Link 3"
+      "text": "Link 3",
+      "is-active": true
     }
   ],
   "caret": "caret",
@@ -275,8 +368,12 @@
   ],
 
   "alertClass": "alert-primary",
+  "alertIcon": false,
   "alertText":
     "This is a primary alert with <a href=\"#\" class=\"alert-link\">an example link</a>. Give it a click if you like.",
+  "top-banner": {
+    "class": false
+  },
   "dismissableAlert": false,
   "listGroupClass": "",
   "listGroup": [
@@ -392,6 +489,16 @@
       }
     ]
   },
+  "navDashboard": [
+    {
+      "navDashboardLabel": "Nav Dashboard Label",
+      "navDashboardTitle": "Nav Dashboard Title",
+      "navDashboardInfo": "Nav Dashboard Info",
+      "hasFeedback": false,
+      "hasButton": true,
+      "buttonText": "Commencer"
+    }
+  ],
   "orderedList": [
     {
       "title": "List item #1",
@@ -443,6 +550,7 @@
   "cards": {
     "classes": false,
     "bsgrid-classes": "col-12 col-md-6 col-lg-4",
+    "headings": false,
     "card-item": [
       {
         "classes": false,
