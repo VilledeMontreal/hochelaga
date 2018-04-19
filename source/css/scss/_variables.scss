@@ -28,6 +28,11 @@ $gray-800: #343a40;
 $gray-900: #212529;
 $black:    #000;
 
+// Specilazed grays
+
+$gray-ink: #637381; // Usage: Text default color.
+$gray-sky: #f4f6f8; // Usage: Backgrounds.
+
 
 // UI color
 
@@ -36,33 +41,35 @@ $blue:    #005fc9;
 $indigo:  #6610f2 !default;
 $purple:  #6f42c1 !default;
 $pink:    #e83e8c !default;
-$red:     #dc3545 !default;
+$red:     #ff3200 !default;
 $orange:  #fd7e14 !default;
-$yellow:  #ffc107 !default;
-$green:   #28a745 !default;
+$yellow:  #fecc03 !default;
+$green:   #00c54a !default;
 $teal:    #20c997 !default;
 $cyan:    #17a2b8 !default;
 
-// We keep those custom grays ? -> I am not attached, I much prefer a decimal system with flexibility
-$vdm-grey-light:    #f2f2f1;
-$vdm-grey:          #80807f;
-$vdm-grey-dark:     #222222; // First occurence : side menu bg & borders
-$vdm-neutral-mid:   #80807f;
-$vdm-neutral-light: #e7e5e5;
 
-// VDM specific
+// Primary colors
 
-$sarcelle:          #429a8e;
-$sarcelle-light:    #87dfd3;
-$sarcelle-dark:     #097d6c;
-
-$montreal-red:      #e00000;
+$sarcelle:          #097d6c;
+$sarcelle-dark:     #075b4f;
+$sarcelle-surprise: #0cb097;
+$sarcelle-atmos:    #87dfd3;
+$sarcelle-lightest: #f8f9fa;
+$red-montreal:      #e00000;
 
 //== Brand
 
-$vdm-brand:         $sarcelle;
-$vdm-sub-brand:     $montreal-red;
+$brand:         $red-montreal;
 
+$primary:       $sarcelle;
+$secondary:     $gray-600;
+$success:       $green;
+$info:          $blue;
+$warning:       $yellow;
+$danger:        $red;
+$light:         $gray-100;
+$dark:          $gray-800;
 
 // Spacing
 //
@@ -85,16 +92,18 @@ $spacers: map-merge((
 // Settings for the `<body>` element.
 
 $body-bg:               $white;
-$body-color:            $black;
+$body-color:            $gray-ink;
 
 // Links
 //
 // Style anchor elements.
 
-$link-color:                  $vdm-brand;
+$link-color:                  $gray-900;
+$link-border-color:           $sarcelle-atmos;
+$link-border-width:           1px;
 $link-decoration:             none;
-$link-hover-color:            $black;
-$link-hover-decoration:       underline;
+$link-hover-color:            $gray-900;
+$link-hover-decoration:       none;
 
 // Paragraphs
 //
@@ -109,6 +118,10 @@ $paragraph-margin-bottom:     1.5rem;
 $border-radius:               .25rem;
 $border-radius-lg:            .3125rem;
 $border-radius-sm:            .2rem;
+
+$headings-color:              $gray-900;
+
+$mark-color:                  $gray-900;
 
 // Fonts
 //
@@ -140,10 +153,14 @@ $h6-font-size:                $font-size-base;              // 16px
 $lead-font-size:              ($font-size-base * 1.25);
 $lead-font-weight:            $font-weight-regular;
 
+$blockquote-small-color:      $body-color;
+$blockquote-font-size:        ($font-size-base * 1.25) !default;
+
 
 //== Icons fonts vfi class, imported from "@villemontreal/font-icon
 $vfi-icon-font-path: $assets-font-path;
 $vfi-icon-font-family : 'vdm';
+
 
 // Body
 //
@@ -161,10 +178,10 @@ $nav-link-padding-x:                2rem;
 $nav-tabs-border-color:             $white;
 $nav-tabs-border-width:             0;
 $nav-tabs-border-radius:            0;
-$nav-tabs-link-hover-border-color:  $vdm-sub-brand;
+$nav-tabs-link-hover-border-color:  $red-montreal;
 $nav-tabs-link-active-color:        $black;
 $nav-tabs-link-active-bg:           $body-bg;
-$nav-tabs-link-active-border-color: $vdm-sub-brand;
+$nav-tabs-link-active-border-color: $red-montreal;
 
 $nav-tabs-spacing:                  4px;
 $nav-tabs-active-border-width:      4px;
@@ -187,22 +204,22 @@ $pagination-icon-padding:           .785rem;
 $pagination-icon-padding-sm:        .425rem;
 $pagination-icon-padding-lg:        1.0625rem;
 
-$pagination-color:                  $vdm-grey;
+$pagination-color:                  $gray-600;
 $pagination-bg:                     $white;
 $pagination-border-width:           1px;
-$pagination-border-color:           lighten($vdm-grey, 9%);
+$pagination-border-color:           $gray-600;
 
-$pagination-hover-color:            $vdm-brand;
-$pagination-hover-bg:               $vdm-grey-light;
-$pagination-hover-border-color:     lighten($vdm-grey, 9%);
+$pagination-hover-color:            $primary;
+$pagination-hover-bg:               $gray-sky;
+$pagination-hover-border-color:     $gray-600;
 
 $pagination-active-color:           $white;
-$pagination-active-bg:              $vdm-brand;
-$pagination-active-border-color:    lighten($vdm-grey, 9%);
+$pagination-active-bg:              $primary;
+$pagination-active-border-color:    $gray-600; 
 
-//$pagination-disabled-color:         $gray-600;
+$pagination-disabled-color:         $gray-600;
 $pagination-disabled-bg:            $white;
-$pagination-disabled-border-color:  lighten($vdm-grey, 9%);
+$pagination-disabled-border-color:  $gray-600;
 
 // Breadcrumbs
 
@@ -213,7 +230,7 @@ $breadcrumb-active-color:           $black;
 // Figures
 
 $figure-caption-font-size:          90%;
-$figure-caption-color:              $vdm-grey;
+$figure-caption-color:              $gray-ink;
 
 
 // Jumbotron
@@ -225,7 +242,7 @@ $jumbotron-bg:                      $white;
 // Cards
 
 $card-border-radius:                0;
-$card-border-color:                 $vdm-brand;
+$card-border-color:                 $primary;
 $card-inner-border-radius:          0;
 //$card-bg:                           $gray-500;
 
@@ -269,7 +286,7 @@ $vdm-btn-padding-x:           2.5rem;
 $vdm-btn-padding-y-sm:        .625rem;
 $vdm-btn-padding-x-sm:        2rem;
 
-$btn-link-disabled-color:     $vdm-neutral-mid;
+$btn-link-disabled-color:     $gray-600;
 
 //
 // Forms
@@ -279,28 +296,28 @@ $input-color:                                   $gray-800;
 $input-border-color:                            $gray-400;
 $input-border-width:                            1px;
 
-$input-disabled-bg:                             $vdm-neutral-light;
+$input-disabled-bg:                             $gray-sky;
 
 $input-placeholder-color:                       $gray-600;
 
 
 // custom forms
 
-$custom-control-indicator-disabled-bg:          $vdm-neutral-light;
-$custom-control-label-disabled-color:           $vdm-neutral-mid;
+$custom-control-indicator-disabled-bg:          $gray-sky;
+$custom-control-label-disabled-color:           $gray-600;
 
 $custom-control-gutter:                         3rem;
 $custom-control-spacer-y:                       1rem;
 
 $custom-control-indicator-size:                 1.875rem;
-$custom-control-indicator-bg:                   $vdm-grey-light;
+$custom-control-indicator-bg:                   $gray-sky;
 $custom-control-indicator-bg-size:              50% 50%;
 
-//$custom-control-indicator-focus-box-shadow:     0 0 0 1px $body-bg, 0 0 0 .2rem rgba($vdm-brand, .25);
+//$custom-control-indicator-focus-box-shadow:     0 0 0 1px $body-bg, 0 0 0 .2rem rgba($brand, .25);
 //$custom-control-indicator-focus-box-shadow:     none !important;
 $custom-control-indicator-active-box-shadow:    none !important;
 $custom-control-indicator-active-bg:            none !important;
-$custom-control-indicator-checked-color:        $vdm-brand;  
+$custom-control-indicator-checked-color:        $primary;
 $custom-control-indicator-checked-bg:           $custom-control-indicator-bg;
 
 $custom-checkbox-indicator-border-radius:       $border-radius-lg;
@@ -327,7 +344,7 @@ $checkbox-toggle-padding:               5px;
 
 // Dropdowns
 
-$dropdown-link-active-bg:           $vdm-brand;
+$dropdown-link-active-bg:           $primary;
 
 // Modal
 

@@ -10,11 +10,11 @@
   width: auto;
   padding: $vdm-btn-padding-y $vdm-btn-padding-x;
   border-radius: 2rem;
-  background-color: $vdm-brand;
+  background-color: $primary;
   text-align: center;
   font-size: $font-size-base;
   color: $white;
-  border: $vdm-btn-border-width solid $vdm-brand;
+  border: $vdm-btn-border-width solid $primary;
   text-shadow: none;
   margin-right: 0.725em;
   vertical-align: middle;
@@ -31,7 +31,7 @@
   &:hover {
     @include drop-shadow();
     color: $white;
-    background-color: $vdm-brand;
+    background-color: $primary;
   }
 
   &:disabled {
@@ -47,8 +47,8 @@
   }
 
   &.vdm-btn-secondary {
-    color: $vdm-brand;
-    border: $vdm-btn-border-width solid $vdm-brand;
+    color: $primary;
+    border: $vdm-btn-border-width solid $primary;
     background-color: $white;
 
     &:disabled {

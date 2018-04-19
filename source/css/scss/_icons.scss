@@ -12,9 +12,10 @@
       margin: 0;
     }
     a { // give this a class
+      border: none;
+      color: $black;
       display: flex;
       align-items: center;
-      color: $black;
       text-decoration: none;
       &:hover,
       &:active {

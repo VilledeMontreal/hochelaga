@@ -44,7 +44,7 @@
         .vdm-title {
           @include header(2);
           &:after {
-            background: $vdm-sub-brand;
+            background: $brand;
           }
         }
         .updated {

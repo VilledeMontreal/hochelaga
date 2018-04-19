@@ -1,3 +1,9 @@
+mark,
+.mark {
+  color: $mark-color;
+}
+
+
 //
 // Headings
 //
@@ -55,7 +61,7 @@ h6, .h6 {
     left: 0;
     top: calc(100% - 0.3rem);
     height: $font-size-base / 3;
-    background: $vdm-sub-brand;
+    background: $brand;
   }
 }
 
@@ -87,6 +93,7 @@ p {
 a {
   // TODO: Refactor required for this block, considering the icon tag will be explicite in the markup
   // Used in the side menu
+  border-bottom: $link-border-width solid $link-border-color;
   &.block {
     display: block;
     background: transparent;
@@ -129,12 +136,12 @@ a {
       color: $white;
       &:hover,
       &:active {
-        color: $vdm-brand;
+        color: $primary;
         text-decoration: none;
       }
     }
     &.brand {
-      color: $vdm-brand;
+      color: $primary;
     }
   }
 }
@@ -192,29 +199,25 @@ ul {
     padding: 0;
 
     li {
-      padding-left: 0.8em;
+      padding-left: .8em;
       position: relative;
       margin-bottom: 0.7em;
 
       &:before {
-        content: "";
-        width: 0.35em;
-        height: 0.35em;
-        @extend .rounded-circle;
-        background: $black;
+        @include circle($size: .3rem, $background-color: $body-color);
         position: absolute;
-        top: 0.5em;
+        top: .5rem;
         left: 0;
       }
       // Level 2
       ul {
         list-style-type: none;
-        padding: 0.5em 0 0 1em;
+        padding: 1rem 0 0 1rem;
         li {
-          padding-left: 1.25em;
+          padding-left: 1rem;
           &:before {
-            width: 0.8em;
-            top: 0.7em;
+            width: .4rem;
+            top: .7rem;
             height: 1px;
             border-radius: 0;
           }
@@ -236,12 +239,14 @@ ol {
     position: relative;
     .title {
       @include header(4, bold);
+      color: $headings-color;
     }
 
     > li {
       padding-bottom: 1.5rem;
       &:before {
         @include header(4, bold);
+        color: $headings-color;
         content: counter(ol-counter, decimal);
         counter-increment: ol-counter;
         position: absolute;
@@ -249,7 +254,7 @@ ol {
         height: 1.6em;
         padding: 0 2.15em 0 0;
         left: 0;
-        border-bottom: 4px solid $vdm-sub-brand;
+        border-bottom: 4px solid $brand;
       }
     }
   }
@@ -303,7 +308,9 @@ ol {
   }
   a {
     @include header(4, bold);
-    color: $vdm-brand;
+    border: none;
+    color: $primary;
+    display: inline-block;
   }
   p {
     margin-bottom: 1rem;
@@ -319,11 +326,11 @@ dl {
   margin-bottom: 2em;
   dt {
     @include header(4, bold);
-    color: $vdm-brand;
+    color: $headings-color;
   }
   dd {
     padding-bottom: 2em;
-    border-bottom: 1px solid $vdm-grey-light;
+    border-bottom: 1px solid $gray-200;
     margin-bottom: 2em;
     &:last-of-type {
       padding-bottom: 0;
@@ -347,7 +354,7 @@ blockquote {
       width: 8px;
       height: 35%;
       position: absolute;
-      background: $vdm-sub-brand;
+      background: $brand;
       content: "";
       left: 0;
       top: 0;
@@ -355,15 +362,13 @@ blockquote {
 
     .blockquote-footer {
       font-style: normal;
-      color: $vdm-grey;
-      font-size: $font-size-sm;
       text-align: right;
       &:before {
         display: none;
       }
     }
     cite {
-      color: $black;
+      color: $gray-900;
       font-style: normal;
     }
   }
@@ -378,10 +383,6 @@ blockquote {
   height: 2px;
   background: $black;
   border-radius: 0;
-  &.mock-title {
-    width: 3rem;
-    margin-left: 0;
-  }
   &.divider-title {
     display: inline-block;
     height: .5rem;
@@ -389,7 +390,7 @@ blockquote {
     margin-top: 0;
     margin-bottom: 0;
     margin-right: 10px;
-    background-color: $vdm-sub-brand;
+    background-color: $brand;
   }
   
   &.divider-small {
@@ -415,7 +416,7 @@ blockquote {
 }
 
 .footer-notes {
-  border-top: 1px solid $vdm-grey;
+  border-top: 1px solid $gray-700;
   padding-top: 2rem;
   margin-bottom: 4rem;
 }
@@ -440,7 +441,6 @@ blockquote {
         content: " ";
         left: 0.05em;
         bottom: -0.075em;
-        //border-radius: $vdm-element-border-radius;
         height: 4px;
         background: $black;
       }
@@ -457,6 +457,7 @@ blockquote {
     text-decoration: none;
   }
   a {
+    border: none;
     display: flex;
     flex-direction: row;
     height: 100%;
@@ -472,7 +473,7 @@ blockquote {
     align-items: center;
     .vfi {
       font-size: 2rem;
-      color: $vdm-brand;
+      color: $primary;
     }
   }
 }

@@ -16,9 +16,15 @@
   padding: 20px 20px;
 }
 
+.patternLink {
+  border: none;
+}
+
 // - - - - - - - - - -  - - - - - -
 //  * * * ATOMS * * *
 // - - - - - - - - - -  - - - - - -
+
+
 
 // Fonts
 // - - - - - - - - - -  - - - - - -
@@ -50,21 +56,9 @@
   }
 }
 
-// Block level presentational utilities
-
-// Backgrounds : to show the overlay effect
-.pl-background {
-  &.pl-grey-light {
-    background: darken($vdm-grey-light, 10%);
-  }
-  &.pl-grey {
-    background: $vdm-grey;
-  }
-}
-
 .pl-placeholder-block {
   @extend .pl-padding-10;
-  background: $vdm-grey-light;
+  background: $gray-sky;
   margin-bottom: 1rem;
 }
 
@@ -107,9 +101,9 @@
 }
 
 .pl-size-block {
-  border-top: 1px solid $vdm-grey;
-  border-bottom: 1px solid $vdm-grey;
-  background: $vdm-grey-light;
+  border-top: 1px solid $gray-600;
+  border-bottom: 1px solid $gray-600;
+  background: $gray-sky;
   text-align: center;
   position: relative;
   margin-bottom: 30px;
@@ -155,7 +149,7 @@ $pl-size-box-wrapper-padding: 1rem;
 .pl-size-box-wrapper {
   width: $pl-size-box-wrapper-size;
   height: $pl-size-box-wrapper-size;
-  border: 1px solid $vdm-grey;
+  border: 1px solid $gray-600;
   float: left;
   margin-right: $pl-size-box-wrapper-padding;
 
@@ -165,21 +159,21 @@ $pl-size-box-wrapper-padding: 1rem;
       auto;
   }
   .pl-size-box-margin {
-    background: darken($vdm-grey-light, 20%);
-    border: 1px solid $vdm-grey;
+    background: darken($gray-sky, 20%);
+    border: 1px solid $gray-600;
     z-index: -5;
     width: $pl-size-box-wrapper-size - $pl-size-box-wrapper-padding;
     height: $pl-size-box-wrapper-size - $pl-size-box-wrapper-padding;
     .pl-size-box-base {
-      background: $vdm-grey-light;
-      border: 1px solid $vdm-grey;
+      background: $gray-sky;
+      border: 1px solid $gray-600;
       z-index: 0;
       width: $pl-size-box-wrapper-size - $pl-size-box-wrapper-padding * 2;
       height: $pl-size-box-wrapper-size - $pl-size-box-wrapper-padding * 2;
 
       .pl-size-box-padding {
-        background: lighten($vdm-grey-light, 20%);
-        border: 1px solid $vdm-grey;
+        background: lighten($gray-sky, 20%);
+        border: 1px solid $gray-600;
         z-index: 5;
         width: $pl-size-box-wrapper-size - $pl-size-box-wrapper-padding * 3;
         height: $pl-size-box-wrapper-size - $pl-size-box-wrapper-padding * 3;
@@ -217,7 +211,7 @@ $pl-size-box-wrapper-padding: 1rem;
   padding: 0;
   li {
     margin: 0;
-    padding: 0;
+    padding: 0 0 1.5rem 0;
   }
   &.plain {
     list-style-type: none;
@@ -230,15 +224,15 @@ $pl-size-box-wrapper-padding: 1rem;
 // Documentation
 // - - - - - - - - - -  - - - - - -
 .pl-document {
-  color: $vdm-neutral-mid;
+  color: $gray-600;
   font-size: $font-size-sm;
   ul {
     li {
       line-height: 1.3em;
       pre {
         width: 40%;
-        color: $vdm-neutral-mid;
-        background: $vdm-neutral-light;
+        color: $gray-600;
+        background: $gray-sky;
       }
     }
   }
@@ -285,7 +279,8 @@ $pl-size-box-wrapper-padding: 1rem;
           width: 128px;
           height: 128px;
           font-size: 128px;
-          background-color: rgba(0, 0, 0, 0.05);
+          //background-color: rgba(0, 0, 0, 0.05);
+          background-color: $gray-sky;
           text-rendering: geometricPrecision;
           -webkit-font-smoothing: antialiased;
           vertical-align: middle;
@@ -301,7 +296,7 @@ $pl-size-box-wrapper-padding: 1rem;
           display: block;
           width: 128px;
           height: 128px;
-          background-color: rgba(0, 0, 0, 0.05);
+          background-color: $gray-sky;
           line-height: 1;
           &:before {
             font-size: 128px;
@@ -310,7 +305,7 @@ $pl-size-box-wrapper-padding: 1rem;
         .ic-name,
         .ic-charcode {
           display: block;
-          color: $vdm-neutral-mid;
+          color: $gray-ink;
           margin-top: 0.5em;
           font-size: $font-size-sm;
         }
@@ -336,6 +331,7 @@ $pl-size-box-wrapper-padding: 1rem;
       .pl-swatch-header {
         display: none;
         font-weight: bold;
+        color: $headings-color;
       }
 
       // Row
@@ -351,8 +347,6 @@ $pl-size-box-wrapper-padding: 1rem;
         &-item {
           display: flex;
           flex-flow: row nowrap;
-          //flex-grow: 1;
-          //flex-basis: 0;
           flex: 1;
           padding: 0.5em;
           //word-break: break-word;
@@ -456,7 +450,7 @@ $pl-size-box-wrapper-padding: 1rem;
         border-radius: 15px;
         width: 30px;
         height: 30px;
-        background: $vdm-neutral-light;
+        background: $gray-sky;
         color: $black;
         float: right;
         text-align: center;
@@ -495,7 +489,7 @@ $pl-size-box-wrapper-padding: 1rem;
           border-radius: 15px;
           width: 30px;
           height: 30px;
-          background: $vdm-neutral-light;
+          background: $gray-sky;
           color: $black;
           float: left;
           text-align: center;
@@ -518,6 +512,7 @@ $pl-size-box-wrapper-padding: 1rem;
   // Brand
 
   // Neutrals
+  /*
   .pl-neutral-lightest {
     background: $vdm-neutral-light;
     color: $vdm-neutral-mid;
@@ -542,10 +537,11 @@ $pl-size-box-wrapper-padding: 1rem;
     background: $black;
     color: $white;
   }
+  */
 
   // UI & Alerts
   .pl-ui {
-    background: $vdm-brand;
+    background: $brand;
     color: $white;
   }
 }
@@ -569,12 +565,12 @@ $pl-size-box-wrapper-padding: 1rem;
 //  For regions demonstration pages -- highlights empty regions.
 .pl-regions-demo-page {
   .region {
-    background: lighten($vdm-grey-light, 4%);
-    border: 1px solid lighten($vdm-grey, 40%);
+    background: $gray-sky;
+    border: 1px solid $gray-300;
 
     .region-row {
       .region-content {
-        border: 1px solid $vdm-grey-light;
+        border: 1px solid $gray-sky;
         background: $white;
         padding-top: 3rem;
         padding-bottom: 3rem;
@@ -584,10 +580,10 @@ $pl-size-box-wrapper-padding: 1rem;
     // Shade alterning regions so as to emphasise their limits
     &:nth-child(even) {
       background-color: $white;
-      border: 1px solid lighten($vdm-grey, 35%);
+      border: 1px solid $gray-300;
       .region-row {
         .region-content {
-          background: lighten($vdm-grey-light, 5%);
+          background: $gray-sky;
         }
       }
     }
@@ -716,12 +712,16 @@ $pl-size-box-wrapper-padding: 1rem;
   }
 }
 
-.pl-sub-brand {
-  background: $vdm-sub-brand;
+.pl-gray-ink {
+  background: $gray-ink;
+}
+
+.pl-gray-sky {
+  background: $gray-sky;
 }
 
 .pl-brand {
-  background: $vdm-brand;
+  background: $brand;
 }
 
 .pl-black {
@@ -741,7 +741,15 @@ $pl-size-box-wrapper-padding: 1rem;
   background: $sarcelle-dark;
 }
 
-.pl-sarcelle-light {
-  background: $sarcelle-light;
+.pl-sarcelle-lightest {
+  background: $sarcelle-lightest;
+}
+
+.pl-sarcelle-surprise {
+  background: $sarcelle-surprise;
+}
+
+.pl-sarcelle-atmos {
+  background: $sarcelle-atmos;
 }
 

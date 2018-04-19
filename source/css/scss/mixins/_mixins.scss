@@ -49,7 +49,7 @@
 //  @arg $size - string - any valid text size declaration
 //  @arg $color - string any valid color declaration
 //  @arg $color - string any valid color declaration
-@mixin bullet-left($size: 0.8em, $color: $vdm-brand, $textcolor: $black) {
+@mixin bullet-left($size: 0.8em, $color: $primary, $textcolor: $black) {
   display: inline-block;
   position: relative;
   padding-left: $size * 1.75;
@@ -336,7 +336,7 @@
 }
 
 // Creates a filled circle
-@mixin circle($size: 1rem, $background-color: $vdm-brand, $border: false, $border-color: $gray-600) {
+@mixin circle($size: 1rem, $background-color: $primary, $border: false, $border-color: $gray-600) {
   background-color: $background-color;
   border-radius: 50%;
   content: "";

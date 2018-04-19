@@ -14,13 +14,13 @@
   }
 
   .card-tags {
-    color: $vdm-brand;
+    color: $primary;
     display: inline-block;
     font-weight: $font-weight-bold;
     margin-bottom: 1rem;
     &:before {
       content: "";
-      background-color: $vdm-brand;
+      background-color: $primary;
       width: 0.75em;
       height: 0.75em;
       border-radius: 100%;
@@ -35,6 +35,7 @@
   }
   .card-title {
     @include header(5, "regular");
+    color: $headings-color;
   }
 
   .card-label {
@@ -66,17 +67,18 @@
     align-items: center;
 
     .vfi {
-      color: $vdm-brand;
+      color: $primary;
       font-size: 2.5rem;
       padding-left: 0.5rem;
     }
   }
 
   .vfi {
-    color: $vdm-brand;
+    color: $primary;
   }
 
   > a {
+    border-bottom: none;
     color: $body-color;
     display: flex;
     flex-direction: column;
@@ -84,8 +86,9 @@
     &:hover,
     &:active {
       color: $white;
-      background: $vdm-brand;
+      background: $primary;
       text-decoration: none;
+      .card-title,
       .card-icon-top,
       .card-footer .vfi,
       .card-tags {
@@ -249,10 +252,10 @@
   &.bg-gray-light {
     background-color: transparent;
     .card {
-      background-color: $vdm-grey-light;
+      background-color: $gray-sky;
       border: none;
       .vfi {
-        color: $vdm-brand;
+        color: $primary;
       }
       a:hover {
         .vfi {
