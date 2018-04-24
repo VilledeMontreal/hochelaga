@@ -14,7 +14,7 @@ Large cards should be used in a 1 or 2 columns bootstrap grid layout.
 
 ## Color variants
 
-Add an optionnal <code>.bg-gray-light</code> to <code>.cards</code> for an alternative grey color-scheme.
+Add an optionnal <code>.bg-gray-sky</code> to <code>.cards</code> for an alternative grey color-scheme.
 
 TODO: 
 

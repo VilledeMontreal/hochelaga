@@ -3,19 +3,17 @@
 .sidebar {
   // Links in sidebars
   a {
+    border: none;
     color: $black;
     //word-break: break-all;
     //word-wrap: break-word;
 
-    &.brand {
-      color: $vdm-brand;
-    }
     &:after,
     &:before {
-      color: $vdm-brand;
+      color: $primary;
     }
     .vfi {
-      color: $vdm-brand;
+      color: $primary;
       &:after,
       &:before {
         background: transparent;
@@ -26,10 +24,9 @@
       color: $black;
       &:after,
       &:before {
-        color: $vdm-brand;
+        color: $primary;
       }
       .vfi {
-        // color: $vdm-brand;
         color: $black;
       }
     }
@@ -38,7 +35,7 @@
   // Generic icon links : may or may not be applied to a hyperlink
   .vfi {
     font-size: 1.5em;
-    color: $vdm-brand;
+    color: $primary;
     background: transparent;
   }
 
@@ -132,13 +129,13 @@
       }
       .vfi {
         font-size: 2rem;
-        color: $body-color;
+        color: $headings-color;
       }
     }
     &.icon.icon-xl {
       .vfi {
         font-size: 3.5rem;
-        color: $vdm-brand;
+        color: $primary;
       }
     }
   }
@@ -158,7 +155,7 @@
   // Transparent border brand
   &.sidebar-border {
     .sb-block {
-      border: 1px solid $vdm-grey;
+      border: 1px solid $gray-600;
       background-color: transparent;
       .sidebar-title {
         margin-bottom: 1rem;
@@ -168,7 +165,7 @@
 
   .bullet-left {
     &.brand {
-      color: $vdm-brand;
+      color: $primary;
     }
   }
 

@@ -1,0 +1,72 @@
+{
+  "regionMainClasses" : "",
+  "regionMainContentClasses" : "",
+  "has-lead-text" : true,
+  "hasPagination": true,
+  "formAttributes":  {
+    "input":  {
+      "type-text": {
+        "id" : "searchfield",
+        "label" : "Recherche dans les titres"
+      }
+    }
+  },
+  "text-elements" : {
+		"headings" : {
+			"h1" : {
+				"content" : "Alerts"
+      }
+    }
+  },
+  "cards": {
+    "classes": "bg-gray-sky",
+    "bsgrid-classes": false,
+    "card-item-block-1": [
+      {
+        "classes": "card-fw card-row-layout",
+        "url": "#",
+        "card-date": "29 mars 2018 - 09 h 25",
+        "card-title": "Réouverture de la section des adultes située au rez-de-chaussée de la bibliothèque Marie-Uguay",
+        "card-text": false,
+        "card-media" : {
+          "icon" : false,
+          "img" : false
+        },
+        "footer" : {
+          "outside-body": true
+        }
+      }
+    ],
+    "card-item-block-2": [
+      {
+        "classes": "card-fw card-row-layout",
+        "url": "#",
+        "card-date": "28 mars 2018 - 18 h 35",
+        "card-title": "Fermeture temporaire de la section des adultes située au rez-de-chaussée de la bibliothèque Marie-Uguay",
+        "card-text": false,
+        "card-media" : {
+          "icon" : false,
+          "img" : false
+        },
+        "footer" : {
+          "outside-body": true
+        }
+      },
+      {
+        "classes": "card-fw card-row-layout",
+        "url": "#",
+        "card-date": "28 mars 2018 - 10 h 20",
+        "card-title": "Erratum – Fin de l'avis d’ébullition de l’eau – rue Viau, entre le boulevard Métropolitain et la rue Jean-Talon, Saint-Léonard",
+        "card-text": false,
+        "card-media" : {
+          "icon" : false,
+          "img" : false
+        },
+        "footer" : {
+          "outside-body": true
+        }
+      }
+    ]
+  }
+  
+}

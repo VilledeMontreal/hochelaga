@@ -12,9 +12,9 @@ A list of content blocks for the sidebar. A bunch of variants and thematic block
 
 ### Links
 
-* Links are always black, in sidebars, to make them the brand color, add the .brand modifier class;
-* The hover effect provides an underline, that is it for a difference from surrounding inline elements;
-* Icons for links with icons are always the brand color
+* Links are always black, in sidebars, to make them the primary color, add the .primary modifier class;
+* The hover effect provides an underline, to differenciate from surrounding inline elements;
+* Icons for links with icons are always the primary color
 
 
 ### Sections
@@ -30,7 +30,7 @@ There are 3 color schemes for child blocks inserted into sidebars, the add-on cl
 
 * The base theme, on a light grey background, 
 * The transparent theme with a fat black top stroke (.sidebar.theme-trans-top-stroke)
-* The transparent theme with a light stroke and brand color accents (.sidebar.theme-border-brand)
+* The transparent theme with a light stroke and primary color accents (.sidebar.theme-border-primary)
 
 
 ### Forms

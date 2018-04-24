@@ -23,7 +23,7 @@ html {
 
 .sidebar {
   > * {
-    background-color: $vdm-grey-light;
+    background-color: $gray-sky;
   }
 } // Sidebar
 
@@ -35,8 +35,11 @@ html {
   &.region-content-header {
     // Dark variant
     &.content-header-dark {
-      background-color: $vdm-grey-dark;
+      background-color: $gray-900;
       color: $white;
+      h1,h2,h3,h4,h5,h6, {
+        color: $white;
+      }
     }
 
     &.has-nav-tabs {
@@ -99,8 +102,7 @@ html {
   .section-heading {
     margin-bottom: map-get($spacers, 4);
   }
-  &.bg-gray-light,
-  &.bg-light {
+  &.bg-gray-sky {
     .card {
       border: none;
     }
@@ -167,5 +169,14 @@ html {
   }
   .item-label {
     @include header(6, 'bold');
+  }
+}
+
+// Carousel overrides
+
+
+.carousel-caption {
+  * {
+    color : $carousel-caption-color;
   }
 }

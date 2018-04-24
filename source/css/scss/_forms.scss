@@ -3,8 +3,9 @@
 legend,
 .group-label {
   @extend legend;
-  margin-bottom: 1rem;
+  color: $headings-color;
   font-weight: $font-weight-bold;
+  margin-bottom: 1rem;
 }
 
 .form-group {
@@ -19,6 +20,12 @@ legend,
       }
     }
   }
+}
+
+// Set label color
+.form-group label,
+.custom-control-label {
+  color: $input-label-color;
 }
 
 // wrapper around input that needs inline text addon
@@ -76,7 +83,7 @@ legend,
     align-items: center;
     pointer-events: none;
     top: 0;
-    color: $vdm-brand;
+    color: $primary;
     .vfi {
       font-size: 2rem;
     }
@@ -108,7 +115,7 @@ legend,
       background-image: none;
       font-size: 2rem;
       line-height: 1;
-      color: $vdm-brand;
+      color: $primary;
     }
     @include iconvfi(after, mini-case-coche-coche);
   }
@@ -182,7 +189,7 @@ legend,
       width: 0.6875rem;
       height: 0.6875rem;
       transform: translate(0.59375rem, 0.59375rem);
-      background-color: $vdm-brand;
+      background-color: $primary;
     }
   }
 }
@@ -308,7 +315,7 @@ legend,
       font-size: 2.4rem;
       width: 2.4rem;
       height: 2.4rem;
-      color: $vdm-brand;
+      color: $primary;
     }
   }
 
@@ -404,7 +411,7 @@ legend,
     flex-shrink: 1;
     width: 100%;
     padding-right: 40px;
-    color: $vdm-brand;
+    color: $primary;
     border: none;
     border-radius: 0px;
   }
@@ -415,7 +422,7 @@ legend,
     top: 50%;
     transform: translateY(-50%);
     background-color: transparent;
-    color: $vdm-brand;
+    color: $primary;
   }
   .dropdown-menu {
     border: none;
@@ -440,5 +447,5 @@ legend,
 // Add border around form-combo
 
 .border-combo {
-  border: 2px solid $vdm-brand;
+  border: 2px solid $primary;
 }

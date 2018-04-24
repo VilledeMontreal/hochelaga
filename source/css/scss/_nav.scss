@@ -4,6 +4,9 @@
   border-radius: 0;
   font-size: $font-size-sm;
   margin-bottom: 0;
+  a {
+    border: none;
+  }
 }
 
 .nav-wizard {
@@ -101,7 +104,8 @@
     }
     a {
       @include header(5);
-      background: $vdm-grey-light;
+      background: $gray-sky;
+      border: none;
       color: $black;
       display: flex;
       line-height: 1.9rem;
@@ -110,13 +114,13 @@
       @include iconvfi(after, mini-plus-circulaire);
 
       &[aria-expanded="true"] {
-        color: $vdm-brand;
+        color: $primary;
         @include iconvfi(after, mini-moins-circulaire-plein);
       }
 
       &:hover,
       &:active {
-        color: $vdm-brand;
+        color: $primary;
         text-decoration: none;
         @include iconvfi(after, mini-plus-circulaire-plein);
 
@@ -134,14 +138,14 @@
         align-self: center;
         right: 1.4rem;
         display: block;
-        color: $vdm-brand;
+        color: $primary;
       }
 
       span {
         align-self: center;
 
         &.collapsible-icon {
-          color: $vdm-brand;
+          color: $primary;
           flex-grow: 0;
           font-size: 2rem;
           align-self: center;
@@ -173,6 +177,7 @@
   .collapsible-header {
     a {
       background: transparent;
+      border: none;
     }
     span {
       margin-right: 15px;
@@ -230,7 +235,7 @@ nav {
 .nav-tabs,
 .nav-tabs-dropdown-menu {
   .nav-link {
-    background: $vdm-grey-light;
+    background: $gray-sky;
     border: none;
     color: $black;
     font-weight: $font-weight-bold;
@@ -247,7 +252,7 @@ nav {
           content: " ";
           width: 100%;
           height: $nav-tabs-active-border-width;
-          background-color: $vdm-sub-brand;
+          background-color: $brand;
           position: absolute;
           top: 0;
           left: 0;
@@ -256,7 +261,7 @@ nav {
       }
     }
     &.disabled {
-      background-color: $vdm-grey-light;
+      background-color: $gray-sky;
     }
     &:not(.active) {
       @include media-breakpoint-up(md) {
@@ -270,7 +275,7 @@ nav {
 .nav-tabs-dropdown {
   @include iconvfi(after, chevron-bas);
   @extend .nav-link;
-  background: $vdm-grey-light;
+  background: $gray-sky;
   border: none;
   color: $black;
   font-weight: $font-weight-bold;
@@ -287,7 +292,6 @@ nav {
       content: " ";
       width: 100%;
       height: $nav-tabs-active-border-width;
-      background-color: $vdm-sub-brand;
       position: absolute;
       top: 0;
       left: 0;
@@ -375,7 +379,7 @@ nav {
     position: relative;
     padding: 0.5rem 2em 0.5rem 0.5rem;
     @include iconvfi(after, chevron-bas);
-    border-bottom: 2px solid $vdm-grey;
+    border-bottom: 2px solid $gray-600;
     display: block;
     width: 100%;
     text-decoration: none;
@@ -434,7 +438,6 @@ nav {
         width: 1.5em;
         height: 1.5em;
         line-height: 1.5;
-        // color: $vdm-brand;
       }
     }
   }
@@ -456,7 +459,7 @@ nav {
     padding: 0.5rem 2em 0.5rem 0.5rem;
     border: 0;
     @include iconvfi(after, chevron-bas);
-    border-bottom: 1px solid $vdm-grey;
+    border-bottom: 1px solid $gray-600;
     display: block;
     width: 100%;
 
@@ -510,6 +513,9 @@ nav {
   li {
     position: relative;
     padding: inherit;
+    a {
+      border: none;
+    }
     &:after {
       background-color: $gray-600;
       content: "";
@@ -536,12 +542,12 @@ nav {
     }
   }
   .caption {
-    color: $vdm-grey;
+    color: $gray-ink;
     display: inline-block;
     padding-bottom: .5rem;
   }
   .circle {
-    @include circle($background-color: $vdm-grey-light, $border: true);
+    @include circle($background-color: $gray-200, $border: true);
     z-index: 100;
     position: relative;
   }
@@ -638,14 +644,15 @@ nav {
 
 // Services sub-navigation
 .navbar-services {
-  border-bottom: 1px solid $vdm-grey-light;
+  border-bottom: 1px solid $gray-200;
 
   .navbar-brand,
   .navbar-link {
+    color: $headings-color;
+    display: flex;
     font-size: $font-size-lg;
     line-height: 1.333333;
     padding: 0;
-    display: flex;
   }
 
   .navbar-brand {
@@ -669,7 +676,8 @@ nav {
       }
     }
     a {
-      color: $body-color;
+      border: none;
+      color: $headings-color;
       text-decoration: underline;
     }
   }

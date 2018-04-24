@@ -1,13 +1,12 @@
-<div class="container-fluid pl-atom-icons-grid pl-latest">
-	<div class="wrapper">
-        <ul>
-        {{#icons }}
-            <li>
-                {{> atoms-fonticon-item }}
-                <span class="ic-name">{{ icon-label }}</span>
-                <span class="ic-charcode">{{ icon-content }}</span>
-            </li>
-        {{/icons}}
-        </ul>
-    </div>
+<div class="cotainer-fluid pl-atom-icons-grid">
+	<ul class="row list-unstyled">
+    {{#icons }}
+    <li class="col-6 col-sm-4 col-md-3 col-lg-2">
+      <div class="pl-atom-icon-item">
+        {{> atoms-fonticon-item }}
+        <span class="ic-name">{{ icon-label }}</span>
+      </div>
+    </li>
+    {{/icons}}
+  </ul>
 </div>
