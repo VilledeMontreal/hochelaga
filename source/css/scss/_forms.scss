@@ -3,8 +3,9 @@
 legend,
 .group-label {
   @extend legend;
-  margin-bottom: 1rem;
+  color: $headings-color;
   font-weight: $font-weight-bold;
+  margin-bottom: 1rem;
 }
 
 .form-group {
@@ -19,6 +20,12 @@ legend,
       }
     }
   }
+}
+
+// Set label color
+.form-group label,
+.custom-control-label {
+  color: $input-label-color;
 }
 
 // wrapper around input that needs inline text addon

@@ -178,10 +178,10 @@ $nav-link-padding-x:                2rem;
 $nav-tabs-border-color:             $white;
 $nav-tabs-border-width:             0;
 $nav-tabs-border-radius:            0;
-$nav-tabs-link-hover-border-color:  $red-montreal;
+$nav-tabs-link-hover-border-color:  $brand;
 $nav-tabs-link-active-color:        $black;
 $nav-tabs-link-active-bg:           $body-bg;
-$nav-tabs-link-active-border-color: $red-montreal;
+$nav-tabs-link-active-border-color: $brand;
 
 $nav-tabs-spacing:                  4px;
 $nav-tabs-active-border-width:      4px;
@@ -292,25 +292,26 @@ $btn-link-disabled-color:     $gray-600;
 // Forms
 //
 
-$input-color:                                   $gray-800;
+$input-label-color:                             $gray-900;
+$input-color:                                   $gray-700;
 $input-border-color:                            $gray-400;
 $input-border-width:                            1px;
 
-$input-disabled-bg:                             $gray-sky;
+$input-disabled-bg:                             $gray-200;
 
 $input-placeholder-color:                       $gray-600;
 
 
 // custom forms
 
-$custom-control-indicator-disabled-bg:          $gray-sky;
+$custom-control-indicator-disabled-bg:          $gray-300;
 $custom-control-label-disabled-color:           $gray-600;
 
 $custom-control-gutter:                         3rem;
 $custom-control-spacer-y:                       1rem;
 
 $custom-control-indicator-size:                 1.875rem;
-$custom-control-indicator-bg:                   $gray-sky;
+$custom-control-indicator-bg:                   $gray-300;
 $custom-control-indicator-bg-size:              50% 50%;
 
 //$custom-control-indicator-focus-box-shadow:     0 0 0 1px $body-bg, 0 0 0 .2rem rgba($brand, .25);

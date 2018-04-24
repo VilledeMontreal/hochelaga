@@ -246,10 +246,10 @@
   .card-item {
     display: flex; // must add flex capacity to col to get equalheight
   }
-  .card.bg-gray-light {
+  .card.bg-gray-sky {
     border: none;
   }
-  &.bg-gray-light {
+  &.bg-gray-sky {
     background-color: transparent;
     .card {
       background-color: $gray-sky;

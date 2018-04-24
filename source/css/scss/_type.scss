@@ -189,11 +189,18 @@ h1, h2, h3, h4, h5, h6 {
 
 // Plain list overrides
 // Should all lists carry this look and feel, really?
-ul {
+ul, ol {
   padding-left:  1.25rem;
   li {
     padding-bottom: .5rem;
+    
+    ul, ol {
+      padding: .5rem 0 0 1rem;
+    }
   }
+}
+
+ul {
   &.custom-list {
     list-style-type: none;
     padding: 0;
@@ -201,7 +208,7 @@ ul {
     li {
       padding-left: .8em;
       position: relative;
-      margin-bottom: 0.7em;
+      //margin-bottom: 0.7em;
 
       &:before {
         @include circle($size: .3rem, $background-color: $body-color);
@@ -212,7 +219,7 @@ ul {
       // Level 2
       ul {
         list-style-type: none;
-        padding: 1rem 0 0 1rem;
+        padding: .5rem 0 0 0;
         li {
           padding-left: 1rem;
           &:before {
@@ -347,7 +354,7 @@ blockquote {
     padding-left: 1.75em;
     font-size: $font-size-lg;
     font-weight: normal;
-    font-style: italic;
+    //font-style: italic;
     position: relative;
 
     &:before {
@@ -371,6 +378,17 @@ blockquote {
       color: $gray-900;
       font-style: normal;
     }
+  }
+}
+
+.table {
+  thead th {
+    color: $headings-color;
+  }
+}
+.table-dark {
+  thead th {
+    color: $table-dark-color;
   }
 }
 
@@ -421,6 +439,13 @@ blockquote {
   margin-bottom: 4rem;
 }
 
+.select-all {
+  -webkit-user-select: all;
+  -moz-user-select: all;
+  -ms-user-select: all;
+  user-select: all;
+}
+
 //
 // Dates display
 //
@@ -463,7 +488,7 @@ blockquote {
     height: 100%;
   }
   .link-box-content {
-    color: $body-color;
+    color: $link-color;
     display: flex;
     flex: 1;
     flex-direction: row;
