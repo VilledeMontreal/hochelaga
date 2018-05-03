@@ -4,9 +4,7 @@
   // Links in sidebars
   a {
     border: none;
-    color: $black;
-    //word-break: break-all;
-    //word-wrap: break-word;
+    color: $link-color;
 
     &:after,
     &:before {
@@ -78,20 +76,6 @@
   }
 
   // Lists in sidebars
-
-  // this is too generic! we need list in sidebars!
-  /*
-  ul {
-    &.inline {
-      @extend .list-inline;
-      > li {
-        @extend .list-inline-item;
-        margin-bottom: 0.85rem;
-      }
-    }
-  }
-  */
-
   .list-unstyled {
     margin-bottom: $paragraph-margin-bottom;
     li {
@@ -114,12 +98,12 @@
   // Other fixtures
   // Titles
   .subtitle {
-    @include header(5);
+    font-size: $font-size-lg;
     line-height: $line-height-lg;
   }
   .sidebar-title {
     //margin-bottom: 2em;
-    @include header(4, bold);
+    @include heading(5, bold);
     display: flex;
     // Tweak some styles for icon inside title
     &.icon {
@@ -244,7 +228,7 @@
     border: 1px solid $gray-200;
 
     .sidebar-title {
-      @include header(4, bold);
+      @include heading(4, bold);
     }
     .vfi {
       color: $body-color;

@@ -54,7 +54,7 @@
 // Page link
 
 .page-link {
-  font-size: $h5-font-size;
+  //font-size: $h5-font-size;
 }
 
 //
@@ -99,16 +99,15 @@
   padding: 0;
   position: relative;
   .collapsible-header {
-    h4 {
+    .collapsible-title {
       margin: 0;
     }
     a {
-      @include header(5);
       background: $gray-sky;
       border: none;
-      color: $black;
       display: flex;
-      line-height: 1.9rem;
+      font-size: $font-size-lg;
+      line-height: get-line-height(21px, 32px);
       padding: 1.4rem 5rem 1.4rem 4rem;
       cursor: pointer;
       @include iconvfi(after, mini-plus-circulaire);
@@ -368,6 +367,7 @@ nav {
 
 // Dropdown component
 // @see https://projects.invisionapp.com/d/main#/console/11533069/248706245/preview
+/*
 .vdm-dropdown {
   background: $white;
   padding: 0.75rem 1.7rem 0.75rem 1.1rem;
@@ -442,10 +442,12 @@ nav {
     }
   }
 }
+*/
 
 // To delete after decision is made
 // Draft from https://projects.invisionapp.com/d/main#/console/11533069/248706245/preview
 // Uses the Bootstrap component dropdown
+/*
 .vdm-dropdown-bs {
   background: $white;
   padding: 0.75rem;
@@ -482,6 +484,7 @@ nav {
     font-size: $font-size-base * 2.1875;
   }
 }
+*/
 
 /**
  * Step Wizard
@@ -633,7 +636,7 @@ nav {
   }
   .db-title {
     display: flex;
-    font-size: 24px;
+    font-size: $font-size-xl;
     font-weight: $font-weight-bold;
     justify-content: space-between;
   }
@@ -650,7 +653,7 @@ nav {
   .navbar-link {
     color: $headings-color;
     display: flex;
-    font-size: $font-size-lg;
+    font-size: ($font-size-base * 1.125);  // 18px
     line-height: 1.333333;
     padding: 0;
   }
@@ -672,7 +675,7 @@ nav {
       padding-top: .375rem;
       padding-bottom: .375rem;
       .navbar-brand {
-        font-size: $font-size-lg;
+        font-size: ($font-size-base * 1.125);  // 18px
       }
     }
     a {

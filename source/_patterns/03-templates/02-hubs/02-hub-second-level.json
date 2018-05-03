@@ -9,10 +9,10 @@
   "featuredSection": {
     "cards": {
       "classes": false,
-      "bsgrid-classes": "col-12 col-md-6 col-lg-3",
+      "bsgrid-classes": "col-12 col-md-6 col-lg-4",
       "headings": {
         "text": "Section heading",
-        "class": "display-4 section-heading"
+        "class": "section-heading"
       },
       "card-item" : [
         {
@@ -68,31 +68,13 @@
           "card-media" : {
             "icon" : "vfi-document"
           }
-        },
-        {
-          "classes" : false,
-          "url" : "#",
-          "card-title" : "Commander du soleil",
-          "card-text" : false,
-          "card-media" : {
-            "icon" : "vfi-soleil"
-          }
-        },
-        {
-          "classes" : false,
-          "url" : "#",
-          "card-title" : "Payer un compte de taxe",
-          "card-text" : false,
-          "card-media" : {
-            "icon" : "vfi-enveloppe"
-          }
         }
       ]
     }
   },
   "demandesListes": {
     "cards": {
-      "classes": "bg-gray-sky",
+      "classes": "",
       "bsgrid-classes": "col-12",
       "headings": {
         "text": "Section headings",

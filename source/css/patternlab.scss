@@ -367,6 +367,9 @@ $pl-size-box-wrapper-padding: 1rem;
 
 .pl-swatches-flex{
   .pl-swatches-wrapper {
+    .pl-swatches-title {
+      font-size: $font-size-lg;
+    }
     .pl-swatches {
       display: flex;
       flex-flow: column nowrap;
@@ -376,7 +379,7 @@ $pl-size-box-wrapper-padding: 1rem;
       // Header
       .pl-swatch-header {
         display: none;
-        font-weight: bold;
+        font-weight: $font-weight-bold;
         color: $headings-color;
       }
 
@@ -639,3 +642,11 @@ $pl-size-box-wrapper-padding: 1rem;
   background: $sarcelle-atmos;
 }
 
+
+// sg-pattern-extra
+
+.sg-pattern-extra {
+  a {
+    border: none;
+  }
+}
