@@ -1,5 +1,5 @@
 ---
-title: Button
+title: Button Primary
 ---
 
 @see atom-buttons for complete specs

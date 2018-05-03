@@ -9,7 +9,7 @@
   width: 100%;
 
   .card-icon-top {
-    font-size: 3.6rem;
+    font-size: 4.5rem;
     margin-top: 3rem;
   }
 
@@ -34,12 +34,16 @@
     padding-bottom: 1rem;
   }
   .card-title {
-    @include header(5, "regular");
-    color: $headings-color;
+    @include card-heading();
+    margin-bottom: 1rem;
+    &:last-child {
+      margin-bottom: 0;
+    }
   }
 
   .card-label {
-    @include header(5, "bold");
+    @include card-heading();
+    font-weight: $font-weight-bold;
   }
 
   .card-body {
@@ -148,7 +152,8 @@
   &.card-large,
   &.card-featured {
     .card-title {
-      @include header(4, "bold");
+      //@include heading(5, "bold");
+      @include card-heading();
     }
     .card-body {
       text-align: left;
@@ -168,6 +173,14 @@
 
   // Large cards specifc
   &.card-large {
+    &.card-row-layout {
+      .card-body {
+        text-align: center;
+        @include media-breakpoint-up(lg) {
+          text-align: left;
+        }
+      }
+    }
     &.card-fw {
       @include media-breakpoint-up(lg) {
         .card-img-top {
@@ -223,11 +236,6 @@
     .card-label {
       font-size: $font-size-base;
     }
-  }
-
-  // Color variant - Is this tied with the card variant? or variant agnostic
-  &.white-scheme {
-    border: none;
   }
 
   .rounded-circle {

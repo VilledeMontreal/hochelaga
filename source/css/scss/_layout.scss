@@ -103,9 +103,10 @@ html {
     margin-bottom: map-get($spacers, 4);
   }
   &.bg-gray-sky {
-    .card {
+   /* .card {
       border: none;
     }
+    */
   }
 }
 .services-heading {
@@ -133,7 +134,7 @@ html {
     padding-bottom: 1rem;
     align-items: center;
     h2 {
-      @include header(4, "bold");
+      @include heading(4, "bold");
       display: inline-block;
       margin-bottom: 0;
     }
@@ -154,6 +155,7 @@ html {
     padding-top: 1.5rem;
   }
   .label {
+    color: $headings-color;
     font-weight: $font-weight-bold;
   }
 }
@@ -163,12 +165,14 @@ html {
 //
 .block-coordinates {
   .title {
-    font-size: 1.5rem;
+    font-size: $font-size-xl;
+    line-height: get-line-height(24px,32px);
     font-weight: $font-weight-bold;
     margin-bottom: 1.5rem;
   }
   .item-label {
-    @include header(6, 'bold');
+    color: $headings-color;
+    font-weight: $font-weight-bold;
   }
 }
 

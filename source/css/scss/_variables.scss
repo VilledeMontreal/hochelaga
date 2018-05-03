@@ -134,27 +134,49 @@ $font-weight-regular:         400; // Nunito Sans Regular
 $font-weight-bold:            700; // Nunito Sans Bold
 
 $line-height-base:            1.5;
-$line-height-lg:              1.625;
-$line-height-sm:              1.3125;
+$line-height-xl:              1.3333;
+$line-height-lg:              1.5238;
+$line-height-sm:              1.3333;
 
 $font-size-base:              1rem;       // Assumes the browser default, typically `16px`
 $font-size-xl:                1.5rem;     // ~24px
-$font-size-lg:                1.125rem;   // ~18px
+$font-size-lg:                1.3125rem;  // ~21px
 $font-size-md:                0.875rem;   // ~14px
 $font-size-sm:                0.75rem;    // ~12px
 
-$h1-font-size:                $font-size-base * 4.1875;     // 67px
-$h2-font-size:                $font-size-base * 3.125;      // 50px
-$h3-font-size:                $font-size-base * 2.3125;     // 37px
-$h4-font-size:                $font-size-base * 1.75;       // 28px
-$h5-font-size:                $font-size-base * 1.3125;     // 21px
-$h6-font-size:                $font-size-base;              // 16px
+$h1-font-size:                $font-size-base * 3.25;       // 52px
+$h2-font-size:                $font-size-base * 2.8125;     // 45px
+$h3-font-size:                $font-size-base * 2.4375;     // 39px
+$h4-font-size:                $font-size-base * 2;          // 32px
+$h5-font-size:                $font-size-base * 1.625;      // 26px
+$h6-font-size:                $font-size-base * 1.1875;     // 19px
 
-$lead-font-size:              ($font-size-base * 1.25);
+//$headings-margin-bottom:      ($spacer / 2);
+$headings-font-weight:        $font-weight-regular;
+$headings-line-height:        1.23; // specific line-height for each level, see mixins header
+$headings-color:              inherit !default;
+
+$display1-size:               4.0625rem; //6rem;
+$display2-size:               3.6875rem; //5.5rem;
+$display3-size:               3.25rem;   //4.5rem;
+$display4-size:               2.8125rem; //3.5rem;
+
+$display1-weight:             300;
+$display2-weight:             300;
+$display3-weight:             300;
+$display4-weight:             300;
+
+// Display line-height are dealt directly in the class because it's specific to each display 
+$display-line-height:         $headings-line-height;
+
+$lead-font-size:              $font-size-lg;     // 21px
+$lead-line-height:            get-line-height(21px, 32px);    // 32px
 $lead-font-weight:            $font-weight-regular;
 
+$small-font-size:             .75em;
+
 $blockquote-small-color:      $body-color;
-$blockquote-font-size:        ($font-size-base * 1.25) !default;
+$blockquote-font-size:        ($font-size-base * 1.25);
 
 
 //== Icons fonts vfi class, imported from "@villemontreal/font-icon
@@ -207,19 +229,19 @@ $pagination-icon-padding-lg:        1.0625rem;
 $pagination-color:                  $gray-600;
 $pagination-bg:                     $white;
 $pagination-border-width:           1px;
-$pagination-border-color:           $gray-600;
+$pagination-border-color:           $gray-400;
 
 $pagination-hover-color:            $primary;
 $pagination-hover-bg:               $gray-sky;
-$pagination-hover-border-color:     $gray-600;
+$pagination-hover-border-color:     $gray-400;
 
 $pagination-active-color:           $white;
 $pagination-active-bg:              $primary;
-$pagination-active-border-color:    $gray-600; 
+$pagination-active-border-color:    $gray-400; 
 
-$pagination-disabled-color:         $gray-600;
+$pagination-disabled-color:         $gray-400;
 $pagination-disabled-bg:            $white;
-$pagination-disabled-border-color:  $gray-600;
+$pagination-disabled-border-color:  $gray-400;
 
 // Breadcrumbs
 
@@ -242,7 +264,7 @@ $jumbotron-bg:                      $white;
 // Cards
 
 $card-border-radius:                0;
-$card-border-color:                 $primary;
+$card-border-color:                 $gray-400;
 $card-inner-border-radius:          0;
 //$card-bg:                           $gray-500;
 

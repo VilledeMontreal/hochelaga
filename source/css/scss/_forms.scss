@@ -158,13 +158,21 @@ legend,
     }
 
     .card-label {
-      @include header(5, "bold");
+      //@include heading(5, "bold");
+      @include card-heading();
     }
 
     .card-title {
-      @include header(5);
+      //@include heading(5);
+      @include card-heading();
     }
 
+  }
+
+  .custom-control-input:disabled ~ .custom-control-label {
+    .card-title, .card-label {
+      color: $custom-control-label-disabled-color;
+    }
   }
 
   // Set checked styles here: change border-color or apply other styles to label

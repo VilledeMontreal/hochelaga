@@ -41,12 +41,12 @@
         margin-left: 0;
         margin-bottom: 3rem;
 
-        .vdm-title {
-          @include header(2);
+        /*.vdm-title {
+          @include heading(2);
           &:after {
             background: $brand;
           }
-        }
+        }*/
         .updated {
           position: relative;
           margin-left: 4.75rem;
