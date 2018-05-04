@@ -457,3 +457,24 @@ legend,
 .border-combo {
   border: 2px solid $primary;
 }
+
+// file drop container
+
+.file-drop-container {
+  border-radius: $input-border-radius;
+  border: dashed 1px $gray-400;
+  display: flex;
+  @extend .p-4;
+  flex-direction: column;
+  align-items: center;
+
+  .help-text {
+    color: $input-placeholder-color;
+    margin-bottom: 1rem;
+    text-align: center;
+  }
+
+  &.file-over{
+    background: $gray-400;
+  }
+}

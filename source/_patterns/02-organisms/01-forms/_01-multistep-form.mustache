@@ -1,5 +1,5 @@
 <form class="form-wizard">
-  {{# hasStepIdentificationIndividual }}
+  {{# hasStepIdentificationIndividual}}
   <div class="form-step">
     <fieldset>
       <legend>Responsable de l'entreprise</legend>
@@ -40,8 +40,8 @@
       </div>
     </fieldset>
   </div>
-  {{/ hasStepIdentificationIndividual }}
-  {{# hasStepIdentificationEnterprise }}
+  {{/ hasStepIdentificationIndividual}}
+  {{# hasStepIdentificationEnterprise}}
   <div class="form-step">
     <fieldset>
       <legend>Identification de l'entreprise</legend>
@@ -82,21 +82,36 @@
       </div>
     </div>
   </div>
-  {{/ hasStepIdentificationEnterprise }}
-  {{# hasStepDeclaration }}
+  {{/ hasStepIdentificationEnterprise}}
+  {{# hasStepDescription}}
+  <div class="form-step">
+    <fieldset>
+      <legend>Description</legend>
+      <div class="form-group">
+        <label>Photo (facultatif)</label>
+        {{> atoms-file-upload }}
+      </div>
+      <div class="form-group">
+        <label for="autres-details">Autres détails (facultatif)</label>
+        <textarea class="form-control" rows="3" id="autres-details"></textarea>
+      </div>
+    </fieldset>
+  </div>
+  {{/ hasStepDescription}}
+  {{# hasStepDeclaration}}
   <div class="form-step">
     <fieldset>
       <legend>Est-ce qu’une matière dangereuse visée en vertu du règlement est produite, entreposée ou détenue à cet établissement?</legend>
       <div class="form-group">
       {{# radiosDeclaration }}
         {{> atoms-radio-custom-form-item }}
-      {{/ radiosDeclaration }}
+      {{/ radiosDeclaration}}
       </div>
     </fieldset>
     <div class="form-group">
-      {{# checkboxDeclaration }}
+      {{# checkboxDeclaration}}
         {{> atoms-checkbox-custom-form-item }}
-      {{/ checkboxDeclaration }}
+      {{/ checkboxDeclaration}}
     </div>
   </div>
   {{/ hasStepDeclaration }}
