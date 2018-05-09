@@ -178,9 +178,14 @@ html {
 
 // Carousel overrides
 
-
 .carousel-caption {
   * {
     color : $carousel-caption-color;
   }
+}
+
+// Wizard layout
+.wizard-content {
+  padding-right: $grid-gutter-width;
+  padding-left: $grid-gutter-width;
 }

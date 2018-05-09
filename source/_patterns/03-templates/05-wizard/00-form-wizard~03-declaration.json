@@ -4,20 +4,23 @@
   "summaryHasNavButtons": false,
   "hasStepIdentificationIndividual": false,
   "hasStepDeclaration": true,
-  "radiosDeclaration": [
-    {
-      "class": "",
-      "id": "radioDeclaration01-1",
-      "label": "Oui",
-      "name": "radiosDeclaration"
-    },
-    {
-      "class": "",
-      "id": "radioDeclaration02-1",
-      "label": "Non",
-      "name": "radiosDeclaration"
-    }
-  ],
+  "radiosDeclaration": {
+    "label": false,
+    "formRadiosItems": [
+      {
+        "class": "",
+        "id": "radioDeclaration01-1",
+        "label": "Oui",
+        "name": "radiosDeclaration"
+      },
+      {
+        "class": "",
+        "id": "radioDeclaration02-1",
+        "label": "Non",
+        "name": "radiosDeclaration"
+      }
+    ]
+  },
   "checkboxDeclaration": [
     {
       "class": "custom-control-card",

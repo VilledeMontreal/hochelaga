@@ -4,20 +4,23 @@
   "summaryHasNavButtons": false,
   "hasStepIdentificationIndividual": false,
   "hasStepAddCardsModal": true,
-  "radiosAddReservoir": [
-    {
-      "class": "",
-      "id": "radioAddReservoir01-1",
-      "label": "Oui",
-      "name": "radiosAddReservoir"
-    },
-    {
-      "class": "",
-      "id": "radioAddReservoir02-1",
-      "label": "Non",
-      "name": "radiosAddReservoir"
-    }
-  ],
+  "radiosAddReservoir": {
+    "label": false,
+    "formRadiosItems": [
+      {
+        "class": "",
+        "id": "radioAddReservoir01-1",
+        "label": "Oui",
+        "name": "radiosAddReservoir"
+      },
+      {
+        "class": "",
+        "id": "radioAddReservoir02-1",
+        "label": "Non",
+        "name": "radiosAddReservoir"
+      }
+    ]
+  },
   "cards": {
     "classes": false,
     "bsgrid-classes": "col-12 col-md-6",

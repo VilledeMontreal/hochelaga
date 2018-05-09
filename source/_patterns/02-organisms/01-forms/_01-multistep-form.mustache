@@ -66,7 +66,7 @@
       </div>
     </fieldset>
     <div class="row">
-      <div class="form-group col-md-6">
+      <div class="form-group col-md-6 required">
         <label for="inputNEQ">NEQ</label>
         <input type="text" class="form-control" id="inputNEQ" placeholder="02-89483-084-93884">
       </div>
@@ -91,6 +91,11 @@
         <label>Photo (facultatif)</label>
         {{> atoms-file-upload }}
       </div>
+      {{# formRadios}}
+      <div class="form-group required">
+        {{> atoms-radio-custom-form-item }}
+      </div>
+      {{/ formRadios}}
       <div class="form-group">
         <label for="autres-details">Autres détails (facultatif)</label>
         <textarea class="form-control" rows="3" id="autres-details"></textarea>
@@ -148,9 +153,9 @@
     <fieldset>
       <legend>Est-ce qu’une matière dangereuse visée en vertu du règlement est produite, entreposée ou détenue à cet établissement?</legend>
       <div class="form-group"> 
-      {{# radiosAddReservoir }}
+      {{# radiosAddReservoir}}
         {{> atoms-radio-custom-form-item }}
-      {{/ radiosAddReservoir }}
+      {{/ radiosAddReservoir}}
       </div>
     </fieldset>
     <div class="form-group">

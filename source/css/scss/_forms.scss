@@ -11,7 +11,7 @@ legend,
 .form-group {
   margin-bottom: 2rem;
   &.required {
-    label {
+    > label {
       &:after {
         content: "*";
         color: $red;
@@ -462,14 +462,14 @@ legend,
 
 .file-drop-container {
   border-radius: $input-border-radius;
-  border: dashed 1px $gray-400;
+  border: dashed 2px $gray-400;
   display: flex;
   @extend .p-4;
   flex-direction: column;
   align-items: center;
 
   .help-text {
-    color: $input-placeholder-color;
+    color: $input-color;
     margin-bottom: 1rem;
     text-align: center;
   }
