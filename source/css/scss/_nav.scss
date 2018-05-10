@@ -46,6 +46,7 @@
         display: block;
         font-size: 1em;
         line-height: 1;
+        color: $pagination-color;
       }
     }
   }
@@ -53,9 +54,6 @@
 
 // Page link
 
-.page-link {
-  //font-size: $h5-font-size;
-}
 
 //
 // Sizing
@@ -365,127 +363,6 @@ nav {
   }
 }
 
-// Dropdown component
-// @see https://projects.invisionapp.com/d/main#/console/11533069/248706245/preview
-/*
-.vdm-dropdown {
-  background: $white;
-  padding: 0.75rem 1.7rem 0.75rem 1.1rem;
-  @include drop-shadow;
-  display: inline-block;
-  font-size: $font-size-base * 2.1875;
-
-  .dropdown-trigger {
-    position: relative;
-    padding: 0.5rem 2em 0.5rem 0.5rem;
-    @include iconvfi(after, chevron-bas);
-    border-bottom: 2px solid $gray-600;
-    display: block;
-    width: 100%;
-    text-decoration: none;
-    color: $black;
-
-    &:after {
-      font-size: 1em;
-      position: absolute;
-      top: 50%;
-      transform: translateY(-50%);
-      left: calc(100% - 1em);
-      display: block;
-      width: 1em;
-      height: 1em;
-      line-height: 1;
-    }
-
-    &[aria-expanded="true"] {
-      @include iconvfi(after, chevron-haut);
-    }
-  }
-  .dropdown-elements {
-    list-style-type: none;
-    margin: 1.7rem 0 1rem 0;
-    padding: 0;
-  }
-
-  // Controls bootstrap collapsing animation speed
-  .collapsing {
-    transition: height 0.1s ease;
-  }
-
-  .dropdown-element {
-    > a {
-      font-size: $font-size-base * 2.1875;
-      color: $black;
-      display: block;
-      line-height: 4rem;
-      list-style-type: none;
-      padding-right: 2em;
-      position: relative;
-
-      &:hover,
-      &:active {
-        @include iconvfi(after, fleche-droite);
-        text-decoration: none;
-      }
-
-      &:after {
-        font-size: 1.5em;
-        position: absolute;
-        top: 50%;
-        transform: translateY(-50%);
-        left: calc(100% - 0.9em);
-        display: block;
-        width: 1.5em;
-        height: 1.5em;
-        line-height: 1.5;
-      }
-    }
-  }
-}
-*/
-
-// To delete after decision is made
-// Draft from https://projects.invisionapp.com/d/main#/console/11533069/248706245/preview
-// Uses the Bootstrap component dropdown
-/*
-.vdm-dropdown-bs {
-  background: $white;
-  padding: 0.75rem;
-  @include drop-shadow;
-  display: inline-block;
-  font-size: $font-size-base * 2.1875;
-
-  .dropdown-toggle {
-    background: transparent;
-    border-radius: 0;
-    padding: 0.5rem 2em 0.5rem 0.5rem;
-    border: 0;
-    @include iconvfi(after, chevron-bas);
-    border-bottom: 1px solid $gray-600;
-    display: block;
-    width: 100%;
-
-    &:before {
-      font-size: 1.3em;
-      position: absolute;
-      top: 50%;
-      transform: translateY(-50%);
-      left: calc(100% - 1.3em);
-      display: block;
-      width: 1.3em;
-      height: 1.3em;
-      line-height: 1.3;
-    }
-    &:after {
-      display: none;
-    }
-  }
-  .dropdown-item {
-    font-size: $font-size-base * 2.1875;
-  }
-}
-*/
-
 /**
  * Step Wizard
  */
@@ -663,17 +540,18 @@ nav {
     font-weight: $font-weight-bold;
   }
 
-  .navbar-link {
-    padding-bottom: 5px;
+  .navbar-icon {
+    font-size: 4rem;
+    color: $primary;
+    margin-right: 1rem;
   }
 
   .navbar-header {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
     margin-left: $header-icon-width;
-    padding-top: 1.25rem;
-    padding-bottom: 1.25rem; 
-    &.navbar-header-profile-link {
-      padding-top: .375rem;
-      padding-bottom: .375rem;
+    &.navbar-header-service-link {
       .navbar-brand {
         font-size: ($font-size-base * 1.125);  // 18px
       }
@@ -682,6 +560,49 @@ nav {
       border: none;
       color: $headings-color;
       text-decoration: underline;
+    }
+    ul {
+      @extend .list-inline;
+      display: flex;
+      margin-bottom: 0;
+      li {
+        display: flex;
+        align-items: center;
+        flex-direction: row;
+        flex-wrap: wrap;
+        padding-bottom: 0;
+        font-size: ($font-size-base * 1.125);
+        a {
+          font-weight: $font-weight-bold;
+          text-decoration: none;
+        }
+      }
+      li {
+        // The separator between breadcrumbs (by default, a forward-slash: "/")
+        + li {
+          padding-left: .5rem;
+          @include iconvfi(before, chevron-droite);
+          &::before {
+            display: inline-block; // Suppress underlining of the separator in modern browsers
+            padding-right: .5rem;
+            font-weight: 700;
+          }
+        }
+      
+        // IE9-11 hack to properly handle hyperlink underlines for breadcrumbs built
+        // without `<ul>`s. The `::before` pseudo-element generates an element
+        // *within* the .breadcrumb-item and thereby inherits the `text-decoration`.
+        //
+        // To trick IE into suppressing the underline, we give the pseudo-element an
+        // underline and then immediately remove it.
+        + li:hover::before {
+          text-decoration: underline;
+        }
+        // stylelint-disable-next-line no-duplicate-selectors
+        + li:hover::before {
+          text-decoration: none;
+        }
+      }
     }
   }
 

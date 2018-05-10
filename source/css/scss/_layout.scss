@@ -27,6 +27,13 @@ html {
   }
 } // Sidebar
 
+// Tweak grid container padding
+
+.container {
+  padding-right: $grid-gutter-width;
+  padding-left: $grid-gutter-width;
+}
+
 
 // Do we really need this?
 .region {
@@ -102,12 +109,6 @@ html {
   .section-heading {
     margin-bottom: map-get($spacers, 4);
   }
-  &.bg-gray-sky {
-   /* .card {
-      border: none;
-    }
-    */
-  }
 }
 .services-heading {
   padding-top: 3rem;
@@ -153,6 +154,18 @@ html {
     border-bottom: 1px solid $gray-400;
     margin-bottom: 2rem;
     padding-top: 1.5rem;
+    padding-bottom: 1.5rem;
+    .vfi {
+      color: $primary;
+      font-size: 4rem;
+      margin-top: -.5rem;
+      margin-right: 1rem;
+    }
+  }
+  .summary-icon-offset {
+    @include media-breakpoint-up(md){
+      padding-left: 80px + ($grid-gutter-width/2);
+    }
   }
   .label {
     color: $headings-color;
@@ -182,10 +195,4 @@ html {
   * {
     color : $carousel-caption-color;
   }
-}
-
-// Wizard layout
-.wizard-content {
-  padding-right: $grid-gutter-width;
-  padding-left: $grid-gutter-width;
 }

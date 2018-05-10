@@ -1,16 +1,31 @@
 <nav class="navbar navbar-services" aria-label="Service navigation" role="navigation">
   <div class="container-fluid">
-    {{# hasProfileLink }}
-    <div class="navbar-header navbar-header-profile-link">
-      <span class="navbar-link"><a href="#">{{ enterpriseName }}</a></span>
-      <span class="navbar-brand">{{ serviceName }}</span>
+    {{# hasServiceLink}}
+    <div class="navbar-header navbar-header-service-link">
+      <span class="navbar-icon vfi {{ serviceIcon }}" aria-hidden="true"></span>
+      <div class="d-flex flex-column">
+        <span class="navbar-link"><a href="#">{{ enterpriseName }}</a></span>
+        <ul>
+          {{# serviceNav}}
+          <li>
+            {{# url}}
+            <a href="{{ url }}">{{ label }}</a>
+            {{/ url}}
+            {{^url}}
+            {{ label }}
+            {{/ url}}
+          </li>
+          {{/ serviceNav}}
+        </ul>
+      </div>
     </div>
-    {{/ hasProfileLink }}
-    {{^ hasProfileLink }}
+    {{/ hasServiceLink}}
+    {{^ hasServiceLink}}
     <div class="navbar-header">
+      <span class="navbar-icon vfi vfi-311-mobile" aria-hidden="true"></span>
       <span class="navbar-brand">{{ serviceName }}</span>
     </div>
-    {{/ hasProfileLink}}
+    {{/ hasServiceLink}}
     
     <ul class="nav">
       <li class="nav-item">{{> atoms-button("buttonClass": "vdm-btn vdm-btn-secondary vdm-btn-sm", "buttonText": "Enregistrer")}}</li>

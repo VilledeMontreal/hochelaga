@@ -94,3 +94,12 @@ a {
     text-decoration: none;
   }
 }
+
+.btn-link {
+  border-bottom: 1px solid $sarcelle-atmos;
+  border-radius: 0;
+  padding: 0;
+  &:hover {
+    border-bottom: 1px solid $sarcelle-atmos;
+  }
+}

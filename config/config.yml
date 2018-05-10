@@ -13,13 +13,14 @@ patternStates:
     - inprogress
     - inreview
     - complete
-styleGuideExcludes: 'pages'
+styleGuideExcludes: pages
 cacheBusterOn: 'true'
 exportDir: export
 publicDir: public
 sourceDir: source
 defaultPattern: all
 defaultShowPatternInfo: false
+baseDir: /Users/uboul8b/Sites/bao-test-vdm/
 plugins:
     reload:
         enabled: true
