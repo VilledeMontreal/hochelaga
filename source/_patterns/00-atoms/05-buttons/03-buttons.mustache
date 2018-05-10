@@ -1,14 +1,12 @@
-<div>
-  <button type="button" class="vdm-btn">Bouton principal</button>
-  <button type="button" class="vdm-btn vdm-btn-secondary">Bouton secondaire</button>
+<div class="pl-button">
+  {{> atoms-button(buttonClass: btn-primary, buttonText: "Primary button")}}
+  {{> atoms-button(buttonClass: btn-secondary, buttonText: "Secondary button")}}
 </div>
-<div>
-  <button type="button" class="vdm-btn" disabled>Bouton désactivé</button>
-  <button type="button" class="vdm-btn vdm-btn-secondary" disabled>Bouton secondaire désactivé</button>
+<div class="pl-button">
+  {{> atoms-button(buttonClass: btn-primary, buttonText: "Disabled button", buttonState: "disabled")}}
 </div>
-<div>
-  <button type="button" class="vdm-btn vdm-btn-sm">Bouton petit</button>
-  <button type="button" class="vdm-btn vdm-btn-sm vdm-btn-secondary">Bouton petit</button>
-  <a href="#" class="vdm-btn" role="button">Bouton lien</a>
-  <!--<button type="button" class="pl-button vdm-btn vdm-btn-wide">Bouton pleine largeur</button>-->
+<div class="pl-button">
+  {{> atoms-button(buttonClass: "btn-primary btn-sm", buttonText: "Primary small button")}}
+  {{> atoms-button(buttonClass: "btn-secondary btn-sm", buttonText: "Secondary small button")}}
+  <a href="#" class="btn-link" role="button">Button link</a>
 </div>
