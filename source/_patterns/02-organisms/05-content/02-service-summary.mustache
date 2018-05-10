@@ -2,33 +2,35 @@
   {{# summaryHasHeading}}
   <div class="summary-heading">
     <h2>Année X</h2>
-    {{# summaryHasNavButtons }}
+    {{# summaryHasNavButtons}}
     <ul class="nav">
       <li class="nav-item">{{> atoms-button("buttonClass": "vdm-btn vdm-btn-secondary", "buttonText": "modifier") }}</li>
       <li class="nav-item">{{> atoms-button("buttonText": "Imprimer") }}</li>
     </ul>
-    {{/ summaryHasNavButtons }}
+    {{/ summaryHasNavButtons}}
   </div>
-  {{/ summaryHasHeading }}
+  {{/ summaryHasHeading}}
   <div class="summary-content {{ summaryContentClass }}">
-    <div class="row">
-      {{# summaryFull }}
+    {{# summaryFull}}
+    <div class="row mb-3">
       <div class="col-12 col-md-6">
         <span class="label">Date</span>
-        <p>Valeur xyz</p>
+        <span>Valeur xyz</span>
       </div>
       <div class="col-12 col-md-6">
         <span class="label">No. de référence</span>
-        <p>Valeur xyz</p>
+        <span>Valeur xyz</span>
       </div>
-      {{/ summaryFull }}
+    </div>
+    {{/ summaryFull}}
+    <div class="row">
       <div class="col-12 col-md-6">
         <span class="label">Entreprise</span>
-        <p>Valeur xyz</p>
+        <span>Valeur xyz</span>
       </div>
       <div class="col-12 col-md-6">
         <span class="label">Établissement</span>
-        <p>Valeur xyz</p>
+        <span>Valeur xyz</span>
       </div>
     </div>
   </div>
