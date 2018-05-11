@@ -2,6 +2,7 @@
 
 
 @import "scss/functions";
+@import "~bootstrap/scss/functions";
 // Default variables override.
 // MUST come before bootstrap variables in SASS because of !default tags used in framework variables
 @import "scss/variables";
@@ -9,7 +10,6 @@
 // Bootstrap Framework.
 // @import "~bootstrap/scss/bootstrap";
 
-@import "~bootstrap/scss/functions";
 @import "~bootstrap/scss/variables";
 
 // we use our custom mixins stylesheet for partial importation of bootstrap mixins
@@ -55,7 +55,7 @@
 // Import VDM styles files
 @import "scss/vdm-icons-map";
 @import "scss/fonts";
-//@import "scss/mixins/mixins";
+@import "scss/mixins/mixins";
 @import "scss/header";
 @import "scss/footer";
 @import "scss/layout";

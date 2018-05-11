@@ -253,7 +253,7 @@
           </form>
         </div>
         <div class="modal-footer justify-content-start">
-          <button type="button" class="vdm-btn vdm-btn-sm">Ajouter</button>
+          {{> atoms-button(buttonClass: "btn-primary btn-sm", buttonText: "Ajouter")}}
         </div>
       </div>
     </div>
@@ -300,10 +300,10 @@
   <div class="form-group form-action-group">
     <ul>
       <li class="first">
-        {{> atoms-button("buttonClass": "vdm-btn vdm-btn-secondary btn-prev", "buttonText": "Précédent" ) }}
+        {{> atoms-button("buttonClass": "btn-secondary btn-prev", "buttonText": "Précédent" ) }}
       </li>
       <li class="last">
-        {{> atoms-button("buttonClass": "vdm-btn btn-next", "buttonText": "Soumettre") }}
+        {{> atoms-button("buttonClass": "btn-primary btn-next", "buttonText": "Soumettre") }}
       </li>
     </ul>
   </div>
