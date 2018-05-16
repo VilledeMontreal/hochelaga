@@ -478,3 +478,71 @@ legend,
     background: $gray-400;
   }
 }
+
+// Feedback form
+
+.feedback-form-container {
+  background: $white;
+  border: 1px solid $card-border-color;
+  margin-top: 2.5rem;
+  margin-bottom: 2.5rem;
+  padding: 1.5rem 2rem;
+
+  .feedback-form-header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 1.5rem;
+
+    .h5 {
+      color: $headings-color;
+      display: block;
+      font-size: $font-size-lg;
+      font-weight: $font-weight-bold;
+      margin-bottom: 0;
+    }
+  
+    .vfi {
+      font-size: 3.5rem;
+      color: $primary;
+    }
+  }
+
+  @include media-breakpoint-up(md) {
+    padding: 1.5rem 4rem;
+    .feedback-form-header {
+      .h5 {
+        @include heading(5, bold);
+      }
+    }
+  }
+}
+
+.feedback-form {
+  textarea {
+    -webkit-transform: translateZ(0px);
+  }
+
+  button + button {
+    margin-left: .5rem;
+  }
+  
+  .feedback-question-label {
+    color: $headings-color;
+    display: block;
+    font-size: $font-size-lg;
+    margin-bottom: 1.5rem;
+  }
+
+  .feedback-details-content,
+  .feedback-details-display {
+    display: none;
+  }
+
+  @include media-breakpoint-up(md) {
+    .feedback-question-label {
+      @include heading(5);
+    }
+  }
+
+}

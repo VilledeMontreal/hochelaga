@@ -10,6 +10,7 @@ mark,
 
 h1, .h1 {
   @include heading(1);
+  margin-bottom: 2rem;
   &.strong {
     @include heading(1, "bold");
   }
@@ -47,16 +48,16 @@ h6, .h6 {
 
 // Type display classes
 .display-1 {
-  line-height: get-line-height(65px, 80px);
+  line-height: get-line-height($display1-size, 80px);
 }
 .display-2 {
-  line-height: get-line-height(59px, 72px);
+  line-height: get-line-height($display2-size, 72px);
 }
 .display-3 {
-  line-height: get-line-height(52px, 64px);
+  line-height: get-line-height($display3-size, 64px);
 }
 .display-4 {
-  line-height: get-line-height(45px, 56px);
+  line-height: get-line-height($display4-size, 56px);
 }
 
 .lead {
@@ -90,6 +91,16 @@ a {
   // TODO: Refactor required for this block, considering the icon tag will be explicite in the markup
   // Used in the side menu
   border-bottom: $link-border-width solid $link-border-color;
+
+  &.link-scrollto {
+    color: $primary;
+    border-bottom: none;
+    .vfi {
+      color: $primary;
+      font-size: 1.42857em;
+      vertical-align: top;
+    }
+  }
   &.block {
     display: block;
     background: transparent;
@@ -127,18 +138,6 @@ a {
       }
     }
 
-    &.inverse {
-      background: $black;
-      color: $white;
-      &:hover,
-      &:active {
-        color: $primary;
-        text-decoration: none;
-      }
-    }
-    &.brand {
-      color: $primary;
-    }
   }
 }
 

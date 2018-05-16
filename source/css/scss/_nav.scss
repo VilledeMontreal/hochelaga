@@ -105,7 +105,7 @@
       border: none;
       display: flex;
       font-size: $font-size-lg;
-      line-height: get-line-height(21px, 32px);
+      line-height: get-line-height($font-size-lg, 32px);
       padding: 1.4rem 5rem 1.4rem 4rem;
       cursor: pointer;
       @include iconvfi(after, mini-plus-circulaire);
@@ -550,7 +550,9 @@ nav {
     display: flex;
     flex-direction: row;
     align-items: center;
-    margin-left: $header-icon-width;
+    @include media-breakpoint-up(md) {
+      margin-left: $header-icon-width;
+    }
     &.navbar-header-service-link {
       .navbar-brand {
         font-size: ($font-size-base * 1.125);  // 18px

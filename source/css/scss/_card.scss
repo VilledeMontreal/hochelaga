@@ -203,6 +203,12 @@
 
   // Featured card specific
   &.card-featured {
+    border: none;
+    flex-direction: row;
+    margin-bottom: 0;
+    .card-bg-image {
+      min-height: 300px;
+    }
     .card-body {
       .text-muted {
         display: inline-block;
@@ -224,6 +230,34 @@
         height: 100%;
         .card-footer {
           margin-top: auto;
+        }
+      }
+    }
+  }
+
+  &.card-fluid {
+    &.card-featured {
+      .card-body {
+        padding: 2rem;
+        justify-content: center;
+      }
+
+      @include media-breakpoint-up(lg) {
+        .card-title {
+          @include heading(2);
+        }
+        .card-title,
+        .card-text {
+          margin-bottom: 2rem;
+        }
+        .card-text {
+          font-size: $font-size-lg;
+        }
+        .card-body {
+          padding: 6rem;
+        }
+        .card-footer {
+          margin-top: 0;
         }
       }
     }
