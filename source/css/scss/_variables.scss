@@ -76,15 +76,21 @@ $dark:          $gray-800;
 $spacer: 1rem;
 $spacers: ();
 $spacers: map-merge((
-  0: 0,
-  1: ($spacer * .25),
-  2: ($spacer * .5),
-  3: $spacer,
-  4: ($spacer * 2),
-  5: ($spacer * 3),
-  6: ($spacer * 4),
-  7: ($spacer * 5),
-  8: ($spacer * 6)
+  "0":    0,
+  "0-5":  ($spacer * .5),
+  "1":    ($spacer * 1),
+  "1-5":  ($spacer * 1.5),
+  "2":    ($spacer * 2),
+  "2-5":  ($spacer * 2.5),
+  "3":    ($spacer * 3),
+  "3-5":  ($spacer * 3,5),
+  "4":    ($spacer * 4),
+  "4-5":  ($spacer * 4,5),
+  "5":    ($spacer * 5),
+  "5-5":  ($spacer * 5,5),
+  "6":    ($spacer * 6),
+  "6-5":  ($spacer * 6,5),
+  "7":    ($spacer * 7)
 ), $spacers);
 
 // Body
@@ -181,7 +187,7 @@ $display4-weight:             300;
 $display-line-height:         $headings-line-height;
 
 $lead-font-size:              $font-size-lg;     // 21px
-$lead-line-height:            get-line-height(21px, 32px);    // 32px
+$lead-line-height:            get-line-height($lead-font-size, 32px);    // 32px
 $lead-font-weight:            $font-weight-regular;
 
 $small-font-size:             .75em;

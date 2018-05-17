@@ -570,17 +570,22 @@
       }
     ]
   },
-  "labelledContent": [
+  "labelContent": [
     {
       "classes": "",
-      "title": "Cras vehicula",
+      "title": "Title",
       "row": [
         {
           "items": [
             {
-              "class": "col-md-6",
-              "label": false,
-              "content": false
+              "class": "col-sm-6",
+              "label": "Item label #1",
+              "content": "Content item #1"
+            },
+            {
+              "class": "col-sm-6",
+              "label": "Item label #2",
+              "content": "Content item #2"
             }
           ]
         }

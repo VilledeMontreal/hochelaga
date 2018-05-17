@@ -24,14 +24,14 @@
     <div class="row">
       {{# hasAlert}}
       <div class="col-12">
-        <div class="alert-container mb-5">
+        <div class="alert-container mb-3">
           {{> molecules-alerts }}
         </div>
       </div>
       {{/ hasAlert}}
 
       <div class="col-12">
-        <div class="labelled-content-header">
+        <div class="label-content-header">
           <div class="row">
             <div class="col-md-4">
               <span class="item-label">PA234545409</span>
@@ -46,15 +46,15 @@
       </div>
 
       <div class="col-lg-8 border-bottom-content">
-        {{# labelledContentMain}}
-        {{> organisms-block-labelled-content }}
-        {{/ labelledContentMain}}
+        {{# labelContentMain}}
+        {{> organisms-block-label-content }}
+        {{/ labelContentMain}}
       </div>
       <aside class="col-lg-4">
-        <!-- Side content - Should be able to call organisms-block-labelled-content -->
-        {{# labelledContentSide}}
-        {{> organisms-block-labelled-content }}
-        {{/ labelledContentSide}}
+        <!-- Side content - Should be able to call organisms-block-label-content -->
+        {{# labelContentSide}}
+        {{> organisms-block-label-content }}
+        {{/ labelContentSide}}
         <!-- End side content -->
       </aside>
 
