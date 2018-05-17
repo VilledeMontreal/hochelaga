@@ -130,6 +130,15 @@ fieldset:disabled a.btn {
   }
 }
 
+.btn-link {
+  border-bottom: 1px solid $sarcelle-atmos;
+  border-radius: 0;
+  padding: 0;
+  &:hover {
+    border-bottom: 1px solid $sarcelle-atmos;
+  }
+}
+
 // Specificity overrides
 input[type="submit"],
 input[type="reset"],
@@ -139,6 +148,17 @@ input[type="button"] {
   }
 }
 
+// Make the div behave like a button
+.btn-group-sm,
+.btn-group-vertical-sm {
+  // Prevent double borders when buttons are next to each other
+  .btn + .btn,
+  .btn + .btn-group,
+  .btn-group + .btn,
+  .btn-group + .btn-group {
+    margin-left: -1px;
+  }
+}
 
 // Buttons
 //
@@ -233,14 +253,5 @@ a {
     //padding-top: 1em;
     display: inline-block;
     text-decoration: none;
-  }
-}
-
-.btn-link {
-  border-bottom: 1px solid $sarcelle-atmos;
-  border-radius: 0;
-  padding: 0;
-  &:hover {
-    border-bottom: 1px solid $sarcelle-atmos;
   }
 }
