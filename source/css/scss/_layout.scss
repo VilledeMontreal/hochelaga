@@ -62,11 +62,15 @@ html {
 
   }
   .content-header {
-    margin-bottom: 3rem;
     width: 100%;
 
     &-title {
+      display: flex;
+      flex-wrap: wrap;
       padding: 3rem 0;
+      h1, .h1 {
+        width: 100%;
+      }
     }
 
     .date-time {
