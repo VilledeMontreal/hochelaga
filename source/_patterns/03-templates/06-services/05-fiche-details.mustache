@@ -1,0 +1,72 @@
+{{> atoms-link-skip-to-main-content }}
+{{> organisms-header-portal }}
+{{> organisms-nav-services }}
+
+<main class="main-content {{ pageClasses }} bg-gray-sky pt-6 pb-6" id="main-content" aria-label="Main Content" role="main">
+  <div class="container">
+    <div class="row">
+      <div class="col-12">
+        <div class="summary">
+          <div class="summary-heading-container">
+            <div class="summary-heading">
+              <h2>Demande</h2> {{> molecules-badge(badgeClass: "badge-pill badge-success", badge: "Ouverte")}}
+            </div>
+            <ul class="nav">
+              <li class="nav-item">{{> atoms-button(buttonClass: "vdm-btn vdm-btn-sm vdm-btn-secondary", buttonText: "Imprimer") }}</li>
+              <li class="nav-item">{{> atoms-button(buttonClass: "vdm-btn vdm-btn-sm", buttonText: "Modifier") }}</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="container container-padding bg-white">
+    <div class="row">
+      {{# hasAlert}}
+      <div class="col-12">
+        <div class="alert-container">
+          {{> molecules-alerts }}
+        </div>
+      </div>
+      {{/ hasAlert}}
+
+      <div class="col-12">
+        <div class="label-content-header">
+          <div class="row">
+            <div class="col-md-4">
+              <span class="item-label">PA234545409</span>
+              <div class="item-content small">Dernière mise à jour le 30 mars 2018</div>
+            </div>
+            <div class="col-md-4">
+              <span class="item-label">Permis pour chien</span>
+              <div class="item-content">Roberto</div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-lg-8 border-bottom-content">
+        {{# labelContentMain}}
+        {{> organisms-label-content }}
+        {{/ labelContentMain}}
+      </div>
+      <aside class="col-lg-4">
+        <!-- Side content - Should be able to call organisms-block-label-content -->
+        {{# labelContentSide}}
+        {{> organisms-label-content }}
+        {{/ labelContentSide}}
+        <!-- End side content -->
+      </aside>
+
+      {{# hasFooterNotes}}
+      <div class="col-12">
+        {{> atoms-footer-notes }}
+      </div>
+      {{/ hasFooterNotes}}
+
+      </div>
+    </div>
+  </div>
+</main>
+
+{{> organisms-footer-portal }}

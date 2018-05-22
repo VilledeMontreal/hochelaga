@@ -62,11 +62,15 @@ html {
 
   }
   .content-header {
-    margin-bottom: 3rem;
     width: 100%;
 
     &-title {
+      display: flex;
+      flex-wrap: wrap;
       padding: 3rem 0;
+      h1, .h1 {
+        width: 100%;
+      }
     }
 
     .date-time {
@@ -100,19 +104,20 @@ html {
   order: 2;
 }
 
-
-
 // Generic section layouts
 .page-section {
-  padding-top: map-get($spacers, 5);
-  padding-bottom: map-get($spacers, 5);
+  padding-top: 3rem;
+  padding-bottom: 3rem;
   .section-heading {
-    margin-bottom: map-get($spacers, 4);
+    margin-bottom: 2rem;
   }
 }
 .services-heading {
   padding-top: 3rem;
-  padding-bottom: 3rem; 
+  padding-bottom: 3rem;
+  > :last-child {
+    margin-bottom: 0;
+  }
 }
 
 // Medium breakpoint and above (768)
@@ -129,7 +134,7 @@ html {
 // Services styles
 // Might migrate to own stylesheet if it becomes too long
 .summary {
-  .summary-heading {
+  .summary-heading-container {
     display: flex;
     justify-content: space-between;
     padding-bottom: 1rem;
@@ -140,12 +145,23 @@ html {
       margin-bottom: 0;
     }
     .nav {
+      display: block;
       .nav-item {
         padding-right: 1rem;
         padding-left: 1rem;
         &:last-child {
           padding-right: 0;
         }
+      }
+      @include media-breakpoint-up(md) {
+        display: flex;
+      }
+    }
+    .summary-heading {
+      display: inline-block;
+      > * {
+        display: inline-block;
+        vertical-align: middle;
       }
     }
   }
@@ -165,6 +181,12 @@ html {
       margin-top: -.5rem;
       margin-right: 1rem;
     }
+    .row {
+      margin-bottom: 2rem;
+      &:last-child {
+        margin-bottom: 0;
+      }
+    }
   }
   .summary-icon-offset {
     @include media-breakpoint-up(md){
@@ -183,18 +205,39 @@ html {
 }
 
 //
-// Coordinates
+// Generic Label and content layout
+// .block-coordinates will be deprecated
 //
-.block-coordinates {
+
+.label-content-header {
+  margin-bottom: 1.5rem;
+  padding-bottom: 1.5rem;
+  border-bottom: 1px solid $gray-700;
+  .item-label {
+    color: $headings-color;
+    font-weight: $font-weight-bold;
+  }
+}
+.block-coordinates,
+.label-content {
+  .row .row {
+    > div {
+      margin-bottom: 1.5rem;
+    }
+  }
   .title {
     font-size: $font-size-xl;
-    line-height: get-line-height(24px,32px);
+    line-height: get-line-height($font-size-xl,32px);
     font-weight: $font-weight-bold;
-    margin-bottom: 1.5rem;
+    padding-top: 1rem;
   }
   .item-label {
     color: $headings-color;
     font-weight: $font-weight-bold;
+  }
+  &.lc-border-bottom {
+    border-bottom: 1px solid $gray-700;
+    margin-bottom: 1.5rem;
   }
 }
 
@@ -204,4 +247,22 @@ html {
   * {
     color : $carousel-caption-color;
   }
+}
+
+// border-bottom-content
+
+.border-bottom-content {
+  > div {
+    border-bottom: 1px solid $gray-700;
+    margin-bottom: 2rem;
+    &:last-child {
+      border-bottom: none;
+      margin-bottom: 0;
+    }
+  }
+}
+
+.container-padding {
+  padding-top: $grid-gutter-width;
+  padding-bottom: $grid-gutter-width;
 }

@@ -7,6 +7,8 @@
   display: flex;
   margin-bottom: $grid-gutter-width;
   width: 100%;
+  border: none;
+  box-shadow: 0 1px 7px rgba(0, 0, 0, 0.05);
 
   .card-icon-top {
     font-size: 4.5rem;
@@ -203,6 +205,12 @@
 
   // Featured card specific
   &.card-featured {
+    //border: none;
+    flex-direction: row;
+    margin-bottom: 0;
+    .card-bg-image {
+      min-height: 300px;
+    }
     .card-body {
       .text-muted {
         display: inline-block;
@@ -228,6 +236,36 @@
       }
     }
   }
+
+  /*
+  &.card-fluid {
+    &.card-featured {
+      .card-body {
+        padding: 2rem;
+        justify-content: center;
+      }
+
+      @include media-breakpoint-up(lg) {
+        .card-title {
+          @include heading(2);
+        }
+        .card-title,
+        .card-text {
+          margin-bottom: 2rem;
+        }
+        .card-text {
+          font-size: $font-size-lg;
+        }
+        .card-body {
+          padding: 6rem;
+        }
+        .card-footer {
+          margin-top: 0;
+        }
+      }
+    }
+  }
+  */
 
   &.card-label-content {
     @extend .text-left;

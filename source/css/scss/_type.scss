@@ -47,22 +47,26 @@ h6, .h6 {
 
 // Type display classes
 .display-1 {
-  line-height: get-line-height(65px, 80px);
+  line-height: get-line-height($display1-size, 80px);
 }
 .display-2 {
-  line-height: get-line-height(59px, 72px);
+  line-height: get-line-height($display2-size, 72px);
 }
 .display-3 {
-  line-height: get-line-height(52px, 64px);
+  line-height: get-line-height($display3-size, 64px);
 }
 .display-4 {
-  line-height: get-line-height(45px, 56px);
+  line-height: get-line-height($display4-size, 56px);
 }
 
 .lead {
   font-size: $lead-font-size;
   font-weight: $lead-font-weight;
   line-height: $lead-line-height;
+  margin-bottom: 2.5rem;
+  > :last-child {
+    margin-bottom: 0;
+  }
 }
 
 // Font weight - generic
@@ -90,6 +94,16 @@ a {
   // TODO: Refactor required for this block, considering the icon tag will be explicite in the markup
   // Used in the side menu
   border-bottom: $link-border-width solid $link-border-color;
+
+  &.link-scrollto {
+    color: $primary;
+    border-bottom: none;
+    .vfi {
+      color: $primary;
+      font-size: 1.42857em;
+      vertical-align: top;
+    }
+  }
   &.block {
     display: block;
     background: transparent;
@@ -127,18 +141,6 @@ a {
       }
     }
 
-    &.inverse {
-      background: $black;
-      color: $white;
-      &:hover,
-      &:active {
-        color: $primary;
-        text-decoration: none;
-      }
-    }
-    &.brand {
-      color: $primary;
-    }
   }
 }
 
@@ -186,6 +188,7 @@ h1, h2, h3, h4, h5, h6 {
 // Plain list overrides
 // Should all lists carry this look and feel, really?
 ul, ol {
+  margin-bottom: 2rem;
   padding-left:  1.25rem;
   li {
     padding-bottom: .5rem;
@@ -244,6 +247,7 @@ ol {
     .title {
       @include heading(5, bold);
       color: $headings-color;
+      margin-bottom: 1rem;
     }
 
     > li {
@@ -268,21 +272,21 @@ ol {
 // A list of items grouped under dates
 // date-list> ul > li > { day-month-year } ul > li { item one } /li |  li { item two } /li ...
 .date-list {
-  margin-bottom: 1.5em;
+  margin-bottom: 1.5rem;
   @extend .list-unstyled;
   &:last-of-type {
     margin-bottom: 0;
   }
   > li {
     .date {
-      margin-bottom: 1.5em;
+      margin-bottom: 1.5rem;
     }
     ul {
-      margin-bottom: 2em;
+      margin-bottom: 2rem;
 
       &.list-items {
         li {
-          margin-bottom: 2em;
+          margin-bottom: 2rem;
 
           &:last-of-type {
             margin-bottom: 0;
@@ -315,6 +319,7 @@ ol {
     border: none;
     color: $primary;
     display: inline-block;
+    margin-bottom: 1rem;
   }
   p {
     margin-bottom: 1rem;
@@ -352,35 +357,35 @@ dl {
 
 // Blockquote
 
-blockquote {
-  &.blockquote {
-    padding-left: 1.75em;
-    font-size: $font-size-lg;
-    font-weight: $font-weight-normal;
-    position: relative;
+.blockquote {
+  font-size: $font-size-lg;
+  font-weight: $font-weight-normal;
+  margin-bottom: 2rem;
+  padding-left: 1.75em;
+  position: relative;
 
+  &:before {
+    content: "";
+    background: $brand;
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 35%;
+    min-height: 2rem;
+    width: 8px;
+  }
+
+  .blockquote-footer {
+    font-size: $font-size-base;
+    font-style: normal;
+    text-align: right;
     &:before {
-      width: 8px;
-      height: 35%;
-      position: absolute;
-      background: $brand;
-      content: "";
-      left: 0;
-      top: 0;
+      display: none;
     }
-
-    .blockquote-footer {
-      font-size: $font-size-base;
-      font-style: normal;
-      text-align: right;
-      &:before {
-        display: none;
-      }
-    }
-    cite {
-      color: $gray-900;
-      font-style: normal;
-    }
+  }
+  cite {
+    color: $gray-900;
+    font-style: normal;
   }
 }
 
@@ -405,7 +410,8 @@ blockquote {
   background: $black;
   border-radius: 0;
   &.divider-title {
-    display: inline-block;
+    display: flex;
+    align-self: center;
     height: .5rem;
     width: 64px;
     margin-top: 0;

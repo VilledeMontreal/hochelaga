@@ -16,8 +16,6 @@
   "badge": "23",
   "badgeClass": "badge-secondary",
   "stateClass": "bg-success",
-  "label": "New Label",
-  "labelClass": "label-default",
   "icon-label": "recherche",
   "progressBarClass": "bg-success",
   "progressCircleClass": "progress-success",
@@ -571,5 +569,27 @@
         }
       }
     ]
-  }
+  },
+  "labelContent": [
+    {
+      "classes": "",
+      "title": "Title",
+      "row": [
+        {
+          "items": [
+            {
+              "class": "col-sm-6",
+              "label": "Item label #1",
+              "content": "Content item #1"
+            },
+            {
+              "class": "col-sm-6",
+              "label": "Item label #2",
+              "content": "Content item #2"
+            }
+          ]
+        }
+      ]
+    }
+  ]
 }
