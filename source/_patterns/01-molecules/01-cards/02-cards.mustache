@@ -1,12 +1,14 @@
-<div class="container">
-  <div class="row cards {{ cards.classes }}">
-  {{# cards.headings }}
-    <h2>{{> cards.headings }}</h2>
-  {{/ cards.headings }}
-  {{# cards.card-item }}
-    <div class="{{ cards.bsgrid-classes }}">
-      {{> molecules-card-item }}
+<section class="page-section bg-gray-sky">
+  <div class="container">
+    <div class="row cards {{ cards.classes }}">
+    {{# cards.headings }}
+      <h2>{{> cards.headings }}</h2>
+    {{/ cards.headings }}
+    {{# cards.card-item }}
+      <div class="{{ cards.bsgrid-classes }}">
+        {{> molecules-card-item }}
+      </div>
+    {{/ cards.card-item }}
     </div>
-  {{/ cards.card-item }}
   </div>
 </div>
