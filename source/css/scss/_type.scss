@@ -17,30 +17,35 @@ h1, .h1 {
 }
 h2, .h2 {
   @include heading(2);
+  margin-bottom: 2rem;
   &.strong {
     @include heading(2, "bold");
   }
 }
 h3, .h3 {
   @include heading(3);
+  margin-bottom: 2rem;
   &.strong {
     @include heading(3, "bold");
   }
 }
 h4, .h4 {
   @include heading(4);
+  margin-bottom: 2rem;
   &.strong {
     @include heading(4, "bold");
   }
 }
 h5, .h5 {
   @include heading(5);
+  margin-bottom: 2rem;
   &.strong {
     @include heading(5, "bold");
   }
 }
 h6, .h6 {
   @include heading(6);
+  margin-bottom: 1rem;
   &.strong {
     @include heading(6, "bold");
   }
@@ -185,6 +190,7 @@ h1, h2, h3, h4, h5, h6 {
 // Plain list overrides
 // Should all lists carry this look and feel, really?
 ul, ol {
+  margin-bottom: 2rem;
   padding-left:  1.25rem;
   li {
     padding-bottom: .5rem;

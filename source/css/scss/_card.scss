@@ -7,6 +7,8 @@
   display: flex;
   margin-bottom: $grid-gutter-width;
   width: 100%;
+  border: none;
+  box-shadow: 0 1px 7px rgba(0, 0, 0, 0.05);
 
   .card-icon-top {
     font-size: 4.5rem;
@@ -203,7 +205,7 @@
 
   // Featured card specific
   &.card-featured {
-    border: none;
+    //border: none;
     flex-direction: row;
     margin-bottom: 0;
     .card-bg-image {
@@ -235,6 +237,7 @@
     }
   }
 
+  /*
   &.card-fluid {
     &.card-featured {
       .card-body {
@@ -262,6 +265,7 @@
       }
     }
   }
+  */
 
   &.card-label-content {
     @extend .text-left;

@@ -3,19 +3,19 @@
 {{> organisms-nav-services }}
 
 <main class="main-content {{ pageClasses }}" id="main-content" aria-label="Main Content" role="main">
-  <div class="container my-5">
+  <div class="container">
     <div class="row">
       <div class="col-12">
 
         {{# hasAlert }}
-          <div class="alert-container mb-3">
+          <div class="alert-container">
           {{> molecules-alerts }}
           </div>
         {{/ hasAlert }}
 
         {{> organisms-service-summary }}
 
-        <h2 class="h4 mb-4">Substances visées présentes à l’établissement</h2>
+        <h2 class="h4">Substances visées présentes à l’établissement</h2>
 
         {{# hasResults }}
           {{# cards }}

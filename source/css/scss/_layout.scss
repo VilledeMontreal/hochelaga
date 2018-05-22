@@ -100,14 +100,12 @@ html {
   order: 2;
 }
 
-
-
 // Generic section layouts
 .page-section {
-  padding-top: map-get($spacers, 5);
-  padding-bottom: map-get($spacers, 5);
+  padding-top: map-get($spacers, 3);
+  padding-bottom: map-get($spacers, 3);
   .section-heading {
-    margin-bottom: map-get($spacers, 4);
+    margin-bottom: map-get($spacers, 2);
   }
 }
 .services-heading {
@@ -225,19 +223,10 @@ html {
     line-height: get-line-height($font-size-xl,32px);
     font-weight: $font-weight-bold;
     padding-top: 1rem;
-    margin-bottom: 1.5rem;
   }
   .item-label {
     color: $headings-color;
     font-weight: $font-weight-bold;
-  }
-  @include media-breakpoint-up(sm) {
-    .row .row {
-      margin-bottom: 1.5rem;
-      > div {
-        margin-bottom: 0;
-      }
-    }
   }
   &.lc-border-bottom {
     border-bottom: 1px solid $gray-700;
@@ -264,4 +253,9 @@ html {
       margin-bottom: 0;
     }
   }
+}
+
+.container-padding {
+  padding-top: $grid-gutter-width;
+  padding-bottom: $grid-gutter-width;
 }

@@ -2,11 +2,11 @@
 {{> organisms-header-portal }}
 {{> organisms-nav-services }}
 
-<main class="main-content {{ pageClasses }} bg-gray-sky pb-5" id="main-content" aria-label="Main Content" role="main">
+<main class="main-content {{ pageClasses }} bg-gray-sky pt-3 pb-3" id="main-content" aria-label="Main Content" role="main">
   <div class="container">
     <div class="row">
       <div class="col-12">
-        <div class="summary mt-5">
+        <div class="summary">
           <div class="summary-heading-container">
             <div class="summary-heading">
               <h2>Demande</h2> {{> molecules-badge(badgeClass: "badge-pill badge-success", badge: "Ouverte")}}
@@ -20,11 +20,11 @@
       </div>
     </div>
   </div>
-  <div class="container bg-white pt-4">
+  <div class="container container-padding bg-white">
     <div class="row">
       {{# hasAlert}}
       <div class="col-12">
-        <div class="alert-container mb-3">
+        <div class="alert-container">
           {{> molecules-alerts }}
         </div>
       </div>
@@ -47,13 +47,13 @@
 
       <div class="col-lg-8 border-bottom-content">
         {{# labelContentMain}}
-        {{> organisms-block-label-content }}
+        {{> organisms-label-content }}
         {{/ labelContentMain}}
       </div>
       <aside class="col-lg-4">
         <!-- Side content - Should be able to call organisms-block-label-content -->
         {{# labelContentSide}}
-        {{> organisms-block-label-content }}
+        {{> organisms-label-content }}
         {{/ labelContentSide}}
         <!-- End side content -->
       </aside>

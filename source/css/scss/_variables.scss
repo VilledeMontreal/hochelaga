@@ -76,21 +76,21 @@ $dark:          $gray-800;
 $spacer: 1rem;
 $spacers: ();
 $spacers: map-merge((
-  "0":    0,
-  "0-5":  ($spacer * .5),
-  "1":    ($spacer * 1),
-  "1-5":  ($spacer * 1.5),
-  "2":    ($spacer * 2),
-  "2-5":  ($spacer * 2.5),
-  "3":    ($spacer * 3),
-  "3-5":  ($spacer * 3,5),
-  "4":    ($spacer * 4),
-  "4-5":  ($spacer * 4,5),
-  "5":    ($spacer * 5),
-  "5-5":  ($spacer * 5,5),
-  "6":    ($spacer * 6),
-  "6-5":  ($spacer * 6,5),
-  "7":    ($spacer * 7)
+  0:    0,
+  _05:  ($spacer * .5),
+  1:    ($spacer * 1),
+  1_5:  ($spacer * 1.5),
+  2:    ($spacer * 2),
+  2-5:  ($spacer * 2.5),
+  3:    ($spacer * 3),
+  3_5:  ($spacer * 3,5),
+  4:    ($spacer * 4),
+  4_5:  ($spacer * 4,5),
+  5:    ($spacer * 5),
+  5_5:  ($spacer * 5,5),
+  6:    ($spacer * 6),
+  6_5:  ($spacer * 6,5),
+  7:    ($spacer * 7)
 ), $spacers);
 
 // Body
@@ -115,7 +115,7 @@ $link-hover-decoration:       none;
 //
 // Style p element.
 
-$paragraph-margin-bottom:     1.5rem;
+$paragraph-margin-bottom:     2rem;
 
 // Grid containers
 //

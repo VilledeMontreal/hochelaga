@@ -6,17 +6,19 @@
 
   {{> organisms-content-header-portal }}
 
-  {{# servicesList }}
-    <div class="container">
-      <div class="row cards {{ cards.classes }}">
-        {{# cards.card-item }}
-        <div class="{{ cards.bsgrid-classes }}">
-          {{> molecules-card-item }}
+  <section class="page-section bg-gray-sky">
+    {{# servicesList}}
+      <div class="container">
+        <div class="row cards {{ cards.classes }}">
+          {{# cards.card-item}}
+          <div class="{{ cards.bsgrid-classes }}">
+            {{> molecules-card-item }}
+          </div>
+          {{/ cards.card-item}}
         </div>
-        {{/ cards.card-item }}
       </div>
-    </div>
-  {{/ servicesList }}
+    {{/ servicesList}}
+  </div>
 
 </main>
 

@@ -504,6 +504,17 @@ nav {
   border-bottom: 1px solid $gray-200;
   margin-bottom: 3rem;
   padding-bottom: 3rem;
+  > * {
+    margin-bottom: 1rem;
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+
+  button {
+    margin-top: 1rem;
+  }
+
   .db-label {
     display: inline-block;
     font-size: $font-size-md;
@@ -516,9 +527,6 @@ nav {
     font-size: $font-size-xl;
     font-weight: $font-weight-bold;
     justify-content: space-between;
-  }
-  .progress-container {
-    padding-bottom: 1rem;
   }
 }
 
