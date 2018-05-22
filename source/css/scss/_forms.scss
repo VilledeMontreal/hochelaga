@@ -331,6 +331,7 @@ legend,
     font-size: $font-size-base;
     line-height: $line-height-lg;
     font-weight: $font-weight-bold;
+    margin-bottom: 1rem;
     width: 100%;
   }
 
@@ -464,7 +465,7 @@ legend,
   border-radius: $input-border-radius;
   border: dashed 2px $gray-400;
   display: flex;
-  @extend .p-2;
+  padding: 2rem;
   flex-direction: column;
   align-items: center;
 
