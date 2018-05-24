@@ -3,7 +3,7 @@
  * Built on bootstrap card component 
  */
 .card {
-  @extend .text-center;
+  text-align: center;
   display: flex;
   margin-bottom: $grid-gutter-width;
   width: 100%;
@@ -21,11 +21,7 @@
     font-weight: $font-weight-bold;
     margin-bottom: 1rem;
     &:before {
-      content: "";
-      background-color: $primary;
-      width: 0.75em;
-      height: 0.75em;
-      border-radius: 100%;
+      @include circle($size: .75rem, $background-color: $primary);
       display: inline-block;
       margin-right: 0.5rem;
     }
@@ -35,6 +31,7 @@
     display: inline-block;
     padding-bottom: 1rem;
   }
+
   .card-title {
     @include card-heading();
     margin-bottom: 1rem;
@@ -111,6 +108,10 @@
     */
   }
 
+  &.card-border {
+    // border: 1px solid $gray-400;
+    box-shadow: 0 1px 4px 0 rgba(0,0,0,0.4);
+  }
   // Row layout is used for icon placement to the left or right at larger breakpoint
   &.card-row-layout {
     .card-body {
@@ -266,9 +267,15 @@
     }
   }
   */
-
+  &.card-complex-layout,
   &.card-label-content {
-    @extend .text-left;
+    text-align: left;
+    .card-body {
+      flex: none;
+      > .row {
+        margin-bottom: 1rem;
+      }
+    }
     .card-title {
       font-weight: $font-weight-bold;
     }
@@ -287,32 +294,41 @@
   }
 }
 
+.card-section {
+  display: flex;
+  .card-body {
+    text-align: left;
+  }
+  .card-label {
+    font-size: $lead-font-size;
+    font-weight: $font-weight-bold;
+    &.card-label-normal {
+      font-weight: $font-weight-normal;
+    }
+  }
+
+  + .card-section {
+    border-top: 1px solid $gray-500;
+  }
+
+  @include media-breakpoint-up(lg) {
+    flex-direction: row;
+    align-items: center;
+
+    .card-icon-top {
+      margin-top: 0;
+      margin-left: 2rem;
+    }
+  }
+}
+
 // Color variant overrides
 .cards {
   > div,
   .card-item {
     display: flex; // must add flex capacity to col to get equalheight
   }
-  .card.bg-gray-sky {
-    border: none;
-  }
-  &.bg-gray-sky {
-    background-color: transparent;
-    .card {
-      background-color: $gray-sky;
-      border: none;
-      .vfi {
-        color: $primary;
-      }
-      /*
-      a:hover {
-        .vfi {
-          color: $white;
-        }
-      }
-      */
-    }
-  }
+
   // Add bs-grid layout to any element, ie: ul>li, etc
   // This is less customizable since cols are hard-coded in css.
   &.cards-bs-grid {

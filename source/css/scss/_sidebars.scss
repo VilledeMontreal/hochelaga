@@ -141,7 +141,7 @@
   // Transparent border brand
   &.sidebar-border {
     .sb-block {
-      border: 1px solid $gray-600;
+      border: 1px solid $gray-200;
       background-color: transparent;
       .sidebar-title {
         margin-bottom: 1rem;
@@ -215,28 +215,7 @@
       background-color: $black;
     }
   }
-  /*
-  .divider {
-    margin-top: 1.5rem;
-    margin-bottom: 1.5rem;
-    margin-left: 0;
-    width: 3rem;
-    border-radius: 4px;
-  }
-  */
 
-  &.sb-block-notes {
-    background-color: $white;
-    border: 1px solid $gray-200;
-
-    .sidebar-title {
-      @include heading(4, bold);
-    }
-    .vfi {
-      color: $body-color;
-      font-size: 2.125rem;
-    }
-  }
   // Schedule data
   .schedule-data {
     display: flex;

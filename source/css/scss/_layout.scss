@@ -74,7 +74,8 @@ html {
     }
 
     .date-time {
-      display: inline-block;
+      display: flex;
+      align-self: center;
     }
 
     @include media-breakpoint-up(lg) {
@@ -217,6 +218,17 @@ html {
     color: $headings-color;
     font-weight: $font-weight-bold;
   }
+  .row {
+    > div {
+      margin-bottom: 1.5rem;
+      &:last-child {
+        margin-bottom: 0;
+      }
+      @include media-breakpoint-up(md) {
+        margin-bottom: 0;
+      }
+    }
+  }
 }
 .block-coordinates,
 .label-content {
@@ -265,4 +277,9 @@ html {
 .container-padding {
   padding-top: $grid-gutter-width;
   padding-bottom: $grid-gutter-width;
+}
+
+.container-card {
+  background-color: $white;
+  box-shadow: 0 1px 7px rgba($black, 0.05);
 }

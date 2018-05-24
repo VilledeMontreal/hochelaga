@@ -165,28 +165,36 @@
         <div class="{{ cards.bsgrid-classes }}">
           <div class="card {{ classes }}">
             <div class="card-body">
-              <span class="card-label">Système de réservoir</span>
-              <p class="card-text">34-589-BRF-11</p>
+              <div class="row">
+                <div class="col-12">
+                  <span class="card-label">Système de réservoir</span>
+                  <span class="card-text">34-589-BRF-11</span>
+                </div>
+              </div>
               <span class="card-title">7664-41-7 Ammoniac</span>
-              <span class="card-label">Concentration de la matière</span>
-              <p class="card-text">20%</p>
-              <div class="row mb-4">
+              <div class="row">
+                <div class="col-12">
+                  <span class="card-label">Concentration de la matière</span>
+                  <span class="card-text">20%</span>
+                </div>
+              </div>
+              <div class="row">
                 <div class="col-12 col-md-6">
                   <span class="card-label">Capacité</span>
-                  <p class="card-text">0,907  tonnes</p>
+                  <span class="card-text">0,907  tonnes</span>
                 </div>
                 <div class="col-12 col-md-6">
                   <span class="card-label">Quantité maximale</span>
-                  <p class="card-text">2 tonnes</p>
+                  <span class="card-text">2 tonnes</span>
                 </div>
               </div>
               <span class="card-label">Geolocalisation</span>
               <div class="row">
                 <div class="col-12 col-md-6">
-                  <p class="card-text">45.890990</p>
+                  <span class="card-text">45.890990</span>
                 </div>
                 <div class="col-12 col-md-6">
-                  <p class="card-text">-73.656565</p>  
+                  <span class="card-text">-73.656565</span>  
                 </div>
               </div>
             </div>
@@ -194,9 +202,10 @@
         </div>
         {{/ cards.card-item }}
         <div class="{{ cards.bsgrid-classes }}">
-          <div class="card card-row-layout bg-gray-sky text-center" tabindex="0" data-toggle="modal" data-target="#addReservoireModal">
+          <div class="card card-label-content card-border justify-content-center text-center" tabindex="0" data-toggle="modal" data-target="#addReservoireModal">
             <div class="card-body">
-              <span class="card-title">Ajouter un système de réservoir</span>
+              <span class="card-label mb-4">Système de réservoir</span>
+              <button class="vdm-btn vdm-btn-secondary vdm-btn-sm" >Ajouter</button>
             </div>
           </div>
         </div>

@@ -52,9 +52,6 @@
   }
 }
 
-// Page link
-
-
 //
 // Sizing
 //
@@ -239,7 +236,6 @@ nav {
     position: relative;
     text-align: center;
     &.active,
-    &:hover,
     &:focus {
       &:not(.disabled) {
         border: none;
@@ -533,6 +529,7 @@ nav {
 // Services sub-navigation
 .navbar-services {
   border-bottom: 1px solid $gray-200;
+  min-height: 75px;
 
   .navbar-brand,
   .navbar-link {
