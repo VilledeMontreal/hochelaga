@@ -3,7 +3,7 @@
     <div class="row cards">
       {{# cards.card-item }}
       <div class="{{ cards.bsgrid-classes }}">
-        <div class="card card-fw">
+        <a href="#" class="card card-fw">
           <div class="card-section">
             <div class="card-body">
               <div class="row">
@@ -19,16 +19,16 @@
               </div>
             </div>
           </div>
-          <div class="card-section">
+          <div class="card-section card-alert alert-warning">
             <span class="card-icon-top {{ card-media.classes }} vfi {{ card-media.icon }}" aria-hidden="true"></span>
             <div class="card-body">
-              <span class="card-subtitle">Terminez votre déclaration</span>
+              <span class="card-label alert-heading">Terminez votre déclaration</span>
               <p class="card-text">Veuillez reviser votre déclaration. Il manque une pièce justificative pour la micropuce de votre chat. </p>
             </div>
           </div>
-        </div>
+        </a>
       </div>
       {{/ cards.card-item }}
     </div>
   </div>
-</div>
+</section>
