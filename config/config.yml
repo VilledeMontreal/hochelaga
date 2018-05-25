@@ -25,10 +25,15 @@ plugins:
         enabled: true
     dataInheritance:
         enabled: true
-ishMinimum: '240'
+ishMinimum: '320'
 ishMaximum: '2600'
 ishControlsHide:
     - hay
+    - disco
+ishViewportRange:
+    s: [320,320]
+    m: [768, 768]
+    l: [1200,1200]
 lineageMatch: '{{>([ ]+)?([A-Za-z0-9-_]+)(?:\:[A-Za-z0-9-]+)?(?:(| )\(.*)?([ ]+)?}}'
 lineageMatchKey: 2
 patternExtension: mustache
