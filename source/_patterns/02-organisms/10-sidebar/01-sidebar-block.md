@@ -36,7 +36,6 @@ There are 3 color schemes for child blocks inserted into sidebars, the add-on cl
 ### Forms
 
 * Forms are inserted @ 96% width in sidebars, auto-centered.
-* So are buttons without a form wrapper with the .vdm-btn-wide class.
 
 ### Titles
 
@@ -44,7 +43,3 @@ The title has modifier classes. The main sidebar title class is ".vdm-title", fo
 
 * When it also has the .discrete class, there will be no bottom stroke and the bottom margin will be lighter.
 
-### Lists
-
-* Some modifier classes are available to control the bottom padding of list items (.p-small, .p-large,.p-larger)
-* Bullet lists have the vdm-bullet-list class applied in order to show visible bullets;
