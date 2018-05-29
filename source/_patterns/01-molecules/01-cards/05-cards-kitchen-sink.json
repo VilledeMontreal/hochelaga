@@ -12,14 +12,32 @@
         "card-label-2": "Déclaration pour établissement existant - 2018",
         "card-item-2": "Petro 2908-0",
         "badge": {
-          "badgeClass": "badge-pill badge-warning",
-          "badge": "En cours"
+          "badgeClass": "badge-pill badge-info",
+          "badge": "Info"
         },
         "card-alert": {
-          "class": "",
+          "class": "alert-info",
           "icon": "vfi-porte-voix",
-          "alert-heading": "Terminez votre déclaration",
-          "alert-text": "Veuillez reviser votre déclaration. Il manque une pièce justificative pour la micropuce de votre chat."
+          "alert-heading": "Lorem ipsum",
+          "alert-text": "Cras vestibulum sit amet velit et congue. Integer eu lorem vitae nisi suscipit sagittis et eget ligula."
+        }
+      },
+      {
+        "classes": "card-fw card-sink",
+        "url": "#",
+        "card-label-1": "Fusce nec pretium neque",
+        "card-item-1": "Derniere mise à jour le 12 janvier 2018",
+        "card-label-2": "Fusce nec pretium nequem - 2018",
+        "card-item-2": "Fusce nec pretium neque",
+        "badge": {
+          "badgeClass": "badge-pill badge-success",
+          "badge": "Terminé"
+        },
+        "card-alert": {
+          "class": "alert-success",
+          "icon": "vfi-coche-circulaire",
+          "alert-heading": "Bien joué",
+          "alert-text": "Praesent tincidunt, arcu eget dapibus feugiat, arcu dui ullamcorper augue, sed semper purus augue sed neque."
         }
       },
       {
@@ -48,13 +66,13 @@
         "card-label-2": "Fusce nec pretium nequem - 2018",
         "card-item-2": "Fusce nec pretium neque",
         "badge": {
-          "badgeClass": "badge-pill badge-success",
-          "badge": "Terminé"
+          "badgeClass": "badge-pill badge-danger",
+          "badge": "Action requise"
         },
         "card-alert": {
-          "class": "alert-success",
-          "icon": "vfi-coche-circulaire",
-          "alert-heading": "Bien joué",
+          "class": "alert-danger",
+          "icon": "vfi-attention",
+          "alert-heading": "Action requise",
           "alert-text": "Praesent tincidunt, arcu eget dapibus feugiat, arcu dui ullamcorper augue, sed semper purus augue sed neque."
         }
       }
