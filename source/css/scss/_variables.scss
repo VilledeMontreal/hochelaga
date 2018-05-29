@@ -33,22 +33,6 @@ $black:    #000;
 $gray-ink: #637381; // Usage: Text default color.
 $gray-sky: #f4f6f8; // Usage: Backgrounds.
 
-
-// UI color
-
-$blue:    #005fc9;
-
-$indigo:  #6610f2 !default;
-$purple:  #6f42c1 !default;
-$pink:    #e83e8c !default;
-$red:     #ff3200 !default;
-$orange:  #fd7e14 !default;
-$yellow:  #fecc03 !default;
-$green:   #00c54a !default;
-$teal:    #20c997 !default;
-$cyan:    #17a2b8 !default;
-
-
 // Primary colors
 
 $sarcelle:          #097d6c;
@@ -57,6 +41,20 @@ $sarcelle-surprise: #0cb097;
 $sarcelle-atmos:    #87dfd3;
 $sarcelle-lightest: #f8f9fa;
 $red-montreal:      #e00000;
+
+// UI color
+
+$blue:    #0296c0;
+
+$indigo:  #6610f2 !default;
+$purple:  #6f42c1 !default;
+$pink:    #e83e8c !default;
+$red:     $red-montreal;
+$orange:  #fd7e14 !default;
+$yellow:  #fecc03;
+$green:   #02c876;
+$teal:    #20c997 !default;
+$cyan:    #17a2b8 !default;
 
 //== Brand
 

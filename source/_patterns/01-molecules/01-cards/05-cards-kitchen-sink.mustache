@@ -3,29 +3,35 @@
     <div class="row cards">
       {{# cards.card-item }}
       <div class="{{ cards.bsgrid-classes }}">
-        <a href="#" class="card card-fw">
+        <a href="{{ url }}" class="card {{ classes }}">
           <div class="card-section">
             <div class="card-body">
               <div class="row">
                 <div class="col-lg-4">
-                  <span class="card-label">187092009876554</span>
-                  <span class="small">Derniere mise à jour le 30 mars 2018</span>
+                  <span class="card-label">{{ card-label-1 }}</span>
+                  <span class="small">{{ card-item-1 }}</span>
                 </div>
                 <div class="col-lg-6">
-                  <span class="card-label card-label-normal">Déclaration pour établissement existant - 2018</span>
-                  <span>Petro 2908-0</span>
+                  <span class="card-label card-label-normal">{{ card-label-2 }}</span>
+                  <span>{{ card-item-2 }}</span>
                 </div>
-                <div class="col-lg-2">{{> molecules-badge(badge: "En cours", badgeClass: "badge-pill badge-warning")}}</div>
+                <div class="col-lg-2">
+                  {{# badge}}
+                  <span class="badge {{ badgeClass }}">{{ badge }}</span>
+                  {{/ badge}}
+                </div>
               </div>
             </div>
           </div>
-          <div class="card-section card-alert alert-warning">
-            <span class="card-icon-top {{ card-media.classes }} vfi {{ card-media.icon }}" aria-hidden="true"></span>
+          {{# card-alert}}
+          <div class="card-section card-alert {{ class }}">
+            <span class="card-icon-top vfi {{ icon }}" aria-hidden="true"></span>
             <div class="card-body">
-              <span class="card-label alert-heading">Terminez votre déclaration</span>
-              <p class="card-text">Veuillez reviser votre déclaration. Il manque une pièce justificative pour la micropuce de votre chat. </p>
+              <span class="alert-heading">{{ alert-heading }}</span>
+              <p class="card-text">{{ alert-text }}</p>
             </div>
           </div>
+          {{/ card-alert}}
         </a>
       </div>
       {{/ cards.card-item }}

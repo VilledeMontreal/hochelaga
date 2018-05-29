@@ -5,13 +5,57 @@
     "bsgrid-classes": "col-12",
     "card-item": [
       {
-        "classes": "card-fw card-row-layout card-sink",
+        "classes": "card-fw card-sink",
         "url": "#",
-        "card-title": "Card with icon placement on the left",
-        "card-text":
-          "Some quick example text to build on the card title and make up the bulk of the card's content.",
-        "card-media": {
-          "icon": "vfi-horloge"
+        "card-label-1": "187092009876554",
+        "card-item-1": "Derniere mise à jour le 30 mars 2018",
+        "card-label-2": "Déclaration pour établissement existant - 2018",
+        "card-item-2": "Petro 2908-0",
+        "badge": {
+          "badgeClass": "badge-pill badge-warning",
+          "badge": "En cours"
+        },
+        "card-alert": {
+          "class": "",
+          "icon": "vfi-porte-voix",
+          "alert-heading": "Terminez votre déclaration",
+          "alert-text": "Veuillez reviser votre déclaration. Il manque une pièce justificative pour la micropuce de votre chat."
+        }
+      },
+      {
+        "classes": "card-fw card-sink",
+        "url": "#",
+        "card-label-1": "Lorem ipsum",
+        "card-item-1": "Derniere mise à jour le 12 mai 2018",
+        "card-label-2": "Lorem ipsum - 2018",
+        "card-item-2": "Lorem ipsum",
+        "badge": {
+          "badgeClass": "badge-pill badge-warning",
+          "badge": "En cours"
+        },
+        "card-alert": {
+          "class": "alert-warning",
+          "icon": "vfi-horloge",
+          "alert-heading": "Terminez votre déclaration",
+          "alert-text": "Veuillez reviser votre déclaration. Il manque une pièce justificative pour la micropuce de votre chat."
+        }
+      },
+      {
+        "classes": "card-fw card-sink",
+        "url": "#",
+        "card-label-1": "Fusce nec pretium neque",
+        "card-item-1": "Derniere mise à jour le 12 janvier 2018",
+        "card-label-2": "Fusce nec pretium nequem - 2018",
+        "card-item-2": "Fusce nec pretium neque",
+        "badge": {
+          "badgeClass": "badge-pill badge-success",
+          "badge": "Terminé"
+        },
+        "card-alert": {
+          "class": "alert-success",
+          "icon": "vfi-coche-circulaire",
+          "alert-heading": "Bien joué",
+          "alert-text": "Praesent tincidunt, arcu eget dapibus feugiat, arcu dui ullamcorper augue, sed semper purus augue sed neque."
         }
       }
     ]
