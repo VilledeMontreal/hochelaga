@@ -52,9 +52,6 @@
   }
 }
 
-// Page link
-
-
 //
 // Sizing
 //
@@ -105,7 +102,7 @@
       border: none;
       display: flex;
       font-size: $font-size-lg;
-      line-height: get-line-height(21px, 32px);
+      line-height: get-line-height($font-size-lg, 32px);
       padding: 1.4rem 5rem 1.4rem 4rem;
       cursor: pointer;
       @include iconvfi(after, mini-plus-circulaire);
@@ -239,7 +236,6 @@ nav {
     position: relative;
     text-align: center;
     &.active,
-    &:hover,
     &:focus {
       &:not(.disabled) {
         border: none;
@@ -504,6 +500,17 @@ nav {
   border-bottom: 1px solid $gray-200;
   margin-bottom: 3rem;
   padding-bottom: 3rem;
+  > * {
+    margin-bottom: 1rem;
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+
+  button {
+    margin-top: 1rem;
+  }
+
   .db-label {
     display: inline-block;
     font-size: $font-size-md;
@@ -517,14 +524,12 @@ nav {
     font-weight: $font-weight-bold;
     justify-content: space-between;
   }
-  .progress-container {
-    padding-bottom: 1rem;
-  }
 }
 
 // Services sub-navigation
 .navbar-services {
   border-bottom: 1px solid $gray-200;
+  min-height: 75px;
 
   .navbar-brand,
   .navbar-link {
@@ -550,7 +555,9 @@ nav {
     display: flex;
     flex-direction: row;
     align-items: center;
-    margin-left: $header-icon-width;
+    @include media-breakpoint-up(md) {
+      margin-left: $header-icon-width;
+    }
     &.navbar-header-service-link {
       .navbar-brand {
         font-size: ($font-size-base * 1.125);  // 18px

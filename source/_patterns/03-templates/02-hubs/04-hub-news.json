@@ -27,8 +27,7 @@
         "url": "#",
         "card-date": "20 février 2018",
         "card-title": "Card with a very long title. Footer is place to the right for larger breakpoint. How do we handle the arrow placement?",
-        "card-text":
-          "Some quick example text to build on the card title and make up the bulk of the card's content.",
+        "card-text": false,
         "card-media" : {
           "icon" : false,
           "img" : {
@@ -45,7 +44,10 @@
         "card-text": false,
         "card-media" : {
           "icon" : false,
-          "img" : false
+          "img" : {
+            "url" : "https://picsum.photos/768/480?image=999",
+            "alt" : "Card #2 img alt."
+          }
         }
       }
     ]

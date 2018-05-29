@@ -33,22 +33,6 @@ $black:    #000;
 $gray-ink: #637381; // Usage: Text default color.
 $gray-sky: #f4f6f8; // Usage: Backgrounds.
 
-
-// UI color
-
-$blue:    #005fc9;
-
-$indigo:  #6610f2 !default;
-$purple:  #6f42c1 !default;
-$pink:    #e83e8c !default;
-$red:     #ff3200 !default;
-$orange:  #fd7e14 !default;
-$yellow:  #fecc03 !default;
-$green:   #00c54a !default;
-$teal:    #20c997 !default;
-$cyan:    #17a2b8 !default;
-
-
 // Primary colors
 
 $sarcelle:          #097d6c;
@@ -57,6 +41,20 @@ $sarcelle-surprise: #0cb097;
 $sarcelle-atmos:    #87dfd3;
 $sarcelle-lightest: #f8f9fa;
 $red-montreal:      #e00000;
+
+// UI color
+
+$blue:    #0296c0;
+
+$indigo:  #6610f2 !default;
+$purple:  #6f42c1 !default;
+$pink:    #e83e8c !default;
+$red:     $red-montreal;
+$orange:  #fd7e14 !default;
+$yellow:  #fecc03;
+$green:   #02c876;
+$teal:    #20c997 !default;
+$cyan:    #17a2b8 !default;
 
 //== Brand
 
@@ -93,18 +91,25 @@ $button-colors: map-merge((
 
 // Spacing
 //
-$spacer: 1rem;
+// Spacers are multiple of 8
+$spacer: .5rem;
 $spacers: ();
 $spacers: map-merge((
-  0: 0,
-  1: ($spacer * .25),
-  2: ($spacer * .5),
-  3: $spacer,
-  4: ($spacer * 2),
-  5: ($spacer * 3),
-  6: ($spacer * 4),
-  7: ($spacer * 5),
-  8: ($spacer * 6)
+  0:  0,
+  1:  ($spacer),
+  2:  ($spacer * 2),
+  3:  ($spacer * 3),
+  4:  ($spacer * 4),
+  5:  ($spacer * 5),
+  6:  ($spacer * 6),
+  7:  ($spacer * 7),
+  8:  ($spacer * 8),
+  9:  ($spacer * 9),
+  10: ($spacer * 10),
+  11: ($spacer * 11),
+  12: ($spacer * 12),
+  13: ($spacer * 13),
+  14: ($spacer * 14)
 ), $spacers);
 
 // Body
@@ -129,7 +134,7 @@ $link-hover-decoration:       none;
 //
 // Style p element.
 
-$paragraph-margin-bottom:     1.5rem;
+$paragraph-margin-bottom:     2rem;
 
 // Grid containers
 //
@@ -187,7 +192,7 @@ $h4-font-size:                $font-size-base * 2;          // 32px
 $h5-font-size:                $font-size-base * 1.625;      // 26px
 $h6-font-size:                $font-size-base * 1.1875;     // 19px
 
-//$headings-margin-bottom:      ($spacer / 2);
+$headings-margin-bottom:      1rem;
 $headings-font-weight:        $font-weight-regular;
 $headings-line-height:        1.23; // specific line-height for each level, see mixins header
 $headings-color:              inherit !default;
@@ -206,7 +211,7 @@ $display4-weight:             300;
 $display-line-height:         $headings-line-height;
 
 $lead-font-size:              $font-size-lg;     // 21px
-$lead-line-height:            get-line-height(21px, 32px);    // 32px
+$lead-line-height:            get-line-height($lead-font-size, 32px);    // 32px
 $lead-font-weight:            $font-weight-regular;
 
 $small-font-size:             .75em;
@@ -452,7 +457,7 @@ $checkbox-toggle-padding:               5px;
 
 // Dropdowns
 
-$dropdown-link-active-bg:           $primary;
+$dropdown-link-active-bg:           $sarcelle-atmos;
 
 // Modal
 

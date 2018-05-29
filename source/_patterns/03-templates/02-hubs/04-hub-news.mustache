@@ -7,10 +7,10 @@
 
   {{> organisms-content-header-portal }}
 
-  <div class="region {{ regionMainClasses }}">
+  <section class="page-section bg-gray-sky">
     <div class="container {{ regionMainContainerClasses }}">
       <div class="row">
-        <article class="col-12 {{ regionMainContentClasses }}">
+        <div class="col-12 {{ regionMainContentClasses }}">
 
           {{> molecules-search-field+dropdown }}
 
@@ -26,10 +26,10 @@
             {{> molecules-pagination("paginationClass": justify-content-center) }}
           {{/ hasPagination }}
 
-        </article>
+        </div>
       </div>
     </div>
-  </div>
+  </section>
 </main>
 
 {{> organisms-footer-portal }}

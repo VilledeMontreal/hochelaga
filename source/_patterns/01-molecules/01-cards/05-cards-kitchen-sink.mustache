@@ -1,0 +1,40 @@
+<section class="page-section bg-gray-sky">
+  <div class="container">
+    <div class="row cards">
+      {{# cards.card-item }}
+      <div class="{{ cards.bsgrid-classes }}">
+        <a href="{{ url }}" class="card {{ classes }}">
+          <div class="card-section">
+            <div class="card-body">
+              <div class="row">
+                <div class="col-lg-4">
+                  <span class="card-label">{{ card-label-1 }}</span>
+                  <span class="small">{{ card-item-1 }}</span>
+                </div>
+                <div class="col-lg-6">
+                  <span class="card-label card-label-normal">{{ card-label-2 }}</span>
+                  <span>{{ card-item-2 }}</span>
+                </div>
+                <div class="col-lg-2">
+                  {{# badge}}
+                  <span class="badge {{ badgeClass }}">{{ badge }}</span>
+                  {{/ badge}}
+                </div>
+              </div>
+            </div>
+          </div>
+          {{# card-alert}}
+          <div class="card-section card-alert {{ class }}">
+            <span class="card-icon-top vfi {{ icon }}" aria-hidden="true"></span>
+            <div class="card-body">
+              <span class="alert-heading">{{ alert-heading }}</span>
+              <p class="card-text">{{ alert-text }}</p>
+            </div>
+          </div>
+          {{/ card-alert}}
+        </a>
+      </div>
+      {{/ cards.card-item }}
+    </div>
+  </div>
+</section>

@@ -16,8 +16,6 @@
   "badge": "23",
   "badgeClass": "badge-secondary",
   "stateClass": "bg-success",
-  "label": "New Label",
-  "labelClass": "label-default",
   "icon-label": "recherche",
   "progressBarClass": "bg-success",
   "progressCircleClass": "progress-success",
@@ -212,6 +210,28 @@
     "fr": "Voir ce site en français",
     "en": "View this site in English"
   },
+  "top-banner-colors": [
+    { 
+      "top-banner": {
+        "class": "top-banner-info"
+      }
+    },
+    { 
+      "top-banner": {
+        "class": "top-banner-success"
+      }
+    },
+    { 
+      "top-banner": {
+        "class": "top-banner-warning"
+      }
+    },
+    { 
+      "top-banner": {
+        "class": "top-banner-danger"
+      }
+    }
+  ],
   "theme-colors": [
     { "color": "primary" },
     { "color": "secondary" },
@@ -571,5 +591,27 @@
         }
       }
     ]
-  }
+  },
+  "labelContent": [
+    {
+      "classes": "",
+      "title": "Title",
+      "row": [
+        {
+          "items": [
+            {
+              "class": "col-sm-6",
+              "label": "Item label #1",
+              "content": "Content item #1"
+            },
+            {
+              "class": "col-sm-6",
+              "label": "Item label #2",
+              "content": "Content item #2"
+            }
+          ]
+        }
+      ]
+    }
+  ]
 }

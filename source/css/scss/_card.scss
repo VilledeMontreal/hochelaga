@@ -3,10 +3,12 @@
  * Built on bootstrap card component 
  */
 .card {
-  @extend .text-center;
+  text-align: center;
   display: flex;
   margin-bottom: $grid-gutter-width;
   width: 100%;
+  border: none;
+  box-shadow: 0 1px 7px 0 rgba(0,0,0,0.12);
 
   .card-icon-top {
     font-size: 4.5rem;
@@ -19,11 +21,7 @@
     font-weight: $font-weight-bold;
     margin-bottom: 1rem;
     &:before {
-      content: "";
-      background-color: $primary;
-      width: 0.75em;
-      height: 0.75em;
-      border-radius: 100%;
+      @include circle($size: .75rem, $background-color: $primary);
       display: inline-block;
       margin-right: 0.5rem;
     }
@@ -33,6 +31,7 @@
     display: inline-block;
     padding-bottom: 1rem;
   }
+
   .card-title {
     @include card-heading();
     margin-bottom: 1rem;
@@ -81,30 +80,10 @@
     color: $primary;
   }
 
-  > a {
-    border-bottom: none;
-    color: $body-color;
-    display: flex;
-    flex-direction: column;
-    height: 100%;
-    &:hover,
-    &:active {
-      color: $white;
-      background: $primary;
-      text-decoration: none;
-      .card-title,
-      .card-icon-top,
-      .card-footer .vfi,
-      .card-tags {
-        color: $white;
-      }
-      // Text-muted is using the !important flag... sad but true
-      .text-muted {
-        color: $white !important;
-      }
-      .card-tags:before {
-        background-color: $white;
-      }
+  .card-alert {
+    .vfi {
+      color: inherit;
+      font-size: 3rem;
     }
   }
 
@@ -112,7 +91,6 @@
   &.card-row-layout {
     .card-body {
       text-align: left;
-      //text-align: center;
     }
 
     @include media-breakpoint-up(lg) {
@@ -138,12 +116,6 @@
         .vfi {
           font-size: 3.6rem;
         }
-      }
-
-      > a {
-        flex-direction: row;
-        align-items: center;
-        width: 100%;
       }
     }
   }
@@ -202,6 +174,12 @@
 
   // Featured card specific
   &.card-featured {
+    // border: none;
+    // flex-direction: row;
+    margin-bottom: 0;
+    .card-bg-image {
+      min-height: 300px;
+    }
     .card-body {
       .text-muted {
         display: inline-block;
@@ -228,8 +206,44 @@
     }
   }
 
+  /*
+  &.card-fluid {
+    &.card-featured {
+      .card-body {
+        padding: 2rem;
+        justify-content: center;
+      }
+
+      @include media-breakpoint-up(lg) {
+        .card-title {
+          @include heading(2);
+        }
+        .card-title,
+        .card-text {
+          margin-bottom: 2rem;
+        }
+        .card-text {
+          font-size: $font-size-lg;
+        }
+        .card-body {
+          padding: 6rem;
+        }
+        .card-footer {
+          margin-top: 0;
+        }
+      }
+    }
+  }
+  */
+  &.card-complex-layout,
   &.card-label-content {
-    @extend .text-left;
+    text-align: left;
+    .card-body {
+      flex: none;
+      > .row {
+        margin-bottom: 1rem;
+      }
+    }
     .card-title {
       font-weight: $font-weight-bold;
     }
@@ -248,30 +262,61 @@
   }
 }
 
+// Card section is used to build multi-layer cards
+// multiple sections stacked up and are divided with a border
+.card-section {
+  display: flex;
+  .card-body {
+    text-align: left;
+  }
+  .card-label {
+    font-size: $lead-font-size;
+    font-weight: $font-weight-bold;
+    &.card-label-normal {
+      font-weight: $font-weight-normal;
+    }
+  }
+
+  + .card-section {
+    border-top: 1px solid $gray-500;
+  }
+
+  @include media-breakpoint-up(lg) {
+    flex-direction: row;
+    align-items: center;
+
+    .card-icon-top {
+      margin-top: 0;
+      margin-left: 2rem;
+    }
+  }
+  .alert-heading {
+    font-size: $lead-font-size;
+    font-weight: $font-weight-bold;
+    color: inherit;
+    margin-bottom: 0;
+  }
+}
+
+// Set interactivity on linked card
+a.card {
+  color: $gray-ink;
+  transition: all 100ms ease-in-out;
+  &:hover {
+    transform: scale(1.04);
+    .card-title {
+      color: $primary;
+    }
+  }
+}
+
 // Color variant overrides
 .cards {
   > div,
   .card-item {
     display: flex; // must add flex capacity to col to get equalheight
   }
-  .card.bg-gray-sky {
-    border: none;
-  }
-  &.bg-gray-sky {
-    background-color: transparent;
-    .card {
-      background-color: $gray-sky;
-      border: none;
-      .vfi {
-        color: $primary;
-      }
-      a:hover {
-        .vfi {
-          color: $white;
-        }
-      }
-    }
-  }
+
   // Add bs-grid layout to any element, ie: ul>li, etc
   // This is less customizable since cols are hard-coded in css.
   &.cards-bs-grid {

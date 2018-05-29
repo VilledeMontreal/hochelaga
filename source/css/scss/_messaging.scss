@@ -1,4 +1,10 @@
 // Alert
+.alert-container {
+  margin-bottom: 3rem;
+}
+.alert-heading {
+  margin-bottom: 1rem;
+}
 .alert-link {
   border-bottom: none;
 }
@@ -6,6 +12,7 @@
   display: flex;
   align-items: center;
   .vfi {
+    color: inherit;
     padding-right: 1.5rem;
     font-size: 3rem;
   }
@@ -41,5 +48,56 @@
 .modal {
   .form-group {
     margin-bottom: 1.3125rem; // 21px
+  }
+}
+
+// Header banner
+.top-banner {
+  background: $black;
+  color: $white;
+  height: $header-banner-portal-height;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0 $grid-gutter-width;
+  line-height: 1;
+
+  @include media-breakpoint-up(md) {
+    justify-content: space-between;
+  }
+
+  .top-banner-link {
+    display: none;
+    @include media-breakpoint-up(md) {
+      display: inline-block;
+      margin-left: 1rem;
+    }
+  }
+
+  .back-link {
+    display: none;
+    @include media-breakpoint-up(md) {
+      display: inline-block;
+    }
+  }
+
+  a {
+    border: none;
+    color: $white;
+    text-decoration: underline;
+    &:active,
+    &:hover {
+      color: $white;
+      text-decoration: underline;
+    }
+  }
+}
+
+// Colors
+//
+// Contextual variations.
+@each $color, $value in $theme-colors {
+  .top-banner-#{$color} {
+    @include banner-variant($value);
   }
 }
