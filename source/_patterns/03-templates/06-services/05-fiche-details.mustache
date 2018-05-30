@@ -3,15 +3,15 @@
 {{> organisms-nav-services }}
 
 <main class="main-content {{ pageClasses }}" id="main-content" aria-label="Main Content" role="main">
-  <div class="test container">
-    <div class="test-heading-container row">
+  <div class="container container-card-header">
+    <div class="row cc-header-row">
       <div class="col-md-6">
-        <div class="test-heading">
-          <h2>Demande</h2> {{> molecules-badge(badgeClass: "badge-pill badge-success", badge: "Ouverte")}}
+        <div class="cc-header-title">
+          <h1>Demande</h1> {{> molecules-badge(badgeClass: "badge-pill badge-success", badge: "Ouverte")}}
         </div>
       </div>
       <div class="col-md-6 d-flex align-self-center">
-        <ul class="nav ml-auto">
+        <ul class="nav ml-md-auto">
           <li class="nav-item">{{> atoms-button(buttonClass: "vdm-btn vdm-btn-sm vdm-btn-secondary", buttonText: "Imprimer") }}</li>
           <li class="nav-item">{{> atoms-button(buttonClass: "vdm-btn vdm-btn-sm", buttonText: "Modifier") }}</li>
         </ul>

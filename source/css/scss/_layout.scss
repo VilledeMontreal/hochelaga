@@ -132,19 +132,20 @@ html {
   }
 }
 
-.test {
-  .test-heading-container {
+.container-card-header {
+  .cc-header-row {
     display: flex;
     justify-content: space-between;
     padding-bottom: 1rem;
     align-items: center;
-    h2 {
+    h1 {
       @include heading(4, "bold");
       display: inline-block;
       margin-bottom: 0;
+      margin-right: 1rem;
     }
     .nav {
-      display: block;
+      display: flex;
       .nav-item {
         padding-right: 1rem;
         padding-left: 1rem;
@@ -153,11 +154,9 @@ html {
           padding-right: 0;
         }
       }
-      @include media-breakpoint-up(md) {
-        display: flex;
-      }
+
     }
-    .test-heading {
+    .cc-header-title {
       display: inline-block;
       > * {
         display: inline-block;
