@@ -3,21 +3,32 @@
 {{> organisms-nav-services }}
 
 <main class="main-content {{ pageClasses }}" id="main-content" aria-label="Main Content" role="main">
-  <div class="container">
-    <div class="row">
-      <div class="col-12">
-        <div class="summary">
-          <div class="summary-heading-container">
-            <div class="summary-heading">
-              <h2>Demande</h2> {{> molecules-badge(badgeClass: "badge-pill badge-success", badge: "Ouverte")}}
-            </div>
-            <ul class="nav">
-              <li class="nav-item">{{> atoms-button(buttonClass: "vdm-btn vdm-btn-sm vdm-btn-secondary", buttonText: "Imprimer") }}</li>
-              <li class="nav-item">{{> atoms-button(buttonClass: "vdm-btn vdm-btn-sm", buttonText: "Modifier") }}</li>
-            </ul>
-          </div>
+  <div class="test container">
+    <div class="test-heading-container row">
+      <div class="col-md-6">
+        <div class="test-heading">
+          <h2>Demande</h2> {{> molecules-badge(badgeClass: "badge-pill badge-success", badge: "Ouverte")}}
         </div>
       </div>
+      <div class="col-md-6 d-flex align-self-center">
+        <ul class="nav ml-auto">
+          <li class="nav-item">{{> atoms-button(buttonClass: "vdm-btn vdm-btn-sm vdm-btn-secondary", buttonText: "Imprimer") }}</li>
+          <li class="nav-item">{{> atoms-button(buttonClass: "vdm-btn vdm-btn-sm", buttonText: "Modifier") }}</li>
+        </ul>
+      </div>
+      <!--
+      <div class="summary">
+        <div class="summary-heading-container">
+          <div class="summary-heading">
+            <h2>Demande</h2> {{> molecules-badge(badgeClass: "badge-pill badge-success", badge: "Ouverte")}}
+          </div>
+          <ul class="nav">
+            <li class="nav-item">{{> atoms-button(buttonClass: "vdm-btn vdm-btn-sm vdm-btn-secondary", buttonText: "Imprimer") }}</li>
+            <li class="nav-item">{{> atoms-button(buttonClass: "vdm-btn vdm-btn-sm", buttonText: "Modifier") }}</li>
+          </ul>
+        </div>
+      </div>
+      -->
     </div>
   </div>
   <div class="container container-padding container-card">
