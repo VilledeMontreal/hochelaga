@@ -25,7 +25,9 @@ legend,
 // Set label color
 .form-group label,
 .custom-control-label {
-  color: $input-label-color;
+  &:not(.btn) {
+    color: $input-label-color;
+  }
 }
 
 // wrapper around input that needs inline text addon
