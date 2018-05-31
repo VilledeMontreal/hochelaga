@@ -132,40 +132,6 @@ html {
   }
 }
 
-.container-card-header {
-  .cc-header-row {
-    display: flex;
-    justify-content: space-between;
-    padding-bottom: 1rem;
-    align-items: center;
-    h1 {
-      @include heading(4, "bold");
-      display: inline-block;
-      margin-bottom: 0;
-      margin-right: 1rem;
-    }
-    .nav {
-      display: flex;
-      .nav-item {
-        padding-right: 1rem;
-        padding-left: 1rem;
-        padding-bottom: 0;
-        &:last-child {
-          padding-right: 0;
-        }
-      }
-
-    }
-    .cc-header-title {
-      display: inline-block;
-      > * {
-        display: inline-block;
-        vertical-align: middle;
-      }
-    }
-  }
-}
-
 // Services styles
 // Might migrate to own stylesheet if it becomes too long
 .summary {
@@ -313,7 +279,86 @@ html {
   padding-bottom: $grid-gutter-width;
 }
 
+// Container with a "card" layout
+
 .container-card {
   background-color: $white;
   box-shadow: 0 1px 7px rgba($black, 0.05);
+}
+
+// Contains a utility nav that is outside of container-card
+// This is on a bg-gray-sky background
+
+.container-card-header {
+  .cc-header-row {
+    display: flex;
+    justify-content: space-between;
+    padding-bottom: 1rem;
+    align-items: center;
+    h1 {
+      @include heading(4, "bold");
+      display: inline-block;
+      margin-bottom: 0;
+      margin-right: 1rem;
+    }
+    .nav {
+      display: block;
+      .nav-item {
+        + .nav-item {
+          margin-top: .5rem;
+        }
+      }
+    }
+    .cc-header-title {
+      display: inline-block;
+      margin-bottom: 1rem;
+      > * {
+        display: inline-block;
+        vertical-align: middle;
+      }
+    }
+    @include media-breakpoint-up(sm) {
+      .nav {
+        display: flex;
+        .nav-item {
+          padding-right: 1rem;
+          padding-left: 1rem;
+          padding-bottom: 0;
+          &:first-child {
+            padding-left: 0;
+          }
+          &:last-child {
+            padding-right: 0;
+          }
+          + .nav-item {
+            margin-top: 0;
+          }
+        }
+      }
+    }
+    @include media-breakpoint-only(sm) {
+      .nav {
+        .nav-item {
+          width: 50%;
+        }
+      }
+    }
+    @include media-breakpoint-up(md) {
+      .cc-header-title {
+        margin-bottom: 0
+      }
+    }
+
+    @include media-breakpoint-down(sm) {
+      .nav {
+        width: 100%;
+        .nav-item {
+          button {
+            display: block;
+            width: 100%;
+          }
+        }
+      }
+    }
+  }
 }
