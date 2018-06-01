@@ -24,6 +24,12 @@
   padding-bottom: $badge-pill-padding-y;
 }
 
+.btn .badge {
+  margin-left: .5rem;
+  top: auto;
+  position: inherit;
+}
+
 // States
 .state {
   @include size(2rem);

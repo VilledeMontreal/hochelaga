@@ -1,0 +1,11 @@
+{{# formCheckboxes}}
+  {{# headings }}
+  <label>{{ headings }}</label>
+  {{/ headings }}
+
+  <div class="form-group">
+    {{# formCheckboxItems}}
+    {{> atoms-checkbox-custom-form-item }}
+    {{/ formCheckboxItems}}
+  </div>
+{{/ formCheckboxes}}

@@ -10,7 +10,7 @@
 @import 'scss/variables';
 
 // Bootstrap Framework.
-@import '~bootstrap/scss/bootstrap';
+@import 'styles';
 
 .sg-main {
   padding: 20px 20px;
@@ -444,6 +444,9 @@ $pl-size-box-wrapper-padding: 1rem;
 // Form-elements
 // - - - - - - - - - -  - - - - - -
 .pl-button {
+  button {
+    margin-bottom: 1rem;
+  }
   margin-bottom: 0.6em;
 }
 
