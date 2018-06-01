@@ -91,12 +91,20 @@ fieldset:disabled a.btn {
 // We provide onlye 2 buttons variants
 // Primary, secondary
 .btn-primary {
-  @include button-variant($primary, $primary, $hover-background: $sarcelle-dark, $hover-border: $sarcelle-dark, $active-background: $sarcelle-dark, $active-border: $sarcelle-dark);
+  @include button-variant($background: $primary, $border: $primary, $color: $white, $hover-background: $sarcelle-dark, $hover-border: $sarcelle-dark, $hover-color: $white, $active-background: $sarcelle-dark, $active-border: $sarcelle-dark, $active-color: $white);
 }
 
 .btn-secondary {
-  @include button-variant(transparent, $primary, $hover-background: $primary, $hover-border: $primary, $active-background: $sarcelle-dark, $active-border: $sarcelle-dark);
-  color: $primary;
+  @include button-variant($background: transparent, $border: $primary, $color: $primary, $hover-background: $primary, $hover-border: $primary, $hover-color: $white, $active-background: $sarcelle-dark, $active-border: $sarcelle-dark, $active-color: $white);
+}
+
+.btn-light {
+  &.btn-primary {
+    @include button-variant($background: $sarcelle-atmos, $border: $sarcelle-atmos, $color: $black, $hover-color: $black, $active-color: $black);
+  }
+  &.btn-secondary {
+    @include button-variant($background: transparent, $border: $sarcelle-atmos, $color: $sarcelle-atmos, $hover-color: $sarcelle-atmos, $active-color: $sarcelle-atmos);
+  }
 }
 
 [class*="btn-"] {
