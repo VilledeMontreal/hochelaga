@@ -5,7 +5,8 @@
 //
 
 .btn {
-  display: inline-block;
+  display: inline-flex;
+  align-items: center;
   font-weight: $btn-font-weight;
   text-align: center;
   white-space: nowrap;
@@ -46,6 +47,14 @@
     &:focus {
       @include box-shadow($btn-focus-box-shadow, $btn-active-box-shadow);
     }
+  }
+  .vfi {
+    color: inherit;
+    font-size: 2rem;
+    margin-left: -1.5rem;
+    margin-right: .5rem;
+    margin-top: -4px;
+    margin-bottom: -4px;
   }
 }
 
@@ -121,6 +130,14 @@ fieldset:disabled a.btn {
 .btn-sm {
   @include button-size($btn-padding-y-sm, $btn-padding-x-sm, $font-size-sm, $btn-line-height-sm, $btn-border-radius-sm);
   border-width: 1px;
+  .vfi {
+    color: inherit;
+    font-size: 1.5rem;
+    margin-left: -1.25rem;
+    margin-right: .25rem;
+    margin-top: -3px;
+    margin-bottom: -3px;
+  }
 }
 
 

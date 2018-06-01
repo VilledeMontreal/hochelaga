@@ -106,6 +106,23 @@ legend,
   }
 }
 
+.input-group-append {
+  .btn {
+    display: flex;
+    align-items: center;
+    padding: $input-padding-y $input-padding-x;
+    font-size: $font-size-base; // Match inputs
+    font-weight: $font-weight-normal;
+    line-height: $input-line-height;
+    color: $input-group-addon-color;
+    text-align: center;
+    white-space: nowrap;
+    background-color: $input-group-addon-bg;
+    border: $input-border-width solid $input-group-addon-border-color;
+    @include border-radius($input-border-radius);
+  }
+}
+
 // Checkboxes
 //
 // use vfi
@@ -138,10 +155,12 @@ legend,
     display: flex;
     flex-direction: column;
     flex: 1;
+    justify-content: center;
     padding: 2rem;
     padding-left: 6rem;
     position: relative;
     border: 1px solid $gray-400;
+    min-height: 8rem; // Make sur card has minimum height
 
     // Background-color and (when enabled) gradient
     &::before {
