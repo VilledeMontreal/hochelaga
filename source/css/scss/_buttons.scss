@@ -1,10 +1,196 @@
-// @file ui-buttons-switches-tabs.scss
+// stylelint-disable selector-no-qualifying-type
+
+//
+// Base styles
+//
+
+.btn {
+  display: inline-flex;
+  align-items: center;
+  font-weight: $btn-font-weight;
+  text-align: center;
+  white-space: nowrap;
+  vertical-align: middle;
+  user-select: none;
+  border: $btn-border-width solid transparent;
+  @include button-size($btn-padding-y, $btn-padding-x, $font-size-base, $btn-line-height, $btn-border-radius);
+  @include transition($btn-transition);
+
+  // Share hover and focus styles
+  @include hover-focus {
+    text-decoration: none;
+  }
+
+  &:focus,
+  &.focus {
+    outline: 0;
+    box-shadow: $btn-focus-box-shadow;
+  }
+
+  // Disabled comes first so active can properly restyle
+  &.disabled,
+  &:disabled {
+    opacity: $btn-disabled-opacity;
+    @include box-shadow(none);
+  }
+
+  // Opinionated: add "hand" cursor to non-disabled .btn elements
+  &:not(:disabled):not(.disabled) {
+    cursor: pointer;
+  }
+
+  &:not(:disabled):not(.disabled):active,
+  &:not(:disabled):not(.disabled).active {
+    background-image: none;
+    @include box-shadow($btn-active-box-shadow);
+
+    &:focus {
+      @include box-shadow($btn-focus-box-shadow, $btn-active-box-shadow);
+    }
+  }
+  .vfi {
+    color: inherit;
+    font-size: 2rem;
+    margin-left: -1.5rem;
+    margin-right: .5rem;
+    margin-top: -4px;
+    margin-bottom: -4px;
+  }
+}
+
+// Future-proof disabling of clicks on `<a>` elements
+a.btn.disabled,
+fieldset:disabled a.btn {
+  pointer-events: none;
+}
+
+//
+// Link buttons
+//
+
+// Make a button look and behave like a link
+.btn-link {
+  font-weight: $font-weight-normal;
+  color: $link-color;
+  background-color: transparent;
+
+  @include hover {
+    color: $link-hover-color;
+    text-decoration: $link-hover-decoration;
+    background-color: transparent;
+    border-color: transparent;
+  }
+
+  &:focus,
+  &.focus {
+    text-decoration: $link-hover-decoration;
+    border-color: transparent;
+    box-shadow: none;
+  }
+
+  &:disabled,
+  &.disabled {
+    color: $btn-link-disabled-color;
+    pointer-events: none;
+  }
+
+  // No need for an active state here
+}
+
+// We provide onlye 2 buttons variants
+// Primary, secondary
+.btn-primary {
+  @include button-variant($background: $primary, $border: $primary, $color: $white, $hover-background: $sarcelle-dark, $hover-border: $sarcelle-dark, $hover-color: $white, $active-background: $sarcelle-dark, $active-border: $sarcelle-dark, $active-color: $white);
+}
+
+.btn-secondary {
+  @include button-variant($background: transparent, $border: $primary, $color: $primary, $hover-background: $primary, $hover-border: $primary, $hover-color: $white, $active-background: $sarcelle-dark, $active-border: $sarcelle-dark, $active-color: $white);
+}
+
+.btn-light {
+  &.btn-primary {
+    @include button-variant($background: $sarcelle-atmos, $border: $sarcelle-atmos, $color: $black, $hover-color: $black, $active-color: $black);
+  }
+  &.btn-secondary {
+    @include button-variant($background: transparent, $border: $sarcelle-atmos, $color: $sarcelle-atmos, $hover-color: $sarcelle-atmos, $active-color: $sarcelle-atmos);
+  }
+}
+
+[class*="btn-"] {
+  &:disabled,
+  &.disabled {
+   @include button-variant($gray-300, $gray-300, $hover-background: $gray-300, $hover-border: $gray-300, $active-background: $gray-300, $active-border: $gray-300);
+  }
+}
+
+//
+// Button Small variant
+//
+
+.btn-sm {
+  @include button-size($btn-padding-y-sm, $btn-padding-x-sm, $font-size-sm, $btn-line-height-sm, $btn-border-radius-sm);
+  border-width: 1px;
+  .vfi {
+    color: inherit;
+    font-size: 1.5rem;
+    margin-left: -1.25rem;
+    margin-right: .25rem;
+    margin-top: -3px;
+    margin-bottom: -3px;
+  }
+}
+
+
+//
+// Block button
+//
+
+.btn-block {
+  display: block;
+  width: 100%;
+
+  // Vertically space out multiple block buttons
+  + .btn-block {
+    margin-top: $btn-block-spacing-y;
+  }
+}
+
+.btn-link {
+  border-bottom: 1px solid $sarcelle-atmos;
+  border-radius: 0;
+  padding: 0;
+  &:hover {
+    border-bottom: 1px solid $sarcelle-atmos;
+  }
+}
+
+// Specificity overrides
+input[type="submit"],
+input[type="reset"],
+input[type="button"] {
+  &.btn-block {
+    width: 100%;
+  }
+}
+
+// Make the div behave like a button
+.btn-group-sm,
+.btn-group-vertical-sm {
+  // Prevent double borders when buttons are next to each other
+  .btn + .btn,
+  .btn + .btn-group,
+  .btn-group + .btn,
+  .btn-group + .btn-group {
+    margin-left: -1px;
+  }
+}
 
 // Buttons
 //
 // To Do: Review all buttons implementations and theming. No need to overcomplicate this. Build on bootstrap please
-//        Find a way to blend nicely with ui buttons aka bootstrap default styles. 
-//        Dropshadows, animations, hovers, etc. needs to be harmonized.
+//
+// DEPRECATED - will be removed in v2.0.0
+//
 .vdm-btn {
   display: inline-block;
   width: auto;
@@ -92,14 +278,5 @@ a {
     //padding-top: 1em;
     display: inline-block;
     text-decoration: none;
-  }
-}
-
-.btn-link {
-  border-bottom: 1px solid $sarcelle-atmos;
-  border-radius: 0;
-  padding: 0;
-  &:hover {
-    border-bottom: 1px solid $sarcelle-atmos;
   }
 }

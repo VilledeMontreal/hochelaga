@@ -283,7 +283,7 @@ html {
 
 .container-card {
   background-color: $white;
-  box-shadow: 0 1px 7px rgba($black, 0.05);
+  box-shadow: $card-box-shadow;
 }
 
 // Contains a utility nav that is outside of container-card
