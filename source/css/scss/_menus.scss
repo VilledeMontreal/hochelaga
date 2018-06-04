@@ -1,47 +1,34 @@
 // @file _menus.scss
 
-html {
-  &.sticky {
-    > body {
-      &.menu-open {
-        padding-top: 0;
-        overflow-x: hidden;
-        .vdm-header {
-          position: static;
-          .vdm-navbar {
-            border: none;
-            .menu-trigger {
-              &:before {
-                content: map-get($vdmicons, vfi-mini-x);
-              }
-            }
-          }
-        }
 
-        .side-menu {
-          display: block;
-          position: fixed;
-          top: 0;
-          bottom: 0;
-          overflow-y: auto;
-        }
-        .vdm-page {
-          left: 300px;
-          transition: left 0.3s;
-          position: absolute;
-          // Reset left margin for all bootstrap containers
-          > * {
-            margin-left: 0;
-            margin-right: 0;
-          }
-          .region {
-            margin-left: 0;
-            margin-right: 0;
-          }
+.menu-open {
+  padding-top: 0;
+  overflow-x: hidden;
+  .vdm-header {
+    position: static;
+    .vdm-navbar {
+      border: none;
+      .menu-trigger {
+        &:before {
+          content: map-get($vdmicons, vfi-mini-x);
         }
       }
     }
   }
+/*
+  .side-menu {
+    display: block;
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    overflow-y: auto;
+  }
+  .vdm-page {
+    left: 300px;
+    transition: left 0.3s;
+    position: absolute;
+  }
+  */
 }
 
 .side-menu {
@@ -50,7 +37,7 @@ html {
   height: 100%;
   min-height: 100vh;
   overflow: hidden;
-  display: none;
+  //display: none;
 
   .menu-links {
     width: 100%;
