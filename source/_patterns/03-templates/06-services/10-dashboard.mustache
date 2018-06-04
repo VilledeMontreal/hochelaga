@@ -3,48 +3,28 @@
 {{> organisms-nav-services }}
 
 <main class="main-content {{ pageClasses }}" id="main-content" aria-label="Main Content" role="main">
-  <div class="container content-header">
-    <div class="row content-header-row">
-      <div class="col-md-6">
-        <div class="content-header-title">
-          <h1>Demande</h1> {{> molecules-badge(badgeClass: "badge-pill badge-success", badge: "Ouverte")}}
-        </div>
+  <div class="container services-header">
+    <div class="services-header-block">
+      <div class="services-header-title">
+        <h1 class="h6">Toutes les déclarations</h1>
       </div>
-      <div class="col-md-6 d-flex align-self-center">
-        <ul class="nav ml-md-auto">
-          <li class="nav-item"><a href="">Filter 1</a></li>
-          <li class="nav-item"><a href="">Filter 2</a></li>
-          <li class="nav-item"><a href="">Filter 3</a></li>
-          <li class="nav-item"><a href="">Filter 4</a></li>
-        </ul>
-        {{> atoms-button(buttonClass: "btn-primary btn-sm", buttonText: "Nouvelle demande") }}
-      </div>
-      <!--
-      <div class="col-md-6 d-flex align-self-center">
-        <ul class="nav ml-md-auto">
-          <li class="nav-item">{{> atoms-button(buttonClass: "vdm-btn vdm-btn-sm vdm-btn-secondary", buttonText: "Imprimer") }}</li>
-          <li class="nav-item">{{> atoms-button(buttonClass: "vdm-btn vdm-btn-sm", buttonText: "Modifier") }}</li>
-        </ul>
-      </div>
-      -->
-      <!--
-      <div class="summary">
-        <div class="summary-heading-container">
-          <div class="summary-heading">
-            <h2>Demande</h2> {{> molecules-badge(badgeClass: "badge-pill badge-success", badge: "Ouverte")}}
-          </div>
-          <ul class="nav">
-            <li class="nav-item">{{> atoms-button(buttonClass: "vdm-btn vdm-btn-sm vdm-btn-secondary", buttonText: "Imprimer") }}</li>
-            <li class="nav-item">{{> atoms-button(buttonClass: "vdm-btn vdm-btn-sm", buttonText: "Modifier") }}</li>
-          </ul>
-        </div>
-      </div>
-      -->
+    </div>
+    <div class="services-header-block block-filters ml-auto">
+      <ul class="nav">
+        <li class="nav-item"><a href="" class="sort">Filter 1</a></li>
+        <li class="nav-item"><a href="" class="sort">Filter 2</a></li>
+        <li class="nav-item"><a href="" class="sort">Filter 3</a></li>
+      </ul>
+      {{> atoms-button(buttonClass: "btn-primary btn-sm", buttonText: "Nouvelle déclaration") }}
     </div>
   </div>
   <div class="container">
-    <div class="row">
-
+    <div class="row cards">
+      {{# cards.card-item }}
+      <div class="{{ cards.bsgrid-classes }}">
+        {{> molecules-card-item-alert}}
+      </div>
+      {{/ cards.card-item }}
     </div>
   </div>
 </main>
