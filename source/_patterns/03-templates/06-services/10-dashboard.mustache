@@ -12,10 +12,21 @@
       </div>
       <div class="col-md-6 d-flex align-self-center">
         <ul class="nav ml-md-auto">
+          <li class="nav-item"><a href="">Filter 1</a></li>
+          <li class="nav-item"><a href="">Filter 2</a></li>
+          <li class="nav-item"><a href="">Filter 3</a></li>
+          <li class="nav-item"><a href="">Filter 4</a></li>
+        </ul>
+        {{> atoms-button(buttonClass: "btn-primary btn-sm", buttonText: "Nouvelle demande") }}
+      </div>
+      <!--
+      <div class="col-md-6 d-flex align-self-center">
+        <ul class="nav ml-md-auto">
           <li class="nav-item">{{> atoms-button(buttonClass: "vdm-btn vdm-btn-sm vdm-btn-secondary", buttonText: "Imprimer") }}</li>
           <li class="nav-item">{{> atoms-button(buttonClass: "vdm-btn vdm-btn-sm", buttonText: "Modifier") }}</li>
         </ul>
       </div>
+      -->
       <!--
       <div class="summary">
         <div class="summary-heading-container">
@@ -31,51 +42,9 @@
       -->
     </div>
   </div>
-  <div class="container container-padding container-card">
+  <div class="container">
     <div class="row">
-      {{# hasAlert}}
-      <div class="col-12">
-        <div class="alert-container">
-          {{> molecules-alerts }}
-        </div>
-      </div>
-      {{/ hasAlert}}
 
-      <div class="col-12">
-        <div class="label-content-header">
-          <div class="row">
-            <div class="col-md-6 col-lg-4">
-              <span class="item-label">PA234545409</span>
-              <div class="item-content small">Dernière mise à jour le 30 mars 2018</div>
-            </div>
-            <div class="col-md-6 col-lg-4">
-              <span class="item-label">Permis pour chien</span>
-              <div class="item-content">Roberto</div>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <div class="col-lg-8 border-bottom-content">
-        {{# labelContentMain}}
-        {{> organisms-label-content }}
-        {{/ labelContentMain}}
-      </div>
-      <aside class="col-lg-4">
-        <!-- Side content - Should be able to call organisms-block-label-content -->
-        {{# labelContentSide}}
-        {{> organisms-label-content }}
-        {{/ labelContentSide}}
-        <!-- End side content -->
-      </aside>
-
-      {{# hasFooterNotes}}
-      <div class="col-12">
-        {{> atoms-footer-notes }}
-      </div>
-      {{/ hasFooterNotes}}
-
-      </div>
     </div>
   </div>
 </main>

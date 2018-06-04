@@ -22,16 +22,18 @@
   "enterpriseName": "Mon compte",
   "serviceName": "Permis animalier",
   "serviceIcon": "vfi-permis-animal-chien",
-  "serviceNav": [
-    {
-      "label": "Permis animalier",
-      "url": "#"
-    },
-    {
-      "label": "1928930",
-      "url": false
-    }
-  ],
+  "serviceNav": {
+    "items": [
+      {
+        "label": "Permis animalier",
+        "url": "#"
+      },
+      {
+        "label": "1928930",
+        "url": false
+      }
+    ]
+  },
   "labelContentMain": {
     "labelContent": [
       {
