@@ -3,16 +3,21 @@
 // Easily pump out default styles, as well as :hover, :focus, :active,
 // and disabled options for all buttons
 
-@mixin button-variant($background, $border, $color: color-yiq($background), $hover-background: darken($background, 7.5%), $hover-border: darken($border, 10%), $hover-color: color-yiq($hover-background), $active-background: darken($background, 10%), $active-border: darken($border, 12.5%), $active-color: color-yiq($active-background)) {
+@mixin button-variant($background, $border, $color: color-yiq($background), $hover-background: $sarcelle-surprise, $hover-border: $sarcelle-surprise, $hover-color: $white, $active-background: $sarcelle-surprise, $active-border: $sarcelle-surprise, $active-color: $white) {
+  
   color: $color;
   @include gradient-bg($background);
   border-color: $border;
   @include box-shadow($btn-box-shadow);
-
-  @include hover {
-    color: $hover-color;
-    @include gradient-bg($hover-background);
-    border-color: $hover-border;
+  &:not(:disabled):not(.disabled) {
+    @include hover {
+      // color: $hover-color;
+      // @include gradient-bg($hover-background);
+      // border-color: $hover-border;
+      color: $white;
+      @include gradient-bg($sarcelle-surprise);
+      border-color: $sarcelle-surprise;
+    }
   }
 
   &:focus,

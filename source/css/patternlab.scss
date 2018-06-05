@@ -18,6 +18,10 @@
 
 .patternLink {
   border: none;
+  color: $gray-800;
+  &:hover {
+    color: darken($gray-800, 20%);
+  }
 }
 
 // - - - - - - - - - -  - - - - - -
