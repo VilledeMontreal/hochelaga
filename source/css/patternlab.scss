@@ -18,6 +18,10 @@
 
 .patternLink {
   border: none;
+  color: $gray-800;
+  &:hover {
+    color: darken($gray-800, 20%);
+  }
 }
 
 // - - - - - - - - - -  - - - - - -
@@ -32,7 +36,7 @@
 // Titles
 .pl-stroked-header {
   padding-top: 0.25em;
-  // padding-left: 0.25em;
+  //   padding-left: 0.25em;
   // border-top: 1px solid #ddd;
   width: 93%;
 }
