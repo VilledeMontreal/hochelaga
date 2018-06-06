@@ -35,59 +35,57 @@ html {
 }
 
 
-// Do we really need this?
-.region {
 
-  // Main header, always includes at least the page Title
-  &.region-content-header {
-    // Dark variant
-    &.content-header-dark {
-      background-color: $gray-900;
+
+// Main header, always includes at least the page Title
+.region-content-header {
+  // Dark variant
+  &.content-header-dark {
+    background-color: $gray-900;
+    color: $white;
+    h1,h2,h3,h4,h5,h6, {
       color: $white;
-      h1,h2,h3,h4,h5,h6, {
-        color: $white;
-      }
-    }
-
-    &.has-nav-tabs {
-      .content-header {
-        margin-bottom: 0;
-      }
-      margin-bottom: 6rem;
-    }
-
-    &.region-border {
-      border-bottom: 1px solid $gray-400;
-    }
-
-  }
-  .content-header {
-    width: 100%;
-
-    &-title {
-      display: flex;
-      flex-wrap: wrap;
-      padding: 3rem 0;
-      h1, .h1 {
-        width: 100%;
-      }
-    }
-
-    .date-time {
-      display: flex;
-      align-self: center;
-    }
-
-    @include media-breakpoint-up(lg) {
-      &.has-image {
-        margin-top: -180px;
-      }
-      .header-title-overlap {
-        background-color: $white;
-      }
     }
   }
-} // Region
+
+  &.has-nav-tabs {
+    .content-header {
+      margin-bottom: 0;
+    }
+    margin-bottom: 6rem;
+  }
+
+  &.region-border {
+    border-bottom: 1px solid $gray-400;
+  }
+
+}
+.content-header {
+  width: 100%;
+
+  &-title {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 3rem 0;
+    h1, .h1 {
+      width: 100%;
+    }
+  }
+
+  .date-time {
+    display: flex;
+    align-self: center;
+  }
+
+  @include media-breakpoint-up(lg) {
+    &.has-image {
+      margin-top: -180px;
+    }
+    .header-title-overlap {
+      background-color: $white;
+    }
+  }
+}
 
 .region-content {
   padding-top: 4rem;
@@ -279,7 +277,95 @@ html {
   padding-bottom: $grid-gutter-width;
 }
 
-.container-card {
-  background-color: $white;
-  box-shadow: $card-box-shadow;
+
+// Box layout
+// Box-header and box-content
+// This is on a bg-gray-sky background
+.box {
+  .box-header {
+    margin-bottom: 1rem;
+    .box-header-title {
+      display: inline-block;
+      margin-bottom: 1rem;
+      > * {
+        display: inline-block;
+        vertical-align: middle;
+      }
+      h1 {
+        //@include heading(5, "bold");
+        display: inline-block;
+        margin-bottom: 0;
+        margin-right: 1rem;
+      }
+    }
+    .box-header-controls {
+      .nav {
+        display: block;
+        margin-bottom: 1rem;
+        .nav-item {
+          a {
+            border-bottom: none;
+            color: $body-color;
+            display: flex;
+          }
+          .sort {
+            @include iconvfi($position: after, $icon: chevron-bas);
+            &:after {
+              margin-left: .25rem;
+              font-weight: 700;
+            }
+          }
+          + .nav-item {
+            margin-top: .5rem;
+          }
+        }
+      }
+    }
+    // TODO: fix for small breakpoints
+    @include media-breakpoint-up(md) {
+      display: flex;
+      flex-direction: row;
+      .box-header-title {
+        display: flex;
+        align-items: center;
+        flex: 1 0 auto;
+        margin-bottom: 0;
+      }
+      .box-header-controls {
+        display: flex;
+        align-self: center;
+        justify-content: flex-end;
+        .nav {
+          display: flex;
+          margin-bottom: 0;
+          .nav-item {
+            padding-right: 1rem;
+            padding-left: 1rem;
+            padding-bottom: 0;
+            &:first-child {
+              padding-left: 0;
+            }
+            &:last-child {
+              padding-right: 0;
+            }
+            + .nav-item {
+              margin-top: 0;
+            }
+          }
+          &.nav-filters {
+            font-size: $font-size-md;
+            margin-right: 2rem;
+            display: flex;
+            flex: 1 0 auto;
+            align-self: center;
+          }
+        }
+      }
+    }
+  }
+
+  .box-content {
+    background-color: $white;
+    box-shadow: $card-box-shadow;
+  }
 }

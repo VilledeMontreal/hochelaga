@@ -1,5 +1,5 @@
 {
-  "pageClasses": "bg-gray-sky py-6",
+  "pageClasses": "box bg-gray-sky py-6",
   "regionMainClasses": "",
   "hasTopBanner": false,
   "sidebarRight": false,
@@ -22,16 +22,18 @@
   "enterpriseName": "Mon compte",
   "serviceName": "Permis animalier",
   "serviceIcon": "vfi-permis-animal-chien",
-  "serviceNav": [
-    {
-      "label": "Permis animalier",
-      "url": "#"
-    },
-    {
-      "label": "1928930",
-      "url": false
-    }
-  ],
+  "serviceNav": {
+    "items": [
+      {
+        "label": "Permis animalier",
+        "url": "#"
+      },
+      {
+        "label": "1928930",
+        "url": false
+      }
+    ]
+  },
   "labelContentMain": {
     "labelContent": [
       {

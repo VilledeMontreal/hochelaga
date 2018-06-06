@@ -55,6 +55,10 @@
     margin-right: .5rem;
     margin-top: -4px;
     margin-bottom: -4px;
+    &.vfi-right {
+      margin-left: .5rem;
+      margin-right: -1.5rem;
+    }
   }
 }
 
@@ -73,12 +77,12 @@ fieldset:disabled a.btn {
   font-weight: $font-weight-normal;
   color: $link-color;
   background-color: transparent;
-
-  @include hover {
-    color: $link-hover-color;
-    text-decoration: $link-hover-decoration;
-    background-color: transparent;
-    border-color: transparent;
+  &:not(:disabled):not(.disabled) {
+    @include hover {
+      color: $link-hover-color;
+      text-decoration: $link-hover-decoration;
+      background-color: transparent;
+    }
   }
 
   &:focus,
@@ -97,22 +101,32 @@ fieldset:disabled a.btn {
   // No need for an active state here
 }
 
-// We provide onlye 2 buttons variants
+// We provide onlye 2 buttons styles with some variants
 // Primary, secondary
 .btn-primary {
-  @include button-variant($background: $primary, $border: $primary, $color: $white, $hover-background: $sarcelle-dark, $hover-border: $sarcelle-dark, $hover-color: $white, $active-background: $sarcelle-dark, $active-border: $sarcelle-dark, $active-color: $white);
+  @include button-variant($background: $primary, $border: $primary, $color: $white);
 }
 
 .btn-secondary {
-  @include button-variant($background: transparent, $border: $primary, $color: $primary, $hover-background: $primary, $hover-border: $primary, $hover-color: $white, $active-background: $sarcelle-dark, $active-border: $sarcelle-dark, $active-color: $white);
+  @include button-variant($background: transparent, $border: $primary, $color: $primary, $hover-background: transparent, $hover-border: $sarcelle-surprise, $hover-color: $sarcelle-surprise, $active-background: $sarcelle-surprise, $active-border: $sarcelle-surprise, $active-color: $white);
 }
 
+//
 .btn-light {
   &.btn-primary {
-    @include button-variant($background: $sarcelle-atmos, $border: $sarcelle-atmos, $color: $black, $hover-color: $black, $active-color: $black);
+    @include button-variant($background: $sarcelle-atmos, $border: $sarcelle-atmos, $color: $black, $hover-background: $sarcelle-surprise, $hover-border: $sarcelle-surprise, $hover-color: $black, $active-color: $black);
   }
   &.btn-secondary {
-    @include button-variant($background: transparent, $border: $sarcelle-atmos, $color: $sarcelle-atmos, $hover-color: $sarcelle-atmos, $active-color: $sarcelle-atmos);
+    @include button-variant($background: transparent, $border: $sarcelle-atmos, $color: $sarcelle-atmos, $hover-background: transparent, $hover-border: $sarcelle-surprise, $hover-color: $sarcelle-surprise, $active-color: $sarcelle-atmos);
+  }
+}
+
+.btn-inverse {
+  &.btn-primary {
+    @include button-variant($background: $white, $border: $white, $color: $sarcelle, $hover-background: $sarcelle-surprise, $hover-border: $sarcelle-surprise, $hover-color: $sarcelle, $active-background: $white, $active-border: $white, $active-color: $sarcelle);
+  }
+  &.btn-secondary {
+    @include button-variant($background: transparent, $border: $white, $color: $white, $hover-background: transparent, $hover-border: $sarcelle-surprise, $hover-color: $sarcelle-surprise, $active-background: $white, $active-border: $white, $active-color: $sarcelle);
   }
 }
 
@@ -129,7 +143,7 @@ fieldset:disabled a.btn {
 
 .btn-sm {
   @include button-size($btn-padding-y-sm, $btn-padding-x-sm, $font-size-sm, $btn-line-height-sm, $btn-border-radius-sm);
-  border-width: 1px;
+  border-width: 2px;
   .vfi {
     color: inherit;
     font-size: 1.5rem;
@@ -137,6 +151,10 @@ fieldset:disabled a.btn {
     margin-right: .25rem;
     margin-top: -3px;
     margin-bottom: -3px;
+    &.vfi-right {
+      margin-left: .25rem;
+      margin-right: -1.25rem;
+    }
   }
 }
 

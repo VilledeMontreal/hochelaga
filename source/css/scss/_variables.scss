@@ -49,12 +49,12 @@ $blue:    #0296c0;          // VDM
 $indigo:  #6610f2 !default;
 $purple:  #6f42c1 !default;
 $pink:    #e83e8c !default;
-// $red:    #ff3200;
-$red:     $red-montreal;      // VDM
+$red:    #ff3200;
+//$red:     $red-montreal;      // VDM
 $orange:  #fd7e14 !default;
 $yellow:  #fecc03;          // VDM
 // $green:   #02c876;
-$green:   #39a24e;          // VDM
+$green:   #0da566;          // VDM
 $teal:    #20c997 !default;
 $cyan:    #17a2b8 !default;
 
@@ -125,11 +125,11 @@ $body-color:            $gray-ink;
 //
 // Style anchor elements.
 
-$link-color:                  $gray-900;
+$link-color:                  $sarcelle-surprise; //$gray-900;
 $link-border-color:           $sarcelle-atmos;
 $link-border-width:           1px;
 $link-decoration:             none;
-$link-hover-color:            $gray-900;
+$link-hover-color:            $sarcelle;
 $link-hover-decoration:       none;
 
 // Paragraphs
@@ -362,6 +362,7 @@ $input-btn-line-height-lg:    $line-height-lg;
 //
 // Buttons
 //
+// DEPRECATED - Use btn-* variables instead
 
 $vdm-btn-border-width:        2px;
 $vdm-btn-height:              53px;
@@ -380,7 +381,7 @@ $btn-padding-y:               .75rem;
 $btn-padding-x:               2.5rem;
 $btn-line-height:             $input-btn-line-height;
 
-$btn-padding-y-sm:            .625rem;
+$btn-padding-y-sm:            .5625rem;
 $btn-padding-x-sm:            2rem;
 $btn-line-height-sm:          get-line-height(12px, 18px);
 

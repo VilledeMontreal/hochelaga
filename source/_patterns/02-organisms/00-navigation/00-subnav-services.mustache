@@ -2,11 +2,14 @@
   <div class="container-fluid">
     {{# hasServiceLink}}
     <div class="navbar-header navbar-header-service-link">
+      {{# serviceIcon}}
       <span class="navbar-icon vfi {{ serviceIcon }}" aria-hidden="true"></span>
+      {{/ serviceIcon}}
       <div class="d-flex flex-column">
         <span class="navbar-link"><a href="#">{{ enterpriseName }}</a></span>
+        {{# serviceNav}}
         <ul>
-          {{# serviceNav}}
+          {{# serviceNav.items}}
           <li>
             {{# url}}
             <a href="{{ url }}">{{ label }}</a>
@@ -15,8 +18,9 @@
             {{ label }}
             {{/ url}}
           </li>
-          {{/ serviceNav}}
+          {{/ serviceNav.items}}
         </ul>
+        {{/ serviceNav}}
       </div>
     </div>
     {{/ hasServiceLink}}
