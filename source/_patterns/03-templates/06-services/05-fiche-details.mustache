@@ -3,24 +3,18 @@
 {{> organisms-nav-services }}
 
 <main class="main-content {{ pageClasses }}" id="main-content" aria-label="Main Content" role="main">
-  <div class="container">
-    <div class="row">
-      <div class="col-12">
-        <div class="summary">
-          <div class="summary-heading-container">
-            <div class="summary-heading">
-              <h2>Demande</h2> {{> molecules-badge(badgeClass: "badge-pill badge-success", badge: "Ouverte")}}
-            </div>
-            <ul class="nav">
-              <li class="nav-item">{{> atoms-button(buttonClass: "btn btn-secondary btn-sm", buttonText: "Imprimer") }}</li>
-              <li class="nav-item">{{> atoms-button(buttonClass: "btn btn-primary btn-sm", buttonText: "Modifier") }}</li>
-            </ul>
-          </div>
-        </div>
-      </div>
+  <div class="container box-header">
+    <div class="box-header-title">
+      <h1 class="h5 strong">Demande</h1> {{> molecules-badge(badgeClass: "badge-pill badge-success", badge: "Ouverte")}}
+    </div>
+    <div class="box-header-controls">
+      <ul class="nav">
+        <li class="nav-item">{{> atoms-button(buttonClass: "btn-secondary btn-sm", buttonText: "Imprimer") }}</li>
+        <li class="nav-item">{{> atoms-button(buttonClass: "btn-primary btn-sm", buttonText: "Modifier") }}</li>
+      </ul>
     </div>
   </div>
-  <div class="container container-padding container-card">
+  <div class="container box-content container-padding">
     <div class="row">
       {{# hasAlert}}
       <div class="col-12">

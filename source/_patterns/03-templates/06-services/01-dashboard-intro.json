@@ -16,16 +16,18 @@
   "hasServiceLink": true,
   "enterpriseName": "Nom de la compagnie XYZ",
   "serviceIcon": false,
-  "serviceNav": [
-    {
-      "label": "Déclaration des matières dangereuses",
-      "url": "#"
-    },
-    {
-      "label": "Établissement existant",
-      "url": false
-    }
-  ],
+  "serviceNav": {
+    "items": [
+      {
+        "label": "Déclaration des matières dangereuses",
+        "url": "#"
+      },
+      {
+        "label": "Établissement existant",
+        "url": false
+      }
+    ]
+  },
   "navDashboard": [
     {
       "navDashboardLabel": "Tâche 1",
