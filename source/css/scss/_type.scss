@@ -486,18 +486,23 @@ dl {
 //
 // Might not be in the right stylesheet
 .link-box {
-  :hover,
-  :active {
-    text-decoration: none;
-  }
   a {
     border: none;
+    color: $gray-900;
     display: flex;
     flex-direction: row;
     height: 100%;
+    .vfi {
+      font-size: 2rem;
+      color: $primary;
+    }
+    &:hover,
+    &:active {
+      color: $primary;
+      text-decoration: none;
+    }
   }
   .link-box-content {
-    color: $link-color;
     display: flex;
     flex: 1;
     flex-direction: row;
@@ -505,10 +510,6 @@ dl {
     margin-bottom: $grid-gutter-width;
     padding: 20px;
     align-items: center;
-    .vfi {
-      font-size: 2rem;
-      color: $primary;
-    }
   }
 }
 
