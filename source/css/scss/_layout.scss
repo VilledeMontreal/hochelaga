@@ -277,96 +277,94 @@ html {
   padding-bottom: $grid-gutter-width;
 }
 
-// Container with a "card" layout
 
-.container-card {
-  background-color: $white;
-  box-shadow: $card-box-shadow;
-}
-
-// Services header may contain Title, states, nav, filters, buttons
+// Box layout
+// Box-header and box-content
 // This is on a bg-gray-sky background
-
-.services-header {
-  margin-bottom: 1rem;
-  .services-header-block {
-    display: block;
-    h1 {
-      @include heading(6, "bold");
-      display: inline-block;
-      margin-bottom: 0;
-      margin-right: 1rem;
-    }
-    .nav {
-      display: block;
-      margin-bottom: 1rem;
-      .nav-item {
-        a {
-          border-bottom: none;
-          color: $body-color;
-          display: flex;
-        }
-        .sort {
-          @include iconvfi($position: after, $icon: chevron-bas);
-          &:after {
-            margin-left: .25rem;
-            font-weight: 700;
-          }
-        }
-        + .nav-item {
-          margin-top: .5rem;
-        }
-      }
-    }
-    .services-header-title {
+.box {
+  .box-header {
+    margin-bottom: 1rem;
+    .box-header-title {
       display: inline-block;
       margin-bottom: 1rem;
       > * {
         display: inline-block;
         vertical-align: middle;
       }
-    }
-    &.block-filters {
-      .nav {
-        font-size: $font-size-md;
-        margin-right: 2rem;
-      }
-    }
-  }
-  // TODO: fix for small breakpoints
-  @include media-breakpoint-up(md) {
-    display: flex;
-    flex-direction: row;
-    .services-header-block {
-      display: flex;
-      align-items: center;
-      flex: 1 0 auto;
-      &.block-filters {
-        display: flex;
-        align-self: center;
-        justify-content: flex-end;
-      }
-      .services-header-title {
-        margin-bottom: 0
-      }
-      .nav {
-        display: flex;
+      h1 {
+        //@include heading(5, "bold");
+        display: inline-block;
         margin-bottom: 0;
+        margin-right: 1rem;
+      }
+    }
+    .box-header-controls {
+      .nav {
+        display: block;
+        margin-bottom: 1rem;
         .nav-item {
-          padding-right: 1rem;
-          padding-left: 1rem;
-          padding-bottom: 0;
-          &:first-child {
-            padding-left: 0;
+          a {
+            border-bottom: none;
+            color: $body-color;
+            display: flex;
           }
-          &:last-child {
-            padding-right: 0;
+          .sort {
+            @include iconvfi($position: after, $icon: chevron-bas);
+            &:after {
+              margin-left: .25rem;
+              font-weight: 700;
+            }
           }
           + .nav-item {
-            margin-top: 0;
+            margin-top: .5rem;
           }
         }
       }
     }
+    // TODO: fix for small breakpoints
+    @include media-breakpoint-up(md) {
+      display: flex;
+      flex-direction: row;
+      .box-header-title {
+        display: flex;
+        align-items: center;
+        flex: 1 0 auto;
+        margin-bottom: 0;
+      }
+      .box-header-controls {
+        display: flex;
+        align-self: center;
+        justify-content: flex-end;
+        .nav {
+          display: flex;
+          margin-bottom: 0;
+          .nav-item {
+            padding-right: 1rem;
+            padding-left: 1rem;
+            padding-bottom: 0;
+            &:first-child {
+              padding-left: 0;
+            }
+            &:last-child {
+              padding-right: 0;
+            }
+            + .nav-item {
+              margin-top: 0;
+            }
+          }
+          &.nav-filters {
+            font-size: $font-size-md;
+            margin-right: 2rem;
+            display: flex;
+            align-self: center;
+          }
+        }
+      }
+    }
+  }
+
+  .box-content {
+    background-color: $white;
+    box-shadow: $card-box-shadow;
   }
 }
