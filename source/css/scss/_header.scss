@@ -1,6 +1,49 @@
-// @file header.scss
+// New navbar based on bootstrap navbar
 
-// @ see http://192.168.56.101:3000/?p=organisms-header
+.navbar {
+  a {
+    border-bottom: none;
+  }
+  .navbar-div {
+    display: flex !important;  // stylelint-disable-line declaration-no-important
+    flex-basis: auto; // Changes flex-bases to auto because of an IE10 bug
+    //flex-basis: 100%;
+    flex-grow: 1;
+    // For always expanded or extra full navbars, ensure content aligns itself
+    // properly vertically. Can be easily overridden with flex utilities.
+    align-items: center;
+  }
+  .nav-item.dropdown {
+    margin-bottom: 0;
+    padding-bottom: 0;
+  }
+  .nav-link.dropdown-toggle {
+    padding-top: 0;
+    padding-bottom: 0;
+  }
+  .vfi {
+    font-size: 2rem;
+    vertical-align: middle;
+  }
+}
+
+.navbar-brand {
+  //height: 2.5rem;
+  padding: 0;
+  img {
+    height: 2.5rem;
+    width: auto;
+  }
+}
+
+.navbar-toggler {
+  align-items: center;
+  border: none;
+  border-radius: 0;
+}
+
+
+
 
 .vdm-header {
   //@extend .fixed-top;

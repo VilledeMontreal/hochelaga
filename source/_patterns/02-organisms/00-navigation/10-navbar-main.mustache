@@ -1,0 +1,42 @@
+<nav class="navbar navbar-light d-flex flex-row">
+  <div class="d-flex flex-row w-100">
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+      <span class="">Menu</span>
+    </button>
+    <button id="quick-search-button">
+      <span class="sr-only">Ouvrir la barre de recherche</span>
+      <span class="vfi vfi-recherche"></span>
+      <span class="d-none d-lg-inline-block">Recherche</span>
+    </button>
+  </div>
+  <a class="navbar-brand mx-auto" href="/">
+    {{> atoms-logo-svg }}
+  </a>
+  <div class="d-flex flex-row w-100">
+    <ul class="navbar-nav">
+      <li class="nav-item dropdown">
+        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          <span class="vfi vfi-profil" aria-hidden="true"></span>
+          Mon compte
+        </a>
+        <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+          <div class="user-info">
+            <span class="user-name">Françoise Tremblay</span>
+            <span class="user-email">francoisetremblay@gmail.com</span>
+          </div>
+          <a href="btn btn-secondary btn-sm">Paramètres</a>
+          <ul class="list-unstyled">
+            <a class="dropdown-item" href="#">Tableau de bord</a>
+            <a class="dropdown-item" href="#">Modifier mon profil</a>
+            <a class="dropdown-item" href="#">Mes services</a>
+            <a class="dropdown-item" href="#">Mes demandes</a>
+            <a class="dropdown-item" href="#">Mes déconnecter</a>
+          </ul>
+          <div class="dropdown-divider"></div>
+          <a class="dropdown-item" href="#">Me déconnecter</a>
+        </div>
+      </li>
+    </ul>
+  </div>
+</nav>
