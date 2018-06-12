@@ -2,7 +2,7 @@
 
 .navbar {
   //border: 1px solid red;
-  padding: 2.5rem 2rem;
+  padding: 2rem 2rem;
   border-bottom: 1px solid $gray-400;
   a:not(.btn) {
     border-bottom: none;
@@ -25,7 +25,7 @@
     padding-bottom: 0;
   }
   .vfi {
-    font-size: 2.5rem;
+    font-size: 3rem;
     vertical-align: middle;
     &.vfi-profil {
       margin-top: -.5rem;
@@ -37,8 +37,9 @@
   }
   .navbar-nav {
     .dropdown-menu {
-      top: 5rem;
+      top: 4.75rem;
       right: -2rem;
+      margin: 0;
       ul {
         padding: 0;
         li {
@@ -47,59 +48,81 @@
       }
     }
   }
-}
-
-.dropdown-menu {
-  .dropdown-item-section {
-    color: $body-color;
-    padding: 1.5rem $dropdown-item-padding-x;
-    > * {
-      margin-bottom: 1.5rem;
-      &:last-child {
-        margin-bottom: 0;
+  .navbar-brand {
+    //height: 2.5rem;
+    padding: 0;
+    img {
+      height: 2.5rem;
+      width: auto;
+    }
+  }
+  .navbar-menu-toggler,
+  .navbar-search-toggler {
+    border: none;
+    border-radius: .25rem;
+    cursor: pointer;
+    margin-right: 1rem;
+    padding: 0 .5rem;
+    display: inline-flex;
+    align-items: center;
+    &:focus,
+    &.focus {
+      outline: 0;
+      box-shadow: $btn-focus-box-shadow;
+    }
+  }
+  .navbar-menu-toggler {
+    .navbar-menu-toggler-custom-icon {
+      span {
+        display: block;
+        background-color: #444;
+        height: 2px;
+        width: 25px;
+        margin-top: 6px;
+        margin-bottom: 6px;
+        -webkit-transform: rotate(0deg);
+        -moz-transform: rotate(0deg);
+        -o-transform: rotate(0deg);
+        transform: rotate(0deg);
+        position: relative;
+        left: 0;
+        opacity: 1;
       }
     }
-    .user-name {
-      font-weight: $font-weight-bold;
+    .navbar-menu-toggler-text {
+      font-size: 1rem;
+      margin-left: 1rem;
+    }
+  }
+  .navbar-search-toggler {
+    user-select: none;
+    cursor: pointer;
+  }
+  .dropdown-menu {
+    .dropdown-item-section {
+      color: $body-color;
+      padding: 1.5rem $dropdown-item-padding-x;
+      > * {
+        margin-bottom: 1.5rem;
+        &:last-child {
+          margin-bottom: 0;
+        }
+      }
+      .user-name {
+        font-weight: $font-weight-bold;
+      }
+    }
+    .notification {
+
     }
   }
 }
 
-.navbar-brand {
-  //height: 2.5rem;
-  padding: 0;
-  img {
-    height: 2.5rem;
-    width: auto;
-  }
-}
-.navbar-toggler-text {
-  font-size: 1rem;
-  margin-left: 1rem;
-}
-.navbar-toggler {
-  align-items: center;
-  border: none;
-  border-radius: 0;
-  .navbar-toggler-custom-icon {
-    span {
-      display: block;
-      background-color: #444;
-      height: 2px;
-      width: 25px;
-      margin-top: 4px;
-      margin-bottom: 4px;
-      -webkit-transform: rotate(0deg);
-      -moz-transform: rotate(0deg);
-      -o-transform: rotate(0deg);
-      transform: rotate(0deg);
-      position: relative;
-      left: 0;
-      opacity: 1;
-   }
-  }
+.navbar-search {
+  display: none;
 }
 
+// Old navbar - Will be deprecated
 
 .vdm-header {
   //@extend .fixed-top;

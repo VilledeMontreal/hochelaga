@@ -1,16 +1,16 @@
 <nav class="navbar navbar-light navbar-expand justify-content-between">
 
   <div class="d-flex w-100">
-    <button class="navbar-toggler d-flex" type="button" data-toggle="menu" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+    <button class="navbar-menu-toggler d-flex" type="button" data-toggle="menu" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
       aria-expanded="false" aria-label="Toggle menu">
-      <span class="navbar-toggler-custom-icon">
+      <span class="navbar-menu-toggler-custom-icon">
         <span></span>
         <span></span>
         <span></span>
       </span>
-      <span class="navbar-toggler-text d-none d-md-inline-block">Menu</span>
+      <span class="navbar-menu-toggler-text d-none d-md-inline-block">Menu</span>
     </button>
-    <button class="btn" id="quick-search-button">
+    <button class="navbar-search-toggler" id="navbarDropdownSearch" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
       <span class="sr-only">Ouvrir la barre de recherche</span>
       <span class="vfi vfi-recherche"></span>
       <span class="d-none d-md-inline-block">Recherche</span>
@@ -55,3 +55,6 @@
     </ul>
   </div>
 </nav>
+<div class="navbar-search" id="navbar-search">
+  {{> molecules-search-field-combo-base }}
+</div>
