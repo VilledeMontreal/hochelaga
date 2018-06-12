@@ -1,12 +1,16 @@
 <nav class="navbar navbar-light navbar-expand justify-content-between">
 
   <div class="d-flex w-100">
-    <button class="navbar-toggler" type="button" data-toggle="menu" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+    <button class="navbar-toggler d-flex" type="button" data-toggle="menu" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
       aria-expanded="false" aria-label="Toggle menu">
-      <span class="navbar-toggler-icon"></span>
-      <span class="">Menu</span>
+      <span class="navbar-toggler-custom-icon">
+        <span></span>
+        <span></span>
+        <span></span>
+      </span>
+      <span class="navbar-toggler-text d-none d-md-inline-block">Menu</span>
     </button>
-    <button id="quick-search-button">
+    <button class="btn" id="quick-search-button">
       <span class="sr-only">Ouvrir la barre de recherche</span>
       <span class="vfi vfi-recherche"></span>
       <span class="d-none d-md-inline-block">Recherche</span>
@@ -23,17 +27,26 @@
           <span class="d-none d-md-inline-block">Mon compte</span>
         </a>
         <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdownMenuLink">
-          <div class="user-info">
-            <span class="user-name">Françoise Tremblay</span>
-            <span class="user-email">francoisetremblay@gmail.com</span>
+          <div class="dropdown-item-section">
+            <div class="user-info">
+              <span class="user-name">Françoise Tremblay</span>
+              <span class="user-email">francoisetremblay@gmail.com</span>
+            </div>
+            <a href="#" class="btn btn-secondary btn-sm">Paramètres</a>
           </div>
-          <a href="btn btn-secondary btn-sm">Paramètres</a>
           <ul class="list-unstyled">
-            <a class="dropdown-item" href="#">Tableau de bord</a>
-            <a class="dropdown-item" href="#">Modifier mon profil</a>
-            <a class="dropdown-item" href="#">Mes services</a>
-            <a class="dropdown-item" href="#">Mes demandes</a>
-            <a class="dropdown-item" href="#">Mes déconnecter</a>
+            <li>
+              <a class="dropdown-item" href="#">Tableau de bord</a>
+            </li>
+            <li>
+              <a class="dropdown-item" href="#">Modifier mon profil</a>
+            </li>
+            <li>
+              <a class="dropdown-item" href="#">Mes services</a>
+            </li>
+            <li>
+              <a class="dropdown-item" href="#">Mes demandes</a>
+            </li>
           </ul>
           <div class="dropdown-divider"></div>
           <a class="dropdown-item" href="#">Me déconnecter</a>
