@@ -9,13 +9,11 @@
     .vdm-navbar {
       border: none;
       .menu-trigger {
-        &:before {
-          content: map-get($vdmicons, vfi-mini-x);
-        }
+        @include iconvfi(before, mini-x);
       }
     }
   }
-/*
+
   .side-menu {
     display: block;
     position: fixed;
@@ -28,7 +26,7 @@
     transition: left 0.3s;
     position: absolute;
   }
-  */
+
 }
 
 .side-menu {

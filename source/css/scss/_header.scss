@@ -122,6 +122,44 @@
   display: none;
 }
 
+.navbar-side {
+  height: 100%;
+  padding: 0;
+  list-style: none;
+  background-color: $gray-sky;
+  overflow-y: scroll;
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 300px;
+  z-index: $zindex-fixed;
+  transform: translateX(-100%);
+  transition: 300ms ease;
+
+  &.in {
+    transform: translateX(0%);
+    transition: 300ms ease;
+  }
+}
+
+.navbar-side-item {
+  padding: 1.5rem 0;
+  margin: 0;
+  border-bottom: 2px solid $sarcelle;
+  height: 5rem;
+}
+
+.side-link {
+  padding-left: 2rem;
+}
+
+
+
+
+
+
+
 // Old navbar - Will be deprecated
 
 .vdm-header {
@@ -154,7 +192,7 @@
   }
 
   .menu-trigger {
-    @include iconvfi(before, menu);
+    //@include iconvfi(before, menu);
     @include size($header-icon-width);
     font-size: 3.5rem;
     border: 0;

@@ -23,11 +23,12 @@
   // ******************************
   // Begin side menu push
 
-  var $menuTrigger = $(".menu-trigger");
+  var $menuToggler = $(".navbar-menu-toggler");
 
-  $menuTrigger.on("click", function() {
-    $("body").toggleClass("menu-open");
-    if ($("body").hasClass("menu-open")) {
+  $menuToggler.on("click", function() {
+    $('#navbarSide').toggleClass('in');
+
+    if ($("#navbarSide").hasClass("in")) {
       $(this).attr("aria-expanded", "true");
     } else {
       $(this).attr("aria-expanded", "false");
