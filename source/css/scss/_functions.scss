@@ -1,0 +1,24 @@
+@function parseInt($n) {
+  @return $n / ($n * 0 + 1);
+}
+
+// Get Line height from font-size and line-height
+// @arg $font-size [px or rem value]
+// @arg $line-height [px value]
+@function get-line-height($font-size, $line-height) {
+  $px: ();
+
+  $unit: unit($font-size);
+  $val: parseInt($font-size);
+
+  @if $unit == 'px' {
+    $px: $val;
+  }
+
+  @if $unit == 'rem' {
+    $px: $val * 16;
+  }
+
+  $lh: parseInt($line-height);
+  @return $lh / $px;
+}

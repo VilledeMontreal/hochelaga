@@ -4,6 +4,9 @@
   border-radius: 0;
   font-size: $font-size-sm;
   margin-bottom: 0;
+  a {
+    border: none;
+  }
 }
 
 .nav-wizard {
@@ -43,15 +46,10 @@
         display: block;
         font-size: 1em;
         line-height: 1;
+        color: $pagination-color;
       }
     }
   }
-}
-
-// Page link
-
-.page-link {
-  font-size: $h5-font-size;
 }
 
 //
@@ -96,27 +94,28 @@
   padding: 0;
   position: relative;
   .collapsible-header {
-    h4 {
+    .collapsible-title {
       margin: 0;
     }
     a {
-      @include header(5);
-      background: $vdm-grey-light;
-      color: $black;
+      background: $gray-sky;
+      border: none;
+      color: $headings-color;
       display: flex;
-      line-height: 1.9rem;
+      font-size: $font-size-lg;
+      line-height: get-line-height($font-size-lg, 32px);
       padding: 1.4rem 5rem 1.4rem 4rem;
       cursor: pointer;
       @include iconvfi(after, mini-plus-circulaire);
 
       &[aria-expanded="true"] {
-        color: $vdm-brand;
+        color: $primary;
         @include iconvfi(after, mini-moins-circulaire-plein);
       }
 
       &:hover,
       &:active {
-        color: $vdm-brand;
+        color: $primary;
         text-decoration: none;
         @include iconvfi(after, mini-plus-circulaire-plein);
 
@@ -134,14 +133,14 @@
         align-self: center;
         right: 1.4rem;
         display: block;
-        color: $vdm-brand;
+        color: $primary;
       }
 
       span {
         align-self: center;
 
         &.collapsible-icon {
-          color: $vdm-brand;
+          color: $primary;
           flex-grow: 0;
           font-size: 2rem;
           align-self: center;
@@ -173,6 +172,7 @@
   .collapsible-header {
     a {
       background: transparent;
+      border: none;
     }
     span {
       margin-right: 15px;
@@ -230,14 +230,13 @@ nav {
 .nav-tabs,
 .nav-tabs-dropdown-menu {
   .nav-link {
-    background: $vdm-grey-light;
+    background: $gray-sky;
     border: none;
     color: $black;
     font-weight: $font-weight-bold;
     position: relative;
     text-align: center;
     &.active,
-    &:hover,
     &:focus {
       &:not(.disabled) {
         border: none;
@@ -247,7 +246,7 @@ nav {
           content: " ";
           width: 100%;
           height: $nav-tabs-active-border-width;
-          background-color: $vdm-sub-brand;
+          background-color: $brand;
           position: absolute;
           top: 0;
           left: 0;
@@ -256,7 +255,7 @@ nav {
       }
     }
     &.disabled {
-      background-color: $vdm-grey-light;
+      background-color: $gray-sky;
     }
     &:not(.active) {
       @include media-breakpoint-up(md) {
@@ -270,7 +269,7 @@ nav {
 .nav-tabs-dropdown {
   @include iconvfi(after, chevron-bas);
   @extend .nav-link;
-  background: $vdm-grey-light;
+  background: $gray-sky;
   border: none;
   color: $black;
   font-weight: $font-weight-bold;
@@ -287,7 +286,6 @@ nav {
       content: " ";
       width: 100%;
       height: $nav-tabs-active-border-width;
-      background-color: $vdm-sub-brand;
       position: absolute;
       top: 0;
       left: 0;
@@ -319,7 +317,6 @@ nav {
   min-width: $dropdown-min-width;
   padding: 0;
   margin: 0;
-  margin-left: -15px;
   text-align: center; // Ensures proper alignment if parent has it changed (e.g., modal footer)
   list-style: none;
   background-color: transparent;
@@ -363,124 +360,6 @@ nav {
   }
 }
 
-// Dropdown component
-// @see https://projects.invisionapp.com/d/main#/console/11533069/248706245/preview
-.vdm-dropdown {
-  background: $white;
-  padding: 0.75rem 1.7rem 0.75rem 1.1rem;
-  @include drop-shadow;
-  display: inline-block;
-  font-size: $font-size-base * 2.1875;
-
-  .dropdown-trigger {
-    position: relative;
-    padding: 0.5rem 2em 0.5rem 0.5rem;
-    @include iconvfi(after, chevron-bas);
-    border-bottom: 2px solid $vdm-grey;
-    display: block;
-    width: 100%;
-    text-decoration: none;
-    color: $black;
-
-    &:after {
-      font-size: 1em;
-      position: absolute;
-      top: 50%;
-      transform: translateY(-50%);
-      left: calc(100% - 1em);
-      display: block;
-      width: 1em;
-      height: 1em;
-      line-height: 1;
-    }
-
-    &[aria-expanded="true"] {
-      @include iconvfi(after, chevron-haut);
-    }
-  }
-  .dropdown-elements {
-    list-style-type: none;
-    margin: 1.7rem 0 1rem 0;
-    padding: 0;
-  }
-
-  // Controls bootstrap collapsing animation speed
-  .collapsing {
-    transition: height 0.1s ease;
-  }
-
-  .dropdown-element {
-    > a {
-      font-size: $font-size-base * 2.1875;
-      color: $black;
-      display: block;
-      line-height: 4rem;
-      list-style-type: none;
-      padding-right: 2em;
-      position: relative;
-
-      &:hover,
-      &:active {
-        @include iconvfi(after, fleche-droite);
-        text-decoration: none;
-      }
-
-      &:after {
-        font-size: 1.5em;
-        position: absolute;
-        top: 50%;
-        transform: translateY(-50%);
-        left: calc(100% - 0.9em);
-        display: block;
-        width: 1.5em;
-        height: 1.5em;
-        line-height: 1.5;
-        // color: $vdm-brand;
-      }
-    }
-  }
-}
-
-// To delete after decision is made
-// Draft from https://projects.invisionapp.com/d/main#/console/11533069/248706245/preview
-// Uses the Bootstrap component dropdown
-.vdm-dropdown-bs {
-  background: $white;
-  padding: 0.75rem;
-  @include drop-shadow;
-  display: inline-block;
-  font-size: $font-size-base * 2.1875;
-
-  .dropdown-toggle {
-    background: transparent;
-    border-radius: 0;
-    padding: 0.5rem 2em 0.5rem 0.5rem;
-    border: 0;
-    @include iconvfi(after, chevron-bas);
-    border-bottom: 1px solid $vdm-grey;
-    display: block;
-    width: 100%;
-
-    &:before {
-      font-size: 1.3em;
-      position: absolute;
-      top: 50%;
-      transform: translateY(-50%);
-      left: calc(100% - 1.3em);
-      display: block;
-      width: 1.3em;
-      height: 1.3em;
-      line-height: 1.3;
-    }
-    &:after {
-      display: none;
-    }
-  }
-  .dropdown-item {
-    font-size: $font-size-base * 2.1875;
-  }
-}
-
 /**
  * Step Wizard
  */
@@ -511,6 +390,9 @@ nav {
   li {
     position: relative;
     padding: inherit;
+    a {
+      border: none;
+    }
     &:after {
       background-color: $gray-600;
       content: "";
@@ -537,12 +419,12 @@ nav {
     }
   }
   .caption {
-    color: $vdm-grey;
+    color: $gray-ink;
     display: inline-block;
     padding-bottom: .5rem;
   }
   .circle {
-    @include circle($background-color: $vdm-grey-light, $border: true);
+    @include circle($background-color: $gray-200, $border: true);
     z-index: 100;
     position: relative;
   }
@@ -619,6 +501,17 @@ nav {
   border-bottom: 1px solid $gray-200;
   margin-bottom: 3rem;
   padding-bottom: 3rem;
+  > * {
+    margin-bottom: 1rem;
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+
+  button {
+    margin-top: 1rem;
+  }
+
   .db-label {
     display: inline-block;
     font-size: $font-size-md;
@@ -628,25 +521,24 @@ nav {
   }
   .db-title {
     display: flex;
-    font-size: 24px;
+    font-size: $font-size-xl;
     font-weight: $font-weight-bold;
     justify-content: space-between;
-  }
-  .progress-container {
-    padding-bottom: 1rem;
   }
 }
 
 // Services sub-navigation
 .navbar-services {
-  border-bottom: 1px solid $vdm-grey-light;
+  border-bottom: 1px solid $gray-200;
+  min-height: 75px;
 
   .navbar-brand,
   .navbar-link {
-    font-size: $font-size-lg;
+    color: $headings-color;
+    display: flex;
+    font-size: ($font-size-base * 1.125);  // 18px
     line-height: 1.333333;
     padding: 0;
-    display: flex;
   }
 
   .navbar-brand {
@@ -654,24 +546,71 @@ nav {
     font-weight: $font-weight-bold;
   }
 
-  .navbar-link {
-    padding-bottom: 5px;
+  .navbar-icon {
+    font-size: 4rem;
+    color: $primary;
+    margin-right: 1rem;
   }
 
   .navbar-header {
-    margin-left: $header-icon-width;
-    padding-top: 1.25rem;
-    padding-bottom: 1.25rem; 
-    &.navbar-header-profile-link {
-      padding-top: .375rem;
-      padding-bottom: .375rem;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    @include media-breakpoint-up(md) {
+      margin-left: $header-icon-width;
+    }
+    &.navbar-header-service-link {
       .navbar-brand {
-        font-size: $font-size-lg;
+        font-size: ($font-size-base * 1.125);  // 18px
       }
     }
     a {
-      color: $body-color;
+      border: none;
+      color: $headings-color;
       text-decoration: underline;
+    }
+    ul {
+      @extend .list-inline;
+      display: flex;
+      margin-bottom: 0;
+      li {
+        display: flex;
+        align-items: center;
+        flex-direction: row;
+        flex-wrap: wrap;
+        padding-bottom: 0;
+        font-size: ($font-size-base * 1.125);
+        a {
+          font-weight: $font-weight-bold;
+          text-decoration: none;
+        }
+      }
+      li {
+        // The separator between breadcrumbs (by default, a forward-slash: "/")
+        + li {
+          padding-left: .5rem;
+          @include iconvfi(before, chevron-droite);
+          &::before {
+            display: inline-block; // Suppress underlining of the separator in modern browsers
+            padding-right: .5rem;
+            font-weight: 700;
+          }
+        }
+      
+        // IE9-11 hack to properly handle hyperlink underlines for breadcrumbs built
+        // without `<ul>`s. The `::before` pseudo-element generates an element
+        // *within* the .breadcrumb-item and thereby inherits the `text-decoration`.
+        //
+        // To trick IE into suppressing the underline, we give the pseudo-element an
+        // underline and then immediately remove it.
+        + li:hover::before {
+          text-decoration: underline;
+        }
+        // stylelint-disable-next-line no-duplicate-selectors
+        + li:hover::before {
+          text-decoration: none;
+        }
+      }
     }
   }
 

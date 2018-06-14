@@ -16,8 +16,6 @@
   "badge": "23",
   "badgeClass": "badge-secondary",
   "stateClass": "bg-success",
-  "label": "New Label",
-  "labelClass": "label-default",
   "icon-label": "recherche",
   "progressBarClass": "bg-success",
   "progressCircleClass": "progress-success",
@@ -50,19 +48,19 @@
   "paragraphClass": "lead",
   "footerNotes": "Nous vous rappelons que, en vertu du règlement NOM, la mise à jour de cette déclaration est exigée avant le 1er avril de chaque année. Veuillez conserver une copie de ce document dans vos dossiers pendant une période minimale de 5 ans et le fournir aux représentants de la Ville sur demande.",
   "text-paragraph":
-    "Mustache irony plaid edison bulb photo booth. Paleo ugh blog truffaut kinfolk XOXO tousled cliche chia four dollar toast shoreditch deep v pok pok viral. Air plant ramps cloud bread, humblebrag kogi adaptogen sriracha vegan offal poutine letterpress skateboard truffaut.",
+    "Kogi Cosby sweater ethical squid irony disrupt, organic tote bag gluten-free XOXO wolf typewriter mixtape small batch. DIY pickled four loko McSweeney's, Odd Future dreamcatcher plaid. PBR&B single-origin coffee gluten-free McSweeney's banjo, bicycle rights food truck gastropub vinyl four loko umami +1 narwhal chia. Fashion axe Banksy chia umami artisan, bitters 90's fanny pack. Single-origin coffee drinking vinegar blog semiotics. Fap mumblecore church-key PBR&B, direct trade 8-bit swag asymmetrical slow-carb Marfa ethical. Mustache retro four loko, church-key Thundercats Portland Helvetica Cosby sweater Echo Park sartorial 8-bit ugh bicycle rights iPhone tote bag.",
   "text-teaser":
     "Migas air plant drinking vinegar twee leggings blue bottle pop-up heirloom jean shorts locavore pug shoreditch lumbersexual tousled.",
   "text-elements": {
     "headings": {
       "h1": {
-        "classes": "display-3",
+        "classes": "",
         "content": "H1 heading",
         "divider": true,
         "dividerClass": "divider-title"
       },
       "h2": {
-        "classes": "display-4",
+        "classes": "",
         "content": "H2 heading"
       },
       "h3": {
@@ -183,6 +181,10 @@
       "placeholder": false
     }
   },
+  "fileDrop": {
+    "helpText": "Déposez votre photo ici ou utilisez le bouton Sélectionner.",
+    "label": "Sélectionner"
+  },
   "formCheckboxes": [
     {
       "class": "checkbox-vfi",
@@ -208,6 +210,28 @@
     "fr": "Voir ce site en français",
     "en": "View this site in English"
   },
+  "top-banner-colors": [
+    { 
+      "top-banner": {
+        "class": "top-banner-info"
+      }
+    },
+    { 
+      "top-banner": {
+        "class": "top-banner-success"
+      }
+    },
+    { 
+      "top-banner": {
+        "class": "top-banner-warning"
+      }
+    },
+    { 
+      "top-banner": {
+        "class": "top-banner-danger"
+      }
+    }
+  ],
   "theme-colors": [
     { "color": "primary" },
     { "color": "secondary" },
@@ -272,7 +296,7 @@
   "inputClass": "",
   "inputAddonBefore": "Addon",
   "inputAddonAfter": false,
-  "buttonClass": "vdm-btn",
+  "buttonClass": "btn-primary",
   "buttonText": "Button",
   "buttonType": "button",
   "breadcrumbs": [
@@ -367,7 +391,7 @@
     { "text": "Right" }
   ],
 
-  "alertClass": "alert-primary",
+  "alertClass": "alert-info",
   "alertIcon": false,
   "alertText":
     "This is a primary alert with <a href=\"#\" class=\"alert-link\">an example link</a>. Give it a click if you like.",
@@ -383,7 +407,7 @@
     { "text": "Porta ac consectetur ac" },
     { "text": "Vestibulum at eros" }
   ],
-  "navbarBrandText": "Pattern Lab",
+  "navbarBrandText": "Boîte à outil - Pattern Lab",
   "navbarNavClass": "",
   "navbarNavFirst": true,
   "navbarNavLast": {
@@ -470,15 +494,15 @@
   "primaryNav": [
     {
       "label": "Transactions et demandes",
-      "url": ""
+      "url": "#"
     },
     {
       "label": "Avis publics",
-      "url": ""
+      "url": "#"
     },
     {
       "label": "EN",
-      "url": ""
+      "url": "#"
     }
   ],
   "navTabs": {
@@ -567,5 +591,27 @@
         }
       }
     ]
-  }
+  },
+  "labelContent": [
+    {
+      "classes": "",
+      "title": "Title",
+      "row": [
+        {
+          "items": [
+            {
+              "class": "col-sm-6",
+              "label": "Item label #1",
+              "content": "Content item #1"
+            },
+            {
+              "class": "col-sm-6",
+              "label": "Item label #2",
+              "content": "Content item #2"
+            }
+          ]
+        }
+      ]
+    }
+  ]
 }

@@ -1,0 +1,30 @@
+{{> atoms-link-skip-to-main-content }}
+{{> organisms-header-portal }}
+{{> organisms-nav-services }}
+
+<main class="main-content {{ pageClasses }}" id="main-content" aria-label="Main Content" role="main">
+  <div class="container box-header">
+    <div class="box-header-title">
+      <h1 class="h6 strong">Toutes les déclarations</h1>
+    </div>
+    <div class="box-header-controls">
+      <ul class="nav nav-filters">
+        <li class="nav-item"><a href="" class="sort">Filter 1</a></li>
+        <li class="nav-item"><a href="" class="sort">Filter 2</a></li>
+        <li class="nav-item"><a href="" class="sort">Filter 3</a></li>
+      </ul>
+      {{> atoms-button(buttonClass: "btn-primary btn-sm", buttonText: "Nouvelle déclaration") }}
+    </div>
+  </div>
+  <div class="container">
+    <div class="row cards">
+      {{# cards.card-item }}
+      <div class="{{ cards.bsgrid-classes }}">
+        {{> molecules-card-item-alert}}
+      </div>
+      {{/ cards.card-item }}
+    </div>
+  </div>
+</main>
+
+{{> organisms-footer-portal }}

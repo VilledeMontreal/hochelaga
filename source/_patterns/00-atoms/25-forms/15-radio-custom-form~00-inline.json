@@ -1,0 +1,33 @@
+{
+  "formRadios": {
+    "label": false,
+    "formRadiosItems": [
+      {
+        "class": "custom-control-inline",
+        "id": "rdio01-3",
+        "label": "Radio",
+        "name": "radiosGroupInline"
+      },
+      {
+        "class": "custom-control-inline",
+        "id": "rdio02-3",
+        "label": "Radio two",
+        "name": "radiosGroupInline"
+      },
+      {
+        "class": "custom-control-inline",
+        "id": "rdio03-3",
+        "label": "Radio three",
+        "state": "checked",
+        "name": "radiosGroupInline"
+      },
+      {
+        "class": "custom-control-inline",
+        "id": "rdio04-3",
+        "label": "Radio four, disabled",
+        "state": "disabled",
+        "name": "radiosGroupInline"
+      }
+    ]
+  }
+}

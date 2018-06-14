@@ -8,48 +8,62 @@
 
 // @arg $level - integrer [1-6]
 // @arg $weight - string ['light','regular','bold']
-@mixin header($level: 1, $weight: "regular", $display: block) {
+@mixin heading($level: 1, $weight: "regular", $display: block) {
+  color: $headings-color;
   font-family: $font-family-base;
-  font-weight: $font-weight-regular;
+  font-weight: $headings-font-weight;
   display: $display;
 
   @if $level == 1 {
-    font-weight: $font-weight-light;
-    font-size: $h1-font-size;         // 67px
-    line-height: $line-height-sm;     // 92px
+    font-size: $h1-font-size;                             // 52px
+    line-height: get-line-height($h1-font-size, 64px);    // 64px
   }
   @if $level == 2 {
-    font-weight: $font-weight-light;
-    font-size: $h2-font-size;         // 50px
-    line-height: $line-height-sm;     // 69px
+    font-size: $h2-font-size;                             // 45px
+    line-height: get-line-height($h2-font-size, 56px);    // 56px
   }
   @if $level == 3 {
-    font-size: $h3-font-size;         // 37px
-    line-height: $line-height-sm;     // 50px
+    font-size: $h3-font-size;                             // 39px
+    line-height: get-line-height($h3-font-size, 48px);    // 48px
   } 
   @if $level == 4 {
-    font-size: $h4-font-size;         // 28px
-    line-height: $line-height-sm;     // 38px
+    font-size: $h4-font-size;                             // 32px
+    line-height: get-line-height($h4-font-size, 40px);    // 40px
   } 
   @if $level == 5 {
-    font-size: $h5-font-size;         // 21px
-    line-height: $line-height-sm;     // 28px
+    font-size: $h5-font-size;                             // 26px
+    line-height: get-line-height($h5-font-size, 32px);    // 32px
   } 
   @if $level == 6 {
-    font-size: $h6-font-size;         // 16px
-    line-height: $line-height-lg;     // 26px
+    font-size: $h6-font-size;                             // 19px
+    line-height:get-line-height($h6-font-size, 24px);     // 24px
   }
 
   @if $weight == "bold" {
     font-weight: $font-weight-bold;
   }
+}
+/*
+@mixin font-size($font-size: $font-size-lg, $line-height: $line-height-sm, font-weight: $font-weight-normal) {
+  font-size: $font-size;
+  font-weight: $font-weight;
+  line-height: $line-height;
+}
+*/
 
+// Card heading
+@mixin card-heading($font-size: $font-size-xl, $line-height: get-line-height($font-size-xl,32px), $font-weight: $font-weight-regular, $color: $headings-color, $display: block) {
+  color: $color;
+  display: $display;
+  font-weight: $font-weight;
+  font-size: $font-size;
+  line-height: $line-height;
 }
 
 //  @arg $size - string - any valid text size declaration
 //  @arg $color - string any valid color declaration
 //  @arg $color - string any valid color declaration
-@mixin bullet-left($size: 0.8em, $color: $vdm-brand, $textcolor: $black) {
+@mixin bullet-left($size: 0.8em, $color: $primary, $textcolor: $black) {
   display: inline-block;
   position: relative;
   padding-left: $size * 1.75;
@@ -82,6 +96,7 @@
   * }
   *
   */
+
 @mixin iconvfi($position: before, $icon: false, $styles: true) {
   @if $position == both {
     $position: "before, &:after";
@@ -187,47 +202,6 @@
 
 /**
  * - - - - - - - - - -
- * == Collector blocks : teasers and cards
- * - - - - - - - - - -
- */
-
-// Color schemes, to be applied to top-level hyperlink
-@mixin teaser-scheme() {
-  background: $vdm-grey-light;
-  border: none;
-  text-decoration: none;
-  color: $body-color;
-
-  &:hover,
-  &:active {
-    background-color: $vdm-brand;
-    color: $white;
-    > * {
-      color: $white;
-    }
-
-    &:before,
-    &:after {
-      color: $white;
-    }
-  }
-}
-
-@mixin teaser-light-scheme() {
-  background: $white;
-  border: 1px solid $vdm-brand;
-  @include teaser-scheme-hover(light, false);
-}
-
-@mixin teaser-white-scheme() {
-  background: $white;
-  border: none;
-  @include teaser-scheme-hover(white, false);
-}
-
-
-/**
- * - - - - - - - - - -
  * == UI
  * - - - - - - - - - -
  */
@@ -236,17 +210,16 @@
 // - - - - - - - - - -
 
 @mixin drop-shadow(
-    $dist-top: 0,
-    $dist-right: 5px,
-    $dist-bottom: 11px,
-    $dist-left: 0 ,
-    $color-r: 0,
-    $color-g: 0,
-    $color-b: 0,
-    $opacity: 0.27
-  ) {
-  box-shadow: $dist-top $dist-right $dist-bottom $dist-left
-    rgba($color-r, $color-g, $color-b, $opacity);
+  $dist-top: 0,
+  $dist-right: 5px,
+  $dist-bottom: 11px,
+  $dist-left: 0 ,
+  $color-r: 0,
+  $color-g: 0,
+  $color-b: 0,
+  $opacity: 0.27
+) {
+  box-shadow: $dist-top $dist-right $dist-bottom $dist-left rgba($color-r, $color-g, $color-b, $opacity);
 }
 
 /**
@@ -255,8 +228,21 @@
  * - - - - - - - - - -
  */
 
-//== Buttons
-// - - - - - - - - - -
+
+// Buttons
+//
+@mixin button-size($padding-y, $padding-x, $font-size, $line-height, $border-radius) {
+  padding: $padding-y $padding-x;
+  font-size: $font-size;
+  line-height: $line-height;
+  // Manually declare to provide an override to the browser default
+  @if $enable-rounded {
+    border-radius: $border-radius;
+  } @else {
+    border-radius: 0;
+  }
+}
+
 @mixin button-alter($color, $background, $border) {
   color: $color;
   background-color: $background;
@@ -336,7 +322,7 @@
 }
 
 // Creates a filled circle
-@mixin circle($size: 1rem, $background-color: $vdm-brand, $border: false, $border-color: $gray-600) {
+@mixin circle($size: 1rem, $background-color: $primary, $border: false, $border-color: $gray-600) {
   background-color: $background-color;
   border-radius: 50%;
   content: "";
@@ -348,4 +334,3 @@
     border: 1px solid $border-color;
   }
 }
-

@@ -3,14 +3,15 @@
 legend,
 .group-label {
   @extend legend;
-  margin-bottom: 1rem;
+  color: $headings-color;
   font-weight: $font-weight-bold;
+  margin-bottom: 1rem;
 }
 
 .form-group {
   margin-bottom: 2rem;
   &.required {
-    label {
+    > label {
       &:after {
         content: "*";
         color: $red;
@@ -18,6 +19,14 @@ legend,
         margin-left: 0.25em;
       }
     }
+  }
+}
+
+// Set label color
+.form-group label,
+.custom-control-label {
+  &:not(.btn) {
+    color: $input-label-color;
   }
 }
 
@@ -76,7 +85,7 @@ legend,
     align-items: center;
     pointer-events: none;
     top: 0;
-    color: $vdm-brand;
+    color: $primary;
     .vfi {
       font-size: 2rem;
     }
@@ -97,6 +106,23 @@ legend,
   }
 }
 
+.input-group-append {
+  .btn {
+    display: flex;
+    align-items: center;
+    padding: $input-padding-y $input-padding-x;
+    font-size: $font-size-base; // Match inputs
+    font-weight: $font-weight-normal;
+    line-height: $input-line-height;
+    color: $input-group-addon-color;
+    text-align: center;
+    white-space: nowrap;
+    background-color: $input-group-addon-bg;
+    border: $input-border-width solid $input-group-addon-border-color;
+    @include border-radius($input-border-radius);
+  }
+}
+
 // Checkboxes
 //
 // use vfi
@@ -108,7 +134,7 @@ legend,
       background-image: none;
       font-size: 2rem;
       line-height: 1;
-      color: $vdm-brand;
+      color: $primary;
     }
     @include iconvfi(after, mini-case-coche-coche);
   }
@@ -129,10 +155,12 @@ legend,
     display: flex;
     flex-direction: column;
     flex: 1;
+    justify-content: center;
     padding: 2rem;
     padding-left: 6rem;
     position: relative;
     border: 1px solid $gray-400;
+    min-height: 8rem; // Make sur card has minimum height
 
     // Background-color and (when enabled) gradient
     &::before {
@@ -151,13 +179,21 @@ legend,
     }
 
     .card-label {
-      @include header(5, "bold");
+      //@include heading(5, "bold");
+      @include card-heading();
     }
 
     .card-title {
-      @include header(5);
+      //@include heading(5);
+      @include card-heading();
     }
 
+  }
+
+  .custom-control-input:disabled ~ .custom-control-label {
+    .card-title, .card-label {
+      color: $custom-control-label-disabled-color;
+    }
   }
 
   // Set checked styles here: change border-color or apply other styles to label
@@ -182,7 +218,7 @@ legend,
       width: 0.6875rem;
       height: 0.6875rem;
       transform: translate(0.59375rem, 0.59375rem);
-      background-color: $vdm-brand;
+      background-color: $primary;
     }
   }
 }
@@ -308,7 +344,7 @@ legend,
       font-size: 2.4rem;
       width: 2.4rem;
       height: 2.4rem;
-      color: $vdm-brand;
+      color: $primary;
     }
   }
 
@@ -316,14 +352,17 @@ legend,
     font-size: $font-size-base;
     line-height: $line-height-lg;
     font-weight: $font-weight-bold;
+    margin-bottom: 1rem;
     width: 100%;
   }
 
+  /*
   .vdm-btn {
     margin-bottom: 0;
     position: relative;
     margin-top: 0.1rem;
   }
+  */
 
   .input-group {
 
@@ -363,6 +402,7 @@ legend,
     .input-group {
       flex-basis: 100%;
     }
+    /*
     .vdm-btn {
       margin: 1rem auto 0 auto;
       align-self: center;
@@ -370,6 +410,7 @@ legend,
         margin: 1rem auto 0 auto;
       }
     }
+    */
   }
 }
 
@@ -404,7 +445,7 @@ legend,
     flex-shrink: 1;
     width: 100%;
     padding-right: 40px;
-    color: $vdm-brand;
+    color: $primary;
     border: none;
     border-radius: 0px;
   }
@@ -415,7 +456,7 @@ legend,
     top: 50%;
     transform: translateY(-50%);
     background-color: transparent;
-    color: $vdm-brand;
+    color: $primary;
   }
   .dropdown-menu {
     border: none;
@@ -440,5 +481,95 @@ legend,
 // Add border around form-combo
 
 .border-combo {
-  border: 2px solid $vdm-brand;
+  border: 2px solid $primary;
+}
+
+// file drop container
+
+.file-drop-container {
+  border-radius: $input-border-radius;
+  border: dashed 2px $gray-400;
+  display: flex;
+  padding: 2rem;
+  flex-direction: column;
+  align-items: center;
+
+  .help-text {
+    color: $input-color;
+    margin-bottom: 1rem;
+    text-align: center;
+  }
+
+  &.file-over{
+    background: $gray-400;
+  }
+}
+
+// Feedback form
+
+.feedback-form-container {
+  background: $white;
+  //border: 1px solid $card-border-color;
+  box-shadow: 0 1px 7px 0 rgba(0,0,0,0.12);
+  margin-top: 2.5rem;
+  margin-bottom: 2.5rem;
+  padding: 1.5rem 2rem;
+
+  .feedback-form-header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 1.5rem;
+
+    .h5 {
+      color: $headings-color;
+      display: block;
+      font-size: $font-size-lg;
+      font-weight: $font-weight-bold;
+      margin-bottom: 0;
+    }
+  
+    .vfi {
+      font-size: 3.5rem;
+      color: $primary;
+    }
+  }
+
+  @include media-breakpoint-up(md) {
+    padding: 1.5rem 4rem;
+    .feedback-form-header {
+      .h5 {
+        @include heading(5, bold);
+      }
+    }
+  }
+}
+
+.feedback-form {
+  textarea {
+    -webkit-transform: translateZ(0px);
+  }
+
+  button + button {
+    margin-left: .5rem;
+  }
+  
+  .feedback-question-label {
+    color: $headings-color;
+    display: block;
+    font-size: $font-size-lg;
+    margin-bottom: 1.5rem;
+  }
+
+  .feedback-details-content,
+  .feedback-details-display {
+    display: none;
+  }
+
+  @include media-breakpoint-up(md) {
+    .feedback-question-label {
+      @include heading(5);
+    }
+  }
+
 }

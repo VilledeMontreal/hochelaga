@@ -2,5 +2,4 @@
 title: Switch
 ---
 
-@ see 02-switches.md
-
+@see 02-switches.md

@@ -28,56 +28,90 @@ $gray-800: #343a40;
 $gray-900: #212529;
 $black:    #000;
 
+// Specilazed grays
+
+$gray-ink: #637381; // Usage: Text default color.
+$gray-sky: #f4f6f8; // Usage: Backgrounds.
+
+// Primary colors
+
+$sarcelle:          #097d6c;
+$sarcelle-dark:     #075b4f;
+$sarcelle-surprise: #0cb097;
+$sarcelle-atmos:    #87dfd3;
+$sarcelle-lightest: #f8f9fa;
+$red-montreal:      #e00000;
 
 // UI color
 
-$blue:    #005fc9;
-
+// $blue:    #005fc9; 
+$blue:    #0296c0;          // VDM
 $indigo:  #6610f2 !default;
 $purple:  #6f42c1 !default;
 $pink:    #e83e8c !default;
-$red:     #dc3545 !default;
+$red:    #ff3200;
+//$red:     $red-montreal;      // VDM
 $orange:  #fd7e14 !default;
-$yellow:  #ffc107 !default;
-$green:   #28a745 !default;
+$yellow:  #fecc03;          // VDM
+// $green:   #02c876;
+$green:   #0da566;          // VDM
 $teal:    #20c997 !default;
 $cyan:    #17a2b8 !default;
 
-// We keep those custom grays ? -> I am not attached, I much prefer a decimal system with flexibility
-$vdm-grey-light:    #f2f2f1;
-$vdm-grey:          #80807f;
-$vdm-grey-dark:     #222222; // First occurence : side menu bg & borders
-$vdm-neutral-mid:   #80807f;
-$vdm-neutral-light: #e7e5e5;
-
-// VDM specific
-$vdm-sarcelle:      #429a8e; // will become $sarcelle 
-$sarcelle:          #429a8e;
-$sarcelle-light:    #429a8e;
-$sarcelle-dark:     #429a8e;
-
-$montreal-red:      #e00000;
-
 //== Brand
 
-$vdm-brand:         $sarcelle;
-$vdm-sub-brand:     $montreal-red;
+$brand:         $red-montreal;
 
+$primary:       $sarcelle;
+$secondary:     $gray-600;
+$success:       $green;
+$info:          $blue;
+$warning:       $yellow;
+$danger:        $red;
+$light:         $gray-100;
+$dark:          $gray-800;
+
+$theme-colors: ();
+$theme-colors: map-merge((
+  "primary":    $primary,
+  "secondary":  $secondary,
+  "success":    $success,
+  "info":       $info,
+  "warning":    $warning,
+  "danger":     $danger,
+  "light":      $light,
+  "dark":       $dark
+), $theme-colors);
+// stylelint-enable
+
+$button-colors: () !default;
+$button-colors: map-merge((
+  "primary":    $primary,
+  "secondary":  $secondary,
+), $button-colors);
+// stylelint-enable
 
 // Spacing
 //
-$spacer: 1rem;
+// Spacers are multiple of 8
+$spacer: .5rem;
 $spacers: ();
 $spacers: map-merge((
-  0: 0,
-  1: ($spacer * .25),
-  2: ($spacer * .5),
-  3: $spacer,
-  4: ($spacer * 2),
-  5: ($spacer * 3),
-  6: ($spacer * 4),
-  7: ($spacer * 5),
-  8: ($spacer * 6)
+  0:  0,
+  1:  ($spacer),
+  2:  ($spacer * 2),
+  3:  ($spacer * 3),
+  4:  ($spacer * 4),
+  5:  ($spacer * 5),
+  6:  ($spacer * 6),
+  7:  ($spacer * 7),
+  8:  ($spacer * 8),
+  9:  ($spacer * 9),
+  10: ($spacer * 10),
+  11: ($spacer * 11),
+  12: ($spacer * 12),
+  13: ($spacer * 13),
+  14: ($spacer * 14)
 ), $spacers);
 
 // Body
@@ -85,22 +119,35 @@ $spacers: map-merge((
 // Settings for the `<body>` element.
 
 $body-bg:               $white;
-$body-color:            $black;
+$body-color:            $gray-ink;
 
 // Links
 //
 // Style anchor elements.
 
-$link-color:                  $vdm-brand;
+$link-color:                  $sarcelle-surprise; //$gray-900;
+$link-border-color:           $sarcelle-atmos;
+$link-border-width:           1px;
 $link-decoration:             none;
-$link-hover-color:            $black;
-$link-hover-decoration:       underline;
+$link-hover-color:            $sarcelle;
+$link-hover-decoration:       none;
 
 // Paragraphs
 //
 // Style p element.
 
-$paragraph-margin-bottom:     1.5rem;
+$paragraph-margin-bottom:     2rem;
+
+// Grid containers
+//
+// Define the maximum width of `.container` for different screen sizes.
+
+$container-max-widths: (
+  sm: 570px,
+  md: 750px,
+  lg: 990px,
+  xl: 1170px
+);
 
 // Components
 //
@@ -110,40 +157,75 @@ $border-radius:               .25rem;
 $border-radius-lg:            .3125rem;
 $border-radius-sm:            .2rem;
 
+$headings-color:              $gray-900;
+
+$mark-color:                  $gray-900;
+
+$component-active-color:      $white;
+$component-active-bg:         theme-color("primary");
+
 // Fonts
 //
 // Font, line-height, and color for body text, headings, and more.
 
 $font-family-base:            'Nunito Sans', Helvetica, Arial, sans-serif;
 
-$font-weight-light:           300; // Nunito Sans Light
+
+$font-weight-light:           300; // Nunito Sans Light         
 $font-weight-regular:         400; // Nunito Sans Regular
 $font-weight-bold:            700; // Nunito Sans Bold
+$font-weight-normal:          $font-weight-regular;
 
 $line-height-base:            1.5;
-$line-height-lg:              1.625;
-$line-height-sm:              1.3125;
+$line-height-xl:              1.3333;
+$line-height-lg:              1.5238;
+$line-height-sm:              1.3333;
 
 $font-size-base:              1rem;       // Assumes the browser default, typically `16px`
 $font-size-xl:                1.5rem;     // ~24px
-$font-size-lg:                1.125rem;   // ~18px
+$font-size-lg:                1.3125rem;  // ~21px
 $font-size-md:                0.875rem;   // ~14px
 $font-size-sm:                0.75rem;    // ~12px
 
-$h1-font-size:                $font-size-base * 4.1875;     // 67px
-$h2-font-size:                $font-size-base * 3.125;      // 50px
-$h3-font-size:                $font-size-base * 2.3125;     // 37px
-$h4-font-size:                $font-size-base * 1.75;       // 28px
-$h5-font-size:                $font-size-base * 1.3125;     // 21px
-$h6-font-size:                $font-size-base;              // 16px
+$h1-font-size:                $font-size-base * 3.25;       // 52px
+$h2-font-size:                $font-size-base * 2.8125;     // 45px
+$h3-font-size:                $font-size-base * 2.4375;     // 39px
+$h4-font-size:                $font-size-base * 2;          // 32px
+$h5-font-size:                $font-size-base * 1.625;      // 26px
+$h6-font-size:                $font-size-base * 1.1875;     // 19px
 
-$lead-font-size:              ($font-size-base * 1.25);
+$headings-margin-bottom:      1rem;
+$headings-font-weight:        $font-weight-regular;
+$headings-line-height:        1.23; // specific line-height for each level, see mixins header
+$headings-color:              inherit !default;
+
+$display1-size:               4.0625rem; //6rem;
+$display2-size:               3.6875rem; //5.5rem;
+$display3-size:               3.25rem;   //4.5rem;
+$display4-size:               2.8125rem; //3.5rem;
+
+$display1-weight:             300;
+$display2-weight:             300;
+$display3-weight:             300;
+$display4-weight:             300;
+
+// Display line-height are dealt directly in the class because it's specific to each display 
+$display-line-height:         $headings-line-height;
+
+$lead-font-size:              $font-size-lg;     // 21px
+$lead-line-height:            get-line-height($lead-font-size, 32px);    // 32px
 $lead-font-weight:            $font-weight-regular;
+
+$small-font-size:             .75em;
+
+$blockquote-small-color:      $body-color;
+$blockquote-font-size:        ($font-size-base * 1.25);
 
 
 //== Icons fonts vfi class, imported from "@villemontreal/font-icon
 $vfi-icon-font-path: $assets-font-path;
 $vfi-icon-font-family : 'vdm';
+
 
 // Body
 //
@@ -161,10 +243,10 @@ $nav-link-padding-x:                2rem;
 $nav-tabs-border-color:             $white;
 $nav-tabs-border-width:             0;
 $nav-tabs-border-radius:            0;
-$nav-tabs-link-hover-border-color:  $vdm-sub-brand;
+$nav-tabs-link-hover-border-color:  $brand;
 $nav-tabs-link-active-color:        $black;
 $nav-tabs-link-active-bg:           $body-bg;
-$nav-tabs-link-active-border-color: $vdm-sub-brand;
+$nav-tabs-link-active-border-color: $brand;
 
 $nav-tabs-spacing:                  4px;
 $nav-tabs-active-border-width:      4px;
@@ -187,22 +269,22 @@ $pagination-icon-padding:           .785rem;
 $pagination-icon-padding-sm:        .425rem;
 $pagination-icon-padding-lg:        1.0625rem;
 
-$pagination-color:                  $vdm-grey;
+$pagination-color:                  $gray-600;
 $pagination-bg:                     $white;
 $pagination-border-width:           1px;
-$pagination-border-color:           lighten($vdm-grey, 9%);
+$pagination-border-color:           $gray-400;
 
-$pagination-hover-color:            $vdm-brand;
-$pagination-hover-bg:               $vdm-grey-light;
-$pagination-hover-border-color:     lighten($vdm-grey, 9%);
+$pagination-hover-color:            $primary;
+$pagination-hover-bg:               $gray-sky;
+$pagination-hover-border-color:     $gray-400;
 
 $pagination-active-color:           $white;
-$pagination-active-bg:              $vdm-brand;
-$pagination-active-border-color:    lighten($vdm-grey, 9%);
+$pagination-active-bg:              $primary;
+$pagination-active-border-color:    $gray-400; 
 
-//$pagination-disabled-color:         $gray-600;
+$pagination-disabled-color:         $gray-400;
 $pagination-disabled-bg:            $white;
-$pagination-disabled-border-color:  lighten($vdm-grey, 9%);
+$pagination-disabled-border-color:  $gray-400;
 
 // Breadcrumbs
 
@@ -213,7 +295,7 @@ $breadcrumb-active-color:           $black;
 // Figures
 
 $figure-caption-font-size:          90%;
-$figure-caption-color:              $vdm-grey;
+$figure-caption-color:              $gray-ink;
 
 
 // Jumbotron
@@ -225,9 +307,11 @@ $jumbotron-bg:                      $white;
 // Cards
 
 $card-border-radius:                0;
-$card-border-color:                 $vdm-brand;
+$card-border-color:                 $gray-400;
 $card-inner-border-radius:          0;
 //$card-bg:                           $gray-500;
+$card-box-shadow:                   0 1px 7px 0 #e6e6e6;
+
 
 //
 // Alerts
@@ -256,9 +340,29 @@ $progress-circle-animation-timing:      .5s;
 $badge-pill-padding-x:              1em;
 $badge-pill-padding-y:              .5em;
 
+
+// Input btn
+
+$input-btn-padding-y:         .375rem;
+$input-btn-padding-x:         .75rem;
+$input-btn-line-height:       $line-height-base;
+
+$input-btn-focus-width:       .2rem;
+$input-btn-focus-color:       rgba($primary, .25);
+$input-btn-focus-box-shadow:  0 0 0 $input-btn-focus-width $input-btn-focus-color;
+
+$input-btn-padding-y-sm:      .25rem;
+$input-btn-padding-x-sm:      .5rem;
+$input-btn-line-height-sm:    $line-height-sm;
+
+$input-btn-padding-y-lg:      .5rem;
+$input-btn-padding-x-lg:      1rem;
+$input-btn-line-height-lg:    $line-height-lg;
+
 //
 // Buttons
 //
+// DEPRECATED - Use btn-* variables instead
 
 $vdm-btn-border-width:        2px;
 $vdm-btn-height:              53px;
@@ -269,38 +373,69 @@ $vdm-btn-padding-x:           2.5rem;
 $vdm-btn-padding-y-sm:        .625rem;
 $vdm-btn-padding-x-sm:        2rem;
 
-$btn-link-disabled-color:     $vdm-neutral-mid;
+// Buttons
+//
+// For each of Bootstrap's buttons, define text, background, and border color.
+
+$btn-padding-y:               .75rem;
+$btn-padding-x:               2.5rem;
+$btn-line-height:             $input-btn-line-height;
+
+$btn-padding-y-sm:            .5625rem;
+$btn-padding-x-sm:            2rem;
+$btn-line-height-sm:          get-line-height(12px, 18px);
+
+$btn-border-width:            2px;
+
+$btn-font-weight:             $font-weight-normal;
+$btn-box-shadow:              inset 0 1px 0 rgba($white, .15), 0 1px 1px rgba($black, .075);
+$btn-focus-width:             $input-btn-focus-width;
+$btn-focus-box-shadow:        $input-btn-focus-box-shadow;
+$btn-disabled-opacity:        .65;
+$btn-active-box-shadow:       inset 0 3px 5px rgba($black, .125);
+
+$btn-link-disabled-color:     $gray-600;
+
+$btn-block-spacing-y:         .5rem;
+
+// Allows for customizing button radius independently from global border radius
+$btn-border-radius:           2rem;
+$btn-border-radius-sm:        $btn-border-radius;
+
+$btn-transition:              color .15s ease-in-out, background-color .15s ease-in-out, border-color .15s ease-in-out, box-shadow .15s ease-in-out;
+
 
 //
 // Forms
 //
 
-$input-color:                                   $gray-800;
+$input-label-color:                             $gray-900;
+$input-color:                                   $gray-700;
 $input-border-color:                            $gray-400;
 $input-border-width:                            1px;
 
-$input-disabled-bg:                             $vdm-neutral-light;
+$input-disabled-bg:                             $gray-200;
 
-$input-placeholder-color:                       $gray-600;
+$input-placeholder-color:                       $gray-500;
 
 
 // custom forms
 
-$custom-control-indicator-disabled-bg:          $vdm-neutral-light;
-$custom-control-label-disabled-color:           $vdm-neutral-mid;
+$custom-control-indicator-disabled-bg:          $gray-300;
+$custom-control-label-disabled-color:           $gray-600;
 
 $custom-control-gutter:                         3rem;
 $custom-control-spacer-y:                       1rem;
 
 $custom-control-indicator-size:                 1.875rem;
-$custom-control-indicator-bg:                   $vdm-grey-light;
+$custom-control-indicator-bg:                   $gray-300;
 $custom-control-indicator-bg-size:              50% 50%;
 
-//$custom-control-indicator-focus-box-shadow:     0 0 0 1px $body-bg, 0 0 0 .2rem rgba($vdm-brand, .25);
+//$custom-control-indicator-focus-box-shadow:     0 0 0 1px $body-bg, 0 0 0 .2rem rgba($brand, .25);
 //$custom-control-indicator-focus-box-shadow:     none !important;
 $custom-control-indicator-active-box-shadow:    none !important;
 $custom-control-indicator-active-bg:            none !important;
-$custom-control-indicator-checked-color:        $vdm-brand;  
+$custom-control-indicator-checked-color:        $primary;
 $custom-control-indicator-checked-bg:           $custom-control-indicator-bg;
 
 $custom-checkbox-indicator-border-radius:       $border-radius-lg;
@@ -327,7 +462,7 @@ $checkbox-toggle-padding:               5px;
 
 // Dropdowns
 
-$dropdown-link-active-bg:           $vdm-brand;
+$dropdown-link-active-bg:           $sarcelle-atmos;
 
 // Modal
 

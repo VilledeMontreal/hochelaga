@@ -1,7 +1,7 @@
 {
   "regionMainClasses": "",
-  "sidebarRight": false,
-  "sidebarLeft": true,
+  "sidebarRight": true,
+  "sidebarLeft": false,
   "navDashboard": [
     {
       "navDashboardLabel": "Tâche 1",
@@ -10,7 +10,7 @@
       "hasFeedback": false,
       "hasButton": true,
       "buttonText": "Modifier",
-      "buttonClass": "btn btn-link",
+      "buttonClass": "btn-link",
       "hasComplete": true
     },
     {
@@ -18,9 +18,12 @@
       "navDashboardTitle": "Titre de la tâche #2",
       "navDashboardInfo": "Information sur la tâche #2",
       "hasFeedback": true,
+      "removeProgressText": false,
+      "progressCompleteText": "Compléter à 32%",
+      "ariaNow": 32,
       "hasButton": true,
       "buttonText": "Continuer",
-      "buttonClass": "vdm-btn"
+      "buttonClass": "btn-primary"
     },
     {
       "navDashboardLabel": "Tâche 3",

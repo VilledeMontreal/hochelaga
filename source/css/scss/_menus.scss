@@ -46,7 +46,7 @@ html {
 
 .side-menu {
   width: $side-menu-width;
-  background: $vdm-grey-dark;
+  background: $gray-900;
   height: 100%;
   min-height: 100vh;
   overflow: hidden;
@@ -64,9 +64,9 @@ html {
     .menu-item {
       background: $black;
       display: flex;
-      border-bottom: $side-menu-border-width solid $vdm-grey-dark;
+      border-bottom: $side-menu-border-width solid $gray-900;
       &:first-child {
-        border-top: $side-menu-border-width solid $vdm-grey-dark;
+        border-top: $side-menu-border-width solid $gray-900;
       }
       &:last-child {
         border: 0;
@@ -79,20 +79,20 @@ html {
         padding: $side-menu-link-v-padding $side-menu-link-h-padding;
         &:hover,
         &:active {
-          color: $vdm-brand;
+          color: $primary;
           text-decoration: none;
         }
         .vfi {
           font-size: $side-menu-icon-size;
           width: $side-menu-icon-size;
           height: $side-menu-icon-size;
-          color: $vdm-brand;
+          color: $primary;
           position: absolute;
         }
 
         // Level 2 link styles
         &.back-link {
-          background: $vdm-grey-dark;
+          background: $gray-900;
           position: relative;
           padding-left: 4.5rem;
           .vfi {
@@ -109,7 +109,7 @@ html {
             position: absolute;
             left: 0;
             top: 0;
-            background: $vdm-brand;
+            background: $primary;
           }
         }
         &.child-link {
@@ -132,7 +132,7 @@ html {
             font-size: $side-menu-icon-size;
             width: $side-menu-icon-size;
             height: $side-menu-icon-size;
-            color: $vdm-brand;
+            color: $primary;
             position: absolute;
             left: calc(100% - 4rem);
             top: calc(50% - 2.1rem);

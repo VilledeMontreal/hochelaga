@@ -6,6 +6,5 @@ title: Button
 
 TO DO:
 
-* Make sure vdm-button blends well with ui buttons (bootsrap default button styles)
-* Find the  best way to provide 2 sets of buttons. (Big rounded pills-like button and ui buttons that stick more to bootstrap styles.)
-
+* Remove .vdm- custom class and provide default buttons
+* We might need to throw away bootstrap system and provide our own. This way we remove all unwanted button styles and variants.

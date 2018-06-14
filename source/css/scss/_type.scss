@@ -1,61 +1,71 @@
+mark,
+.mark {
+  color: $mark-color;
+}
+
+
 //
 // Headings
 //
 
 h1, .h1 {
-  @include header(1);
+  @include heading(1);
   &.strong {
-    @include header(1, "bold");
+    @include heading(1, "bold");
   }
 }
 h2, .h2 {
-  @include header(2);
+  @include heading(2);
   &.strong {
-    @include header(2, "bold");
+    @include heading(2, "bold");
   }
 }
 h3, .h3 {
-  @include header(3);
+  @include heading(3);
   &.strong {
-    @include header(3, "bold");
+    @include heading(3, "bold");
   }
 }
 h4, .h4 {
-  @include header(4);
+  @include heading(4);
   &.strong {
-    @include header(4, "bold");
+    @include heading(4, "bold");
   }
 }
 h5, .h5 {
-  @include header(5);
+  @include heading(5);
   &.strong {
-    @include header(5, "bold");
+    @include heading(5, "bold");
   }
 }
 h6, .h6 {
-  @include header(6);
+  @include heading(6);
   &.strong {
-    @include header(6, "bold");
+    @include heading(6, "bold");
   }
 }
 
-// TODO: Change vdm-title declaration
-// Deprecated - we use .divider class to provide the decorative line under title or other element
+// Type display classes
+.display-1 {
+  line-height: get-line-height($display1-size, 80px);
+}
+.display-2 {
+  line-height: get-line-height($display2-size, 72px);
+}
+.display-3 {
+  line-height: get-line-height($display3-size, 64px);
+}
+.display-4 {
+  line-height: get-line-height($display4-size, 56px);
+}
 
-.vdm-title {
-  position: relative;
-  padding-bottom: 0.5rem;
-  margin-bottom: 3rem;
-
-  &:after {
-    position: absolute;
-    min-width: 3rem;
-    max-width: 4rem;
-    content: " ";
-    left: 0;
-    top: calc(100% - 0.3rem);
-    height: $font-size-base / 3;
-    background: $vdm-sub-brand;
+.lead {
+  font-size: $lead-font-size;
+  font-weight: $lead-font-weight;
+  line-height: $lead-line-height;
+  margin-bottom: 2.5rem;
+  > :last-child {
+    margin-bottom: 0;
   }
 }
 
@@ -79,14 +89,21 @@ b, strong {
   font-weight: $font-weight-bold;
 }
 
-p {
-  line-height: $line-height-lg;
-}
-
 // Links - generic
 a {
   // TODO: Refactor required for this block, considering the icon tag will be explicite in the markup
   // Used in the side menu
+  border-bottom: $link-border-width solid $link-border-color;
+
+  &.link-scrollto {
+    color: $primary;
+    border-bottom: none;
+    .vfi {
+      color: $primary;
+      font-size: 1.42857em;
+      vertical-align: top;
+    }
+  }
   &.block {
     display: block;
     background: transparent;
@@ -124,18 +141,6 @@ a {
       }
     }
 
-    &.inverse {
-      background: $black;
-      color: $white;
-      &:hover,
-      &:active {
-        color: $vdm-brand;
-        text-decoration: none;
-      }
-    }
-    &.brand {
-      color: $vdm-brand;
-    }
   }
 }
 
@@ -182,39 +187,43 @@ h1, h2, h3, h4, h5, h6 {
 
 // Plain list overrides
 // Should all lists carry this look and feel, really?
-ul {
+ul, ol {
+  margin-bottom: 2rem;
   padding-left:  1.25rem;
   li {
     padding-bottom: .5rem;
+    
+    ul, ol {
+      padding: .5rem 0 0 1rem;
+    }
   }
+}
+/*
+ul {
   &.custom-list {
     list-style-type: none;
     padding: 0;
 
     li {
-      padding-left: 0.8em;
+      padding-left: .8em;
       position: relative;
-      margin-bottom: 0.7em;
+      //margin-bottom: 0.7em;
 
       &:before {
-        content: "";
-        width: 0.35em;
-        height: 0.35em;
-        @extend .rounded-circle;
-        background: $black;
+        @include circle($size: .3rem, $background-color: $body-color);
         position: absolute;
-        top: 0.5em;
+        top: .5rem;
         left: 0;
       }
       // Level 2
       ul {
         list-style-type: none;
-        padding: 0.5em 0 0 1em;
+        padding: .5rem 0 0 0;
         li {
-          padding-left: 1.25em;
+          padding-left: 1rem;
           &:before {
-            width: 0.8em;
-            top: 0.7em;
+            width: .4rem;
+            top: .7rem;
             height: 1px;
             border-radius: 0;
           }
@@ -226,6 +235,7 @@ ul {
     }
   }
 }
+*/
 
 // Ordered list overrides
 ol {
@@ -235,13 +245,16 @@ ol {
     padding-left: 6em;
     position: relative;
     .title {
-      @include header(4, bold);
+      @include heading(5, bold);
+      color: $headings-color;
+      margin-bottom: 1rem;
     }
 
     > li {
       padding-bottom: 1.5rem;
       &:before {
-        @include header(4, bold);
+        @include heading(5, bold);
+        color: $headings-color;
         content: counter(ol-counter, decimal);
         counter-increment: ol-counter;
         position: absolute;
@@ -249,7 +262,7 @@ ol {
         height: 1.6em;
         padding: 0 2.15em 0 0;
         left: 0;
-        border-bottom: 4px solid $vdm-sub-brand;
+        border-bottom: 4px solid $brand;
       }
     }
   }
@@ -259,21 +272,21 @@ ol {
 // A list of items grouped under dates
 // date-list> ul > li > { day-month-year } ul > li { item one } /li |  li { item two } /li ...
 .date-list {
-  margin-bottom: 1.5em;
+  margin-bottom: 1.5rem;
   @extend .list-unstyled;
   &:last-of-type {
     margin-bottom: 0;
   }
   > li {
     .date {
-      margin-bottom: 1.5em;
+      margin-bottom: 1.5rem;
     }
     ul {
-      margin-bottom: 2em;
+      margin-bottom: 2rem;
 
       &.list-items {
         li {
-          margin-bottom: 2em;
+          margin-bottom: 2rem;
 
           &:last-of-type {
             margin-bottom: 0;
@@ -302,8 +315,11 @@ ol {
     margin-bottom: 0;
   }
   a {
-    @include header(4, bold);
-    color: $vdm-brand;
+    @include heading(4, bold);
+    border: none;
+    color: $primary;
+    display: inline-block;
+    margin-bottom: 1rem;
   }
   p {
     margin-bottom: 1rem;
@@ -318,12 +334,12 @@ ol {
 dl {
   margin-bottom: 2em;
   dt {
-    @include header(4, bold);
-    color: $vdm-brand;
+    @include heading(5, bold);
+    color: $headings-color;
   }
   dd {
     padding-bottom: 2em;
-    border-bottom: 1px solid $vdm-grey-light;
+    border-bottom: 1px solid $gray-300;
     margin-bottom: 2em;
     &:last-of-type {
       padding-bottom: 0;
@@ -333,39 +349,54 @@ dl {
   }
 }
 
+// Break word
+
+.break-word {
+  word-wrap: break-word;
+}
+
 // Blockquote
 
-blockquote {
-  &.blockquote {
-    padding-left: 1.75em;
-    font-size: $font-size-lg;
-    font-weight: normal;
-    font-style: italic;
-    position: relative;
+.blockquote {
+  font-size: $font-size-lg;
+  font-weight: $font-weight-normal;
+  margin-bottom: 2rem;
+  padding-left: 1.75em;
+  position: relative;
 
+  &:before {
+    content: "";
+    background: $brand;
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 35%;
+    min-height: 2rem;
+    width: 8px;
+  }
+
+  .blockquote-footer {
+    font-size: $font-size-base;
+    font-style: normal;
+    text-align: right;
     &:before {
-      width: 8px;
-      height: 35%;
-      position: absolute;
-      background: $vdm-sub-brand;
-      content: "";
-      left: 0;
-      top: 0;
+      display: none;
     }
+  }
+  cite {
+    color: $gray-900;
+    font-style: normal;
+  }
+}
 
-    .blockquote-footer {
-      font-style: normal;
-      color: $vdm-grey;
-      font-size: $font-size-sm;
-      text-align: right;
-      &:before {
-        display: none;
-      }
-    }
-    cite {
-      color: $black;
-      font-style: normal;
-    }
+.table {
+  thead th {
+    color: $headings-color;
+  }
+}
+.table-dark {
+  thead th {
+    color: $table-dark-color;
   }
 }
 
@@ -378,18 +409,15 @@ blockquote {
   height: 2px;
   background: $black;
   border-radius: 0;
-  &.mock-title {
-    width: 3rem;
-    margin-left: 0;
-  }
   &.divider-title {
-    display: inline-block;
+    display: flex;
+    align-self: center;
     height: .5rem;
     width: 64px;
     margin-top: 0;
     margin-bottom: 0;
     margin-right: 10px;
-    background-color: $vdm-sub-brand;
+    background-color: $brand;
   }
   
   &.divider-small {
@@ -415,9 +443,16 @@ blockquote {
 }
 
 .footer-notes {
-  border-top: 1px solid $vdm-grey;
+  border-top: 1px solid $gray-700;
   padding-top: 2rem;
   margin-bottom: 4rem;
+}
+
+.select-all {
+  -webkit-user-select: all;
+  -moz-user-select: all;
+  -ms-user-select: all;
+  user-select: all;
 }
 
 //
@@ -430,7 +465,7 @@ blockquote {
   // Fat day, discrete month, block level headings
   &.day-month {
     > .day {
-      @include header(2);
+      @include heading(2);
       display: inline-block;
       position: relative;
       margin-right: 0.3em;
@@ -440,7 +475,6 @@ blockquote {
         content: " ";
         left: 0.05em;
         bottom: -0.075em;
-        //border-radius: $vdm-element-border-radius;
         height: 4px;
         background: $black;
       }
@@ -452,17 +486,23 @@ blockquote {
 //
 // Might not be in the right stylesheet
 .link-box {
-  :hover,
-  :active {
-    text-decoration: none;
-  }
   a {
+    border: none;
+    color: $gray-900;
     display: flex;
     flex-direction: row;
     height: 100%;
+    .vfi {
+      font-size: 2rem;
+      color: $primary;
+    }
+    &:hover,
+    &:active {
+      color: $primary;
+      text-decoration: none;
+    }
   }
   .link-box-content {
-    color: $body-color;
     display: flex;
     flex: 1;
     flex-direction: row;
@@ -470,10 +510,6 @@ blockquote {
     margin-bottom: $grid-gutter-width;
     padding: 20px;
     align-items: center;
-    .vfi {
-      font-size: 2rem;
-      color: $vdm-brand;
-    }
   }
 }
 

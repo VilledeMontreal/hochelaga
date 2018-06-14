@@ -11,12 +11,14 @@
   > img {
     @extend .img-fluid;
   }
+  /*
   .vdm-btn {
     position: absolute;
     right: 7%;
     bottom: 7%;
     z-index: 10;
   }
+  */
 }
 
 // Header container with image, title and teaser text
@@ -41,12 +43,12 @@
         margin-left: 0;
         margin-bottom: 3rem;
 
-        .vdm-title {
-          @include header(2);
+        /*.vdm-title {
+          @include heading(2);
           &:after {
-            background: $vdm-sub-brand;
+            background: $brand;
           }
-        }
+        }*/
         .updated {
           position: relative;
           margin-left: 4.75rem;
@@ -76,4 +78,9 @@
       }
     }
   }
+}
+
+.img-hero {
+  display: block;
+  margin: 0 auto;
 }

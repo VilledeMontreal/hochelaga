@@ -21,8 +21,8 @@
   align-items: center;
   justify-content: space-between;
   background: $white;
-  border-bottom: 1px solid $vdm-grey-light;
-  height: $header-portal-height;
+  border-bottom: 1px solid $gray-200;
+  //height: $header-portal-height;
   padding: 0;
   width: 100%;
   position: relative;
@@ -39,13 +39,13 @@
     margin: 0;
     padding: 0;
     line-height: 1;
-    background: $vdm-sub-brand;
+    background: $brand;
     color: $white;
     vertical-align: middle;
     cursor: pointer;
     outline-width: 0;
     &:after {
-      color: $vdm-sub-brand;
+      color: $brand;
     }
   }
 
@@ -74,7 +74,7 @@
       > * {
         @extend .d-sm-inline-block;
         @include media-breakpoint-up(lg) {
-          border-left: 1px solid $vdm-grey-light;
+          border-left: 1px solid $gray-200;
         }
       }
       .button-label {
@@ -133,7 +133,7 @@
   &:after {
     font-size: 3.7rem;
     line-height: 1;
-    color: $vdm-sub-brand;
+    color: $brand;
   }
 
   &.search {
@@ -151,6 +151,7 @@
   margin: 0;
   padding: 0;
   a {
+    border: none;
     color: $black;
     line-height: 1;
     height: $header-portal-height;
@@ -212,6 +213,7 @@
     }
   }
   .home-link {
+    border: none;
     flex-shrink: 0;
     @include size($header-icon-width);
     background-color: $black;
@@ -219,9 +221,11 @@
     text-decoration: none;
     .vfi {
       font-size: 3rem;
+      color: $white;
     }
   }
   .hdr-title {
+    color: $headings-color;
     font-weight: $font-weight-bold;
     padding-left: $grid-gutter-width;
     padding-right: $grid-gutter-width;
@@ -234,56 +238,5 @@
     ul {
       margin-bottom: 0;
     }
-  }
-}
-
-
-// Header banner
-.header-banner {
-  background: $black;
-  color: $white;
-  height: $header-banner-portal-height;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  padding: 0 $grid-gutter-width;
-  line-height: 1;
-
-  @include media-breakpoint-up(md) {
-    justify-content: space-between;
-  }
-
-  .banner-link {
-    display: none;
-    @include media-breakpoint-up(md) {
-      display: inline-block;
-      margin-left: 1rem;
-    }
-  }
-
-  .back-link {
-    display: none;
-    @include media-breakpoint-up(md) {
-      display: inline-block;
-    }
-  }
-
-  a {
-    color: $white;
-    text-decoration: underline;
-    &:active,
-    &:hover {
-      color: $white;
-      text-decoration: underline;
-    }
-  }
-}
-
-// Colors
-//
-// Contextual variations.
-@each $color, $value in $theme-colors {
-  .banner-#{$color} {
-    @include banner-variant($value);
   }
 }

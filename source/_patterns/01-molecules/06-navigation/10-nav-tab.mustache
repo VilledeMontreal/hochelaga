@@ -6,13 +6,14 @@
     </li>
     {{/ navTabs.navItem }}
   </ul>
-
-  <a href="#" class="nav-tabs-dropdown d-md-none active" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Tabs</a>
-  <ul class="dropdown-menu nav-tabs-dropdown-menu d-md-none">
-    {{# navTabs.navItem }}
-    <li class="dropdown-item nav-item">
-      <a href="{{ url }}" class="nav-link {{ class }}">{{ title }}</a>
-    </li>
-    {{/ navTabs.navItem }}
-  </ul>
+  <div >
+    <a href="#" class="nav-tabs-dropdown d-md-none active" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" id="dropdownNavTabs">Tabs</a>
+    <ul class="dropdown-menu nav-tabs-dropdown-menu d-md-none" aria-labelledby="dropdownNavTabs">
+      {{# navTabs.navItem }}
+      <li class="dropdown-item nav-item">
+        <a href="{{ url }}" class="nav-link {{ class }}">{{ title }}</a>
+      </li>
+      {{/ navTabs.navItem }}
+    </ul>
+  </div>
 </nav>

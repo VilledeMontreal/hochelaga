@@ -1,0 +1,16 @@
+{{> atoms-link-skip-to-main-content }}
+{{> organisms-header-portal }}
+{{> molecules-breadcrumb }}
+
+<main class="main-content {{ pageClasses }}" id="main-content" aria-label="Main Content">
+
+  {{> organisms-content-header-portal }}
+
+  {{# servicesSection}}
+    {{> molecules-card }}
+  {{/ servicesSection}}
+
+</main>
+
+{{> organisms-footer-portal }}
+
