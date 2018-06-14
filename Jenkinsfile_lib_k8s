@@ -1,6 +1,7 @@
 #!groovy
 //@Library('cicd-lib@develop')
-@Library('cicd-lib')
+@Library('cicd-lib@develop')
+
 import vdmtl.cicd.*
 import jenkins.model.*
 
@@ -41,11 +42,7 @@ ctx = pipeline.createContext([
 
 pipeline.start(ctx) {
 
-    pipeline.prepareDockerImage(ctx) {
-
-        pipeline.checkoutStage(ctx) {
-            checkout scm;
-        }
+    pipeline.withSourceCode(ctx) {
 
         pipeline.buildStage(ctx) {
             pipeline.buildDockerImage(ctx)
@@ -56,21 +53,13 @@ pipeline.start(ctx) {
         }
     }
 
-    pipeline.useDraftDockerImage(ctx) {
-        // pipeline.testStage(ctx) {
-        //     try {
-        //         sh """
-        //             cd /mtl/app
-        //             npm run test
-        //         """
-        //     } finally {
+    pipeline.withDraftDockerImage(ctx) {
 
-        //     }
-        // }
 
         pipeline.publishStage(ctx) {
             pipeline.publishLibrary(ctx)
         }
+
 
     }
 }
