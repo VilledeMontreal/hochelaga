@@ -28,6 +28,10 @@ ctx = pipeline.createContext([
         dockerfilePath: "Dockerfile"
     ],
     notifications: [
+        hipchat: [
+            room: "4285211",
+            notify: true
+        ],
         mail: [
             to: [
                 // Full email, or prefix of the email address ville.montreal.qc.ca
@@ -57,6 +61,7 @@ pipeline.start(ctx) {
 
 
         pipeline.publishStage(ctx) {
+            sh "cd /usr/src/app && gulp distribute"
             pipeline.publishLibrary(ctx)
         }
 
