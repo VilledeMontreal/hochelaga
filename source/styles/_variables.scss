@@ -1,0 +1,300 @@
+// @file variables.scss
+
+//= = = = Environment setup = = = =
+//
+//== Assets
+$assets-img-paths : "../../../images" !default;
+$assets-icons-path : "../../../images/icons" !default;
+$assets-font-path: '../fonts' !default;
+
+//= = = = Colors = = = =
+//
+//== Neutrals
+
+$vdm-white:               #FFFFFF;
+$vdm-black:               #000000;
+$vdm-sarcelle:            #429A8E;
+$vdm-grey-light:          #F2F2F1;
+$vdm-grey:                #80807F;
+$vdm-grey-dark:           #222222; // First occurence : side menu bg & borders
+$vdm-red:                 #E00000;
+
+$vdm-neutral-mid:         #80807F;
+$vdm-neutral-light:       #E7E5E5;
+
+//== Brand
+
+$vdm-brand:                 #429A8E;
+$vdm-sub-brand:             #E00000;
+
+// - - - - - - - - - -
+// == Scaffolding
+// - - - - - - - - - -
+
+//== Links
+
+//** Global text color on `<body>`
+$vdm-text:            $vdm-black;
+//** Global textual link color
+$vdm-link:            $vdm-brand;
+$vdm-icon-link:       $vdm-black; // Arrow link
+//** Link hover color
+$vdm-link-hover:      $vdm-black;
+//** Link hover decoration
+$vdm-link-hover-decoration: underline;
+$vdm-icon-link-hover-decoration: none;  // Arrow link
+
+// - - - - - - - - - -
+// == Typography
+// - - - - - - - - - -
+
+//== Font Family
+$vdm-font-family:             'Nunito Sans', Helvetica, Arial, sans-serif;
+
+//== Font Weight
+$vdm-font-weight-light:        300; // Nunito Sans Light
+$vdm-font-weight-regular:      400; // Nunito Sans Regular
+$vdm-font-weight-bold:         700; // Nunito Sans Bold
+
+//== Fonts Size
+$vdm-font-size-base:          16px;                                   // 16px
+$vdm-font-size-larger:        ceil(($vdm-font-size-base * 1.3125));  // ~21px
+$vdm-font-size-large:         ceil(($vdm-font-size-base * 1.125));    // ~18px
+$vdm-font-size-small:         ceil(($vdm-font-size-base * 0.85));     // ~14px
+$vdm-font-size-smaller:       ceil(($vdm-font-size-base * 0.75));     // ~12px
+
+//== Line Height
+$vdm-line-height-base:        floor(($vdm-font-size-base * 1.3125));   // 21px
+
+//== Icons fonts -vdm-font-icon character
+$vdm-icon-font-path: $assets-font-path;
+$vdm-icon-font-version: '0.5';
+$vdm-icon-font-family : 'vdm-fonticon';
+// @see variable $icon all the way at the end for symbols definition
+
+$vdm-icon-font-size: 3.6rem;
+$vdm-icon-font-height : 3.6rem;
+$vdm-icon-font-width : 3.6rem;
+$vdm-icon-font-line-height : 3.6rem;
+
+//== Icons fonts -vdm-font-icon character
+$vdm-icon-social-media-scale: 60px;
+$vdm-icon-social-media-padding-right: 10px;         // in patternal.scss ?
+$vdm-icon-social-media-padding-right-lists: 1em;    // in patternal.scss ?
+
+//== test social icon font
+$social-icon-font-path: $assets-font-path;
+$social-icon-font-version: '1.0';
+$social-icon-font-family : 'ic-social';
+$social-icon-font-size: 30px;
+
+//== Font Awesome character
+$fontawesome-icon-font-path: $assets-font-path + '/font-awesome-4.7.0';
+$fontawesome-icon-font-version: '4.7.0';
+$fontawesome-icon-font-family : 'fontawesome-fonticon';
+
+// - - - - - - - - - -
+// == Layout - top-level structures
+// - - - - - - - - - -
+
+$vdm-header-banner-portal-height : 50px;
+$vdm-header-portal-height : 60px;
+$vdm-header-total-portal-height : $vdm-header-banner-portal-height + $vdm-header-portal-height;
+
+
+// - - - - - - - - - -
+// == UI - general -- split this cat. later
+// - - - - - - - - - -
+
+// - - - - - - - - - -
+// == Navigation
+// - - - - - - - - - -
+
+// Tabs 
+$vdm-tabs-spacing: 4px;
+$vdm-tabs-border-width: 4px;
+$vdm-tabs-line-height: $vdm-font-size-base * 3.6;
+$vdm-tabs-h-padding: $vdm-font-size-base * 1.62;
+$vdm-tabs-v-padding: $vdm-font-size-base * 0.375;
+
+// Pagination
+$vdm-breadcrumb-item-padding : 1.25rem;
+
+$vdm-navbar-height: 60px;
+
+
+// - - - - - - - - - -
+// == Forms
+// - - - - - - - - - -
+
+//== Form elements
+
+// Form generalities
+$vdm-form-bg-color:         $vdm-brand;
+$vdm-form-text-color:       $vdm-white;
+$vdm-form-border:           none;
+$vdm-error-color:           $vdm-sub-brand;
+
+// Form elements - generic
+$vdm-element-border-width: 2px;
+$vdm-element-border-radius: 5px;
+$vdm-element-padding: 2px;
+$vdm-element-base-height: 34px;
+
+// Secondary element states
+$vdm-form-alt-bg-color: $vdm-white;
+$vdm-form-alt-text-color: $vdm-brand;
+$vdm-form-alt-border: 2px solid $vdm-brand;
+
+$vdm-form-disabled-bg-color: $vdm-neutral-light;
+$vdm-form-disabled-text-color: $vdm-neutral-mid;
+$vdm-form-disabled-secondary-border: 2px solid $vdm-neutral-light;
+
+// Buttons
+$vdm-btn-padding-x: 40px;
+$vdm-btn-padding-y: 5px;
+$vdm-btn-border-width: 2px;
+$vdm-btn-height: 53px;
+$vdm-btn-small-height: 40px;
+
+// False checkboxes :on/off switches
+$vdm-switch-border-radius: 40px;
+$vdm-switch-border-radius-inside: 30px;
+$vdm-switch-height: 40px;
+$vdm-switch-width: 75px;
+$vdm-switch-width-inside: 30px;
+$vdm-switch-padding: 5px;
+
+// Textfields
+$vdm-textfield-border-radius: $vdm-element-border-radius;
+
+
+// Menus
+$vdm-side-menu-width: 300px;
+$vdm-side-menu-border-width: 2px;
+$vdm-side-menu-icon-size: 3rem;
+$vdm-side-menu-link-h-padding: 1rem;
+$vdm-side-menu-link-v-padding: 1.75rem;
+
+
+// - - - - - - - - - -
+// == Layout
+// - - - - - - - - - -
+
+$vdm-sidebar-box-h-padding : 1.75rem;
+$vdm-sidebar-box-v-padding : 1.5rem;
+
+// Vertical spacing between regions and sections
+$region-last-padding-bottom: 4rem;
+$region-padding-bottom: 3rem;
+$section-padding-bottom: 2.5rem;
+
+// Checkboxes
+// $vdm-checkbox-border-radius: 40px;
+// $vdm-checkbox-border-radius-inside: 30px;
+// $vdm-checkbox-height: 40px;
+// $vdm-checkbox-width: 75px;
+// $vdm-checkbox-width-inside: 30px;
+// $vdm-checkbox-padding: 3px;
+
+
+$icons: (
+  rosette: "\E000",
+  search: "\E001",
+  profile: "\E002",
+  flag: "\E003",
+  calendar: "\E004",
+  sun: "\E005",
+  ticket: "\E006",
+  eye: "\E007",
+  people: "\E008",
+  doc-holder: "\E009",
+  bus: "\E00A",
+  phone: "\E00B",
+  book: "\E00C",
+  arrow-play: "\E00D",
+  arrow-select: "\E00E",
+  news-item: "\E00F",
+  location-star: "\E010",
+  permit-id: "\E011",
+  document: "\E012",
+  credit-card: "\E013",
+  folder: "\E014",
+  bell: "\E015",
+  settings: "\E016",
+  plus-circle-dot: "\E017",
+  minus-circle-dot: "\E018",
+  steps-checked: "\E019",
+  ellipsis-circle-dot: "\E01A",
+  enveloppe: "\E01B",
+  folder-add: "\E01C",
+  warning-triangle: "\E01D",
+  computer: "\E01E",
+  nut: "\E01F",
+  pencil: "\E020",
+  lightbulb: "\E021",
+  pen: "\E022",
+  warning-circle: "\E023",
+  clock: "\E024",
+  target: "\E025",
+  broom: "\E026",
+  permit: "\E027",
+  arrow-circle-up: "\E028",
+  arrow-circle-right: "\E029",
+  arrow-circle-down: "\E02A",
+  arrow-circle-left: "\E02B",
+  house: "\E02C",
+  x-close: "\E02D",
+  circle-progress-done: "\E02E",
+  circle-progress-a: "\E02F",
+  circle-progress-ab: "\E030",
+  circle-progress-abc: "\E031",
+  circle-progress-c: "\E032",
+  circle-progress-bc: "\E033",
+  circle-progress-checked: "\E034",
+  circle-progress-folder: "\E035",
+  chevron-up: "\E036",
+  chevron-right: "\E037",
+  chevron-down: "\E038",
+  chevron-left: "\E039",
+  circle-checked: "\E03A",
+  menu: "\E100",
+  location: "\E101",
+  arrow-up: "\E102",
+  arrow-right: "\E103",
+  arrow-down: "\E104",
+  arrow-left: "\E105",
+  plus: "\E200",
+  minus: "\E201",
+  multiply: "\E202",
+  circle-plus: "\E203",
+  circle-minus: "\E204",
+  circle-multiply: "\E205",
+  circle-plus-invert: "\E206",
+  circle-minus-invert: "\E207",
+  circle-multiply-invert: "\E208",
+  checkbox-checked: "\E209",
+  checkbox-empty: "\E20A",
+  checkbox-checked-trans: "\E20B",
+  checkbox-checked-invert: "\E20C",
+  trash: "\E400",
+  recycle: "\E401",
+  compost: "\E402",
+  greens: "\E403",
+  permit-pet: "\E404"
+);
+
+$social-media-icons: (
+  facebook: "\E800",
+  linkedin: "\E801",
+  twitter: "\E802",
+  youtube: "\E803",
+  instagram: "\E804",
+  googleplus: "\E805",
+  instagram-sm: "\E806"
+);
+
+
+
+
+

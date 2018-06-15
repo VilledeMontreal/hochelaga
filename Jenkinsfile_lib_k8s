@@ -61,7 +61,7 @@ pipeline.start(ctx) {
 
 
         pipeline.publishStage(ctx) {
-            sh "cd /usr/src/app && gulp distribute"
+            sh "cd /usr/src/app && npm run distribute"
             pipeline.publishLibrary(ctx)
         }
 

@@ -1,0 +1,294 @@
+<h3 class="pl-stroked-header">Teasers - flexbox with mixins</h3>
+<div class="vdm-teasers-wrapper">
+    <h4>Icons, left and right</h4>
+    <ul class="vdm-teasers-mixin">
+        <li class="vdm-teaser-mixin icon-left">
+            <a class="vdm-teaser-body-mixin ic-rosette" title="title text">
+                <h2 class="title">Title - Icon small, rosette</h2>
+                <p class="content">Body Body Body hoodie. </p>
+            </a>
+        </li>
+        <li class="vdm-teaser-mixin icon-right">
+            <a class="vdm-teaser-body-mixin ic-search" title="title text">
+                <h2 class="title">Title - Icon small, search - Title - Icon small, rosette</h2>
+                <p class="content">Body Body Body hoodie. Bitters banjo williamsburg ugh, tattooed +1.</p>
+                <p class="footer">Footer footer footer hoodie. Bitters banjo williamsburg ugh, tattooed +1.</p>
+            </a>
+        </li>
+        <li class="vdm-teaser-mixin light-scheme icon-left">
+            <a class="vdm-teaser-body-mixin ic-flag" title="title text">
+                <h2 class="title">Title - Icon small, flag</h2>
+                <p class="content">Body Body Body hoodie. Bitters banjo williamsburg ugh, tattooed +1.</p>
+            </a>
+        </li>
+        <li class="vdm-teaser-mixin light-scheme icon-right">
+            <a class="vdm-teaser-body-mixin ic-profile" title="title text">
+                <h2 class="title">Title - Icon</h2>
+                <p class="content">Body Body Body hoodie. Bitters banjo williamsburg ugh, tattooed +1.</p>
+                <p class="footer">Footer footer footer hoodie. Bitters banjo williamsburg ugh, tattooed +1.</p>
+            </a>
+        </li>
+    </ul>
+</div>
+<div class="vdm-teasers-wrapper neutral-light">
+    <h3>Arrow block variants</h3>
+
+    <!-- @see https://projects.invisionapp.com/d/main#/console/11533069/246771810/preview -->
+    <!-- @see https://projects.invisionapp.com/d/main#/console/11533069/246949643/preview -->
+    <!-- @see https://projects.invisionapp.com/d/main#/console/11533069/245898997/preview -->
+    <!-- @see https://projects.invisionapp.com/d/main#/console/11533069/247235329/preview -->
+    <!-- @see https://projects.invisionapp.com/d/main#/console/11533069/248716747/preview -->
+
+    <h4>Small, discrete footer tags, white scheme on grey background</h4>
+    <ul class="vdm-teasers-mixin">
+        <li class="vdm-teaser-mixin arrow-block white-scheme">
+            <a class="vdm-teaser-body-mixin"  title="title text">
+                <h3 class="title">Title - Arrow right, no icon</h3>
+                <p class="footer discrete">Footer footer footer hoodie. Bitters banjo williamsburg ugh, tattooed +1.</p>
+            </a>
+        </li>
+        <li class="vdm-teaser-mixin arrow-block white-scheme">
+            <a class="vdm-teaser-body-mixin" title="title text">
+                <h3 class="title">Title - Icon small, search - Title - Arrow right, no icon</h3>
+                <p class="footer discrete">Footer footer footer hoodie.</p>
+            </a>
+        </li>
+        <li class="vdm-teaser-mixin arrow-block white-scheme compact">
+            <a class="vdm-teaser-body-mixin"  title="title text">
+                <h3 class="title">Title - Icon small, rosette - compact</h3>
+                <p class="footer discrete">Footer footer footer hoodie. Bitters banjo williamsburg ugh, tattooed +1.</p>
+            </a>
+        </li>
+        <li class="vdm-teaser-mixin arrow-block white-scheme compact">
+            <a class="vdm-teaser-body-mixin" title="title text">
+                <h3 class="title">Title - Icon small, search - Title - Icon small, 8-bit adaptogen glossier meditation helvetica migas pitchfork</h3>
+                <p class="footer discrete">Footer footer footer hoodie. Bitters banjo williamsburg ugh, tattooed +1.</p>
+            </a>
+        </li>
+    </ul>
+</div>
+
+<div class="vdm-teasers-wrapper">
+    <h4>Icon left, no wrapper, vertically centered title, right arrow</h4>
+    <ul class="vdm-teasers-mixin">
+        <li class="vdm-teaser-mixin icon-left arrow-block">
+            <a class="vdm-teaser-body-mixin ic-circle-checked" title="title text">
+                <h2 class="title">Bitters farm-to-table snackwave prism kinfolk</h2>
+                <span class="feedback">This is feedback, YO!</span>
+            </a>
+        </li>
+        <li class="vdm-teaser-mixin icon-left arrow-block">
+            <a class="vdm-teaser-body-mixin ic-house" title="title text">
+                <h2 class="title">Gluten-free iceland DIY put a bird on it meggings unicorn</h2>
+            </a>
+        </li>
+    </ul>
+
+    <h4>Inline display & inner wrapper, identifier, right arrow</h4>
+    <ul class="vdm-teasers-mixin">
+        <li class="vdm-teaser-mixin inline-flex arrow-block">
+            <a class="vdm-teaser-body-mixin" title="title text">
+                <div class="content-wrapper">
+                    <h2 class="title">Title - Arrow right, with icon and lateral flex, inner flex wrapper</h2>
+                    <p class="content">Do stuff</p>
+                    <p class="footer"><span class="date">Le 12 janvier</span></p>
+                </div>
+                <span class="identifier">PP35-DFCS78</span>
+            </a>
+        </li>
+        <li class="vdm-teaser-mixin inline-flex arrow-block">
+            <a class="vdm-teaser-body-mixin" title="title text">
+                <div class="content-wrapper">
+                    <h2 class="title">Title - Arrow right, with icon and lateral flex, inner wrapper</h2>
+                    <p class="content">Williamsburg , tattooed</p>
+                    <p class="footer"><span class="date">On or before May 26 2017</span></p>
+                </div>
+                <span class="identifier">PP35-DFCS78</span>
+            </a>
+        </li>
+    </ul>
+
+    <h4>Inline display & double icon, inner wrapper, identifier, right arrow</h4>
+    <ul class="vdm-teasers-mixin">
+        <li class="vdm-teaser-mixin inline-flex arrow-block icon-left">
+            <a class="vdm-teaser-body-mixin ic-circle-plus" title="title text">
+                <div class="content-wrapper">
+                    <h2 class="title">Title - Arrow right, with double icon and lateral flex, inner flex wrapper</h2>
+                    <p class="content">Do stuff</p>
+                    <p class="footer"><span class="date">Le 12 janvier</span></p>
+                </div>
+                <span class="identifier">PP35-DFCS78</span>
+            </a>
+        </li>
+        <li class="vdm-teaser-mixin inline-flex arrow-block icon-left">
+            <a class="vdm-teaser-body-mixin ic-target" title="title text">
+                <div class="content-wrapper">
+                    <h2 class="title">Title - Arrow right, with double icon and lateral flex, inner wrapper</h2>
+                    <p class="content">Williamsburg , tattooed</p>
+                    <p class="footer"><span class="date">On or before May 26 2017</span></p>
+                </div>
+                <span class="identifier">PP35-DFCS78</span>
+            </a>
+        </li>
+    </ul>
+
+    <h4>Inline display & inner wrapper, green title & fat body, right arrow</h4>
+    <ul class="vdm-teasers-mixin">
+        <li class="vdm-teaser-mixin inline-flex category-block arrow-block">
+            <a class="vdm-teaser-body-mixin" title="title text">
+                <div class="content-wrapper">
+                    <h2 class="title">Title - Thundercats category</h2>
+                </div>
+                <p class="category-description">Meditation helvetica migas pitchfork leggings tumblr. Selvage 
+                chartreuse wayfarers, pour-over gluten-free iceland DIY put a bird 
+                on it meggings unicorn pitchfork marfa health goth messenger bag keytar.</p>
+            </a>
+        </li>
+        <li class="vdm-teaser-mixin inline-flex category-block arrow-block">
+            <a class="vdm-teaser-body-mixin" title="title text">
+                <div class="content-wrapper">
+                    <h2 class="title">Title - Pork belly category</h2>
+                </div>
+                <p class="category-description">Jianbing fashion axe la croix, pour-over meh everyday carry poke
+                 tbh tumeric you probably haven't heard of them shoreditch. 
+                 Etsy tumblr master cleanse four loko try-hard unicorn kitsch tofu tacos YOLO.</p>
+            </a>
+        </li>
+    </ul>
+</div>
+<div class="vdm-teasers-wrapper">
+    <h4>Image and a single arrow title</h4>
+    <!-- @see https://projects.invisionapp.com/d/main#/console/11533069/248691983/preview -->
+    <!-- @see https://projects.invisionapp.com/d/main#/console/11533069/248691984/preview -->
+    <ul class="vdm-teasers-mixin">
+        <li class="vdm-teaser-mixin image-right small">
+            <a class="vdm-teaser-body-mixin" title="title text">
+                {{> 00-atoms/10-images/image-768-ratio-1.77-01 }}
+                <div class="content-wrapper">
+                    <h2 class="title arrow-link">Title - Twee direct trade thundercats disrupt vinyl.</h2>
+                </div>
+            </a>
+        </li>
+        <li class="vdm-teaser-mixin image-left small">
+            <a class="vdm-teaser-body-mixin" title="title text">
+                {{> 00-atoms/10-images/image-768-ratio-1.77-02 }}
+                <div class="content-wrapper">
+                    <h2 class="title arrow-link">Title - Palo santo health goth artisan</h2>
+                </div>
+            </a>
+        </li>
+        <li class="vdm-teaser-mixin image-right small">
+            <a class="vdm-teaser-body-mixin" title="title text">
+                {{> 00-atoms/10-images/image-768-ratio-1.77-01 }}
+                <div class="content-wrapper">
+                    <h2 class="title arrow-link">Title - Selvage chartreuse wayfarers</h2>
+                    <p class="footer">
+                        <span class="vdm-label">8-bit</span>
+                    </p>
+                </div>
+            </a>
+        </li>
+        <li class="vdm-teaser-mixin image-right small">
+            <a class="vdm-teaser-body-mixin" title="title text">
+                {{> 00-atoms/10-images/image-768-ratio-1.77-02 }}
+                <div class="content-wrapper">
+                    <h2 class="title arrow-link">Title - VHS migas man braid everyday carry vinyl</h2>
+                    <p class="footer">
+                        <span class="vdm-label">farm-to-table</span>
+                    </p>
+                </div>
+            </a>
+        </li>
+    </ul>
+
+
+    <h4>Image and a complex body, large image</h4>
+    <!-- @see https://projects.invisionapp.com/d/main#/console/11533069/247010233/inspect -->
+    <ul class="vdm-teasers-mixin">
+        <li class="vdm-teaser-mixin image-right large">
+            <a class="vdm-teaser-body-mixin" title="title text">
+                {{> 00-atoms/10-images/image-768-ratio-1.77-03 }}
+                <div class="content-wrapper">
+                    <h2 class="title">Title - Icon small, rosette</h2>
+                    <p class="content">Body Body Body hoodie. Bitters banjo williamsburg ugh, tattooed +1.</p>
+                </div>
+            </a>
+        </li>
+        <li class="vdm-teaser-mixin image-left large">
+            <a class="vdm-teaser-body-mixin" title="title text">
+                {{> 00-atoms/10-images/image-768-ratio-1.77-01 }}
+                <div class="content-wrapper">
+                    <h2 class="title">Title - Icon small, rosette</h2>
+                    <p class="content">Body Body Body hoodie. Bitters banjo williamsburg ugh, tattooed +1.</p>
+                    <p class="footer arrow-link">Footer footer footer hoodie. Bitters banjo williamsburg ugh, tattooed +1.</p>
+                </div>
+            </a>
+        </li>
+    </ul>
+
+
+    <h4>Image and a complex body, large image to the right, inline footer items</h4>
+    <!-- @see https://projects.invisionapp.com/d/main#/console/11533069/247010233/inspect -->
+    <ul class="vdm-teasers-mixin">
+        
+        <li class="vdm-teaser-mixin image-right large">
+            <a class="vdm-teaser-body-mixin" title="title text">
+                {{> 00-atoms/10-images/image-768-ratio-1.77-02 }}
+                <div class="content-wrapper">
+                    <p class="date">28 juillet 2017</p>
+                    <h2 class="title arrow-link">Title - Bitters banjo williamsburg ugh, tattooed +1 williamsburg williamsburg</h2>
+                    <p class="footer inline-items">
+                        <span class="location-pin">Ville-Marie</span>
+                        <span class="vdm-label">adaptogen</span>
+                        <span class="vdm-label">axe la croix</span>
+                    </p>
+                </div>
+            </a>
+        </li>
+        <li class="vdm-teaser-mixin image-right large">
+            <a class="vdm-teaser-body-mixin" title="title text">
+                {{> 00-atoms/10-images/image-768-ratio-1.77-03 }}
+                <div class="content-wrapper">
+                    <p class="date">21 juillet 2017</p>
+                    <h2 class="title arrow-link">Title - Bitters banjo williamsburg ugh, tattooed +1 williamsburg williamsburg</h2>
+                    <p class="footer inline-items">
+                        <span class="location-pin">Notre-dame côte des neiges</span>
+                        <span class="vdm-label">cold-pressed</span>
+                        <span class="vdm-label">gluten-free</span>
+                    </p>
+                </div>
+            </a>
+        </li>
+    </ul>
+
+    <h4>Image and a complex body, very large large image on the left, inline footer items</h4>
+    <!-- @see https://projects.invisionapp.com/d/main#/console/11533069/247010233/inspect -->
+    <ul class="vdm-teasers-mixin">
+        <li class="vdm-teaser-mixin image-left larger">
+            <a class="vdm-teaser-body-mixin" title="title text">
+                {{> 00-atoms/10-images/image-768-ratio-1.57-03 }}
+                <div class="content-wrapper">
+                    <h2 class="title">Title - Bitters banjo </h2>
+                    <p class="content">Content - gastropub gochujang, adaptogen cronut woke kitsch small batch ramps paleo roof party intelligentsia. Skateboard YOLO venmo aesthetic artisan taiyaki fanny pack. </p>
+                    <p class="footer arrow-link">
+                        Rash-a-deer!
+                    </p>
+                </div>
+            </a>
+        </li>
+        <li class="vdm-teaser-mixin image-left larger">
+            <a class="vdm-teaser-body-mixin" title="title text">
+                {{> 00-atoms/10-images/image-768-ratio-1.57-01 }}
+                <div class="content-wrapper">
+                    <h2 class="title">Title - Adaptogen cronut</h2>
+                    <p class="content">Content - gastropub gochujang, adaptogen cronut woke kitsch small batch ramps paleo roof party intelligentsia. Skateboard YOLO venmo aesthetic artisan taiyaki fanny pack. </p>
+                    <p class="footer arrow-link">
+                        Rash-a-deer!
+                    </p>
+                </div>
+            </a>
+        </li>
+    </ul>
+    
+</div>
+

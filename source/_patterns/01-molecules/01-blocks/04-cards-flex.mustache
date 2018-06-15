@@ -1,0 +1,209 @@
+
+<h3 class="pl-stroked-header">Cards - flexbox</h3>
+<div class="vdm-cards-wrapper">
+    <h4>Icons and thumbs, title only</h4>
+    <ul class="vdm-cards grid-type-grid">
+        <li class="vdm-card thumb light-scheme icon-center">
+            <a class="vdm-card-body ic-rosette" title="title text">
+                <h2 class="title">Title - Icon small, rosette</h2>
+            </a>
+        </li>
+        <li class="vdm-card thumb light-scheme icon-center">
+            <a class="vdm-card-body ic-search" title="title text">
+                <h2 class="title">Title - Icon small, search - Title - Icon small, rosette</h2>
+            </a>
+        </li>
+        <li class="vdm-card thumb light-scheme icon-center">
+            <a class="vdm-card-body ic-flag" title="title text">
+                <h2 class="title">Title - Icon small, flag</h2>
+            </a>
+        </li>
+        <li class="vdm-card thumb light-scheme icon-center">
+            <a class="vdm-card-body ic-profile" title="title text">
+                <h2 class="title">Title - Icon</h2>
+            </a>
+        </li>
+    </ul>
+</div>
+<!-- @see https://projects.invisionapp.com/d/main#/console/11533069/248716747/preview --> 
+<div class="vdm-cards-wrapper neutral-light">
+    <h4>Title and body in a grid, no icons, dry</h4>
+    <ul class="vdm-cards grid-type-grid">
+        <li class="vdm-card thumb minimal white-scheme">
+            <a class="vdm-card-body" title="title text">
+                <h2 class="title">Title - plain</h2>
+                <p class="content">Body - Succulents brooklyn kitsch, street art fingerstache fanny pack YOLO</p>
+            </a>
+        </li>
+        <li class="vdm-card thumb minimal white-scheme">
+            <a class="vdm-card-body" title="title text">
+                <h2 class="title">Title - pinterest YOLO cardigan waistcoat</h2>
+                <p class="content">Body - Try-hard unicorn kitsch tofu tacos</p>
+            </a>
+        </li>
+        <li class="vdm-card thumb minimal white-scheme">
+            <a class="vdm-card-body" title="title text">
+                <h2 class="title">Title - Ethical distillery man bun retro bushwick</h2>
+                <p class="content">Body - sartorial poutine drinking vinegar shabby chic</p>
+            </a>
+        </li>
+        <li class="vdm-card thumb minimal white-scheme">
+            <a class="vdm-card-body" title="title text">
+                <h2 class="title">Title - Shabby chic poutine</h2>
+                <p class="content">Body - Organic DIY keytar fam whatever shabby chic poutine fanny pack jean</p>
+            </a>
+        </li>
+    </ul>
+</div>
+
+<!-- @see https://projects.invisionapp.com/d/main#/console/11533069/248716747/preview --> 
+<div class="vdm-cards-wrapper neutral-light">
+    <h4>Oversize, introduces search resultas and listing ont he left</h4>
+    <ul class="vdm-cards">
+        <li class="vdm-card featured white-scheme">
+            <a class="vdm-card-body" title="title text">
+                <h2 class="title">Title - plain</h2>
+                <p class="content">Body - Succulents brooklyn kitsch, street art fingerstache fanny pack YOLO franzen edison bulb brunch chambray prism squid portland health goth.</p>
+                <p class="footer arrow-link">Rash a deir!</p>
+            </a>
+        </li>
+    </ul>
+</div>
+
+<div class="vdm-cards-wrapper neutral-light">
+<!-- @see  // @see https://projects.invisionapp.com/d/main#/console/11533069/245692118/inspect -->
+    <h3>Cards with images</h3>
+    <h4>Thumbnail image variants, image top</h4>
+    <h5>Plain</h5>
+    <ul class="vdm-cards grid-type-grid">
+        <li class="vdm-card vdm-card-image thumb white-scheme">
+            <a class="vdm-card-body" title="title text">
+                {{> 00-atoms/10-images/image-768-ratio-1.57-01 }}
+                <div class="card-content-wrapper">
+                    <h3 class="title">Ahuntsic-Cartonville</h3>
+                </div>
+            </a>
+        </li>
+        <li class="vdm-card vdm-card-image thumb white-scheme">
+            <a class="vdm-card-body" title="title text">
+                {{> 00-atoms/10-images/image-768-ratio-1.57-02 }}
+                <div class="card-content-wrapper">
+                    <h3 class="title">Anzou</h3>
+                </div>
+            </a>
+        </li>
+        <li class="vdm-card vdm-card-image thumb white-scheme">
+            <a class="vdm-card-body" title="title text">
+                {{> 00-atoms/10-images/image-768-ratio-1.57-03 }}
+                <div class="card-content-wrapper">
+                    <h3 class="title">Rivière-des-Prairies–Pointe-aux-Fraises</h3>
+                </div>
+            </a>
+        </li>
+        <li class="vdm-card vdm-card-image thumb white-scheme">
+            <a class="vdm-card-body" title="title text">
+                {{> 00-atoms/10-images/image-768-ratio-1.57-01 }}
+                <div class="card-content-wrapper">
+                    <h3 class="title">Le Sud-Ouesse</h3>
+                </div>
+            </a>
+        </li>
+    </ul>
+    <h5>Rounded</h5>
+    <ul class="vdm-cards grid-type-grid">
+        <li class="vdm-card vdm-card-image thumb rounded white-scheme">
+            <a class="vdm-card-body" title="title text">
+                {{> 00-atoms/10-images/image-768-ratio-1-01 }}
+                <div class="card-content-wrapper">
+                    <h3 class="title">Gingras<span class="weight-regular">Toto</span></h3>
+                    <p class="footer">Maire</p>
+                </div>
+            </a>
+        </li>
+        <li class="vdm-card vdm-card-image thumb rounded white-scheme">
+            <a class="vdm-card-body" title="title text">
+                {{> 00-atoms/10-images/image-768-ratio-1-02 }}
+                <div class="card-content-wrapper">
+                    <h3 class="title">Dupuis<span class="weight-regular">Linel</span></h3>
+                    <p class="footer">Colonel</p>
+                </div>
+            </a>
+        </li>
+        <li class="vdm-card vdm-card-image thumb rounded white-scheme">
+            <a class="vdm-card-body" title="title text">
+                {{> 00-atoms/10-images/image-768-ratio-1-03 }}
+                <div class="card-content-wrapper">
+                    <h3 class="title">Montauband-Lacasse<span class="weight-regular">Archibald</span></h3>
+                    <p class="footer">Grand patron</p>
+                </div>
+            </a>
+        </li>
+        <li class="vdm-card vdm-card-image thumb rounded white-scheme">
+            <a class="vdm-card-body" title="title text">
+                {{> 00-atoms/10-images/image-768-ratio-1-01 }}
+                <div class="card-content-wrapper">
+                    <h3 class="title">Sâblé<span class="weight-regular">Ruban</span></h3>
+                    <p class="footer">Évèque principal</p>
+                </div>
+            </a>
+        </li>
+    </ul>
+</div>
+
+<div class="vdm-cards-wrapper">
+    <!-- @see  // @see https://projects.invisionapp.com/d/main#/console/11533069/248691983/preview -->
+    <!-- @see  // @see https://projects.invisionapp.com/d/main#/console/11533069/248691983/preview -->
+    <h3>Cards with images</h3>
+    <h4>Large image variants, image top</h4>
+    <h5>Events block</h5>
+    <ul class="vdm-cards grid-type-grid">
+        <li class="vdm-card vdm-card-image large">
+            <a class="vdm-card-body" title="title text">
+                {{> 00-atoms/10-images/image-768-ratio-1.77-01 }}
+                <div class="card-content-wrapper">
+                    <p class="category bullet-left">En vedette</p>
+                    <h3 class="title">Poke bushwick literally meh, man</h3>
+                    <p class="content">Air plant four dollar toast put a bird on it, jianbing pork belly williamsburg pickled. Cardigan single-origin coffee iPhone iceland palo santo sriracha affogato lumbersexual aesthetic sustainable fingerstache bespoke authentic trust fund.</p>
+                    <p class="footer">
+                        <span class="arrow-link last">Yo gluten-free iceland DIY!</span>
+                    </p>
+                </div>
+            </a>
+        </li>
+        <li class="vdm-card vdm-card-image large">
+            <a class="vdm-card-body" title="title text">
+                {{> 00-atoms/10-images/image-768-ratio-1.77-02 }}
+                <div class="card-content-wrapper">
+                    <p class="category bullet-left">En vedette</p>
+                    <h3 class="title">Palo santo health goth artisan</h3>
+                    <p class="content">Normcore shoreditch wolf flexitarian shabby chic. Tumeric banjo salvia, asymmetrical chartreuse DIY cred VHS migas man braid everyday carry vinyl. Bespoke knausgaard adaptogen, semiotics kombucha chambray cloud bread succulents vape bicycle rights. Craft beer tilde activated charcoal poke tbh typewriter stumptown meh af ugh before they sold out fashion axe heirloom.</p>
+                    <p class="footer"><span class="arrow-link last">Yo gluten-free iceland DIY!</span></p>
+                </div>
+            </a>
+        </li>
+        
+        <li class="vdm-card vdm-card-image large">
+            <a class="vdm-card-body" title="title text">
+                {{> 00-atoms/10-images/image-768-ratio-1.77-02 }}
+                <div class="card-content-wrapper">
+                    <p class="category bullet-left">En vedette</p>
+                    <h3 class="title">Kickstarter raclette fixie readymade swag tumeric</h3>
+                    <p class="content">Authentic iPhone twee farm-to-table, succulents cardigan hashtag. Fashion axe gluten-free wolf, actually vape authentic ethical air plant butcher sriracha you probably haven't heard of them man braid skateboard chambray. Dreamcatcher slow-carb health goth hoodie fingerstache street art master cleanse raw denim etsy YOLO cray. Disrupt gentrify bushwick kombucha.</p>
+                    <p class="footer"><span class="arrow-link last">Yo gluten-free iceland DIY!</span></p>
+                </div>
+            </a>
+        </li>
+        <li class="vdm-card vdm-card-image large">
+            <a class="vdm-card-body" title="title text">
+                {{> 00-atoms/10-images/image-768-ratio-1.77-01 }}
+                <div class="card-content-wrapper">
+                    <p class="category bullet-left">En vedette</p>
+                    <h3 class="title">Jianbing fashion axe la croix, pour-over meh everyday carry poke tbh tumeric</h3>
+                    <p class="content">gluten-free iceland DIY put a bird on it meggings unicorn pitchfork marfa health goth messenger bag keytar. Vaporware hammock tattooed hoodie migas.</p>
+                    <p class="footer"><span class="arrow-link last">Yo gluten-free iceland DIY!</span></p>
+                </div>
+            </a>
+        </li>
+        <!-- --> 
+    </ul>
+</div>
