@@ -228,15 +228,6 @@ $hr-margin-y:                 ($spacer * 2);
 $vfi-icon-font-path: $assets-font-path;
 $vfi-icon-font-family : 'vdm';
 
-
-// Body
-//
-// Settings for the `<body>` element.
-
-$header-banner-portal-height : 50px;
-$header-portal-height : 60px;
-$header-total-portal-height : $header-banner-portal-height + $header-portal-height;
-
 // Navs
 
 $nav-link-padding-y:                1rem;
@@ -255,7 +246,10 @@ $nav-tabs-active-border-width:      4px;
 
 // Navbar
 
-$navbar-height: 60px;
+$navbar-height: 114px;
+$top-banner-height : 50px;
+
+$header-total-height : $top-banner-height + $navbar-height;
 
 // Pagination
 
@@ -507,6 +501,7 @@ $side-menu-link-v-padding:      1.75rem;
 
 $header-icon-width:             60px;
 $header-icon-height:            $header-icon-width;
+
 
 // Navs
 
