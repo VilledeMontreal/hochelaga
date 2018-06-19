@@ -1,41 +1,7 @@
 // @file _menus.scss
 
 
-.menu-open {
-  padding-top: 0;
-  overflow-x: hidden;
-  .vdm-header {
-    position: static;
-    .vdm-navbar {
-      border: none;
-      .menu-trigger {
-        @include iconvfi(before, mini-x);
-      }
-    }
-  }
-
-  .side-menu {
-    display: block;
-    position: fixed;
-    top: 0;
-    bottom: 0;
-    overflow-y: auto;
-  }
-  .vdm-page {
-    left: 300px;
-    transition: left 0.3s;
-    position: absolute;
-  }
-
-}
-
 .side-menu {
-  width: $side-menu-width;
-  background: $gray-900;
-  height: 100%;
-  min-height: 100vh;
-  overflow: hidden;
-  //display: none;
 
   .menu-links {
     width: 100%;

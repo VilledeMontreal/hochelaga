@@ -1,6 +1,6 @@
-<header class="{{ headerClasses }}" role="banner">
+<header class="{{ headerClasses }} {{# hasTopBanner}}has-top-banner{{/ hasTopBanner }}" role="banner">
   {{# hasTopBanner}}
   {{> molecules-top-banner }}
   {{/ hasTopBanner }}
-  {{> organisms-navbar-brand-center }}
+  {{> organisms-navbar }}
 </header>

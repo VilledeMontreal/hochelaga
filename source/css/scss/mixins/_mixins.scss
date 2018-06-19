@@ -276,6 +276,16 @@
  * - - - - - - - - - -
  */
 
+ @mixin button-reset() {
+  color: inherit;
+  font: inherit;
+  text-transform: none;
+  background-color: transparent;
+  border: 0;
+  margin: 0;
+  overflow: visible;
+ }
+
  //@include n-columns(200px,  10px, true, 5);
 @mixin n-columns($child-selector, $min-width, $gutter, $last-equal: false, $max-cols: 5) {
   display: flex;

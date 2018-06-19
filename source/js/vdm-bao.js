@@ -23,16 +23,25 @@
   // ******************************
   // Begin side menu push
 
-  var $menuToggler = $(".navbar-menu-toggler");
+  var $menuOpen = $(".hamburger");
+  var $menuClose = $(".btn-side-menu-close")
 
-  $menuToggler.on("click", function() {
-    $('#navbarSide').toggleClass('in');
+  $menuOpen.on("click", function() {
+    $('#navbarSideMenu').addClass('is-open');
+    $("#navbarSideMenu").attr("aria-expanded", "true");
+    $('.overlay').show();
+  });
 
-    if ($("#navbarSide").hasClass("in")) {
-      $(this).attr("aria-expanded", "true");
-    } else {
-      $(this).attr("aria-expanded", "false");
-    }
+  // Close navbarSide when the overlay is clicked
+  $('.overlay').on('click', function(){
+    $('#navbarSideMenu').removeClass('is-open');
+    $('.overlay').hide();
+  });
+
+  $menuClose.on("click", function() {
+    $('#navbarSideMenu').removeClass('is-open');
+    $("#navbarSideMenu").attr("aria-expanded", "false");
+    $('.overlay').hide();
   });
 
   // ******************************

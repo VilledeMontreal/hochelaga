@@ -16,6 +16,9 @@
     // properly vertically. Can be easily overridden with flex utilities.
     align-items: center;
   }
+  button + button {
+    margin-left: 1rem;
+  }
   .nav-item.dropdown {
     margin-bottom: 0;
     padding-bottom: 0;
@@ -34,8 +37,16 @@
   .nav-link {
     display: flex;
     align-items: center;
+    padding: 0;
   }
   .navbar-nav {
+    .nav-item-btn {
+      padding-bottom: 0;
+      margin: 0 0.5rem;
+      &:last-child {
+        margin-right: 0;
+      }
+    }
     .dropdown-menu {
       top: 4.75rem;
       right: -2rem;
@@ -56,7 +67,7 @@
       width: auto;
     }
   }
-  .navbar-menu-toggler,
+
   .navbar-search-toggler {
     border: none;
     border-radius: .25rem;
@@ -65,39 +76,13 @@
     padding: 0 .5rem;
     display: inline-flex;
     align-items: center;
-    &:focus,
-    &.focus {
-      outline: 0;
-      box-shadow: $btn-focus-box-shadow;
-    }
   }
-  .navbar-menu-toggler {
-    .navbar-menu-toggler-custom-icon {
-      span {
-        display: block;
-        background-color: #444;
-        height: 2px;
-        width: 25px;
-        margin-top: 6px;
-        margin-bottom: 6px;
-        -webkit-transform: rotate(0deg);
-        -moz-transform: rotate(0deg);
-        -o-transform: rotate(0deg);
-        transform: rotate(0deg);
-        position: relative;
-        left: 0;
-        opacity: 1;
-      }
-    }
-    .navbar-menu-toggler-text {
-      font-size: 1rem;
-      margin-left: 1rem;
-    }
-  }
+
   .navbar-search-toggler {
     user-select: none;
     cursor: pointer;
   }
+
   .dropdown-menu {
     .dropdown-item-section {
       color: $body-color;
@@ -112,9 +97,6 @@
         font-weight: $font-weight-bold;
       }
     }
-    .notification {
-
-    }
   }
 }
 
@@ -122,32 +104,46 @@
   display: none;
 }
 
-.navbar-side {
+.navbar-side-menu {
   height: 100%;
   padding: 0;
   list-style: none;
-  background-color: $gray-sky;
-  overflow-y: scroll;
+  background-color: $gray-900;
+  overflow-x: hidden;
+  overflow-y: auto;
+  padding: 2rem;
   position: fixed;
   top: 0;
   left: 0;
   height: 100%;
-  width: 300px;
+  width: 100%;
   z-index: $zindex-fixed;
   transform: translateX(-100%);
   transition: 300ms ease;
 
-  &.in {
+  &.is-open {
     transform: translateX(0%);
     transition: 300ms ease;
   }
+  
+
+  ul {
+    @extend .list-unstyled;
+  }
+
+  @include media-breakpoint-up(sm) {
+    width: $side-menu-width;
+  }
 }
 
-.navbar-side-item {
+.navbar-side-menu-item {
   padding: 1.5rem 0;
   margin: 0;
-  border-bottom: 2px solid $sarcelle;
   height: 5rem;
+}
+
+.navbar-side-sub-menu-item {
+  display: none;
 }
 
 .side-link {
@@ -155,25 +151,79 @@
 }
 
 
+// Hamburger
+//
+.hamburger {
+  @include button-reset();
+  padding: $hamburger-padding-y $hamburger-padding-x;
+  display: inline-flex;
+  align-items: center;
+  cursor: pointer;
+}
 
+.hamburger-box {
+  width: $hamburger-layer-width;
+  height: $hamburger-layer-height * 3 + $hamburger-layer-spacing * 2;
+  display: inline-block;
+  position: relative;
+}
 
+.hamburger-inner {
+  display: block;
+  top: 50%;
+  margin-top: $hamburger-layer-height / -2;
 
+  &,
+  &::before,
+  &::after {
+    width: $hamburger-layer-width;
+    height: $hamburger-layer-height;
+    background-color: $hamburger-layer-color;
+    position: absolute;
+    transition-property: transform;
+    transition-duration: 0.15s;
+    transition-timing-function: ease;
+  }
 
+  &::before,
+  &::after {
+    content: "";
+    display: block;
+  }
 
-// Old navbar - Will be deprecated
+  &::before {
+    top: ($hamburger-layer-spacing + $hamburger-layer-height) * -1;
+  }
 
-.vdm-header {
-  //@extend .fixed-top;
-  ul {
-    list-style-type: none;
-    margin: 0;
-    padding: 0;
-    li {
-      margin: 0;
-      padding: 0;
-    }
+  &::after {
+    bottom: ($hamburger-layer-spacing + $hamburger-layer-height) * -1;
   }
 }
+
+.hamburger-label {
+  font-size: 1rem;
+  margin-left: 1rem;
+  color: $black;
+}
+
+// Close Side-menu button
+.btn-side-menu-close {
+  @include button-reset();
+  display: inline-flex;
+  align-items: center;
+  cursor: pointer;
+  color: $gray-600;
+  padding: 0.5rem 0.5rem;
+  .vfi {
+    color: inherit;
+    font-size: 2rem;
+  }
+  .btn-label {
+    font-size: 1rem;
+    margin-left: 1rem;
+  }
+}
+
 
 // Main navigation
 .vdm-navbar {
@@ -346,13 +396,6 @@
   }
 }
 
-// Main lateral navigation menu
-.side-menu {
-  &.wrapper {
-    display: none;
-    position: absolute;
-  }
-}
 
 
 // Wizard header

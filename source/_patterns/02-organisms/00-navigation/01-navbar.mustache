@@ -1,14 +1,6 @@
 <nav class="navbar navbar-light navbar-expand justify-content-between">
-
   <div class="d-flex w-100">
-    <button class="navbar-menu-toggler d-flex" type="button" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle menu">
-      <span class="navbar-menu-toggler-custom-icon">
-        <span></span>
-        <span></span>
-        <span></span>
-      </span>
-      <span class="navbar-menu-toggler-text d-none d-md-inline-block">Menu</span>
-    </button>
+    {{> molecules-main-menu-button }}
     <button class="navbar-search-toggler" id="navbarDropdownSearch" aria-haspopup="true" aria-expanded="false">
       <span class="sr-only">Ouvrir la barre de recherche</span>
       <span class="vfi vfi-recherche"></span>
@@ -18,7 +10,14 @@
   <a class="navbar-brand mx-auto" href="/">
     <img src="../../images/dist/logos/vdm-logo.svg" class="brand-logo" alt="Logo - Ville de Montréal" />
   </a>
-  <div class="d-flex w-100">
+  <div class="col-right d-flex w-100">
+    {{^ user-authenticated }}
+    <ul class="nav navbar-nav ml-auto">
+      <li class="nav-item-btn">{{> atoms-button(buttonClass: "btn-secondary btn-sm", buttonText: "Create account")}}</li>
+      <li class="nav-item-btn">{{> atoms-button(buttonClass: "btn-primary btn-sm", buttonText: "Log in")}}</li>
+    </ul>
+    {{/ user-authenticated }}
+    {{# user-authenticated }}
     <ul class="nav navbar-nav ml-auto">
       <li class="nav-item dropdown">
         <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
@@ -28,8 +27,8 @@
         <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdownMenuLink">
           <div class="dropdown-item-section">
             <div class="user-info">
-              <span class="user-name">Françoise Tremblay</span>
-              <span class="user-email">francoisetremblay@gmail.com</span>
+              <span class="user-name">{{ user.name }}</span>
+              <span class="user-email">{{ user.email }}</span>
             </div>
             <a href="#" class="btn btn-secondary btn-sm">Paramètres</a>
           </div>
@@ -52,27 +51,11 @@
         </div>
       </li>
     </ul>
+    {{/ user-authenticated }}
   </div>
   {{> molecules-menu-open-side-v2 }}
-  <!--
-  <div class="navbar-side-container">
-    <ul class="navbar-side" id="navbarSide" role="menu">
-      <li class="navbar-side-item">
-        <a href="#" class="side-link" role="menuitem">Item 1</a>
-      </li>
-      <li class="navbar-side-item">
-        <a href="#" class="side-link" role="menuitem">Item 2</a>
-      </li>
-      <li class="navbar-side-item">
-        <a href="#" class="side-link" role="menuitem">Item 3</a>
-      </li>
-      <li class="navbar-side-item">
-        <a href="#" class="side-link" role="menuitem">Item 4</a>
-      </li>
-    </ul>
+  <div class="navbar-search" id="navbar-search">
+    {{> molecules-search-field-combo-base }}
   </div>
-  -->
+  <div class="overlay"></div>
 </nav>
-<div class="navbar-search" id="navbar-search">
-  {{> molecules-search-field-combo-base }}
-</div>
