@@ -1,6 +1,7 @@
 #!groovy
 //@Library('cicd-lib@develop')
-@Library('cicd-lib@feature/developv2')
+@Library('cicd-lib@develop')
+
 import vdmtl.cicd.*
 import jenkins.model.*
 
@@ -27,6 +28,10 @@ ctx = pipeline.createContext([
         dockerfilePath: "Dockerfile"
     ],
     notifications: [
+        hipchat: [
+            room: "4285211",
+            notify: true
+        ],
         mail: [
             to: [
                 // Full email, or prefix of the email address ville.montreal.qc.ca
@@ -41,11 +46,7 @@ ctx = pipeline.createContext([
 
 pipeline.start(ctx) {
 
-    pipeline.prepareDockerImage(ctx) {
-
-        pipeline.checkoutStage(ctx) {
-            checkout scm;
-        }
+    pipeline.withSourceCode(ctx) {
 
         pipeline.buildStage(ctx) {
             pipeline.buildDockerImage(ctx)
@@ -56,21 +57,14 @@ pipeline.start(ctx) {
         }
     }
 
-    pipeline.useDraftDockerImage(ctx) {
-        // pipeline.testStage(ctx) {
-        //     try {
-        //         sh """
-        //             cd /mtl/app
-        //             npm run test
-        //         """
-        //     } finally {
+    pipeline.withDraftDockerImage(ctx) {
 
-        //     }
-        // }
 
         pipeline.publishStage(ctx) {
+            sh "cd /usr/src/app && npm run distribute"
             pipeline.publishLibrary(ctx)
         }
+
 
     }
 }

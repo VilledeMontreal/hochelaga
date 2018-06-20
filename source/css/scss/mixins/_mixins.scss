@@ -96,6 +96,7 @@
   * }
   *
   */
+
 @mixin iconvfi($position: before, $icon: false, $styles: true) {
   @if $position == both {
     $position: "before, &:after";
@@ -209,17 +210,16 @@
 // - - - - - - - - - -
 
 @mixin drop-shadow(
-    $dist-top: 0,
-    $dist-right: 5px,
-    $dist-bottom: 11px,
-    $dist-left: 0 ,
-    $color-r: 0,
-    $color-g: 0,
-    $color-b: 0,
-    $opacity: 0.27
-  ) {
-  box-shadow: $dist-top $dist-right $dist-bottom $dist-left
-    rgba($color-r, $color-g, $color-b, $opacity);
+  $dist-top: 0,
+  $dist-right: 5px,
+  $dist-bottom: 11px,
+  $dist-left: 0 ,
+  $color-r: 0,
+  $color-g: 0,
+  $color-b: 0,
+  $opacity: 0.27
+) {
+  box-shadow: $dist-top $dist-right $dist-bottom $dist-left rgba($color-r, $color-g, $color-b, $opacity);
 }
 
 /**
@@ -344,4 +344,3 @@
     border: 1px solid $border-color;
   }
 }
-
