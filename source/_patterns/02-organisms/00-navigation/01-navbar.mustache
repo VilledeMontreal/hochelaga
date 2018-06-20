@@ -1,4 +1,4 @@
-<nav class="navbar navbar-light navbar-expand justify-content-between">
+<nav class="navbar navbar-light navbar-expand justify-content-between" role="navigation">
   <div class="d-flex w-100">
     {{> molecules-main-menu-button }}
     <button class="navbar-search-toggler" id="navbarDropdownSearch" aria-haspopup="true" aria-expanded="false">
@@ -6,6 +6,7 @@
       <span class="vfi vfi-recherche"></span>
       <span class="d-none d-md-inline-block">Recherche</span>
     </button>
+    {{> molecules-menu-open-side-v2 }}
   </div>
   <a class="navbar-brand mx-auto" href="/">
     <img src="../../images/dist/logos/vdm-logo.svg" class="brand-logo" alt="Logo - Ville de Montréal" />
@@ -53,7 +54,6 @@
     </ul>
     {{/ user-authenticated }}
   </div>
-  {{> molecules-menu-open-side-v2 }}
   <div class="navbar-search" id="navbar-search">
     {{> molecules-search-field-combo-base }}
   </div>
