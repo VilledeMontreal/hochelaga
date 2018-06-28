@@ -4,6 +4,14 @@
 // Base styles
 //
 
+button {
+  &:focus,
+  &.focus {
+    outline: 0;
+    box-shadow: $btn-focus-box-shadow;
+  }
+}
+
 .btn {
   display: inline-flex;
   align-items: center;
@@ -114,19 +122,19 @@ fieldset:disabled a.btn {
 //
 .btn-light {
   &.btn-primary {
-    @include button-variant($background: $sarcelle-atmos, $border: $sarcelle-atmos, $color: $black, $hover-background: $sarcelle-surprise, $hover-border: $sarcelle-surprise, $hover-color: $black, $active-color: $black);
+    @include button-variant($background: $sarcelle-atmos, $border: $sarcelle-atmos, $color: $black, $hover-background: $sarcelle-surprise, $hover-border: $sarcelle-surprise, $hover-color: $black, $active-color: $white);
   }
   &.btn-secondary {
-    @include button-variant($background: transparent, $border: $sarcelle-atmos, $color: $sarcelle-atmos, $hover-background: transparent, $hover-border: $sarcelle-surprise, $hover-color: $sarcelle-surprise, $active-color: $sarcelle-atmos);
+    @include button-variant($background: transparent, $border: $sarcelle-atmos, $color: $sarcelle-atmos, $hover-background: transparent, $hover-border: $sarcelle-surprise, $hover-color: $sarcelle-surprise, $active-color: $white);
   }
 }
 
 .btn-inverse {
   &.btn-primary {
-    @include button-variant($background: $white, $border: $white, $color: $sarcelle, $hover-background: $sarcelle-surprise, $hover-border: $sarcelle-surprise, $hover-color: $sarcelle, $active-background: $white, $active-border: $white, $active-color: $sarcelle);
+    @include button-variant($background: $white, $border: $white, $color: $sarcelle, $hover-background: $sarcelle-surprise, $hover-border: $sarcelle-surprise, $hover-color: $sarcelle, $active-color: $white);
   }
   &.btn-secondary {
-    @include button-variant($background: transparent, $border: $white, $color: $white, $hover-background: transparent, $hover-border: $sarcelle-surprise, $hover-color: $sarcelle-surprise, $active-background: $white, $active-border: $white, $active-color: $sarcelle);
+    @include button-variant($background: transparent, $border: $white, $color: $white, $hover-background: transparent, $hover-border: $sarcelle-surprise, $hover-color: $sarcelle-surprise, $active-color: $white);
   }
 }
 
@@ -173,6 +181,8 @@ fieldset:disabled a.btn {
   }
 }
 
+// Link button
+
 .btn-link {
   border-bottom: 1px solid $sarcelle-atmos;
   border-radius: 0;
@@ -200,6 +210,56 @@ input[type="button"] {
   .btn-group + .btn,
   .btn-group + .btn-group {
     margin-left: -1px;
+  }
+}
+
+// Icon only buttons
+
+.btn-notification {
+  background: $danger;
+  padding: 0;
+  @include size(50px);
+  .vfi {
+    font-size: 1.5rem;
+    margin: 0;
+    color: $white;
+    margin: auto;
+  }
+}
+
+// Button close
+
+// Slide menu close button
+.btn-close {
+  @include button-reset();
+  display: inline-flex;
+  align-items: center;
+  cursor: pointer;
+  color: $gray-600;
+  margin: 0;
+  padding: .5rem;
+  .vfi {
+    color: inherit;
+    font-size: 1.5rem;
+  }
+  .btn-label {
+    font-size: 1rem;
+    margin-left: 1rem;
+  }
+
+  @include media-breakpoint-up(sm) {
+    .vfi {
+      font-size: 2rem;
+    }
+  }
+
+  @include media-breakpoint-up(lg) {
+    .btn-label {
+      font-size: $sm-link-font-size;
+    }
+    .vfi {
+      font-size: 2.5rem;
+    }
   }
 }
 

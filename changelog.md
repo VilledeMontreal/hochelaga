@@ -8,6 +8,14 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 - Header refactoring
 - Side menu refactoring
 
+### Fixed
+- .btn-light and .btn-inverse buttons active state text and background color fix.
+
+## [0.2.2] - 2018-06-18
+
+### Fixed
+- Cleaned up old master branch from unwanted files
+
 ## [0.2.0] - 2018-06-14
 ### Added
 - Color: Sarcelle variants lightest, light and dark.
@@ -24,7 +32,8 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 
 ### Changed
 - Bootstrap 4.1.1 upgrade
-- Margin and padding utility classes now use a .5rem(8px) step. m-0 is .5rem, m1 is 1rem etc.
+- Container outter padding as pass from 15px to 30px to give more space on both side.
+- Margin and padding utility classes now use a .5rem (8px) step. m-0 is .5rem, m-1 is 1rem etc.
 - Buttons now stick to bootstrap .btn class convention. We provide .btn-primary and .btn-secondary. .btn-sm, .btn-light and .btn-inverse variants available for the 2 buttons types. 
 - Headings and display font-size tweaks.
 - Dialog colors tweaked.
