@@ -1,12 +1,12 @@
 <nav class="navbar navbar-light navbar-expand justify-content-between" role="navigation">
   <div class="d-flex w-100">
     {{> molecules-main-menu-button }}
-    <button class="navbar-search-toggler" id="navbarDropdownSearch" aria-haspopup="true" aria-expanded="false">
+    <button class="navbar-search-toggler d-none d-lg-inline-flex" id="navbarDropdownSearch" aria-haspopup="true" aria-expanded="false">
       <span class="sr-only">Ouvrir la barre de recherche</span>
       <span class="vfi vfi-recherche"></span>
-      <span class="d-none d-md-inline-block">Recherche</span>
+      <span class="btn-label">Recherche</span>
     </button>
-    {{> molecules-menu-open-side-v2 }}
+    {{> molecules-slide-menu }}
   </div>
   <a class="navbar-brand mx-auto" href="/">
     <img src="../../images/dist/logos/vdm-logo.svg" class="brand-logo" alt="Logo - Ville de Montréal" />
@@ -14,12 +14,25 @@
   <div class="col-right d-flex w-100">
     {{^ user-authenticated }}
     <ul class="nav navbar-nav ml-auto">
-      <li class="nav-item-btn">{{> atoms-button(buttonClass: "btn-secondary btn-sm", buttonText: "Create account")}}</li>
-      <li class="nav-item-btn">{{> atoms-button(buttonClass: "btn-primary btn-sm", buttonText: "Log in")}}</li>
+      <li class="nav-item-btn mr-8 d-none d-lg-block">
+        {{> atoms-button-icon(buttonClass: "btn-notification", buttonIconSr: true, buttonIconSrText: "Toggle notification view", buttonText: false, icon-label: "cloche", buttonIcon: true)}}
+      </li>
+      <li class="nav-item-btn d-none d-md-block">
+        {{> atoms-button(buttonClass: "btn-primary btn-sm", buttonText: "Log in")}}
+      </li>
+      <li class="nav-item-btn d-flex d-md-none">
+        <a href="#">
+          <span class="vfi vfi-profil" aria-hidden="true"></span>
+          <span class="sr-only">Log in</span>
+        </a>
+      </li>
     </ul>
     {{/ user-authenticated }}
     {{# user-authenticated }}
     <ul class="nav navbar-nav ml-auto">
+      <li class="nav-item-btn mr-8 d-none d-lg-block">
+        {{> atoms-button-icon(buttonClass: "btn-notification", buttonIconSr: true, buttonIconSrText: "Toggle notification view", buttonText: false, icon-label: "cloche", buttonIcon: true)}}
+      </li>
       <li class="nav-item dropdown">
         <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
           <span class="vfi vfi-profil" aria-hidden="true"></span>
@@ -27,12 +40,19 @@
         </a>
         <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdownMenuLink">
           <div class="dropdown-item-section">
-            <div class="user-info">
-              <span class="user-name">{{ user.name }}</span>
-              <span class="user-email">{{ user.email }}</span>
+            <div class="user-section">
+              <div class="user-info">
+                <span class="user-email">{{ user.email }}</span>
+                <span class="user-profil">{{ user.profil }}</span>
+              </div>
+              <div class="user-action">
+                <a href="#" class="link-profil">
+                  <span class="vfi vfi-parametres"></span>
+                </a>
+              </div>
             </div>
-            <a href="#" class="btn btn-secondary btn-sm">Paramètres</a>
           </div>
+          <div class="dropdown-divider"></div>
           <ul class="list-unstyled">
             <li>
               <a class="dropdown-item" href="#">Tableau de bord</a>
@@ -54,8 +74,16 @@
     </ul>
     {{/ user-authenticated }}
   </div>
-  <div class="navbar-search" id="navbar-search">
-    {{> molecules-search-field-combo-base }}
-  </div>
   <div class="overlay"></div>
 </nav>
+<div id="navbar-search" class="navbar-search">
+  <div class="container">
+    <div class="inner-container">
+      {{> atoms-input(inputHideLabel: true) }}
+      <button class="btn-close">
+        <span class="vfi vfi-grand-x"></span>
+        <span class="sr-only">Fermer</span>
+      </button>
+    </div>
+  </div>
+</div>

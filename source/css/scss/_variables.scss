@@ -468,6 +468,7 @@ $dropdown-border-color:             $gray-400;
 $dropdown-border-radius:            0;
 $dropdown-border-width:             1px;
 $dropdown-divider-bg:               $gray-400;
+$dropdown-box-shadow:               0 .5rem .5rem rgba($black, .175);
 
 $dropdown-link-color:               $gray-900;
 $dropdown-link-hover-color:         darken($gray-900, 5%);
@@ -479,7 +480,7 @@ $dropdown-link-active-bg:           $sarcelle-atmos;
 //$dropdown-link-disabled-color:      $gray-600;
 
 $dropdown-item-padding-y:           .5rem;
-$dropdown-item-padding-x:           1.5rem;
+$dropdown-item-padding-x:           2.5rem;
 
 $dropdown-header-color:             $gray-600;
 
@@ -493,11 +494,18 @@ $modal-md:                          600px;
 //
 // Menus
 //
-$side-menu-width:               320px;
-$side-menu-border-width:        2px;
-$side-menu-icon-size:           3rem;
-$side-menu-link-h-padding:      1rem;
-$side-menu-link-v-padding:      1.75rem;
+$sm-menu-width:           440px;
+$sm-menu-bg:              $gray-900;
+$sm-border-width:         1px;
+$sm-border-color:         $gray-700;
+$sm-link-color:           $white;
+$sm-link-hover-color:     $sarcelle-surprise;
+$sm-link-font-size:       1.125rem; // 18px
+$sm-icon-size:            3rem;
+$sm-icon-color:           $sarcelle-surprise;
+$sm-link-padding:         1rem 2.8125rem;
+$sm-transition-dur:       300ms;
+$sm-transition-easing:    ease-in-out;
 
 $header-icon-width:             60px;
 $header-icon-height:            $header-icon-width;
@@ -549,10 +557,10 @@ $navbar-light-toggler-border-color: $black;
 // hamburger
 //
 $hamburger-padding-x:       .5rem;
-$hamburger-padding-y:       .5rem;
+$hamburger-padding-y:       .75rem;
 $hamburger-layer-width:     2rem;
 $hamburger-layer-height:    .1875rem;
-$hamburger-layer-spacing:   .5rem;
+$hamburger-layer-spacing:   .53125rem;
 $hamburger-layer-color:     $black;
 
 

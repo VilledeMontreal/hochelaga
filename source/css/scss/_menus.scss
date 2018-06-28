@@ -1,127 +1,223 @@
-// @file _menus.scss
+// Slide menu
+//
 
+// Slide menu header
+// Contains the close button
+.slide-menu-header {
+  margin: .625rem;
 
-.side-menu {
+  @include media-breakpoint-up(sm) {
+    margin: 1rem;
+  }
 
-  .menu-links {
-    width: 100%;
-    margin: 0;
-    padding: 0;
-    list-style: none;
-    position: relative;
-    transition: all 0.5s ease;
-    padding-top: 50px;
+  @include media-breakpoint-up(lg) {
+    margin: 4rem 4rem 2.5rem 4rem;
+  }
 
-    .menu-item {
-      background: $black;
-      display: flex;
-      border-bottom: $side-menu-border-width solid $gray-900;
-      &:first-child {
-        border-top: $side-menu-border-width solid $gray-900;
+}
+
+// Slide menu close button
+.btn-side-menu-close {
+  @include button-reset();
+  display: inline-flex;
+  align-items: center;
+  cursor: pointer;
+  color: $gray-600;
+  margin: 0;
+  padding: .5rem;
+  .vfi {
+    color: inherit;
+    font-size: 1.5rem;
+  }
+  .btn-label {
+    font-size: 1rem;
+    margin-left: 1rem;
+  }
+
+  @include media-breakpoint-up(sm) {
+    .vfi {
+      font-size: 2rem;
+    }
+  }
+
+  @include media-breakpoint-up(lg) {
+    .btn-label {
+      font-size: $sm-link-font-size;
+    }
+    .vfi {
+      font-size: 2.5rem;
+    }
+  }
+}
+
+// Slide menu search
+//
+.slide-menu-search {
+
+  .form-group {
+    margin-bottom: 0;
+  }
+
+  .vfi {
+    color: $gray-100;
+  }
+  .form-control {
+    background-color: $gray-800;
+    border: none;
+    border-radius: 0;
+    color: $gray-100;
+    font-size: 1rem;
+    line-height: 1;
+    padding: 1.1875rem;
+
+    &::placeholder {
+      color: $gray-100;
+    }
+
+    &:focus {
+      background: $gray-400;
+      box-shadow: none;
+      color: $gray-900;
+
+      &::placeholder {
+        color: $gray-900;
       }
-      &:last-child {
-        border: 0;
-      }
 
-      .menu-link {
-        color: $white;
-        display: block;
-        flex-grow: 1;
-        padding: $side-menu-link-v-padding $side-menu-link-h-padding;
-        &:hover,
-        &:active {
-          color: $primary;
-          text-decoration: none;
-        }
+    }
+  }
+  .input-group-icon {
+    .input-group-icon-left {
+      padding-left: .625rem;
+      .vfi {
+        font-size: 2.5rem;
+      }
+      + input {
+        padding-left: 3.75rem;
+      }
+    }
+    .input-group-focus {
+      display: none;
+    }
+  }
+
+  // Mobile
+  @include media-breakpoint-up(sm) {
+    .form-control {
+      font-size: $sm-link-font-size;
+      padding: 1.75rem;
+    }
+    .input-group-icon {
+      .input-group-icon-left {
+        padding-left: 1rem;
         .vfi {
-          font-size: $side-menu-icon-size;
-          width: $side-menu-icon-size;
-          height: $side-menu-icon-size;
-          color: $primary;
-          position: absolute;
+          font-size: 3rem;
         }
-
-        // Level 2 link styles
-        &.back-link {
-          background: $gray-900;
-          position: relative;
-          padding-left: 4.5rem;
-          .vfi {
-            left: 0.5rem;
-            top: calc(50% - 1.5rem);
-          }
-        }
-        &.parent-link {
-          position: relative;
-          &:before {
-            content: "";
-            width: 4px;
-            height: 100%;
-            position: absolute;
-            left: 0;
-            top: 0;
-            background: $primary;
-          }
-        }
-        &.child-link {
-          padding-left: 3rem;
-        }
-      }
-
-      // This list item has a child submenu
-      &.has-children {
-        // Direct child link of this pregnant list item
-        > .menu-link {
-          position: relative;
-          .vfi {
-            left: calc(100% - 4rem);
-            top: calc(50% - 1.5rem);
-          }
-          @include iconvfi(after, fleche-droite);
-          &:after {
-            display: none;
-            font-size: $side-menu-icon-size;
-            width: $side-menu-icon-size;
-            height: $side-menu-icon-size;
-            color: $primary;
-            position: absolute;
-            left: calc(100% - 4rem);
-            top: calc(50% - 2.1rem);
-          }
-        }
-
-        .menu-links {
-          // Level 2 sub menu list
-          // Initially hidden
-          &.submenu {
-            position: absolute;
-            top: 0;
-            left: 100%;
-            width: 100%;
-            height: 100vh;
-            margin: 0;
-            padding: 0;
-            list-style: none;
-            overflow-y: auto;
-            opacity: 0;
-            visibility: hidden;
-            transition: all 0.5s ease;
-
-            &.show {
-              left: 0;
-              opacity: 1;
-              visibility: visible;
-            }
-
-            // Nested list list item
-            .menu-item {
-              // Nested list link
-              .menu-link {
-              }
-            }
-          }
+        + input {
+          padding-left: 5rem;
         }
       }
     }
+  }
+}
+
+// Main slide-menu container
+.slide-menu {
+	position: fixed;
+	width: 100%;
+	max-width: 100%;
+	height: 100vh;
+	top: 0;
+	right: 0;
+	display: none;
+  overflow-x: hidden;
+  overflow-y: auto;
+	box-sizing: border-box;
+	background: $sm-menu-bg;
+	transition: transform $sm-transition-dur $sm-transition-easing;
+	transform: translateX(100%);
+	will-change: transform;
+	z-index: $zindex-fixed;
+
+	.slider {
+		width: 100%;
+		transition: transform $sm-transition-dur $sm-transition-easing;
+		transform: translateX(0);
+		will-change: transform;
+	}
+
+	ul {
+		@extend .list-unstyled;
+		position: relative;
+		width: 100%;
+		max-width: 100%;
+    margin: 0;
+    margin-top: 1.5rem;
+    
+    li {
+      display: flex;
+      padding: 0;
+    }
+
+		ul {
+			position: absolute;
+			top: 0;
+			left: 100%;
+      display: none;
+      padding: 0;
+      margin: 0;
+		}
+
+		a {
+      color: $sm-link-color;
+      font-size: $sm-link-font-size;
+      display: flex;
+      flex: 1;
+      align-items: center;
+      padding: 1.5rem 3.75rem;
+      cursor: pointer;
+      &:hover,
+      &:active,
+      &.active {
+        color: $sarcelle-surprise;
+        text-decoration: none;
+        
+        .vfi {
+          color: $sarcelle-surprise;
+        }
+      }
+      .vfi {
+        color: $gray-600;
+        margin-left: 1.5rem;
+        margin-top: -.75rem;
+        margin-bottom: -.75rem;
+      }
+
+      &.back-link {
+        color: $sm-link-hover-color;
+        font-size: $font-size-md;
+        text-transform: uppercase;
+
+        .vfi {
+          color: $sm-icon-color;
+          font-size: 1rem;
+          line-height: 1;
+          margin-left: 0;
+        }
+      }
+    }
+    
+    @include media-breakpoint-up(sm) {
+      a {
+        padding-left: 5rem;
+        padding-right: 5rem;
+        .vfi {
+          margin-left: auto;
+        }
+      }
+    }
+	}
+  
+  @include media-breakpoint-up(sm) {
+    width: $sm-menu-width;
   }
 }
