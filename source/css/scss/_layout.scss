@@ -1,4 +1,8 @@
 // @file layout.scss
+html, body {
+  height: 100%;
+  overflow: auto;
+}
 
 html {
 
@@ -9,7 +13,7 @@ html {
       display: flex;
       flex-direction: column;
       height: 100vh;
-      padding-top: $header-total-portal-height;
+      padding-top: $header-total-height;
     }
     .main-content {
       flex: 1 0 auto;
@@ -368,4 +372,20 @@ html {
     background-color: $white;
     box-shadow: $card-box-shadow;
   }
+}
+
+
+// Overlay
+
+.overlay {
+  position: fixed;
+  display: none;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  cursor: pointer;
+  background-color: $gray-800;
+  opacity: 0.3;
+  z-index: 1020;
 }

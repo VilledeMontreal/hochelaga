@@ -1,198 +1,288 @@
-// @file header.scss
+// New navbar based on bootstrap navbar
 
-// @ see http://192.168.56.101:3000/?p=organisms-header
+.navbar {
+  padding: 1.125rem 1.5rem;
+  border-bottom: 1px solid $gray-400;
+  a:not(.btn) {
+    border-bottom: none;
+  }
+  .navbar-div {
+    display: flex;
+    flex-basis: auto; // Changes flex-bases to auto because of an IE10 bug
+    flex-grow: 1;
+    align-items: center;
+  }
 
-.vdm-header {
-  //@extend .fixed-top;
-  ul {
-    list-style-type: none;
-    margin: 0;
+  // Montreal logo is the navbar-brand
+  .navbar-brand {
+    display: flex;
     padding: 0;
-    li {
-      margin: 0;
-      padding: 0;
+    img {
+      height: 1.5rem;
+      width: auto;
+    }
+
+    @include media-breakpoint-up(sm) {
+      img {
+        height: 2rem;
+      }
+    }
+
+    @include media-breakpoint-up(md) {
+      img {
+        height: 2.5rem;
+      }
     }
   }
-}
 
-// Main navigation
-.vdm-navbar {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  background: $white;
-  border-bottom: 1px solid $gray-200;
-  //height: $header-portal-height;
-  padding: 0;
-  width: 100%;
-  position: relative;
-
-  .menu-trigger-wrapper {
-    flex-basis: calc(50% - 80px);
+  @include media-breakpoint-up(md) {
+    button + .dropdown,
+    button + button {
+      margin-left: 3.5rem;
+    }
   }
 
-  .menu-trigger {
-    @include iconvfi(before, menu);
-    @include size($header-icon-width);
-    font-size: 3.5rem;
-    border: 0;
-    margin: 0;
+  // Special placement on smaller device...
+  .btn-notification {
+    position: fixed;
+    bottom: $grid-gutter-width;
+    right: $grid-gutter-width;
+    z-index: 2000;
+    @include media-breakpoint-up(lg) {
+      position: static;
+      bottom: auto;
+      right: auto;
+      z-index: auto;
+    }
+  }
+
+  .nav-link {
+    display: flex;
+    align-items: center;
     padding: 0;
-    line-height: 1;
-    background: $brand;
-    color: $white;
-    vertical-align: middle;
-    cursor: pointer;
-    outline-width: 0;
+  }
+  .navbar-nav {
+    align-items: center;
+    .nav-item-btn {
+      padding-bottom: 0;
+      margin: 0 0.5rem;
+
+      &:last-child {
+        margin-right: 0;
+      }
+    }
+    li:last-child {
+      .nav-link {
+        padding-right: 0;
+      }
+    }
+  }
+
+  // Dropdown Menu toggle (user)
+  .dropdown {
+    margin-bottom: 0;
+    padding-bottom: 0;
+    position: inherit;
+    display: flex;
+
+    .user-name {
+      padding-right: .5rem;
+    }
+  }
+  .dropdown-toggle {
+    padding-top: 0;
+    padding-bottom: 0;
     &:after {
-      color: $brand;
+      border: 0;
+      color: $link-color;
+      font-size: 1rem;
+      margin-left: 0;
+      width: auto;
+      height: auto;
+    }
+    @include iconvfi($position: after, $icon: chevron-bas);
+
+    @include media-breakpoint-up(sm) {
+      &:after {
+        font-size: 1.5rem;
+      }
     }
   }
 
-  .brand-logo {
-    height: 34px;
-  }
+  // Dropdown menu
+  .dropdown-menu {
+    border-right: 0;
+    top: 100%;
+    right: 0;
+    margin: 0;
+    font-size: 1.125rem; // 18px
+    box-shadow: -1px 3px 3px 0 $gray-300;
 
-  a {
-    color: $black;
-    text-decoration: none;
-    &:active,
-    &:hover {
-      color: $black;
-      text-decoration: none;
+    .vfi {
+      font-size: 3rem;
+      color: $sarcelle-surprise;
     }
-  }
+    ul {
+      padding: 0;
+      li {
+        padding: 0;
+      }
+    }
+    .dropdown-item-section {
+      color: $body-color;
+      padding: 1.5rem $dropdown-item-padding-x;
+      > * {
+        margin-bottom: 1.5rem;
+        &:last-child {
+          margin-bottom: 0;
+        }
+      }
+      .user-email {
+        font-size: $font-size-base;
+      }
+      .user-profil {
+        font-weight: $font-weight-bold;
+      }
+    }
 
-  .navbar-icons {
-    flex-basis: calc(50% - 80px);
-    .icons {
+    .user-section {
       display: flex;
       align-items: center;
-      flex-direction: row;
-      justify-content: flex-end;
-
-      > * {
-        @extend .d-sm-inline-block;
-        @include media-breakpoint-up(lg) {
-          border-left: 1px solid $gray-200;
-        }
-      }
-      .button-label {
-        display: none;
-      }
-
-      .search {
-        display: none;
-        @include media-breakpoint-up(sm) {
-          @extend .d-sm-inline-block;
-        }
-      }
-
-      .language {
-        display: none;
-      }
-
-      @include media-breakpoint-up(lg) {
-        .button-label {
-          display: inline-block;
-        }
-        .language {
+      .user-info {
+        > * {
           display: block;
         }
       }
+      .user-action {
+        margin-left: 1rem;
+      }
     }
   }
-} // vdm-navbar -- Main navbar
+
+  // change icon when dropdown is open
+  .dropdown.show {
+    .nav-link.dropdown-toggle {
+      @include iconvfi($position: after, $icon: chevron-haut);
+    }
+  }
+
+  // Dropdown-menu Mobile full width
+  @include media-breakpoint-down(xs) {
+    .dropdown-menu {
+      border-left: 0;
+      width: 100%;
+    }
+  }
+
+  @include media-breakpoint-up(sm) {
+    padding: 1.875rem 1.5rem;
+  }
+
+  @include media-breakpoint-up(md) {
+    padding: 2.125rem 3rem;
+  }
+}
 
 // Navbar buttons styles
+
 .navbar-button {
-  background: transparent;
-  border: 0;
+  @include button-reset();
+  color: $black;
   cursor: pointer;
-  height: $navbar-height;
-  margin: 0;
-  padding: 0 15px 0 15px;
-  vertical-align: middle;
-  display: flex;
+  display: inline-flex;
   align-items: center;
+  padding: .0625rem 0;
+  @include transition(color .15s ease-in-out);
+
+  // Icons size in navbar
+  .vfi {
+    font-size: 2rem;
+    vertical-align: middle;
+    @include transition(color .15s ease-in-out);
+
+    // mobile and up
+    @include media-breakpoint-up(sm) {
+      font-size: 2.5rem;
+    }
+    // tablets and up
+    @include media-breakpoint-up(md) {
+      font-size: 3rem;
+    }
+  }
 
   .button-label {
     color: $black;
-    display: inline-block;
-    line-height: $header-portal-height;
-    vertical-align: top;
+    font-size: 1.125rem;
+    line-height: 1;
+    margin-left: 1rem;
+    @include transition(color .15s ease-in-out);
   }
 
   &:hover,
   &:active {
-    &:after {
-      color: $black;
-    }
-  }
-
-  &:after {
-    font-size: 3.7rem;
-    line-height: 1;
-    color: $brand;
-  }
-
-  &.search {
-    @include iconvfi(after, recherche);
-  }
-
-  &.account {
-    @include iconvfi(after, profil);
-  }
-}
-
-// Language switcher component
-.language-list {
-  list-style-type: none;
-  margin: 0;
-  padding: 0;
-  a {
-    border: none;
-    color: $black;
-    line-height: 1;
-    height: $header-portal-height;
-    width: $header-portal-height;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    text-decoration: none;
-    text-transform: uppercase;
-    &:active,
-    &:hover {
-      color: $black;
-      text-decoration: none;
-    }
-  }
-  .lang {
-    &.active {
-      display: none;
+    color: $sarcelle-surprise;
+    .vfi,
+    .button-label {
+      color: $sarcelle-surprise;
     }
   }
 }
 
-// Flyout js search combo box
-.searchbar-wrapper {
+/*
+.menu-toggler {
+  @include button-reset();
+  display: inline-flex;
+  align-items: center;
+  cursor: pointer;
+  padding: .0625rem .5rem;
+}
+
+// Search toggler
+.navbar-search-toggler {
+  @include button-reset();
+  color: $black;
+  border: none;
+  border-radius: .25rem;
+  cursor: pointer;
+  margin-left: 1rem;
+  margin-right: 1rem;
+  padding: 0 .5rem;
+  display: inline-flex;
+  align-items: center;
+}
+*/
+
+// Navbar search flyout
+.navbar-search {
   display: none;
-  // Responsive rules for larger displays
-  @include media-breakpoint-up(lg) {
-    display: block;
-  }
   position: absolute;
-  .searchbar {
+  top: 0;
+  left: 0;
+  right: 0;
+  background-color: $white;
+  z-index: $zindex-fixed;
+  padding-top: 3.375em;
+  padding-bottom: 3.375rem;
+
+  .inner-container {
+    display: flex;
+  }
+
+  .form-group {
+    display: flex;
+    margin: 0;
+    width: 100%;
+  }
+
+  .form-control {
+    border: none;
+    font-size: 1.875rem;
+    &:focus {
+      box-shadow: none;
+    }
   }
 }
 
-// Main lateral navigation menu
-.side-menu {
-  &.wrapper {
-    display: none;
-    position: absolute;
-  }
-}
 
 
 // Wizard header
