@@ -225,6 +225,9 @@ input[type="button"] {
     color: $white;
     margin: auto;
   }
+  @include hover {
+    background-color: theme-color-level(danger, 2);
+  }
 }
 
 // Button close

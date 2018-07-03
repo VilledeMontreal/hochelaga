@@ -35,22 +35,24 @@
     }
   }
 
-  button + button {
-    margin-left: 2rem;
+  @include media-breakpoint-up(md) {
+    button + .dropdown,
+    button + button {
+      margin-left: 3.5rem;
+    }
   }
 
-  // Icons size in navbar
-  .vfi {
-    font-size: 2rem;
-    vertical-align: middle;
-
-    // mobile and up
-    @include media-breakpoint-up(sm) {
-      font-size: 2.5rem;
-    }
-    // tablets and up
-    @include media-breakpoint-up(md) {
-      font-size: 3rem;
+  // Special placement on smaller device...
+  .btn-notification {
+    position: fixed;
+    bottom: $grid-gutter-width;
+    right: $grid-gutter-width;
+    z-index: 2000;
+    @include media-breakpoint-up(lg) {
+      position: static;
+      bottom: auto;
+      right: auto;
+      z-index: auto;
     }
   }
 
@@ -77,16 +79,17 @@
   }
 
   // Dropdown Menu toggle (user)
-  .nav-item.dropdown {
+  .dropdown {
     margin-bottom: 0;
     padding-bottom: 0;
     position: inherit;
+    display: flex;
 
     .user-name {
       padding-right: .5rem;
     }
   }
-  .nav-link.dropdown-toggle {
+  .dropdown-toggle {
     padding-top: 0;
     padding-bottom: 0;
     &:after {
@@ -184,21 +187,40 @@
 
 .navbar-button {
   @include button-reset();
+  color: $black;
   cursor: pointer;
   display: inline-flex;
   align-items: center;
-  cursor: pointer;
   padding: .0625rem 0;
+  @include transition(color .15s ease-in-out);
+
+  // Icons size in navbar
+  .vfi {
+    font-size: 2rem;
+    vertical-align: middle;
+    @include transition(color .15s ease-in-out);
+
+    // mobile and up
+    @include media-breakpoint-up(sm) {
+      font-size: 2.5rem;
+    }
+    // tablets and up
+    @include media-breakpoint-up(md) {
+      font-size: 3rem;
+    }
+  }
 
   .button-label {
     color: $black;
     font-size: 1.125rem;
     line-height: 1;
     margin-left: 1rem;
+    @include transition(color .15s ease-in-out);
   }
 
   &:hover,
   &:active {
+    color: $sarcelle-surprise;
     .vfi,
     .button-label {
       color: $sarcelle-surprise;
