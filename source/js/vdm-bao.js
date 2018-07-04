@@ -4,7 +4,7 @@
   // ******************************
   // Begin side menu push
 
-  var $menuOpen = $(".hamburger");
+  var $menuOpen = $(".menu-toggler");
   var $btnClose = $(".btn-close")
 
   $menuOpen.on("click", function () {
@@ -453,9 +453,9 @@
 
 
   var menuLeft = $('#slide-menu-left').slideMenu({
-    submenuLinkAfter: '<span class="vfi vfi-fleche-droite" aria-hidden="true"></span>',
+    submenuLinkAfter: '<span class="vdm vdm-063-fleche-droite" aria-hidden="true"></span>',
     backLinkTitle: 'Back',
-    backLinkBefore: '<span class="vfi vfi-chevron-gauche" aria-hidden="true"></span> '
+    backLinkBefore: '<span class="vdm vdm-058-chevron-gauche" aria-hidden="true"></span> '
   });
 
 

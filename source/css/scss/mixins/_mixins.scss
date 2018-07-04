@@ -92,12 +92,12 @@
   *
   * Usage 
   * .some-class {
-  *     @include iconvfi(before, rosace);
+  *     @include iconvdm(before, rosace);
   * }
   *
   */
 
-@mixin iconvfi($position: before, $icon: false, $styles: true) {
+@mixin iconvdm($position: before, $icon: false, $styles: true) {
   @if $position == both {
     $position: "before, &:after";
   }
@@ -105,20 +105,20 @@
   &:#{$position} {
     @if $icon {
       //  @debug($icon);
-      $index: str-index($icon, "vfi-");
+      $index: str-index($icon, "vdm-");
       @if $index {
-        $icon: str-replace($icon, "vfi-", "");
+        $icon: str-replace($icon, "vdm-", "");
         // @debug("replaced icon : " $icon);
       }
       // A specific icon has been designated
-      content: "#{map-get($vdmicons, vfi- + $icon)}";
+      content: "#{map-get($vdmicons, vdm- + $icon)}";
       // @debug(vfi- + $icon);
       // @debug(#{map-get($vdmicons, vfi- + $icon)});
     }
     @if $styles {
       font-weight: normal;
       font-style: normal;
-      font-family: $vfi-icon-font-family;
+      font-family: "vdm";
       text-decoration: none;
       display: inline-block;
       text-rendering: auto;
@@ -130,11 +130,11 @@
 }
 
 // Generates a block-level link with an icon in the after position;
-@mixin icon-block-link( $icon : fleche-droite, $size: false ) {
+@mixin icon-block-link( $icon : '063-fleche-droite', $size: false ) {
   display: block;
   position: relative;
   background: transparent;
-  @include iconvfi(after, $icon);
+  @include iconvdm(after, $icon);
 
   &:after {
     position: absolute;

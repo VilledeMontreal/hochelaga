@@ -25,7 +25,7 @@
   color: $gray-600;
   margin: 0;
   padding: .5rem;
-  .vfi {
+  .vdm {
     color: inherit;
     font-size: 1.5rem;
   }
@@ -35,7 +35,7 @@
   }
 
   @include media-breakpoint-up(sm) {
-    .vfi {
+    .vdm {
       font-size: 2rem;
     }
   }
@@ -44,7 +44,7 @@
     .btn-label {
       font-size: $sm-link-font-size;
     }
-    .vfi {
+    .vdm {
       font-size: 2.5rem;
     }
   }
@@ -58,7 +58,7 @@
     margin-bottom: 0;
   }
 
-  .vfi {
+  .vdm {
     color: $gray-100;
   }
   .form-control {
@@ -88,7 +88,7 @@
   .input-group-icon {
     .input-group-icon-left {
       padding-left: .625rem;
-      .vfi {
+      .vdm {
         font-size: 2.5rem;
       }
       + input {
@@ -109,7 +109,7 @@
     .input-group-icon {
       .input-group-icon-left {
         padding-left: 1rem;
-        .vfi {
+        .vdm {
           font-size: 3rem;
         }
         + input {
@@ -181,11 +181,11 @@
         color: $sarcelle-surprise;
         text-decoration: none;
         
-        .vfi {
+        .vdm {
           color: $sarcelle-surprise;
         }
       }
-      .vfi {
+      .vdm {
         color: $gray-600;
         font-size: 3rem;
         margin-left: 1.5rem;
@@ -198,7 +198,7 @@
         font-size: $font-size-md;
         text-transform: uppercase;
 
-        .vfi {
+        .vdm {
           color: $sm-icon-color;
           font-size: 1rem;
           line-height: 1;
@@ -211,7 +211,7 @@
       a {
         padding-left: 5rem;
         padding-right: 5rem;
-        .vfi {
+        .vdm {
           margin-left: auto;
         }
       }

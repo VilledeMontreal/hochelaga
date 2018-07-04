@@ -10,7 +10,7 @@
     &:before {
       color: $primary;
     }
-    .vfi {
+    .vdm {
       color: $primary;
       &:after,
       &:before {
@@ -24,14 +24,14 @@
       &:before {
         color: $primary;
       }
-      .vfi {
+      .vdm {
         color: $black;
       }
     }
   }
 
   // Generic icon links : may or may not be applied to a hyperlink
-  .vfi {
+  .vdm {
     font-size: 1.5em;
     color: $primary;
     background: transparent;
@@ -46,19 +46,19 @@
     address {
       margin-bottom: 0;
     }
-    .vfi {
+    .vdm {
       &:before {
         font-size: 1em;
       }
     }
 
     &.left {
-      .vfi {
+      .vdm {
         padding-right: .5rem;
       }
     }
     &.right {
-      .vfi {
+      .vdm {
         padding-left: .5rem;
       }
     }
@@ -113,13 +113,13 @@
         justify-content: space-between;
         width: 100%;
       }
-      .vfi {
+      .vdm {
         font-size: 2rem;
         color: $headings-color;
       }
     }
     &.icon.icon-xl {
-      .vfi {
+      .vdm {
         font-size: 3.5rem;
         color: $primary;
       }
@@ -128,7 +128,7 @@
 
   // Color theme variants
   // Transparent top stroke theme variant
-  &.sidebar-top-stroke {
+  &.sidebar-border-top {
     .sb-block {
       border-top: 4px solid $black;
       background-color: transparent;
@@ -163,7 +163,7 @@
         padding-right: 0;
         padding-bottom: 5rem;
         // Move the icon
-        .vfi {
+        .vdm {
           top: calc(100% - 1.25em);
           left: 50%;
           height: 1em;
@@ -228,7 +228,7 @@
     .schedule-start-time { 
       margin-right: 10px;
     }
-    .vfi {
+    .vdm {
       margin: 0;
       font-size: 1rem;
     }

@@ -3,7 +3,7 @@
     {{> molecules-main-menu-button }}
     <button class="navbar-button navbar-search-toggler d-none d-lg-inline-flex" id="navbarDropdownSearch" aria-haspopup="true" aria-expanded="false">
       <span class="sr-only">Ouvrir la barre de recherche</span>
-      <span class="vfi vfi-recherche"></span>
+      {{> atoms-fonticon-item(icon-label: "002-recherche") }}
       <span class="button-label">Recherche</span>
     </button>
     {{> molecules-slide-menu }}
@@ -13,18 +13,18 @@
   </a>
   <div class="col-right d-flex w-100">
     <div class="d-flex align-items-center ml-auto">
-      {{> atoms-button-icon(buttonClass: "btn-notification", buttonIconSr: true, buttonIconSrText: "Toggle notification view", buttonText: false, icon-label: "cloche", buttonIcon: true)}}
+      {{> atoms-button-icon(buttonClass: "btn-notification", buttonIconSr: true, buttonIconSrText: "Toggle notification view", buttonText: false, icon-label: "022-cloche", buttonIcon: true)}}
       {{^ user-authenticated }}
       {{> atoms-button(buttonClass: "btn-primary btn-sm d-none d-md-inline-flex", buttonText: "Log in")}}
       <button class="navbar-button d-inline-flex d-md-none">
-        <span class="vfi vfi-profil" aria-hidden="true"></span>
+        {{> atoms-fonticon-item(icon-label: "003-profil") }}
         <span class="sr-only">Log in</span>
       </button>
       {{/ user-authenticated }}
       {{# user-authenticated }}
       <div class="dropdown">
         <button class="navbar-button dropdown-toggle" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-          <span class="vfi vfi-profil" aria-hidden="true"></span>
+          {{> atoms-fonticon-item(icon-label: "003-profil") }}
           <span class="user-name d-none d-md-inline-block">{{ user.username }}</span>
         </button>
         <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdownMenuLink">
@@ -36,7 +36,7 @@
               </div>
               <div class="user-action">
                 <a href="#" class="link-profil">
-                  <span class="vfi vfi-parametres"></span>
+                  {{> atoms-fonticon-item(icon-label: "023-parametres") }}
                 </a>
               </div>
             </div>

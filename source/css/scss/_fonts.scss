@@ -1,26 +1,11 @@
 @import url("https://fonts.googleapis.com/css?family=Nunito+Sans:300,400,600,700");
 
-//== Icons fonts w/ vfi class, imported from "@villemontreal/font-icon
-@font-face {
-  font-family: $vfi-icon-font-family;
-  src: url("#{$vfi-icon-font-path}/vdm.eot?c81cd1b7c58db7a73be82e1052585cc0?#iefix")
-      format("embedded-opentype"),
-    url("#{$vfi-icon-font-path}/vdm.woff2?c81cd1b7c58db7a73be82e1052585cc0")
-      format("woff2"),
-    url("#{$vfi-icon-font-path}/vdm.woff?c81cd1b7c58db7a73be82e1052585cc0")
-      format("woff"),
-    url("#{$vfi-icon-font-path}/vdm.ttf?c81cd1b7c58db7a73be82e1052585cc0")
-      format("truetype"),
-    url("#{$vfi-icon-font-path}/vdm.svg?c81cd1b7c58db7a73be82e1052585cc0#vdm")
-      format("svg");
-}
 
-.vfi {
+.vdm {
   line-height: 1;
   text-rendering: auto;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  font: normal normal normal $font-size-base/1 $vfi-icon-font-family;
   display: inline-block; // -- required to avoid text-decoration inheritance
   color: $headings-color;
 }
@@ -29,21 +14,21 @@
 // -------------------------
 
 /* makes the font 33% larger relative to the icon container */
-.vfi-lg {
+.vdm-lg {
   font-size: (4em / 3);
   line-height: (3em / 4);
   vertical-align: -15%;
 }
-.vfi-2x { font-size: 2em; }
-.vfi-3x { font-size: 3em; }
-.vfi-4x { font-size: 4em; }
-.vfi-5x { font-size: 5em; }
+.vdm-2x { font-size: 2em; }
+.vdm-3x { font-size: 3em; }
+.vdm-4x { font-size: 4em; }
+.vdm-5x { font-size: 5em; }
 
 a {
   &:hover,
   &:active,
   &:focus {
-    .vfi {
+    .vdm {
       text-decoration: none !important; // -- Prevent text-decoration for icons, e-ve-ry-whe-re
     }
   }

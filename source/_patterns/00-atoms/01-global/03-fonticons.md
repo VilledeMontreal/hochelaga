@@ -8,14 +8,14 @@ Displays an index of the content of the npm @villemontreal/font-icon project.
 
 Markup should be as simple as this : 
 
-```<span class="vfi vfi-rosette aria-hidden="true"></span>```
+```<span class="vdm vdm-001-rosace aria-hidden="true"></span>```
 
 Best practices recommands inline usage as much as possible, where explicit makup is used to generate the icon.
 
 In a few cases, where the content CSS attribute is animated by user interactivity, the mixin may be used.
 
 Example: 
-```@include iconvfi(before, rosette); ```
+```@include iconvdm(before, '001-rosace'); ```
 
 ## Background
 

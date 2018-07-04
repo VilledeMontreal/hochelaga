@@ -100,7 +100,7 @@
       width: auto;
       height: auto;
     }
-    @include iconvfi($position: after, $icon: chevron-bas);
+    @include iconvdm($position: after, $icon: '057-chevron-bas');
 
     @include media-breakpoint-up(sm) {
       &:after {
@@ -118,7 +118,7 @@
     font-size: 1.125rem; // 18px
     box-shadow: -1px 3px 3px 0 $gray-300;
 
-    .vfi {
+    .vdm {
       font-size: 3rem;
       color: $sarcelle-surprise;
     }
@@ -162,7 +162,7 @@
   // change icon when dropdown is open
   .dropdown.show {
     .nav-link.dropdown-toggle {
-      @include iconvfi($position: after, $icon: chevron-haut);
+      @include iconvdm($position: after, $icon: '055-chevron-haut');
     }
   }
 
@@ -195,7 +195,7 @@
   @include transition(color .15s ease-in-out);
 
   // Icons size in navbar
-  .vfi {
+  .vdm {
     font-size: 2rem;
     vertical-align: middle;
     @include transition(color .15s ease-in-out);
@@ -221,7 +221,7 @@
   &:hover,
   &:active {
     color: $sarcelle-surprise;
-    .vfi,
+    .vdm,
     .button-label {
       color: $sarcelle-surprise;
     }
@@ -309,7 +309,7 @@
     background-color: $black;
     color: $white;
     text-decoration: none;
-    .vfi {
+    .vdm {
       font-size: 3rem;
       color: $white;
     }

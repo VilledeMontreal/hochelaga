@@ -69,19 +69,19 @@
     display: flex;
     align-items: center;
 
-    .vfi {
+    .vdm {
       color: $primary;
       font-size: 2.5rem;
       padding-left: 0.5rem;
     }
   }
 
-  .vfi {
+  .vdm {
     color: $primary;
   }
 
   .card-alert {
-    .vfi {
+    .vdm {
       color: inherit;
       font-size: 3rem;
     }
@@ -113,7 +113,7 @@
 
       .card-footer {
         padding: 2rem;
-        .vfi {
+        .vdm {
           font-size: 3.6rem;
         }
       }
@@ -160,7 +160,7 @@
           max-width: 400px;
           order: 100;
         }
-        .vfi {
+        .vdm {
           color: $white;
         }
       }

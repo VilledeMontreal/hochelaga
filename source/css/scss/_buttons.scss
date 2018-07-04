@@ -56,14 +56,14 @@ button {
       @include box-shadow($btn-focus-box-shadow, $btn-active-box-shadow);
     }
   }
-  .vfi {
+  .vdm {
     color: inherit;
     font-size: 2rem;
     margin-left: -1.5rem;
     margin-right: .5rem;
     margin-top: -4px;
     margin-bottom: -4px;
-    &.vfi-right {
+    &.vdm-right {
       margin-left: .5rem;
       margin-right: -1.5rem;
     }
@@ -152,14 +152,14 @@ fieldset:disabled a.btn {
 .btn-sm {
   @include button-size($btn-padding-y-sm, $btn-padding-x-sm, $font-size-sm, $btn-line-height-sm, $btn-border-radius-sm);
   border-width: 2px;
-  .vfi {
+  .vdm {
     color: inherit;
     font-size: 1.5rem;
     margin-left: -1.25rem;
     margin-right: .25rem;
     margin-top: -3px;
     margin-bottom: -3px;
-    &.vfi-right {
+    &.vdm-right {
       margin-left: .25rem;
       margin-right: -1.25rem;
     }
@@ -219,7 +219,7 @@ input[type="button"] {
   background: $danger;
   padding: 0;
   @include size(50px);
-  .vfi {
+  .vdm {
     font-size: 1.5rem;
     margin: 0;
     color: $white;
@@ -241,7 +241,7 @@ input[type="button"] {
   color: $gray-600;
   margin: 0;
   padding: .5rem;
-  .vfi {
+  .vdm {
     color: inherit;
     font-size: 1.5rem;
   }
@@ -251,7 +251,7 @@ input[type="button"] {
   }
 
   @include media-breakpoint-up(sm) {
-    .vfi {
+    .vdm {
       font-size: 2rem;
     }
   }
@@ -260,7 +260,7 @@ input[type="button"] {
     .btn-label {
       font-size: $sm-link-font-size;
     }
-    .vfi {
+    .vdm {
       font-size: 2.5rem;
     }
   }
@@ -270,7 +270,7 @@ input[type="button"] {
 //
 // To Do: Review all buttons implementations and theming. No need to overcomplicate this. Build on bootstrap please
 //
-// DEPRECATED - will be removed in v2.0.0
+// DEPRECATED - will be removed in v1.0.0
 //
 .vdm-btn {
   display: inline-block;

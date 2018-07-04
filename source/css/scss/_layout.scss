@@ -178,7 +178,7 @@ html {
       display: flex;
       flex-direction: column;
     }
-    .vfi {
+    .vdm {
       color: $primary;
       font-size: 4rem;
       margin-top: -.5rem;
@@ -313,7 +313,7 @@ html {
             display: flex;
           }
           .sort {
-            @include iconvfi($position: after, $icon: chevron-bas);
+            @include iconvdm($position: after, $icon: '057-chevron-bas');
             &:after {
               margin-left: .25rem;
               font-weight: 700;

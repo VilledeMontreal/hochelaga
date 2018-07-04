@@ -86,7 +86,7 @@ legend,
     pointer-events: none;
     top: 0;
     color: $primary;
-    .vfi {
+    .vdm {
       font-size: 2rem;
     }
   }
@@ -125,7 +125,7 @@ legend,
 
 // Checkboxes
 //
-// use vfi
+// use vdm
 .custom-checkbox {
   margin-bottom: $custom-control-spacer-y;
 
@@ -136,7 +136,7 @@ legend,
       line-height: 1;
       color: $primary;
     }
-    @include iconvfi(after, mini-case-coche-coche);
+    @include iconvdm(after, '077-mini-case-coche-coche');
   }
 
   .custom-control-input:indeterminate ~ .custom-control-label {
@@ -340,7 +340,7 @@ legend,
   align-items: center;
 
   &.icon-combo {
-    .vfi {
+    .vdm {
       font-size: 2.4rem;
       width: 2.4rem;
       height: 2.4rem;
@@ -529,7 +529,7 @@ legend,
       margin-bottom: 0;
     }
   
-    .vfi {
+    .vdm {
       font-size: 3.5rem;
       color: $primary;
     }
