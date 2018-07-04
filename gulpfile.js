@@ -116,7 +116,7 @@ gulp.task('nodemodulesfontsdata', function() {
     var sass = '$vdmicons : (\n';
 
     for (var key in source) {
-      var label = `${key}`.replace(pattern,'');
+      var label = key
       var content = `${source[key]}`;
       
       // Write the json line
@@ -127,7 +127,7 @@ gulp.task('nodemodulesfontsdata', function() {
       );
       
       // Write the sass line
-      sass += '\t' + 'vfi-' + label + ' : ' + '"' + content + '"';
+      sass += '\t' + 'vdm-' + label + ' : ' + '"' + content + '"';
       index ++;
       var lineEnding = index < count ? ',' + '\n' : '\n';
       sass += lineEnding;
