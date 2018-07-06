@@ -51,6 +51,9 @@
     width: 100%;
 
     .popover-wrapper {
+      .vdm {
+        color: $gray-900;
+      }
       &.right {
         position: absolute;
         right: 0;
