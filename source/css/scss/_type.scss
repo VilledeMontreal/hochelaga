@@ -98,7 +98,7 @@ a {
   &.link-scrollto {
     color: $primary;
     border-bottom: none;
-    .vfi {
+    .vdm {
       color: $primary;
       font-size: 1.42857em;
       vertical-align: top;
@@ -110,7 +110,7 @@ a {
     line-height: $line-height-lg;
     padding: 0.6em 0.6em;
 
-    .vfi {
+    .vdm {
       font-size: 2.5em;
     }
 
@@ -123,10 +123,10 @@ a {
       position: relative;
       padding-right: 4em;
 
-      .vfi {
+      .vdm {
         position: absolute;
-        content: map-get($vdmicons, fleche-droite);
-        font-family: $vfi-icon-font-family;
+        content: map-get($vdmicons, '063-fleche-droite');
+        font-family: $vdm-icon-font-family;
         font-size: 2.5em;
         top: 50%;
         transform: translateY(-50%);
@@ -149,7 +149,7 @@ a {
   display: inline-flex;
   align-items: center;
   // we need this code to prevent icon from getting underlined on hover
-  .vfi {
+  .vdm {
     display: inline-block;
     text-decoration: none;
     font-size: 1.5rem;
@@ -159,12 +159,12 @@ a {
     }
   }
   &.right {
-    .vfi {
+    .vdm {
       padding-left: 0.15em;
     }
   }
   &.left {
-    .vfi {
+    .vdm {
       padding-right: 0.15em;
     }
   }
@@ -174,7 +174,7 @@ a {
 h1, h2, h3, h4, h5, h6 {
   a {
     &.icon {
-      .vfi {
+      .vdm {
         font-size: 1.2em;
       }
     }
@@ -263,6 +263,46 @@ ol {
         padding: 0 2.15em 0 0;
         left: 0;
         border-bottom: 4px solid $brand;
+      }
+    }
+  }
+}
+
+// Social media
+// Move this block with other listss (numbered, date, etc)
+.social-media-list {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+  li { // give this a class
+    margin: 0;
+    padding: 0 0.65rem 0 0;
+    display: inline-block;
+    &:last-of-type {
+      margin: 0;
+    }
+    a { // give this a class
+      border: none;
+      color: $black;
+      display: flex;
+      align-items: center;
+      text-decoration: none;
+      &:hover,
+      &:active {
+        color: $black;
+        cursor: pointer;
+      }
+      .vdm {
+        &:before {
+          font-size: 2em;
+        }
+        padding-right: 0.5rem;
+      }
+      .label {
+        &:hover,
+        &:active {
+          text-decoration: underline;
+        }
       }
     }
   }
@@ -492,7 +532,7 @@ dl {
     display: flex;
     flex-direction: row;
     height: 100%;
-    .vfi {
+    .vdm {
       font-size: 2rem;
       color: $primary;
     }
@@ -519,7 +559,7 @@ dl {
   a {
     display: flex;
     align-items: center;
-    .vfi {
+    .vdm {
       font-size: 2rem;
       &:before {
         display: inline-block;

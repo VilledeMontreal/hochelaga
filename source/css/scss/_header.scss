@@ -1,4 +1,4 @@
-// New navbar based on bootstrap navbar
+// Main navbar based on bootstrap navbar
 
 .navbar {
   padding: 1.125rem 1.5rem;
@@ -21,13 +21,13 @@
       height: 1.5rem;
       width: auto;
     }
-
+    // 576px and up
     @include media-breakpoint-up(sm) {
       img {
         height: 2rem;
       }
     }
-
+    // 768px and up
     @include media-breakpoint-up(md) {
       img {
         height: 2.5rem;
@@ -35,6 +35,7 @@
     }
   }
 
+  // 768px and up
   @include media-breakpoint-up(md) {
     button + .dropdown,
     button + button {
@@ -48,6 +49,8 @@
     bottom: $grid-gutter-width;
     right: $grid-gutter-width;
     z-index: 2000;
+
+    // 992px and up - Reset placement
     @include media-breakpoint-up(lg) {
       position: static;
       bottom: auto;
@@ -61,11 +64,12 @@
     align-items: center;
     padding: 0;
   }
+
   .navbar-nav {
     align-items: center;
     .nav-item-btn {
+      margin: 0 .5rem;
       padding-bottom: 0;
-      margin: 0 0.5rem;
 
       &:last-child {
         margin-right: 0;
@@ -84,11 +88,18 @@
     padding-bottom: 0;
     position: inherit;
     display: flex;
-
-    .user-name {
+    .user-info {
       padding-right: .5rem;
+      line-height: 1.25;
+      > * {
+        display: flex;
+      }
+      .user-profil {
+        font-weight: $font-weight-bold;
+      }
     }
   }
+  // Replace caret by our own icon
   .dropdown-toggle {
     padding-top: 0;
     padding-bottom: 0;
@@ -100,7 +111,7 @@
       width: auto;
       height: auto;
     }
-    @include iconvfi($position: after, $icon: chevron-bas);
+    @include iconvdm($position: after, $icon: '057-chevron-bas');
 
     @include media-breakpoint-up(sm) {
       &:after {
@@ -115,22 +126,30 @@
     top: 100%;
     right: 0;
     margin: 0;
+    min-width: 20rem;
     font-size: 1.125rem; // 18px
     box-shadow: -1px 3px 3px 0 $gray-300;
 
-    .vfi {
+    // Font-icon size and color
+    .vdm {
       font-size: 3rem;
       color: $sarcelle-surprise;
     }
+
+    // Main user-menu
     ul {
       padding: 0;
+      margin-bottom: 0;
       li {
         padding: 0;
       }
     }
+
+    //
     .dropdown-item-section {
-      color: $body-color;
-      padding: 1.5rem $dropdown-item-padding-x;
+      color: $black;
+      font-size: 1rem;
+      padding: .75rem $dropdown-item-padding-x;
       > * {
         margin-bottom: 1.5rem;
         &:last-child {
@@ -138,31 +157,55 @@
         }
       }
       .user-email {
-        font-size: $font-size-base;
+        font-size: $font-size-md;
+        color: $gray-600;
       }
       .user-profil {
         font-weight: $font-weight-bold;
+        margin-bottom: 1rem;
+      }
+    }
+    .user-action {
+      .dropdown-item {
+        .vdm {
+          font-size: 2.5rem;
+          margin-top: -.75rem;
+          margin-bottom: -.75rem;
+          margin-left: auto;
+        }
       }
     }
 
-    .user-section {
+    .dropdown-item {
       display: flex;
       align-items: center;
-      .user-info {
-        > * {
-          display: block;
-        }
+      padding-top: .75rem;
+      padding-bottom: .75rem;
+
+      @include hover-focus {
+        color: $link-color;
+        @include gradient-bg($white);
       }
-      .user-action {
-        margin-left: 1rem;
+    
+      &.active,
+      &:active {
+        color: $link-color;
+        @include gradient-bg($white);
+      }
+    
+      &.disabled,
+      &:disabled {
+        color: $dropdown-link-disabled-color;
+        background-color: transparent;
       }
     }
+
   }
 
   // change icon when dropdown is open
   .dropdown.show {
-    .nav-link.dropdown-toggle {
-      @include iconvfi($position: after, $icon: chevron-haut);
+    .dropdown-toggle {
+      @include iconvdm($position: after, $icon: '055-chevron-haut');
     }
   }
 
@@ -195,7 +238,7 @@
   @include transition(color .15s ease-in-out);
 
   // Icons size in navbar
-  .vfi {
+  .vdm {
     font-size: 2rem;
     vertical-align: middle;
     @include transition(color .15s ease-in-out);
@@ -221,36 +264,19 @@
   &:hover,
   &:active {
     color: $sarcelle-surprise;
-    .vfi,
+    .vdm,
     .button-label {
       color: $sarcelle-surprise;
     }
   }
-}
 
-/*
-.menu-toggler {
-  @include button-reset();
-  display: inline-flex;
-  align-items: center;
-  cursor: pointer;
-  padding: .0625rem .5rem;
-}
+  // remove focus from box-shadow
+  &:focus,
+  &.focus {
+    box-shadow: none;
+  }
 
-// Search toggler
-.navbar-search-toggler {
-  @include button-reset();
-  color: $black;
-  border: none;
-  border-radius: .25rem;
-  cursor: pointer;
-  margin-left: 1rem;
-  margin-right: 1rem;
-  padding: 0 .5rem;
-  display: inline-flex;
-  align-items: center;
 }
-*/
 
 // Navbar search flyout
 .navbar-search {
@@ -284,7 +310,6 @@
 }
 
 
-
 // Wizard header
 //
 // Optimize and normalize - we can extend from banner and build more generic containers
@@ -309,7 +334,7 @@
     background-color: $black;
     color: $white;
     text-decoration: none;
-    .vfi {
+    .vdm {
       font-size: 3rem;
       color: $white;
     }

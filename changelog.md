@@ -5,11 +5,28 @@ The format is based on [Keep a Changelog](http://keepachangelog.com/en/1.0.0/)
 and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.html).
 
 ## [Unreleased]
-- Header refactoring
-- Side menu refactoring
+
+### Added
+- New navbars and menus in Organisms > Navigation
+- Added button-clear for clearing value of input in Atoms > Forms > Input Has Clear
+- Added new navbar with main navigation and menus (main menu and user menu)
 
 ### Fixed
 - .btn-light and .btn-inverse buttons active state text and background color fix.
+
+### Changed
+- vdm-font-icon handling changed for the Boite-a-outils project.
+- Switched from .vfi back to .vdm prefix for all icons from the font.
+- Switched back to the original icon names, dropping the gulp tasks used to 
+remove index from the name. Which makes it possible to update font-icon without publishing a new release of the boite-a-outils.
+- Kept vdm-icons sass-map but with the original icons names.
+- Clean-up sidebars and removed unused classes.
+- Changed markup structure for input-group-icon.
+
+### Removed
+- Removed all the old .vdm-header theming and classes in favor of the new navbar and slide-menu.
+
+
 
 ## [0.2.2] - 2018-06-18
 

@@ -16,7 +16,7 @@
   "badge": "23",
   "badgeClass": "badge-secondary",
   "stateClass": "bg-success",
-  "icon-label": "recherche",
+  "icon-label": "002-recherche",
   "progressBarClass": "bg-success",
   "progressCircleClass": "progress-success",
   "progressCompleteText": "60% Complete",
@@ -187,21 +187,22 @@
   },
   "formCheckboxes": [
     {
-      "class": "checkbox-vfi",
+      "class": "checkbox-vdm",
       "id": "chk01",
       "label": "Checkbox"
     },
     {
-      "class": "checkbox-vfi",
+      "class": "checkbox-vdm",
       "id": "chk02",
       "label": "Checkbox two"
     },
     {
-      "class": "checkbox-vfi",
+      "class": "checkbox-vdm",
       "id": "chk03",
       "label": "Checkbox three"
     }
   ],
+  "inputHelpText": false,
   "htmlLang": {
     "fr": "fr",
     "en": "en"
@@ -583,7 +584,7 @@
         "card-text":
           "Some quick example text to build on the card title and make up the bulk of the card's content.",
         "card-media": {
-          "icon": "vfi-porte-voix"
+          "icon": "vdm-093-porte-voix"
         },
         "footer": {
           "inside-body": false,
