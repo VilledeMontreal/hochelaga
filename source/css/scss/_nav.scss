@@ -42,7 +42,7 @@
     > .page-link {
       padding: $pagination-icon-padding;
       line-height: 1;
-      .vfi {
+      .vdm {
         display: block;
         font-size: 1em;
         line-height: 1;
@@ -64,7 +64,7 @@
     &:last-child {
       > .page-link {
         padding: $pagination-icon-padding-lg;
-        .vfi {
+        .vdm {
           font-size: 1.2em;
         }
       }
@@ -106,21 +106,21 @@
       line-height: get-line-height($font-size-lg, 32px);
       padding: 1.4rem 5rem 1.4rem 4rem;
       cursor: pointer;
-      @include iconvfi(after, mini-plus-circulaire);
+      @include iconvdm(after, '069-mini-plus-circulaire');
 
       &[aria-expanded="true"] {
         color: $primary;
-        @include iconvfi(after, mini-moins-circulaire-plein);
+        @include iconvdm(after, '073-mini-moins-circulaire-plein');
       }
 
       &:hover,
       &:active {
         color: $primary;
         text-decoration: none;
-        @include iconvfi(after, mini-plus-circulaire-plein);
+        @include iconvdm(after, '072-mini-plus-circulaire-plein');
 
         &[aria-expanded="true"] {
-          @include iconvfi(after, mini-moins-circulaire);
+          @include iconvdm(after, '070-mini-moins-circulaire');
         }
       }
 
@@ -267,7 +267,7 @@ nav {
 
 // Mobile tabs becomes dropdown
 .nav-tabs-dropdown {
-  @include iconvfi(after, chevron-bas);
+  @include iconvdm(after, '057-chevron-bas');
   @extend .nav-link;
   background: $gray-sky;
   border: none;
@@ -589,7 +589,7 @@ nav {
         // The separator between breadcrumbs (by default, a forward-slash: "/")
         + li {
           padding-left: .5rem;
-          @include iconvfi(before, chevron-droite);
+          @include iconvdm(before, '056-chevron-droite');
           &::before {
             display: inline-block; // Suppress underlining of the separator in modern browsers
             padding-right: .5rem;

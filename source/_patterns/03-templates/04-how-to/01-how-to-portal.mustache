@@ -1,5 +1,4 @@
 {{> atoms-link-skip-to-main-content }}
-{{> molecules-menu-open-side }}
 {{> organisms-header-portal }}
 {{> molecules-breadcrumb }}
 
@@ -11,15 +10,15 @@
     <div class="container {{ regionMainContainerClasses }}">
       <div class="row">
         <article class="col-12 col-md-7 {{ regionMainContentClasses }}">
-          {{# searchBox }}
+          {{# searchBox}}
             <div class="mb-6">
             {{> molecules-dropdown-field-combo }}
             </div>
-          {{/ searchBox }}
+          {{/ searchBox}}
           {{> organisms-how-to-content }}
         </article>
 
-        {{# sidebarRight }}
+        {{# sidebarRight}}
         <aside class="col-12 col-md-4 offset-md-1 sidebar sidebar-right {{ sidebar-classes }}">
           <section class="sb-block">
             <div class="subsection">
@@ -49,17 +48,17 @@
               {{> organisms-heading-sidebar(sidebarTitle: "Règlements") }}
               <ul class="list-unstyled">
                 <li class="link-with-icon">
-                  <a href="#">Règlement de la Ville de Montréal (16-049-900009)<span class="vfi vfi-fleche-droite" aria-hidden="true"></span></a>
+                  <a href="#">Règlement de la Ville de Montréal (16-049-900009){{> atoms-fonticon-item(icon-label: "063-fleche-droite") }}</a>
                 </li>
                 <li class="link-with-icon">
-                  <a href="#">Règlement (16-049-900009)<span class="vfi vfi-fleche-droite" aria-hidden="true"></span></a>
+                  <a href="#">Règlement (16-049-900009){{> atoms-fonticon-item(icon-label: "063-fleche-droite") }}</a>
                 </li>
               </ul>
             </div>
 
           </section>
         </aside>
-        {{/ sidebarRight }}
+        {{/ sidebarRight}}
 
       </div>
     </div>
@@ -69,9 +68,9 @@
     <div class="container">
       <div class="row">
         <div class="col-12">
-          {{# howToInfos }}
+          {{# howToInfos}}
             {{> organisms-how-to-infos }}
-          {{/ howToInfos }}
+          {{/ howToInfos}}
         </div>
       </div>
     </div>

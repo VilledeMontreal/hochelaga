@@ -49,7 +49,7 @@ $blue:    #0296c0;          // VDM
 $indigo:  #6610f2 !default;
 $purple:  #6f42c1 !default;
 $pink:    #e83e8c !default;
-$red:    #ff3200;
+$red:     #ff3200;
 //$red:     $red-montreal;      // VDM
 $orange:  #fd7e14 !default;
 $yellow:  #fecc03;          // VDM
@@ -221,19 +221,11 @@ $small-font-size:             .75em;
 $blockquote-small-color:      $body-color;
 $blockquote-font-size:        ($font-size-base * 1.25);
 
-
-//== Icons fonts vfi class, imported from "@villemontreal/font-icon
-$vfi-icon-font-path: $assets-font-path;
-$vfi-icon-font-family : 'vdm';
+$hr-margin-y:                 ($spacer * 2);
 
 
-// Body
-//
-// Settings for the `<body>` element.
-
-$header-banner-portal-height : 50px;
-$header-portal-height : 60px;
-$header-total-portal-height : $header-banner-portal-height + $header-portal-height;
+//== Icons fonts vdm class, imported from "@villemontreal/font-icon
+$vdm-icon-font-family : 'vdm';
 
 // Navs
 
@@ -253,7 +245,10 @@ $nav-tabs-active-border-width:      4px;
 
 // Navbar
 
-$navbar-height: 60px;
+$navbar-height: 114px;
+$top-banner-height : 50px;
+
+$header-total-height : $top-banner-height + $navbar-height;
 
 // Pagination
 
@@ -461,32 +456,111 @@ $checkbox-toggle-padding:               5px;
 
 
 // Dropdowns
+//
+// Dropdown menu container and contents.
 
+//$dropdown-min-width:                10rem;
+//$dropdown-padding-y:                .5rem;
+//$dropdown-spacer:                   .125rem;
+$dropdown-bg:                       $white;
+$dropdown-border-color:             $gray-400;
+$dropdown-border-radius:            0;
+$dropdown-border-width:             1px;
+$dropdown-divider-bg:               $gray-400;
+$dropdown-box-shadow:               0 .5rem .5rem rgba($black, .175);
+
+$dropdown-link-color:               $gray-900;
+$dropdown-link-hover-color:         darken($gray-900, 5%);
+$dropdown-link-hover-bg:            $gray-100;
+
+//$dropdown-link-active-color:        $component-active-color;
 $dropdown-link-active-bg:           $sarcelle-atmos;
+
+//$dropdown-link-disabled-color:      $gray-600;
+
+$dropdown-item-padding-y:           .5rem;
+$dropdown-item-padding-x:           2.5rem;
+
+$dropdown-header-color:             $gray-600;
 
 // Modal
 
 //$modal-lg:                          800px;
-$modal-md:                          600px;;
+$modal-md:                          600px;
 //$modal-sm:                          300px;
 
 
 //
 // Menus
 //
-$side-menu-width:               300px;
-$side-menu-border-width:        2px;
-$side-menu-icon-size:           3rem;
-$side-menu-link-h-padding:      1rem;
-$side-menu-link-v-padding:      1.75rem;
+$sm-menu-width:           440px;
+$sm-menu-bg:              $gray-900;
+$sm-border-width:         1px;
+$sm-border-color:         $gray-700;
+$sm-link-color:           $white;
+$sm-link-hover-color:     $sarcelle-surprise;
+$sm-link-font-size:       1.125rem; // 18px
+$sm-icon-size:            3rem;
+$sm-icon-color:           $sarcelle-surprise;
+$sm-link-padding:         1rem 2.8125rem;
+$sm-transition-dur:       300ms;
+$sm-transition-easing:    ease-in-out;
 
 $header-icon-width:             60px;
 $header-icon-height:            $header-icon-width;
 
+
+// Navs
+
+$nav-divider-margin-y:              $spacer;
+
 // Navbar
 
-//$navbar-padding-y:                  ($spacer / 2);
+
+$navbar-padding-y:                  $spacer;
 $navbar-padding-x:                  0;
+
+
+// Navbar
+
+// $navbar-padding-y:                  ($spacer / 2) !default;
+// $navbar-padding-x:                  $spacer !default;
+
+$navbar-nav-link-padding-x:         .5rem !default;
+
+$navbar-brand-font-size:            $font-size-lg !default;
+// Compute the navbar-brand padding-y so the navbar-brand will have the same height as navbar-text and nav-link
+$nav-link-height:                   ($font-size-base * $line-height-base + $nav-link-padding-y * 2) !default;
+$navbar-brand-height:               $navbar-brand-font-size * $line-height-base !default;
+$navbar-brand-padding-y:            ($nav-link-height - $navbar-brand-height) / 2 !default;
+
+$navbar-toggler-padding-y:          0;
+$navbar-toggler-padding-x:          0;
+$navbar-toggler-font-size:          2rem;
+$navbar-toggler-border-radius:      0.25rem;
+
+$navbar-dark-color:                 rgba($white, .5) !default;
+$navbar-dark-hover-color:           rgba($white, .75) !default;
+$navbar-dark-active-color:          $white !default;
+$navbar-dark-disabled-color:        rgba($white, .25) !default;
+$navbar-dark-toggler-icon-bg:       str-replace(url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 30 30' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='#{$navbar-dark-color}' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 7h22M4 15h22M4 23h22'/%3E%3C/svg%3E"), "#", "%23") !default;
+$navbar-dark-toggler-border-color:  rgba($white, .1) !default;
+
+$navbar-light-color:                $black;
+$navbar-light-hover-color:          $black;
+$navbar-light-active-color:         $black;
+$navbar-light-disabled-color:       $gray-700;
+//$navbar-light-toggler-icon-bg:      str-replace(url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 30 30' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='#{$navbar-light-color}' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 7h22M4 15h22M4 23h22'/%3E%3C/svg%3E"), "#", "%23") !default;
+$navbar-light-toggler-border-color: $black;
+
+// hamburger
+//
+$hamburger-padding-x:       .5rem;
+$hamburger-padding-y:       .75rem;
+$hamburger-layer-width:     2rem;
+$hamburger-layer-height:    .1875rem;
+$hamburger-layer-spacing:   .53125rem;
+$hamburger-layer-color:     $black;
 
 
 // - - - - - - - - - -

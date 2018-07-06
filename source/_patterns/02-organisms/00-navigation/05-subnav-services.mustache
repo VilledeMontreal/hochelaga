@@ -3,7 +3,7 @@
     {{# hasServiceLink}}
     <div class="navbar-header navbar-header-service-link">
       {{# serviceIcon}}
-      <span class="navbar-icon vfi {{ serviceIcon }}" aria-hidden="true"></span>
+      <span class="navbar-icon vdm {{ serviceIcon }}" aria-hidden="true"></span>
       {{/ serviceIcon}}
       <div class="d-flex flex-column">
         <span class="navbar-link"><a href="#">{{ enterpriseName }}</a></span>
@@ -26,7 +26,7 @@
     {{/ hasServiceLink}}
     {{^ hasServiceLink}}
     <div class="navbar-header">
-      <span class="navbar-icon vfi vfi-311-mobile" aria-hidden="true"></span>
+      {{> atoms-fonticon-item(icon-label: "103-311-mobile", icon-class: "navbar-icon") }}
       <span class="navbar-brand">{{ serviceName }}</span>
     </div>
     {{/ hasServiceLink}}

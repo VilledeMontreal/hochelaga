@@ -1,0 +1,79 @@
+<nav class="navbar navbar-light navbar-expand justify-content-between" role="navigation">
+  <div class="d-flex w-100">
+    {{> molecules-main-menu-button }}
+    <button class="navbar-button navbar-search-toggler d-none d-lg-inline-flex" id="navbarDropdownSearch" aria-haspopup="true" aria-expanded="false">
+      <span class="sr-only">Ouvrir la barre de recherche</span>
+      {{> atoms-fonticon-item(icon-label: "002-recherche") }}
+      <span class="button-label">Recherche</span>
+    </button>
+    {{> molecules-slide-menu }}
+  </div>
+  <a class="navbar-brand mx-auto" href="/">
+    <img src="../../images/logos/vdm-logo.svg" class="brand-logo" alt="Logo - Ville de Montréal" />
+  </a>
+  <div class="col-right d-flex w-100">
+    <div class="d-flex align-items-center ml-auto">
+      {{> atoms-button-icon(buttonClass: "btn-notification", buttonIconSr: true, buttonIconSrText: "Toggle notification view", buttonText: false, icon-label: "022-cloche", buttonIcon: true)}}
+      {{^ user-authenticated }}
+      {{> atoms-button(buttonClass: "btn-primary btn-sm d-none d-md-inline-flex", buttonText: "Me connecter")}}
+      <button class="navbar-button d-inline-flex d-md-none">
+        {{> atoms-fonticon-item(icon-label: "003-profil") }}
+        <span class="sr-only">Me connecter</span>
+      </button>
+      {{/ user-authenticated }}
+      {{# user-authenticated }}
+      <div class="dropdown">
+        <button class="navbar-button dropdown-toggle" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          {{> atoms-fonticon-item(icon-label: "003-profil") }}
+          <div class="user-info d-none d-lg-inline-block">
+            <span class="user-username">{{ user.username }}</span>
+            <span class="user-profil">{{ user.profil }}</span>
+          </div>
+        </button>
+        <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdownMenuLink">
+          <div class="dropdown-item-section">
+            <div class="user-info">
+              <span class="user-name">{{ user.name }}</span>
+              <span class="user-profil d-block d-lg-none">{{ user.profil }}</span>
+              <span class="user-email">{{ user.email }}</span>
+            </div>
+          </div>
+          <div class="dropdown-divider"></div>
+          <div class="user-action">
+            <a class="dropdown-item" href="#">Changer de profil {{> atoms-fonticon-item(icon-label: "023-parametres") }}</a>
+          </div>
+          <div class="dropdown-divider"></div>
+          <ul class="list-unstyled">
+            <li>
+              <a class="dropdown-item" href="#">Tableau de bord</a>
+            </li>
+            <li>
+              <a class="dropdown-item" href="#">Modifier mon profil</a>
+            </li>
+            <li>
+              <a class="dropdown-item" href="#">Mes services</a>
+            </li>
+            <li>
+              <a class="dropdown-item" href="#">Mes demandes</a>
+            </li>
+          </ul>
+          <div class="dropdown-divider"></div>
+          <a class="dropdown-item" href="#">Me déconnecter</a>
+        </div>
+      </div>
+      {{/ user-authenticated }}
+    </div>
+  </div>
+  <div class="overlay"></div>
+</nav>
+<div id="navbar-search" class="navbar-search">
+  <div class="container">
+    <div class="inner-container">
+      <button class="navbar-button js-button-close">
+        <span class="vdm vdm-065-fleche-gauche"></span>
+        <span class="sr-only">Quitter la recherche</span>
+      </button>
+      {{> atoms-input-has-clear(inputHideLabel: true, "inputHelpText": false, placeholder: "Rechercher une information ou un service") }}
+    </div>
+  </div>
+</div>

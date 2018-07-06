@@ -4,6 +4,14 @@
 // Base styles
 //
 
+button {
+  &:focus,
+  &.focus {
+    outline: 0;
+    box-shadow: $btn-focus-box-shadow;
+  }
+}
+
 .btn {
   display: inline-flex;
   align-items: center;
@@ -48,14 +56,14 @@
       @include box-shadow($btn-focus-box-shadow, $btn-active-box-shadow);
     }
   }
-  .vfi {
+  .vdm {
     color: inherit;
     font-size: 2rem;
     margin-left: -1.5rem;
     margin-right: .5rem;
     margin-top: -4px;
     margin-bottom: -4px;
-    &.vfi-right {
+    &.vdm-right {
       margin-left: .5rem;
       margin-right: -1.5rem;
     }
@@ -114,19 +122,19 @@ fieldset:disabled a.btn {
 //
 .btn-light {
   &.btn-primary {
-    @include button-variant($background: $sarcelle-atmos, $border: $sarcelle-atmos, $color: $black, $hover-background: $sarcelle-surprise, $hover-border: $sarcelle-surprise, $hover-color: $black, $active-color: $black);
+    @include button-variant($background: $sarcelle-atmos, $border: $sarcelle-atmos, $color: $black, $hover-background: $sarcelle-surprise, $hover-border: $sarcelle-surprise, $hover-color: $black, $active-color: $white);
   }
   &.btn-secondary {
-    @include button-variant($background: transparent, $border: $sarcelle-atmos, $color: $sarcelle-atmos, $hover-background: transparent, $hover-border: $sarcelle-surprise, $hover-color: $sarcelle-surprise, $active-color: $sarcelle-atmos);
+    @include button-variant($background: transparent, $border: $sarcelle-atmos, $color: $sarcelle-atmos, $hover-background: transparent, $hover-border: $sarcelle-surprise, $hover-color: $sarcelle-surprise, $active-color: $white);
   }
 }
 
 .btn-inverse {
   &.btn-primary {
-    @include button-variant($background: $white, $border: $white, $color: $sarcelle, $hover-background: $sarcelle-surprise, $hover-border: $sarcelle-surprise, $hover-color: $sarcelle, $active-background: $white, $active-border: $white, $active-color: $sarcelle);
+    @include button-variant($background: $white, $border: $white, $color: $sarcelle, $hover-background: $sarcelle-surprise, $hover-border: $sarcelle-surprise, $hover-color: $sarcelle, $active-color: $white);
   }
   &.btn-secondary {
-    @include button-variant($background: transparent, $border: $white, $color: $white, $hover-background: transparent, $hover-border: $sarcelle-surprise, $hover-color: $sarcelle-surprise, $active-background: $white, $active-border: $white, $active-color: $sarcelle);
+    @include button-variant($background: transparent, $border: $white, $color: $white, $hover-background: transparent, $hover-border: $sarcelle-surprise, $hover-color: $sarcelle-surprise, $active-color: $white);
   }
 }
 
@@ -144,14 +152,14 @@ fieldset:disabled a.btn {
 .btn-sm {
   @include button-size($btn-padding-y-sm, $btn-padding-x-sm, $font-size-sm, $btn-line-height-sm, $btn-border-radius-sm);
   border-width: 2px;
-  .vfi {
+  .vdm {
     color: inherit;
     font-size: 1.5rem;
     margin-left: -1.25rem;
     margin-right: .25rem;
     margin-top: -3px;
     margin-bottom: -3px;
-    &.vfi-right {
+    &.vdm-right {
       margin-left: .25rem;
       margin-right: -1.25rem;
     }
@@ -172,6 +180,8 @@ fieldset:disabled a.btn {
     margin-top: $btn-block-spacing-y;
   }
 }
+
+// Link button
 
 .btn-link {
   border-bottom: 1px solid $sarcelle-atmos;
@@ -203,11 +213,86 @@ input[type="button"] {
   }
 }
 
+// Icon only buttons
+
+.btn-notification {
+  background: $danger;
+  flex-shrink: 0;
+  padding: 0;
+  @include size(50px);
+  .vdm {
+    font-size: 1.5rem;
+    margin: 0;
+    color: $white;
+    margin: auto;
+  }
+  @include hover {
+    background-color: theme-color-level(danger, 2);
+  }
+  &.focus,
+  &:focus {
+    @include box-shadow(none);
+  }
+}
+
+// Button close
+
+// Slide menu close button
+.btn-close {
+  @include button-reset();
+  display: inline-flex;
+  align-items: center;
+  cursor: pointer;
+  color: $gray-600;
+  margin: 0;
+  padding: .5rem;
+  .vdm {
+    color: inherit;
+    font-size: 1.5rem;
+  }
+  .btn-label {
+    font-size: 1rem;
+    margin-left: 1rem;
+  }
+
+  @include media-breakpoint-up(sm) {
+    .vdm {
+      font-size: 2rem;
+    }
+  }
+
+  @include media-breakpoint-up(lg) {
+    .btn-label {
+      font-size: $sm-link-font-size;
+    }
+    .vdm {
+      font-size: 2.5rem;
+    }
+  }
+}
+
+.btn-clear {
+  @include button-reset();
+  pointer-events: inherit;
+  cursor: pointer;
+}
+
+.btn-close-search {
+  @include button-reset();
+  pointer-events: inherit;
+  cursor: pointer;
+  &.focus,
+  &:focus {
+    @include box-shadow(none);
+  }
+
+}
+
 // Buttons
 //
 // To Do: Review all buttons implementations and theming. No need to overcomplicate this. Build on bootstrap please
 //
-// DEPRECATED - will be removed in v2.0.0
+// DEPRECATED - will be removed in v1.0.0
 //
 .vdm-btn {
   display: inline-block;

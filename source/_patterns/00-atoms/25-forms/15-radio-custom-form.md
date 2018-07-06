@@ -2,7 +2,7 @@
 title: Radio set
 ---
 
-We build up on bootstrap custom forms and replace svg with vfi icons or css
+We build up on bootstrap custom forms and replace svg with vdm icons or css
 
 To Do: 
 

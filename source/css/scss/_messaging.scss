@@ -11,7 +11,7 @@
 .alert-icon {
   display: flex;
   align-items: center;
-  .vfi {
+  .vdm {
     color: inherit;
     padding-right: 1.5rem;
     font-size: 3rem;
@@ -36,7 +36,7 @@
   display: flex;
   border-radius: 50%;
   align-self: center;
-  .vfi {
+  .vdm {
     text-align: right;
     color: $white;
     font-size: 2rem;
@@ -61,7 +61,7 @@
 .top-banner {
   background: $black;
   color: $white;
-  height: $header-banner-portal-height;
+  height: $top-banner-height;
   display: flex;
   align-items: center;
   justify-content: center;
