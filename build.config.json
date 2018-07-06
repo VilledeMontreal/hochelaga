@@ -60,8 +60,7 @@
     "nodemodulesfontsdata": {
       "input": "node_modules/@villemontreal/font-icon/icon-dist/vdm.json",
       "json": "./source/_data/icons.json",
-      "sass": "./source/css/scss/vdm-icons-map.scss",
-      "sassdist": "./dist/css/scss/vdm-icons-map.scss"
+      "sass": "./source/css/scss/_font-icon-map.scss"
     },
     "scripts": {
       "base"  : "source/js/",
@@ -81,7 +80,8 @@
     "scss": {
       "base" : "source/css/",
       "files": [
-        "source/css/**/**.scss"
+        "source/css/**/**.scss",
+        "!source/css/pl-scss/**"
       ],
       "dest" : "public/css/",
       "distribution"  : "dist/css/"
@@ -91,8 +91,7 @@
       "files": [
         "source/fonts/**/*"
       ],
-      "dest" : "public/fonts/",
-      "distribution"  : "dist/fonts/"
+      "dest" : "public/fonts/"
     },
     "images": {
       "base" : "source/images/",
@@ -102,13 +101,21 @@
       "dest" : "public/images/"
     },
     "imagesdist": {
-      "base" : "source/images/dist",
+      "base" : "source/images/",
       "files": [
-        "source/images/dist/**/*"
+        "source/images/**/*",
+        "!source/images/pl-demo/",
+        "!source/images/pl-demo/**/*"  
       ],
-      "dest" : "dist/images/dist"
+      "dest" : "dist/images/"
     },
     "patternlab": {
+      "scss": {
+        "files": [
+          "source/css/pl-scss/*"
+        ],
+        "dest": "public/css/"
+      },
       "styleguide": {
         "files": [
           "core/styleguide/**"

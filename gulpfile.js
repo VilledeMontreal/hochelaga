@@ -6,27 +6,20 @@
 
 var gulp            = require('gulp'),
     autoprefixer    = require('gulp-autoprefixer'),
-    bump            = require('gulp-bump'),
     clean           = require('gulp-clean'),
-    concat          = require('gulp-concat'),
     browserSync     = require('browser-sync'),
     cssmin          = require('gulp-cssmin'),
-    del             = require('del'),
-    filter          = require('gulp-filter'),
     fs              = require("fs"),
-    git             = require('gulp-git'),
     gulpif          = require('gulp-if'),
+    gutil           = require('gulp-util'),
     imagemin        = require('gulp-imagemin'),
-    jeditor         = require("gulp-json-editor"),
     postcss         = require('gulp-postcss'),
     rename          = require('gulp-rename'),
-    replace         = require('gulp-replace'),
     sass            = require('gulp-sass'),
     shell           = require('gulp-shell'),
     sourcemaps      = require('gulp-sourcemaps'),
-    tagversion      = require('gulp-tag-version'),
     tildeImporter   = require('node-sass-tilde-importer'),
-    uglify          = require('gulp-uglify'),
+    uglify          = require('gulp-uglify-es').default;
     config          = require('./build.config.json');
 
 // Trigger and switches
@@ -86,13 +79,6 @@ gulp.task('nodemodulesfonts', function () {
       .pipe(browserSync.reload({stream:true}));
 });
 
-gulp.task('nodemodulesfonts-dist', function () {
-  return gulp.src(config.nodemodulesfonts.files)
-      .pipe(gulp.dest(
-          config.nodemodulesfonts.distribution
-      ))
-});
-
 
 // VDM font-metadata -- 
 // Load and transform the json file to provide looping data for mustache templates in a new .json file.
@@ -104,7 +90,7 @@ gulp.task('nodemodulesfontsdata', function() {
       return console.log(err);
     }
  
-    var sassdir = production == true ? config.nodemodulesfontsdata.sassdist : config.nodemodulesfontsdata.sass;
+    var sassdir = config.nodemodulesfontsdata.sass;
     var source = JSON.parse(json);
     var count = Object.keys(source).length;
     var index = 0;
@@ -157,11 +143,7 @@ gulp.task('nodemodulesfontsdata', function() {
 // Scripts from source to public
 gulp.task('scripts', function () {
   return gulp.src(config.scripts.files)
-    /*
-    .pipe(concat(
-        'application.js' // Export all js to a single js file, to be tested
-    ))
-    */
+
     .pipe(
         gulpif(production, uglify())
     )
@@ -170,18 +152,18 @@ gulp.task('scripts', function () {
             suffix: '.min'
         }))
     )
-    .pipe(gulp.dest(
-        config.scripts.dest
-    ))
+    .pipe(gulpif(!production, gulp.dest(config.scripts.dest)))
+    .pipe(gulpif(!production, gulp.dest(config.scripts.distribution)))
     .pipe(browserSync.reload({stream:true}));
 });
 
-// Scripts from source to public
+// Scripts from source to distribution
 gulp.task('scripts-dist', function () {
   return gulp.src(config.scripts.files)
     .pipe(
         uglify()
     )
+    .on('error', function (err) { gutil.log(gutil.colors.red('[Error]'), err.toString()); })
     .pipe(
         rename({ suffix: '.min'})
     )
@@ -197,13 +179,6 @@ gulp.task('fonts', function () {
         config.fonts.dest
       ))
       .pipe(browserSync.reload({stream:true}));
-});
-
-gulp.task('fonts-dist', function () {
-  return gulp.src(config.fonts.files)
-    .pipe(gulp.dest(
-      config.fonts.distribution
-    ))
 });
 
 // Images copy and minimize
@@ -249,33 +224,25 @@ gulp.task('sass', function () {
     .pipe(sourcemaps.write(
       config.sourcemaps.dest
     ))
-    .pipe(gulp.dest(
-      config.scss.dest
-    ))
+    .pipe(gulpif(!production, (gulp.dest(config.scss.dest))))
+    .pipe(gulpif(production, (gulp.dest(config.scss.distribution))))
     .pipe(browserSync.reload({stream:true}));
 });
 
-
-gulp.task('sass-dist', function () {
-
+// Task: Handle Sass and CSS
+gulp.task('pl-sass', function () {
   var processors = [
       autoprefixer
   ];
-
-  return gulp.src(config.scss.files)
+  return gulp.src(config.patternlab.scss.files)
     .pipe(sourcemaps.init())
     .pipe(sass( { importer: tildeImporter } ).on('error', sass.logError))
-    .pipe(cssmin())
-    .pipe(rename({
-      suffix: '.min'
-    }))
     .pipe(postcss( processors ))
     .pipe(sourcemaps.write(
       config.sourcemaps.dest
     ))
-    .pipe(gulp.dest(
-      config.scss.distribution
-    ));
+    .pipe(gulp.dest(config.patternlab.scss.dest))
+    .pipe(browserSync.reload({stream:true}));
 });
 
 // Task: patternlab
@@ -358,6 +325,7 @@ gulp.task('default', ['cleanable:before'], function () {
     'styleguide',
     'fonts',
     'sass',
+    'pl-sass',
     'images',
     'nodemodulescripts',
     'nodemodulesfonts',
@@ -384,45 +352,11 @@ gulp.task('distribute', ['clean-dist:before'], function () {
   production = true;
   gulp.start(
     'nodemodulescripts-dist',
-    'nodemodulesfonts-dist',
     'nodemodulesfontsdata',
-    'scripts-dist',
-    'fonts-dist',
+    'scripts',
     'images-dist',
-    'sass-dist',
+    'sass',
     'scss-dist'
   );
 });
 
-// Task: Deploy static content
-// Description: Deploy static content using rsync shell command
-gulp.task('deploy', function () {
-  return gulp.src(config.deployment.local.path, {read: false})
-    .pipe(shell([
-      'rsync '+ config.deployment.rsync.options +' '+ config.deployment.local.path +'/ '+ config.deployment.remote.host
-    ]))
-});
-
-  // Function: Releasing (Bump & Tagging)
-  // Description: Bump npm versions, create Git tag and push to origin
-gulp.task('release', function () {
-  production = true;
-  return gulp.src(config.versioning.files)
-    .pipe(bump({
-      type: gulp.env.type || 'patch'
-    }))
-    .pipe(gulp.dest('./'))
-    .pipe(git.commit('Release a ' + gulp.env.type + '-update'))
-
-    // read only one file to get version number
-    .pipe(filter('package.json'))
-
-    // Tag it
-    .pipe(tagversion())
-
-    // Publish files and tags to endpoint
-    .pipe(shell([
-      'git push origin dev',
-      'git push origin --tags'
-    ]));
-});
