@@ -4,12 +4,15 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](http://keepachangelog.com/en/1.0.0/)
 and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.html).
 
-## [Unreleased]
+## Unreleased
+- Mobile menu search interactivity refinement.
+
+## [0.3.0] - 2018-07-06
 
 ### Added
-- New navbars and menus in Organisms > Navigation
-- Added button-clear for clearing value of input in Atoms > Forms > Input Has Clear
-- Added new navbar with main navigation and menus (main menu and user menu)
+- New navbars and menus in Organisms > Navigation.
+- Added btn-clear for clearing value of input in Atoms > Forms > Input Has Clear.
+- Added new navbar with main navigation and menus (main menu and user menu).
 
 ### Fixed
 - .btn-light and .btn-inverse buttons active state text and background color fix.
@@ -19,12 +22,13 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 - Switched from .vfi back to .vdm prefix for all icons from the font.
 - Switched back to the original icon names, dropping the gulp tasks used to 
 remove index from the name. Which makes it possible to update font-icon without publishing a new release of the boite-a-outils.
-- Kept vdm-icons sass-map but with the original icons names.
+- Kept font-icon sass-map but with the original icons names.
 - Clean-up sidebars and removed unused classes.
 - Changed markup structure for input-group-icon.
 
 ### Removed
 - Removed all the old .vdm-header theming and classes in favor of the new navbar and slide-menu.
+- Removed box-shadow on focus for all main navbar buttons.
 
 
 
@@ -61,3 +65,7 @@ remove index from the name. Which makes it possible to update font-icon without 
 
 ### Removed
 - Removed vdm prefix for buttons classes
+
+[0.3.0]: https://bitbucket.org/villemontreal/boite-outils-web/src/0.3.0/
+[0.2.2]: https://bitbucket.org/villemontreal/boite-outils-web/src/0.2.2/
+[0.2.0]: https://bitbucket.org/villemontreal/boite-outils-web/src/0.2.0/
