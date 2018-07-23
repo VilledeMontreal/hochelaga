@@ -65,7 +65,8 @@
     "scripts": {
       "base"  : "source/js/",
       "files" : [
-        "source/js/**/*.js"
+        "source/js/**/*.js",
+        "!source/js/vendor/**"
       ],
       "dest"  : "public/js/",
       "distribution"  : "dist/js/"

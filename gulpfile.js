@@ -143,7 +143,7 @@ gulp.task('nodemodulesfontsdata', function() {
 // Scripts from source to public
 gulp.task('scripts', function () {
   return gulp.src(config.scripts.files)
-
+    .pipe(gulpif(production, gulp.dest(config.scripts.distribution)))
     .pipe(
         gulpif(production, uglify())
     )
@@ -153,7 +153,7 @@ gulp.task('scripts', function () {
         }))
     )
     .pipe(gulpif(!production, gulp.dest(config.scripts.dest)))
-    .pipe(gulpif(!production, gulp.dest(config.scripts.distribution)))
+    .pipe(gulpif(production, gulp.dest(config.scripts.distribution)))
     .pipe(browserSync.reload({stream:true}));
 });
 
