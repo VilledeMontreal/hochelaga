@@ -98,7 +98,7 @@
       }
     }
     .dropdown-toggle .user-info {
-      padding-left: 1rem;
+      //padding-left: 1rem;
       padding-right: .5rem;
     }
   }
@@ -106,6 +106,7 @@
   .dropdown-toggle {
     padding-top: 0;
     padding-bottom: 0;
+    // remove carets
     &:after {
       content: none;
     }
@@ -115,7 +116,7 @@
         font-size: 1.5rem;
       }
     }
-
+    // Add chevron only on large breakpoint and up
     @include media-breakpoint-up(lg) {
       &:after {
         border: 0;
@@ -217,6 +218,7 @@
       &:after {
         content: none;
       }
+      // Switch to chevron haut for large breakpoint and up
       @include media-breakpoint-up(lg) {
         @include iconvdm($position: after, $icon: '055-chevron-haut');
       }
@@ -272,7 +274,6 @@
     color: $black;
     font-size: 1rem;
     line-height: 1;
-    //margin-left: .625rem;
     @include transition(color .15s ease-in-out);
   }
 
@@ -283,12 +284,6 @@
     .button-label {
       color: $sarcelle-surprise;
     }
-    // replaced with proper icon
-    /*
-    .authenticated-profil {
-      border-color: $sarcelle-surprise;
-    }
-    */
   }
 
   // remove focus from box-shadow
@@ -302,33 +297,6 @@
       font-size: 1.125rem;
     }
   }
-
-
-  /*
-  .authenticated-profil {
-    border: 2px solid $black;
-    border-radius: 50%;
-    display: flex;
-    padding: 2px;
-    @include transition(border-color .15s ease-in-out);
-    .vdm {
-      font-size: 1.25rem;
-    }
-
-    @include media-breakpoint-up(sm) {
-      .vdm {
-        font-size: 1.625rem;
-      }
-    }
-  
-    @include media-breakpoint-up(lg) {
-      padding: 3px;
-      .vdm {
-        font-size: 1.875rem;
-      }
-    }
-  }
-  */
 }
 
 // Navbar search flyout
