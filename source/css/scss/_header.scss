@@ -13,10 +13,6 @@
     align-items: center;
   }
 
-  .col-right {
-    padding-left: 2rem;
-  }
-
   // Montreal logo is the navbar-brand
   .navbar-brand {
     display: flex;
@@ -43,7 +39,7 @@
   @include media-breakpoint-up(md) {
     button + .dropdown,
     button + button {
-      margin-left: 3.5rem;
+      margin-left: 2.5rem;
     }
   }
 
@@ -93,7 +89,6 @@
     position: inherit;
     display: flex;
     .user-info {
-      padding-right: .5rem;
       line-height: 1.25;
       > * {
         display: flex;
@@ -102,25 +97,35 @@
         font-weight: $font-weight-bold;
       }
     }
+    .dropdown-toggle .user-info {
+      padding-left: 1rem;
+      padding-right: .5rem;
+    }
   }
   // Replace caret by our own icon
   .dropdown-toggle {
     padding-top: 0;
     padding-bottom: 0;
     &:after {
-      border: 0;
-      color: $link-color;
-      font-size: 1rem;
-      margin-left: 0;
-      width: auto;
-      height: auto;
+      content: none;
     }
-    @include iconvdm($position: after, $icon: '057-chevron-bas');
 
     @include media-breakpoint-up(sm) {
       &:after {
         font-size: 1.5rem;
       }
+    }
+
+    @include media-breakpoint-up(lg) {
+      &:after {
+        border: 0;
+        color: $link-color;
+        font-size: 1rem;
+        margin-left: 0;
+        width: auto;
+        height: auto;
+      }
+      @include iconvdm($position: after, $icon: '057-chevron-bas'); 
     }
   }
 
@@ -209,7 +214,12 @@
   // change icon when dropdown is open
   .dropdown.show {
     .dropdown-toggle {
-      @include iconvdm($position: after, $icon: '055-chevron-haut');
+      &:after {
+        content: none;
+      }
+      @include media-breakpoint-up(lg) {
+        @include iconvdm($position: after, $icon: '055-chevron-haut');
+      }
     }
   }
 
@@ -222,11 +232,11 @@
   }
 
   @include media-breakpoint-up(sm) {
-    padding: 1.875rem 1.5rem;
+    padding: 1.75rem 1.5rem;
   }
 
   @include media-breakpoint-up(md) {
-    padding: 2.125rem 3rem;
+    padding: 2.125rem 1.5rem;
   }
 }
 
@@ -245,6 +255,7 @@
   .vdm {
     font-size: 2rem;
     vertical-align: middle;
+    margin-right: .625rem;
     @include transition(color .15s ease-in-out);
 
     // mobile and up
@@ -259,9 +270,9 @@
 
   .button-label {
     color: $black;
-    font-size: 1.125rem;
+    font-size: 1rem;
     line-height: 1;
-    margin-left: 1rem;
+    //margin-left: .625rem;
     @include transition(color .15s ease-in-out);
   }
 
@@ -272,6 +283,12 @@
     .button-label {
       color: $sarcelle-surprise;
     }
+    // replaced with proper icon
+    /*
+    .authenticated-profil {
+      border-color: $sarcelle-surprise;
+    }
+    */
   }
 
   // remove focus from box-shadow
@@ -280,6 +297,38 @@
     box-shadow: none;
   }
 
+  &.navbar-button-lg {
+    .button-label {
+      font-size: 1.125rem;
+    }
+  }
+
+
+  /*
+  .authenticated-profil {
+    border: 2px solid $black;
+    border-radius: 50%;
+    display: flex;
+    padding: 2px;
+    @include transition(border-color .15s ease-in-out);
+    .vdm {
+      font-size: 1.25rem;
+    }
+
+    @include media-breakpoint-up(sm) {
+      .vdm {
+        font-size: 1.625rem;
+      }
+    }
+  
+    @include media-breakpoint-up(lg) {
+      padding: 3px;
+      .vdm {
+        font-size: 1.875rem;
+      }
+    }
+  }
+  */
 }
 
 // Navbar search flyout

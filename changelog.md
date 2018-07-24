@@ -7,6 +7,18 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 ## Unreleased
 - Mobile menu search interactivity refinement.
 
+## [0.3.1] - 2018-07-24
+
+## Added 
+
+
+### Changed
+- Upgraded to Bootstrap 4.1.2
+- Upgraded to font-icon 1.0.7
+
+### Fixed
+- Fixed js files in distribution
+
 ## [0.3.0] - 2018-07-06
 
 ### Added

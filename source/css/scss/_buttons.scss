@@ -221,7 +221,7 @@ input[type="button"] {
   padding: 0;
   @include size(50px);
   .vdm {
-    font-size: 1.5rem;
+    font-size: 2rem;
     margin: 0;
     color: $white;
     margin: auto;
@@ -285,7 +285,18 @@ input[type="button"] {
   &:focus {
     @include box-shadow(none);
   }
+}
 
+.button-underline {
+  .button-label {
+    border-bottom: 1px solid $black;
+    padding-top: 1px;
+  }
+  &:hover {
+    .button-label {
+      border-color: inherit;
+    }
+  }
 }
 
 // Buttons
