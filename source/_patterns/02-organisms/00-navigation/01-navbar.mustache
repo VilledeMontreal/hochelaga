@@ -20,7 +20,7 @@
       <button class="navbar-button button-underline d-none d-lg-inline-flex">
         <span class="button-label">M'inscrire</span>
       </button>
-      <button class="navbar-button d-inline-flex">
+      <button class="navbar-button btn-login d-inline-flex">
         {{> atoms-fonticon-item(icon-label: "003-profil") }}
         <span class="button-label d-none d-md-inline-flex">Me connecter</span>
         <span class="sr-only">Me connecter</span>
@@ -29,13 +29,11 @@
       {{# user-authenticated }}
       <div class="dropdown">
         <button class="navbar-button dropdown-toggle" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-          <span class="authenticated-profil">
-            {{> atoms-fonticon-item(icon-label: "110-profil-connecte") }}
-          </span>
-          <div class="user-info d-none d-lg-inline-block">
-            <span class="user-username">{{ user.username }}</span>
+          {{> atoms-fonticon-item(icon-label: "110-profil-connecte") }}
+          <div class="user-info d-none d-md-inline-flex">
+            <span class="user-username elided-text">{{ user.username }}</span>
             {{# user-has-profile}}
-            <span class="user-profil">{{ user.profil }}</span>
+            <span class="user-profil elided-text">{{ user.profil }}</span>
             {{/ user-has-profile}}
           </div>
         </button>
