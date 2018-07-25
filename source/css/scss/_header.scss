@@ -94,10 +94,12 @@
     padding-top: 0;
     padding-bottom: 0;
 
+    // Prevent long username/profile to break layout with max-width
+    // Use elided-text helper class on field to add ellipsis on truncated strings
     .user-info {
       flex-direction: column;
       line-height: 1.25;
-      max-width: 175px; // prevent long username/profile to break layout
+      max-width: 170px;
       text-align: left;
       padding-right: .5rem;
       .user-profil {
