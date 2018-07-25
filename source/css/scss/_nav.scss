@@ -9,11 +9,6 @@
   }
 }
 
-.nav-wizard {
-  background-color: $white;
-  border-bottom: 1px solid $gray-400;
-}
-
 // Pagination
 // Reference used : https://projects.invisionapp.com/d/main#/console/11533069/245898997/inspect
 
@@ -363,24 +358,42 @@ nav {
 /**
  * Step Wizard
  */
-.nav-wizard {
+ .nav-wizard {
+  background-color: $white;
+  border-bottom: 1px solid $gray-400;
   display: flex;
   flex-direction: row;
   align-items: center;
 }
 .nav-steps-count {
-  display: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: $gray-500;
+  font-size: $font-size-md;
+  flex: 1 0 auto;
+  line-height: 1.5;
+  padding: 1rem;
+  width: 100%;
   @include media-breakpoint-up(md) {
+    color: $gray-ink;
+    font-size: 1.125rem;
+    font-weight: $font-weight-bold;
     position: absolute;
     top: 0;
     bottom: 0;
-    left: $header-icon-width;
-    display: flex;
-    align-items: center;
+    left: .875rem;
+    width: auto;
+    justify-content: left;
   }
 }
 .nav-steps-items {
-  flex: 1;
+  display: none;
+  @include media-breakpoint-up(md) {
+    display: flex;
+    flex: 1;
+    padding-bottom: 1.5rem;
+  }
 }
 .nav-steps {
   display: flex;
@@ -419,9 +432,9 @@ nav {
     }
   }
   .caption {
-    color: $gray-ink;
+    color: $gray-600;
     display: inline-block;
-    padding-bottom: .5rem;
+    padding-bottom: .25rem;
   }
   .circle {
     @include circle($background-color: $gray-200, $border: true);
@@ -448,6 +461,7 @@ nav {
   }
   //larger than 768px
   @include media-breakpoint-up(sm) {
+    display: flex;
     justify-content: center;
     // Position the steps line and circle
     .nav-item {
@@ -470,29 +484,7 @@ nav {
       margin: 0 auto;
     }
   }
-  // smaller than 768px
-  @include media-breakpoint-down(xs) {
-    li {
-      &:after {
-        top: 50%;
-      }
-      .nav-link {
-        display: flex;
-        flex-direction: row;
-        align-items: center;
-        padding: 0.625rem 1rem 0.625rem 0;
-        .caption {
-          order: 2;
-          padding-left: 1rem;
-          padding-bottom: 0;
-        }
-        .circle {
-          order: 1;
-          flex: 0 0 auto;
-        }
-      }
-    }
-  }
+
 }
 
 // Nav dashboard Steps
