@@ -56,7 +56,7 @@ gulp.task('clean-dist:before', function () {
 gulp.task('nodemodulescripts', function () {
   return gulp.src(config.nodemodulescripts.files)
       .pipe(gulp.dest(
-          config.nodemodulescripts.dest
+        config.nodemodulescripts.dest
       ))
       .pipe(browserSync.reload({stream:true}));
 });
@@ -143,17 +143,23 @@ gulp.task('nodemodulesfontsdata', function() {
 // Scripts from source to public
 gulp.task('scripts', function () {
   return gulp.src(config.scripts.files)
-
     .pipe(
-        gulpif(production, uglify())
+      gulpif(production, gulp.dest(config.scripts.distribution))
     )
     .pipe(
-        gulpif(production, rename({
-            suffix: '.min'
-        }))
+      gulpif(production, uglify())
     )
-    .pipe(gulpif(!production, gulp.dest(config.scripts.dest)))
-    .pipe(gulpif(!production, gulp.dest(config.scripts.distribution)))
+    .pipe(
+      gulpif(production, rename({
+        suffix: '.min'
+      }))
+    )
+    .pipe(
+      gulpif(!production, gulp.dest(config.scripts.dest))
+    )
+    .pipe(
+      gulpif(production, gulp.dest(config.scripts.distribution))
+    )
     .pipe(browserSync.reload({stream:true}));
 });
 
@@ -216,16 +222,24 @@ gulp.task('sass', function () {
   return gulp.src(config.scss.files)
     .pipe(sourcemaps.init())
     .pipe(sass( { importer: tildeImporter } ).on('error', sass.logError))
-    .pipe(gulpif(production, cssmin()))
-    .pipe(gulpif(production, rename({
-      suffix: '.min'
-    })))
+    .pipe(
+      gulpif(production, cssmin())
+    )
+    .pipe(
+      gulpif(production, rename({
+        suffix: '.min'
+      }))
+    )
     .pipe(postcss( processors ))
     .pipe(sourcemaps.write(
       config.sourcemaps.dest
     ))
-    .pipe(gulpif(!production, (gulp.dest(config.scss.dest))))
-    .pipe(gulpif(production, (gulp.dest(config.scss.distribution))))
+    .pipe(
+      gulpif(!production, (gulp.dest(config.scss.dest)))
+    )
+    .pipe(
+      gulpif(production, (gulp.dest(config.scss.distribution)))
+    )
     .pipe(browserSync.reload({stream:true}));
 });
 
@@ -306,6 +320,12 @@ gulp.task('watch', function () {
   gulp.watch(
     config.scss.files,
     ['sass']
+  );
+
+  // Watch Sass
+  gulp.watch(
+    config.patternlab.scss.files,
+    ['pl-sass']
   );
 
   // Watch fonts

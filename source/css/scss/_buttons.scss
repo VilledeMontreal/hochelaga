@@ -221,7 +221,7 @@ input[type="button"] {
   padding: 0;
   @include size(50px);
   .vdm {
-    font-size: 1.5rem;
+    font-size: 2rem;
     margin: 0;
     color: $white;
     margin: auto;
@@ -246,13 +246,22 @@ input[type="button"] {
   color: $gray-600;
   margin: 0;
   padding: .5rem;
+  @include transition($btn-transition);
   .vdm {
     color: inherit;
     font-size: 1.5rem;
   }
-  .btn-label {
+  .button-label {
     font-size: 1rem;
     margin-left: 1rem;
+  }
+
+  &:focus {
+    box-shadow: none;
+  }
+
+  &:hover {
+    color: $sarcelle-surprise;
   }
 
   @include media-breakpoint-up(sm) {
@@ -285,7 +294,19 @@ input[type="button"] {
   &:focus {
     @include box-shadow(none);
   }
+}
 
+// Utility class to give a button label underline capacities
+.button-underline {
+  .button-label {
+    border-bottom: 1px solid $black;
+    padding-top: 1px;
+  }
+  &:hover {
+    .button-label {
+      border-color: inherit;
+    }
+  }
 }
 
 // Buttons
