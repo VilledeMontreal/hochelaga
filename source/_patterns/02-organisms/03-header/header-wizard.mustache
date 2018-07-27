@@ -1,15 +1,12 @@
 <header class="wizard-header" role="banner">
   <div class="hdr-container">
-    <a class="home-link" href="https://beta.montreal.ca">
-      {{> atoms-fonticon-item("icon-label": "001-rosace")}}
-    </a>
-    <span class="hdr-title">Compléter le profil de l’entreprise</span>
+    <span class="hdr-title">{{ wizard-form-name }}</span>
   </div>
   <div class="hdr-links">
-    <ul class="list-inline">
-      <li class="list-inline-item">
-        {{> atoms-button(buttonClass: "btn-secondary btn-sm", buttonText: "Quitter") }}
-      </li>
-    </ul>
+    <button class="btn-quit">
+      <span class="button-label d-none d-md-inline-flex">Quitter</span>
+      {{> atoms-fonticon-item(icon-label: "111-quitter") }}
+      <span class="sr-only">Quitter</span>
+    </button>
   </div>
 </header>
