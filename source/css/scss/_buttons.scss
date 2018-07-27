@@ -286,6 +286,32 @@ input[type="button"] {
   cursor: pointer;
 }
 
+.btn-quit {
+  @include button-reset();
+  pointer-events: inherit;
+  color: $headings-color;
+  cursor: pointer;
+  padding: 0 .5rem;
+  @include transition(color .15s ease-in-out);
+  .button-label {
+    margin-right: .5rem;
+  }
+  .vdm {
+    font-size: 2rem;
+    @include transition(color .15s ease-in-out);
+  }
+  &:hover {
+    color: $sarcelle-surprise;
+    .vdm {
+      color: $sarcelle-surprise;
+    }
+  }
+  &.focus,
+  &:focus {
+    box-shadow: none;
+  }
+}
+
 .btn-close-search {
   @include button-reset();
   pointer-events: inherit;

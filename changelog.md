@@ -4,20 +4,34 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](http://keepachangelog.com/en/1.0.0/)
 and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.html).
 
-## Unreleased
-- Mobile menu search interactivity refinement.
 
-## [0.3.1] - 2018-07-24
+## Unreleased
+
+## Added
+- .btn-quit a quit button with icon on the right
+
+## Changed
+- Changed Wizard header styling
+- Minor changes to wizard steps: solved responsive issues and theming upgrades
+
+
+## [0.3.1] - 2018-07-25
 
 ## Added 
-
+- Added new color $sarcelle-light aka pepermane.
+- Added some templates variants (authenticated, profile, notifications) for organisms > navigation > navbar
+- Added .elided-text utility class.
 
 ### Changed
-- Upgraded to Bootstrap 4.1.2
-- Upgraded to font-icon 1.0.7
+- Upgraded to Bootstrap 4.1.3
+- Upgraded to font-icon 1.0.9
+- Changed padding, sizing and buttons styles for navbar.
+- Changed connected vs non-connected icon in navbar.
 
 ### Fixed
 - Fixed js files in distribution
+- Fixed $sarcelle-lightest hex color
+- Fixed wrong color for $gray-600
 
 ## [0.3.0] - 2018-07-06
 
