@@ -4,12 +4,8 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](http://keepachangelog.com/en/1.0.0/)
 and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.html).
 
-## Unreleased
-- Modals (default, alerts and centered)
-- Step nav (mobile harmonisation)
-- 
 
-## [0.3.2] - 2018-07-27
+## Unreleased
 
 ## Added
 - .btn-quit a quit button with icon on the right
@@ -26,7 +22,6 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 - Added some templates variants (authenticated, profile, notifications) for organisms > navigation > navbar
 - Added .elided-text utility class.
 
-
 ### Changed
 - Upgraded to Bootstrap 4.1.3
 - Upgraded to font-icon 1.0.9
@@ -37,7 +32,6 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 - Fixed js files in distribution
 - Fixed $sarcelle-lightest hex color
 - Fixed wrong color for $gray-600
-- -
 
 ## [0.3.0] - 2018-07-06
 
