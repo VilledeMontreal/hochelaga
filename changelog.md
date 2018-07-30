@@ -15,6 +15,12 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 - Minor changes to wizard steps: solved responsive issues and theming upgrades
 
 
+## [0.3.2] - 2018-07-31
+
+### Changed
+- changed navbar logo breakpoint sizes for tablets
+
+
 ## [0.3.1] - 2018-07-25
 
 ## Added 
