@@ -6,16 +6,14 @@
 <!-- Begin main page header -->
 {{> organisms-header-portal }}
 <!-- End main page header -->
-<!-- Begin breadcrumb -->
-{{> molecules-breadcrumb }}
-<!-- End breadcrumb -->
+
 <main class="main-content {{ pageClasses }}" id="main-content" aria-label="Main Content" role="main">
   <!-- Begin content header region-->
-  {{> organisms-content-header-portal }}
+  {{> organisms-content-header }}
   <!-- End content header region-->
 
   <!-- Begin before-content region-->
-  <section class="region region-before {{ regionBeforeClasses }} pt-4 pb-4">
+  <section class="page-section {{ regionBeforeClasses }} bg-gray-sky">
     <div class="container">
       <div class="row">
         <div class="col-12">Section before content</div>
@@ -25,7 +23,7 @@
   <!-- End before-content region-->
 
   <!-- Begin main-content region-->
-  <div class="region {{ regionMainClasses }} pt-4 pb-4">
+  <div class="region-content {{ regionMainClasses }}">
     <div class="container {{ regionMainContainerClasses }}">
       <div class="row">
         {{# fullTopSection }}
@@ -52,7 +50,7 @@
   </div>
 
   <!-- Begin after-content region-->
-  <section class="region region-after {{ regionAfterClasses }} pt-4 pb-4">
+  <section class="page-section {{ regionAfterClasses }} bg-gray-sky">
     <div class="container">
       <div class="row">
         <div class="col-12">Region after content</div>

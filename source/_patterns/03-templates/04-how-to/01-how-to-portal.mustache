@@ -1,12 +1,21 @@
 {{> atoms-link-skip-to-main-content }}
 {{> organisms-header-portal }}
-{{> molecules-breadcrumb }}
 
 <main class="main-content {{ pageClasses }}" id="main-content" aria-label="Main Content">
 
   {{> organisms-content-header-portal }}
 
-  <div class="region {{ regionMainClasses }}">
+  <!-- Teaser -->
+  {{# has-lead-text }}
+  {{> molecules-lead }}
+  {{/ has-lead-text }}
+
+  <!-- Tabs -->
+  {{# has-nav-tabs }}
+    {{> molecules-nav-tab }}
+  {{/ has-nav-tabs}}
+
+  <div class="region-content {{ regionMainClasses }}">
     <div class="container {{ regionMainContainerClasses }}">
       <div class="row">
         <article class="col-12 col-md-7 {{ regionMainContentClasses }}">
@@ -36,7 +45,7 @@
             </div>
 
             <div class="subsection">
-              {{> organisms-heading-sidebar(sidebarTitle: "Ce que vous devez savoir") }}
+              {{> organisms-heading-sidebar(sidebarTitle: "Ce que vous devez savoir")}}
               <p>La première année, le permis est valide pour une période maximale de 15 mois, soit du 1er juillet au 30 septembre de l'année suivante.</p>
               <p>Par la suite, il est renouvelable tous les 12 mois, soit du 1er octobre au 30 septembre de l'année suivante.</p>
               <p>Il est possible de se procurer, entre le 1er avril et le 30 juin, un permis pour une durée de six mois, valide jusqu'au 30 septembre de la même année.</p>
@@ -64,7 +73,7 @@
     </div>
   </div>
 
-  <section class="region region-after {{ regionAfterClasses }}">
+  <section class="region-after {{ regionAfterClasses }}">
     <div class="container">
       <div class="row">
         <div class="col-12">

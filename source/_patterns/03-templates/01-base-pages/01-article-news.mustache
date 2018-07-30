@@ -1,14 +1,19 @@
 {{> atoms-link-skip-to-main-content }}
 {{> organisms-header-portal }}
-{{> molecules-breadcrumb }}
+
 <main class="main-content {{ pageClasses }}" id="main-content" aria-label="Main Content">
 
-  {{> organisms-content-header-portal }}
+  {{> organisms-content-header }}
 
-  <div class="region {{ regionMainClasses }}">
+  <!-- Teaser -->
+  {{# has-lead-text }}
+  {{> molecules-lead }}
+  {{/ has-lead-text }}
+
+  <div class="region-content {{ regionContentClasses }}">
     <div class="container {{ regionMainContainerClasses }}">
       <div class="row">
-        <article class="col-12 {{ regionMainContentClasses }}">
+        <article class="col-12 col-lg-8 offset-lg-2 {{ regionMainContentClasses }}">
           <p>Du 3 au 4 mars, le hall d'honneur de l'hôtel de ville de Montréal prendra des airs de fête! Venez vivre un événement unique combinant les arts visuels et numériques, de même que la musique.</p>
           <h2>H2. Un titre de niveau 2</h2>
           <p>En famille ou entre amis, participez à la création d'une murale géante et voyez-la s'animer dans une atmosphère musicale et lumineuse!</p>
@@ -31,15 +36,9 @@
           </blockquote>
           <p>Nam sed elementum magna. Fusce et malesuada elit. Aliquam semper eget ante quis tristique. Morbi hendrerit vestibulum ante vel fringilla. Etiam et diam et magna placerat posuere sit amet id neque. Etiam a ipsum arcu. Etiam neque ante, convallis vitae imperdiet sed, accumsan sit amet eros. Quisque et iaculis ante, non finibus arcu. Maecenas scelerisque vel purus in interdum. Sed id odio quis felis tempus sagittis nec at orci. Nullam bibendum dictum dolor eget varius.</p>
         </article>
-        {{# sidebarRight }}
-        <aside class="col-12 {{ sidebarLeftClass }} sidebar sidebar-right">
-          {{> organisms-sidebar-block }}
-        </aside>
-        {{/ sidebarRight }}
       </div>
     </div>
   </div>
- <!-- Region-after section -->
 </main>
 
 {{> organisms-footer-portal }}

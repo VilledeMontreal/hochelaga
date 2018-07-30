@@ -184,17 +184,31 @@
 //
 
 nav {
+  display: flex;
   position: relative;
 }
 
 .nav-tabs {
-  border-bottom: none;
-  display: flex;
-  flex-direction: column;
-  @extend .flex-md-row;
+  display: inline-block;
+  background-color: $white;
+  overflow-x: auto;
+  overflow-y: hidden;
+  white-space: nowrap;
+  text-align: center;
+  width: 100%;
+  /* Make an auto-hiding scroller for the 3 people using a IE */
+  -ms-overflow-style: -ms-autohiding-scrollbar;
+  /* For WebKit implementations, provide inertia scrolling */
+  -webkit-overflow-scrolling: touch;
+  /* Remove the default scrollbar for WebKit implementations */
+  &::-webkit-scrollbar {
+      display: none;
+  }
   .nav-item {
     margin-bottom: 0;
     padding-bottom: 0;
+    display: inline-block;
+    max-width: 300px;
     &.show {
       .nav-link {
         @extend .nav-link.active;
@@ -206,31 +220,19 @@ nav {
       }
     }
   }
-  @include media-breakpoint-up(md) {
-    justify-content: center;
-    .nav-item {
-      flex: 0 1 25%;
-      .nav-link {
-        margin-right: $nav-tabs-spacing;
-      }
-      &:last-of-type {
-        .nav-link {
-          margin: 0;
-        }
-      }
-    }
-  }
 }
 
-.nav-tabs,
-.nav-tabs-dropdown-menu {
+.nav-tabs {
   .nav-link {
-    background: $gray-sky;
     border: none;
-    color: $black;
+    color: $gray-700;
+    font-size: $font-size-md;
+    line-height: 1.42857142857;
     font-weight: $font-weight-bold;
     position: relative;
     text-align: center;
+    white-space: normal;
+    &:hover,
     &.active,
     &:focus {
       &:not(.disabled) {
@@ -239,23 +241,20 @@ nav {
         background-color: $white;
         &:before {
           content: " ";
-          width: 100%;
+          width: auto;
           height: $nav-tabs-active-border-width;
           background-color: $brand;
           position: absolute;
-          top: 0;
-          left: 0;
+          bottom: 0;
+          left: $nav-link-padding-x;
+          right: $nav-link-padding-x;
           display: block;
         }
       }
     }
     &.disabled {
-      background-color: $gray-sky;
-    }
-    &:not(.active) {
-      @include media-breakpoint-up(md) {
-        box-shadow: 0px -10px 10px -10px rgba(0, 0, 0, 0.3) inset;
-      }
+      //background-color: $gray-sky;
+      cursor: default;
     }
   }
 }
@@ -358,7 +357,7 @@ nav {
 /**
  * Step Wizard
  */
- .nav-wizard {
+.nav-wizard {
   background-color: $white;
   border-bottom: 1px solid $gray-400;
   display: flex;

@@ -25,75 +25,79 @@ html {
   }
 }
 
+// Sidebar
 .sidebar {
   > * {
     background-color: $gray-sky;
   }
-} // Sidebar
+}
 
-// Tweak grid container padding
-
-.container {
+// Grid container padding override
+.container,
+.container-fluid {
   padding-right: $grid-gutter-width;
   padding-left: $grid-gutter-width;
 }
 
-
-
-
-// Main header, always includes at least the page Title
-.region-content-header {
+// Main content header
+.content-header {
+  padding: 6rem 0 3.5rem 0;
+  .container-fluid {
+    max-width: 1600px;
+  }
   // Dark variant
   &.content-header-dark {
     background-color: $gray-900;
     color: $white;
-    h1,h2,h3,h4,h5,h6, {
+    h1,h2,h3,h4,h5,h6 {
       color: $white;
     }
   }
 
-  &.has-nav-tabs {
-    .content-header {
-      margin-bottom: 0;
-    }
-    margin-bottom: 6rem;
-  }
-
-  &.region-border {
-    border-bottom: 1px solid $gray-400;
-  }
-
-}
-.content-header {
-  width: 100%;
-
   &-title {
-    display: flex;
-    flex-wrap: wrap;
-    padding: 3rem 0;
-    h1, .h1 {
-      width: 100%;
+    padding-bottom: 2.5rem;
+    h1 {
+      font-size: 64px;
+      &:after {
+        content: "";
+        display: block;
+        height: .5rem;
+        width: 7.5rem;
+        margin-top: 2.5rem;
+        margin-bottom: 0;
+        margin-right: 10px;
+        background-color: $brand;
+      }
     }
+  }
+
+  &-metadata {
+    padding-bottom: 2.5rem;
+    .hub-link {
+      a {
+        border-bottom: none;
+        color: $gray-600;
+        font-size: $font-size-xl;
+        line-height: 1.3333;
+      }
+      @include media-breakpoint-up(md) {
+        display: flex;
+        flex-flow: row wrap;
+        justify-content: flex-end;
+      }
+    } 
   }
 
   .date-time {
-    display: flex;
-    align-self: center;
+    color: $gray-600;
+    font-size: $font-size-xl;
+    line-height: 1.3333;
   }
 
-  @include media-breakpoint-up(lg) {
-    &.has-image {
-      margin-top: -180px;
-    }
-    .header-title-overlap {
-      background-color: $white;
-    }
-  }
 }
 
 .region-content {
-  padding-top: 4rem;
-  padding-bottom: 4rem;
+  padding-bottom: 6rem;
 }
 
 // Swap the source order for the 3 column case
@@ -105,6 +109,17 @@ html {
 }
 .sidebar-right {
   order: 2;
+}
+
+// Medium breakpoint and above (768)
+@include media-breakpoint-up(md) {
+  // Reorder the source for medium + displays -- 3 columns override
+  .sidebar-left {
+    order: 0;
+  }
+  .sidebar-right {
+    order: 0;
+  }
 }
 
 // Generic section layouts
@@ -123,14 +138,13 @@ html {
   }
 }
 
-// Medium breakpoint and above (768)
-@include media-breakpoint-up(md) {
-  // Reorder the source for medium + displays -- 3 columns override
-  .sidebar-left {
-    order: 0;
-  }
-  .sidebar-right {
-    order: 0;
+// Lead container
+.lead-container {
+  padding-top: 4rem;
+  padding-bottom: 4rem;
+  margin-bottom: 4rem;
+  .lead:last-child {
+    margin-bottom: 0;
   }
 }
 

@@ -1,19 +1,9 @@
 <nav>
-  <ul class="nav nav-tabs d-none d-md-flex" role="tablist">
+  <ul class="nav nav-tabs" role="tablist">
     {{# navTabs.navItem }}
     <li class="nav-item" role="presentation">
       <a href="{{ url }}" class="nav-link {{ class }}" role="tab" data-toggle="tab">{{ title }}</a>
     </li>
     {{/ navTabs.navItem }}
   </ul>
-  <div >
-    <a href="#" class="nav-tabs-dropdown d-md-none active" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" id="dropdownNavTabs">Tabs</a>
-    <ul class="dropdown-menu nav-tabs-dropdown-menu d-md-none" aria-labelledby="dropdownNavTabs">
-      {{# navTabs.navItem }}
-      <li class="dropdown-item nav-item">
-        <a href="{{ url }}" class="nav-link {{ class }}">{{ title }}</a>
-      </li>
-      {{/ navTabs.navItem }}
-    </ul>
-  </div>
 </nav>

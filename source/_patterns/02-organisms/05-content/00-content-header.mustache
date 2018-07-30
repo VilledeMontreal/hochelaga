@@ -1,0 +1,30 @@
+<header class="content-header {{ headerContainerClasses }}">
+  <div class="container-fluid">
+    <div class="row">
+      <div class="col-12 col-lg-8">
+        <div class="content-header-title">
+          {{> atoms-heading-1 }}
+        </div>
+      </div>
+    </div>
+    
+    {{# has-header-meta}}
+    <div class="row content-header-metadata">
+       {{# has-publication-date }}
+      <div class="col-12 col-md-6">
+        {{> atoms-date-time-text }}
+      </div>
+      {{/ has-publication-date}}
+      {{# has-hub-link}}
+      <div class="col-12 col-md-6">
+        <div class="hub-link">
+          <a href="#">{{ link-to-hub }}</a>
+        </div>
+      {{/ has-hub-link}}
+    </div>
+    {{/ has-header-meta}}
+  </div>
+  {{# has-image}}
+    {{> atoms-header-image}}
+  {{/ has-image}}
+</header>
