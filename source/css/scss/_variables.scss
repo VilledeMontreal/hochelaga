@@ -188,32 +188,38 @@ $font-size-lg:                1.3125rem;  // ~21px
 $font-size-md:                0.875rem;   // ~14px
 $font-size-sm:                0.75rem;    // ~12px
 
+// Headings font-size and line-height are made responsive
+// @see type.scss
+// These values represent the largest font-size for those headings
 $h1-font-size:                $font-size-base * 3.25;       // 52px
-$h2-font-size:                $font-size-base * 2.8125;     // 45px
+$h2-font-size:                $font-size-base * 2.75;       // 44px
 $h3-font-size:                $font-size-base * 2.4375;     // 39px
 $h4-font-size:                $font-size-base * 2;          // 32px
 $h5-font-size:                $font-size-base * 1.625;      // 26px
 $h6-font-size:                $font-size-base * 1.1875;     // 19px
 
 $headings-margin-bottom:      1rem;
-$headings-font-weight:        $font-weight-regular;
+$headings-font-weight:        $font-weight-bold;
 $headings-line-height:        1.23; // specific line-height for each level, see mixins header
-$headings-color:              inherit !default;
+$headings-color:              $gray-900;
 
-$display1-size:               4.0625rem; //6rem;
-$display2-size:               3.6875rem; //5.5rem;
-$display3-size:               3.25rem;   //4.5rem;
-$display4-size:               2.8125rem; //3.5rem;
+// Headings font-size and line-height are made responsive
+// @see type.scss
+// These values represent the largest font-size for those headings
+$display1-size:               4.0625rem;  //65px;
+$display2-size:               4.0625rem;  //65px;
+$display3-size:               3.6875rem;  //59px;
+$display4-size:               3.25rem;    //52px;
 
-$display1-weight:             300;
-$display2-weight:             300;
-$display3-weight:             300;
-$display4-weight:             300;
+$display1-weight:             700;
+$display2-weight:             400;
+$display3-weight:             400;
+$display4-weight:             400;
 
 // Display line-height are dealt directly in the class because it's specific to each display 
 $display-line-height:         $headings-line-height;
 
-$lead-font-size:              $font-size-lg;     // 21px
+$lead-font-size:              1.6875rem;     // 27px
 $lead-line-height:            get-line-height($lead-font-size, 32px);    // 32px
 $lead-font-weight:            $font-weight-regular;
 
@@ -230,11 +236,11 @@ $vdm-icon-font-family : 'vdm';
 
 // Navs
 
-$nav-link-padding-y:                1rem;
+$nav-link-padding-y:                1.5rem;
 $nav-link-padding-x:                2rem;
 
-$nav-tabs-border-color:             $white;
-$nav-tabs-border-width:             0;
+$nav-tabs-border-color:             $gray-300;
+$nav-tabs-border-width:             1px;
 $nav-tabs-border-radius:            0;
 $nav-tabs-link-hover-border-color:  $brand;
 $nav-tabs-link-active-color:        $black;
@@ -282,16 +288,27 @@ $pagination-disabled-color:         $gray-400;
 $pagination-disabled-bg:            $white;
 $pagination-disabled-border-color:  $gray-400;
 
-// Breadcrumbs
-
-$breadcrumb-item-padding:           1.25rem;
-$breadcrumb-bg:                     $white;
-$breadcrumb-active-color:           $black;
 
 // Figures
 
 $figure-caption-font-size:          90%;
 $figure-caption-color:              $gray-ink;
+
+
+// Breadcrumbs
+
+$breadcrumb-padding-y:              .75rem;
+$breadcrumb-padding-x:              0;
+$breadcrumb-item-padding:           1rem;
+
+$breadcrumb-margin-bottom:          1rem;
+
+$breadcrumb-bg:                     $white;
+$breadcrumb-divider-color:          $gray-700;
+$breadcrumb-active-color:           $gray-700;
+$breadcrumb-divider:                quote(">");
+
+$breadcrumb-border-radius:          0;
 
 
 // Jumbotron

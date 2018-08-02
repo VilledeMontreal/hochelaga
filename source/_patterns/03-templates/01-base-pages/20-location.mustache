@@ -1,12 +1,17 @@
 {{> atoms-link-skip-to-main-content }}
 {{> organisms-header-portal }}
-{{> molecules-breadcrumb }}
+
 <main class="main-content {{ pageClasses }}" id="main-content" aria-label="Main Content">
 
-  {{> organisms-content-header-portal }}
+  {{> organisms-content-header }}
 
-  <div class="region {{ regionMainClasses }}">
-    <div class="container {{ regionMainContainerClasses }}">
+  <!-- Teaser -->
+  {{# has-lead-text }}
+  {{> molecules-lead }}
+  {{/ has-lead-text }}
+
+  <div class="region-content {{ regionMainClasses }}">
+    <div class="container">
       <div class="row">
         <div class="col-12 col-lg-8">
           <!--  Services -->
@@ -112,7 +117,6 @@
       </div>
     </div>
   </div>
- <!-- Region-after section -->
 </main>
 
 {{> organisms-footer-portal }}

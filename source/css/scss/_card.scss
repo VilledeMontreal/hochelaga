@@ -45,6 +45,26 @@
     font-weight: $font-weight-bold;
   }
 
+  .card-link {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    border-bottom: none;
+    font-size: 1.125rem;
+    color: $sarcelle;
+    @include transition(color .15s ease-in-out);
+    .vdm {
+      font-size: 3rem;
+      margin-left: 1rem;
+      color: inherit;
+    }
+
+    &:hover {
+      color: $sarcelle-surprise;
+
+    }
+  }
+
   .card-body {
     padding: 2rem 2rem 2rem 2rem;
     align-self: center;
@@ -273,7 +293,7 @@
     text-align: left;
   }
   .card-label {
-    font-size: $lead-font-size;
+    font-size: $font-size-lg;
     font-weight: $font-weight-bold;
     &.card-label-normal {
       font-weight: $font-weight-normal;
@@ -282,6 +302,10 @@
 
   + .card-section {
     border-top: 1px solid $gray-500;
+  }
+
+  .table {
+    margin-bottom: 0;
   }
 
   @include media-breakpoint-up(lg) {
@@ -300,7 +324,7 @@
     }
   }
   .alert-heading {
-    font-size: $lead-font-size;
+    font-size: $font-size-lg;
     font-weight: $font-weight-bold;
     color: inherit;
     margin-bottom: 0;

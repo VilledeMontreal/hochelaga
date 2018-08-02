@@ -1,71 +1,118 @@
-mark,
-.mark {
-  color: $mark-color;
-}
-
-
-//
 // Headings
 //
+// Headings are responsive
+// @see responsive-font-size mixin
 
 h1, .h1 {
-  @include heading(1);
-  &.strong {
-    @include heading(1, "bold");
+  @include responsive-font-size($h1-font-size, .75, 48px);
+  // 576px and up
+  @include media-breakpoint-up(sm) {
+    @include responsive-font-size($h1-font-size, .85, 56px);
+  }
+  // 768px and up
+  @include media-breakpoint-up(md) {
+    @include responsive-font-size($h1-font-size, 1, 64px);
   }
 }
 h2, .h2 {
-  @include heading(2);
-  &.strong {
-    @include heading(2, "bold");
+  @include responsive-font-size($h2-font-size, .81, 48px);
+  // 576px and up
+  @include media-breakpoint-up(sm) {
+    @include responsive-font-size($h2-font-size, .88, 48px);
+  }
+  // 768px and up
+  @include media-breakpoint-up(md) {
+    @include responsive-font-size($h2-font-size, 1, 56px);
   }
 }
 h3, .h3 {
-  @include heading(3);
-  &.strong {
-    @include heading(3, "bold");
+  @include responsive-font-size($h3-font-size, .82, 40px);
+  // 576px and up
+  @include media-breakpoint-up(sm) {
+    @include responsive-font-size($h3-font-size, .92, 48px);
+  }
+  // 768px and up
+  @include media-breakpoint-up(md) {
+    @include responsive-font-size($h3-font-size, 1, 48px);
   }
 }
 h4, .h4 {
-  @include heading(4);
-  &.strong {
-    @include heading(4, "bold");
+  @include responsive-font-size($h4-font-size, .84375, 32px);
+  // 576px and up
+  @include media-breakpoint-up(sm) {
+    @include responsive-font-size($h4-font-size, 1, 40px);
   }
 }
 h5, .h5 {
-  @include heading(5);
-  &.strong {
-    @include heading(5, "bold");
+  @include responsive-font-size($h5-font-size, .92, 32px);
+  // 576px and up
+  @include media-breakpoint-up(sm) {
+    @include responsive-font-size($h5-font-size, 1, 32px);
   }
 }
 h6, .h6 {
-  @include heading(6);
-  &.strong {
-    @include heading(6, "bold");
+  @include responsive-font-size($h6-font-size, 1, 24px);
+}
+
+// Display headings
+//
+// Display headings are responsive
+// @see responsive-font-size mixin
+
+.display-1,
+.display-2 {
+  @include responsive-font-size($display1-size, .6, 48px);
+  // 576px and up
+  @include media-breakpoint-up(sm) {
+    @include responsive-font-size($display1-size, .8, 64px);
+  }
+  // 768px and up
+  @include media-breakpoint-up(md) {
+    @include responsive-font-size($display1-size, 1, 80px);
   }
 }
 
-// Type display classes
-.display-1 {
-  line-height: get-line-height($display1-size, 80px);
-}
-.display-2 {
-  line-height: get-line-height($display2-size, 72px);
-}
 .display-3 {
-  line-height: get-line-height($display3-size, 64px);
+  @include responsive-font-size($display3-size, .615, 48px);
+  // 576px and up
+  @include media-breakpoint-up(sm) {
+    @include responsive-font-size($display3-size, .815, 56px);
+  }
+  // 768px and up
+  @include media-breakpoint-up(md) {
+    @include responsive-font-size($display3-size, 1, 72px);
+  }
 }
 .display-4 {
-  line-height: get-line-height($display4-size, 56px);
+  @include responsive-font-size($display4-size, .65, 40px);
+  // 576px and up
+  @include media-breakpoint-up(sm) {
+    @include responsive-font-size($display4-size, .85, 56px);
+  }
+  // 768px and up
+  @include media-breakpoint-up(md) {
+    @include responsive-font-size($display4-size, 1, 64px);
+  }
 }
 
+// Lead
+//
+// Lead font-size are responsive
+
 .lead {
-  font-size: $lead-font-size;
+  @include responsive-font-size($lead-font-size, .7, 24px);
   font-weight: $lead-font-weight;
-  line-height: $lead-line-height;
   margin-bottom: 2.5rem;
   > :last-child {
     margin-bottom: 0;
+  }
+  // 576px and up
+  @include media-breakpoint-up(sm) {
+    @include responsive-font-size($lead-font-size, .9, 32px);
+  }
+  // 992px and up
+  @include media-breakpoint-up(md) {
+    @include responsive-font-size($lead-font-size, 1, 32px);
   }
 }
 
@@ -87,6 +134,11 @@ em {
 
 b, strong {
   font-weight: $font-weight-bold;
+}
+
+mark,
+.mark {
+  color: $mark-color;
 }
 
 // Links - generic
@@ -437,6 +489,38 @@ dl {
 .table-dark {
   thead th {
     color: $table-dark-color;
+  }
+}
+
+// sarcelle variant
+.table-sarcelle {
+
+  thead {
+    th {
+      background-color: $sarcelle-light;
+      border: none;
+    }
+  }
+
+  &.table-bordered {
+    border: 0;
+  }
+
+  &.table-striped {
+    td {
+      border: none;
+    }
+    tbody tr:nth-of-type(odd) {
+      background-color: $sarcelle-lightest;
+    }
+  }
+
+  &.table-hover {
+    tbody tr {
+      @include hover {
+        background-color: $sarcelle-lightest;
+      }
+    }
   }
 }
 

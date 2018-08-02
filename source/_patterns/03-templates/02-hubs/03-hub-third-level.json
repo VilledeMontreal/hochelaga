@@ -9,7 +9,7 @@
   "sidebarRight" : true,
   "sidebarLeft" : false,
   "sidebarRightClass": "col-lg-4 offset-lg-1",
-  "has-lead-text" : true,
+  "has-lead-text" : false,
   "hasPagination": true,
   "featuredSection": {
     "cards": {
@@ -37,6 +37,24 @@
           "card-media" : {
             "icon" : "vdm-040-permis-generique"
           }
+        }
+      ]
+    }
+  },
+  "third-level-section": {
+    "items": {
+      "heading": "First heading",
+      "subheading": "Sub-heading",
+      "item": [
+        {
+          "url": "#",
+          "title": "Link 1",
+          "description": "<p>Description link 1</p>"
+        },
+        {
+          "url": "#",
+          "title": "Link 2",
+          "description": "<p>Description link 2</p>"
         }
       ]
     }

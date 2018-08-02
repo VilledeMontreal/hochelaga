@@ -9,10 +9,10 @@
 // @arg $level - integrer [1-6]
 // @arg $weight - string ['light','regular','bold']
 @mixin heading($level: 1, $weight: "regular", $display: block) {
-  color: $headings-color;
-  font-family: $font-family-base;
-  font-weight: $headings-font-weight;
-  display: $display;
+  // color: $headings-color;
+  //font-family: $font-family-base;
+  //font-weight: $headings-font-weight;
+  //display: $display;
 
   @if $level == 1 {
     font-size: $h1-font-size;                             // 52px
@@ -43,13 +43,24 @@
     font-weight: $font-weight-bold;
   }
 }
-/*
-@mixin font-size($font-size: $font-size-lg, $line-height: $line-height-sm, font-weight: $font-weight-normal) {
-  font-size: $font-size;
-  font-weight: $font-weight;
-  line-height: $line-height;
+
+// Responsive headings
+// @arg $font-size - rem
+// @arg $multiplier - integer
+// @arg $line-height - px
+
+@mixin responsive-font-size($font-size, $multiplier, $line-height) {
+
+  $heading-multiplier: check-multiplier-value($multiplier);
+  $font-size: $font-size * $heading-multiplier;
+  $font-size-px: rem-to-px($font-size);
+  $font-size-rem: px-to-rem($font-size-px);
+
+  // Generate font-size and line-height
+  font-size: $font-size-rem;
+  line-height: get-line-height($font-size-px, $line-height);
+
 }
-*/
 
 // Card heading
 @mixin card-heading($font-size: $font-size-xl, $line-height: get-line-height($font-size-xl,32px), $font-weight: $font-weight-regular, $color: $headings-color, $display: block) {
