@@ -1,11 +1,15 @@
 {
   "pageClasses": "how-to",
-  "regionMainClasses": "",
+  "regionMainClasses": "pt-8",
   "regionMainContainerClasses": "",
   "regionMainContentClasses": "",
-  "headerContainerClasses": "content-header-dark",
-  "regionAfterClasses" : "page-section bg-gray-sky",
-  "leadContainerClasses": "mb-0",
+  "contentHeaderClasses": "content-header-dark",
+  "has-header-meta": true,
+  "has-publication-date": true,
+  "has-hub-link": true,
+  "date-time-text": "Mis à jour le 24 mai 2018",
+  "hub-link-text": "Toutes les démarches",
+  "leadContainerClasses": "",
   "has-lead-text": true,
   "has-nav-tabs": true,
   "searchBox": true,
@@ -82,5 +86,53 @@
     {
       "link-label": "Link box item #5"
     }
-  ]
+  ],
+  "tarifs": {
+    "cards": {
+      "section-classes": "bg-gray-sky",
+      "classes": false,
+      "bsgrid-classes": "col-12",
+      "card-item": [
+        {
+          "classes": "card-fw card-tarif",
+          "url": false,
+          "card-label-1": "Permis animal pour chat",
+          "card-item-1": "Valide pour 1 an sur tout le territoire de la Ville de Montréal",
+          "card-link": false,
+          "card-teaser-tarif": false,
+          "card-table-tarif": true,
+          "table": {
+            "caption": "",
+            "tableClass": "table-sarcelle table-striped table-responsive-md",
+            "thead": {
+              "theadClass": "",
+              "th": [
+                { "title": "Information additionnelle sur le permis" },
+                { "title": "Prix de base" },
+                { "title": "Prix pour chat micropucé" }
+              ]
+            },
+            "tbody": {
+              "tr": [
+                {
+                  "td": [
+                    { "text": "Votre chat est stérilisé" },
+                    { "text": "12 $" },
+                    { "text": "5 $" }
+                  ]
+                },
+                {
+                  "td": [
+                    { "text": "Votre chat n’est PAS stérilisé" },
+                    { "text": "32 $" },
+                    { "text": "25 $" }
+                  ]
+                }
+              ]
+            }
+          }
+        }
+      ]
+    }
+  }
 }

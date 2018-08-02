@@ -3,14 +3,14 @@
 
 <main class="main-content {{ pageClasses }}" id="main-content" aria-label="Main Content">
 
-  {{> organisms-content-header-portal }}
+  {{> organisms-content-header }}
 
   {{# featuredSection}}
     {{> molecules-card }}
   {{/ featuredSection}}
 
   <section class="page-section bg-gray-sky">
-    <div class="container {{ regionMainContainerClasses }}">
+    <div class="container">
       {{# demandesListes }}
       <div class="row">
         {{# cards.headings }}
