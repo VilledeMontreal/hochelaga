@@ -2,10 +2,15 @@
 // Reference used : https://projects.invisionapp.com/d/main#/console/11533069/245898997/inspect
 .breadcrumb {
   border-radius: 0;
-  font-size: $font-size-sm;
+  font-size: 1.125rem;
   margin-bottom: 0;
   a {
     border: none;
+    color: $gray-700;
+    @include transition(color .15s ease-in-out);
+    &:hover {
+      color: $sarcelle-surprise;
+    }
   }
 }
 
@@ -462,6 +467,10 @@ nav {
       cursor: default;
     }
   }
+  // override nav-link padding
+  .nav-link {
+    padding: 1rem 2rem;
+  }
   //larger than 768px
   @include media-breakpoint-up(sm) {
     display: flex;
@@ -476,6 +485,7 @@ nav {
     li {
       &:after {
         height: 1px;
+        // bottom is $nav-link-padding-y + half of circle height (1rem/2)
         bottom: 1.5rem;
         width: 100%;
       }
@@ -527,6 +537,11 @@ nav {
   border-bottom: 1px solid $gray-200;
   min-height: 75px;
 
+  .container-fluid {
+    padding-left: .5rem;
+    padding-right: .5rem;
+  }
+
   .navbar-brand,
   .navbar-link {
     color: $headings-color;
@@ -551,9 +566,11 @@ nav {
     display: flex;
     flex-direction: row;
     align-items: center;
+    /* 
     @include media-breakpoint-up(md) {
       margin-left: $header-icon-width;
     }
+    */
     &.navbar-header-service-link {
       .navbar-brand {
         font-size: ($font-size-base * 1.125);  // 18px

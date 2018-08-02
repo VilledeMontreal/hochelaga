@@ -1,5 +1,9 @@
-// Anything that is a top level sidebar in the layout.
-// See also base definition in the layout.scss document.
+// Sidebar
+.sidebar {
+  > * {
+    background-color: $gray-sky;
+  }
+}
 .sidebar {
   // Links in sidebars
   a {

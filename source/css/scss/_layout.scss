@@ -25,13 +25,6 @@ html {
   }
 }
 
-// Sidebar
-.sidebar {
-  > * {
-    background-color: $gray-sky;
-  }
-}
-
 // Grid container padding override
 .container,
 .container-fluid {
@@ -41,15 +34,18 @@ html {
 
 // Main content header
 .content-header {
-  padding: 6rem 0 3.5rem 0;
+  padding-top: 6rem;
   .container-fluid {
     max-width: 1600px;
   }
   // Dark variant
   &.content-header-dark {
-    background-color: $gray-900;
+    background-color: $gray-700;
     color: $white;
     h1,h2,h3,h4,h5,h6 {
+      color: $white;
+    }
+    .hub-link a {
       color: $white;
     }
   }
@@ -57,7 +53,6 @@ html {
   &-title {
     padding-bottom: 2.5rem;
     h1 {
-      font-size: 64px;
       &:after {
         content: "";
         display: block;
@@ -73,31 +68,57 @@ html {
 
   &-metadata {
     padding-bottom: 2.5rem;
+    color: $gray-600;
+    .date-time {
+      font-size: 1.125rem;
+      line-height: 1.3333;
+    }
     .hub-link {
       a {
         border-bottom: none;
-        color: $gray-600;
-        font-size: $font-size-xl;
+        color: $gray-700;
+        font-size:  1.125rem;
         line-height: 1.3333;
+        @include transition(color .15s ease-in-out);
+        &:hover {
+          color: $sarcelle-surprise;
+        }
       }
-      @include media-breakpoint-up(md) {
+    }
+    // 576px and up
+    @include media-breakpoint-up(sm) {
+      .hub-link {
         display: flex;
         flex-flow: row wrap;
         justify-content: flex-end;
       }
-    } 
+    }
+    // 768 px and up
+    @include media-breakpoint-up(md) {
+      .date-time, 
+      .hub-link a {
+        font-size: $font-size-xl;
+        line-height: 1.3333;
+      }
+    }
+    @include media-breakpoint-down(xs){
+      padding-bottom: 0;
+      > div + div {
+        margin-top: .5rem;
+      }
+    }
   }
 
-  .date-time {
-    color: $gray-600;
-    font-size: $font-size-xl;
-    line-height: 1.3333;
-  }
+
 
 }
 
 .region-content {
-  padding-bottom: 6rem;
+  padding-bottom: 4rem;
+
+  img {
+    padding-bottom: 2rem;
+  }
 }
 
 // Swap the source order for the 3 column case
@@ -142,7 +163,6 @@ html {
 .lead-container {
   padding-top: 4rem;
   padding-bottom: 4rem;
-  margin-bottom: 4rem;
   .lead:last-child {
     margin-bottom: 0;
   }
