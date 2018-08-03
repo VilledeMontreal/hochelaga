@@ -40,16 +40,43 @@
     </div>
   </div>
 
-  <section class="page-section {{ regionAfterClasses }} bg-gray-sky text-center">
+  {{# cards-tarification}}
+  <section class="page-section {{ regionAfterClasses }} bg-gray-sky">
     <div class="container">
       <div class="row">
-        <div class="col-12">
+        <div class="col-12 text-center">
           <h2 class="section-heading">Tarification</h2>
-          <p>TO DO: Create a card variant for tarification and add placeholder content here.</p>
         </div>
+      </div>
+      <div class="row cards">
+        {{# cards.card-item }}
+        <div class="{{ cards.bsgrid-classes }}">
+          {{> molecules-card-item-tarif}}
+        </div>
+        {{/ cards.card-item }}
       </div>
     </div>
   </section>
+  {{/ cards-tarification}}
+
+  {{# cards-suggested-content}}
+  <section class="page-section {{ regionAfterClasses }} bg-gray-sky">
+    <div class="container">
+      <div class="row">
+        <div class="col-12 text-center">
+          <h2 class="section-heading">Contenus complémentaires suggérés</h2>
+        </div>
+      </div>
+      <div class="row cards">
+        {{# cards.card-item }}
+        <div class="{{ cards.bsgrid-classes }}">
+          {{> molecules-card-item}}
+        </div>
+        {{/ cards.card-item }}
+      </div>
+    </div>
+  </section>
+  {{/ cards-suggested-content}}
 
 </main>
 
