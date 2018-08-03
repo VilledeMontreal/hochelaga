@@ -117,7 +117,6 @@ h6, .h6 {
 }
 
 // Font weight - generic
-
 .regular {
   font-weight: $font-weight-regular;
 }
@@ -320,35 +319,41 @@ ol {
   }
 }
 
-// Social media
-// Move this block with other listss (numbered, date, etc)
+// Social media list
+//
 .social-media-list {
   margin: 0;
   padding: 0;
   list-style-type: none;
-  li { // give this a class
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  li {
     margin: 0;
-    padding: 0 0.65rem 0 0;
-    display: inline-block;
+    padding: 0 .65rem 0 0;
+    flex: 0;
+    flex-wrap: wrap;
     &:last-of-type {
       margin: 0;
+      padding-right: 0;
     }
-    a { // give this a class
+    a {
       border: none;
       color: $black;
       display: flex;
       align-items: center;
       text-decoration: none;
+      cursor: pointer;
       &:hover,
       &:active {
-        color: $black;
-        cursor: pointer;
+        color: $sarcelle-surprise;
+        .vdm {
+          color: inherit;
+        }
       }
       .vdm {
-        &:before {
-          font-size: 2em;
-        }
-        padding-right: 0.5rem;
+        font-size: 2rem;
+        padding-right: .5rem;
       }
       .label {
         &:hover,
