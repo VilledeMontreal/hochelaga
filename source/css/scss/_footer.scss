@@ -3,225 +3,106 @@
  */
 footer {
   &.footer {
-    background-color: $brand;
-    color: $white;
-    padding-top: 3rem;
-    padding-bottom: 1.5rem;
+    background-color: $sarcelle-light;
+    color: $gray-900;
+    padding-top: 4rem;
+    padding-bottom: 2rem;
 
     // Links
     a {
       border: none;
-      color: $white;
-      &:before,
-      &:after {
-        color: $white;
-      }
+      color: $gray-700;
       &:hover,
       &:active {
-        color: $white;
-        text-decoration: underline;
-        &:before,
-        &:after {
-          color: $white;
-        }
+        color: $sarcelle-surprise;
+        text-decoration: none;
       }
     }
-    // List items
+
     ul {
-      margin: 0;
-      padding: 0;
-      list-style-type: none;
-      > li {
-        margin: 0;
-        padding: 0;
-        a {
-          display: block;
+      margin-bottom: 0;
+    }
+
+    .social-media-list {
+      justify-content: center;
+      li a {
+        .vdm {
+          font-size: 1.5rem;
+          padding: 0;
         }
       }
     }
 
-    .main {
-      @include make-row();
-      padding-bottom: 2rem;
-
-      // 311 block
-      .featured {
-        @include make-col-ready();
-        @include make-col(12);
-        order: 2;
-        display: flex;
-
-        .icon-text {
-          font-size: 4rem;
-          padding-right: 1rem;
-          line-height: 1;
-        }
-        .text {
-          align-self: center;
-          font-size: 1.3125rem;
-          line-height: 1.3;
-          width: 6rem;
-        }
-      }
-
-      // Links laid out on 3 columns;
-      .footer-links {
-        @include make-col-ready();
-        @include make-col(12);
-        margin-bottom: 3rem;
-        > li {
-          margin-bottom: 0.3rem;
-          > a {
-            @include icon-block-link($size:2.5em);
-            .label {
-              display: none;
-            }
-          }
-        }
-      } // ul
-
-      .social-media-list {
-        order: 3;
-        @include make-col-ready();
-        @include make-col(12);
-        margin-top: 3rem;
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
-        flex-wrap: wrap;
-        li {
-          @include make-col(6);
-          margin-bottom: 1rem;
-        }
-
-        a {
-          display: flex;
-          align-items: center;
-          color: $white;
-          .vdm {
-            color: $white;
-          }
-          &:hover {
-            text-decoration: none;
-            .label {
-              text-decoration: underline;
-            }
-          }
-        }
-      }
-    } // Main wrapper
-
-    // Second section of the footer : under the white line;
-    .sub {
-      @include make-row();
+    .btn-lang {
+      @include button-reset();
+      border: 1px solid $gray-700;
+      border-radius: 2px;
+      cursor: pointer;
       font-size: $font-size-sm;
-      &::before {
-        content: "";
-        background-color: $white;
-        margin: 0 $grid-gutter-width/2 .5rem $grid-gutter-width/2;
-        height: 4px;
-        width: 100%;
-      }
+      line-height: 1.16666666667;
+      padding: .75rem 3.5rem;
+    }
 
-      .first {
-        @include make-col-ready();
-        @include make-col(12);
-        order: 1;
+    .legal-links {
+      font-size: $font-size-sm;
+      line-height: 1.16666666667;
+      li {
+        padding-bottom: 0;
       }
-      .last {
-        @include make-col-ready();
-        @include make-col(12);
-        order: 0;
+    }
 
-        .sub-footer-links {
-          margin-bottom: .5rem;
-          > li {
-            display: inline-block;
-            position: relative;
-            padding: 0 1em;
-            &:before {
-              content: "";
-              width: 1px;
-              height: 70%;
-              background: $white;
-              position: absolute;
-              left: 0;
-              top: 50%;
-              transform: translateY(-50%);
-            }
-            &:first-of-type {
-              padding-left: 0;
-              border: 0;
-              &:before {
-                display: none;
-              }
-            }
-            &:last-of-type {
-              padding-right: 0;
-            }
-          }
-        } // ul
-      }
-    } // Secondary wrapper, sub-footer section
+    .copyright {
+      font-size: 0.625rem;
+      line-height: 1.4;
+    }
+    .footer-sub {
+      margin-bottom: 1.5rem;
+    }
+    .footer-section {
+      border-top: 2px solid $gray-900;
+      padding-top: .875rem;
+    }
 
-    @include media-breakpoint-up(sm) {
-      .main {
-        .featured {
-          order: 1;
-          flex-wrap: wrap;
-        }
-        .footer-links{
-          @include n-columns("li", 50%, 0, false, 2);
-        }
-        .social-media-list {
-          li {
-            @include make-col(4);
-          }
-        }
-      }
-    } // sm-up
+    .col-footer-sub {
+      text-align: center;
+      align-self: center;
+      justify-content: center;
+    }
 
-    @include media-breakpoint-up(md) {
-      .main {
-        .footer-links{
-          @include n-columns("li", 33%, 0, false, 3);
+    .col-footer-copyright {
+      text-align: center;
+    }
+
+    // md-up
+    @include media-breakpoint-down(md) {
+      .col-footer-sub {
+        &:first-child {
+          margin-bottom: 1.5rem;
         }
-        .social-media-list {
-          li {
-            flex: 0;
-            margin-bottom: 0;
-          }
+        &:nth-child(2) {
+          margin-bottom: 2.5rem;
         }
-      }
-      .sub {
-        .first {
-          @include make-col-ready();
-          @include make-col(6);
-          order: 0;
-        }
-        .last {
-          @include make-col-ready();
-          @include make-col(6);
-          text-align: right;
-          order: 1;
-          .sub-footer-links {
-            margin-bottom: 0;
-          }
-        }
-      }
-    } // md-up
-    @include media-breakpoint-up(lg) {
-      .main {
-        .featured {
-          @include make-col(4);
-          order: 0;
-        }
-        .footer-links {
-          @include make-col(8);
+        &:last-child {
           margin-bottom: 0;
         }
       }
+
+    } 
+    // lg-up
+    @include media-breakpoint-up(lg) {
+      .col-lg-text-center {
+        text-align: center;
+      }
+      .col-lg-text-right {
+        text-align: right;
+      }
+      .col-lg-text-left {
+        text-align: left;
+      }
+
+      .footer-section {
+        padding-top: 1.5rem;
+      }
     }
   }
-} // Footer
-
+}

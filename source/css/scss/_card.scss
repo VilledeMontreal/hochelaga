@@ -16,14 +16,17 @@
   }
 
   .card-tags {
-    color: $primary;
     display: inline-block;
-    font-weight: $font-weight-bold;
     margin-bottom: 1rem;
-    &:before {
-      @include circle($size: .75rem, $background-color: $primary);
-      display: inline-block;
-      margin-right: 0.5rem;
+
+    &.primary-tags {
+      color: $primary;
+      font-weight: $font-weight-bold;
+      &:before {
+        @include circle($size: .75rem, $background-color: $primary);
+        display: inline-block;
+        margin-right: 0.5rem;
+      }
     }
   }
 
