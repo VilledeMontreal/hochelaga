@@ -165,6 +165,11 @@ $mark-color:                  $gray-900;
 $component-active-color:      $white;
 $component-active-bg:         theme-color("primary");
 
+
+// Generic value for backdrop bg and opacity
+$backdrop-bg:                 $gray-800;
+$backdrop-opacity:            .3;
+
 // Fonts
 //
 // Font, line-height, and color for body text, headings, and more.
@@ -501,11 +506,38 @@ $dropdown-item-padding-x:           2.5rem;
 
 $dropdown-header-color:             $gray-600;
 
-// Modal
 
-//$modal-lg:                          800px;
+// Modals
+
+// Padding applied to the modal body
+$modal-inner-padding:               1rem;
+
+$modal-dialog-margin:               .5rem;
+$modal-dialog-margin-y-sm-up:       1.75rem;
+
+$modal-title-line-height:           $line-height-base;
+
+$modal-content-bg:                  $white;
+$modal-content-border-color:        rgba($black, .2);
+$modal-content-border-width:        0;
+$modal-content-border-radius:       0;
+$modal-content-box-shadow-xs:       0 .25rem .5rem rgba($black, .5);
+$modal-content-box-shadow-sm-up:    0 .5rem 1rem rgba($black, .5);
+
+// must be the same as $menu backdrop-bg and opacity
+$modal-backdrop-bg:                 $backdrop-bg;
+$modal-backdrop-opacity:            $backdrop-opacity;
+$modal-header-border-color:         $gray-200;
+$modal-footer-border-color:         $modal-header-border-color;
+$modal-header-border-width:         $modal-content-border-width;
+$modal-footer-border-width:         $modal-header-border-width;
+$modal-header-padding:              1rem;
+
+$modal-lg:                          800px;
 $modal-md:                          600px;
-//$modal-sm:                          300px;
+$modal-sm:                          300px;
+
+$modal-transition:                  transform .3s ease-out;
 
 
 //

@@ -1,0 +1,166 @@
+.modal {
+
+  .modal-header {
+    padding: 1.5rem;
+    .btn-close {
+      position: absolute;
+      top: 0;
+      right: 0;
+      margin: auto;
+      z-index: $zindex-modal + 1;
+      .vdm {
+        color: $gray-900;
+        font-size: 1.5rem;
+      }
+    }
+  }
+
+  // prevent modal-body to grow and push footer to the bottom
+  .modal-body {
+    flex-grow: 0;
+    padding: .5rem 1.5rem 2rem 1.5rem;
+    > :last-child {
+      margin-bottom: 0;
+    }
+  }
+
+  .modal-footer {
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding: 1rem 1.5rem 2rem 1.5rem;
+  }
+
+  // Full screen modal on 767px and under
+  @include media-breakpoint-down(sm) {
+    .modal-dialog {
+      min-width: 100%;
+      margin: 0;
+    }
+  
+    .modal-content {
+      min-height: 100vh;
+    }
+    .modal-footer {
+      justify-content: center;
+      > button {
+        margin-bottom: 1rem;
+      }
+    }
+  }
+}
+
+// Modal icon variant
+//
+.modal {
+  &.modal-icon {
+    .modal-header,
+    .modal-body {
+      text-align: center;
+    }
+    .modal-header {
+      .vdm {
+        font-size: 4em;
+      }
+      .btn-close {
+        .vdm {
+          color: $gray-900;
+          font-size: 1.5rem;
+        }
+      }
+    }
+  }
+}
+
+// Modal alert variant
+//
+.modal {
+
+  &.modal-alert {
+    .modal-header {
+      background-color: $danger;
+      text-align: center;
+      .vdm {
+        color: $white;
+        font-size: 4rem;
+      }
+      .btn-close {
+        .vdm {
+          color: $gray-900;
+          font-size: 1.5rem;
+        }
+      }
+    }
+
+    .modal-content {
+      border-radius: 0;
+      text-align: center;
+    }
+
+    .modal-body {
+      padding: 3rem 2rem;
+      color: $gray-ink;
+      .date-time {
+        color: $gray-700;
+        font-size: .875rem;
+        line-height: get-line-height(14px, 16px);
+        font-weight: bold;
+        margin-bottom: 2rem;
+      }
+      .modal-title {
+        margin-bottom: 1.5rem;
+      }
+    }
+
+    .modal-footer {
+      padding: 0 2rem 3rem 2rem;
+    }
+    // Full screen modal on 767px and under
+    @include media-breakpoint-down(sm) {
+      .modal-dialog {
+        min-width: 100%;
+        margin: 0;
+      }
+    
+      .modal-content {
+        min-height: 100vh;
+      }
+
+      .modal-header {
+        // btn-close is white on small device for this variant
+        .btn-close {
+          .vdm {
+            color: $white;
+          }
+        }
+      }
+
+      .modal-body {
+        padding: 2rem;
+      }
+
+    }
+
+    // Switch header to side on 768px and up
+    // Specific to modal alert
+    @include media-breakpoint-up(md) {
+      .modal-header {
+        padding-left: 2.5rem;
+        padding-right: 2.5rem;
+        .vdm {
+          font-size: 5rem;
+        }
+      }
+      .modal-content {
+        text-align: left;
+        flex-direction: row;
+        min-height:  300px;
+      }
+
+      .modal-footer {
+        justify-content: flex-start;
+      }
+    }
+  }
+}
+
+// Modal 
