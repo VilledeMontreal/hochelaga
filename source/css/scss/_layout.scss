@@ -419,7 +419,7 @@ html {
   right: 0;
   bottom: 0;
   cursor: pointer;
-  background-color: $gray-800;
-  opacity: 0.3;
+  background-color: $backdrop-bg;
+  opacity: $backdrop-opacity;
   z-index: 1020;
 }
