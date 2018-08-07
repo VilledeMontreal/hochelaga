@@ -30,6 +30,15 @@
     padding: 1rem 1.5rem 2rem 1.5rem;
   }
 
+  .modal-footer-logo {
+    margin-top: auto;
+    margin-bottom: 2rem;
+    img {
+      height: 1.5rem;
+      width: auto;
+    }
+  }
+
   // Full screen modal on 767px and under
   @include media-breakpoint-down(sm) {
     .modal-dialog {
@@ -44,6 +53,14 @@
       justify-content: center;
       > button {
         margin-bottom: 1rem;
+      }
+    }
+  }
+  // 576px and up
+  @include media-breakpoint-up(sm) {
+    .modal-footer-logo {
+      img {
+        height: 2rem;
       }
     }
   }
