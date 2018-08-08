@@ -5,15 +5,23 @@ The format is based on [Keep a Changelog](http://keepachangelog.com/en/1.0.0/)
 and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.html).
 
 
-## Unreleased
+## Unreleased [1.0.0]
 
 ## Added
 - .btn-quit a quit button with icon on the right
+- Added 2 variants for modals: .modal-alert and .modal-icon with static and live examples.
+- Added 2 new card variants for tarification (teaser and table).
+- Added responsive values for all headings, display-headings and lead.
+- Added new template for Page sujet.
 
 ## Changed
 - Changed Wizard header styling
-- Minor changes to wizard steps: solved responsive issues and theming upgrades
-
+- Minor changes to wizard steps: solved responsive issues and theming upgrades. 
+- Minor changes to default modal styles.
+- Changed some display-headings and lead values.
+- Refactoring of content headers. Simplification and harmonisation of all content headers html and css
+- Refactoring of footer.
+- Changed nav tabs theming.
 
 ## [0.3.2] - 2018-07-31
 
