@@ -36,7 +36,7 @@ html {
 .content-header {
   padding-top: 6rem;
   .container-fluid {
-    max-width: 1600px;
+    max-width: map-get($content-max-widths, xl);
   }
   // Dark variant
   &.content-header-dark {
@@ -109,16 +109,10 @@ html {
     }
   }
 
-
-
 }
 
 .region-content {
   padding-bottom: 4rem;
-
-  img {
-    padding-bottom: 2rem;
-  }
 }
 
 // Swap the source order for the 3 column case
@@ -408,6 +402,78 @@ html {
   }
 }
 
+// Alternative layout for fluid-like content types (sujet, nouvelles)
+// fluid up to a max-width
+// A helper class .section-inner-media is used to deal with media margin and centering
+.section-content-fluid {
+  .section-inner {
+    &.section-inner-md {
+      margin: 0 $grid-gutter-width;
+      max-width: map-get($content-max-widths, md);
+      @media (min-width: map-get($content-max-widths, md) + ($grid-gutter-width * 2)) {
+        margin: 0 auto;
+      }
+    }
+    &.section-inner-lg {
+      margin: 0 $grid-gutter-width;
+      max-width: map-get($content-max-widths, lg);
+      @media (min-width: map-get($content-max-widths, lg) + ($grid-gutter-width * 2)) {
+        margin: 0 auto;
+      }
+    }
+    &.section-inner-xl {
+      margin: 0 $grid-gutter-width;
+      max-width: map-get($content-max-widths, xl);
+      @media (min-width: map-get($content-max-widths, xl) + ($grid-gutter-width * 2)) {
+        margin: 0 auto;
+      }
+    }
+    &.section-inner-media {
+      margin: 0 auto;
+      .media {
+        justify-content: center;
+        margin-bottom: 3rem;
+      }
+    }
+  }
+}
+
+// section-content layout
+// some media types (images and videos) are taken out of the grid
+// TODO: DELETE THIS
+/*
+.container {
+  .section-content {
+    position: relative;
+    .section-inner {
+      @include make-col-ready();
+
+      &.section-layout-outset-column {
+        padding-right: 0;
+        padding-left: 0;
+        margin-left: -$grid-gutter-width;
+        margin-right: -$grid-gutter-width;
+        width: auto;
+        .media {
+          justify-content: center;
+          margin-bottom: 3rem;
+        }
+      }
+
+      @include media-breakpoint-up(lg) {
+        @include make-col(8);
+        @include make-col-offset(2);
+        &.section-layout-outset-column {
+          @include make-col(12);
+          @include make-col-offset(0);
+          padding-left: $grid-gutter-width/2;
+          padding-right: $grid-gutter-width/2;
+        }
+      }
+    }
+  }
+}
+*/
 
 // Overlay
 
