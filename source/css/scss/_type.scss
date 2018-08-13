@@ -517,37 +517,14 @@ dl {
   }
 }
 
-// sarcelle variant
-.table-sarcelle {
 
-  thead {
-    th {
-      background-color: $sarcelle-light;
-      border: none;
-    }
-  }
-
-  &.table-bordered {
-    border: 0;
-  }
-
-  &.table-striped {
-    td {
-      border: none;
-    }
-    tbody tr:nth-of-type(odd) {
-      background-color: $sarcelle-lightest;
-    }
-  }
-
-  &.table-hover {
-    tbody tr {
-      @include hover {
-        background-color: $sarcelle-lightest;
-      }
-    }
-  }
+@each $color, $value in $theme-colors {
+  @include table-row-variant($color, theme-color-level($color, -10));
 }
+
+@include table-row-variant(active, $table-active-bg);
+
+@include table-row-variant(primary, $sarcelle-light);
 
 // Mostly applied to the hr element
 .divider {

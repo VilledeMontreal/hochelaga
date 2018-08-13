@@ -1,31 +1,37 @@
 {{# table }}
-<table class="table {{ tableClass }}">
-	{{# caption }}
-	<caption>{{ caption }}</caption>
-	{{/ caption }}
-	{{# thead }}
-	<thead class="{{ theadClass }}">
-    	<tr>
-			{{# th }}
-			<th scope="col">{{ title }}</th>
-			{{/ th }}
-    	</tr>
-  	</thead>
-  	{{/ thead }}
-  	{{# tbody }}
-  	<tbody>
+{{# tableWrapper}}
+<div class="{{ tableWrapper }}">
+{{/ tableWrapper}}
+  <table class="table {{ tableClass }}">
+    {{# caption }}
+    <caption>{{ caption }}</caption>
+    {{/ caption }}
+    {{# thead }}
+    <thead class="{{ theadClass }}">
+      <tr>
+      {{# th }}
+        <th scope="col">{{ title }}</th>
+      {{/ th }}
+      </tr>
+    </thead>
+    {{/ thead }}
+    {{# tbody }}
+    <tbody>
 
-		{{# tr }}
-		<tr>
-			{{# th }}
-			<th scope="">{{ th }}</th>
-			{{/ th }}
-			{{# td }}
-			<td>{{ text }}</td>
-			{{/ td }}
-    	</tr>
-		{{/ tr}}
-  	</tbody>
-  	{{/ tbody }}
-</table>
+    {{# tr }}
+      <tr class="{{ trClass }}">
+        {{# th }}
+        <th scope="">{{ th }}</th>
+        {{/ th }}
+        {{# td }}
+        <td>{{ text }}</td>
+        {{/ td }}
+      </tr>
+    {{/ tr}}
+    </tbody>
+    {{/ tbody }}
+  </table>
+{{# tableWrapper }}
+</div>
+{{/ tableWrapper }}
 {{/ table }}

@@ -250,11 +250,11 @@ $hr-margin-y:                 ($spacer * 2);
 // Customizes the `.table` component with basic values, each used across all table variations.
 
 $table-cell-padding:          1rem .75rem;
-$table-cell-padding-sm:       .3rem;
+$table-cell-padding-sm:       .5rem .75rem;
 
 $table-bg:                    transparent;
 $table-accent-bg:             $sarcelle-lightest; // used for zebra accent
-$table-hover-bg:              rgba($black, .075);
+$table-hover-bg:              $sarcelle-lightest; // used for hoverable
 $table-active-bg:             $table-hover-bg;
 
 $table-border-width:          $border-width;
