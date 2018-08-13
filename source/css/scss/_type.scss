@@ -487,13 +487,33 @@ dl {
 }
 
 .table {
+  margin-bottom: 2rem;
   thead th {
-    color: $headings-color;
+    color: $table-head-color;
+    border-bottom: none;
   }
 }
 .table-dark {
   thead th {
     color: $table-dark-color;
+  }
+}
+
+.table {
+  .thead-dark {
+    th {
+      color: $table-head-color;
+      background-color: $table-head-dark-bg;
+      border-top: none;
+    }
+  }
+
+  .thead-light {
+    th {
+      color: $table-head-color;
+      background-color: $table-head-bg;
+      border-top: none;
+    }
   }
 }
 
