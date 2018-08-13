@@ -23,6 +23,7 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 - Refactoring of content headers. Simplification and harmonisation of all content headers html and css
 - Refactoring of footer.
 - Changed nav tabs theming.
+- Changed tables and tables variant theming.
 
 ## [0.3.2] - 2018-07-31
 
