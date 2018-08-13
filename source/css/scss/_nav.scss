@@ -234,6 +234,7 @@ nav {
     font-size: $font-size-md;
     line-height: 1.42857142857;
     font-weight: $font-weight-bold;
+    padding: 1.5rem .5rem;
     position: relative;
     text-align: center;
     white-space: normal;
@@ -251,8 +252,8 @@ nav {
           background-color: $brand;
           position: absolute;
           bottom: 0;
-          left: $nav-link-padding-x;
-          right: $nav-link-padding-x;
+          left: .5rem;
+          right: .5rem;
           display: block;
         }
       }
@@ -260,6 +261,21 @@ nav {
     &.disabled {
       //background-color: $gray-sky;
       cursor: default;
+    }
+  }
+  @include media-breakpoint-up(md) {
+    .nav-link {
+      padding: 2rem 2.5rem;
+      &:hover,
+      &.active,
+      &:focus {
+        &:not(.disabled) {
+          &:before {
+            left: 2.5rem;
+            right: 2.5rem;
+          }
+        }
+      }
     }
   }
 }

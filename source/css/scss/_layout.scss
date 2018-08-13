@@ -57,11 +57,20 @@ html {
         content: "";
         display: block;
         height: .5rem;
-        width: 7.5rem;
+        width: 3.75rem;
         margin-top: 2.5rem;
         margin-bottom: 0;
         margin-right: 10px;
         background-color: $brand;
+      }
+    }
+
+    // smaller line for smallest breakpoint
+    @include media-breakpoint-up(sm) {
+      h1 {
+        &:after {
+          width: 7.5rem;
+        }
       }
     }
   }
@@ -155,8 +164,12 @@ html {
 
 // Lead container
 .lead-container {
-  padding-top: 4rem;
-  padding-bottom: 4rem;
+  padding-top: 3rem;
+  padding-bottom: 3rem;
+  @include media-breakpoint-up(md){
+    padding-top: 4rem;
+    padding-bottom: 4rem;
+  }
   .lead:last-child {
     margin-bottom: 0;
   }
