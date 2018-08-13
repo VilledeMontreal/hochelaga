@@ -18,6 +18,7 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 - Changed Wizard header styling
 - Minor changes to wizard steps: solved responsive issues and theming upgrades. 
 - Minor changes to default modal styles.
+- Changed breadcrumb integration and style.
 - Changed some display-headings and lead values.
 - Refactoring of content headers. Simplification and harmonisation of all content headers html and css
 - Refactoring of footer.
