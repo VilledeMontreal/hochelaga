@@ -188,8 +188,12 @@
 // Tabs
 //
 
+
 nav {
-  display: flex;
+  // Flex messed up with a couple of nav component.
+  // No background on why this was switch to flex
+  // Revert back to default and seems ok for all our nav component.
+  //display: flex;
   position: relative;
 }
 
