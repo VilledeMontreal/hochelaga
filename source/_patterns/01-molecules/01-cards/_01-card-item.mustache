@@ -3,7 +3,7 @@
 <a href="{{ url }}" class="card {{ classes }}">
 {{/ url}}
 {{^ url}}
-<div class="card {{ classes }}">
+<div class="card {{ classes }}" {{# data-href }} data-href="{{ data-href }}" {{/ data-href }}>
 {{/ url}}
   {{# card-media }}
     {{# card-media.icon }}
@@ -26,6 +26,9 @@
     {{# card-text }}
     <p class="card-text">{{ card-text }}</p>
     {{/ card-text }}
+    {{# card-inception-links }}
+      {{{ card-inception-links }}}
+    {{/ card-inception-links }}
     {{# card-text-muted }}
     <span class="text-muted">{{ card-text-muted }}</span>
     {{/ card-text-muted }}

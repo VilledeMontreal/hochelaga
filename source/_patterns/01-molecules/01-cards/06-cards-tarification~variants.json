@@ -42,9 +42,10 @@
         "card-table-tarif": true,
         "table": {
           "caption": "",
-          "tableClass": "table-sarcelle table-striped table-responsive-md",
+          "tableWrapper": "table-responsive",
+          "tableClass": "table-striped",
           "thead": {
-            "theadClass": "",
+            "theadClass": "thead-dark",
             "th": [
               { "title": "Information additionnelle sur le permis" },
               { "title": "Prix de base" },

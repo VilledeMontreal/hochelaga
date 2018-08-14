@@ -198,6 +198,23 @@
     }
   }
 
+  // Inception card
+  // Cards as a link with sublinks
+  &.card-inception {
+    cursor: pointer;
+    transition: all 100ms ease-in-out;
+    &:hover {
+      transform: scale(1.04);
+      .card-title {
+        color: $primary;
+      }
+    }
+    // Links inside inception card
+    a {
+      border-bottom: none;
+    }
+  }
+
   // Featured card specific
   &.card-featured {
     // border: none;

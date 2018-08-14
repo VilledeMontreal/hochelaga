@@ -18,17 +18,25 @@
   <div class="region-content {{ regionMainClasses }}">
     <div class="container">
       <div class="row">
-        <article class="col-12 col-md-7">
+        <article class="col-12 col-md-8">
           {{# searchBox}}
             <div class="mb-6">
             {{> molecules-dropdown-field-combo }}
             </div>
           {{/ searchBox}}
-          {{> organisms-how-to-content }}
+
+          <div class="row">
+            <div class="col-md-12">
+              <h2 class="section-heading">Ville-Marie</h2>
+              <div id="accordion" role="tablist" aria-multiselectable="true">
+                {{> molecules-collapsible-item }}
+              </div>
+            </div>
+          </div>
         </article>
 
         {{# sidebarRight}}
-        <aside class="col-12 col-md-4 offset-md-1 sidebar sidebar-right {{ sidebar-classes }}">
+        <aside class="col-12 col-md-4 sidebar sidebar-right {{ sidebar-classes }}">
           <section class="sb-block">
             <div class="subsection">
               {{> organisms-heading-sidebar(sidebarTitle: "Mode de paiement") }}
