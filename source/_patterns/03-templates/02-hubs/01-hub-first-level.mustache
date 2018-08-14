@@ -5,6 +5,11 @@
 
   {{> organisms-content-header }}
 
+  <!-- Teaser -->
+  {{# has-lead-text }}
+  {{> molecules-lead }}
+  {{/ has-lead-text }}
+
   {{# servicesSection}}
     {{> molecules-card }}
   {{/ servicesSection}}

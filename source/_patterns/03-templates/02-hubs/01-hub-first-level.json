@@ -11,72 +11,109 @@
     "email": "francoisetremblay@gmail.com",
     "profil": "Hydro-Québec"
   },
+  "text-elements": {
+    "headings": {
+      "display": {
+        "tag": "h1",
+        "classes": "display-1",
+        "content": "Display heading 1"
+      }
+    }
+  },
   "hasPagination": true,
   "servicesSection": {
     "cards": {
+      "section-classes": "pt-0",
       "classes": "",
       "bsgrid-classes": "col-12 col-md-6",
       "card-item": [
         {
-          "classes": "card-large card-row-layout",
-          "url": "#",
-          "card-title": "This is a random title from 01-card-test.json",
-          "card-text":
-            "Some quick example text to build on the card title and make up the bulk of the card's content.",
-          "card-media": {
-            "icon": "vdm-093-porte-voix"
-          }
+          "classes": "card-large card-inception",
+          "data-href": "#",
+          "url": false,
+          "card-title": "Card #1 title",
+          "card-text": false,
+          "card-inception-links": 
+            "<a href=\"#\">Lorem ipsum</a>, <a href=\"#\">Dolor</a> et <a href=\"#\">Palat advitam</a>",
+          "card-media": false,
+          "footer": false
         },
         {
-          "classes": "card-large card-row-layout",
-          "url": "#",
+          "classes": "card-large card-inception",
+          "data-href": "#",
+          "url": false,
           "card-title": "Card #2 title",
-          "card-text":
-            "Some quick example text to build on the card title and make up the bulk of the card's content.",
-          "card-media": {
-            "icon": "vdm-084-nid-de-poule"
-          }
+          "card-text": false,
+          "card-inception-links":
+            "<a href=\"#\">Lorem ipsum</a>, <a href=\"#\">Dolor</a>, <a href=\"#\">Palat advitam</a>, <a href=\"#\">Resolut</a> et <a href=\"#\">Praesent commodo risus nec</a>",
+          "card-media": false,
+          "footer": false
         },
         {
-          "classes": "card-large card-row-layout",
-          "url": "#",
+          "classes": "card-large card-inception",
+          "data-href": "#",
+          "url": false,
           "card-title": "Card #3 title",
-          "card-text":
-            "Some quick example text to build on the card title and make up the bulk of the card's content.",
-          "card-media": {
-            "icon": "vdm-039-balai"
-          }
+          "card-text": false,
+          "card-inception-links":
+            "<a href=\"#\">Lorem ipsum</a>, <a href=\"#\">Dolor</a>, <a href=\"#\">Palat advitam</a>, <a href=\"#\">Resolut</a> et <a href=\"#\">Praesent commodo risus nec</a>",
+          "card-media": false,
+          "footer": false
         },
         {
-          "classes": "card-large card-row-layout",
-          "url": "#",
-          "card-title":
-            "Card #4 title - This is a very, very long title, to prove that the world is rather flat.",
-          "card-text":
-            "Some quick example text to build on the card title and make up the bulk of the card's content.",
-          "card-media": {
-            "icon": "vdm-089-travaux-routiers"
-          }
+          "classes": "card-large card-inception",
+          "data-href": "#",
+          "url": false,
+          "card-title": "Card #4 title",
+          "card-text": false,
+          "card-inception-links":
+            "<a href=\"#\">Lorem ipsum</a>, <a href=\"#\">Dolor</a> et <a href=\"#\">Palat advitam</a>",
+          "card-media": false,
+          "footer": false
         },
         {
-          "classes": "card-large card-row-layout",
-          "url": "#",
+          "classes": "card-large card-inception",
+          "data-href": "http://rds.ca",
+          "url": false,
           "card-title": "Card #5 title",
-          "card-text":
-            "Some quick example text to build on the card title and make up the bulk of the card's content.",
-          "card-media": {
-            "icon": "vdm-095-deneigement"
-          }
+          "card-text": false,
+          "card-inception-links":
+            "<a href=\"#\">Lorem ipsum</a>, <a href=\"#\">Dolor</a> et <a href=\"#\">Palat advitam</a>",
+          "card-media": false,
+          "footer": false
         },
         {
-          "classes": "card-large card-row-layout",
-          "url": "#",
+          "classes": "card-large card-inception",
+          "data-href": "#",
+          "url": false,
           "card-title": "Card #6 title",
-          "card-text":
-            "Some quick example text to build on the card title and make up the bulk of the card's content.",
-          "card-media": {
-            "icon": "vdm-083-permis-animal-chien"
-          }
+          "card-text": false,
+          "card-inception-links":
+            "<a href=\"#\">Lorem ipsum</a>, <a href=\"#\">Dolor</a>, <a href=\"#\">Palat advitam</a>, <a href=\"#\">Resolut</a> et <a href=\"#\">Praesent commodo risus nec</a>",
+          "card-media": false,
+          "footer": false
+        },
+        {
+          "classes": "card-large card-inception",
+          "data-href": "#",
+          "url": false,
+          "card-title": "Card #7 title",
+          "card-text": false,
+          "card-inception-links":
+            "<a href=\"#\">Lorem ipsum</a>, <a href=\"#\">Dolor</a>, <a href=\"#\">Palat advitam</a>, <a href=\"#\">Resolut</a> et <a href=\"#\">Praesent commodo risus nec</a>",
+          "card-media": false,
+          "footer": false
+        },
+        {
+          "classes": "card-large card-inception",
+          "data-href": "http://rds.ca",
+          "url": false,
+          "card-title": "Card #8 title",
+          "card-text": false,
+          "card-inception-links":
+            "<a href=\"#\">Lorem ipsum</a>, <a href=\"#\">Dolor</a> et <a href=\"#\">Palat advitam</a>",
+          "card-media": false,
+          "footer": false
         }
       ]
     }

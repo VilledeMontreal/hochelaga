@@ -9,9 +9,9 @@
     {{> molecules-card }}
   {{/ featuredSection}}
 
-  <section class="page-section bg-gray-sky">
+  {{# demandesListes }}
+  <section class="page-section {{cards.section-classes}}">
     <div class="container">
-      {{# demandesListes }}
       <div class="row">
         {{# cards.headings }}
         <div class="col-12">
@@ -38,9 +38,9 @@
           {{/ hasPagination }}
         </div>
       </div>
-      {{/ demandesListes }}
     </div>
   </section>
+  {{/ demandesListes }}
 </main>
 
 {{> organisms-footer-portal }}
