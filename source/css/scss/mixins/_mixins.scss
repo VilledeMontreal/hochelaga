@@ -211,62 +211,6 @@
   }
 }
 
-// Hamburger menu
-/*
-@mixin hamburger-icon($hamburger-layer-width, $hamburger-layer-height, $hamburger-layer-spacing, $hamburger-padding-y: $hamburger-padding-y, $hamburger-padding-x: $hamburger-padding-x) {
-
-  @include button-reset();
-  padding: $hamburger-padding-y $hamburger-padding-x;
-  display: inline-flex;
-  align-items: center;
-  cursor: pointer;
-
-  .hamburger-box {
-    width: $hamburger-layer-width;
-    height: $hamburger-layer-height * 3 + $hamburger-layer-spacing * 2;
-    display: inline-block;
-    position: relative;
-  }
-  
-  .hamburger-inner {
-    display: block;
-    top: 50%;
-    margin-top: $hamburger-layer-height / -2;
-  
-    &,
-    &::before,
-    &::after {
-      width: $hamburger-layer-width;
-      height: $hamburger-layer-height;
-      background-color: $hamburger-layer-color;
-      position: absolute;
-      transition-property: transform;
-      transition-duration: 0.15s;
-      transition-timing-function: ease;
-    }
-  
-    &::before,
-    &::after {
-      content: "";
-      display: block;
-    }
-  
-    &::before {
-      top: ($hamburger-layer-spacing + $hamburger-layer-height) * -1;
-    }
-  
-    &::after {
-      bottom: ($hamburger-layer-spacing + $hamburger-layer-height) * -1;
-    }
-  }
-  
-  .hamburger-label {
-    font-size: 1rem;
-    margin-left: 1rem;
-    color: $black;
-  }
-}
-*/
 
 /**
  * - - - - - - - - - -

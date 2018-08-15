@@ -365,7 +365,6 @@ $jumbotron-bg:                      $white;
 $card-border-radius:                0;
 $card-border-color:                 $gray-400;
 $card-inner-border-radius:          0;
-//$card-bg:                           $gray-500;
 $card-box-shadow:                   0 1px 7px 0 #e6e6e6;
 
 
@@ -374,11 +373,11 @@ $card-box-shadow:                   0 1px 7px 0 #e6e6e6;
 //
 // Define alert colors, border radius, and padding.
 
-$alert-padding-y:                   1.5rem !default;
-$alert-padding-x:                   1.5rem !default;
-$alert-margin-bottom:               1rem !default;
+$alert-padding-y:                   1.5rem;
+$alert-padding-x:                   1.5rem;
+$alert-margin-bottom:               1rem;
 $alert-border-radius:               0;
-$alert-link-font-weight:            $font-weight-bold !default;
+$alert-link-font-weight:            $font-weight-bold;
 $alert-border-width:                0;
 
 
@@ -390,6 +389,13 @@ $progress-circle-border-color-fill:     $gray-700;
 $progress-circle-size:                  100px;
 $progress-circle-steps:                 100; //this needs to be even.
 $progress-circle-animation-timing:      .5s;
+
+// List group
+
+$list-group-bg:                     $white;
+$list-group-border-color:           $gray-500;
+$list-group-border-width:           $border-width;
+$list-group-border-radius:          0;
 
 // Badges
 
@@ -640,15 +646,6 @@ $navbar-light-active-color:         $black;
 $navbar-light-disabled-color:       $gray-700;
 //$navbar-light-toggler-icon-bg:      str-replace(url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 30 30' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='#{$navbar-light-color}' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 7h22M4 15h22M4 23h22'/%3E%3C/svg%3E"), "#", "%23") !default;
 $navbar-light-toggler-border-color: $black;
-
-// hamburger
-//
-$hamburger-padding-x:       .5rem;
-$hamburger-padding-y:       .75rem;
-$hamburger-layer-width:     2rem;
-$hamburger-layer-height:    .1875rem;
-$hamburger-layer-spacing:   .53125rem;
-$hamburger-layer-color:     $black;
 
 
 // - - - - - - - - - -
