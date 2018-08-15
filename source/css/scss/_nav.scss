@@ -491,7 +491,7 @@ nav {
   .nav-link {
     padding: 1rem 2rem;
   }
-  //larger than 768px
+  //larger than 576px
   @include media-breakpoint-up(sm) {
     display: flex;
     justify-content: center;
@@ -516,6 +516,14 @@ nav {
     .circle {
       margin: 0 auto;
     }
+  }
+  //larger than 768px
+  @include media-breakpoint-up(md) {
+    margin: 0 6rem;
+  }
+
+  @include media-breakpoint-up(lg){
+    margin: 0 3rem;
   }
 
 }
