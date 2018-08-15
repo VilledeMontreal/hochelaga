@@ -39,6 +39,52 @@
     }
   }
 
+  // User profile
+  .modal-user {
+    border: 1px solid $gray-300;
+    display: flex;
+    padding: 1rem 1rem 1rem .75rem;
+    align-items: center;
+    .vdm {
+      font-size: 4rem;
+      margin-right: .75rem;
+    }
+    .user-info {
+      flex: 1;
+      color: $gray-600;
+      font-size: $font-size-md;
+      line-height: get-line-height($font-size-md, 18px);
+      overflow: hidden;
+      span {
+        display: block;
+      }
+      .user-profil {
+        color: $headings-color;
+        font-size: 1.125rem;
+        font-weight: $font-weight-bold;
+        padding-bottom: .25rem;
+      }
+      .user-name {
+        font-weight: $font-weight-bold;
+      }
+    }
+
+    &:hover {
+      background-color: $gray-200;
+      cursor: pointer;
+    }
+
+    + .modal-user {
+      margin-top: 1rem;
+    }
+
+    @include media-breakpoint-up(sm) {
+      .vdm {
+        margin-right: 1.5rem;
+      }
+    }
+  }
+
   // Full screen modal on 767px and under
   @include media-breakpoint-down(sm) {
     .modal-dialog {
