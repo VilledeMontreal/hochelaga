@@ -103,9 +103,9 @@
           "card-table-tarif": true,
           "table": {
             "caption": "",
-            "tableClass": "table-sarcelle table-striped table-responsive-md",
+            "tableClass": "table-striped",
             "thead": {
-              "theadClass": "thead-dark",
+              "theadClass": "",
               "th": [
                 { "title": "Information additionnelle sur le permis" },
                 { "title": "Prix de base" },
@@ -115,15 +115,15 @@
             "tbody": {
               "tr": [
                 {
+                  "th": "Votre chat est stérilisé",
                   "td": [
-                    { "text": "Votre chat est stérilisé" },
                     { "text": "12 $" },
                     { "text": "5 $" }
                   ]
                 },
                 {
+                  "th": "Votre chat n’est PAS stérilisé",
                   "td": [
-                    { "text": "Votre chat n’est PAS stérilisé" },
                     { "text": "32 $" },
                     { "text": "25 $" }
                   ]

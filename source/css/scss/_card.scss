@@ -326,6 +326,14 @@
 
   .table {
     margin-bottom: 0;
+    th, td {
+      padding-top: 1.5rem;
+      padding-bottom: 1.5rem;
+    }
+    th:first-child {
+      text-align: left;
+      padding-left: 2rem;
+    }
   }
 
   @include media-breakpoint-up(lg) {
