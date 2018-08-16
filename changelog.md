@@ -5,11 +5,11 @@ The format is based on [Keep a Changelog](http://keepachangelog.com/en/1.0.0/)
 and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.html).
 
 
-## [1.0.0] - 2018-08-15
+## [1.0.0] - 2018-08-16
 
 ## Added
 - .btn-quit a quit button with icon on the right
-- Added 2 variants for modals: .modal-alert and .modal-icon with static and live examples.
+- Added 3 variants for modals: .modal-alert, .modal-icon and .modal-user with static and live examples.
 - Added 2 new card variants for tarification (teaser and table).
 - Added responsive values for all headings, display-headings and lead.
 - Added new template for Page sujet.
@@ -25,6 +25,7 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 - Changed nav tabs theming.
 - Changed tables and tables variant theming.
 - Changed hubs templates.
+- Removed some variants for tables and pagination.
 
 ## [0.3.2] - 2018-07-31
 
