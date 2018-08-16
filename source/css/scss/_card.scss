@@ -53,8 +53,8 @@
     align-items: center;
     justify-content: flex-end;
     border-bottom: none;
-    font-size: 1.125rem;
     color: $sarcelle;
+    font-size: $font-size-base;
     @include transition(color .15s ease-in-out);
     .vdm {
       font-size: 3rem;
@@ -249,35 +249,6 @@
     }
   }
 
-  /*
-  &.card-fluid {
-    &.card-featured {
-      .card-body {
-        padding: 2rem;
-        justify-content: center;
-      }
-
-      @include media-breakpoint-up(lg) {
-        .card-title {
-          @include heading(2);
-        }
-        .card-title,
-        .card-text {
-          margin-bottom: 2rem;
-        }
-        .card-text {
-          font-size: $font-size-lg;
-        }
-        .card-body {
-          padding: 6rem;
-        }
-        .card-footer {
-          margin-top: 0;
-        }
-      }
-    }
-  }
-  */
   &.card-complex-layout,
   &.card-label-content {
     text-align: left;
@@ -313,7 +284,7 @@
     text-align: left;
   }
   .card-label {
-    font-size: $font-size-lg;
+    font-size: $font-size-xl;
     font-weight: $font-weight-bold;
     &.card-label-normal {
       font-weight: $font-weight-normal;

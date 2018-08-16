@@ -2,7 +2,7 @@
 // Reference used : https://projects.invisionapp.com/d/main#/console/11533069/245898997/inspect
 .breadcrumb {
   border-radius: 0;
-  font-size: 1.125rem;
+  font-size: $font-size-lg;
   margin-bottom: 0;
   a {
     border: none;
@@ -402,7 +402,7 @@ nav {
   // Absolute positionning on larger breakpoint
   @include media-breakpoint-up(md) {
     color: $gray-ink;
-    font-size: 1.125rem;
+    font-size: $font-size-lg;
     line-height: 1.5;
     font-weight: $font-weight-bold;
     padding: 1.5rem 1rem 1.125rem 1.875rem;
@@ -574,7 +574,7 @@ nav {
   .navbar-link {
     color: $headings-color;
     display: flex;
-    font-size: ($font-size-base * 1.125);  // 18px
+    font-size: 1.125rem;  // 18px
     line-height: 1.333333;
     padding: 0;
   }
@@ -601,7 +601,7 @@ nav {
     */
     &.navbar-header-service-link {
       .navbar-brand {
-        font-size: ($font-size-base * 1.125);  // 18px
+        font-size: 1.125rem;  // 18px
       }
     }
     a {
@@ -619,7 +619,7 @@ nav {
         flex-direction: row;
         flex-wrap: wrap;
         padding-bottom: 0;
-        font-size: ($font-size-base * 1.125);
+        font-size: 1.125rem;
         a {
           font-weight: $font-weight-bold;
           text-decoration: none;

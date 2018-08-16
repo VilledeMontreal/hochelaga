@@ -206,12 +206,10 @@ legend,
     }
 
     .card-label {
-      //@include heading(5, "bold");
       @include card-heading();
     }
 
     .card-title {
-      //@include heading(5);
       @include card-heading();
     }
 
@@ -549,10 +547,8 @@ legend,
     margin-bottom: 1.5rem;
 
     .h5 {
-      color: $headings-color;
+      @extend .h5;
       display: block;
-      font-size: $font-size-lg;
-      font-weight: $font-weight-bold;
       margin-bottom: 0;
     }
   
@@ -564,11 +560,6 @@ legend,
 
   @include media-breakpoint-up(md) {
     padding: 1.5rem 4rem;
-    .feedback-form-header {
-      .h5 {
-        @include heading(5, bold);
-      }
-    }
   }
 }
 
@@ -595,7 +586,7 @@ legend,
 
   @include media-breakpoint-up(md) {
     .feedback-question-label {
-      @include heading(5);
+      font-size: $font-size-xl;
     }
   }
 

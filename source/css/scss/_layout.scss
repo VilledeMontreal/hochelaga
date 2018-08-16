@@ -80,14 +80,14 @@ html {
     color: $gray-600;
     .date-time {
       font-size: 1.125rem;
-      line-height: 1.3333;
+      //line-height: 1.3333;
     }
     .hub-link {
       a {
         border-bottom: none;
         color: $gray-700;
         font-size:  1.125rem;
-        line-height: 1.3333;
+        //line-height: 1.3333;
         @include transition(color .15s ease-in-out);
         &:hover {
           color: $sarcelle-surprise;
@@ -106,8 +106,8 @@ html {
     @include media-breakpoint-up(md) {
       .date-time, 
       .hub-link a {
-        font-size: $font-size-xl;
-        line-height: 1.3333;
+        font-size: $font-size-lg;
+        //line-height: 1.3333;
       }
     }
     @include media-breakpoint-down(xs){
@@ -184,7 +184,7 @@ html {
     padding-bottom: 1rem;
     align-items: center;
     h2 {
-      @include heading(4, "bold");
+      @extend .h4;
       display: inline-block;
       margin-bottom: 0;
     }
@@ -337,7 +337,6 @@ html {
         vertical-align: middle;
       }
       h1 {
-        //@include heading(5, "bold");
         display: inline-block;
         margin-bottom: 0;
         margin-right: 1rem;

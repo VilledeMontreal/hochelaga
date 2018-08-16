@@ -107,8 +107,7 @@
     margin-bottom: 1rem;
   }
   .sidebar-title {
-    //margin-bottom: 2em;
-    @include heading(5, bold);
+    @extend .h5;
     display: flex;
     margin-bottom: 1rem;
     // Tweak some styles for icon inside title

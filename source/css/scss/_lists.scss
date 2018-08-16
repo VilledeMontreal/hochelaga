@@ -23,7 +23,7 @@ ol {
     padding-left: 6em;
     position: relative;
     .title {
-      @include heading(5, bold);
+      @extend .h5;
       color: $headings-color;
       margin-bottom: 1rem;
     }
@@ -31,7 +31,7 @@ ol {
     > li {
       padding-bottom: 1.5rem;
       &:before {
-        @include heading(5, bold);
+        @extend .h5;
         color: $headings-color;
         content: counter(ol-counter, decimal);
         counter-increment: ol-counter;
@@ -139,7 +139,7 @@ ol {
     margin-bottom: 0;
   }
   a {
-    @include heading(4, bold);
+    @extend .h5;
     border: none;
     color: $primary;
     display: inline-block;
@@ -158,7 +158,7 @@ ol {
 dl {
   margin-bottom: 2em;
   dt {
-    @include heading(5, bold);
+    @extend .h5;
     color: $headings-color;
   }
   dd {
@@ -172,21 +172,26 @@ dl {
     }
   }
 }
-// List groups
 
+// List groups
+//
 // Individual list items
 //
 // Use on `li`s or `div`s within the `.list-group` parent.
 
 .list-group-item {
   border: $list-group-border-width solid $list-group-border-color;
+  // remove right and left border
   border-right: 0;
   border-left: 0;
   @include border-radius(0);
 
+  // remove border-top-radius
   &:first-child {
     @include border-top-radius(0);
   }
+
+  // remove border-bottom-radius
   &:last-child {
     @include border-bottom-radius(0);
   }
