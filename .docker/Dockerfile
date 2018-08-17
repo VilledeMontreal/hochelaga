@@ -39,7 +39,7 @@ RUN mkdir -p /usr/src/app \
     && mv composer.phar /usr/local/bin/composer
 
 
-#	Create a node user 
+#	Create a node user
 
 RUN groupadd --gid 1000 node \
   && useradd --uid 1000 --gid node --shell /bin/bash --create-home node
@@ -65,7 +65,8 @@ VOLUME /usr/src/app/source
 
 RUN ls -al \
   && npm install \
-  && composer install
+  && composer install \
+  && npm rebuild node-sass
 
 #	Serve the project, npm start would work just as well
 
