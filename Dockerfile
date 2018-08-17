@@ -39,7 +39,7 @@ RUN mkdir -p /usr/src/app \
     && mv composer.phar /usr/local/bin/composer
 
 
-#	Create a node user 
+#	Create a node user
 
 RUN groupadd --gid 1000 node \
   && useradd --uid 1000 --gid node --shell /bin/bash --create-home node
