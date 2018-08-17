@@ -65,8 +65,7 @@ VOLUME /usr/src/app/source
 
 RUN ls -al \
   && npm install \
-  && composer install \
-  && npm rebuild node-sass
+  && composer install
 
 #	Serve the project, npm start would work just as well
 
