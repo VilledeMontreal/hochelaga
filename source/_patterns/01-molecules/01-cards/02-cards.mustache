@@ -1,9 +1,13 @@
 <section class="page-section {{ cards.section-classes }}">
   <div class="container">
-    <div class="row cards {{ cards.classes }}">
-    {{# cards.headings }}
-      <h2>{{> cards.headings }}</h2>
+    {{# cards.headings}}
+    <div class="row">
+      <div class="col-12">
+        <h2>{{> cards.headings }}</h2>
+      </div>
+    </div>
     {{/ cards.headings }}
+    <div class="row cards {{ cards.classes }}">
     {{# cards.card-item }}
       <div class="{{ cards.bsgrid-classes }}">
         {{> molecules-card-item }}

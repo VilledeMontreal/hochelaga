@@ -22,3 +22,39 @@
   $lh: parseInt($line-height);
   @return $lh / $px;
 }
+
+// check-multiplier-value
+// @arg $multiplier - number
+@function check-multiplier-value($multiplier) {
+
+  // check if the value is a number
+  // and that the number is a unitless value.
+  @if type-of($multiplier) == number and unitless($multiplier) {
+
+    // If the value of $multiplier is a unitless number,
+    // return the number.
+    @return $multiplier;
+
+  // Lastly, should the value passed to $multiplier not be a 
+  // unitless number, throw a Sass error to explain the issue.
+  } @else {
+
+    // Throw a Sass error if the $scale value is
+    // not a unitless number.
+    @error "Sorry, `#{$multiplier}` is not a unitless number value.";
+  }
+
+}
+
+// Convert rem unit to px
+// output: Round $value
+@function rem-to-px($size) {
+	$value: parseInt($size) * 16px; //16px is the base size specified
+	@return round($value);
+}
+
+@function px-to-rem($size) {
+  $value: $size / 16px; //16px is the base size specified
+
+	@return #{$value}rem;
+}

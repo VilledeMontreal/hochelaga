@@ -1,76 +1,118 @@
-mark,
-.mark {
-  color: $mark-color;
-}
-
-
-//
 // Headings
 //
+// Headings are responsive
+// @see responsive-font-size mixin
 
 h1, .h1 {
-  @include heading(1);
-  &.strong {
-    @include heading(1, "bold");
+  @include responsive-font-size($h1-font-size, .75, 48px);
+  // 576px and up
+  @include media-breakpoint-up(sm) {
+    @include responsive-font-size($h1-font-size, .85, 56px);
+  }
+  // 768px and up
+  @include media-breakpoint-up(md) {
+    @include responsive-font-size($h1-font-size, 1, 64px);
   }
 }
 h2, .h2 {
-  @include heading(2);
-  &.strong {
-    @include heading(2, "bold");
+  @include responsive-font-size($h2-font-size, .81, 48px);
+  // 576px and up
+  @include media-breakpoint-up(sm) {
+    @include responsive-font-size($h2-font-size, .88, 48px);
+  }
+  // 768px and up
+  @include media-breakpoint-up(md) {
+    @include responsive-font-size($h2-font-size, 1, 56px);
   }
 }
 h3, .h3 {
-  @include heading(3);
-  &.strong {
-    @include heading(3, "bold");
+  @include responsive-font-size($h3-font-size, .82, 40px);
+  // 576px and up
+  @include media-breakpoint-up(sm) {
+    @include responsive-font-size($h3-font-size, .92, 48px);
+  }
+  // 768px and up
+  @include media-breakpoint-up(md) {
+    @include responsive-font-size($h3-font-size, 1, 48px);
   }
 }
 h4, .h4 {
-  @include heading(4);
-  &.strong {
-    @include heading(4, "bold");
+  @include responsive-font-size($h4-font-size, .84375, 32px);
+  // 576px and up
+  @include media-breakpoint-up(sm) {
+    @include responsive-font-size($h4-font-size, 1, 40px);
   }
 }
 h5, .h5 {
-  @include heading(5);
-  &.strong {
-    @include heading(5, "bold");
+  @include responsive-font-size($h5-font-size, .92, 32px);
+  // 576px and up
+  @include media-breakpoint-up(sm) {
+    @include responsive-font-size($h5-font-size, 1, 32px);
   }
 }
 h6, .h6 {
-  @include heading(6);
-  &.strong {
-    @include heading(6, "bold");
+  @include responsive-font-size($h6-font-size, 1, 24px);
+}
+
+// Display headings
+//
+// Display headings are responsive
+// @see responsive-font-size mixin
+
+.display-1,
+.display-2 {
+  @include responsive-font-size($display1-size, .6, 48px);
+  // 576px and up
+  @include media-breakpoint-up(sm) {
+    @include responsive-font-size($display1-size, .8, 64px);
+  }
+  // 768px and up
+  @include media-breakpoint-up(md) {
+    @include responsive-font-size($display1-size, 1, 80px);
   }
 }
 
-// Type display classes
-.display-1 {
-  line-height: get-line-height($display1-size, 80px);
-}
-.display-2 {
-  line-height: get-line-height($display2-size, 72px);
-}
 .display-3 {
-  line-height: get-line-height($display3-size, 64px);
+  @include responsive-font-size($display3-size, .615, 48px);
+  // 576px and up
+  @include media-breakpoint-up(sm) {
+    @include responsive-font-size($display3-size, .815, 56px);
+  }
+  // 768px and up
+  @include media-breakpoint-up(md) {
+    @include responsive-font-size($display3-size, 1, 72px);
+  }
 }
 .display-4 {
-  line-height: get-line-height($display4-size, 56px);
+  @include responsive-font-size($display4-size, .65, 40px);
+  // 576px and up
+  @include media-breakpoint-up(sm) {
+    @include responsive-font-size($display4-size, .85, 56px);
+  }
+  // 768px and up
+  @include media-breakpoint-up(md) {
+    @include responsive-font-size($display4-size, 1, 64px);
+  }
 }
 
+// Lead
+//
+// Lead font-size are responsive
+
 .lead {
-  font-size: $lead-font-size;
+  @include responsive-font-size($lead-font-size, .9, 32px);
   font-weight: $lead-font-weight;
-  line-height: $lead-line-height;
   margin-bottom: 2.5rem;
   > :last-child {
     margin-bottom: 0;
   }
+  // 576px and up
+  @include media-breakpoint-up(sm) {
+    @include responsive-font-size($lead-font-size, 1, 32px);
+  }
 }
 
 // Font weight - generic
-
 .regular {
   font-weight: $font-weight-regular;
 }
@@ -87,6 +129,11 @@ em {
 
 b, strong {
   font-weight: $font-weight-bold;
+}
+
+mark,
+.mark {
+  color: $mark-color;
 }
 
 // Links - generic
@@ -181,222 +228,14 @@ h1, h2, h3, h4, h5, h6 {
   }
 }
 
-// Lists
-//
-// ul, ol
-
-// Plain list overrides
-// Should all lists carry this look and feel, really?
-ul, ol {
-  margin-bottom: 2rem;
-  padding-left:  1.25rem;
-  li {
-    padding-bottom: .5rem;
-    
-    ul, ol {
-      padding: .5rem 0 0 1rem;
-    }
-  }
-}
-/*
-ul {
-  &.custom-list {
-    list-style-type: none;
-    padding: 0;
-
-    li {
-      padding-left: .8em;
-      position: relative;
-      //margin-bottom: 0.7em;
-
-      &:before {
-        @include circle($size: .3rem, $background-color: $body-color);
-        position: absolute;
-        top: .5rem;
-        left: 0;
-      }
-      // Level 2
-      ul {
-        list-style-type: none;
-        padding: .5rem 0 0 0;
-        li {
-          padding-left: 1rem;
-          &:before {
-            width: .4rem;
-            top: .7rem;
-            height: 1px;
-            border-radius: 0;
-          }
-          &:last-of-type {
-            margin-bottom: 0;
-          }
-        }
-      }
-    }
-  }
-}
-*/
-
-// Ordered list overrides
-ol {
-  &.numbered-list {
-    list-style-type: none; // Not sure this remains accessible
-    counter-reset: ol-counter;
-    padding-left: 6em;
-    position: relative;
-    .title {
-      @include heading(5, bold);
-      color: $headings-color;
-      margin-bottom: 1rem;
-    }
-
-    > li {
-      padding-bottom: 1.5rem;
-      &:before {
-        @include heading(5, bold);
-        color: $headings-color;
-        content: counter(ol-counter, decimal);
-        counter-increment: ol-counter;
-        position: absolute;
-        width: 1.5em;
-        height: 1.6em;
-        padding: 0 2.15em 0 0;
-        left: 0;
-        border-bottom: 4px solid $brand;
-      }
-    }
-  }
-}
-
-// Social media
-// Move this block with other listss (numbered, date, etc)
-.social-media-list {
-  margin: 0;
-  padding: 0;
-  list-style-type: none;
-  li { // give this a class
-    margin: 0;
-    padding: 0 0.65rem 0 0;
-    display: inline-block;
-    &:last-of-type {
-      margin: 0;
-    }
-    a { // give this a class
-      border: none;
-      color: $black;
-      display: flex;
-      align-items: center;
-      text-decoration: none;
-      &:hover,
-      &:active {
-        color: $black;
-        cursor: pointer;
-      }
-      .vdm {
-        &:before {
-          font-size: 2em;
-        }
-        padding-right: 0.5rem;
-      }
-      .label {
-        &:hover,
-        &:active {
-          text-decoration: underline;
-        }
-      }
-    }
-  }
-}
-
-// Date lists
-// A list of items grouped under dates
-// date-list> ul > li > { day-month-year } ul > li { item one } /li |  li { item two } /li ...
-.date-list {
-  margin-bottom: 1.5rem;
-  @extend .list-unstyled;
-  &:last-of-type {
-    margin-bottom: 0;
-  }
-  > li {
-    .date {
-      margin-bottom: 1.5rem;
-    }
-    ul {
-      margin-bottom: 2rem;
-
-      &.list-items {
-        li {
-          margin-bottom: 2rem;
-
-          &:last-of-type {
-            margin-bottom: 0;
-          }
-        }
-      }
-    }
-  }
-}
-
-// Hub Lists
-// A list of items with link and description
-.hub-list-container {
-  h3 {
-    margin-bottom: 2rem;
-  }
-}
-.hub-list {
-  @extend .list-unstyled;
-  margin-bottom: 3.5rem;
-}
-
-.hub-list-item {
-  margin-bottom: 2rem;
-  &:last-child {
-    margin-bottom: 0;
-  }
-  a {
-    @include heading(4, bold);
-    border: none;
-    color: $primary;
-    display: inline-block;
-    margin-bottom: 1rem;
-  }
-  p {
-    margin-bottom: 1rem;
-    &:last-child {
-      margin-bottom: 0;
-    }
-  }
-}
-
-// Definition list
-
-dl {
-  margin-bottom: 2em;
-  dt {
-    @include heading(5, bold);
-    color: $headings-color;
-  }
-  dd {
-    padding-bottom: 2em;
-    border-bottom: 1px solid $gray-300;
-    margin-bottom: 2em;
-    &:last-of-type {
-      padding-bottom: 0;
-      margin-bottom: 0;
-      border: 0;
-    }
-  }
-}
-
 // Break word
-
+//
 .break-word {
   word-wrap: break-word;
 }
 
 // Blockquote
-
+//
 .blockquote {
   font-size: $font-size-lg;
   font-weight: $font-weight-normal;
@@ -429,18 +268,8 @@ dl {
   }
 }
 
-.table {
-  thead th {
-    color: $headings-color;
-  }
-}
-.table-dark {
-  thead th {
-    color: $table-dark-color;
-  }
-}
-
 // Mostly applied to the hr element
+// Parts or full class will be deprecated
 .divider {
   margin-top: 0.75rem;
   margin-bottom: 0.75rem;
@@ -513,7 +342,7 @@ dl {
   // Fat day, discrete month, block level headings
   &.day-month {
     > .day {
-      @include heading(2);
+      @extend .h2;
       display: inline-block;
       position: relative;
       margin-right: 0.3em;
@@ -521,8 +350,8 @@ dl {
         position: absolute;
         width: 1.1em;
         content: " ";
-        left: 0.05em;
-        bottom: -0.075em;
+        left: .05em;
+        bottom: -.075em;
         height: 4px;
         background: $black;
       }

@@ -1,12 +1,17 @@
 {{> atoms-link-skip-to-main-content }}
 {{> organisms-header-portal }}
-{{> molecules-breadcrumb }}
+
 <main class="main-content {{ pageClasses }}" id="main-content" aria-label="Main Content">
 
-  {{> organisms-content-header-portal }}
+  {{> organisms-content-header }}
 
-  <div class="region {{ regionMainClasses }}">
-    <div class="container {{ regionMainContainerClasses }}">
+  <!-- Teaser -->
+  {{# has-lead-text }}
+  {{> molecules-lead }}
+  {{/ has-lead-text }}
+
+  <div class="region-content {{ regionMainClasses }}">
+    <div class="container">
       <div class="row">
         <div class="col-12 col-lg-8">
           <!--  Services -->
@@ -35,7 +40,7 @@
                 <div class="col-sm-5">
                   <span class="label">Lieu ou bâtiment accessible</span>
                 </div>
-                <div class="col-sm-7 mt-1">
+                <div class="col-sm-7">
                   <span>Oui</span>
                 </div>
               </div>
@@ -43,7 +48,7 @@
                 <div class="col-sm-5">
                   <span class="label">Service accessbile</span>
                 </div>
-                <div class="col-sm-7 mt-1">
+                <div class="col-sm-7">
                   <span>Oui</span>
                 </div>
               </div>
@@ -58,7 +63,7 @@
                 <div class="col-sm-5">
                   <span class="label">Capacité d'accueil</span>
                 </div>
-                <div class="col-sm-7 mt-1">
+                <div class="col-sm-7">
                   <span>899900 places</span>
                 </div>
               </div>
@@ -66,8 +71,8 @@
                 <div class="col-sm-5">
                   <span class="label">Condition d'admission</span>
                 </div>
-                <div class="col-sm-7 mt-1">
-                  <a class="elided-text" href="http://beta.montreal.ca">http://beta.montreal.ca</a>
+                <div class="col-sm-7">
+                  <a class="" href="http://beta.montreal.ca">http://beta.montreal.ca</a>
                 </div>
               </div>
               <div class="divider divider-fullwidth mt-4"></div>
@@ -96,8 +101,8 @@
                 <div class="col-sm-5">
                   <span class="label">Pour connaître tous les tarifs</span>
                 </div>
-                <div class="col-sm-7 mt-1">
-                  <a class="elided-text" href="http://montreal.ca/info-tarif-avec-un-url-super-long-quil-va-falloir-couper-un-jour-ou-lautre-du-moins-a-laffichage">http://montreal.ca/info-tarif-avec-un-url-super-long-quil-va-falloir-couper-un-jour-ou-lautre-du-moins-a-laffichage</a>
+                <div class="col-sm-7">
+                  <a class="" href="http://montreal.ca/info-tarif-avec-un-url-super-long-quil-va-falloir-couper-un-jour-ou-lautre-du-moins-a-laffichage">http://montreal.ca/info-tarif-avec-un-url-super-long-quil-va-falloir-couper-un-jour-ou-lautre-du-moins-a-laffichage</a>
                 </div>
               </div>
               <div class="divider divider-fullwidth mt-4"></div>
@@ -112,7 +117,6 @@
       </div>
     </div>
   </div>
- <!-- Region-after section -->
 </main>
 
 {{> organisms-footer-portal }}

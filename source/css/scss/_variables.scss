@@ -150,9 +150,18 @@ $container-max-widths: (
   xl: 1170px
 );
 
+$content-max-widths: (
+  md: 750px,
+  lg: 1110px,
+  xl: 1600px
+) !default;
+
 // Components
 //
 // Define common padding and border radius sizes and more.
+
+$border-width:                1px;
+$border-color:                $gray-300;
 
 $border-radius:               .25rem;
 $border-radius-lg:            .3125rem;
@@ -164,6 +173,11 @@ $mark-color:                  $gray-900;
 
 $component-active-color:      $white;
 $component-active-bg:         theme-color("primary");
+
+
+// Generic value for backdrop bg and opacity
+$backdrop-bg:                 $gray-800;
+$backdrop-opacity:            .3;
 
 // Fonts
 //
@@ -184,36 +198,42 @@ $line-height-sm:              1.3333;
 
 $font-size-base:              1rem;       // Assumes the browser default, typically `16px`
 $font-size-xl:                1.5rem;     // ~24px
-$font-size-lg:                1.3125rem;  // ~21px
+$font-size-lg:                1.25rem;    // ~20px
 $font-size-md:                0.875rem;   // ~14px
 $font-size-sm:                0.75rem;    // ~12px
 
+// Headings font-size and line-height are made responsive
+// @see type.scss
+// These values represent the largest font-size for those headings
 $h1-font-size:                $font-size-base * 3.25;       // 52px
-$h2-font-size:                $font-size-base * 2.8125;     // 45px
+$h2-font-size:                $font-size-base * 2.75;       // 44px
 $h3-font-size:                $font-size-base * 2.4375;     // 39px
 $h4-font-size:                $font-size-base * 2;          // 32px
 $h5-font-size:                $font-size-base * 1.625;      // 26px
-$h6-font-size:                $font-size-base * 1.1875;     // 19px
+$h6-font-size:                $font-size-base * 1.25;       // 20px
 
 $headings-margin-bottom:      1rem;
-$headings-font-weight:        $font-weight-regular;
+$headings-font-weight:        $font-weight-bold;
 $headings-line-height:        1.23; // specific line-height for each level, see mixins header
-$headings-color:              inherit !default;
+$headings-color:              $gray-900;
 
-$display1-size:               4.0625rem; //6rem;
-$display2-size:               3.6875rem; //5.5rem;
-$display3-size:               3.25rem;   //4.5rem;
-$display4-size:               2.8125rem; //3.5rem;
+// Headings font-size and line-height are made responsive
+// @see type.scss
+// These values represent the largest font-size for those headings
+$display1-size:               4.0625rem;  //65px;
+$display2-size:               4.0625rem;  //65px;
+$display3-size:               3.6875rem;  //59px;
+$display4-size:               3.25rem;    //52px;
 
-$display1-weight:             300;
-$display2-weight:             300;
-$display3-weight:             300;
-$display4-weight:             300;
+$display1-weight:             700;
+$display2-weight:             400;
+$display3-weight:             400;
+$display4-weight:             400;
 
 // Display line-height are dealt directly in the class because it's specific to each display 
 $display-line-height:         $headings-line-height;
 
-$lead-font-size:              $font-size-lg;     // 21px
+$lead-font-size:              1.5rem;     // 24px
 $lead-line-height:            get-line-height($lead-font-size, 32px);    // 32px
 $lead-font-weight:            $font-weight-regular;
 
@@ -225,16 +245,45 @@ $blockquote-font-size:        ($font-size-base * 1.25);
 $hr-margin-y:                 ($spacer * 2);
 
 
+// Tables
+//
+// Customizes the `.table` component with basic values, each used across all table variations.
+
+$table-cell-padding:          1rem .75rem;
+$table-cell-padding-sm:       .5rem .75rem;
+
+$table-bg:                    transparent;
+$table-accent-bg:             $sarcelle-lightest; // used for zebra accent
+$table-hover-bg:              $sarcelle-lightest; // used for hoverable
+$table-active-bg:             $table-hover-bg;
+
+$table-border-width:          $border-width;
+$table-border-color:          $gray-200;
+
+$table-head-bg:               $sarcelle-lightest;
+$table-head-color:            $headings-color;
+
+$table-head-dark-bg:          $sarcelle-light;
+
+$table-dark-bg:               $gray-900;
+$table-dark-accent-bg:        rgba($white, .05);
+$table-dark-hover-bg:         rgba($white, .075);
+$table-dark-border-color:     lighten($gray-900, 7.5%);
+$table-dark-color:            $body-bg;
+
+$table-striped-order:         odd;
+
+
 //== Icons fonts vdm class, imported from "@villemontreal/font-icon
 $vdm-icon-font-family : 'vdm';
 
 // Navs
 
-$nav-link-padding-y:                1rem;
+$nav-link-padding-y:                1.5rem;
 $nav-link-padding-x:                2rem;
 
-$nav-tabs-border-color:             $white;
-$nav-tabs-border-width:             0;
+$nav-tabs-border-color:             $gray-300;
+$nav-tabs-border-width:             1px;
 $nav-tabs-border-radius:            0;
 $nav-tabs-link-hover-border-color:  $brand;
 $nav-tabs-link-active-color:        $black;
@@ -282,16 +331,27 @@ $pagination-disabled-color:         $gray-400;
 $pagination-disabled-bg:            $white;
 $pagination-disabled-border-color:  $gray-400;
 
-// Breadcrumbs
-
-$breadcrumb-item-padding:           1.25rem;
-$breadcrumb-bg:                     $white;
-$breadcrumb-active-color:           $black;
 
 // Figures
 
 $figure-caption-font-size:          90%;
 $figure-caption-color:              $gray-ink;
+
+
+// Breadcrumbs
+
+$breadcrumb-padding-y:              .75rem;
+$breadcrumb-padding-x:              0;
+$breadcrumb-item-padding:           1rem;
+
+$breadcrumb-margin-bottom:          1rem;
+
+$breadcrumb-bg:                     $white;
+$breadcrumb-divider-color:          $gray-700;
+$breadcrumb-active-color:           $gray-700;
+$breadcrumb-divider:                quote(">");
+
+$breadcrumb-border-radius:          0;
 
 
 // Jumbotron
@@ -305,7 +365,6 @@ $jumbotron-bg:                      $white;
 $card-border-radius:                0;
 $card-border-color:                 $gray-400;
 $card-inner-border-radius:          0;
-//$card-bg:                           $gray-500;
 $card-box-shadow:                   0 1px 7px 0 #e6e6e6;
 
 
@@ -314,11 +373,11 @@ $card-box-shadow:                   0 1px 7px 0 #e6e6e6;
 //
 // Define alert colors, border radius, and padding.
 
-$alert-padding-y:                   1.5rem !default;
-$alert-padding-x:                   1.5rem !default;
-$alert-margin-bottom:               1rem !default;
+$alert-padding-y:                   1.5rem;
+$alert-padding-x:                   1.5rem;
+$alert-margin-bottom:               1rem;
 $alert-border-radius:               0;
-$alert-link-font-weight:            $font-weight-bold !default;
+$alert-link-font-weight:            $font-weight-bold;
 $alert-border-width:                0;
 
 
@@ -330,6 +389,13 @@ $progress-circle-border-color-fill:     $gray-700;
 $progress-circle-size:                  100px;
 $progress-circle-steps:                 100; //this needs to be even.
 $progress-circle-animation-timing:      .5s;
+
+// List group
+
+$list-group-bg:                     $white;
+$list-group-border-color:           $gray-500;
+$list-group-border-width:           $border-width;
+$list-group-border-radius:          0;
 
 // Badges
 
@@ -484,11 +550,38 @@ $dropdown-item-padding-x:           2.5rem;
 
 $dropdown-header-color:             $gray-600;
 
-// Modal
 
-//$modal-lg:                          800px;
+// Modals
+
+// Padding applied to the modal body
+$modal-inner-padding:               1rem;
+
+$modal-dialog-margin:               .5rem;
+$modal-dialog-margin-y-sm-up:       1.75rem;
+
+$modal-title-line-height:           $line-height-base;
+
+$modal-content-bg:                  $white;
+$modal-content-border-color:        rgba($black, .2);
+$modal-content-border-width:        0;
+$modal-content-border-radius:       0;
+$modal-content-box-shadow-xs:       0 .25rem .5rem rgba($black, .5);
+$modal-content-box-shadow-sm-up:    0 .5rem 1rem rgba($black, .5);
+
+// must be the same as $menu backdrop-bg and opacity
+$modal-backdrop-bg:                 $backdrop-bg;
+$modal-backdrop-opacity:            $backdrop-opacity;
+$modal-header-border-color:         $gray-200;
+$modal-footer-border-color:         $modal-header-border-color;
+$modal-header-border-width:         $modal-content-border-width;
+$modal-footer-border-width:         $modal-header-border-width;
+$modal-header-padding:              1rem;
+
+$modal-lg:                          800px;
 $modal-md:                          600px;
-//$modal-sm:                          300px;
+$modal-sm:                          300px;
+
+$modal-transition:                  transform .3s ease-out;
 
 
 //
@@ -553,15 +646,6 @@ $navbar-light-active-color:         $black;
 $navbar-light-disabled-color:       $gray-700;
 //$navbar-light-toggler-icon-bg:      str-replace(url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 30 30' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='#{$navbar-light-color}' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 7h22M4 15h22M4 23h22'/%3E%3C/svg%3E"), "#", "%23") !default;
 $navbar-light-toggler-border-color: $black;
-
-// hamburger
-//
-$hamburger-padding-x:       .5rem;
-$hamburger-padding-y:       .75rem;
-$hamburger-layer-width:     2rem;
-$hamburger-layer-height:    .1875rem;
-$hamburger-layer-spacing:   .53125rem;
-$hamburger-layer-color:     $black;
 
 
 // - - - - - - - - - -

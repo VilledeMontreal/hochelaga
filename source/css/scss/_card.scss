@@ -16,14 +16,17 @@
   }
 
   .card-tags {
-    color: $primary;
     display: inline-block;
-    font-weight: $font-weight-bold;
     margin-bottom: 1rem;
-    &:before {
-      @include circle($size: .75rem, $background-color: $primary);
-      display: inline-block;
-      margin-right: 0.5rem;
+
+    &.primary-tags {
+      color: $primary;
+      font-weight: $font-weight-bold;
+      &:before {
+        @include circle($size: .75rem, $background-color: $primary);
+        display: inline-block;
+        margin-right: 0.5rem;
+      }
     }
   }
 
@@ -43,6 +46,32 @@
   .card-label {
     @include card-heading();
     font-weight: $font-weight-bold;
+  }
+
+  .card-link {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    border-bottom: none;
+    color: $sarcelle;
+    font-size: $font-size-base;
+    @include transition(color .15s ease-in-out);
+    .vdm {
+      font-size: 3rem;
+      margin-left: 1rem;
+      color: inherit;
+    }
+
+    &:hover {
+      color: $sarcelle-surprise;
+
+    }
+  }
+
+  .tarif-value {
+    font-size: $font-size-lg;
+    font-weight: $font-weight-bold;
+    padding: 0 .5rem;
   }
 
   .card-body {
@@ -175,6 +204,23 @@
     }
   }
 
+  // Inception card
+  // Cards as a link with sublinks
+  &.card-inception {
+    cursor: pointer;
+    transition: all 100ms ease-in-out;
+    &:hover {
+      transform: scale(1.04);
+      .card-title {
+        color: $primary;
+      }
+    }
+    // Links inside inception card
+    a {
+      border-bottom: none;
+    }
+  }
+
   // Featured card specific
   &.card-featured {
     // border: none;
@@ -209,35 +255,6 @@
     }
   }
 
-  /*
-  &.card-fluid {
-    &.card-featured {
-      .card-body {
-        padding: 2rem;
-        justify-content: center;
-      }
-
-      @include media-breakpoint-up(lg) {
-        .card-title {
-          @include heading(2);
-        }
-        .card-title,
-        .card-text {
-          margin-bottom: 2rem;
-        }
-        .card-text {
-          font-size: $font-size-lg;
-        }
-        .card-body {
-          padding: 6rem;
-        }
-        .card-footer {
-          margin-top: 0;
-        }
-      }
-    }
-  }
-  */
   &.card-complex-layout,
   &.card-label-content {
     text-align: left;
@@ -273,7 +290,7 @@
     text-align: left;
   }
   .card-label {
-    font-size: $lead-font-size;
+    font-size: $font-size-xl;
     font-weight: $font-weight-bold;
     &.card-label-normal {
       font-weight: $font-weight-normal;
@@ -282,6 +299,18 @@
 
   + .card-section {
     border-top: 1px solid $gray-500;
+  }
+
+  .table {
+    margin-bottom: 0;
+    th, td {
+      padding-top: 1.5rem;
+      padding-bottom: 1.5rem;
+    }
+    th:first-child {
+      text-align: left;
+      padding-left: 2rem;
+    }
   }
 
   @include media-breakpoint-up(lg) {
@@ -300,7 +329,7 @@
     }
   }
   .alert-heading {
-    font-size: $lead-font-size;
+    font-size: $font-size-lg;
     font-weight: $font-weight-bold;
     color: inherit;
     margin-bottom: 0;

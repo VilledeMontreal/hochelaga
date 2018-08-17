@@ -586,6 +586,29 @@ $pl-size-box-wrapper-padding: 1rem;
   background: $sarcelle-lightest;
 }
 
+// modal examples
+.pl-example-modal {
+
+}
+
+.pl-example-modal {
+  .modal {
+    position: relative;
+    top: auto;
+    right: auto;
+    bottom: auto;
+    left: auto;
+    z-index: 1;
+    display: block;
+  }
+
+  .modal-dialog {
+    left: auto;
+    margin-right: auto;
+    margin-left: auto;
+  }
+}
+
 
 // sg-pattern-extra
 

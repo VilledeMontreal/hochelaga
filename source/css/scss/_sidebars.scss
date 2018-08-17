@@ -1,5 +1,9 @@
-// Anything that is a top level sidebar in the layout.
-// See also base definition in the layout.scss document.
+// Sidebar
+.sidebar {
+  > * {
+    background-color: $gray-sky;
+  }
+}
 .sidebar {
   // Links in sidebars
   a {
@@ -103,8 +107,7 @@
     margin-bottom: 1rem;
   }
   .sidebar-title {
-    //margin-bottom: 2em;
-    @include heading(5, bold);
+    @extend .h5;
     display: flex;
     margin-bottom: 1rem;
     // Tweak some styles for icon inside title

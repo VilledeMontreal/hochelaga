@@ -1,62 +1,56 @@
 {{> atoms-link-skip-to-main-content }}
 {{> organisms-header-portal }}
-{{> molecules-breadcrumb }}
 
 <main class="main-content {{ pageClasses }}" id="main-content" aria-label="Main Content">
 
-  {{> organisms-content-header-portal }}
+  {{> organisms-content-header }}
 
   {{# featuredSection}}
     {{> molecules-card }}
   {{/ featuredSection}}
 
-  <section class="region page-section {{ regionMainClasses }}">
+  <!-- Teaser -->
+  {{# has-lead-text }}
+  {{> molecules-lead }}
+  {{/ has-lead-text }}
+
+  <section class="page-section {{ regionMainClasses }}">
+    {{# third-level-section }}
     <div class="container">
       <div class="row">
+        {{# third-level-section.items.heading }}
         <div class="col-12">
-          <h2 class="section-heading">Les principales collectes</h2>
+          <h2 class="section-heading">{{items.heading}}</h2>
         </div>
+        {{/ third-level-section.items.heading }}
+
         <div class="col-12 col-lg-7">
           <div class="hub-list-container">
-            <h3>Les collectes régulières</h3>
+            {{# third-level-section.items.subheading}}
+            <h3>{{ items.subheading }}</h3>
+            {{/ third-level-section.items.subheading}}
             <ul class="hub-list">
+              {{# third-level-section.items.item}}
               <li class="hub-list-item">
-                <a href="/collectes/collecte-des-matieres-recyclables">Collecte des matières recyclables </a>
-                <p>Quoi mettre dans votre bac de recyclage?</p>
-                <p>Quoi mettre dans votre bac de recyclage?</p>
-                <p>Quoi mettre dans votre bac de recyclage?</p>
+                {{# link}}
+                <a href="{{ url }}">{{ title }}</a>
+                {{/ link}}
+                {{# description}}
+                  {{{ description}}}
+                {{/ description}}
               </li>
-              <li class="hub-list-item">
-                <a href="/collectes/collecte-des-residus-alimentaires">Collecte des résidus alimentaires</a>
-                <p>Quoi mettre dans votre bac brun?</p>
-              </li>
-              <li class="hub-list-item">
-                <a href="/collectes/collecte-des-residus-verts">Collecte des résidus verts</a>
-                <p>Quoi faire de vos résidus de jardin, de gazon et des feuilles mortes?</p>
-              </li>
-              <li class="hub-list-item">
-                <a href="/collectes/collecte-des-dechets-domestiques">Collecte des déchets domestiques</a>
-                <p>Il vous reste des déchets qui n’ont pas été recyclés, compostés ou déposés à l’écocentre? </p>
-              </li>
-            </ul>
-          </div>
-          <div class="hub-list-container">
-            <h3>Les collectes ponctuelles</h3>
-            <ul class="hub-list">
-              <li class="hub-list-item">
-                <a href="/collectes/collecte-des-residus-domestiques-dangereux">Collecte des résidus domestiques dangereux</a>
-                <p>Quoi faire de vos batteries, aérosols et huiles usées? </p>
-              </li>
+              {{/ third-level-section.items.item}}
             </ul>
           </div>
         </div>
-        {{# sidebarRight }}
+        {{# sidebarRight}}
         <aside class="col-12 {{ sidebarRightClass }} sidebar sidebar-right">
           {{> organisms-sidebar-block }}
         </aside>
-        {{/ sidebarRight }}
+        {{/ sidebarRight}}
       </div>
     </div>
+    {{/ third-level-section }}
   </section>
 </main>
 

@@ -1,0 +1,198 @@
+// Lists overrides and new variants
+
+// Plain list overrides
+//
+ul, ol {
+  margin-bottom: 2rem;
+  padding-left:  1.25rem;
+  li {
+    padding-bottom: .5rem;
+    
+    ul, ol {
+      padding: .5rem 0 0 1rem;
+    }
+  }
+}
+
+
+// Ordered list overrides
+ol {
+  &.numbered-list {
+    list-style-type: none; // Not sure this remains accessible
+    counter-reset: ol-counter;
+    padding-left: 6em;
+    position: relative;
+    .title {
+      @extend .h5;
+      color: $headings-color;
+      margin-bottom: 1rem;
+    }
+
+    > li {
+      padding-bottom: 1.5rem;
+      &:before {
+        @extend .h5;
+        color: $headings-color;
+        content: counter(ol-counter, decimal);
+        counter-increment: ol-counter;
+        position: absolute;
+        width: 1.5em;
+        height: 1.6em;
+        padding: 0 2.15em 0 0;
+        left: 0;
+        border-bottom: 4px solid $brand;
+      }
+    }
+  }
+}
+
+// Social media list
+//
+.social-media-list {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  li {
+    margin: 0;
+    padding: 0 .65rem 0 0;
+    flex: 0;
+    flex-wrap: wrap;
+    &:last-of-type {
+      margin: 0;
+      padding-right: 0;
+    }
+    a {
+      border: none;
+      color: $black;
+      display: flex;
+      align-items: center;
+      text-decoration: none;
+      cursor: pointer;
+      &:hover,
+      &:active {
+        color: $sarcelle-surprise;
+        .vdm {
+          color: inherit;
+        }
+      }
+      .vdm {
+        font-size: 2rem;
+        padding-right: .5rem;
+      }
+      .label {
+        &:hover,
+        &:active {
+          text-decoration: underline;
+        }
+      }
+    }
+  }
+}
+
+// Date lists
+// A list of items grouped under dates
+// date-list> ul > li > { day-month-year } ul > li { item one } /li |  li { item two } /li ...
+.date-list {
+  margin-bottom: 1.5rem;
+  @extend .list-unstyled;
+  &:last-of-type {
+    margin-bottom: 0;
+  }
+  > li {
+    .date {
+      margin-bottom: 1.5rem;
+    }
+    ul {
+      margin-bottom: 2rem;
+
+      &.list-items {
+        li {
+          margin-bottom: 2rem;
+
+          &:last-of-type {
+            margin-bottom: 0;
+          }
+        }
+      }
+    }
+  }
+}
+
+// Hub Lists
+// A list of items with link and description
+.hub-list-container {
+  h3 {
+    margin-bottom: 2rem;
+  }
+}
+.hub-list {
+  @extend .list-unstyled;
+  margin-bottom: 3.5rem;
+}
+
+.hub-list-item {
+  margin-bottom: 2rem;
+  &:last-child {
+    margin-bottom: 0;
+  }
+  a {
+    @extend .h5;
+    border: none;
+    color: $primary;
+    display: inline-block;
+    margin-bottom: 1rem;
+  }
+  p {
+    margin-bottom: 1rem;
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+}
+
+// Definition list
+
+dl {
+  margin-bottom: 2em;
+  dt {
+    @extend .h5;
+    color: $headings-color;
+  }
+  dd {
+    padding-bottom: 2em;
+    border-bottom: 1px solid $gray-300;
+    margin-bottom: 2em;
+    &:last-of-type {
+      padding-bottom: 0;
+      margin-bottom: 0;
+      border: 0;
+    }
+  }
+}
+
+// List groups
+//
+// Individual list items
+//
+// Use on `li`s or `div`s within the `.list-group` parent.
+
+.list-group-item {
+  border: $list-group-border-width solid $list-group-border-color;
+  // remove right and left border
+  border-right: 0;
+  border-left: 0;
+  @include border-radius(0);
+
+  // remove border-top-radius
+  &:first-child {
+    @include border-top-radius(0);
+  }
+
+  // remove border-bottom-radius
+  &:last-child {
+    @include border-bottom-radius(0);
+  }
+}

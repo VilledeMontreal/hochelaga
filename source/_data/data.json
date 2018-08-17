@@ -2,6 +2,8 @@
   "title": "Ville de Montréal - Toolbox",
   "metaAuthor": "Ville de Montréal",
   "metaDescription": "Meta description content goes here",
+  "date-time-text": "Updated on July 30th, 2018 at 9:29 AM",
+  "hub-link-text": "Back to hub page link",
   "heading": "Page Header",
   "subheading": "Subtext For Header",
   "serviceName": "Nom du service XYZ",
@@ -11,6 +13,9 @@
   "ariaLabel": "Aria label",
   "listItem": "List Item",
   "listItemNested": "Nested List Item",
+  "social-media-icons-list": {
+    "has-label": true
+  },
   "term": "Term",
   "definition": "This is the definition of the term.",
   "badge": "23",
@@ -30,12 +35,14 @@
   "alt": "Image alt attribute",
   "caption": "Caption Text",
   "panelClass": "panel-default",
+  "date-time": "Mis à jour le 23 septembre 2037",
   "panelHeading": false,
   "panelFooter": false,
   "htmlClass": "",
   "pageClasses": "",
   "headerClasses": "",
   "headerContainerClasses": "",
+  "leadContainerClasses": "mb-8",
   "mainContainerClasses": "",
   "sidebarLeftClass": "col-lg-4",
   "sidebarRightClass": "col-lg-4",
@@ -51,13 +58,12 @@
     "Kogi Cosby sweater ethical squid irony disrupt, organic tote bag gluten-free XOXO wolf typewriter mixtape small batch. DIY pickled four loko McSweeney's, Odd Future dreamcatcher plaid. PBR&B single-origin coffee gluten-free McSweeney's banjo, bicycle rights food truck gastropub vinyl four loko umami +1 narwhal chia. Fashion axe Banksy chia umami artisan, bitters 90's fanny pack. Single-origin coffee drinking vinegar blog semiotics. Fap mumblecore church-key PBR&B, direct trade 8-bit swag asymmetrical slow-carb Marfa ethical. Mustache retro four loko, church-key Thundercats Portland Helvetica Cosby sweater Echo Park sartorial 8-bit ugh bicycle rights iPhone tote bag.",
   "text-teaser":
     "Migas air plant drinking vinegar twee leggings blue bottle pop-up heirloom jean shorts locavore pug shoreditch lumbersexual tousled.",
+  "lead-text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris in massa sed nisl commodo porta. Aliquam erat volutpat. Duis a sollicitudin nibh. Vivamus tincidunt vel ipsum sed euismod. Sed luctus quam vel mauris metus.",
   "text-elements": {
     "headings": {
       "h1": {
         "classes": "",
-        "content": "H1 heading",
-        "divider": true,
-        "dividerClass": "divider-title"
+        "content": "H1 heading"
       },
       "h2": {
         "classes": "",
@@ -76,8 +82,9 @@
         "content": "H5 heading"
       },
       "display": {
-        "classes": "display-1",
-        "content": "Display 1"
+        "tag": "h1",
+        "classes": "display-2",
+        "content": "Display heading 2"
       }
     }
   },
@@ -306,6 +313,8 @@
   "buttonClass": "btn-primary",
   "buttonText": "Button",
   "buttonType": "button",
+  "dataToggle": "modal",
+  "dataTarget": "#dataTarget",
   "breadcrumbs": [
     {
       "url": "#",
@@ -314,11 +323,6 @@
     {
       "url": "#",
       "text": "Link 2"
-    },
-    {
-      "url": "#",
-      "text": "Link 3",
-      "is-active": true
     }
   ],
   "caret": "caret",
@@ -520,6 +524,7 @@
       }
     ]
   },
+  "wizard-form-name": "Nom du processus / formulaire",
   "navDashboard": [
     {
       "navDashboardLabel": "Nav Dashboard Label",
@@ -579,6 +584,7 @@
     ]
   },
   "cards": {
+    "section-classes": "bg-gray-sky",
     "classes": false,
     "bsgrid-classes": "col-12 col-md-6 col-lg-4",
     "headings": false,
@@ -620,5 +626,10 @@
         }
       ]
     }
-  ]
+  ],
+  "header-image": {
+    "src": "https://picsum.photos/2000/768/?random",
+    "alt": "Header image default alt.",
+    "classes": false
+  }
 }

@@ -4,20 +4,52 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](http://keepachangelog.com/en/1.0.0/)
 and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.html).
 
-## Unreleased
-- Mobile menu search interactivity refinement.
 
-## [0.3.1] - 2018-07-24
+## [1.0.0] - 2018-08-16
 
-## Added 
+## Added
+- .btn-quit a quit button with icon on the right
+- Added 3 variants for modals: .modal-alert, .modal-icon and .modal-user with static and live examples.
+- Added 2 new card variants for tarification (teaser and table).
+- Added responsive values for all headings, display-headings and lead.
+- Added new template for Page sujet.
 
+## Changed
+- Changed Wizard header styling
+- Minor changes to wizard steps: solved responsive issues and theming upgrades. 
+- Minor changes to default modal styles.
+- Changed breadcrumb integration and style.
+- Changed some display-headings and lead values.
+- Refactoring of content headers. Simplification and harmonisation of all content headers html and css
+- Refactoring of footer.
+- Changed nav tabs theming.
+- Changed tables and tables variant theming.
+- Changed hubs templates.
+- Removed some variants for tables and pagination.
+
+## [0.3.2] - 2018-07-31
 
 ### Changed
-- Upgraded to Bootstrap 4.1.2
-- Upgraded to font-icon 1.0.7
+- changed navbar logo breakpoint sizes for tablets
+
+
+## [0.3.1] - 2018-07-25
+
+## Added 
+- Added new color $sarcelle-light aka pepermane.
+- Added some templates variants (authenticated, profile, notifications) for organisms > navigation > navbar
+- Added .elided-text utility class.
+
+### Changed
+- Upgraded to Bootstrap 4.1.3
+- Upgraded to font-icon 1.0.9
+- Changed padding, sizing and buttons styles for navbar.
+- Changed connected vs non-connected icon in navbar.
 
 ### Fixed
 - Fixed js files in distribution
+- Fixed $sarcelle-lightest hex color
+- Fixed wrong color for $gray-600
 
 ## [0.3.0] - 2018-07-06
 

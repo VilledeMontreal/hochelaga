@@ -2,16 +2,16 @@
 // Reference used : https://projects.invisionapp.com/d/main#/console/11533069/245898997/inspect
 .breadcrumb {
   border-radius: 0;
-  font-size: $font-size-sm;
+  font-size: $font-size-lg;
   margin-bottom: 0;
   a {
     border: none;
+    color: $gray-700;
+    @include transition(color .15s ease-in-out);
+    &:hover {
+      color: $sarcelle-surprise;
+    }
   }
-}
-
-.nav-wizard {
-  background-color: $white;
-  border-bottom: 1px solid $gray-400;
 }
 
 // Pagination
@@ -188,18 +188,36 @@
 // Tabs
 //
 
+
 nav {
+  // Flex messed up with a couple of nav component.
+  // No background on why this was switch to flex
+  // Revert back to default and seems ok for all our nav component.
+  //display: flex;
   position: relative;
 }
 
 .nav-tabs {
-  border-bottom: none;
-  display: flex;
-  flex-direction: column;
-  @extend .flex-md-row;
+  display: inline-block;
+  background-color: $white;
+  overflow-x: auto;
+  overflow-y: hidden;
+  white-space: nowrap;
+  text-align: center;
+  width: 100%;
+  /* Make an auto-hiding scroller for the 3 people using a IE */
+  -ms-overflow-style: -ms-autohiding-scrollbar;
+  /* For WebKit implementations, provide inertia scrolling */
+  -webkit-overflow-scrolling: touch;
+  /* Remove the default scrollbar for WebKit implementations */
+  &::-webkit-scrollbar {
+      display: none;
+  }
   .nav-item {
     margin-bottom: 0;
     padding-bottom: 0;
+    display: inline-block;
+    max-width: 300px;
     &.show {
       .nav-link {
         @extend .nav-link.active;
@@ -211,31 +229,20 @@ nav {
       }
     }
   }
-  @include media-breakpoint-up(md) {
-    justify-content: center;
-    .nav-item {
-      flex: 0 1 25%;
-      .nav-link {
-        margin-right: $nav-tabs-spacing;
-      }
-      &:last-of-type {
-        .nav-link {
-          margin: 0;
-        }
-      }
-    }
-  }
 }
 
-.nav-tabs,
-.nav-tabs-dropdown-menu {
+.nav-tabs {
   .nav-link {
-    background: $gray-sky;
     border: none;
-    color: $black;
+    color: $gray-700;
+    font-size: $font-size-md;
+    line-height: 1.42857142857;
     font-weight: $font-weight-bold;
+    padding: 1.5rem .5rem;
     position: relative;
     text-align: center;
+    white-space: normal;
+    &:hover,
     &.active,
     &:focus {
       &:not(.disabled) {
@@ -244,22 +251,34 @@ nav {
         background-color: $white;
         &:before {
           content: " ";
-          width: 100%;
+          width: auto;
           height: $nav-tabs-active-border-width;
           background-color: $brand;
           position: absolute;
-          top: 0;
-          left: 0;
+          bottom: 0;
+          left: .5rem;
+          right: .5rem;
           display: block;
         }
       }
     }
     &.disabled {
-      background-color: $gray-sky;
+      //background-color: $gray-sky;
+      cursor: default;
     }
-    &:not(.active) {
-      @include media-breakpoint-up(md) {
-        box-shadow: 0px -10px 10px -10px rgba(0, 0, 0, 0.3) inset;
+  }
+  @include media-breakpoint-up(md) {
+    .nav-link {
+      padding: 2rem 2.5rem;
+      &:hover,
+      &.active,
+      &:focus {
+        &:not(.disabled) {
+          &:before {
+            left: 2.5rem;
+            right: 2.5rem;
+          }
+        }
       }
     }
   }
@@ -364,23 +383,45 @@ nav {
  * Step Wizard
  */
 .nav-wizard {
+  background-color: $white;
+  border-bottom: 1px solid $gray-400;
   display: flex;
   flex-direction: row;
   align-items: center;
 }
 .nav-steps-count {
-  display: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: $gray-500;
+  font-size: $font-size-md;
+  flex: 1 0 auto;
+  line-height: 1.71428571;
+  padding: 1.125rem;
+  width: 100%;
+  // Absolute positionning on larger breakpoint
   @include media-breakpoint-up(md) {
+    color: $gray-ink;
+    font-size: $font-size-lg;
+    line-height: 1.5;
+    font-weight: $font-weight-bold;
+    padding: 1.5rem 1rem 1.125rem 1.875rem;
     position: absolute;
     top: 0;
     bottom: 0;
-    left: $header-icon-width;
-    display: flex;
-    align-items: center;
+    left: 0;
+    width: auto;
+    justify-content: left;
   }
 }
 .nav-steps-items {
-  flex: 1;
+  display: none;
+  // Show steps on larger breakpoint
+  @include media-breakpoint-up(md) {
+    display: flex;
+    flex: 1;
+    padding-bottom: 1.5rem;
+  }
 }
 .nav-steps {
   display: flex;
@@ -419,9 +460,9 @@ nav {
     }
   }
   .caption {
-    color: $gray-ink;
+    color: $gray-600;
     display: inline-block;
-    padding-bottom: .5rem;
+    padding-bottom: .25rem;
   }
   .circle {
     @include circle($background-color: $gray-200, $border: true);
@@ -446,8 +487,13 @@ nav {
       cursor: default;
     }
   }
-  //larger than 768px
+  // override nav-link padding
+  .nav-link {
+    padding: 1rem 2rem;
+  }
+  //larger than 576px
   @include media-breakpoint-up(sm) {
+    display: flex;
     justify-content: center;
     // Position the steps line and circle
     .nav-item {
@@ -459,6 +505,7 @@ nav {
     li {
       &:after {
         height: 1px;
+        // bottom is $nav-link-padding-y + half of circle height (1rem/2)
         bottom: 1.5rem;
         width: 100%;
       }
@@ -470,29 +517,15 @@ nav {
       margin: 0 auto;
     }
   }
-  // smaller than 768px
-  @include media-breakpoint-down(xs) {
-    li {
-      &:after {
-        top: 50%;
-      }
-      .nav-link {
-        display: flex;
-        flex-direction: row;
-        align-items: center;
-        padding: 0.625rem 1rem 0.625rem 0;
-        .caption {
-          order: 2;
-          padding-left: 1rem;
-          padding-bottom: 0;
-        }
-        .circle {
-          order: 1;
-          flex: 0 0 auto;
-        }
-      }
-    }
+  //larger than 768px
+  @include media-breakpoint-up(md) {
+    margin: 0 6rem;
   }
+
+  @include media-breakpoint-up(lg){
+    margin: 0 3rem;
+  }
+
 }
 
 // Nav dashboard Steps
@@ -532,11 +565,16 @@ nav {
   border-bottom: 1px solid $gray-200;
   min-height: 75px;
 
+  .container-fluid {
+    padding-left: .5rem;
+    padding-right: .5rem;
+  }
+
   .navbar-brand,
   .navbar-link {
     color: $headings-color;
     display: flex;
-    font-size: ($font-size-base * 1.125);  // 18px
+    font-size: 1.125rem;  // 18px
     line-height: 1.333333;
     padding: 0;
   }
@@ -556,12 +594,14 @@ nav {
     display: flex;
     flex-direction: row;
     align-items: center;
+    /* 
     @include media-breakpoint-up(md) {
       margin-left: $header-icon-width;
     }
+    */
     &.navbar-header-service-link {
       .navbar-brand {
-        font-size: ($font-size-base * 1.125);  // 18px
+        font-size: 1.125rem;  // 18px
       }
     }
     a {
@@ -579,7 +619,7 @@ nav {
         flex-direction: row;
         flex-wrap: wrap;
         padding-bottom: 0;
-        font-size: ($font-size-base * 1.125);
+        font-size: 1.125rem;
         a {
           font-weight: $font-weight-bold;
           text-decoration: none;

@@ -25,74 +25,102 @@ html {
   }
 }
 
-.sidebar {
-  > * {
-    background-color: $gray-sky;
-  }
-} // Sidebar
-
-// Tweak grid container padding
-
-.container {
+// Grid container padding override
+.container,
+.container-fluid {
   padding-right: $grid-gutter-width;
   padding-left: $grid-gutter-width;
 }
 
-
-
-
-// Main header, always includes at least the page Title
-.region-content-header {
+// Main content header
+.content-header {
+  padding-top: 6rem;
+  .container-fluid {
+    max-width: map-get($content-max-widths, xl);
+  }
   // Dark variant
   &.content-header-dark {
-    background-color: $gray-900;
+    background-color: $gray-700;
     color: $white;
-    h1,h2,h3,h4,h5,h6, {
+    h1,h2,h3,h4,h5,h6 {
+      color: $white;
+    }
+    .hub-link a {
       color: $white;
     }
   }
 
-  &.has-nav-tabs {
-    .content-header {
-      margin-bottom: 0;
-    }
-    margin-bottom: 6rem;
-  }
-
-  &.region-border {
-    border-bottom: 1px solid $gray-400;
-  }
-
-}
-.content-header {
-  width: 100%;
-
   &-title {
-    display: flex;
-    flex-wrap: wrap;
-    padding: 3rem 0;
-    h1, .h1 {
-      width: 100%;
+    padding-bottom: 2.5rem;
+    h1 {
+      &:after {
+        content: "";
+        display: block;
+        height: .5rem;
+        width: 3.75rem;
+        margin-top: 2.5rem;
+        margin-bottom: 0;
+        margin-right: 10px;
+        background-color: $brand;
+      }
+    }
+
+    // smaller line for smallest breakpoint
+    @include media-breakpoint-up(sm) {
+      h1 {
+        &:after {
+          width: 7.5rem;
+        }
+      }
     }
   }
 
-  .date-time {
-    display: flex;
-    align-self: center;
+  &-metadata {
+    padding-bottom: 2.5rem;
+    color: $gray-600;
+    .date-time {
+      font-size: 1.125rem;
+      //line-height: 1.3333;
+    }
+    .hub-link {
+      a {
+        border-bottom: none;
+        color: $gray-700;
+        font-size:  1.125rem;
+        //line-height: 1.3333;
+        @include transition(color .15s ease-in-out);
+        &:hover {
+          color: $sarcelle-surprise;
+        }
+      }
+    }
+    // 576px and up
+    @include media-breakpoint-up(sm) {
+      .hub-link {
+        display: flex;
+        flex-flow: row wrap;
+        justify-content: flex-end;
+      }
+    }
+    // 768 px and up
+    @include media-breakpoint-up(md) {
+      .date-time, 
+      .hub-link a {
+        font-size: $font-size-lg;
+        //line-height: 1.3333;
+      }
+    }
+    @include media-breakpoint-down(xs){
+      padding-bottom: 0;
+      > div + div {
+        margin-top: .5rem;
+      }
+    }
   }
 
-  @include media-breakpoint-up(lg) {
-    &.has-image {
-      margin-top: -180px;
-    }
-    .header-title-overlap {
-      background-color: $white;
-    }
-  }
 }
 
 .region-content {
-  padding-top: 4rem;
   padding-bottom: 4rem;
 }
 
@@ -105,6 +133,17 @@ html {
 }
 .sidebar-right {
   order: 2;
+}
+
+// Medium breakpoint and above (768)
+@include media-breakpoint-up(md) {
+  // Reorder the source for medium + displays -- 3 columns override
+  .sidebar-left {
+    order: 0;
+  }
+  .sidebar-right {
+    order: 0;
+  }
 }
 
 // Generic section layouts
@@ -123,14 +162,16 @@ html {
   }
 }
 
-// Medium breakpoint and above (768)
-@include media-breakpoint-up(md) {
-  // Reorder the source for medium + displays -- 3 columns override
-  .sidebar-left {
-    order: 0;
+// Lead container
+.lead-container {
+  padding-top: 3rem;
+  padding-bottom: 3rem;
+  @include media-breakpoint-up(md){
+    padding-top: 4rem;
+    padding-bottom: 4rem;
   }
-  .sidebar-right {
-    order: 0;
+  .lead:last-child {
+    margin-bottom: 0;
   }
 }
 
@@ -143,7 +184,7 @@ html {
     padding-bottom: 1rem;
     align-items: center;
     h2 {
-      @include heading(4, "bold");
+      @extend .h4;
       display: inline-block;
       margin-bottom: 0;
     }
@@ -296,7 +337,6 @@ html {
         vertical-align: middle;
       }
       h1 {
-        //@include heading(5, "bold");
         display: inline-block;
         margin-bottom: 0;
         margin-right: 1rem;
@@ -374,6 +414,78 @@ html {
   }
 }
 
+// Alternative layout for fluid-like content types (sujet, nouvelles)
+// fluid up to a max-width
+// A helper class .section-inner-media is used to deal with media margin and centering
+.section-content-fluid {
+  .section-inner {
+    &.section-inner-md {
+      margin: 0 $grid-gutter-width;
+      max-width: map-get($content-max-widths, md);
+      @media (min-width: map-get($content-max-widths, md) + ($grid-gutter-width * 2)) {
+        margin: 0 auto;
+      }
+    }
+    &.section-inner-lg {
+      margin: 0 $grid-gutter-width;
+      max-width: map-get($content-max-widths, lg);
+      @media (min-width: map-get($content-max-widths, lg) + ($grid-gutter-width * 2)) {
+        margin: 0 auto;
+      }
+    }
+    &.section-inner-xl {
+      margin: 0 $grid-gutter-width;
+      max-width: map-get($content-max-widths, xl);
+      @media (min-width: map-get($content-max-widths, xl) + ($grid-gutter-width * 2)) {
+        margin: 0 auto;
+      }
+    }
+    &.section-inner-media {
+      margin: 0 auto;
+      .media {
+        justify-content: center;
+        margin-bottom: 3rem;
+      }
+    }
+  }
+}
+
+// section-content layout
+// some media types (images and videos) are taken out of the grid
+// TODO: DELETE THIS
+/*
+.container {
+  .section-content {
+    position: relative;
+    .section-inner {
+      @include make-col-ready();
+
+      &.section-layout-outset-column {
+        padding-right: 0;
+        padding-left: 0;
+        margin-left: -$grid-gutter-width;
+        margin-right: -$grid-gutter-width;
+        width: auto;
+        .media {
+          justify-content: center;
+          margin-bottom: 3rem;
+        }
+      }
+
+      @include media-breakpoint-up(lg) {
+        @include make-col(8);
+        @include make-col-offset(2);
+        &.section-layout-outset-column {
+          @include make-col(12);
+          @include make-col-offset(0);
+          padding-left: $grid-gutter-width/2;
+          padding-right: $grid-gutter-width/2;
+        }
+      }
+    }
+  }
+}
+*/
 
 // Overlay
 
@@ -385,7 +497,7 @@ html {
   right: 0;
   bottom: 0;
   cursor: pointer;
-  background-color: $gray-800;
-  opacity: 0.3;
+  background-color: $backdrop-bg;
+  opacity: $backdrop-opacity;
   z-index: 1020;
 }
