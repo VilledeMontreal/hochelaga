@@ -3,10 +3,33 @@
 
 <main class="main-content {{ pageClasses }}" id="main-content" aria-label="Main Content">
 
-  {{> organisms-content-header }}
+  {{> organisms-content-header-profile }}
 
-  <div class="region-content {{ regionContentClasses }}">
+  <!-- Begin main-content region-->
+  <div class="region-content {{ regionMainClasses }}">
+    <div class="container {{ regionMainContainerClasses }}">
+      <div class="row">
+        <aside class="col-12 {{ sidebarLeftClass }} sidebar sidebar-left">
+          {{> organisms-sidebar-block }}
+        </aside>
+        <article class="col-12 {{ regionMainContentClasses }}">
+          <h2>Rôles et responsabilités</h2>
+           
+          {{# cards-roles }}
+          <div class="cards">
+            {{# cards.card-item }}
+              {{> molecules-card-item}}
+            {{/ cards.card-item }}
+          </div>
+          {{/ cards-roles }}
 
+          <h2>Autres responsabilités</h2>
+
+          {{> molecules-list-group }}
+
+        </article>
+      </div>
+    </div>
   </div>
 
 </main>

@@ -1,37 +1,49 @@
 <header class="content-header {{ contentHeaderClasses }}">
   <div class="{{ headerContainerClasses }} pb-7">
     <div class="row">
-      <div class="col-12 col-md-4">
-        <img src="https://picsum.photos/250/250?image=823" class="rounded-circle" alt="Portrait de l'élu X." />
+      <div class="col-12 col-lg-8 offset-lg-4">
+        <div class="content-header-metadata">
+          <div class="hub-link">
+            <a href="#">{{ hub-link-text }}</a>
+          </div>
+        </div>
       </div>
-      <div class="col-12 col-md-8">
-        {{# has-breadcrumb}}
-        {{> molecules-breadcrumbs}}
-        {{/ has-breadcrumb}}
+    </div>
+    <div class="row">
+      <div class="col-12 col-lg-4">
+        <div class="img-profile">
+          <img src="https://picsum.photos/500/500?image=823" class="img-fluid rounded-circle" alt="Portrait de l'élu X." />
+        </div>
+      </div>
+      <div class="col-12 col-lg-8">
         <div class="content-header-title">
           {{> atoms-display-heading }}
         </div>
-      </div>
-    </div>
-    
-    {{# has-header-meta}}
-    <div class="row content-header-metadata">
-       {{# has-publication-date }}
-      <div class="col-12 col-sm-6">
-        {{> atoms-date-time-text }}
-      </div>
-      {{/ has-publication-date}}
-      {{# has-hub-link}}
-      <div class="col-12 col-sm-6">
-        <div class="hub-link">
-          <a href="#">{{ hub-link-text }}</a>
+        <div class="content-header-infos">
+          <span class="profile-title">Conseiller de la Ville</span>
+          <span class="profile-member">Membre du comité exécutif</span>
         </div>
       </div>
-      {{/ has-hub-link}}
     </div>
-    {{/ has-header-meta}}
+    <div class="row">
+      <div class="col-12 col-lg-4">
+        <div class="content-header-infos">
+          <span class="profile-label">Parti</span>
+          <span class="profile-value">Projet Montréal - Équipe Valérie Plante</span>
+        </div>
+      </div>
+      <div class="col-12 col-lg-4">
+        <div class="content-header-infos">
+          <span class="profile-label">District</span>
+          <span class="profile-value">Nom du district</span>
+        </div>
+      </div>
+      <div class="col-12 col-lg-4">
+        <div class="content-header-infos">
+          <span class="profile-label">Arrondissement</span>
+          <span class="profile-value">Mercier-Hochelaga-Maisonneuve</span>
+        </div>
+      </div>
+    </div>
   </div>
-  {{# has-image}}
-  {{> molecules-header-image}}
-  {{/ has-image}}
 </header>

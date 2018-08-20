@@ -8,6 +8,7 @@ html {
 
   // @see https://philipwalton.github.io/solved-by-flexbox/demos/sticky-footer/
   // @see https://github.com/philipwalton/solved-by-flexbox/blob/master/assets/css/components/site.css
+  /*
   &.sticky {
     .vdm-page {
       display: flex;
@@ -23,6 +24,7 @@ html {
       flex: none;
     }
   }
+  */
 }
 
 // Grid container padding override
@@ -65,7 +67,7 @@ html {
       }
     }
 
-    // smaller line for smallest breakpoint
+    // 576px and up
     @include media-breakpoint-up(sm) {
       h1 {
         &:after {
@@ -101,8 +103,14 @@ html {
         flex-flow: row wrap;
         justify-content: flex-end;
       }
+
+      &.content-header-metadata {
+        .hub-link {
+          justify-content: flex-start;
+        }
+      }
     }
-    // 768 px and up
+    // 768px and up
     @include media-breakpoint-up(md) {
       .date-time, 
       .hub-link a {
@@ -110,6 +118,7 @@ html {
         //line-height: 1.3333;
       }
     }
+    // 575px and down
     @include media-breakpoint-down(xs){
       padding-bottom: 0;
       > div + div {
@@ -118,10 +127,46 @@ html {
     }
   }
 
+  // Content header profile variant
   &.content-header-profile {
-    .rounded-circle {
-      width: 250px;
-      height: 250px;
+    .img-profile {
+      margin: 0 auto 30px auto;
+      max-width: 250px;
+    }
+    .content-header-metadata {
+      .hub-link {
+        justify-content: flex-start;
+        a {
+          color: $gray-600;
+          &:hover {
+            color: $sarcelle-surprise;
+          }
+        }
+      }
+    }
+    .content-header-infos {
+      color: $headings-color;
+      span {
+        display: block;
+      }
+      .profile-title {
+        color: $headings-color;
+        font-size: $font-size-xl;
+      }
+      .profile-member {
+        color: $headings-color;
+        font-size: $font-size-lg;
+      }
+      .profile-label {
+        color: $gray-600;
+      }
+    }
+    @include media-breakpoint-up(lg) {
+      .img-profile {
+        margin: 0;
+        max-width: none;
+        padding-right: $grid-gutter-width/2;
+      }
     }
   }
 
@@ -132,15 +177,17 @@ html {
 }
 
 // Swap the source order for the 3 column case
+/*
 .main-content {
   order: 0;
 }
 .sidebar-left {
-  order: 1;
+  order: 0;
 }
 .sidebar-right {
   order: 2;
 }
+*/
 
 // Medium breakpoint and above (768)
 @include media-breakpoint-up(md) {

@@ -1,9 +1,44 @@
 {
-  "contentHeaderClasses": "bg-gray-sky",
+  "contentHeaderClasses": "content-header-profile bg-gray-sky",
   "headerContainerClasses": "container",
   "has-header-meta": true,
   "has-publication-date": false,
   "has-hub-link": true,
   "hub-link-text": "Tous les élus",
-  "regionMainContentClasses": "col-lg-12"
+  "regionMainContentClasses": "col-lg-8",
+  "sidebarRight": false,
+  "sidebarLeft": true,
+  "sidebarLeftClass": "col-lg-4",
+  "sidebar-blocks-demo-debug-wrapper": false,
+  "sidebar-blocks-demo-debug-message": false,
+  "cards-roles": {
+    "cards": {
+      "section-classes": "",
+      "classes": false,
+      "bsgrid-classes": "",
+      "card-item": [
+        {
+          "classes": "card-fw card-row-layout",
+          "url": "#",
+          "card-title": "Comité exécutif",
+          "card-text":
+            "Reponsable - Urbanisme, transport, Office de consultation publique de Montréal",
+          "card-media": false,
+          "footer" : {
+            "outside-body": true
+          }
+        },
+        {
+          "classes": "card-fw card-row-layout",
+          "url": "#",
+          "card-title": "Commission sur l'eau, l'environnement, le développement durable et les grands parcs",
+          "card-text": "Président",
+          "card-media": false,
+          "footer" : {
+            "outside-body": true
+          }
+        }
+      ]
+    }
+  }
 }
