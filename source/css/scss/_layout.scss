@@ -103,12 +103,6 @@ html {
         flex-flow: row wrap;
         justify-content: flex-end;
       }
-
-      &.content-header-metadata {
-        .hub-link {
-          justify-content: flex-start;
-        }
-      }
     }
     // 768px and up
     @include media-breakpoint-up(md) {
