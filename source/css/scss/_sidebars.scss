@@ -1,10 +1,7 @@
 // Sidebar
 .sidebar {
-  > * {
-    background-color: $gray-sky;
-  }
-}
-.sidebar {
+  margin-bottom: 1rem;
+  overflow: hidden;
   // Links in sidebars
   a {
     border: none;
@@ -23,13 +20,13 @@
     }
     &:hover,
     &:active {
-      color: $black;
+      color: $sarcelle-surprise;
       &:after,
       &:before {
-        color: $primary;
+        color: $sarcelle-surprise;
       }
       .vdm {
-        color: $black;
+        color: $sarcelle-surprise;
       }
     }
   }
@@ -49,11 +46,6 @@
 
     address {
       margin-bottom: 0;
-    }
-    .vdm {
-      &:before {
-        font-size: 1em;
-      }
     }
 
     &.left {
@@ -80,7 +72,7 @@
   }
 
   // Lists in sidebars
-  .list-unstyled {
+  ul:not(.social-media-list) {
     margin-bottom: $paragraph-margin-bottom;
     li {
       padding-bottom: 1rem;
@@ -88,6 +80,10 @@
         padding-bottom: 0;
       }
     }
+  }
+
+  .social-media-list {
+    padding-left: 2rem;
   }
 
   p {
@@ -107,45 +103,27 @@
     margin-bottom: 1rem;
   }
   .sidebar-title {
-    @extend .h5;
+    color: $headings-color;
+    font-size: $font-size-xl;
+    font-weight: $font-weight-bold;
     display: flex;
-    margin-bottom: 1rem;
+    margin-bottom: 2rem;
     // Tweak some styles for icon inside title
     &.icon {
-      &.right {
-        justify-content: space-between;
-        width: 100%;
-      }
       .vdm {
         font-size: 2rem;
         color: $headings-color;
       }
     }
-    &.icon.icon-xl {
-      .vdm {
-        font-size: 3.5rem;
-        color: $primary;
-      }
-    }
   }
 
-  // Color theme variants
-  // Transparent top stroke theme variant
-  &.sidebar-border-top {
-    .sb-block {
-      border-top: 4px solid $black;
-      background-color: transparent;
-      padding-right: 0;
-      .sidebar-title {
-        margin-bottom: 1rem;
-      }
-    }
-  }
+
   // Transparent border brand
   &.sidebar-border {
     .sb-block {
       border: 1px solid $gray-200;
       background-color: transparent;
+      padding: 1.5rem 1.75rem 2rem 1.75rem;
       .sidebar-title {
         margin-bottom: 1rem;
       }
@@ -158,35 +136,13 @@
     }
   }
 
-  // md breakpoint
-  //
-  @include media-breakpoint-only(md) {
-    .sidebar-title {
-      &.icon-right {
-        padding-right: 0;
-        padding-bottom: 5rem;
-        // Move the icon
-        .vdm {
-          top: calc(100% - 1.25em);
-          left: 50%;
-          height: 1em;
-          transform: translateX(-50%);
-        }
-        &:after {
-          display: none;
-        }
-        margin-bottom: 1rem;
-      }
-    }
-  }
 }
 
 // The base unit for a sidebar component, stacked
 .sb-block {
-  padding: $sidebar-box-v-padding $sidebar-box-h-padding 2rem $sidebar-box-h-padding;
-  &:last-of-type {
-    margin-bottom: $sidebar-box-v-padding;
-  }
+  overflow: hidden;
+  margin-bottom: 3rem;
+
 
   // The basic grouping tool for visual effect, with a padding/margin-bottom;
   .subsection {
@@ -196,26 +152,6 @@
     }
     .subsection-content {
       flex: 1;
-    }
-  }
-
-  .divider {
-    margin-top: 0.75rem;
-    margin-bottom: 0.75rem;
-    border-style: none;
-    border-width: 0;
-    height: 2px;
-    background: $black;
-    border-radius: 0;
-
-    &.divider-title {
-      display: block;
-      height: .25rem;
-      width: 60px;
-      margin-top: 0;
-      margin-bottom: 2rem;
-      margin-right: 0;
-      background-color: $black;
     }
   }
 
