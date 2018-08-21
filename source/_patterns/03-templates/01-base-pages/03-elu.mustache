@@ -9,8 +9,10 @@
   <div class="region-content {{ regionMainClasses }}">
     <div class="container {{ regionMainContainerClasses }}">
       <div class="row">
-        <aside class="col-12 {{ sidebarLeftClass }} sidebar sidebar-left">
-          {{> organisms-sidebar-block }}
+        <aside class="col-12 col-lg-4">
+          <div class="sidebar">
+            {{> organisms-sidebar-block-coordinates }}
+          </div>
         </aside>
         <article class="col-12 {{ regionMainContentClasses }}">
           <h2>Rôles et responsabilités</h2>

@@ -59,7 +59,7 @@ html {
         content: "";
         display: block;
         height: .5rem;
-        width: 3.75rem;
+        width: 4rem;
         margin-top: 2.5rem;
         margin-bottom: 0;
         margin-right: 10px;
@@ -68,10 +68,10 @@ html {
     }
 
     // 576px and up
-    @include media-breakpoint-up(sm) {
+    @include media-breakpoint-up(md) {
       h1 {
         &:after {
-          width: 7.5rem;
+          width: 6rem;
         }
       }
     }
@@ -129,11 +129,14 @@ html {
 
   // Content header profile variant
   &.content-header-profile {
+    padding-top: 3.5rem;
+    margin-bottom: 3.5rem;
     .img-profile {
       margin: 0 auto 30px auto;
       max-width: 250px;
     }
     .content-header-metadata {
+      padding-bottom: 2.5rem;
       .hub-link {
         justify-content: flex-start;
         a {
@@ -146,6 +149,7 @@ html {
     }
     .content-header-infos {
       color: $headings-color;
+      margin-bottom: 1rem;
       span {
         display: block;
       }
@@ -166,6 +170,9 @@ html {
         margin: 0;
         max-width: none;
         padding-right: $grid-gutter-width/2;
+      }
+      .content-header-infos {
+        margin-bottom: 0;
       }
     }
   }

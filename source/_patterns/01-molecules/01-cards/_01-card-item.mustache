@@ -71,7 +71,12 @@
     {{/ card-button }}
     {{# footer.inside-body }}
     <div class="card-footer">
-      {{ footer.text }}<span class="vdm vdm-063-fleche-droite" aria-hidden="true"></span>
+      {{# footer.text}}
+      <span class="card-footer-label">
+        {{ footer.text }}
+      </span>
+      {{/ footer.text}}
+      <span class="vdm vdm-063-fleche-droite" aria-hidden="true"></span>
     </div>
     {{/ footer.inside-body }}
   </div>
@@ -84,7 +89,12 @@
   {{/ card-metadata }}
   {{# footer.outside-body }}
   <div class="card-footer">
-    {{ footer.text }}<span class="vdm vdm-063-fleche-droite" aria-hidden="true"></span>
+    {{# footer.text}}
+    <span class="card-footer-label">
+      {{ footer.text }}
+    </span>
+    {{/ footer.text}}
+    <span class="vdm vdm-063-fleche-droite" aria-hidden="true"></span>
   </div>
   {{/ footer.outside-body }}
 {{# url }}

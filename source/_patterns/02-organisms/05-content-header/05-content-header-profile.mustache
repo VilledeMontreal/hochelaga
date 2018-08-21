@@ -19,31 +19,35 @@
         <div class="content-header-title">
           {{> atoms-display-heading }}
         </div>
+        {{# profile-infos }}
         <div class="content-header-infos">
-          <span class="profile-title">Conseiller de la Ville</span>
-          <span class="profile-member">Membre du comité exécutif</span>
+          <span class="profile-title">{{ title}}</span>
+          <span class="profile-member">{{ member }}</span>
         </div>
+        {{/ profile-infos }}
       </div>
     </div>
-    <div class="row">
+    {{# profile-infos }}
+    <div class="row mt-4">
       <div class="col-12 col-lg-4">
         <div class="content-header-infos">
           <span class="profile-label">Parti</span>
-          <span class="profile-value">Projet Montréal - Équipe Valérie Plante</span>
+          <span class="profile-value">{{ parti }}</span>
         </div>
       </div>
       <div class="col-12 col-lg-4">
         <div class="content-header-infos">
           <span class="profile-label">District</span>
-          <span class="profile-value">Nom du district</span>
+          <span class="profile-value">{{ district }}</span>
         </div>
       </div>
       <div class="col-12 col-lg-4">
         <div class="content-header-infos">
           <span class="profile-label">Arrondissement</span>
-          <span class="profile-value">Mercier-Hochelaga-Maisonneuve</span>
+          <span class="profile-value">{{ arrondissement }}</span>
         </div>
       </div>
     </div>
+    {{/ profile-infos }}
   </div>
 </header>
