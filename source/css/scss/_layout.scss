@@ -103,12 +103,6 @@ html {
         flex-flow: row wrap;
         justify-content: flex-end;
       }
-
-      &.content-header-metadata {
-        .hub-link {
-          justify-content: flex-start;
-        }
-      }
     }
     // 768px and up
     @include media-breakpoint-up(md) {
@@ -181,30 +175,6 @@ html {
 
 .region-content {
   padding-bottom: 4rem;
-}
-
-// Swap the source order for the 3 column case
-/*
-.main-content {
-  order: 0;
-}
-.sidebar-left {
-  order: 0;
-}
-.sidebar-right {
-  order: 2;
-}
-*/
-
-// Medium breakpoint and above (768)
-@include media-breakpoint-up(md) {
-  // Reorder the source for medium + displays -- 3 columns override
-  .sidebar-left {
-    order: 0;
-  }
-  .sidebar-right {
-    order: 0;
-  }
 }
 
 // Generic section layouts

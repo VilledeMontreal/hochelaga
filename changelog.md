@@ -5,6 +5,22 @@ The format is based on [Keep a Changelog](http://keepachangelog.com/en/1.0.0/)
 and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.html).
 
 
+## [1.1.0] - 2018-08-21
+
+## Added
+- Added template for Élus.
+- Added content-header variant for profiles template types.
+
+## Changed
+- Changed sidebar organisation in patternlab.
+- Clean-up unused sidebar examples and unnecessary class bloating the sidebar examples.
+- Esthetic changes to some cards variants.
+- Added list-groups specific theming
+- Moved all lists to atoms > lists
+
+## Removed
+- Removed some variants for sidebars, cards and base layout templates.
+
 ## [1.0.0] - 2018-08-16
 
 ## Added

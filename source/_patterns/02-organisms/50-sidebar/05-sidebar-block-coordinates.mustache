@@ -1,31 +1,33 @@
 
-<section class="sb-block {{ sb-classes }}">
-  {{> organisms-heading-sidebar }}
-  <ul class="list-unstyled">
-    <li>
-      <span class="icon left">
-        {{> atoms-fonticon-item(icon-label: "091-localisation") }}
-        {{> atoms-address }}
-      </span>
-    </li>
-    <li>
-      <a href="tel:+15144443456" class="icon left">
-        {{> atoms-fonticon-item(icon-label: "012-telephone") }}
-        514 444-3456
-      </a>
-    </li>
-    <li>
-      <a href="tel:+15144445678" class="icon left">
-        {{> atoms-fonticon-item(icon-label: "012-telephone") }}
-        514 444-5678
-      </a>
-    </li>
-    <li>
-      <a href="mailto:guy-tremblay@ville.montreal.qc.ca" class="icon left">
-        {{> atoms-fonticon-item(icon-label: "028-enveloppe") }}
-        guy-tremblay@ville.montreal.qc.ca
-      </a>
-    </li>
-  </ul>
-  {{> atoms-social-media-icons-list}}
-</section>
+<div class="sidebar {{sidebarClasses}}">
+  <section class="sb-block {{ sb-classes }}">
+    {{> organisms-heading-sidebar }}
+    <ul class="list-unstyled">
+      <li>
+        <span class="icon left">
+          {{> atoms-fonticon-item(icon-label: "091-localisation") }}
+          {{> atoms-address }}
+        </span>
+      </li>
+      <li>
+        <a href="tel:+15144443456" class="icon left">
+          {{> atoms-fonticon-item(icon-label: "012-telephone") }}
+          514 444-3456
+        </a>
+      </li>
+      <li>
+        <a href="tel:+15144445678" class="icon left">
+          {{> atoms-fonticon-item(icon-label: "012-telephone") }}
+          514 444-5678
+        </a>
+      </li>
+      <li>
+        <a href="mailto:guy-tremblay@ville.montreal.qc.ca" class="icon left">
+          {{> atoms-fonticon-item(icon-label: "028-enveloppe") }}
+          guy-tremblay@ville.montreal.qc.ca
+        </a>
+      </li>
+    </ul>
+    {{> atoms-social-media-icons-list}}
+  </section>
+</div>
