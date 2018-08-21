@@ -1,0 +1,53 @@
+<header class="content-header {{ contentHeaderClasses }}">
+  <div class="{{ headerContainerClasses }} pb-7">
+    <div class="row">
+      <div class="col-12 col-lg-8 offset-lg-4">
+        <div class="content-header-metadata">
+          <div class="hub-link">
+            <a href="#">{{ hub-link-text }}</a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-12 col-lg-4">
+        <div class="img-profile">
+          <img src="https://picsum.photos/500/500?image=823" class="img-fluid rounded-circle" alt="Portrait de l'élu X." />
+        </div>
+      </div>
+      <div class="col-12 col-lg-8">
+        <div class="content-header-title">
+          {{> atoms-display-heading }}
+        </div>
+        {{# profile-infos }}
+        <div class="content-header-infos">
+          <span class="profile-title">{{ title}}</span>
+          <span class="profile-member">{{ member }}</span>
+        </div>
+        {{/ profile-infos }}
+      </div>
+    </div>
+    {{# profile-infos }}
+    <div class="row mt-4">
+      <div class="col-12 col-lg-4">
+        <div class="content-header-infos">
+          <span class="profile-label">Parti</span>
+          <span class="profile-value">{{ parti }}</span>
+        </div>
+      </div>
+      <div class="col-12 col-lg-4">
+        <div class="content-header-infos">
+          <span class="profile-label">District</span>
+          <span class="profile-value">{{ district }}</span>
+        </div>
+      </div>
+      <div class="col-12 col-lg-4">
+        <div class="content-header-infos">
+          <span class="profile-label">Arrondissement</span>
+          <span class="profile-value">{{ arrondissement }}</span>
+        </div>
+      </div>
+    </div>
+    {{/ profile-infos }}
+  </div>
+</header>

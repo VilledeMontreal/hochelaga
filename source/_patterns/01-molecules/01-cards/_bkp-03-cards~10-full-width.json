@@ -7,17 +7,7 @@
       {
         "classes": "card-fw card-row-layout",
         "url": "#",
-        "card-title": "Card with icon",
-        "card-text":
-          "Some quick example text to build on the card title and make up the bulk of the card's content.",
-        "card-media": {
-          "icon": "vdm-093-porte-voix"
-        }
-      },
-      {
-        "classes": "card-fw card-row-layout",
-        "url": false,
-        "card-title": "Card with icon - No link",
+        "card-title": "Card with icon placement on the left",
         "card-text":
           "Some quick example text to build on the card title and make up the bulk of the card's content.",
         "card-media": {
@@ -27,7 +17,44 @@
       {
         "classes": "card-fw card-row-layout",
         "url": "#",
-        "card-title": "Card with icon. Footer is place to the right for larger breakpoint.",
+        "card-title": "Card with icon placement to the right",
+        "card-text":
+          "Some quick example text to build on the card title and make up the bulk of the card's content.",
+        "card-media": {
+          "classes" : "card-icon-right",
+          "icon": "vdm-093-porte-voix"
+        }
+      },
+      {
+        "classes": "card-fw card-row-layout",
+        "url": false,
+        "card-title": "Card with icon placement to the right - No link",
+        "card-text":
+          "Some quick example text to build on the card title and make up the bulk of the card's content.",
+        "card-media": {
+          "classes" : "card-icon-right",
+          "icon": "vdm-093-porte-voix"
+        }
+      },
+      {
+        "classes": "card-fw card-row-layout",
+        "url": "#",
+        "card-date": "20 février 2018",
+        "card-title": "Card with a very long title. Footer is place to the right for larger breakpoint. How do we handle the arrow placement?",
+        "card-text":
+          "Some quick example text to build on the card title and make up the bulk of the card's content.",
+        "card-media": {
+          "classes" : false,
+          "icon": false
+        },
+        "footer" : {
+          "outside-body": true
+        }
+      },
+      {
+        "classes": "card-fw card-row-layout",
+        "url": "#",
+        "card-title": "Card with a very long title. Footer is place to the right for larger breakpoint. How do we handle the arrow placement?",
         "card-text":
           "Some quick example text to build on the card title and make up the bulk of the card's content.",
         "card-media": {
@@ -40,14 +67,13 @@
       {
         "classes": "card-fw card-row-layout",
         "url": "#",
-        "card-date": "20 février 2018",
-        "card-title": "Card with a very long title. Footer is place to the right for larger breakpoint.",
+        "card-title": "Card with extra metadata in a row layout",
         "card-text":
           "Some quick example text to build on the card title and make up the bulk of the card's content.",
         "card-media": {
-          "classes" : false,
-          "icon": false
+          "icon": "vdm-093-porte-voix"
         },
+        "card-metadata": "PP35-DFCS78",
         "footer" : {
           "outside-body": true
         }
