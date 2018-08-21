@@ -15,19 +15,20 @@
           </div>
         </aside>
         <article class="col-12 {{ regionMainContentClasses }}">
-          <h2>Rôles et responsabilités</h2>
-           
-          {{# cards-roles }}
-          <div class="cards">
-            {{# cards.card-item }}
-              {{> molecules-card-item}}
-            {{/ cards.card-item }}
+          <div class="page-section pt-0">
+            <h2 class="section-heading">Rôles et responsabilités</h2>
+            {{# cards-roles }}
+            <div class="cards">
+              {{# cards.card-item }}
+                {{> molecules-card-item}}
+              {{/ cards.card-item }}
+            </div>
+            {{/ cards-roles }}
           </div>
-          {{/ cards-roles }}
-
-          <h2>Autres responsabilités</h2>
-
-          {{> molecules-list-group }}
+          <div class="page-section pt-0">
+            <h2 class="section-heading">Autres responsabilités</h2>
+            {{> molecules-list-group }}
+          </div>
 
         </article>
       </div>
