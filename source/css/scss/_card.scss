@@ -43,6 +43,15 @@
     }
   }
 
+  .card-subtitle {
+    color: $gray-700;
+    display: block;
+    font-size: $font-size-lg;
+    line-height: 1.2;
+    margin-top: -.875rem;
+    margin-bottom: 1rem;
+  }
+
   .card-label {
     @include card-heading();
     font-weight: $font-weight-bold;
@@ -211,6 +220,35 @@
         .card-img-top {
           max-width: 500px;
         }
+      }
+    }
+  }
+
+  &.card-member {
+    .card-img-top {
+      margin: 2rem auto 0 auto;
+    }
+    .card-body {
+      *:last-child {
+        margin-bottom: 0;
+      }
+    }
+    // 992px and up
+    @include media-breakpoint-up(lg){
+      .card-img-top {
+        width: 130px;
+        margin: 2rem;
+        margin-right: 0;
+        align-self: flex-start;
+      }
+    }
+  }
+
+  &.card-member-extra {
+    // 992px and up
+    @include media-breakpoint-up(lg){
+      .card-body {
+        align-self: flex-start;
       }
     }
   }
