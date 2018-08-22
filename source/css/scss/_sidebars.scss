@@ -29,6 +29,16 @@
         color: $sarcelle-surprise;
       }
     }
+    &.read-more {
+      color: $primary;
+      &:hover,
+      &:active {
+        color: $sarcelle-surprise;
+        .vdm {
+          color: $sarcelle-surprise;
+        }
+      }
+    }
   }
 
   // Generic icon links : may or may not be applied to a hyperlink
@@ -60,14 +70,12 @@
     }
   }
 
-  // Reset some button styles in sidebar
-  // TODO: Check if we need this more generic
-  button {
-    display: block;
-    margin: 0 auto;
-    margin-bottom: 1.35rem;
-    &:last-of-type {
-      margin: 0 auto;
+  // Use .no-icon and .left class to add padding equal to icons width
+  .no-icon {
+    display: flex;
+    align-items: flex-start;
+    &.left {
+      padding-left: 2rem;
     }
   }
 
