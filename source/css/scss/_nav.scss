@@ -190,11 +190,91 @@
 
 
 nav {
-  // Flex messed up with a couple of nav component.
-  // No background on why this was switch to flex
-  // Revert back to default and seems ok for all our nav component.
-  //display: flex;
   position: relative;
+}
+.nav {
+  .nav-item {
+    margin-bottom: 0;
+    padding-bottom: 0;
+    display: inline-block;
+  }
+  .nav-link {
+    border: none;
+    color: $primary;
+  }
+}
+
+.nav-anchors {
+  display: inline-block;
+  background-color: $white;
+  width: 100%;
+  border-bottom: $nav-tabs-border-width solid $nav-tabs-border-color;
+  padding: 1rem $grid-gutter-width/2;
+
+  .nav-link {
+    font-size: $font-size-base;
+    line-height: 1.42857142857;
+    padding: .5rem;
+    position: relative;
+    text-align: center;
+    white-space: normal;
+    &:after {
+      content: " ";
+      width: auto;
+      height: 1px;
+      background-color: $primary;
+      position: absolute;
+      left: .5rem;
+      right: .5rem;
+      display: block;
+    }
+    &.nav-top {
+      display: none;
+      color: $gray-400;
+      &:after {
+        content: none;
+      }
+    }
+    &:hover,
+    &.active {
+      &:not(.disabled) {
+        color: $sarcelle-surprise;
+        &:after {
+          content: none;
+        }
+      }
+    }
+    &.disabled {
+      cursor: default;
+    }
+  }
+  @include media-breakpoint-up(md) {
+    .nav-link {
+      padding: .5rem 1.5rem;
+      &:first-child {
+
+      }
+      &:after {
+        left: 1.5rem;
+        right: 1.5rem;
+      }
+    }
+  }
+  @include media-breakpoint-up(lg) {
+    padding-top: 0;
+    padding-bottom: 0;
+    text-align: center;
+    .nav-link {
+      padding: 2rem 2.5rem;
+      &.nav-top {
+        display: block;
+      }
+      &:after {
+        left: 2.5rem;
+        right: 2.5rem;
+      }
+    }
+  }
 }
 
 .nav-tabs {
@@ -233,7 +313,6 @@ nav {
 
 .nav-tabs {
   .nav-link {
-    border: none;
     color: $gray-700;
     font-size: $font-size-md;
     line-height: 1.42857142857;

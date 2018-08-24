@@ -10,9 +10,12 @@
   {{> molecules-lead }}
   {{/ has-lead-text }}
 
-  {{# servicesSection}}
-    {{> molecules-card }}
-  {{/ servicesSection}}
+  <!-- Begin main-content region-->
+  <div id="navTop" class="region-content {{ regionMainClasses }}">
+    {{# servicesSection}}
+      {{> molecules-card }}
+    {{/ servicesSection}}
+  </div>
 
 </main>
 

@@ -10,8 +10,12 @@
   {{> molecules-lead }}
   {{/ has-lead-text }}
 
+  {{# has-nav-anchors }}
+  {{> molecules-nav-anchors }}
+  {{/ has-nav-anchors }}
+
   <!-- Begin main-content region-->
-  <div class="region-content {{ regionMainClasses }}">
+  <div id="navTop" class="region-content {{ regionMainClasses }}">
     <div class="container {{ regionMainContainerClasses }}">
       <div class="row">
         <article class="col-12 col-lg-8 {{ regionMainContentClasses }}">
@@ -27,7 +31,7 @@
   </div>
 
   {{# cards-membres}}
-  <section class="page-section {{ regionAfterClasses }} bg-gray-sky">
+  <section id="members" class="page-section {{ regionAfterClasses }} bg-gray-sky">
     <div class="container">
       <div class="row">
         <div class="col-12 text-center">
@@ -40,23 +44,50 @@
           {{> molecules-card-item}}
         </div>
         {{/ cards.card-item }}
+        {{# cards.button-load-more}}
         <div class="col-12 justify-content-center">
           {{> atoms-button(buttonClass: "btn-secondary", buttonText: "Voir tous les membres")}}
         </div>
+        {{/ cards.button-load-more}}
       </div>
     </div>
   </section>
   {{/ cards-membres}}
 
-  <section class="page-section {{ regionAfterClasses }} bg-gray-sky">
+  {{# featured-section}}
+  <section id="webdiffusion" class="bg-image-section {{ regionAfterClasses }}" style="background-image: url(https://picsum.photos/3888/2592?image=977)">
+    <div class="container">
+      <div class="row">
+        <div class="col-12 col-lg-6">
+          <div class="featured-content">
+            <h2 class="h1">Regarder le conseil en direct</h2>
+            <p>Dans un esprit de plus grande transparence le conseil municipal est diffusé en direct sur Internet, ainsi qu'en différé.</p>
+            {{> atoms-button(buttonClass: "btn-secondary", buttonText: "Visionnez")}}
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  {{/ featured-section}}
+
+  {{# informations}}
+  <section id="informations" class="page-section {{ regionAfterClasses }} bg-gray-sky">
     <div class="container">
       <div class="row">
         <div class="col-12 text-center">
           <h2 class="section-heading">Plus d'informations</h2>
         </div>
       </div>
+      <div class="row cards">
+        {{# cards.card-item }}
+        <div class="{{ cards.bsgrid-classes }}">
+          {{> molecules-card-item}}
+        </div>
+        {{/ cards.card-item }}
+      </div>
     </div>
   </section>
+  {{/ informations}}
 
 </main>
 
