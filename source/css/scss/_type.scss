@@ -359,37 +359,6 @@ h1, h2, h3, h4, h5, h6 {
   }
 }
 
-// Link box are used to build grid display of links
-//
-// Might not be in the right stylesheet
-.link-box {
-  a {
-    border: none;
-    color: $gray-900;
-    display: flex;
-    flex-direction: row;
-    height: 100%;
-    .vdm {
-      font-size: 2rem;
-      color: $primary;
-    }
-    &:hover,
-    &:active {
-      color: $primary;
-      text-decoration: none;
-    }
-  }
-  .link-box-content {
-    display: flex;
-    flex: 1;
-    flex-direction: row;
-    background-color: $white;
-    margin-bottom: $grid-gutter-width;
-    padding: 20px;
-    align-items: center;
-  }
-}
-
 // link with icons
 
 .link-with-icon {

@@ -6,12 +6,12 @@
   {{> organisms-content-header }}
 
   <!-- Teaser -->
-  {{# has-lead-text }}
+  {{# has-lead-text}}
   {{> molecules-lead }}
-  {{/ has-lead-text }}
+  {{/ has-lead-text}}
 
   <!-- Tabs -->
-  {{# has-nav-tabs }}
+  {{# has-nav-tabs}}
     {{> molecules-nav-tab }}
   {{/ has-nav-tabs}}
 
@@ -82,26 +82,33 @@
     </div>
   </div>
 
+  {{# informations}}
   <section class="page-section {{ regionAfterClasses }} bg-gray-sky">
     <div class="container">
       <div class="row">
-        <div class="col-12">
-          {{# howToInfos}}
-            {{> organisms-how-to-infos }}
-          {{/ howToInfos}}
+        <div class="col-12 text-center">
+          <h2 class="section-heading">Plus d'informations</h2>
         </div>
+      </div>
+      <div class="row cards">
+        {{# cards.card-item }}
+        <div class="{{ cards.bsgrid-classes }}">
+          {{> molecules-card-item}}
+        </div>
+        {{/ cards.card-item }}
       </div>
     </div>
   </section>
+  {{/ informations}}
 
   {{# tarifs}}
   <section class="page-section bg-gray-sky">
     <div class="container">
-    <div class="row">
-      <div class="col-12">
-        <h2 class="section-heading">Tarification</h2>
+      <div class="row">
+        <div class="col-12 text-center">
+          <h2 class="section-heading">Tarification</h2>
+        </div>
       </div>
-    </div>
       <div class="row cards">
         {{# cards.card-item }}
         <div class="{{ cards.bsgrid-classes }}">
