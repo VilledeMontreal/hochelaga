@@ -210,12 +210,14 @@
     }
   });
 
-  // Activate scrollspy to add active class to navbar items on scroll
-  $('body').scrollspy({
-    target: '#navAnchors',
-    offset: $("#navAnchors").height()
-  });
-
+  
+  // Activate scrollspy to add active class to navAnchors items on scroll
+  if($('#navAnchors').length != 0) {
+    $('body').scrollspy({
+      target: '#navAnchors',
+      offset: $("#navAnchors").height()
+    });
+  }
 
 
 })(jQuery);

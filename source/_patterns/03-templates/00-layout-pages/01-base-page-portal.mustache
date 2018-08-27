@@ -6,6 +6,11 @@
 
   {{> organisms-content-header }}
 
+    <!-- Teaser -->
+  {{# has-lead-text }}
+  {{> molecules-lead }}
+  {{/ has-lead-text }}
+
   <div class="region-content {{ regionMainClasses }}">
     <div class="container {{ regionMainContainerClasses }}">
       <div class="row">
