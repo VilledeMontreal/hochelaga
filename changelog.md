@@ -4,6 +4,14 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](http://keepachangelog.com/en/1.0.0/)
 and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.html).
 
+## [1.2.0] - 2018-08-27
+
+## Added
+- Added featured-content molecules.
+- Added card variants for members and links
+- Added nav-anchors molecules
+- Added template for Instances and commissions.
+- Added templates variants for comité exécutif and commission.
 
 ## [1.1.0] - 2018-08-21
 
