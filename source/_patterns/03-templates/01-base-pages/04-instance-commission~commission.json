@@ -3,7 +3,7 @@
   "text-elements": {
     "headings":{
       "display":{
-        "content": "Nom de l'instance ou de la commission"
+        "content": "Commission sur l'eau, l'environnement, le développement durable et les grands parcs"
       }
     }
   },
@@ -11,59 +11,31 @@
   "has-publication-date": true,
   "has-hub-link": true,
   "date-time-text": "Mis à jour le 23 septembre 2018",
-  "hub-link-text": "Toutes les instances",
+  "hub-link-text": "Tous les conseils et comissions",
   "has-lead-text": true,
-  "leadContainerClasses": "",
-  "has-nav-anchors": true,
-  "nav": {
-    "is-sticky": true,
-    "navItem": [
-      {
-        "class": "nav-top",
-        "url": "#navTop",
-        "title": "Haut de page"
-      },
-      {
-        "class": false,
-        "url": "#members",
-        "title": "Membres"
-      },
-      {
-        "class": false,
-        "url": "#webdiffusion",
-        "title": "Webdiffusions"
-      },
-      {
-        "class": false,
-        "url": "#informations",
-        "title": "Plus d'informations"
-      }
-    ]
-  },
-  "has-sb-seance": true,
-  "sidebarTitle": "Prochaine séance",
+  "has-sb-seance": false,
+  "has-sb-newsletter": true,
+  "sidebarTitle": "Invitations",
   "featured-section": {
-    "featuredContentID": "webdiffusion",
-    "featuredContentBgImage": "background-image: url(https://picsum.photos/3888/2592?image=977)",
-    "featuredContentTitle": "Regarder le conseil en direct",
-    "featuredContentText": "Dans un esprit de plus grande transparence le conseil municipal est diffusé en direct sur Internet, ainsi qu'en différé.",
+    "featuredContentTitle": "Regarder la consultation en ligne",
+    "featuredContentText": "Vous pouvez assister aux séances ou visionner les séances en ligne.",
     "featuredContentButton": {
       "buttonText": "Visionnez"
     }
   },
   "cards-membres": {
-    "button-load-more": false,
     "cards": {
+      "button-load-more": true,
       "section-classes": "",
       "classes": false,
       "bsgrid-classes": "col-12 col-md-6",
       "card-item": [
         {
-          "classes": "card-large card-row-layout card-member",
+          "classes": "card-large card-row-layout card-member card-member-extra",
           "url": "#",
           "card-title": "Prénom Nom",
           "card-subtitle": "Fonction au sein du conseil",
-          "card-text": false,
+          "card-text": "Responsable - Habitation, gestion et planification immobilière, diversité montréalaise",
           "card-media": {
             "icon": false,
             "img" : {
@@ -75,11 +47,11 @@
           "footer" : false
         },
         {
-          "classes": "card-large card-row-layout card-member",
+          "classes": "card-large card-row-layout card-member card-member-extra",
           "url": "#",
           "card-title": "Prénom Nom",
           "card-subtitle": "Fonction au sein du conseil",
-          "card-text": false,
+          "card-text": "Responsabilité au sein du comité exécutif",
           "card-media": {
             "icon": false,
             "img" : {
@@ -91,11 +63,11 @@
           "footer" : false
         },
         {
-          "classes": "card-large card-row-layout card-member",
+          "classes": "card-large card-row-layout card-member card-member-extra",
           "url": "#",
           "card-title": "Prénom Nom",
           "card-subtitle": "Fonction au sein du conseil",
-          "card-text": false,
+          "card-text": "Responsabilité au sein du comité exécutif",
           "card-media": {
             "icon": false,
             "img" : {
@@ -107,11 +79,43 @@
           "footer" : false
         },
         {
-          "classes": "card-large card-row-layout card-member",
+          "classes": "card-large card-row-layout card-member card-member-extra",
           "url": "#",
           "card-title": "Prénom Nom",
           "card-subtitle": "Fonction au sein du conseil",
-          "card-text": false,
+          "card-text": "Responsabilité au sein du comité exécutif",
+          "card-media": {
+            "icon": false,
+            "img" : {
+              "classes": "rounded-circle",
+              "url" : "https://picsum.photos/480/480?image=669",
+              "alt" : "Prénom Nom img alt."
+            }
+          },
+          "footer" : false
+        },
+        {
+          "classes": "card-large card-row-layout card-member card-member-extra",
+          "url": "#",
+          "card-title": "Prénom Nom",
+          "card-subtitle": "Fonction au sein du conseil",
+          "card-text": "Responsabilité au sein du comité exécutif",
+          "card-media": {
+            "icon": false,
+            "img" : {
+              "classes": "rounded-circle",
+              "url" : "https://picsum.photos/480/480?image=669",
+              "alt" : "Prénom Nom img alt."
+            }
+          },
+          "footer" : false
+        },
+        {
+          "classes": "card-large card-row-layout card-member card-member-extra",
+          "url": "#",
+          "card-title": "Prénom Nom",
+          "card-subtitle": "Fonction au sein du conseil",
+          "card-text": "Responsabilité au sein du comité exécutif",
           "card-media": {
             "icon": false,
             "img" : {
@@ -155,36 +159,6 @@
           "classes" : "card-link",
           "url" : "#",
           "card-title" : "Card #3 link title - longer than usual",
-          "card-text" : false,
-          "card-media" : false,
-          "footer" : {
-            "outside-body": true
-          }
-        },
-        {
-          "classes" : "card-link",
-          "url" : "#",
-          "card-title" : "Card #4 link title",
-          "card-text" : false,
-          "card-media" : false,
-          "footer" : {
-            "outside-body": true
-          }
-        },
-        {
-          "classes" : "card-link",
-          "url" : "#",
-          "card-title" : "Card #5 link title",
-          "card-text" : false,
-          "card-media" : false,
-          "footer" : {
-            "outside-body": true
-          }
-        },
-        {
-          "classes" : "card-link",
-          "url" : "#",
-          "card-title" : "Card #6 link title",
           "card-text" : false,
           "card-media" : false,
           "footer" : {

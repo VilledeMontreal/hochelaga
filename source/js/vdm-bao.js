@@ -189,9 +189,22 @@
       var target = $(this.hash);
       target = target.length ? target : $('[name=' + this.hash.slice(1) + ']');
       if (target.length) {
+        if(window.matchMedia("(min-width: 992px").matches) {
+          $navOffset = $("#navAnchors").height();
+        } else {
+          $navOffset = 0;
+        }
         $('html, body').animate({
-          scrollTop: (target.offset().top - 87)
+          scrollTop: (target.offset().top - $navOffset)
         }, 1000, "easeInOutExpo");
+
+        target.focus(); // Setting focus
+        if (target.is(":focus")){ // Checking if the target was focused
+          return false;
+        } else {
+          target.attr('tabindex','-1'); // Adding tabindex for elements not focusable
+          target.focus(); // Setting focus
+        };
         return false;
       }
     }
@@ -200,7 +213,7 @@
   // Activate scrollspy to add active class to navbar items on scroll
   $('body').scrollspy({
     target: '#navAnchors',
-    offset: 87
+    offset: $("#navAnchors").height()
   });
 
 

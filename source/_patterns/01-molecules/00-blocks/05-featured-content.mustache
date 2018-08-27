@@ -1,11 +1,13 @@
-<section id="webdiffusion" class="bg-image-section {{ regionAfterClasses }}">
+<section id="{{ featuredContentID }}" class="bg-image-section {{ regionAfterClasses }}" style="{{ featuredContentBgImage }}">
   <div class="container">
     <div class="row">
       <div class="col-12 col-lg-6">
         <div class="featured-content">
-          <h2 class="h1">Regarder le conseil en direct</h2>
-          <p>Dans un esprit de plus grande transparence le conseil municipal est diffusé en direct sur Internet, ainsi qu'en différé.</p>
-          {{> atoms-button(buttonClass: "btn-secondary", buttonText: "Visionnez")}}
+          <h2 class="h1">{{featuredContentTitle}}</h2>
+          <p>{{{featuredContentText}}}</p>
+          {{# featuredContentButton }}
+          <button type="{{ buttonType }}" class="btn {{ buttonClass }}" {{ buttonState }}>{{# buttonIcon }}{{> atoms-fonticon-item }}{{/ buttonIcon}}{{ buttonText }}</button>
+          {{/ featuredContentButton }}
         </div>
       </div>
     </div>

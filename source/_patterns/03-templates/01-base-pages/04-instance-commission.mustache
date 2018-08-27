@@ -24,7 +24,12 @@
           <p>La Division du soutien aux instances de la Direction générale produit les ordres du jour du comité exécutif.</p>
         </article>
         <aside class="col-12 col-lg-4 sidebar-right" role="complementary">
+        {{# has-sb-seance}}
           {{> organisms-sidebar-block-seance }}
+        {{/ has-sb-seance}}
+        {{# has-sb-newsletter}}
+          {{> organisms-sidebar-block-newsletter }}
+        {{/ has-sb-newsletter}}
         </aside>
       </div>
     </div>
@@ -55,19 +60,7 @@
   {{/ cards-membres}}
 
   {{# featured-section}}
-  <section id="webdiffusion" class="bg-image-section {{ regionAfterClasses }}" style="background-image: url(https://picsum.photos/3888/2592?image=977)">
-    <div class="container">
-      <div class="row">
-        <div class="col-12 col-lg-6">
-          <div class="featured-content">
-            <h2 class="h1">Regarder le conseil en direct</h2>
-            <p>Dans un esprit de plus grande transparence le conseil municipal est diffusé en direct sur Internet, ainsi qu'en différé.</p>
-            {{> atoms-button(buttonClass: "btn-secondary", buttonText: "Visionnez")}}
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
+  {{> molecules-featured-content}}
   {{/ featured-section}}
 
   {{# informations}}
