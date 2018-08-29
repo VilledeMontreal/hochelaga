@@ -137,6 +137,7 @@
   // Slide-menu initialisation
   // @see slide-menu.js 
   //
+
   if($('#slide-menu-left').length != 0) {
 
     $('#slide-menu-left').slideMenu({
