@@ -15,12 +15,10 @@
 
   // Montreal logo is the navbar-brand
   .navbar-brand {
-    display: flex;
     padding: 0;
     img {
       height: 1.5rem;
       width: auto;
-      flex: 0 0 auto;
     }
     // 576px and up
     @include media-breakpoint-up(sm) {
