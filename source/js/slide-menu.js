@@ -6,15 +6,15 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
 
 // TODO: make this library agnostic
 // TODO: document the events
-// VDM - Added backLinkTitle (line 17 and 282-290)
-// VDM - Added backlinkClass (line 18 and )
-// VDM - Added hability to close overlay and modify aria-expanded data (line 151 - 152)
+// VDM - Added backLinkTitle (line 24 and 340-346)
+// VDM - Added backlinkClass (line 25 and 340-346)
+// VDM - Added hability to close overlay (line 151 - 152)
 
 (function ($) {
 
-    const PLUGIN_NAME = 'slideMenu';
-    const DEFAULT_OPTIONS = {
-        position: 'left',
+    var PLUGIN_NAME = 'slideMenu';
+    var DEFAULT_OPTIONS = {
+        position: 'right',
         showBackLink: true,
         keycodeOpen: null,
         keycodeClose: 27, //esc
@@ -23,12 +23,13 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
         backLinkTitle: '',
         backLinkClass: '',
         backLinkBefore: '',
-        backLinkAfter: '',
+        backLinkAfter: ''
     };
 
-    class SlideMenu {
+    var SlideMenu = function () {
+        function SlideMenu(options) {
+            _classCallCheck(this, SlideMenu);
 
-        constructor(options) {
             this.options = options;
 
             this._menu = options.elem;
@@ -48,8 +49,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
             this._setupEventHandlers();
             this._setupMenu();
 
-            if (this._hasMenu)
-                this._setupSubmenus();
+            if (this._hasMenu) this._setupSubmenus();
         }
 
         /**
@@ -57,264 +57,320 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
          * @param {boolean|null} open
          * @param {boolean} animate
          */
-        toggle(open = null, animate = true) {
-            let offset;
 
-            if (open === null) {
-                if (this._isOpen) {
-                    this.close();
+
+        _createClass(SlideMenu, [{
+            key: 'toggle',
+            value: function toggle() {
+                var open = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : null;
+                var animate = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : true;
+
+                var offset = void 0;
+
+                if (open === null) {
+                    if (this._isOpen) {
+                        this.close();
+                    } else {
+                        this.open();
+                    }
+                    return;
+                } else if (open) {
+                    offset = 0;
+                    this._isOpen = true;
                 } else {
-                    this.open();
+                    offset = this.options.position === 'left' ? '-100%' : '100%';
+                    this._isOpen = false;
                 }
-                return;
-            } else if (open) {
-                offset = 0;
-                this._isOpen = true;
-            } else {
-                offset = (this.options.position === 'left') ? '-100%' : '100%';
-                this._isOpen = false;
+
+                this._triggerEvent();
+
+                if (animate) this._triggerAnimation(this._menu, offset);else {
+                    this._pauseAnimations(this._triggerAnimation.bind(this, this._menu, offset));
+                    this._isAnimating = false;
+                }
             }
 
-            this._triggerEvent();
+            /**
+             * Open the menu
+             * @param {boolean} animate Use CSS transitions
+             */
 
-            if (animate)
-                this._triggerAnimation(this._menu, offset);
-            else {
-                this._pauseAnimations(this._triggerAnimation.bind(this, this._menu, offset));
-                this._isAnimating = false;
+        }, {
+            key: 'open',
+            value: function open() {
+                var animate = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : true;
+
+                this._lastAction = 'open';
+                this.toggle(true, animate);
             }
-        }
 
-        /**
-         * Open the menu
-         * @param {boolean} animate Use CSS transitions
-         */
-        open(animate = true) {
-            this._lastAction = 'open';
-            this.toggle(true, animate);
-        }
+            /**
+             * Close the menu
+             * @param {boolean} animate Use CSS transitions
+             */
 
-        /**
-         * Close the menu
-         * @param {boolean} animate Use CSS transitions
-         */
-        close(animate = true) {
-            this._lastAction = 'close';
-            this.toggle(false, animate);
-        }
+        }, {
+            key: 'close',
+            value: function close() {
+                var animate = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : true;
 
-        /**
-         * Navigate one menu hierarchy back if possible
-         */
-        back() {
-            this._lastAction = 'back';
-            this._navigate(null, -1);
-        }
+                this._lastAction = 'close';
+                this.toggle(false, animate);
+            }
 
-        /**
-         * Navigate to a specific link on any level (useful to open the correct hierarchy directly)
-         * @param {string|object} target A string selector a plain DOM object or a jQuery instance
-         */
-        navigateTo(target) {
-            target = this._menu.find($(target)).first();
+            /**
+             * Navigate one menu hierarchy back if possible
+             */
 
-            if (!target.length)
-                return false;
+        }, {
+            key: 'back',
+            value: function back() {
+                this._lastAction = 'back';
+                this._navigate(null, -1);
+            }
 
-            var parents = target.parents('ul');
-            var level = parents.length - 1;
+            /**
+             * Navigate to a specific link on any level (useful to open the correct hierarchy directly)
+             * @param {string|object} target A string selector a plain DOM object or a jQuery instance
+             */
 
-            if (level === 0)
-                return false;
+        }, {
+            key: 'navigateTo',
+            value: function navigateTo(target) {
+                var _this = this;
 
-            this._pauseAnimations(() => {
-                this._level = level;
-                parents.show().first().addClass('active');
-                this._triggerAnimation(this._slider, -this._level * 100);
-            });
-        }
+                target = this._menu.find($(target)).first();
 
-        /**
-         * Set up all event handlers
-         * @private
-         */
-        _setupEventHandlers() {
-            if (this._hasMenu) {
-                this._anchors.click((event) => {
-                    let anchor = $(event.target).is('a') ? $(event.target) : $(event.target).parents('a:first');
-                    this._navigate(anchor);
+                if (!target.length) return false;
+
+                var parents = target.parents('ul');
+                var level = parents.length - 1;
+
+                if (level === 0) return false;
+
+                this._pauseAnimations(function () {
+                    _this._level = level;
+                    parents.show().first().addClass('active');
+                    _this._triggerAnimation(_this._slider, -_this._level * 100);
                 });
             }
 
-            $(this._menu.add(this._slider)).on('transitionend msTransitionEnd', () => {
-                this._isAnimating = false;
-                this._triggerEvent(true);
-            });
+            /**
+             * Set up all event handlers
+             * @private
+             */
 
-            $(document).keydown((e) => {
-                switch(e.which) {
-                    case this.options.keycodeClose:
-                        this.close();
-                        $("#navbarSideMenu").attr("aria-expanded", "false");
-                        $('.overlay').hide();
-                        break;
+        }, {
+            key: '_setupEventHandlers',
+            value: function _setupEventHandlers() {
+                var _this2 = this;
 
-                    case this.options.keycodeOpen:
-                        this.open();
-                        break;
-
-                    default:
-                        return;
-                }
-                e.preventDefault();
-            });
-
-            this._menu.on('sm.back-after', () => {
-                let lastActiveUl = 'ul ' + '.active '.repeat(this._level + 1);
-                this._menu.find(lastActiveUl).removeClass('active').hide();
-            });
-        }
-
-        /**
-         * Trigger a custom event to support callbacks
-         * @param {boolean} afterAnimation Mark this event as `before` or `after` callback
-         * @private
-         */
-        _triggerEvent(afterAnimation = false) {
-            let eventName = 'sm.' + this._lastAction;
-            if (afterAnimation) eventName += '-after';
-            this._menu.trigger(eventName);
-        }
-
-        /**
-         * Navigate the _menu - that is slide it one step left or right
-         * @param {jQuery} anchor The clicked anchor or button element
-         * @param {int} dir Navigation direction: 1 = forward, 0 = backwards
-         * @private
-         */
-        _navigate(anchor, dir = 1) {
-            // Abort if an animation is still running
-            if (this._isAnimating) {
-                return;
-            }
-
-            let offset = (this._level + dir) * -100;
-
-            if (dir > 0) {
-                if (!anchor.next('ul').length)
-                    return;
-
-                anchor.next('ul').addClass('active').show();
-            } else if (this._level === 0) {
-                return;
-            }
-
-            this._lastAction = dir > 0 ? 'forward' : 'back';
-            this._level = this._level + dir;
-
-            this._triggerAnimation(this._slider, offset);
-        }
-
-        /**
-         * Start the animation (the CSS transition)
-         * @param elem
-         * @param offset
-         * @private
-         */
-        _triggerAnimation(elem, offset) {
-            this._triggerEvent();
-
-            if (!String(offset).includes('%'))
-                offset += '%';
-
-            elem.css('transform', 'translateX(' + offset + ')');
-            this._isAnimating = true;
-        }
-
-        /**
-         * Initialize the menu
-         * @private
-         */
-        _setupMenu() {
-            this._pauseAnimations(() => {
-                switch (this.options.position) {
-                    case 'left':
-                        this._menu.css({
-                            left: 0,
-                            right: 'auto',
-                            transform: 'translateX(-100%)'
-                        });
-                        break;
-                    default:
-                        this._menu.css({
-                            left: 'auto',
-                            right: 0
-                        });
-                        break;
-                }
-                this._menu.show();
-            });
-        }
-
-        /**
-         * Pause the CSS transitions, to apply CSS changes directly without an animation
-         * @param work
-         * @private
-         */
-        _pauseAnimations(work) {
-            this._menu.addClass('no-transition');
-            work();
-            this._menu[0].offsetHeight; // trigger a reflow, flushing the CSS changes
-            this._menu.removeClass('no-transition');
-        }
-
-        /**
-         * Enhance the markup of menu items which contain a submenu
-         * @private
-         */
-        _setupSubmenus() {
-            this._anchors.each((i, anchor) => {
-                anchor = $(anchor);
-                if (anchor.next('ul').length) {
-                    // prevent default behaviour (use link just to navigate)
-                    anchor.click(function (ev) {
-                        ev.preventDefault();
+                if (this._hasMenu) {
+                    this._anchors.click(function (event) {
+                        var anchor = $(event.target).is('a') ? $(event.target) : $(event.target).parents('a:first');
+                        _this2._navigate(anchor);
                     });
-
-                    // add `before` and `after` text
-                    let anchorTitle = anchor.text();
-                    anchor.html(this.options.submenuLinkBefore + anchorTitle + this.options.submenuLinkAfter);
-
-                    // add a back button
-                    if (this.options.showBackLink) {
-                        let anchorBackLinkTitle = anchorTitle;
-                        if(this.options.backLinkTitle) {
-                          anchorBackLinkTitle = this.options.backLinkTitle;
-                        }
-                        let backLink = $('<a href class="slide-menu-control ' + this.options.backLinkClass + '" data-action="back">' + anchorBackLinkTitle + '</a>');
-                        backLink.html(this.options.backLinkBefore + backLink.text() + this.options.backLinkAfter);
-                        anchor.next('ul').prepend($('<li>').append(backLink));
-                    }
                 }
-            });
-        }
-    }
+
+                $(this._menu.add(this._slider)).on('transitionend msTransitionEnd', function () {
+                    _this2._isAnimating = false;
+                    _this2._triggerEvent(true);
+                });
+
+                $(document).keydown(function (e) {
+                    switch (e.which) {
+                        case _this2.options.keycodeClose:
+                            _this2.close();
+                            // Close overlay too
+                            $('.overlay').hide();
+                            break;
+
+                        case _this2.options.keycodeOpen:
+                            _this2.open();
+                            break;
+
+                        default:
+                            return;
+                    }
+                    e.preventDefault();
+                });
+
+                this._menu.on('sm.back-after', function () {
+                    var lastActiveUl = 'ul ' + '.active '.repeat(_this2._level + 1);
+                    _this2._menu.find(lastActiveUl).removeClass('active').hide();
+                });
+            }
+
+            /**
+             * Trigger a custom event to support callbacks
+             * @param {boolean} afterAnimation Mark this event as `before` or `after` callback
+             * @private
+             */
+
+        }, {
+            key: '_triggerEvent',
+            value: function _triggerEvent() {
+                var afterAnimation = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : false;
+
+                var eventName = 'sm.' + this._lastAction;
+                if (afterAnimation) eventName += '-after';
+                this._menu.trigger(eventName);
+            }
+
+            /**
+             * Navigate the _menu - that is slide it one step left or right
+             * @param {jQuery} anchor The clicked anchor or button element
+             * @param {int} dir Navigation direction: 1 = forward, 0 = backwards
+             * @private
+             */
+
+        }, {
+            key: '_navigate',
+            value: function _navigate(anchor) {
+                var dir = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : 1;
+
+                // Abort if an animation is still running
+                if (this._isAnimating) {
+                    return;
+                }
+
+                var offset = (this._level + dir) * -100;
+
+                if (dir > 0) {
+                    if (!anchor.next('ul').length) return;
+
+                    anchor.next('ul').addClass('active').show();
+                } else if (this._level === 0) {
+                    return;
+                }
+
+                this._lastAction = dir > 0 ? 'forward' : 'back';
+                this._level = this._level + dir;
+
+                this._triggerAnimation(this._slider, offset);
+            }
+
+            /**
+             * Start the animation (the CSS transition)
+             * @param elem
+             * @param offset
+             * @private
+             */
+
+        }, {
+            key: '_triggerAnimation',
+            value: function _triggerAnimation(elem, offset) {
+                this._triggerEvent();
+
+                if (!(String(offset).indexOf('%') !== -1)) offset += '%';
+
+                elem.css('transform', 'translateX(' + offset + ')');
+                this._isAnimating = true;
+            }
+
+            /**
+             * Initialize the menu
+             * @private
+             */
+
+        }, {
+            key: '_setupMenu',
+            value: function _setupMenu() {
+                var _this3 = this;
+
+                this._pauseAnimations(function () {
+                    switch (_this3.options.position) {
+                        case 'left':
+                            _this3._menu.css({
+                                left: 0,
+                                right: 'auto',
+                                transform: 'translateX(-100%)'
+                            });
+                            break;
+                        default:
+                            _this3._menu.css({
+                                left: 'auto',
+                                right: 0
+                            });
+                            break;
+                    }
+                    _this3._menu.show();
+                });
+            }
+
+            /**
+             * Pause the CSS transitions, to apply CSS changes directly without an animation
+             * @param work
+             * @private
+             */
+
+        }, {
+            key: '_pauseAnimations',
+            value: function _pauseAnimations(work) {
+                this._menu.addClass('no-transition');
+                work();
+                this._menu[0].offsetHeight; // trigger a reflow, flushing the CSS changes
+                this._menu.removeClass('no-transition');
+            }
+
+            /**
+             * Enhance the markup of menu items which contain a submenu
+             * @private
+             */
+
+        }, {
+            key: '_setupSubmenus',
+            value: function _setupSubmenus() {
+                var _this4 = this;
+
+                this._anchors.each(function (i, anchor) {
+                    anchor = $(anchor);
+                    if (anchor.next('ul').length) {
+                        // prevent default behaviour (use link just to navigate)
+                        anchor.click(function (ev) {
+                            ev.preventDefault();
+                        });
+
+                        // add `before` and `after` text
+                        var anchorTitle = anchor.text();
+                        anchor.html(_this4.options.submenuLinkBefore + anchorTitle + _this4.options.submenuLinkAfter);
+
+                        // add a back button
+                        if (_this4.options.showBackLink) {
+                            // VDM - Add option to define back link title and class
+                            var anchorBackLinkTitle = anchorTitle;
+                            if(_this4.options.backLinkTitle) {
+                              anchorBackLinkTitle = _this4.options.backLinkTitle;
+                            }
+                            var backLink = $('<a href class="slide-menu-control ' + _this4.options.backLinkClass + '" data-action="back">' + anchorBackLinkTitle + '</a>');
+                            backLink.html(_this4.options.backLinkBefore + backLink.text() + _this4.options.backLinkAfter);
+                            anchor.next('ul').prepend($('<li>').append(backLink));
+                        }
+                    }
+                });
+            }
+        }]);
+
+        return SlideMenu;
+    }();
 
     // Link control buttons with the API
+
+
     $('body').on('click', '.slide-menu-control', function (e) {
-        let menu;
-        let target = $(this).data('target');
+        var menu = void 0;
+        var target = $(this).data('target');
 
         if (!target || target === 'this') {
             menu = $(this).parents('.slide-menu:first');
         } else {
-            menu = $('#' + target)
+            menu = $('#' + target);
         }
 
         if (!menu.length) return;
 
-        let instance = menu.data(PLUGIN_NAME);
-        let action = $(this).data('action');
+        var instance = menu.data(PLUGIN_NAME);
+        var action = $(this).data('action');
 
         if (instance && typeof instance[action] === 'function') {
             instance[action]();
@@ -326,17 +382,17 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
     // Register the jQuery plugin
     $.fn[PLUGIN_NAME] = function (options) {
         if (!$(this).length) {
-            console.warn('Slide Menu: Unable to find menu DOM element.');
+            console.warn('Slide Menu: Unable to find menu DOM element. Maybe a typo?');
             return;
         }
 
         options = $.extend({}, DEFAULT_OPTIONS, options);
         options.elem = $(this);
 
-        let instance = new SlideMenu(options);
+        var instance = new SlideMenu(options);
         $(this).data(PLUGIN_NAME, instance);
 
         return instance;
     };
-
-}(jQuery));
+})(jQuery);
+//# sourceMappingURL=slide-menu.js.map

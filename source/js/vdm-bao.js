@@ -141,6 +141,7 @@
   if($('#slide-menu-left').length != 0) {
 
     $('#slide-menu-left').slideMenu({
+      position: 'left',
       submenuLinkAfter: '<span class="vdm vdm-063-fleche-droite" aria-hidden="true"></span>',
       backLinkTitle: 'Back',
       backLinkClass: 'back-link',
