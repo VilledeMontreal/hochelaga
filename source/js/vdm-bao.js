@@ -152,10 +152,16 @@
   // Sticky navbar
   //
   // Custom function which toggles between sticky class (is-sticky)
-  var stickyToggle = function(sticky, stickyWrapper, scrollElement) {
+  var stickyToggle = function(sticky, stickyWrapper, stickyLimit, scrollElement) {
     var stickyHeight = sticky.outerHeight();
     var stickyTop = stickyWrapper.offset().top;
-    if (scrollElement.scrollTop() >= stickyTop){
+    var stickyLimitTop = stickyLimit.offset().top;
+
+    // We handle view all pages Sticky behavior by setting a stickyLimit.
+    // Need to handle scrollspy and multiple ID on same page for view all templates pages...
+    if(scrollElement.scrollTop() > stickyLimitTop - stickyHeight) {
+      sticky.css({top: (scrollElement.scrollTop() + stickyHeight - stickyLimitTop) * -1})
+    } else if (scrollElement.scrollTop() > stickyTop){
       stickyWrapper.height(stickyHeight);
       sticky.addClass("is-sticky");
     }
@@ -169,6 +175,7 @@
   $('[data-toggle="sticky-onscroll"]').each(function() {
     var sticky = $(this);
     var stickyWrapper = $('<div>').addClass('sticky-wrapper'); // insert hidden element to maintain actual top offset on page
+    var stickyLimit = sticky.siblings().last();
     sticky.before(stickyWrapper);
     sticky.addClass('sticky');
 
@@ -176,7 +183,7 @@
     $(window).on('scroll.sticky-onscroll resize.sticky-onscroll', function() {
       if(window.matchMedia("(min-width: 992px").matches) {
         //console.log("It matches!");
-        stickyToggle(sticky, stickyWrapper, $(window));
+        stickyToggle(sticky, stickyWrapper, stickyLimit, $(window));
       } else {
         sticky.removeClass("is-sticky");
         stickyWrapper.height('auto');
