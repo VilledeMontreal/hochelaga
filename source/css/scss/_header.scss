@@ -16,6 +16,8 @@
   // Montreal logo is the navbar-brand
   .navbar-brand {
     padding: 0;
+    display: flex;
+    flex: 0 0 auto; // This is needed because of IE weird behavior
     img {
       height: 1.5rem;
       width: auto;
