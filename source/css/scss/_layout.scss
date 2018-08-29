@@ -472,6 +472,9 @@
     &.section-inner-media {
       margin: 0 auto;
       .media {
+        > * {
+          flex: 0 0 auto;
+        }
         justify-content: center;
         margin-bottom: 3rem;
       }
