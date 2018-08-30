@@ -35,6 +35,14 @@
         </blockquote>
         <p>Nam sed elementum magna. Fusce et malesuada elit. Aliquam semper eget ante quis tristique. Morbi hendrerit vestibulum ante vel fringilla. Etiam et diam et magna placerat posuere sit amet id neque. Etiam a ipsum arcu. Etiam neque ante, convallis vitae imperdiet sed, accumsan sit amet eros. Quisque et iaculis ante, non finibus arcu. Maecenas scelerisque vel purus in interdum. Sed id odio quis felis tempus sagittis nec at orci. Nullam bibendum dictum dolor eget varius.</p>
       </div>
+      {{# contact }}
+      <div class="section-inner section-inner-md section-divider">
+        <h2>Contact</h2>
+        {{# contact-item}}
+          {{> molecules-block-contact }}
+        {{/ contact-item}}
+      </div>
+      {{/ contact}}
     </article>
   </div>
 

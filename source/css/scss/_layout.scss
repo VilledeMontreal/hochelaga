@@ -479,6 +479,32 @@
         margin-bottom: 3rem;
       }
     }
+
+    &.section-divider {
+      border-top: 2px solid $gray-900;
+      margin-top: 4rem;
+      padding-top: 4rem;
+    }
+  }
+}
+
+// Generic block of content
+.content-block {
+  margin-bottom: 2rem;
+  .content-block-infos {
+    color: $headings-color;
+    font-size: $font-size-lg;
+    margin-bottom: 2.5rem;
+    > span {
+      display: block;
+    }
+  }
+  .no-icon {
+    display: flex;
+    align-items: flex-start;
+    &.left {
+      padding-left: 2rem;
+    }
   }
 }
 
