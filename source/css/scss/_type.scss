@@ -151,6 +151,13 @@ a {
   // Used in the side menu
   border-bottom: $link-border-width solid $link-border-color;
 
+
+  &[href$=".pdf"]:after {
+    content: "(PDF)";
+    margin-right: -3rem;
+    padding-left: .5rem;
+  }
+
   &.link-scrollto {
     color: $primary;
     border-bottom: none;
