@@ -5,6 +5,30 @@ The format is based on [Keep a Changelog](http://keepachangelog.com/en/1.0.0/)
 and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.html).
 
 
+## [1.3.0] - Unreleased
+
+## Added
+- Added sections for sujet template.
+
+## Changed
+- Changed Démarche template.
+
+## Deprecated
+
+## Removed
+
+## Fixed
+
+
+## [1.2.0] - 2018-08-27
+
+## Added
+- Added featured-content molecules.
+- Added card variants for members and links
+- Added nav-anchors molecules
+- Added template for Instances and commissions.
+- Added templates variants for comité exécutif and commission.
+
 ## [1.1.0] - 2018-08-21
 
 ## Added
@@ -126,6 +150,11 @@ remove index from the name. Which makes it possible to update font-icon without 
 ### Removed
 - Removed vdm prefix for buttons classes
 
+[1.2.0]: https://bitbucket.org/villemontreal/boite-outils-web/src/1.2.0/
+[1.1.0]: https://bitbucket.org/villemontreal/boite-outils-web/src/1.1.0/
+[1.0.0]: https://bitbucket.org/villemontreal/boite-outils-web/src/1.0.0/
+[0.3.2]: https://bitbucket.org/villemontreal/boite-outils-web/src/0.3.2/
+[0.3.1]: https://bitbucket.org/villemontreal/boite-outils-web/src/0.3.1/
 [0.3.0]: https://bitbucket.org/villemontreal/boite-outils-web/src/0.3.0/
 [0.2.2]: https://bitbucket.org/villemontreal/boite-outils-web/src/0.2.2/
 [0.2.0]: https://bitbucket.org/villemontreal/boite-outils-web/src/0.2.0/

@@ -137,14 +137,96 @@
   // Slide-menu initialisation
   // @see slide-menu.js 
   //
+
   if($('#slide-menu-left').length != 0) {
 
-    var menuLeft = $('#slide-menu-left').slideMenu({
+    $('#slide-menu-left').slideMenu({
+      position: 'left',
       submenuLinkAfter: '<span class="vdm vdm-063-fleche-droite" aria-hidden="true"></span>',
       backLinkTitle: 'Back',
       backLinkClass: 'back-link',
       backLinkBefore: '<span class="vdm vdm-058-chevron-gauche" aria-hidden="true"></span> '
     });
   }
+
+  // Sticky navbar
+  //
+  // Custom function which toggles between sticky class (is-sticky)
+  var stickyToggle = function(sticky, stickyWrapper, stickyLimit, scrollElement) {
+    var stickyHeight = sticky.outerHeight();
+    var stickyTop = stickyWrapper.offset().top;
+    var stickyLimitTop = stickyLimit.offset().top;
+
+    // We handle view all pages Sticky behavior by setting a stickyLimit.
+    // Need to handle scrollspy and multiple ID on same page for view all templates pages...
+    if(scrollElement.scrollTop() > stickyLimitTop - stickyHeight) {
+      sticky.css({top: (scrollElement.scrollTop() + stickyHeight - stickyLimitTop) * -1})
+    } else if (scrollElement.scrollTop() > stickyTop){
+      stickyWrapper.height(stickyHeight);
+      sticky.addClass("is-sticky");
+    }
+    else{
+      sticky.removeClass("is-sticky");
+      stickyWrapper.height('auto');
+    }
+  };
+  
+  // Find all data-toggle="sticky-onscroll" elements
+  $('[data-toggle="sticky-onscroll"]').each(function() {
+    var sticky = $(this);
+    var stickyWrapper = $('<div>').addClass('sticky-wrapper'); // insert hidden element to maintain actual top offset on page
+    var stickyLimit = sticky.siblings().last();
+    sticky.before(stickyWrapper);
+    sticky.addClass('sticky');
+
+    // Scroll & resize events
+    $(window).on('scroll.sticky-onscroll resize.sticky-onscroll', function() {
+      if(window.matchMedia("(min-width: 992px").matches) {
+        //console.log("It matches!");
+        stickyToggle(sticky, stickyWrapper, stickyLimit, $(window));
+      } else {
+        sticky.removeClass("is-sticky");
+        stickyWrapper.height('auto');
+      }
+    });
+  });
+
+
+  // Smooth scrolling using jQuery easing
+  $('a.js-scroll-trigger[href*="#"]:not([href="#"])').click(function() {
+    if (location.pathname.replace(/^\//, '') == this.pathname.replace(/^\//, '') && location.hostname == this.hostname) {
+      var target = $(this.hash);
+      target = target.length ? target : $('[name=' + this.hash.slice(1) + ']');
+      if (target.length) {
+        if(window.matchMedia("(min-width: 992px").matches) {
+          $navOffset = $("#navAnchors").height();
+        } else {
+          $navOffset = 0;
+        }
+        $('html, body').animate({
+          scrollTop: (target.offset().top - $navOffset)
+        }, 1000, "easeInOutExpo");
+
+        target.focus(); // Setting focus
+        if (target.is(":focus")){ // Checking if the target was focused
+          return false;
+        } else {
+          target.attr('tabindex','-1'); // Adding tabindex for elements not focusable
+          target.focus(); // Setting focus
+        };
+        return false;
+      }
+    }
+  });
+
+  
+  // Activate scrollspy to add active class to navAnchors items on scroll
+  if($('#navAnchors').length != 0) {
+    $('body').scrollspy({
+      target: '#navAnchors',
+      offset: $("#navAnchors").height()
+    });
+  }
+
 
 })(jQuery);

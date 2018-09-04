@@ -4,12 +4,6 @@ title: Sidebar block and variable content
 
 A list of content blocks for the sidebar. A bunch of variants and thematic blocks are represented.
 
-
-### Questions and issues
-
-* There is a 96% width directive for all forms in sidebars. If this causes issues and overides are needed, sidebar forms will need classes.
-* Responsibeve bahavious has to be implemented for the medium breakpoint, when the column narrows. Problems arise with right side icons, then. Have a look at teasers and cards for inspiration.
-
 ### Links
 
 * Links are always black, in sidebars, to make them the primary color, add the .primary modifier class;
@@ -21,7 +15,7 @@ A list of content blocks for the sidebar. A bunch of variants and thematic block
 
 * The base unit to space out content blocks vertically is a div.subsection. 
 * Each subsection may have one or many subtitles (hx.subtitle)
-* The subsection title inherits from the H5 styling.
+* The subsection title inherits from the H6 styling.
 
 
 ### Color schemes 

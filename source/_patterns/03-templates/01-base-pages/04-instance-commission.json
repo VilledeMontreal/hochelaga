@@ -1,0 +1,197 @@
+{
+  "regionMainContentClasses": "col-lg-8",
+  "text-elements": {
+    "headings":{
+      "display":{
+        "content": "Nom de l'instance ou de la commission"
+      }
+    }
+  },
+  "has-header-meta": true,
+  "has-publication-date": true,
+  "has-hub-link": true,
+  "date-time-text": "Mis à jour le 23 septembre 2018",
+  "hub-link-text": "Toutes les instances",
+  "has-lead-text": true,
+  "leadContainerClasses": "",
+  "has-nav-anchors": true,
+  "nav": {
+    "is-sticky": true,
+    "navItem": [
+      {
+        "class": "nav-top",
+        "url": "#navTop",
+        "title": "Haut de page"
+      },
+      {
+        "class": false,
+        "url": "#members",
+        "title": "Membres"
+      },
+      {
+        "class": false,
+        "url": "#webdiffusion",
+        "title": "Webdiffusions"
+      },
+      {
+        "class": false,
+        "url": "#informations",
+        "title": "Plus d'informations"
+      }
+    ]
+  },
+  "has-sb-seance": true,
+  "sidebarTitle": "Prochaine séance",
+  "featured-section": {
+    "featuredContentID": "webdiffusion",
+    "featuredContentBgImage": "background-image: url(https://picsum.photos/3888/2592?image=977)",
+    "featuredContentTitle": "Regarder le conseil en direct",
+    "featuredContentText": "Dans un esprit de plus grande transparence le conseil municipal est diffusé en direct sur Internet, ainsi qu'en différé.",
+    "featuredContentButton": {
+      "buttonText": "Visionnez"
+    }
+  },
+  "cards-membres": {
+    "button-load-more": false,
+    "cards": {
+      "section-classes": "",
+      "classes": false,
+      "bsgrid-classes": "col-12 col-md-6",
+      "card-item": [
+        {
+          "classes": "card-large card-row-layout card-member",
+          "url": "#",
+          "card-title": "Prénom Nom",
+          "card-subtitle": "Fonction au sein du conseil",
+          "card-text": false,
+          "card-media": {
+            "icon": false,
+            "img" : {
+              "classes": "rounded-circle",
+              "url" : "https://picsum.photos/480/480?image=669",
+              "alt" : "Prénom Nom img alt."
+            }
+          },
+          "footer" : false
+        },
+        {
+          "classes": "card-large card-row-layout card-member",
+          "url": "#",
+          "card-title": "Prénom Nom",
+          "card-subtitle": "Fonction au sein du conseil",
+          "card-text": false,
+          "card-media": {
+            "icon": false,
+            "img" : {
+              "classes": "rounded-circle",
+              "url" : "https://picsum.photos/480/480?image=669",
+              "alt" : "Prénom Nom img alt."
+            }
+          },
+          "footer" : false
+        },
+        {
+          "classes": "card-large card-row-layout card-member",
+          "url": "#",
+          "card-title": "Prénom Nom",
+          "card-subtitle": "Fonction au sein du conseil",
+          "card-text": false,
+          "card-media": {
+            "icon": false,
+            "img" : {
+              "classes": "rounded-circle",
+              "url" : "https://picsum.photos/480/480?image=669",
+              "alt" : "Prénom Nom img alt."
+            }
+          },
+          "footer" : false
+        },
+        {
+          "classes": "card-large card-row-layout card-member",
+          "url": "#",
+          "card-title": "Prénom Nom",
+          "card-subtitle": "Fonction au sein du conseil",
+          "card-text": false,
+          "card-media": {
+            "icon": false,
+            "img" : {
+              "classes": "rounded-circle",
+              "url" : "https://picsum.photos/480/480?image=669",
+              "alt" : "Prénom Nom img alt."
+            }
+          },
+          "footer" : false
+        }
+      ]
+    }
+  },
+  "informations": {
+    "cards": {
+      "section-classes": "bg-gray-sky",
+      "classes": false,
+      "bsgrid-classes": "col-12 col-md-6 col-lg-4",
+      "card-item" : [
+        {
+          "classes" : "card-link",
+          "url" : "#",
+          "card-title" : "Card #1 link title",
+          "card-text" : false,
+          "card-media" : false,
+          "footer" : {
+            "outside-body": true
+          }
+        },
+        {
+          "classes" : "card-link",
+          "url" : "#",
+          "card-title" : "Card #2 link title",
+          "card-text" : false,
+          "card-media" : false,
+          "footer" : {
+            "outside-body": true
+          }
+        },
+        {
+          "classes" : "card-link",
+          "url" : "#",
+          "card-title" : "Card #3 link title - longer than usual",
+          "card-text" : false,
+          "card-media" : false,
+          "footer" : {
+            "outside-body": true
+          }
+        },
+        {
+          "classes" : "card-link",
+          "url" : "#",
+          "card-title" : "Card #4 link title",
+          "card-text" : false,
+          "card-media" : false,
+          "footer" : {
+            "outside-body": true
+          }
+        },
+        {
+          "classes" : "card-link",
+          "url" : "#",
+          "card-title" : "Card #5 link title",
+          "card-text" : false,
+          "card-media" : false,
+          "footer" : {
+            "outside-body": true
+          }
+        },
+        {
+          "classes" : "card-link",
+          "url" : "#",
+          "card-title" : "Card #6 link title",
+          "card-text" : false,
+          "card-media" : false,
+          "footer" : {
+            "outside-body": true
+          }
+        }
+      ]
+    }
+  }
+}

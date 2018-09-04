@@ -1,0 +1,87 @@
+{{> atoms-link-skip-to-main-content }}
+{{> organisms-header-portal }}
+
+<main class="main-content {{ pageClasses }}" id="main-content" aria-label="Main Content">
+
+  {{> organisms-content-header }}
+
+  <!-- Teaser -->
+  {{# has-lead-text }}
+  {{> molecules-lead }}
+  {{/ has-lead-text }}
+
+  {{# has-nav-anchors }}
+  {{> molecules-nav-anchors }}
+  {{/ has-nav-anchors }}
+
+  <!-- Begin main-content region-->
+  <div id="navTop" class="region-content {{ regionMainClasses }}">
+    <div class="container {{ regionMainContainerClasses }}">
+      <div class="row">
+        <article class="col-12 col-lg-8 {{ regionMainContentClasses }}">
+          <p>Le comité exécutif a la responsabilité de préparer divers documents, au nombre desquels figurent les budgets, les règlements, etc., qui sont soumis à l’approbation du conseil municipal.</p>
+          <p>Les pouvoirs décisionnels du comité exécutif ont notamment trait à l’octroi de contrats ou de subventions (selon les montants), à la gestion des ressources humaines et financières, des approvisionnements et des immeubles. Il peut aussi recevoir d’autres pouvoirs délégués par le municipal.</p>
+          <p>La Division du soutien aux instances de la Direction générale produit les ordres du jour du comité exécutif.</p>
+        </article>
+        <aside class="col-12 col-lg-4 sidebar-right" role="complementary">
+        {{# has-sb-seance}}
+          {{> organisms-sidebar-block-seance }}
+        {{/ has-sb-seance}}
+        {{# has-sb-newsletter}}
+          {{> organisms-sidebar-block-newsletter }}
+        {{/ has-sb-newsletter}}
+        </aside>
+      </div>
+    </div>
+  </div>
+
+  {{# cards-membres}}
+  <section id="members" class="page-section {{ regionAfterClasses }} bg-gray-sky">
+    <div class="container">
+      <div class="row">
+        <div class="col-12 text-center">
+          <h2 class="section-heading">Membres</h2>
+        </div>
+      </div>
+      <div class="row cards">
+        {{# cards.card-item }}
+        <div class="{{ cards.bsgrid-classes }}">
+          {{> molecules-card-item}}
+        </div>
+        {{/ cards.card-item }}
+        {{# cards.button-load-more}}
+        <div class="col-12 justify-content-center">
+          {{> atoms-button(buttonClass: "btn-secondary", buttonText: "Voir tous les membres")}}
+        </div>
+        {{/ cards.button-load-more}}
+      </div>
+    </div>
+  </section>
+  {{/ cards-membres}}
+
+  {{# featured-section}}
+  {{> molecules-featured-content}}
+  {{/ featured-section}}
+
+  {{# informations}}
+  <section id="informations" class="page-section {{ regionAfterClasses }} bg-gray-sky">
+    <div class="container">
+      <div class="row">
+        <div class="col-12 text-center">
+          <h2 class="section-heading">Plus d'informations</h2>
+        </div>
+      </div>
+      <div class="row cards">
+        {{# cards.card-item }}
+        <div class="{{ cards.bsgrid-classes }}">
+          {{> molecules-card-item}}
+        </div>
+        {{/ cards.card-item }}
+      </div>
+    </div>
+  </section>
+  {{/ informations}}
+
+</main>
+
+{{> organisms-footer-portal }}

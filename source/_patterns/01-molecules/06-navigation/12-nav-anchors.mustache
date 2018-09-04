@@ -1,0 +1,9 @@
+<nav id="navAnchors" {{# nav.is-sticky }}data-toggle="sticky-onscroll"{{/ nav.is-sticky}}>
+  <ul class="nav nav-anchors">
+    {{# nav.navItem }}
+    <li class="nav-item">
+      <a href="{{ url }}" class="nav-link js-scroll-trigger {{ class }}">{{ title }}</a>
+    </li>
+    {{/ nav.navItem }}
+  </ul>
+</nav>

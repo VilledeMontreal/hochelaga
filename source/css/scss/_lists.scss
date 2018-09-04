@@ -58,7 +58,7 @@ ol {
   li {
     margin: 0;
     padding: 0 .65rem 0 0;
-    flex: 0;
+    flex: 0 0 auto; // IE needs this
     flex-wrap: wrap;
     &:last-of-type {
       margin: 0;
