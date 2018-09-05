@@ -95,6 +95,15 @@ h6, .h6 {
   }
 }
 
+// Utility class for font-size
+
+.font-size-xl {
+  font-size: $font-size-xl;
+}
+.font-size-lg {
+  font-size: $font-size-lg;
+}
+
 // Lead
 //
 // Lead font-size are responsive
@@ -141,6 +150,18 @@ a {
   // TODO: Refactor required for this block, considering the icon tag will be explicite in the markup
   // Used in the side menu
   border-bottom: $link-border-width solid $link-border-color;
+
+  // File extension handling
+
+  &[href$=".pdf"] {
+    margin-right: 49px;
+    &:after {
+      content: "(PDF)";
+      margin-right: -49px;
+      padding-left: .5rem;
+      overflow: hidden;
+    }
+  }
 
   &.link-scrollto {
     color: $primary;
@@ -213,6 +234,38 @@ a {
   &.left {
     .vdm {
       padding-right: 0.15em;
+    }
+  }
+}
+
+// External link icon
+// Apply to .region-content
+
+.region-content {
+  a[href*="//"]:not([href*="montreal.ca"]) {
+    @include iconvdm($position: after, $icon: '112-lien-externe');
+    margin-right: 1.125rem;
+    &:after {
+      font-size: 1.125rem;
+      padding-left: 0.125rem;
+      vertical-align: baseline;
+      overflow: hidden;
+      margin-right: -1.125rem;
+      margin-top: -.5rem;
+      margin-bottom: -.5rem;
+
+    }
+  }
+  // List some exclusion
+  .list-icon,
+  .social-media-list,
+  .sb-block,
+  .cards {
+    a[href*="//"]:not([href*="montreal.ca"]) {
+      margin-right: 0;
+      &:after {
+        content: none;
+      }
     }
   }
 }
