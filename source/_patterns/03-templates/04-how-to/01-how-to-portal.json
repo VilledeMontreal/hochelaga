@@ -146,7 +146,7 @@
       "bsgrid-classes": "col-12",
       "card-item": [
         {
-          "classes": "card-fw card-tarif",
+          "classes": "card-tarif",
           "url": false,
           "card-label-1": "Permis animal pour chat",
           "card-item-1": "Valide pour 1 an sur tout le territoire de la Ville de Montréal",
@@ -154,10 +154,11 @@
           "card-teaser-tarif": false,
           "card-table-tarif": true,
           "table": {
+            "tableWrapper": true,
             "caption": "",
             "tableClass": "table-striped",
             "thead": {
-              "theadClass": "",
+              "theadClass": "thead-dark",
               "th": [
                 { "title": "Information additionnelle sur le permis" },
                 { "title": "Prix de base" },

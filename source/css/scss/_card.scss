@@ -297,6 +297,40 @@
     }
   }
 
+  // Card tarification specification
+
+  &.card-tarif {
+    .row > div {
+      &:first-child {
+        .card-section {
+          border-top: none;
+        }
+      }
+    }
+    .card-section {
+      border-top: 1px solid $gray-500;
+    }
+    .card-link {
+      justify-content: center;
+    }
+
+    @include media-breakpoint-up(lg) {
+      .row > div {
+        &:last-child {
+          .card-section {
+            border-top: 1px solid $gray-500;
+          }
+        }
+      }
+      .card-section {
+        border: none;
+      }
+      .card-link {
+        justify-content: flex-end;
+      }
+    }
+  }
+
   // Featured card specific
   &.card-featured {
     // border: none;
