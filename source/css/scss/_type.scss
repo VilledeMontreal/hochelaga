@@ -151,11 +151,16 @@ a {
   // Used in the side menu
   border-bottom: $link-border-width solid $link-border-color;
 
+  // File extension handling
 
-  &[href$=".pdf"]:after {
-    content: "(PDF)";
-    margin-right: -3rem;
-    padding-left: .5rem;
+  &[href$=".pdf"] {
+    margin-right: 49px;
+    &:after {
+      content: "(PDF)";
+      margin-right: -49px;
+      padding-left: .5rem;
+      overflow: hidden;
+    }
   }
 
   &.link-scrollto {
@@ -229,6 +234,38 @@ a {
   &.left {
     .vdm {
       padding-right: 0.15em;
+    }
+  }
+}
+
+// External link icon
+// Apply to .region-content
+
+.region-content {
+  a[href*="//"]:not([href*="montreal.ca"]) {
+    @include iconvdm($position: after, $icon: '112-lien-externe');
+    margin-right: 1.125rem;
+    &:after {
+      font-size: 1.125rem;
+      padding-left: 0.125rem;
+      vertical-align: baseline;
+      overflow: hidden;
+      margin-right: -1.125rem;
+      margin-top: -.5rem;
+      margin-bottom: -.5rem;
+
+    }
+  }
+  // List some exclusion
+  .list-icon,
+  .social-media-list,
+  .sb-block,
+  .cards {
+    a[href*="//"]:not([href*="montreal.ca"]) {
+      margin-right: 0;
+      &:after {
+        content: none;
+      }
     }
   }
 }
