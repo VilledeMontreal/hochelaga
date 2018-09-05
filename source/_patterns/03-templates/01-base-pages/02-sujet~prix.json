@@ -1,11 +1,20 @@
 {
   "regionMainContentClasses": "col-lg-8",
+  "text-elements": {
+    "headings":{
+      "display":{
+        "content": "Template sujet (variante prix)"
+      }
+    }
+  },
   "has-header-meta": true,
   "has-publication-date": true,
   "has-hub-link": true,
-  "date-time-text": "Mis à jour le 23 septembre 2018",
+  "date-time-text": "Mis à jour le 5 septembre 2018",
   "hub-link-text": "Tous les sujets",
   "has-lead-text": true,
+  "default-content": false,
+  "variant-prix": true,
   "contact": {
     "contact-item": [
       {
@@ -57,57 +66,7 @@
       }
     ]
   },
-  "cards-tarification": {
-    "cards": {
-      "section-classes": "bg-gray-sky",
-      "classes": false,
-      "bsgrid-classes": "col-12",
-      "card-item": [
-        {
-          "classes": "card-fw card-tarif",
-          "url": false,
-          "card-label-1": "Permis animal pour chat",
-          "card-item-1": "Valide pour 1 an sur tout le territoire de la Ville de Montréal",
-          "card-link": {
-            "url": "https://montrealenlumiere.com",
-            "class": false,
-            "label": "Comment obtenir ce permis"
-          },
-          "card-teaser-tarif": {
-            "card-tarif-text": "En moyenne <span class=\"tarif-value\">32 $</span>"
-          }
-        },
-        {
-          "classes": "card-fw card-tarif",
-          "url": false,
-          "card-label-1": "Permis animal de type Promeneur",
-          "card-item-1": "Valide pour 1 an sur tout le territoire de la Ville de Montréal",
-          "card-link": {
-            "url": "#",
-            "class": false,
-            "label": "Comment obtenir ce permis"
-          },
-          "card-teaser-tarif": {
-            "card-tarif-text": "<span class=\"tarif-value\">100 $</span>"
-          }
-        },
-        {
-          "classes": "card-fw card-tarif",
-          "url": false,
-          "card-label-1": "Permis animal de type X",
-          "card-item-1": "Valide pour 1 an sur tout le territoire de la Ville de Montréal",
-          "card-link": {
-            "url": "#",
-            "class": false,
-            "label": "Choisir un arrondissement"
-          },
-          "card-teaser-tarif": {
-            "card-tarif-text": "Le prix varie en fonction de l'arrondissement."
-          }
-        }
-      ]
-    }
-  },
+  "cards-tarification": false,
   "cards-suggested-content": {
     "cards": {
       "section-classes": "bg-gray-sky",

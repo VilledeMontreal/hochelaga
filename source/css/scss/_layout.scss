@@ -203,6 +203,39 @@
     margin-bottom: 0;
   }
 }
+.section-select-arron {
+  @include media-breakpoint-down(md) {
+    > div + div {
+      margin-top: 2rem;
+    }
+  }
+}
+.select-arron {
+
+  .title {
+    color: $headings-color;
+    display: block;
+    font-size: $font-size-lg;
+    font-weight: $font-weight-bold;
+    margin-bottom: 1rem;
+    
+  }
+
+  .placeholder-arron {
+    background-color: $white;
+    border: 2px solid $gray-200;
+    color: $gray-600;
+    display: inline-block;
+    padding: 1rem 3rem 1rem 1rem;
+  }
+
+  @include media-breakpoint-up(lg) {
+    border-right: 1px solid $gray-400;
+    padding-right: 3.375rem;
+    margin-right:  3.375rem;
+    height: 100%;
+  }
+}
 
 // Services styles
 // Might migrate to own stylesheet if it becomes too long

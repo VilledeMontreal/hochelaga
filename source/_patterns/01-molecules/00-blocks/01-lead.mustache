@@ -1,7 +1,22 @@
 <div class="bg-gray-sky lead-container {{ leadContainerClasses }}">
   <div class="section-content-fluid">
+    {{^ selectArrondissement}}
     <div class="section-inner section-inner-lg">
       {{> atoms-lead }}
     </div>
+    {{/ selectArrondissement}}
+    {{# selectArrondissement}}
+    <div class="row no-gutters section-inner section-inner-lg section-select-arron">
+      <div class="col-12 col-lg-7 order-lg-2">
+        {{> atoms-lead }}
+      </div>
+      <div class="col-12 col-lg-5 order-lg-1">
+        <div class="select-arron">
+          <span class="title">Sélectionnez votre arrondissement pour connaître la démarche à suivre.</span>
+          <div class="placeholder-arron">Sélectionnez votre arrondissement</div>
+        </div>
+      </div>
+    </div>
+    {{/ selectArrondissement}}
   </div>
 </div>

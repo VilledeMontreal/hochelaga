@@ -3,7 +3,7 @@
   "text-elements": {
     "headings":{
       "display":{
-        "content": "Template sujet"
+        "content": "Template sujet (variante mois ou regroupement d'événements)"
       }
     }
   },
@@ -13,58 +13,9 @@
   "date-time-text": "Mis à jour le 5 septembre 2018",
   "hub-link-text": "Tous les sujets",
   "has-lead-text": true,
-  "default-content": true,
-  "cards-tarification": {
-    "cards": {
-      "section-classes": "bg-gray-sky",
-      "classes": false,
-      "bsgrid-classes": "col-12",
-      "card-item": [
-        {
-          "classes": "card-fw card-tarif",
-          "url": false,
-          "card-label-1": "Permis animal pour chat",
-          "card-item-1": "Valide pour 1 an sur tout le territoire de la Ville de Montréal",
-          "card-link": {
-            "url": "#",
-            "class": false,
-            "label": "Comment obtenir ce permis"
-          },
-          "card-teaser-tarif": {
-            "card-tarif-text": "En moyenne <strong>32$</strong>"
-          }
-        },
-        {
-          "classes": "card-fw card-tarif",
-          "url": false,
-          "card-label-1": "Permis animal de type Promeneur",
-          "card-item-1": "Valide pour 1 an sur tout le territoire de la Ville de Montréal",
-          "card-link": {
-            "url": "#",
-            "class": false,
-            "label": "Comment obtenir ce permis"
-          },
-          "card-teaser-tarif": {
-            "card-tarif-text": "<strong>100$</strong>"
-          }
-        },
-        {
-          "classes": "card-fw card-tarif",
-          "url": false,
-          "card-label-1": "Permis animal de type X",
-          "card-item-1": "Valide pour 1 an sur tout le territoire de la Ville de Montréal",
-          "card-link": {
-            "url": "#",
-            "class": false,
-            "label": "Choisir un arrondissement"
-          },
-          "card-teaser-tarif": {
-            "card-tarif-text": "Le prix varie en fonction de l'arrondissement."
-          }
-        }
-      ]
-    }
-  },
+  "default-content": false,
+  "variant-mois": true,
+  "cards-tarification": false,
   "cards-suggested-content": {
     "cards": {
       "section-classes": "bg-gray-sky",

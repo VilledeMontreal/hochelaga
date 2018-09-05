@@ -9,9 +9,15 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 
 ## Added
 - Added sections for sujet template.
+- Added styling of external link with css partial selector on .region-content. 
+- Added handling of exception to external link (cards, list-icon, social-media-list).
+- Added styling of pdf document with css partial selector.
+- Added same domain (montreal.ca) links and exernal links to show styings.
 
 ## Changed
 - Changed Démarche template.
+- Changed html structure for card-tarif mobile first layout and better responsive handling.
+- Changed font-icon version to 1.1.0 - New icon (112-lien-externe)
 
 ## Deprecated
 
@@ -28,6 +34,10 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 - Added nav-anchors molecules
 - Added template for Instances and commissions.
 - Added templates variants for comité exécutif and commission.
+
+## Fixed
+- Fixed numerous IE bugs, mainly flexbox related.
+- Fixed slide-menu IE bug.
 
 ## [1.1.0] - 2018-08-21
 
