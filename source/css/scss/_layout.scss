@@ -212,6 +212,10 @@
 }
 .select-arron {
 
+  .label {
+    display: block;
+    margin-bottom: 1rem;
+  }
   .title {
     color: $headings-color;
     display: block;
@@ -382,6 +386,26 @@
 .container-padding {
   padding-top: $grid-gutter-width;
   padding-bottom: $grid-gutter-width;
+}
+
+// Empty state
+
+.empty-state-container {
+  @extend .h4;
+  color: $body-color;
+  font-weight: $font-weight-regular;
+  max-width: map-get($content-max-widths, md);
+  margin: 0 auto 4rem auto;
+  text-align: center;
+  img {
+    margin: 0 auto 2rem auto
+  }
+  @include media-breakpoint-up(sm) {
+    margin: 0 auto 10rem auto;
+    img {
+      margin-bottom: 3rem;
+    }
+  }
 }
 
 
