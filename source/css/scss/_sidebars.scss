@@ -125,6 +125,12 @@
     }
   }
 
+  // Top stroke variant
+  &.sidebar-top-stroke {
+    border-top: 4px solid $headings-color;
+    padding: 2rem 2rem 0 2rem;
+  }
+
 
   // Transparent border brand
   &.sidebar-border {

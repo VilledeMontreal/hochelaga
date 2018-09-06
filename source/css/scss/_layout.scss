@@ -203,6 +203,43 @@
     margin-bottom: 0;
   }
 }
+.section-select-arron {
+  @include media-breakpoint-down(md) {
+    > div + div {
+      margin-top: 2rem;
+    }
+  }
+}
+.select-arron {
+
+  .label {
+    display: block;
+    margin-bottom: 1rem;
+  }
+  .title {
+    color: $headings-color;
+    display: block;
+    font-size: $font-size-lg;
+    font-weight: $font-weight-bold;
+    margin-bottom: 1rem;
+    
+  }
+
+  .placeholder-arron {
+    background-color: $white;
+    border: 2px solid $gray-200;
+    color: $gray-600;
+    display: inline-block;
+    padding: 1rem 3rem 1rem 1rem;
+  }
+
+  @include media-breakpoint-up(lg) {
+    border-right: 1px solid $gray-400;
+    padding-right: 3.375rem;
+    margin-right:  3.375rem;
+    height: 100%;
+  }
+}
 
 // Services styles
 // Might migrate to own stylesheet if it becomes too long
@@ -349,6 +386,26 @@
 .container-padding {
   padding-top: $grid-gutter-width;
   padding-bottom: $grid-gutter-width;
+}
+
+// Empty state
+
+.empty-state-container {
+  @extend .h4;
+  color: $body-color;
+  font-weight: $font-weight-regular;
+  max-width: map-get($content-max-widths, md);
+  margin: 0 auto 4rem auto;
+  text-align: center;
+  img {
+    margin: 0 auto 2rem auto
+  }
+  @include media-breakpoint-up(sm) {
+    margin: 0 auto 10rem auto;
+    img {
+      margin-bottom: 3rem;
+    }
+  }
 }
 
 

@@ -3,7 +3,7 @@
   "text-elements": {
     "headings":{
       "display":{
-        "content": "Template sujet (variante prix)"
+        "content": "Template sujet (variante mois ou regroupement d'événements)"
       }
     }
   },
@@ -14,58 +14,7 @@
   "hub-link-text": "Tous les sujets",
   "has-lead-text": true,
   "default-content": false,
-  "variant-prix": true,
-  "contact": {
-    "contact-item": [
-      {
-        "name": "Valérie Lampron",
-        "fonction": "Bibliothécaire",
-        "compagnie": "Service de la culture, Direction des blibiothèques",
-        "list-icon-item": [
-          {
-            "url": false,
-            "class": "icon left",
-            "icon-item": {
-              "icon-label": "091-localisation"
-            },
-            "content": "<address>123, rue Bord de l'eau<br>Montréal, QC, H3K 2T5</address>"
-          },
-          {
-            "url": "tel:1234564455",
-            "class": "icon left",
-            "icon-item": {
-              "icon-label": "012-telephone"
-            },
-            "content": "514 872-1234"
-          },
-          {
-            "url": "mailto:valerie.lampron@ville.montreal.qc.ca",
-            "class": "icon left",
-            "icon-item": {
-              "icon-label": "028-enveloppe"
-            },
-            "content": "valerie.lampron@ville.montreal.qc.ca"
-          },
-          {
-            "url": "https://test.com",
-            "class": "icon left",
-            "icon-item": {
-              "icon-label": "031-ordinateur"
-            },
-            "content": "v.lampron.com"
-          }
-        ],
-        "social-media-icons-list": {
-          "has-label": false,
-          "has-facebook": true,
-          "has-instagram": false,
-          "has-twitter": true,
-          "has-linkedin": true,
-          "has-youtube": false
-        }
-      }
-    ]
-  },
+  "variant-mois": true,
   "cards-tarif": false,
   "cards-suggested-content": {
     "cards": {

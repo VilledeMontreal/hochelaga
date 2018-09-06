@@ -104,13 +104,13 @@
       display: flex;
       font-size: $font-size-lg;
       line-height: get-line-height($font-size-lg, 32px);
-      padding: 1.4rem 5rem 1.4rem 4rem;
+      padding: 1.4rem 5rem 1.4rem 2rem;
       cursor: pointer;
       @include iconvdm(after, '069-mini-plus-circulaire');
 
       &[aria-expanded="true"] {
         color: $primary;
-        @include iconvdm(after, '073-mini-moins-circulaire-plein');
+        @include iconvdm(after, '070-mini-moins-circulaire');
       }
 
       &:hover,
@@ -120,7 +120,7 @@
         @include iconvdm(after, '072-mini-plus-circulaire-plein');
 
         &[aria-expanded="true"] {
-          @include iconvdm(after, '070-mini-moins-circulaire');
+          @include iconvdm(after, '073-mini-moins-circulaire-plein');
         }
       }
 
@@ -140,26 +140,51 @@
         align-self: center;
 
         &.collapsible-icon {
-          color: $primary;
-          flex-grow: 0;
-          font-size: 2rem;
-          align-self: center;
-          font-weight: $font-weight-bold;
-          content: "";
-          position: absolute;
-          left: 1.3rem;
+          display: none;
         }
 
         &.circle {
-          @include circle();
-          margin-left: 0.5rem;
+          display: none;
         }
       }
     }
   }
   // Content block wrapper
   .collapsible-block {
-    padding: 1rem 4.3rem 1.5rem 4.3rem;
+    padding: 2rem 4.3rem 1.5rem 2rem;
+    h2, .h2, h3, .h3, h4, .h4, h5, .h5 {
+      font-size: $font-size-lg;
+
+    }
+  }
+
+  @include media-breakpoint-up(sm) {
+    .collapsible-header {
+      a {
+        padding: 1.4rem 5rem 1.4rem 4rem;
+        span {
+          &.collapsible-icon {
+            color: $primary;
+            flex-grow: 0;
+            font-size: 2rem;
+            align-self: center;
+            font-weight: $font-weight-bold;
+            content: "";
+            display: block;
+            position: absolute;
+            left: 1.3rem;
+          }
+  
+          &.circle {
+            @include circle();
+            margin-left: 0.5rem;
+          }
+        }
+      }
+    }
+    .collapsible-block {
+      padding: 2rem 4.3rem 1.5rem 4.3rem;
+    }
   }
 }
 
@@ -168,6 +193,10 @@
     background-color: $white;
     box-shadow: 0 2px 7px 4px rgba(232,232,232,0.5);
     z-index: 100;
+    .collapsible-block {
+      padding-top: 1rem;
+      padding-bottom: 2rem;
+    }
   }
   .collapsible-header {
     a {
@@ -251,9 +280,6 @@ nav {
   @include media-breakpoint-up(md) {
     .nav-link {
       padding: .5rem 1.5rem;
-      &:first-child {
-
-      }
       &:after {
         left: 1.5rem;
         right: 1.5rem;
