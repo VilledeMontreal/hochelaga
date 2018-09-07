@@ -104,7 +104,7 @@
       display: flex;
       font-size: $font-size-lg;
       line-height: get-line-height($font-size-lg, 32px);
-      padding: 1.4rem 5rem 1.4rem 2rem;
+      padding: 1.4rem 4rem 1.4rem 1.5rem;
       cursor: pointer;
       @include iconvdm(after, '069-mini-plus-circulaire');
 
@@ -125,13 +125,13 @@
       }
 
       &:after {
-        font-size: 2.6rem;
+        font-size: 2rem;
         line-height: 1;
-        width: 2.6rem;
-        height: 2.6rem;
+        width: 2rem;
+        height: 2rem;
         position: absolute;
         align-self: center;
-        right: 1.4rem;
+        right: 1rem;
         display: block;
         color: $primary;
       }
@@ -142,26 +142,24 @@
         &.collapsible-icon {
           display: none;
         }
-
-        &.circle {
-          display: none;
-        }
       }
     }
   }
   // Content block wrapper
   .collapsible-block {
-    padding: 2rem 4.3rem 1.5rem 2rem;
+    padding: 2rem 4rem 2rem 2rem;
     h2, .h2, h3, .h3, h4, .h4, h5, .h5 {
       font-size: $font-size-lg;
-
+    }
+    > *:last-child {
+      margin-bottom: 0;
     }
   }
 
   @include media-breakpoint-up(sm) {
     .collapsible-header {
       a {
-        padding: 1.4rem 5rem 1.4rem 4rem;
+        padding: 1.4rem 4rem 1.4rem 4rem;
         span {
           &.collapsible-icon {
             color: $primary;
@@ -172,18 +170,18 @@
             content: "";
             display: block;
             position: absolute;
-            left: 1.3rem;
+            left: 1rem;
           }
-  
-          &.circle {
-            @include circle();
-            margin-left: 0.5rem;
+          &.circle,
+          &.default-icon {
+            @include circle($size: .625rem);
+            left: 1.6875rem;
           }
         }
       }
     }
     .collapsible-block {
-      padding: 2rem 4.3rem 1.5rem 4.3rem;
+      padding: 2rem 4rem 2rem 4rem;
     }
   }
 }
@@ -191,11 +189,11 @@
 .collapsible-variant {
   .collapsible-item {
     background-color: $white;
-    box-shadow: 0 2px 7px 4px rgba(232,232,232,0.5);
+    box-shadow: $card-box-shadow;
     z-index: 100;
     .collapsible-block {
-      padding-top: 1rem;
-      padding-bottom: 2rem;
+      padding-top: 0;
+      padding-bottom: 2.5rem;
     }
   }
   .collapsible-header {

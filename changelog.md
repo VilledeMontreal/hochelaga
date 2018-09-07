@@ -14,18 +14,21 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 - Added styling of pdf document with css partial selector.
 - Added same domain (montreal.ca) links and exernal links to show styings.
 - Added molecules > empty states
-- Added ability to add borrough selector inside of lead container (needed for demarche templates).
+- Added ability to add borough selector inside of lead container (needed for demarche templates).
 
 ## Changed
 - Changed Démarche template.
 - Changed html structure for card-tarif mobile first layout and better responsive handling.
 - Changed font-icon version to 1.1.0 - New icon (112-lien-externe)
 - Changed collapsible theming.
+- Changed to list-icon and integration of list-icon in sidebar
+- Changed link theming in sidebar and list-icon.
 
 ## Deprecated
 - molecules > search-field-combo-base, search-field+dropdown
 
 ## Removed
+- Removed molecules > search-field-combo-base, search-field+dropdown from patternlab.
 
 ## Fixed
 

@@ -528,12 +528,14 @@
     }
     &.section-inner-media {
       margin: 0 auto;
+      padding-top: 1rem;
+      margin-bottom: 3rem;
       .media {
         > * {
           flex: 0 0 auto;
         }
         justify-content: center;
-        margin-bottom: 3rem;
+
       }
     }
 

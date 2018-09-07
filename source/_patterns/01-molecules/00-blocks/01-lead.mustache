@@ -14,8 +14,6 @@
         {{^ selectedArrondissement}}
         <div class="select-arron">
           <span class="title">Sélectionnez votre arrondissement pour connaître la démarche à suivre.</span>
-          <!-- <div class="placeholder-arron">Sélectionnez votre arrondissement</div> -->
-          <!-- {{> atoms-button(buttonClass: "btn-primary", buttonText: "Sélectionnez votre arrondissement")}} -->
           <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#selectArrondissementModal">Sélectionner votre arrondissement</button>
         </div>
         {{/ selectedArrondissement}}
@@ -40,9 +38,11 @@
           </div>
           <div class="modal-body">
           {{# dropdown}}
-            <ul class="">
+            <ul>
               {{# options }}
-              <li class="">{{label}}</li>
+              <li>
+                <a href="#">{{label}}</a>
+              </li>
               {{/ options}}
             </ul>
           {{/ dropdown}}

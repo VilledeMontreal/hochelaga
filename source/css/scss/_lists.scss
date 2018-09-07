@@ -46,17 +46,13 @@ ol {
   }
 }
 
+// list of items with icons
 .list-icon {
   @extend .list-unstyled;
-  a {
-    border: none;
-    color: inherit;
-    &:hover,
-    &:active {
-      color: $sarcelle-surprise;
-      .vdm {
-        color: $sarcelle-surprise;
-      }
+  li {
+    padding-bottom: 1rem;
+    &:last-child {
+      padding-bottom: 0;
     }
   }
   
@@ -67,12 +63,8 @@ ol {
     background: transparent;
   }
 
-  // Links and span tags, mind the inheritance
-  // All icon elements are block level
   .icon {
-    display: flex;
-    align-items: flex-start;
-
+    align-items: flex-start; 
     address {
       margin-bottom: 0;
     }
@@ -91,10 +83,29 @@ ol {
 
   // Use .no-icon and .left class to add padding equal to icons width
   .no-icon {
-    display: flex;
-    align-items: flex-start;
     &.left {
       padding-left: 2rem;
+    }
+  }
+
+  // We need to handle border on link with icons inside
+  a {
+    &.icon {
+      .vdm {
+        color: $link-color;
+      }
+      &.left {
+        margin-left: 2rem;
+        .vdm {
+          margin-left: -2rem;
+        }
+      }
+      &:hover,
+      &:active {
+        .vdm {
+          color: $link-hover-color;
+        }
+      }
     }
   }
 }
@@ -132,6 +143,7 @@ ol {
         }
       }
       .vdm {
+        color: $black;
         font-size: 2rem;
         padding-right: .5rem;
       }
