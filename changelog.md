@@ -21,6 +21,7 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 - Changed html structure for card-tarif mobile first layout and better responsive handling.
 - Changed font-icon version to 1.1.0 - New icon (112-lien-externe)
 - Changed collapsible theming.
+- Changed to list-icon and integration of list-icon in sidebar
 
 ## Deprecated
 - molecules > search-field-combo-base, search-field+dropdown
