@@ -1,0 +1,29 @@
+{{> atoms-link-skip-to-main-content }}
+{{> organisms-header-portal }}
+
+<main class="main-content {{ pageClasses }}" id="main-content" aria-label="Main Content">
+
+  {{> organisms-content-header }}
+
+  <!-- Begin main-content region-->
+  <div class="region-content {{ regionMainClasses }}">
+    <div class="container {{ regionMainContainerClasses }}">
+      <div class="row">
+        <article class="col-12 col-lg-8 {{ regionMainContentClasses }}">
+          To Do: Content ingtegration
+        </article>
+        <!-- Sidebar Right -->
+        <aside class="col-12 col-lg-4 sidebar-right" role="complementary">
+          {{> organisms-sidebar-block-evenement }}
+        </aside>
+      </div>
+    </div>
+  </div>
+
+  <section class="map-section">
+    <div id="mapEventId" style="height:500px"></div>
+  </section>
+
+</main>
+
+{{> organisms-footer-portal }}
