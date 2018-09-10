@@ -49,18 +49,13 @@
   }
 
   &-metadata {
-    padding-bottom: 2.5rem;
     color: $gray-600;
-    .date-time {
-      font-size: 1.125rem;
-      //line-height: 1.3333;
-    }
+    font-size: $font-size-lg;
+    padding-bottom: 2.5rem;
     .hub-link {
       a {
         border-bottom: none;
         color: $gray-700;
-        font-size:  1.125rem;
-        //line-height: 1.3333;
         @include transition(color .15s ease-in-out);
         &:hover {
           color: $sarcelle-surprise;
@@ -73,14 +68,6 @@
         display: flex;
         flex-flow: row wrap;
         justify-content: flex-end;
-      }
-    }
-    // 768px and up
-    @include media-breakpoint-up(md) {
-      .date-time, 
-      .hub-link a {
-        font-size: $font-size-lg;
-        //line-height: 1.3333;
       }
     }
     // 575px and down

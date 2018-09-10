@@ -228,7 +228,9 @@
     });
   }
 
+  /*
   if($('#mapEventId').length != 0) {
+    
     var map = L.map('mapEventId', {
       zoomControl: false,
       scrollWheelZoom: false,
@@ -241,6 +243,7 @@
 
     L.marker([45.509771, -73.553638]).addTo(map);
   }
+  */
 
 
 })(jQuery);

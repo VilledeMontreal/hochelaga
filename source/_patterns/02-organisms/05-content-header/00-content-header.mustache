@@ -13,11 +13,16 @@
     
     {{# has-header-meta}}
     <div class="row content-header-metadata">
-       {{# has-publication-date }}
+      {{# has-publication-date }}
       <div class="col-12 col-sm-6">
         {{> atoms-date-time-text }}
       </div>
       {{/ has-publication-date}}
+      {{# has-informations}}
+      <div class="col-12 col-sm-6">
+        <span class="metadata-informations">{{ informations-text }}</span>
+      </div>
+      {{/ has-informations}}
       {{# has-hub-link}}
       <div class="col-12 col-sm-6">
         <div class="hub-link">
