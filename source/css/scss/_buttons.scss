@@ -190,6 +190,11 @@ fieldset:disabled a.btn {
   &:hover {
     border-bottom: 1px solid $sarcelle-atmos;
   }
+
+  &:focus,
+  &.focus {
+    border-bottom: 1px solid $sarcelle-atmos;
+  }
 }
 
 // Specificity overrides
