@@ -174,8 +174,10 @@
           }
           &.circle,
           &.default-icon {
-            @include circle($size: .625rem);
             left: 1.6875rem;
+            &:after {
+              @include circle($size: .625rem);
+            }
           }
         }
       }
