@@ -31,6 +31,8 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 - Removed molecules > search-field-combo-base, search-field+dropdown from patternlab.
 
 ## Fixed
+- Fixed some issues with sidebars html structure and classes.
+- Fixed .btn-link focus state border issues.
 
 
 ## [1.2.0] - 2018-08-27

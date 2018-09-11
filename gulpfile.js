@@ -19,8 +19,9 @@ var gulp            = require('gulp'),
     shell           = require('gulp-shell'),
     sourcemaps      = require('gulp-sourcemaps'),
     tildeImporter   = require('node-sass-tilde-importer'),
-    uglify          = require('gulp-uglify-es').default;
-    config          = require('./build.config.json');
+    uglify          = require('gulp-uglify-es').default,
+    config          = require('./build.config.json'),
+    package         = require('./package.json');
 
 // Trigger and switches
 var production;
@@ -278,6 +279,27 @@ gulp.task('styleguide', function() {
     .pipe(gulp.dest(config.patternlab.styleguide.dest));
 });
 
+gulp.task('bao-version', function() {
+
+  var output = {
+    "version"  : package.version
+  };
+
+  console.log(package.version);
+
+  // Write the json icons file
+  fs.writeFile(config.bao.files.json, JSON.stringify(output, null, 4), (err) => {
+    if (err) {
+      console.error(err);
+      return;
+    };
+    console.log("The json bao version file has been created with version " + package.version);
+  });
+
+  return gulp.src(config.bao.files.json).pipe(gulp.dest(config.bao.dest)).pipe(browserSync.reload({stream:true}));
+
+})
+
 
 // task: BrowserSync
 // Description: Run BrowserSync server with disabled ghost mode
@@ -333,6 +355,7 @@ gulp.task('watch', function () {
     config.fonts.files,
     ['fonts']
   );
+
 });
 
 // Task: Default
@@ -361,7 +384,8 @@ gulp.task('serve', function () {
   gulp.start(
     'browsersync',
     'default',
-    'watch'
+    'watch',
+    'bao-version'
   );
 });
 

@@ -190,6 +190,8 @@
     margin-bottom: 0;
   }
 }
+// Borough selection section inside lead-container
+// @see demarche (how to) templates
 .section-select-arron {
   @include media-breakpoint-down(md) {
     > div + div {
@@ -197,8 +199,8 @@
     }
   }
 }
-.select-arron {
 
+.select-arron {
   .label {
     display: block;
     margin-bottom: 1rem;
@@ -209,15 +211,13 @@
     font-size: $font-size-lg;
     font-weight: $font-weight-bold;
     margin-bottom: 1rem;
-    
   }
 
-  .placeholder-arron {
-    background-color: $white;
-    border: 2px solid $gray-200;
-    color: $gray-600;
-    display: inline-block;
-    padding: 1rem 3rem 1rem 1rem;
+  // Button for borough selection should be small on smallest breakpoint.
+  @include media-breakpoint-down(xs) {
+    .btn:not(.btn-link) {
+      @include button-size($btn-padding-y-sm, $btn-padding-x-sm, $font-size-sm, $btn-line-height-sm, $btn-border-radius-sm);
+    }
   }
 
   @include media-breakpoint-up(lg) {
