@@ -42,6 +42,10 @@
     &.badge-light {
       border: 1px solid $white;
       color: $white;
+      @include hover-focus {
+        background-color: $sarcelle-surprise;
+        border-color: $sarcelle-surprise;
+      }
     }
   }
 }
