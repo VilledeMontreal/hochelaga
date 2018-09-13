@@ -165,8 +165,7 @@
 }
 
 // Add background variant to .header-banner.
-//
-// @see badge-variant mixins
+
 @mixin banner-variant($bg) {
   color: color-yiq($bg);
   background-color: $bg;
@@ -177,40 +176,18 @@
 }
 
 // Add color variant to .progress-bar.
-//
-// @see badge-variant mixins
+
 @mixin progress-variant($bg) {
   .progress-bar {
     border-color: $bg;
   }
 }
 
-// Badge variant
-
-@mixin badge-outline-variant($color) {
-  color: $color;
-  background-color: transparent;
-  border: 1px solid $color;
-
-  &[href] {
-    @include hover-focus {
-      color: $color;
-      text-decoration: none;
-      border-color: darken($color, 10%);
-    }
-  }
+@mixin badge-variant($bg) {
+  color: color-yiq($bg);
+  background-color: $bg;
+  border-color: $bg;
 }
-
-// Add badge outline variants
-//
-// Contextual variations (linked badges get darker on :hover).
-
-@each $color, $value in $theme-colors {
-  .badge-outline-#{$color} {
-    @include badge-outline-variant($value);
-  }
-}
-
 
 /**
  * - - - - - - - - - -
