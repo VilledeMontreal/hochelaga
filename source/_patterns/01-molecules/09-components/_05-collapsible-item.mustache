@@ -2,7 +2,7 @@
 <div class="collapsible-item">
   <div class="collapsible-header" role="tab" id="{{ heading-id }}">
     <div class="collapsible-title">
-      <a data-toggle="collapse" href="#" data-target="#{{ block-id }}" aria-expanded="false" aria-controls="{{ block-id }}">
+      <a data-toggle="collapse" href="#" data-target="#{{ block-id }}" aria-expanded="{{# show}}true{{/ show}}{{^ show}}false{{/ show}}" aria-controls="{{ block-id }}">
         {{# icon }}
         <span class="collapsible-icon vdm {{ icon }}" aria-hidden="true"></span>
         {{/ icon }}
@@ -18,7 +18,7 @@
       </a>
     </div>
   </div>
-  <div id="{{ block-id }}" class="collapse" role="tabpanel" aria-labelledby="{{ heading-id }}">
+  <div id="{{ block-id }}" class="collapse {{# show }}show{{/ show}}" role="tabpanel" aria-labelledby="{{ heading-id }}">
     <div class="collapsible-block">
       {{{ content }}}
     </div>

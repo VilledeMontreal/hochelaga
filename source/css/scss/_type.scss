@@ -95,6 +95,15 @@ h6, .h6 {
   }
 }
 
+// Utility class for font-size
+
+.font-size-xl {
+  font-size: $font-size-xl;
+}
+.font-size-lg {
+  font-size: $font-size-lg;
+}
+
 // Lead
 //
 // Lead font-size are responsive
@@ -138,9 +147,31 @@ mark,
 
 // Links - generic
 a {
-  // TODO: Refactor required for this block, considering the icon tag will be explicite in the markup
-  // Used in the side menu
+  // We had border-bottom on all links and override specific case
   border-bottom: $link-border-width solid $link-border-color;
+
+  // icons in link should be link-color
+  .vdm {
+    color: $link-color;
+  }
+  &:hover,
+  &:active {
+    color: $link-hover-color;
+    .vdm {
+      color: $link-hover-color;
+    }
+  }
+
+  // File extension handling
+  &[href$=".pdf"] {
+    margin-right: 49px;
+    &:after {
+      content: "(PDF)";
+      margin-right: -49px;
+      padding-left: .5rem;
+      overflow: hidden;
+    }
+  }
 
   &.link-scrollto {
     color: $primary;
@@ -151,6 +182,20 @@ a {
       vertical-align: top;
     }
   }
+
+  // Read more links
+  &.read-more {
+    color: $link-color;
+    border: none;
+    &:hover,
+    &:active {
+      color: $link-hover-color;
+      .vdm {
+        color: $link-hover-color;
+      }
+    }
+  }
+  /*
   &.block {
     display: block;
     background: transparent;
@@ -189,6 +234,7 @@ a {
     }
 
   }
+  */
 }
 
 // Add .icon class to display vertically centered icon and text
@@ -198,21 +244,51 @@ a {
   // we need this code to prevent icon from getting underlined on hover
   .vdm {
     display: inline-block;
-    text-decoration: none;
     font-size: 1.5rem;
     &:before {
       display: inline-block;
-      text-decoration: none;
     }
   }
   &.right {
     .vdm {
-      padding-left: 0.15em;
+      padding-left: 0.15rem;
     }
   }
   &.left {
     .vdm {
-      padding-right: 0.15em;
+      padding-right: 0.15rem;
+    }
+  }
+}
+
+// External link icon
+// Apply to .region-content and sb-block
+
+.sb-block,
+.region-content {
+  a[href*="//"]:not([href*="montreal.ca"]) {
+    @include iconvdm($position: after, $icon: '112-lien-externe');
+    margin-right: 1.125rem;
+    &:after {
+      font-size: 1.125rem;
+      padding-left: 0.125rem;
+      vertical-align: baseline;
+      overflow: hidden;
+      margin-right: -1.125rem;
+      margin-top: -.5rem;
+      margin-bottom: -.5rem;
+
+    }
+  }
+  // List some exclusion
+  .list-icon,
+  .social-media-list,
+  .cards {
+    a[href*="//"]:not([href*="montreal.ca"]) {
+      margin-right: 0;
+      &:after {
+        content: none;
+      }
     }
   }
 }
@@ -360,7 +436,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 // link with icons
-
+// Will be deprecated
 .link-with-icon {
   a {
     display: flex;

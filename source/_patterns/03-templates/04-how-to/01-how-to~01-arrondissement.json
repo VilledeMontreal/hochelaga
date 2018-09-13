@@ -4,25 +4,25 @@
   "regionMainContainerClasses": "",
   "regionMainContentClasses": "",
   "contentHeaderClasses": "content-header-dark",
+  "text-elements": {
+    "headings":{
+      "display":{
+        "content": "Template démarche (How To)"
+      }
+    }
+  },
   "has-header-meta": true,
   "has-publication-date": true,
   "has-hub-link": true,
   "date-time-text": "Mis à jour le 24 mai 2018",
   "hub-link-text": "Toutes les démarches",
   "leadContainerClasses": "",
+  "selectArrondissement": true,
+  "selectedArrondissement": true,
+  "arrondissement": "Rivière-des-Prairies–Pointe-aux-Trembles",
   "has-lead-text": true,
   "has-nav-tabs": true,
-  "searchBox": true,
-  "combo-box-text":
-    "Sélectionnez votre arrondissement pour connaître la démarche à suivre.",
   "icon-label": "localisation",
-  "text-elements": {
-    "headings": {
-      "h1": {
-        "content": "How To"
-      }
-    }
-  },
   "sidebarRight": true,
   "sidebar-blocks-demo-debug-wrapper": false,
   "sidebar-blocks-demo-debug-message": false,
@@ -45,31 +45,33 @@
   "collapsibleItem": [
     {
       "title": "En ligne",
-      "content": 
-      "<ol class=\"numbered-list\"><li><h2 class=\"title\">Avant de faire votre demande en ligne</h2><ul><li>Déposez vos branches sur le trottoir.</li><li>Assurez-vous de connaître les consignes à respecter en consultant la <a href=\"#\">collecte des branches d'arbres</a>.</li></ul></li><li><h2 class=\"title\">Faire votre demande en ligne</h2><button type=\"button\" class=\"btn btn-primary\">Demander une collecte</button></li></ol>",
-      "block-id": "howto-vm-enligne",
-      "heading-id": "Heading-howto-vm-enligne",
-      "icon": "vfi-ordinateur",
+      "content": "<p>Lorem ipsum dolor sit amet, <a href=\"https://beta.montreal.ca/moncompte\">mon compte</a> consectetur adipiscing elit. Praesent vitae turpis augue. Maecenas volutpat massa vel tellus congue, eget volutpat sem accumsan. Ut sit amet vulputate felis. Pellentesque volutpat erat enim, vel efficitur ipsum scelerisque id. Integer lacinia lectus ut erat interdum, eget convallis est dapibus.</p><h3>Mode de paiement acceptés</h3><ul><li>Argent comptant</li><li>Carte de débit ou de crédit (MasterCard, Visa)</li><li>Chèque ou mandat à l'ordre de la Ville de Montréal</li></ul><a href=\"\" class=\"btn btn-sm btn-primary\">Appel à l'action</a>",
+      "block-id": "howto-rdp-enligne",
+      "heading-id": "heading-howto-rdp-enligne",
+      "show": "true",
+      "icon": false,
+      "has-default-icon": true,
       "badge": false
     },
     {
-      "title": "Au téléphone",
-      "content": "Collapsible content",
-      "block-id": "howto-vm-tel",
-      "heading-id": "heading-howto-vm-tel",
-      "icon": "vfi-telephone",
+      "title": "Par téléphone",
+      "content": "<p><strong>Résidents d’un immeuble de 8 logements ou moins :</strong><br>Contactez le 311 (de l’extérieur de Montréal : 514 872-0311)<br>Du lundi au vendredi : de 8 h 30 à 20 h 30<br>Samedi, dimanche et jours fériés: de 9 h à 17 h</p><p><strong>Résidents d’un immeuble de 9 logements ou plus :</strong><br>Contactez l’éco-quartier de la Pointe-aux-Prairies : 514 648-9177 ou 514 642-8379</p>",
+      "block-id": "howto-rdp-tel",
+      "heading-id": "heading-howto-rdp-tel",
+      "icon": false,
+      "has-default-icon": true,
       "badge": false
     },
     {
-      "title": "En personne",
-      "content": "Collapsible content",
-      "block-id": "howto-vm-personne",
-      "heading-id": "heading-howto-vm-personne",
-      "icon": "vfi-enveloppe",
+      "title": "Par la poste",
+      "content": "<p>Remplissez le <a href=\"formulaire.pdf\">formulaire</a> de demande et postez-le à l'adresse suivante :</p><address><strong>Direction de l'aménagement urbain et des services aux entreprises</strong><br>7171, rue Bombardier<br>Anjou (Québec) H1J 2E9</address>",
+      "block-id": "howto-rdp-poste",
+      "heading-id": "heading-howto-rdp-poste",
+      "icon": false,
+      "has-default-icon": true,
       "badge": false
     }
   ],
-  "howToInfos": true,
   "informations": {
     "cards": {
       "section-classes": "bg-gray-sky",
@@ -146,7 +148,7 @@
       "bsgrid-classes": "col-12",
       "card-item": [
         {
-          "classes": "card-fw card-tarif",
+          "classes": "card-tarif",
           "url": false,
           "card-label-1": "Permis animal pour chat",
           "card-item-1": "Valide pour 1 an sur tout le territoire de la Ville de Montréal",
@@ -154,10 +156,11 @@
           "card-teaser-tarif": false,
           "card-table-tarif": true,
           "table": {
+            "tableWrapper": true,
             "caption": "",
             "tableClass": "table-striped",
             "thead": {
-              "theadClass": "",
+              "theadClass": "thead-dark",
               "th": [
                 { "title": "Information additionnelle sur le permis" },
                 { "title": "Prix de base" },

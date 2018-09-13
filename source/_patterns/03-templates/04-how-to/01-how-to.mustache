@@ -1,0 +1,107 @@
+{{> atoms-link-skip-to-main-content }}
+{{> organisms-header-portal }}
+
+<main class="main-content {{ pageClasses }}" id="main-content" aria-label="Main Content">
+
+  {{> organisms-content-header }}
+
+  <!-- Teaser -->
+  {{# has-lead-text}}
+  {{> molecules-lead }}
+  {{/ has-lead-text}}
+
+  <!-- Tabs -->
+  {{# has-nav-tabs}}
+    {{> molecules-nav-tab }}
+  {{/ has-nav-tabs}}
+
+  <div class="region-content {{ regionMainClasses }}">
+    <div class="container">
+      <div class="row">
+        {{# has-empty-state}}
+        <article class="col-12">
+          {{> molecules-empty-state-arrondissement}}
+        </article>
+        {{/ has-empty-state}}
+        {{^ has-empty-state}}
+        <article class="col-12 col-lg-8">
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus cursus mauris non orci malesuada aliquet. Nunc tincidunt nisi fringilla consectetur pharetra. Duis sed pretium velit, ut placerat purus. Quisque volutpat facilisis nisl, ut scelerisque orci dapibus in. Proin vestibulum et felis ac tempor. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Duis sed vulputate velit, vitae venenatis nisi. Sed et egestas ligula. Vestibulum feugiat scelerisque odio quis accumsan. Etiam diam lacus, lobortis eu tortor et, consequat vehicula nibh.</p>
+          <p>Donec lacinia neque nec turpis consequat dictum non non felis. <a href="https://google.ca">Suspendisse vehicula</a> eros a nulla sagittis, sit amet porta quam egestas. Donec non velit ut nulla porta pulvinar. Nullam venenatis sapien id ligula gravida, non tincidunt est malesuada. Nulla eleifend est sit amet dapibus pulvinar. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Ut finibus libero non eros consectetur porta. Curabitur vitae tellus commodo, maximus est vel, lobortis massa. Integer ultricies ultrices blandit. Duis lacinia dui vitae augue ultricies pretium a ornare ante.</p>
+          
+          <div class="collapsible-variant pt-4" role="tablist" aria-multiselectable="true">
+            {{> molecules-collapsible-item }}
+          </div>
+
+        </article>
+        {{# sidebarRight}}
+        <aside class="col-12 col-lg-4 sidebar-right" role="complementary">
+          <div class="sidebar {{ sidebar-classes }}">
+            <section class="sb-block">
+              <div class="subsection">
+                {{> organisms-heading-sidebar(sidebarTitle: "Bon à savoir")}}
+                <p>Lorem ipsum dolor sit amet, consectetur <a href="https://ville.montreal.qc.ca">adipiscing elit</a>. Phasellus cursus mauris non orci malesuada aliquet.</p>
+                <p>Nunc tincidunt nisi fringilla consectetur pharetra. Duis sed pretium velit, ut placerat purus. Quisque volutpat facilisis nisl, ut scelerisque orci dapibus in.</p>
+              </div>
+
+              <div class="subsection">
+                {{> organisms-heading-sidebar(sidebarTitle: "Règlements") }}
+                <ul>
+                  <li>
+                    <a href="#">Règlement de la Ville de Montréal (16-049-900009)</a>
+                  </li>
+                  <li>
+                    <a href="http://ville.montreal.qc.ca/sel/sypre-consultation/afficherpdf?idDoc=12070&typeDoc=1">Règlement 8809</a>
+                  </li>
+                </ul>
+              </div>
+            </section>
+          </div>
+        </aside>
+        {{/ sidebarRight}}
+        {{/ has-empty-state}}
+      </div>
+    </div>
+  </div>
+
+  {{# tarifs}}
+  <section class="page-section bg-gray-sky">
+    <div class="container">
+      <div class="row">
+        <div class="col-12 text-center">
+          <h2 class="section-heading">Tarifs</h2>
+        </div>
+      </div>
+      <div class="row cards">
+        {{# cards.card-item }}
+        <div class="{{ cards.bsgrid-classes }}">
+          {{> molecules-card-item-tarif-v2}}
+        </div>
+        {{/ cards.card-item }}
+      </div>
+    </div>
+  </section>
+  {{/ tarifs}}
+
+  {{# informations}}
+  <section class="page-section {{ regionAfterClasses }} bg-gray-sky">
+    <div class="container">
+      <div class="row">
+        <div class="col-12 text-center">
+          <h2 class="section-heading">Plus d'information</h2>
+        </div>
+      </div>
+      <div class="row cards">
+        {{# cards.card-item }}
+        <div class="{{ cards.bsgrid-classes }}">
+          {{> molecules-card-item}}
+        </div>
+        {{/ cards.card-item }}
+      </div>
+    </div>
+  </section>
+  {{/ informations}}
+
+
+</main>
+
+{{> organisms-footer-portal }}

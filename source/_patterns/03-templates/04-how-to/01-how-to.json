@@ -1,0 +1,165 @@
+{
+  "pageClasses": "how-to",
+  "regionMainClasses": "pt-8",
+  "regionMainContainerClasses": "",
+  "regionMainContentClasses": "",
+  "contentHeaderClasses": "content-header-dark",
+  "text-elements": {
+    "headings":{
+      "display":{
+        "content": "Template démarche (How To)"
+      }
+    }
+  },
+  "has-header-meta": true,
+  "has-publication-date": true,
+  "has-hub-link": true,
+  "date-time-text": "Mis à jour le 24 mai 2018",
+  "hub-link-text": "Toutes les démarches",
+  "leadContainerClasses": "",
+  "selectArrondissement":false,
+  "has-lead-text": true,
+  "has-nav-tabs": false,
+  "sidebarRight": true,
+  "sidebar-classes": "sidebar-top-stroke",
+  "sb-classes": "",
+  "collapsibleItem": [
+    {
+      "title": "En ligne",
+      "content": "<p>Lorem ipsum dolor sit amet, <a href=\"https://beta.montreal.ca/moncompte\">mon compte</a> consectetur adipiscing elit. Praesent vitae turpis augue. Maecenas volutpat massa vel tellus congue, eget volutpat sem accumsan. Ut sit amet vulputate felis. Pellentesque volutpat erat enim, vel efficitur ipsum scelerisque id. Integer lacinia lectus ut erat interdum, eget convallis est dapibus.</p><h3>Mode de paiement acceptés</h3><ul><li>Argent comptant</li><li>Carte de débit ou de crédit (MasterCard, Visa)</li><li>Chèque ou mandat à l'ordre de la Ville de Montréal</li></ul><a href=\"\" class=\"btn btn-sm btn-primary\">Appel à l'action</a>",
+      "block-id": "howto-vm-enligne",
+      "heading-id": "heading-howto-vm-enligne",
+      "show": "true",
+      "icon": false,
+      "has-default-icon": true,
+      "badge": false
+    },
+    {
+      "title": "En personne",
+      "content": "Collapsible content",
+      "block-id": "howto-vm-personne",
+      "heading-id": "heading-howto-vm-personne",
+      "icon": false,
+      "has-default-icon": true,
+      "badge": false
+    }
+  ],
+  "informations": {
+    "cards": {
+      "section-classes": "bg-gray-sky",
+      "classes": false,
+      "bsgrid-classes": "col-12 col-md-6 col-lg-4",
+      "card-item" : [
+        {
+          "classes" : "card-link",
+          "url" : "#",
+          "card-title" : "Card #1 link title",
+          "card-text" : false,
+          "card-media" : false,
+          "footer" : {
+            "outside-body": true
+          }
+        },
+        {
+          "classes" : "card-link",
+          "url" : "#",
+          "card-title" : "Card #2 link title",
+          "card-text" : false,
+          "card-media" : false,
+          "footer" : {
+            "outside-body": true
+          }
+        },
+        {
+          "classes" : "card-link",
+          "url" : "#",
+          "card-title" : "Card #3 link title - longer than usual",
+          "card-text" : false,
+          "card-media" : false,
+          "footer" : {
+            "outside-body": true
+          }
+        },
+        {
+          "classes" : "card-link",
+          "url" : "#",
+          "card-title" : "Card #4 link title",
+          "card-text" : false,
+          "card-media" : false,
+          "footer" : {
+            "outside-body": true
+          }
+        },
+        {
+          "classes" : "card-link",
+          "url" : "#",
+          "card-title" : "Card #5 link title",
+          "card-text" : false,
+          "card-media" : false,
+          "footer" : {
+            "outside-body": true
+          }
+        },
+        {
+          "classes" : "card-link",
+          "url" : "#",
+          "card-title" : "Card #6 link title",
+          "card-text" : false,
+          "card-media" : false,
+          "footer" : {
+            "outside-body": true
+          }
+        }
+      ]
+    }
+  },
+  "tarifs": {
+    "cards": {
+      "section-classes": "bg-gray-sky",
+      "classes": false,
+      "bsgrid-classes": "col-12",
+      "card-item": [
+        {
+          "classes": "card-tarif",
+          "url": false,
+          "card-label-1": "Permis animal pour chat",
+          "card-item-1": "Valide pour 1 an sur tout le territoire de la Ville de Montréal",
+          "card-link": false,
+          "card-teaser-tarif": false,
+          "card-table-tarif": true,
+          "table": {
+            "tableWrapper": true,
+            "caption": "",
+            "tableClass": "table-striped",
+            "thead": {
+              "theadClass": "thead-dark",
+              "th": [
+                { "title": "Information additionnelle sur le permis" },
+                { "title": "Prix de base" },
+                { "title": "Prix pour chat micropucé" }
+              ]
+            },
+            "tbody": {
+              "tr": [
+                {
+                  "th": "Votre chat est stérilisé",
+                  "td": [
+                    { "text": "12 $" },
+                    { "text": "5 $" }
+                  ]
+                },
+                {
+                  "th": "Votre chat n’est PAS stérilisé",
+                  "td": [
+                    { "text": "32 $" },
+                    { "text": "25 $" }
+                  ]
+                }
+              ]
+            }
+          }
+        }
+      ]
+    }
+  }
+}

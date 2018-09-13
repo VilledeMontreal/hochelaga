@@ -1,0 +1,22 @@
+<ul class="list-icon">
+  {{# list-icon-item }}
+  <li>
+    {{# url }}
+    <a href="{{url}}" class="{{ class }}">
+      {{# icon-item}}
+      <span class="vdm vdm-{{ icon-label }} {{ icon-class }}" aria-hidden="true"></span>
+      {{/ icon-item}}
+      {{{ content }}}
+    </a>
+    {{/ url }}
+    {{^ url }}
+    <span class="{{ class }}">
+      {{# icon-item}}
+      <span class="vdm vdm-{{ icon-label }} {{ icon-class }}" aria-hidden="true"></span>
+      {{/ icon-item}}
+      {{{ content }}}
+    </span>
+    {{/ url }}
+  </li>
+  {{/ list-icon-item}}
+</ul>

@@ -46,6 +46,70 @@ ol {
   }
 }
 
+// list of items with icons
+.list-icon {
+  @extend .list-unstyled;
+  li {
+    padding-bottom: 1rem;
+    &:last-child {
+      padding-bottom: 0;
+    }
+  }
+  
+  // Generic icon links : may or may not be applied to a hyperlink
+  .vdm {
+    font-size: 1.5em;
+    color: $primary;
+    background: transparent;
+  }
+
+  .icon {
+    align-items: flex-start; 
+    address {
+      margin-bottom: 0;
+    }
+
+    &.left {
+      .vdm {
+        padding-right: .5rem;
+      }
+    }
+    &.right {
+      .vdm {
+        padding-left: .5rem;
+      }
+    }
+  }
+
+  // Use .no-icon and .left class to add padding equal to icons width
+  .no-icon {
+    &.left {
+      padding-left: 2rem;
+    }
+  }
+
+  // We need to handle border on link with icons inside
+  a {
+    &.icon {
+      .vdm {
+        color: $link-color;
+      }
+      &.left {
+        margin-left: 2rem;
+        .vdm {
+          margin-left: -2rem;
+        }
+      }
+      &:hover,
+      &:active {
+        .vdm {
+          color: $link-hover-color;
+        }
+      }
+    }
+  }
+}
+
 // Social media list
 //
 .social-media-list {
@@ -79,6 +143,7 @@ ol {
         }
       }
       .vdm {
+        color: $black;
         font-size: 2rem;
         padding-right: .5rem;
       }
@@ -93,6 +158,18 @@ ol {
   &.social-media-list-icons {
     li a .vdm {
       padding-right: 0;
+    }
+  }
+  &.icon-primary {
+    li a .vdm {
+      color: $primary;
+      &:hover,
+      &:active {
+        color: $sarcelle-surprise;
+        .vdm {
+          color: inherit;
+        }
+      }
     }
   }
 }

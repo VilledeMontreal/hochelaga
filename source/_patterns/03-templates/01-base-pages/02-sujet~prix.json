@@ -1,0 +1,147 @@
+{
+  "regionMainContentClasses": "col-lg-8",
+  "text-elements": {
+    "headings":{
+      "display":{
+        "content": "Template sujet (variante prix)"
+      }
+    }
+  },
+  "has-header-meta": true,
+  "has-publication-date": true,
+  "has-hub-link": true,
+  "date-time-text": "Mis à jour le 5 septembre 2018",
+  "hub-link-text": "Tous les sujets",
+  "has-lead-text": true,
+  "default-content": false,
+  "variant-prix": true,
+  "contact": {
+    "contact-item": [
+      {
+        "name": "Valérie Lampron",
+        "fonction": "Bibliothécaire",
+        "compagnie": "Service de la culture, Direction des blibiothèques",
+        "list-icon-item": [
+          {
+            "url": false,
+            "class": "icon left",
+            "icon-item": {
+              "icon-label": "091-localisation"
+            },
+            "content": "<address>123, rue Bord de l'eau<br>Montréal, QC, H3K 2T5</address>"
+          },
+          {
+            "url": false,
+            "class": "icon left",
+            "icon-item": {
+              "icon-label": "012-telephone"
+            },
+            "content": "514 872-1234"
+          },
+          {
+            "url": "mailto:valerie.lampron@ville.montreal.qc.ca",
+            "class": "icon left",
+            "icon-item": {
+              "icon-label": "028-enveloppe"
+            },
+            "content": "valerie.lampron@ville.montreal.qc.ca"
+          },
+          {
+            "url": "https://test.com",
+            "class": "icon left",
+            "icon-item": {
+              "icon-label": "031-ordinateur"
+            },
+            "content": "v.lampron.com"
+          }
+        ],
+        "social-media-icons-list": {
+          "has-label": false,
+          "has-facebook": true,
+          "has-instagram": false,
+          "has-twitter": true,
+          "has-linkedin": true,
+          "has-youtube": false
+        }
+      }
+    ]
+  },
+  "cards-tarif": false,
+  "cards-suggested-content": {
+    "cards": {
+      "section-classes": "bg-gray-sky",
+      "classes": false,
+      "bsgrid-classes": "col-12 col-md-6",
+      "card-item": [
+        {
+          "classes": "card-large",
+          "url": "#",
+          "card-tags" : [
+            { "tag" : "Événement" }
+          ],
+          "card-title": "Card #1 title",
+          "card-text":
+            "Some quick example text to build on the card title and make up the bulk of the card's content.",
+          "card-media": {
+            "icon": false
+          },
+          "footer": {
+            "outside-body": true,
+            "text": "Read more"
+          }
+        },
+        {
+          "classes": "card-large",
+          "url": "#",
+          "card-tags" : [
+            { "tag" : "Démarche" }
+          ],
+          "card-title": "Card #2 title",
+          "card-text":
+            "Some quick example text to build on the card title and make up the bulk of the card's content.",
+          "card-media": {
+            "icon": false
+          },
+          "footer": {
+            "outside-body": true,
+            "text": "Read more"
+          }
+        },
+        {
+          "classes": "card-large",
+          "url": "#",
+          "card-tags" : [
+            { "tag" : "Démarche" }
+          ],
+          "card-title": "Card #3 title",
+          "card-text":
+            "Some quick example text to build on the card title and make up the bulk of the card's content.",
+          "card-media": {
+            "icon": false
+          },
+          "footer": {
+            "outside-body": true,
+            "text": "Read more"
+          }
+        },
+        {
+          "classes": "card-large",
+          "url": "#",
+          "card-tags" : [
+            { "tag" : "Démarche" }
+          ],
+          "card-title": "Card #4 title",
+          "card-text":
+            "Some quick example text to build on the card title and make up the bulk of the card's content.",
+          "card-media": {
+            "icon": false
+          },
+          "footer": {
+            "outside-body": true,
+            "text": "Read more"
+          }
+        }
+      ]
+    }
+  }
+}

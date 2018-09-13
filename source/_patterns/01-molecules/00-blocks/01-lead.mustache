@@ -1,7 +1,55 @@
 <div class="bg-gray-sky lead-container {{ leadContainerClasses }}">
   <div class="section-content-fluid">
+    {{^ selectArrondissement}}
     <div class="section-inner section-inner-lg">
       {{> atoms-lead }}
     </div>
+    {{/ selectArrondissement}}
+    {{# selectArrondissement}}
+    <div class="row no-gutters section-inner section-inner-lg section-select-arron">
+      <div class="col-12 col-lg-7 order-lg-2">
+        {{> atoms-lead }}
+      </div>
+      <div class="col-12 col-lg-5 order-lg-1">
+        {{^ selectedArrondissement}}
+        <div class="select-arron">
+          <span class="title">Sélectionnez votre arrondissement pour connaître la démarche à suivre.</span>
+          <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#selectArrondissementModal">Sélectionner votre arrondissement</button>
+        </div>
+        {{/ selectedArrondissement}}
+        {{# selectedArrondissement}}
+        <div class="select-arron">
+          <span class="label">Votre arrondissement</span>
+          <span class="title">{{ arrondissement }}</span>
+          <button class="btn btn-link" data-toggle="modal" data-target="#selectArrondissementModal">Changer d'arrondissement</button>
+        </div>
+        {{/ selectedArrondissement}}
+      </div>
+    </div>
+    <!-- Modal -->
+    <div class="modal fade" id="selectArrondissementModal" tabindex="-1" role="dialog" aria-labelledby="selectArrondissementModalLabel" aria-hidden="true">
+      <div class="modal-dialog modal-dialog-centered" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="selectArrondissementModalLabel">Sélectionner votre arrondissement</h5>
+            <button type="button" class="close btn-close" data-dismiss="modal" aria-label="Close">
+              <span class="vdm vdm-046-grand-x"></span>
+            </button>
+          </div>
+          <div class="modal-body">
+          {{# dropdown}}
+            <ul>
+              {{# options }}
+              <li>
+                <a href="#">{{label}}</a>
+              </li>
+              {{/ options}}
+            </ul>
+          {{/ dropdown}}
+          </div>
+        </div>
+      </div>
+    </div>
+    {{/ selectArrondissement}}
   </div>
 </div>

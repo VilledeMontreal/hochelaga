@@ -1,0 +1,38 @@
+
+
+<div class="card card-fw card-tarif">
+  <div class="row">
+    <div class="col-12 {{# card-link }}col-lg-6{{/ card-link}} order-1">
+      <div class="card-section">
+        <div class="card-body">
+          <span class="card-label">{{ card-label-1 }}</span>
+          <span class="small">{{ card-item-1 }}</span>
+        </div>
+      </div>
+    </div>
+    {{# card-link}}
+    <div class="col-12 col-lg-6 order-3 order-lg-2">
+      <div class="card-section">
+        <div class="card-body">
+          <a href="{{card-link.url}}" class="card-link {{card-link.class}}">{{ card-link.label }} {{> atoms-fonticon-item(icon-label: "063-fleche-droite")}}</a>
+        </div>
+      </div>
+    </div>
+    {{/ card-link}}
+    {{# card-teaser-tarif}}
+    <div class="col-12 order-2 order-lg-3 {{ class }}">
+      <div class="card-section">
+        <div class="card-body text-center">{{{ card-tarif-text }}}</div>
+      </div>
+    </div>
+    {{/ card-teaser-tarif}}
+    {{# card-table-tarif}}
+    <div class="col-12 order-last {{ class }}">
+      <div class="card-section {{ class }}">
+        {{> atoms-table}}
+      </div>
+    </div>
+    {{/ card-table-tarif}}
+  </div>
+</div>
+

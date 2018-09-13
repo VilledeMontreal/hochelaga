@@ -2,93 +2,6 @@
 .sidebar {
   margin-bottom: 1rem;
   overflow: hidden;
-  // Links in sidebars
-  a {
-    border: none;
-    color: $headings-color;
-
-    &:after,
-    &:before {
-      color: $primary;
-    }
-    .vdm {
-      color: $primary;
-      &:after,
-      &:before {
-        background: transparent;
-      }
-    }
-    &:hover,
-    &:active {
-      color: $sarcelle-surprise;
-      &:after,
-      &:before {
-        color: $sarcelle-surprise;
-      }
-      .vdm {
-        color: $sarcelle-surprise;
-      }
-    }
-    &.read-more {
-      color: $primary;
-      &:hover,
-      &:active {
-        color: $sarcelle-surprise;
-        .vdm {
-          color: $sarcelle-surprise;
-        }
-      }
-    }
-  }
-
-  // Generic icon links : may or may not be applied to a hyperlink
-  .vdm {
-    font-size: 1.5em;
-    color: $primary;
-    background: transparent;
-  }
-
-  // Links and span tags, mind the inheritance
-  // All icon elements are block level
-  .icon {
-    display: flex;
-    align-items: flex-start;
-
-    address {
-      margin-bottom: 0;
-    }
-
-    &.left {
-      .vdm {
-        padding-right: .5rem;
-      }
-    }
-    &.right {
-      .vdm {
-        padding-left: .5rem;
-      }
-    }
-  }
-
-  // Use .no-icon and .left class to add padding equal to icons width
-  .no-icon {
-    display: flex;
-    align-items: flex-start;
-    &.left {
-      padding-left: 2rem;
-    }
-  }
-
-  // Lists in sidebars
-  ul:not(.social-media-list) {
-    margin-bottom: $paragraph-margin-bottom;
-    li {
-      padding-bottom: 1rem;
-      &:last-child {
-        padding-bottom: 0;
-      }
-    }
-  }
 
   .social-media-list {
     padding-left: 2rem;
@@ -96,11 +9,6 @@
 
   p {
     margin-bottom: $paragraph-margin-bottom;
-  }
-
-  .avatar {
-    display: block;
-    margin-bottom: 2rem;
   }
 
   // Other fixtures
@@ -125,6 +33,12 @@
     }
   }
 
+  // Top stroke variant
+  &.sidebar-top-stroke {
+    border-top: 4px solid $headings-color;
+    padding: 2rem 2rem 0 2rem;
+  }
+
 
   // Transparent border brand
   &.sidebar-border {
@@ -137,20 +51,15 @@
       }
     }
   }
-
-  .bullet-left {
-    &.brand {
-      color: $primary;
-    }
-  }
-
 }
 
 // The base unit for a sidebar component, stacked
 .sb-block {
   overflow: hidden;
   margin-bottom: 3rem;
-
+  > *:last-child {
+    margin-bottom: 0;
+  }
 
   // The basic grouping tool for visual effect, with a padding/margin-bottom;
   .subsection {
@@ -164,22 +73,38 @@
   }
 
   // Schedule data
-  .schedule-data {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    .schedule-start-time,
-    .schedule-send-time {
-      white-space: nowrap
-    }
-    .schedule-start-time { 
-      margin-right: 10px;
+  // TODO: Refactor this code
+  .sb-schedule {
+    align-items: flex-start;
+    width: 100%;
+    &.icon.left {
+      > .vdm {
+        padding-right: .5rem;
+      }
     }
     .vdm {
-      margin: 0;
-      font-size: 1rem;
+      color: $primary;
+    }
+    .schedule-data {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      .schedule-start-time,
+      .schedule-send-time {
+        white-space: nowrap
+      }
+      .schedule-start-time { 
+        margin-right: 10px;
+      }
+      .vdm {
+        margin-left: .5rem;
+        font-size: 1rem;
+        cursor: pointer;
+      }
     }
   }
+  
+  // Note
   .note {
     margin: 1rem 0;
   }
