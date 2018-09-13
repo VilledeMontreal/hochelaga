@@ -48,6 +48,10 @@
       }
     }
   }
+
+  + .badge {
+    margin-left: .5rem;
+  }
 }
 
 // Quick fix for badges in buttons
@@ -68,9 +72,9 @@
 
 // Colors
 //
-// Contextual variations (linked badges get darker on :hover).
+// Contextual variations for badge-pill only.
 @each $color, $value in $dialog-colors {
-  .badge.badge-pill-#{$color} {
+  .badge-pill.badge-#{$color} {
     @include badge-variant($value);
   }
 }
