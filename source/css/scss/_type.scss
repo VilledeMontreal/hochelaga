@@ -313,6 +313,7 @@ h1, h2, h3, h4, h5, h6 {
 // Blockquote
 //
 .blockquote {
+  color: $gray-900;
   font-size: $font-size-lg;
   font-weight: $font-weight-normal;
   margin-bottom: 2rem;
@@ -333,7 +334,6 @@ h1, h2, h3, h4, h5, h6 {
   .blockquote-footer {
     font-size: $font-size-base;
     font-style: normal;
-    text-align: right;
     &:before {
       display: none;
     }

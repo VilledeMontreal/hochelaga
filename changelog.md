@@ -4,8 +4,21 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](http://keepachangelog.com/en/1.0.0/)
 and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.html).
 
+## [2.0.0] - Unreleased
 
-## [1.3.0] - Unreleased
+## Added
+- Added Evenement templates.
+- Added Map integration exemples for mapbox inside evenement.
+- Added content header variants for evenement needs.
+- Added Media-gallery organisms. Work in progress.
+
+## Changed
+- Changed badges styles and moved badges to atoms.
+
+## Removed
+- Removed unused .list-numbered styles and examples.
+
+## [1.3.0] - 2018-09-13
 
 ## Added
 - Added sections for sujet template.
@@ -33,6 +46,7 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 ## Fixed
 - Fixed some issues with sidebars html structure and classes.
 - Fixed .btn-link focus state border issues.
+- Fixed collapsible theming in IE.
 
 
 ## [1.2.0] - 2018-08-27
@@ -169,6 +183,7 @@ remove index from the name. Which makes it possible to update font-icon without 
 ### Removed
 - Removed vdm prefix for buttons classes
 
+[1.3.0]: https://bitbucket.org/villemontreal/boite-outils-web/src/1.3.0/
 [1.2.0]: https://bitbucket.org/villemontreal/boite-outils-web/src/1.2.0/
 [1.1.0]: https://bitbucket.org/villemontreal/boite-outils-web/src/1.1.0/
 [1.0.0]: https://bitbucket.org/villemontreal/boite-outils-web/src/1.0.0/
