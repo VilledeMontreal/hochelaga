@@ -62,6 +62,12 @@
         }
       }
     }*/
+
+    .metadata-informations {
+      color: $headings-color;
+      font-weight: $font-weight-bold;
+    }
+
     // 576px and up
     @include media-breakpoint-up(sm) {
       .hub-link {

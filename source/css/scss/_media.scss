@@ -1,34 +1,22 @@
-.img-hero {
-  display: block;
-  margin: 0 auto;
-}
+// Media gallery
 
-// TODO: see with ux if and how we do this
-.img-overflow {
-  margin-left: -$grid-gutter-width;
-  margin-right: -$grid-gutter-width;
-  padding-top: 2rem;
-  padding-bottom: 2rem;
-  overflow: hidden;
-  text-align: center;
-
-  img {}
+.media-gallery {
+  @extend .list-unstyled;
+  @include make-row();
+  li {
+    @include make-col-ready();
+    @include make-col(12);
+  }
 
   @include media-breakpoint-up(md) {
-    margin-left: -30px;
-    margin-right: -30px;
+    li {
+      @include make-col(6);
+    }
   }
+
   @include media-breakpoint-up(lg) {
-    margin-left: -175px;
-    margin-right: -175px;
+    li {
+      @include make-col(3);
+    }
   }
-  @include media-breakpoint-up(xl) {
-    margin-left: -200px;
-    margin-right: -200px;
-  }
-}
-
-
-.gallery-image {
-  
 }
