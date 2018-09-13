@@ -52,16 +52,16 @@
     color: $gray-600;
     font-size: $font-size-lg;
     padding-bottom: 2.5rem;
-    .hub-link {
+    /*.hub-link {
       a {
         border-bottom: none;
         color: $gray-700;
         @include transition(color .15s ease-in-out);
         &:hover {
-          color: $sarcelle-surprise;
+         color: $sarcelle-surprise;
         }
       }
-    }
+    }*/
     // 576px and up
     @include media-breakpoint-up(sm) {
       .hub-link {
@@ -90,12 +90,12 @@
       padding-bottom: 2.5rem;
       .hub-link {
         justify-content: flex-start;
-        a {
+        /*a {
           color: $gray-600;
           &:hover {
             color: $sarcelle-surprise;
           }
-        }
+        }*/
       }
     }
     .content-header-infos {
