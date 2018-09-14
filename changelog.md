@@ -4,7 +4,7 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](http://keepachangelog.com/en/1.0.0/)
 and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.html).
 
-## [2.0.0] - Unreleased
+## [1.4.0] - Unreleased
 
 ## Added
 - Added Evenement templates.
@@ -14,6 +14,7 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 
 ## Changed
 - Changed badges styles and moved badges to atoms.
+- Updated font-icon to v1.1.2 - (113-prix and 114-telecopieur)
 
 ## Removed
 - Removed unused .list-numbered styles and examples.
