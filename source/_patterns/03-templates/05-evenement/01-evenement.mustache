@@ -26,10 +26,20 @@
           {{> organisms-media-gallery}}
           {{/ has-gallery }}
           {{# has-video }}
-          <div class="media embed-responsive embed-responsive-16by9">
-            <iframe class="embed-responsive-item" src="//www.youtube.com/embed/rBfphgabDhU" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+          <div class="media-container">
+            <div class="media embed-responsive embed-responsive-16by9">
+              <iframe class="embed-responsive-item" src="//www.youtube.com/embed/rBfphgabDhU" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+            </div>
           </div>
           {{/ has-video }}
+          {{# has-tags }}
+            <h3 class="h6">Mots-clés</h3>
+            <ul class="list-inline">
+              {{# tags}}
+              <li class="list-inline-item">{{> atoms-badge}}</li>
+              {{/ tags}}
+            </ul>
+          {{/ has-tags }}
         </article>
         <!-- Sidebar Right -->
         <aside class="col-12 col-lg-4 sidebar-right" role="complementary">

@@ -1,10 +1,16 @@
+.media-container {
+  margin-bottom: 3rem;
+}
+
 // Media gallery
 .media-gallery-container {
-  padding-top: 2rem;
+  padding-top: 1rem;
+  margin-bottom: 1rem;
 }
 .media-gallery {
   @extend .list-unstyled;
   @include make-row();
+  margin-bottom: 0;
   li {
     @include make-col-ready();
     @include make-col(12);

@@ -27,16 +27,15 @@
   }
 
   &-title {
-    padding-bottom: 2.5rem;
+    padding-bottom: 3rem;
     h1 {
+      margin-bottom: 0;
       &:after {
         content: "";
         display: block;
         height: .5rem;
         width: 4rem;
         margin-top: 2.5rem;
-        margin-bottom: 0;
-        margin-right: 10px;
         background-color: $brand;
       }
     }
@@ -54,7 +53,7 @@
   &-metadata {
     color: $gray-600;
     font-size: $font-size-lg;
-    padding-bottom: 2.5rem;
+    //padding-bottom: 2rem;
     .hub-link {
       padding-top: 1rem;
       a {
