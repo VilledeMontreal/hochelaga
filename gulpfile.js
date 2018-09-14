@@ -188,6 +188,15 @@ gulp.task('fonts', function () {
       .pipe(browserSync.reload({stream:true}));
 });
 
+// Glyphs, copy
+gulp.task('glyphs', function () {
+  return gulp.src(config.glyphs.files)
+    .pipe(gulp.dest(
+      config.glyphs.dest
+    ))
+    .pipe(browserSync.reload({stream:true}));
+});
+
 // Images copy and minimize
 gulp.task('images', function () {
     return gulp.src(config.images.files)
@@ -279,6 +288,8 @@ gulp.task('styleguide', function() {
     .pipe(gulp.dest(config.patternlab.styleguide.dest));
 });
 
+// Task: Bao-version
+// Get version from package.json and output a json the source directory
 gulp.task('bao-version', function() {
 
   var output = {
@@ -367,6 +378,7 @@ gulp.task('default', ['cleanable:before'], function () {
     'patternlab',
     'styleguide',
     'fonts',
+    'glyphs',
     'sass',
     'pl-sass',
     'images',
