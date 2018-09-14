@@ -228,5 +228,22 @@
     });
   }
 
+  /*
+  if($('#mapEventId').length != 0) {
+    
+    var map = L.map('mapEventId', {
+      zoomControl: false,
+      scrollWheelZoom: false,
+      dragging: false,
+    }).setView([45.509771, -73.553638], 16);
+
+    L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+        attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors',
+    }).addTo(map);
+
+    L.marker([45.509771, -73.553638]).addTo(map);
+  }
+  */
+
 
 })(jQuery);

@@ -6,7 +6,7 @@
 .badge {
   background-color: $gray-200;
   border: 1px solid $gray-200;
-  color: $gray-ink;
+  color: $gray-900;
   display: inline-block;
   padding: $badge-padding-y $badge-padding-x;
   font-size: $badge-font-size;
@@ -21,7 +21,7 @@
   &.badge-light {
     background-color: $white;
     border-color: $white;
-    color: $gray-ink;
+    color: $gray-900;
   }
 
   // Empty badges collapse automatically
