@@ -1,11 +1,14 @@
 // Media gallery
-
+.media-gallery-container {
+  padding-top: 2rem;
+}
 .media-gallery {
   @extend .list-unstyled;
   @include make-row();
   li {
     @include make-col-ready();
     @include make-col(12);
+    padding-bottom: $grid-gutter-width;
   }
 
   @include media-breakpoint-up(md) {

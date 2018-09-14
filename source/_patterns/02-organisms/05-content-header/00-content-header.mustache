@@ -14,22 +14,22 @@
     {{# has-header-meta}}
     <div class="row content-header-metadata">
       {{# has-publication-date }}
-      <div class="col-12 col-sm-6">
+      <div class="col">
         {{> atoms-date-time-text }}
       </div>
       {{/ has-publication-date}}
       {{# has-informations}}
-      <div class="col-12 col-sm-6">
-        <span class="metadata-informations">{{ informations-text }}</span>
-        {{# badges }}
-        <div class="d-inline-flex mx-2">
+      <div class="col">
+        <div class="metadata-infos">
+          {{{ informations-text }}}
+          {{# badges }}
           {{> atoms-badge}}
+          {{/ badges }}
         </div>
-        {{/ badges }}
       </div>
       {{/ has-informations}}
       {{# has-hub-link}}
-      <div class="col-12 col-sm-6">
+      <div class="col-12 col-lg-auto">
         <div class="hub-link">
           <a href="#">{{ hub-link-text }}</a>
         </div>

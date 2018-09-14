@@ -390,6 +390,22 @@
 
   marker.setLngLat([-73.5543312, 45.508919]).addTo(map);
 
+  var markerHeight = 50, markerRadius = 10, linearOffset = 25;
+  var popupOffsets = {
+  'top': [0, 0],
+  'top-left': [0,0],
+  'top-right': [0,0],
+  'bottom': [0, -markerHeight],
+  'bottom-left': [linearOffset, (markerHeight - markerRadius + linearOffset) * -1],
+  'bottom-right': [-linearOffset, (markerHeight - markerRadius + linearOffset) * -1],
+  'left': [markerRadius, (markerHeight - markerRadius) * -1],
+  'right': [-markerRadius, (markerHeight - markerRadius) * -1]
+  };
+  var popup = new mapboxgl.Popup({closeButton: false, closeOnClick: false, offset: popupOffsets, className: 'map-popup'})
+    .setLngLat([-73.5543312, 45.508919])
+    .setHTML("<address><strong>Maison de la culture Ahuntsic-Cartierville</strong><br>10300, rue Lajeunesse,<br>Montréal, Qc, H3L 2E5</address>")
+    .addTo(map);
+
   function defaultMarker() {
     const el = document.createElement('div');
     el.className = 'marker';

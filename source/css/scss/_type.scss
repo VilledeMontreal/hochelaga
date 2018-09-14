@@ -110,6 +110,7 @@ h6, .h6 {
 
 .lead {
   @include responsive-font-size($lead-font-size, .9, 32px);
+  color: $headings-color;
   font-weight: $lead-font-weight;
   margin-bottom: 2.5rem;
   > :last-child {
