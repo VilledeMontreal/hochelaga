@@ -39,6 +39,25 @@
     padding-bottom: 1rem;
   }
 
+  .card-event {
+    .card-date {
+      color: $gray-900;
+      font-weight: $font-weight-bold;
+    }
+    span {
+      &:first-child {
+        &:before {
+          content: none;
+        }
+      }
+      &:before {
+        content: "—";
+        color: $brand;
+        margin: 0 .5rem;
+      }
+    }
+  }
+
   .card-title {
     @include card-heading();
     margin-bottom: 1rem;

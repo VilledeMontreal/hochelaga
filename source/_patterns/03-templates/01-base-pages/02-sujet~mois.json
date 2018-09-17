@@ -25,12 +25,13 @@
         {
           "classes": "card-large",
           "url": "#",
-          "card-tags" : [
-            { "tag" : "Événement" }
-          ],
+          "card-tags" : false,
+          "card-event": {
+            "card-date": "Du 8 au 12 mai 2018",
+            "tag": "Événement"
+          },
           "card-title": "Card #1 title",
-          "card-text":
-            "Some quick example text to build on the card title and make up the bulk of the card's content.",
+          "card-text": false,
           "card-media": {
             "icon": false
           },
@@ -46,8 +47,7 @@
             { "tag" : "Démarche" }
           ],
           "card-title": "Card #2 title",
-          "card-text":
-            "Some quick example text to build on the card title and make up the bulk of the card's content.",
+          "card-text": false,
           "card-media": {
             "icon": false
           },
@@ -63,8 +63,7 @@
             { "tag" : "Démarche" }
           ],
           "card-title": "Card #3 title",
-          "card-text":
-            "Some quick example text to build on the card title and make up the bulk of the card's content.",
+          "card-text": false,
           "card-media": {
             "icon": false
           },
@@ -80,8 +79,7 @@
             { "tag" : "Démarche" }
           ],
           "card-title": "Card #4 title",
-          "card-text":
-            "Some quick example text to build on the card title and make up the bulk of the card's content.",
+          "card-text": false,
           "card-media": {
             "icon": false
           },

@@ -4,16 +4,18 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](http://keepachangelog.com/en/1.0.0/)
 and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.html).
 
-## [1.4.0] - Unreleased
+## [2.0.0] - Unreleased
 
 ## Added
 - Added Evenement templates.
 - Added Map integration exemples for mapbox inside evenement.
 - Added content header variants for evenement needs.
 - Added Media-gallery organisms. Work in progress.
+- Added Cards variant for Evenement content type.
 
 ## Changed
 - Changed badges styles and moved badges to atoms.
+- Changed html markup and classes for content-header to fix responsive issue.
 - Updated font-icon to v1.1.2 - (113-prix and 114-telecopieur)
 
 ## Removed
