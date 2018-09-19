@@ -23,12 +23,13 @@
   "sidebarRight": true,
   "sidebar-classes": "sidebar-top-stroke",
   "sb-classes": "",
+  "pieces-justificatives": false,
   "collapsibleItem": [
     {
       "title": "En ligne",
       "content": "<p>Lorem ipsum dolor sit amet, <a href=\"https://beta.montreal.ca/moncompte\">mon compte</a> consectetur adipiscing elit. Praesent vitae turpis augue. Maecenas volutpat massa vel tellus congue, eget volutpat sem accumsan. Ut sit amet vulputate felis. Pellentesque volutpat erat enim, vel efficitur ipsum scelerisque id. Integer lacinia lectus ut erat interdum, eget convallis est dapibus.</p><h3>Mode de paiement acceptés</h3><ul><li>Argent comptant</li><li>Carte de débit ou de crédit (MasterCard, Visa)</li><li>Chèque ou mandat à l'ordre de la Ville de Montréal</li></ul><a href=\"\" class=\"btn btn-sm btn-primary\">Appel à l'action</a>",
-      "block-id": "howto-vm-enligne",
-      "heading-id": "heading-howto-vm-enligne",
+      "block-id": "howto-rdp-enligne",
+      "heading-id": "heading-howto-rdp-enligne",
       "show": "true",
       "icon": false,
       "has-default-icon": true,
@@ -36,9 +37,45 @@
     },
     {
       "title": "En personne",
-      "content": "Collapsible content",
-      "block-id": "howto-vm-personne",
-      "heading-id": "heading-howto-vm-personne",
+      "content": "<p>Rendez-vous à un <a href=\"\">point de service de votre arrondissement</a>.</p><p>Si vous ne pouvez pas vous déplacer pour prendre possession de votre bac, des périodes de livraison sont prévues durant la saison estivale. Le nouveau bac sera livré à votre domicile sans préavis, du lundi au vendredi, entre 7 h et 18 h.</p><h3>Mode de paiement acceptés</h3><ul><li>Argent comptant</li><li>Carte de débit ou de crédit (MasterCard, Visa)</li><li>Chèque ou mandat à l'ordre de la Ville de Montréal</li></ul>",
+      "block-id": "howto-rdp-personne",
+      "heading-id": "heading-howto-rdp-personne",
+      "icon": false,
+      "has-default-icon": true,
+      "badge": false
+    },
+    {
+      "title": "Par téléphone",
+      "content": "<p><strong>Résidents d’un immeuble de 8 logements ou moins :</strong><br>Contactez le 311 (de l’extérieur de Montréal : 514 872-0311)<br>Du lundi au vendredi : de 8 h 30 à 20 h 30<br>Samedi, dimanche et jours fériés: de 9 h à 17 h</p><p><strong>Résidents d’un immeuble de 9 logements ou plus :</strong><br>Contactez l’éco-quartier de la Pointe-aux-Prairies : 514 648-9177 ou 514 642-8379</p><h3>Mode de paiement acceptés</h3><ul><li>Argent comptant</li><li>Carte de débit ou de crédit (MasterCard, Visa)</li><li>Chèque ou mandat à l'ordre de la Ville de Montréal</li></ul>",
+      "block-id": "howto-rdp-tel",
+      "heading-id": "heading-howto-rdp-tel",
+      "icon": false,
+      "has-default-icon": true,
+      "badge": false
+    },
+    {
+      "title": "Par courrier",
+      "content": "<p>Remplissez le <a href=\"formulaire.pdf\">formulaire</a> de demande et postez-le à l'adresse suivante :</p><address><strong>Direction de l'aménagement urbain et des services aux entreprises</strong><br>7171, rue Bombardier<br>Anjou (Québec) H1J 2E9</address><h3>Mode de paiement acceptés</h3><ul><li>Argent comptant</li><li>Carte de débit ou de crédit (MasterCard, Visa)</li><li>Chèque ou mandat à l'ordre de la Ville de Montréal</li></ul>",
+      "block-id": "howto-rdp-courrier",
+      "heading-id": "heading-howto-rdp-courrier",
+      "icon": false,
+      "has-default-icon": true,
+      "badge": false
+    },
+    {
+      "title": "Par courriel",
+      "content": "<p>Remplissez le <a href=\"formulaire.pdf\">formulaire</a> de demande et envoyer le à l'adresse suivante : <a href=\"mailto:test@ville.montreal.qc.ca\">test@ville.montreal.ca</a></p><h3>Mode de paiement acceptés</h3><ul><li>Argent comptant</li><li>Carte de débit ou de crédit (MasterCard, Visa)</li><li>Chèque ou mandat à l'ordre de la Ville de Montréal</li></ul>",
+      "block-id": "howto-rdp-courriel",
+      "heading-id": "heading-howto-rdp-courriel",
+      "icon": false,
+      "has-default-icon": true,
+      "badge": false
+    },
+    {
+      "title": "Par télécopieur",
+      "content": "<p>Remplissez le <a href=\"formulaire.pdf\">formulaire</a> de demande et envoyer le au numéro de fax suivant : 514 872-1111</p><h3>Mode de paiement acceptés</h3><ul><li>Argent comptant</li><li>Carte de débit ou de crédit (MasterCard, Visa)</li><li>Chèque ou mandat à l'ordre de la Ville de Montréal</li></ul>",
+      "block-id": "howto-rdp-fax",
+      "heading-id": "heading-howto-rdp-fax",
       "icon": false,
       "has-default-icon": true,
       "badge": false

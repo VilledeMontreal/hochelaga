@@ -146,6 +146,10 @@ mark,
   color: $mark-color;
 }
 
+address {
+  margin-bottom: $paragraph-margin-bottom;
+}
+
 // Links - generic
 a {
   // We had border-bottom on all links and override specific case
