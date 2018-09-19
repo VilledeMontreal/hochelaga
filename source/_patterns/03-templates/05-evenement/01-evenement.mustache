@@ -21,7 +21,12 @@
           Sed fermentum eleifend dui. Nam aliquet malesuada neque sit amet sodales. Integer mauris nibh, sodales ut diam vel, venenatis pretium ex. Donec vulputate ut felis sit amet varius.</p>
           <p>Nulla facilisi. Nullam convallis massa sapien, id blandit lorem sodales pretium. Nam tempor erat et accumsan rhoncus. Nunc quis posuere magna. Ut elementum, velit eu venenatis venenatis, velit elit pellentesque leo, ac finibus enim orci eu lectus. 
           Sed vel risus nec nisl ultricies mollis at eu diam. Donec vitae orci congue, vulputate lacus ut, posuere ipsum.</p>
-
+          {{# has-documents }}
+          <h3>Documents</h3>
+          <ul>
+            <li><a href="test.pdf">Programme de l'événement</a></li>
+          </ul>
+          {{/ has-documents}}
           {{# has-gallery }}
           {{> organisms-media-gallery}}
           {{/ has-gallery }}
