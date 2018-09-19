@@ -1,22 +1,15 @@
 <ul class="list-icon">
   {{# list-icon-item }}
-  <li>
-    {{# url }}
-    <a href="{{url}}" class="{{ class }}">
-      {{# icon-item}}
-      <span class="vdm vdm-{{ icon-label }} {{ icon-class }}" aria-hidden="true"></span>
-      {{/ icon-item}}
-      {{{ content }}}
-    </a>
-    {{/ url }}
-    {{^ url }}
-    <span class="{{ class }}">
-      {{# icon-item}}
-      <span class="vdm vdm-{{ icon-label }} {{ icon-class }}" aria-hidden="true"></span>
-      {{/ icon-item}}
-      {{{ content }}}
-    </span>
-    {{/ url }}
+  <li class="list-icon-item">
+  {{# icon-item}}
+    <span class="vdm vdm-{{ icon-label }} {{ icon-class }}" aria-hidden="true"></span>
+  {{/ icon-item}}
+  {{# url }}
+    <a href="{{url}}" class="{{ class }}">{{{ content }}}</a>
+  {{/ url }}
+  {{^ url }}
+    <span>{{{ content }}}</span>
+  {{/ url }}
   </li>
   {{/ list-icon-item}}
 </ul>

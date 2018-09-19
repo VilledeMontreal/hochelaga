@@ -49,65 +49,32 @@ ol {
 // list of items with icons
 .list-icon {
   @extend .list-unstyled;
-  li {
+  .list-icon-item {
+    display: flex;
     padding-bottom: 1rem;
+    // Use .no-icon class to add padding equal to icons width and paddings
+    &.no-icon {
+      padding-left: 2rem;
+    }
     &:last-child {
       padding-bottom: 0;
     }
-  }
-  
-  // Generic icon links : may or may not be applied to a hyperlink
-  .vdm {
-    font-size: 1.5em;
-    color: $primary;
-    background: transparent;
-  }
-
-  .icon {
-    align-items: flex-start; 
-    address {
-      margin-bottom: 0;
+    > .vdm {
+      background: transparent;
+      color: $gray-ink;
+      font-size: 1.5em;
+      padding-right: .5rem;
     }
+    > * {
+      align-items: flex-start;
 
-    &.left {
-      .vdm {
-        padding-right: .5rem;
-      }
-    }
-    &.right {
-      .vdm {
-        padding-left: .5rem;
-      }
     }
   }
 
-  // Use .no-icon and .left class to add padding equal to icons width
-  .no-icon {
-    &.left {
-      padding-left: 2rem;
-    }
+  address {
+    margin-bottom: 0;
   }
 
-  // We need to handle border on link with icons inside
-  a {
-    &.icon {
-      .vdm {
-        color: $link-color;
-      }
-      &.left {
-        margin-left: 2rem;
-        .vdm {
-          margin-left: -2rem;
-        }
-      }
-      &:hover,
-      &:active {
-        .vdm {
-          color: $link-hover-color;
-        }
-      }
-    }
-  }
 }
 
 // Social media list
@@ -160,6 +127,7 @@ ol {
       padding-right: 0;
     }
   }
+  /*
   &.icon-primary {
     li a .vdm {
       color: $primary;
@@ -172,6 +140,7 @@ ol {
       }
     }
   }
+  */
 }
 
 // Date lists

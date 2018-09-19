@@ -5,6 +5,9 @@
 
   .social-media-list {
     padding-left: 2rem;
+    .vdm {
+      color: $gray-ink;
+    }
   }
 
   p {
@@ -81,9 +84,6 @@
       > .vdm {
         padding-right: .5rem;
       }
-    }
-    .vdm {
-      color: $primary;
     }
     .schedule-data {
       display: flex;

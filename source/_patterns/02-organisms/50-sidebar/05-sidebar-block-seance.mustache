@@ -3,22 +3,16 @@
   <section class="sb-block {{ sb-classes }}">
     {{> organisms-heading-sidebar }}
     <ul class="list-icon">
-     <li>
-        <span class="icon left">
-          {{> atoms-fonticon-item(icon-label: "005-calendrier") }}
-          15 septembre 2018, à 8h30
-        </a>
+     <li class="list-icon-item">
+        {{> atoms-fonticon-item(icon-label: "005-calendrier") }}
+        <span>15 septembre 2018, à 8h30</span>
       </li>
-      <li>
-        <span class="icon left">
-          {{> atoms-fonticon-item(icon-label: "091-localisation") }}
-          {{> atoms-address }}
-        </span>
+      <li class="list-icon-item">
+        {{> atoms-fonticon-item(icon-label: "091-localisation") }}
+        {{> atoms-address }}
       </li>
-      <li>
-        <span class="no-icon left">
-          <a href="#" class="icon right read-more">En savoir plus {{> atoms-fonticon-item(icon-label: "063-fleche-droite") }}</a>
-        </span>
+      <li class="list-icon-item no-icon">
+        <a href="#" class="icon right read-more">En savoir plus {{> atoms-fonticon-item(icon-label: "063-fleche-droite") }}</a>
       </li>
     </ul>
     {{> atoms-button(buttonClass: "btn-secondary", buttonText: "Toutes les séances")}}

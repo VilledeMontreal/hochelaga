@@ -12,14 +12,18 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 - Added content header variants for evenement needs.
 - Added Media-gallery organisms. Work in progress.
 - Added Cards variant for Evenement content type.
+- Added data in the Démarche templates (canaux, documents).
 
 ## Changed
 - Changed badges styles and moved badges to atoms.
 - Changed html markup and classes for content-header to fix responsive issue.
 - Updated font-icon to v1.1.2 - (113-prix and 114-telecopieur).
+- Changed footer theming for a darker version.
+- Changed html markup and styles for list-icon in sidebar and contact block.
 
 ## Removed
 - Removed unused .list-numbered styles and examples.
+- Removed unwanted section in templates (démarche), change section title (sujet).
 
 ## [1.3.0] - 2018-09-13
 
@@ -29,15 +33,15 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 - Added handling of exception to external link (cards, list-icon, social-media-list).
 - Added styling of pdf document with css partial selector.
 - Added same domain (montreal.ca) links and exernal links to show styings.
-- Added molecules > empty states
+- Added molecules > empty states.
 - Added ability to add borough selector inside of lead container (needed for demarche templates).
 
 ## Changed
 - Changed Démarche template.
 - Changed html structure for card-tarif mobile first layout and better responsive handling.
-- Changed font-icon version to 1.1.0 - New icon (112-lien-externe)
+- Changed font-icon version to 1.1.0 - New icon (112-lien-externe).
 - Changed collapsible theming.
-- Changed to list-icon and integration of list-icon in sidebar
+- Changed to list-icon and integration of list-icon in sidebar.
 - Changed link theming in sidebar and list-icon.
 
 ## Deprecated
