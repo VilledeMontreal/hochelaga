@@ -16,7 +16,7 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 ## Changed
 - Changed badges styles and moved badges to atoms.
 - Changed html markup and classes for content-header to fix responsive issue.
-- Updated font-icon to v1.1.2 - (113-prix and 114-telecopieur)
+- Updated font-icon to v1.1.2 - (113-prix and 114-telecopieur).
 
 ## Removed
 - Removed unused .list-numbered styles and examples.

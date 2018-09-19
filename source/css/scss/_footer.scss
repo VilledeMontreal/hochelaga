@@ -3,15 +3,15 @@
  */
 footer {
   &.footer {
-    background-color: $sarcelle-light;
-    color: $gray-900;
+    background-color: $gray-900;
+    color: $white;
     padding-top: 4rem;
     padding-bottom: 2rem;
 
     // Links
     a {
       border: none;
-      color: $gray-700;
+      color: $white;
       &:hover,
       &:active {
         color: $sarcelle-surprise;
@@ -27,15 +27,22 @@ footer {
       justify-content: center;
       li a {
         .vdm {
+          color: $white;
           font-size: 1.5rem;
           padding: 0;
+        }
+        @include hover-focus {
+          color: $sarcelle-surprise;
+          .vdm {
+            color: inherit;
+          }
         }
       }
     }
 
     .btn-lang {
       @include button-reset();
-      border: 1px solid $gray-700;
+      border: 1px solid $white;
       border-radius: 2px;
       cursor: pointer;
       font-size: $font-size-sm;
@@ -63,7 +70,7 @@ footer {
       margin-bottom: 1.5rem;
     }
     .footer-section {
-      border-top: 2px solid $gray-900;
+      border-top: 2px solid $white;
       padding-top: .875rem;
     }
 
