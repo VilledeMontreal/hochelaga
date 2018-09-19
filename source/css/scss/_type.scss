@@ -146,6 +146,10 @@ mark,
   color: $mark-color;
 }
 
+address {
+  margin-bottom: $paragraph-margin-bottom;
+}
+
 // Links - generic
 a {
   // We had border-bottom on all links and override specific case
@@ -252,12 +256,12 @@ a {
   }
   &.right {
     .vdm {
-      padding-left: 0.15rem;
+      padding-left: 0.5rem;
     }
   }
   &.left {
     .vdm {
-      padding-right: 0.15rem;
+      padding-right: 0.5rem;
     }
   }
 }
@@ -289,17 +293,6 @@ a {
       margin-right: 0;
       &:after {
         content: none;
-      }
-    }
-  }
-}
-
-// Inline links with icons - Headers : a tad smaller
-h1, h2, h3, h4, h5, h6 {
-  a {
-    &.icon {
-      .vdm {
-        font-size: 1.2em;
       }
     }
   }
@@ -355,21 +348,6 @@ h1, h2, h3, h4, h5, h6 {
   height: 2px;
   background: $black;
   border-radius: 0;
-  &.divider-title {
-    display: flex;
-    align-self: center;
-    height: .5rem;
-    width: 64px;
-    margin-top: 0;
-    margin-bottom: 0;
-    margin-right: 10px;
-    background-color: $brand;
-  }
-  
-  &.divider-small {
-    height: 4px;
-    width: 50px;
-  }
   
   &.divider-fullwidth {
     width: 100%;
@@ -383,12 +361,6 @@ h1, h2, h3, h4, h5, h6 {
 .meta {
   font-size: $font-size-sm;
 }
-
-/*
-.date-time {
-  font-size: $font-size-sm;
-}
-*/
 
 .footer-notes {
   border-top: 1px solid $gray-700;
@@ -437,20 +409,3 @@ h1, h2, h3, h4, h5, h6 {
     }
   }
 }
-
-// link with icons
-// Will be deprecated
-.link-with-icon {
-  a {
-    display: flex;
-    align-items: center;
-    .vdm {
-      font-size: 2rem;
-      &:before {
-        display: inline-block;
-        text-decoration: none;
-      }
-    }
-  }
-}
-

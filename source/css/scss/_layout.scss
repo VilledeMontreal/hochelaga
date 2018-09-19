@@ -561,11 +561,10 @@
       display: block;
     }
   }
-  .no-icon {
-    display: flex;
-    align-items: flex-start;
-    &.left {
-      padding-left: 2rem;
+  .social-media-list-icons {
+    padding-left: 2rem;
+    .vdm {
+      color: $gray-ink;
     }
   }
 }
