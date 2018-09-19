@@ -54,8 +54,17 @@
       "badge": false
     },
     {
+      "title": "Par courriel",
+      "content": "<p>Remplissez le <a href=\"formulaire.pdf\">formulaire</a> de demande et envoyer le à l'adresse suivante : <a href=\"mailto:test@ville.montreal.qc.ca\">test@ville.montreal.ca</a></p><h3>Mode de paiement acceptés</h3><ul><li>Argent comptant</li><li>Carte de débit ou de crédit (MasterCard, Visa)</li><li>Chèque ou mandat à l'ordre de la Ville de Montréal</li></ul>",
+      "block-id": "howto-rdp-courriel",
+      "heading-id": "heading-howto-rdp-courriel",
+      "icon": false,
+      "has-default-icon": true,
+      "badge": false
+    },
+    {
       "title": "Par téléphone",
-      "content": "<p><strong>Résidents d’un immeuble de 8 logements ou moins :</strong><br>Contactez le 311 (de l’extérieur de Montréal : 514 872-0311)<br>Du lundi au vendredi : de 8 h 30 à 20 h 30<br>Samedi, dimanche et jours fériés: de 9 h à 17 h</p><p><strong>Résidents d’un immeuble de 9 logements ou plus :</strong><br>Contactez l’éco-quartier de la Pointe-aux-Prairies : 514 648-9177 ou 514 642-8379</p>",
+      "content": "<p><strong>Résidents d’un immeuble de 8 logements ou moins :</strong><br>Contactez le 311 (de l’extérieur de Montréal : 514 872-0311)<br>Du lundi au vendredi : de 8 h 30 à 20 h 30<br>Samedi, dimanche et jours fériés: de 9 h à 17 h</p><p><strong>Résidents d’un immeuble de 9 logements ou plus :</strong><br>Contactez l’éco-quartier de la Pointe-aux-Prairies : 514 648-9177 ou 514 642-8379</p><h3>Mode de paiement acceptés</h3><ul><li>Argent comptant</li><li>Carte de débit ou de crédit (MasterCard, Visa)</li><li>Chèque ou mandat à l'ordre de la Ville de Montréal</li></ul>",
       "block-id": "howto-rdp-tel",
       "heading-id": "heading-howto-rdp-tel",
       "icon": false,
@@ -63,84 +72,34 @@
       "badge": false
     },
     {
-      "title": "Par la poste",
-      "content": "<p>Remplissez le <a href=\"formulaire.pdf\">formulaire</a> de demande et postez-le à l'adresse suivante :</p><address><strong>Direction de l'aménagement urbain et des services aux entreprises</strong><br>7171, rue Bombardier<br>Anjou (Québec) H1J 2E9</address>",
-      "block-id": "howto-rdp-poste",
-      "heading-id": "heading-howto-rdp-poste",
+      "title": "Par télécopieur",
+      "content": "<p>Remplissez le <a href=\"formulaire.pdf\">formulaire</a> de demande et envoyer le au numéro de fax suivant : 514 872-1111</p><h3>Mode de paiement acceptés</h3><ul><li>Argent comptant</li><li>Carte de débit ou de crédit (MasterCard, Visa)</li><li>Chèque ou mandat à l'ordre de la Ville de Montréal</li></ul>",
+      "block-id": "howto-rdp-fax",
+      "heading-id": "heading-howto-rdp-fax",
+      "icon": false,
+      "has-default-icon": true,
+      "badge": false
+    },
+    {
+      "title": "Par courrier",
+      "content": "<p>Remplissez le <a href=\"formulaire.pdf\">formulaire</a> de demande et postez-le à l'adresse suivante :</p><address><strong>Direction de l'aménagement urbain et des services aux entreprises</strong><br>7171, rue Bombardier<br>Anjou (Québec) H1J 2E9</address><h3>Mode de paiement acceptés</h3><ul><li>Argent comptant</li><li>Carte de débit ou de crédit (MasterCard, Visa)</li><li>Chèque ou mandat à l'ordre de la Ville de Montréal</li></ul>",
+      "block-id": "howto-rdp-courrier",
+      "heading-id": "heading-howto-rdp-courrier",
+      "icon": false,
+      "has-default-icon": true,
+      "badge": false
+    },
+    {
+      "title": "En personne",
+      "content": "<p>Rendez-vous à un <a href=\"\">point de service de votre arrondissement</a>.</p><p>Si vous ne pouvez pas vous déplacer pour prendre possession de votre bac, des périodes de livraison sont prévues durant la saison estivale. Le nouveau bac sera livré à votre domicile sans préavis, du lundi au vendredi, entre 7 h et 18 h.</p><h3>Mode de paiement acceptés</h3><ul><li>Argent comptant</li><li>Carte de débit ou de crédit (MasterCard, Visa)</li><li>Chèque ou mandat à l'ordre de la Ville de Montréal</li></ul>",
+      "block-id": "howto-rdp-personne",
+      "heading-id": "heading-howto-rdp-personne",
       "icon": false,
       "has-default-icon": true,
       "badge": false
     }
   ],
-  "informations": {
-    "cards": {
-      "section-classes": "bg-gray-sky",
-      "classes": false,
-      "bsgrid-classes": "col-12 col-md-6 col-lg-4",
-      "card-item" : [
-        {
-          "classes" : "card-link",
-          "url" : "#",
-          "card-title" : "Card #1 link title",
-          "card-text" : false,
-          "card-media" : false,
-          "footer" : {
-            "outside-body": true
-          }
-        },
-        {
-          "classes" : "card-link",
-          "url" : "#",
-          "card-title" : "Card #2 link title",
-          "card-text" : false,
-          "card-media" : false,
-          "footer" : {
-            "outside-body": true
-          }
-        },
-        {
-          "classes" : "card-link",
-          "url" : "#",
-          "card-title" : "Card #3 link title - longer than usual",
-          "card-text" : false,
-          "card-media" : false,
-          "footer" : {
-            "outside-body": true
-          }
-        },
-        {
-          "classes" : "card-link",
-          "url" : "#",
-          "card-title" : "Card #4 link title",
-          "card-text" : false,
-          "card-media" : false,
-          "footer" : {
-            "outside-body": true
-          }
-        },
-        {
-          "classes" : "card-link",
-          "url" : "#",
-          "card-title" : "Card #5 link title",
-          "card-text" : false,
-          "card-media" : false,
-          "footer" : {
-            "outside-body": true
-          }
-        },
-        {
-          "classes" : "card-link",
-          "url" : "#",
-          "card-title" : "Card #6 link title",
-          "card-text" : false,
-          "card-media" : false,
-          "footer" : {
-            "outside-body": true
-          }
-        }
-      ]
-    }
-  },
+  "informations": false,
   "tarifs": {
     "cards": {
       "section-classes": "bg-gray-sky",
