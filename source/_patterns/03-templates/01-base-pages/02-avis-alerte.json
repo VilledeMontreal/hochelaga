@@ -1,0 +1,61 @@
+{
+  "text-elements": {
+    "headings":{
+      "display":{
+        "content": "Template Avis et alertes"
+      }
+    }
+  },
+  "contentHeaderClasses": "",
+  "has-header-meta": true,
+  "has-publication-date": true,
+  "has-hub-link": true,
+  "date-time-text": "Mis à jour le 21 septembre 2018",
+  "hub-link-text": "Tous les avis et alertes",
+  "has-lead-text": false,
+  "sidebarRight": true,
+  "sidebarAbonnement": {
+    "sidebarTitle": "S'abonner aux alertes",
+    "sb-abonnement-text": "<p>Pour recevoir des avis et alertes par courriel ou texto, vous devez avoir créé un compte.</p>",
+    "buttonText": "Abonnez-vous"
+  },
+  "informations": {
+    "cards": {
+      "section-classes": "bg-gray-sky",
+      "classes": false,
+      "bsgrid-classes": "col-12 col-md-6 col-lg-4",
+      "card-item" : [
+        {
+          "classes" : "card-link",
+          "url" : "#",
+          "card-title" : "Card #1 link title",
+          "card-text" : false,
+          "card-media" : false,
+          "footer" : {
+            "outside-body": true
+          }
+        },
+        {
+          "classes" : "card-link",
+          "url" : "#",
+          "card-title" : "Card #2 link title",
+          "card-text" : false,
+          "card-media" : false,
+          "footer" : {
+            "outside-body": true
+          }
+        },
+        {
+          "classes" : "card-link",
+          "url" : "#",
+          "card-title" : "Card #3 link title - longer than usual",
+          "card-text" : false,
+          "card-media" : false,
+          "footer" : {
+            "outside-body": true
+          }
+        }
+      ]
+    }
+  }
+}
