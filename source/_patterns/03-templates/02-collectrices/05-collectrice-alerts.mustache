@@ -5,12 +5,22 @@
 
   {{> organisms-content-header }}
 
+    <!-- Teaser -->
+  {{# has-lead-text}}
+  {{> molecules-lead }}
+  {{/ has-lead-text}}
+
   <section class="page-section bg-gray-sky">
     <div class="container">
       <div class="row">
         <div class="col-12">
 
-          {{> molecules-search-field+dropdown }}
+          <div class="form-group">
+            <div class="input-group-icon input-group-icon-left">
+              {{> atoms-fonticon-item(icon-label: "002-recherche") }}
+              <input type="text" class="form-control" id="text-icon-left" placeholder="Rechercher une information ou un service">
+            </div>
+          </div>
       
           <ul class="date-list">
             <li>
