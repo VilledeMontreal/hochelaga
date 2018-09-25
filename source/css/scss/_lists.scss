@@ -246,4 +246,8 @@ dl {
   &:last-child {
     @include border-bottom-radius(0);
   }
+
+  a {
+    border-bottom: none;
+  }
 }

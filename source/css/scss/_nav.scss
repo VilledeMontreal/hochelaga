@@ -154,6 +154,10 @@
     > *:last-child {
       margin-bottom: 0;
     }
+
+    .list-group {
+      margin-bottom: 2rem;
+    }
   }
 
   @include media-breakpoint-up(sm) {
