@@ -415,6 +415,18 @@ $list-group-border-radius:          0;
 $list-group-item-padding-y:         1rem;
 $list-group-item-padding-x:         1.5rem;
 
+$list-group-hover-bg:               $sarcelle-lightest;
+$list-group-active-color:           $component-active-color;
+$list-group-active-bg:              $component-active-bg;
+$list-group-active-border-color:    $list-group-active-bg;
+
+$list-group-action-color:           $sarcelle-surprise;
+$list-group-action-hover-color:     $sarcelle;
+
+$list-group-action-active-color:    $sarcelle;
+$list-group-action-active-bg:       $sarcelle-lightest;
+
+
 // Badges
 $badge-padding-y:                   .25em;
 $badge-padding-x:                   .4em;
