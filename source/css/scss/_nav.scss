@@ -109,7 +109,7 @@
       @include iconvdm(after, '069-mini-plus-circulaire');
 
       &[aria-expanded="true"] {
-        color: $primary;
+        //color: $primary;
         @include iconvdm(after, '070-mini-moins-circulaire');
       }
 
@@ -153,6 +153,10 @@
     }
     > *:last-child {
       margin-bottom: 0;
+    }
+
+    .list-group {
+      margin-bottom: 2rem;
     }
   }
 
