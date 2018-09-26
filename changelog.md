@@ -13,6 +13,7 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 - Added Media-gallery organisms. Work in progress.
 - Added Cards variant for Evenement content type.
 - Added data in the Démarche templates (canaux, documents).
+- Added list-group links in molecules > list groups.
 
 ## Changed
 - Changed badges styles and moved badges to atoms.
