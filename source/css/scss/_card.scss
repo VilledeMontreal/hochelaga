@@ -236,6 +236,9 @@
 
   // Full-width card override
   &.card-fw {
+    .card-body {
+      align-self: flex-start;
+    }
     @include media-breakpoint-up(lg) {
       .card-img-top {
         margin-left: 1rem;
