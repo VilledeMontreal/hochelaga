@@ -50,6 +50,11 @@
     }
   }
 
+  &-metadata {
+    color: $gray-600;
+    font-size: $font-size-lg;
+  }
+
   // Hub link
   .hub-link {
     color: $gray-600;
@@ -71,10 +76,18 @@
     }
   }
 
+  // used for specific contente header infos like Evenement
   .metadata-infos {
     color: $headings-color;
     font-weight: $font-weight-bold;
+    > * {
+      margin-bottom: .5rem;
+      &:last-child {
+        margin-bottom: 0;
+      }
+    }
     .infos-event {
+      vertical-align: middle;
       > span {
         display: block;
       }
@@ -87,6 +100,7 @@
     @include media-breakpoint-up(lg) {
       > * {
         margin-right: 1rem;
+        margin-bottom: 0;
       }
       .infos-event {
         display: inline-block;
@@ -105,11 +119,6 @@
         }
       }
     }
-  }
-
-  &-metadata {
-    color: $gray-600;
-    font-size: $font-size-lg;
   }
 
   // Content header profile variant
