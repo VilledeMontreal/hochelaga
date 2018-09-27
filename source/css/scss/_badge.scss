@@ -67,6 +67,7 @@
 .badge-pill {
   padding-right: $badge-pill-padding-x;
   padding-left: $badge-pill-padding-x;
+  font-weight: $font-weight-normal;
   @include border-radius($badge-pill-border-radius);
 }
 

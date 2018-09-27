@@ -74,21 +74,30 @@
   .metadata-infos {
     color: $headings-color;
     font-weight: $font-weight-bold;
-    > span {
-      display: block;
-
-      &.infos-lieu {
+    .infos-event {
+      > span {
+        display: block;
+      }
+      .infos-lieu {
         font-weight: $font-weight-normal;
-
       }
     }
 
     // 1200px and up
     @include media-breakpoint-up(lg) {
-      > span {
-        display: inline-block;
+      > * {
         margin-right: 1rem;
-        &.infos-lieu {
+      }
+      .infos-event {
+        display: inline-block;
+        > span {
+          display: inline-block;
+          margin-right: 1rem;
+          &:last-child {
+            margin-right: 0;
+          }
+        }
+        .infos-lieu {
           &:before {
             content: "—";
             margin-right: 1rem;
