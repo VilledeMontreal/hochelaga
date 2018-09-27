@@ -7,7 +7,7 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 ## [2.0.0] - Unreleased
 
 ## Added
-- Added Evenement templates.
+- Added Evenement templates and status variants.
 - Added Map integration exemples for mapbox inside evenement.
 - Added content header variants for evenement needs.
 - Added Media-gallery organisms. Work in progress.
