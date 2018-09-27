@@ -58,6 +58,9 @@ ol {
     }
     &:last-child {
       padding-bottom: 0;
+      .list-icon-content {
+        margin-bottom: 0;
+      }
     }
     > .vdm {
       background: transparent;
@@ -69,6 +72,15 @@ ol {
       align-items: flex-start;
 
     }
+  }
+
+  .list-icon-label {
+    font-weight: $font-weight-bold;
+    display: block;
+  }
+
+  .list-icon-content {
+    margin-bottom: 1rem;
   }
 
   address {
