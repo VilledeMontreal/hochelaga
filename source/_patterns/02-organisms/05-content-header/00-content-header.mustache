@@ -17,9 +17,29 @@
       </div>
       {{/ has-publication-date}}
       {{# has-informations}}
-      <div class="col order-2">
+      <div class="col order-1">
         <div class="content-header-metadata metadata-infos">
-          {{{ informations-text }}}
+          {{# informations-state }}
+          <span class="badge badge-pill {{ badgeClass }}">{{ badge }}</span>
+          {{/ informations-state }}
+
+          {{# informations-event}}
+          <div class="infos-event {{ informations-state.stateClass }}">
+            {{# date }}
+            <span class="infos-date">
+            {{# informations-state.state-cancel }}<s>
+            {{/ informations-state.state-cancel }}
+            {{ date }}
+            {{# informations-state.state-cancel }}</s>
+            {{/ informations-state.state-cancel }}
+            </span>
+            {{/ date}}
+            {{# lieu }}
+            <span class="infos-lieu">{{ lieu }}</span>
+            {{/ lieu }}
+          </div>
+          {{/ informations-event}}
+
           {{# badges }}
           {{> atoms-badge}}
           {{/ badges }}
@@ -27,7 +47,7 @@
       </div>
       {{/ has-informations}}
       {{# has-hub-link}}
-      <div class="col-12 col-xl-auto order-first order-xl-3">
+      <div class="col-12 col-xl-auto order-first order-xl-last">
         <div class="hub-link">
           <a href="#">{{ hub-link-text }}</a>
         </div>
