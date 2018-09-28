@@ -49,65 +49,44 @@ ol {
 // list of items with icons
 .list-icon {
   @extend .list-unstyled;
-  li {
+  .list-icon-item {
+    display: flex;
     padding-bottom: 1rem;
-    &:last-child {
-      padding-bottom: 0;
-    }
-  }
-  
-  // Generic icon links : may or may not be applied to a hyperlink
-  .vdm {
-    font-size: 1.5em;
-    color: $primary;
-    background: transparent;
-  }
-
-  .icon {
-    align-items: flex-start; 
-    address {
-      margin-bottom: 0;
-    }
-
-    &.left {
-      .vdm {
-        padding-right: .5rem;
-      }
-    }
-    &.right {
-      .vdm {
-        padding-left: .5rem;
-      }
-    }
-  }
-
-  // Use .no-icon and .left class to add padding equal to icons width
-  .no-icon {
-    &.left {
+    // Use .no-icon class to add padding equal to icons width and paddings
+    &.no-icon {
       padding-left: 2rem;
     }
-  }
-
-  // We need to handle border on link with icons inside
-  a {
-    &.icon {
-      .vdm {
-        color: $link-color;
-      }
-      &.left {
-        margin-left: 2rem;
-        .vdm {
-          margin-left: -2rem;
-        }
-      }
-      &:hover,
-      &:active {
-        .vdm {
-          color: $link-hover-color;
-        }
+    &:last-child {
+      padding-bottom: 0;
+      .list-icon-content {
+        margin-bottom: 0;
       }
     }
+    > .vdm {
+      background: transparent;
+      color: $gray-ink;
+      font-size: 1.5em;
+      padding-right: .5rem;
+    }
+    > * {
+      align-items: flex-start;
+
+    }
   }
+
+  .list-icon-label {
+    font-weight: $font-weight-bold;
+    display: block;
+  }
+
+  .list-icon-content {
+    margin-bottom: 1rem;
+  }
+
+  address {
+    margin-bottom: 0;
+  }
+
 }
 
 // Social media list
@@ -160,6 +139,7 @@ ol {
       padding-right: 0;
     }
   }
+  /*
   &.icon-primary {
     li a .vdm {
       color: $primary;
@@ -172,6 +152,7 @@ ol {
       }
     }
   }
+  */
 }
 
 // Date lists
@@ -266,6 +247,7 @@ dl {
   // remove right and left border
   border-right: 0;
   border-left: 0;
+  display: flex;
   @include border-radius(0);
 
   // remove border-top-radius
@@ -276,5 +258,14 @@ dl {
   // remove border-bottom-radius
   &:last-child {
     @include border-bottom-radius(0);
+  }
+
+  a {
+    border-bottom: none;
+  }
+
+  .vdm {
+    font-size: 1.5rem;
+    padding-right: .5rem;
   }
 }

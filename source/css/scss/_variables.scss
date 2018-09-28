@@ -70,9 +70,10 @@ $info:          $blue;
 $warning:       $yellow;
 $danger:        $red;
 $light:         $gray-100;
-$dark:          $gray-800;
+$dark:          $gray-900;
 
 $theme-colors: ();
+// stylelint-disable-next-line scss/dollar-variable-default
 $theme-colors: map-merge((
   "primary":    $primary,
   "secondary":  $secondary,
@@ -86,10 +87,24 @@ $theme-colors: map-merge((
 // stylelint-enable
 
 $button-colors: () !default;
+// stylelint-disable-next-line scss/dollar-variable-default
 $button-colors: map-merge((
   "primary":    $primary,
   "secondary":  $secondary,
 ), $button-colors);
+// stylelint-enable
+
+$dialog-colors: () !default;
+// stylelint-disable-next-line scss/dollar-variable-default
+$dialog-colors: map-merge(
+  (
+    "success":    $success,
+    "info":       $info,
+    "warning":    $warning,
+    "danger":     $danger,
+  ),
+  $dialog-colors
+);
 // stylelint-enable
 
 // Spacing
@@ -184,7 +199,6 @@ $backdrop-opacity:            .3;
 // Font, line-height, and color for body text, headings, and more.
 
 $font-family-base:            'Nunito Sans', Helvetica, Arial, sans-serif;
-
 
 $font-weight-light:           300; // Nunito Sans Light         
 $font-weight-regular:         400; // Nunito Sans Regular
@@ -400,10 +414,23 @@ $list-group-border-radius:          0;
 $list-group-item-padding-y:         1rem;
 $list-group-item-padding-x:         1.5rem;
 
-// Badges
+$list-group-hover-bg:               $sarcelle-lightest;
+$list-group-active-color:           $component-active-color;
+$list-group-active-bg:              $component-active-bg;
+$list-group-active-border-color:    $list-group-active-bg;
 
-$badge-pill-padding-x:              1em;
-$badge-pill-padding-y:              .5em;
+$list-group-action-color:           $sarcelle-surprise;
+$list-group-action-hover-color:     $sarcelle;
+
+$list-group-action-active-color:    $sarcelle;
+$list-group-action-active-bg:       $sarcelle-lightest;
+
+
+// Badges
+$badge-padding-y:                   .25em;
+$badge-padding-x:                   .4em;
+
+$badge-pill-padding-x:              .6em;
 
 
 // Input btn

@@ -18,8 +18,18 @@
     <span class="card-tags {{class}}">{{ tag }}</span>
     {{/ card-tags }}
     {{# card-date }}
-    <span class="card-date">{{ card-date }}</span>
+      <span class="card-date">{{ card-date }}</span>
     {{/ card-date }}
+    {{# card-subheading-section }}
+    <div class="card-subheading">
+      {{# card-tags }}
+      <span class="card-tags {{class}}">{{ tag }}</span>
+      {{/ card-tags }}
+      {{# card-date }}
+      <span class="card-date">{{ card-date }}</span>
+      {{/ card-date }}
+    </div>
+    {{/ card-subheading-section }}
     {{# card-title }}
     <span class="card-title">{{ card-title }}</span>
     {{/ card-title }}

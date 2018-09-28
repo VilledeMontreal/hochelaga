@@ -18,18 +18,6 @@
   }
 }
 
-// Badges
-.badge-pill {
-  padding-top: $badge-pill-padding-y;
-  padding-bottom: $badge-pill-padding-y;
-}
-
-.btn .badge {
-  margin-left: .5rem;
-  top: auto;
-  position: inherit;
-}
-
 // States
 .state {
   @include size(2rem);
@@ -59,7 +47,7 @@
 
 // Header banner
 .top-banner {
-  background: $black;
+  background: $gray-900;
   color: $white;
   height: $top-banner-height;
   display: flex;

@@ -1,0 +1,47 @@
+<div class="sidebar {{ sidebar-classes }}">
+  <section class="sb-block">
+    {{> organisms-heading-sidebar(sidebarTitle: "Informations")}}
+    <ul class="list-icon">
+      <li class="list-icon-item">
+        {{> atoms-fonticon-item(icon-label: "005-calendrier") }}
+        <div class="list-icon-content">
+          <span class="list-icon-label">Quand</span>
+          <span class="text-dark">12 septembre 2018, 19 h<br>
+          au 13 septembre 2018, 23 h</span>
+        </div>
+      </li>
+      <li class="list-icon-item">
+        {{> atoms-fonticon-item(icon-label: "091-localisation") }}
+        <div class="list-icon-content">
+          <span class="list-icon-label">Où</span>
+          <address>
+            <span class="text-dark">Maison de la culture Ahuntsic-Cartierville</span><br>
+            10300, rue Lajeunesse,<br>
+            Montréal, Qc, H3L 2E5
+          </address>
+          <a href="#">Plus d'info</a><br>
+          <a href="#mapEventId" class="js-scroll-trigger">Afficher sur la carte</a>
+        </div>
+      </li>
+      <li class="list-icon-item">
+        {{> atoms-fonticon-item(icon-label: "007-billet") }}
+        <div class="list-icon-content">
+          <span class="list-icon-label">Gratuit</span>
+          <a href="https://espacetrad.ca">Obtenir des billets</a>
+        </div>
+      </li>
+      <li class="list-icon-item">
+        {{> atoms-fonticon-item(icon-label: "012-telephone") }}
+        <div class="list-icon-content">
+          <span class="list-icon-label">Contact</span>
+          <span class="text-dark">Mireille Anctil</span><br>
+          Service de la culture<br>
+          <a href="mailto:mireille.anctil@espacetrad.ca">mireille.anctil@espacetrad.ca</a><br>
+          Tél. : 514 872-3107 poste 123<br>
+          Fax : 514 872-2222
+        </div>
+      </li>
+    </ul>
+    {{> atoms-social-media-icons-list}}
+  </section>
+</div>

@@ -198,11 +198,16 @@
       var target = $(this.hash);
       target = target.length ? target : $('[name=' + this.hash.slice(1) + ']');
       if (target.length) {
-        if(window.matchMedia("(min-width: 992px").matches) {
-          $navOffset = $("#navAnchors").height();
+        if($(".sticky").length > 0){
+          if(window.matchMedia("(min-width: 992px").matches) {
+            $navOffset = $(".sticky").height();
+          } else {
+            $navOffset = 0;
+          }
         } else {
           $navOffset = 0;
         }
+
         $('html, body').animate({
           scrollTop: (target.offset().top - $navOffset)
         }, 1000, "easeInOutExpo");
@@ -227,6 +232,5 @@
       offset: $("#navAnchors").height()
     });
   }
-
 
 })(jQuery);

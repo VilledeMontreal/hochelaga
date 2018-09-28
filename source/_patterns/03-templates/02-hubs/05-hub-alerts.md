@@ -1,4 +1,0 @@
----
-title: Hub page - Alerts
----
-
