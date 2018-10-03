@@ -279,16 +279,17 @@ a {
 // Apply to .region-content and sb-block
 
 .sb-block,
-.region-content {
+.region-content,
+.lead {
   a[href*="//"]:not([href*="montreal.ca"]) {
     @include iconvdm($position: after, $icon: '112-lien-externe');
-    margin-right: 1.125rem;
+    margin-right: 1.125em;
     &:after {
-      font-size: 1.125rem;
+      font-size: 1.125em;
       padding-left: 0.125rem;
       vertical-align: baseline;
       overflow: hidden;
-      margin-right: -1.125rem;
+      margin-right: -1.125em;
       margin-top: -.5rem;
       margin-bottom: -.5rem;
 

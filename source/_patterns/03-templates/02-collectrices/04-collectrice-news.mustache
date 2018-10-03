@@ -12,16 +12,18 @@
           {{# cards.headings }}
           <h2 class="{{ cards.headings.class }}">{{ cards.headings.text }}</h2>
           {{/ cards.headings }}
+        </div>
 
-          <!--{{> molecules-search-field+dropdown }}-->
-
+        <div class="col-12 col-lg-6">
           <div class="form-group">
             <div class="input-group-icon input-group-icon-left">
               {{> atoms-fonticon-item(icon-label: "002-recherche") }}
               <input type="text" class="form-control" id="text-icon-left" placeholder="Rechercher une information ou un service">
             </div>
           </div>
+        </div>
 
+        <div class="col-12">
           {{# cards }}
           <div class="cards {{ cards.classes }}">
           {{# cards.card-item }}
@@ -29,12 +31,13 @@
           {{/ cards.card-item }}
           </div>
           {{/ cards }}
-          
-          {{# hasPagination }}
-            {{> molecules-pagination("paginationClass": justify-content-center) }}
-          {{/ hasPagination }}
-
         </div>
+
+        {{# hasPagination }}
+        <div class="col-12">  
+          {{> molecules-pagination("paginationClass": justify-content-center) }}
+        </div>
+        {{/ hasPagination }}
       </div>
     </div>
   </section>
