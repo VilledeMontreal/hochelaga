@@ -24,96 +24,67 @@
   "servicesSection": {
     "cards": {
       "section-classes": "pt-0",
-      "classes": "",
+      "classes": false,
       "bsgrid-classes": "col-12 col-md-6",
       "card-item": [
         {
-          "classes": "card-large card-inception",
-          "data-href": "#",
-          "url": false,
-          "card-title": "Card #1 title",
-          "card-text": false,
-          "card-inception-links": 
-            "<a href=\"#\">Lorem ipsum</a>, <a href=\"#\">Dolor</a> et <a href=\"#\">Palat advitam</a>",
-          "card-media": false,
-          "footer": false
+          "classes": "card-large card-row-layout",
+          "data-href": false,
+          "url": "#",
+          "card-title": "Animaux domestiques",
+          "card-text":
+            "Médaille de chien ou de chat. Tout savoir.",
+          "card-inception-links": false,
+          "card-media": {
+            "icon": "vdm-083-permis-animal-chien"
+          }
         },
         {
-          "classes": "card-large card-inception",
-          "data-href": "#",
-          "url": false,
-          "card-title": "Card #2 title",
-          "card-text": false,
-          "card-inception-links":
-            "<a href=\"#\">Lorem ipsum</a>, <a href=\"#\">Dolor</a>, <a href=\"#\">Palat advitam</a>, <a href=\"#\">Resolut</a> et <a href=\"#\">Praesent commodo risus nec</a>",
-          "card-media": false,
-          "footer": false
+          "classes": "card-large card-row-layout",
+          "data-href": false,
+          "url": "#",
+          "card-title": "Déchets et recyclage",
+          "card-text":
+            "Pour le tri intelligent des déchets",
+          "card-inception-links": false,
+          "card-media": {
+            "icon": "vdm-079-dechets-et-recyclage"
+          }
         },
         {
-          "classes": "card-large card-inception",
-          "data-href": "#",
-          "url": false,
-          "card-title": "Card #3 title",
-          "card-text": false,
-          "card-inception-links":
-            "<a href=\"#\">Lorem ipsum</a>, <a href=\"#\">Dolor</a>, <a href=\"#\">Palat advitam</a>, <a href=\"#\">Resolut</a> et <a href=\"#\">Praesent commodo risus nec</a>",
-          "card-media": false,
-          "footer": false
+          "classes": "card-large card-row-layout",
+          "data-href": false,
+          "url": "#",
+          "card-title": "Demandes de service",
+          "card-text": "6 types de demandes à faire en ligne",
+          "card-inception-links": false,
+          "card-media": {
+            "icon": "vdm-103-311-mobile"
+          }
         },
         {
-          "classes": "card-large card-inception",
-          "data-href": "#",
-          "url": false,
-          "card-title": "Card #4 title",
-          "card-text": false,
-          "card-inception-links":
-            "<a href=\"#\">Lorem ipsum</a>, <a href=\"#\">Dolor</a> et <a href=\"#\">Palat advitam</a>",
-          "card-media": false,
-          "footer": false
+          "classes": "card-large card-row-layout",
+          "data-href": false,
+          "url": "#",
+          "card-title": "Droit et justice",
+          "card-text":
+            "Contravention à payer, documents juridiques à obtenir. Toute l'information.",
+          "card-inception-links": false,
+          "card-media": {
+            "icon": "vdm-021-dossier"
+          }
         },
         {
-          "classes": "card-large card-inception",
-          "data-href": "http://rds.ca",
-          "url": false,
-          "card-title": "Card #5 title",
-          "card-text": false,
-          "card-inception-links":
-            "<a href=\"#\">Lorem ipsum</a>, <a href=\"#\">Dolor</a> et <a href=\"#\">Palat advitam</a>",
-          "card-media": false,
-          "footer": false
-        },
-        {
-          "classes": "card-large card-inception",
-          "data-href": "#",
-          "url": false,
-          "card-title": "Card #6 title",
-          "card-text": false,
-          "card-inception-links":
-            "<a href=\"#\">Lorem ipsum</a>, <a href=\"#\">Dolor</a>, <a href=\"#\">Palat advitam</a>, <a href=\"#\">Resolut</a> et <a href=\"#\">Praesent commodo risus nec</a>",
-          "card-media": false,
-          "footer": false
-        },
-        {
-          "classes": "card-large card-inception",
-          "data-href": "#",
-          "url": false,
-          "card-title": "Card #7 title",
-          "card-text": false,
-          "card-inception-links":
-            "<a href=\"#\">Lorem ipsum</a>, <a href=\"#\">Dolor</a>, <a href=\"#\">Palat advitam</a>, <a href=\"#\">Resolut</a> et <a href=\"#\">Praesent commodo risus nec</a>",
-          "card-media": false,
-          "footer": false
-        },
-        {
-          "classes": "card-large card-inception",
-          "data-href": "http://rds.ca",
-          "url": false,
-          "card-title": "Card #8 title",
-          "card-text": false,
-          "card-inception-links":
-            "<a href=\"#\">Lorem ipsum</a>, <a href=\"#\">Dolor</a> et <a href=\"#\">Palat advitam</a>",
-          "card-media": false,
-          "footer": false
+          "classes": "card-large card-row-layout",
+          "data-href": false,
+          "url": "#",
+          "card-title": "Habitation et taxes",
+          "card-text":
+            "Compte de taxes et évaluation foncière. S'y retrouver.",
+          "card-inception-links": false,  
+          "card-media": {
+            "icon": "vdm-045-maison"
+          }
         }
       ]
     }

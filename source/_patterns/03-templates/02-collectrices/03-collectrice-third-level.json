@@ -52,21 +52,53 @@
     }
   },
   "third-level-section": {
-    "items": {
-      "heading": "First heading",
-      "subheading": "Sub-heading",
-      "item": [
-        {
-          "url": "#",
-          "title": "Link 1",
-          "description": "<p>Description link 1</p>"
-        },
-        {
-          "url": "#",
-          "title": "Link 2",
-          "description": "<p>Description link 2</p>"
-        }
-      ]
-    }
+    "heading": "Permis et services",
+    "items": [
+      {
+        "subheading": "Permis et médailles",
+        "item": [
+          {
+            "url": "#",
+            "title": "Permis pour chat",
+            "description": "<p>La médaille est obligatoire.</p>"
+          },
+          {
+            "url": "#",
+            "title": "Permis pour chien",
+            "description": "<p>Votre chien doit porter sa médaille en tout temps.</p>"
+          },
+          {
+            "url": "#",
+            "title": "Permis pour promeneur de chiens",
+            "description": "<p>Vous promenez 3 chiens ou plus? Un permis est nécessaire.</p>"
+          }
+        ]
+      },
+      {
+        "subheading": "Services",
+        "item": [
+          {
+            "url": "#",
+            "title": "Signaler un animal domestique perdu ou trouvé",
+            "description": "<p>Voici les étapes à suivre.</p>"
+          },
+          {
+            "url": "#",
+            "title": "Signaler un animal mort",
+            "description": "<p>Informez-nous.</p>"
+          },
+          {
+            "url": "#",
+            "title": "Porter plainte contre le propriétaire d’un chat ou d’un chien",
+            "description": "<p>Renseignez-vous sur les démarches à faire.</p>"
+          },
+          {
+            "url": "#",
+            "title": "Patrouille animale",
+            "description": "<p>Elle veille à votre sécurité et au respect du règlement.</p>"
+          }
+        ]
+      }
+    ]
   }
 }
