@@ -58,6 +58,9 @@ ol {
     }
     &:last-child {
       padding-bottom: 0;
+      .list-icon-content {
+        margin-bottom: 0;
+      }
     }
     > .vdm {
       background: transparent;
@@ -69,6 +72,15 @@ ol {
       align-items: flex-start;
 
     }
+  }
+
+  .list-icon-label {
+    font-weight: $font-weight-bold;
+    display: block;
+  }
+
+  .list-icon-content {
+    margin-bottom: 1rem;
   }
 
   address {
@@ -235,6 +247,7 @@ dl {
   // remove right and left border
   border-right: 0;
   border-left: 0;
+  display: flex;
   @include border-radius(0);
 
   // remove border-top-radius
@@ -245,5 +258,14 @@ dl {
   // remove border-bottom-radius
   &:last-child {
     @include border-bottom-radius(0);
+  }
+
+  a {
+    border-bottom: none;
+  }
+
+  .vdm {
+    font-size: 1.5rem;
+    padding-right: .5rem;
   }
 }

@@ -21,6 +21,23 @@
   <div id="{{ block-id }}" class="collapse {{# show }}show{{/ show}}" role="tabpanel" aria-labelledby="{{ heading-id }}">
     <div class="collapsible-block">
       {{{ content }}}
+      {{# has-links}}
+      <div class="list-group">
+        <a href="#" class="list-group-item list-group-item-action" data-toggle="modal" data-target="#modalDocuments">{{> atoms-fonticon-item(icon-label: "019-document")}} Consulter les documents nécessaires</a>
+        <a href="#tarifs" class="list-group-item list-group-item-action js-scroll-trigger">{{> atoms-fonticon-item(icon-label: "113-prix")}} Consulter les tarifs</a>
+      </div>
+      {{/ has-links}}
+      {{# has-mode-paiement}}
+      <h3>Mode de paiement acceptés</h3>
+      <ul>
+        <li>Argent comptant</li>
+        <li>Carte de débit ou de crédit (MasterCard, Visa)</li>
+        <li>Chèque ou mandat à l'ordre de la Ville de Montréal</li>
+      </ul>
+      {{/ has-mode-paiement}}
+      {{# has-call-to-action}}
+      <a href="#" class="btn btn-sm btn-primary">Appel à l'action</a>
+      {{/ has-call-to-action}}
     </div>
   </div>
 </div>

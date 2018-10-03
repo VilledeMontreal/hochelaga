@@ -4,15 +4,24 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](http://keepachangelog.com/en/1.0.0/)
 and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.html).
 
-## [2.0.0] - Unreleased
+## [2.1.0] - unreleased
 
 ## Added
-- Added Evenement templates.
+- Added templates and variantes for Collectes.
+
+## Changed
+- Changed json structure for sidebar elements (patternlab only).
+
+## [2.0.0] - 2018-09-28
+
+## Added
+- Added Evenement templates and status variants.
 - Added Map integration exemples for mapbox inside evenement.
 - Added content header variants for evenement needs.
 - Added Media-gallery organisms. Work in progress.
 - Added Cards variant for Evenement content type.
 - Added data in the Démarche templates (canaux, documents).
+- Added list-group links in molecules > list groups.
 
 ## Changed
 - Changed badges styles and moved badges to atoms.
@@ -190,6 +199,7 @@ remove index from the name. Which makes it possible to update font-icon without 
 ### Removed
 - Removed vdm prefix for buttons classes
 
+[2.0.0]: https://bitbucket.org/villemontreal/boite-outils-web/src/2.0.0/
 [1.3.0]: https://bitbucket.org/villemontreal/boite-outils-web/src/1.3.0/
 [1.2.0]: https://bitbucket.org/villemontreal/boite-outils-web/src/1.2.0/
 [1.1.0]: https://bitbucket.org/villemontreal/boite-outils-web/src/1.1.0/
