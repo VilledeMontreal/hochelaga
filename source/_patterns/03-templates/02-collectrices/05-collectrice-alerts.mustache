@@ -17,37 +17,27 @@
           <div class="form-group">
             <div class="input-group-icon input-group-icon-left">
               {{> atoms-fonticon-item(icon-label: "002-recherche") }}
-              <input type="text" class="form-control" id="text-icon-left" placeholder="Rechercher une information ou un service">
+              <input type="text" class="form-control form-control-lg form-control-dark" id="text-icon-left" placeholder="Rechercher un avis ou une alerte">
             </div>
           </div>
         </div>
-
+        {{# cards }}
         <div class="col-12">
           <ul class="date-list">
+            {{# items }}
             <li>
+              {{# date }}
               <h2 class="date day-month">
-                <span class="day">29</span>Mars
+                <span class="day">{{ day }}</span>{{ month}}
               </h2>
-              {{# cards }}
+              {{/ date}}
               <div class="cards {{ cards.classes }}">
-              {{# cards.card-item-block-1 }}
+              {{# item }}
                 {{> molecules-card-item }}
-              {{/ cards.card-item-block-1 }}
+              {{/ item }}
               </div>
-              {{/ cards }}
             </li>
-            <li>
-              <h2 class="date day-month">
-                <span class="day">28</span>Mars
-              </h2>
-              {{# cards }}
-              <div class="cards {{ cards.classes }}">
-              {{# cards.card-item-block-2 }}
-                {{> molecules-card-item }}
-              {{/ cards.card-item-block-2 }}
-              </div>
-              {{/ cards }}
-            </li>
+            {{/ items }}
           </ul>
           
           {{# hasPagination }}
@@ -55,6 +45,7 @@
           {{/ hasPagination }}
 
         </div>
+        {{/ cards }}
       </div>
     </div>
   </section>

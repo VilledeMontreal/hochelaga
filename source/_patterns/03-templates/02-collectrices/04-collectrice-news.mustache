@@ -8,19 +8,20 @@
   <section class="page-section bg-gray-sky">
     <div class="container">
       <div class="row">
-        <div class="col-12">
-          {{# cards.headings }}
-          <h2 class="{{ cards.headings.class }}">{{ cards.headings.text }}</h2>
-          {{/ cards.headings }}
-        </div>
-
+        
         <div class="col-12 col-lg-6">
           <div class="form-group">
             <div class="input-group-icon input-group-icon-left">
               {{> atoms-fonticon-item(icon-label: "002-recherche") }}
-              <input type="text" class="form-control" id="text-icon-left" placeholder="Rechercher une information ou un service">
+              <input type="text" class="form-control form-control-lg form-control-dark" id="text-icon-left" placeholder="Rechercher une actualité">
             </div>
           </div>
+        </div>
+
+        <div class="col-12">
+          {{# cards.headings }}
+          <h2 class="{{ cards.headings.class }}">{{ cards.headings.text }}</h2>
+          {{/ cards.headings }}
         </div>
 
         <div class="col-12">
