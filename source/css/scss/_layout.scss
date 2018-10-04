@@ -230,7 +230,8 @@
 }
 // Borough selection section inside lead-container
 // @see demarche (how to) templates
-.section-select-arron {
+.section-select-arron,
+.section-lead {
   @include media-breakpoint-down(md) {
     > div + div {
       margin-top: 2rem;
@@ -238,7 +239,9 @@
   }
 }
 
-.select-arron {
+.select-arron,
+.lead-left-content,
+.lead-right-content {
   .label {
     display: block;
     margin-bottom: 1rem;
@@ -258,10 +261,20 @@
     }
   }
 
-  @include media-breakpoint-up(lg) {
+}
+.lead-left-content {
+    @include media-breakpoint-up(lg) {
     border-right: 1px solid $gray-400;
     padding-right: 3.375rem;
     margin-right:  3.375rem;
+    height: 100%;
+  }
+}
+.lead-right-content {
+  @include media-breakpoint-up(lg) {
+    border-left: 1px solid $gray-400;
+    padding-left: 3.375rem;
+    margin-left:  3.375rem;
     height: 100%;
   }
 }

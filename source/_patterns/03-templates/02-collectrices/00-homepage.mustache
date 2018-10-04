@@ -12,17 +12,32 @@
             <p>Notre nouveau site prend forme.</p>
             <p>Vous y trouverez de l’information pratique sur certains sujets et de nouveaux services personnalisés qui seront bonifiés régulièrement.</p>
             <p>Dites-nous ce que vous en pensez!</p>
-            <a href="#services" data-smooth-scrolling="true" class="link-scrollto">Découvrez-le{{> atoms-fonticon-item(icon-label: "057-chevron-bas") }}</a>
+            <a href="#services" data-smooth-scrolling="true" class="js-scroll-trigger link-scrollto">Découvrez-le{{> atoms-fonticon-item(icon-label: "057-chevron-bas") }}</a>
           </div>
         </div>
       </div>
     </div>
   </section>
 
-  <img src="https://res.cloudinary.com/villemontreal/image/upload/v1/portail/lqh3zdw8tzd8zj8jtxmy.jpg" alt="Pause Bixi au bord du canal Lachine" title="" class="img-hero img-fluid">
+  <img class="w-100" src="https://res.cloudinary.com/villemontreal/image/upload/v1/portail/lqh3zdw8tzd8zj8jtxmy.jpg" alt="Pause Bixi au bord du canal Lachine" title="">
 
   {{# featuredSection}}
-    {{> molecules-card }}
+  <section class="page-section {{cards.section-classes}}" id="services">
+  <div class="container">
+    <div class="row cards {{ cards.classes }}">
+      {{# cards.headings}}
+      <div class="col-12">
+        <h2 class="{{ cards.headings.class }}">{{ cards.headings.text }}</h2>
+      </div>
+      {{/ cards.headings}}
+      {{# cards.card-item}}
+      <div class="{{ cards.bsgrid-classes }}">
+        {{> molecules-card-item }}
+      </div>
+      {{/ cards.card-item}}
+    </div>
+  </div>
+</section>
   {{/ featuredSection}}
 
   {{# nouvellesListes }}
@@ -88,6 +103,8 @@
   </section>
   {{/ homePromo}}
   -->
+
+  {{> organisms-feedback-form}}
 
 </main>
 

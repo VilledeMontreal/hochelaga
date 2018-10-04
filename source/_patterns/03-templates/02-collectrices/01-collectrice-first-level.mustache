@@ -13,7 +13,15 @@
   <!-- Begin main-content region-->
   <div id="navTop" class="region-content {{ regionMainClasses }}">
     {{# servicesSection}}
-      {{> molecules-card }}
+    <div class="container">
+      <div class="row cards {{ cards.classes }}">
+        {{# cards.card-item}}
+        <div class="{{ cards.bsgrid-classes }}">
+          {{> molecules-card-item }}
+        </div>
+        {{/ cards.card-item}}
+      </div>
+    </div>
     {{/ servicesSection}}
   </div>
 

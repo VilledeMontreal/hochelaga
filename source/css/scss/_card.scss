@@ -217,6 +217,8 @@
         padding: 2rem;
         .vdm {
           font-size: 3.5rem;
+          margin-left: 2rem;
+          margin-right: 2rem;
         }
       }
     }
@@ -378,6 +380,8 @@
       }
     }
     @include media-breakpoint-up(lg) {
+      flex-direction: row;
+      align-items: center;
       .card-img-top {
         @include make-col(6);
         margin: 0;

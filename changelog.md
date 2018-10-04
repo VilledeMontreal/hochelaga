@@ -11,6 +11,14 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 
 ## Changed
 - Changed json structure for sidebar elements (patternlab only).
+- Changed class name from .select-arron to lead-left-content or .lead-right-content and updated lead molecule.
+- Collectrices updated: nouvelles, avis et alertes, 1er niveau, 2e niveau.
+- Updated Homepage data and structure.
+- Updated Feedback form spacing.
+
+## Deprecated
+- .section-select-arron and .select-arron have been replaced with more generc classes .section-lead and .lead-right-content or .lead-left-content in layout.scss. Changes are reflected in the lead molecule.
+
 
 ## [2.0.0] - 2018-09-28
 

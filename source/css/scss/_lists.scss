@@ -165,6 +165,7 @@ ol {
     margin-bottom: 0;
   }
   > li {
+    margin-bottom: 2rem;
     .date {
       margin-bottom: 1.5rem;
     }
@@ -202,11 +203,13 @@ ol {
     margin-bottom: 0;
   }
   a {
-    @extend .h5;
+    font-size: $font-size-xl;
+    font-weight: $font-weight-bold;
+    line-height: 1.3333;
     border: none;
-    color: $primary;
+    //color: $sarcelle-surprise;
     display: inline-block;
-    margin-bottom: 1rem;
+    margin-bottom: .5rem;
   }
   p {
     margin-bottom: 1rem;
