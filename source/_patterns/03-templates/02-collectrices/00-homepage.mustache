@@ -64,9 +64,9 @@
   </section>
   {{/ nouvellesListes}}
 
-<!--
   {{# homePromo}}
-  <section class="">
+  <section class="section-promo">
+    {{# promo-featured-card }}
     <div class="home-promo">
       <div class="row no-gutters card card-fluid card-featured">
         <div class="col-xs-12 col-lg-5 card-bg-image" style="background:url(https://picsum.photos/768/480?image=1033) right center / cover no-repeat"></div>
@@ -81,28 +81,28 @@
         </div>
       </div>
     </div>
+    {{/ promo-featured-card }}
+    {{# promo-full-width }}
     <div class="home-promo">
-      <div class="row no-gutters card card-fluid card-featured">
-        <div class="col-xs-12 col-lg-5 card-bg-image order-lg-2">
-          <img src="https://res.cloudinary.com/villemontreal/image/upload/v1/portail/eonsir6ecilo7r74sc3e.jpg" class="img-fluid" alt="Un main qui tient un téléphone intelligent" title="">
-        </div>
-        <div class="col-xs-12 col-lg-7 order-lg-1">
-          <div class="card-body">
-            <span class="card-title">Découvrez l’application Montréal - Services aux citoyens</span>
-            <div class="card-text">
+      <div class="container">
+        <div class="row no-gutters">
+          <div class="col-12 col-lg-6">
+            <div class="featured-content">
+              <h2>Découvrez l’application Montréal - Services aux citoyens</h2>
               <p>Recevez nos avis et alertes de sécurité par texto et courriel.</p>
               <p>Signalez-nous un problème tel un nid-de-poule ou un graffiti.</p>
-            </div>
-            <div class="card-footer">
               <a href="#" class="btn btn-primary" title="Call to action">Call to action</a>
             </div>
+          </div>
+          <div class="col-12 col-lg-6">
+            <img src="https://res.cloudinary.com/villemontreal/image/upload/v1/portail/eonsir6ecilo7r74sc3e.jpg" class="img-fluid" alt="Un main qui tient un téléphone intelligent" title="">
           </div>
         </div>
       </div>
     </div>
+    {{/ promo-full-width }}
   </section>
   {{/ homePromo}}
-  -->
 
   {{> organisms-feedback-form}}
 
