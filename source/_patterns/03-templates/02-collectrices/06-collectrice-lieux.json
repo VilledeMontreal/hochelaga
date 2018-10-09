@@ -18,85 +18,109 @@
       "formControlClass": "form-control-lg form-control-dark"
     }
   },
-  "cards": {
-    "section-classes": "bg-gray-sky",
-    "classes": "pt-3",
-    "bsgrid-classes": "col-12",
+  "list-group-results": {
     "headings": {
-      "class": "h4",
-      "text": "56 résultats"
+      "text": "58 résultats"
     },
-    "card-item": [
+    "listGroupClass": "list-group-hub mb-5",
+    "listGroup": [
       {
-        "classes": "card-fw card-link",
         "url": "#",
-        "card-title": "Titre du lieu #1",
-        "card-text":
-          "Catérogie du lieu - Arrondissement",
-        "card-media": {
-          "classes" : false,
-          "icon": false
-        },
-        "footer" : {
-          "outside-body": true
+        "title": "Bibliothèque Jean-Corbeil",
+        "infos": {
+          "infos-items": [
+            {
+              "class": false,
+              "text": "Bibliothèque"
+            },
+            {
+              "class": "text-dark separator-brand",
+              "text": "Anjou"
+            }
+          ]
         }
       },
       {
-        "classes": "card-fw card-link",
         "url": "#",
-        "card-title": "Titre du lieu #2",
-        "card-text":
-          "Catérogie du lieu - Arrondissement",
-        "card-media": {
-          "classes" : false,
-          "icon": false
-        },
-        "footer" : {
-          "outside-body": true
+        "title": "Bibliothèque Langelier",
+        "infos": {
+          "infos-items": [
+            {
+              "class": false,
+              "text": "Bibliothèque"
+            },
+            {
+              "class": "text-dark separator-brand",
+              "text": "Mercier–Hochelaga-Maisonneuve"
+            }
+          ]
         }
       },
       {
-        "classes": "card-fw card-link",
         "url": "#",
-        "card-title": "Titre du lieu #3",
-        "card-text":
-          "Catérogie du lieu - Arrondissement",
-        "card-media": {
-          "classes" : false,
-          "icon": false
-        },
-        "footer" : {
-          "outside-body": true
+        "title": "Bibliothèque Père-Ambroise",
+        "infos": {
+          "infos-items": [
+            {
+              "class": false,
+              "text": "Bibliothèque"
+            },
+            {
+              "class": "text-dark separator-brand",
+              "text": "Ville-Marie"
+            }
+          ]
         }
       },
       {
-        "classes": "card-fw card-link",
         "url": "#",
-        "card-title": "Titre du lieu #4",
-        "card-text":
-          "Catérogie du lieu - Arrondissement",
-        "card-media": {
-          "classes" : false,
-          "icon": false
-        },
-        "footer" : {
-          "outside-body": true
+        "title": "Bibliothèque de la maison culturelle et communautaire",
+        "infos": {
+          "infos-items": [
+            {
+              "class": false,
+              "text": "Bibliothèque"
+            },
+            {
+              "class": "text-dark separator-brand",
+              "text": "Montréal-Nord"
+            }
+          ]
         }
       },
       {
-        "classes": "card-fw card-link",
         "url": "#",
-        "card-title": "Titre du lieu #5",
-        "card-text": "Catérogie du lieu - Arrondissement",
-        "card-media": {
-          "classes" : false,
-          "icon": false
-        },
-        "footer" : {
-          "outside-body": true
+        "title": "Bibliothèque de Rosemont",
+        "infos": {
+          "infos-items": [
+            {
+              "class": false,
+              "text": "Bibliothèque"
+            },
+            {
+              "class": "text-dark separator-brand",
+              "text": "Rosemont–La Petite-Patrie"
+            }
+          ]
+        }
+      },
+      {
+        "url": "#",
+        "title": "Grande Bibliothèque - Bibliothèque et Archives nationales du Québec",
+        "infos": {
+          "infos-items": [
+            {
+              "class": false,
+              "text": "Bibliothèque"
+            },
+            {
+              "class": "text-dark separator-brand",
+              "text": "Ville-Marie"
+            }
+          ]
         }
       }
     ]
-  }
-  
+  },
+  "cards": false
 }

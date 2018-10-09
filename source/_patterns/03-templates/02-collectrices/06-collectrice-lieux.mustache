@@ -10,10 +10,49 @@
   {{> molecules-lead }}
   {{/ has-lead-text}}
 
-  <section class="map-section bg-gray-sky pt-8">
+  <section class="page-section pt-0 pb-4">
     <div class="container-fluid">
       <div class="row">
         <div class="col-12 col-lg-4">
+          {{# list-group-results }}
+          {{# headings }}
+          <h2 class="list-group-heading">{{ headings.text }}</h2>
+          {{/ headings }}
+          {{> molecules-list-group-hub}}
+          <!--
+          <div class="list-group list-group-hub">
+            <a href="#" class="list-group-item list-group-item-action flex-column align-items-start">
+              <span class="list-group-item-title">Bibliothèque Jean-Corbeil</span>
+              <span>Bibliothèque - Anjou</span>
+            </a>
+            <a href="#" class="list-group-item list-group-item-action flex-column align-items-start">
+              <span class="list-group-item-title">Bibliothèque Langelier</span>
+              <span>Mercier–Hochelaga-Maisonneuve<span><span>Bibliothèque</span>
+            </a>
+            <a href="#" class="list-group-item list-group-item-action flex-column align-items-start">
+              <span class="list-group-item-title">Bibliothèque Père-Ambroise</span>
+              <span>Bibliothèque - Ville-Marie</span>
+            </a>
+            <a href="#" class="list-group-item list-group-item-action flex-column align-items-start">
+              <span class="list-group-item-title">Bibliothèque de la maison culturelle et communautaire</span>
+              <span>Bibliothèque - Montréal-Nord</span>
+            </a>
+            <a href="#" class="list-group-item list-group-item-action flex-column align-items-start">
+              <span class="list-group-item-title">Bibliothèque de Rosemont</span>
+              <span>Bibliothèque - Rosemont–La Petite-Patrie</span>
+            </a>
+            <a href="#" class="list-group-item list-group-item-action flex-column align-items-start">
+              <span class="list-group-item-title">Grande Bibliothèque - Bibliothèque et Archives nationales du Québec</span>
+              <span>Bibliothèque - Ville-Marie</span>
+            </a>
+          </div>
+          -->
+
+          {{# hasPagination }}
+            {{> molecules-pagination("paginationClass": justify-content-center) }}
+          {{/ hasPagination }}
+
+          {{/ list-group-results }}
 
           {{# cards }}
           <div class="row cards {{ cards.classes }}">
