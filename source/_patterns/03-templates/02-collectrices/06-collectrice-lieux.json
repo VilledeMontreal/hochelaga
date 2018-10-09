@@ -15,7 +15,75 @@
   },
   "formAttributes": {
     "select": {
-      "formControlClass": "form-control-lg form-control-dark"
+      "id": "lieux-categories",
+      "formControlClass": "form-control-lg form-control-dark",
+      "defaultOptionLabel": "Catégorie",
+      "options": [
+        {
+          "option-text": "Aréna",
+          "option-value": "arena"  
+        },
+        {
+          "option-text": "Bibliothèque",
+          "option-value": "bibliotheque"  
+        },
+        {
+          "option-text": "Centre communautaire",
+          "option-value": "centre-communautaire"  
+        },
+        {
+          "option-text": "Centre culturel",
+          "option-value": "centre-culturel"  
+        },
+        {
+          "option-text": "Centre sportif",
+          "option-value": "centre-sportif"  
+        },
+        {
+          "option-text": "Cour de voirie",
+          "option-value": "cour-de-voirie"  
+        },
+        {
+          "option-text": "Éco-centre",
+          "option-value": "eco-centre"  
+        },
+        {
+          "option-text": "Éco-quartier",
+          "option-value": "eco-quartier"  
+        },
+        {
+          "option-text": "Hôtel de ville",
+          "option-value": "hotel-de-ville"  
+        },
+        {
+          "option-text": "Mairie d'arrondissement",
+          "option-value": "mairie-darrondissement"  
+        },
+        {
+          "option-text": "Musée",
+          "option-value": "musee"  
+        },
+        {
+          "option-text": "Parc",
+          "option-value": "parc"  
+        },
+        {
+          "option-text": "Parc à chiens",
+          "option-value": "parc-a-chiens"  
+        },
+        {
+          "option-text": "Piscine intérieure",
+          "option-value": "piscine-interieure"  
+        },
+        {
+          "option-text": "Point de service",
+          "option-value": "point-de-service"  
+        },
+        {
+          "option-text": "Refuge animalier",
+          "option-value": "refuge-animalier"
+        }
+      ]
     }
   },
   "list-group-results": {
