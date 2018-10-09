@@ -1,0 +1,194 @@
+{
+  "regionMainClasses" : "",
+  "regionMainContentClasses" : "",
+  "has-lead-text" : false,
+  "lead-text": "La Ville publie des alertes en cas d'urgence. En tout temps, elle informe aussi les citoyens de situations qui peuvent avoir un impact sur leur quotidien, selon les sujets qu’ils ont sélectionnés (avis d’ébullition d’eau, travaux, fermeture de piscine, etc.). En savoir plus sur les <a href=\"#\">avis et alertes</a>.",
+  "hasPagination": true,
+  "text-elements": {
+    "headings": {
+      "display": {
+        "tag": "h1",
+        "classes": "display-1",
+        "content": "Collectrice Trouver un lieu"
+      }
+    }
+  },
+  "formAttributes": {
+    "select": {
+      "id": "lieux-categories",
+      "formControlClass": "form-control-lg form-control-dark",
+      "defaultOptionLabel": "Catégorie",
+      "options": [
+        {
+          "option-text": "Aréna",
+          "option-value": "arena"  
+        },
+        {
+          "option-text": "Bibliothèque",
+          "option-value": "bibliotheque"  
+        },
+        {
+          "option-text": "Centre communautaire",
+          "option-value": "centre-communautaire"  
+        },
+        {
+          "option-text": "Centre culturel",
+          "option-value": "centre-culturel"  
+        },
+        {
+          "option-text": "Centre sportif",
+          "option-value": "centre-sportif"  
+        },
+        {
+          "option-text": "Cour de voirie",
+          "option-value": "cour-de-voirie"  
+        },
+        {
+          "option-text": "Éco-centre",
+          "option-value": "eco-centre"  
+        },
+        {
+          "option-text": "Éco-quartier",
+          "option-value": "eco-quartier"  
+        },
+        {
+          "option-text": "Hôtel de ville",
+          "option-value": "hotel-de-ville"  
+        },
+        {
+          "option-text": "Mairie d'arrondissement",
+          "option-value": "mairie-darrondissement"  
+        },
+        {
+          "option-text": "Musée",
+          "option-value": "musee"  
+        },
+        {
+          "option-text": "Parc",
+          "option-value": "parc"  
+        },
+        {
+          "option-text": "Parc à chiens",
+          "option-value": "parc-a-chiens"  
+        },
+        {
+          "option-text": "Piscine intérieure",
+          "option-value": "piscine-interieure"  
+        },
+        {
+          "option-text": "Point de service",
+          "option-value": "point-de-service"  
+        },
+        {
+          "option-text": "Refuge animalier",
+          "option-value": "refuge-animalier"
+        }
+      ]
+    }
+  },
+  "list-group-results": {
+    "headings": {
+      "text": "58 résultats"
+    },
+    "listGroupClass": "list-group-hub mb-5",
+    "listGroup": [
+      {
+        "url": "#",
+        "title": "Bibliothèque Jean-Corbeil",
+        "infos": {
+          "infos-items": [
+            {
+              "class": false,
+              "text": "Bibliothèque"
+            },
+            {
+              "class": "text-dark separator-brand",
+              "text": "Anjou"
+            }
+          ]
+        }
+      },
+      {
+        "url": "#",
+        "title": "Bibliothèque Langelier",
+        "infos": {
+          "infos-items": [
+            {
+              "class": false,
+              "text": "Bibliothèque"
+            },
+            {
+              "class": "text-dark separator-brand",
+              "text": "Mercier–Hochelaga-Maisonneuve"
+            }
+          ]
+        }
+      },
+      {
+        "url": "#",
+        "title": "Bibliothèque Père-Ambroise",
+        "infos": {
+          "infos-items": [
+            {
+              "class": false,
+              "text": "Bibliothèque"
+            },
+            {
+              "class": "text-dark separator-brand",
+              "text": "Ville-Marie"
+            }
+          ]
+        }
+      },
+      {
+        "url": "#",
+        "title": "Bibliothèque de la maison culturelle et communautaire",
+        "infos": {
+          "infos-items": [
+            {
+              "class": false,
+              "text": "Bibliothèque"
+            },
+            {
+              "class": "text-dark separator-brand",
+              "text": "Montréal-Nord"
+            }
+          ]
+        }
+      },
+      {
+        "url": "#",
+        "title": "Bibliothèque de Rosemont",
+        "infos": {
+          "infos-items": [
+            {
+              "class": false,
+              "text": "Bibliothèque"
+            },
+            {
+              "class": "text-dark separator-brand",
+              "text": "Rosemont–La Petite-Patrie"
+            }
+          ]
+        }
+      },
+      {
+        "url": "#",
+        "title": "Grande Bibliothèque - Bibliothèque et Archives nationales du Québec",
+        "infos": {
+          "infos-items": [
+            {
+              "class": false,
+              "text": "Bibliothèque"
+            },
+            {
+              "class": "text-dark separator-brand",
+              "text": "Ville-Marie"
+            }
+          ]
+        }
+      }
+    ]
+  },
+  "cards": false
+}

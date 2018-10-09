@@ -187,6 +187,17 @@
       font-size: $font-size-base;
       font-weight: $font-weight-bold;
     }
+
+    // full width get bigger title
+    &.card-fw {
+      .card-title {
+        @include card-heading();
+        margin-bottom: 1rem;
+        &:last-child {
+          margin-bottom: 0;
+        }
+      }
+    }
   }
 
   // Row layout is used for icon placement to the left or right at larger breakpoint
