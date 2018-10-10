@@ -1,0 +1,55 @@
+{{> atoms-link-skip-to-main-content }}
+{{> organisms-header-portal }}
+
+<main class="main-content {{ pageClasses }}" id="main-content" aria-label="Main Content">
+
+  {{> organisms-content-header }}
+
+    <!-- Teaser -->
+  {{# has-lead-text}}
+  {{> molecules-lead }}
+  {{/ has-lead-text}}
+
+  <section class="page-section bg-gray-sky">
+    <div class="container">
+      <div class="row">
+        <div class="col-12 col-lg-6">
+          <div class="form-group">
+            <div class="input-group-icon input-group-icon-left">
+              {{> atoms-fonticon-item(icon-label: "002-recherche") }}
+              <input type="text" class="form-control form-control-lg form-control-dark" id="text-icon-left" placeholder="Rechercher un avis ou une alerte">
+            </div>
+          </div>
+        </div>
+        {{# cards }}
+        <div class="col-12">
+          <ul class="date-list">
+            {{# items }}
+            <li>
+              {{# date }}
+              <h2 class="date day-month">
+                <span class="day">{{ day }}</span>{{ month}}
+              </h2>
+              {{/ date}}
+              <div class="cards {{ cards.classes }}">
+              {{# item }}
+                {{> molecules-card-item }}
+              {{/ item }}
+              </div>
+            </li>
+            {{/ items }}
+          </ul>
+          
+          {{# hasPagination }}
+            {{> molecules-pagination("paginationClass": justify-content-center) }}
+          {{/ hasPagination }}
+
+        </div>
+        {{/ cards }}
+      </div>
+    </div>
+  </section>
+</main>
+
+{{> organisms-footer-portal }}
+

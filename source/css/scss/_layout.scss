@@ -7,7 +7,7 @@
 
 // Main content header
 .content-header {
-  padding-top: 5rem;
+  padding-top: 4rem;
   .container-fluid {
     max-width: map-get($content-max-widths, xl);
   }
@@ -53,62 +53,70 @@
   &-metadata {
     color: $gray-600;
     font-size: $font-size-lg;
-    //padding-bottom: 2rem;
-    .hub-link {
-      padding-top: 1rem;
-      a {
-        color: $gray-ink;
-        @include transition(color .15s ease-in-out);
-        @include hover-focus {
-          color: $sarcelle;
-        }
+  }
+
+  // Hub link
+  .hub-link {
+    color: $gray-600;
+    font-size: $font-size-lg;
+    padding-bottom: 2rem;
+    a {
+      color: $gray-ink;
+      @include transition(color .15s ease-in-out);
+      @include hover-focus {
+        color: $sarcelle;
       }
     }
+    // 992px and up
+    @include media-breakpoint-up(xl) {
+      display: flex;
+      flex-flow: row wrap;
+      justify-content: flex-end;
+      padding-bottom: 0;
+    }
+  }
 
-    .metadata-infos {
-      color: $headings-color;
-      font-weight: $font-weight-bold;
+  // used for specific contente header infos like Evenement
+  .metadata-infos {
+    color: $headings-color;
+    font-weight: $font-weight-bold;
+    > * {
+      margin-bottom: .5rem;
+      &:last-child {
+        margin-bottom: 0;
+      }
+    }
+    .infos-event {
+      vertical-align: middle;
       > span {
         display: block;
-
-        &.infos-lieu {
-          font-weight: $font-weight-normal;
-
-        }
       }
-    }
-
-    // 992px and up
-    @include media-breakpoint-up(lg) {
-      .hub-link {
-        display: flex;
-        flex-flow: row wrap;
-        justify-content: flex-end;
-        padding-top: 0;
+      .infos-lieu {
+        font-weight: $font-weight-normal;
       }
     }
 
     // 1200px and up
-    @include media-breakpoint-up(xl) {
-      .metadata-infos {
+    @include media-breakpoint-up(lg) {
+      > * {
+        margin-right: 1rem;
+        margin-bottom: 0;
+      }
+      .infos-event {
+        display: inline-block;
         > span {
           display: inline-block;
           margin-right: 1rem;
-          &.infos-lieu {
-            &:before {
-              content: "—";
-              margin-right: 1rem;
-            }
+          &:last-child {
+            margin-right: 0;
           }
         }
-      }
-    }
-
-    // 575px and down
-    @include media-breakpoint-down(xs){
-      padding-bottom: 0;
-      > div + div {
-        margin-top: .5rem;
+        .infos-lieu {
+          &:before {
+            content: "—";
+            margin-right: 1rem;
+          }
+        }
       }
     }
   }
@@ -120,11 +128,9 @@
       margin: 0 auto 30px auto;
       max-width: 250px;
     }
-    .content-header-metadata {
-      padding-bottom: 2.5rem;
-      .hub-link {
-        justify-content: flex-start;
-      }
+    .hub-link {
+      justify-content: flex-start;
+      padding-bottom: 2rem;
     }
     .content-header-infos {
       color: $headings-color;
@@ -166,6 +172,10 @@
 .page-section {
   padding-top: 3rem;
   padding-bottom: 3rem;
+}
+// Use page-section-anchor to get padding over the section with sticky anchor nav
+.page-section-anchor {
+  padding-top: 2rem;
 }
 .section-heading {
   margin-bottom: 2rem;
@@ -220,7 +230,8 @@
 }
 // Borough selection section inside lead-container
 // @see demarche (how to) templates
-.section-select-arron {
+.section-select-arron,
+.section-lead {
   @include media-breakpoint-down(md) {
     > div + div {
       margin-top: 2rem;
@@ -228,7 +239,9 @@
   }
 }
 
-.select-arron {
+.select-arron,
+.lead-left-content,
+.lead-right-content {
   .label {
     display: block;
     margin-bottom: 1rem;
@@ -248,10 +261,20 @@
     }
   }
 
-  @include media-breakpoint-up(lg) {
+}
+.lead-left-content {
+    @include media-breakpoint-up(lg) {
     border-right: 1px solid $gray-400;
     padding-right: 3.375rem;
     margin-right:  3.375rem;
+    height: 100%;
+  }
+}
+.lead-right-content {
+  @include media-breakpoint-up(lg) {
+    border-left: 1px solid $gray-400;
+    padding-left: 3.375rem;
+    margin-left:  3.375rem;
     height: 100%;
   }
 }
@@ -573,11 +596,10 @@
       display: block;
     }
   }
-  .no-icon {
-    display: flex;
-    align-items: flex-start;
-    &.left {
-      padding-left: 2rem;
+  .social-media-list-icons {
+    padding-left: 2rem;
+    .vdm {
+      color: $gray-ink;
     }
   }
 }

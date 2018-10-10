@@ -1,0 +1,133 @@
+{
+  "pageClasses": "",
+  "regionMainClasses": "",
+  "regionMainContainerClasses": "",
+  "regionMainContentClasses": "",
+  "regionBeforeClasses": "page-section bg-gray-sky",
+  "has-lead-text" : true,
+  "hasPagination": true,
+  "top-banner": {
+    "class": false
+  },
+  "featuredSection": {
+    "cards": {
+      "section-classes": "bg-gray-sky",
+      "classes": false,
+      "bsgrid-classes": "col-12 col-md-6 col-lg-4",
+      "headings": {
+        "text": "Je veux",
+        "class": "section-heading"
+      },
+      "card-item" : [
+        {
+          "classes" : false,
+          "url" : "#",
+          "card-title" : "Recevoir des avis et alertes",
+          "card-text" : false,
+          "card-media" : {
+            "icon" : "vdm-093-porte-voix"
+          }
+        },
+        {
+          "classes" : false,
+          "url" : "#",
+          "card-title" : "Faire une demande de service en ligne",
+          "card-text" : false,
+          "card-media" : {
+            "icon" : "vdm-103-311-mobile"
+          }
+        },
+        {
+          "classes" : false,
+          "url" : "#",
+          "card-title" : "Payer ou contester un constat d'infraction",
+          "card-text" : false,
+          "card-media" : {
+            "icon" : "vdm-020-carte-de-credit"
+          }
+        },
+        {
+          "classes" : false,
+          "url" : "#",
+          "card-title" : "Demander une vignette de stationnement sur rue réservé aux résidents (SRRR)",
+          "card-text" : false,
+          "card-media" : {
+            "icon" : "vdm-094-permis-stationnement"
+          }
+        },
+        {
+          "classes" : false,
+          "url" : "#",
+          "card-title" : "Obtenir ou renouveller un permis pour chien",
+          "card-text" : false,
+          "card-media" : {
+            "icon" : "vdm-083-permis-animal-chien"
+          }
+        },
+        {
+          "classes" : false,
+          "url" : "#",
+          "card-title" : "Obtenir ou renouveller un permis pour chat",
+          "card-text" : false,
+          "card-media" : {
+            "icon" : "vdm-096-permis-animal-chat"
+          }
+        }
+      ]
+    }
+  },
+  "nouvellesListes": {
+    "cards": {
+      "classes": "",
+      "bsgrid-classes": "col-12",
+      "headings": {
+        "text": "Nouvelles",
+        "class": "section-heading"
+      },
+      "card-item": [
+        {
+          "classes": "card-fw card-row-layout",
+          "url": "#",
+          "card-date": "20 février 2018",
+          "card-title": "Card with a very long title. Footer is place to the right for larger breakpoint. How do we handle the arrow placement?",
+          "card-media" : {
+            "icon" : false,
+            "img" : {
+              "url" : "https://picsum.photos/768/480?image=1074",
+              "alt" : "Card #1 img alt."
+            }
+          }
+        },
+        {
+          "classes": "card-fw card-row-layout",
+          "url": "#",
+          "card-date": "20 février 2018",
+          "card-title": "Card with a very long title. Footer is place to the right for larger breakpoint. How do we handle the arrow placement?",
+          "card-media": {
+            "classes" : false,
+            "icon": false
+          },
+          "footer" : {
+            "outside-body": true
+          }
+        },
+        {
+          "classes": "card-fw card-row-layout",
+          "url": "#",
+          "card-date": "18 février 2018",
+          "card-title": "Card title",
+          "card-text": false,
+          "card-media" : {
+            "icon" : false,
+            "img" : {
+              "url" : "https://picsum.photos/768/480?image=1044",
+              "alt" : "Card #2 img alt."
+            }
+          }
+        }
+      ]
+    }
+  },
+  "homePromo": true,
+  "promo-full-width": false
+}

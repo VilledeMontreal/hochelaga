@@ -22,6 +22,10 @@ legend,
   }
 }
 
+.form-control-dark {
+  border-color: $gray-500;
+}
+
 // Set label color
 .form-group label,
 .custom-control-label {
@@ -536,9 +540,9 @@ legend,
   background: $white;
   //border: 1px solid $card-border-color;
   box-shadow: 0 1px 7px 0 rgba(0,0,0,0.12);
-  margin-top: 2.5rem;
-  margin-bottom: 2.5rem;
-  padding: 1.5rem 2rem;
+  margin-top: 3rem;
+  margin-bottom: 3rem;
+  padding: 2rem 2rem;
 
   .feedback-form-header {
     display: flex;
@@ -559,7 +563,7 @@ legend,
   }
 
   @include media-breakpoint-up(md) {
-    padding: 1.5rem 4rem;
+    padding: 2rem 4rem 3rem 4rem;
   }
 }
 

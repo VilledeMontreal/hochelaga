@@ -4,26 +4,46 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](http://keepachangelog.com/en/1.0.0/)
 and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.html).
 
-## [1.5.0] - Unreleased
+
+## [2.1.0] - unreleased
+
 
 ## Added
-- Added loader
+- Added templates and variantes for Collectes.
+- Added atoms > feedback > loader
+
+## Changed
+- Changed json structure for sidebar elements (patternlab only).
+- Changed class name from .select-arron to lead-left-content or .lead-right-content and updated lead molecule.
+- Collectrices updated: nouvelles, avis et alertes, 1er niveau, 2e niveau.
+- Updated Homepage data and structure.
+- Updated Feedback form spacing.
+
+## Deprecated
+- .section-select-arron and .select-arron have been replaced with more generc classes .section-lead and .lead-right-content or .lead-left-content in layout.scss. Changes are reflected in the lead molecule.
 
 
-## [1.4.0] - TBC
+## [2.0.0] - 2018-09-28
 
 ## Added
-- Added Evenement templates.
+- Added Evenement templates and status variants.
 - Added Map integration exemples for mapbox inside evenement.
 - Added content header variants for evenement needs.
 - Added Media-gallery organisms. Work in progress.
+- Added Cards variant for Evenement content type.
+- Added data in the Démarche templates (canaux, documents).
+- Added list-group links in molecules > list groups.
 
 ## Changed
 - Changed badges styles and moved badges to atoms.
-- Updated font-icon to v1.1.2 - (113-prix and 114-telecopieur)
+- Changed html markup and classes for content-header to fix responsive issue.
+- Updated font-icon to v1.1.2 - (113-prix and 114-telecopieur).
+- Changed footer theming for a darker version.
+- Changed html markup and styles for list-icon in sidebar and contact block.
 
 ## Removed
 - Removed unused .list-numbered styles and examples.
+- Removed unwanted section in templates (démarche), change section title (sujet).
 
 ## [1.3.0] - 2018-09-13
 
@@ -33,15 +53,15 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 - Added handling of exception to external link (cards, list-icon, social-media-list).
 - Added styling of pdf document with css partial selector.
 - Added same domain (montreal.ca) links and exernal links to show styings.
-- Added molecules > empty states
+- Added molecules > empty states.
 - Added ability to add borough selector inside of lead container (needed for demarche templates).
 
 ## Changed
 - Changed Démarche template.
 - Changed html structure for card-tarif mobile first layout and better responsive handling.
-- Changed font-icon version to 1.1.0 - New icon (112-lien-externe)
+- Changed font-icon version to 1.1.0 - New icon (112-lien-externe).
 - Changed collapsible theming.
-- Changed to list-icon and integration of list-icon in sidebar
+- Changed to list-icon and integration of list-icon in sidebar.
 - Changed link theming in sidebar and list-icon.
 
 ## Deprecated
@@ -190,6 +210,7 @@ remove index from the name. Which makes it possible to update font-icon without 
 ### Removed
 - Removed vdm prefix for buttons classes
 
+[2.0.0]: https://bitbucket.org/villemontreal/boite-outils-web/src/2.0.0/
 [1.3.0]: https://bitbucket.org/villemontreal/boite-outils-web/src/1.3.0/
 [1.2.0]: https://bitbucket.org/villemontreal/boite-outils-web/src/1.2.0/
 [1.1.0]: https://bitbucket.org/villemontreal/boite-outils-web/src/1.1.0/

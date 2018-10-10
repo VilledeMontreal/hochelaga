@@ -36,7 +36,33 @@
 
   .card-date {
     display: inline-block;
-    padding-bottom: 1rem;
+    margin-bottom: 1rem;
+  }
+
+  .card-subheading {
+    margin-bottom: 1rem;
+    > span {
+      display: block;
+      margin-bottom: 0;
+    }
+    .card-date {
+      color: $gray-900;
+      font-weight: $font-weight-bold;
+    }
+    /*
+    span {
+      &:first-child {
+        &:before {
+          content: none;
+        }
+      }
+      &:before {
+        content: "—";
+        color: $brand;
+        margin: 0 .5rem;
+      }
+    }
+    */
   }
 
   .card-title {
@@ -161,6 +187,17 @@
       font-size: $font-size-base;
       font-weight: $font-weight-bold;
     }
+
+    // full width get bigger title
+    &.card-fw {
+      .card-title {
+        @include card-heading();
+        margin-bottom: 1rem;
+        &:last-child {
+          margin-bottom: 0;
+        }
+      }
+    }
   }
 
   // Row layout is used for icon placement to the left or right at larger breakpoint
@@ -191,6 +228,8 @@
         padding: 2rem;
         .vdm {
           font-size: 3.5rem;
+          margin-left: 2rem;
+          margin-right: 2rem;
         }
       }
     }
@@ -210,6 +249,9 @@
 
   // Full-width card override
   &.card-fw {
+    .card-body {
+      align-self: flex-start;
+    }
     @include media-breakpoint-up(lg) {
       .card-img-top {
         margin-left: 1rem;
@@ -349,6 +391,8 @@
       }
     }
     @include media-breakpoint-up(lg) {
+      flex-direction: row;
+      align-items: center;
       .card-img-top {
         @include make-col(6);
         margin: 0;

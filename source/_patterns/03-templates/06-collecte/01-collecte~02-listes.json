@@ -1,0 +1,179 @@
+{
+  "pageClasses": "",
+  "regionMainClasses": "pt-8",
+  "regionMainContainerClasses": "",
+  "regionMainContentClasses": "",
+  "contentHeaderClasses": "",
+  "text-elements": {
+    "headings":{
+      "display":{
+        "content": "Template collecte"
+      }
+    }
+  },
+  "has-header-meta": true,
+  "has-publication-date": true,
+  "has-hub-link": true,
+  "date-time-text": "Mis à jour le 20 septembre 2018",
+  "hub-link-text": "Toutes les collectes",
+  "leadContainerClasses": "",
+  "selectArrondissement": true,
+  "selectedArrondissement": true,
+  "arrondissement": "Rivière-des-Prairies–Pointe-aux-Trembles",
+  "has-lead-text": true,
+  "has-nav-anchors": true,
+  "nav": {
+    "is-sticky": true,
+    "navItem": [
+      {
+        "class": "nav-top",
+        "url": "#navTop",
+        "title": "Haut de page"
+      },
+      {
+        "class": false,
+        "url": "#matieres-acceptees",
+        "title": "Matières acceptées"
+      },
+      {
+        "class": false,
+        "url": "#matieres-refusees",
+        "title": "Matières refusées"
+      },
+      {
+        "class": false,
+        "url": "#contenants-acceptes",
+        "title": "Contenants acceptés"
+      },
+      {
+        "class": false,
+        "url": "#informations",
+        "title": "Plus d'informations"
+      }
+    ]
+  },
+  "has-empty-state": false,
+  "sidebarRight": true,
+  "has-matieres-section": true,
+  "matieres": {
+    "matieres-list-item": [
+      {
+        "id": "matieres-acceptees",
+        "title": "Matières acceptée",
+        "listItem": [
+          {
+            "text": "Feuilles mortes"
+          },
+          {
+            "text": "Rognures de gazon"
+          },
+          {
+            "text": "Citrouilles vidées de leur contenu"
+          },
+          {
+            "text": "Résidus de nettoyage de jardins, de potagers et d'arbres fruitiers"
+          },
+          {
+            "text": "Résidus de déchaumage et de désherbage"
+          },
+          {
+            "text": "Résidus de nettoyage printanier et d'autres travaux d'entretien paysager"
+          },
+          {
+            "text": "Branches de conifères et de haies de cèdres (thuyas) de 1 m de long et d'un diamètre de 5 cm maximum, attachées en fagot"
+          }
+        ]
+      },
+      {
+        "id": "matieres-refusees",
+        "title": "Matières refusées",
+        "listItem": [
+          {
+            "text": "Tourbe"
+          },
+          {
+            "text": "Terre et pierres"
+          },
+          {
+            "text": "Litière d'animaux"
+          },
+          {
+            "text": "Résidus alimentaires"
+          },
+          {
+            "text": "Souches et troncs d’arbres"
+          },
+          {
+            "text": "Branches de vignes et d'arbres fruitiers"
+          },
+          {
+            "text": "Branches de feuillus qui font l’objet d’une collecte spéciale"
+          }
+        ]
+      },
+      {
+        "id": "contenants-acceptes",
+        "title": "Contenants acceptée",
+        "listItem": [
+          {
+            "text": "Sacs en papier biodégradable"
+          },
+          {
+            "text": "Anciens bacs de recyclage de 64 litres"
+          },
+          {
+            "text": "Bacs noirs de 240 litres ou de 360 litres"
+          },
+          {
+            "text": "Bacs à déchets ne contenant que des résidus verts"
+          },
+          {
+            "text": "Tout autre contenant rigide et réutilisable (poubelles, etc.)"
+          },
+          {
+            "text": "Sacs en plastique : ils ne sont pas recommandés, mais ils seront quand même récupérés lors de la collecte"
+          }
+        ]
+      }
+    ]
+  },
+  "informations": {
+    "cards": {
+      "section-classes": "",
+      "classes": false,
+      "bsgrid-classes": "col-12 col-md-6 col-lg-4",
+      "card-item" : [
+        {
+          "classes" : "card-link",
+          "url" : "#",
+          "card-title" : "Card #1 link title",
+          "card-text" : false,
+          "card-media" : false,
+          "footer" : {
+            "outside-body": true
+          }
+        },
+        {
+          "classes" : "card-link",
+          "url" : "#",
+          "card-title" : "Card #2 link title",
+          "card-text" : false,
+          "card-media" : false,
+          "footer" : {
+            "outside-body": true
+          }
+        },
+        {
+          "classes" : "card-link",
+          "url" : "#",
+          "card-title" : "Card #3 link title - longer than usual",
+          "card-text" : false,
+          "card-media" : false,
+          "footer" : {
+            "outside-body": true
+          }
+        }
+      ]
+    }
+  }
+}
