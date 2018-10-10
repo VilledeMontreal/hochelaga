@@ -19,6 +19,13 @@
         </div>
 
         <div class="col-12">
+          {{^ list-group-results }}
+          <div class="empty-results">
+            {{# empty-state }}
+            <p>{{{ heading }}}</p>
+            {{/ empty-state }}
+          </div>
+          {{/ list-group-results }}
           {{# list-group-results }}
           {{# headings }}
           <h2 class="list-group-heading">{{ headings.text }}</h2>
