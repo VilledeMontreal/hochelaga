@@ -4,10 +4,13 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](http://keepachangelog.com/en/1.0.0/)
 and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.html).
 
+
 ## [2.1.0] - unreleased
+
 
 ## Added
 - Added templates and variantes for Collectes.
+- Added atoms > feedback > loader
 
 ## Changed
 - Changed json structure for sidebar elements (patternlab only).
