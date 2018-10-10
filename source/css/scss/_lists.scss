@@ -290,7 +290,7 @@ dl {
   .list-group-item {
     color: $gray-ink;
     display: flex;
-    //flex-direction: column;
+    justify-content: space-between;
     padding: 2.25rem 2rem;
     &:hover {
       color: $gray-ink;
@@ -326,6 +326,7 @@ dl {
       flex: 1 1 auto;
       padding-right: 1rem;
       text-align: left;
+      max-width: 800px;
     }
     .list-group-item-footer {
       //padding: 1.5rem 1rem 1.5rem 0;

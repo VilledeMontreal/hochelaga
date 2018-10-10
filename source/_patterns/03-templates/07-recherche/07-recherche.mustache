@@ -1,0 +1,43 @@
+{{> atoms-link-skip-to-main-content }}
+{{> organisms-header-portal }}
+
+<main class="main-content {{ pageClasses }}" id="main-content" aria-label="Main Content">
+
+  {{> organisms-content-header }}
+
+  <section class="page-section pt-0">
+    <div class="container">
+      <div class="row">
+
+        <div class="col-12 col-lg-6">
+          <div class="form-group">
+            <div class="input-group-icon input-group-icon-left">
+              {{> atoms-fonticon-item(icon-label: "002-recherche") }}
+              <input type="text" class="form-control form-control-lg form-control-dark" id="text-icon-left" placeholder="Rechercher une information ou un service">
+            </div>
+          </div>
+        </div>
+
+        <div class="col-12">
+          {{# list-group-results }}
+          {{# headings }}
+          <h2 class="list-group-heading">{{ headings.text }}</h2>
+          {{/ headings }}
+
+          {{> molecules-list-group-hub}}
+
+          {{# hasPagination }}
+            {{> molecules-pagination("paginationClass": justify-content-center) }}
+          {{/ hasPagination }}
+
+          {{/ list-group-results }}
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+</main>
+
+{{> organisms-footer-portal }}
+
