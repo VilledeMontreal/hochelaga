@@ -1,0 +1,77 @@
+{{> atoms-link-skip-to-main-content }}
+{{> organisms-header-portal }}
+
+<main class="main-content {{ pageClasses }}" id="main-content" aria-label="Main Content">
+
+  <header class="content-header {{ contentHeaderClasses }}">
+    <div class="{{ headerContainerClasses }} pt-4 pb-12">
+      <div class="row justify-content-md-center">
+        <div class="col-12 col-md-8 col-lg-6">
+          <div class="form-group mb-0">
+            <div class="input-group-icon input-group-icon-left">
+              {{> atoms-fonticon-item(icon-label: "002-recherche") }}
+              <input type="text" class="form-control form-control-lg form-control-dark" id="text-icon-left" placeholder="Rechercher une information ou un service">
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <section class="page-section">
+    <div class="container">
+      <div class="row">
+
+        <div class="col-12">
+          {{^ list-group-results }}
+          <div class="empty-results">
+            {{# empty-state }}
+            <p>{{{ heading }}}</p>
+            {{/ empty-state }}
+            <!--
+            <div class="row cards {{ cards.classes }}">
+              {{# cards.card-item }}
+              <div class="{{ cards.bsgrid-classes }}">
+                <div class="card {{ classes }}">
+                  {{# card-media }}
+                  {{# card-media.icon }}
+                  <span class="card-icon-top {{ card-media.classes }} vdm {{ card-media.icon }}" aria-hidden="true"></span>
+                  {{/ card-media.icon }}
+                  {{/ card-media }}
+                  <div class="card-body">
+                    {{# card-title }}
+                    <span class="card-title">{{ card-title }}</span>
+                    {{/ card-title }}
+                    {{# card-text }}
+                    <div class="card-text">{{{ card-text }}}</div>
+                    {{/ card-text }}
+                  </div>
+                </div>
+              </div>
+              {{/ cards.card-item }}
+            </div>
+          </div>
+          -->
+          {{/ list-group-results }}
+          {{# list-group-results }}
+          {{# headings }}
+          <h1 class="list-group-heading">{{ headings.text }}</h1>
+          {{/ headings }}
+
+          {{> molecules-list-group-hub}}
+
+          {{# hasPagination }}
+            {{> molecules-pagination("paginationClass": justify-content-center) }}
+          {{/ hasPagination }}
+
+          {{/ list-group-results }}
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+</main>
+
+{{> organisms-footer-portal }}
+

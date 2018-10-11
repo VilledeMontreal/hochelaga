@@ -364,6 +364,15 @@ a {
   }
 }
 
+// Longdash
+.longdash-brand {
+  &:before {
+    content: "—";
+    color: $brand;
+    margin-right: .75rem;
+  }
+}
+
 .bullet-left {
   @include bullet-left();
 }

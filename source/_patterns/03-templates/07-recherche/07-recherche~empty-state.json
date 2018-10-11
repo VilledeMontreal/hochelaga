@@ -1,0 +1,37 @@
+{
+  "regionMainClasses" : "",
+  "regionMainContentClasses" : "",
+  "has-lead-text" : true,
+  "hasPagination": true,
+  "text-elements": {
+    "headings": {
+      "display": {
+        "tag": "h1",
+        "classes": "display-1",
+        "content": "Résultats de recherche"
+      }
+    }
+  },
+  "list-group-results": false,
+  "empty-state": {
+    "heading": "Désolé, nous n'avons pas trouvé de résultat pour <strong>\"Pixel 3\"</strong>."
+  },
+  "cards": {
+    "section-classes": "bg-gray-sky",
+    "classes": false,
+    "bsgrid-classes": "col-8",
+    "card-item": [
+      {
+        "classes": "card-fw card-row-layout",
+        "url": false,
+        "card-title": "Vous n'avez pas trouvé ce que vous cherchez?",
+        "card-text":
+          "<p>Quelques suggestions pour une recherche optimale :</p><ul><li>Essayez différents mots</li><li>Utilisez moins de mots</li><li>Vérifiez l'orthographe des mots recherchés</li></ul>",
+        "card-media": {
+          "icon": "vdm-034-ampoule"
+        }
+      }
+    ]
+  }
+  
+}

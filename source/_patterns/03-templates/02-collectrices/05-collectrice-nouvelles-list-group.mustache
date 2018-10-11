@@ -1,0 +1,43 @@
+{{> atoms-link-skip-to-main-content }}
+{{> organisms-header-portal }}
+
+<main class="main-content {{ pageClasses }}" id="main-content" aria-label="Main Content">
+
+  <section class="page-section">
+    <div class="container">
+      <div class="row">
+
+        <div class="col-12 col-lg-6">
+          <div class="form-group">
+            <div class="input-group-icon input-group-icon-left">
+              {{> atoms-fonticon-item(icon-label: "002-recherche") }}
+              <input type="text" class="form-control form-control-lg form-control-dark" id="text-icon-left" placeholder="Rechercher une actualité">
+            </div>
+          </div>
+        </div>
+
+        <div class="col-12">
+          {{# list-group-results }}
+          {{# headings }}
+          <h2>{{ headings.text }}</h2>
+          {{/ headings }}
+
+          {{> molecules-list-group-hub}}
+
+          {{# hasPagination }}
+          <div class="text-center">
+            {{> atoms-button(buttonClass: "btn-primary btn-sm" ,buttonText: "Afficher plus d'actualités") }}
+          </div>
+          {{/ hasPagination }}
+
+          {{/ list-group-results }}
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+</main>
+
+{{> organisms-footer-portal }}
+
