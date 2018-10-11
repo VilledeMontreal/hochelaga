@@ -207,6 +207,7 @@
   padding-bottom: 8rem;
 }
 
+// Featured content is a block content with a white background
 .featured-content {
   background-color: $white;
   padding: 2rem;
@@ -214,6 +215,31 @@
     padding: 3.5rem;
   }
 }
+
+// Promo content is a weird thing on the homepage
+// Needs to be more generic once homepage is clearly defined
+.home-promo {
+  padding-top: 3rem;
+  .promo-content {
+    padding-bottom: 4rem;
+    h2 {
+      margin-bottom: 1.5rem;
+    }
+  }
+
+  @include media-breakpoint-up(lg) {
+    .promo-content {
+      padding-top: 2rem;
+      padding-bottom: 2rem;
+      h2 {
+        margin-bottom: 1.5rem;
+      }
+    }
+  }
+}
+
+
+
 
 
 // Lead container
