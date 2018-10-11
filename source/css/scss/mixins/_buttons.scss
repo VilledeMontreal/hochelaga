@@ -20,6 +20,11 @@
     }
   }
 
+  // loader variant
+  .loader .loader-child {
+    border-color: $color transparent transparent transparent;
+  }
+
   &:focus,
   &.focus {
     // Avoid using mixin so we can pass custom focus shadow properly
