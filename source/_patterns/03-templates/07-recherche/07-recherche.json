@@ -3,15 +3,9 @@
   "regionMainContentClasses" : "",
   "has-lead-text" : true,
   "hasPagination": true,
-  "text-elements": {
-    "headings": {
-      "display": {
-        "tag": "h1",
-        "classes": "display-1",
-        "content": "Résultats de recherche"
-      }
-    }
-  },
+  "contentHeaderClasses": "content-header-dark",
+  "headerContainerClasses": "container",
+  "text-elements": false,
   "list-group-results": {
     "headings": {
       "text": "67 résultats"
@@ -25,7 +19,7 @@
           "infos-items": [
             {
               "class": false,
-              "text": "Le permis annuel pour chien est obligatoire et valide partout sur le territoire de la Ville de Montréal."
+              "text": "Sujet"
             }
           ]
         }
@@ -37,7 +31,7 @@
           "infos-items": [
             {
               "class": false,
-              "text": "Vous voulez obtenir ou renouveler le permis annuel pour votre chien à Montréal? Voici tout ce que vous devez savoir."
+              "text": "Démarche"
             }
           ]
         }
@@ -49,7 +43,7 @@
           "infos-items": [
             {
               "class": false,
-              "text": "Un permis spécial est obligatoire pour les promeneurs de chiens. Il est valide partout sur le territoire de la Ville de Montréal."
+              "text": "Sujet"
             }
           ]
         }
@@ -61,7 +55,7 @@
           "infos-items": [
             {
               "class": false,
-              "text": "Vous voulez obtenir ou renouveler votre permis pour promeneur de chiens à Montréal? Voici tout ce que vous devez savoir."
+              "text": "Démarche"
             }
           ]
         }
@@ -73,7 +67,15 @@
           "infos-items": [
             {
               "class": false,
-              "text": "Saint-Laurent - 2920 avenue O'Brien"
+              "text": "Lieu"
+            },
+            {
+              "class": false,
+              "text": "2920 avenue O'Brien"
+            },
+            {
+              "class": "longdash-brand text-dark",
+              "text": "Saint-Laurent"
             }
           ]
         }
@@ -85,7 +87,15 @@
           "infos-items": [
             {
               "class": false,
-              "text": "Rosemont–La Petite-Patrie - 3330 avenue Laurier Est"
+              "text": "Lieu"
+            },
+            {
+              "class": false,
+              "text": "3330 avenue Laurier Est"
+            },
+            {
+              "class": "longdash-brand text-dark",
+              "text": "Rosemont–La Petite-Patrie"
             }
           ]
         }
@@ -100,6 +110,9 @@
               "text": "La version bêta de notre site ne propose pas encore le contenu recherché. Pour accéder à la page existante, vous serez redirigé vers un autre site de la Ville de Montréal."
             }
           ]
+        },
+        "footer": {
+          "icon-label": "112-lien-externe"
         }
       },
       {
@@ -107,6 +120,10 @@
         "title": "Services ouverts et fermés durant le temps des Fêtes",
         "infos": {
           "infos-items": [
+            {
+              "class": false,
+              "text": "Actualité"
+            },
             {
               "class": false,
               "text": "21 décembre 2017"

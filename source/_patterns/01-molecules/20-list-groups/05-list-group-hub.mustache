@@ -12,7 +12,12 @@
       {{/ infos}}
     </div>
     <div class="list-group-item-footer">
+    {{^ footer.icon-label }}
     {{> atoms-fonticon-item(icon-label: "063-fleche-droite")}}
+    {{/ footer.icon-label }}
+    {{# footer.icon-label }}
+      {{> atoms-fonticon-item(icon-label: "112-lien-externe")}}
+    {{/ footer.icon-label }}
     </div>
     </a>
   {{/ listGroup }}

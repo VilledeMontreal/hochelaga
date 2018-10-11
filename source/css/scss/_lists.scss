@@ -351,12 +351,12 @@ dl {
     flex-wrap: wrap;
     > span {
       margin-right: .75rem;
-      &.separator-brand {
-        &:before {
-          content: "—";
-          color: $brand;
-          margin-right: .75rem;
-        }
+    }
+    > span:nth-child(n + 2):not(.longdash-brand) {
+      &:before {
+        content: "·";
+        color: $gray-900;
+        margin-right: .75rem;
       }
     }
   }

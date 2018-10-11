@@ -7,10 +7,10 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 
 ## [2.1.0] - unreleased
 
-
 ## Added
-- Added templates and variantes for Collectes.
-- Added atoms > feedback > loader
+- Added templates and variantes for Collectes (templates > collecte).
+- Added templates and variants for Search results page (templates > recherche).
+- Added loader and button loader (atoms > feedback > loader)
 
 ## Changed
 - Changed json structure for sidebar elements (patternlab only).
