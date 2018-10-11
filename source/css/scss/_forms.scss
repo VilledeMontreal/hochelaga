@@ -506,13 +506,6 @@ legend,
   }
 }
 
-
-// Add border around form-combo
-
-.border-combo {
-  border: 2px solid $primary;
-}
-
 // file drop container
 
 .file-drop-container {
@@ -538,11 +531,12 @@ legend,
 
 .feedback-form-container {
   background: $white;
-  //border: 1px solid $card-border-color;
-  box-shadow: 0 1px 7px 0 rgba(0,0,0,0.12);
+  box-shadow: $card-box-shadow;
   margin-top: 3rem;
   margin-bottom: 3rem;
-  padding: 2rem 2rem;
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
 
   .feedback-form-header {
     display: flex;
@@ -557,13 +551,14 @@ legend,
     }
   
     .vdm {
-      font-size: 3.5rem;
+      font-size: 2.5rem;
       color: $primary;
+      margin-right: .5rem;
     }
   }
 
   @include media-breakpoint-up(md) {
-    padding: 2rem 4rem 3rem 4rem;
+    padding: 3rem 4rem;
   }
 }
 
