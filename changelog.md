@@ -10,14 +10,17 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 ## Added
 - Added templates and variantes for Collectes (templates > collecte).
 - Added templates and variants for Search results page (templates > recherche).
-- Added loader and button loader (atoms > feedback > loader)
+- Added loader (atoms > feedback > loader).
+- Added button with loader (atoms > button).
+- Added Promo section on homepage.
 
 ## Changed
 - Changed json structure for sidebar elements (patternlab only).
 - Changed class name from .select-arron to lead-left-content or .lead-right-content and updated lead molecule.
 - Collectrices updated: nouvelles, avis et alertes, 1er niveau, 2e niveau.
 - Updated Homepage data and structure.
-- Updated Feedback form spacing.
+- Updated Feedback form theming.
+- Updated list-groups for complexe data layout.
 
 ## Deprecated
 - .section-select-arron and .select-arron have been replaced with more generc classes .section-lead and .lead-right-content or .lead-left-content in layout.scss. Changes are reflected in the lead molecule.
