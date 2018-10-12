@@ -298,7 +298,8 @@ a {
   // List some exclusion
   .list-icon,
   .social-media-list,
-  .cards {
+  .cards,
+  .list-group-hub {
     a[href*="//"]:not([href*="montreal.ca"]) {
       margin-right: 0;
       &:after {
@@ -396,10 +397,11 @@ a {
 
 // Class to add ellipsis to long line of text
 .elided-text {
-  //display: block;
+  max-width: 100%;
   white-space: nowrap; 
   overflow: hidden;
-  text-overflow: ellipsis; 
+  text-overflow: ellipsis;
+  display: inline-block;
 }
 
 //

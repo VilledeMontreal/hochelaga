@@ -58,7 +58,7 @@
 
 // The base unit for a sidebar component, stacked
 .sb-block {
-  overflow: hidden;
+  //overflow: hidden;
   margin-bottom: 3rem;
   > *:last-child {
     margin-bottom: 0;
@@ -77,24 +77,26 @@
 
   // Schedule data
   // TODO: Refactor this code
-  .sb-schedule {
+  .schedule-content {
     align-items: flex-start;
     width: 100%;
-    &.icon.left {
-      > .vdm {
-        padding-right: .5rem;
-      }
-    }
+
     .schedule-data {
       display: flex;
       flex-direction: row;
       align-items: center;
       .schedule-start-time,
-      .schedule-send-time {
+      .schedule-end-time {
         white-space: nowrap
       }
       .schedule-start-time { 
-        margin-right: 10px;
+        margin-right: .25rem;
+      }
+      .schedule-end-time {
+        &:before {
+          content: "-";
+          margin-right: .25rem;
+        }
       }
       .vdm {
         margin-left: .5rem;
@@ -106,6 +108,12 @@
   
   // Note
   .note {
-    margin: 1rem 0;
+    margin-bottom: 1rem;
+  }
+
+  .elided-text {
+    display: inline-block;
+    max-width: 100%;
+    white-space: nowrap;
   }
 }

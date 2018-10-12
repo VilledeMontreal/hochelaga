@@ -81,6 +81,7 @@ ol {
 
   .list-icon-content {
     margin-bottom: 1rem;
+    width: 100%;
   }
 
   address {
@@ -292,34 +293,9 @@ dl {
     display: flex;
     justify-content: space-between;
     padding: 2.25rem 2rem;
-    &:hover {
-      color: $gray-ink;
-      .list-group-item-title {
-        color: $sarcelle;
-      }
-      .list-group-item-footer {
-        .vdm {
-          color: $sarcelle;
-        }
-      }
-    }
     > *:last-child {
       padding-bottom: 0;
     }
-    /*
-    @include iconvdm($position: after, $icon: '063-fleche-droite');
-    &:after {
-      color: $gray-300;
-      font-size: 3.5rem;
-      position: absolute;
-      right: 1.5rem;
-      top: 50%;
-      -webkit-transform: translateY(-50%);
-      -moz-transform: translateY(-50%);
-      -ms-transform: translateY(-50%);
-      transform: translateY(-50%);
-    }
-    */
     flex-direction: row;
     align-items: center;
     .list-group-item-body {
@@ -334,6 +310,20 @@ dl {
         color: $gray-300;
         font-size: 3rem;
         padding-right: 0;
+      }
+    }
+  }
+
+  a.list-group-item {
+    &:hover {
+      color: $gray-ink;
+      .list-group-item-title {
+        color: $sarcelle;
+      }
+      .list-group-item-footer {
+        .vdm {
+          color: $sarcelle;
+        }
       }
     }
   }
