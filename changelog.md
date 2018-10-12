@@ -10,6 +10,7 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 ## Added
 - Added templates and variantes for Collectes (templates > collecte).
 - Added templates and variants for Search results page (templates > recherche).
+- Added template for Avis et alertes.
 - Added loader (atoms > feedback > loader).
 - Added button with loader (atoms > button).
 - Added Promo section on homepage.
@@ -24,6 +25,9 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 
 ## Deprecated
 - .section-select-arron and .select-arron have been replaced with more generc classes .section-lead and .lead-right-content or .lead-left-content in layout.scss. Changes are reflected in the lead molecule.
+
+## Fixed
+- Max-width set to 1450px for .content-header-title.
 
 
 ## [2.0.0] - 2018-09-28

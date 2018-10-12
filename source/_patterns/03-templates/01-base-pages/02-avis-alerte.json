@@ -2,19 +2,21 @@
   "text-elements": {
     "headings":{
       "display":{
-        "content": "Template Avis et alertes"
+        "classes": "display-4",
+        "content": "Coupure d'eau – Rue Duff Court, entre Croissant Roy et 24e Avenue, arrondissement de Lachine"
       }
     }
   },
-  "contentHeaderClasses": "",
+  "contentHeaderClasses": "bg-gray-sky",
   "has-header-meta": true,
   "has-publication-date": true,
   "has-hub-link": true,
-  "date-time-text": "Mis à jour le 21 septembre 2018",
+  "date-time-text": "Publié le 1 octobre 2018 à 10 h 17",
   "hub-link-text": "Tous les avis et alertes",
   "has-lead-text": false,
   "sidebarRight": true,
-  "sidebarAbonnement": {
+  "sb-abonnement": {
+    "sidebarClasses": "sidebar-top-stroke",
     "sidebarTitle": "S'abonner aux alertes",
     "sb-abonnement-text": "<p>Pour recevoir des avis et alertes par courriel ou texto, vous devez avoir créé un compte.</p>",
     "buttonText": "Abonnez-vous"
@@ -57,5 +59,11 @@
         }
       ]
     }
+  },
+  "map": {
+    "mapID": "mapAvis001"
+  },
+  "conseil": {
+    "conseilText": "<p>Veuillez noter qu’il est possible que les manipulations sur le réseau entraînent la coloration de l'eau dans ce secteur et les rues avoisinantes. Le cas échant, laissez couler l'eau jusqu'à ce qu'elle redevienne incolore. Il n'y a aucun danger pour la santé.</p>"
   }
 }
