@@ -57,7 +57,15 @@
   <section class="map-section">
     <div id="mapEventId" style="height:500px"></div>
   </section>
-  <script>
+
+  {{# hasFeedbackForm}}
+  {{> organisms-feedback-form}}
+  {{/ hasFeedbackForm }}
+</main>
+
+{{> organisms-footer-portal }}
+
+ <script>
     var startZoom = 16;
     var center = [-73.662623, 45.553576];
     var maxBounds = [[-74.3965936,45.319517],[-73.442801,45.751651]];
@@ -432,7 +440,3 @@
   }
 
   </script>
-
-</main>
-
-{{> organisms-footer-portal }}

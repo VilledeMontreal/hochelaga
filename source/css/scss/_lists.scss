@@ -58,6 +58,9 @@ ol {
     }
     &:last-child {
       padding-bottom: 0;
+      .list-icon-content {
+        margin-bottom: 0;
+      }
     }
     > .vdm {
       background: transparent;
@@ -69,6 +72,15 @@ ol {
       align-items: flex-start;
 
     }
+  }
+
+  .list-icon-label {
+    font-weight: $font-weight-bold;
+    display: block;
+  }
+
+  .list-icon-content {
+    margin-bottom: 1rem;
   }
 
   address {
@@ -153,6 +165,7 @@ ol {
     margin-bottom: 0;
   }
   > li {
+    margin-bottom: 2rem;
     .date {
       margin-bottom: 1.5rem;
     }
@@ -190,11 +203,13 @@ ol {
     margin-bottom: 0;
   }
   a {
-    @extend .h5;
+    font-size: $font-size-xl;
+    font-weight: $font-weight-bold;
+    line-height: 1.3333;
     border: none;
-    color: $primary;
+    //color: $sarcelle-surprise;
     display: inline-block;
-    margin-bottom: 1rem;
+    margin-bottom: .5rem;
   }
   p {
     margin-bottom: 1rem;
@@ -235,6 +250,7 @@ dl {
   // remove right and left border
   border-right: 0;
   border-left: 0;
+  display: flex;
   @include border-radius(0);
 
   // remove border-top-radius
@@ -245,5 +261,103 @@ dl {
   // remove border-bottom-radius
   &:last-child {
     @include border-bottom-radius(0);
+  }
+
+  a {
+    border-bottom: none;
+    &:hover {
+      .list-group-item-title {
+        color: $sarcelle;
+      }
+    }
+  }
+
+  .vdm {
+    font-size: 1.5rem;
+    padding-right: .5rem;
+  }
+
+}
+
+.list-group-heading {
+  font-size: $font-size-xl;
+  line-height: 1.3333;
+  padding-top: .7rem;
+  padding-bottom: 1.275rem;
+}
+
+.list-group-hub {
+  .list-group-item {
+    color: $gray-ink;
+    display: flex;
+    justify-content: space-between;
+    padding: 2.25rem 2rem;
+    &:hover {
+      color: $gray-ink;
+      .list-group-item-title {
+        color: $sarcelle;
+      }
+      .list-group-item-footer {
+        .vdm {
+          color: $sarcelle;
+        }
+      }
+    }
+    > *:last-child {
+      padding-bottom: 0;
+    }
+    /*
+    @include iconvdm($position: after, $icon: '063-fleche-droite');
+    &:after {
+      color: $gray-300;
+      font-size: 3.5rem;
+      position: absolute;
+      right: 1.5rem;
+      top: 50%;
+      -webkit-transform: translateY(-50%);
+      -moz-transform: translateY(-50%);
+      -ms-transform: translateY(-50%);
+      transform: translateY(-50%);
+    }
+    */
+    flex-direction: row;
+    align-items: center;
+    .list-group-item-body {
+      flex: 1 1 auto;
+      padding-right: 1rem;
+      text-align: left;
+      max-width: 800px;
+    }
+    .list-group-item-footer {
+      //padding: 1.5rem 1rem 1.5rem 0;
+      .vdm {
+        color: $gray-300;
+        font-size: 3rem;
+        padding-right: 0;
+      }
+    }
+  }
+  
+  .list-group-item-title {
+    font-size: $font-size-xl;
+    line-height: 1.3333;
+    color: $headings-color;
+    display: block;
+    padding-bottom: .5rem;
+  }
+
+  .list-group-item-content {
+    display: flex;
+    flex-wrap: wrap;
+    > span {
+      margin-right: .75rem;
+    }
+    > span:nth-child(n + 2):not(.longdash-brand) {
+      &:before {
+        content: "·";
+        color: $gray-900;
+        margin-right: .75rem;
+      }
+    }
   }
 }

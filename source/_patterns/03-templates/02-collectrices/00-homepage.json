@@ -7,7 +7,7 @@
   "has-lead-text" : true,
   "hasPagination": true,
   "top-banner": {
-    "class": "top-banner-info"
+    "class": false
   },
   "featuredSection": {
     "cards": {
@@ -101,6 +101,19 @@
         {
           "classes": "card-fw card-row-layout",
           "url": "#",
+          "card-date": "20 février 2018",
+          "card-title": "Card with a very long title. Footer is place to the right for larger breakpoint. How do we handle the arrow placement?",
+          "card-media": {
+            "classes" : false,
+            "icon": false
+          },
+          "footer" : {
+            "outside-body": true
+          }
+        },
+        {
+          "classes": "card-fw card-row-layout",
+          "url": "#",
           "card-date": "18 février 2018",
           "card-title": "Card title",
           "card-text": false,
@@ -115,10 +128,6 @@
       ]
     }
   },
-  "homePromo": [
-    {
-      "classes": "",
-      "url": false
-    }
-  ]
+  "homePromo": true,
+  "promo-full-width": true
 }

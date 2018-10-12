@@ -8,10 +8,23 @@
   <section class="page-section bg-gray-sky">
     <div class="container">
       <div class="row">
+        
+        <div class="col-12 col-lg-6">
+          <div class="form-group">
+            <div class="input-group-icon input-group-icon-left">
+              {{> atoms-fonticon-item(icon-label: "002-recherche") }}
+              <input type="text" class="form-control form-control-lg form-control-dark" id="text-icon-left" placeholder="Rechercher une actualité">
+            </div>
+          </div>
+        </div>
+
         <div class="col-12">
+          {{# cards.headings }}
+          <h2 class="{{ cards.headings.class }}">{{ cards.headings.text }}</h2>
+          {{/ cards.headings }}
+        </div>
 
-          {{> molecules-search-field+dropdown }}
-
+        <div class="col-12">
           {{# cards }}
           <div class="cards {{ cards.classes }}">
           {{# cards.card-item }}
@@ -19,15 +32,20 @@
           {{/ cards.card-item }}
           </div>
           {{/ cards }}
-          
-          {{# hasPagination }}
-            {{> molecules-pagination("paginationClass": justify-content-center) }}
-          {{/ hasPagination }}
-
         </div>
+
+        {{# hasPagination }}
+        <div class="col-12">  
+          {{> molecules-pagination("paginationClass": justify-content-center) }}
+        </div>
+        {{/ hasPagination }}
       </div>
     </div>
   </section>
+
+  {{# hasFeedbackForm}}
+  {{> organisms-feedback-form}}
+  {{/ hasFeedbackForm }}
 </main>
 
 {{> organisms-footer-portal }}

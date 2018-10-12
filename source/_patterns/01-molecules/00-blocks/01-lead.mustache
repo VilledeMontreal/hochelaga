@@ -1,24 +1,25 @@
 <div class="bg-gray-sky lead-container {{ leadContainerClasses }}">
   <div class="section-content-fluid">
-    {{^ selectArrondissement}}
+    {{^ leadLeftSection}}
     <div class="section-inner section-inner-lg">
       {{> atoms-lead }}
     </div>
-    {{/ selectArrondissement}}
+    {{/ leadLeftSection}}
+    {{# leadLeftSection}}
     {{# selectArrondissement}}
-    <div class="row no-gutters section-inner section-inner-lg section-select-arron">
+    <div class="row no-gutters section-inner section-inner-lg section-lead">
       <div class="col-12 col-lg-7 order-lg-2">
         {{> atoms-lead }}
       </div>
       <div class="col-12 col-lg-5 order-lg-1">
         {{^ selectedArrondissement}}
-        <div class="select-arron">
+        <div class="lead-left-content">
           <span class="title">{{ selectArrondissementText }}</span>
           <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#selectArrondissementModal">Sélectionner votre arrondissement</button>
         </div>
         {{/ selectedArrondissement}}
         {{# selectedArrondissement}}
-        <div class="select-arron">
+        <div class="lead-left-content">
           <span class="label">Votre arrondissement</span>
           <span class="title">{{ arrondissement }}</span>
           <button class="btn btn-link" data-toggle="modal" data-target="#selectArrondissementModal">Changer d'arrondissement</button>
@@ -51,5 +52,22 @@
       </div>
     </div>
     {{/ selectArrondissement}}
+    {{# leadAbonnement }}
+    <div class="row no-gutters section-inner section-inner-lg section-lead">
+      <div class="col-12 col-lg-7">
+        {{> atoms-lead }}
+      </div>
+      <div class="col-12 col-lg-5">
+        <div class="lead-right-content">
+          <span class="title">{{ leadAbonnementTitle }}</span>
+          <p>{{ leadAbonnementText }}</p>
+          {{# button}}
+          <a href="{{ buttonUrl }}" class="btn {{ buttonClass }}">{{ buttonText }}</a>
+          {{/ button}}
+        </div>
+      </div>
+    </div>
+    {{/ leadAbonnement }}
+    {{/ leadLeftSection }}
   </div>
 </div>

@@ -18,19 +18,17 @@
     {{# third-level-section }}
     <div class="container">
       <div class="row">
-        {{# third-level-section.items.heading }}
+        {{# third-level-section.heading }}
         <div class="col-12">
-          <h2 class="section-heading">{{items.heading}}</h2>
+          <h2 class="section-heading">{{heading}}</h2>
         </div>
-        {{/ third-level-section.items.heading }}
-
+        {{/ third-level-section.heading }}
+        {{# third-level-section.items }}
         <div class="col-12 col-lg-7">
           <div class="hub-list-container">
-            {{# third-level-section.items.subheading}}
-            <h3>{{ items.subheading }}</h3>
-            {{/ third-level-section.items.subheading}}
+            <h3>{{ subheading }}</h3>
             <ul class="hub-list">
-              {{# third-level-section.items.item}}
+              {{# item }}
               <li class="hub-list-item">
                 {{# link}}
                 <a href="{{ url }}">{{ title }}</a>
@@ -39,19 +37,23 @@
                   {{{ description}}}
                 {{/ description}}
               </li>
-              {{/ third-level-section.items.item}}
+              {{/ item}}
             </ul>
           </div>
         </div>
+        {{/ third-level-section.items}}
         {{# sidebarRight}}
         <aside class="col-12 {{ sidebarRightClass }} sidebar sidebar-right">
-          {{> organisms-sidebar-block }}
         </aside>
         {{/ sidebarRight}}
       </div>
     </div>
     {{/ third-level-section }}
   </section>
+
+  {{# hasFeedbackForm}}
+  {{> organisms-feedback-form}}
+  {{/ hasFeedbackForm }}
 </main>
 
 {{> organisms-footer-portal }}

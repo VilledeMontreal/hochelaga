@@ -4,15 +4,38 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](http://keepachangelog.com/en/1.0.0/)
 and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.html).
 
-## [2.0.0] - Unreleased
+
+## [2.1.0] - unreleased
 
 ## Added
-- Added Evenement templates.
+- Added templates and variantes for Collectes (templates > collecte).
+- Added templates and variants for Search results page (templates > recherche).
+- Added loader (atoms > feedback > loader).
+- Added button with loader (atoms > button).
+- Added Promo section on homepage.
+
+## Changed
+- Changed json structure for sidebar elements (patternlab only).
+- Changed class name from .select-arron to lead-left-content or .lead-right-content and updated lead molecule.
+- Collectrices updated: nouvelles, avis et alertes, 1er niveau, 2e niveau.
+- Updated Homepage data and structure.
+- Updated Feedback form theming.
+- Updated list-groups for complexe data layout.
+
+## Deprecated
+- .section-select-arron and .select-arron have been replaced with more generc classes .section-lead and .lead-right-content or .lead-left-content in layout.scss. Changes are reflected in the lead molecule.
+
+
+## [2.0.0] - 2018-09-28
+
+## Added
+- Added Evenement templates and status variants.
 - Added Map integration exemples for mapbox inside evenement.
 - Added content header variants for evenement needs.
 - Added Media-gallery organisms. Work in progress.
 - Added Cards variant for Evenement content type.
 - Added data in the Démarche templates (canaux, documents).
+- Added list-group links in molecules > list groups.
 
 ## Changed
 - Changed badges styles and moved badges to atoms.
@@ -190,6 +213,7 @@ remove index from the name. Which makes it possible to update font-icon without 
 ### Removed
 - Removed vdm prefix for buttons classes
 
+[2.0.0]: https://bitbucket.org/villemontreal/boite-outils-web/src/2.0.0/
 [1.3.0]: https://bitbucket.org/villemontreal/boite-outils-web/src/1.3.0/
 [1.2.0]: https://bitbucket.org/villemontreal/boite-outils-web/src/1.2.0/
 [1.1.0]: https://bitbucket.org/villemontreal/boite-outils-web/src/1.1.0/
