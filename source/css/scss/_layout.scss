@@ -28,6 +28,8 @@
 
   &-title {
     padding-bottom: 3rem;
+    // Limit max width of title
+    max-width: 1450px;
     h1 {
       margin-bottom: 0;
       &:after {
