@@ -349,5 +349,26 @@ dl {
         margin-right: .75rem;
       }
     }
+    .label {
+      font-weight: $font-weight-bold;
+      display: block;
+    }
+  }
+
+  // A row is a label/content combination
+  .list-group-item-row,
+  .list-group-item-column {
+    width: 100%;
+    padding-bottom: 1rem;
+    &:last-child {
+      padding-bottom: 0;
+    }
+  }
+
+  .list-group-item-column {
+    .label {
+      color: $headings-color;
+      padding-bottom: 1rem;
+    }
   }
 }
