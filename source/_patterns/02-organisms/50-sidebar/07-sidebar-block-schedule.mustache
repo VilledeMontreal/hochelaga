@@ -1,107 +1,113 @@
 <div class="sidebar {{sidebarClasses}}">
   <section class="sb-block {{ sb-classes }}">
     {{> organisms-heading-sidebar }}
-    <div class="subsection">
-      <div class="sb-schedule icon left">
-        {{> atoms-fonticon-item(icon-label: "037-horloge") }}  
-        <div class="subsection-content">
-          <div class="row">
-            <div class="day-of-week col-4">
-              <span class="elided-text">Lundi</span>
-            </div>
-            <div class="col-8">
-              <div class="schedule-data">
-                <span class="schedule-start-time">08 h 00</span>
-                <span class="schedule-end-time">12 h 00</span>
+    <ul class="list-icon">
+      <li class="list-icon-item">
+        {{> atoms-fonticon-item(icon-label: "037-horloge") }}
+        <div class="list-icon-content">
+          <span class="list-icon-label">Horaire</span>
+          <div class="schedule-content">
+            <div class="row">
+              <div class="col-3">
+                <span class="schedule-day">Lun.</span>
+              </div>
+              <div class="col-9">
+                <div class="schedule-data">
+                  <span class="schedule-start-time">08 h 00</span>
+                  <span class="schedule-end-time">12 h 00</span>
+                </div>
+                 <div class="schedule-data">
+                  <span class="schedule-start-time">13 h 00</span>
+                  <span class="schedule-end-time">16 h 30</span>
+                  <span class="vdm vdm-069-mini-plus-circulaire collapsed" data-toggle="collapse" data-target="#collapse-0-0" aria-expanded="false" aria-controls="collapse-0-0"></span>
+                </div>
+              </div>
+              <div class="col-12 collapse" id="collapse-0-0" style="">
+                <small class="d-block note">Ceci est une note pour l'horaire du lundi 13 h 00 - 16 h 30</small>
               </div>
             </div>
-          </div>
-          <div class="row">
-            <div class="day-of-week col-4"></div>
-            <div class="col-8">
-              <div class="schedule-data">
-                <span class="schedule-start-time">13 h 00</span>
-                <span class="schedule-end-time">16 h 30</span>
-                <span class="vdm vdm-069-mini-plus-circulaire collapsed" data-toggle="collapse" data-target="#collapse-0-0" aria-expanded="false" aria-controls="collapse-0-0"></span>
+            <div class="row">
+              <div class="col-3">
+                <span class="schedule-day">Mar.</span>
+              </div>
+              <div class="col-9">
+                <div class="schedule-data">
+                  <span class="schedule-start-time">08 h 00</span>
+                  <span class="schedule-end-time">12 h 00</span>
+                </div>
+                <div class="schedule-data">
+                  <span class="schedule-start-time">13 h 00</span>
+                  <span class="schedule-end-time">16 h 30</span>
+                </div>
               </div>
             </div>
-            <div class="col-12 collapse" id="collapse-0-0" style="">
-              <em class="d-block note">Ceci est une note pour l'horaire du lundi 13 h 00 - 16 h 30</em>
-            </div>
-          </div>
-          <div class="row">
-            <div class="day-of-week col-4">
-              <span class="elided-text">Mardi</span>
-            </div>
-            <div class="col-8">
-              <div class="schedule-data">
-                <span class="schedule-start-time">08 h 00</span>
-                <span class="schedule-end-time">12 h 00</span>
+            <div class="row">
+              <div class="col-3">
+                <span class="schedule-day">Mer.</span>
+              </div>
+              <div class="col-9">
+                <div class="schedule-data">
+                  <span class="schedule-start-time">08 h 00</span>
+                  <span class="schedule-end-time">12 h 00</span>
+                </div>
+                <div class="schedule-data">
+                  <span class="schedule-start-time">13 h 00</span>
+                  <span class="schedule-end-time">16 h 30</span>
+                </div>
               </div>
             </div>
-          </div>
-          <div class="row">
-            <div class="day-of-week col-4"></div>
-            <div class="col-8">
-              <div class="schedule-data">
-                <span class="schedule-start-time">13 h 00</span>
-                <span class="schedule-end-time">16 h 30</span>
+            <div class="row">
+              <div class="col-3">
+                <span class="schedule-day">Jeu.</span>
+              </div>
+              <div class="col-9">
+                <div class="schedule-data">
+                  <span class="schedule-start-time">08 h 00</span>
+                  <span class="schedule-end-time">12 h 00</span>
+                </div>
+                <div class="schedule-data">
+                  <span class="schedule-start-time">13 h 00</span>
+                  <span class="schedule-end-time">16 h 30</span>
+                </div>
               </div>
             </div>
-          </div>
-          <div class="row">
-            <div class="day-of-week col-4">
-              <span class="elided-text">Mercredi</span>
-            </div>
-            <div class="col-8">
-              <div class="schedule-data">
-                <span class="schedule-start-time">08 h 00</span>
-                <span class="schedule-end-time">12 h 00</span>
+            <div class="row">
+              <div class="col-3">
+                <span class="schedule-day">Ven.</span>
               </div>
-            </div>
-          </div>
-          <div class="row">
-            <div class="day-of-week col-4"></div>
-            <div class="col-8">
-              <div class="schedule-data">
-                <span class="schedule-start-time">13 h 00</span>
-                <span class="schedule-end-time">16 h 30</span>
-              </div>
-            </div>
-          </div>
-          <div class="row">
-            <div class="day-of-week col-4">
-              <span class="elided-text">Jeudi</span>
-            </div>
-            <div class="col-8">
-              <div class="schedule-data">
-                <span class="schedule-start-time">08 h 00</span>
-                <span class="schedule-end-time">12 h 00</span>
-              </div>
-            </div>
-          </div>
-          <div class="row">
-            <div class="day-of-week col-4"></div>
-            <div class="col-8">
-              <div class="schedule-data">
-                <span class="schedule-start-time">13 h 00</span>
-                <span class="schedule-end-time">16 h 30</span>
-              </div>
-            </div>
-          </div>
-          <div class="row">
-            <div class="day-of-week col-4">
-              <span class="elided-text">Vendredi</span>
-            </div>
-            <div class="col-8">
-              <div class="schedule-data">
-                <span class="schedule-start-time">08 h 00</span>
-                <span class="schedule-end-time">12 h 00</span>
+              <div class="col-9">
+                <div class="schedule-data">
+                  <span class="schedule-start-time">08 h 00</span>
+                  <span class="schedule-end-time">12 h 00</span>
+                </div>
               </div>
             </div>
           </div>
         </div>
-      </div>
-    </div>
+      </li>
+      <li class="list-icon-item">
+        {{> atoms-fonticon-item(icon-label: "091-localisation") }}
+        <div class="list-icon-content">
+          <span class="list-icon-label">Adresse</span>
+          <address>
+            10300, rue Lajeunesse,<br>
+            Montréal (Québec) H3L 2E5
+          </address>
+          <a href="#{{ map.mapID }}" class="js-scroll-trigger">Afficher sur la carte</a>
+        </div>
+      </li>
+      <li class="list-icon-item">
+        {{> atoms-fonticon-item(icon-label: "012-telephone") }}
+        <div class="list-icon-content">
+          <span class="list-icon-label">Contact</span>
+          Tél. : 514 872-3107 poste 123<br>
+          Fax : 514 872-2222<br>
+          <a href="mailto:service.administratif@ville.montreal.qc.ca">Écrire un courriel</a><br>
+          <a href="http://ville.montreal.qc.ca/portal/page?_pageid=5798,86299744&_dad=portal&_schema=PORTAL" class="d-inline-block mt-2">Plus d'information</a>
+        </div>
+      </li>
+    </ul>
+    {{> atoms-social-media-icons-list}}
+    
   </section>
 </div>
