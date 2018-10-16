@@ -355,7 +355,7 @@ dl {
     > span {
       margin-right: .75rem;
     }
-    > span:nth-child(n + 2):not(.longdash-brand) {
+    > span:nth-child(n + 2):not(.separator-brand) {
       &:before {
         content: "·";
         color: $gray-900;
