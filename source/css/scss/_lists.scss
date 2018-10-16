@@ -278,6 +278,19 @@ dl {
     padding-right: .5rem;
   }
 
+  .list-group-item-title {
+    color: $headings-color;
+    display: block;
+    font-size: $font-size-xl;
+    line-height: 1.3333;
+    padding-bottom: .5rem;
+  }
+  
+  .list-group-item-label {
+    font-weight: $font-weight-bold;
+    display: block;
+  }
+
 }
 
 .list-group-heading {
@@ -287,7 +300,8 @@ dl {
   padding-bottom: 1.275rem;
 }
 
-.list-group-hub {
+.list-group-hub,
+.list-group-content {
   .list-group-item {
     color: $gray-ink;
     display: flex;
@@ -300,9 +314,10 @@ dl {
     align-items: center;
     .list-group-item-body {
       flex: 1 1 auto;
-      padding-right: 1rem;
+      //padding-right: 1rem;
       text-align: left;
       max-width: 800px;
+      min-width: 0; // this is needed for the text-overflow property to work
     }
     .list-group-item-footer {
       //padding: 1.5rem 1rem 1.5rem 0;
@@ -313,6 +328,11 @@ dl {
       }
     }
   }
+}
+
+// List group hub for Collectrices list-group layout
+// Title and simple data inline with divider. Optionnal footer icon
+.list-group-hub {
 
   a.list-group-item {
     &:hover {
@@ -327,15 +347,8 @@ dl {
       }
     }
   }
-  
-  .list-group-item-title {
-    font-size: $font-size-xl;
-    line-height: 1.3333;
-    color: $headings-color;
-    display: block;
-    padding-bottom: .5rem;
-  }
 
+  // Review this shit
   .list-group-item-content {
     display: flex;
     flex-wrap: wrap;
@@ -349,26 +362,34 @@ dl {
         margin-right: .75rem;
       }
     }
-    .label {
-      font-weight: $font-weight-bold;
-      display: block;
-    }
   }
+}
 
-  // A row is a label/content combination
+
+// List group content for list-group layout inside content
+// Title and complexe data structure. With or without bs grid layout.
+.list-group-content {
+
   .list-group-item-row,
   .list-group-item-column {
-    width: 100%;
     padding-bottom: 1rem;
     &:last-child {
       padding-bottom: 0;
     }
   }
 
+  // A column is not inside bootstrap grid layout
   .list-group-item-column {
-    .label {
+    width: 100%;
+    display: block;
+    .list-group-item-label {
       color: $headings-color;
       padding-bottom: 1rem;
     }
+  }
+  
+  // A row is a label/value combination
+  .list-group-item-row {
+
   }
 }

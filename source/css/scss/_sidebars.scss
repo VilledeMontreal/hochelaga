@@ -117,3 +117,18 @@
     white-space: nowrap;
   }
 }
+
+// Update date in sidebar
+.sidebar-updated {
+  margin-top: -4rem;
+  padding-top: 1.8125rem;
+  padding-bottom: 1rem;
+  display: flex;
+  justify-content: flex-end;
+  align-self: center;
+  font-size: 80%;
+  .vdm {
+    font-size: 1.5em;
+    margin-right: .5rem;
+  }
+}

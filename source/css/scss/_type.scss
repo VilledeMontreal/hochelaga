@@ -398,10 +398,11 @@ a {
 // Class to add ellipsis to long line of text
 .elided-text {
   max-width: 100%;
+  width: 100%;
+  display: inline-block;
   white-space: nowrap; 
   overflow: hidden;
   text-overflow: ellipsis;
-  display: inline-block;
 }
 
 //
