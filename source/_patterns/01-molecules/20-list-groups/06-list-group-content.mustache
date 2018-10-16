@@ -9,7 +9,12 @@
         {{# label }}
         <span class="list-group-item-label">{{ label }}</span>
         {{/ label }}
+        {{# value }}
         {{{ value }}}
+        {{/ value }}
+        {{# url }}
+          <a class="elided-text" href="{{url}}">{{url}}</a>
+        {{/ url }}
       </div>
       {{/ items }}
       {{/ items-column }}
