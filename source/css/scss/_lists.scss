@@ -369,10 +369,18 @@ dl {
   }
 }
 
-
 // List group content for list-group layout inside content
 // Title and complexe data structure. With or without bs grid layout.
 .list-group-content {
+
+  //remove extra margin on last child item of last-child...
+  .list-group-item-body {
+    > :last-child {
+      > * {
+        margin-bottom: 0;
+      }
+    }
+  }
 
   .list-group-item-row,
   .list-group-item-column {
@@ -392,8 +400,4 @@ dl {
     }
   }
   
-  // A row is a label/value combination
-  .list-group-item-row {
-
-  }
 }
