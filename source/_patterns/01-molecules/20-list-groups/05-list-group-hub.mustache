@@ -1,0 +1,24 @@
+<div class="list-group {{ listGroupClass }}">
+	{{# listGroup }}
+  	<a class="list-group-item list-group-item-action {{ class }}" href="{{ url }}">
+    <div class="list-group-item-body">
+      <span class="list-group-item-title">{{ title}}</span>
+      {{# infos }}
+        <div class="list-group-item-content {{infosClass}}">
+        {{# infos.infos-items }}
+          <span class="{{class}}">{{{ text }}}</span>
+        {{/ infos.infos-items }}
+        </div>
+      {{/ infos}}
+    </div>
+    <div class="list-group-item-footer">
+    {{^ footer.icon-label }}
+    {{> atoms-fonticon-item(icon-label: "063-fleche-droite")}}
+    {{/ footer.icon-label }}
+    {{# footer.icon-label }}
+      {{> atoms-fonticon-item(icon-label: "112-lien-externe")}}
+    {{/ footer.icon-label }}
+    </div>
+    </a>
+  {{/ listGroup }}
+</div>

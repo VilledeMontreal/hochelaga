@@ -81,6 +81,7 @@ ol {
 
   .list-icon-content {
     margin-bottom: 1rem;
+    width: 100%;
   }
 
   address {
@@ -165,6 +166,7 @@ ol {
     margin-bottom: 0;
   }
   > li {
+    margin-bottom: 2rem;
     .date {
       margin-bottom: 1.5rem;
     }
@@ -180,6 +182,9 @@ ol {
           }
         }
       }
+    }
+    &:last-child {
+      margin-bottom: 0;
     }
   }
 }
@@ -202,11 +207,13 @@ ol {
     margin-bottom: 0;
   }
   a {
-    @extend .h5;
+    font-size: $font-size-xl;
+    font-weight: $font-weight-bold;
+    line-height: 1.3333;
     border: none;
-    color: $primary;
+    //color: $sarcelle-surprise;
     display: inline-block;
-    margin-bottom: 1rem;
+    margin-bottom: .5rem;
   }
   p {
     margin-bottom: 1rem;
@@ -262,10 +269,135 @@ dl {
 
   a {
     border-bottom: none;
+    &:hover {
+      .list-group-item-title {
+        color: $sarcelle;
+      }
+    }
   }
 
   .vdm {
     font-size: 1.5rem;
     padding-right: .5rem;
   }
+
+  .list-group-item-title {
+    color: $headings-color;
+    display: block;
+    font-size: $font-size-xl;
+    line-height: 1.3333;
+    padding-bottom: .5rem;
+  }
+  
+  .list-group-item-label {
+    font-weight: $font-weight-bold;
+    display: block;
+  }
+
+}
+
+.list-group-heading {
+  color: $headings-color;
+  font-size: $font-size-xl;
+  line-height: 1.3333;
+  padding-top: .7rem;
+  padding-bottom: 1.275rem;
+}
+
+.list-group-hub,
+.list-group-content {
+  .list-group-item {
+    color: $gray-ink;
+    display: flex;
+    justify-content: space-between;
+    padding: 2.25rem 2rem;
+    > *:last-child {
+      padding-bottom: 0;
+    }
+    flex-direction: row;
+    align-items: center;
+    .list-group-item-body {
+      flex: 1 1 auto;
+      //padding-right: 1rem;
+      text-align: left;
+      max-width: 800px;
+      min-width: 0; // this is needed for the text-overflow property to work
+    }
+    .list-group-item-footer {
+      //padding: 1.5rem 1rem 1.5rem 0;
+      .vdm {
+        color: $gray-300;
+        font-size: 3rem;
+        padding-right: 0;
+      }
+    }
+  }
+}
+
+// List group hub for Collectrices list-group layout
+// Title and simple data inline with divider. Optionnal footer icon
+.list-group-hub {
+
+  a.list-group-item {
+    &:hover {
+      color: $gray-ink;
+      .list-group-item-title {
+        color: $sarcelle;
+      }
+      .list-group-item-footer {
+        .vdm {
+          color: $sarcelle;
+        }
+      }
+    }
+  }
+
+  // Review this shit
+  .list-group-item-content {
+    display: flex;
+    flex-wrap: wrap;
+    > span {
+      margin-right: .75rem;
+    }
+    > span:nth-child(n + 2):not(.separator-brand) {
+      &:before {
+        content: "·";
+        color: $gray-900;
+        margin-right: .75rem;
+      }
+    }
+  }
+}
+
+// List group content for list-group layout inside content
+// Title and complexe data structure. With or without bs grid layout.
+.list-group-content {
+
+  //remove extra margin on last child item of last-child...
+  .list-group-item-body {
+    > :last-child {
+      > * {
+        margin-bottom: 0;
+      }
+    }
+  }
+
+  .list-group-item-row,
+  .list-group-item-column {
+    padding-bottom: 1rem;
+    &:last-child {
+      padding-bottom: 0;
+    }
+  }
+
+  // A column is not inside bootstrap grid layout
+  .list-group-item-column {
+    width: 100%;
+    display: block;
+    .list-group-item-label {
+      color: $headings-color;
+      padding-bottom: 1rem;
+    }
+  }
+  
 }

@@ -1,0 +1,31 @@
+{
+  "inputGroupIconExamples": [
+    {
+      "formGroupLabel": "Input group icon, default left icon",
+      "inputID": "input-text-left",
+      "inputGroupIconClass": "input-group-icon-left",
+      "iconAfter": false,
+      "icon-label": "002-recherche",
+      "formControlClass": false,
+      "inputPlaceholder": "Input placeholder"
+    },
+    {
+      "formGroupLabel": "Input group icon, right icon",
+      "inputID": "input-text-right",
+      "inputGroupIconClass": "input-group-icon-right",
+      "iconAfter": true,
+      "icon-label": "008-oeil",
+      "formControlClass": false,
+      "inputPlaceholder": "Input placeholder"
+    },
+    {
+      "formGroupLabel": "Input group large, dark, with icon",
+      "inputID": "input-group-search",
+      "inputGroupIconClass": "input-group-icon-left",
+      "iconAfter": false,
+      "icon-label": "002-recherche",
+      "formControlClass": "form-control-lg form-control-dark",
+      "inputPlaceholder": "Input placeholder"
+    }
+  ]
+}

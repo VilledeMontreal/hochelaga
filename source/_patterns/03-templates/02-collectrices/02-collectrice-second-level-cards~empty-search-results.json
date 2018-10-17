@@ -3,14 +3,9 @@
   "regionMainClasses": "",
   "regionMainContainerClasses": "",
   "regionMainContentClasses": "",
-  "regionBeforeClasses": "page-section",
-  "sidebar-blocks-demo-debug-wrapper": false,
-  "sidebar-blocks-demo-debug-message": false,
-  "sidebarRight" : true,
-  "sidebarLeft" : false,
-  "sidebarRightClass": "col-lg-4 offset-lg-1",
-  "has-lead-text" : false,
-  "hasPagination": true,
+  "regionBeforeClasses": "page-section bg-gray-sky",
+  "has-lead-text" : true,
+  "hasPagination": false,
   "text-elements": {
     "headings": {
       "display": {
@@ -47,26 +42,47 @@
           "card-media" : {
             "icon" : "vdm-040-permis-generique"
           }
+        },
+        {
+          "classes" : false,
+          "url" : "#",
+          "card-title" : "Collecte de résidus",
+          "card-text" : false,
+          "card-media" : {
+            "icon" : "vdm-082-residus-verts"
+          }
+        },
+        {
+          "classes" : false,
+          "url" : "#",
+          "card-title" : "Réserver un livre",
+          "card-text" : false,
+          "card-media" : {
+            "icon" : "vdm-013-livre"
+          }
+        },
+        {
+          "classes" : false,
+          "url" : "#",
+          "card-title" : "Transport",
+          "card-text" : false,
+          "card-media" : {
+            "icon" : "vdm-011-bus"
+          }
+        },
+        {
+          "classes" : false,
+          "url" : "#",
+          "card-title" : "Payer un constat",
+          "card-text" : false,
+          "card-media" : {
+            "icon" : "vdm-019-document"
+          }
         }
       ]
     }
   },
-  "third-level-section": {
-    "items": {
-      "heading": "First heading",
-      "subheading": "Sub-heading",
-      "item": [
-        {
-          "url": "#",
-          "title": "Link 1",
-          "description": "<p>Description link 1</p>"
-        },
-        {
-          "url": "#",
-          "title": "Link 2",
-          "description": "<p>Description link 2</p>"
-        }
-      ]
-    }
+  "demandesListes": {
+    "cards": false
   }
 }

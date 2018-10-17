@@ -28,6 +28,8 @@
 
   &-title {
     padding-bottom: 3rem;
+    // Limit max width of title
+    max-width: 1450px;
     h1 {
       margin-bottom: 0;
       &:after {
@@ -207,6 +209,7 @@
   padding-bottom: 8rem;
 }
 
+// Featured content is a block content with a white background
 .featured-content {
   background-color: $white;
   padding: 2rem;
@@ -214,6 +217,31 @@
     padding: 3.5rem;
   }
 }
+
+// Promo content is a weird thing on the homepage
+// Needs to be more generic once homepage is clearly defined
+.home-promo {
+  padding-top: 3rem;
+  .promo-content {
+    padding-bottom: 4rem;
+    h2 {
+      margin-bottom: 1.5rem;
+    }
+  }
+
+  @include media-breakpoint-up(lg) {
+    .promo-content {
+      padding-top: 2rem;
+      padding-bottom: 2rem;
+      h2 {
+        margin-bottom: 1.5rem;
+      }
+    }
+  }
+}
+
+
+
 
 
 // Lead container
@@ -230,7 +258,8 @@
 }
 // Borough selection section inside lead-container
 // @see demarche (how to) templates
-.section-select-arron {
+.section-select-arron,
+.section-lead {
   @include media-breakpoint-down(md) {
     > div + div {
       margin-top: 2rem;
@@ -238,7 +267,9 @@
   }
 }
 
-.select-arron {
+.select-arron,
+.lead-left-content,
+.lead-right-content {
   .label {
     display: block;
     margin-bottom: 1rem;
@@ -258,10 +289,20 @@
     }
   }
 
-  @include media-breakpoint-up(lg) {
+}
+.lead-left-content {
+    @include media-breakpoint-up(lg) {
     border-right: 1px solid $gray-400;
     padding-right: 3.375rem;
     margin-right:  3.375rem;
+    height: 100%;
+  }
+}
+.lead-right-content {
+  @include media-breakpoint-up(lg) {
+    border-left: 1px solid $gray-400;
+    padding-left: 3.375rem;
+    margin-left:  3.375rem;
     height: 100%;
   }
 }
@@ -615,4 +656,11 @@
   top: 0;
   z-index: 1000;
   width: 100%;
+}
+
+// empty-results
+.empty-results {
+  .list-group-heading {
+    display: block;
+  }
 }

@@ -127,7 +127,9 @@ $spacers: map-merge((
   11: ($spacer * 11),
   12: ($spacer * 12),
   13: ($spacer * 13),
-  14: ($spacer * 14)
+  14: ($spacer * 14),
+  15: ($spacer * 15),
+  16: ($spacer * 16)
 ), $spacers);
 
 // Body
@@ -414,7 +416,7 @@ $list-group-border-radius:          0;
 $list-group-item-padding-y:         1rem;
 $list-group-item-padding-x:         1.5rem;
 
-$list-group-hover-bg:               $sarcelle-lightest;
+$list-group-hover-bg:               $gray-100;
 $list-group-active-color:           $component-active-color;
 $list-group-active-bg:              $component-active-bg;
 $list-group-active-border-color:    $list-group-active-bg;

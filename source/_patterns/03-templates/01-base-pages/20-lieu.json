@@ -2,6 +2,7 @@
   "regionMainContentClasses": "",
   "sidebarRight": true,
   "sidebarLeft": false,
+  "contentHeaderClasses": "bg-gray-sky",
   "text-elements": {
     "headings":{
       "display":{
@@ -10,7 +11,117 @@
     }
   },
   "has-header-meta": true,
-  "has-publication-date": true,
-  "header-category": "Point de service - Mercier–Hochelaga-Maisonneuve",
-  "has-lead-text": true
+  "has-informations": true,
+  "informations-event": {
+    "date": "10300, rue Lajeunesse",
+    "lieu": "Ahuntsic-Cartierville"
+  },
+  "badges":[
+    {
+      "badge": "Centre culturel",
+      "badgeClass": "",
+      "badgeUrl": "#"
+    }
+  ],
+  "has-publication-date": false,
+  "has-hub-link": true,
+  "date-time-text": "Mis à jour le 5 septembre 2018",
+  "hub-link-text": "Tous les lieux",
+  "has-lead-text": false,
+  "sidebarClasses": "sidebar-top-stroke",
+  "sidebarTitle": "Informations",
+  "social-media-icons-list": {
+    "has-label": false,
+    "has-facebook": true,
+    "has-instagram": false,
+    "has-twitter": true,
+    "has-linkedin": false,
+    "has-youtube": true
+  },
+  "lieu-datas": false,
+  "lieuListGroup": {
+    "listGroupClass": "list-group-content",
+    "listGroupContent": [
+      {
+        "title": "Services",
+        "items-row": false,
+        "items-column": {
+          "items": [
+            {
+              "label": false,
+              "value": "<ul><li>Wi-Fi gratuit</li><li>Vestiaire familial</li><li>Toilettes</li><li>Casse-croûte</li></ul>",
+              "url": false
+            }
+          ]
+        }
+      },
+      {
+        "title": "Accessibilité universelle",
+        "items-column": false,
+        "items-row": {
+          "items": [
+            {
+              "label": "Lieu accessible",
+              "value": "Oui",
+              "url": false
+            },
+            {
+              "label": "Service accessible",
+              "value": "Oui",
+              "url": false
+            }
+          ]
+        }
+      },
+      {
+        "title": "Accès",
+        "items-column": false,
+        "items-row": {
+          "items": [
+            {
+              "label": "Capacité d'accueil",
+              "value": "89 999 places",
+              "url": false
+            },
+            {
+              "label": "Condition d'admission",
+              "value": false,
+              "url": "http://ville.montreal.qc.ca/portal/page?_pageid=5798,85041649&_dad=portal&_schema=PORTAL"
+            }
+          ]
+        }
+      },
+      {
+        "title": "Tarifs",
+        "items-row": false,
+        "items-column": {
+          "items": [
+            {
+              "label": "Prix",
+              "value": "<p>Prix réguliers // Résidents du Québec<br>Adultes : 20,50 $ // 16,00 $<br>65 ans et plus : 18,75 $ // 15,00 $<br>Étudiants (18+)* : 15,00 $ // 12,25 $<br>5 à 17 ans : 10,25 $ // 8,00 $<br>Famille** : 56,75 $ // 45,00 $</p><p>Tarifs valides du 30 janvier au 31 décembre 2018</p>",
+              "url": false
+            },
+            {
+              "label": "Précisions sur les tarifs",
+              "value": "<p>* Tarif accordé sur présentation de carte d'identité étudiante.<br>** Famille : un maximum de 2 adultes et 3 enfants de 5 à 17 ans. Le tarif famille carte Accès Montréal est applicable si tous les membres de la famille présents lors de la visite sont détenteurs d'une carte Accès Montréal valide.</p><p>Taxes comprises<br>Gratuit pour les enfants de 4 ans et moins</p>",
+              "url": false
+            },
+            {
+              "label": "Mode(s) de paiement",
+              "value": "<ul><li>Argent comptant</li><li>Carte de débit</li><li>Visa</li><li>Mastercard</li><li>American Express</li></ul>",
+              "url": false
+            },
+            {
+              "label": "Pour connaître tous les tarifs",
+              "value": false,
+              "url": "http://ville.montreal.qc.ca/portal/page?_pageid=5798,85041649&_dad=portal&_schema=PORTAL"
+            }
+          ]
+        }
+      }
+    ]
+  },
+  "map": {
+    "mapID": "mapLieu001"
+  }
 }

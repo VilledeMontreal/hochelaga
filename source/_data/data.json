@@ -59,6 +59,10 @@
   "sidebar-blocks-demo-debug-wrapper" : false,
   "sidebarTitle": "Sidebar Block Title",
   "hasTopBanner": true,
+  "hasFeedbackForm": true,
+  "empty-results": {
+    "search-term": "Fajitas"
+  },
   "combo-box-text": "Combo block title",
   "combo-box-icon": "ic-search",
   "combo-box-placeholder": "textfield label",
@@ -192,7 +196,13 @@
     "select": {
       "id": "selectid",
       "formControlClass": false,
-      "defaultOptionLabel": "Filter by"
+      "defaultOptionLabel": "Filter by",
+      "options": [
+        {
+          "option-text" : "Option 1",
+          "option-value" : "option-1"
+        }
+      ]
     },
     "button": {
       "labelDefault": "Button",
@@ -428,8 +438,7 @@
     { "text": "Cras justo odio" },
     { "text": "Dapibus ac facilisis in" },
     { "text": "Morbi leo risus" },
-    { "text": "Porta ac consectetur ac" },
-    { "text": "Vestibulum at eros" }
+    { "text": "Porta ac consectetur ac" }
   ],
   "navbarBrandText": "Boîte à outil - Pattern Lab",
   "navbarNavClass": "",

@@ -89,13 +89,26 @@
           "classes": "card-fw card-row-layout",
           "url": "#",
           "card-date": "20 février 2018",
-          "card-title": "Card with a very long title. Footer is place to the right for larger breakpoint. How do we handle the arrow placement?",
+          "card-title": "Card with a very long title. Footer is place to the right for larger breakpoint.",
           "card-media" : {
             "icon" : false,
             "img" : {
               "url" : "https://picsum.photos/768/480?image=1074",
               "alt" : "Card #1 img alt."
             }
+          }
+        },
+        {
+          "classes": "card-fw card-row-layout",
+          "url": "#",
+          "card-date": "20 février 2018",
+          "card-title": "Card with a very long title. Footer is place to the right for larger breakpoint.",
+          "card-media": {
+            "classes" : false,
+            "icon": false
+          },
+          "footer" : {
+            "outside-body": true
           }
         },
         {
@@ -115,10 +128,6 @@
       ]
     }
   },
-  "homePromo": [
-    {
-      "classes": "",
-      "url": false
-    }
-  ]
+  "homePromo": true,
+  "promo-full-width": true
 }
