@@ -5,33 +5,38 @@
 
   {{> organisms-content-header }}
 
+  {{# nouvellesListes }}
   <section class="page-section bg-gray-sky">
     <div class="container">
+      {{# inputGroupSearch }}
       <div class="row">
-        
         <div class="col-12 col-lg-6">
-          <div class="form-group">
-            <div class="input-group-icon input-group-icon-left">
-              {{> atoms-fonticon-item(icon-label: "002-recherche") }}
-              <input type="text" class="form-control form-control-lg form-control-dark" id="text-icon-left" placeholder="Rechercher une actualité">
-            </div>
-          </div>
+          {{> atoms-input-icon }}
         </div>
-
+      </div>
+      {{/ inputGroupSearch }}
+      {{^ cards }}
+      <div class="row">
         <div class="col-12">
-          {{# cards.headings }}
+          {{> molecules-empty-search-results }}
+        </div>
+      </div>
+      {{/ cards }}
+
+      {{# cards }}
+      <div class="row">
+        {{# cards.headings }}
+        <div class="col-12">
           <h2 class="{{ cards.headings.class }}">{{ cards.headings.text }}</h2>
-          {{/ cards.headings }}
         </div>
+        {{/ cards.headings }}
 
-        <div class="col-12">
-          {{# cards }}
-          <div class="cards {{ cards.classes }}">
+        <div class="cards {{ cards.classes }}">
           {{# cards.card-item }}
+          <div class="{{ cards.bsgrid-classes }}">
             {{> molecules-card-item }}
-          {{/ cards.card-item }}
           </div>
-          {{/ cards }}
+          {{/ cards.card-item }}
         </div>
 
         {{# hasPagination }}
@@ -39,9 +44,12 @@
           {{> molecules-pagination("paginationClass": justify-content-center) }}
         </div>
         {{/ hasPagination }}
+
       </div>
+      {{/ cards }}
     </div>
   </section>
+  {{/ nouvellesListes }}
 
   {{# hasFeedbackForm}}
   {{> organisms-feedback-form}}

@@ -24,34 +24,7 @@
 
         <div class="col-12">
           {{^ list-group-results }}
-          <div class="empty-results">
-            {{# empty-state }}
-            <p>{{{ heading }}}</p>
-            {{/ empty-state }}
-            <!--
-            <div class="row cards {{ cards.classes }}">
-              {{# cards.card-item }}
-              <div class="{{ cards.bsgrid-classes }}">
-                <div class="card {{ classes }}">
-                  {{# card-media }}
-                  {{# card-media.icon }}
-                  <span class="card-icon-top {{ card-media.classes }} vdm {{ card-media.icon }}" aria-hidden="true"></span>
-                  {{/ card-media.icon }}
-                  {{/ card-media }}
-                  <div class="card-body">
-                    {{# card-title }}
-                    <span class="card-title">{{ card-title }}</span>
-                    {{/ card-title }}
-                    {{# card-text }}
-                    <div class="card-text">{{{ card-text }}}</div>
-                    {{/ card-text }}
-                  </div>
-                </div>
-              </div>
-              {{/ cards.card-item }}
-            </div>
-          </div>
-          -->
+          {{> molecules-empty-search-results }}
           {{/ list-group-results }}
           {{# list-group-results }}
           {{# headings }}

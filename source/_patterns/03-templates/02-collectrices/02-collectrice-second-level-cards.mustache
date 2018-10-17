@@ -17,39 +17,47 @@
   {{# demandesListes }}
   <section class="page-section {{cards.section-classes}}">
     <div class="container">
+      
+      {{# inputGroupSearch }}
       <div class="row">
-
         <div class="col-12 col-lg-6">
-          <div class="form-group">
-            <div class="input-group-icon input-group-icon-left">
-              {{> atoms-fonticon-item(icon-label: "002-recherche") }}
-              <input type="text" class="form-control form-control-lg form-control-dark" id="text-icon-left" placeholder="Rechercher une information ou un service">
-            </div>
-          </div>
+          {{> atoms-input-icon }}
         </div>
+      </div>
+      {{/ inputGroupSearch}}
 
+      {{^ cards }}
+      <div class="row">
+        <div class="col-12">
+        {{> molecules-empty-search-results }}
+        </div>
+      </div>
+      {{/ cards }}
+      
+      {{# cards }}
+      <div class="row">
         {{# cards.headings }}
         <div class="col-12">
           <h2 class="{{ cards.headings.class }}">{{ cards.headings.text }}</h2>
         </div>
         {{/ cards.headings }}
 
-      </div>
+        <div class="cards {{ cards.classes }}">
+          {{# cards.card-item }}
+          <div class="{{ cards.bsgrid-classes }}">
+            {{> molecules-card-item }}
+          </div>
+          {{/ cards.card-item }}
+        </div>
 
-      <div class="row cards {{ cards.classes }}">
-        {{# cards.card-item }}
-        <div class="{{ cards.bsgrid-classes }}">
-          {{> molecules-card-item }}
-        </div>
-        {{/ cards.card-item }}
-      </div>
-      <div class="row">
+        {{# hasPagination }}
         <div class="col-12">
-          {{# hasPagination }}
-            {{> molecules-pagination("paginationClass": justify-content-center) }}
-          {{/ hasPagination }}
+          {{> molecules-pagination("paginationClass": justify-content-center) }}
         </div>
+        {{/ hasPagination }}
       </div>
+      {{/ cards }}
+
     </div>
   </section>
   {{/ demandesListes }}

@@ -183,6 +183,9 @@ ol {
         }
       }
     }
+    &:last-child {
+      margin-bottom: 0;
+    }
   }
 }
 
@@ -294,6 +297,7 @@ dl {
 }
 
 .list-group-heading {
+  color: $headings-color;
   font-size: $font-size-xl;
   line-height: 1.3333;
   padding-top: .7rem;

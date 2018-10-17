@@ -12,155 +12,167 @@
       }
     }
   },
-  "cards": {
-    "classes": "",
-    "bsgrid-classes": false,
-    "headings": {
-      "text": "Les dernières nouvelles",
-      "class": "section-heading"
-    },
-    "card-item": [
-      {
-        "classes": "card-fw card-row-layout",
-        "url": "#",
-        "card-date": "18 septembre 2018",
-        "card-title": "Signaler la présence des coyotes : pour une coexistence réussie",
-        "card-text": false,
-        "card-media" : {
-          "icon" : false,
-          "img" : {
-            "url" : "https://picsum.photos/768/480?image=112",
-            "alt" : "Card #1 img alt."
-          }
-        }
+  "inputGroupSearch": [
+    {
+      "formGroupLabel": false,
+      "inputID": "input-group-search",
+      "inputGroupIconClass": "input-group-icon-left",
+      "iconAfter": false,
+      "icon-label": "002-recherche",
+      "formControlClass": "form-control-lg form-control-dark",
+      "inputPlaceholder": "Rechercher une nouvelle"
+    }
+  ],
+  "nouvellesListes": {
+    "cards": {
+      "classes": "",
+      "bsgrid-classes": "col-12",
+      "headings": {
+        "text": "Les dernières nouvelles",
+        "class": "section-heading"
       },
-      {
-        "classes": "card-fw card-row-layout",
-        "url": "#",
-        "card-date": "14 septembre 2018",
-        "card-title": "Sommet de la réconciliation : reconnaître les peuples autochtones",
-        "card-text": false,
-        "card-media" : {
-          "icon" : false,
-          "img" : {
-            "url" : "https://picsum.photos/768/480?image=380",
-            "alt" : "Card #2 img alt."
+      "card-item": [
+        {
+          "classes": "card-fw card-row-layout",
+          "url": "#",
+          "card-date": "18 septembre 2018",
+          "card-title": "Signaler la présence des coyotes : pour une coexistence réussie",
+          "card-text": false,
+          "card-media" : {
+            "icon" : false,
+            "img" : {
+              "url" : "https://picsum.photos/768/480?image=112",
+              "alt" : "Card #1 img alt."
+            }
           }
-        }
-      },
-      {
-        "classes": "card-fw card-row-layout",
-        "url": "#",
-        "card-date": "28 août 2018",
-        "card-title": "Nouveau règlement animalier : prévention et bien-être animal au cœur de la démarche",
-        "card-text": false,
-        "card-media" : {
-          "icon" : false,
-          "img" : {
-            "url" : "https://picsum.photos/768/480?image=593",
-            "alt" : "Card #2 img alt."
-          }
-        }
-      },
-      {
-        "classes": "card-fw card-row-layout",
-        "url": "#",
-        "card-date": "27 juillet 2018",
-        "card-title": "Rues piétonnes : nouvelles venues en 2018",
-        "card-text": false,
-        "card-media" : {
-          "icon" : false,
-          "img" : {
-            "url" : "https://picsum.photos/768/480?image=563",
-            "alt" : "Card #2 img alt."
-          }
-        }
-      },
-      {
-        "classes": "card-fw card-row-layout",
-        "url": "#",
-        "card-date": "20 juillet 2018",
-        "card-title": "Mois de l'archéologie : plus de 100 activités riches en découvertes",
-        "card-text": false,
-        "card-media" : {
-          "icon" : false,
-          "img" : {
-            "url" : "https://picsum.photos/768/480?image=627",
-            "alt" : "Card #2 img alt."
-          }
-        }
-      },
-      {
-        "classes": "card-fw card-row-layout",
-        "url": "#",
-        "card-date": "13 juillet 2018",
-        "card-title": "Les parcs-nature de Montréal : planifiez votre été sans quitter l’île!",
-        "card-text": false,
-        "card-media" : {
-          "icon" : false,
-          "img" : false
         },
-        "footer" : {
-          "outside-body": true
-        }
-      },
-      {
-        "classes": "card-fw card-row-layout",
-        "url": "#",
-        "card-date": "11 juillet 2018",
-        "card-title": "Une page de notre histoire à l’hôtel de ville",
-        "card-text": false,
-        "card-media" : {
-          "icon" : false,
-          "img" : {
-            "url" : "https://picsum.photos/768/480?image=691",
-            "alt" : "Card #2 img alt."
+        {
+          "classes": "card-fw card-row-layout",
+          "url": "#",
+          "card-date": "14 septembre 2018",
+          "card-title": "Sommet de la réconciliation : reconnaître les peuples autochtones",
+          "card-text": false,
+          "card-media" : {
+            "icon" : false,
+            "img" : {
+              "url" : "https://picsum.photos/768/480?image=380",
+              "alt" : "Card #2 img alt."
+            }
+          }
+        },
+        {
+          "classes": "card-fw card-row-layout",
+          "url": "#",
+          "card-date": "28 août 2018",
+          "card-title": "Nouveau règlement animalier : prévention et bien-être animal au cœur de la démarche",
+          "card-text": false,
+          "card-media" : {
+            "icon" : false,
+            "img" : {
+              "url" : "https://picsum.photos/768/480?image=593",
+              "alt" : "Card #2 img alt."
+            }
+          }
+        },
+        {
+          "classes": "card-fw card-row-layout",
+          "url": "#",
+          "card-date": "27 juillet 2018",
+          "card-title": "Rues piétonnes : nouvelles venues en 2018",
+          "card-text": false,
+          "card-media" : {
+            "icon" : false,
+            "img" : {
+              "url" : "https://picsum.photos/768/480?image=563",
+              "alt" : "Card #2 img alt."
+            }
+          }
+        },
+        {
+          "classes": "card-fw card-row-layout",
+          "url": "#",
+          "card-date": "20 juillet 2018",
+          "card-title": "Mois de l'archéologie : plus de 100 activités riches en découvertes",
+          "card-text": false,
+          "card-media" : {
+            "icon" : false,
+            "img" : {
+              "url" : "https://picsum.photos/768/480?image=627",
+              "alt" : "Card #2 img alt."
+            }
+          }
+        },
+        {
+          "classes": "card-fw card-row-layout",
+          "url": "#",
+          "card-date": "13 juillet 2018",
+          "card-title": "Les parcs-nature de Montréal : planifiez votre été sans quitter l’île!",
+          "card-text": false,
+          "card-media" : {
+            "icon" : false,
+            "img" : false
+          },
+          "footer" : {
+            "outside-body": true
+          }
+        },
+        {
+          "classes": "card-fw card-row-layout",
+          "url": "#",
+          "card-date": "11 juillet 2018",
+          "card-title": "Une page de notre histoire à l’hôtel de ville",
+          "card-text": false,
+          "card-media" : {
+            "icon" : false,
+            "img" : {
+              "url" : "https://picsum.photos/768/480?image=691",
+              "alt" : "Card #2 img alt."
+            }
+          }
+        },
+        {
+          "classes": "card-fw card-row-layout",
+          "url": "#",
+          "card-date": "9 juillet 2018",
+          "card-title": "Réseau Express Vélo : à vous la parole!",
+          "card-text": false,
+          "card-media" : {
+            "icon" : false,
+            "img" : {
+              "url" : "https://picsum.photos/768/480?image=839",
+              "alt" : "Card #2 img alt."
+            }
+          }
+        },
+        {
+          "classes": "card-fw card-row-layout",
+          "url": "#",
+          "card-date": "6 juillet 2018",
+          "card-title": "L’agrile du frêne : toujours préoccupant",
+          "card-text": false,
+          "card-media" : {
+            "icon" : false,
+            "img" : {
+              "url" : "https://picsum.photos/768/480?image=995",
+              "alt" : "Card #2 img alt."
+            }
+          }
+        },
+        {
+          "classes": "card-fw card-row-layout",
+          "url": "#",
+          "card-date": "29 juin 2018",
+          "card-title": "Vague de chaleur : soyez prudents",
+          "card-text": false,
+          "card-media" : {
+            "icon" : false,
+            "img" : {
+              "url" : "https://picsum.photos/768/480?image=1084",
+              "alt" : "Card #2 img alt."
+            }
           }
         }
-      },
-      {
-        "classes": "card-fw card-row-layout",
-        "url": "#",
-        "card-date": "9 juillet 2018",
-        "card-title": "Réseau Express Vélo : à vous la parole!",
-        "card-text": false,
-        "card-media" : {
-          "icon" : false,
-          "img" : {
-            "url" : "https://picsum.photos/768/480?image=839",
-            "alt" : "Card #2 img alt."
-          }
-        }
-      },
-      {
-        "classes": "card-fw card-row-layout",
-        "url": "#",
-        "card-date": "6 juillet 2018",
-        "card-title": "L’agrile du frêne : toujours préoccupant",
-        "card-text": false,
-        "card-media" : {
-          "icon" : false,
-          "img" : {
-            "url" : "https://picsum.photos/768/480?image=995",
-            "alt" : "Card #2 img alt."
-          }
-        }
-      },
-      {
-        "classes": "card-fw card-row-layout",
-        "url": "#",
-        "card-date": "29 juin 2018",
-        "card-title": "Vague de chaleur : soyez prudents",
-        "card-text": false,
-        "card-media" : {
-          "icon" : false,
-          "img" : {
-            "url" : "https://picsum.photos/768/480?image=1084",
-            "alt" : "Card #2 img alt."
-          }
-        }
-      }
-    ]
+      ]
+    }
   }
-  
 }
