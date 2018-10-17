@@ -10,54 +10,70 @@ body {
 // @see responsive-font-size mixin
 
 h1, .h1 {
-  @include responsive-font-size($h1-font-size, .75, 48px);
+  @include responsive-font-size($h1-font-size, .75, 44px);
   // 576px and up
   @include media-breakpoint-up(sm) {
-    @include responsive-font-size($h1-font-size, .85, 56px);
+    @include responsive-font-size($h1-font-size, .875, 56px);
   }
   // 768px and up
   @include media-breakpoint-up(md) {
-    @include responsive-font-size($h1-font-size, 1, 64px);
+    @include responsive-font-size($h1-font-size, 1, 60px);
   }
 }
 h2, .h2 {
-  @include responsive-font-size($h2-font-size, .81, 48px);
+  @include responsive-font-size($h2-font-size, .7619, 40px);
   // 576px and up
   @include media-breakpoint-up(sm) {
-    @include responsive-font-size($h2-font-size, .88, 48px);
+    @include responsive-font-size($h2-font-size, .857142, 44px);
   }
   // 768px and up
   @include media-breakpoint-up(md) {
-    @include responsive-font-size($h2-font-size, 1, 56px);
+    @include responsive-font-size($h2-font-size, 1, 52px);
   }
 }
 h3, .h3 {
-  @include responsive-font-size($h3-font-size, .82, 40px);
+  @include responsive-font-size($h3-font-size, .7777, 36px);
   // 576px and up
   @include media-breakpoint-up(sm) {
-    @include responsive-font-size($h3-font-size, .92, 48px);
+    @include responsive-font-size($h3-font-size, .8888, 40px);
   }
   // 768px and up
   @include media-breakpoint-up(md) {
-    @include responsive-font-size($h3-font-size, 1, 48px);
+    @include responsive-font-size($h3-font-size, 1, 44px);
   }
 }
 h4, .h4 {
-  @include responsive-font-size($h4-font-size, .84375, 32px);
+  @include responsive-font-size($h4-font-size, .75, 32px);
   // 576px and up
   @include media-breakpoint-up(sm) {
+    @include responsive-font-size($h4-font-size, .875, 36px);
+  }
+  // 768px and up
+  @include media-breakpoint-up(md) {
     @include responsive-font-size($h4-font-size, 1, 40px);
   }
 }
 h5, .h5 {
-  @include responsive-font-size($h5-font-size, .92, 32px);
+  @include responsive-font-size($h5-font-size, .846153, 32px);
   // 576px and up
   @include media-breakpoint-up(sm) {
+    @include responsive-font-size($h5-font-size, .923076, 32px);
+  }
+  // 768px and up
+  @include media-breakpoint-up(md) {
     @include responsive-font-size($h5-font-size, 1, 32px);
   }
 }
 h6, .h6 {
-  @include responsive-font-size($h6-font-size, 1, 24px);
+  @include responsive-font-size($h6-font-size, .8181, 28px);
+  // 576px and up
+  @include media-breakpoint-up(sm) {
+    @include responsive-font-size($h6-font-size, .9090, 28px);
+  }
+  // 768px and up
+  @include media-breakpoint-up(md) {
+    @include responsive-font-size($h6-font-size, 1, 28px);
+  }
 }
 
 // Display headings
@@ -67,22 +83,21 @@ h6, .h6 {
 
 .display-1,
 .display-2 {
-  @include responsive-font-size($display1-size, .6, 48px);
+  @include responsive-font-size($display1-size, .625, 52px);
   // 576px and up
   @include media-breakpoint-up(sm) {
-    @include responsive-font-size($display1-size, .8, 64px);
+    @include responsive-font-size($display1-size, .78125, 64px);
   }
   // 768px and up
   @include media-breakpoint-up(md) {
     @include responsive-font-size($display1-size, 1, 80px);
   }
 }
-
 .display-3 {
-  @include responsive-font-size($display3-size, .615, 48px);
+  @include responsive-font-size($display3-size, .642857, 44px);
   // 576px and up
   @include media-breakpoint-up(sm) {
-    @include responsive-font-size($display3-size, .815, 56px);
+    @include responsive-font-size($display3-size, .82142, 60px);
   }
   // 768px and up
   @include media-breakpoint-up(md) {
@@ -90,10 +105,10 @@ h6, .h6 {
   }
 }
 .display-4 {
-  @include responsive-font-size($display4-size, .65, 40px);
+  @include responsive-font-size($display4-size, .64, 40px);
   // 576px and up
   @include media-breakpoint-up(sm) {
-    @include responsive-font-size($display4-size, .85, 56px);
+    @include responsive-font-size($display4-size, .84, 56px);
   }
   // 768px and up
   @include media-breakpoint-up(md) {
@@ -115,7 +130,7 @@ h6, .h6 {
 // Lead font-size are responsive
 
 .lead {
-  @include responsive-font-size($lead-font-size, .9, 32px);
+  @include responsive-font-size($lead-font-size, .9166, 32px);
   color: $headings-color;
   font-weight: $lead-font-weight;
   margin-bottom: 2.5rem;
@@ -210,46 +225,6 @@ a {
       }
     }
   }
-  /*
-  &.block {
-    display: block;
-    background: transparent;
-    line-height: $line-height-lg;
-    padding: 0.6em 0.6em;
-
-    .vdm {
-      font-size: 2.5em;
-    }
-
-    &.inline {
-      display: inline-block;
-      padding-left: 0;
-    }
-
-    &.arrow {
-      position: relative;
-      padding-right: 4em;
-
-      .vdm {
-        position: absolute;
-        content: map-get($vdmicons, '063-fleche-droite');
-        font-family: $vdm-icon-font-family;
-        font-size: 2.5em;
-        top: 50%;
-        transform: translateY(-50%);
-        left: calc(100% - 1.25em);
-        background: transparent;
-
-        &:hover,
-        &:active {
-          background-color: transparent;
-          text-decoration: none;
-        }
-      }
-    }
-
-  }
-  */
 }
 
 // Add .icon class to display vertically centered icon and text
@@ -399,7 +374,6 @@ a {
 // Class to add ellipsis to long line of text
 .elided-text {
   max-width: 100%;
-  //width: 100%;
   display: inline-block;
   white-space: nowrap; 
   overflow: hidden;
