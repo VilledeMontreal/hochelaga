@@ -4,6 +4,35 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](http://keepachangelog.com/en/1.0.0/)
 and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.html).
 
+
+## [2.1.0] - 2018-10-18
+
+## Added
+- Added templates and variantes for Collectes (templates > collecte).
+- Added templates and variants for Search results page (templates > recherche).
+- Added template for Avis et alertes.
+- Added loader (atoms > feedback > loader).
+- Added button with loader (atoms > button).
+- Added Promo section on homepage.
+- Added list-group variant for .list-group-hub and .list-group-content.
+- Added empty-results content and styles for collectrices and search pages.
+
+## Changed
+- Changed json structure for sidebar elements (patternlab only).
+- Changed class name from .select-arron to lead-left-content or .lead-right-content and updated lead molecule.
+- Collectrices updated: nouvelles, avis et alertes, 1er niveau, 2e niveau.
+- Lieu template updated: sidebar, list-group, map, header.
+- Updated Homepage data and structure.
+- Updated Feedback form theming.
+- Updated list-groups for complexe data layout.
+
+## Deprecated
+- .section-select-arron and .select-arron have been replaced with more generc classes .section-lead and .lead-right-content or .lead-left-content in layout.scss. Changes are reflected in the lead molecule.
+
+## Fixed
+- Max-width set to 1450px for .content-header-title.
+
+
 ## [2.0.0] - 2018-09-28
 
 ## Added
@@ -191,6 +220,7 @@ remove index from the name. Which makes it possible to update font-icon without 
 ### Removed
 - Removed vdm prefix for buttons classes
 
+[2.1.0]: https://bitbucket.org/villemontreal/boite-outils-web/src/2.1.0/
 [2.0.0]: https://bitbucket.org/villemontreal/boite-outils-web/src/2.0.0/
 [1.3.0]: https://bitbucket.org/villemontreal/boite-outils-web/src/1.3.0/
 [1.2.0]: https://bitbucket.org/villemontreal/boite-outils-web/src/1.2.0/

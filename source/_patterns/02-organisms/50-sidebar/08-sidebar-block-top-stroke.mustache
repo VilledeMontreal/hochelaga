@@ -1,9 +1,11 @@
-<div class="sidebar {{ sidebar-classes }}">
+<div class="sidebar {{ sidebarClasses }}">
+  {{# sb-block-bon-savoir }}
   <section class="sb-block">
     {{> organisms-heading-sidebar(sidebarTitle: "Bon à savoir")}}
     <p>Lorem ipsum dolor sit amet, consectetur <a href="https://ville.montreal.qc.ca">adipiscing elit</a>. Phasellus cursus mauris non orci malesuada aliquet.</p>
     <p>Nunc tincidunt nisi fringilla consectetur pharetra. Duis sed pretium velit, ut placerat purus. Quisque volutpat facilisis nisl, ut scelerisque orci dapibus in.</p>
   </section>
+  {{/ sb-block-bon-savoir }}
   <section class="sb-block">
     {{> organisms-heading-sidebar(sidebarTitle: "Documents") }}
     <ul>

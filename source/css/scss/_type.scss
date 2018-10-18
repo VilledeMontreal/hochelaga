@@ -279,16 +279,17 @@ a {
 // Apply to .region-content and sb-block
 
 .sb-block,
-.region-content {
+.region-content,
+.lead {
   a[href*="//"]:not([href*="montreal.ca"]) {
     @include iconvdm($position: after, $icon: '112-lien-externe');
-    margin-right: 1.125rem;
+    margin-right: 1.125em;
     &:after {
-      font-size: 1.125rem;
+      font-size: 1.125em;
       padding-left: 0.125rem;
       vertical-align: baseline;
       overflow: hidden;
-      margin-right: -1.125rem;
+      margin-right: -1.125em;
       margin-top: -.5rem;
       margin-bottom: -.5rem;
 
@@ -297,7 +298,8 @@ a {
   // List some exclusion
   .list-icon,
   .social-media-list,
-  .cards {
+  .cards,
+  .list-group-hub {
     a[href*="//"]:not([href*="montreal.ca"]) {
       margin-right: 0;
       &:after {
@@ -363,6 +365,15 @@ a {
   }
 }
 
+// Longdash
+.separator-brand {
+  &:before {
+    content: "—";
+    color: $brand;
+    margin-right: .75rem;
+  }
+}
+
 .bullet-left {
   @include bullet-left();
 }
@@ -386,10 +397,12 @@ a {
 
 // Class to add ellipsis to long line of text
 .elided-text {
-  //display: block;
+  max-width: 100%;
+  //width: 100%;
+  display: inline-block;
   white-space: nowrap; 
   overflow: hidden;
-  text-overflow: ellipsis; 
+  text-overflow: ellipsis;
 }
 
 //

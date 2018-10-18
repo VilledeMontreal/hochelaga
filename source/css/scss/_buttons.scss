@@ -68,6 +68,18 @@ button {
       margin-right: -1.5rem;
     }
   }
+
+  .loader {
+    @include size(1.5rem);
+    margin-left: -1.5rem;
+    margin-right: 1rem;
+    margin-top: -4px;
+    margin-bottom: -4px;
+    .loader-child {
+      border-width: .125rem;
+      border-color: $white transparent transparent transparent;
+    }
+  }
 }
 
 // Future-proof disabling of clicks on `<a>` elements
@@ -109,7 +121,7 @@ fieldset:disabled a.btn {
   // No need for an active state here
 }
 
-// We provide onlye 2 buttons styles with some variants
+// We provide only 2 buttons styles with some variants
 // Primary, secondary
 .btn-primary {
   @include button-variant($background: $primary, $border: $primary, $color: $white);
@@ -138,7 +150,7 @@ fieldset:disabled a.btn {
   }
 }
 
-[class*="btn-"] {
+[class*="btn-"]:not(.btn-link) {
   &:disabled,
   &.disabled {
    @include button-variant($gray-300, $gray-300, $hover-background: $gray-300, $hover-border: $gray-300, $active-background: $gray-300, $active-border: $gray-300);
@@ -152,6 +164,7 @@ fieldset:disabled a.btn {
 .btn-sm {
   @include button-size($btn-padding-y-sm, $btn-padding-x-sm, $font-size-sm, $btn-line-height-sm, $btn-border-radius-sm);
   border-width: 2px;
+  // Icons in button
   .vdm {
     color: inherit;
     font-size: 1.5rem;
@@ -162,6 +175,17 @@ fieldset:disabled a.btn {
     &.vdm-right {
       margin-left: .25rem;
       margin-right: -1.25rem;
+    }
+  }
+  // Loaders in button
+  .loader {
+    @include size(1rem);
+    margin-left: -1.25rem;
+    margin-right: .75rem;
+    margin-top: -3px;
+    margin-bottom: -3px;
+    .loader-child {
+      border-width: .125rem ;
     }
   }
 }
@@ -194,6 +218,14 @@ fieldset:disabled a.btn {
   &:focus,
   &.focus {
     border-bottom: 1px solid $sarcelle-atmos;
+  }
+
+  &:disabled,
+  &.disabled {
+    color: $btn-link-disabled-color;
+    pointer-events: none;
+    background-color: transparent;
+    border: none;
   }
 }
 
@@ -337,101 +369,5 @@ input[type="button"] {
     .button-label {
       border-color: inherit;
     }
-  }
-}
-
-// Buttons
-//
-// To Do: Review all buttons implementations and theming. No need to overcomplicate this. Build on bootstrap please
-//
-// DEPRECATED - will be removed in v1.0.0
-//
-.vdm-btn {
-  display: inline-block;
-  width: auto;
-  padding: $vdm-btn-padding-y $vdm-btn-padding-x;
-  border-radius: 2rem;
-  background-color: $primary;
-  text-align: center;
-  font-size: $font-size-base;
-  color: $white;
-  border: $vdm-btn-border-width solid $primary;
-  text-shadow: none;
-  margin-right: 0.725em;
-  vertical-align: middle;
-  touch-action: manipulation;
-  cursor: pointer;
-  // Reset unusual Firefox-on-Android default style; see https://github.com/necolas/normalize.css/issues/214
-  white-space: nowrap;
-  background-image: none;
-  &:last-of-type {
-    margin-right: 0;
-  }
-
-  &:active,
-  &:hover {
-    @include drop-shadow();
-    color: $white;
-    background-color: $primary;
-  }
-
-  &:disabled {
-    color: $btn-link-disabled-color;
-    border: $vdm-btn-border-width solid $input-disabled-bg;
-    background-color: $input-disabled-bg;
-    &:active,
-    &:hover {
-      box-shadow: unset;
-      color: $btn-link-disabled-color;
-      background-color: $input-disabled-bg;
-    }
-  }
-
-  &.vdm-btn-secondary {
-    color: $primary;
-    border: $vdm-btn-border-width solid $primary;
-    background-color: $white;
-
-    &:disabled {
-      color: $btn-link-disabled-color;
-      border: $vdm-btn-border-width solid $input-disabled-bg;
-      background-color: $white;
-
-      &:active,
-      &:hover {
-        box-shadow: unset;
-        background-color: $white;
-        border: 2px solid $input-disabled-bg;
-      }
-    }
-
-    &:active,
-    &:hover {
-      @include drop-shadow(3px, 5px, 11px, 2px, 0, 0, 0, 0.27);
-      border: $vdm-btn-border-width solid $white;
-      background-color: $white;
-    }
-  }
-
-  &.vdm-btn-sm {
-    font-size: $font-size-sm;
-    border-width: 1px;
-    padding: $vdm-btn-padding-y-sm $vdm-btn-padding-x-sm;
-    &:active,
-    &:hover {
-      border-width: 1px;
-    }
-  }
-
-  &.vdm-btn-wide {
-    width: 100%;
-  }
-}
-
-a {
-  &.vdm-btn {
-    //padding-top: 1em;
-    display: inline-block;
-    text-decoration: none;
   }
 }
