@@ -13,7 +13,6 @@ patternStates:
     - inprogress
     - inreview
     - complete
-styleGuideExcludes: pages
 cacheBusterOn: 'true'
 exportDir: export
 publicDir: public
@@ -30,6 +29,7 @@ ishMaximum: '2600'
 ishControlsHide:
     - hay
     - disco
+    - random
 ishViewportRange:
     s: [320,320]
     m: [768, 768]

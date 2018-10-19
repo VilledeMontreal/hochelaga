@@ -5,7 +5,7 @@ The format is based on [Keep a Changelog](http://keepachangelog.com/en/1.0.0/)
 and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.html).
 
 
-## [2.1.0] - unreleased
+## [2.1.0] - 2018-10-18
 
 ## Added
 - Added templates and variantes for Collectes (templates > collecte).
@@ -14,7 +14,8 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 - Added loader (atoms > feedback > loader).
 - Added button with loader (atoms > button).
 - Added Promo section on homepage.
-- Addes list-group variant for .list-group-hub and .list-group-content.
+- Added list-group variant for .list-group-hub and .list-group-content.
+- Added empty-results content and styles for collectrices and search pages.
 
 ## Changed
 - Changed json structure for sidebar elements (patternlab only).
@@ -219,6 +220,7 @@ remove index from the name. Which makes it possible to update font-icon without 
 ### Removed
 - Removed vdm prefix for buttons classes
 
+[2.1.0]: https://bitbucket.org/villemontreal/boite-outils-web/src/2.1.0/
 [2.0.0]: https://bitbucket.org/villemontreal/boite-outils-web/src/2.0.0/
 [1.3.0]: https://bitbucket.org/villemontreal/boite-outils-web/src/1.3.0/
 [1.2.0]: https://bitbucket.org/villemontreal/boite-outils-web/src/1.2.0/
