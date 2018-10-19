@@ -194,10 +194,10 @@ a {
 
   // File extension handling
   &[href$=".pdf"] {
-    margin-right: 49px;
+    margin-right: 3.02em;
     &:after {
       content: "(PDF)";
-      margin-right: -49px;
+      margin-right: -3.02em;
       padding-left: .5rem;
       overflow: hidden;
     }
