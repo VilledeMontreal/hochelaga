@@ -73,7 +73,7 @@
 }
 
 .pagination-sm {
-  @include pagination-size($pagination-padding-y-sm, $pagination-padding-x-sm, $font-size-md, $line-height-sm, 0);
+  @include pagination-size($pagination-padding-y-sm, $pagination-padding-x-sm, $font-size-sm, $line-height-sm, 0);
 
   .page-item {
     &:first-child,
@@ -212,7 +212,7 @@
       margin-right: 15px;
     }
     .badge-pill {
-      font-size: $font-size-sm;
+      font-size: $font-size-xs;
     }
   }
 
@@ -246,8 +246,8 @@ nav {
   padding: 1rem $grid-gutter-width/2;
 
   .nav-link {
-    font-size: $font-size-base;
-    line-height: 1.42857142857;
+    font-size: $font-size-sm;   //~15px
+    line-height: 1.4;           //~21px
     padding: .5rem;
     position: relative;
     text-align: center;
@@ -345,8 +345,8 @@ nav {
 .nav-tabs {
   .nav-link {
     color: $gray-700;
-    font-size: $font-size-md;
-    line-height: 1.42857142857;
+    font-size: $font-size-sm;         //~15px
+    line-height: 1.4;                 //~21px
     font-weight: $font-weight-bold;
     padding: 1.5rem .5rem;
     position: relative;
@@ -504,9 +504,9 @@ nav {
   align-items: center;
   justify-content: center;
   color: $gray-500;
-  font-size: $font-size-md;
+  font-size: $font-size-sm;     // ~15px
   flex: 1 0 auto;
-  line-height: 1.71428571;
+  line-height: 1.4;
   padding: 1.125rem;
   width: 100%;
   // Absolute positionning on larger breakpoint
@@ -517,8 +517,8 @@ nav {
     font-weight: $font-weight-bold;
     padding: 1.5rem 1rem 1.125rem 1.875rem;
     position: absolute;
-    top: 0;
-    bottom: 0;
+    //top: 0;
+    bottom: 1rem;
     left: 0;
     width: auto;
     justify-content: left;
@@ -572,7 +572,9 @@ nav {
   .caption {
     color: $gray-600;
     display: inline-block;
-    padding-bottom: .25rem;
+    font-size: $font-size-sm;
+    line-height: 1.2;
+    padding-bottom: .5rem;
   }
   .circle {
     @include circle($background-color: $gray-200, $border: true);
@@ -657,7 +659,7 @@ nav {
 
   .db-label {
     display: inline-block;
-    font-size: $font-size-md;
+    font-size: $font-size-sm;           // ~15px
     font-weight: $font-weight-bold;
     margin-bottom: .5rem;
     text-transform: uppercase;

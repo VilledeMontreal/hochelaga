@@ -53,8 +53,8 @@
     .user-info {
       flex: 1;
       color: $gray-600;
-      font-size: $font-size-md;
-      line-height: get-line-height($font-size-md, 18px);
+      font-size: $font-size-sm;
+      line-height: $line-height-sm;
       overflow: hidden;
       span {
         display: block;
@@ -63,7 +63,7 @@
         color: $headings-color;
         font-size: $font-size-lg;
         font-weight: $font-weight-bold;
-        padding-bottom: .25rem;
+        // padding-bottom: .25rem;
       }
       .user-name {
         font-weight: $font-weight-bold;

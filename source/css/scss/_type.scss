@@ -296,6 +296,7 @@ a {
 .blockquote {
   color: $gray-900;
   font-size: $font-size-lg;
+  line-height: get-line-height($font-size-lg, 32px);
   font-weight: $font-weight-normal;
   margin-bottom: 2rem;
   padding-left: 1.75em;
@@ -354,14 +355,20 @@ a {
   @include bullet-left();
 }
 
+/*
 .meta {
-  font-size: $font-size-sm;
+  font-size: $font-size-xs;
 }
+*/
 
 .footer-notes {
   border-top: 1px solid $gray-700;
+  font-size: $font-size-sm;
   padding-top: 2rem;
   margin-bottom: 4rem;
+  small, .small {
+    font-size: 100%;
+  }
 }
 
 .select-all {

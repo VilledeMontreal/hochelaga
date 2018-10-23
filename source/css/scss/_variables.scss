@@ -210,13 +210,13 @@ $font-weight-normal:          $font-weight-regular;
 $line-height-base:            1.555555555;
 $line-height-xl:              1.3333;
 $line-height-lg:              1.5238;
-$line-height-sm:              1.3333;
+$line-height-sm:              1.4;
 
-$font-size-base:              1.125rem;   // Assumes the browser default, typically `16px`
-$font-size-xl:                1.5rem;     // ~24px
-$font-size-lg:                1.25rem;    // ~20px
-$font-size-md:                0.875rem;   // ~14px
-$font-size-sm:                0.75rem;    // ~12px
+$font-size-base:              1.125rem;     // ~18px if browser default is 16px
+$font-size-xl:                1.5rem;       // ~24px
+$font-size-lg:                1.3125rem;    // ~21px
+$font-size-sm:                0.9375rem;    // ~15px
+$font-size-xs:                0.75rem;      // ~12px
 
 // Headings font-size and line-height are made responsive
 // @see type.scss
@@ -230,16 +230,16 @@ $h6-font-size:                1.375rem;       // 22px
 
 $headings-margin-bottom:      1.5rem;
 $headings-font-weight:        $font-weight-bold;
-$headings-line-height:        1.23; // specific line-height for each level, see mixins header
+$headings-line-height:        1.23;           // specific line-height for each level, see mixins header
 $headings-color:              $gray-900;
 
 // Headings font-size and line-height are made responsive
 // @see type.scss
 // These values represent the largest font-size for those headings
-$display1-size:               4rem;       //64px;
-$display2-size:               4rem;       //64px;
-$display3-size:               3.5rem;     //56px;
-$display4-size:               3.125rem;    //50px;
+$display1-size:               4rem;           //64px;
+$display2-size:               4rem;           //64px;
+$display3-size:               3.5rem;         //56px;
+$display4-size:               3.125rem;       //50px;
 
 $display1-weight:             700;
 $display2-weight:             400;
@@ -249,8 +249,8 @@ $display4-weight:             400;
 // Display line-height are dealt directly in the class because it's specific to each display 
 $display-line-height:         $headings-line-height;
 
-$lead-font-size:              1.5rem;     // 24px
-$lead-line-height:            get-line-height($lead-font-size, 32px);    // 32px
+$lead-font-size:              $font-size-xl;              // 24px
+$lead-line-height:            $line-height-xl;            // 32px
 $lead-font-weight:            $font-weight-regular;
 
 $small-font-size:             .75em;
@@ -439,7 +439,7 @@ $badge-pill-padding-x:              .6em;
 
 $input-btn-padding-y:         .375rem;
 $input-btn-padding-x:         .75rem;
-$input-btn-line-height:       $line-height-base;
+$input-btn-line-height:       1.47;
 
 $input-btn-focus-width:       .2rem;
 $input-btn-focus-color:       rgba($primary, .25);
@@ -467,7 +467,7 @@ $btn-line-height-sm:          get-line-height(12px, 18px);
 
 $btn-border-width:            2px;
 
-$btn-font-size:               1rem;
+$btn-font-size:               $font-size-sm;
 $btn-font-weight:             $font-weight-normal;
 $btn-box-shadow:              inset 0 1px 0 rgba($white, .15), 0 1px 1px rgba($black, .075);
 $btn-focus-width:             $input-btn-focus-width;
