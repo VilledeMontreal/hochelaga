@@ -1,8 +1,7 @@
 // Breadcrumb
-// Reference used : https://projects.invisionapp.com/d/main#/console/11533069/245898997/inspect
 .breadcrumb {
   border-radius: 0;
-  font-size: $font-size-lg;
+  font-size: $font-size-base;
   margin-bottom: 0;
   a {
     border: none;
@@ -15,8 +14,6 @@
 }
 
 // Pagination
-// Reference used : https://projects.invisionapp.com/d/main#/console/11533069/245898997/inspect
-
 .pagination {
   @include border-radius(0);
 }
