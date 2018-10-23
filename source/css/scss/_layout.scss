@@ -54,13 +54,13 @@
 
   &-metadata {
     color: $gray-600;
-    font-size: $font-size-lg;
+    font-size: $font-size-base;
   }
 
   // Hub link
   .hub-link {
     color: $gray-600;
-    font-size: $font-size-lg;
+    font-size: $font-size-base;
     padding-bottom: 2rem;
     a {
       color: $gray-ink;
@@ -146,7 +146,7 @@
       }
       .profile-member {
         color: $headings-color;
-        font-size: $font-size-lg;
+        font-size: $font-size-base;
       }
       .profile-label {
         color: $gray-600;
@@ -285,7 +285,7 @@
   // Button for borough selection should be small on smallest breakpoint.
   @include media-breakpoint-down(xs) {
     .btn:not(.btn-link) {
-      @include button-size($btn-padding-y-sm, $btn-padding-x-sm, $font-size-sm, $btn-line-height-sm, $btn-border-radius-sm);
+      @include button-size($btn-padding-y-sm, $btn-padding-x-sm, $font-size-xs, $btn-line-height-sm, $btn-border-radius-sm);
     }
   }
 
@@ -549,7 +549,7 @@
             }
           }
           &.nav-filters {
-            font-size: $font-size-md;
+            font-size: $font-size-sm;
             margin-right: 2rem;
             display: flex;
             flex: 1 0 auto;

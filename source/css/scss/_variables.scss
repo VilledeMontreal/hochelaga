@@ -207,39 +207,39 @@ $font-weight-regular:         400; // Nunito Sans Regular
 $font-weight-bold:            700; // Nunito Sans Bold
 $font-weight-normal:          $font-weight-regular;
 
-$line-height-base:            1.5;
+$line-height-base:            1.555555555;
 $line-height-xl:              1.3333;
 $line-height-lg:              1.5238;
-$line-height-sm:              1.3333;
+$line-height-sm:              1.4;
 
-$font-size-base:              1rem;       // Assumes the browser default, typically `16px`
-$font-size-xl:                1.5rem;     // ~24px
-$font-size-lg:                1.25rem;    // ~20px
-$font-size-md:                0.875rem;   // ~14px
-$font-size-sm:                0.75rem;    // ~12px
+$font-size-base:              1.125rem;     // ~18px if browser default is 16px
+$font-size-xl:                1.5rem;       // ~24px
+$font-size-lg:                1.3125rem;    // ~21px
+$font-size-sm:                0.9375rem;    // ~15px
+$font-size-xs:                0.75rem;      // ~12px
 
 // Headings font-size and line-height are made responsive
 // @see type.scss
 // These values represent the largest font-size for those headings
-$h1-font-size:                $font-size-base * 3.25;       // 52px
-$h2-font-size:                $font-size-base * 2.75;       // 44px
-$h3-font-size:                $font-size-base * 2.4375;     // 39px
-$h4-font-size:                $font-size-base * 2;          // 32px
-$h5-font-size:                $font-size-base * 1.625;      // 26px
-$h6-font-size:                $font-size-base * 1.25;       // 20px
+$h1-font-size:                3rem;           // 48px
+$h2-font-size:                2.625rem;       // 42px
+$h3-font-size:                2.25rem;        // 36px
+$h4-font-size:                2rem;           // 32px
+$h5-font-size:                1.625rem;       // 26px
+$h6-font-size:                1.375rem;       // 22px
 
-$headings-margin-bottom:      1rem;
+$headings-margin-bottom:      1.5rem;
 $headings-font-weight:        $font-weight-bold;
-$headings-line-height:        1.23; // specific line-height for each level, see mixins header
+$headings-line-height:        1.23;           // specific line-height for each level, see mixins header
 $headings-color:              $gray-900;
 
 // Headings font-size and line-height are made responsive
 // @see type.scss
 // These values represent the largest font-size for those headings
-$display1-size:               4.0625rem;  //65px;
-$display2-size:               4.0625rem;  //65px;
-$display3-size:               3.6875rem;  //59px;
-$display4-size:               3.25rem;    //52px;
+$display1-size:               4rem;           //64px;
+$display2-size:               4rem;           //64px;
+$display3-size:               3.5rem;         //56px;
+$display4-size:               3.125rem;       //50px;
 
 $display1-weight:             700;
 $display2-weight:             400;
@@ -249,14 +249,14 @@ $display4-weight:             400;
 // Display line-height are dealt directly in the class because it's specific to each display 
 $display-line-height:         $headings-line-height;
 
-$lead-font-size:              1.5rem;     // 24px
-$lead-line-height:            get-line-height($lead-font-size, 32px);    // 32px
+$lead-font-size:              $font-size-xl;              // 24px
+$lead-line-height:            $line-height-xl;            // 32px
 $lead-font-weight:            $font-weight-regular;
 
 $small-font-size:             .75em;
 
 $blockquote-small-color:      $body-color;
-$blockquote-font-size:        ($font-size-base * 1.25);
+$blockquote-font-size:        1.25rem;
 
 $hr-margin-y:                 ($spacer * 2);
 
@@ -439,7 +439,7 @@ $badge-pill-padding-x:              .6em;
 
 $input-btn-padding-y:         .375rem;
 $input-btn-padding-x:         .75rem;
-$input-btn-line-height:       $line-height-base;
+$input-btn-line-height:       1.47;
 
 $input-btn-focus-width:       .2rem;
 $input-btn-focus-color:       rgba($primary, .25);
@@ -452,20 +452,6 @@ $input-btn-line-height-sm:    $line-height-sm;
 $input-btn-padding-y-lg:      .5rem;
 $input-btn-padding-x-lg:      1rem;
 $input-btn-line-height-lg:    $line-height-lg;
-
-//
-// Buttons
-//
-// DEPRECATED - Use btn-* variables instead
-
-$vdm-btn-border-width:        2px;
-$vdm-btn-height:              53px;
-$vdm-btn-small-height:        40px;
-
-$vdm-btn-padding-y:           .75rem;
-$vdm-btn-padding-x:           2.5rem;
-$vdm-btn-padding-y-sm:        .625rem;
-$vdm-btn-padding-x-sm:        2rem;
 
 // Buttons
 //
@@ -481,6 +467,7 @@ $btn-line-height-sm:          get-line-height(12px, 18px);
 
 $btn-border-width:            2px;
 
+$btn-font-size:               $font-size-sm;
 $btn-font-weight:             $font-weight-normal;
 $btn-box-shadow:              inset 0 1px 0 rgba($white, .15), 0 1px 1px rgba($black, .075);
 $btn-focus-width:             $input-btn-focus-width;
