@@ -75,10 +75,10 @@
     flex-direction: row;
     align-items: center;
     .list-group-item-body {
-      flex: 1 1 auto;
+      flex: 1 0 0%;
       //padding-right: 1rem;
       text-align: left;
-      max-width: 800px;
+      //max-width: 75%;
       min-width: 0; // this is needed for the text-overflow property to work
     }
     .list-group-item-footer {
