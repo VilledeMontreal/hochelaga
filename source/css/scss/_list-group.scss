@@ -67,7 +67,7 @@
   .list-group-item {
     color: $gray-ink;
     display: flex;
-    justify-content: space-between;
+    //justify-content: space-between;
     padding: 2.25rem 2rem;
     > *:last-child {
       padding-bottom: 0;
@@ -82,6 +82,7 @@
       min-width: 0; // this is needed for the text-overflow property to work
     }
     .list-group-item-footer {
+      margin-left: auto;
       //padding: 1.5rem 1rem 1.5rem 0;
       .vdm {
         color: $gray-300;
