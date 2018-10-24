@@ -88,6 +88,10 @@
         padding-right: 0;
       }
     }
+    // Make sure we always have margin between body and footer
+    .list-group-item-body + .list-group-item-footer {
+      margin-left: 1.5rem;
+    }
   }
 }
 
