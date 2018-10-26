@@ -670,6 +670,7 @@ nav {
 }
 
 // Services sub-navigation
+// Deprecated. Update to .subnav
 .navbar-services {
   border-bottom: 1px solid $gray-200;
   min-height: 75px;
@@ -765,5 +766,46 @@ nav {
 
   .nav-item {
     padding: 0 1rem;
+  }
+}
+
+// Subnav will replace navbar navbar-services
+.subnav {
+  border-bottom: 1px solid $gray-400;
+  display: flex;
+  justify-content: space-between;
+  padding: 1.5rem;
+  .subnav-container,
+  .subnav-links {
+    display: flex;
+    > * {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+  }
+  .subnav-title {
+    color: $headings-color;
+    font-size: $font-size-base;
+    line-height: get-line-height($font-size-base, 24px);
+    font-weight: $font-weight-bold;
+    padding-left: .25rem;
+    padding-right: .25rem;
+    @include media-breakpoint-up(sm) {
+      padding-left: .375rem;
+      padding-right: .375rem;
+    }
+    @include media-breakpoint-up(md) {
+      font-size: $font-size-xl; // 24px
+      line-height: get-line-height($font-size-xl, 28px);
+      padding-left: .5rem;
+      padding-right: .5rem;
+    }
+  }
+  .subnav-links {
+    //padding-right: 1.375rem;
+    ul {
+      margin-bottom: 0;
+    }
   }
 }

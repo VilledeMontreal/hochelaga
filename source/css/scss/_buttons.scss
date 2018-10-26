@@ -328,18 +328,19 @@ input[type="button"] {
   pointer-events: inherit;
   color: $headings-color;
   cursor: pointer;
-  padding: 0 .5rem;
-  @include transition(color .15s ease-in-out);
+  padding: 0;
   .button-label {
     margin-right: .5rem;
   }
   .vdm {
+    color: inherit;
     font-size: 2rem;
-    @include transition(color .15s ease-in-out);
+    margin-left: 0;
+    margin-right: 0;
   }
-  &:hover {
-    color: $sarcelle-surprise;
-    .vdm {
+
+  &:not(:disabled):not(.disabled) {
+    @include hover {
       color: $sarcelle-surprise;
     }
   }

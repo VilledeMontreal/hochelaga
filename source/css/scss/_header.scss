@@ -385,15 +385,13 @@
   }
   .hdr-title {
     color: $headings-color;
+    font-size: $font-size-base;
+    line-height: get-line-height($font-size-base, 24px);
     font-weight: $font-weight-bold;
-    padding: 1.125rem $grid-gutter-width;
-    @include media-breakpoint-up(sm) {
-      font-size: 1.25rem;
-      padding: .9375rem $grid-gutter-width;
-    }
-    @include media-breakpoint-up(lg) {
-      font-size: 1.5rem; // 24px
-      padding: 1.375rem $grid-gutter-width;
+    padding: 1.5rem $grid-gutter-width;
+    @include media-breakpoint-up(md) {
+      font-size: $font-size-xl; // 24px
+      line-height: get-line-height($font-size-xl, 28px);
     }
   }
   .hdr-links {

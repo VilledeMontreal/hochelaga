@@ -1,39 +1,12 @@
-<nav class="navbar navbar-services" aria-label="Service navigation" role="navigation">
-  <div class="container-fluid">
-    {{# hasServiceLink}}
-    <div class="navbar-header navbar-header-service-link">
-      {{# serviceIcon}}
-      <span class="navbar-icon vdm {{ serviceIcon }}" aria-hidden="true"></span>
-      {{/ serviceIcon}}
-      <div class="d-flex flex-column">
-        <span class="navbar-link"><a href="#">{{ enterpriseName }}</a></span>
-        {{# serviceNav}}
-        <ul>
-          {{# serviceNav.items}}
-          <li>
-            {{# url}}
-            <a href="{{ url }}">{{ label }}</a>
-            {{/ url}}
-            {{^url}}
-            {{ label }}
-            {{/ url}}
-          </li>
-          {{/ serviceNav.items}}
-        </ul>
-        {{/ serviceNav}}
-      </div>
-    </div>
-    {{/ hasServiceLink}}
-    {{^ hasServiceLink}}
-    <div class="navbar-header">
-      {{> atoms-fonticon-item(icon-label: "103-311-mobile", icon-class: "navbar-icon") }}
-      <span class="navbar-brand">{{ serviceName }}</span>
-    </div>
-    {{/ hasServiceLink}}
-    
-    <ul class="nav">
-      <li class="nav-item">{{> atoms-button("buttonClass": "btn-secondary btn-sm", "buttonText": "Enregistrer")}}</li>
-      <li class="nav-item">{{> atoms-button("buttonClass": "btn-secondary btn-sm", "buttonText": "Quitter")}}</li>
-    </ul>
+<nav class="subnav subnav-services" aria-label="Service navigation" role="navigation">
+  <div class="subnav-container">
+    <span class="subnav-title">{{ serviceName }}</span>
+  </div>
+  <div class="subnav-links">
+    <button class="btn btn-quit">
+      <span class="button-label d-none d-md-inline-flex">Quitter</span>
+      {{> atoms-fonticon-item(icon-label: "111-quitter") }}
+      <span class="sr-only">Quitter</span>
+    </button>
   </div>
 </nav>
