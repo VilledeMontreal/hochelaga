@@ -5,6 +5,30 @@ The format is based on [Keep a Changelog](http://keepachangelog.com/en/1.0.0/)
 and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.html).
 
 
+## [2.2.0] - unreleased
+
+## Added
+- Added new organisms for .subnav.
+- Added $font-size-xs variable.
+- Added pages section in patternlab and created 2 pages for Animaux presentation based on real content.
+  
+## Changed
+- Updated base-font-size to 18px.
+- Updated font-size scale to 12px, 15px, 18px, 21px and 24px.
+- Updated headings and display font sizes.
+- 
+
+## Deprecated 
+- .navbar-services have been replaced with a simplified .subnav structure. Organisms > navigation > Subnav Services
+
+## Removed
+- Removed $font-size-md and migrate to equivalent $font-size-sm
+
+## Fixed
+- Fixed various issues regarding flexbox in .list-group-content and .list-group-hub
+- Fixed html structure for some cards in collectrices.
+
+
 ## [2.1.0] - 2018-10-18
 
 ## Added

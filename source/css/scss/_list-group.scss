@@ -67,7 +67,7 @@
   .list-group-item {
     color: $gray-ink;
     display: flex;
-    justify-content: space-between;
+    //justify-content: space-between;
     padding: 2.25rem 2rem;
     > *:last-child {
       padding-bottom: 0;
@@ -75,19 +75,22 @@
     flex-direction: row;
     align-items: center;
     .list-group-item-body {
-      flex: 1 1 auto;
-      //padding-right: 1rem;
-      text-align: left;
-      max-width: 800px;
+      flex: 1 0 0%;
       min-width: 0; // this is needed for the text-overflow property to work
+      text-align: left;
     }
     .list-group-item-footer {
+      margin-left: auto;
       //padding: 1.5rem 1rem 1.5rem 0;
       .vdm {
         color: $gray-300;
         font-size: 3rem;
         padding-right: 0;
       }
+    }
+    // Make sure we always have margin between body and footer
+    .list-group-item-body + .list-group-item-footer {
+      margin-left: 1.5rem;
     }
   }
 }
@@ -116,6 +119,9 @@
     flex-wrap: wrap;
     > span {
       margin-right: .75rem;
+      &:last-child {
+        margin-right: 0;
+      }
     }
     > span:nth-child(n + 2):not(.separator-brand) {
       &:before {
@@ -125,6 +131,10 @@
       }
     }
   }
+}
+
+.list-group-max-width {
+  max-width: 800px;
 }
 
 // List group content for list-group layout inside content

@@ -1,8 +1,7 @@
 // Breadcrumb
-// Reference used : https://projects.invisionapp.com/d/main#/console/11533069/245898997/inspect
 .breadcrumb {
   border-radius: 0;
-  font-size: $font-size-lg;
+  font-size: $font-size-base;
   margin-bottom: 0;
   a {
     border: none;
@@ -15,8 +14,6 @@
 }
 
 // Pagination
-// Reference used : https://projects.invisionapp.com/d/main#/console/11533069/245898997/inspect
-
 .pagination {
   @include border-radius(0);
 }
@@ -73,7 +70,7 @@
 }
 
 .pagination-sm {
-  @include pagination-size($pagination-padding-y-sm, $pagination-padding-x-sm, $font-size-md, $line-height-sm, 0);
+  @include pagination-size($pagination-padding-y-sm, $pagination-padding-x-sm, $font-size-sm, $line-height-sm, 0);
 
   .page-item {
     &:first-child,
@@ -212,7 +209,7 @@
       margin-right: 15px;
     }
     .badge-pill {
-      font-size: $font-size-sm;
+      font-size: $font-size-xs;
     }
   }
 
@@ -246,8 +243,8 @@ nav {
   padding: 1rem $grid-gutter-width/2;
 
   .nav-link {
-    font-size: $font-size-base;
-    line-height: 1.42857142857;
+    font-size: $font-size-sm;   //~15px
+    line-height: 1.4;           //~21px
     padding: .5rem;
     position: relative;
     text-align: center;
@@ -345,8 +342,8 @@ nav {
 .nav-tabs {
   .nav-link {
     color: $gray-700;
-    font-size: $font-size-md;
-    line-height: 1.42857142857;
+    font-size: $font-size-sm;         //~15px
+    line-height: 1.4;                 //~21px
     font-weight: $font-weight-bold;
     padding: 1.5rem .5rem;
     position: relative;
@@ -504,9 +501,9 @@ nav {
   align-items: center;
   justify-content: center;
   color: $gray-500;
-  font-size: $font-size-md;
+  font-size: $font-size-sm;     // ~15px
   flex: 1 0 auto;
-  line-height: 1.71428571;
+  line-height: 1.4;
   padding: 1.125rem;
   width: 100%;
   // Absolute positionning on larger breakpoint
@@ -517,8 +514,8 @@ nav {
     font-weight: $font-weight-bold;
     padding: 1.5rem 1rem 1.125rem 1.875rem;
     position: absolute;
-    top: 0;
-    bottom: 0;
+    //top: 0;
+    bottom: 1rem;
     left: 0;
     width: auto;
     justify-content: left;
@@ -572,7 +569,9 @@ nav {
   .caption {
     color: $gray-600;
     display: inline-block;
-    padding-bottom: .25rem;
+    font-size: $font-size-sm;
+    line-height: 1.2;
+    padding-bottom: .5rem;
   }
   .circle {
     @include circle($background-color: $gray-200, $border: true);
@@ -657,7 +656,7 @@ nav {
 
   .db-label {
     display: inline-block;
-    font-size: $font-size-md;
+    font-size: $font-size-sm;           // ~15px
     font-weight: $font-weight-bold;
     margin-bottom: .5rem;
     text-transform: uppercase;
@@ -671,6 +670,7 @@ nav {
 }
 
 // Services sub-navigation
+// Deprecated. Update to .subnav
 .navbar-services {
   border-bottom: 1px solid $gray-200;
   min-height: 75px;
@@ -766,5 +766,46 @@ nav {
 
   .nav-item {
     padding: 0 1rem;
+  }
+}
+
+// Subnav will replace navbar navbar-services
+.subnav {
+  border-bottom: 1px solid $gray-400;
+  display: flex;
+  justify-content: space-between;
+  padding: 1.5rem;
+  .subnav-container,
+  .subnav-links {
+    display: flex;
+    > * {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+  }
+  .subnav-title {
+    color: $headings-color;
+    font-size: $font-size-base;
+    line-height: get-line-height($font-size-base, 24px);
+    font-weight: $font-weight-bold;
+    padding-left: .25rem;
+    padding-right: .25rem;
+    @include media-breakpoint-up(sm) {
+      padding-left: .375rem;
+      padding-right: .375rem;
+    }
+    @include media-breakpoint-up(md) {
+      font-size: $font-size-xl; // 24px
+      line-height: get-line-height($font-size-xl, 28px);
+      padding-left: .5rem;
+      padding-right: .5rem;
+    }
+  }
+  .subnav-links {
+    //padding-right: 1.375rem;
+    ul {
+      margin-bottom: 0;
+    }
   }
 }

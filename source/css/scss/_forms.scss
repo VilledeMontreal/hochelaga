@@ -583,6 +583,11 @@ legend,
     display: none;
   }
 
+  .notice {
+    font-size: $font-size-sm;
+    line-height: $line-height-sm;
+  }
+
   @include media-breakpoint-up(md) {
     .feedback-question-label {
       font-size: $font-size-xl;

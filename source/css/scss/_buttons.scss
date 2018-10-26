@@ -21,7 +21,7 @@ button {
   vertical-align: middle;
   user-select: none;
   border: $btn-border-width solid transparent;
-  @include button-size($btn-padding-y, $btn-padding-x, $font-size-base, $btn-line-height, $btn-border-radius);
+  @include button-size($btn-padding-y, $btn-padding-x, $btn-font-size, $btn-line-height, $btn-border-radius);
   @include transition($btn-transition);
 
   // Share hover and focus styles
@@ -61,8 +61,8 @@ button {
     font-size: 2rem;
     margin-left: -1.5rem;
     margin-right: .5rem;
-    margin-top: -4px;
-    margin-bottom: -4px;
+    margin-top: -.3125rem;
+    margin-bottom: -.3125rem;
     &.vdm-right {
       margin-left: .5rem;
       margin-right: -1.5rem;
@@ -73,8 +73,8 @@ button {
     @include size(1.5rem);
     margin-left: -1.5rem;
     margin-right: 1rem;
-    margin-top: -4px;
-    margin-bottom: -4px;
+    margin-top: -.0625rem;
+    margin-bottom: -.0625rem;
     .loader-child {
       border-width: .125rem;
       border-color: $white transparent transparent transparent;
@@ -162,7 +162,7 @@ fieldset:disabled a.btn {
 //
 
 .btn-sm {
-  @include button-size($btn-padding-y-sm, $btn-padding-x-sm, $font-size-sm, $btn-line-height-sm, $btn-border-radius-sm);
+  @include button-size($btn-padding-y-sm, $btn-padding-x-sm, $font-size-xs, $btn-line-height-sm, $btn-border-radius-sm);
   border-width: 2px;
   // Icons in button
   .vdm {
@@ -289,7 +289,7 @@ input[type="button"] {
     font-size: 1.5rem;
   }
   .button-label {
-    font-size: 1rem;
+    font-size: $font-size-sm;
     margin-left: 1rem;
   }
 
@@ -328,18 +328,19 @@ input[type="button"] {
   pointer-events: inherit;
   color: $headings-color;
   cursor: pointer;
-  padding: 0 .5rem;
-  @include transition(color .15s ease-in-out);
+  padding: 0;
   .button-label {
     margin-right: .5rem;
   }
   .vdm {
+    color: inherit;
     font-size: 2rem;
-    @include transition(color .15s ease-in-out);
+    margin-left: 0;
+    margin-right: 0;
   }
-  &:hover {
-    color: $sarcelle-surprise;
-    .vdm {
+
+  &:not(:disabled):not(.disabled) {
+    @include hover {
       color: $sarcelle-surprise;
     }
   }
@@ -360,6 +361,7 @@ input[type="button"] {
 }
 
 // Utility class to give a button label underline capacities
+// Used in main navbar - Might be refactored
 .button-underline {
   .button-label {
     border-bottom: 1px solid $black;

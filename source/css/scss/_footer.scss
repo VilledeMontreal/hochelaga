@@ -45,7 +45,7 @@ footer {
       border: 1px solid $white;
       border-radius: 2px;
       cursor: pointer;
-      font-size: $font-size-sm;
+      font-size: $font-size-xs;
       line-height: 1.16666666667;
       padding: .75rem 3.5rem;
       &:hover {
@@ -55,7 +55,7 @@ footer {
     }
 
     .legal-links {
-      font-size: $font-size-sm;
+      font-size: $font-size-xs;
       line-height: 1.16666666667;
       li {
         padding-bottom: 0;
@@ -63,7 +63,8 @@ footer {
     }
 
     .copyright {
-      font-size: 0.625rem;
+      //font-size: 0.625rem;        //~10px
+      font-size: $font-size-xs;
       line-height: 1.4;
     }
     .footer-sub {

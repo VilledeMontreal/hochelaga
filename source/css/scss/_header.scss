@@ -141,7 +141,8 @@
     right: 0;
     margin: 0;
     min-width: 20rem;
-    font-size: 1.125rem; // 18px
+    //font-size: 1.125rem; // 18px
+    font-size: $font-size-sm;   //~15px
     box-shadow: -1px 3px 3px 0 $gray-300;
 
     // Font-icon size and color
@@ -162,7 +163,7 @@
     //
     .dropdown-item-section {
       color: $black;
-      font-size: 1rem;
+      font-size: $font-size-sm;                   //~15px
       padding: .75rem $dropdown-item-padding-x;
       > * {
         margin-bottom: 1.5rem;
@@ -172,13 +173,13 @@
       }
 
       .user-info {
-        line-height: 1.25;
+        line-height: 1.4;
         > * {
           display: flex;
         }
       }
       .user-email {
-        font-size: $font-size-md;
+        font-size: $font-size-sm;
         color: $gray-600;
       }
       .user-profil {
@@ -283,7 +284,7 @@
 
   .button-label {
     color: $black;
-    font-size: 1rem;
+    //font-size: $font-size-sm;
     line-height: 1;
     @include transition(color .15s ease-in-out);
   }
@@ -384,15 +385,13 @@
   }
   .hdr-title {
     color: $headings-color;
+    font-size: $font-size-base;
+    line-height: get-line-height($font-size-base, 24px);
     font-weight: $font-weight-bold;
-    padding: 1.125rem $grid-gutter-width;
-    @include media-breakpoint-up(sm) {
-      font-size: 1.25rem;
-      padding: .9375rem $grid-gutter-width;
-    }
-    @include media-breakpoint-up(lg) {
-      font-size: 1.5rem; // 24px
-      padding: 1.375rem $grid-gutter-width;
+    padding: 1.5rem $grid-gutter-width;
+    @include media-breakpoint-up(md) {
+      font-size: $font-size-xl; // 24px
+      line-height: get-line-height($font-size-xl, 28px);
     }
   }
   .hdr-links {

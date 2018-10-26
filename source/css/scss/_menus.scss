@@ -30,7 +30,7 @@
     font-size: 1.5rem;
   }
   .button-label {
-    font-size: 1rem;
+    font-size: $font-size-sm;   //~15px
     margin-left: 1rem;
   }
 
@@ -78,7 +78,7 @@
     border: none;
     border-radius: 0;
     color: $gray-100;
-    font-size: 1rem;
+    font-size: $font-size-sm;   //~15px
     line-height: 1;
     padding: 1.1875rem;
 
@@ -245,7 +245,7 @@
 
       &.back-link {
         color: $sm-link-hover-color;
-        font-size: $font-size-md;
+        font-size: $font-size-sm;
 
         .vdm {
           color: $sm-icon-color;

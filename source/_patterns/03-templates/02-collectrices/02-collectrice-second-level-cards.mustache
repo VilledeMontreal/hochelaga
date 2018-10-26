@@ -35,30 +35,32 @@
       {{/ cards }}
       
       {{# cards }}
+      {{# cards.headings }}
       <div class="row">
-        {{# cards.headings }}
         <div class="col-12">
           <h2 class="{{ cards.headings.class }}">{{ cards.headings.text }}</h2>
         </div>
-        {{/ cards.headings }}
+      </div>
+      {{/ cards.headings }}
 
-        <div class="cards {{ cards.classes }}">
-          {{# cards.card-item }}
-          <div class="{{ cards.bsgrid-classes }}">
-            {{> molecules-card-item }}
-          </div>
-          {{/ cards.card-item }}
+      <div class="row cards {{ cards.classes }}">
+        {{# cards.card-item }}
+        <div class="{{ cards.bsgrid-classes }}">
+          {{> molecules-card-item }}
         </div>
+        {{/ cards.card-item }}
+      </div>
 
-        {{# hasPagination }}
+      {{# hasPagination }}
+      <div class="row">
         <div class="col-12">
           {{> molecules-pagination("paginationClass": justify-content-center) }}
         </div>
         {{/ hasPagination }}
       </div>
-      {{/ cards }}
-
     </div>
+    {{/ cards }}
+
   </section>
   {{/ demandesListes }}
 
