@@ -664,3 +664,17 @@
     display: block;
   }
 }
+
+// Results load-more section
+.results-load-more {
+  padding-top: 3rem;
+  padding-bottom: 3rem;
+  button {
+    display: block;
+    margin: 0 auto;
+  }
+  .btn-link {
+    color: $gray-ink;
+    margin-top: 1.5rem;
+  }
+}

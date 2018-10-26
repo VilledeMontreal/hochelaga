@@ -1,0 +1,172 @@
+{
+  "regionMainClasses" : "",
+  "regionMainContentClasses" : "",
+  "has-lead-text" : true,
+  "hasPagination": true,
+  "text-elements": {
+    "headings": {
+      "display": {
+        "tag": "h1",
+        "classes": "display-1",
+        "content": "Collectrice Élus"
+      }
+    }
+  },
+  "inputGroupSearch": [
+    {
+      "formGroupLabel": false,
+      "inputID": "input-group-search",
+      "inputGroupIconClass": "input-group-icon-left",
+      "iconAfter": false,
+      "icon-label": "002-recherche",
+      "formControlClass": "form-control-lg form-control-dark",
+      "inputPlaceholder": "Rechercher un élu"
+    }
+  ],
+  "elusListes": {
+    "headings": {
+      "text": "Vos élus",
+      "class": "section-heading"
+    },
+    "load-more": {
+      "buttonText": "Afficher plus d'élus",
+      "buttonClass": "btn-primary"
+    },
+    "cards": [
+      {
+        "section-classes": "bg-gray-sky",
+        "bsgrid-classes": "col-12 col-md-6",
+        "card-item": [
+          {
+            "classes": "card-large card-row-layout card-member",
+            "url": "#",
+            "card-title": "Christian Arseneault",
+            "card-subtitle": "Conseiller de la Ville",
+            "card-text": false,
+            "card-media": {
+              "icon": false,
+              "img" : {
+                "classes": "rounded-circle",
+                "url" : "https://picsum.photos/480/480?image=786",
+                "alt" : "Member #1 img alt."
+              }
+            },
+            "footer" : false
+          },
+          {
+            "classes": "card-large card-row-layout card-member",
+            "url": "#",
+            "card-title": "Manon Barbe",
+            "card-subtitle": "Mairesse d'arrondissement",
+            "card-text": false,
+            "card-media": {
+              "icon": false,
+              "img" : {
+                "classes": "rounded-circle",
+                "url" : "https://picsum.photos/480/480?image=786",
+                "alt" : "Member #2 img alt."
+              }
+            },
+            "footer" : false
+          },
+          {
+            "classes": "card-large card-row-layout card-member",
+            "url": "#",
+            "card-title": "Mario Battista",
+            "card-subtitle": "Conseiller d'arrondissement",
+            "card-text": false,
+            "card-media": {
+              "icon": false,
+              "img" : {
+                "classes": "rounded-circle",
+                "url" : "https://picsum.photos/480/480?image=786",
+                "alt" : "Member #3 img alt."
+              }
+            },
+            "footer" : false
+          },
+          {
+            "classes": "card-large card-row-layout card-member",
+            "url": "#",
+            "card-title": "Robert Beaudry",
+            "card-subtitle": "Conseiller de la Ville",
+            "card-text": false,
+            "card-media": {
+              "icon": false,
+              "img" : {
+                "classes": "rounded-circle",
+                "url" : "https://picsum.photos/480/480?image=786",
+                "alt" : "Member #4 img alt."
+              }
+            },
+            "footer" : false
+          },
+          {
+            "classes": "card-large card-row-layout card-member",
+            "url": "#",
+            "card-title": "Jim Beis Dimistrios",
+            "card-subtitle": "Maire d'arrondissement",
+            "card-text": false,
+            "card-media": {
+              "icon": false,
+              "img" : {
+                "classes": "rounded-circle",
+                "url" : "https://picsum.photos/480/480?image=786",
+                "alt" : "Member #5 img alt."
+              }
+            },
+            "footer" : false
+          },
+          {
+            "classes": "card-large card-row-layout card-member",
+            "url": "#",
+            "card-title": "Renée-Chantal Belinga",
+            "card-subtitle": "Conseillère d'arrondissement",
+            "card-text": false,
+            "card-media": {
+              "icon": false,
+              "img" : {
+                "classes": "rounded-circle",
+                "url" : "https://picsum.photos/480/480?image=786",
+                "alt" : "Member #6 img alt."
+              }
+            },
+            "footer" : false
+          },
+          {
+            "classes": "card-large card-row-layout card-member",
+            "url": "#",
+            "card-title": "Michèle D. Biron",
+            "card-subtitle": "Conseillère d'arrondissement",
+            "card-text": false,
+            "card-media": {
+              "icon": false,
+              "img" : {
+                "classes": "rounded-circle",
+                "url" : "https://picsum.photos/480/480?image=786",
+                "alt" : "Member #7 img alt."
+              }
+            },
+            "footer" : false
+          },
+          {
+            "classes": "card-large card-row-layout card-member",
+            "url": "#",
+            "card-title": "Michel Bissonnet",
+            "card-subtitle": "Maire d'arrondissement",
+            "card-text": false,
+            "card-media": {
+              "icon": false,
+              "img" : {
+                "classes": "rounded-circle",
+                "url" : "https://picsum.photos/480/480?image=786",
+                "alt" : "Member #8 img alt."
+              }
+            },
+            "footer" : false
+          }
+        ]
+      }
+    ]
+  }
+}

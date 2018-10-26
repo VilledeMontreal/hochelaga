@@ -1,0 +1,65 @@
+{{> atoms-link-skip-to-main-content }}
+{{> organisms-header-portal }}
+
+<main class="main-content {{ pageClasses }}" id="main-content" aria-label="Main Content">
+
+  {{# elusListes }}
+  <section class="page-section">
+    <div class="container">
+      {{# inputGroupSearch }}
+      <div class="row">
+        <div class="col-12 col-lg-6">
+          {{> atoms-input-icon }}
+        </div>
+      </div>
+      {{/ inputGroupSearch }}
+      {{^ cards }}
+      <div class="row">
+        <div class="col-12">
+          {{> molecules-empty-search-results }}
+        </div>
+      </div>
+      {{/ cards }}
+      
+      {{# headings }}
+      <div class="row">
+        <div class="col-12">
+          <h1 class="{{ headings.class }}">{{ headings.text }}</h1>
+        </div>
+      </div>
+      {{/ headings }}
+    </div>
+  </section>
+  {{# elusListes.cards }}
+  <div class="js-elus-results">
+    {{# page-number }}
+      {{> molecules-page-number }}
+    {{/ page-number }}
+    <div class="page-section bg-gray-sky pt-10">
+      <div class="container">
+        <div class="row cards {{ classes }}">
+          {{# card-item }}
+          <div class="{{ bsgrid-classes }}">
+            {{> molecules-card-item }}
+          </div>
+          {{/ card-item }}
+        </div>
+      </div>
+    </div>
+  </div>
+  {{/ elusListes.cards }}
+  {{# load-more }}
+  <div class="results-load-more">
+    {{> atoms-button }}
+    {{> atoms-button(buttonClass: "btn-link", buttonText: "Afficher tous les élus") }}
+  </div>
+  {{/ load-more }}
+  {{/ elusListes }}
+
+  {{# hasFeedbackForm}}
+  {{> organisms-feedback-form}}
+  {{/ hasFeedbackForm }}
+</main>
+
+{{> organisms-footer-portal }}
+
