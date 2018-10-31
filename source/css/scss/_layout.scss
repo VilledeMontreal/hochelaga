@@ -182,6 +182,9 @@
 .section-heading {
   margin-bottom: 2rem;
 }
+.section-subheading {
+  @extend h3;
+}
 .services-heading {
   padding-top: 3rem;
   padding-bottom: 3rem;
@@ -239,9 +242,6 @@
     }
   }
 }
-
-
-
 
 
 // Lead container
@@ -615,11 +615,17 @@
 
 // Generic block of content
 .content-block {
-  margin-bottom: 2rem;
+  margin-bottom: 3rem;
   .content-block-infos {
     color: $headings-color;
     font-size: $font-size-lg;
-    margin-bottom: 2.5rem;
+    margin-bottom: 2rem;
+    line-height: get-line-height($font-size-lg, 32px);
+    .content-block-infos-title {
+      font-size: $font-size-xl;
+      font-weight: bold;
+      line-height: get-line-height($font-size-xl, 32px);
+    }
     > span {
       display: block;
     }

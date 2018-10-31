@@ -92,12 +92,16 @@
         <p><a href="http://montreal.ca" class="btn btn-primary">Remplir le sondage</a></p>
       </div>
       {{/ variant-mois}}
+      {{# social-medias }}
+      <div class="section-inner section-inner-md section-divider">
+        <h2 class="section-subheading">Suivez le sujet XYZ</h2>
+        {{> atoms-social-media-icons-list}}
+      </div>
+      {{/ social-medias}}
       {{# contact }}
       <div class="section-inner section-inner-md section-divider">
-        <h2>Contact</h2>
-        {{# contact-item}}
-          {{> molecules-block-contact }}
-        {{/ contact-item}}
+        <h2 class="section-subheading">Contact</h2>
+        {{> molecules-block-contact }}
       </div>
       {{/ contact}}
     </article>

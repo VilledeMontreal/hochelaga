@@ -15,6 +15,16 @@
   "has-lead-text": true,
   "default-content": false,
   "variant-prix": true,
+  "social-medias": {
+    "social-media-icons-list": {
+      "has-label": false,
+      "has-facebook": true,
+      "has-instagram": true,
+      "has-twitter": true,
+      "has-linkedin": false,
+      "has-youtube": false
+    }
+  },
   "contact": {
     "contact-item": [
       {
@@ -55,14 +65,39 @@
             "content": "v.lampron.com"
           }
         ],
-        "social-media-icons-list": {
-          "has-label": false,
-          "has-facebook": true,
-          "has-instagram": false,
-          "has-twitter": true,
-          "has-linkedin": true,
-          "has-youtube": false
-        }
+        "social-media-icons-list": false
+      },
+      {
+        "name": "Gary Comeau",
+        "fonction": "Directeur par intérim",
+        "compagnie": "Service de la culture, Direction des blibiothèques",
+        "list-icon-item": [
+          {
+            "url": false,
+            "class": "icon left",
+            "icon-item": {
+              "icon-label": "091-localisation"
+            },
+            "content": "<address>123, rue Bord de l'eau<br>Montréal, QC, H3K 2T5</address>"
+          },
+          {
+            "url": false,
+            "class": "icon left",
+            "icon-item": {
+              "icon-label": "012-telephone"
+            },
+            "content": "514 872-1234"
+          },
+          {
+            "url": "mailto:gary.comeau@ville.montreal.qc.ca",
+            "class": "icon left",
+            "icon-item": {
+              "icon-label": "028-enveloppe"
+            },
+            "content": "gary.comeau@ville.montreal.qc.ca"
+          }
+        ],
+        "social-media-icons-list": false
       }
     ]
   },
