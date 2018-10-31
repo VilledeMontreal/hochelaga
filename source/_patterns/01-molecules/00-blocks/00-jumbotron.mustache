@@ -1,0 +1,30 @@
+<div class="jumbotron jumbotron-fluid {{jumbotronClasses}}">
+  <div class="container">
+    <div class="row jumbotron-heading">
+      {{# jumbotron.headings}}
+      <div class="col">
+        <{{tag}} class="{{ classes }}">{{ content }}</{{tag}}>
+      </div>
+      {{/ jumbotron.headings}}
+      <div class="col-auto d-none d-lg-flex">
+        <div class="hub-link">
+          <a href="#">{{ hub-link-text }}</a>
+        </div>
+      </div>
+    </div>
+    {{# jumbotron.cards }}
+    <div class="row cards {{ classes }}">
+    {{# card-item }}
+      <div class="{{ bsgrid-classes }}">
+        {{> molecules-card-item }}
+      </div>
+    {{/ card-item }}
+    </div>
+    {{/ jumbotron.cards }}
+
+    {{# jumbotron.cta }}
+    <a class="btn btn-primary" href="{{ url }}" role="button">{{ cta }}</a>
+    {{/ jumbotron.cta }}
+  </div>
+</div>
+
