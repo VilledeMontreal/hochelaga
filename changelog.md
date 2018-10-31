@@ -5,7 +5,19 @@ The format is based on [Keep a Changelog](http://keepachangelog.com/en/1.0.0/)
 and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.html).
 
 
-## [2.2.0] - unreleased
+## [2.3.0] - unreleased
+
+## Added
+- Contact form in modal alternative for sidebar coordinates block. Needed for Élus.
+- Jumbotron
+- Collectrices Élus template
+- Collectrices Nouvelles V2 template
+
+## Changed
+- Changed Social medias placement in Sujet templates.
+- Changed Contact block in Sujet templates and fixed spacing for multiple contacts.
+
+## [2.2.0] - 2018-10-26
 
 ## Added
 - Added new organisms for .subnav.
@@ -16,7 +28,6 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 - Updated base-font-size to 18px.
 - Updated font-size scale to 12px, 15px, 18px, 21px and 24px.
 - Updated headings and display font sizes.
-- 
 
 ## Deprecated 
 - .navbar-services have been replaced with a simplified .subnav structure. Organisms > navigation > Subnav Services
@@ -244,6 +255,7 @@ remove index from the name. Which makes it possible to update font-icon without 
 ### Removed
 - Removed vdm prefix for buttons classes
 
+[2.2.0]: https://bitbucket.org/villemontreal/boite-outils-web/src/2.2.0/
 [2.1.0]: https://bitbucket.org/villemontreal/boite-outils-web/src/2.1.0/
 [2.0.0]: https://bitbucket.org/villemontreal/boite-outils-web/src/2.0.0/
 [1.3.0]: https://bitbucket.org/villemontreal/boite-outils-web/src/1.3.0/
