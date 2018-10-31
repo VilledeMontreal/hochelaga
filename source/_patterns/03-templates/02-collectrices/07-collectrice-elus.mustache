@@ -3,8 +3,10 @@
 
 <main class="main-content {{ pageClasses }}" id="main-content" aria-label="Main Content">
 
+  {{> molecules-jumbotron }}
+
   {{# elusListes }}
-  <section class="page-section">
+  <section class="page-section pt-9">
     <div class="container">
       {{# inputGroupSearch }}
       <div class="row">
@@ -31,7 +33,7 @@
     </div>
   </section>
   {{# elusListes.cards }}
-  <div class="js-elus-results">
+  <div class="js-results">
     {{# page-number }}
       {{> molecules-page-number }}
     {{/ page-number }}

@@ -3,6 +3,9 @@
 
 <main class="main-content {{ pageClasses }}" id="main-content" aria-label="Main Content">
 
+  {{> molecules-jumbotron }}
+
+<!--
   <section class="page-section">
     <div class="container">
       <div class="row">
@@ -36,6 +39,53 @@
       </div>
     </div>
   </section>
+-->
+
+  {{# nouvellesListes }}
+  <section class="page-section pt-9">
+    <div class="container">
+      {{# inputGroupSearch }}
+      <div class="row">
+        <div class="col-12 col-lg-6">
+          {{> atoms-input-icon }}
+        </div>
+      </div>
+      {{/ inputGroupSearch }}
+      {{^ nouvellesListes.listGroups }}
+      <div class="row">
+        <div class="col-12">
+          {{> molecules-empty-search-results }}
+        </div>
+      </div>
+      {{/ nouvellesListes.listGroups }}
+      
+      {{# headings }}
+      <div class="row">
+        <div class="col-12">
+          <h1 class="{{ headings.class }}">{{ headings.text }}</h1>
+        </div>
+      </div>
+      {{/ headings }}
+      {{# nouvellesListes.listGroups }}
+      <div class="row">
+        <div class="col-12">
+          <div class="js-elus-results">
+          {{# page-number }}
+            {{> molecules-page-number }}
+          {{/ page-number }}
+          {{> molecules-list-group-hub}}
+          </div>
+        </div>
+      </div>
+      {{/ nouvellesListes.listGroups }}
+      {{# load-more }}
+      <div class="results-load-more">
+        {{> atoms-button }}
+      </div>
+      {{/ load-more }}
+    </div>
+  </section>
+  {{/ nouvellesListes }}
 
   {{# hasFeedbackForm}}
   {{> organisms-feedback-form}}

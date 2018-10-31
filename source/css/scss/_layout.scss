@@ -25,6 +25,10 @@
       }
     }
   }
+  // sarcelle variant
+  &.content-header-sarcelle {
+    background-color: $sarcelle-lightest;
+  }
 
   &-title {
     padding-bottom: 3rem;
@@ -55,27 +59,6 @@
   &-metadata {
     color: $gray-600;
     font-size: $font-size-base;
-  }
-
-  // Hub link
-  .hub-link {
-    color: $gray-600;
-    font-size: $font-size-base;
-    padding-bottom: 2rem;
-    a {
-      color: $gray-ink;
-      @include transition(color .15s ease-in-out);
-      @include hover-focus {
-        color: $sarcelle;
-      }
-    }
-    // 992px and up
-    @include media-breakpoint-up(xl) {
-      display: flex;
-      flex-flow: row wrap;
-      justify-content: flex-end;
-      padding-bottom: 0;
-    }
   }
 
   // used for specific contente header infos like Evenement
@@ -162,6 +145,28 @@
         margin-bottom: 0;
       }
     }
+  }
+}
+
+// Hub link
+.hub-link {
+  color: $gray-600;
+  font-size: $font-size-base;
+  padding-bottom: 2rem;
+  a {
+    color: $gray-ink;
+    @include transition(color .15s ease-in-out);
+    @include hover-focus {
+      color: $sarcelle;
+    }
+  }
+  // 992px and up
+  @include media-breakpoint-up(xl) {
+    display: flex;
+    //flex-flow: row wrap;
+    justify-content: flex-end;
+    align-self: flex-end;
+    padding-bottom: 0;
   }
 }
 
@@ -662,19 +667,5 @@
 .empty-results {
   .list-group-heading {
     display: block;
-  }
-}
-
-// Results load-more section
-.results-load-more {
-  padding-top: 3rem;
-  padding-bottom: 3rem;
-  button {
-    display: block;
-    margin: 0 auto;
-  }
-  .btn-link {
-    color: $gray-ink;
-    margin-top: 1.5rem;
   }
 }

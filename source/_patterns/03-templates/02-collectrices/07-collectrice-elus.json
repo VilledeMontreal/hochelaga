@@ -1,17 +1,43 @@
 {
   "regionMainClasses" : "",
   "regionMainContentClasses" : "",
-  "has-lead-text" : true,
-  "hasPagination": true,
-  "text-elements": {
+  "jumbotronClasses": "jumbotron-bg-sarcelle",
+  "jumbotron": {
     "headings": {
-      "display": {
-        "tag": "h1",
-        "classes": "display-1",
-        "content": "Collectrice Élus"
-      }
+      "tag": "h2",
+      "classes": "jumbotron-title",
+      "content": "Jumbotron heading"
+    },
+    "cards": {
+      "classes": false,
+      "bsgrid-classes": "col-12",
+      "card-item": [
+        {
+          "classes": "card-fw card-featured",
+          "url": "#",
+          "card-title": "Card with featured content",
+          "card-text":
+            "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec non justo sit amet quam scelerisque blandit.",
+          "card-media" : {
+            "icon" : false,
+            "img" : {
+              "url" : "https://picsum.photos/768/480?image=396",
+              "alt" : "featured card img alt."
+            }
+          },
+          "footer" : {
+            "inside-body": true,
+            "text": "En savoir plus"
+          }
+        }
+      ]
     }
   },
+  "has-hub-link": true,
+  "hub-link-text": "Tous les élus",
+  
+  "has-lead-text" : false,
+  "hasPagination": true,
   "inputGroupSearch": [
     {
       "formGroupLabel": false,
