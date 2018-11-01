@@ -16,9 +16,10 @@
 
 // Page load-more section
 // Load more buttons and optionnal all results link
-.results-load-more {
+.pagination-wrapper {
   padding-top: 4rem;
   padding-bottom: 4rem;
+  text-align: center;
   button {
     display: block;
     margin: 0 auto;
@@ -27,17 +28,27 @@
     color: $gray-ink;
     margin-top: 1.5rem;
   }
+
+  &:last-child {
+    padding-bottom: 0;
+  }
+}
+
+.cards + .pagination-wrapper {
+  margin-top: -$grid-gutter-width;
 }
 
 // Pagination
 .pagination {
   @include border-radius(0);
+  margin-bottom: 0;
 }
 
 // Page item
 
 .page-item {
   display: flex;
+  padding-bottom: 0;
   &:first-child {
     .page-link {
       @include border-left-radius(0);

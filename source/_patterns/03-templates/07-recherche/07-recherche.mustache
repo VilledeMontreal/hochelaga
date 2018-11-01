@@ -34,7 +34,9 @@
           {{> molecules-list-group-hub}}
 
           {{# hasPagination }}
-            {{> molecules-pagination("paginationClass": justify-content-center) }}
+          <div class="pagination-wrapper">
+              {{> molecules-pagination("paginationClass": justify-content-center) }}
+          </div>
           {{/ hasPagination }}
 
           {{/ list-group-results }}
