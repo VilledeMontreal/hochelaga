@@ -55,7 +55,8 @@
   font-size: $font-size-xl;
   line-height: 1.3333;
   padding-top: .7rem;
-  padding-bottom: 1.275rem;
+  padding-bottom: 0;
+  margin-bottom: 2rem;
 }
 
 
@@ -64,6 +65,7 @@
 // Use with more complex content
 .list-group-hub,
 .list-group-content {
+  margin-bottom: 0;
   .list-group-item {
     color: $gray-ink;
     display: flex;

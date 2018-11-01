@@ -153,7 +153,7 @@ ol {
     margin-bottom: 0;
   }
   > li {
-    margin-bottom: 2rem;
+    padding-bottom: 4rem;
     .date {
       margin-bottom: 1.5rem;
     }
@@ -171,8 +171,12 @@ ol {
       }
     }
     &:last-child {
-      margin-bottom: 0;
+      padding-bottom: 0;
     }
+  }
+  // Give a little more room if we have cards inside a date-list
+  .cards {
+    padding-top: 1rem;
   }
 }
 

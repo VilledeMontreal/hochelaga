@@ -13,6 +13,22 @@
   }
 }
 
+// Page number
+.page-number {
+  color: $headings-color;
+  display: flex;
+  justify-content: center;
+  padding-top: 3.5rem;
+  padding-bottom: 3.5rem;
+  span {
+    &:before,
+    &:after {
+      content: "-";
+      padding: .5rem;
+    }
+  }
+}
+
 // Pagination
 .pagination {
   @include border-radius(0);

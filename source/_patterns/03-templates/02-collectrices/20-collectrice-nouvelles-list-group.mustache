@@ -3,62 +3,52 @@
 
 <main class="main-content {{ pageClasses }}" id="main-content" aria-label="Main Content">
 
-  {{> organisms-content-header }}
+  {{> molecules-jumbotron }}
 
-    <!-- Teaser -->
-  {{# has-lead-text}}
-  {{> molecules-lead }}
-  {{/ has-lead-text}}
-
-  {{# alertsCards }}
-  <section class="page-section bg-gray-sky pt-0">
+  {{# nouvellesListes }}
+  <section class="page-section">
     <div class="container">
       <div class="hub-section-heading">
-        {{# inputGroupSearch}}
+        {{# inputGroupSearch }}
         <div class="row">
           <div class="col-12 col-lg-6">
             {{> atoms-input-icon }}
           </div>
         </div>
-        {{/ inputGroupSearch}}
+        {{/ inputGroupSearch }}
+        {{# headings }}
+        <div class="row">
+          <div class="col-12">
+            <h1 class="{{ headings.class }}">{{ headings.text }}</h1>
+          </div>
+        </div>
+        {{/ headings }}
       </div>
-      {{# cards }}
+      
+      {{# nouvellesListes.listGroups }}
       <div class="row">
         <div class="col-12">
-          <ul class="date-list">
-            {{# items }}
-            <li>
-              {{# date }}
-              <h2 class="date day-month">
-                <span class="day">{{ day }}</span>{{ month}}
-              </h2>
-              {{/ date}}
-              <div class="row cards {{ cards.classes }}">
-              {{# item }}
-                <div class="{{ cards.bsgrid-classes }}">
-                  {{> molecules-card-item }}
-                </div>
-              {{/ item }}
-              </div>
-            </li>
-            {{/ items }}
-          </ul>
+          <div class="js-elus-results">
+          {{# page-number }}
+            {{> molecules-page-number }}
+          {{/ page-number }}
+          {{> molecules-list-group-hub}}
+          </div>
         </div>
       </div>
+      {{/ nouvellesListes.listGroups }}
 
-      {{# hasPagination }}
+      {{# load-more }}
       <div class="pagination-wrapper">
-        {{> molecules-pagination("paginationClass": justify-content-center) }}
+        {{> atoms-button }}
       </div>
-      {{/ hasPagination }}
-
-      {{/ cards }}
+      {{/ load-more }}
     </div>
   </section>
-  {{/ alertsCards }}
+  {{/ nouvellesListes }}
 
   <!-- Empty results -->
-  {{^ alertsCards }}
+  {{^ nouvellesListes }}
   <section class="page-section">
     <div class="container">
       <div class="hub-section-heading">
@@ -77,7 +67,7 @@
       </div>
     </div>
   </section>
-  {{/ alertsCards }}
+  {{/ nouvellesListes }}
 
   {{# hasFeedbackForm}}
   {{> organisms-feedback-form}}

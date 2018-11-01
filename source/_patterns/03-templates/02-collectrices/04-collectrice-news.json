@@ -1,6 +1,4 @@
 {
-  "regionMainClasses" : "",
-  "regionMainContentClasses" : "",
   "has-lead-text" : true,
   "hasPagination": true,
   "text-elements": {
@@ -23,14 +21,14 @@
       "inputPlaceholder": "Rechercher une nouvelle"
     }
   ],
-  "nouvellesListes": {
+  "nouvellesCards": {
+    "headings": {
+      "text": "Les dernières nouvelles",
+      "class": "section-heading"
+    },
     "cards": {
       "classes": "",
       "bsgrid-classes": "col-12",
-      "headings": {
-        "text": "Les dernières nouvelles",
-        "class": "section-heading"
-      },
       "card-item": [
         {
           "classes": "card-fw card-row-layout",

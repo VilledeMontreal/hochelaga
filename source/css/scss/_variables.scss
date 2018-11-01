@@ -109,7 +109,8 @@ $dialog-colors: map-merge(
 
 // Spacing
 //
-// Spacers are multiple of 8
+// Spacers are multiple of 8px
+// From 8px (1) to 160px (20)
 $spacer: .5rem;
 $spacers: ();
 $spacers: map-merge((
@@ -129,7 +130,11 @@ $spacers: map-merge((
   13: ($spacer * 13),
   14: ($spacer * 14),
   15: ($spacer * 15),
-  16: ($spacer * 16)
+  16: ($spacer * 16),
+  17: ($spacer * 17),
+  18: ($spacer * 18),
+  19: ($spacer * 19),
+  20: ($spacer * 20)
 ), $spacers);
 
 // Body
@@ -372,8 +377,8 @@ $breadcrumb-border-radius:          0;
 
 // Jumbotron
 
-//$jumbotron-padding:                 2rem;
-$jumbotron-bg:                      $white;
+$jumbotron-padding:                 3rem;
+$jumbotron-bg:                      $gray-sky;
 
 
 // Cards

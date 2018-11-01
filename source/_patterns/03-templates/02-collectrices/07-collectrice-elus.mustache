@@ -3,10 +3,10 @@
 
 <main class="main-content {{ pageClasses }}" id="main-content" aria-label="Main Content">
 
-  {{> organisms-content-header }}
+  {{> molecules-jumbotron }}
 
-  {{# nouvellesCards }}
-  <section class="page-section bg-gray-sky">
+  {{# elusListes }}
+  <section class="pt-9">
     <div class="container">
       <div class="hub-section-heading">
         {{# inputGroupSearch }}
@@ -19,36 +19,42 @@
         {{# headings }}
         <div class="row">
           <div class="col-12">
-            <h2 class="{{ headings.class }}">{{ headings.text }}</h2>
+            <h1 class="{{ headings.class }}">{{ headings.text }}</h1>
           </div>
         </div>
         {{/ headings }}
       </div>
-
-      {{# cards }}
-      
-      <div class="row cards {{ cards.classes }}">
-        {{# cards.card-item }}
-        <div class="{{ cards.bsgrid-classes }}">
-          {{> molecules-card-item }}
-        </div>
-        {{/ cards.card-item }}
-      </div>
-
-      {{# hasPagination }}
-      <div class="pagination-wrapper">
-          {{> molecules-pagination("paginationClass": justify-content-center) }}
-      </div>
-      {{/ hasPagination }}
-
-      {{/ cards }}
     </div>
   </section>
-  {{/ nouvellesCards }}
+  {{# elusListes.cards }}
+  <div class="js-results">
+    {{# page-number }}
+      {{> molecules-page-number }}
+    {{/ page-number }}
+    <div class="page-section bg-gray-sky pt-10">
+      <div class="container">
+        <div class="row cards {{ classes }}">
+          {{# card-item }}
+          <div class="{{ bsgrid-classes }}">
+            {{> molecules-card-item }}
+          </div>
+          {{/ card-item }}
+        </div>
+      </div>
+    </div>
+  </div>
+  {{/ elusListes.cards }}
+  {{# load-more }}
+  <div class="pagination-wrapper">
+    {{> atoms-button }}
+    {{> atoms-button(buttonClass: "btn-link", buttonText: "Afficher tous les élus") }}
+  </div>
+  {{/ load-more }}
+  {{/ elusListes }}
 
   <!-- Empty results -->
-  {{^ nouvellesCards }}
-  <section class="page-section pt-0">
+  {{^ elusListes }}
+  <section class="page-section">
     <div class="container">
       <div class="hub-section-heading">
         {{# inputGroupSearch }}
@@ -66,7 +72,7 @@
       </div>
     </div>
   </section>
-  {{/ nouvellesCards }}
+  {{/ elusListes }}
 
   {{# hasFeedbackForm}}
   {{> organisms-feedback-form}}

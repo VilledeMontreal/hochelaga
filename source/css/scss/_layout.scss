@@ -25,6 +25,10 @@
       }
     }
   }
+  // sarcelle variant
+  &.content-header-sarcelle {
+    background-color: $sarcelle-lightest;
+  }
 
   &-title {
     padding-bottom: 3rem;
@@ -55,27 +59,6 @@
   &-metadata {
     color: $gray-600;
     font-size: $font-size-base;
-  }
-
-  // Hub link
-  .hub-link {
-    color: $gray-600;
-    font-size: $font-size-base;
-    padding-bottom: 2rem;
-    a {
-      color: $gray-ink;
-      @include transition(color .15s ease-in-out);
-      @include hover-focus {
-        color: $sarcelle;
-      }
-    }
-    // 992px and up
-    @include media-breakpoint-up(xl) {
-      display: flex;
-      flex-flow: row wrap;
-      justify-content: flex-end;
-      padding-bottom: 0;
-    }
   }
 
   // used for specific contente header infos like Evenement
@@ -165,15 +148,44 @@
   }
 }
 
+// Hub link
+.hub-link {
+  color: $gray-600;
+  font-size: $font-size-base;
+  padding-bottom: 2rem;
+  a {
+    color: $gray-ink;
+    @include transition(color .15s ease-in-out);
+    @include hover-focus {
+      color: $sarcelle;
+    }
+  }
+  // 992px and up
+  @include media-breakpoint-up(xl) {
+    display: flex;
+    //flex-flow: row wrap;
+    justify-content: flex-end;
+    align-self: flex-end;
+    padding-bottom: 0;
+  }
+}
+
 .region-content {
-  padding-top: 4rem;
-  padding-bottom: 4rem;
+  padding-top: 4.5rem;
+  padding-bottom: 4.5rem;
 }
 
 // Generic section layouts
 .page-section {
-  padding-top: 3rem;
-  padding-bottom: 3rem;
+  padding-top: 4.5rem;
+  padding-bottom: 4.5rem;
+
+  // Remove padding on 2 consecutive section with bg-gray-sky
+  &.bg-gray-sky {
+    + .bg-gray-sky {
+      padding-top: 0;
+    }
+  }
 }
 // Use page-section-anchor to get padding over the section with sticky anchor nav
 .page-section-anchor {
@@ -192,6 +204,18 @@
     margin-bottom: 0;
   }
 }
+
+.hub-section-heading {
+  h1,h2,h3 {
+    @extend h2;
+  }
+  margin-bottom: 2.5rem;
+
+  .row + .row {
+    margin-top: 1rem;
+  }
+}
+
 
 // Sidebar left and right mobile spacing
 .sidebar-right {
@@ -255,7 +279,13 @@
   .lead:last-child {
     margin-bottom: 0;
   }
+
+  + .bg-gray-sky {
+    padding-top: 1rem;
+  }
 }
+
+
 // Borough selection section inside lead-container
 // @see demarche (how to) templates
 .section-select-arron,
@@ -666,7 +696,15 @@
 
 // empty-results
 .empty-results {
-  .list-group-heading {
+  // TODO: REMOVE list-group-heading in v3.0.0
+  // list-group-heading will be deprecated,
+  // Use empty-results-heading inside empty-results div
+  .list-group-heading,
+  .empty-results-heading {
     display: block;
+    color: $headings-color;
+    font-size: $font-size-xl;
+    line-height: 1.3333;
+    padding-bottom: 1.275rem;
   }
 }
