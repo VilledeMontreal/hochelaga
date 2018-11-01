@@ -16,6 +16,13 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 ## Changed
 - Changed Social medias placement in Sujet templates.
 - Changed Contact block in Sujet templates and fixed spacing for multiple contacts.
+- Clean-up all json files, removed unused data.
+- Normalize Collectrices (hubs) structure (heading, results, pagination).
+- Normalize .page-section and .region-congent padding.
+
+## Fixed
+- Fixed padding between two adjacent section with .bg-gray-sky
+
 
 ## [2.2.0] - 2018-10-26
 

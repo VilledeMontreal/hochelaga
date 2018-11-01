@@ -143,7 +143,7 @@
     $('#slide-menu-left').slideMenu({
       position: 'left',
       submenuLinkAfter: '<span class="vdm vdm-063-fleche-droite" aria-hidden="true"></span>',
-      backLinkTitle: 'Back',
+      backLinkTitle: 'Retour',
       backLinkClass: 'back-link',
       backLinkBefore: '<span class="vdm vdm-058-chevron-gauche" aria-hidden="true"></span> '
     });
