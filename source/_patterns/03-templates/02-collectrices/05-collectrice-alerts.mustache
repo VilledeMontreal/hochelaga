@@ -33,21 +33,25 @@
                 <span class="day">{{ day }}</span>{{ month}}
               </h2>
               {{/ date}}
-              <div class="cards {{ cards.classes }}">
+              <div class="row cards {{ cards.classes }}">
               {{# item }}
-                {{> molecules-card-item }}
+                <div class="{{ cards.bsgrid-classes }}">
+                  {{> molecules-card-item }}
+                </div>
               {{/ item }}
               </div>
             </li>
             {{/ items }}
           </ul>
-          
-          {{# hasPagination }}
-            {{> molecules-pagination("paginationClass": justify-content-center) }}
-          {{/ hasPagination }}
-
         </div>
       </div>
+
+      {{# hasPagination }}
+      <div class="pagination-wrapper">
+        {{> molecules-pagination("paginationClass": justify-content-center) }}
+      </div>
+      {{/ hasPagination }}
+
       {{/ cards }}
     </div>
   </section>
