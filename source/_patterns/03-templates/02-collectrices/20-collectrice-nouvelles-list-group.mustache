@@ -42,30 +42,25 @@
 -->
 
   {{# nouvellesListes }}
-  <section class="page-section pt-9">
+  <section class="page-section">
     <div class="container">
-      {{# inputGroupSearch }}
-      <div class="row">
-        <div class="col-12 col-lg-6">
-          {{> atoms-input-icon }}
+      <div class="hub-section-heading">
+        {{# inputGroupSearch }}
+        <div class="row">
+          <div class="col-12 col-lg-6">
+            {{> atoms-input-icon }}
+          </div>
         </div>
-      </div>
-      {{/ inputGroupSearch }}
-      {{^ nouvellesListes.listGroups }}
-      <div class="row">
-        <div class="col-12">
-          {{> molecules-empty-search-results }}
+        {{/ inputGroupSearch }}
+        {{# headings }}
+        <div class="row">
+          <div class="col-12">
+            <h1 class="{{ headings.class }}">{{ headings.text }}</h1>
+          </div>
         </div>
+        {{/ headings }}
       </div>
-      {{/ nouvellesListes.listGroups }}
       
-      {{# headings }}
-      <div class="row">
-        <div class="col-12">
-          <h1 class="{{ headings.class }}">{{ headings.text }}</h1>
-        </div>
-      </div>
-      {{/ headings }}
       {{# nouvellesListes.listGroups }}
       <div class="row">
         <div class="col-12">
@@ -78,11 +73,34 @@
         </div>
       </div>
       {{/ nouvellesListes.listGroups }}
+
       {{# load-more }}
       <div class="results-load-more">
         {{> atoms-button }}
       </div>
       {{/ load-more }}
+    </div>
+  </section>
+  {{/ nouvellesListes }}
+
+  <!-- Empty results -->
+  {{^ nouvellesListes }}
+  <section class="page-section">
+    <div class="container">
+      <div class="hub-section-heading">
+        {{# inputGroupSearch }}
+        <div class="row">
+          <div class="col-12 col-lg-6">
+            {{> atoms-input-icon }}
+          </div>
+        </div>
+        {{/ inputGroupSearch }}
+      </div>
+      <div class="row">
+        <div class="col-12">
+          {{> molecules-empty-search-results }}
+        </div>
+      </div>
     </div>
   </section>
   {{/ nouvellesListes }}

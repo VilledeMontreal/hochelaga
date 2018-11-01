@@ -6,30 +6,24 @@
   {{> molecules-jumbotron }}
 
   {{# elusListes }}
-  <section class="page-section pt-9">
+  <section class="pt-9">
     <div class="container">
-      {{# inputGroupSearch }}
-      <div class="row">
-        <div class="col-12 col-lg-6">
-          {{> atoms-input-icon }}
+      <div class="hub-section-heading">
+        {{# inputGroupSearch }}
+        <div class="row">
+          <div class="col-12 col-lg-6">
+            {{> atoms-input-icon }}
+          </div>
         </div>
-      </div>
-      {{/ inputGroupSearch }}
-      {{^ cards }}
-      <div class="row">
-        <div class="col-12">
-          {{> molecules-empty-search-results }}
+        {{/ inputGroupSearch }}
+        {{# headings }}
+        <div class="row">
+          <div class="col-12">
+            <h1 class="{{ headings.class }}">{{ headings.text }}</h1>
+          </div>
         </div>
+        {{/ headings }}
       </div>
-      {{/ cards }}
-      
-      {{# headings }}
-      <div class="row">
-        <div class="col-12">
-          <h1 class="{{ headings.class }}">{{ headings.text }}</h1>
-        </div>
-      </div>
-      {{/ headings }}
     </div>
   </section>
   {{# elusListes.cards }}
@@ -56,6 +50,28 @@
     {{> atoms-button(buttonClass: "btn-link", buttonText: "Afficher tous les élus") }}
   </div>
   {{/ load-more }}
+  {{/ elusListes }}
+
+  <!-- Empty results -->
+  {{^ elusListes }}
+  <section class="page-section">
+    <div class="container">
+      <div class="hub-section-heading">
+        {{# inputGroupSearch }}
+        <div class="row">
+          <div class="col-12 col-lg-6">
+            {{> atoms-input-icon }}
+          </div>
+        </div>
+        {{/ inputGroupSearch }}
+      </div>
+      <div class="row">
+        <div class="col-12">
+          {{> molecules-empty-search-results }}
+        </div>
+      </div>
+    </div>
+  </section>
   {{/ elusListes }}
 
   {{# hasFeedbackForm}}

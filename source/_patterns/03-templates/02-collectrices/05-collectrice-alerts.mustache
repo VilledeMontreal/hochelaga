@@ -10,15 +10,18 @@
   {{> molecules-lead }}
   {{/ has-lead-text}}
 
-  <section class="page-section bg-gray-sky">
+  {{# alertsCards }}
+  <section class="page-section bg-gray-sky pt-0">
     <div class="container">
-      {{# inputGroupSearch}}
-      <div class="row">
-        <div class="col-12 col-lg-6">
-          {{> atoms-input-icon }}
+      <div class="hub-section-heading">
+        {{# inputGroupSearch}}
+        <div class="row">
+          <div class="col-12 col-lg-6">
+            {{> atoms-input-icon }}
+          </div>
         </div>
+        {{/ inputGroupSearch}}
       </div>
-      {{/ inputGroupSearch}}
       {{# cards }}
       <div class="row">
         <div class="col-12">
@@ -48,6 +51,29 @@
       {{/ cards }}
     </div>
   </section>
+  {{/ alertsCards }}
+
+  <!-- Empty results -->
+  {{^ alertsCards }}
+  <section class="page-section">
+    <div class="container">
+      <div class="hub-section-heading">
+        {{# inputGroupSearch }}
+        <div class="row">
+          <div class="col-12 col-lg-6">
+            {{> atoms-input-icon }}
+          </div>
+        </div>
+        {{/ inputGroupSearch }}
+      </div>
+      <div class="row">
+        <div class="col-12">
+          {{> molecules-empty-search-results }}
+        </div>
+      </div>
+    </div>
+  </section>
+  {{/ alertsCards }}
 
   {{# hasFeedbackForm}}
   {{> organisms-feedback-form}}
