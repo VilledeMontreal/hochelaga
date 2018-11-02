@@ -15,16 +15,16 @@
   //display: $display;
 
   @if $level == 1 {
-    font-size: $h1-font-size;                             // 52px
-    line-height: get-line-height($h1-font-size, 64px);    // 64px
+    font-size: $h1-font-size;                             // 48px
+    line-height: get-line-height($h1-font-size, 64px);    // 60px
   }
   @if $level == 2 {
-    font-size: $h2-font-size;                             // 45px
-    line-height: get-line-height($h2-font-size, 56px);    // 56px
+    font-size: $h2-font-size;                             // 42px
+    line-height: get-line-height($h2-font-size, 56px);    // 52px
   }
   @if $level == 3 {
-    font-size: $h3-font-size;                             // 39px
-    line-height: get-line-height($h3-font-size, 48px);    // 48px
+    font-size: $h3-font-size;                             // 36px
+    line-height: get-line-height($h3-font-size, 48px);    // 44px
   } 
   @if $level == 4 {
     font-size: $h4-font-size;                             // 32px
@@ -35,8 +35,8 @@
     line-height: get-line-height($h5-font-size, 32px);    // 32px
   } 
   @if $level == 6 {
-    font-size: $h6-font-size;                             // 19px
-    line-height:get-line-height($h6-font-size, 24px);     // 24px
+    font-size: $h6-font-size;                             // 22px
+    line-height:get-line-height($h6-font-size, 24px);     // 28px
   }
 
   @if $weight == "bold" {
