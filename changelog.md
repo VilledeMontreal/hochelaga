@@ -14,6 +14,7 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 - Collectrices Nouvelles V2 template
 
 ## Changed
+- Updated font-icon to version 1.1.3 (115-glissant and 116-signalisation)
 - Changed Social medias placement in Sujet templates.
 - Changed Contact block in Sujet templates and fixed spacing for multiple contacts.
 - Clean-up all json files, removed unused data.
