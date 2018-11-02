@@ -139,7 +139,7 @@ h6, .h6 {
   }
   // 576px and up
   @include media-breakpoint-up(sm) {
-    @include responsive-font-size($lead-font-size, 1, 32px);
+    @include responsive-font-size($lead-font-size, 1, 36px);
   }
 }
 
@@ -296,7 +296,7 @@ a {
 .blockquote {
   color: $gray-900;
   font-size: $font-size-lg;
-  line-height: get-line-height($font-size-lg, 32px);
+  line-height: $line-height-base;
   font-weight: $font-weight-normal;
   margin-bottom: 2rem;
   padding-left: 1.75em;

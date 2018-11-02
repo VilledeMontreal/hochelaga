@@ -13,90 +13,7 @@
   }
 }
 
-// Page number
-.page-number {
-  color: $headings-color;
-  display: flex;
-  justify-content: center;
-  padding-top: 3.5rem;
-  padding-bottom: 3.5rem;
-  span {
-    &:before,
-    &:after {
-      content: "-";
-      padding: .5rem;
-    }
-  }
-}
 
-// Pagination
-.pagination {
-  @include border-radius(0);
-}
-
-// Page item
-
-.page-item {
-  display: flex;
-  &:first-child {
-    .page-link {
-      @include border-left-radius(0);
-    }
-  }
-
-  &:last-child {
-    .page-link {
-      @include border-right-radius(0);
-    }
-  }
-
-  &:first-child,
-  &:last-child {
-    > .page-link {
-      padding: $pagination-icon-padding;
-      line-height: 1;
-      .vdm {
-        display: block;
-        font-size: 1em;
-        line-height: 1;
-        color: $pagination-color;
-      }
-    }
-  }
-}
-
-//
-// Sizing
-//
-
-.pagination-lg {
-  @include pagination-size($pagination-padding-y-lg, $pagination-padding-x-lg, 1.5rem, $line-height-lg, 0);
-
-  .page-item {
-    &:first-child,
-    &:last-child {
-      > .page-link {
-        padding: $pagination-icon-padding-lg;
-        .vdm {
-          font-size: 1.2em;
-        }
-      }
-    }
-  }
-}
-
-.pagination-sm {
-  @include pagination-size($pagination-padding-y-sm, $pagination-padding-x-sm, $font-size-sm, $line-height-sm, 0);
-
-  .page-item {
-    &:first-child,
-    &:last-child {
-      > .page-link {
-        padding: $pagination-icon-padding-sm;
-      }
-    }
-  }
-}
 
 //
 // Collapsible Item
@@ -116,7 +33,7 @@
       color: $headings-color;
       display: flex;
       font-size: $font-size-lg;
-      line-height: get-line-height($font-size-lg, 32px);
+      line-height: $line-height-sm;
       padding: 1.4rem 4rem 1.4rem 1.5rem;
       cursor: pointer;
       @include iconvdm(after, '069-mini-plus-circulaire');
@@ -519,14 +436,14 @@ nav {
   color: $gray-500;
   font-size: $font-size-sm;     // ~15px
   flex: 1 0 auto;
-  line-height: 1.4;
+  line-height: $line-height-base;
   padding: 1.125rem;
   width: 100%;
   // Absolute positionning on larger breakpoint
   @include media-breakpoint-up(md) {
     color: $gray-ink;
     font-size: $font-size-lg;
-    line-height: 1.5;
+    line-height: $line-height-base;
     font-weight: $font-weight-bold;
     padding: 1.5rem 1rem 1.125rem 1.875rem;
     position: absolute;
@@ -586,7 +503,7 @@ nav {
     color: $gray-600;
     display: inline-block;
     font-size: $font-size-sm;
-    line-height: 1.2;
+    line-height: $line-height-sm;
     padding-bottom: .5rem;
   }
   .circle {
@@ -680,6 +597,7 @@ nav {
   .db-title {
     display: flex;
     font-size: $font-size-xl;
+    line-height: $line-height-sm;
     font-weight: $font-weight-bold;
     justify-content: space-between;
   }
@@ -700,7 +618,7 @@ nav {
   .navbar-link {
     color: $headings-color;
     display: flex;
-    font-size: 1.125rem;  // 18px
+    font-size: $font-size-base;  // 18px
     line-height: 1.333333;
     padding: 0;
   }
@@ -802,8 +720,8 @@ nav {
   }
   .subnav-title {
     color: $headings-color;
-    font-size: $font-size-base;
-    line-height: get-line-height($font-size-base, 24px);
+    font-size: $font-size-base;         // 18px
+    line-height: $line-height-sm;       // 1.33
     font-weight: $font-weight-bold;
     padding-left: .25rem;
     padding-right: .25rem;
@@ -812,8 +730,8 @@ nav {
       padding-right: .375rem;
     }
     @include media-breakpoint-up(md) {
-      font-size: $font-size-xl; // 24px
-      line-height: get-line-height($font-size-xl, 28px);
+      font-size: $font-size-xl;         // 24px
+      line-height: $line-height-sm;     // 1.33  
       padding-left: .5rem;
       padding-right: .5rem;
     }

@@ -39,7 +39,7 @@
     color: $headings-color;
     display: block;
     font-size: $font-size-xl;
-    line-height: 1.3333;
+    line-height: $line-height-sm;
     padding-bottom: .5rem;
   }
   
@@ -53,7 +53,7 @@
 .list-group-heading {
   color: $headings-color;
   font-size: $font-size-xl;
-  line-height: 1.3333;
+  line-height: $line-height-sm;
   padding-top: .7rem;
   padding-bottom: 0;
   margin-bottom: 2rem;

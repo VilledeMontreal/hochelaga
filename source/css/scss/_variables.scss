@@ -212,10 +212,9 @@ $font-weight-regular:         400; // Nunito Sans Regular
 $font-weight-bold:            700; // Nunito Sans Bold
 $font-weight-normal:          $font-weight-regular;
 
-$line-height-base:            1.555555555;
-$line-height-xl:              1.3333;
-$line-height-lg:              1.5238;
-$line-height-sm:              1.4;
+$line-height-base:            1.5555;
+$line-height-lg:              1.5555;
+$line-height-sm:              1.3333;
 
 $font-size-base:              1.125rem;     // ~18px if browser default is 16px
 $font-size-xl:                1.5rem;       // ~24px
@@ -255,7 +254,7 @@ $display4-weight:             400;
 $display-line-height:         $headings-line-height;
 
 $lead-font-size:              $font-size-xl;              // 24px
-$lead-line-height:            $line-height-xl;            // 32px
+$lead-line-height:            1.5;                        // 36px
 $lead-font-weight:            $font-weight-regular;
 
 $small-font-size:             .75em;

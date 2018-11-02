@@ -126,6 +126,7 @@
       .profile-title {
         color: $headings-color;
         font-size: $font-size-xl;
+        line-height: $line-height-sm;
       }
       .profile-member {
         color: $headings-color;
@@ -308,6 +309,7 @@
     color: $headings-color;
     display: block;
     font-size: $font-size-lg;
+    line-height: $line-height-sm;
     font-weight: $font-weight-bold;
     margin-bottom: 1rem;
   }
@@ -444,7 +446,7 @@
   }
   .title {
     font-size: $font-size-xl;
-    line-height: get-line-height($font-size-xl,32px);
+    line-height: $line-height-sm;
     font-weight: $font-weight-bold;
     padding-top: 1rem;
   }
@@ -649,12 +651,12 @@
   .content-block-infos {
     color: $headings-color;
     font-size: $font-size-lg;
+    line-height: $line-height-base;
     margin-bottom: 2rem;
-    line-height: get-line-height($font-size-lg, 32px);
     .content-block-infos-title {
       font-size: $font-size-xl;
       font-weight: bold;
-      line-height: get-line-height($font-size-xl, 32px);
+      line-height: $line-height-sm;
     }
     > span {
       display: block;
@@ -704,7 +706,7 @@
     display: block;
     color: $headings-color;
     font-size: $font-size-xl;
-    line-height: 1.3333;
+    line-height: $line-height-sm;
     padding-bottom: 1.275rem;
   }
 }
