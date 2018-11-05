@@ -266,8 +266,8 @@ a {
       vertical-align: baseline;
       overflow: hidden;
       margin-right: -1.125em;
-      margin-top: -.5rem;
-      margin-bottom: -.5rem;
+      margin-top: -.625rem;
+      margin-bottom: -.625rem;
 
     }
   }
@@ -400,6 +400,7 @@ a {
       @extend .h2;
       display: inline-block;
       position: relative;
+      margin-bottom: 0;
       margin-right: 0.3em;
       &:after {
         position: absolute;

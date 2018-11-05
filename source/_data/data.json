@@ -51,7 +51,7 @@
   "htmlClass": "",
   "pageClasses": "",
   "headerClasses": "",
-  "headerContainerClasses": "container-fluid",
+  "contentHeaderContainerClasses": "container-fluid",
   "leadContainerClasses": "",
   "mainContainerClasses": "",
   "sidebarLeftClass": "col-lg-4",
@@ -102,6 +102,14 @@
         "classes": "display-2",
         "content": "Display heading 2"
       }
+    }
+  },
+  "jumbotronClasses": "jumbotron-bg-sarcelle",
+  "jumbotron": {
+    "headings": {
+      "tag": "h2",
+      "classes": "jumbotron-title",
+      "content": "Jumbotron heading"
     }
   },
   "user": {
@@ -383,6 +391,7 @@
       "text": "Messages"
     }
   ],
+  "pageNumber": "1",
   "paginationClass": "",
   "paginationList": [
     {

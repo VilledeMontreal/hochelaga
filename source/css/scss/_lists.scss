@@ -68,10 +68,11 @@ ol {
       font-size: 1.5em;
       padding-right: .5rem;
     }
+    /*
     > * {
       align-items: flex-start;
-
     }
+    */
   }
 
   .list-icon-label {
@@ -110,7 +111,7 @@ ol {
     }
     a {
       border: none;
-      color: $black;
+      color: $gray-900;
       display: flex;
       align-items: center;
       text-decoration: none;
@@ -123,7 +124,7 @@ ol {
         }
       }
       .vdm {
-        color: $black;
+        color: $gray-900;
         font-size: 2rem;
         padding-right: .5rem;
       }
@@ -140,20 +141,6 @@ ol {
       padding-right: 0;
     }
   }
-  /*
-  &.icon-primary {
-    li a .vdm {
-      color: $primary;
-      &:hover,
-      &:active {
-        color: $sarcelle-surprise;
-        .vdm {
-          color: inherit;
-        }
-      }
-    }
-  }
-  */
 }
 
 // Date lists
@@ -166,7 +153,7 @@ ol {
     margin-bottom: 0;
   }
   > li {
-    margin-bottom: 2rem;
+    padding-bottom: 4rem;
     .date {
       margin-bottom: 1.5rem;
     }
@@ -184,8 +171,12 @@ ol {
       }
     }
     &:last-child {
-      margin-bottom: 0;
+      padding-bottom: 0;
     }
+  }
+  // Give a little more room if we have cards inside a date-list
+  .cards {
+    padding-top: 1rem;
   }
 }
 

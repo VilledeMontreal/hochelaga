@@ -1,5 +1,6 @@
 {
   "contentHeaderClasses": "content-header-profile bg-gray-sky",
+  "contentHeaderContainerClasses": "container",
   "text-elements": {
     "headings":{
       "display":{
@@ -7,7 +8,6 @@
       }
     }
   },
-  "headerContainerClasses": "container",
   "has-header-meta": true,
   "has-publication-date": false,
   "has-hub-link": true,
@@ -16,6 +16,41 @@
   "sidebarRight": false,
   "sidebarLeft": true,
   "sidebarTitle": "Coordonnées",
+  "coordinates": {
+    "list-icon-item": [
+      {
+        "url": false,
+        "icon-item": {
+          "icon-label": "091-localisation"
+        },
+        "content": "<address>123, bord de l'eau<br>Montréal, QC, H3K 2T5</address>"
+      },
+      {
+        "url": false,
+        "icon-item": {
+          "icon-label": "012-telephone"
+        },
+        "content": "514 872-5678"
+      },
+      {
+        "url": "#contactModal",
+        "modal": true,
+        "class": "elided-text",
+        "icon-item": {
+          "icon-label": "028-enveloppe"
+        },
+        "content": "Envoyer un courriel"
+      }
+    ]
+  },
+  "social-media-icons-list": {
+    "has-label": false,
+    "has-facebook": true,
+    "has-instagram": false,
+    "has-twitter": true,
+    "has-linkedin": true,
+    "has-youtube": false
+  },
   "cards-roles": {
     "cards": {
       "section-classes": "",

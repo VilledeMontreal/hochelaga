@@ -14,6 +14,8 @@
     {{> molecules-card }}
   {{/ featuredSection}}
 
+
+<!--
   {{# demandesListes }}
   <section class="page-section {{cards.section-classes}}">
     <div class="container">
@@ -56,11 +58,72 @@
         <div class="col-12">
           {{> molecules-pagination("paginationClass": justify-content-center) }}
         </div>
-        {{/ hasPagination }}
       </div>
+      {{/ hasPagination }}
     </div>
     {{/ cards }}
 
+  </section>
+  {{/ demandesListes }}
+  -->
+
+  {{# demandesListes }}
+  <section class="page-section">
+    <div class="container">
+      <div class="hub-section-heading">
+        {{# inputGroupSearch }}
+        <div class="row">
+          <div class="col-12 col-lg-6">
+            {{> atoms-input-icon }}
+          </div>
+        </div>
+        {{/ inputGroupSearch }}
+        {{# headings }}
+        <div class="row">
+          <div class="col-12">
+            <h2 class="{{ headings.class }}">{{ headings.text }}</h2>
+          </div>
+        </div>
+        {{/ headings }}
+      </div>
+
+      {{# listGroups }}
+      <div class="row">
+        <div class="col-12">
+          {{> molecules-list-group-hub}}
+        </div>
+      </div>
+      {{/ listGroups }}
+
+      {{# hasPagination }}
+      <div class="pagination-wrapper">
+        {{> molecules-pagination("paginationClass": justify-content-center) }}
+      </div>
+      {{/ hasPagination }}
+
+    </div>
+  </section>
+  {{/ demandesListes }}
+
+   <!-- Empty results -->
+  {{^ demandesListes }}
+  <section class="page-section">
+    <div class="container">
+      <div class="hub-section-heading">
+        {{# inputGroupSearch }}
+        <div class="row">
+          <div class="col-12 col-lg-6">
+            {{> atoms-input-icon }}
+          </div>
+        </div>
+        {{/ inputGroupSearch }}
+      </div>
+      <div class="row">
+        <div class="col-12">
+          {{> molecules-empty-search-results }}
+        </div>
+      </div>
+    </div>
   </section>
   {{/ demandesListes }}
 

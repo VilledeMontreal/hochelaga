@@ -5,7 +5,12 @@
     <span class="vdm vdm-{{ icon-label }} {{ icon-class }}" aria-hidden="true"></span>
   {{/ icon-item}}
   {{# url }}
+    {{^ modal }}
     <a href="{{url}}" class="{{ class }}">{{{ content }}}</a>
+    {{/ modal }}
+    {{# modal }}
+    <a href="{{url}}" class="{{ class }}" data-toggle="modal">{{{ content }}}</a>
+    {{/ modal }}
   {{/ url }}
   {{^ url }}
     <span>{{{ content }}}</span>

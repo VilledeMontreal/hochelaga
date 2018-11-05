@@ -1,0 +1,78 @@
+{{> atoms-link-skip-to-main-content }}
+{{> organisms-header-portal }}
+
+<main class="main-content {{ pageClasses }}" id="main-content" aria-label="Main Content">
+
+  {{> molecules-jumbotron }}
+
+  {{# nouvellesListes }}
+  <section class="page-section">
+    <div class="container">
+      <div class="hub-section-heading">
+        {{# inputGroupSearch }}
+        <div class="row">
+          <div class="col-12 col-lg-6">
+            {{> atoms-input-icon }}
+          </div>
+        </div>
+        {{/ inputGroupSearch }}
+        {{# headings }}
+        <div class="row">
+          <div class="col-12">
+            <h1 class="{{ headings.class }}">{{ headings.text }}</h1>
+          </div>
+        </div>
+        {{/ headings }}
+      </div>
+      
+      {{# nouvellesListes.listGroups }}
+      <div class="row">
+        <div class="col-12">
+          <div class="js-elus-results">
+          {{# page-number }}
+            {{> molecules-page-number }}
+          {{/ page-number }}
+          {{> molecules-list-group-hub}}
+          </div>
+        </div>
+      </div>
+      {{/ nouvellesListes.listGroups }}
+
+      {{# load-more }}
+      <div class="pagination-wrapper">
+        {{> atoms-button }}
+      </div>
+      {{/ load-more }}
+    </div>
+  </section>
+  {{/ nouvellesListes }}
+
+  <!-- Empty results -->
+  {{^ nouvellesListes }}
+  <section class="page-section">
+    <div class="container">
+      <div class="hub-section-heading">
+        {{# inputGroupSearch }}
+        <div class="row">
+          <div class="col-12 col-lg-6">
+            {{> atoms-input-icon }}
+          </div>
+        </div>
+        {{/ inputGroupSearch }}
+      </div>
+      <div class="row">
+        <div class="col-12">
+          {{> molecules-empty-search-results }}
+        </div>
+      </div>
+    </div>
+  </section>
+  {{/ nouvellesListes }}
+
+  {{# hasFeedbackForm}}
+  {{> organisms-feedback-form}}
+  {{/ hasFeedbackForm }}
+</main>
+
+{{> organisms-footer-portal }}
+

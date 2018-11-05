@@ -10,7 +10,7 @@
   {{> molecules-lead }}
   {{/ has-lead-text}}
 
-  <section class="page-section pt-0 pb-4">
+  <section class="page-section pt-0">
     <div class="container-fluid">
       <div class="row">
         <div class="col-12 col-lg-4">
@@ -25,7 +25,9 @@
           {{> molecules-list-group-hub}}
 
           {{# hasPagination }}
+          <div class="pagination-wrapper">
             {{> molecules-pagination("paginationClass": justify-content-center) }}
+          </div>
           {{/ hasPagination }}
 
           {{/ list-group-results }}
@@ -44,7 +46,7 @@
               {{> atoms-select }}
             </div>
             <div class="d-none d-lg-block col-12">
-              <div id="mapLieux" style="height:800px"></div>
+              <div id="mapLieux" style="height:850px"></div>
             </div>
           </div>
         </div>

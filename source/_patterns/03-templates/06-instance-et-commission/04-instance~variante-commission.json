@@ -1,5 +1,4 @@
 {
-  "regionMainContentClasses": "col-lg-8",
   "text-elements": {
     "headings":{
       "display":{
@@ -24,8 +23,11 @@
     }
   },
   "cards-membres": {
+    "load-more": {
+      "buttonText": "Voir tous les membres",
+      "buttonClass": "btn-secondary"
+    },
     "cards": {
-      "button-load-more": true,
       "section-classes": "",
       "classes": false,
       "bsgrid-classes": "col-12 col-md-6",

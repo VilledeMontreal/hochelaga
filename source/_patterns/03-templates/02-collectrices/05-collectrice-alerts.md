@@ -1,4 +1,4 @@
 ---
-title: Collectrice - Alertes
+title: Collectrice - Alerts
 ---
 
