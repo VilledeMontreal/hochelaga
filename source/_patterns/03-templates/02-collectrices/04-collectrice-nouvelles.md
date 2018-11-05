@@ -1,3 +1,4 @@
 ---
-title: Collectrice - Nouvelle
+title: Collectrice - Nouvelles
+
 ---

@@ -2,19 +2,15 @@
   "text-elements": {
     "headings":{
       "display":{
-        "content": "Template instance ou commission"
+        "content": "Conseil d'arrondissement Rosemont–La Petite-Patrie"
       }
     }
   },
   "has-header-meta": true,
   "has-publication-date": true,
-  "date-time-text": "Mis à jour le 23 septembre 2018",
-  "has-hub-link": {
-    "url": "#",
-    "link-text": "Toutes les instances"
-  },
+  "date-time-text": "Mis à jour le 5 novembre 2018",
   "has-lead-text": true,
-  "leadContainerClasses": "",
+  "lead-text": "Le conseil d’arrondissement est composé du maire d’arrondissement et de 4 conseillers de ville élus par les citoyens. Le conseil est responsable des compétence de l’arrondissement : réfection des rues secondaires, collectes d’ordures et de matières recyclables, délivrance des permis, gestion du territoire, soutien au développement économique, offre d’activités culturelles et de loisirs, etc.",
   "has-nav-anchors": true,
   "nav": {
     "is-sticky": true,
@@ -42,9 +38,11 @@
     ]
   },
   "content": 
-    "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed et elementum sem. Maecenas nec ipsum eget risus dignissim luctus. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas.</p><p>Maecenas ipsum libero, consequat eget mollis id, fermentum et justo. Cras tristique ut urna vel auctor. Quisque a varius dui. Donec interdum tempor ipsum ut iaculis. In sit amet nunc pellentesque, semper turpis sit amet, congue nunc. Donec a rutrum ligula.</p><p>Mauris feugiat ex vel elit finibus, vel convallis sem ultrices. Aliquam eu magna eu purus consequat auctor.</p>",
+    "<p>Les conseils d’arrondissement ont lieu le 1er ou 2e lundi ou mardi de chaque mois. Ils débutent à 19 h. Les citoyens peuvent assister aux séances des conseils ou <a href=\"#\">poser des questions</a>. Des services sont mis en place pour favoriser la participation :</p><ul><li>Halte-garderie : service disponible gratuitement pour les parents d’enfants âgés de 1 à 10 ans. Le service est assuré par l'entreprise émergente PopupCamp.</li><li>Webdiffusion des assemblées</li></ul><p>Les ordres du jour des séances sont disponibles les vendredis précédant la tenue d’une assemblée.</p><p>Les archives des procès-verbaux, ordres du jour et documents officiels sont disponibles en <a href=\"#\">cliquant ici</a>.</p>",
   "has-sb-seance": true,
   "sidebarTitle": "Prochaine séance",
+  "seance-date": "5 novembre 2018, à 19 h",
+  "address": "<strong>Salle Jean-Drapeau</strong><br>5650, rue D’Iberville, 2<sup>e</sup> étage<br>Montréal (Québec) H2G 2B3",
   "featured-section": {
     "featuredContentID": "webdiffusion",
     "featuredContentBgImage": "background-image: url(https://picsum.photos/3888/2592?image=977)",
@@ -55,12 +53,28 @@
     }
   },
   "cards-membres": {
-    "button-load-more": false,
+    "load-more": false,
     "cards": {
       "section-classes": "",
       "classes": false,
       "bsgrid-classes": "col-12 col-md-6",
       "card-item": [
+        {
+          "classes": "card-large card-row-layout card-member",
+          "url": "#",
+          "card-title": "Prénom Nom",
+          "card-subtitle": "Fonction au sein du conseil",
+          "card-text": false,
+          "card-media": {
+            "icon": false,
+            "img" : {
+              "classes": "rounded-circle",
+              "url" : "https://picsum.photos/480/480?image=669",
+              "alt" : "Prénom Nom img alt."
+            }
+          },
+          "footer" : false
+        },
         {
           "classes": "card-large card-row-layout card-member",
           "url": "#",
@@ -137,7 +151,17 @@
         {
           "classes" : "card-link",
           "url" : "#",
-          "card-title" : "Card #1 link title",
+          "card-title" : "Poser une question au conseil d'arrondissement",
+          "card-text" : false,
+          "card-media" : false,
+          "footer" : {
+            "outside-body": true
+          }
+        },
+        {
+          "classes" : "card-link",
+          "url" : "#",
+          "card-title" : "Ordres du jour et procès-verbaux",
           "card-text" : false,
           "card-media" : false,
           "footer" : {

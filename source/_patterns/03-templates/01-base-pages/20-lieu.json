@@ -1,5 +1,4 @@
 {
-  "regionMainContentClasses": "",
   "sidebarRight": true,
   "sidebarLeft": false,
   "contentHeaderClasses": "bg-gray-sky",
@@ -24,9 +23,11 @@
     }
   ],
   "has-publication-date": false,
-  "has-hub-link": true,
   "date-time-text": "Mis à jour le 5 septembre 2018",
-  "hub-link-text": "Tous les lieux",
+  "has-hub-link": {
+    "url": "#",
+    "link-text": "Tous les lieux"
+  },
   "has-lead-text": false,
   "sidebarClasses": "sidebar-top-stroke",
   "sidebarTitle": "Informations",
