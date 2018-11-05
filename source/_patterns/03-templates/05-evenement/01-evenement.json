@@ -10,8 +10,11 @@
   "has-header-meta": true,
   "has-publication-date": false,
   "has-informations": true,
-  "has-hub-link": true,
-  "has-image": true,
+  "has-hub-link": {
+    "url": "#",
+    "link-text": "Tous les événements"
+  },
+  
   "informations-event": {
     "date": "Du 12 au 18 septembre 2018",
     "lieu": "Maison de la culture Ahuntsic-Cartierville"
@@ -23,7 +26,7 @@
       "badgeUrl": "#"
     }
   ],
-  "hub-link-text": "Tous les événements",
+  "has-image": true,
   "has-documents": true,
   "has-gallery": true,
   "has-video": true,

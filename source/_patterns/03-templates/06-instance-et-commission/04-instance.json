@@ -8,9 +8,11 @@
   },
   "has-header-meta": true,
   "has-publication-date": true,
-  "has-hub-link": true,
   "date-time-text": "Mis à jour le 23 septembre 2018",
-  "hub-link-text": "Toutes les instances",
+  "has-hub-link": {
+    "url": "#",
+    "link-text": "Toutes les instances"
+  },
   "has-lead-text": true,
   "leadContainerClasses": "",
   "has-nav-anchors": true,
@@ -39,6 +41,8 @@
       }
     ]
   },
+  "content": 
+    "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed et elementum sem. Maecenas nec ipsum eget risus dignissim luctus. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas.</p><p>Maecenas ipsum libero, consequat eget mollis id, fermentum et justo. Cras tristique ut urna vel auctor. Quisque a varius dui. Donec interdum tempor ipsum ut iaculis. In sit amet nunc pellentesque, semper turpis sit amet, congue nunc. Donec a rutrum ligula.</p><p>Mauris feugiat ex vel elit finibus, vel convallis sem ultrices. Aliquam eu magna eu purus consequat auctor.</p>",
   "has-sb-seance": true,
   "sidebarTitle": "Prochaine séance",
   "featured-section": {
@@ -134,56 +138,6 @@
           "classes" : "card-link",
           "url" : "#",
           "card-title" : "Card #1 link title",
-          "card-text" : false,
-          "card-media" : false,
-          "footer" : {
-            "outside-body": true
-          }
-        },
-        {
-          "classes" : "card-link",
-          "url" : "#",
-          "card-title" : "Card #2 link title",
-          "card-text" : false,
-          "card-media" : false,
-          "footer" : {
-            "outside-body": true
-          }
-        },
-        {
-          "classes" : "card-link",
-          "url" : "#",
-          "card-title" : "Card #3 link title - longer than usual",
-          "card-text" : false,
-          "card-media" : false,
-          "footer" : {
-            "outside-body": true
-          }
-        },
-        {
-          "classes" : "card-link",
-          "url" : "#",
-          "card-title" : "Card #4 link title",
-          "card-text" : false,
-          "card-media" : false,
-          "footer" : {
-            "outside-body": true
-          }
-        },
-        {
-          "classes" : "card-link",
-          "url" : "#",
-          "card-title" : "Card #5 link title",
-          "card-text" : false,
-          "card-media" : false,
-          "footer" : {
-            "outside-body": true
-          }
-        },
-        {
-          "classes" : "card-link",
-          "url" : "#",
-          "card-title" : "Card #6 link title",
           "card-text" : false,
           "card-media" : false,
           "footer" : {
