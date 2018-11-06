@@ -1,0 +1,91 @@
+{{> atoms-link-skip-to-main-content }}
+{{> organisms-header-portal }}
+
+<main class="main-content {{ pageClasses }}" id="main-content" aria-label="Main Content">
+
+  {{> organisms-content-header }}
+
+  {{# featuredSection}}
+    {{> molecules-card }}
+  {{/ featuredSection}}
+
+  <section class="page-section">
+    <div class="container">
+      <div class="contact-form col-lg-6">
+        <div class="h4">Par courriel</div>
+        <form id="form19" name="form19" class="wufoo" accept-charset="UTF-8" method="POST" action="https://vdmtl.wufoo.eu/forms/z1vh95sz0g1mp6f/#public" novalidate="novalidate">
+          <p>Les champs marqués d'un (<span class="danger">*</span>) sont obligatoires</p>
+          <div class="d-flex justify-content-between">
+            <div id="foli3" class="col-6"><label id="title3">Prénom* </label>
+              <div id="divFirstName"><input type="text" id="Field3" name="Field3" maxlength="255" aria-required="true"
+                  aria-describedby="title3">
+                <div id="fisrtNameReq" class="alert alert-danger firstName hide" style="display: none;">Entrez votre prénom</div>
+                <div class="hide">Votre prénom ne peut pas dépasser 256 caractères.</div>
+              </div>
+            </div>
+            <div id="foli4" class="col-6"><label id="title4">Nom* </label>
+              <div id="divLastName"><input type="text" id="Field4" name="Field4" maxlength="255" aria-required="true"
+                  aria-describedby="title4">
+                <div id="lastNameReq" class="alert alert-danger hide" style="display: none;">Entrez votre nom</div>
+                <div class="alert alert-danger hide">Votre nom de famille ne peut pas dépasser 256 caractères.</div>
+              </div>
+            </div>
+          </div>
+          <div id="foli5"><label id="title5">Courriel*</label>
+            <div id="divEmail"><input type="email" id="Field5" name="Field5" aria-required="true" placeholder="xyz@exemple.com"
+                aria-describedby="title5" class="form-control">
+              <div id="emailReq" class="alert alert-danger hide" style="display: none;">Saisissez votre adresse courriel</div>
+              <div id="emailValid" class="alert alert-danger hide" style="display: none;">Oups! Votre courriel respecte-t-il
+                la forme <i>xyz@exemple.com?</i></div>
+            </div>
+          </div>
+          <div id="foli8"><label id="title8">Votre demande concerne-t-elle un arrondissement? Si oui, lequel?</label>
+            <div class="select-container"><select id="Field8" name="Field8" aria-describedby="title8">
+                <option selected=""></option>
+                <option value="Ahuntsic-Cartierville">Ahuntsic-Cartierville</option>
+                <option value="Anjou">Anjou</option>
+                <option value="Côte-des-Neiges–Notre-Dame-de-Grâce">Côte-des-Neiges–Notre-Dame-de-Grâce</option>
+                <option value="L'Île-Bizard–Sainte-Geneviève">L'Île-Bizard–Sainte-Geneviève</option>
+                <option value="Lachine">Lachine</option>
+                <option value="LaSalle">LaSalle</option>
+                <option value="Le Plateau-Mont-Royal">Le Plateau-Mont-Royal</option>
+                <option value="Le Sud-Ouest">Le Sud-Ouest</option>
+                <option value="Mercier–Hochelaga-Maisonneuve">Mercier–Hochelaga-Maisonneuve</option>
+                <option value="Montréal-Nord">Montréal-Nord</option>
+                <option value="Outremont">Outremont</option>
+                <option value="Pierrefonds-Roxboro">Pierrefonds-Roxboro</option>
+                <option value="Rivière-des-Prairies–Pointe-aux-Trembles">Rivière-des-Prairies–Pointe-aux-Trembles</option>
+                <option value="Rosemont–La Petite-Patrie">Rosemont–La Petite-Patrie</option>
+                <option value="Saint-Laurent">Saint-Laurent</option>
+                <option value="Saint-Léonard">Saint-Léonard</option>
+                <option value="Verdun">Verdun</option>
+                <option value="Ville-Marie">Ville-Marie</option>
+                <option value="Villeray–Saint-Michel–Parc-Extension">Villeray–Saint-Michel–Parc-Extension</option>
+              </select><span class="vdm vdm-057-chevron-bas"></span></div>
+          </div>
+          <div id="foli6"><label id="title6">Objet </label>
+            <div><input type="text" id="Field6" name="Field6" maxlength="255"></div>
+          </div>
+          <div id="foli7"><label id="title7">Message* </label>
+            <div id="divMessage"><textarea id="Field7" name="Field7" aria-required="true" aria-describedby="title7"></textarea>
+              <div id="messageReq" class="alert alert-danger hide" style="display: none;">Ecrivez votre message</div>
+              <div class="alert alert-danger hide">Votre message ne peut pas dépasser 256 caractères.</div>
+            </div>
+          </div>
+          <div id="foli9" class="notranslate hide"><label id="title9">Language<div><input type="hidden" id="Field9" name="Field9"
+                  value="fr"></div></label></div>
+          <div class="d-flex justify-content-end"><button id="saveForm" name="saveForm" class="vdm-button-small" type="submit"
+              disabled="">Soumettre</button><span class="sr-only">Bouton de validation de formulaire</span></div>
+          <div class="hide"><label>Do Not Fill This Out<textarea name="comment" id="comment"></textarea><input type="hidden"
+                id="idstamp" name="idstamp" value="kmBkFdCoXbsS3sKzVX5qH5ZoFajez3vM7lWfztxN5Ns="></label></div>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  {{# hasFeedbackForm}}
+  {{> organisms-feedback-form}}
+  {{/ hasFeedbackForm }}
+</main>
+
+{{> organisms-footer-portal }}
