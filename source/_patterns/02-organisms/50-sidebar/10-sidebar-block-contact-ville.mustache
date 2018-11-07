@@ -1,0 +1,26 @@
+<div class="sidebar {{ sidebarClasses }}">
+  <section class="sb-block">
+    <ul class="list-icon">
+      <li class="list-icon-item">
+        {{> atoms-fonticon-item(icon-label: "012-telephone") }}
+        <div class="list-icon-content">
+          <span class="list-icon-label">Par téléphone</span>
+          <span class="h2">311</span><br>
+          <span>De l'extérieur de Montréal :<br>
+          514 872-0311</span>
+          <span class="list-icon-label pt-2">Heure d'ouverture</span>
+          <span class="d-block pb-1">Du lundi au vendredi : 8 h 30 à 20 h 30</span>
+          <span class="d-block">Samedi, dimanche et jours fériés : 9 h à 17 h</span>
+        </div>
+      </li>
+      <li class="list-icon-item">
+        {{> atoms-fonticon-item(icon-label: "017-localisation-etoile") }}
+        <div class="list-icon-content">
+          <span class="list-icon-label">En personne</span>
+          <div>Trouver un point de service, un comptoir de permis ou un point de service de la cour municipale</div>
+          <a href="{{ link.templates-collectrice-lieux }}" class="icon right read-more pt-2">En savoir plus {{> atoms-fonticon-item(icon-label: "063-fleche-droite") }}</a>
+        </div>
+      </li>
+    </ul>
+  </section>
+</div>
