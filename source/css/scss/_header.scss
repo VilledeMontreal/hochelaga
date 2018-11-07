@@ -1,8 +1,9 @@
 // Main navbar based on bootstrap navbar
 
 .navbar {
-  padding: 1.125rem 1.5rem;
+  background-color: $white;
   border-bottom: 1px solid $gray-400;
+  padding: 1.125rem 1.5rem;
   a:not(.btn) {
     border-bottom: none;
   }
