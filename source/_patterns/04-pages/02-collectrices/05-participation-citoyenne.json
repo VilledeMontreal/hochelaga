@@ -10,18 +10,9 @@
   "sidebarLeft" : false,
   "sidebarRightClass": "col-lg-4 offset-lg-1",
   "has-lead-text" : true,
-  "lead-text": "Il existe plusieurs façons de participer à la vie démocratique de Montréal. Que ce soit d’aller poser une question au conseil de votre arrondissement ou participer à une séance publique d’un commission, plusieurs possibilités",
+  "lead-text": "Il existe plusieurs façons de participer à la vie démocratique de Montréal. Que ce soit d’aller poser une question au conseil de votre arrondissement ou participer à une séance publique d’une commission, plusieurs possibilités sont offertes.",
   "has-breadcrumb": true,
-  "breadcrumbs": [
-    {
-      "url": "#",
-      "text": "Accueil"
-    },
-    {
-      "url": "#",
-      "text": "Vie municipale"
-    }
-  ],
+  "breadcrumbs": false,
   "hasPagination": true,
   "text-elements": {
     "headings": {
@@ -42,7 +33,7 @@
           {
             "url": "link.pages-conseil-municipal",
             "title": "Conseil municipal",
-            "description": "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras at convallis felis. Sed non purus ligula. Phasellus vulputate aliquam libero nec sollicitudin.</p>"
+            "description": "<p>Le conseil municipal est composé d’élus qui représentent la population. Il est la principale instance décisionnelle de la Ville de Montréal.</p>"
           },
           {
             "url": "#",
@@ -57,7 +48,7 @@
           {
             "url": "link.pages-conseils-arrondissement",
             "title": "Conseil d’arrondissement",
-            "description": "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras at convallis felis. Sed non purus ligula. Phasellus vulputate aliquam libero nec sollicitudin.</p>"
+            "description": "<p>Le conseil d’arrondissement est composé d’un nombre variable d’élus. Il assume des pouvoirs de portée locale.</p>"
           }
         ]
       },
@@ -70,7 +61,7 @@
             "description": "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras at convallis felis. Sed non purus ligula. Phasellus vulputate aliquam libero nec sollicitudin.</p>"
           },
           {
-            "url": "link.poser-une-question-au-conseil-arrondissement",
+            "url": "link.pages-poser-une-question-au-conseil-arrondissement",
             "title": "Poser une question au conseil d’arrondissement",
             "description": "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras at convallis felis. Sed non purus ligula. Phasellus vulputate aliquam libero nec sollicitudin.</p>"
           },
