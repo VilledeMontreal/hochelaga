@@ -7,12 +7,12 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 ## [2.4.0] - unreleased
 
 ## Added
-- Added Pages for Instances (sujets, collectrices, démarche)
-
+- Added Pages for Instances (sujets, collectrices, démarche).
+- Added Maintenance page.
 
 ## Changed
 - Harmonisation of all line-heights. Use of variables and fix some weird case of line-height inheritance. 
-
+- Updated font-icon to version 1.1.4 (117-lien-externe-lg)
 
 
 ## [2.3.0] - 2018-11-05
@@ -273,6 +273,7 @@ remove index from the name. Which makes it possible to update font-icon without 
 
 ### Removed
 - Removed vdm prefix for buttons classes
+
 
 [2.3.0]: https://bitbucket.org/villemontreal/boite-outils-web/src/2.3.0/
 [2.2.0]: https://bitbucket.org/villemontreal/boite-outils-web/src/2.2.0/
