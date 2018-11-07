@@ -322,7 +322,7 @@ gulp.task('browsersync', function() {
         "/boite-outils": config.root
       }
     },
-    ghostMode: true,
+    ghostMode: false,
     open: "local"
   });
 });

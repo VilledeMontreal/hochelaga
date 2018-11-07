@@ -342,6 +342,27 @@ a {
   }
 }
 
+// Maintenance page
+.divider-brand {
+  &:after {
+    content: "";
+    display: block;
+    height: .5rem;
+    width: 4rem;
+    margin-top: 2.5rem;
+    background-color: $brand;
+    margin-right: auto;
+    margin-left: auto;
+  }
+}
+
+.divider-lg {
+  &:after {
+    width: 6rem;
+  }
+  
+}
+
 // Longdash
 .separator-brand {
   &:before {
