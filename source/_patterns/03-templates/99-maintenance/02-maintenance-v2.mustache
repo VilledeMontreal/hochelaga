@@ -20,30 +20,32 @@
             </div>
             <h1 class="h3">Désolé, le site est en maintenance jusqu'à&nbsp;14&nbsp;h.</h1>
             <p class="font-size-xl">On se revoit plus tard.</p>
-            <div class="row cards {{ cards.classes }} pt-2">
-              {{# cards.card-item }}
-              <div class="{{ cards.bsgrid-classes }}">
-                {{> molecules-card-item }}
-              </div>
-              {{/ cards.card-item }}
-            </div>
           </div>
         </div>
       </section>
-      <div class="divider-brand divider-lg pt-4 pb-6"></div>
+      <div class="divider-brand divider-lg pt-2 pb-6"></div>
       <!-- EN -->
-      <section class="section-en">
+      <section class="section-en pb-4">
         <div class="row ">
           <div class="col-lg-8 offset-lg-2 text-center">
             <h1 class="h3">We're sorry - the site is under maintenance until&nbsp;2&nbsp;p.m.</h1>
             <p class="font-size-xl">We'll see you later.</p>
-            <div class="row cards {{ cards.classes }} pt-2">
-              {{# cards.card-item-en }}
-              <div class="{{ cards.bsgrid-classes }}">
+          </div>
+        </div>
+      </section>
+      <section class="row">
+        <div class="col-lg-8 offset-lg-2">
+          <div class="row cards {{ cards.classes }}">
+            {{# cards.card-item }}
+            <div class="{{ cards.bsgrid-classes }}">
+              <div class="d-block w-100">
                 {{> molecules-card-item }}
+                <div class="text-center d-block pb-4">
+                  <a href="{{ url-en }}">{{ card-title-en }}</a>
+                </div>
               </div>
-              {{/ cards.card-item-en }}
             </div>
+            {{/ cards.card-item }}
           </div>
         </div>
       </section>
