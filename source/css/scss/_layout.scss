@@ -8,8 +8,13 @@
 // Main content header
 .content-header {
   padding-top: 4rem;
+  padding-bottom: 0;
   .container-fluid {
-    max-width: map-get($content-max-widths, xl);
+    max-width: map-get($content-max-widths, xl);    // 1600px
+    padding-bottom: 2rem;
+  };
+  .container-fluid-xl {
+    max-width: map-get($container-max-widths, xl);   // 1170px
   }
   // Dark variant
   &.content-header-dark {
@@ -25,7 +30,12 @@
       }
     }
   }
-  // sarcelle variant
+  // Hub variant
+  &.content-header-hub {
+    border-bottom: 1px solid $gray-400;
+  }
+
+  // Sarcelle variant
   &.content-header-sarcelle {
     background-color: $sarcelle-lightest;
   }
@@ -59,6 +69,7 @@
   &-metadata {
     color: $gray-600;
     font-size: $font-size-base;
+    padding-bottom: 2rem;
   }
 
   // used for specific contente header infos like Evenement
@@ -109,6 +120,7 @@
   // Content header profile variant
   &.content-header-profile {
     padding-top: 3.5rem;
+    padding-bottom: 3.5rem;
     .img-profile {
       margin: 0 auto 30px auto;
       max-width: 250px;

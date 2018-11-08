@@ -1,5 +1,5 @@
 <header class="content-header {{ contentHeaderClasses }}">
-  <div class="{{ contentHeaderContainerClasses }} pb-7">
+  <div class="{{ contentHeaderContainerClasses }}">
     <div class="row">
       <div class="col-12">
         {{# has-breadcrumb}}
@@ -8,6 +8,9 @@
         <div class="content-header-title">
           {{> atoms-display-heading }}
         </div>
+        {{# has-header-lead }}
+        <p class="lead">{{ lead-text }}</p>
+        {{/ has-header-lead }}
       </div>
       {{# has-publication-date }}
       <div class="col order-1">
