@@ -39,7 +39,10 @@
   &.content-header-sarcelle {
     background-color: $sarcelle-lightest;
   }
-
+  &-lead {
+    //max-width: 800px;
+    max-width: 1170px;
+  }
   &-title {
     padding-bottom: 3rem;
     // Limit max width of title
