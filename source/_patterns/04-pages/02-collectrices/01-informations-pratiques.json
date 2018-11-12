@@ -1,32 +1,28 @@
 {
+  "contentHeaderContainerClasses": "container-fluid container-fluid-xl",
   "has-lead-text" : false,
   "has-header-lead": true,
-  "user-authenticated": true,
-  "user": {
-    "username": "Françoise",
-    "email": "francoisetremblay@gmail.com",
-    "profil": "Hydro-Québec"
-  },
+  "lead-text": "Un aperçu des services offerts par la Ville de Montréal",
+  "user-authenticated": false,
   "text-elements": {
     "headings": {
       "display": {
         "tag": "h1",
         "classes": "display-1",
-        "content": "Display heading 1"
+        "content": "Informations pratiques"
       }
     }
   },
   "pageSectionClasses": "bg-gray-sky",
   "servicesSection": {
     "cards": {
-      "section-classes": "bg-gray-sky",
       "classes": false,
       "bsgrid-classes": "col-12 col-md-6",
       "card-item": [
         {
           "classes": "card-large card-row-layout",
           "data-href": false,
-          "url": "#",
+          "url": "link.pages-animaux-domestiques",
           "card-title": "Animaux domestiques",
           "card-text":
             "Médaille de chien ou de chat. Tout savoir.",
@@ -80,6 +76,18 @@
           "card-inception-links": false,  
           "card-media": {
             "icon": "vdm-045-maison"
+          }
+        },
+        {
+          "classes": "card-large card-row-layout",
+          "data-href": false,
+          "url": "#",
+          "card-title": "Déneigement",
+          "card-text":
+            "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed non nisi lectus.",
+          "card-inception-links": false,  
+          "card-media": {
+            "icon": "vdm-095-deneigement"
           }
         }
       ]
