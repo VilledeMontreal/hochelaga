@@ -1,0 +1,61 @@
+{
+  "contentHeaderClasses": "content-header-dark",
+  "text-elements": {
+    "headings":{
+      "display":{
+        "content": "Retrouver un véhicule remorqué"
+      }
+    }
+  },
+  "has-header-meta": true,
+  "has-publication-date": true,
+  "has-hub-link": {
+    "url": "#",
+    "link-text": "Toutes les démarches"
+  },
+  "date-time-text": "Mis à jour le 9 novembre 2018",
+  "leadContainerClasses": "",
+  "leadLeftSection": false,
+  "selectArrondissement": true,
+  "selectArrondissementText": "Sélectionnez votre arrondissement pour connaître la démarche à suivre.",
+  "selectedArrondissement": false,
+  "has-lead-text": true,
+  "lead-text": "Si vous cherchez votre auto après les opérations de déneigement à Montréal, consultez le service Info-remorquage pour la retrouver.",
+  "has-empty-state": false,
+  "sidebarRight": false,
+  "collapsibleHowTo": {
+    "collapsibleItem": [
+      {
+        "title": "En ligne",
+        "content": "<p>Lorem ipsum dolor sit amet, <a href=\"https://beta.montreal.ca/moncompte\">mon compte</a> consectetur adipiscing elit. Praesent vitae turpis augue. Maecenas volutpat massa vel tellus congue, eget volutpat sem accumsan. Ut sit amet vulputate felis. Pellentesque volutpat erat enim, vel efficitur ipsum scelerisque id. Integer lacinia lectus ut erat interdum, eget convallis est dapibus.</p>",
+        "block-id": "howto-vehicule-remorque-enligne",
+        "heading-id": "heading-howto-vehicule-remorque-enligne",
+        "show": "true",
+        "icon": false,
+        "has-default-icon": true,
+        "has-links": false,
+        "has-mode-paiement": false,
+        "has-call-to-action": {
+          "cta-url": "#",
+          "cta-title": "Appel à l'action"
+        },
+        "badge": false
+      },
+      {
+        "title": "Par téléphone",
+        "content": "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent vitae turpis augue. Maecenas volutpat massa vel tellus congue, eget volutpat sem accumsan. Ut sit amet vulputate felis. Pellentesque volutpat erat enim, vel efficitur ipsum scelerisque id. Integer lacinia lectus ut erat interdum, eget convallis est dapibus.</p>",
+        "block-id": "howto-vehicule-remorque-tel",
+        "heading-id": "heading-howto-vehicule-remorque-tel",
+        "icon": false,
+        "has-default-icon": true,
+        "has-links": false,
+        "has-mode-paiement": false,
+        "has-call-to-action": false,  
+        "badge": false
+      }
+    ]
+  },
+  "informations": {
+  },
+  "tarifs": false
+}
