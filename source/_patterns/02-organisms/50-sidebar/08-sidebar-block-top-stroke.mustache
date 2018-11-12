@@ -2,23 +2,31 @@
   {{# sb-block-bon-savoir }}
   <section class="sb-block">
     {{> organisms-heading-sidebar(sidebarTitle: "Bon à savoir")}}
-    <p>Lorem ipsum dolor sit amet, consectetur <a href="https://ville.montreal.qc.ca">adipiscing elit</a>. Phasellus cursus mauris non orci malesuada aliquet.</p>
-    <p>Nunc tincidunt nisi fringilla consectetur pharetra. Duis sed pretium velit, ut placerat purus. Quisque volutpat facilisis nisl, ut scelerisque orci dapibus in.</p>
+    {{{ content }}}
   </section>
   {{/ sb-block-bon-savoir }}
+  {{# sb-block-documents }}
   <section class="sb-block">
     {{> organisms-heading-sidebar(sidebarTitle: "Documents") }}
     <ul>
-      <li><a href="test.pdf">Titre du document #1</a></li>
-      <li><a href="test.pdf">Titre du document #2</a></li>
-      <li><a href="test.pdf">Titre du document #3</a></li>
+      {{# documents }}
+      <li>
+        <a href="{{ url }}">{{ title }}</a>
+      </li>
+      {{/ documents }}
     </ul>
   </section>
+  {{/ sb-block-documents }}
+  {{# sb-block-reglements }}
   <section class="sb-block">
     {{> organisms-heading-sidebar(sidebarTitle: "Règlements") }}
     <ul>
-      <li><a href="#">Règlement de la Ville de Montréal (16-049-xxxxx)</a></li>
-      <li><a href="#">Règlement de la Ville de Montréal (16-049-xxxxx)</a></li>
+      {{# reglements }}
+      <li>
+        <a href="{{ url }}">{{ title }}</a>
+      </li>
+      {{/ reglements }}
     </ul>
   </section>
+  {{/ sb-block-reglements}}
 </div>
