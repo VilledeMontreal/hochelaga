@@ -158,22 +158,13 @@ legend,
 // Checkboxes
 //
 // use vdm
+
 .custom-checkbox {
   margin-bottom: $custom-control-spacer-y;
 
   .custom-control-input:checked ~ .custom-control-label {
     &::after {
-      background-image: none;
-      font-size: 2rem;
-      line-height: 1;
-      color: $primary;
-    }
-    @include iconvdm(after, '077-mini-case-coche-coche');
-  }
-
-  .custom-control-input:indeterminate ~ .custom-control-label {
-    &::after {
-      background-image: none;
+      background-size: 30px;
     }
   }
 }

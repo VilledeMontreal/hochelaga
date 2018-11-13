@@ -524,11 +524,10 @@ $custom-control-indicator-checked-color:        $primary;
 $custom-control-indicator-checked-bg:           $custom-control-indicator-bg;
 
 $custom-checkbox-indicator-border-radius:       $border-radius-lg;
-$custom-checkbox-indicator-icon-checked:        none;
-$custom-checkbox-indicator-indeterminate-bg:    $custom-control-indicator-bg;
+$custom-checkbox-indicator-icon-checked:        str-replace(url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 340 340'%3E%3Cpath fill='#{$custom-control-indicator-checked-color}' d='M140,250a10,10,0,0,1-7.07-2.93l-60-60a10,10,0,0,1,14.14-14.14L140,225.86,252.93,112.93a10,10,0,0,1,14.14,14.14l-120,120A10,10,0,0,1,140,250Z'/%3E%3C/svg%3E"), "#", "%23");
 
+$custom-checkbox-indicator-indeterminate-bg:    $custom-control-indicator-bg;
 $custom-checkbox-indicator-icon-indeterminate:  none;
-$custom-checkbox-indicator-icon-checked:        none;
 
 $custom-radio-indicator-icon-checked:           none;
 $custom-control-indicator-checked-disabled-bg:  $custom-control-indicator-bg;
