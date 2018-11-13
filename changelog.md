@@ -8,11 +8,19 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 
 ## Added
 - Added Pages for Instances (sujets, collectrices, démarche).
+- Added Informations pratiques collectrice (Pages > collectrices).
 - Added Maintenance page.
+- Added Demarches pages for Déneigement (Pages > Demarches).
 
 ## Changed
 - Harmonisation of all line-heights. Use of variables and fix some weird case of line-height inheritance. 
-- Updated font-icon to version 1.1.4 (117-lien-externe-lg)
+- Updated font-icon to version 1.1.5.
+- Changed Collectrices Content Header styles.
+- Templates need to have DUMMY content. No real content should be use. Start refactoring now that we have pages.
+- Pattern Lab: Added dynamic value for several templates and organisms so they can be used to generate PAGES more efficiently.
+
+## Fixed
+- Content header paddings and spacing, harmonisation of spacing with optionnal content.
 
 
 ## [2.3.0] - 2018-11-05
