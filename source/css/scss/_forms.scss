@@ -5,6 +5,7 @@ legend,
   @extend legend;
   color: $headings-color;
   font-weight: $font-weight-bold;
+  line-height: $line-height-sm;
   margin-bottom: 1rem;
 }
 
@@ -157,22 +158,13 @@ legend,
 // Checkboxes
 //
 // use vdm
+
 .custom-checkbox {
   margin-bottom: $custom-control-spacer-y;
 
   .custom-control-input:checked ~ .custom-control-label {
     &::after {
-      background-image: none;
-      font-size: 2rem;
-      line-height: 1;
-      color: $primary;
-    }
-    @include iconvdm(after, '077-mini-case-coche-coche');
-  }
-
-  .custom-control-input:indeterminate ~ .custom-control-label {
-    &::after {
-      background-image: none;
+      background-size: 30px;
     }
   }
 }
@@ -575,6 +567,7 @@ legend,
     color: $headings-color;
     display: block;
     font-size: $font-size-lg;
+    line-height: $line-height-sm;
     margin-bottom: 1.5rem;
   }
 
@@ -585,7 +578,6 @@ legend,
 
   .notice {
     font-size: $font-size-sm;
-    line-height: $line-height-sm;
   }
 
   @include media-breakpoint-up(md) {

@@ -63,7 +63,7 @@
 }
 
 // Card heading
-@mixin card-heading($font-size: $font-size-xl, $line-height: get-line-height($font-size-xl,32px), $font-weight: $font-weight-regular, $color: $headings-color, $display: block) {
+@mixin card-heading($font-size: $font-size-xl, $line-height: $line-height-sm, $font-weight: $font-weight-regular, $color: $headings-color, $display: block) {
   color: $color;
   display: $display;
   font-weight: $font-weight;

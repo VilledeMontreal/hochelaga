@@ -77,7 +77,7 @@
     color: $gray-700;
     display: block;
     font-size: $font-size-lg;
-    line-height: 1.2;
+    line-height: $line-height-sm;
     margin-top: -.875rem;
     margin-bottom: 1rem;
   }
@@ -88,8 +88,9 @@
   }
 
   .card-description {
+    display: inline-block;
     font-size: $font-size-sm;
-    line-height: $line-height-sm;
+    line-height: $line-height-base;
   }
 
   .card-link {
@@ -254,6 +255,7 @@
 
   // Full-width card override
   &.card-fw {
+    //min-height: 11rem;
     .card-body {
       align-self: flex-start;
     }
@@ -356,6 +358,14 @@
     }
     .card-section {
       border-top: 1px solid $gray-500;
+    }
+    .card-footer {
+      padding: 2rem;
+      align-self: center;
+      justify-content: center;
+      text-align: left;
+      height: 100%;
+      width: 100%;
     }
     .card-link {
       justify-content: center;

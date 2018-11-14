@@ -1,10 +1,7 @@
 {
-  "pageClasses": "",
-  "regionMainClasses": "",
-  "regionMainContainerClasses": "",
-  "regionMainContentClasses": "",
-  "regionBeforeClasses": "page-section bg-gray-sky",
-  "has-lead-text" : true,
+  "contentHeaderContainerClasses": "container-fluid container-fluid-xl",
+  "has-lead-text" : false,
+  "has-header-liner": true,
   "user-authenticated": true,
   "user": {
     "username": "Françoise",
@@ -20,10 +17,10 @@
       }
     }
   },
-  "hasPagination": true,
+  "pageSectionClasses": "bg-gray-sky",
   "servicesSection": {
     "cards": {
-      "section-classes": "pt-0",
+      "section-classes": "bg-gray-sky",
       "classes": false,
       "bsgrid-classes": "col-12 col-md-6",
       "card-item": [

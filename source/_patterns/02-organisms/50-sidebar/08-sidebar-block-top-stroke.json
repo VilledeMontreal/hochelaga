@@ -1,4 +1,22 @@
 {
   "sidebarClasses": "sidebar-top-stroke",
-  "sb-block-bon-savoir": true
+  "sb-block-bon-savoir": {
+    "content": "<p>Lorem ipsum dolor sit amet, consectetur <a href=\"https://ville.montreal.qc.ca\">adipiscing elit</a>. Phasellus cursus mauris non orci malesuada aliquet.</p><p>Nunc tincidunt nisi fringilla consectetur pharetra. Duis sed pretium velit, ut placerat purus. Quisque volutpat facilisis nisl, ut scelerisque orci dapibus in.</p>"
+  },
+  "sb-block-documents": {
+    "documents": [
+      {
+        "url": "test.pdf",
+        "title": "Titre du document #1"
+      }
+    ]
+  },
+  "sb-block-reglements": {
+    "reglements": [
+      {
+        "url": "#",
+        "title": "Règlement de la Ville de Montréal (16-049-xxxxx)"
+      }
+    ]
+  }
 }

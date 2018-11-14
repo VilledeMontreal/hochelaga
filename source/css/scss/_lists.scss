@@ -193,14 +193,14 @@ ol {
 }
 
 .hub-list-item {
-  margin-bottom: 2rem;
+  padding-bottom: 2rem;
   &:last-child {
     margin-bottom: 0;
   }
   a {
     font-size: $font-size-xl;
     font-weight: $font-weight-bold;
-    line-height: 1.3333;
+    line-height: $line-height-sm;
     border: none;
     //color: $sarcelle-surprise;
     display: inline-block;

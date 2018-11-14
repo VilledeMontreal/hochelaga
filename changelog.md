@@ -4,8 +4,28 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](http://keepachangelog.com/en/1.0.0/)
 and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.html).
 
+## [2.4.0] - unreleased
 
-## [2.3.0] - unreleased
+## Added
+- Added Pages for Instances (sujets, collectrices, démarche).
+- Added Informations pratiques collectrice (Pages > collectrices).
+- Added Maintenance page.
+- Added Demarches pages for Déneigement (Pages > Demarches).
+
+## Changed
+- Harmonisation of all line-heights. Use of variables and fix some weird case of line-height inheritance. 
+- Updated font-icon to version 1.1.5.
+- Changed Collectrices Content Header styles.
+- Changed Card-tarif markup and column classes.
+- Templates need to have DUMMY content. No real content should be use. Start refactoring now that we have pages.
+- Pattern Lab: Added dynamic value for several templates and organisms so they can be used to generate PAGES more efficiently.
+
+## Fixed
+- Content header paddings and spacing, harmonisation of spacing with optionnal content.
+- Fixed custom-checkboxes background-image Windows10/IE11 issue. Rolled-back to inline-svg like bootstrap does.
+
+
+## [2.3.0] - 2018-11-05
 
 ## Added
 - Contact form in modal alternative for sidebar coordinates block. Needed for Élus.
@@ -20,6 +40,7 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 - Clean-up all json files, removed unused data.
 - Normalize Collectrices (hubs) structure (heading, results, pagination).
 - Normalize .page-section and .region-congent padding.
+- Patternlab : New directory of templates for Future Evolution.
 
 ## Fixed
 - Fixed padding between two adjacent section with .bg-gray-sky
@@ -263,6 +284,8 @@ remove index from the name. Which makes it possible to update font-icon without 
 ### Removed
 - Removed vdm prefix for buttons classes
 
+
+[2.3.0]: https://bitbucket.org/villemontreal/boite-outils-web/src/2.3.0/
 [2.2.0]: https://bitbucket.org/villemontreal/boite-outils-web/src/2.2.0/
 [2.1.0]: https://bitbucket.org/villemontreal/boite-outils-web/src/2.1.0/
 [2.0.0]: https://bitbucket.org/villemontreal/boite-outils-web/src/2.0.0/

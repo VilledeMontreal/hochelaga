@@ -10,8 +10,10 @@
   },
   "has-header-meta": true,
   "has-publication-date": false,
-  "has-hub-link": true,
-  "hub-link-text": "Tous les élus",
+  "has-hub-link": {
+    "url": "#",
+    "link-text": "Tous les élus"
+  },
   "regionMainContentClasses": "col-lg-8",
   "sidebarRight": false,
   "sidebarLeft": true,
@@ -23,7 +25,7 @@
         "icon-item": {
           "icon-label": "091-localisation"
         },
-        "content": "<address>123, bord de l'eau<br>Montréal, QC, H3K 2T5</address>"
+        "content": "<address>275 Rue Notre-Dame Est<br> Montréal, QC H2Y 1C6</address>"
       },
       {
         "url": false,
@@ -33,7 +35,7 @@
         "content": "514 872-5678"
       },
       {
-        "url": "#contactModal",
+        "url": "mailto:test@montreal.ca",
         "modal": true,
         "class": "elided-text",
         "icon-item": {

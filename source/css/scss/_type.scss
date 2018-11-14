@@ -124,6 +124,12 @@ h6, .h6 {
 .font-size-lg {
   font-size: $font-size-lg;
 }
+.font-size-sm {
+  font-size: $font-size-sm;
+}
+.font-size-xs {
+  font-size: $font-size-xs;
+}
 
 // Lead
 //
@@ -139,7 +145,7 @@ h6, .h6 {
   }
   // 576px and up
   @include media-breakpoint-up(sm) {
-    @include responsive-font-size($lead-font-size, 1, 32px);
+    @include responsive-font-size($lead-font-size, 1, 36px);
   }
 }
 
@@ -296,7 +302,7 @@ a {
 .blockquote {
   color: $gray-900;
   font-size: $font-size-lg;
-  line-height: get-line-height($font-size-lg, 32px);
+  line-height: $line-height-base;
   font-weight: $font-weight-normal;
   margin-bottom: 2rem;
   padding-left: 1.75em;
@@ -339,6 +345,25 @@ a {
   
   &.divider-fullwidth {
     width: 100%;
+  }
+}
+
+// Maintenance page
+.divider-brand {
+  &:after {
+    content: "";
+    display: block;
+    height: .5rem;
+    width: 4rem;
+    background-color: $brand;
+    margin-right: auto;
+    margin-left: auto;
+  }
+}
+
+.divider-lg {
+  &:after {
+    width: 6rem;
   }
 }
 

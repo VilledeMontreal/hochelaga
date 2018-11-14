@@ -25,12 +25,10 @@
         {{/ has-empty-state}}
         {{^ has-empty-state}}
         <article class="col-12 col-lg-8">
-          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus cursus mauris non orci malesuada aliquet. Nunc tincidunt nisi fringilla consectetur pharetra. Duis sed pretium velit, ut placerat purus. Quisque volutpat facilisis nisl, ut scelerisque orci dapibus in. Proin vestibulum et felis ac tempor. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Duis sed vulputate velit, vitae venenatis nisi. Sed et egestas ligula. Vestibulum feugiat scelerisque odio quis accumsan. Etiam diam lacus, lobortis eu tortor et, consequat vehicula nibh.</p>
-          <p>Donec lacinia neque nec turpis consequat dictum non non felis. <a href="https://google.ca">Suspendisse vehicula</a> eros a nulla sagittis, sit amet porta quam egestas. Donec non velit ut nulla porta pulvinar. Nullam venenatis sapien id ligula gravida, non tincidunt est malesuada. Nulla eleifend est sit amet dapibus pulvinar. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Ut finibus libero non eros consectetur porta. Curabitur vitae tellus commodo, maximus est vel, lobortis massa. Integer ultricies ultrices blandit. Duis lacinia dui vitae augue ultricies pretium a ornare ante.</p>
-
-          <div class="collapsible-variant pt-4" role="tablist" aria-multiselectable="true">
-            {{> molecules-collapsible-item }}
-          </div>
+          {{{ main-content }}}
+          {{# collapsibleHowTo }}
+          {{> molecules-collapsible }}
+          {{/ collapsibleHowTo }}
 
           {{# pieces-justificatives}}
           <div class="modal" id="modalDocuments" tabindex="-1" role="dialog" aria-labelledby="modalDocumentsLabel" aria-hidden="true">
@@ -115,7 +113,7 @@
       <div class="row cards">
         {{# cards.card-item }}
         <div class="{{ cards.bsgrid-classes }}">
-          {{> molecules-card-item-tarif-v2}}
+          {{> molecules-card-item-tarif }}
         </div>
         {{/ cards.card-item }}
       </div>

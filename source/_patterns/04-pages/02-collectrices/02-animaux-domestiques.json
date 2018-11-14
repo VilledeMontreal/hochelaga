@@ -1,23 +1,19 @@
 {
-  "pageClasses": "",
-  "regionMainClasses": "",
-  "regionMainContainerClasses": "",
-  "regionMainContentClasses": "",
-  "regionBeforeClasses": "page-section",
-  "sidebar-blocks-demo-debug-wrapper": false,
-  "sidebar-blocks-demo-debug-message": false,
+  "pageTitle": "Animaux domestique",
+  "contentHeaderContainerClasses": "container-fluid container-fluid-xl",
   "sidebarRight" : true,
   "sidebarLeft" : false,
   "sidebarRightClass": "col-lg-4 offset-lg-1",
   "has-lead-text" : true,
+  "lead-text": "Les propriétaires de chats et de chiens qui habitent à Montréal doivent détenir un permis annuel. Ces licences sont valides partout à Montréal.",
   "has-breadcrumb": true,
   "breadcrumbs": [
     {
-      "url": "#",
+      "url": "link.templates-homepage",
       "text": "Accueil"
     },
     {
-      "url": "#",
+      "url": "link.pages-informations-pratiques",
       "text": "Informations pratiques"
     }
   ],
@@ -39,7 +35,7 @@
         "subheading": false,
         "item": [
           {
-            "url": "#",
+            "url": "link.pages-sujet-permis-animalier",
             "title": "Permis animalier",
             "description": "<p>Le permis pour chien ou chat est obligatoire dans tous les arrondissements et doit être renouvelé chaque année. La stérilisation et le micropuçage deviennent également obligatoires pour les chats et pour les chiens à partir du 1er janvier 2020.</p>"
           },

@@ -8,8 +8,13 @@
 // Main content header
 .content-header {
   padding-top: 4rem;
+  padding-bottom: 0;
   .container-fluid {
-    max-width: map-get($content-max-widths, xl);
+    max-width: map-get($content-max-widths, xl);    // 1600px
+    padding-bottom: 2rem;
+  };
+  .container-fluid-xl {
+    max-width: map-get($container-max-widths, xl);   // 1170px
   }
   // Dark variant
   &.content-header-dark {
@@ -25,11 +30,13 @@
       }
     }
   }
-  // sarcelle variant
+
+  // Sarcelle variant
   &.content-header-sarcelle {
     background-color: $sarcelle-lightest;
   }
 
+  // Title
   &-title {
     padding-bottom: 3rem;
     // Limit max width of title
@@ -59,6 +66,7 @@
   &-metadata {
     color: $gray-600;
     font-size: $font-size-base;
+    padding-bottom: 2rem;
   }
 
   // used for specific contente header infos like Evenement
@@ -109,6 +117,7 @@
   // Content header profile variant
   &.content-header-profile {
     padding-top: 3.5rem;
+    padding-bottom: 3.5rem;
     .img-profile {
       margin: 0 auto 30px auto;
       max-width: 250px;
@@ -126,6 +135,7 @@
       .profile-title {
         color: $headings-color;
         font-size: $font-size-xl;
+        line-height: $line-height-sm;
       }
       .profile-member {
         color: $headings-color;
@@ -145,6 +155,13 @@
         margin-bottom: 0;
       }
     }
+  }
+}
+
+// Remove padding when we have .content-header followed by .page-section and neither is .bg-gray-sky
+.content-header:not(.bg-gray-sky):not(.content-header-dark) {
+  + .page-section:not(.bg-gray-sky) {
+    padding-top: 0;
   }
 }
 
@@ -308,6 +325,7 @@
     color: $headings-color;
     display: block;
     font-size: $font-size-lg;
+    line-height: $line-height-sm;
     font-weight: $font-weight-bold;
     margin-bottom: 1rem;
   }
@@ -444,7 +462,7 @@
   }
   .title {
     font-size: $font-size-xl;
-    line-height: get-line-height($font-size-xl,32px);
+    line-height: $line-height-sm;
     font-weight: $font-weight-bold;
     padding-top: 1rem;
   }
@@ -649,12 +667,12 @@
   .content-block-infos {
     color: $headings-color;
     font-size: $font-size-lg;
+    line-height: $line-height-base;
     margin-bottom: 2rem;
-    line-height: get-line-height($font-size-lg, 32px);
     .content-block-infos-title {
       font-size: $font-size-xl;
       font-weight: bold;
-      line-height: get-line-height($font-size-xl, 32px);
+      line-height: $line-height-sm;
     }
     > span {
       display: block;
@@ -704,7 +722,7 @@
     display: block;
     color: $headings-color;
     font-size: $font-size-xl;
-    line-height: 1.3333;
+    line-height: $line-height-sm;
     padding-bottom: 1.275rem;
   }
 }
