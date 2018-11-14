@@ -16,11 +16,13 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 - Harmonisation of all line-heights. Use of variables and fix some weird case of line-height inheritance. 
 - Updated font-icon to version 1.1.5.
 - Changed Collectrices Content Header styles.
+- Changed Card-tarif markup and column classes.
 - Templates need to have DUMMY content. No real content should be use. Start refactoring now that we have pages.
 - Pattern Lab: Added dynamic value for several templates and organisms so they can be used to generate PAGES more efficiently.
 
 ## Fixed
 - Content header paddings and spacing, harmonisation of spacing with optionnal content.
+- Fixed custom-checkboxes background-image Windows10/IE11 issue. Rolled-back to inline-svg like bootstrap does.
 
 
 ## [2.3.0] - 2018-11-05
