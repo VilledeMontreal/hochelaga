@@ -7,10 +7,13 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 ## [2.5.0] - unreleased
 
 ## Added
+- Page Élus (Valérie Plante)
+- 
 
 ## Changed
 
 ## Fixed
+- Fixed cards subtitle size and color.
 
 
 ## [2.4.0] - 2018-11-14
