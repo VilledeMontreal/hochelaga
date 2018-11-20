@@ -8,12 +8,16 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 
 ## Added
 - Page Élus (Valérie Plante)
-- 
+- Templates Fiche services (Deprecated, will be removed once fiche-services are migrated to demarches)
 
 ## Changed
+- .nav-anchors: .nav-top class on first element needs to be applied on li instead of a.
+- Custom forms checkboxes and radios styles have changed.
 
 ## Fixed
 - Fixed cards subtitle size and color.
+- Fixed nav-tabs styles.
+- Fixed side-menu margin-bottom.
 
 
 ## [2.4.0] - 2018-11-14
