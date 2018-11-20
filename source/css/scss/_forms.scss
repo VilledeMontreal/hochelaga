@@ -199,6 +199,23 @@ legend,
   }
 }
 
+// Custom control indicators
+//
+// Build the custom controls out of pseudo-elements.
+
+.custom-control-label {
+
+  // Background-color and (when enabled) gradient
+  &::before {
+    top: .125rem;
+  }
+
+  // Foreground (icon)
+  &::after {
+    top: .125rem;
+  }
+}
+
 
 // Checkboxes
 //
@@ -576,8 +593,13 @@ legend,
     -webkit-transform: translateZ(0px);
   }
 
-  button + button {
-    margin-left: .5rem;
+  button {
+    + button {
+      margin-left: .5rem;
+      &.btn-link {
+        margin-left: 1rem;
+      }
+    }
   }
   
   .feedback-question-label {
