@@ -174,12 +174,6 @@ legend,
     }
   }
 
-  .custom-control-input:indeterminate ~ .custom-control-label {
-    &::before {
-      border-color: $custom-control-indicator-checked-bg;
-    }
-  }
-
   .custom-control-input:disabled {
     &:checked ~ .custom-control-label::before {
       border-color: $custom-control-indicator-checked-disabled-bg;
