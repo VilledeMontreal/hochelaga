@@ -155,19 +155,96 @@ legend,
   }
 }
 
+// Custom control indicators
+//
+// Build the custom controls out of pseudo-elements.
+// Radios
+//
+// Tweak just a few things for radios.
+.custom-control {
+  margin-bottom: $custom-control-spacer-y;
+
+  .custom-control-label::before {
+    border: 1px solid $input-border-color;
+  }
+
+  .custom-control-input:checked ~ .custom-control-label {
+    &::before {
+      border-color: $custom-control-indicator-checked-bg;
+    }
+  }
+
+  .custom-control-input:disabled {
+    &:checked ~ .custom-control-label::before {
+      border-color: $custom-control-indicator-checked-disabled-bg;
+    }
+    &:indeterminate ~ .custom-control-label::before {
+      border-color: $custom-control-indicator-checked-disabled-bg;
+    }
+  }
+
+}
+
+.custom-control-input {
+  position: absolute;
+  z-index: -1; // Put the input behind the label so it doesn't overlay text
+  opacity: 0;
+
+  &:disabled {
+    ~ .custom-control-label {
+      &::before {
+        border-color: $custom-control-indicator-disabled-bg;
+      }
+    }
+  }
+}
+
+// Custom control indicators
+//
+// Build the custom controls out of pseudo-elements.
+
+.custom-control-label {
+
+  // Background-color and (when enabled) gradient
+  &::before {
+    top: .125rem;
+  }
+
+  // Foreground (icon)
+  &::after {
+    top: .125rem;
+  }
+}
+
+
 // Checkboxes
 //
 // use vdm
 
 .custom-checkbox {
-  margin-bottom: $custom-control-spacer-y;
 
+  // We need to grow the checkbox a bit cuz it's too thin...
   .custom-control-input:checked ~ .custom-control-label {
     &::after {
-      background-size: 30px;
+      background-size: $custom-checkbox-indicator-icon-checked-bg-size;
     }
   }
 }
+
+// Radios
+//
+// Tweak just a few things for radios.
+
+.custom-radio {
+
+  // We need to grow the checkbox a bit cuz it's too thin...
+  .custom-control-input:checked ~ .custom-control-label {
+    &::after {
+      background-size: $custom-radio-indicator-icon-checked-bg-size;
+    }
+  }
+}
+
 
 // Custom checkboxes and radios themed as card
 .custom-control-card {
@@ -180,7 +257,7 @@ legend,
     flex: 1;
     justify-content: center;
     padding: 2rem;
-    padding-left: 6rem;
+    padding-left: 5.3125rem;
     position: relative;
     border: 1px solid $gray-400;
     min-height: 8rem; // Make sur card has minimum height
@@ -208,7 +285,6 @@ legend,
     .card-title {
       @include card-heading();
     }
-
   }
 
   .custom-control-input:disabled ~ .custom-control-label {
@@ -216,33 +292,8 @@ legend,
       color: $custom-control-label-disabled-color;
     }
   }
-
-  // Set checked styles here: change border-color or apply other styles to label
-  // See bootstrap .custom-forms.scss for examples
-  /*
-  .custom-control-input:checked ~ .custom-control-label {
-    border-color: $success;
-  }
-  */
 }
 
-
-// Radios
-//
-// Tweak just a few things for radios.
-.custom-radio {
-  margin-bottom: $custom-control-spacer-y;
-
-  .custom-control-input:checked ~ .custom-control-label {
-    &::after {
-      border-radius: 50%;
-      width: 0.6875rem;
-      height: 0.6875rem;
-      transform: translate(0.59375rem, 0.59375rem);
-      background-color: $primary;
-    }
-  }
-}
 
 // Switches - Checkboxes as state toggles
 //
@@ -278,7 +329,7 @@ legend,
           left: $checkbox-toggle-padding;
           bottom: $checkbox-toggle-padding;
           right: $checkbox-toggle-padding;
-          background-color: $custom-control-indicator-checked-color;
+          background-color: $checkbox-toggle-bg-toggled;
           border-radius: $checkbox-toggle-border-radius;
           width: $checkbox-toggle-width-inside;
           -webkit-transition: 0.3s;
@@ -291,8 +342,8 @@ legend,
           left: 0;
           bottom: 0;
           right: 0;
-          background-color: transparent;
-          border: $checkbox-toggle-border-width solid $custom-control-indicator-checked-color;
+          background-color: $checkbox-toggle-bg;
+          border: $checkbox-toggle-border-width solid $checkbox-toggle-border-color;
           border-radius: $checkbox-toggle-border-radius-inside;
           width: $checkbox-toggle-width;
         }
@@ -304,13 +355,13 @@ legend,
         & + label {
           // Inside button
           &:after {
-            background-color: $white;
+            background-color: $checkbox-toggle-bg;
             margin-left: $checkbox-toggle-width-inside + $checkbox-toggle-padding;
           }
 
           // Outside pill
           &:before {
-            background-color: $custom-control-indicator-checked-color;
+            background-color: $checkbox-toggle-bg-toggled;
             border: 0;
           }
         }
@@ -322,7 +373,7 @@ legend,
           cursor: not-allowed;
           // Inside button
           &:after {
-            background-color: $white;
+            background-color: $checkbox-toggle-bg;
             margin-left: 0;
           }
 
@@ -377,14 +428,6 @@ legend,
     width: 100%;
   }
 
-  /*
-  .vdm-btn {
-    margin-bottom: 0;
-    position: relative;
-    margin-top: 0.1rem;
-  }
-  */
-
   .input-group {
 
     &.stroked {
@@ -423,15 +466,6 @@ legend,
     .input-group {
       flex-basis: 100%;
     }
-    /*
-    .vdm-btn {
-      margin: 1rem auto 0 auto;
-      align-self: center;
-      &:last-of-type {
-        margin: 1rem auto 0 auto;
-      }
-    }
-    */
   }
 }
 
@@ -559,8 +593,13 @@ legend,
     -webkit-transform: translateZ(0px);
   }
 
-  button + button {
-    margin-left: .5rem;
+  button {
+    + button {
+      margin-left: .5rem;
+      &.btn-link {
+        margin-left: 1rem;
+      }
+    }
   }
   
   .feedback-question-label {

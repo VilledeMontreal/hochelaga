@@ -175,6 +175,18 @@ nav {
   border-bottom: $nav-tabs-border-width solid $nav-tabs-border-color;
   padding: 1rem $grid-gutter-width/2;
 
+  .nav-item {
+    &.nav-top {
+      display: none;
+      .nav-link {
+        color: $gray-400;
+        &:after {
+          content: none;
+        }
+      }
+    }
+  }
+
   .nav-link {
     font-size: $font-size-sm;   //~15px
     line-height: 1.4;           //~21px
@@ -191,13 +203,6 @@ nav {
       left: .5rem;
       right: .5rem;
       display: block;
-    }
-    &.nav-top {
-      display: none;
-      color: $gray-400;
-      &:after {
-        content: none;
-      }
     }
     &:hover,
     &.active {
@@ -225,11 +230,13 @@ nav {
     padding-top: 0;
     padding-bottom: 0;
     text-align: center;
+    .nav-item {
+      &.nav-top {
+        display: inline-block;
+      }
+    }
     .nav-link {
       padding: 2rem 2.5rem;
-      &.nav-top {
-        display: block;
-      }
       &:after {
         left: 2.5rem;
         right: 2.5rem;
@@ -239,7 +246,7 @@ nav {
 }
 
 .nav-tabs {
-  display: inline-block;
+  //display: inline-block;
   background-color: $white;
   overflow-x: auto;
   overflow-y: hidden;
@@ -273,7 +280,12 @@ nav {
 }
 
 .nav-tabs {
+  flex-wrap: nowrap;
+  .nav-item {
+    flex-shrink: 0;
+  }
   .nav-link {
+    flex-shrink: 0;
     color: $gray-700;
     font-size: $font-size-sm;         //~15px
     line-height: 1.4;                 //~21px
@@ -308,6 +320,22 @@ nav {
     }
   }
   @include media-breakpoint-up(md) {
+    .nav-link {
+      padding: 1.5rem 1.5rem;
+      &:hover,
+      &.active,
+      &:focus {
+        &:not(.disabled) {
+          &:before {
+            left: 1.5rem;
+            right: 1.5rem;
+          }
+        }
+      }
+    }
+  }
+  @include media-breakpoint-up(lg) {
+    justify-content: center;
     .nav-link {
       padding: 2rem 2.5rem;
       &:hover,

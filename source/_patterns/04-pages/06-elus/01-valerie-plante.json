@@ -4,7 +4,7 @@
   "text-elements": {
     "headings":{
       "display":{
-        "content": "Template élu"
+        "content": "Valérie Plante"
       }
     }
   },
@@ -13,6 +13,18 @@
   "has-hub-link": {
     "url": "#",
     "link-text": "Tous les élus"
+  },
+  "profile-infos": {
+    "imageUrl": "https://res.cloudinary.com/villemontreal/image/upload/f_auto,q_auto/v1/portail/inhujp6lbs3dfehrrjiq.jpg",
+    "imageAlt": "Portrait de la mairesse de la Ville de Montréal, Valérie Plante",
+    "title": [
+      { "value": "Mairesse de la Ville" },
+      { "value": "Mairesse d'arrondissement" }
+    ],
+    "member": "Siège au comité exécutif",
+    "parti": "Projet Montréal - Équipe Valérie Plante",
+    "district": false,
+    "arrondissement": "Ville-Marie"
   },
   "regionMainContentClasses": "col-lg-8",
   "sidebarRight": false,
@@ -25,23 +37,23 @@
         "icon-item": {
           "icon-label": "091-localisation"
         },
-        "content": "<address>275 Rue Notre-Dame Est<br> Montréal, QC H2Y 1C6</address>"
+        "content": "<address><strong>Hôtel de ville</strong><br>275 Rue Notre-Dame Est<br> Montréal, QC H2Y 1C6</address>"
       },
       {
         "url": false,
         "icon-item": {
           "icon-label": "012-telephone"
         },
-        "content": "514 872-5678"
+        "content": "514 872-3101"
       },
       {
-        "url": "mailto:test@montreal.ca",
+        "url": "mailto:mairesse@ville.montreal.qc.ca",
         "modal": true,
         "class": "elided-text",
         "icon-item": {
           "icon-label": "028-enveloppe"
         },
-        "content": "Envoyer un courriel"
+        "content": "mairesse@ville.montreal.qc.ca"
       }
     ]
   },
@@ -61,10 +73,11 @@
       "card-item": [
         {
           "classes": "card-fw card-row-layout",
-          "url": "https://ville.montreal.qc.ca",
+          "url": "link.templates-instance-variante-comite-executif",
           "card-title": "Comité exécutif",
+          "card-subtitle": "Mairesse de la Ville",
           "card-text":
-            "Reponsable - Urbanisme, transport, Office de consultation publique de Montréal",
+            "Relations internationales, centre-ville, mont Royal",
           "card-media": false,
           "footer" : {
             "outside-body": true
@@ -73,8 +86,20 @@
         {
           "classes": "card-fw card-row-layout",
           "url": "https://ville.montreal.qc.ca",
-          "card-title": "Commission sur l'eau, l'environnement, le développement durable et les grands parcs",
-          "card-text": "Président",
+          "card-title": "Conseil municipal",
+          "card-subtitle": "Mairesse de la Ville",
+          "card-text": false,
+          "card-media": false,
+          "footer" : {
+            "outside-body": true
+          }
+        },
+        {
+          "classes": "card-fw card-row-layout",
+          "url": "https://ville.montreal.qc.ca",
+          "card-title": "Conseil d'agglomération",
+          "card-subtitle": "Membre du conseil d'agglomération",
+          "card-text": false,
           "card-media": false,
           "footer" : {
             "outside-body": true
@@ -86,7 +111,10 @@
   "section-responsabilites": {
     "listGroup": [
       {
-        "text": "Responsabilité X au sein du conseil XYZ."
+        "text": "Présidente du conseil d'administration de la Communauté métropolitaine de Montréal"
+      },
+      {
+        "text": "Présidente du comité exécutif de la Communauté métropolitaine de Montréal"
       }
     ]
   }
