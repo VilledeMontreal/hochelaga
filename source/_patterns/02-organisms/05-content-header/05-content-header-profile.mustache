@@ -10,7 +10,7 @@
     <div class="row">
       <div class="col-12 col-lg-4">
         <div class="img-profile">
-          <img src="https://picsum.photos/500/500?image=823" class="img-fluid rounded-circle" alt="Portrait de l'élu X." />
+          <img src="{{ profile-infos.imageUrl }}" class="img-fluid rounded-circle" alt="{{ profile-infos.imageAlt }}" />
         </div>
       </div>
       <div class="col-12 col-lg-8">
@@ -19,7 +19,9 @@
         </div>
         {{# profile-infos }}
         <div class="content-header-infos">
-          <span class="profile-title">{{ title}}</span>
+          {{# title }}
+          <span class="profile-title">{{ value }}</span>
+          {{/ title }}
           <span class="profile-member">{{ member }}</span>
         </div>
         {{/ profile-infos }}
@@ -33,12 +35,14 @@
           <span class="profile-value">{{ parti }}</span>
         </div>
       </div>
+      {{# district }}
       <div class="col-12 col-lg-4">
         <div class="content-header-infos">
           <span class="profile-label">District</span>
           <span class="profile-value">{{ district }}</span>
         </div>
       </div>
+      {{/ district }}
       <div class="col-12 col-lg-4">
         <div class="content-header-infos">
           <span class="profile-label">Arrondissement</span>

@@ -74,8 +74,10 @@
             <p class="notice">En soumettant le formulaire, vous acceptez que les informations techniques relatives à votre équipement
               soient collectées pour nous permettre d’améliorer le site.</p>
             <div class="actions-buttons">
-              <button type="submit" name="saveForm" class="btn btn-sm" disabled>Soumettre</button>
-              <!--<button type="button" class="btn btn-secondary btn-sm reset-button" disabled>Annuler</button>-->
+              <button type="submit" name="saveForm" class="btn btn-primary btn-sm" {{ is-disabled }}>Soumettre</button>
+              {{# reset-button }}
+              <button type="button" class="btn btn-link btn-sm reset-button">Annuler</button>
+              {{/ reset-button }}
             </div>
             <input type="hidden" name="comment">
             <input type="hidden" name="idstamp" value="s6ca0fAPki7zk4nFCtzEiJYsfTA8bSL6BKoW46uSjgY=">
