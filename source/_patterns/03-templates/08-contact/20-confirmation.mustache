@@ -6,7 +6,18 @@
     <div class="container">
       <div class="row">
         <article class="col-12">
-          {{> organisms-wizard-confirmation}}
+          <div class="row">
+            <div class="alert-container col-12 col-lg-8 offset-lg-2">
+              {{> molecules-alerts }}
+            </div>
+          </div>
+          {{# has-confirmation-summary }}
+          {{> organisms-wizard-confirmation-summary }}
+          {{/ has-confirmation-summary }}
+
+          {{# confirmation-cta }}
+          {{> organisms-wizard-confirmation-cta }}
+          {{/ confirmation-cta }}
         </article>
       </div>
     </div>

@@ -225,9 +225,12 @@
   });
 
   // Test for disabled state
-  $('#emailFirstName').focus(function () {
-    console.log('Test');
-    $('.btn').prop('disabled', false);
+  $('#confirmation-chk-card01').change(function () {
+    if(this.checked) {
+      $(this).closest('form').find('.btn').prop('disabled', false);
+    } else {
+      $(this).closest('form').find('.btn').prop('disabled', true);
+    }
   });
 
   
