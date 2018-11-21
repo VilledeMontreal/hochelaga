@@ -1,7 +1,10 @@
 <div class="alert-container">
   {{> molecules-alerts }}
 </div>
-
+{{# has-confirmation-summary }}
 {{> organisms-wizard-confirmation-summary }}
+{{/ has-confirmation-summary }}
 
+{{# confirmation-cta }}
 {{> organisms-wizard-confirmation-cta }}
+{{/ confirmation-cta }}

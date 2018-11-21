@@ -8,7 +8,8 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 
 ## Added
 - Page Élus (Valérie Plante)
-- Templates Fiche services (Deprecated, will be removed once fiche-services are migrated to demarches)
+- Templates Fiche services (Deprecated, will be removed once fiche-services are migrated to demarches).
+- Templates Contact and confirmation (Templates > contact).
 
 ## Changed
 - .nav-anchors: .nav-top class on first element needs to be applied on li instead of a.
