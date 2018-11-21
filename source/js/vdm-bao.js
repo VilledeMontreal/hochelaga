@@ -224,6 +224,12 @@
     }
   });
 
+  // Test for disabled state
+  $('#emailFirstName').focus(function () {
+    console.log('Test');
+    $('.btn').prop('disabled', false);
+  });
+
   
   // Activate scrollspy to add active class to navAnchors items on scroll
   if($('#navAnchors').length != 0) {

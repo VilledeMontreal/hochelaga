@@ -1,7 +1,7 @@
-<form class="needs-validation" novalidate>
+<form id="email-subscription-form" class="needs-validation" novalidate>
   <div class="form-group">
-    <label for="firstName">First name</label>
-    <input type="text" class="form-control" id="firstName">
+    <label for="emailFirstName">First name</label>
+    <input type="text" class="form-control" id="emailFirstName">
   </div>
   <div class="form-group">
     <label for="lastName">Last name</label>
@@ -11,5 +11,5 @@
     <label for="email">Email</label>
     <input type="email" class="form-control" id="email">
   </div>
-  {{> atoms-button }}
+  {{> atoms-button(buttonState:"disabled") }}
 </form>
