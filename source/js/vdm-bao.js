@@ -224,6 +224,15 @@
     }
   });
 
+  // Test for disabled state
+  $('#confirmation-chk-card01').change(function () {
+    if(this.checked) {
+      $(this).closest('form').find('.btn').prop('disabled', false);
+    } else {
+      $(this).closest('form').find('.btn').prop('disabled', true);
+    }
+  });
+
   
   // Activate scrollspy to add active class to navAnchors items on scroll
   if($('#navAnchors').length != 0) {

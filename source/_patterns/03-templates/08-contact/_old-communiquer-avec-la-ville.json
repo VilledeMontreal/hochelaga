@@ -1,0 +1,40 @@
+{
+  "text-elements": {
+    "headings": {
+      "display": {
+        "tag": "h1",
+        "classes": "display-1",
+        "content": "Communiquer avec la Ville"
+      }
+    }
+  },
+  "featuredSection": {
+    "cards": {
+      "section-classes": "bg-gray-sky",
+      "classes": false,
+      "bsgrid-classes": "col-12 col-lg-6",
+      "headings": false,
+      "card-item" : [
+        {
+          "classes": "card-large card-row-layout",
+          "url": false,
+          "card-title": "Par téléphone",
+          "card-text": false,
+          "card-html-content": "<div class=\"d-flex flex-column flex-lg-row mb-2\"><h3 class=\"display-1 mr-lg-2 mb-0\">311</h3><div class=\"font-size-sm pt-2\">De l'extérieur de Montréal :<br>514 872-0311</div></div><span class=\"d-block font-size-sm\">Du lundi au vendredi : 8 h 30 à 20 h 30</span><span class=\"d-block font-size-sm\">Samedi, dimanche et jours fériés : 9 h à 17 h</span>",
+          "card-media": {
+            "icon": "vdm-012-telephone"
+          }
+        },
+        {
+          "classes": "card-large card-row-layout",
+          "url": "link.templates-collectrice-lieux",
+          "card-title": "En personne",
+          "card-text": "Trouver un point de service, un comptoir de permis ou un point de service de la cour municipale.",
+          "card-media": {
+            "icon": "vdm-017-localisation-etoile"
+          }
+        }
+      ]
+    }
+  }
+}
