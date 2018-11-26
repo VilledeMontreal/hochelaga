@@ -227,9 +227,9 @@
   // Test for disabled state
   $('#confirmation-chk-card01').change(function () {
     if(this.checked) {
-      $(this).closest('form').find('.btn').removeClass('disabled');
+      $(this).closest('form').find('.btn').prop('disabled', false).removeClass('disabled');
     } else {
-      $(this).closest('form').find('.btn').addClass('disabled');
+      $(this).closest('form').find('.btn').prop('disabled', true).addClass('disabled');
     }
   });
 
