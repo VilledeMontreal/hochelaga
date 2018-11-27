@@ -224,8 +224,17 @@
     }
   });
 
+    // Test for disabled state
+    $('#email-subscription-form-2 #confirmation-chk-card01').change(function () {
+      if(this.checked) {
+        $(this).closest('form').find('.btn').prop('disabled', false);
+      } else {
+        $(this).closest('form').find('.btn').prop('disabled', true);
+      }
+    });
+
   // Test for disabled state
-  $('#confirmation-chk-card01').change(function () {
+  $('#email-subscription-form #confirmation-chk-card01').change(function () {
     if(this.checked) {
       $(this).closest('form').find('.btn').prop('disabled', false).removeClass('disabled');
     } else {
