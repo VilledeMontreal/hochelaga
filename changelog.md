@@ -6,8 +6,14 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 
 ## [2.5.2] - unreleased
 
+## Added
+- Added variant for Feedback form Success message.
+
 ## Changed
 - Contact Us sidebar modifications
+
+## Fixed
+- Fixed webdiffusion bg-image section color.
 
 
 ## [2.5.1] - 2018-11-23

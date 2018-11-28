@@ -19,21 +19,7 @@
     flex: 0 0 auto; // IE needs this
   }
 
-  .card-tags {
-    display: inline-block;
-    margin-bottom: 1rem;
-
-    &.primary-tags {
-      color: $primary;
-      font-weight: $font-weight-bold;
-      &:before {
-        @include circle($size: .75rem, $background-color: $primary);
-        display: inline-block;
-        margin-right: 0.5rem;
-      }
-    }
-  }
-
+  .card-tags,
   .card-date {
     display: inline-block;
     margin-bottom: 1rem;
@@ -49,20 +35,6 @@
       color: $gray-900;
       font-weight: $font-weight-bold;
     }
-    /*
-    span {
-      &:first-child {
-        &:before {
-          content: none;
-        }
-      }
-      &:before {
-        content: "—";
-        color: $brand;
-        margin: 0 .5rem;
-      }
-    }
-    */
   }
 
   .card-title {
@@ -107,7 +79,6 @@
 
     &:hover {
       color: $sarcelle-surprise;
-
     }
   }
 
@@ -143,6 +114,7 @@
     padding: 2rem;
     padding-top: 0;
     text-align: left;
+    
     @include media-breakpoint-up(lg) {
       padding-top: 2rem;
       padding-left: 0;
@@ -197,16 +169,6 @@
       font-weight: $font-weight-bold;
     }
 
-    // full width get bigger title
-    &.card-fw {
-      .card-title {
-        @include card-heading();
-        margin-bottom: 1rem;
-        &:last-child {
-          margin-bottom: 0;
-        }
-      }
-    }
   }
 
   // Row layout is used for icon placement to the left or right at larger breakpoint
@@ -229,10 +191,6 @@
         }
       }
 
-      .card-body {
-        text-align: left;
-      }
-
       .card-footer {
         padding: 2rem;
         .vdm {
@@ -248,7 +206,6 @@
   &.card-large,
   &.card-featured {
     .card-title {
-      //@include heading(5, "bold");
       @include card-heading();
     }
     .card-body {
@@ -258,7 +215,6 @@
 
   // Full-width card override
   &.card-fw {
-    //min-height: 11rem;
     .card-body {
       align-self: flex-start;
     }
@@ -393,8 +349,6 @@
 
   // Featured card specific
   &.card-featured {
-    // border: none;
-    // flex-direction: row;
     margin-bottom: 0;
     .card-bg-image {
       min-height: 300px;
@@ -525,24 +479,5 @@ a.card {
   > div,
   .card-item {
     display: flex; // must add flex capacity to col to get equalheight
-  }
-
-  // Add bs-grid layout to any element, ie: ul>li, etc
-  // This is less customizable since cols are hard-coded in css.
-  &.cards-bs-grid {
-    @include make-row();
-    .card-item {
-      @include make-col-ready();
-      // Grid styles
-      @include media-breakpoint-up(xs) {
-        @include make-col(12);
-      }
-      @include media-breakpoint-up(md) {
-        @include make-col(6);
-      }
-      @include media-breakpoint-up(lg) {
-        @include make-col(4);
-      }
-    }
   }
 }

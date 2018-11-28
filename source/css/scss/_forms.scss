@@ -219,8 +219,6 @@ legend,
 
 // Checkboxes
 //
-// use vdm
-
 .custom-checkbox {
 
   // We need to grow the checkbox a bit cuz it's too thin...
@@ -234,7 +232,6 @@ legend,
 // Radios
 //
 // Tweak just a few things for radios.
-
 .custom-radio {
 
   // We need to grow the checkbox a bit cuz it's too thin...
@@ -245,7 +242,7 @@ legend,
   }
 }
 
-
+//
 // Custom checkboxes and radios themed as card
 .custom-control-card {
   padding: 0;
@@ -294,10 +291,8 @@ legend,
   }
 }
 
-
-// Switches - Checkboxes as state toggles
 //
-
+// Switches - Checkboxes as state toggles
 .checkbox-toggle {
   // Massive negative offset clears the original checkbox & label.
   position: relative;
@@ -405,6 +400,7 @@ legend,
 
 // Form box combo with a header, input-group
 // Variants for dropdown-combo and search-combo
+// TODO: MASSIVE review and refactor. Is it still even needed?
 .form-combo {
   padding: 1.8rem;
   display: flex;
@@ -532,8 +528,8 @@ legend,
   }
 }
 
+//
 // file drop container
-
 .file-drop-container {
   border-radius: $input-border-radius;
   border: dashed 2px $gray-400;
@@ -553,8 +549,9 @@ legend,
   }
 }
 
+//
 // Feedback form
-
+// TODO: Normalisation
 .feedback-form-container {
   background: $white;
   box-shadow: $card-box-shadow;
@@ -571,11 +568,11 @@ legend,
     margin-bottom: 1.5rem;
 
     .h5 {
-      @extend .h5;
       display: block;
       margin-bottom: 0;
     }
   
+    // Icon
     .vdm {
       font-size: 2.5rem;
       color: $primary;

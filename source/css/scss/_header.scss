@@ -142,7 +142,6 @@
     right: 0;
     margin: 0;
     min-width: 20rem;
-    //font-size: 1.125rem; // 18px
     font-size: $font-size-sm;   //~15px
     box-shadow: -1px 3px 3px 0 $gray-300;
 
@@ -161,7 +160,7 @@
       }
     }
 
-    //
+    // Dropdown section
     .dropdown-item-section {
       color: $black;
       font-size: $font-size-sm;                   //~15px
@@ -255,8 +254,8 @@
   }
 }
 
+//
 // Navbar buttons styles
-
 .navbar-button {
   @include button-reset();
   color: $black;
@@ -322,6 +321,7 @@
 
 }
 
+//
 // Navbar search flyout
 .navbar-search {
   display: none;
@@ -353,9 +353,8 @@
   }
 }
 
-
-// Wizard header
 //
+// Wizard header
 // Optimize and normalize - we can extend from banner and build more generic containers
 .wizard-header {
   background-color: $sarcelle-light;

@@ -13,8 +13,6 @@
   }
 }
 
-
-
 //
 // Collapsible Item
 //
@@ -149,10 +147,8 @@
 }
 
 //
-// Tabs
+// Nav
 //
-
-
 nav {
   position: relative;
 }
@@ -168,6 +164,8 @@ nav {
   }
 }
 
+
+// Nav anchors
 .nav-anchors {
   display: inline-block;
   background-color: $white;
@@ -245,9 +243,11 @@ nav {
   }
 }
 
+
+// Nav tabs
 .nav-tabs {
-  //display: inline-block;
   background-color: $white;
+  flex-wrap: nowrap;
   overflow-x: auto;
   overflow-y: hidden;
   white-space: nowrap;
@@ -262,9 +262,10 @@ nav {
       display: none;
   }
   .nav-item {
+    display: inline-block;
+    flex-shrink: 0;
     margin-bottom: 0;
     padding-bottom: 0;
-    display: inline-block;
     max-width: 300px;
     &.show {
       .nav-link {
@@ -276,13 +277,6 @@ nav {
         margin: 0;
       }
     }
-  }
-}
-
-.nav-tabs {
-  flex-wrap: nowrap;
-  .nav-item {
-    flex-shrink: 0;
   }
   .nav-link {
     flex-shrink: 0;
@@ -315,7 +309,6 @@ nav {
       }
     }
     &.disabled {
-      //background-color: $gray-sky;
       cursor: default;
     }
   }
@@ -352,104 +345,9 @@ nav {
   }
 }
 
-// Mobile tabs becomes dropdown
-.nav-tabs-dropdown {
-  @include iconvdm(after, '057-chevron-bas');
-  @extend .nav-link;
-  background: $gray-sky;
-  border: none;
-  color: $black;
-  font-weight: $font-weight-bold;
-  position: relative;
-  text-align: center;
-
-  &.active,
-  &:hover,
-  &:focus {
-    border: none;
-    color: $black;
-    background-color: $white;
-    &:before {
-      content: " ";
-      width: 100%;
-      height: $nav-tabs-active-border-width;
-      position: absolute;
-      top: 0;
-      left: 0;
-      display: block;
-    }
-  }
-
-  &:after {
-    font-size: 1em;
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-    right: 2rem;
-    display: block;
-    width: 1em;
-    height: 1em;
-    line-height: 1;
-  }
-}
-
-.nav-tabs-dropdown-menu {
-  position: absolute;
-  top: 100%;
-  left: 0;
-  width: 100%;
-  z-index: $zindex-dropdown;
-  display: none; // none by default, but block on "open" of the menu
-  float: left;
-  min-width: $dropdown-min-width;
-  padding: 0;
-  margin: 0;
-  text-align: center; // Ensures proper alignment if parent has it changed (e.g., modal footer)
-  list-style: none;
-  background-color: transparent;
-  border: none;
-  @include border-radius(0);
-  @include box-shadow(none);
-
-  .dropdown-item {
-    display: block;
-    width: 100%; // For `<button>`s
-    padding: 0;
-    clear: both;
-    font-weight: $font-weight-normal;
-    color: $dropdown-link-color;
-    text-align: inherit; // For `<button>`s
-    white-space: nowrap; // prevent links from randomly breaking onto new lines
-    background-color: transparent; // For `<button>`s
-    border: 0; // For `<button>`s
-
-    @include hover-focus {
-      color: $dropdown-link-hover-color;
-      text-decoration: none;
-      @include gradient-bg($dropdown-link-hover-bg);
-    }
-
-    .active {
-      display: none;
-      //color: $dropdown-link-active-color;
-      //text-decoration: none;
-      //@include gradient-bg($dropdown-link-active-bg);
-    }
-
-    .disabled {
-      color: $dropdown-link-disabled-color;
-      //background-color: transparent;
-      // Remove CSS gradients if they're enabled
-      @if $enable-gradients {
-        background-image: none;
-      }
-    }
-  }
-}
-
-/**
- * Step Wizard
- */
+//
+// Step Wizard
+//
 .nav-wizard {
   background-color: $white;
   border-bottom: 1px solid $gray-400;
@@ -561,7 +459,7 @@ nav {
   .nav-link {
     padding: 1rem 2rem;
   }
-  //larger than 576px
+  // 576px and up
   @include media-breakpoint-up(sm) {
     display: flex;
     justify-content: center;
@@ -587,17 +485,17 @@ nav {
       margin: 0 auto;
     }
   }
-  //larger than 768px
+  // 768px and up
   @include media-breakpoint-up(md) {
     margin: 0 6rem;
   }
-
+  // 992px and up
   @include media-breakpoint-up(lg){
     margin: 0 3rem;
   }
-
 }
 
+//
 // Nav dashboard Steps
 //
 .nav-dashboard-item { 
@@ -622,6 +520,7 @@ nav {
     margin-bottom: .5rem;
     text-transform: uppercase;
   }
+
   .db-title {
     display: flex;
     font-size: $font-size-xl;
@@ -631,8 +530,50 @@ nav {
   }
 }
 
+// Subnav will replace navbar navbar-services
+.subnav {
+  border-bottom: 1px solid $gray-400;
+  display: flex;
+  justify-content: space-between;
+  padding: 1.5rem;
+  .subnav-container,
+  .subnav-links {
+    display: flex;
+    > * {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+  }
+  .subnav-title {
+    color: $headings-color;
+    font-size: $font-size-base;         // 18px
+    line-height: $line-height-sm;       // 1.33
+    font-weight: $font-weight-bold;
+    padding-left: .25rem;
+    padding-right: .25rem;
+    @include media-breakpoint-up(sm) {
+      padding-left: .375rem;
+      padding-right: .375rem;
+    }
+    @include media-breakpoint-up(md) {
+      font-size: $font-size-xl;         // 24px
+      line-height: $line-height-sm;     // 1.33  
+      padding-left: .5rem;
+      padding-right: .5rem;
+    }
+  }
+  .subnav-links {
+    //padding-right: 1.375rem;
+    ul {
+      margin-bottom: 0;
+    }
+  }
+}
+
 // Services sub-navigation
 // Deprecated. Update to .subnav
+// REMOVE IN V3
 .navbar-services {
   border-bottom: 1px solid $gray-200;
   min-height: 75px;
@@ -728,46 +669,5 @@ nav {
 
   .nav-item {
     padding: 0 1rem;
-  }
-}
-
-// Subnav will replace navbar navbar-services
-.subnav {
-  border-bottom: 1px solid $gray-400;
-  display: flex;
-  justify-content: space-between;
-  padding: 1.5rem;
-  .subnav-container,
-  .subnav-links {
-    display: flex;
-    > * {
-      display: flex;
-      justify-content: center;
-      align-items: center;
-    }
-  }
-  .subnav-title {
-    color: $headings-color;
-    font-size: $font-size-base;         // 18px
-    line-height: $line-height-sm;       // 1.33
-    font-weight: $font-weight-bold;
-    padding-left: .25rem;
-    padding-right: .25rem;
-    @include media-breakpoint-up(sm) {
-      padding-left: .375rem;
-      padding-right: .375rem;
-    }
-    @include media-breakpoint-up(md) {
-      font-size: $font-size-xl;         // 24px
-      line-height: $line-height-sm;     // 1.33  
-      padding-left: .5rem;
-      padding-right: .5rem;
-    }
-  }
-  .subnav-links {
-    //padding-right: 1.375rem;
-    ul {
-      margin-bottom: 0;
-    }
   }
 }

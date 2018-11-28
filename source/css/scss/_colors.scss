@@ -1,13 +1,10 @@
-//Use background.scss logic to add bg-variants for grays
-
+//
+// Use background.scss logic to add bg-variants for grays
 @each $color, $value in $grays {
   @include bg-variant(".bg-gray-#{$color}", $value);
 }
 
-/**
- * Color variants are dealt with a class at the cards container level.
- */
-
+// Add bg-gray-sky variant
 .bg-gray-sky {
   background-color: $gray-sky;
 }

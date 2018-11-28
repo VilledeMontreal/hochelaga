@@ -1,3 +1,4 @@
+//
 // Grid container padding override
 .container,
 .container-fluid {
@@ -5,6 +6,7 @@
   padding-left: $grid-gutter-width;
 }
 
+//
 // Main content header
 .content-header {
   padding-top: 4rem;
@@ -29,11 +31,6 @@
         color: $sarcelle-light;
       }
     }
-  }
-
-  // Sarcelle variant
-  &.content-header-sarcelle {
-    background-color: $sarcelle-lightest;
   }
 
   // Title
@@ -244,8 +241,8 @@
   }
 }
 
+//
 // Section with BG image
-
 .bg-image-section {
   background-size: cover;
   background-color: $gray-300;
@@ -284,7 +281,7 @@
   }
 }
 
-
+//
 // Lead container
 .lead-container {
   padding-top: 3rem;
@@ -431,8 +428,6 @@
 //
 // Generic Label and content layout
 // .block-coordinates will be deprecated
-//
-
 .label-content-header {
   margin-bottom: 1.5rem;
   padding-bottom: 1.5rem;
@@ -476,8 +471,8 @@
   }
 }
 
-// Carousel overrides
 
+// Carousel overrides
 .carousel-caption {
   * {
     color : $carousel-caption-color;
@@ -614,6 +609,7 @@
   }
 }
 
+//
 // Alternative layout for fluid-like content types (sujet, nouvelles)
 // fluid up to a max-width
 // A helper class .section-inner-media is used to deal with media margin and centering
@@ -686,8 +682,8 @@
   }
 }
 
+//
 // Overlay
-
 .overlay {
   position: fixed;
   display: none;
@@ -701,8 +697,8 @@
   z-index: 1020;
 }
 
+//
 // Sticky behavior
-
 .sticky.is-sticky {
   position: fixed;
   left: 0;
@@ -712,6 +708,7 @@
   width: 100%;
 }
 
+//
 // empty-results
 .empty-results {
   // TODO: REMOVE list-group-heading in v3.0.0

@@ -1,5 +1,10 @@
 .modal {
 
+  // Validate this override
+  .form-group {
+    margin-bottom: 1.3125rem; // 21px
+  }
+
   .modal-header {
     padding: 1.5rem;
     flex: 0 0 auto; // IE need this
@@ -138,7 +143,6 @@
 // Modal alert variant
 //
 .modal {
-
   &.modal-alert {
     .modal-header {
       background-color: $danger;
@@ -226,5 +230,3 @@
     }
   }
 }
-
-// Modal 
