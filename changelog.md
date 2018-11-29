@@ -10,10 +10,12 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 - Added variant for Feedback form Success message.
 
 ## Changed
-- Contact Us sidebar modifications
+- Contact Us sidebar modifications.
+- Updated font-icon to version 1.1.7.
 
 ## Fixed
 - Fixed webdiffusion bg-image section color.
+- Fixed Tables first-child in Cards.
 
 
 ## [2.5.1] - 2018-11-23
