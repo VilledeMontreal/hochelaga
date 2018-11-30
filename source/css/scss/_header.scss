@@ -83,14 +83,7 @@
     }
   }
 
-  // Dropdown Menu toggle (user)
-  .dropdown {
-    margin-bottom: 0;
-    padding-bottom: 0;
-    position: inherit;
-    display: flex;
-  }
-  // Replace caret by our own icon
+  // Dropdown overrides
   .dropdown-toggle {
     padding-top: 0;
     padding-bottom: 0;
@@ -110,27 +103,13 @@
     // remove carets
     &:after {
       content: none;
+      color: $link-color;
+      font-size: 1.125rem;
     }
 
-    @include media-breakpoint-up(sm) {
-      &:after {
-        font-size: 1.5rem;
-      }
-    }
-
-    @include media-breakpoint-up(md) {
-      padding-right: .5rem;
-    }
     // Add chevron only on large breakpoint and up
     @include media-breakpoint-up(md) {
-      &:after {
-        border: 0;
-        color: $link-color;
-        font-size: 1.125rem;
-        margin-left: 0;
-        width: auto;
-        height: auto;
-      }
+      padding-right: .5rem;
       @include iconvdm($position: after, $icon: '057-chevron-bas'); 
     }
   }
@@ -142,7 +121,6 @@
     right: 0;
     margin: 0;
     min-width: 20rem;
-    font-size: $font-size-sm;   //~15px
     box-shadow: -1px 3px 3px 0 $gray-300;
 
     // Font-icon size and color
@@ -151,27 +129,8 @@
       color: $sarcelle-surprise;
     }
 
-    // Main user-menu
-    ul {
-      padding: 0;
-      margin-bottom: 0;
-      li {
-        padding: 0;
-      }
-    }
-
     // Dropdown section
     .dropdown-item-section {
-      color: $black;
-      font-size: $font-size-sm;                   //~15px
-      padding: .75rem $dropdown-item-padding-x;
-      > * {
-        margin-bottom: 1.5rem;
-        &:last-child {
-          margin-bottom: 0;
-        }
-      }
-
       .user-info {
         line-height: 1.4;
         > * {
@@ -198,30 +157,6 @@
       }
     }
 
-    .dropdown-item {
-      display: flex;
-      align-items: center;
-      padding-top: .75rem;
-      padding-bottom: .75rem;
-
-      @include hover-focus {
-        color: $link-color;
-        @include gradient-bg($white);
-      }
-    
-      &.active,
-      &:active {
-        color: $link-color;
-        @include gradient-bg($white);
-      }
-    
-      &.disabled,
-      &:disabled {
-        color: $dropdown-link-disabled-color;
-        background-color: transparent;
-      }
-    }
-
   }
 
   // change icon when dropdown is open
@@ -245,10 +180,12 @@
     }
   }
 
+  // 576px and up - Navbar padding tweaks
   @include media-breakpoint-up(sm) {
     padding: 1.75rem 1.5rem;
   }
 
+  // 768px and up - Navbar padding tweaks
   @include media-breakpoint-up(md) {
     padding: 2.125rem 1.5rem;
   }

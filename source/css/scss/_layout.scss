@@ -153,12 +153,69 @@
       }
     }
   }
+
+  &.content-header-hub {
+    background-color: $gray-sky;
+    // Need to Harmonise this with other content-header
+    padding-top: 6rem;
+    padding-bottom: 3rem;
+    h1 {
+      font-weight: $font-weight-normal;
+      margin-bottom: 1rem;
+    }
+    .display-1 {
+      margin-bottom: 3rem;
+    }
+  }
+
+  // Use to set bg-image and overlay
+  &.content-header-overlay {
+    position: relative;
+    background-size: cover;
+    background-position: center;
+    &:before {
+      position: absolute;
+      content:" ";
+      top:0;
+      left:0;
+      width:100%;
+      height:100%;
+      display: block;
+      z-index:0;
+      background-color: rgba(255, 255, 255, 0.7);
+    }
+  }
 }
 
 // Remove padding when we have .content-header followed by .page-section and neither is .bg-gray-sky
 .content-header:not(.bg-gray-sky):not(.content-header-dark) {
   + .page-section:not(.bg-gray-sky) {
     padding-top: 0;
+  }
+}
+
+// Quick links
+.quick-links {
+  font-size: $font-size-sm;
+  .quick-links-label {
+    color: $gray-700;
+    display: inline-block;
+    font-weight: $font-weight-bold;
+    margin-right: .5rem;
+    margin-bottom: .5rem;
+  }
+  ul {
+    display: inline-block;
+    margin-bottom: 0;
+  }
+  .list-inline-item:not(:last-child) {
+    margin-right: .5rem;
+  }
+  a {
+    color: $headings-color;
+    &:hover {
+      color: $headings-color;
+    }
   }
 }
 
@@ -223,7 +280,12 @@
   h1,h2,h3 {
     @extend h2;
   }
-  margin-bottom: 2.5rem;
+  margin-bottom: 1rem;
+
+  // Align title with content when we have a list-group-hub
+  .list-group-hub-heading {
+    margin-left: 2rem;
+  }
 
   .row + .row {
     margin-top: 1rem;

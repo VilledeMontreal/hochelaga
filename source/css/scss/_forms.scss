@@ -104,7 +104,6 @@ legend,
       padding-left: 2.625rem;
     }
   }
-
   &.input-group-icon-right {
     > .vdm {
       right: 0;
@@ -113,6 +112,49 @@ legend,
       padding-right: 2.625rem;
     }
   }
+
+  // Large input-group with icon
+  &.input-group-icon-lg {
+    > .vdm {
+      font-size: 3rem;
+      padding: 0 .5rem;
+    }
+
+    &.input-group-icon-left {
+      input {
+        padding-left: 4rem;
+      }
+    }
+
+    &.input-group-icon-right {
+      input {
+        padding-right: 4rem;
+      }
+    }
+
+  }
+
+  // Small input-group with icon
+  &.input-group-icon-sm {
+    > .vdm {
+      font-size: 1.5rem;
+      padding: 0 .2rem;
+    }
+
+    &.input-group-icon-left {
+      input {
+        padding-left: 2rem;
+      }
+    }
+
+    &.input-group-icon-right {
+      input {
+        padding-right: 2rem;
+      }
+    }
+
+  }
+
 }
 
 .has-clear {
@@ -202,9 +244,7 @@ legend,
 // Custom control indicators
 //
 // Build the custom controls out of pseudo-elements.
-
 .custom-control-label {
-
   // Background-color and (when enabled) gradient
   &::before {
     top: .125rem;
@@ -220,7 +260,6 @@ legend,
 // Checkboxes
 //
 .custom-checkbox {
-
   // We need to grow the checkbox a bit cuz it's too thin...
   .custom-control-input:checked ~ .custom-control-label {
     &::after {
@@ -233,7 +272,6 @@ legend,
 //
 // Tweak just a few things for radios.
 .custom-radio {
-
   // We need to grow the checkbox a bit cuz it's too thin...
   .custom-control-input:checked ~ .custom-control-label {
     &::after {
@@ -398,75 +436,8 @@ legend,
   }
 }
 
-// Form box combo with a header, input-group
-// Variants for dropdown-combo and search-combo
-// TODO: MASSIVE review and refactor. Is it still even needed?
-.form-combo {
-  padding: 1.8rem;
-  display: flex;
-  flex-wrap: wrap;
-  align-items: center;
-
-  &.icon-combo {
-    .vdm {
-      font-size: 2.4rem;
-      width: 2.4rem;
-      height: 2.4rem;
-      color: $primary;
-    }
-  }
-
-  .title {
-    font-size: $font-size-base;
-    line-height: $line-height-lg;
-    font-weight: $font-weight-bold;
-    margin-bottom: 1rem;
-    width: 100%;
-  }
-
-  .input-group {
-
-    &.stroked {
-      border-bottom: 3px solid $black;
-    }
-
-    .form-group {
-      margin-top: 0;
-      margin-bottom: 0;
-      flex-grow: 1;
-
-      .form-control {
-        border: none;
-      }
-    }
-  }
-
-}
-.search-combo {
-  .input-group {
-    padding: 1rem 0.5rem 0.5rem 0.5rem;
-    align-items: center;
-    flex: 1 0;
-    margin-right: 1rem;
-    display: inline-flex;
-
-    > * {
-      margin-right: 0.5rem;
-    }
-
-    :last-child {
-      margin-right: 0;
-    }
-  }
-  @include media-breakpoint-down(xs) {
-    .input-group {
-      flex-basis: 100%;
-    }
-  }
-}
-
 // Form-combo and variants
-
+// TODO: Validate if this is still Wanted
 .dropdown-combo {
   position: relative;
   .dropdown-combo-toggle {

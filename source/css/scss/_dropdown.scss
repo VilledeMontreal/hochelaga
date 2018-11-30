@@ -1,0 +1,81 @@
+// Dropdown Menu toggle (user)
+.dropdown {
+  margin-bottom: 0;
+  padding-bottom: 0;
+  position: inherit;
+  display: flex;
+}
+// Replace caret by our own icon
+.dropdown-toggle {
+  display: inline-flex;
+  align-items: center;
+
+  // Replace carets
+  &:after {
+    border: 0;
+    color: inherit;
+    font-size: 1.125rem;
+    margin-left: .5rem;
+    width: auto;
+    height: auto;
+  }
+  @include iconvdm($position: after, $icon: '057-chevron-bas');
+}
+
+// Dropdown menu
+.dropdown-menu {
+  font-size: $font-size-sm;
+
+  // Main user-menu
+  ul {
+    padding: 0;
+    margin-bottom: 0;
+    li {
+      padding: 0;
+    }
+  }
+
+  // Dropdown section
+  .dropdown-item-section {
+    color: $black;
+    font-size: $font-size-sm;
+    padding: .75rem $dropdown-item-padding-x;
+    > * {
+      margin-bottom: 1.5rem;
+      &:last-child {
+        margin-bottom: 0;
+      }
+    }
+  }
+
+  .dropdown-item {
+    display: flex;
+    align-items: center;
+    padding-top: .75rem;
+    padding-bottom: .75rem;
+
+    @include hover-focus {
+      color: $link-color;
+      @include gradient-bg($white);
+    }
+  
+    &.active,
+    &:active {
+      color: $link-color;
+      @include gradient-bg($white);
+    }
+  
+    &.disabled,
+    &:disabled {
+      color: $dropdown-link-disabled-color;
+      background-color: transparent;
+    }
+  }
+}
+
+// change icon when dropdown is open
+.dropdown.show {
+  .dropdown-toggle {
+    @include iconvdm($position: after, $icon: '055-chevron-haut');
+  }
+}

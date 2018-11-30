@@ -494,14 +494,50 @@ $btn-transition:              color .15s ease-in-out, background-color .15s ease
 // Forms
 //
 
-$input-label-color:                             $gray-900;
-$input-color:                                   $gray-700;
-$input-border-color:                            $gray-400;
-$input-border-width:                            1px;
+$input-padding-y:                       $input-btn-padding-y;
+$input-padding-x:                       $input-btn-padding-x;
+$input-line-height:                     $input-btn-line-height;
 
-$input-disabled-bg:                             $gray-200;
+$input-padding-y-sm:                    $input-btn-padding-y-sm;
+$input-padding-x-sm:                    $input-btn-padding-x-sm;
+$input-line-height-sm:                  $input-btn-line-height-sm;
 
-$input-placeholder-color:                       $gray-500;
+$input-padding-y-lg:                    1rem;
+$input-padding-x-lg:                    $input-btn-padding-x-lg;
+$input-line-height-lg:                  $input-btn-line-height-lg;
+
+$input-bg:                              $white;
+$input-disabled-bg:                     $gray-200;
+
+$input-label-color:                     $headings-color;
+$input-color:                           $gray-700;
+$input-border-color:                    $gray-400;
+$input-border-width:                    1px;
+$input-box-shadow:                      inset 0 1px 1px rgba($black, .075);
+
+$input-border-radius:                   $border-radius;
+$input-border-radius-lg:                $border-radius-lg;
+$input-border-radius-sm:                $border-radius-sm;
+
+$input-focus-bg:                        $input-bg;
+$input-focus-border-color:              $sarcelle-atmos;
+$input-focus-color:                     $input-color;
+$input-focus-width:                     $input-btn-focus-width;
+$input-focus-box-shadow:                $input-btn-focus-box-shadow;
+
+$input-placeholder-color:               $gray-500;
+$input-plaintext-color:                 $body-color;
+
+$input-height-border:                   $input-border-width * 2;
+
+$input-height-inner:                    ($font-size-base * $input-line-height) + ($input-padding-y * 2);
+$input-height:                          calc(#{$input-height-inner} + #{$input-height-border});
+
+$input-height-inner-sm:                 ($font-size-sm * $input-line-height-sm) + ($input-padding-y-sm * 2);
+$input-height-sm:                       calc(#{$input-height-inner-sm} + #{$input-height-border});
+
+$input-height-inner-lg:                 ($font-size-lg * $input-line-height-lg) + ($input-padding-y-lg * 2);
+$input-height-lg:                       calc(#{$input-height-inner-lg} + #{$input-height-border});
 
 
 // custom forms
@@ -623,6 +659,9 @@ $header-icon-height:            $header-icon-width;
 
 
 // Navs
+
+$nav-link-padding-y:                1rem;
+$nav-link-padding-x:                1rem;
 
 $nav-divider-margin-y:              $spacer;
 

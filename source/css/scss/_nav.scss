@@ -165,6 +165,26 @@ nav {
 }
 
 
+// Nav filters
+.section-filters {
+  background-color: $white;
+  border-bottom: 1px solid $gray-900;
+}
+
+.nav-filters {
+  width: 100%;
+  padding: 1rem 0;
+  margin-left: -1rem;
+  .nav-link {
+    color: $headings-color;
+    font-size: $font-size-xl;
+  }
+  .dropdown-toggle:after {
+    color: $gray-ink;
+  }
+}
+
+
 // Nav anchors
 .nav-anchors {
   display: inline-block;
