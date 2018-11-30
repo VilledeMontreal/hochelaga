@@ -1,0 +1,56 @@
+{{> atoms-link-skip-to-main-content }}
+{{> organisms-header-portal }}
+
+<main class="main-content {{ pageClasses }}" id="main-content" aria-label="Main Content">
+
+  {{> organisms-content-header-hub }}
+
+  {{# nav-filters }}
+  {{> molecules-nav-filters }}
+  {{/ nav-filters }}
+
+  {{# elusListes }}
+  <section class="page-section">
+    <div class="container">
+      <div class="hub-section-heading">
+        {{# headings }}
+        <div class="row">
+          <div class="col-12">
+            <h2 class="{{ headings.class }}">{{ headings.text }}</h2>
+          </div>
+        </div>
+        {{/ headings }}
+      </div>
+
+      {{# listGroups }}
+      <div class="row">
+        <div class="col-12">
+          {{> molecules-list-group-hub}}
+        </div>
+      </div>
+      {{/ listGroups }}
+
+    </div>
+  </section>
+  {{/ elusListes }}
+
+  <!-- Empty results -->
+  {{^ elusListes }}
+  <section class="page-section">
+    <div class="container">
+      <div class="row">
+        <div class="col-12">
+          {{> molecules-empty-search-results }}
+        </div>
+      </div>
+    </div>
+  </section>
+  {{/ elusListes }}
+
+  {{# hasFeedbackForm}}
+  {{> organisms-feedback-form}}
+  {{/ hasFeedbackForm }}
+</main>
+
+{{> organisms-footer-portal }}
+
