@@ -4,6 +4,23 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](http://keepachangelog.com/en/1.0.0/)
 and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.html).
 
+## [2.6.0] - unreleased
+
+## Added
+- Added vues directory in templates.
+- Added nav filters molecules.
+- Added Pages > Tous les élus.
+
+## Changed
+- Changed Collectrices Tous les élus.
+- Renamed Collectrices second level cards to Collectrices second level list-group.
+
+## Fixed
+- Fixed missing classes for large input with icon
+- Fixed large and small input height calculation and paddings.
+- Fixed large and small input icon size.
+- Fixed dropdown and dropdown-menu styling.
+
 ## [2.5.2] - unreleased
 
 ## Added
