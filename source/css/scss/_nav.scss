@@ -174,16 +174,19 @@ nav {
 .nav-filters {
   width: 100%;
   padding: 1rem 0;
-  margin-left: -1rem;
+  .nav-item {
+    margin-right: 2rem;
+  }
   .nav-link {
     color: $headings-color;
     font-size: $font-size-xl;
+    padding-left: 0;
+    padding-right: 0;
   }
   .dropdown-toggle:after {
     color: $gray-ink;
   }
 }
-
 
 // Nav anchors
 .nav-anchors {

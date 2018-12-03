@@ -2,8 +2,6 @@
 .dropdown {
   margin-bottom: 0;
   padding-bottom: 0;
-  position: inherit;
-  display: flex;
 }
 // Replace caret by our own icon
 .dropdown-toggle {
@@ -25,6 +23,9 @@
 // Dropdown menu
 .dropdown-menu {
   font-size: $font-size-sm;
+  // TODO: check if this is affecting navbar dropdown
+  max-height: 60vh;
+  overflow-y: auto;
 
   // Main user-menu
   ul {
@@ -51,8 +52,9 @@
   .dropdown-item {
     display: flex;
     align-items: center;
-    padding-top: .75rem;
-    padding-bottom: .75rem;
+    //padding-top: .75rem;
+    //padding-bottom: .75rem;
+    padding: .75rem 1.25rem;
 
     @include hover-focus {
       color: $link-color;

@@ -212,9 +212,11 @@
     margin-right: .5rem;
   }
   a {
+    border-color: $headings-color;
     color: $headings-color;
     &:hover {
       color: $headings-color;
+      border-color: transparent;
     }
   }
 }
