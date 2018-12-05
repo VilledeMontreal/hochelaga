@@ -251,7 +251,6 @@
     $('#form20 button').prop('disabled', true);
     $('#form20 button#cancel').prop('hidden', true);
   }
-
   
   // Activate scrollspy to add active class to navAnchors items on scroll
   if($('#navAnchors').length != 0) {

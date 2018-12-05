@@ -279,15 +279,14 @@
 }
 
 .hub-section-heading {
-  h1,h2,h3 {
-    @extend h2;
+  h1,h2,h3,h4,h5,h6 {
+    color: $headings-color;
+    font-weight: $font-weight-bold;
+    font-size: $font-size-xl;
+    line-height: $line-height-sm;
+    margin-bottom: 1.5rem;
   }
   margin-bottom: 1rem;
-
-  // Align title with content when we have a list-group-hub
-  .list-group-hub-heading {
-    margin-left: 2rem;
-  }
 
   .row + .row {
     margin-top: 1rem;

@@ -227,6 +227,15 @@ fieldset:disabled a.btn {
     background-color: transparent;
     border: none;
   }
+
+  &.btn-reset {
+    color: $gray-ink;
+    border-bottom: 1px solid $gray-ink;
+    &:not(:disabled):not(.disabled):hover {
+      color: $gray-ink;
+      border-bottom-color: transparent;
+    }
+  }
 }
 
 // Specificity overrides

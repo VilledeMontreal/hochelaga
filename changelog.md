@@ -10,6 +10,7 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 - Added vues directory in templates.
 - Added nav filters molecules.
 - Added Pages > Tous les élus.
+- Added .badge-dismiss variant.
 
 ## Changed
 - Changed Collectrices Tous les élus.

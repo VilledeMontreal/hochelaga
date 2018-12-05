@@ -168,7 +168,7 @@ nav {
 // Nav filters
 .section-filters {
   background-color: $white;
-  border-bottom: 1px solid $gray-900;
+  border-bottom: $nav-tabs-border-width solid $nav-tabs-border-color;
 }
 
 .nav-filters {
@@ -176,15 +176,49 @@ nav {
   padding: 1rem 0;
   .nav-item {
     margin-right: 2rem;
+    &:last-child {
+      margin-right: 0;
+    }
   }
   .nav-link {
     color: $headings-color;
-    font-size: $font-size-xl;
     padding-left: 0;
     padding-right: 0;
   }
   .dropdown-toggle:after {
     color: $gray-ink;
+  }
+}
+
+// 767px and under
+@include media-breakpoint-down(sm) {
+  .nav-modal {
+
+    .nav {
+      flex-direction: column;
+      .nav-item {
+        display: block;
+      }
+    }
+
+    .nav-filters {
+      padding: 0;
+    }
+
+    .dropdown-menu {
+      border: none;
+      margin-top: 0;
+      max-height: none;
+      min-width: 0;
+      float: none;
+      padding-top: 0;
+      position: static;
+      .dropdown-item {
+        padding-left: .1875rem;
+        padding-right: 0;
+        white-space: inherit;
+      }
+    }
   }
 }
 

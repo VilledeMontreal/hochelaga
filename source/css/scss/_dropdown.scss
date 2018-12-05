@@ -26,8 +26,10 @@
   // TODO: check if this is affecting navbar dropdown
   max-height: 60vh;
   overflow-y: auto;
+  padding: .75rem 0 1rem 0;
+  margin-top: 1rem;
 
-  // Main user-menu
+  // Main menu
   ul {
     padding: 0;
     margin-bottom: 0;
@@ -52,8 +54,6 @@
   .dropdown-item {
     display: flex;
     align-items: center;
-    //padding-top: .75rem;
-    //padding-bottom: .75rem;
     padding: .75rem 1.25rem;
 
     @include hover-focus {
@@ -71,6 +71,18 @@
     &:disabled {
       color: $dropdown-link-disabled-color;
       background-color: transparent;
+    }
+
+    // Handle form-group in dropdown-item
+    &.form-group {
+      margin-bottom: 0;
+      padding-bottom: .125rem;
+      .custom-control {
+        margin-bottom: 0;
+      }
+      .custom-control-label {
+        padding-top: .125rem;
+      }
     }
   }
 }
