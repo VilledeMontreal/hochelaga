@@ -9,7 +9,7 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 ## Added
 - Added vues directory in templates.
 - Added nav filters molecules.
-- Added Pages > Tous les élus.
+- Added Pages > Tous les élus and variants.
 - Added .badge-dismiss variant.
 - Added variant for Feedback form Success message.
 
