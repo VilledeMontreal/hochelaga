@@ -1,0 +1,52 @@
+{
+  "navModalID": "navModalFilters-2",
+  "nav": {
+    "navItem": [
+      {
+        "title": "Filter #1",
+        "radios": [
+          {
+            "class": "",
+            "id": "rdioDatefilter-1",
+            "label": "Radio #1",
+            "name": "radiosDateGroup",
+            "state": false
+          },
+          {
+            "class": "",
+            "id": "rdioDatefilter-2",
+            "label": "Radio #2",
+            "name": "radiosDateGroup",
+            "state": false
+          }
+        ]
+      },
+      {
+        "title": "Filter #2",
+        "radios": false,
+        "checkboxes": [
+          {
+            "class": "",
+            "id": "chckboxDatefilter-1",
+            "label": "Checkbox option #1",
+            "state": false
+          },
+          {
+            "class": "",
+            "id": "chckboxDatefilter-2",
+            "label": "Checkbox option #2",
+            "state": false
+          }
+        ]
+      },
+      {
+        "dropdownClass": "dropdown-align-right",
+        "dropdownMenuClass": "dropdown-menu-right",
+        "title": "Par date",
+        "radios": false,
+        "checkboxes": false,
+        "dates": true
+      }
+    ]
+  }
+}

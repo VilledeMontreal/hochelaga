@@ -205,6 +205,13 @@ nav {
       padding: 0;
     }
 
+    .dropdown {
+
+      &.dropdown-align-right {
+        margin-left: 0;
+      }
+    }
+
     .dropdown-menu {
       border: none;
       margin-top: 0;

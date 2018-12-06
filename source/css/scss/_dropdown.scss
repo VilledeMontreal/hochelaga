@@ -2,6 +2,10 @@
 .dropdown {
   margin-bottom: 0;
   padding-bottom: 0;
+
+  &.dropdown-align-right {
+    margin-left: auto;
+  }
 }
 // Replace caret by our own icon
 .dropdown-toggle {

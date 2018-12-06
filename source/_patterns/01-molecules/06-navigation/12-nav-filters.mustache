@@ -1,8 +1,8 @@
 <section id="nav-filters" class="section-filters">
   <div class="container">
-    <!-- Modal -->
-    <div class="nav-modal modal modal-left-pane fade" id="navFiltersModal" tabindex="-1" role="dialog" aria-labelledby="navFiltersModalLabel">
-      <div class="modal-dialog" role="document">
+    <!-- Nav Modal on mobile, becomes static nav with dropdowns on tablets and up -->
+    <div class="nav-modal modal modal-left-pane fade" id="{{ navModalID }}" aria-labelledby="navFiltersModalLabel">
+      <div class="modal-dialog">
         <div class="modal-content">
           <div class="modal-header d-flex d-md-none">
             <h5 class="modal-title" id="navFiltersModalLabel">Filtres de recherche</h5>
@@ -11,9 +11,9 @@
           <div class="modal-body">
             <ul class="nav nav-filters">
               {{# nav.navItem }}
-              <li class="nav-item dropdown">
+              <li class="nav-item dropdown {{ dropdownClass }}">
                 <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false" data-display="static">{{ title }}</a>
-                <div class="dropdown-menu">
+                <div class="dropdown-menu {{ dropdownMenuClass }}">
                   <form>
                     {{# radios }}
                     <div class="dropdown-item form-group">
@@ -31,6 +31,11 @@
                       </div>
                     </div>
                     {{/ checkboxes }}
+                    {{# dates }}
+                    <div class="dropdown-item">
+                      TO DO: date range integration
+                    </div>
+                    {{/ dates }}
                   </form>
                 </div>
               </li>
@@ -56,7 +61,7 @@
 <div class="container">
   <div class="row">
     <div class="col-12 d-block d-md-none pt-4">
-      <button type="button" class="btn btn-secondary btn-block" data-toggle="modal" data-target="#navFiltersModal" data-backdrop="false">
+      <button type="button" class="btn btn-secondary btn-block" data-toggle="modal" data-target="#{{ navModalID }}" data-backdrop="false">
         Filtres de recherche
       </button>
     </div>
