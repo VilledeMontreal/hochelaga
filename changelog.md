@@ -11,27 +11,19 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 - Added nav filters molecules.
 - Added Pages > Tous les élus.
 - Added .badge-dismiss variant.
+- Added variant for Feedback form Success message.
 
 ## Changed
 - Changed Collectrices Tous les élus.
 - Renamed Collectrices second level cards to Collectrices second level list-group.
+- Contact Us sidebar modifications.
+- Updated font-icon to version 1.1.7.
 
 ## Fixed
 - Fixed missing classes for large input with icon
 - Fixed large and small input height calculation and paddings.
 - Fixed large and small input icon size.
 - Fixed dropdown and dropdown-menu styling.
-
-## [2.5.2] - unreleased
-
-## Added
-- Added variant for Feedback form Success message.
-
-## Changed
-- Contact Us sidebar modifications.
-- Updated font-icon to version 1.1.7.
-
-## Fixed
 - Fixed webdiffusion bg-image section color.
 - Fixed Tables first-child in Cards.
 
