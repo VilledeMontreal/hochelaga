@@ -275,6 +275,11 @@
         max-width: none;
         transform: none !important;
       }
+
+      // IE had issue with display Flex.
+      .modal-content {
+        display: block; // IE needs this or we get weird inheritance.
+      }
   
       .modal-body {
         padding: 0;
