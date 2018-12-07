@@ -276,7 +276,7 @@
         transform: none !important;
       }
 
-      // IE had issue with display Flex.
+      // IE had issue with display Flex on modal-content.
       .modal-content {
         display: block; // IE needs this or we get weird inheritance.
       }
