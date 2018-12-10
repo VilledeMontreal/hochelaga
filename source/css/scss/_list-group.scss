@@ -81,6 +81,7 @@
       text-align: left;
     }
     .list-group-item-footer {
+      display: none;
       margin-left: auto;
       .vdm {
         color: $gray-300;
@@ -88,11 +89,56 @@
         padding-right: 0;
       }
     }
+
     // Make sure we always have margin between body and footer
     .list-group-item-body + .list-group-item-footer {
       margin-left: 1.5rem;
     }
+
+    // list-broup-item-content for complexe content inside list-group-item-body
+    .list-group-item-content {
+      display: flex;
+      flex-wrap: wrap;
+      flex-direction: column;
+      > span {
+        margin-right: .75rem;
+        &:last-child {
+          margin-right: 0;
+        }
+      }
+      // Remove all pseudo glittering on mobile
+      @include media-breakpoint-down(md) {
+        .separator-brand {
+          &:before {
+            content: none;
+          }
+        }
+      }
+
+      // Switch to flex-direction row and show pseudo element
+      @include media-breakpoint-up(lg) {
+        flex-direction: row;
+        > span:nth-child(n + 2):not(.separator-brand) {
+          &:before {
+            content: "·";
+            color: $gray-900;
+            margin-right: .75rem;
+          }
+        }
+      }
+
+    }
+
   }
+
+  @include media-breakpoint-up(md) {
+    .list-group-item {
+      .list-group-item-footer {
+        display: flex;
+      }
+    }
+  }
+
 }
 
 // List group hub for Collectrices list-group layout
@@ -113,24 +159,6 @@
     }
   }
 
-  // Review this shit
-  .list-group-item-content {
-    display: flex;
-    flex-wrap: wrap;
-    > span {
-      margin-right: .75rem;
-      &:last-child {
-        margin-right: 0;
-      }
-    }
-    > span:nth-child(n + 2):not(.separator-brand) {
-      &:before {
-        content: "·";
-        color: $gray-900;
-        margin-right: .75rem;
-      }
-    }
-  }
 }
 
 .list-group-max-width {

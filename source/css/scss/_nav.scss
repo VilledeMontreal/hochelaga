@@ -190,6 +190,13 @@ nav {
   }
 }
 
+// filters applied section
+.filters-applied {
+  > * {
+    margin-bottom: .75rem;
+  }
+}
+
 // 767px and under
 @include media-breakpoint-down(sm) {
   .nav-modal {
