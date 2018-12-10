@@ -8,10 +8,11 @@
   border: 1px solid $gray-200;
   color: $gray-900;
   display: inline-block;
-  padding: $badge-padding-y $badge-padding-x;
   font-size: $badge-font-size;
   font-weight: $badge-font-weight;
   line-height: 1;
+  margin-right: .5rem;
+  padding: $badge-padding-y $badge-padding-x;
   text-align: center;
   white-space: nowrap;
   vertical-align: middle;
@@ -22,6 +23,23 @@
     background-color: $white;
     border-color: $white;
     color: $gray-900;
+  }
+
+  &.badge-dismiss {
+    @include iconvdm($position: after, $icon: '068-mini-x');
+    position: relative;
+    padding-right: 1.5em;
+    &:after {
+      font-size: 1.5em;
+      position: absolute;
+      right: 0;
+      top: 50%;
+      transform: translateY(-50%);
+    }
+
+    &:last-child {
+      margin-right: 0;
+    }
   }
 
   // Empty badges collapse automatically
@@ -49,9 +67,6 @@
     }
   }
 
-  + .badge {
-    margin-left: .5rem;
-  }
 }
 
 // Quick fix for badges in buttons

@@ -18,7 +18,7 @@ ul, ol {
 // Ordered list overrides
 ol {
   &.numbered-list {
-    list-style-type: none; // Not sure this remains accessible
+    list-style-type: none;
     counter-reset: ol-counter;
     padding-left: 6em;
     position: relative;
@@ -202,7 +202,6 @@ ol {
     font-weight: $font-weight-bold;
     line-height: $line-height-sm;
     border: none;
-    //color: $sarcelle-surprise;
     display: inline-block;
     margin-bottom: .5rem;
   }

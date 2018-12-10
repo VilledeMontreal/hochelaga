@@ -43,8 +43,7 @@
     padding: 2rem 2rem 0 2rem;
   }
 
-
-  // Transparent border brand
+  // 4 sides border variant
   &.sidebar-border {
     .sb-block {
       border: 1px solid $gray-200;
@@ -59,7 +58,6 @@
 
 // The base unit for a sidebar component, stacked
 .sb-block {
-  //overflow: hidden;
   margin-bottom: 3rem;
   > *:last-child {
     margin-bottom: 0;
@@ -116,20 +114,5 @@
     display: inline-block;
     max-width: 100%;
     white-space: nowrap;
-  }
-}
-
-// Update date in sidebar
-.sidebar-updated {
-  margin-top: -4rem;
-  padding-top: 1.8125rem;
-  padding-bottom: 1rem;
-  display: flex;
-  justify-content: flex-end;
-  align-self: center;
-  font-size: 80%;
-  .vdm {
-    font-size: 1.5em;
-    margin-right: .5rem;
   }
 }

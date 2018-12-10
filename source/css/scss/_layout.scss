@@ -1,3 +1,4 @@
+//
 // Grid container padding override
 .container,
 .container-fluid {
@@ -5,6 +6,7 @@
   padding-left: $grid-gutter-width;
 }
 
+//
 // Main content header
 .content-header {
   padding-top: 4rem;
@@ -29,11 +31,6 @@
         color: $sarcelle-light;
       }
     }
-  }
-
-  // Sarcelle variant
-  &.content-header-sarcelle {
-    background-color: $sarcelle-lightest;
   }
 
   // Title
@@ -156,12 +153,71 @@
       }
     }
   }
+
+  &.content-header-hub {
+    background-color: $gray-sky;
+    // Need to Harmonise this with other content-header
+    padding-top: 6rem;
+    padding-bottom: 3rem;
+    h1 {
+      font-weight: $font-weight-normal;
+      margin-bottom: 1rem;
+    }
+    .display-1 {
+      margin-bottom: 3rem;
+    }
+  }
+
+  // Use to set bg-image and overlay
+  &.content-header-overlay {
+    position: relative;
+    background-size: cover;
+    background-position: center;
+    &:before {
+      position: absolute;
+      content:" ";
+      top:0;
+      left:0;
+      width:100%;
+      height:100%;
+      display: block;
+      z-index:0;
+      background-color: rgba(255, 255, 255, 0.7);
+    }
+  }
 }
 
 // Remove padding when we have .content-header followed by .page-section and neither is .bg-gray-sky
 .content-header:not(.bg-gray-sky):not(.content-header-dark) {
   + .page-section:not(.bg-gray-sky) {
     padding-top: 0;
+  }
+}
+
+// Quick links
+.quick-links {
+  font-size: $font-size-sm;
+  .quick-links-label {
+    color: $gray-700;
+    display: inline-block;
+    font-weight: $font-weight-bold;
+    margin-right: .5rem;
+    margin-bottom: .5rem;
+  }
+  ul {
+    display: inline-block;
+    margin-bottom: 0;
+  }
+  .list-inline-item:not(:last-child) {
+    margin-right: .5rem;
+  }
+  a {
+    border-color: $headings-color;
+    color: $headings-color;
+    &:hover {
+      color: $headings-color;
+      border-color: transparent;
+    }
   }
 }
 
@@ -223,10 +279,14 @@
 }
 
 .hub-section-heading {
-  h1,h2,h3 {
-    @extend h2;
+  h1,h2,h3,h4,h5,h6 {
+    color: $headings-color;
+    font-weight: $font-weight-bold;
+    font-size: $font-size-xl;
+    line-height: $line-height-sm;
+    margin-bottom: 1.5rem;
   }
-  margin-bottom: 2.5rem;
+  margin-bottom: 1rem;
 
   .row + .row {
     margin-top: 1rem;
@@ -244,11 +304,11 @@
   }
 }
 
+//
 // Section with BG image
-
 .bg-image-section {
   background-size: cover;
-  background-color: $gray-sky;
+  background-color: $gray-300;
   padding-top: 6rem;
   padding-bottom: 8rem;
 }
@@ -284,7 +344,7 @@
   }
 }
 
-
+//
 // Lead container
 .lead-container {
   padding-top: 3rem;
@@ -431,8 +491,6 @@
 //
 // Generic Label and content layout
 // .block-coordinates will be deprecated
-//
-
 .label-content-header {
   margin-bottom: 1.5rem;
   padding-bottom: 1.5rem;
@@ -476,8 +534,8 @@
   }
 }
 
-// Carousel overrides
 
+// Carousel overrides
 .carousel-caption {
   * {
     color : $carousel-caption-color;
@@ -614,6 +672,7 @@
   }
 }
 
+//
 // Alternative layout for fluid-like content types (sujet, nouvelles)
 // fluid up to a max-width
 // A helper class .section-inner-media is used to deal with media margin and centering
@@ -686,8 +745,8 @@
   }
 }
 
+//
 // Overlay
-
 .overlay {
   position: fixed;
   display: none;
@@ -701,8 +760,8 @@
   z-index: 1020;
 }
 
+//
 // Sticky behavior
-
 .sticky.is-sticky {
   position: fixed;
   left: 0;
@@ -712,6 +771,7 @@
   width: 100%;
 }
 
+//
 // empty-results
 .empty-results {
   // TODO: REMOVE list-group-heading in v3.0.0

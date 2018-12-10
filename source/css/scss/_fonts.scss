@@ -27,16 +27,6 @@
 .vdm-7x { font-size: 7em; }
 .vdm-8x { font-size: 8em; }
 
-a {
-  &:hover,
-  &:active,
-  &:focus {
-    .vdm {
-      text-decoration: none !important; // -- Prevent text-decoration for icons, e-ve-ry-whe-re
-    }
-  }
-}
-
 @each $name, $char in $vdmicons {
   &.#{$name} {
     &:before {

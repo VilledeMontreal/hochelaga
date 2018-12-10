@@ -4,7 +4,38 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](http://keepachangelog.com/en/1.0.0/)
 and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.html).
 
-## [2.5.0] - unreleased
+## [2.6.0] - unreleased
+
+## Added
+- Added vues directory in templates.
+- Added nav filters molecules.
+- Added Pages > Tous les élus and variants.
+- Added .badge-dismiss variant.
+- Added variant for Feedback form Success message.
+
+## Changed
+- Changed Collectrices Tous les élus.
+- Renamed Collectrices second level cards to Collectrices second level list-group.
+- Contact Us sidebar modifications.
+- Updated font-icon to version 1.1.7.
+
+## Fixed
+- Fixed missing classes for large input with icon
+- Fixed large and small input height calculation and paddings.
+- Fixed large and small input icon size.
+- Fixed dropdown and dropdown-menu styling.
+- Fixed webdiffusion bg-image section color.
+- Fixed Tables first-child in Cards.
+
+
+## [2.5.1] - 2018-11-23
+
+## Changed
+- Templates Contact and confirmation Evolution.
+- Hide some "Tous les ..." links in various templates based on content types.
+
+
+## [2.5.0] - 2018-11-22
 
 ## Added
 - Page Élus (Valérie Plante)
@@ -303,6 +334,8 @@ remove index from the name. Which makes it possible to update font-icon without 
 - Removed vdm prefix for buttons classes
 
 
+[2.5.1]: https://bitbucket.org/villemontreal/boite-outils-web/src/2.5.1/
+[2.5.0]: https://bitbucket.org/villemontreal/boite-outils-web/src/2.5.0/
 [2.4.0]: https://bitbucket.org/villemontreal/boite-outils-web/src/2.4.0/
 [2.3.0]: https://bitbucket.org/villemontreal/boite-outils-web/src/2.3.0/
 [2.2.0]: https://bitbucket.org/villemontreal/boite-outils-web/src/2.2.0/

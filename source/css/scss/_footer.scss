@@ -1,6 +1,6 @@
-/**
- * Main footer
- */
+//
+// Main footer
+//
 footer {
   &.footer {
     background-color: $gray-900;
@@ -63,11 +63,11 @@ footer {
     }
 
     .copyright {
-      //font-size: 0.625rem;        //~10px
       display: inline-block;
       font-size: $font-size-xs;
       line-height: $line-height-base;
     }
+
     .footer-sub {
       margin-bottom: 1.5rem;
     }
@@ -77,9 +77,9 @@ footer {
     }
 
     .col-footer-sub {
-      text-align: center;
       align-self: center;
       justify-content: center;
+      text-align: center;
     }
 
     .col-footer-copyright {

@@ -37,15 +37,9 @@
   cursor: pointer;
 }
 
-// Modal
-
-.modal {
-  .form-group {
-    margin-bottom: 1.3125rem; // 21px
-  }
-}
-
-// Header banner
+//
+// Top banner
+//
 .top-banner {
   background: $gray-900;
   color: $white;
@@ -57,33 +51,35 @@
   padding: 0 $grid-gutter-width;
   line-height: 1.33;
 
-  @include media-breakpoint-up(md) {
-    justify-content: space-between;
-  }
-
   .top-banner-link {
     display: none;
-    @include media-breakpoint-up(md) {
-      display: inline-block;
-      margin-left: 1rem;
-    }
   }
 
   .back-link {
     display: none;
-    @include media-breakpoint-up(md) {
-      display: inline-block;
-    }
   }
 
   // Default link colors and underline, overrides in mixins
   a {
     color: $white;
     border: none;
-    box-shadow: inset 0 -1px $white;
+    box-shadow: inset 0 -1px $white; // Needs Harmonisation with all other links?
     &:active,
     &:hover {
       color: $white;
+    }
+  }
+
+  @include media-breakpoint-up(md) {
+    justify-content: space-between;
+
+    .top-banner-link {
+      display: inline-block;
+      margin-left: 1rem;
+    }
+
+    .back-link {
+      display: inline-block;
     }
   }
 }

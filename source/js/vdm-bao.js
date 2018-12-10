@@ -225,7 +225,7 @@
   });
 
   // Test for disabled state
-  $('#confirmation-chk-card01').change(function () {
+  $('#email-subscription-form #confirmation-chk-card01').change(function () {
     if(this.checked) {
       $(this).closest('form').find('.btn').prop('disabled', false);
     } else {
@@ -233,6 +233,24 @@
     }
   });
 
+  // Feedback form example
+  $('#form20 input[name=Field10]').change(evt => {
+    const inputValue = $(evt.target).val();
+    if (inputValue) {
+      $('#form20 button').prop('disabled', false);
+      $('#form20 button').prop('hidden', false);
+    }
+  });
+
+  $('#form20 button.reset-button').click(evt => {
+    resetAllValues();
+  });
+
+  function resetAllValues() {
+    $('#form20 input[name=Field10]').prop('checked', false);
+    $('#form20 button').prop('disabled', true);
+    $('#form20 button#cancel').prop('hidden', true);
+  }
   
   // Activate scrollspy to add active class to navAnchors items on scroll
   if($('#navAnchors').length != 0) {

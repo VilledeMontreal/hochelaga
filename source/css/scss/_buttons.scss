@@ -1,4 +1,4 @@
-// stylelint-disable selector-no-qualifying-type
+// Thi stylesheet completely replace bootstrap button.scss
 
 //
 // Base styles
@@ -226,6 +226,15 @@ fieldset:disabled a.btn {
     pointer-events: none;
     background-color: transparent;
     border: none;
+  }
+
+  &.btn-reset {
+    color: $gray-ink;
+    border-bottom: 1px solid $gray-ink;
+    &:not(:disabled):not(.disabled):hover {
+      color: $gray-ink;
+      border-bottom-color: transparent;
+    }
   }
 }
 
