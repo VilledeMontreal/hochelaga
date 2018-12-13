@@ -21,6 +21,16 @@
   </div>
   {{/ filters-applied }}
 
+  {{# has-empty-state}}
+  <div class="container mt-4">
+    <div class="row">
+      <div class="col-12">
+        {{> molecules-empty-state }}
+      </div>
+    </div>
+  </div>
+  {{/ has-empty-state}}
+  {{^ has-empty-state}}
   {{# elusListes }}
   <section class="page-section">
     <div class="container">
@@ -78,6 +88,12 @@
     </div>
   </section>
   {{/ elusListes }}
+  {{/ has-empty-state}}
+
+  <!-- Teaser -->
+  {{# has-lead-text}}
+  {{> molecules-lead }}
+  {{/ has-lead-text}}
 
   {{# hasFeedbackForm}}
   {{> organisms-feedback-form}}
