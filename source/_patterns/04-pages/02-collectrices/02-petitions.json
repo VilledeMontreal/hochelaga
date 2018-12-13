@@ -1,32 +1,44 @@
 {
+  "contentHeaderBgImage": false,
+  "has-lead-text" : true,
+  "lead-text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur feugiat nibh hendrerit venenatis vulputate. Cras malesuada scelerisque purus. Morbi faucibus leo lorem, id aliquam tellus viverra quis. Integer pharetra elementum libero, quis bibendum mi fringilla.",
+  "leadLeftSection": true,
+  "leadAbonnement": true,
+  "leadAbonnementTitle": "Présenter un projet de pétition",
+  "leadAbonnementText": "Vous désirez obtenir une consultation publique en tant que citoyen.",
+  "button": {
+    "buttonUrl": "#",
+    "buttonText": "Créer ma pétition",
+    "buttonClass": "btn-primary btn-sm"
+  },
   "text-elements": {
     "headings": {
       "display": {
         "tag": "h1",
         "classes": "h4",
-        "content": "Tous les élus"
+        "content": "Toutes les pétitions"
       }
     }
   },
-  "header-subtitle": "Vous désirez tout savoir sur un élu de la Ville de Montréal ?",
+  "header-subtitle": "Prenez l’initiative et obtener une consultation publique",
   "inputGroupSearch": [
     {
-      "inputPlaceholder": "Rechercher un élu par son nom"
+      "inputPlaceholder": "Rechercher une pétition par son nom"
     }
   ],
   "quickLinks": {
     "quickLinksItem": [
       {
         "url": "#",
-        "label": "Maire d'arrondissement"
+        "label": "Lien rapide #1"
       },
       {
         "url": "#",
-        "label": "Conseiller d'arrondissement"
+        "label": "Lien rapide #2"
       },
       {
         "url": "#",
-        "label": "Conseiller de Ville"
+        "label": "Lien rapide #3"
       }
     ]
   },
@@ -34,8 +46,15 @@
     "nav": {
       "navItem": [
         {
-          "title": "Tous les arrondissements",
+          "title": "Tout le territoire",
           "radios": [
+            {
+              "class": "",
+              "id": "rdioFilterArron-vdm",
+              "label": "Ville de Montréal",
+              "name": "radiosArronGroup",
+              "state": false
+            },
             {
               "class": "",
               "id": "rdioFilterArron-1",
@@ -172,93 +191,73 @@
           ]
         },
         {
-          "title": "Tous les titres",
+          "title": "Tous les états",
           "checkboxes": false,
           "radios": [
             {
               "class": "",
-              "id": "rdioFilterTitre-1",
-              "label": "Maire de la Ville",
-              "name": "radiosTitreGroup",
+              "id": "rdioFilterEtat-1",
+              "label": "État #1",
+              "name": "radiosEtatGroup",
               "state": false
             },
             {
               "class": "",
-              "id": "rdioFilterTitre-2",
-              "label": "Conseiller de la Ville",
-              "name": "radiosTitreGroup",
+              "id": "rdioFilterEtat-2",
+              "label": "État #2",
+              "name": "radiosEtatGroup",
+              "state": false
+            },
+            {
+              "class": "",
+              "id": "rdioFilterEtat-3",
+              "label": "État #3",
+              "name": "radiosEtatGroup",
               "state": false
             }
           ]
         },
         {
-          "title": "Tous les partis",
+          "title": "Tous les sujets",
           "checkboxes": false,
           "radios": [
             {
               "class": "",
-              "id": "rdioFilterParti-1",
-              "label": "Projet Montréal - Équipe Valérie Plante",
-              "name": "radiosPartiGroup",
+              "id": "rdioFilterSujet-1",
+              "label": "Lorem ipsum",
+              "name": "radiosSujetGroup",
               "state": false
             },
             {
               "class": "",
-              "id": "rdioFilterParti-2",
-              "label": "Ensemble Montréal",
-              "name": "radiosPartiGroup",
+              "id": "rdioFilterSujet-2",
+              "label": "Dolor sit amet",
+              "name": "radiosSujetGroup",
               "state": false
             },
             {
               "class": "",
-              "id": "rdioFilterParti-3",
-              "label": "Coalition Montréal",
-              "name": "radiosPartiGroup",
-              "state": false
-            },
-            {
-              "class": "",
-              "id": "rdioFilterParti-4",
-              "label": "Vrai changement pour Montréal",
-              "name": "radiosPartiGroup",
-              "state": false
-            },
-            {
-              "class": "",
-              "id": "rdioFilterParti-5",
-              "label": "Équipe Anjou",
-              "name": "radiosPartiGroup",
-              "state": false
-            },
-            {
-              "class": "",
-              "id": "rdioFilterParti-6",
-              "label": "Équipe Barbe Team",
-              "name": "radiosPartiGroup",
-              "state": false
-            },
-            {
-              "class": "",
-              "id": "rdioFilterParti-7",
-              "label": "Équipe Dauphin Lachine",
-              "name": "radiosPartiGroup",
-              "state": false
-            },
-            {
-              "class": "",
-              "id": "rdioFilterParti-8",
-              "label": "Plateau sans frontières",
-              "name": "radiosPartiGroup",
+              "id": "rdioFilterEtat-3",
+              "label": "Consectetur adipiscing",
+              "name": "radiosSujetGroup",
               "state": false
             }
           ]
+        },
+        {
+          "dropdownClass": "dropdown-align-right",
+          "dropdownMenuClass": "dropdown-menu-right",
+          "title": "Par date",
+          "radios": false,
+          "checkboxes": false,
+          "dates": true
         }
       ]
     }
   },
   "elusListes": {
     "headings": {
-      "text": "109 élus pour la Ville de Montréal",
+      "text": "4 pétitions",
       "class": "list-group-hub-heading"
     },
     "listGroupClass": "list-group-hub",
@@ -267,12 +266,12 @@
         "listGroup": [
           {
             "url": "#",
-            "title": "Nom de l'élu",
+            "title": "Lorem ipsum dolor sit amet",
             "infos": {
               "infos-items": [
                 {
                   "class": false,
-                  "text": "Titre de l'élu"
+                  "text": "09 h 30"
                 },
                 {
                   "class": "text-dark separator-brand",
@@ -283,12 +282,12 @@
           },
           {
             "url": "#",
-            "title": "Nom de l'élu",
+            "title": "Consectetur adipiscing elit",
             "infos": {
               "infos-items": [
                 {
                   "class": false,
-                  "text": "Titre de l'élu"
+                  "text": "12 novembre"
                 },
                 {
                   "class": "text-dark separator-brand",
@@ -299,140 +298,24 @@
           },
           {
             "url": "#",
-            "title": "Nom de l'élu",
+            "title": "Vestibulum lacinia nec nunc vulputate cursus",
             "infos": {
               "infos-items": [
                 {
                   "class": false,
-                  "text": "Titre de l'élu"
-                },
-                {
-                  "class": "text-dark separator-brand",
-                  "text": "Nom de l'arrondissement concerné"
+                  "text": "9 octobre"
                 }
               ]
             }
           },
           {
             "url": "#",
-            "title": "Nom de l'élu",
+            "title": "Maecenas tempus vehicula magna, id placerat dolor dapibus et",
             "infos": {
               "infos-items": [
                 {
                   "class": false,
-                  "text": "Titre de l'élu"
-                },
-                {
-                  "class": "text-dark separator-brand",
-                  "text": "Nom de l'arrondissement concerné"
-                }
-              ]
-            }
-          },
-          {
-            "url": "#",
-            "title": "Nom de l'élu",
-            "infos": {
-              "infos-items": [
-                {
-                  "class": false,
-                  "text": "Titre de l'élu"
-                },
-                {
-                  "class": "text-dark separator-brand",
-                  "text": "Nom de l'arrondissement concerné"
-                }
-              ]
-            }
-          },
-          {
-            "url": "#",
-            "title": "Nom de l'élu",
-            "infos": {
-              "infos-items": [
-                {
-                  "class": false,
-                  "text": "Titre de l'élu"
-                },
-                {
-                  "class": "text-dark separator-brand",
-                  "text": "Nom de l'arrondissement concerné"
-                }
-              ]
-            }
-          },
-          {
-            "url": "#",
-            "title": "Nom de l'élu",
-            "infos": {
-              "infos-items": [
-                {
-                  "class": false,
-                  "text": "Titre de l'élu"
-                },
-                {
-                  "class": "text-dark separator-brand",
-                  "text": "Nom de l'arrondissement concerné"
-                }
-              ]
-            }
-          },
-          {
-            "url": "#",
-            "title": "Nom de l'élu",
-            "infos": {
-              "infos-items": [
-                {
-                  "class": false,
-                  "text": "Titre de l'élu"
-                },
-                {
-                  "class": "text-dark separator-brand",
-                  "text": "Nom de l'arrondissement concerné"
-                }
-              ]
-            }
-          },
-          {
-            "url": "#",
-            "title": "Nom de l'élu",
-            "infos": {
-              "infos-items": [
-                {
-                  "class": false,
-                  "text": "Titre de l'élu"
-                },
-                {
-                  "class": "text-dark separator-brand",
-                  "text": "Nom de l'arrondissement concerné"
-                }
-              ]
-            }
-          },
-          {
-            "url": "#",
-            "title": "Nom de l'élu",
-            "infos": {
-              "infos-items": [
-                {
-                  "class": false,
-                  "text": "Titre de l'élu"
-                },
-                {
-                  "class": "text-dark separator-brand",
-                  "text": "Nom de l'arrondissement concerné"
-                }
-              ]
-            }
-          },
-          {
-            "url": "#",
-            "title": "Nom de l'élu",
-            "infos": {
-              "infos-items": [
-                {
-                  "class": false,
-                  "text": "Titre de l'élu"
+                  "text": "11 septembre"
                 },
                 {
                   "class": "text-dark separator-brand",

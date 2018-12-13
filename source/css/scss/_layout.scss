@@ -572,6 +572,16 @@
   img {
     margin: 0 auto 2rem auto
   }
+
+  .empty-state-icon {
+    margin-top: 4rem;
+    margin-bottom: 2rem;
+    .vdm {
+      color: $gray-300;
+      font-size: 7.5rem;
+    }
+  }
+
   @include media-breakpoint-up(sm) {
     margin: 0 auto 10rem auto;
     img {
