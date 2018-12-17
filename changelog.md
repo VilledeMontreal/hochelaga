@@ -7,7 +7,7 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 ## [2.6.1] - unreleased
 
 ## Added
-- Added Petitions templates.
+- Added vues Petitions templates.
 - Added icon variant for empty-state molecule.
 
 ## Changed
