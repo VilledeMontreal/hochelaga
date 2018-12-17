@@ -10,6 +10,9 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 - Added Petitions templates.
 - Added icon variant for empty-state molecule.
 
+## Changed
+- Updated font-icon to version 1.1.8
+
 ## Fixed
 - Addresses normalisation throughout all components.
 
