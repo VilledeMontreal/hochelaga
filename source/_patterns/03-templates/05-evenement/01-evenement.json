@@ -40,31 +40,76 @@
   },
   "mediaGallery": [
     {
-      "mediaSrc": "https://picsum.photos/1000/667?image=1072",
-      "mediaSize": "1000x667",
-      "mediaSrcThumb": "https://picsum.photos/600/400?image=1072",
+      "mediaSrc": "https://picsum.photos/2000/990?image=1072",
+      "mediaSize": "2000x990",
+      "mediaCaption": "This is a dummy caption",
+      "mediaAuthor": "Jamie Mink",
       "mediaAlt": "Media #1070",
-      "height": "400",
-      "width": "600",
-      "index": 0
+      "thumbnail" : {
+        "mediaSrc": "https://picsum.photos/600/400?image=1072",
+        "height": "400",
+        "width": "600"
+      }
     },
     {
       "mediaSrc": "https://picsum.photos/1000/667?image=1071",
       "mediaSize": "1000x667",
-      "mediaSrcThumb": "https://picsum.photos/600/400?image=1071",
-      "mediaAlt": "Media #1070",
-      "height": "400",
-      "width": "600",
-      "index": 1
+      "mediaCaption": "This is a dummy caption",
+      "mediaAuthor": "Tim Stief",
+      "mediaAlt": "Media #1071",
+      "thumbnail" : {
+        "mediaSrc": "https://picsum.photos/600/400?image=1071",
+        "height": "400",
+        "width": "600"
+      }
     },
     {
       "mediaSrc": "https://picsum.photos/1000/667?image=1070",
       "mediaSize": "1000x667",
-      "mediaSrcThumb": "https://picsum.photos/600/400?image=1070",
+      "mediaCaption": "This is a dummy caption",
+      "mediaAuthor": "Sean Stratton",
       "mediaAlt": "Media #1070",
-      "height": "400",
-      "width": "600",
-      "index": 2
+      "thumbnail" : {
+        "mediaSrc": "https://picsum.photos/600/400?image=1070",
+        "height": "400",
+        "width": "600"
+      }
+    },
+    {
+      "mediaSrc": "https://picsum.photos/1000/667?image=943",
+      "mediaSize": "1000x667",
+      "mediaCaption": "This is a dummy caption",
+      "mediaAuthor": "Paul Earle",
+      "mediaAlt": "Media #943",
+      "thumbnail" : {
+        "mediaSrc": "https://picsum.photos/600/400?image=943",
+        "height": "400",
+        "width": "600"
+      }
+    },
+    {
+      "mediaSrc": "https://picsum.photos/1350/901?image=767",
+      "mediaSize": "1350x901",
+      "mediaCaption": "This is a dummy caption",
+      "mediaAuthor": "Sébastien Marchand",
+      "mediaAlt": "Media #767",
+      "thumbnail" : {
+        "mediaSrc": "https://picsum.photos/600/400?image=767",
+        "height": "400",
+        "width": "600"
+      }
+    },
+    {
+      "mediaSrc": "https://picsum.photos/1350/901?image=655",
+      "mediaSize": "1350x901",
+      "mediaCaption": "This is a dummy caption",
+      "mediaAuthor": "Kyle Szegedi",
+      "mediaAlt": "Media #655",
+      "thumbnail" : {
+        "mediaSrc": "https://picsum.photos/600/400?image=655",
+        "height": "400",
+        "width": "600"
+      }
     }
   ],
   "has-tags": false,
