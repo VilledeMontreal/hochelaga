@@ -119,10 +119,12 @@
       margin: 0 auto 30px auto;
       max-width: 250px;
     }
+    /*
     .hub-link {
       justify-content: flex-start;
       padding-bottom: 2rem;
     }
+    */
     .content-header-infos {
       color: $headings-color;
       margin-bottom: 1rem;
@@ -154,6 +156,7 @@
     }
   }
 
+  // Variant for collectrices pages
   &.content-header-hub {
     background-color: $gray-sky;
     // Need to Harmonise this with other content-header
@@ -166,6 +169,45 @@
     .display-1 {
       margin-bottom: 3rem;
     }
+  }
+
+  // Variant for jumbotron style content-header
+  &.content-header-jumbotron {
+    .content-header-wrapper {
+      height: 100%;
+      padding: 2rem;
+      display: flex;
+      flex-direction: column;
+    }
+    .content-header-headings {
+      margin-bottom: 3rem;
+    }
+
+    @include media-breakpoint-up(xl) {
+      .list-icon {
+        margin: 0;
+        .list-icon-item {
+          padding-bottom: 2rem;
+        }
+      }
+    }
+/*     .content-header-metadata {
+      padding-bottom: 0;
+      height: 100%;      
+      .list-icon {
+        margin: 0;
+        display: flex;
+        flex-direction: column;
+        flex: 1;
+        height: 100%;
+        //align-content: space-around;
+        .list-icon-item {
+          flex: 1;
+        }
+      }
+
+    } */
+
   }
 
   // Use to set bg-image and overlay
@@ -223,6 +265,10 @@
 
 // Hub link
 .hub-link {
+  padding-bottom: 2rem;
+}
+/*
+.hub-link {
   color: $gray-600;
   font-size: $font-size-base;
   padding-bottom: 2rem;
@@ -233,6 +279,7 @@
       color: $sarcelle;
     }
   }
+
   // 992px and up
   @include media-breakpoint-up(xl) {
     display: flex;
@@ -242,6 +289,7 @@
     padding-bottom: 0;
   }
 }
+*/
 
 .region-content {
   padding-top: 4.5rem;

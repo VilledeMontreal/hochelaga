@@ -1,0 +1,50 @@
+{
+  "text-elements": {
+    "headings":{
+      "display":{
+        "classes": "h4",
+        "content": "Complexe Aquatique Michel-Leduc (Aquadôme)"
+      }
+    }
+  },
+  "contentHeaderClasses": "content-header-jumbotron",
+  "has-informations": true,
+  "has-hub-link":{
+    "url": "#",
+    "link-text": "Tous les ..."
+  },
+  "has-image": true,
+  "badges":[
+    {
+      "badge": "Catégorie",
+      "badgeClass": "",
+      "badgeUrl": "#"
+    }
+  ],
+  "list-icon-item": [
+    {
+      "url": false,
+      "class": false,
+      "icon-item": {
+        "icon-label": "037-horloge"
+      },
+      "content": "Aujourd'hui <span class=\"date-time-range\">9 h 30 - 12 h 00 — 14 h 00 - 21 h 00</span><br><strong>Ouvert en ce moment</strong>"
+    },
+    {
+      "url": false,
+      "class": false,
+      "icon-item": {
+        "icon-label": "091-localisation"
+      },
+      "content": "<address>1411, rue Lapierre<br>Montréal (Québec) H8N 2J4</address><a href=\"#mapEventId\" class=\"js-scroll-trigger\">Afficher la carte</a>"
+    },
+    {
+      "url": false,
+      "class": false,
+      "icon-item": {
+        "icon-label": "115-glissant"
+      },
+      "content": "Accessible aux personnes handicapées"
+    }
+  ]
+}

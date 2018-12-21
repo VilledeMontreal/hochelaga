@@ -1,0 +1,34 @@
+<header class="content-header {{ contentHeaderClasses }}">
+  <div class="{{ contentHeaderContainerClasses }}">
+  {{# has-hub-link}}
+    <div class="row">
+      <div class="col-12">
+        <div class="hub-link">
+          <a href="{{ url }}">{{ link-text }}</a>
+        </div>
+      </div>
+    </div>
+    {{/ has-hub-link}}
+    <div class="row">
+      <div class="col-12 col-lg-5">
+        <div class="content-header-wrapper bg-gray-sky">
+          <div class="content-header-headings">
+            {{> atoms-display-heading }}
+            {{# badges }}
+            {{> atoms-badge}}
+            {{/ badges }}
+          </div>
+          <div class="content-header-metadata">
+            {{> atoms-text-icons-list}}
+          </div>
+        </div>
+      </div>
+      {{# has-image }}
+      <div class="col-12 col-lg-7">
+        {{> organisms-media-gallery-button }}
+      </div>
+      {{/ has-image }}
+      </div>
+    </div>
+  </div>
+</header>
