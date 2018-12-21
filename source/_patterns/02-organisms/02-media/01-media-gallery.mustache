@@ -1,12 +1,25 @@
 <!-- Media Gallery -->
-<div class="media-gallery-container">
-  <ul class="media-gallery">
+<!--<div class="media-gallery-container">
+  <ul class="media-gallery" itemscope itemtype="http://schema.org/ImageGallery">
     {{# mediaGallery }}
-    <li>
-      <a href="#">
-        <img src="{{ mediaSrc }}" class="img-fluid" alt="{{ mediaAlt }}">
+    <li itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
+      <a href="{{ mediaSrc }}" itemprop="contentUrl" data-size="1000x667" data-index="{{index}}">
+        <img src="{{ mediaSrcThumb }}" class="img-fluid" height="400" width="600" itemprop="thumbnail" alt="{{ mediaAlt }}">
       </a>
     </li>
     {{/ mediaGallery }}
+  </ul>
+</div>
+-->
+
+<div class="media-gallery-container">
+  <ul class="media-gallery" itemscope itemtype="http://schema.org/ImageGallery">
+    {{# mediaGallery }}
+    <li itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
+      <a href="{{ mediaSrc }}" itemprop="contentUrl" data-size="{{ mediaSize }}" data-index="{{ index }}" data-title="{{ mediaCaption}}" data-author="{{ mediaAuthor }}">
+        <img src="{{ thumbnail.mediaSrc }}" class="img-fluid" height="{{ thumbnail.height }}" width="{{ thumbnail.width }}" itemprop="thumbnail" alt="{{ mediaAlt }}">
+      </a>
+    </li>
+    {{/ mediaGallery}}
   </ul>
 </div>

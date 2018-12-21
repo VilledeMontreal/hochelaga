@@ -29,3 +29,18 @@
     }
   }
 }
+
+.media-gallery-hidden {
+  display: none;
+}
+
+.media-gallery-button {
+  position: relative;
+  display: inline-block;
+  button {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    margin: 1.5rem;
+  }
+}

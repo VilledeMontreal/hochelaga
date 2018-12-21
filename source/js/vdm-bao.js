@@ -260,4 +260,191 @@
     });
   }
 
+  $('.media-gallery').each( function() {
+    var $pic     = $(this),
+        getItems = function() {
+            var items = [];
+            $pic.find('a').each(function() {
+                var $href   = $(this).attr('href'),
+                    $size   = $(this).data('size').split('x'),
+                    $width  = $size[0],
+                    $height = $size[1];
+ 
+                var item = {
+                    src     : $href,
+                    w       : $width,
+                    h       : $height,
+                    author  : $(this).data('author'),
+                    title   : $(this).data('title'),
+                }
+ 
+                items.push(item);
+            });
+            return items;
+        }
+ 
+    var items = getItems();
+    
+    var $pswp = $('.pswp')[0];
+    $pic.on('click', 'li', function(event) {
+      event.preventDefault();
+      
+      var $index = $(this).index();
+      var author = "";
+      var options = {
+        index: $index,
+        showHideOpacity: true,
+        shareEl: false,
+        addCaptionHTMLFn: function(item, captionEl, isFake) {
+          if(!item.title) {
+            captionEl.children[0].innerText = '';
+            return false;
+          }
+
+          if(item.author) {
+            author = '<br/><small>Photo: ' + item.author + '</small>';
+          }
+          captionEl.children[0].innerHTML = item.title +  author;
+          return true;
+        }
+      }
+      
+      // Initialize PhotoSwipe
+      var lightBox = new PhotoSwipe($pswp, PhotoSwipeUI_Default, items, options);
+      lightBox.init();
+    });
+
+  var openPhotoSwipe = function() {
+
+    $('.media-gallery').each( function() {
+      var $pic     = $(this),
+          getItems = function() {
+            var items = [];
+            $pic.find('a').each(function() {
+                var $href   = $(this).attr('href'),
+                    $size   = $(this).data('size').split('x'),
+                    $width  = $size[0],
+                    $height = $size[1];
+  
+                var item = {
+                    src     : $href,
+                    w       : $width,
+                    h       : $height,
+                    author  : $(this).data('author'),
+                    title   : $(this).data('title'),
+                }
+  
+                items.push(item);
+            });
+            return items;
+          }
+   
+      var items = getItems();
+      
+      var $pswp = $('.pswp')[0];
+      var author = "";
+      var options = {
+        index: 0,
+        showHideOpacity: true,
+        shareEl: false,
+        addCaptionHTMLFn: function(item, captionEl, isFake) {
+          if(!item.title) {
+            captionEl.children[0].innerText = '';
+            return false;
+          }
+
+          if(item.author) {
+            author = '<br/><small>Photo: ' + item.author + '</small>';
+          }
+          captionEl.children[0].innerHTML = item.title +  author;
+          return true;
+        }
+      }
+      // Initialize PhotoSwipe
+      var lightBox = new PhotoSwipe($pswp, PhotoSwipeUI_Default, items, options);
+      lightBox.init();
+    });
+  };
+
+ 
+
+  /*
+ var openPhotoSwipe = function() {
+  var parseThumbnailElements = function(el) {
+      var thumbElements = el.childNodes,
+          numNodes = thumbElements.length,
+          items = [],
+          figureEl,
+          linkEl,
+          size,
+          item;
+
+      for(var i = 0; i < numNodes; i++) {
+
+          figureEl = thumbElements[i]; // <figure> element
+
+          // include only element nodes 
+          if(figureEl.nodeType !== 1) {
+              continue;
+          }
+
+          linkEl = figureEl.children[0]; // <a> element
+
+          size = linkEl.getAttribute('data-size').split('x');
+
+          // create slide object
+          item = {
+              src: linkEl.getAttribute('href'),
+              w: parseInt(size[0], 10),
+              h: parseInt(size[1], 10)
+          };
+
+
+
+          if(figureEl.children.length > 1) {
+              // <figcaption> content
+              item.title = figureEl.children[1].innerHTML; 
+          }
+
+          if(linkEl.children.length > 0) {
+              // <img> thumbnail element, retrieving thumbnail url
+              item.msrc = linkEl.children[0].getAttribute('src');
+          } 
+
+          item.el = figureEl; // save link to element for getThumbBoundsFn
+          items.push(item);
+      }
+
+      return items;
+  };
+
+  var pswpElement = document.querySelectorAll('.pswp')[0],
+      gallery,
+      options,
+      items;
+
+  var galleryElements = document.querySelectorAll('.media-gallery')[0];
+  items = parseThumbnailElements(galleryElements);
+
+  // define options (if needed)
+  var options = {
+      index: 0 // start at first slide
+  };
+
+  
+  var gallery = new PhotoSwipe( pswpElement, PhotoSwipeUI_Default, items, options);
+  gallery.init();
+};
+*/
+
+  $(".js-gallery-trigger").click(function() {
+    
+    openPhotoSwipe();
+
+  });
+
+});
+
+
+
 })(jQuery);

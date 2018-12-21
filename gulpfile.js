@@ -179,6 +179,14 @@ gulp.task('scripts-dist', function () {
     ));
 });
 
+// Photoswipe, copy
+gulp.task('photoswipe', function () {
+  return gulp.src(config.photoswipe.files)
+    .pipe(gulp.dest(
+      config.photoswipe.dest
+    ))
+});
+
 // Fonts, copy
 gulp.task('fonts', function () {
     return gulp.src(config.fonts.files)
@@ -383,6 +391,7 @@ gulp.task('default', ['cleanable:before'], function () {
     'pl-sass',
     'images',
     'nodemodulescripts',
+    'photoswipe',
     'nodemodulesfonts',
     'nodemodulesfontsdata',
     'scripts'
