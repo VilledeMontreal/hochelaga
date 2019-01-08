@@ -182,7 +182,11 @@
     .content-header-headings {
       margin-bottom: 3rem;
     }
-
+    @include media-breakpoint-up(lg) {
+      .content-header-wrapper {
+        min-height: 436px;
+      }
+    }
     @include media-breakpoint-up(xl) {
       .list-icon {
         margin: 0;

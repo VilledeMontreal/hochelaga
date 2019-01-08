@@ -10,7 +10,7 @@
     </div>
     {{/ has-hub-link}}
     <div class="row">
-      <div class="col-12 col-lg-5">
+      <div class="col-12 col-lg-6 col-xl-5">
         <div class="content-header-wrapper bg-gray-sky">
           <div class="content-header-headings">
             {{> atoms-display-heading }}
@@ -23,11 +23,11 @@
           </div>
         </div>
       </div>
-      {{# has-image }}
-      <div class="col-12 col-lg-7">
-        {{> organisms-media-gallery-button }}
+      {{# has-media-image }}
+      <div class="col-12 col-lg-6 col-xl-7">
+        <div class="media-cover" role="image" aria-label="media-image.mediaAlt" style="background-image: url('{{ media-image.mediaSrc}}');"></div>
       </div>
-      {{/ has-image }}
+      {{/ has-media-image }}
       </div>
     </div>
   </div>

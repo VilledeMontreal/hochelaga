@@ -13,7 +13,12 @@
     "url": "#",
     "link-text": "Tous les ..."
   },
-  "has-image": true,
+  "has-media-image": true,
+  "media-image": {
+    "mediaSrc": "https://picsum.photos/1000/667?image=1072",
+    "mediaSize": "1000x667",
+    "mediaAlt": "Media #1072"
+  },
   "badges":[
     {
       "badge": "Catégorie",
@@ -28,7 +33,7 @@
       "icon-item": {
         "icon-label": "037-horloge"
       },
-      "content": "Aujourd'hui <span class=\"date-time-range\">9 h 30 - 12 h 00 — 14 h 00 - 21 h 00</span><br><strong>Ouvert en ce moment</strong>"
+      "content": "Aujourd'hui <span class=\"date-time-range\">9 h 30 - 12 h 00 — 14 h 00 - 21 h 00</span>"
     },
     {
       "url": false,

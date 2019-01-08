@@ -44,3 +44,14 @@
     margin: 1.5rem;
   }
 }
+
+.media-cover {
+  background-size: cover;
+  background-position: 50% 50%;
+  min-height: 425px;
+  width: 100%;
+
+  @include media-breakpoint-up(lg) {
+    height: 100%;
+  }
+}
