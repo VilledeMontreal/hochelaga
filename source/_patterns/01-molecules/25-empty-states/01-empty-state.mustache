@@ -1,0 +1,14 @@
+<div class="empty-state-container">
+  {{# empty-state-img}}
+  <div class="empty-state-img">
+    <img src="../../images/empty-state-arr-sm.png" class="d-sm-none">
+    <img src="../../images/empty-state-arr-lg.png" class="d-none d-sm-block">
+  </div>
+  {{/ empty-state-img}}
+  {{# empty-state-icon}}
+  <div class="empty-state-icon">
+    <span class="vdm vdm-{{ empty-state-icon }}" aria-hidden="true"></span>
+  </div>
+  {{/ empty-state-icon}}
+  <p class="text-center">{{{ empty-state-text }}}</p>
+</div>

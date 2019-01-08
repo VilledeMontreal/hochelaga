@@ -304,8 +304,12 @@ a {
   line-height: $line-height-base;
   font-weight: $font-weight-normal;
   margin-bottom: 2rem;
-  padding-left: 1.75em;
+  padding-left: 2rem;
   position: relative;
+
+  p:last-of-type {
+    margin-bottom: 1rem;
+  }
 
   &:before {
     content: "";
@@ -313,13 +317,13 @@ a {
     position: absolute;
     left: 0;
     top: 0;
-    height: 35%;
-    min-height: 2rem;
-    width: 8px;
+    height: 100%;
+    width: 4px;
   }
 
   .blockquote-footer {
     font-size: $font-size-base;
+    color: $body-color;
     font-style: normal;
     &:before {
       display: none;

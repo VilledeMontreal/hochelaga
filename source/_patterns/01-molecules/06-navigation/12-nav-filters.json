@@ -1,37 +1,39 @@
 {
-  "navModalID": "navModalFilters-1",
-  "nav": {
-    "navItem": [
-      {
-        "title": "Filter #1",
-        "radios": [
-          {
-            "class": "",
-            "id": "rdiofilter-1",
-            "label": "Radio",
-            "name": "radiosGroup",
-            "state": false
-          }
-        ]
-      },
-      {
-        "title": "Filter #2",
-        "radios": false,
-        "checkboxes": [
-          {
-            "class": "",
-            "id": "chckboxfilter-1",
-            "label": "Checkbox",
-            "state": false
-          },
-          {
-            "class": "",
-            "id": "chckboxfilter-2",
-            "label": "Checkbox option #2",
-            "state": false
-          }
-        ]
-      }
-    ]
+  "nav-filters": {
+    "navModalID": "navModalFilters-1",
+    "nav": {
+      "navItem": [
+        {
+          "title": "Filter #1",
+          "radios": [
+            {
+              "class": "",
+              "id": "rdiofilter-1",
+              "label": "Radio",
+              "name": "radiosGroup",
+              "state": false
+            }
+          ]
+        },
+        {
+          "title": "Filter #2",
+          "radios": false,
+          "checkboxes": [
+            {
+              "class": "",
+              "id": "chckboxfilter-1",
+              "label": "Checkbox",
+              "state": false
+            },
+            {
+              "class": "",
+              "id": "chckboxfilter-2",
+              "label": "Checkbox option #2",
+              "state": false
+            }
+          ]
+        }
+      ]
+    }
   }
 }
