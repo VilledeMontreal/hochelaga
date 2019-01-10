@@ -1,6 +1,6 @@
-<header class="content-header {{ contentHeaderClasses }}">
+<header class="content-header content-header-jumbotron {{ contentHeaderClasses }}">
   <div class="{{ contentHeaderContainerClasses }}">
-  {{# has-hub-link}}
+    {{# has-hub-link}}
     <div class="row">
       <div class="col-12">
         <div class="hub-link">
@@ -9,7 +9,23 @@
       </div>
     </div>
     {{/ has-hub-link}}
-    <div class="row">
+    <div class="row no-gutters">
+      {{^ has-media-image }}
+      <div class="col-12">
+        <div class="content-header-wrapper bg-gray-sky">
+          <div class="content-header-headings">
+            {{> atoms-display-heading }}
+            {{# badges }}
+            {{> atoms-badge}}
+            {{/ badges }}
+          </div>
+          <div class="content-header-metadata">
+            {{> atoms-text-icons-list}}
+          </div>
+        </div>
+      </div>
+      {{/ has-media-image }}
+      {{# has-media-image }}
       <div class="col-12 col-lg-6 col-xl-5">
         <div class="content-header-wrapper bg-gray-sky">
           <div class="content-header-headings">
@@ -23,12 +39,31 @@
           </div>
         </div>
       </div>
-      {{# has-media-image }}
       <div class="col-12 col-lg-6 col-xl-7">
-        <div class="media-cover" role="image" aria-label="media-image.mediaAlt" style="background-image: url('{{ media-image.mediaSrc}}');"></div>
-      </div>
+        {{# has-media-gallery }}
+        <div class="media-gallery-button">
+        {{/ has-media-gallery }}
+          <button class="btn-media js-gallery-trigger" aria-hidden="true">
+            <div class="media-cover" role="image" aria-label="media-image.mediaAlt" style="background-image: url('{{ media-image.mediaSrc}}');"></div>
+          </button>
+          {{# has-media-gallery }}
+          {{> atoms-button-icon(buttonClass: "btn-primary btn-light btn-media-gallery js-gallery-trigger", buttonText: "Afficher les photos", icon-label: "021-dossier", buttonIcon: true)}}
+
+          <ul class="media-gallery d-none" itemscope itemtype="http://schema.org/ImageGallery">
+            {{# mediaGallery }}
+            <li itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
+              <a href="{{ mediaSrc }}" itemprop="contentUrl" data-size="{{ mediaSize }}" data-index="{{ index }}" data-title="{{ mediaCaption}}" data-author="{{ mediaAuthor }}">
+                <img src="{{ thumbnail.mediaSrc }}" class="img-fluid" height="{{ thumbnail.height }}" width="{{ thumbnail.width }}" itemprop="thumbnail" alt="{{ mediaAlt }}">
+              </a>
+            </li>
+            {{/ mediaGallery}}
+          </ul>
+
+          {{/ has-media-gallery }}
+        {{#has-media-gallery}}  
+        </div>
+        {{/ has-media-gallery }}
       {{/ has-media-image }}
-      </div>
     </div>
   </div>
 </header>

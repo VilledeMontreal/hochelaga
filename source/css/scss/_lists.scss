@@ -51,7 +51,7 @@ ol {
   @extend .list-unstyled;
   .list-icon-item {
     display: flex;
-    padding-bottom: 1rem;
+    padding-bottom: 2rem;
     // Use .no-icon class to add padding equal to icons width and paddings
     &.no-icon {
       padding-left: 2rem;
@@ -68,11 +68,6 @@ ol {
       font-size: 1.5em;
       padding-right: .5rem;
     }
-    /*
-    > * {
-      align-items: flex-start;
-    }
-    */
   }
 
   .list-icon-label {
@@ -81,8 +76,11 @@ ol {
   }
 
   .list-icon-content {
-    margin-bottom: 1rem;
+    //margin-bottom: 1rem;
     width: 100%;
+    > * {
+      @include clearfix;
+    }
   }
 
   address {

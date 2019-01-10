@@ -184,7 +184,7 @@
     }
     @include media-breakpoint-up(lg) {
       .content-header-wrapper {
-        min-height: 436px;
+        min-height: 525px;
       }
     }
     @include media-breakpoint-up(xl) {
@@ -195,23 +195,6 @@
         }
       }
     }
-/*     .content-header-metadata {
-      padding-bottom: 0;
-      height: 100%;      
-      .list-icon {
-        margin: 0;
-        display: flex;
-        flex-direction: column;
-        flex: 1;
-        height: 100%;
-        //align-content: space-around;
-        .list-icon-item {
-          flex: 1;
-        }
-      }
-
-    } */
-
   }
 
   // Use to set bg-image and overlay
@@ -734,7 +717,6 @@
   }
 }
 
-//
 // Alternative layout for fluid-like content types (sujet, nouvelles)
 // fluid up to a max-width
 // A helper class .section-inner-media is used to deal with media margin and centering

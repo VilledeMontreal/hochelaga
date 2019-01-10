@@ -1,30 +1,5 @@
 {
-  "text-elements": {
-    "headings":{
-      "display":{
-        "classes": "h4",
-        "content": "Complexe Aquatique Michel-Leduc (Aquadôme)"
-      }
-    }
-  },
-  "has-informations": true,
-  "has-hub-link":{
-    "url": "#",
-    "link-text": "Tous les ..."
-  },
-  "has-media-image": true,
-  "media-image": {
-    "mediaSrc": "https://picsum.photos/1000/667?image=1072",
-    "mediaSize": "1000x667",
-    "mediaAlt": "Media #1072"
-  },
-  "badges":[
-    {
-      "badge": "Catégorie",
-      "badgeClass": "",
-      "badgeUrl": "#"
-    }
-  ],
+  "has-media-image": false,
   "list-icon-item": [
     {
       "icon-item": {
@@ -35,6 +10,11 @@
           "url": false,
           "class": false,
           "content": "Aujourd'hui <span class=\"date-time-range\">9 h 30 - 12 h 00 — 14 h 00 - 21 h 00</span>"
+        },
+        {
+          "url": false,
+          "class": false,
+          "content": "<badge class=\"badge badge-pill badge-danger\">Fermeture exceptionnelle</badge>"
         }
       ]
     },
