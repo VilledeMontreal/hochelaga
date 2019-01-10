@@ -4,7 +4,27 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](http://keepachangelog.com/en/1.0.0/)
 and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.html).
 
-## [2.6.1] - unreleased
+## [3.0.0] - Unreleased
+
+## Added
+- Content header jumbotron. New content header for tc like evenements, activites, lieu, etc.
+- Media gallery component using Photoswipe plugin.
+- Media gallery button to trigger a media gallery visualisation.
+
+## Changed
+- PatternLab: refactor data to allow for new multiple content inside a list-item.
+- Changed hub-link positionning.
+- Featured image placement in Nouvelle template.
+- Evenement et lieu utilise le nouveau Content header jumbotron component.
+
+## Removed
+- Removed dropdown-combo variants.
+
+## Fixed
+- List of icons: add an optionnal wrapper to allow for multiple chuck of content inside a list-item.
+
+
+## [2.6.1] - 2019-01-10
 
 ## Added
 - Added vues Petitions templates.
@@ -15,6 +35,7 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 
 ## Fixed
 - Addresses normalisation throughout all components.
+
 
 ## [2.6.0] - 2018-12-10
 
@@ -346,6 +367,7 @@ remove index from the name. Which makes it possible to update font-icon without 
 - Removed vdm prefix for buttons classes
 
 
+[2.6.1]: https://bitbucket.org/villemontreal/boite-outils-web/src/2.6.1/
 [2.6.0]: https://bitbucket.org/villemontreal/boite-outils-web/src/2.6.0/
 [2.5.1]: https://bitbucket.org/villemontreal/boite-outils-web/src/2.5.1/
 [2.5.0]: https://bitbucket.org/villemontreal/boite-outils-web/src/2.5.0/
