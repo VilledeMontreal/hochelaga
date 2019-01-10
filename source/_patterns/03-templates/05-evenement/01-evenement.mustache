@@ -3,7 +3,7 @@
 
 <main class="main-content {{ pageClasses }}" id="main-content" aria-label="Main Content">
 
-  {{> organisms-content-header }}
+  {{> organisms-content-header-jumbotron }}
 
   <!-- Begin main-content region-->
   <div class="region-content {{ regionMainClasses }}">
@@ -12,6 +12,7 @@
         <article class="col-12 col-lg-8 {{ regionMainContentClasses }}">
           <p class="lead">Ut quis rhoncus libero. Donec molestie et nunc nec commodo. Nulla eu leo purus. Curabitur elementum, quam eu pharetra vestibulum, 
           justo nisl rutrum nisi, non egestas nisl libero eget magna. Suspendisse lectus sapien, aliquet in enim sed, convallis consectetur sapien. Integer laoreet tempor tellus.</p>
+          
           <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas blandit quam a volutpat fermentum. Proin ut dictum metus. Ut eget lectus sit amet nibh aliquam placerat sed et augue. 
           Etiam vel mollis tellus. Suspendisse nunc sapien, auctor non nunc convallis, ultricies convallis lectus. Mauris sed nisi egestas, convallis erat eu, faucibus urna. Morbi ornare arcu non mauris blandit suscipit. 
           Aenean at nisl a orci fringilla maximus. Fusce nisl justo, vestibulum at tellus id, fringilla pretium mi.</p>
@@ -21,15 +22,14 @@
           Sed fermentum eleifend dui. Nam aliquet malesuada neque sit amet sodales. Integer mauris nibh, sodales ut diam vel, venenatis pretium ex. Donec vulputate ut felis sit amet varius.</p>
           <p>Nulla facilisi. Nullam convallis massa sapien, id blandit lorem sodales pretium. Nam tempor erat et accumsan rhoncus. Nunc quis posuere magna. Ut elementum, velit eu venenatis venenatis, velit elit pellentesque leo, ac finibus enim orci eu lectus. 
           Sed vel risus nec nisl ultricies mollis at eu diam. Donec vitae orci congue, vulputate lacus ut, posuere ipsum.</p>
+          
           {{# has-documents }}
           <h3>Document</h3>
           <ul>
             <li><a href="test.pdf">Programme de l'événement</a></li>
           </ul>
           {{/ has-documents}}
-          {{# has-gallery }}
-          {{> organisms-media-gallery}}
-          {{/ has-gallery }}
+
           {{# has-video }}
           <div class="media-container">
             <div class="media embed-responsive embed-responsive-16by9">
@@ -37,14 +37,13 @@
             </div>
           </div>
           {{/ has-video }}
-          {{# has-tags }}
-            <h3 class="h6">Mots-clés</h3>
-            <ul class="list-inline">
-              {{# tags}}
-              <li class="list-inline-item">{{> atoms-badge}}</li>
-              {{/ tags}}
-            </ul>
-          {{/ has-tags }}
+
+          <div class="map-section">
+            <h3>Localisation</h3>
+            <address class="icon mb-2">{{> atoms-fonticon-item(icon-label: 091-localisation)}} 10300, rue Lajeunesse, Montréal (Québec) H3L 2E5</address>
+            <div id="mapEventId" style="height:500px"></div>
+          </div>
+
         </article>
         <!-- Sidebar Right -->
         <aside class="col-12 col-lg-4 sidebar-right" role="complementary">
@@ -53,10 +52,6 @@
       </div>
     </div>
   </div>
-
-  <section class="map-section">
-    <div id="mapEventId" style="height:500px"></div>
-  </section>
 
   {{# hasFeedbackForm}}
   {{> organisms-feedback-form}}

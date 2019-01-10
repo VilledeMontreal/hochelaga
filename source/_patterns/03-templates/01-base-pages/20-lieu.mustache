@@ -3,12 +3,7 @@
 
 <main class="main-content {{ pageClasses }}" id="main-content" aria-label="Main Content">
 
-  {{> organisms-content-header }}
-
-  <!-- Teaser -->
-  {{# has-lead-text }}
-  {{> molecules-lead }}
-  {{/ has-lead-text }}
+  {{> organisms-content-header-jumbotron }}
 
   <div class="region-content {{ regionMainClasses }}">
     <div class="container">
@@ -47,7 +42,7 @@
 
 <script>
     var startZoom = 16;
-    var center = [-73.662623, 45.553576];
+    var center = [-73.607951, 45.437203];
     var maxBounds = [[-74.3965936,45.319517],[-73.442801,45.751651]];
     var marker = new mapboxgl.Marker(defaultMarker());
     var mapboxStyle = {
@@ -391,7 +386,8 @@
     interactive: false,
   });
 
-  marker.setLngLat([-73.662623, 45.553576]).addTo(map);
+
+  marker.setLngLat([-73.607951, 45.437203]).addTo(map);
 
   var markerHeight = 50, markerRadius = 10, linearOffset = 25;
   var popupOffsets = {
@@ -405,8 +401,8 @@
   'right': [-markerRadius, (markerHeight - markerRadius) * -1]
   };
   var popup = new mapboxgl.Popup({closeButton: false, closeOnClick: false, offset: popupOffsets, className: 'map-popup'})
-    .setLngLat([-73.662623, 45.553576])
-    .setHTML("<address><strong>Maison de la culture Ahuntsic-Cartierville</strong><br>10300, rue Lajeunesse<br>Montréal (Québec) H3L 2E5</address>")
+    .setLngLat([-73.607951, 45.437203])
+    .setHTML("<address>1411, rue Lapierre<br>Montréal (Québec) H8N 2J4</address>")
     .addTo(map);
 
   function defaultMarker() {

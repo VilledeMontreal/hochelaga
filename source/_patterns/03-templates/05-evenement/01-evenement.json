@@ -1,23 +1,23 @@
 {
-  "contentHeaderClasses": "bg-gray-sky",
   "text-elements": {
     "headings":{
       "display":{
+        "classes": "h4",
         "content": "Template événement"
       }
     }
   },
-  "has-header-meta": true,
-  "has-publication-date": false,
   "has-informations": true,
-  "has-hub-link": {
+  "has-hub-link":{
     "url": "#",
     "link-text": "Tous les événements"
   },
-  
-  "informations-event": {
-    "date": "Du 12 au 18 septembre 2018",
-    "lieu": "Maison de la culture Ahuntsic-Cartierville"
+  "has-media-image": true,
+  "has-media-gallery": true,
+  "media-image": {
+    "mediaSrc": "https://picsum.photos/1000/667?image=1072",
+    "mediaSize": "1000x667",
+    "mediaAlt": "Media #1072"
   },
   "badges":[
     {
@@ -26,9 +26,25 @@
       "badgeUrl": "#"
     }
   ],
-  "has-image": true,
+  "list-icon-item": [
+    {
+      "url": false,
+      "class": false,
+      "icon-item": {
+        "icon-label": "005-calendrier"
+      },
+      "content": "Samedi 12 septembre 2018"
+    },
+    {
+      "url": false,
+      "class": false,
+      "icon-item": {
+        "icon-label": "113-prix"
+      },
+      "content": "Entrée libre"
+    }
+  ],
   "has-documents": true,
-  "has-gallery": true,
   "has-video": true,
   "social-media-icons-list": {
     "has-label": false,
@@ -110,24 +126,6 @@
         "height": "400",
         "width": "600"
       }
-    }
-  ],
-  "has-tags": false,
-  "tags": [
-    {
-      "badge": "Mot-clé #1",
-      "badgeClass": "",
-      "badgeUrl": "#"
-    },
-    {
-      "badge": "Mot-clé #2",
-      "badgeClass": "",
-      "badgeUrl": "#"
-    },
-    {
-      "badge": "Mot-clé #3",
-      "badgeClass": "",
-      "badgeUrl": "#"
     }
   ]
 }

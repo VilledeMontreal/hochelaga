@@ -1,34 +1,57 @@
 {
-  "sidebarRight": true,
-  "sidebarLeft": false,
-  "contentHeaderClasses": "bg-gray-sky",
   "text-elements": {
     "headings":{
       "display":{
+        "classes": "h4",
         "content": "Template lieu"
       }
     }
   },
-  "has-header-meta": true,
   "has-informations": true,
-  "informations-event": {
-    "date": "10300, rue Lajeunesse",
-    "lieu": "Ahuntsic-Cartierville"
+  "has-hub-link":{
+    "url": "#",
+    "link-text": "Tous les lieux"
+  },
+  "has-media-image": true,
+  "media-image": {
+    "mediaSrc": "https://picsum.photos/1000/700?image=1058",
+    "mediaSize": "1000x667",
+    "mediaAlt": "Media #1058"
   },
   "badges":[
     {
-      "badge": "Centre culturel",
+      "badge": "Catégorie",
       "badgeClass": "",
       "badgeUrl": "#"
     }
   ],
-  "has-publication-date": false,
-  "date-time-text": "Mis à jour le 5 septembre 2018",
-  "has-hub-link": {
-    "url": "#",
-    "link-text": "Tous les lieux"
-  },
-  "has-lead-text": false,
+  "list-icon-item": [
+    {
+      "url": false,
+      "class": false,
+      "icon-item": {
+        "icon-label": "037-horloge"
+      },
+      "content": "Aujourd'hui <span class=\"date-time-range\">9 h 30 - 12 h 00 — 14 h 00 - 21 h 00</span>"
+    },
+    {
+      "url": false,
+      "class": false,
+      "icon-item": {
+        "icon-label": "091-localisation"
+      },
+      "content": "<address>1411, rue Lapierre<br>Montréal (Québec) H8N 2J4</address><a href=\"#mapLieu001\" class=\"js-scroll-trigger\">Afficher la carte</a>"
+    },
+    {
+      "url": false,
+      "class": false,
+      "icon-item": {
+        "icon-label": "115-glissant"
+      },
+      "content": "Accessible aux personnes handicapées"
+    }
+  ],
+  "sidebarRight": true,
   "sidebarClasses": "sidebar-top-stroke",
   "sidebarTitle": "Informations",
   "social-media-icons-list": {
