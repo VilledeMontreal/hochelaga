@@ -36,8 +36,8 @@
 
 .media-gallery-button {
   position: relative;
-  display: inline-block;
-  button {
+  height: 100%;
+  .btn-media-gallery {
     position: absolute;
     bottom: 0;
     right: 0;
@@ -49,9 +49,19 @@
   background-size: cover;
   background-position: 50% 50%;
   min-height: 425px;
+  height: 100%;
   width: 100%;
 
   @include media-breakpoint-up(lg) {
     height: 100%;
   }
+}
+
+.btn-media {
+  @include button-reset();
+  cursor: pointer;
+  width: 100%;
+  height: 100%;
+  padding: 0;
+  margin: 0;
 }
