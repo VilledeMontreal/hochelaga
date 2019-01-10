@@ -1,28 +1,28 @@
 {
   "list-icon-item": [
     {
-      "url": false,
-      "class": false,
       "icon-item": {
         "icon-label": "091-localisation"
       },
-      "content": "<address><strong>Hôtel de ville de Montréal</strong><br>275, rue Notre-Dame Est<br>Montréal (Québec) H2Y 1C6</address>"
+      "item": [
+        {
+          "class": false,
+          "url": false,
+          "content": "<address><strong>Hôtel de ville de Montréal</strong><br>275, rue Notre-Dame Est<br>Montréal (Québec) H2Y 1C6</address>"
+        }
+      ]
     },
     {
-      "url": "#",
-      "class": false,
       "icon-item": {
         "icon-label": "012-telephone"
       },
-      "content": "514 872-1234"
-    },
-    {
-      "url": "mailto:test@ville.montreal.qc.ca",
-      "class": "elided-text",
-      "icon-item": {
-        "icon-label": "028-enveloppe"
-      },
-      "content": "test@ville.montreal.qc.ca"
+      "item": [
+        {
+          "class": false,
+          "url": "#",
+          "content": "514 872-1234"
+        }
+      ]
     }
   ]
 }

@@ -7,44 +7,59 @@
       "compagnie": "Service de la culture, Direction des blibiothèques",
       "list-icon-item": [
         {
-          "url": false,
-          "class": "icon left",
           "icon-item": {
             "icon-label": "091-localisation"
           },
-          "content": "<address>123, rue Bord de l'eau<br>Montréal (Québec) H3K 2T5</address>"
+          "item": [
+            {
+              "url": false,
+              "content": "<address>123, rue Bord de l'eau<br>Montréal (Québec) H3K 2T5</address>"
+            }
+          ]
         },
         {
-          "url": false,
-          "class": "icon left",
           "icon-item": {
             "icon-label": "012-telephone"
           },
-          "content": "514 872-1234"
+          "item": [
+            {
+              "url": false,
+              "content": "514 872-1234"
+            }
+          ]
         },
         {
-          "url": false,
-          "class": "icon left",
           "icon-item": {
             "icon-label": "012-telephone"
           },
-          "content": "514 872-1111"
+          "item": [
+            {
+              "url": false,
+              "content": "514 872-1111"
+            }
+          ]
         },
         {
-          "url": "mailto:valerie.lampron@ville.montreal.qc.ca",
-          "class": "icon left",
           "icon-item": {
             "icon-label": "028-enveloppe"
           },
-          "content": "valerie.lampron@ville.montreal.qc.ca"
+          "item": [
+            {
+              "url": "mailto:valerie.lampron@ville.montreal.qc.ca",
+              "content": "valerie.lampron@ville.montreal.qc.ca"
+            }
+          ]
         },
         {
-          "url": "https://test.com",
-          "class": "icon left",
           "icon-item": {
             "icon-label": "031-ordinateur"
           },
-          "content": "v.lampron.com"
+          "item": [
+            {
+              "url": "https://test.com",
+              "content": "v.lampron.com"
+            }
+          ]
         }
       ],
       "social-media-icons-list": {

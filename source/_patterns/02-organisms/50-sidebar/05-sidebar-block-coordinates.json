@@ -2,27 +2,40 @@
   "coordinates": {
     "list-icon-item": [
       {
-        "url": false,
         "icon-item": {
           "icon-label": "091-localisation"
         },
-        "content": "<address>275, rue Notre-Dame Est<br>Montréal (Québec) H2Y 1C6</address>"
+        "item": [
+          {
+            "url": false,
+            "content": "<address>275, rue Notre-Dame Est<br>Montréal (Québec) H2Y 1C6</address>"
+          }
+        ]
       },
       {
-        "url": false,
         "icon-item": {
           "icon-label": "012-telephone"
         },
-        "content": "514 872-5678"
+        "item": [
+          {
+            "url": false,
+            "content": "514 872-5678"
+          }
+        ]
       },
       {
-        "url": "mailto:test@montreal.ca",
-        "modal": true,
-        "class": "elided-text",
         "icon-item": {
           "icon-label": "028-enveloppe"
         },
-        "content": "Envoyer un courriel"
+        "item": [
+          {
+            "url": "#",
+            "modal": true,
+            "modal-target": "#contactModal",
+            "class": "elided-text",
+            "content": "Envoyer un courriel"
+          }
+        ]
       }
     ]
   },
