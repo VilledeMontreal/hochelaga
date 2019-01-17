@@ -260,4 +260,12 @@
     });
   }
 
+  $('.collapse-content').on('show.bs.collapse', function () {
+    $(this).parent().find("button").text('Voir moins');
+  });
+
+  $('.collapse-content').on('hide.bs.collapse', function () {
+    $(this).parent().find("button").text('Voir plus');
+  });
+
 })(jQuery);
