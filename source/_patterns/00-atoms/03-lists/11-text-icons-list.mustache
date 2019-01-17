@@ -5,6 +5,9 @@
     <span class="vdm vdm-{{ icon-label }} {{ icon-class }}" aria-hidden="true"></span>
     {{/ icon-item}}
     <div class="list-icon-content">
+    {{# item-label }}
+    <span class="list-icon-label">{{item-label}}</span>
+    {{/ item-label }}
     {{# item }}
       {{# url }}
       {{^ modal }}
@@ -15,7 +18,13 @@
       {{/ modal }}
       {{/ url }}
       {{^ url }}
+      {{# tag }}
+      <{{tag}}>
+      {{/ tag }}
       {{{ content }}}
+      {{# tag }}
+      </{{tag}}>
+      {{/ tag }}
       {{/ url }}
     {{/ item }}
     </div>
