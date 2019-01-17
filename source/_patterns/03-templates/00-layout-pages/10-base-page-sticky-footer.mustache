@@ -4,32 +4,18 @@
 
 <main class="main-content {{ pageClasses }}" id="main-content" aria-label="Main Content">
 
-  {{> organisms-content-header }}
-
   <div class="region-content {{ regionMainClasses }}">
     <div class="container {{ regionMainContainerClasses }}">
       <div class="row">
         <article class="col-7 {{ regionMainContentClasses }}">
-          <div class="collapse collapse-content" id="collapseContentExample">
-            <p>Cras quis gravida leo, id blandit elit. <a href="https://ville.montreal.qc.ca">Vivamus placerat</a> felis massa, consectetur fringilla ante ultricies feugiat. Sed imperdiet semper rhoncus. 
-              Aenean quis augue consequat, viverra mi mollis, suscipit arcu. Vestibulum vitae urna ipsum. Nulla turpis dolor, facilisis a eleifend in, facilisis quis augue. Donec ullamcorper ligula blandit, pulvinar tellus eu, venenatis arcu. 
-              Nam id finibus erat, eget sollicitudin lectus. Curabitur vel est id est rutrum cursus. Donec nunc neque, auctor et lectus eget, faucibus ullamcorper turpis. Phasellus malesuada magna ac turpis volutpat mollis. Ut suscipit condimentum augue vel placerat. 
-              Sed fermentum eleifend dui. Nam aliquet malesuada neque sit amet sodales. Integer mauris nibh, sodales ut diam vel, venenatis pretium ex. Donec vulputate ut felis sit amet varius.</p>
-            <p>Nulla facilisi. Nullam convallis massa sapien, id blandit lorem sodales pretium. Nam tempor erat et accumsan rhoncus. Nunc quis posuere magna. Ut elementum, velit eu venenatis venenatis, velit elit pellentesque leo, ac finibus enim orci eu lectus. 
-              Sed vel risus nec nisl ultricies mollis at eu diam. Donec vitae orci congue, vulputate lacus ut, posuere ipsum.</p>
-            <p>Nulla facilisi. Nullam convallis massa sapien, id blandit lorem sodales pretium. Nam tempor erat et accumsan rhoncus. Nunc quis posuere magna. Ut elementum, velit eu venenatis venenatis, velit elit pellentesque leo, ac finibus enim orci eu lectus. 
-              Sed vel risus nec nisl ultricies mollis at eu diam. Donec vitae orci congue, vulputate lacus ut, posuere ipsum.</p>
-            <p>Nulla facilisi. Nullam convallis massa sapien, id blandit lorem sodales pretium. Nam tempor erat et accumsan rhoncus. Nunc quis posuere magna. Ut elementum, velit eu venenatis venenatis, velit elit pellentesque leo, ac finibus enim orci eu lectus. 
-              Sed vel risus nec nisl ultricies mollis at eu diam. Donec vitae orci congue, vulputate lacus ut, posuere ipsum.</p>
-            <p>Nulla facilisi. Nullam convallis massa sapien, id blandit lorem sodales pretium. Nam tempor erat et accumsan rhoncus. Nunc quis posuere magna. Ut elementum, velit eu venenatis venenatis, velit elit pellentesque leo, ac finibus enim orci eu lectus. 
-              Sed vel risus nec nisl ultricies mollis at eu diam. Donec vitae orci congue, vulputate lacus ut, posuere ipsum.</p>
-            <p>Nulla facilisi. Nullam convallis massa sapien, id blandit lorem sodales pretium. Nam tempor erat et accumsan rhoncus. Nunc quis posuere magna. Ut elementum, velit eu venenatis venenatis, velit elit pellentesque leo, ac finibus enim orci eu lectus. 
-              Sed vel risus nec nisl ultricies mollis at eu diam. Donec vitae orci congue, vulputate lacus ut, posuere ipsum.</p>
-            <p>Nulla facilisi. Nullam convallis massa sapien, id blandit lorem sodales pretium. Nam tempor erat et accumsan rhoncus. Nunc quis posuere magna. Ut elementum, velit eu venenatis venenatis, velit elit pellentesque leo, ac finibus enim orci eu lectus. 
-              Sed vel risus nec nisl ultricies mollis at eu diam. Donec vitae orci congue, vulputate lacus ut, posuere ipsum.</p>
+          <div class="mb-6">
+            <p>Click the button below to hide the contents of this page. Notice how the footer sticks to the bottom of the window even when there’s not enough content to fill the page.</p>
+            <button class="btn btn-primary" type="button" data-toggle="collapse" data-target="#collapseStickyFooterExample" aria-expanded="false" aria-controls="collapseStickyFooterExample">Toggle content</button>
           </div>
-          <div class="w-100 text-center">
-            <button class="btn btn-link" type="button" data-toggle="collapse" data-target="#collapseContentExample" aria-expanded="false" aria-controls="collapseContentExample">Voir plus</button>
+          <div class="collapse show" id="collapseStickyFooterExample">
+            <p>Getting the footer to stick to the bottom of pages with sparse content is something just about every Web developer has tried to tackle at some point in his or her career. And, for the most part, it’s a solved problem. Yet all the <a href="http://ryanfait.com/resources/footer-stick-to-bottom-of-page/">existing solutions</a> have one significant shortcoming — they don’t work if the height of your footer is unknown.</p>
+            <p>Flexbox is a perfect fit for this type of problem. While mostly known for laying out content in the horizontal direction, Flexbox actually works just as well for vertical layout problems. All you have to do is wrap the vertical sections in a flex container and choose which ones you want to expand. They’ll automatically take up all the available space in their container.</p>
+            <p>In the example below, the container is set to the height of the window, and the content area is told to expand as needed. (Note: in the vertical direction you need to specify a height for the container. This is different from the horizontal direction, which automatically expands to fit.)</p>
           </div>
         </article>
       </div>

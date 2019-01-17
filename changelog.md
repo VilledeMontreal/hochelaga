@@ -7,6 +7,9 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 
 ## [2.6.2] - Unreleased
 
+## Added
+- Added sticky-footer capacity. @see templates > Layout Pages > Sticky Footer  
+
 ## Changed
 - PatternLab: Modified Vues avec filtres datas in patterns.
 
