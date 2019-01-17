@@ -12,6 +12,7 @@
     "url": "#",
     "link-text": "Tous les lieux"
   },
+  "organised-by": false,
   "has-media-image": true,
   "media-image": {
     "mediaSrc": "https://picsum.photos/1000/700?image=1058",
@@ -27,28 +28,40 @@
   ],
   "list-icon-item": [
     {
-      "url": false,
-      "class": false,
       "icon-item": {
         "icon-label": "037-horloge"
       },
-      "content": "Aujourd'hui <span class=\"date-time-range\">9 h 30 - 12 h 00 — 14 h 00 - 21 h 00</span>"
+      "item": [
+        {
+          "url": false,
+          "class": false,
+          "content": "Aujourd'hui <span class=\"date-time-range\">9 h 30 - 12 h 00 — 14 h 00 - 21 h 00</span>"
+        }
+      ]
     },
     {
-      "url": false,
-      "class": false,
       "icon-item": {
         "icon-label": "091-localisation"
       },
-      "content": "<address>1411, rue Lapierre<br>Montréal (Québec) H8N 2J4</address><a href=\"#mapLieu001\" class=\"js-scroll-trigger\">Afficher la carte</a>"
+      "item": [
+        {
+          "url": false,
+          "class": false,
+          "content": "<address>1411, rue Lapierre<br>Montréal (Québec) H8N 2J4</address><a href=\"#mapLieu001\" class=\"js-scroll-trigger\">Afficher la carte</a>"
+        }
+      ]
     },
     {
-      "url": false,
-      "class": false,
       "icon-item": {
         "icon-label": "115-glissant"
       },
-      "content": "Accessible aux personnes handicapées"
+      "item": [
+        {
+          "url": false,
+          "class": false,
+          "content": "Accessible aux personnes handicapées"
+        }
+      ]
     }
   ],
   "sidebarRight": true,

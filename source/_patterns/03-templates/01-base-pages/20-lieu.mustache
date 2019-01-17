@@ -3,6 +3,14 @@
 
 <main class="main-content {{ pageClasses }}" id="main-content" aria-label="Main Content">
 
+  <div class="container-fluid container-fluid-max-xl">
+    <div class="row">
+      <div class="col-12">
+      {{> molecules-breadcrumbs}}
+      </div>
+    </div>
+  </div>
+
   {{> organisms-content-header-jumbotron }}
 
   <div class="region-content {{ regionMainClasses }}">

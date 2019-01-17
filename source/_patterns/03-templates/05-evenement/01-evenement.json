@@ -2,16 +2,13 @@
   "text-elements": {
     "headings":{
       "display":{
-        "classes": "h4",
+        "classes": "h2",
         "content": "Template événement"
       }
     }
   },
   "has-informations": true,
-  "has-hub-link":{
-    "url": "#",
-    "link-text": "Tous les événements"
-  },
+  "has-hub-link": false,
   "has-media-image": true,
   "has-media-gallery": true,
   "media-image": {
@@ -19,29 +16,18 @@
     "mediaSize": "1000x667",
     "mediaAlt": "Media #1072"
   },
-  "badges":[
-    {
-      "badge": "Catégorie",
-      "badgeClass": "",
-      "badgeUrl": "#"
-    }
-  ],
   "list-icon-item": [
     {
-      "url": false,
-      "class": false,
       "icon-item": {
         "icon-label": "005-calendrier"
       },
-      "content": "Samedi 12 septembre 2018"
-    },
-    {
-      "url": false,
-      "class": false,
-      "icon-item": {
-        "icon-label": "113-prix"
-      },
-      "content": "Entrée libre"
+      "item": [
+        {
+          "url": false,
+          "class": false,
+          "content": "Jeudi 17 janvier de 09 h 00 à 10 h 00"
+        }
+      ]
     }
   ],
   "has-documents": true,
@@ -51,7 +37,7 @@
     "has-facebook": true,
     "has-instagram": false,
     "has-twitter": true,
-    "has-linkedin": true,
+    "has-linkedin": false,
     "has-youtube": false
   },
   "mediaGallery": [
