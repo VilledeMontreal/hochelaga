@@ -24,7 +24,16 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 - List of icons: add an optionnal wrapper to allow for multiple chuck of content inside a list-item.
 
 
-## [2.6.1] - 2019-01-10
+## [2.6.2] - Unreleased
+
+## Added
+- Added sticky-footer capacity. @see templates > Layout Pages > Sticky Footer  
+
+## Changed
+- PatternLab: Modified Vues avec filtres datas in patterns.
+
+
+## [2.6.1] - 2018-01-09
 
 ## Added
 - Added vues Petitions templates.
