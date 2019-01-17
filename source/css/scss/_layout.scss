@@ -6,6 +6,10 @@
   padding-left: $grid-gutter-width;
 }
 
+.container-fluid-max-xl {
+  max-width: map-get($content-max-widths, xl);    // 1600px
+}
+
 //
 // Main content header
 .content-header {
@@ -119,12 +123,6 @@
       margin: 0 auto 30px auto;
       max-width: 250px;
     }
-    /*
-    .hub-link {
-      justify-content: flex-start;
-      padding-bottom: 2rem;
-    }
-    */
     .content-header-infos {
       color: $headings-color;
       margin-bottom: 1rem;
@@ -173,6 +171,7 @@
 
   // Variant for jumbotron style content-header
   &.content-header-jumbotron {
+    padding-top: 0;
     .content-header-wrapper {
       height: 100%;
       padding: 2rem;
@@ -180,7 +179,21 @@
       flex-direction: column;
     }
     .content-header-headings {
-      margin-bottom: 3rem;
+      margin-top: 2.5rem;
+      margin-bottom: 2rem;
+      position: relative;
+      .label {
+        font-weight: $font-weight-bold;
+        padding-right: 1rem;
+      }
+    }
+    .content-header-headings-state {
+      position: absolute;
+      transform: translateY(-100%);
+    }
+    .content-header-metadata {
+      margin-top: auto;
+      padding-bottom: 0;
     }
     @include media-breakpoint-up(lg) {
       .content-header-wrapper {
@@ -254,29 +267,6 @@
 .hub-link {
   padding-bottom: 2rem;
 }
-/*
-.hub-link {
-  color: $gray-600;
-  font-size: $font-size-base;
-  padding-bottom: 2rem;
-  a {
-    color: $gray-ink;
-    @include transition(color .15s ease-in-out);
-    @include hover-focus {
-      color: $sarcelle;
-    }
-  }
-
-  // 992px and up
-  @include media-breakpoint-up(xl) {
-    display: flex;
-    //flex-flow: row wrap;
-    justify-content: flex-end;
-    align-self: flex-end;
-    padding-bottom: 0;
-  }
-}
-*/
 
 .region-content {
   padding-top: 4.5rem;
@@ -330,6 +320,7 @@
 
 
 // Sidebar left and right mobile spacing
+/*
 .sidebar-right {
   margin-top: 3rem;
   margin-bottom: -3rem;
@@ -338,6 +329,7 @@
     margin-bottom: 0;
   }
 }
+*/
 
 //
 // Section with BG image
@@ -578,7 +570,6 @@
 }
 
 // border-bottom-content
-
 .border-bottom-content {
   > div {
     border-bottom: 1px solid $gray-700;

@@ -7,6 +7,7 @@
     border: none;
     color: $gray-700;
     @include transition(color .15s ease-in-out);
+    font-weight: $font-weight-bold;
     &:hover {
       color: $sarcelle-surprise;
     }

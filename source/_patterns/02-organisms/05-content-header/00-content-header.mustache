@@ -1,17 +1,7 @@
 <header class="content-header {{ contentHeaderClasses }}">
   <div class="{{ contentHeaderContainerClasses }}">
     <div class="row">
-      {{# has-hub-link}}
       <div class="col-12">
-        <div class="hub-link">
-          <a href="{{ url }}">{{ link-text }}</a>
-        </div>
-      </div>
-      {{/ has-hub-link}}
-      <div class="col-12">
-        {{# has-breadcrumb}}
-        {{> molecules-breadcrumbs}}
-        {{/ has-breadcrumb}}
         <div class="content-header-title">
           {{> atoms-display-heading }}
         </div>

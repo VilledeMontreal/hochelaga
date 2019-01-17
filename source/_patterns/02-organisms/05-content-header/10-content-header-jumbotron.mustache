@@ -1,44 +1,28 @@
 <header class="content-header content-header-jumbotron {{ contentHeaderClasses }}">
   <div class="{{ contentHeaderContainerClasses }}">
-    {{# has-hub-link}}
-    <div class="row">
-      <div class="col-12">
-        <div class="hub-link">
-          <a href="{{ url }}">{{ link-text }}</a>
-        </div>
-      </div>
-    </div>
-    {{/ has-hub-link}}
-    <div class="row no-gutters">
-      {{^ has-media-image }}
-      <div class="col-12">
-        <div class="content-header-wrapper bg-gray-sky">
+    <div class="row no-gutters bg-gray-sky">
+      <div class="col-12 {{^has-media-image}}col-xl-8{{/ has-media-image}}{{# has-media-image}}col-lg-6 col-xl-5{{/ has-media-image}}">
+        <div class="content-header-wrapper">
           <div class="content-header-headings">
-            {{> atoms-display-heading }}
-            {{# badges }}
+            {{# state}}
+            <div class="content-header-headings-state">
             {{> atoms-badge}}
-            {{/ badges }}
+            </div>
+            {{/ state}}
+            {{> atoms-display-heading }}
+            {{# organised-by}}
+            <div class="content-header-label">
+              <span class="label">Organisé par</span>
+              <a href="{{ url }}">{{ title }}</a>
+            </div>
+            {{/ organised-by}}
           </div>
           <div class="content-header-metadata">
             {{> atoms-text-icons-list}}
           </div>
         </div>
       </div>
-      {{/ has-media-image }}
       {{# has-media-image }}
-      <div class="col-12 col-lg-6 col-xl-5">
-        <div class="content-header-wrapper bg-gray-sky">
-          <div class="content-header-headings">
-            {{> atoms-display-heading }}
-            {{# badges }}
-            {{> atoms-badge}}
-            {{/ badges }}
-          </div>
-          <div class="content-header-metadata">
-            {{> atoms-text-icons-list}}
-          </div>
-        </div>
-      </div>
       <div class="col-12 col-lg-6 col-xl-7">
         {{# has-media-gallery }}
         <div class="media-gallery-button">

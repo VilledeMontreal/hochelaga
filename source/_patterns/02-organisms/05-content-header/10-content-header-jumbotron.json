@@ -1,52 +1,49 @@
 {
+  "state": false,
   "text-elements": {
     "headings":{
       "display":{
-        "classes": "h4",
-        "content": "Complexe Aquatique Michel-Leduc (Aquadôme)"
+        "classes": "h2",
+        "content": "Célébrez le temps des Fêtes à l'hôtel de ville de Montréal"
       }
     }
   },
-  "has-informations": true,
-  "has-hub-link":{
-    "url": "#",
-    "link-text": "Tous les ..."
-  },
+  "has-hub-link": false,
+  "has-breadcrumb": true,
+  "breadcrumbs": [
+    {
+      "url": "#",
+      "text": "Accueil"
+    },
+    {
+      "url": "#",
+      "text": "Niveau 1"
+    },
+    {
+      "url": "#",
+      "text": "Type d'événement"
+    }
+  ],
   "has-media-image": true,
   "media-image": {
     "mediaSrc": "https://picsum.photos/1000/667?image=1072",
     "mediaSize": "1000x667",
     "mediaAlt": "Media #1072"
   },
-  "badges":[
-    {
-      "badge": "Catégorie",
-      "badgeClass": "",
-      "badgeUrl": "#"
-    }
-  ],
+  "organised-by": {
+    "url": "#",
+    "title": "Ville de Montréal"
+  },
   "list-icon-item": [
     {
       "icon-item": {
-        "icon-label": "037-horloge"
+        "icon-label": "005-calendrier"
       },
       "item": [
         {
           "url": false,
           "class": false,
-          "content": "Aujourd'hui <span class=\"date-time-range\">9 h 30 - 12 h 00 — 14 h 00 - 21 h 00</span>"
-        }
-      ]
-    },
-    {
-      "icon-item": {
-        "icon-label": "091-localisation"
-      },
-      "item": [
-        {
-          "url": false,
-          "class": false,
-          "content": "<address>1411, rue Lapierre<br>Montréal (Québec) H8N 2J4</address><a href=\"#mapEventId\" class=\"js-scroll-trigger\">Afficher la carte</a>"
+          "content": "du 28 décembre 2019 - 17 h 00<br>au 19 janvier 2020 - 18 h 00"
         }
       ]
     }
