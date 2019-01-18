@@ -18,13 +18,19 @@
       {{/ modal }}
       {{/ url }}
       {{^ url }}
-      {{# tag }}
-      <{{tag}}>
-      {{/ tag }}
+
+      {{^ tag }}
       {{{ content }}}
-      {{# tag }}
-      </{{tag}}>
       {{/ tag }}
+
+      {{# tag.span }}
+      <span>{{{ content }}}</span>
+      {{/ tag.span }}
+
+      {{# tag.div }}
+      <div class="list-icon-block">{{{ content }}}</div>
+      {{/ tag.div }}
+
       {{/ url }}
     {{/ item }}
     </div>

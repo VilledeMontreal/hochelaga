@@ -1,6 +1,6 @@
 <div class="sidebar {{ sidebarClasses }}">
   <section class="sb-block">
-    <ul class="list-icon">
+    <!--<ul class="list-icon">
       <li class="list-icon-item">
         {{> atoms-fonticon-item(icon-label: "091-localisation") }}
         
@@ -46,6 +46,10 @@
         </div>
       </li>
     </ul>
+    -->
+    {{# evenement-list-infos }}
+    {{> atoms-text-icons-list }}
     {{> atoms-social-media-icons-list}}
+    {{/ evenement-list-infos }}
   </section>
 </div>

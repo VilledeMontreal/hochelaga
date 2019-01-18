@@ -42,16 +42,19 @@
               Sed vel risus nec nisl ultricies mollis at eu diam. Donec vitae orci congue, vulputate lacus ut, posuere ipsum.</p>
 
           {{# has-documents }}
-          <h3>Document</h3>
+          <h3 class="h4">Documents</h3>
           <ul>
-            <li><a href="test.pdf">Programme de l'événement</a></li>
+            {{# documents}}
+            <li><a href="{{ url }}">{{ title }}</a></li>
+            {{/ documents}}
           </ul>
           {{/ has-documents}}
 
           {{# has-video }}
+          <h3 class="h4">{{ section-title }}</h3>
           <div class="media-container">
             <div class="media embed-responsive embed-responsive-16by9">
-              <iframe class="embed-responsive-item" src="//www.youtube.com/embed/rBfphgabDhU" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+              <iframe class="embed-responsive-item" src="{{ src }}" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
             </div>
           </div>
           {{/ has-video }}
@@ -81,9 +84,11 @@
 
  <script>
     var startZoom = 16;
-    var center = [-73.662623, 45.553576];
+    var pointLngLat = [{{{ map.lngLat }}}];
+    var center = pointLngLat;
     var maxBounds = [[-74.3965936,45.319517],[-73.442801,45.751651]];
     var marker = new mapboxgl.Marker(defaultMarker());
+    var address = "{{{map.address}}}";
     var mapboxStyle = {
     version: 8,
     name: 'basic',
@@ -425,7 +430,7 @@
     interactive: false,
   });
 
-  marker.setLngLat([-73.662623, 45.553576]).addTo(map);
+  marker.setLngLat(pointLngLat).addTo(map);
 
   var markerHeight = 50, markerRadius = 10, linearOffset = 25;
   var popupOffsets = {
@@ -439,8 +444,8 @@
   'right': [-markerRadius, (markerHeight - markerRadius) * -1]
   };
   var popup = new mapboxgl.Popup({closeButton: false, closeOnClick: false, offset: popupOffsets, className: 'map-popup'})
-    .setLngLat([-73.662623, 45.553576])
-    .setHTML("<address><strong>Maison de la culture Ahuntsic-Cartierville</strong><br>10300, rue Lajeunesse<br>Montréal (Québec) H3L 2E5</address>")
+    .setLngLat(pointLngLat)
+    .setHTML(address)
     .addTo(map);
 
   function defaultMarker() {

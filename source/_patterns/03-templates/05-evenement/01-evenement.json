@@ -30,8 +30,18 @@
       ]
     }
   ],
-  "has-documents": true,
-  "has-video": true,
+  "has-documents": {
+    "documents": [
+      {
+        "url": "test.pdf",
+        "title": "Titre du document"
+      }
+    ]
+  },
+  "has-video": {
+    "section-title": "Vidéo",
+    "src": "//www.youtube.com/embed/rBfphgabDhU"
+  },
   "social-media-icons-list": {
     "has-label": false,
     "has-facebook": true,
@@ -113,5 +123,9 @@
         "width": "600"
       }
     }
-  ]
+  ],
+  "map": {
+    "address": "<address><a href='#'>Bibliothèque Jacqueline-De Repentigny</a><br>5955, avenue Bannantyne<br>Montréal (Québec) H4H 1H6</address>",
+    "lngLat": "-73.577946, 45.448775"
+  }
 }
