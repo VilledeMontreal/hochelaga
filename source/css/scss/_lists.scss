@@ -58,9 +58,6 @@ ol {
     }
     &:last-child {
       padding-bottom: 0;
-      .list-icon-content {
-        margin-bottom: 0;
-      }
     }
     > .vdm {
       background: transparent;
@@ -73,11 +70,24 @@ ol {
   .list-icon-label {
     font-weight: $font-weight-bold;
     display: block;
+    margin-bottom: .5rem;
   }
 
   .list-icon-content {
-    //margin-bottom: 1rem;
     width: 100%;
+    .list-icon-block {
+      margin-bottom: 1rem;
+      width: 100%;
+      &:last-child {
+        margin-bottom: 0;
+      }
+      > * {
+        @include clearfix;
+      }
+    }
+    &:last-child {
+      margin-bottom: 0;
+    }
     > * {
       @include clearfix;
     }

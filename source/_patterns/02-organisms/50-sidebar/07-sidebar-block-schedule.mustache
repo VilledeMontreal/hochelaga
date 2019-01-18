@@ -89,20 +89,28 @@
         {{> atoms-fonticon-item(icon-label: "091-localisation") }}
         <div class="list-icon-content">
           <span class="list-icon-label">Adresse</span>
-          <address>
-            10300, rue Lajeunesse<br>
-            Montréal (Québec) H3L 2E5
-          </address>
-          <a href="#{{ map.mapID }}" class="js-scroll-trigger">Afficher sur la carte</a>
+          <div class="list-icon-block">
+            <address>
+              10300, rue Lajeunesse<br>
+              Montréal (Québec) H3L 2E5
+            </address>
+          </div>
+          <div class="list-icon-block">
+            <a href="#{{ map.mapID }}" class="js-scroll-trigger">Afficher sur la carte</a>
+          </div>
         </div>
       </li>
       <li class="list-icon-item">
         {{> atoms-fonticon-item(icon-label: "012-telephone") }}
         <div class="list-icon-content">
           <span class="list-icon-label">Contact</span>
-          Tél. : 514 872-3107 poste 123<br>
-          Fax : 514 872-2222<br>
-          <a href="mailto:service.administratif@ville.montreal.qc.ca">Écrire un courriel</a>
+          <div class="list-icon-block">
+            Tél. : 514 872-3107 poste 123<br>
+            Fax : 514 872-2222
+          </div>
+          <div class="list-icon-block">
+            <a href="mailto:service.administratif@ville.montreal.qc.ca">Écrire un courriel</a>
+          </div>
         </div>
       </li>
     </ul>
