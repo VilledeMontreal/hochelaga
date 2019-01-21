@@ -25,7 +25,7 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 - List of icons: add an optionnal wrapper to allow for multiple chuck of content inside a list-item.
 
 
-## [2.6.2] - Unreleased
+## [2.6.2] - 2018-01-21
 
 ## Added
 - Added sticky-footer capacity. @see templates > Layout Pages > Sticky Footer  
@@ -377,6 +377,7 @@ remove index from the name. Which makes it possible to update font-icon without 
 - Removed vdm prefix for buttons classes
 
 
+[2.6.2]: https://bitbucket.org/villemontreal/boite-outils-web/src/2.6.2/
 [2.6.1]: https://bitbucket.org/villemontreal/boite-outils-web/src/2.6.1/
 [2.6.0]: https://bitbucket.org/villemontreal/boite-outils-web/src/2.6.0/
 [2.5.1]: https://bitbucket.org/villemontreal/boite-outils-web/src/2.5.1/
