@@ -14,12 +14,14 @@ html {
   display: flex;
   flex-direction: column;
   height: 100%; /* 1, 3 */
+  > .site-header,
+  > .site-footer,
   > header,
   > footer {
     flex: none; /* 2 */
   }
 
-  .main-content {
+  .site-main-content {
     flex: 1 0 auto; /* 2 */
     width: 100%;
   }
