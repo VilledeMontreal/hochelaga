@@ -4,7 +4,17 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](http://keepachangelog.com/en/1.0.0/)
 and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.html).
 
-## [2.6.1] - unreleased
+
+## [2.6.2] - Unreleased
+
+## Added
+- Added sticky-footer capacity. @see templates > Layout Pages > Sticky Footer  
+
+## Changed
+- PatternLab: Modified Vues avec filtres datas in patterns.
+
+
+## [2.6.1] - 2018-01-09
 
 ## Added
 - Added vues Petitions templates.
@@ -346,6 +356,7 @@ remove index from the name. Which makes it possible to update font-icon without 
 - Removed vdm prefix for buttons classes
 
 
+[2.6.1]: https://bitbucket.org/villemontreal/boite-outils-web/src/2.6.1/
 [2.6.0]: https://bitbucket.org/villemontreal/boite-outils-web/src/2.6.0/
 [2.5.1]: https://bitbucket.org/villemontreal/boite-outils-web/src/2.5.1/
 [2.5.0]: https://bitbucket.org/villemontreal/boite-outils-web/src/2.5.0/
