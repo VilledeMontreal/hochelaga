@@ -13,6 +13,7 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 
 ## Changed
 - PatternLab: refactor data to allow for new multiple content inside a list-item.
+- .text-icon-list now allows .list-icon-block inside .list-icon-content to stack some block of datas.
 - Changed hub-link positionning.
 - Featured image placement in Nouvelle template.
 - Evenement et lieu utilise le nouveau Content header jumbotron component.

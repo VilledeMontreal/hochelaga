@@ -47,6 +47,10 @@ ol {
 }
 
 // list of items with icons
+.list-icon-heading {
+  font-weight: $font-weight-bold;
+  margin-bottom: .5rem;
+}
 .list-icon {
   @extend .list-unstyled;
   .list-icon-item {
