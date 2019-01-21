@@ -14,8 +14,8 @@ html {
   display: flex;
   flex-direction: column;
   height: 100%; /* 1, 3 */
-  .site-header,
-  .site-footer,
+  > .site-header,
+  > .site-footer,
   > header,
   > footer {
     flex: none; /* 2 */
