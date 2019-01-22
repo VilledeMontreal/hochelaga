@@ -56,11 +56,22 @@
       background-color: $sarcelle-surprise;
       border-color: $sarcelle-surprise;
     }
+    // Active state is same as hover-focus state
+    &.active {
+      color: $white;
+      background-color: $sarcelle-surprise;
+      border-color: $sarcelle-surprise;
+    }
 
     &.badge-light {
       border: 1px solid $white;
       color: $white;
       @include hover-focus {
+        background-color: $sarcelle-surprise;
+        border-color: $sarcelle-surprise;
+      }
+      // We have to set border-color for badge-light active state
+      &.active {
         background-color: $sarcelle-surprise;
         border-color: $sarcelle-surprise;
       }
