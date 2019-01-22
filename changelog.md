@@ -5,6 +5,16 @@ The format is based on [Keep a Changelog](http://keepachangelog.com/en/1.0.0/)
 and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.html).
 
 
+## [2.6.3] - Unreleased
+
+## Added
+- Added .badges-lg and .badges-xl utility classes for badges font-size.
+- Added .active class for link badge.
+
+## Changed
+- Updated vues Applied-filters section with new utility classes
+
+
 ## [2.6.2] - 2018-01-21
 
 ## Added
