@@ -1,6 +1,6 @@
 #!groovy
 
-@Library('cicd-shared-library')
+@Library('cicd-lib')
 import vdmtl.cicd.MultibranchPipeline
 
 pipeline = new MultibranchPipeline();
