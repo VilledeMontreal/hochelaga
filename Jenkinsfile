@@ -6,9 +6,9 @@ import vdmtl.cicd.MultibranchPipeline
 pipeline = new MultibranchPipeline();
 ctx = pipeline.createContext([
     "hipchatRoom" : [
-        "PRODUCTION": "4285211",
-        "DEVELOPMENT": "4285211",
-        "ACCEPTANCE": "4285211"
+        "PRODUCTION": "boîte-à-outils-web",
+        "DEVELOPMENT": "boîte-à-outils-web",
+        "ACCEPTANCE": "boîte-à-outils-web"
     ],
     "dockerImageBaseName": "vdmtl/boite-outils-web",
     "workspaceDir": "/home/jenkins/boite-outils-web",
