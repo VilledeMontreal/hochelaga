@@ -13,6 +13,7 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 
 ## Changed
 - Updated vues Applied-filters section with new utility classes
+- Upated Notification from hipChat to slack room.
 
 
 ## [2.6.2] - 2018-01-21
