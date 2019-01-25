@@ -6,8 +6,14 @@
  * @see pattern-scaffolding.css in mustache demo starterkit for reference
  */
 
+ @import "../scss/functions";
+ @import "~bootstrap/scss/functions";
+ // Default variables override.
+ // MUST come before bootstrap variables in SASS because of !default tags used in framework variables
+ @import "../scss/variables";
+
 // Import variables and bootstrap framework - duplicate but required
-@import '../scss/variables';
+// @import '../scss/variables';
 
 // Bootstrap Framework.
 @import '../styles';
