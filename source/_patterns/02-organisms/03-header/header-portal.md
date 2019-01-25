@@ -1,7 +1,7 @@
 ---
-title: Header for the portal
+title: Header portal
 ---
 
 Main header for the portal website
 
-Add the class <code>.fixed-top</code> to fix header at the top of the browser. Disable to prevent weird behavior with templates and pages.
+Optionnal <code>.top-banner</code> can be added on top of main navigation.
