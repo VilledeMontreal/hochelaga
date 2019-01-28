@@ -407,7 +407,7 @@ $input-height-lg:                       calc(#{$input-height-inner-lg} + #{$inpu
 
 // custom forms
 
-$custom-control-indicator-disabled-bg:          $gray-300;
+$custom-control-indicator-disabled-bg:          $gray-400;
 $custom-control-label-disabled-color:           $gray-600;
 
 $custom-control-gutter:                         .625rem;
@@ -415,17 +415,29 @@ $custom-control-spacer-y:                       1rem; // Custom VDM addon
 
 $custom-control-indicator-size:                 1.375rem;
 $custom-control-indicator-bg:                   $white;
+$custom-control-indicator-border-width:         $input-border-width;
 
 $custom-control-indicator-active-box-shadow:    none !important;
 $custom-control-indicator-active-bg:            none !important;
 $custom-control-indicator-checked-color:        $white;
 $custom-control-indicator-checked-bg:           $primary;
 
+$custom-control-indicator-checked-disabled-bg:  $custom-control-indicator-disabled-bg;
+
+
 $custom-checkbox-indicator-border-radius:         $border-radius-lg;
 $custom-checkbox-indicator-icon-checked-bg-size:  1.1875rem;  
 $custom-checkbox-indicator-icon-checked:          str-replace(url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 340 340'%3E%3Cpath fill='#{$custom-control-indicator-checked-color}' d='M140,250a10,10,0,0,1-7.07-2.93l-60-60a10,10,0,0,1,14.14-14.14L140,225.86,252.93,112.93a10,10,0,0,1,14.14,14.14l-120,120A10,10,0,0,1,140,250Z'/%3E%3C/svg%3E"), "#", "%23");
 
 $custom-radio-indicator-icon-checked-bg-size:     .625rem;
+
+$custom-switch-control-indicator-size:            1.75rem;
+$custom-switch-control-indicator-color:           $primary;
+$custom-switch-control-indicator-disabled-color:  $white;
+$custom-switch-inner-padding:                     .125rem;
+$custom-switch-width:                             $custom-switch-control-indicator-size * 2;
+$custom-switch-indicator-border-radius:           $custom-switch-control-indicator-size;
+$custom-switch-indicator-size:                    calc(#{$custom-switch-control-indicator-size} - #{$custom-control-indicator-border-width * 4});
 
 
 // Form validation
