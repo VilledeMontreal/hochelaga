@@ -5,7 +5,23 @@ The format is based on [Keep a Changelog](http://keepachangelog.com/en/1.0.0/)
 and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.html).
 
 
-## [2.6.3] - Unreleased
+## 2.7.0 - Unreleased
+
+## Added
+- New switches available in bootstrap v4.2.1. Our switches will be deprecated in v3
+
+## Changed
+- Updated to bootstrap v4.2.1
+- Review all available variables. Reorder and update values based on Bootstrap v4.2.1.
+
+## Fixed
+- Fixed minor issues with custom-checkboxes and custom-radios padding new calculation.
+
+## Deprecated
+- Our switches will be deprecated in favor of boostrap new switches component.
+
+
+## [2.6.3] - 2018-01-26
 
 ## Added
 - Added .badges-lg and .badges-xl utility classes for badges font-size.

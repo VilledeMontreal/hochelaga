@@ -3,19 +3,9 @@
 // Variables should follow the `$component-state-property-size` formula for
 // consistent naming. Ex: $nav-link-disabled-color and $modal-content-box-shadow-xs.
 
-// Assets path
-
-$assets-img-paths : "../../../images" !default;
-$assets-icons-path : "../../../images/icons" !default;
-$assets-font-path: '../fonts' !default;
-
-//
 // Color system
-//
-
 
 // Grays
-
 $white:    #fff;
 $gray-100: #f8f9fa;
 $gray-200: #e9ecef;
@@ -46,16 +36,16 @@ $red-montreal:      #e00000;
 // UI color
 
 // $blue:    #005fc9; 
-$blue:    #0296c0;          // VDM
+$blue:    #0296c0;            // VDM
 $indigo:  #6610f2 !default;
 $purple:  #6f42c1 !default;
 $pink:    #e83e8c !default;
 $red:     #ff3200;
 //$red:     $red-montreal;      // VDM
 $orange:  #fd7e14 !default;
-$yellow:  #fecc03;          // VDM
+$yellow:  #fecc03;            // VDM
 // $green:   #02c876;
-$green:   #0da566;          // VDM
+$green:   #0da566;            // VDM
 $teal:    #20c997 !default;
 $cyan:    #17a2b8 !default;
 
@@ -84,7 +74,6 @@ $theme-colors: map-merge((
   "light":      $light,
   "dark":       $dark
 ), $theme-colors);
-// stylelint-enable
 
 $button-colors: () !default;
 // stylelint-disable-next-line scss/dollar-variable-default
@@ -92,7 +81,6 @@ $button-colors: map-merge((
   "primary":    $primary,
   "secondary":  $secondary,
 ), $button-colors);
-// stylelint-enable
 
 $dialog-colors: () !default;
 // stylelint-disable-next-line scss/dollar-variable-default
@@ -105,7 +93,12 @@ $dialog-colors: map-merge(
   ),
   $dialog-colors
 );
-// stylelint-enable
+
+
+// Options
+
+$enable-validation-icons:   false;
+
 
 // Spacing
 //
@@ -113,6 +106,7 @@ $dialog-colors: map-merge(
 // From 8px (1) to 160px (20)
 $spacer: .5rem;
 $spacers: ();
+// stylelint-disable-next-line scss/dollar-variable-default
 $spacers: map-merge((
   0:  0,
   1:  ($spacer),
@@ -137,6 +131,7 @@ $spacers: map-merge((
   20: ($spacer * 20)
 ), $spacers);
 
+
 // Body
 //
 // Settings for the `<body>` element.
@@ -144,11 +139,12 @@ $spacers: map-merge((
 $body-bg:               $white;
 $body-color:            $gray-ink;
 
+
 // Links
 //
 // Style anchor elements.
 
-$link-color:                  $sarcelle-surprise; //$gray-900;
+$link-color:                  $sarcelle-surprise;
 $link-border-color:           $sarcelle-atmos;
 $link-border-width:           1px;
 $link-decoration:             none;
@@ -161,26 +157,43 @@ $link-hover-decoration:       none;
 
 $paragraph-margin-bottom:     2rem;
 
+
 // Grid containers
 //
 // Define the maximum width of `.container` for different screen sizes.
 
-$container-max-widths: (
-  sm: 570px,
-  md: 750px,
-  lg: 990px,
-  xl: 1170px
+$container-max-widths: ();
+// stylelint-disable-next-line scss/dollar-variable-default
+$container-max-widths: map-merge(
+  (
+    sm: 570px,
+    md: 750px,
+    lg: 990px,
+    xl: 1170px
+  ),
+  $container-max-widths
 );
 
-$content-max-widths: (
-  md: 750px,
-  lg: 1110px,
-  xl: 1600px
-) !default;
+$content-max-widths: () !default;
+// stylelint-disable-next-line scss/dollar-variable-default
+$content-max-widths: map-merge(
+  (
+    md: 750px,
+    lg: 1110px,
+    xl: 1600px
+  ),
+  $content-max-widths
+);
+
+@include _assert-ascending($content-max-widths, "$content-max-widths");
+
 
 // Components
 //
 // Define common padding and border radius sizes and more.
+
+$line-height-lg:              1.5555;
+$line-height-sm:              1.3333;
 
 $border-width:                1px;
 $border-color:                $gray-300;
@@ -189,17 +202,13 @@ $border-radius:               .25rem;
 $border-radius-lg:            .3125rem;
 $border-radius-sm:            .2rem;
 
-$headings-color:              $gray-900;
-
-$mark-color:                  $gray-900;
-
 $component-active-color:      $white;
 $component-active-bg:         theme-color("primary");
-
 
 // Generic value for backdrop bg and opacity
 $backdrop-bg:                 $gray-800;
 $backdrop-opacity:            .3;
+
 
 // Fonts
 //
@@ -207,20 +216,18 @@ $backdrop-opacity:            .3;
 
 $font-family-base:            'Nunito Sans', Helvetica, Arial, sans-serif;
 
-$font-weight-light:           300; // Nunito Sans Light         
-$font-weight-regular:         400; // Nunito Sans Regular
-$font-weight-bold:            700; // Nunito Sans Bold
-$font-weight-normal:          $font-weight-regular;
-
-$line-height-base:            1.5555;
-$line-height-lg:              1.5555;
-$line-height-sm:              1.3333;
-
 $font-size-base:              1.125rem;     // ~18px if browser default is 16px
 $font-size-xl:                1.5rem;       // ~24px
 $font-size-lg:                1.3125rem;    // ~21px
 $font-size-sm:                0.9375rem;    // ~15px
 $font-size-xs:                0.75rem;      // ~12px
+
+$font-weight-light:           300; // Nunito Sans Light
+$font-weight-normal:          400;  // Nunito Sans Regular     
+$font-weight-regular:         $font-weight-normal;
+$font-weight-bold:            700; // Nunito Sans Bold
+
+$line-height-base:            $line-height-lg;
 
 // Headings font-size and line-height are made responsive
 // @see type.scss
@@ -257,10 +264,12 @@ $lead-font-size:              $font-size-xl;              // 24px
 $lead-line-height:            1.5;                        // 36px
 $lead-font-weight:            $font-weight-regular;
 
+$mark-color:                  $gray-900;
+
 $small-font-size:             .75em;
 
 $blockquote-small-color:      $body-color;
-$blockquote-font-size:        1.25rem;
+$blockquote-font-size:        $font-size-lg;
 
 $hr-margin-y:                 ($spacer * 2);
 
@@ -294,150 +303,8 @@ $table-dark-color:            $body-bg;
 $table-striped-order:         odd;
 
 
-//== Icons fonts vdm class, imported from "@villemontreal/font-icon
+// Icons fonts vdm class, imported from "@villemontreal/font-icon
 $vdm-icon-font-family : 'vdm';
-
-// Navs
-
-$nav-link-padding-y:                1.5rem;
-$nav-link-padding-x:                2rem;
-
-$nav-tabs-border-color:             $gray-300;
-$nav-tabs-border-width:             1px;
-$nav-tabs-border-radius:            0;
-$nav-tabs-link-hover-border-color:  $brand;
-$nav-tabs-link-active-color:        $black;
-$nav-tabs-link-active-bg:           $body-bg;
-$nav-tabs-link-active-border-color: $brand;
-
-$nav-tabs-spacing:                  4px;
-$nav-tabs-active-border-width:      4px;
-
-// Navbar
-
-$navbar-height: 114px;
-$top-banner-height : 50px;
-
-$header-total-height : $top-banner-height + $navbar-height;
-
-// Pagination
-
-$pagination-padding-y:              .625rem;
-$pagination-padding-x:              1.125rem;
-$pagination-padding-y-sm:           .3rem;
-$pagination-padding-x-sm:           .6rem;
-$pagination-padding-y-lg:           .75rem;
-$pagination-padding-x-lg:           1.5625rem;
-$pagination-line-height:            1.25;
-
-$pagination-icon-padding:           .785rem;
-$pagination-icon-padding-sm:        .425rem;
-$pagination-icon-padding-lg:        1.0625rem;
-
-$pagination-color:                  $gray-600;
-$pagination-bg:                     $white;
-$pagination-border-width:           1px;
-$pagination-border-color:           $gray-400;
-
-$pagination-hover-color:            $primary;
-$pagination-hover-bg:               $gray-sky;
-$pagination-hover-border-color:     $gray-400;
-
-$pagination-active-color:           $white;
-$pagination-active-bg:              $primary;
-$pagination-active-border-color:    $gray-400; 
-
-$pagination-disabled-color:         $gray-400;
-$pagination-disabled-bg:            $white;
-$pagination-disabled-border-color:  $gray-400;
-
-
-// Figures
-
-$figure-caption-font-size:          90%;
-$figure-caption-color:              $gray-ink;
-
-
-// Breadcrumbs
-
-$breadcrumb-padding-y:              .75rem;
-$breadcrumb-padding-x:              0;
-$breadcrumb-item-padding:           1rem;
-
-$breadcrumb-margin-bottom:          1rem;
-
-$breadcrumb-bg:                     transparent;
-$breadcrumb-divider-color:          $gray-700;
-$breadcrumb-active-color:           $gray-700;
-$breadcrumb-divider:                quote(">");
-
-$breadcrumb-border-radius:          0;
-
-
-// Jumbotron
-
-$jumbotron-padding:                 3rem;
-$jumbotron-bg:                      $gray-sky;
-
-
-// Cards
-
-$card-border-radius:                0;
-$card-border-color:                 $gray-400;
-$card-inner-border-radius:          0;
-$card-box-shadow:                   0 1px 7px 0 rgba(0,0,0,0.1);
-
-
-//
-// Alerts
-//
-// Define alert colors, border radius, and padding.
-
-$alert-padding-y:                   1.5rem;
-$alert-padding-x:                   1.5rem;
-$alert-margin-bottom:               1rem;
-$alert-border-radius:               0;
-$alert-link-font-weight:            $font-weight-bold;
-$alert-border-width:                0;
-
-
-// Progress circle bars
-
-$progress-circle-border-width:          5px;
-$progress-circle-border-color-default:  $gray-300;
-$progress-circle-border-color-fill:     $gray-700;
-$progress-circle-size:                  100px;
-$progress-circle-steps:                 100; //this needs to be even.
-$progress-circle-animation-timing:      .5s;
-
-// List group
-
-$list-group-bg:                     $white;
-$list-group-border-color:           $gray-500;
-$list-group-border-width:           $border-width;
-$list-group-border-radius:          0;
-
-$list-group-item-padding-y:         1rem;
-$list-group-item-padding-x:         1.5rem;
-
-$list-group-hover-bg:               $gray-100;
-$list-group-active-color:           $sarcelle;
-$list-group-active-bg:              $sarcelle-lightest;
-$list-group-active-border-color:    $list-group-border-color;
-
-$list-group-action-color:           $sarcelle-surprise;
-$list-group-action-hover-color:     $sarcelle;
-
-$list-group-action-active-color:    $sarcelle;
-$list-group-action-active-bg:       $sarcelle-lightest;
-
-
-// Badges
-$badge-padding-y:                   .25em;
-$badge-padding-x:                   .4em;
-
-$badge-pill-padding-x:              .6em;
-
 
 // Input btn
 
@@ -456,6 +323,7 @@ $input-btn-line-height-sm:    $line-height-sm;
 $input-btn-padding-y-lg:      .5rem;
 $input-btn-padding-x-lg:      1rem;
 $input-btn-line-height-lg:    $line-height-lg;
+
 
 // Buttons
 //
@@ -490,9 +358,7 @@ $btn-border-radius-sm:        $btn-border-radius;
 $btn-transition:              color .15s ease-in-out, background-color .15s ease-in-out, border-color .15s ease-in-out, box-shadow .15s ease-in-out;
 
 
-//
 // Forms
-//
 
 $input-padding-y:                       $input-btn-padding-y;
 $input-padding-x:                       $input-btn-padding-x;
@@ -539,28 +405,46 @@ $input-height-sm:                       calc(#{$input-height-inner-sm} + #{$inpu
 $input-height-inner-lg:                 ($font-size-lg * $input-line-height-lg) + ($input-padding-y-lg * 2);
 $input-height-lg:                       calc(#{$input-height-inner-lg} + #{$input-height-border});
 
-
 // custom forms
 
-$custom-control-indicator-disabled-bg:          $gray-300;
+$custom-control-indicator-disabled-bg:          $gray-400;
 $custom-control-label-disabled-color:           $gray-600;
 
-$custom-control-gutter:                         2rem;
-$custom-control-spacer-y:                       1rem;
+$custom-control-gutter:                         .625rem;
+$custom-control-spacer-y:                       1rem; // Custom VDM addon
 
 $custom-control-indicator-size:                 1.375rem;
 $custom-control-indicator-bg:                   $white;
+$custom-control-indicator-border-width:         $input-border-width;
 
 $custom-control-indicator-active-box-shadow:    none !important;
 $custom-control-indicator-active-bg:            none !important;
 $custom-control-indicator-checked-color:        $white;
 $custom-control-indicator-checked-bg:           $primary;
 
+$custom-control-indicator-checked-disabled-bg:  $custom-control-indicator-disabled-bg;
+
+
 $custom-checkbox-indicator-border-radius:         $border-radius-lg;
 $custom-checkbox-indicator-icon-checked-bg-size:  1.1875rem;  
 $custom-checkbox-indicator-icon-checked:          str-replace(url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 340 340'%3E%3Cpath fill='#{$custom-control-indicator-checked-color}' d='M140,250a10,10,0,0,1-7.07-2.93l-60-60a10,10,0,0,1,14.14-14.14L140,225.86,252.93,112.93a10,10,0,0,1,14.14,14.14l-120,120A10,10,0,0,1,140,250Z'/%3E%3C/svg%3E"), "#", "%23");
 
-$custom-radio-indicator-icon-checked-bg-size:     .625rem;     
+$custom-radio-indicator-icon-checked-bg-size:     .625rem;
+
+$custom-switch-control-indicator-size:            1.75rem;
+$custom-switch-control-indicator-color:           $primary;
+$custom-switch-control-indicator-disabled-color:  $white;
+$custom-switch-inner-padding:                     .125rem;
+$custom-switch-width:                             $custom-switch-control-indicator-size * 2;
+$custom-switch-indicator-border-radius:           $custom-switch-control-indicator-size;
+$custom-switch-indicator-size:                    calc(#{$custom-switch-control-indicator-size} - #{$custom-control-indicator-border-width * 4});
+
+
+// Form validation
+
+$form-feedback-margin-top:          .5rem;
+$form-feedback-font-size:           $font-size-sm;
+
 
 // Checkbox Toggle :on/off switches
 
@@ -580,9 +464,6 @@ $checkbox-toggle-bg-toggled:            $primary;
 //
 // Dropdown menu container and contents.
 
-//$dropdown-min-width:                10rem;
-//$dropdown-padding-y:                .5rem;
-//$dropdown-spacer:                   .125rem;
 $dropdown-bg:                       $white;
 $dropdown-border-color:             $gray-400;
 $dropdown-border-radius:            0;
@@ -594,15 +475,124 @@ $dropdown-link-color:               $gray-900;
 $dropdown-link-hover-color:         darken($gray-900, 5%);
 $dropdown-link-hover-bg:            $gray-100;
 
-//$dropdown-link-active-color:        $component-active-color;
 $dropdown-link-active-bg:           $sarcelle-atmos;
-
-//$dropdown-link-disabled-color:      $gray-600;
 
 $dropdown-item-padding-y:           .5rem;
 $dropdown-item-padding-x:           2.5rem;
 
 $dropdown-header-color:             $gray-600;
+
+
+// Navs
+
+// We need to clarify these doublons
+$nav-link-padding-y:                1.5rem;
+$nav-link-padding-x:                2rem;
+$nav-link-padding-y:                1rem;
+$nav-link-padding-x:                1rem;
+
+$nav-tabs-border-color:             $gray-300;
+$nav-tabs-border-width:             1px;
+$nav-tabs-border-radius:            0;
+$nav-tabs-link-hover-border-color:  $brand;
+$nav-tabs-link-active-color:        $black;
+$nav-tabs-link-active-bg:           $body-bg;
+$nav-tabs-link-active-border-color: $brand;
+
+$nav-tabs-spacing:                  4px;
+$nav-tabs-active-border-width:      4px;
+
+$nav-divider-margin-y:              $spacer;
+
+
+// Navbar
+
+$navbar-height: 114px;
+$top-banner-height : 50px;
+
+$header-total-height : $top-banner-height + $navbar-height;
+
+$navbar-padding-y:                  $spacer;
+$navbar-padding-x:                  0;
+
+$navbar-nav-link-padding-x:         .5rem !default;
+
+$navbar-brand-font-size:            $font-size-lg !default;
+// Compute the navbar-brand padding-y so the navbar-brand will have the same height as navbar-text and nav-link
+$nav-link-height:                   ($font-size-base * $line-height-base + $nav-link-padding-y * 2) !default;
+$navbar-brand-height:               $navbar-brand-font-size * $line-height-base !default;
+$navbar-brand-padding-y:            ($nav-link-height - $navbar-brand-height) / 2 !default;
+
+$navbar-toggler-padding-y:          0;
+$navbar-toggler-padding-x:          0;
+$navbar-toggler-font-size:          2rem;
+$navbar-toggler-border-radius:      0.25rem;
+
+$navbar-dark-color:                 rgba($white, .5) !default;
+$navbar-dark-hover-color:           rgba($white, .75) !default;
+$navbar-dark-active-color:          $white !default;
+$navbar-dark-disabled-color:        rgba($white, .25) !default;
+$navbar-dark-toggler-border-color:  rgba($white, .1) !default;
+
+$navbar-light-color:                $black;
+$navbar-light-hover-color:          $black;
+$navbar-light-active-color:         $black;
+$navbar-light-disabled-color:       $gray-700;
+$navbar-light-toggler-border-color: $black;
+
+
+// Pagination
+
+$pagination-padding-y:              .625rem;
+$pagination-padding-x:              1.125rem;
+$pagination-padding-y-sm:           .3rem;
+$pagination-padding-x-sm:           .6rem;
+$pagination-padding-y-lg:           .75rem;
+$pagination-padding-x-lg:           1.5625rem;
+$pagination-line-height:            1.25;
+
+$pagination-icon-padding:           .785rem;
+$pagination-icon-padding-sm:        .425rem;
+$pagination-icon-padding-lg:        1.0625rem;
+
+$pagination-color:                  $gray-600;
+$pagination-bg:                     $white;
+$pagination-border-width:           1px;
+$pagination-border-color:           $gray-400;
+
+$pagination-hover-color:            $primary;
+$pagination-hover-bg:               $gray-sky;
+$pagination-hover-border-color:     $gray-400;
+
+$pagination-active-color:           $white;
+$pagination-active-bg:              $primary;
+$pagination-active-border-color:    $gray-400; 
+
+$pagination-disabled-color:         $gray-400;
+$pagination-disabled-bg:            $white;
+$pagination-disabled-border-color:  $gray-400;
+
+
+// Jumbotron
+
+$jumbotron-padding:                 3rem;
+$jumbotron-bg:                      $gray-sky;
+
+
+// Cards
+
+$card-border-radius:                0;
+$card-border-color:                 $gray-400;
+$card-inner-border-radius:          0;
+$card-box-shadow:                   0 1px 7px 0 rgba(0,0,0,0.1);
+
+
+// Badges
+
+$badge-padding-y:                   .25em;
+$badge-padding-x:                   .4em;
+
+$badge-pill-padding-x:              .6em;
 
 
 // Modals
@@ -631,87 +621,97 @@ $modal-header-border-width:         $modal-content-border-width;
 $modal-footer-border-width:         $modal-header-border-width;
 $modal-header-padding:              1rem;
 
+$modal-xl:                          1140px;
 $modal-lg:                          800px;
 $modal-md:                          600px;
 $modal-sm:                          300px;
 
 $modal-transition:                  transform 300ms ease-out;
 
+
+// Alerts
 //
-// Menus
-//
-$sm-menu-width:           440px;
-$sm-menu-bg:              $gray-900;
-$sm-border-width:         1px;
-$sm-border-color:         $gray-700;
-$sm-link-color:           $white;
-$sm-link-hover-color:     $sarcelle-surprise;
-$sm-link-font-size:       1.125rem; // 18px
-$sm-icon-size:            3rem;
-$sm-icon-color:           $sarcelle-surprise;
-$sm-link-padding:         1rem 2.8125rem;
-$sm-transition-dur:       300ms;
-$sm-transition-easing:    ease-in-out;
+// Define alert colors, border radius, and padding.
 
-$header-icon-width:             60px;
-$header-icon-height:            $header-icon-width;
+$alert-padding-y:                   1.5rem;
+$alert-padding-x:                   1.5rem;
+$alert-margin-bottom:               1rem;
+$alert-border-radius:               0;
+$alert-link-font-weight:            $font-weight-bold;
+$alert-border-width:                0;
 
 
-// Navs
+// Progress circle bars
 
-$nav-link-padding-y:                1rem;
-$nav-link-padding-x:                1rem;
-
-$nav-divider-margin-y:              $spacer;
-
-// Navbar
-
-
-$navbar-padding-y:                  $spacer;
-$navbar-padding-x:                  0;
+$progress-circle-border-width:          5px;
+$progress-circle-border-color-default:  $gray-300;
+$progress-circle-border-color-fill:     $gray-700;
+$progress-circle-size:                  100px;
+$progress-circle-steps:                 100; //this needs to be even.
+$progress-circle-animation-timing:      .5s;
 
 
-// Navbar
+// List group
 
-// $navbar-padding-y:                  ($spacer / 2) !default;
-// $navbar-padding-x:                  $spacer !default;
+$list-group-bg:                     $white;
+$list-group-border-color:           $gray-500;
+$list-group-border-width:           $border-width;
+$list-group-border-radius:          0;
 
-$navbar-nav-link-padding-x:         .5rem !default;
+$list-group-item-padding-y:         1rem;
+$list-group-item-padding-x:         1.5rem;
 
-$navbar-brand-font-size:            $font-size-lg !default;
-// Compute the navbar-brand padding-y so the navbar-brand will have the same height as navbar-text and nav-link
-$nav-link-height:                   ($font-size-base * $line-height-base + $nav-link-padding-y * 2) !default;
-$navbar-brand-height:               $navbar-brand-font-size * $line-height-base !default;
-$navbar-brand-padding-y:            ($nav-link-height - $navbar-brand-height) / 2 !default;
+$list-group-hover-bg:               $gray-100;
+$list-group-active-color:           $sarcelle;
+$list-group-active-bg:              $sarcelle-lightest;
+$list-group-active-border-color:    $list-group-border-color;
 
-$navbar-toggler-padding-y:          0;
-$navbar-toggler-padding-x:          0;
-$navbar-toggler-font-size:          2rem;
-$navbar-toggler-border-radius:      0.25rem;
+$list-group-action-color:           $sarcelle-surprise;
+$list-group-action-hover-color:     $sarcelle;
 
-$navbar-dark-color:                 rgba($white, .5) !default;
-$navbar-dark-hover-color:           rgba($white, .75) !default;
-$navbar-dark-active-color:          $white !default;
-$navbar-dark-disabled-color:        rgba($white, .25) !default;
-//$navbar-dark-toggler-icon-bg:       str-replace(url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 30 30' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='#{$navbar-dark-color}' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 7h22M4 15h22M4 23h22'/%3E%3C/svg%3E"), "#", "%23") !default;
-$navbar-dark-toggler-border-color:  rgba($white, .1) !default;
-
-$navbar-light-color:                $black;
-$navbar-light-hover-color:          $black;
-$navbar-light-active-color:         $black;
-$navbar-light-disabled-color:       $gray-700;
-//$navbar-light-toggler-icon-bg:      str-replace(url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 30 30' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='#{$navbar-light-color}' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 7h22M4 15h22M4 23h22'/%3E%3C/svg%3E"), "#", "%23") !default;
-$navbar-light-toggler-border-color: $black;
+$list-group-action-active-color:    $sarcelle;
+$list-group-action-active-bg:       $sarcelle-lightest;
 
 
-// - - - - - - - - - -
-// == Layout
-// - - - - - - - - - -
+// Figures
 
-$sidebar-box-h-padding:         1.75rem;
-$sidebar-box-v-padding:         1.5rem;
+$figure-caption-font-size:          90%;
+$figure-caption-color:              $gray-ink;
 
-// Vertical spacing between regions and sections
-$region-last-padding-bottom:    4rem;
-$region-padding-bottom:         3rem;
-$section-padding-bottom:        2.5rem;
+
+// Breadcrumbs
+
+$breadcrumb-padding-y:              .75rem;
+$breadcrumb-padding-x:              0;
+$breadcrumb-item-padding:           1rem;
+
+$breadcrumb-margin-bottom:          1rem;
+
+$breadcrumb-bg:                     transparent;
+$breadcrumb-divider-color:          $gray-700;
+$breadcrumb-active-color:           $gray-700;
+$breadcrumb-divider:                quote("/");
+
+$breadcrumb-border-radius:          0;
+
+
+// Slide Menus
+
+$slide-menu-width:                440px;
+$slide-menu-bg:                   $gray-900;
+$slide-menu-border-width:         1px;
+$slide-menu-border-color:         $gray-700;
+$slide-menu-link-color:           $white;
+$slide-menu-link-hover-color:     $sarcelle-surprise;
+$slide-menu-link-font-size:       1.125rem; // 18px
+$slide-menu-icon-size:            3rem;
+$slide-menu-icon-color:           $sarcelle-surprise;
+$slide-menu-link-padding:         1rem 2.8125rem;
+$slide-menu-transition-dur:       300ms;
+$slide-menu-transition-easing:    ease-in-out;
+
+
+// Header
+
+$header-icon-width:               60px;
+$header-icon-height:              $header-icon-width;
