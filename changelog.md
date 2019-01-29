@@ -25,7 +25,34 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 - List of icons: add an optionnal wrapper to allow for multiple chuck of content inside a list-item.
 
 
-## [2.6.2] - Unreleased
+## 2.7.0 - Unreleased
+
+## Added
+- New switches available in bootstrap v4.2.1. Our switches will be deprecated in v3
+
+## Changed
+- Updated to bootstrap v4.2.1
+- Review all available variables. Reorder and update values based on Bootstrap v4.2.1.
+
+## Fixed
+- Fixed minor issues with custom-checkboxes and custom-radios padding new calculation.
+
+## Deprecated
+- Our switches will be deprecated in favor of boostrap new switches component.
+
+
+## [2.6.3] - 2018-01-26
+
+## Added
+- Added .badges-lg and .badges-xl utility classes for badges font-size.
+- Added .active class for link badge.
+
+## Changed
+- Updated vues Applied-filters section with new utility classes
+- Upated Notification from hipChat to slack room.
+
+
+## [2.6.2] - 2018-01-21
 
 ## Added
 - Added sticky-footer capacity. @see templates > Layout Pages > Sticky Footer  
@@ -377,6 +404,7 @@ remove index from the name. Which makes it possible to update font-icon without 
 - Removed vdm prefix for buttons classes
 
 
+[2.6.2]: https://bitbucket.org/villemontreal/boite-outils-web/src/2.6.2/
 [2.6.1]: https://bitbucket.org/villemontreal/boite-outils-web/src/2.6.1/
 [2.6.0]: https://bitbucket.org/villemontreal/boite-outils-web/src/2.6.0/
 [2.5.1]: https://bitbucket.org/villemontreal/boite-outils-web/src/2.5.1/

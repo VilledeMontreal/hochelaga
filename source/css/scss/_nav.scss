@@ -1,8 +1,6 @@
 // Breadcrumb
 .breadcrumb {
-  border-radius: 0;
   font-size: $font-size-base;
-  margin-bottom: 0;
   a {
     border: none;
     color: $gray-700;
@@ -193,7 +191,7 @@ nav {
 
 // filters applied section
 .filters-applied {
-  > * {
+  a, .btn {
     margin-bottom: .75rem;
   }
 }
