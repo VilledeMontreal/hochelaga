@@ -4,7 +4,7 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](http://keepachangelog.com/en/1.0.0/)
 and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.html).
 
-## [3.0.0] - Unreleased
+## [2.8.0] - Unreleased
 
 ## Added
 - Content header jumbotron. New content header for tc like evenements, activites, lieu, etc.
@@ -25,7 +25,7 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 - List of icons: add an optionnal wrapper to allow for multiple chuck of content inside a list-item.
 
 
-## 2.7.0 - Unreleased
+## [2.7.0] - Unreleased
 
 ## Added
 - New switches available in bootstrap v4.2.1. Our switches will be deprecated in v3
@@ -404,6 +404,7 @@ remove index from the name. Which makes it possible to update font-icon without 
 - Removed vdm prefix for buttons classes
 
 
+[2.6.3]: https://bitbucket.org/villemontreal/boite-outils-web/src/2.6.3/
 [2.6.2]: https://bitbucket.org/villemontreal/boite-outils-web/src/2.6.2/
 [2.6.1]: https://bitbucket.org/villemontreal/boite-outils-web/src/2.6.1/
 [2.6.0]: https://bitbucket.org/villemontreal/boite-outils-web/src/2.6.0/
