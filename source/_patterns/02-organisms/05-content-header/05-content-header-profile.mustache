@@ -1,7 +1,12 @@
-<header class="container-fluid-max-xl content-header content-header-profile mx-auto {{ contentHeaderClasses }}">
+<header class="content-header content-header-profile bg-gray-sky {{ contentHeaderClasses }}">
   <div class="container {{ contentHeaderContainerClasses }}">
-    <div class="row no-gutters bg-gray-sky">
-      <div class="col-12 col-lg-7 col-xl-8">
+    <div class="row">
+      <div class="col-12 col-lg-5 col-xl-4 order-1 order-lg-last">
+        <div class="img-profile">
+          <img src="{{ profile-infos.imageUrl }}" class="img-fluid rounded-circle" alt="{{ profile-infos.imageAlt }}" />
+        </div>
+      </div>
+      <div class="col-12 col-lg-7 col-xl-8 order-2 order-lg-first">
         <div class="content-header-title">
           {{> atoms-display-heading }}
         </div>
@@ -40,11 +45,6 @@
           {{/ district }}
         </div>
         {{/ profile-infos }}
-      </div>
-      <div class="col-12 col-lg-5 col-xl-4">
-        <div class="img-profile">
-          <img src="{{ profile-infos.imageUrl }}" class="img-fluid rounded-circle" alt="{{ profile-infos.imageAlt }}" />
-        </div>
       </div>
     </div>
   </div>
