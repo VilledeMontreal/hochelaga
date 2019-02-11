@@ -47,20 +47,21 @@ ol {
 }
 
 // list of items with icons
+.list-icon-heading {
+  font-weight: $font-weight-bold;
+  margin-bottom: .5rem;
+}
 .list-icon {
   @extend .list-unstyled;
   .list-icon-item {
     display: flex;
-    padding-bottom: 1rem;
+    padding-bottom: 2rem;
     // Use .no-icon class to add padding equal to icons width and paddings
     &.no-icon {
       padding-left: 2rem;
     }
     &:last-child {
       padding-bottom: 0;
-      .list-icon-content {
-        margin-bottom: 0;
-      }
     }
     > .vdm {
       background: transparent;
@@ -68,21 +69,32 @@ ol {
       font-size: 1.5em;
       padding-right: .5rem;
     }
-    /*
-    > * {
-      align-items: flex-start;
-    }
-    */
   }
 
   .list-icon-label {
     font-weight: $font-weight-bold;
     display: block;
+    margin-bottom: .5rem;
   }
 
   .list-icon-content {
-    margin-bottom: 1rem;
     width: 100%;
+    .list-icon-block {
+      margin-bottom: 1rem;
+      width: 100%;
+      &:last-child {
+        margin-bottom: 0;
+      }
+      > * {
+        @include clearfix;
+      }
+    }
+    &:last-child {
+      margin-bottom: 0;
+    }
+    > * {
+      @include clearfix;
+    }
   }
 
   address {

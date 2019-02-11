@@ -488,69 +488,6 @@ legend,
   }
 }
 
-// Form-combo and variants
-// TODO: Validate if this is still Wanted
-.dropdown-combo {
-  position: relative;
-  .dropdown-combo-toggle {
-    border-bottom: 1px solid $black;
-    cursor: pointer;
-    display: flex;
-    flex: 1 1 100%;
-  }
-  .dropdown-combo-placeholder,
-  .select-container {
-    color: $gray-500;
-    flex-grow: 1;
-    align-self: center;
-    white-space: nowrap;
-    overflow: hidden;
-    text-overflow: ellipsis;
-  }
-  .select-container {
-    z-index: 1;
-  }
-  .dropdown-combo-select {
-    background: transparent;
-    -webkit-appearance: none;
-    -moz-appearance: none;
-    appearance: none;
-    z-index: 1;
-    flex-shrink: 1;
-    width: 100%;
-    padding-right: 40px;
-    color: $primary;
-    border: none;
-    border-radius: 0px;
-  }
-
-  .dropdown-combo-select-button {
-    position: absolute;
-    right: 0;
-    top: 50%;
-    transform: translateY(-50%);
-    background-color: transparent;
-    color: $primary;
-  }
-  .dropdown-menu {
-    border: none;
-    border-radius: 0;
-    margin: 0;
-    margin-top: 1px;
-    max-height: 235px;
-    overflow-x: hidden;
-    box-shadow: $dropdown-box-shadow; // Use available variables to normalize dropdown-box-shadow
-    width: 100%;
-    li {
-      padding-bottom: 0;
-    }
-    .dropdown-item {
-      display: inline-block;
-      padding: .625rem 1rem .625rem 2rem;
-    }
-  }
-}
-
 //
 // file drop container
 .file-drop-container {

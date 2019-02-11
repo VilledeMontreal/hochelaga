@@ -1,6 +1,6 @@
 {
-  "contentHeaderClasses": "content-header-profile bg-gray-sky",
-  "contentHeaderContainerClasses": "container",
+  "contentHeaderClasses": "",
+  "contentHeaderContainerClasses": "",
   "text-elements": {
     "headings":{
       "display":{
@@ -10,38 +10,98 @@
   },
   "has-header-meta": true,
   "has-publication-date": false,
-  "has-hub-link": false,
-  "regionMainContentClasses": "col-lg-8",
+  "has-hub-link": {
+    "url": "link.pages-tous-les-elus",
+    "link-text": "Tous les élus"
+  },
+  "regionMainContentClasses": "col-lg-7 col-xl-8",
   "sidebarRight": false,
   "sidebarLeft": true,
   "sidebarTitle": "Coordonnées",
-  "coordinates": {
-    "list-icon-item": [
-      {
-        "url": false,
-        "icon-item": {
-          "icon-label": "091-localisation"
+  "coordinates": [
+    {
+      "list-icon-heading": "Bureau d'arrondissement",
+      "list-icon-item": [
+        {
+          "url": false,
+          "icon-item": {
+            "icon-label": "091-localisation"
+          },
+          "item": [
+            {
+              "class": false,
+              "url": false,
+              "tag": false,
+              "content": "<address>5160, boul. Décarie<br>Bureau 710<br>Montréal (Québec) H3X 2H9</address>"
+            }
+          ]
         },
-        "content": "<address>275, rue Notre-Dame Est<br>Montréal (Québec) H2Y 1C6</address>"
-      },
-      {
-        "url": false,
-        "icon-item": {
-          "icon-label": "012-telephone"
+        {
+          "url": false,
+          "icon-item": {
+            "icon-label": "012-telephone"
+          },
+          "item": [
+            {
+              "class": false,
+              "url": false,
+              "tag": false,
+              "content": "514 872-4863"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "list-icon-heading": "Hôtel de Ville",
+      "list-icon-item": [
+        {
+          "url": false,
+          "icon-item": {
+            "icon-label": "091-localisation"
+          },
+          "item": [
+            {
+              "class": false,
+              "url": false,
+              "tag": false,
+              "content": "<address>275, rue Notre-Dame Est<br>Bureau 908<br>Montréal (Québec) H2Y 1C6</address>"
+            }
+          ]
         },
-        "content": "514 872-5678"
-      },
-      {
-        "url": "mailto:test@montreal.ca",
-        "modal": true,
-        "class": "elided-text",
-        "icon-item": {
-          "icon-label": "028-enveloppe"
+        {
+          "url": false,
+          "icon-item": {
+            "icon-label": "012-telephone"
+          },
+          "item": [
+            {
+              "class": false,
+              "url": false,
+              "tag": false,
+              "content": "514 872-9899"
+            }
+          ]
         },
-        "content": "Envoyer un courriel"
-      }
-    ]
-  },
+        {
+          "url": "mailto:test@montreal.ca",
+          "modal": false,
+          "class": false,
+          "icon-item": {
+            "icon-label": "028-enveloppe"
+          },
+          "item": [
+            {
+              "class": false,
+              "url": "mailto:test@montreal.ca",
+              "tag": false,
+              "content": "Envoyer un courriel"
+            }
+          ]
+        }
+      ]
+    }
+  ],
   "social-media-icons-list": {
     "has-label": false,
     "has-facebook": true,

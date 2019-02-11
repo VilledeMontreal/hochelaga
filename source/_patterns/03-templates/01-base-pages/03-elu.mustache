@@ -3,15 +3,20 @@
 
 <main class="main-content {{ pageClasses }}" id="main-content" aria-label="Main Content">
 
+  <div class="container">
+    <div class="row">
+      <div class="col-12">
+      {{> molecules-breadcrumbs}}
+      </div>
+    </div>
+  </div>
+
   {{> organisms-content-header-profile }}
 
   <!-- Begin main-content region-->
   <div class="region-content {{ regionMainClasses }}">
     <div class="container {{ regionMainContainerClasses }}">
       <div class="row">
-        <aside class="col-12 col-lg-4 sidebar-left" role="complementary">
-          {{> organisms-sidebar-block-coordinates }}
-        </aside>
         <article class="col-12 {{ regionMainContentClasses }}">
           <div class="page-section pt-0">
             <h2 class="section-heading">Rôles et responsabilités</h2>
@@ -30,6 +35,9 @@
           </div>
           {{/ section-responsabilites }}
         </article>
+        <aside class="col-12 col-lg-5 col-xl-4 sidebar-right" role="complementary">
+          {{> organisms-sidebar-block-coordinates }}
+        </aside>
       </div>
     </div>
   </div>

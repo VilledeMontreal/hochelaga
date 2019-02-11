@@ -1,4 +1,39 @@
 {
+  "text-elements": {
+    "headings":{
+      "display":{
+        "classes": "h2",
+        "content": "Tournoi de Super Mario Kart 8 - Semi-finale"
+      }
+    }
+  },
+  "has-informations": true,
+  "has-hub-link": false,
+  "has-media-image": true,
+  "has-media-gallery": false,
+  "media-image": {
+    "mediaSrc": "https://res.cloudinary.com/villemontreal/image/upload/c_scale,w_auto,dpr_auto/q_auto/f_auto/v1547842908/portail-dev/hgzblj05djnzsjwshp7w.jpg",
+    "mediaSize": "1456x971",
+    "mediaAlt": "Tournoi de Super Mario Kart 8 - Semi-finale"
+  },
+  "organised-by": {
+    "url": "http://www.montrealjoue.ca/",
+    "title": "Montréal Joue"
+  },
+  "list-icon-item": [
+    {
+      "icon-item": {
+        "icon-label": "005-calendrier"
+      },
+      "item": [
+        {
+          "url": false,
+          "class": false,
+          "content": "du 17 janvier - 17 h 00<br>au 19 janvier - 18 h 00"
+        }
+      ]
+    }
+  ],
   "evenement-list-infos": {
     "list-icon-item": [
       {
@@ -13,7 +48,7 @@
             "tag": {
               "div": true
             },
-            "content": "<address><a href=\"#\">Bibliothèque Jacqueline-De Repentigny</a><br>5955, avenue Bannantyne<br>Montréal (Québec) H4H 1H6</address>"
+            "content": "<address><span class=\"text-dark\">Coeur des sciences de l'UQAM</span><br>200, rue Sherbrooke Ouest<br>Local SH-4800<br>Montréal (Québec) H2X 1X5</address>"
           },
           {
             "class": false,
@@ -37,7 +72,7 @@
             "tag": {
               "span": true
             },
-            "content": "Gratuit"
+            "content": "Payant"
           }
         ]
       },
@@ -90,5 +125,24 @@
       "has-linkedin": false,
       "has-youtube": false
     }
+  },
+  "has-documents": false,
+  "has-video": {
+    "section-title": "Vidéo",
+    "src": "//www.youtube.com/embed/OftqIOqSYr4"
+  },
+  "mediaGallery": [
+    {
+      "mediaSrc": "https://res.cloudinary.com/villemontreal/image/upload/c_scale,w_auto,dpr_auto/q_auto/f_auto/v1547842908/portail-dev/hgzblj05djnzsjwshp7w.jpg",
+      "mediaSize": "1456x971",
+      "mediaCaption": "Tournoi de Super Mario Kart 8 - Semi-finale",
+      "mediaAuthor": "Mario Kalnovsky",
+      "mediaAlt": "Tournoi de Super Mario Kart 8 - Semi-finale",
+      "thumbnail" : false
+    }
+  ],
+  "map": {
+    "address": "<address><span class='text-dark'>Coeur des sciences de l'UQAM</span><br>200, rue Sherbrooke Ouest<br>Local SH-4800<br>Montréal (Québec) H2X 1X5</address>",
+    "lngLat": "-73.570015, 45.509979"
   }
 }

@@ -2,9 +2,6 @@
   <div class="{{ contentHeaderContainerClasses }}">
     <div class="row">
       <div class="col-12">
-        {{# has-breadcrumb}}
-        {{> molecules-breadcrumbs}}
-        {{/ has-breadcrumb}}
         <div class="content-header-title">
           {{> atoms-display-heading }}
         </div>
@@ -15,14 +12,14 @@
         {{/ has-header-liner }}
       </div>
       {{# has-publication-date }}
-      <div class="col order-1">
+      <div class="col-12">
         <div class="content-header-metadata">
         {{> atoms-date-time-text }}
         </div>
       </div>
       {{/ has-publication-date}}
       {{# has-informations}}
-      <div class="col order-1">
+      <div class="col-12">
         <div class="content-header-metadata metadata-infos">
           {{# informations-state }}
           <span class="badge badge-pill {{ badgeClass }}">{{ badge }}</span>
@@ -51,13 +48,6 @@
         </div>
       </div>
       {{/ has-informations}}
-      {{# has-hub-link}}
-      <div class="col-12 col-xl-auto order-first order-xl-last">
-        <div class="hub-link">
-          <a href="{{ url }}">{{ link-text }}</a>
-        </div>
-      </div>
-      {{/ has-hub-link}}
     </div>
   </div>
 </header>

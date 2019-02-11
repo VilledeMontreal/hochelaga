@@ -4,6 +4,26 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](http://keepachangelog.com/en/1.0.0/)
 and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.html).
 
+## [3.0.0] - Unreleased
+
+## Added
+- Content header jumbotron. New content header for tc like evenements, activites, lieu, etc.
+- Media gallery component using Photoswipe plugin.
+- Media gallery button to trigger a media gallery visualisation.
+
+## Changed
+- PatternLab: refactor data to allow for new multiple content inside a list-item.
+- .text-icon-list now allows .list-icon-block inside .list-icon-content to stack some block of datas.
+- Changed hub-link positionning.
+- Featured image placement in Nouvelle template.
+- Evenement et lieu utilise le nouveau Content header jumbotron component.
+
+## Removed
+- Removed dropdown-combo variants.
+
+## Fixed
+- List of icons: add an optionnal wrapper to allow for multiple chuck of content inside a list-item.
+
 
 ## 2.7.0 - Unreleased
 
