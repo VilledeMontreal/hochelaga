@@ -1,6 +1,4 @@
 {
-  "contentHeaderClasses": "content-header-profile bg-gray-sky",
-  "contentHeaderContainerClasses": "container",
   "text-elements": {
     "headings":{
       "display":{
@@ -23,45 +21,92 @@
     "district": false,
     "arrondissement": "Ville-Marie"
   },
-  "regionMainContentClasses": "col-lg-8",
   "sidebarRight": false,
   "sidebarLeft": true,
-  "sidebarTitle": "Coordonnées",
-  "coordinates": {
-    "list-icon-item": [
-      {
-        "url": false,
-        "icon-item": {
-          "icon-label": "091-localisation"
+  "coordinates": [
+    {
+      "list-icon-heading": "Bureau d'arrondissement",
+      "list-icon-item": [
+        {
+          "url": false,
+          "icon-item": {
+            "icon-label": "091-localisation"
+          },
+          "item": [
+            {
+              "class": false,
+              "url": false,
+              "tag": false,
+              "content": "<address>800, boulevard De Maisonneuve Est<br>19e étage<br>Montréal (Québec) H2L 4L8</address>"
+            }
+          ]
         },
-        "content": "<address><strong>Hôtel de ville</strong><br>275, rue Notre-Dame Est<br> Montréal (Québec) H2Y 1C6</address>"
-      },
-      {
-        "url": false,
-        "icon-item": {
-          "icon-label": "012-telephone"
+        {
+          "url": false,
+          "icon-item": {
+            "icon-label": "012-telephone"
+          },
+          "item": [
+            {
+              "class": false,
+              "url": false,
+              "tag": false,
+              "content": "514 872-4863"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "list-icon-heading": "Hôtel de Ville",
+      "list-icon-item": [
+        {
+          "url": false,
+          "icon-item": {
+            "icon-label": "091-localisation"
+          },
+          "item": [
+            {
+              "class": false,
+              "url": false,
+              "tag": false,
+              "content": "<address>275, rue Notre-Dame Est<br>Bureau 908<br>Montréal (Québec) H2Y 1C6</address>"
+            }
+          ]
         },
-        "content": "514 872-3101"
-      },
-      {
-        "url": "mailto:mairesse@ville.montreal.qc.ca",
-        "modal": true,
-        "class": "elided-text",
-        "icon-item": {
-          "icon-label": "028-enveloppe"
+        {
+          "url": false,
+          "icon-item": {
+            "icon-label": "012-telephone"
+          },
+          "item": [
+            {
+              "class": false,
+              "url": false,
+              "tag": false,
+              "content": "514 872-9899"
+            }
+          ]
         },
-        "content": "mairesse@ville.montreal.qc.ca"
-      }
-    ]
-  },
-  "social-media-icons-list": {
-    "has-label": false,
-    "has-facebook": true,
-    "has-instagram": false,
-    "has-twitter": true,
-    "has-linkedin": true,
-    "has-youtube": false
-  },
+        {
+          "url": "mailto:test@montreal.ca",
+          "modal": false,
+          "class": false,
+          "icon-item": {
+            "icon-label": "028-enveloppe"
+          },
+          "item": [
+            {
+              "class": false,
+              "url": "mailto:test@montreal.ca",
+              "tag": false,
+              "content": "Envoyer un courriel"
+            }
+          ]
+        }
+      ]
+    }
+  ],
   "cards-roles": {
     "cards": {
       "section-classes": "",
