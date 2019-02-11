@@ -56,6 +56,7 @@ button {
       @include box-shadow($btn-focus-box-shadow, $btn-active-box-shadow);
     }
   }
+  // Deal with VDM Icons
   .vdm {
     color: inherit;
     font-size: 2rem;
@@ -94,20 +95,19 @@ fieldset:disabled a.btn {
 
 // Make a button look and behave like a link
 .btn-link {
-  font-weight: $font-weight-normal;
   color: $link-color;
   background-color: transparent;
   &:not(:disabled):not(.disabled) {
     @include hover {
       color: $link-hover-color;
-      text-decoration: $link-hover-decoration;
+      text-decoration: none;
       background-color: transparent;
     }
   }
 
   &:focus,
   &.focus {
-    text-decoration: $link-hover-decoration;
+    text-decoration: none;
     border-color: transparent;
     box-shadow: none;
   }
@@ -118,8 +118,48 @@ fieldset:disabled a.btn {
     pointer-events: none;
   }
 
-  // No need for an active state here
+  &.btn-reset {
+    color: $gray-ink;
+    &:not(:disabled):not(.disabled):hover {
+      color: $gray-900;
+    }
+  }
 }
+
+
+// Link button
+/*
+.btn-link {
+  border-bottom: 1px solid $sarcelle-atmos;
+  border-radius: 0;
+  padding: 0;
+  &:hover {
+    border-bottom: 1px solid $sarcelle-atmos;
+  }
+
+  &:focus,
+  &.focus {
+    border-bottom: 1px solid $sarcelle-atmos;
+  }
+
+  &:disabled,
+  &.disabled {
+    color: $btn-link-disabled-color;
+    pointer-events: none;
+    background-color: transparent;
+    border: none;
+  }
+
+  &.btn-reset {
+    color: $gray-ink;
+    border-bottom: 1px solid $gray-ink;
+    &:not(:disabled):not(.disabled):hover {
+      color: $gray-ink;
+      border-bottom-color: transparent;
+    }
+  }
+}
+*/
 
 // We provide only 2 buttons styles with some variants
 // Primary, secondary
@@ -205,38 +245,7 @@ fieldset:disabled a.btn {
   }
 }
 
-// Link button
 
-.btn-link {
-  border-bottom: 1px solid $sarcelle-atmos;
-  border-radius: 0;
-  padding: 0;
-  &:hover {
-    border-bottom: 1px solid $sarcelle-atmos;
-  }
-
-  &:focus,
-  &.focus {
-    border-bottom: 1px solid $sarcelle-atmos;
-  }
-
-  &:disabled,
-  &.disabled {
-    color: $btn-link-disabled-color;
-    pointer-events: none;
-    background-color: transparent;
-    border: none;
-  }
-
-  &.btn-reset {
-    color: $gray-ink;
-    border-bottom: 1px solid $gray-ink;
-    &:not(:disabled):not(.disabled):hover {
-      color: $gray-ink;
-      border-bottom-color: transparent;
-    }
-  }
-}
 
 // Specificity overrides
 input[type="submit"],
