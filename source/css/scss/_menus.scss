@@ -46,7 +46,7 @@
 
   @include media-breakpoint-up(lg) {
     .button-label {
-      font-size: $sm-link-font-size;
+      font-size: $slide-menu-link-font-size;
     }
     .vdm {
       font-size: 2.5rem;
@@ -125,7 +125,7 @@
   // Mobile
   @include media-breakpoint-up(sm) {
     .form-control {
-      font-size: $sm-link-font-size;
+      font-size: $slide-menu-link-font-size;
       padding: 1.75rem;
     }
     .input-group-icon {
@@ -182,15 +182,15 @@
   overflow-x: hidden;
   overflow-y: auto;
 	box-sizing: border-box;
-	background: $sm-menu-bg;
-	transition: transform $sm-transition-dur $sm-transition-easing;
+	background: $slide-menu-bg;
+	transition: transform $slide-menu-transition-dur $slide-menu-transition-easing;
 	transform: translateX(100%);
 	will-change: transform;
 	z-index: $zindex-fixed;
 
 	.slider {
 		width: 100%;
-		transition: transform $sm-transition-dur $sm-transition-easing;
+		transition: transform $slide-menu-transition-dur $slide-menu-transition-easing;
 		transform: translateX(0);
 		will-change: transform;
 	}
@@ -219,8 +219,8 @@
 		}
 
 		a {
-      color: $sm-link-color;
-      font-size: $sm-link-font-size;
+      color: $slide-menu-link-color;
+      font-size: $slide-menu-link-font-size;
       display: flex;
       flex: 1;
       align-items: center;
@@ -245,11 +245,11 @@
       }
 
       &.back-link {
-        color: $sm-link-hover-color;
+        color: $slide-menu-link-hover-color;
         font-size: $font-size-sm;
 
         .vdm {
-          color: $sm-icon-color;
+          color: $slide-menu-icon-color;
           font-size: 1rem;
           line-height: 1;
           margin-left: 0;
@@ -269,6 +269,6 @@
 	}
   
   @include media-breakpoint-up(sm) {
-    width: $sm-menu-width;
+    width: $slide-menu-width;
   }
 }

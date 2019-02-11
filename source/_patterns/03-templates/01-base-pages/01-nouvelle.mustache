@@ -22,11 +22,13 @@
 
   <div class="region-content {{ regionContentClasses }}">
     <article class="section-content-fluid">
+      {{# featured-image }}
       <div class="section-inner section-inner-lg section-inner-media">
         <div class="media media-image">
-          <img src="https://picsum.photos/1200/600?image=980" alt="Test image nouvelle." class="img-fluid">
+          <img src="{{ imgUrl }}" alt="{{ imgAlt }}" class="img-fluid">
         </div>
       </div>
+      {{/ featured-image }}
 
       <div class="section-inner section-inner-md">
         <p>Souvent confondu avec le renard roux et certaines races de chiens, le coyote se trouve de plus en plus à l'intérieur et à proximité des zones urbaines d'Amérique du Nord.</p>

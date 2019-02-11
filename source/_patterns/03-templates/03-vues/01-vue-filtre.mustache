@@ -12,11 +12,13 @@
   {{# filters-applied }}
   <div class="container mt-4">
     <div class="row">
-      <div class="col-12 filters-applied">
+      <span class="col-12 filters-applied">
         <span class="sr-only">Filtres sélectionnés : </span>
-        {{> atoms-badges}}
-        {{> atoms-button(buttonClass: "btn-link btn-sm btn-reset",buttonText: "Tout effacer")}}
-      </div>
+        <div class="badges-lg">
+          {{> atoms-badges}}
+          {{> atoms-button(buttonClass: "btn-link btn-sm btn-reset",buttonText: "Tout effacer")}}
+        </div>
+      </span>
     </div>
   </div>
   {{/ filters-applied }}
