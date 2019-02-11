@@ -1,7 +1,9 @@
 // Breadcrumb
 .breadcrumb {
   font-size: $font-size-base;
-  margin-top: #{$breadcrumb-margin-bottom + $breadcrumb-padding-y / 2};
+  li {
+    padding-bottom: 0;
+  }
   a {
     border: none;
     color: $gray-700;

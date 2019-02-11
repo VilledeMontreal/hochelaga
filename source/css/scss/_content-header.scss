@@ -1,0 +1,220 @@
+//
+// Main content header
+.content-header {
+  padding-top: 4rem;
+  padding-bottom: 0;
+  .container-fluid {
+    max-width: map-get($content-max-widths, xl);    // 1600px
+    padding-bottom: 2rem;
+  };
+  .container-fluid-xl {
+    max-width: map-get($container-max-widths, xl);   // 1170px
+  }
+  // Dark variant
+  &.content-header-dark {
+    background-color: $gray-700;
+    color: $white;
+    h1,h2,h3,h4,h5,h6 {
+      color: $white;
+    }
+    .hub-link a {
+      color: $white;
+      @include hover-focus {
+        color: $sarcelle-light;
+      }
+    }
+  }
+
+  // Title
+  &-title {
+    padding-bottom: 3rem;
+    // Limit max width of title
+    max-width: 1450px;
+    h1 {
+      margin-bottom: 0;
+      &:after {
+        content: "";
+        display: block;
+        height: .5rem;
+        width: 4rem;
+        margin-top: 2.5rem;
+        background-color: $brand;
+      }
+    }
+
+    // 576px and up
+    @include media-breakpoint-up(md) {
+      h1 {
+        &:after {
+          width: 6rem;
+        }
+      }
+    }
+  }
+
+  &-metadata {
+    color: $gray-600;
+    font-size: $font-size-base;
+    padding-bottom: 2rem;
+  }
+
+  // used for specific contente header infos like Evenement
+  .metadata-infos {
+    color: $headings-color;
+    font-weight: $font-weight-bold;
+    > * {
+      margin-bottom: .5rem;
+      &:last-child {
+        margin-bottom: 0;
+      }
+    }
+    .infos-event {
+      vertical-align: middle;
+      > span {
+        display: block;
+      }
+      .infos-lieu {
+        font-weight: $font-weight-normal;
+      }
+    }
+
+    // 1200px and up
+    @include media-breakpoint-up(lg) {
+      > * {
+        margin-right: 1rem;
+        margin-bottom: 0;
+      }
+      .infos-event {
+        display: inline-block;
+        > span {
+          display: inline-block;
+          margin-right: 1rem;
+          &:last-child {
+            margin-right: 0;
+          }
+        }
+        .infos-lieu {
+          &:before {
+            content: "—";
+            margin-right: 1rem;
+          }
+        }
+      }
+    }
+  }
+
+  // Content header profile variant
+  &.content-header-profile {
+    padding-top: 3.5rem;
+    padding-bottom: 3.5rem;
+    .img-profile {
+      margin: 0 auto 2.5rem auto;
+      max-width: 375px;
+    }
+    .content-header-infos {
+      color: $headings-color;
+      span {
+        display: block;
+      }
+      .profile-title {
+        color: $headings-color;
+        font-size: $font-size-xl;
+        line-height: $line-height-sm;
+      }
+      .profile-member {
+        color: $headings-color;
+        font-size: $font-size-base;
+      }
+      .profile-label {
+        color: $gray-600;
+      }
+    }
+    @include media-breakpoint-up(lg) {
+      .img-profile {
+        margin: 0;
+        //max-width: 375px;
+      }
+    }
+  }
+
+  // Variant for collectrices pages
+  &.content-header-hub {
+    background-color: $gray-sky;
+    // Need to Harmonise this with other content-header
+    padding-top: 6rem;
+    padding-bottom: 3rem;
+    h1 {
+      font-weight: $font-weight-normal;
+      margin-bottom: 1rem;
+    }
+    .display-1 {
+      margin-bottom: 3rem;
+    }
+  }
+
+  // Variant for jumbotron style content-header
+  &.content-header-jumbotron {
+    padding-top: 0;
+    .content-header-wrapper {
+      height: 100%;
+      padding: 2rem;
+      display: flex;
+      flex-direction: column;
+    }
+    .content-header-headings {
+      margin-top: 2.5rem;
+      margin-bottom: 2rem;
+      position: relative;
+      .label {
+        font-weight: $font-weight-bold;
+        padding-right: 1rem;
+      }
+    }
+    .content-header-headings-state {
+      position: absolute;
+      transform: translateY(-2.5rem);
+    }
+    .content-header-metadata {
+      margin-top: auto;
+      padding-bottom: 0;
+    }
+    @include media-breakpoint-up(lg) {
+      .content-header-wrapper {
+        min-height: 525px;
+      }
+    }
+    @include media-breakpoint-up(xl) {
+      .list-icon {
+        margin: 0;
+        .list-icon-item {
+          padding-bottom: 2rem;
+        }
+      }
+    }
+  }
+
+  // Use to set bg-image and overlay
+  &.content-header-overlay {
+    position: relative;
+    background-size: cover;
+    background-position: center;
+    &:before {
+      position: absolute;
+      content:" ";
+      top:0;
+      left:0;
+      width:100%;
+      height:100%;
+      display: block;
+      z-index:0;
+      background-color: rgba(255, 255, 255, 0.7);
+    }
+  }
+}
+
+// Remove padding when we have .content-header followed by .page-section and neither is .bg-gray-sky
+.content-header:not(.bg-gray-sky):not(.content-header-dark) {
+  + .page-section:not(.bg-gray-sky) {
+    padding-top: 0;
+  }
+}
