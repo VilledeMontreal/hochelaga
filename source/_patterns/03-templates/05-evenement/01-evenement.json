@@ -1,4 +1,5 @@
 {
+  "breadcrumbContainerClasses": "px-4",
   "text-elements": {
     "headings":{
       "display":{
@@ -8,7 +9,6 @@
     }
   },
   "has-informations": true,
-  "has-hub-link": false,
   "has-media-image": true,
   "has-media-gallery": true,
   "media-image": {
@@ -16,16 +16,53 @@
     "mediaSize": "1000x667",
     "mediaAlt": "Media #1072"
   },
+  "list-icon-class": "row no-gutters",
   "list-icon-item": [
     {
+      "list-icon-item-class": false,
       "icon-item": {
         "icon-label": "005-calendrier"
       },
+      "item-label": "Date et heure",
       "item": [
         {
           "url": false,
           "class": false,
-          "content": "Jeudi 17 janvier de 09 h 00 à 10 h 00"
+          "content": "Jeudi 17 janvier de 09&nbsp;h&nbsp;00 à 10&nbsp;h&nbsp;00"
+        }
+      ]
+    },
+    {
+      "list-icon-item-class": "col-lg-6",
+      "icon-item": {
+        "icon-label": "113-prix"
+      },
+      "item-label": "Tarif",
+      "item": [
+        {
+          "class": false,
+          "url": false,
+          "tag": {
+            "span": true
+          },
+          "content": "Gratuit"
+        }
+      ]
+    },
+    {
+      "list-icon-item-class": "col-lg-6",
+      "icon-item": {
+        "icon-label": "007-billet"
+      },
+      "item-label": "Droit d'entrée",
+      "item": [
+        {
+          "class": false,
+          "url": false,
+          "tag": {
+            "span": true
+          },
+          "content": "Avec billet"
         }
       ]
     }
@@ -38,9 +75,27 @@
       }
     ]
   },
+  "has-tags": {
+    "container-class": "badges-lg",
+    "tags": [
+      {
+        "badge": "Tag #1",
+        "badgeClass": false,
+        "badgeUrl": "#"
+      },
+      {
+        "badge": "Tag #2",
+        "badgeClass": false,
+        "badgeUrl": "#"
+      }
+    ]
+  },
   "has-video": {
     "section-title": "Vidéo",
     "src": "//www.youtube.com/embed/rBfphgabDhU"
+  },
+  "evenement-list-infos": {
+    "list-icon-class": false
   },
   "social-media-icons-list": {
     "has-label": false,
