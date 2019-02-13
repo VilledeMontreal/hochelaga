@@ -1,7 +1,7 @@
 <header class="content-header content-header-jumbotron {{ contentHeaderClasses }}">
   <div class="{{ contentHeaderContainerClasses }}">
     <div class="row no-gutters bg-gray-sky">
-      <div class="col-12 {{^has-media-image}}col-xl-8{{/ has-media-image}}{{# has-media-image}}col-lg-6 col-xl-5{{/ has-media-image}}">
+      <div class="col-12{{^has-media-image}} col-xl-8{{/ has-media-image}}{{# has-media-image}} col-lg-6 col-xl-5{{/ has-media-image}}">
         <div class="content-header-wrapper">
           <div class="content-header-headings">
             {{# state}}
@@ -23,7 +23,7 @@
         </div>
       </div>
       {{# has-media-image }}
-      <div class="col-12 col-lg-6 col-xl-7">
+      <div class="col-12 col-lg-6 col-xl-7 order-first order-lg-last">
         {{# has-media-gallery }}
         <div class="media-gallery-button">
         {{/ has-media-gallery }}
@@ -31,8 +31,7 @@
             <div class="media-cover" role="image" aria-label="media-image.mediaAlt" style="background-image: url('{{ media-image.mediaSrc}}');"></div>
           </button>
           {{# has-media-gallery }}
-          {{> atoms-button-icon(buttonClass: "btn-primary btn-light btn-media-gallery js-gallery-trigger", buttonText: "Afficher les photos", icon-label: "021-dossier", buttonIcon: true)}}
-
+          {{> atoms-button-icon(buttonClass: "btn-primary btn-light btn-hide-label-xs btn-media-gallery js-gallery-trigger", buttonText: "Afficher les photos", icon-label: "021-dossier", buttonIcon: true)}}
           {{/ has-media-gallery }}
         {{#has-media-gallery}}  
         </div>

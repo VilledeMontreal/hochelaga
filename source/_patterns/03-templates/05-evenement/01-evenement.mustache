@@ -25,7 +25,7 @@
   <div class="region-content {{ regionMainClasses }}">
     <div class="container {{ regionMainContainerClasses }}">
       <div class="row">
-        <article class="col-12 col-lg-7 {{ regionMainContentClasses }}">
+        <article class="col-12 col-lg-7 col-xl-8 {{ regionMainContentClasses }}">
           <p class="lead">Ut quis rhoncus libero. Donec molestie et nunc nec commodo. Nulla eu leo purus. Curabitur elementum, quam eu pharetra vestibulum, 
             justo nisl rutrum nisi, non egestas nisl libero eget magna. Suspendisse lectus sapien, aliquet in enim sed, convallis consectetur sapien. Integer laoreet tempor tellus.</p>
 
@@ -50,6 +50,15 @@
           </ul>
           {{/ has-documents}}
 
+          {{# has-tags}}
+          <h3 class="h4">Étiquettes</h3>
+          <ul class="list-inline {{container-class}}">
+            {{# tags}}
+            <li class="list-inline-item">{{> atoms-badge}}</li>
+            {{/ tags}}
+          </ul>
+          {{/ has-tags}}
+
           {{# has-video }}
           <h3 class="h4">{{ section-title }}</h3>
           <div class="media-container">
@@ -61,7 +70,7 @@
 
         </article>
         <!-- Sidebar Right -->
-        <aside class="col-12 col-lg-5 sidebar-right" role="complementary">
+        <aside class="col-12 col-lg-5 col-xl-4 sidebar-right order-first order-lg-last" role="complementary">
           {{> organisms-sidebar-block-evenement }}
         </aside>
       </div>

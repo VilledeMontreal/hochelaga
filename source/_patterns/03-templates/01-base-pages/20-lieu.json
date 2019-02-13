@@ -8,10 +8,18 @@
     }
   },
   "has-informations": true,
-  "has-hub-link":{
-    "url": "#",
-    "link-text": "Tous les lieux"
-  },
+  "has-breadcrumb": true,
+  "breadcrumbs": [
+    {
+      "url": "link.template-homepage",
+      "text": "Accueil"
+    },
+    {
+      "url": "link.templates-collectrice-lieux",
+      "text": "Tous les lieux"
+    }
+  ],
+  "breadcrumbContainerClasses": "px-4",
   "organised-by": false,
   "has-media-image": true,
   "media-image": {

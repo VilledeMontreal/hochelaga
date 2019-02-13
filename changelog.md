@@ -7,35 +7,28 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 ## [3.0.0] - Unreleased
 
 ## Added
+- New switches available in bootstrap v4.2.1. Our switches will be deprecated in v3
 - Content header jumbotron. New content header for tc like evenements, activites, lieu, etc.
 - Media gallery component using Photoswipe plugin.
 - Media gallery button to trigger a media gallery visualisation.
 
 ## Changed
-- PatternLab: refactor data to allow for new multiple content inside a list-item.
-- .text-icon-list now allows .list-icon-block inside .list-icon-content to stack some block of datas.
-- Changed hub-link positionning.
-- Featured image placement in Nouvelle template.
-- Evenement et lieu utilise le nouveau Content header jumbotron component.
-
-## Removed
-- Removed dropdown-combo variants.
-
-## Fixed
-- List of icons: add an optionnal wrapper to allow for multiple chuck of content inside a list-item.
-
-
-## 2.7.0 - Unreleased
-
-## Added
-- New switches available in bootstrap v4.2.1. Our switches will be deprecated in v3
-
-## Changed
 - Updated to bootstrap v4.2.1
 - Review all available variables. Reorder and update values based on Bootstrap v4.2.1.
+- PatternLab: refactor data to allow for new multiple content inside a list-item.
+- .text-icon-list now allows .list-icon-block inside .list-icon-content to stack some block of datas.
+- Featured image placement in Nouvelle template.
+- Evenement and lieux uses the new Content header jumbotron component.
 
 ## Fixed
 - Fixed minor issues with custom-checkboxes and custom-radios padding new calculation.
+
+## Removed
+- Removed dropdown-combo variants.
+- Removed .hub-link
+
+## Fixed
+- List of icons: add an optionnal wrapper to allow for multiple chuck of content inside a list-item.
 
 ## Deprecated
 - Our switches will be deprecated in favor of boostrap new switches component.
@@ -404,6 +397,7 @@ remove index from the name. Which makes it possible to update font-icon without 
 - Removed vdm prefix for buttons classes
 
 
+[2.6.3]: https://bitbucket.org/villemontreal/boite-outils-web/src/2.6.3/
 [2.6.2]: https://bitbucket.org/villemontreal/boite-outils-web/src/2.6.2/
 [2.6.1]: https://bitbucket.org/villemontreal/boite-outils-web/src/2.6.1/
 [2.6.0]: https://bitbucket.org/villemontreal/boite-outils-web/src/2.6.0/

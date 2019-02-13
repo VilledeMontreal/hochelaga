@@ -8,12 +8,19 @@
       }
     }
   },
+  "has-breadcrumb": true,
+  "breadcrumbs": [
+    {
+      "url": "link.template-homepage",
+      "text": "Accueil"
+    },
+    {
+      "url": "link.pages-tous-les-elus",
+      "text": "Tous les élus"
+    }
+  ],
   "has-header-meta": true,
   "has-publication-date": false,
-  "has-hub-link": {
-    "url": "link.pages-tous-les-elus",
-    "link-text": "Tous les élus"
-  },
   "regionMainContentClasses": "col-lg-7 col-xl-8",
   "sidebarRight": false,
   "sidebarLeft": true,

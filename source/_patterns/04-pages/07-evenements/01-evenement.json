@@ -20,21 +20,59 @@
     "url": "http://www.montrealjoue.ca/",
     "title": "Montréal Joue"
   },
+  "list-icon-class": "row no-gutters",
   "list-icon-item": [
     {
+      "list-icon-item-class": false,
       "icon-item": {
         "icon-label": "005-calendrier"
       },
+      "item-label": "Date et heure",
       "item": [
         {
           "url": false,
           "class": false,
-          "content": "du 17 janvier - 17 h 00<br>au 19 janvier - 18 h 00"
+          "content": "Jeudi 17 janvier de 09&nbsp;h&nbsp;00 à 10&nbsp;h&nbsp;00"
+        }
+      ]
+    },
+    {
+      "list-icon-item-class": "col-lg-6",
+      "icon-item": {
+        "icon-label": "113-prix"
+      },
+      "item-label": "Tarif",
+      "item": [
+        {
+          "class": false,
+          "url": false,
+          "tag": {
+            "span": true
+          },
+          "content": "Gratuit"
+        }
+      ]
+    },
+    {
+      "list-icon-item-class": "col-lg-6",
+      "icon-item": {
+        "icon-label": "007-billet"
+      },
+      "item-label": "Droit d'entrée",
+      "item": [
+        {
+          "class": false,
+          "url": false,
+          "tag": {
+            "span": true
+          },
+          "content": "Avec billet"
         }
       ]
     }
   ],
   "evenement-list-infos": {
+    "list-icon-class": false,
     "list-icon-item": [
       {
         "icon-item": {
@@ -57,38 +95,6 @@
               "div": true
             },
             "content": "<a href=\"mapEventId\" class=\"js-scroll-trigger\">Afficher la carte</a>"
-          }
-        ]
-      },
-      {
-        "icon-item": {
-          "icon-label": "113-prix"
-        },
-        "item-label": "Tarif",
-        "item": [
-          {
-            "class": false,
-            "url": false,
-            "tag": {
-              "span": true
-            },
-            "content": "Payant"
-          }
-        ]
-      },
-      {
-        "icon-item": {
-          "icon-label": "007-billet"
-        },
-        "item-label": "Droit d'entrée",
-        "item": [
-          {
-            "class": false,
-            "url": false,
-            "tag": {
-              "span": true
-            },
-            "content": "Avec billet"
           }
         ]
       },

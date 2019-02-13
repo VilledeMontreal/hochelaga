@@ -48,13 +48,14 @@
 .media-cover {
   background-size: cover;
   background-position: 50% 50%;
-  min-height: 425px;
+  min-height: 250px;
   height: 100%;
   width: 100%;
 
-  @include media-breakpoint-up(lg) {
-    height: 100%;
+  @include media-breakpoint-up(sm) {
+    min-height: 425px;
   }
+
 }
 
 .btn-media {

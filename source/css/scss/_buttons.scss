@@ -382,3 +382,25 @@ input[type="button"] {
     }
   }
 }
+
+
+// Utility class to hide button-icon label
+@each $breakpoint, $value in $grid-breakpoints {
+  // Hide button label at small breakpoint
+  &.btn-hide-label-#{$breakpoint} {
+    @include media-breakpoint-down($breakpoint) {
+      padding-right: 1rem;
+      .vdm {
+        margin-right: 0;
+      }
+      .btn-label {
+        display: none;
+      }
+
+      // Tweak padding for small modifier
+      &.btn-sm {
+        padding-right: .75rem;
+      }
+    }
+  }
+}

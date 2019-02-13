@@ -1,6 +1,11 @@
 <header class="content-header {{ contentHeaderClasses }}">
   <div class="{{ contentHeaderContainerClasses }}">
     <div class="row">
+      {{# has-breadcrumb}}
+      <div class="col-12">
+      {{> molecules-breadcrumbs}}
+      </div>
+      {{/ has-breadcrumb}}
       <div class="col-12">
         <div class="content-header-title">
           {{> atoms-display-heading }}

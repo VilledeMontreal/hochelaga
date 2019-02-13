@@ -2,34 +2,23 @@
 // Main content header
 .content-header {
   padding-top: 4rem;
-  padding-bottom: 0;
+  padding-bottom: 2rem;
   .container-fluid {
     max-width: map-get($content-max-widths, xl);    // 1600px
-    padding-bottom: 2rem;
   };
   .container-fluid-xl {
     max-width: map-get($container-max-widths, xl);   // 1170px
   }
-  // Dark variant
-  &.content-header-dark {
-    background-color: $gray-700;
-    color: $white;
-    h1,h2,h3,h4,h5,h6 {
-      color: $white;
-    }
-    .hub-link a {
-      color: $white;
-      @include hover-focus {
-        color: $sarcelle-light;
-      }
-    }
+
+  // Fix breadcrumb padding when inside content-header-profile
+  .breadcrumb {
+    padding: 0 0 1.5rem 0;
   }
 
   // Title
   &-title {
     padding-bottom: 3rem;
-    // Limit max width of title
-    max-width: 1450px;
+    max-width: 1450px; // Limit max width of title
     h1 {
       margin-bottom: 0;
       &:after {
@@ -103,12 +92,20 @@
     }
   }
 
+  // Dark variant
+  &.content-header-dark {
+    background-color: $gray-700;
+    color: $white;
+    h1,h2,h3,h4,h5,h6 {
+      color: $white;
+    }
+  }
+
   // Content header profile variant
   &.content-header-profile {
-    padding-top: 3.5rem;
-    padding-bottom: 3.5rem;
+
     .img-profile {
-      margin: 0 auto 2.5rem auto;
+      margin: 2.5rem auto 0 auto;
       max-width: 375px;
     }
     .content-header-infos {
@@ -132,7 +129,6 @@
     @include media-breakpoint-up(lg) {
       .img-profile {
         margin: 0;
-        //max-width: 375px;
       }
     }
   }
@@ -140,7 +136,7 @@
   // Variant for collectrices pages
   &.content-header-hub {
     background-color: $gray-sky;
-    // Need to Harmonise this with other content-header
+    // Fatter padding for content-header-hub
     padding-top: 6rem;
     padding-bottom: 3rem;
     h1 {
@@ -180,7 +176,7 @@
     }
     @include media-breakpoint-up(lg) {
       .content-header-wrapper {
-        min-height: 525px;
+        min-height: 600px;
       }
     }
     @include media-breakpoint-up(xl) {
