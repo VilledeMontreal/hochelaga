@@ -4,13 +4,25 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](http://keepachangelog.com/en/1.0.0/)
 and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.html).
 
-## [3.0.0] - Unreleased
+
+## [3.1.0] - Unreleased
+
+## Added
+- New card: Date et heure
+- PatternLab: new organism Section with some page-section examples.
+
+## Changed
+- Refactoring of Lieux template.
+
+
+## [3.0.0] - 2019-02-14
 
 ## Added
 - New switches available in bootstrap v4.2.1. Our switches will be deprecated in v3
 - Content header jumbotron. New content header for tc like evenements, activites, lieu, etc.
 - Media gallery component using Photoswipe plugin.
 - Media gallery button to trigger a media gallery visualisation.
+- Utility classes for responsive Button with icons.
 
 ## Changed
 - Updated to bootstrap v4.2.1
@@ -19,6 +31,7 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 - .text-icon-list now allows .list-icon-block inside .list-icon-content to stack some block of datas.
 - Featured image placement in Nouvelle template.
 - Evenement and lieux uses the new Content header jumbotron component.
+- Refactoring of Elus template.
 
 ## Fixed
 - Fixed minor issues with custom-checkboxes and custom-radios padding new calculation.
@@ -37,7 +50,7 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 ## [2.6.3] - 2018-01-26
 
 ## Added
-- Added .badges-lg and .badges-xl utility classes for badges font-size.
+- Added .badge-lg and .badge-xl utility classes for badges font-size.
 - Added .active class for link badge.
 
 ## Changed
@@ -397,6 +410,7 @@ remove index from the name. Which makes it possible to update font-icon without 
 - Removed vdm prefix for buttons classes
 
 
+[3.0.0]: https://bitbucket.org/villemontreal/boite-outils-web/src/3.0.0/
 [2.6.3]: https://bitbucket.org/villemontreal/boite-outils-web/src/2.6.3/
 [2.6.2]: https://bitbucket.org/villemontreal/boite-outils-web/src/2.6.2/
 [2.6.1]: https://bitbucket.org/villemontreal/boite-outils-web/src/2.6.1/
