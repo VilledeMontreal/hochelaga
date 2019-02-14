@@ -6,10 +6,22 @@
 <div class="card {{ classes }}">
 {{/ url}}
   <div class="card-body">
+    {{^ has-bs-class}}
+
+    {{# card-type }}
+    <span class="card-type {{class}}">{{ card-type }}</span>
+    {{/ card-type }}
+    {{# card-title }}
+    <span class="card-title">{{ card-title }}</span>
+    {{/ card-title }}
+    
+    {{> atoms-text-icons-list}}
+    
+    {{/has-bs-class}}
+
     {{# has-bs-class }}
     <div class="row">
-      <div class="col-12 col-lg-7 col-xl-8">
-    {{/ has-bs-class}}
+      <div class="col-12 col-lg-8">
         <div class="d-flex h-100">
           <div class="d-flex flex-column">
             {{# card-type }}
@@ -20,20 +32,18 @@
             {{/ card-title }}
           </div>
           {{# has-icon}}
-          <div class="d-none d-lg-flex card-footer ml-auto">
+          <div class="card-footer d-none d-lg-flex ml-auto">
             <span class="vdm vdm-063-fleche-droite" aria-hidden="true"></span>
           </div>
           {{/ has-icon}}
         </div>
-    {{# has-bs-class}}
       </div>
-      <div class="col-12 col-lg-5 col-xl-4 order-last order-lg-first">
-    {{/ has-bs-class}}
+      <div class="col-12 col-lg-4 order-last order-lg-first">
         {{> atoms-text-icons-list}}
-    {{# has-bs-class}}
       </div>
     </div>
     {{/ has-bs-class}}
+
   </div>
 {{# url }}
 </a>
