@@ -1,5 +1,11 @@
 <button type="{{ buttonType }}" class="btn {{ buttonClass }}" {{ buttonState }}{{# dataToggle }} data-toggle="{{dataToggle}}"{{/ dataToggle}}{{# dataTarget }} data-target="{{dataTarget}}"{{/ dataTarget}}>
-  {{# buttonIcon }}<span class="vdm vdm-{{ icon-label }}" aria-hidden="true"></span>{{/ buttonIcon}}
-  {{# buttonIconSr }}<span class="sr-only">{{buttonIconSrText}}</span>{{/ buttonIconSr}}
-  {{# buttonText }}{{ buttonText }}{{/ buttonText}}
+  {{# buttonIcon }}
+  <span class="vdm vdm-{{ icon-label }}" aria-hidden="true"></span>
+  {{/ buttonIcon}}
+  {{# buttonIconSr }}
+  <span class="sr-only">{{buttonIconSrText}}</span>
+  {{/ buttonIconSr}}
+  {{# buttonText }}
+    <span class="btn-label">{{ buttonText }}</span>
+  {{/ buttonText}}
 </button>

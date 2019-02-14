@@ -1,11 +1,62 @@
 {
-  "sidebarClasses": "sidebar-top-stroke",
-  "social-media-icons-list": {
-    "has-label": false,
-    "has-facebook": true,
-    "has-instagram": false,
-    "has-twitter": true,
-    "has-linkedin": true,
-    "has-youtube": false
+  "evenement-list-infos": {
+    "list-icon-item": [
+      {
+        "icon-item": {
+          "icon-label": "091-localisation"
+        },
+        "item-label": "Lieu",
+        "item": [
+          {
+            "class": false,
+            "url": false,
+            "tag": {
+              "div": true
+            },
+            "content": "<address><a href=\"#\">Bibliothèque Jacqueline-De Repentigny</a><br>5955, avenue Bannantyne<br>Montréal (Québec) H4H 1H6</address>"
+          },
+          {
+            "class": false,
+            "url": false,
+            "tag": {
+              "div": true
+            },
+            "content": "<a href=\"mapEventId\" class=\"js-scroll-trigger\">Afficher la carte</a>"
+          }
+        ]
+      },
+      {
+        "icon-item": {
+          "icon-label": "031-ordinateur"
+        },
+        "item-label": "Inscription",
+        "item": [
+          {
+            "class": false,
+            "url": false,
+            "tag": {
+              "div": true
+            },
+            "content": "514 987-0909 poste 1234"
+          },
+          {
+            "class": false,
+            "url": false,
+            "tag": {
+              "div": true
+            },
+            "content": "<a href=\"mailto:test@ville.montreal.qc.ca\">Courriel</a><a href=\"#\">Site web</a>"
+          }
+        ]
+      }
+    ],
+    "social-media-icons-list": {
+      "has-label": false,
+      "has-facebook": true,
+      "has-instagram": false,
+      "has-twitter": true,
+      "has-linkedin": false,
+      "has-youtube": false
+    }
   }
 }

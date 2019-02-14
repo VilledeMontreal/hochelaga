@@ -244,6 +244,8 @@ legend,
 // Custom control indicators
 //
 // Build the custom controls out of pseudo-elements.
+
+/*
 .custom-control-label {
   // Background-color and (when enabled) gradient
   &::before {
@@ -255,6 +257,8 @@ legend,
     top: .125rem;
   }
 }
+
+*/
 
 
 // Checkboxes
@@ -329,8 +333,56 @@ legend,
   }
 }
 
+// switches
 //
+// Tweak a few things for switches
+
+.custom-switch {
+  padding-left: $custom-switch-width + $custom-control-gutter;
+
+  .custom-control-label {
+    padding: 1px 0;
+    &::before {
+      top: 0;
+      left: -($custom-switch-width + $custom-control-gutter);
+      width: $custom-switch-width;
+      height: $custom-switch-control-indicator-size + $custom-switch-inner-padding;
+      pointer-events: all;
+      border-radius: $custom-switch-indicator-border-radius;
+    }
+
+    &::after {
+      top: calc(#{$custom-switch-inner-padding} + #{$custom-control-indicator-border-width});
+      left: calc(#{-($custom-switch-width + $custom-control-gutter - $custom-switch-inner-padding)} + #{$custom-control-indicator-border-width * 2});
+      width: $custom-switch-indicator-size;
+      height: $custom-switch-indicator-size;
+      background-color: $custom-switch-control-indicator-color;
+      border-radius: $custom-switch-indicator-border-radius;
+      @include transition(transform .15s ease-in-out, $custom-forms-transition);
+    }
+  }
+
+  .custom-control-input:checked ~ .custom-control-label {
+    &::after {
+      background-color: $custom-control-indicator-bg;
+      transform: translateX($custom-switch-width - $custom-switch-control-indicator-size - ($custom-switch-inner-padding * 2));
+    }
+  }
+
+  .custom-control-input:disabled {
+    &:checked ~ .custom-control-label::before {
+      background-color: $custom-control-indicator-checked-disabled-bg;
+    }
+
+    & ~ .custom-control-label::after {
+      background-color: $custom-switch-control-indicator-disabled-color;
+    }
+  }
+}
+
+
 // Switches - Checkboxes as state toggles
+// Deprecated - use custom-switch instead
 .checkbox-toggle {
   // Massive negative offset clears the original checkbox & label.
   position: relative;
@@ -432,69 +484,6 @@ legend,
         }
       }
 
-    }
-  }
-}
-
-// Form-combo and variants
-// TODO: Validate if this is still Wanted
-.dropdown-combo {
-  position: relative;
-  .dropdown-combo-toggle {
-    border-bottom: 1px solid $black;
-    cursor: pointer;
-    display: flex;
-    flex: 1 1 100%;
-  }
-  .dropdown-combo-placeholder,
-  .select-container {
-    color: $gray-500;
-    flex-grow: 1;
-    align-self: center;
-    white-space: nowrap;
-    overflow: hidden;
-    text-overflow: ellipsis;
-  }
-  .select-container {
-    z-index: 1;
-  }
-  .dropdown-combo-select {
-    background: transparent;
-    -webkit-appearance: none;
-    -moz-appearance: none;
-    appearance: none;
-    z-index: 1;
-    flex-shrink: 1;
-    width: 100%;
-    padding-right: 40px;
-    color: $primary;
-    border: none;
-    border-radius: 0px;
-  }
-
-  .dropdown-combo-select-button {
-    position: absolute;
-    right: 0;
-    top: 50%;
-    transform: translateY(-50%);
-    background-color: transparent;
-    color: $primary;
-  }
-  .dropdown-menu {
-    border: none;
-    border-radius: 0;
-    margin: 0;
-    margin-top: 1px;
-    max-height: 235px;
-    overflow-x: hidden;
-    box-shadow: $dropdown-box-shadow; // Use available variables to normalize dropdown-box-shadow
-    width: 100%;
-    li {
-      padding-bottom: 0;
-    }
-    .dropdown-item {
-      display: inline-block;
-      padding: .625rem 1rem .625rem 2rem;
     }
   }
 }

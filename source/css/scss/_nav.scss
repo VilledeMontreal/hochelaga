@@ -1,14 +1,31 @@
 // Breadcrumb
 .breadcrumb {
-  border-radius: 0;
   font-size: $font-size-base;
-  margin-bottom: 0;
+  li {
+    padding-bottom: 0;
+  }
   a {
     border: none;
     color: $gray-700;
     @include transition(color .15s ease-in-out);
+    font-weight: $font-weight-bold;
     &:hover {
       color: $sarcelle-surprise;
+    }
+  }
+
+  // Light version to be used on dark background
+  &.breadcrumb-light {
+    a {
+      color: $white;
+      &:hover {
+        color: $sarcelle-surprise;
+      }
+    }
+    .breadcrumb-item {
+      &::before {
+        color: $white;
+      }
     }
   }
 }

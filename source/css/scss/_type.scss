@@ -8,7 +8,6 @@ body {
 //
 // Headings are responsive
 // @see responsive-font-size mixin
-
 h1, .h1 {
   @include responsive-font-size($h1-font-size, .75, 44px);
   // 576px and up
@@ -277,6 +276,7 @@ a {
     }
   }
   // List some exclusion
+  .media-gallery,
   .list-icon,
   .social-media-list,
   .cards,
@@ -300,7 +300,7 @@ a {
 //
 .blockquote {
   color: $gray-900;
-  font-size: $font-size-lg;
+  font-size: $blockquote-font-size;
   line-height: $line-height-base;
   font-weight: $font-weight-normal;
   margin-bottom: 2rem;
@@ -382,12 +382,6 @@ a {
 .bullet-left {
   @include bullet-left();
 }
-
-/*
-.meta {
-  font-size: $font-size-xs;
-}
-*/
 
 .footer-notes {
   border-top: 1px solid $gray-700;

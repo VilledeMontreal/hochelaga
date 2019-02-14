@@ -45,6 +45,13 @@
       "dest"  : "public/js/vendor/",
       "distribution"  : "dist/js/vendor/"
     },
+    "photoswipe": {
+      "base" : "node_modules/",
+      "files" : [
+        "node_modules/photoswipe/dist/**"
+      ],
+      "dest" : "public/plugin/photoswipe/dist/"
+    },
     "nodemodulesfonts": {
       "base"  : "node_modules/",
       "files" : [

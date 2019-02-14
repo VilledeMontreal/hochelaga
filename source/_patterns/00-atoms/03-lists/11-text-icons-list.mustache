@@ -1,20 +1,43 @@
-<ul class="list-icon">
+
+{{# list-icon-heading }}
+<div class="list-icon-heading">{{ list-icon-heading }}</div>
+{{/ list-icon-heading }}
+<ul class="list-icon {{list-icon-class}}">
   {{# list-icon-item }}
-  <li class="list-icon-item">
-  {{# icon-item}}
+  <li class="list-icon-item {{list-icon-item-class}}">
+    {{# icon-item}}
     <span class="vdm vdm-{{ icon-label }} {{ icon-class }}" aria-hidden="true"></span>
-  {{/ icon-item}}
-  {{# url }}
-    {{^ modal }}
-    <a href="{{url}}" class="{{ class }}">{{{ content }}}</a>
-    {{/ modal }}
-    {{# modal }}
-    <a href="{{url}}" class="{{ class }}" data-toggle="modal">{{{ content }}}</a>
-    {{/ modal }}
-  {{/ url }}
-  {{^ url }}
-    <span>{{{ content }}}</span>
-  {{/ url }}
+    {{/ icon-item}}
+    <div class="list-icon-content">
+    {{# item-label }}
+    <span class="list-icon-label">{{item-label}}</span>
+    {{/ item-label }}
+    {{# item }}
+      {{# url }}
+      {{^ modal }}
+      <a href="{{url}}" class="{{ class }}">{{{ content }}}</a>
+      {{/ modal }}
+      {{# modal }}
+      <a href="{{url}}" class="{{ class }}" data-toggle="modal" data-target="{{ modal-target }}">{{{ content }}}</a>
+      {{/ modal }}
+      {{/ url }}
+      {{^ url }}
+
+      {{^ tag }}
+      {{{ content }}}
+      {{/ tag }}
+
+      {{# tag.span }}
+      <span>{{{ content }}}</span>
+      {{/ tag.span }}
+
+      {{# tag.div }}
+      <div class="list-icon-block">{{{ content }}}</div>
+      {{/ tag.div }}
+
+      {{/ url }}
+    {{/ item }}
+    </div>
   </li>
   {{/ list-icon-item}}
 </ul>

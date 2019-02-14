@@ -1,0 +1,51 @@
+<header class="content-header content-header-jumbotron {{ contentHeaderClasses }}">
+  <div class="{{ contentHeaderContainerClasses }}">
+    <div class="row no-gutters bg-gray-sky">
+      <div class="col-12{{^has-media-image}} col-xl-8{{/ has-media-image}}{{# has-media-image}} col-lg-6 col-xl-5{{/ has-media-image}}">
+        <div class="content-header-wrapper">
+          <div class="content-header-headings">
+            {{# state}}
+            <div class="content-header-headings-state">
+            {{> atoms-badge}}
+            </div>
+            {{/ state}}
+            {{> atoms-display-heading }}
+            {{# organised-by}}
+            <div class="content-header-label">
+              <span class="label">Organisé par</span>
+              <a href="{{ url }}">{{ title }}</a>
+            </div>
+            {{/ organised-by}}
+          </div>
+          <div class="content-header-metadata">
+            {{> atoms-text-icons-list}}
+          </div>
+        </div>
+      </div>
+      {{# has-media-image }}
+      <div class="col-12 col-lg-6 col-xl-7 order-first order-lg-last">
+        {{# has-media-gallery }}
+        <div class="media-gallery-button">
+        {{/ has-media-gallery }}
+          <button class="btn-media js-gallery-trigger" aria-hidden="true">
+            <div class="media-cover" role="image" aria-label="media-image.mediaAlt" style="background-image: url('{{ media-image.mediaSrc}}');"></div>
+          </button>
+          {{# has-media-gallery }}
+          {{> atoms-button-icon(buttonClass: "btn-primary btn-light btn-hide-label-xs btn-media-gallery js-gallery-trigger", buttonText: "Afficher les photos", icon-label: "021-dossier", buttonIcon: true)}}
+          {{/ has-media-gallery }}
+        {{#has-media-gallery}}  
+        </div>
+        {{/ has-media-gallery }}
+        <ul class="media-gallery d-none" itemscope itemtype="http://schema.org/ImageGallery">
+          {{# mediaGallery }}
+          <li itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
+            <a href="{{ mediaSrc }}" itemprop="contentUrl" data-size="{{ mediaSize }}" data-index="{{ index }}" data-title="{{ mediaCaption}}" data-author="{{ mediaAuthor }}">
+              <img src="{{ thumbnail.mediaSrc }}" class="img-fluid" height="{{ thumbnail.height }}" width="{{ thumbnail.width }}" itemprop="thumbnail" alt="{{ mediaAlt }}">
+            </a>
+          </li>
+          {{/ mediaGallery}}
+        </ul>
+      {{/ has-media-image }}
+    </div>
+  </div>
+</header>

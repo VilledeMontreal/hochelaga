@@ -318,7 +318,7 @@ input[type="button"] {
 
   @include media-breakpoint-up(lg) {
     .btn-label {
-      font-size: $sm-link-font-size;
+      font-size: $slide-menu-link-font-size;
     }
     .vdm {
       font-size: 2.5rem;
@@ -379,6 +379,28 @@ input[type="button"] {
   &:hover {
     .button-label {
       border-color: inherit;
+    }
+  }
+}
+
+
+// Utility class to hide button-icon label
+@each $breakpoint, $value in $grid-breakpoints {
+  // Hide button label at small breakpoint
+  &.btn-hide-label-#{$breakpoint} {
+    @include media-breakpoint-down($breakpoint) {
+      padding-right: 1rem;
+      .vdm {
+        margin-right: 0;
+      }
+      .btn-label {
+        display: none;
+      }
+
+      // Tweak padding for small modifier
+      &.btn-sm {
+        padding-right: .75rem;
+      }
     }
   }
 }

@@ -59,13 +59,14 @@
 // The base unit for a sidebar component, stacked
 .sb-block {
   margin-bottom: 3rem;
+  @include clearfix;
   > *:last-child {
     margin-bottom: 0;
   }
 
   // The basic grouping tool for visual effect, with a padding/margin-bottom;
   .subsection {
-    padding-bottom: $sidebar-box-v-padding;
+    padding-bottom: 1.5rem;
     &:last-of-type {
       padding-bottom: 0;
     }
