@@ -50,6 +50,17 @@
           </ul>
           {{/ has-documents}}
 
+          {{# has-partners}}
+          <h3 class="h4">Partenaire</h3>
+          <ul class="list-inline {{container-class}}">
+            {{# partners}}
+            <li class="list-inline-item">
+              <a href=""><img class=""></a>
+            </li>
+            {{/ partners}}
+          </ul>
+          {{/ has-partners}}
+
           {{# has-tags}}
           <h3 class="h4">Étiquettes</h3>
           <ul class="list-inline {{container-class}}">
@@ -83,6 +94,10 @@
       </div>
     </div>
   </div>
+
+  {{# hasSimilarEvents}}
+  {{> organisms-page-section}}
+  {{/ hasSimilarEvents}}
 
   {{# hasFeedbackForm}}
   {{> organisms-feedback-form}}

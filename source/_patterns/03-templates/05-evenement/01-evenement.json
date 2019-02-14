@@ -182,5 +182,130 @@
   "map": {
     "address": "<address><a href='#'>Bibliothèque Jacqueline-De Repentigny</a><br>5955, avenue Bannantyne<br>Montréal (Québec) H4H 1H6</address>",
     "lngLat": "-73.577946, 45.448775"
+  },
+  "hasSimilarEvents": {
+    "page-section": {
+      "section-headings": {
+        "heading": "Événements similaires",
+        "button": {
+          "buttonClass": "btn-secondary", 
+          "buttonText": "Tous les événements"
+        }
+      },
+      "cards": {
+        "section-classes": "bg-gray-sky",
+        "classes": false,
+        "card-item" : [
+          {
+            "bsgrid-classes": "col-12 col-md-6 col-lg-4",
+            "classes" : "card-teaser",
+            "url" : "#",
+            "card-title" : "Lorem ipsum dolor sit amet",
+            "card-type": "Type d'événement",
+
+            "list-icon-class": "mb-0",
+            "list-icon-item": [
+              {
+                "list-icon-item-class": false,
+                "icon-item": {
+                  "icon-label": "091-localisation"
+                },
+                "item-label": "Date et heure",
+                "item": [
+                  {
+                    "class": false,
+                    "url": false,
+                    "tag": {
+                      "span": true
+                    },
+                    "content": "du 28 décembre 2019 - 17&nbsp;h&nbsp;00"
+                  },
+                  {
+                    "class": false,
+                    "url": false,
+                    "tag": {
+                      "span": true
+                    },
+                    "content": "au 19 janvier 2020 - 18&nbsp;h&nbsp;00"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "bsgrid-classes": "col-12 col-md-6 col-lg-4",
+            "classes" : "card-teaser",
+            "url" : "#",
+            "card-title" : "Donec eget sodales neque",
+            "card-type": "Type d'événement",
+
+            "list-icon-class": "mb-0",
+            "list-icon-item": [
+              {
+                "list-icon-item-class": false,
+                "icon-item": {
+                  "icon-label": "091-localisation"
+                },
+                "item-label": "Date et heure",
+                "item": [
+                  {
+                    "class": false,
+                    "url": false,
+                    "tag": {
+                      "span": true
+                    },
+                    "content": "Jeudi 19 janvier"
+                  },
+                  {
+                    "class": false,
+                    "url": false,
+                    "tag": {
+                      "span": true
+                    },
+                    "content": "de 09&nbsp;h&nbsp;00 à 10&nbsp;h&nbsp;00"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "bsgrid-classes": "col-12 col-md-6 col-lg-4",
+            "classes" : "card-teaser",
+            "url" : "#",
+            "card-title" : "Aliquam sit amet gravida velit",
+            "card-type": "Type d'événement",
+
+            "list-icon-class": "mb-0",
+            "list-icon-item": [
+              {
+                "list-icon-item-class": false,
+                "icon-item": {
+                  "icon-label": "091-localisation"
+                },
+                "item-label": "Date et heure",
+                "item": [
+                  {
+                    "class": false,
+                    "url": false,
+                    "tag": {
+                      "span": true
+                    },
+                    "content": "Jeudi 19 janvier"
+                  },
+                  {
+                    "class": false,
+                    "url": false,
+                    "tag": {
+                      "span": true
+                    },
+                    "content": "de 09&nbsp;h&nbsp;00 à 10&nbsp;h&nbsp;00"
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      }
+    }
   }
 }

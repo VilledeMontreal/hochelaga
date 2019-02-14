@@ -1,4 +1,23 @@
 {
+  "state": {
+    "badge": "En direct bientôt",
+    "badgeClass": "badge-pill badge-danger",
+    "badge-sr-text": ""
+  },
+  "text-elements": {
+    "headings":{
+      "display":{
+        "classes": "h2",
+        "content": "Présentation aux employés de la SPVM - Plan de lutte au profilage racial/social 2018-2021"
+      }
+    }
+  },
+  "organised-by": {
+    "url": "#",
+    "title": "Commission sur l’eau, l’environnement, le développement durable et les grands parcs"
+  },
+  "has-media-image": false,
+  "list-icon-class": "row no-gutters",
   "list-icon-item": [
     {
       "list-icon-item-class": "col-12",
@@ -10,18 +29,7 @@
         {
           "url": false,
           "class": false,
-          "tag": {
-            "span": true
-          },
-          "content": "du 17 janvier - 17&nbsp;h&nbsp;00"
-        },
-        {
-          "url": false,
-          "class": false,
-          "tag": {
-            "span": true
-          },
-          "content": "au 19 janvier - 18&nbsp;h&nbsp;00"
+          "content": "Jeudi 14 février à 17&nbsp;h&nbsp;00"
         }
       ]
     },
@@ -38,7 +46,7 @@
           "tag": {
             "span": true
           },
-          "content": "Payant"
+          "content": "Gratuit"
         }
       ]
     },
@@ -55,15 +63,9 @@
           "tag": {
             "span": true
           },
-          "content": "Avec billet"
+          "content": "Sur invitation seulement"
         }
       ]
     }
-  ],
-  "alerts": {
-    "alertClass": "alert-warning alert-icon alert-dismissible mb-0",
-    "alertIcon": "036-attention-circulaire",
-    "alertText": "<strong>Warning!</strong> This is a warning alert with an icon.<br>This example text is going to run a bit longer so that you can see how spacing within an alert works with this kind of content.",
-    "dismissableAlert": true
-  }
+  ]
 }
