@@ -19,6 +19,11 @@
     flex: 0 0 auto; // IE needs this
   }
 
+  .card-type {
+    font-weight: $font-weight-bold;
+    display: inline-block;
+    margin-bottom: .5rem;
+  }
   .card-tags,
   .card-date {
     display: inline-block;
@@ -197,6 +202,29 @@
           font-size: 3.5rem;
           margin-left: 2rem;
           margin-right: 2rem;
+        }
+      }
+    }
+  }
+
+  // Teaser layout
+  &.card-teaser {
+    .card-body {
+      text-align: left;
+    }
+    &.card-row-layout {
+      .card-title {
+        margin-bottom: 1rem;
+      }
+      .card-footer {
+        padding: 0;
+        .vdm {
+          margin-right: 0;
+        }
+      }
+      @include media-breakpoint-up(lg) {
+        .card-title {
+          margin-bottom: 0;
         }
       }
     }
