@@ -15,6 +15,15 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 - Refactoring of Lieux template.
 
 
+## [3.0.1] - 2019-02-20
+
+## Changed
+- Update to popper v1.14.7 dependencies
+
+## Fixed
+- Fixed dependencies on bootstrap too permissive that allowed upgrade to bootstrap v4.3.1 which breaks everything.
+
+
 ## [3.0.0] - 2019-02-14
 
 ## Added
@@ -410,6 +419,7 @@ remove index from the name. Which makes it possible to update font-icon without 
 - Removed vdm prefix for buttons classes
 
 
+[3.0.1]: https://bitbucket.org/villemontreal/boite-outils-web/src/3.0.1/
 [3.0.0]: https://bitbucket.org/villemontreal/boite-outils-web/src/3.0.0/
 [2.6.3]: https://bitbucket.org/villemontreal/boite-outils-web/src/2.6.3/
 [2.6.2]: https://bitbucket.org/villemontreal/boite-outils-web/src/2.6.2/
