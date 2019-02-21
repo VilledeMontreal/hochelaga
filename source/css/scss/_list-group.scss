@@ -31,32 +31,32 @@
   }
 
   .vdm {
-    font-size: 1.5rem;
+    @include font-size(1.5rem);
     padding-right: .5rem;
   }
 
   .list-group-item-title {
     color: $headings-color;
     display: block;
-    font-size: $font-size-xl;
+    @include font-size($font-size-xl);
     line-height: $line-height-sm;
     padding-bottom: .5rem;
   }
   
   .list-group-item-label {
-    font-weight: $font-weight-bold;
     display: block;
+    font-weight: $font-weight-bold;
   }
 
 }
 
 .list-group-heading {
   color: $headings-color;
-  font-size: $font-size-xl;
+  @include font-size($font-size-xl);
   line-height: $line-height-sm;
+  margin-bottom: 2rem;
   padding-top: .7rem;
   padding-bottom: 0;
-  margin-bottom: 2rem;
 }
 
 
@@ -85,7 +85,7 @@
       margin-left: auto;
       .vdm {
         color: $gray-300;
-        font-size: 3rem;
+        @include font-size(3rem);
         padding-right: 0;
       }
     }

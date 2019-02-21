@@ -15,17 +15,31 @@
 
 /* makes the font 33% larger relative to the icon container */
 .vdm-lg {
-  font-size: (4em / 3);
+  @include font-size(4em / 3);
   line-height: (3em / 4);
   vertical-align: -15%;
 }
-.vdm-2x { font-size: 2em; }
-.vdm-3x { font-size: 3em; }
-.vdm-4x { font-size: 4em; }
-.vdm-5x { font-size: 5em; }
-.vdm-6x { font-size: 6em; }
-.vdm-7x { font-size: 7em; }
-.vdm-8x { font-size: 8em; }
+.vdm-2x {
+  @include font-size(2em);
+}
+.vdm-3x {
+  @include font-size(3em);
+}
+.vdm-4x {
+  @include font-size(4em);
+}
+.vdm-5x {
+  @include font-size(5em);
+}
+.vdm-6x {
+  @include font-size(6em);
+}
+.vdm-7x {
+  @include font-size(7em);
+}
+.vdm-8x {
+  @include font-size(8em);
+}
 
 @each $name, $char in $vdmicons {
   &.#{$name} {

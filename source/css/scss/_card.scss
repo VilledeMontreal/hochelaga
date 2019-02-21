@@ -11,7 +11,7 @@
   box-shadow: $card-box-shadow;
 
   .card-icon-top {
-    font-size: 4.5rem;
+    @include font-size(4.5rem);
     margin-top: 3rem;
   }
 
@@ -64,7 +64,7 @@
 
   .card-description {
     display: inline-block;
-    font-size: $font-size-sm;
+    @include font-size($font-size-sm);
     line-height: $line-height-base;
   }
 
@@ -74,10 +74,10 @@
     justify-content: flex-end;
     border-bottom: none;
     color: $sarcelle;
-    font-size: $font-size-base;
+    @include font-size($font-size-base);
     @include transition(color .15s ease-in-out);
     .vdm {
-      font-size: 3rem;
+      @include font-size(3rem);
       margin-left: 1rem;
       color: inherit;
     }
@@ -88,7 +88,7 @@
   }
 
   .tarif-value {
-    font-size: $font-size-lg;
+    @include font-size($font-size-lg);
     font-weight: $font-weight-bold;
     padding: 0 .5rem;
   }
@@ -140,7 +140,7 @@
 
     .vdm {
       color: $primary;
-      font-size: 2.5rem;
+      @include font-size(2.5rem);
     }
   }
 
@@ -151,7 +151,7 @@
   .card-alert {
     .vdm {
       color: inherit;
-      font-size: 3rem;
+      @include font-size(3rem);
     }
   }
 
@@ -166,11 +166,11 @@
     .card-footer {
       padding: 1.5rem 1rem 1.5rem 0;
       .vdm {
-        font-size: 3rem;
+        @include font-size(3rem);
       }
     }
     .card-title {
-      font-size: $font-size-base;
+      @include font-size($font-size-base);
       font-weight: $font-weight-bold;
     }
 
@@ -199,7 +199,7 @@
       .card-footer {
         padding: 2rem;
         .vdm {
-          font-size: 3.5rem;
+          @include font-size(3.5rem);
           margin-left: 2rem;
           margin-right: 2rem;
         }
@@ -422,7 +422,7 @@
       font-weight: $font-weight-bold;
     }
     .card-label {
-      font-size: $font-size-base;
+      @include font-size($font-size-base);
     }
   }
 
@@ -444,7 +444,7 @@
     text-align: left;
   }
   .card-label {
-    font-size: $font-size-xl;
+    @include font-size($font-size-xl);
     font-weight: $font-weight-bold;
     &.card-label-normal {
       font-weight: $font-weight-normal;
@@ -484,7 +484,7 @@
     }
   }
   .alert-heading {
-    font-size: $font-size-lg;
+    @include font-size($font-size-lg);
     font-weight: $font-weight-bold;
     color: inherit;
     margin-bottom: 0;

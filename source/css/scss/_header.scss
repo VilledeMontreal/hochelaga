@@ -109,7 +109,7 @@
     &:after {
       content: none;
       color: $link-color;
-      font-size: 1.125rem;
+      @include font-size(1.125rem);
     }
 
     // Add chevron only on large breakpoint and up
@@ -131,7 +131,7 @@
 
     // Font-icon size and color
     .vdm {
-      font-size: 3rem;
+      @include font-size(3rem);
       color: $sarcelle-surprise;
     }
 
@@ -144,7 +144,7 @@
         }
       }
       .user-email {
-        font-size: $font-size-sm;
+        @include font-size($font-size-sm);
         color: $gray-600;
       }
       .user-profil {
@@ -162,7 +162,7 @@
     .user-action {
       .dropdown-item {
         .vdm {
-          font-size: 2.5rem;
+          @include font-size(2.5rem);
           margin-top: -.75rem;
           margin-bottom: -.75rem;
           margin-left: auto;
@@ -217,24 +217,23 @@
 
   // Icons size in navbar
   .vdm {
-    font-size: 2rem;
+    @include font-size(2rem);
     vertical-align: middle;
     @include transition(color .15s ease-in-out);
 
     // mobile and up
     @include media-breakpoint-up(sm) {
-      font-size: 2.5rem;
+      @include font-size(2.5rem);
     }
     // tablets and up
     @include media-breakpoint-up(md) {
-      font-size: 3rem;
+      @include font-size(3rem);
       margin-right: .625rem;
     }
   }
 
   .button-label {
     color: $black;
-    //font-size: $font-size-sm;
     line-height: 1;
     @include transition(color .15s ease-in-out);
   }
@@ -256,7 +255,7 @@
 
   &.navbar-button-lg {
     .button-label {
-      font-size: 1.125rem;
+      @include font-size($font-size-base);
     }
   }
   // Login button need less right margin on larger breakpoint...
@@ -296,7 +295,7 @@
 
   .form-control {
     border: none;
-    font-size: 1.875rem;
+    @include font-size(1.875rem);
     &:focus {
       box-shadow: none;
     }
@@ -324,23 +323,25 @@
   .home-link {
     border: none;
     flex-shrink: 0;
-    @include size($header-icon-width);
+    width: $header-icon-width;
+    height: $header-icon-height;
     background-color: $black;
     color: $white;
     text-decoration: none;
     .vdm {
-      font-size: 3rem;
+      @include font-size(3rem);
       color: $white;
     }
   }
   .hdr-title {
     color: $headings-color;
-    font-size: $font-size-base;           // 18px
+    @include font-size($font-size-base);
     line-height: $line-height-base;       // 1.55
     font-weight: $font-weight-bold;
     padding: 1.5rem $grid-gutter-width;
+
     @include media-breakpoint-up(md) {
-      font-size: $font-size-xl;           // 24px
+      @include font-size($font-size-xl);
       line-height: $line-height-sm;       // 1.33
     }
   }

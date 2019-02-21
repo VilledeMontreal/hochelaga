@@ -43,7 +43,7 @@
 
   &-metadata {
     color: $gray-600;
-    font-size: $font-size-base;
+    @include font-size($font-size-base);
     padding-bottom: 2rem;
   }
 
@@ -115,12 +115,12 @@
       }
       .profile-title {
         color: $headings-color;
-        font-size: $font-size-xl;
+        @include font-size($font-size-xl);
         line-height: $line-height-sm;
       }
       .profile-member {
         color: $headings-color;
-        font-size: $font-size-base;
+        @include font-size($font-size-base);
       }
       .profile-label {
         color: $gray-600;

@@ -14,20 +14,21 @@
   .vdm {
     color: inherit;
     padding-right: 1.5rem;
-    font-size: 3rem;
+    @include font-size(3rem);
   }
 }
 
 // States
 .state {
-  @include size(2rem);
   display: flex;
   border-radius: 50%;
   align-self: center;
+  width: 2rem;
+  height: 2rem;
   .vdm {
     text-align: right;
     color: $white;
-    font-size: 2rem;
+    @include font-size(2rem);
     align-self: center;
   }
 }
@@ -43,9 +44,8 @@
 .top-banner {
   background: $gray-900;
   color: $white;
-  font-size: $font-size-sm;
-  height: $top-banner-height;
   display: flex;
+  @include font-size($font-size-sm);
   align-items: center;
   justify-content: center;
   padding: 0 $grid-gutter-width;
