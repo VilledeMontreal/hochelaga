@@ -5,10 +5,22 @@ The format is based on [Keep a Changelog](http://keepachangelog.com/en/1.0.0/)
 and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.html).
 
 
-## [3.2.0] - Unreleased
+## [3.3.0] - Unreleased
 
 ## Changed
 - Refactoring of Lieux template.
+
+
+## [3.2.0] - Unreleased
+
+## Changed
+- Updated to bootstrap v4.3.1
+- Updated all font-size selector to the new font-size mixin.
+- Modify usage of deprecated mixins size().
+
+## Fixed
+- Fixed some altered variables that changed in bootstrap variables.
+- Fixed padding content-header
 
 
 ## [3.1.0] - 2019-02-20

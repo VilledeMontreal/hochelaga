@@ -42,7 +42,7 @@ html {
 
 // Quick links
 .quick-links {
-  font-size: $font-size-sm;
+  @include font-size($font-size-sm);
   padding-bottom: 2rem;
   .quick-links-label {
     color: $gray-700;
@@ -111,8 +111,8 @@ html {
 .hub-section-heading {
   h1,h2,h3,h4,h5,h6 {
     color: $headings-color;
+    @include font-size($font-size-xl);
     font-weight: $font-weight-bold;
-    font-size: $font-size-xl;
     line-height: $line-height-sm;
     margin-bottom: 1.5rem;
   }
@@ -216,7 +216,7 @@ html {
   .title {
     color: $headings-color;
     display: block;
-    font-size: $font-size-lg;
+    @include font-size($font-size-lg);
     line-height: $line-height-sm;
     font-weight: $font-weight-bold;
     margin-bottom: 1rem;
@@ -293,7 +293,7 @@ html {
     }
     .vdm {
       color: $primary;
-      font-size: 4rem;
+      @include font-size(4rem);
       margin-top: -.5rem;
       margin-right: 1rem;
     }
@@ -351,9 +351,9 @@ html {
     }
   }
   .title {
-    font-size: $font-size-xl;
-    line-height: $line-height-sm;
+    @include font-size($font-size-xl);
     font-weight: $font-weight-bold;
+    line-height: $line-height-sm;
     padding-top: 1rem;
   }
   .item-label {
@@ -409,7 +409,7 @@ html {
     margin-bottom: 2rem;
     .vdm {
       color: $gray-300;
-      font-size: 7.5rem;
+      @include font-size(7.5rem);
     }
   }
 
@@ -496,11 +496,11 @@ html {
             }
           }
           &.nav-filters {
-            font-size: $font-size-sm;
-            margin-right: 2rem;
             display: flex;
             flex: 1 0 auto;
             align-self: center;
+            @include font-size($font-size-sm);
+            margin-right: 2rem;
           }
         }
       }
@@ -565,11 +565,11 @@ html {
   margin-bottom: 3rem;
   .content-block-infos {
     color: $headings-color;
-    font-size: $font-size-lg;
+    @include font-size($font-size-lg);
     line-height: $line-height-base;
     margin-bottom: 2rem;
     .content-block-infos-title {
-      font-size: $font-size-xl;
+      @include font-size($font-size-xl);
       font-weight: bold;
       line-height: $line-height-sm;
     }
@@ -614,14 +614,14 @@ html {
 //
 // empty-results
 .empty-results {
-  // TODO: REMOVE list-group-heading in v3.0.0
+  // TODO: REMOVE list-group-heading in v4.0.0
   // list-group-heading will be deprecated,
   // Use empty-results-heading inside empty-results div
   .list-group-heading,
   .empty-results-heading {
     display: block;
     color: $headings-color;
-    font-size: $font-size-xl;
+    @include font-size($font-size-xl);
     line-height: $line-height-sm;
     padding-bottom: 1.275rem;
   }

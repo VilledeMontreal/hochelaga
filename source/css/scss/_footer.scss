@@ -28,7 +28,7 @@ footer {
       li a {
         .vdm {
           color: $white;
-          font-size: 1.5rem;
+          @include font-size($font-size-xl);
           padding: 0;
         }
         @include hover-focus {
@@ -45,7 +45,7 @@ footer {
       border: 1px solid $white;
       border-radius: 2px;
       cursor: pointer;
-      font-size: $font-size-xs;
+      @include font-size($font-size-xs);
       line-height: $line-height-sm;
       padding: .75rem 3.5rem;
       &:hover {
@@ -55,7 +55,7 @@ footer {
     }
 
     .legal-links {
-      font-size: $font-size-xs;
+      @include font-size($font-size-xs);
       line-height: $line-height-base;
       li {
         padding-bottom: 0;
@@ -64,7 +64,7 @@ footer {
 
     .copyright {
       display: inline-block;
-      font-size: $font-size-xs;
+      @include font-size($font-size-xs);
       line-height: $line-height-base;
     }
 
