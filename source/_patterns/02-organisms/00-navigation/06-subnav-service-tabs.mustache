@@ -1,0 +1,22 @@
+<nav class="d-flex flex-wrap justify-content-between" aria-label="Service navigation" role="navigation">
+  <div class="order-1 col">
+    <span class="subnav-title">{{ serviceName }}</span>
+  </div>
+  <div class="order-2 order-md-last col text-right">
+    <button class="btn btn-quit">
+      <span class="button-label d-none d-md-inline-flex">Quitter</span>
+      {{> atoms-fonticon-item(icon-label: "111-quitter") }}
+      <span class="sr-only">Quitter</span>
+    </button>
+  </div>
+  <div class=""></div>
+  <div class="order-3 col-auto">
+    <ul class="nav nav-tabs order-3" role="tablist">
+      {{# navTabs.navItem }}
+      <li class="nav-item" role="presentation">
+        <a href="{{ url }}" class="nav-link {{ class }}" role="tab" data-toggle="tab">{{ title }}</a>
+      </li>
+      {{/ navTabs.navItem }}
+    </ul>
+  </ul>
+</nav>
