@@ -16,30 +16,30 @@
   <div class="region-content {{ regionMainClasses }}">
     <div class="container">
       <div class="row">
-        <article class="col-12 col-lg-8">
+        <article class="col-12 col-lg-7 col-xl-8">
           <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras at convallis felis. Sed non purus ligula. Phasellus vulputate aliquam libero nec sollicitudin. 
           Integer vel egestas neque, eu faucibus tellus. Ut consequat tortor justo, blandit convallis ex malesuada vel. Ut dapibus enim pretium diam lacinia porttitor et a ante. 
           Maecenas a ligula at urna accumsan mollis. Quisque congue erat nec lacus dapibus, ut sodales mi finibus. Proin rhoncus nibh vel justo cursus pharetra.</p>
-          
-          {{# lieuListGroup }}
-          {{> molecules-list-group-content }}
-          {{/ lieuListGroup }}
-
         </article>
+
         {{# sidebarRight }}
-        <aside class="col-12 col-lg-4 sidebar-right" role="complementary">
+        <aside class="col-12 col-lg-5 col-xl-4 sidebar-right" role="complementary">
           {{> organisms-sidebar-block-schedule }}
         </aside>
         {{/ sidebarRight }}
+
       </div>
+      {{# map }}
+      <div class="row">
+        <div class="col-12">
+          <div class="map-section">
+            <div id="{{ mapID }}" style="height:500px"></div>
+          </div>
+        </div>
+      </div>
+      {{/ map }}
     </div>
   </div>
-
-  {{# map }}
-  <section class="map-section">
-    <div id="{{ mapID }}" style="height:500px"></div>
-  </section>
-  {{/ map }}
 
   {{# hasFeedbackForm}}
   {{> organisms-feedback-form}}
