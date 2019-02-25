@@ -2,6 +2,7 @@
   <div class="subnav-container">
     <span class="subnav-title">{{ serviceName }}</span>
   </div>
+  {{# subnav-links }}
   <div class="subnav-links">
     <button class="btn btn-quit">
       <span class="button-label d-none d-md-inline-flex">Quitter</span>
@@ -9,4 +10,8 @@
       <span class="sr-only">Quitter</span>
     </button>
   </div>
+  {{/ subnav-links }}
 </nav>
+{{# navTabs }}
+{{> molecules-nav-tabs }}
+{{/ navTabs }}

@@ -338,6 +338,7 @@ nav {
   flex-wrap: nowrap;
   overflow-x: auto;
   overflow-y: hidden;
+  padding-left: 1.5rem;
   white-space: nowrap;
   text-align: center;
   width: 100%;
@@ -417,6 +418,7 @@ nav {
   }
   @include media-breakpoint-up(lg) {
     justify-content: center;
+    padding-left: 0;
     .nav-link {
       padding: 2rem 2.5rem;
       &:hover,
@@ -618,12 +620,13 @@ nav {
   }
 }
 
-// Subnav will replace navbar navbar-services
+// Subnav
+// Replacement for .navbar .navbar-services
 .subnav {
   border-bottom: 1px solid $gray-400;
   display: flex;
   justify-content: space-between;
-  padding: 1.5rem;
+  padding: 1.5rem 2rem;
   .subnav-container,
   .subnav-links {
     display: flex;
@@ -636,23 +639,14 @@ nav {
   .subnav-title {
     color: $headings-color;
     @include font-size($font-size-base);
-    line-height: $line-height-sm;       // 1.33
+    line-height: $line-height-sm;
     font-weight: $font-weight-bold;
-    padding-left: .25rem;
-    padding-right: .25rem;
-    @include media-breakpoint-up(sm) {
-      padding-left: .375rem;
-      padding-right: .375rem;
-    }
     @include media-breakpoint-up(md) {
       @include font-size($font-size-xl);
-      line-height: $line-height-sm;     // 1.33  
-      padding-left: .5rem;
-      padding-right: .5rem;
+      line-height: $line-height-sm;
     }
   }
   .subnav-links {
-    //padding-right: 1.375rem;
     ul {
       margin-bottom: 0;
     }
