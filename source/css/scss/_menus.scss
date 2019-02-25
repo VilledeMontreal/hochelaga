@@ -27,10 +27,10 @@
   padding: .5rem;
   .vdm {
     color: inherit;
-    font-size: 1.5rem;
+    @include font-size(1.5rem);
   }
   .button-label {
-    font-size: $font-size-sm;   //~15px
+    @include font-size($font-size-sm);
     margin-left: 1rem;
   }
 
@@ -40,16 +40,16 @@
 
   @include media-breakpoint-up(sm) {
     .vdm {
-      font-size: 2rem;
+      @include font-size(2rem);
     }
   }
 
   @include media-breakpoint-up(lg) {
     .button-label {
-      font-size: $slide-menu-link-font-size;
+      @include font-size($slide-menu-link-font-size);
     }
     .vdm {
-      font-size: 2.5rem;
+      @include font-size(2.5rem);
     }
   }
 }
@@ -78,7 +78,7 @@
     border: none;
     border-radius: 0;
     color: $gray-100;
-    font-size: $font-size-sm;   //~15px
+    @include font-size($font-size-sm);
     line-height: 1;
     padding: 1.1875rem;
 
@@ -101,7 +101,7 @@
     &.input-group-icon-left {
       > .vdm {
         color: $white;
-        font-size: 2.5rem;
+        @include font-size(2.5rem);
         padding-left: .625rem;
       }
       input {
@@ -117,7 +117,7 @@
     transform: translateY(-50%);
     color: $gray-900;
     display: flex;
-    font-size: 2.5rem;
+    @include font-size(2.5rem);
     padding: 0;
     margin-left: .625rem;
   }
@@ -125,13 +125,13 @@
   // Mobile
   @include media-breakpoint-up(sm) {
     .form-control {
-      font-size: $slide-menu-link-font-size;
+      @include font-size($slide-menu-link-font-size);
       padding: 1.75rem;
     }
     .input-group-icon {
       &.input-group-icon-left {
         > .vdm {
-          font-size: 3rem;
+          @include font-size(3rem);
           padding-left: 1rem;
         }
         input {
@@ -140,7 +140,7 @@
       }
     }
     .btn-close-search {
-      font-size: 3rem;
+      @include font-size(3rem);
       margin-left: 1rem;
     }
   }
@@ -220,7 +220,7 @@
 
 		a {
       color: $slide-menu-link-color;
-      font-size: $slide-menu-link-font-size;
+      @include font-size($slide-menu-link-font-size);
       display: flex;
       flex: 1;
       align-items: center;
@@ -238,7 +238,7 @@
       }
       .vdm {
         color: $gray-600;
-        font-size: 3rem;
+        @include font-size(3rem);
         margin-left: 1.5rem;
         margin-top: -.75rem;
         margin-bottom: -.75rem;
@@ -246,11 +246,11 @@
 
       &.back-link {
         color: $slide-menu-link-hover-color;
-        font-size: $font-size-sm;
+        @include font-size($font-size-sm);
 
         .vdm {
           color: $slide-menu-icon-color;
-          font-size: 1rem;
+          @include font-size(1rem);
           line-height: 1;
           margin-left: 0;
         }

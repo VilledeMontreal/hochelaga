@@ -17,7 +17,7 @@
 
   // Title
   &-title {
-    padding-bottom: 3rem;
+    padding-bottom: 2rem;
     max-width: 1450px; // Limit max width of title
     h1 {
       margin-bottom: 0;
@@ -26,7 +26,7 @@
         display: block;
         height: .5rem;
         width: 4rem;
-        margin-top: 2.5rem;
+        margin-top: 2rem;
         background-color: $brand;
       }
     }
@@ -43,7 +43,7 @@
 
   &-metadata {
     color: $gray-600;
-    font-size: $font-size-base;
+    @include font-size($font-size-base);
     padding-bottom: 2rem;
   }
 
@@ -105,7 +105,7 @@
   &.content-header-profile {
 
     .img-profile {
-      margin: 2.5rem auto 0 auto;
+      margin: 2rem auto 0 auto;
       max-width: 375px;
     }
     .content-header-infos {
@@ -115,12 +115,12 @@
       }
       .profile-title {
         color: $headings-color;
-        font-size: $font-size-xl;
+        @include font-size($font-size-xl);
         line-height: $line-height-sm;
       }
       .profile-member {
         color: $headings-color;
-        font-size: $font-size-base;
+        @include font-size($font-size-base);
       }
       .profile-label {
         color: $gray-600;
@@ -136,15 +136,12 @@
   // Variant for collectrices pages
   &.content-header-hub {
     background-color: $gray-sky;
-    // Fatter padding for content-header-hub
-    padding-top: 6rem;
-    padding-bottom: 3rem;
     h1 {
       font-weight: $font-weight-normal;
       margin-bottom: 1rem;
     }
     .display-1 {
-      margin-bottom: 3rem;
+      margin-bottom: 2rem;
     }
   }
 
@@ -158,7 +155,7 @@
       flex-direction: column;
     }
     .content-header-headings {
-      margin-top: 2.5rem;
+      margin-top: 3rem;
       margin-bottom: 2rem;
       position: relative;
       .label {
@@ -168,7 +165,7 @@
     }
     .content-header-headings-state {
       position: absolute;
-      transform: translateY(-2.5rem);
+      transform: translateY(-3rem);
     }
     .content-header-metadata {
       margin-top: auto;
