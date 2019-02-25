@@ -20,11 +20,15 @@
   },
   "enterpriseName": "Holding Petroleum Canada Inc.",
   "serviceIcon": false,
-  "serviceNav": {
-    "items": [
+  "navTabs": {
+    "navItem": [
       {
-        "label": "Déclaration des matières dangereuses",
-        "url": "#"
+        "class": "active",
+        "title": "Nav item #1"
+      },
+      {
+        "class": false,
+        "title": "Nav item #2"
       }
     ]
   },
