@@ -230,6 +230,12 @@ a {
       }
     }
   }
+
+  // Utility classes to remove border-bottom
+  &.img-link,
+  &.no-border {
+    border: none;
+  }
 }
 
 // Add .icon class to display vertically centered icon and text
