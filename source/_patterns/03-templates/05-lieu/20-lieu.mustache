@@ -24,18 +24,122 @@
           Integer vel egestas neque, eu faucibus tellus. Ut consequat tortor justo, blandit convallis ex malesuada vel. Ut dapibus enim pretium diam lacinia porttitor et a ante. 
           Maecenas a ligula at urna accumsan mollis. Quisque congue erat nec lacus dapibus, ut sodales mi finibus. Proin rhoncus nibh vel justo cursus pharetra.</p>
         
+          {{# equipements}}
+          <div class="content-block">
+            <h3 class="h5">Équipements</h3>
+            <div class="row">
+              <div class="col-12 col-md-6 col-lg-12 col-xl-6 mb-4">
+                <div class="content-block-icon border p-4 h-100">
+                  {{> atoms-fonticon-item("icon-label": "115-glissant", icon-class: "mb-2") }}
+                  <span class="content-block-icon-label">Aquatiques</span>
+                  <ul class="list-unstyled">
+                    <li>Piscine</li>
+                    <li>Bassin de plongeon</li>
+                  </ul>
+                </div>
+              </div>
+              <div class="col-12 col-md-6 col-lg-12 col-xl-6 mb-4">
+                <div class="content-block-icon border p-4 h-100">
+                  {{> atoms-fonticon-item("icon-label": "087-banc-de-parc", icon-class: "mb-2") }}
+                  <span class="content-block-icon-label">Conditionnement physique et mise en forme</span>
+                  <ul class="list-unstyled">
+                    <li>Salle multisport</li>
+                    <li>Piste d'athlétisme</li>
+                  </ul>
+                </div>
+              </div>
+              <div class="col-12 col-md-6 col-lg-12 col-xl-6">
+                <div class="content-block-icon border p-4 h-100">
+                  {{> atoms-fonticon-item("icon-label": "122-terrain-sport", icon-class: "mb-2") }}
+                  <span class="content-block-icon-label">Sports d'équipe</span>
+                  <ul class="list-unstyled">
+                    <li>Salle multisport</li>
+                    <li>Piste d'athlétisme</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+          {{/ equipements}}
+
+          {{# commodites}}
+          <div class="content-block">
+            <h3 class="h5">Commodités</h3>
+            <div class="row">
+              <div class="col-12 col-md-6 col-lg-12 col-xl-6 mb-4">
+                <div class="content-block-icon d-flex h-100">
+                  {{> atoms-fonticon-item("icon-label": "115-glissant", icon-class: "pr-1") }}
+                  <div class="w-100">
+                    <span class="content-block-icon-label offset-icon">Généraux</span>
+                    <ul class="list-unstyled">
+                      <li>Lorem ipsum dolor sit amet</li>
+                      <li>Consectetur adipiscing elit</li>
+                      <li>Integer molestie lorem at massa</li>
+                      <li>Facilisis in pretium nisl aliquet</li>
+                      <li>Eget porttitor lorem</li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+              <div class="col-12 col-md-6 col-lg-12 col-xl-6 mb-4">
+                <div class="content-block-icon d-flex h-100">
+                  {{> atoms-fonticon-item("icon-label": "082-residus-verts", icon-class: "pr-1") }}
+                  <div class="w-100">
+                    <span class="content-block-icon-label offset-icon">Alimentaires</span>
+                    <ul class="list-unstyled">
+                      <li>Facilisis in pretium</li>
+                      <li>Eget porttitor lorem</li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+              <div class="col-12 col-md-6 col-lg-12 col-xl-6 mb-4">
+                <div class="content-block-icon d-flex h-100">
+                  {{> atoms-fonticon-item("icon-label": "109-profil-sourire", icon-class: "pr-1") }}
+                  <div class="w-100">
+                    <span class="content-block-icon-label offset-icon">Familles</span>
+                    <ul class="list-unstyled">
+                      <li>Facilisis in pretium</li>
+                      <li>Eget porttitor lorem</li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+              <div class="col-12 col-md-6 col-lg-12 col-xl-6">
+                <div class="content-block-icon d-flex h-100">
+                  {{> atoms-fonticon-item("icon-label": "085-lampadaire", icon-class: "pr-1") }}
+                  <div class="w-100">
+                    <span class="content-block-icon-label offset-icon">Installations</span>
+                    <ul class="list-unstyled">
+                      <li>Facilisis in pretium</li>
+                      <li>Eget porttitor lorem</li>
+                      <li>Lorem ipsum dolor sit amet</li>
+                      <li>Consectetur adipiscing elit</li>
+                      <li>Integer molestie lorem at massa</li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          {{/ commodites}}
+
           {{# events}}
-          <h3 class="h4">Événements à venir</h3>
-          {{> molecules-list-group-hub }}
+          <div class="content-block">
+            <h3 class="h5">Événements à venir</h3>
+            {{> molecules-list-group-hub }}
+          </div>
           {{/ events}}
 
           {{# has-tags}}
-          <h3 class="h4">Étiquettes</h3>
-          <ul class="list-inline {{container-class}}">
-            {{# tags}}
-            <li class="list-inline-item">{{> atoms-badge}}</li>
-            {{/ tags}}
-          </ul>
+          <div class="content-block">
+            <h3 class="h5">Étiquettes</h3>
+            <ul class="list-inline {{container-class}}">
+              {{# tags}}
+              <li class="list-inline-item">{{> atoms-badge}}</li>
+              {{/ tags}}
+            </ul>
+          </div>
           {{/ has-tags}}
         
         </article>
@@ -56,11 +160,11 @@
         </div>
       </div>
       {{/ map }}
-    </div>
+    </p>
   </div>
 
   {{# hasLieux}}
-  {{> organisms-page-section}}
+  {{> organisms-page-section-cards}}
   {{/ hasLieux}}
 
   {{# hasFeedbackForm}}

@@ -20,7 +20,7 @@
     }
   ],
   "breadcrumbContainerClasses": "px-4",
-  "organised-by": false,
+  "organizer": false,
   "borough": {
     "url": "#",
     "borough": "Ville-Marie"
@@ -47,7 +47,18 @@
         {
           "url": false,
           "class": false,
-          "content": "<address>1411, rue Lapierre<br>Montréal (Québec) H8N 2J4</address><a href=\"#mapLieu001\" class=\"js-scroll-trigger\">Afficher la carte</a>"
+          "tag": {
+            "div": true
+          },
+          "content": "<address>1411, rue Lapierre<br>Montréal (Québec) H8N 2J4</address>"
+        },
+        {
+          "url": false,
+          "class": false,
+          "tag": {
+            "div": true
+          },
+          "content": "<a href=\"#mapLieu001\" class=\"js-scroll-trigger\">Afficher la carte</a>"
         }
       ]
     },
@@ -65,8 +76,10 @@
     }
   ],
   "sidebarRight": true,
+  "equipements": true,
+  "commodites": true,
   "events": {
-    "listGroupClass": "list-group-hub mb-6",
+    "listGroupClass": "list-group-hub mb-4",
     "listGroup": [
       {
         "url": "#",
@@ -138,5 +151,103 @@
   },
   "map": {
     "mapID": "mapLieu001"
+  },
+  "hasLieux": {
+    "page-section": {
+      "section-headings": {
+        "heading": "Lieux à proximité",
+        "button": {
+          "buttonAsLink": true,
+          "buttonUrl": "#",
+          "buttonClass": "btn-secondary", 
+          "buttonText": "Tous les lieux"
+        }
+      },
+      "organized-by": false,
+      "cards": {
+        "section-classes": "bg-gray-sky",
+        "classes": false,
+        "card-item" : [
+          {
+            "bsgrid-classes": "col-12 col-md-6 col-lg-4",
+            "classes" : "card-teaser",
+            "url" : "#",
+            "card-title" : "Lorem ipsum dolor sit amet",
+            "card-type": "Type de lieu",
+
+            "list-icon-class": "mt-auto mb-0",
+            "list-icon-item": [
+              {
+                "list-icon-item-class": false,
+                "icon-item": {
+                  "icon-label": "091-localisation"
+                },
+                "item-label": false,
+                "item": [
+                  {
+                    "class": false,
+                    "url": false,
+                    "tag": false,
+                    "content": "<address>1411, rue Lapierre<br>Montréal (Québec) H8N 2J4</address>"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "bsgrid-classes": "col-12 col-md-6 col-lg-4",
+            "classes" : "card-teaser",
+            "url" : "#",
+            "card-title" : "Donec eget sodales neque",
+            "card-type": "Type de lieu",
+
+            "list-icon-class": "mt-auto mb-0",
+            "list-icon-item": [
+              {
+                "list-icon-item-class": false,
+                "icon-item": {
+                  "icon-label": "091-localisation"
+                },
+                "item-label": false,
+                "item": [
+                  {
+                    "class": false,
+                    "url": false,
+                    "tag": false,
+                    "content": "<address>1411, rue Lapierre<br>Montréal (Québec) H8N 2J4</address>"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "bsgrid-classes": "col-12 col-md-6 col-lg-4",
+            "classes" : "card-teaser",
+            "url" : "#",
+            "card-title" : "Aliquam sit amet gravida velit",
+            "card-type": "Type de lieu",
+
+            "list-icon-class": "mt-auto mb-0",
+            "list-icon-item": [
+              {
+                "list-icon-item-class": false,
+                "icon-item": {
+                  "icon-label": "091-localisation"
+                },
+                "item-label": false,
+                "item": [
+                  {
+                    "class": false,
+                    "url": false,
+                    "tag": false,
+                    "content": "<address>1323, Boulevard René-Lévesque Est<br>Montréal (Québec) H2L 2L9</address>"
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      }
+    }
   }
 }
