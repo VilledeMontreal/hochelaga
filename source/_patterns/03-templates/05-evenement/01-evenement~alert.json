@@ -1,8 +1,212 @@
 {
+  "has-organizer": {
+    "url": "#",
+    "title": "Ville de Montréal"
+  },
+  "list-icon-item": [
+    {
+      "list-icon-item-class": "col-12",
+      "icon-item": {
+        "icon-label": "005-calendrier"
+      },
+      "item-label": "Date et heure",
+      "item": [
+        {
+          "url": false,
+          "class": false,
+          "tag": {
+            "span": true
+          },
+          "content": "du 17 janvier - 17&nbsp;h&nbsp;00"
+        },
+        {
+          "url": false,
+          "class": false,
+          "tag": {
+            "span": true
+          },
+          "content": "au 19 janvier - 18&nbsp;h&nbsp;00"
+        }
+      ]
+    },
+    {
+      "list-icon-item-class": "col-lg-6",
+      "icon-item": {
+        "icon-label": "113-prix"
+      },
+      "item-label": "Tarif",
+      "item": [
+        {
+          "class": false,
+          "url": false,
+          "tag": {
+            "span": true
+          },
+          "content": "Payant"
+        }
+      ]
+    },
+    {
+      "list-icon-item-class": "col-lg-6",
+      "icon-item": {
+        "icon-label": "007-billet"
+      },
+      "item-label": "Droit d'entrée",
+      "item": [
+        {
+          "class": false,
+          "url": false,
+          "tag": {
+            "span": true
+          },
+          "content": "Avec billet"
+        }
+      ]
+    }
+  ],
   "alerts": {
     "alertClass": "alert-warning alert-icon alert-dismissible mb-0",
     "alertIcon": "036-attention-circulaire",
     "alertText": "<strong>Warning!</strong> This is a warning alert with an icon.<br>This example text is going to run a bit longer so that you can see how spacing within an alert works with this kind of content.",
     "dismissableAlert": true
+  },
+  "organized-by": {
+    "page-section": {
+      "section-headings": {
+        "heading": "Organisé par",
+        "button": false
+      },
+      "cards": false,
+      "organized-by": true
+    }
+  },
+  "hasSimilarEvents": {
+    "page-section": {
+      "section-headings": {
+        "heading": "Plus d'événements de cet organisateur",
+        "button": {
+          "buttonClass": "btn-secondary", 
+          "buttonText": "Tous les événements"
+        }
+      },
+      "organized-by": false,
+      "cards": {
+        "section-classes": "bg-gray-sky",
+        "classes": false,
+        "card-item" : [
+          {
+            "bsgrid-classes": "col-12",
+            "has-bs-class": true,
+            "classes" : "card-teaser card-fw card-row-layout",
+            "url" : "#",
+            "card-title" : "Curabitur in ante eu quam varius ullamcorper",
+            "card-type": "Type d'événement",
+            "list-icon-class": "mb-0",
+            "list-icon-item": [
+              {
+                "list-icon-item-class": false,
+                "icon-item": {
+                  "icon-label": "091-localisation"
+                },
+                "item-label": "Date et heure",
+                "item": [
+                  {
+                    "class": false,
+                    "url": false,
+                    "tag": {
+                      "span": true
+                    },
+                    "content": "Jeudi 19 janvier"
+                  },
+                  {
+                    "class": false,
+                    "url": false,
+                    "tag": {
+                      "span": true
+                    },
+                    "content": "de 09&nbsp;h&nbsp;00 à 10&nbsp;h&nbsp;00"
+                  }
+                ]
+              }
+            ],
+            "has-icon": true
+          },
+          {
+            "bsgrid-classes": "col-12",
+            "has-bs-class": true,
+            "classes" : "card-teaser card-fw card-row-layout",
+            "url" : "#",
+            "card-title" : "Curabitur in ante eu quam varius ullamcorper",
+            "card-type": "Type d'événement",
+            "list-icon-class": "mb-0",
+            "list-icon-item": [
+              {
+                "list-icon-item-class": false,
+                "icon-item": {
+                  "icon-label": "091-localisation"
+                },
+                "item-label": "Date et heure",
+                "item": [
+                  {
+                    "class": false,
+                    "url": false,
+                    "tag": {
+                      "span": true
+                    },
+                    "content": "Jeudi 19 janvier"
+                  },
+                  {
+                    "class": false,
+                    "url": false,
+                    "tag": {
+                      "span": true
+                    },
+                    "content": "de 09&nbsp;h&nbsp;00 à 10&nbsp;h&nbsp;00"
+                  }
+                ]
+              }
+            ],
+            "has-icon": true
+          },
+          {
+            "bsgrid-classes": "col-12",
+            "has-bs-class": true,
+            "classes" : "card-teaser card-fw card-row-layout",
+            "url" : "#",
+            "card-title" : "Curabitur in ante eu quam varius ullamcorper",
+            "card-type": "Type d'événement",
+            "list-icon-class": "mb-0",
+            "list-icon-item": [
+              {
+                "list-icon-item-class": false,
+                "icon-item": {
+                  "icon-label": "091-localisation"
+                },
+                "item-label": "Date et heure",
+                "item": [
+                  {
+                    "class": false,
+                    "url": false,
+                    "tag": {
+                      "span": true
+                    },
+                    "content": "Jeudi 19 janvier"
+                  },
+                  {
+                    "class": false,
+                    "url": false,
+                    "tag": {
+                      "span": true
+                    },
+                    "content": "de 09&nbsp;h&nbsp;00 à 10&nbsp;h&nbsp;00"
+                  }
+                ]
+              }
+            ],
+            "has-icon": true
+          }
+        ]
+      }
+    }
   }
 }
