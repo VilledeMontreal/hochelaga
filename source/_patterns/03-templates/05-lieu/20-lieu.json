@@ -1,0 +1,253 @@
+{
+  "text-elements": {
+    "headings":{
+      "display":{
+        "classes": "h4",
+        "content": "Template lieu"
+      }
+    }
+  },
+  "has-informations": true,
+  "has-breadcrumb": true,
+  "breadcrumbs": [
+    {
+      "url": "link.template-homepage",
+      "text": "Accueil"
+    },
+    {
+      "url": "link.templates-collectrice-lieux",
+      "text": "Tous les lieux"
+    }
+  ],
+  "breadcrumbContainerClasses": "px-4",
+  "organizer": false,
+  "borough": {
+    "url": "#",
+    "borough": "Ville-Marie"
+  },
+  "has-media-image": true,
+  "media-image": {
+    "mediaSrc": "https://picsum.photos/1000/700?image=1058",
+    "mediaSize": "1000x667",
+    "mediaAlt": "Media #1058"
+  },
+  "badges":[
+    {
+      "badge": "Catégorie",
+      "badgeClass": "",
+      "badgeUrl": "#"
+    }
+  ],
+  "list-icon-item": [
+    {
+      "icon-item": {
+        "icon-label": "091-localisation"
+      },
+      "item": [
+        {
+          "url": false,
+          "class": false,
+          "tag": {
+            "div": true
+          },
+          "content": "<address>1411, rue Lapierre<br>Montréal (Québec) H8N 2J4</address>"
+        },
+        {
+          "url": false,
+          "class": false,
+          "tag": {
+            "div": true
+          },
+          "content": "<a href=\"#mapLieu001\" class=\"js-scroll-trigger\">Afficher la carte</a>"
+        }
+      ]
+    },
+    {
+      "icon-item": {
+        "icon-label": "115-glissant"
+      },
+      "item": [
+        {
+          "url": false,
+          "class": false,
+          "content": "Accessible aux personnes handicapées"
+        }
+      ]
+    }
+  ],
+  "sidebarRight": true,
+  "equipements": true,
+  "commodites": true,
+  "events": {
+    "listGroupClass": "list-group-hub mb-4",
+    "listGroup": [
+      {
+        "url": "#",
+        "title": "Cras justo odio",
+        "infos": {
+          "infos-items": [
+            {
+              "class": false,
+              "text": "00 h 00"
+            },
+            {
+              "class": "text-dark separator-brand",
+              "text": "Type d'événement"
+            }
+          ]
+        }
+      },
+      {
+        "url": "#",
+        "title": "Dapibus ac facilisis in",
+        "infos": {
+          "infos-items": [
+            {
+              "class": false,
+              "text": "00 h 00"
+            },
+            {
+              "class": "text-dark separator-brand",
+              "text": "Type d'événement"
+            }
+          ]
+        },
+        "footer": {
+          "icon-label": false
+        }
+      },
+      {
+        "url": "#",
+        "title": "Morbi leo risus",
+        "infos": {
+          "infos-items": [
+            {
+              "class": false,
+              "text": "00 h 00"
+            },
+            {
+              "class": "text-dark separator-brand",
+              "text": "Type d'événement"
+            }
+          ]
+        }
+      }
+    ]
+  },
+  "has-tags": {
+    "container-class": "badges-lg",
+    "tags": [
+      {
+        "badge": "Tag #1",
+        "badgeClass": false,
+        "badgeUrl": "#"
+      },
+      {
+        "badge": "Tag #2",
+        "badgeClass": false,
+        "badgeUrl": "#"
+      }
+    ]
+  },
+  "map": {
+    "mapID": "mapLieu001"
+  },
+  "hasLieux": {
+    "page-section": {
+      "section-headings": {
+        "heading": "Lieux à proximité",
+        "button": {
+          "buttonAsLink": true,
+          "buttonUrl": "#",
+          "buttonClass": "btn-secondary", 
+          "buttonText": "Tous les lieux"
+        }
+      },
+      "organized-by": false,
+      "cards": {
+        "section-classes": "bg-gray-sky",
+        "classes": false,
+        "card-item" : [
+          {
+            "bsgrid-classes": "col-12 col-md-6 col-lg-4",
+            "classes" : "card-teaser",
+            "url" : "#",
+            "card-title" : "Lorem ipsum dolor sit amet",
+            "card-type": "Type de lieu",
+
+            "list-icon-class": "mt-auto mb-0",
+            "list-icon-item": [
+              {
+                "list-icon-item-class": false,
+                "icon-item": {
+                  "icon-label": "091-localisation"
+                },
+                "item-label": false,
+                "item": [
+                  {
+                    "class": false,
+                    "url": false,
+                    "tag": false,
+                    "content": "<address>1411, rue Lapierre<br>Montréal (Québec) H8N 2J4</address>"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "bsgrid-classes": "col-12 col-md-6 col-lg-4",
+            "classes" : "card-teaser",
+            "url" : "#",
+            "card-title" : "Donec eget sodales neque",
+            "card-type": "Type de lieu",
+
+            "list-icon-class": "mt-auto mb-0",
+            "list-icon-item": [
+              {
+                "list-icon-item-class": false,
+                "icon-item": {
+                  "icon-label": "091-localisation"
+                },
+                "item-label": false,
+                "item": [
+                  {
+                    "class": false,
+                    "url": false,
+                    "tag": false,
+                    "content": "<address>1411, rue Lapierre<br>Montréal (Québec) H8N 2J4</address>"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "bsgrid-classes": "col-12 col-md-6 col-lg-4",
+            "classes" : "card-teaser",
+            "url" : "#",
+            "card-title" : "Aliquam sit amet gravida velit",
+            "card-type": "Type de lieu",
+
+            "list-icon-class": "mt-auto mb-0",
+            "list-icon-item": [
+              {
+                "list-icon-item-class": false,
+                "icon-item": {
+                  "icon-label": "091-localisation"
+                },
+                "item-label": false,
+                "item": [
+                  {
+                    "class": false,
+                    "url": false,
+                    "tag": false,
+                    "content": "<address>1323, Boulevard René-Lévesque Est<br>Montréal (Québec) H2L 2L9</address>"
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      }
+    }
+  }
+}

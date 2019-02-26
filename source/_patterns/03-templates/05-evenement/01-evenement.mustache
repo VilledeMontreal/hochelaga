@@ -42,7 +42,7 @@
               Sed vel risus nec nisl ultricies mollis at eu diam. Donec vitae orci congue, vulputate lacus ut, posuere ipsum.</p>
 
           {{# has-documents }}
-          <h3 class="h4">Documents</h3>
+          <h3 class="h5">Documents</h3>
           <ul>
             {{# documents}}
             <li><a href="{{ url }}">{{ title }}</a></li>
@@ -51,7 +51,7 @@
           {{/ has-documents}}
 
           {{# has-partners}}
-          <h3 class="h4">Partenaire</h3>
+          <h3 class="h5">Partenaire</h3>
           <ul class="list-inline {{container-class}}">
             {{# partners}}
             <li class="list-inline-item">
@@ -62,7 +62,7 @@
           {{/ has-partners}}
 
           {{# has-tags}}
-          <h3 class="h4">Étiquettes</h3>
+          <h3 class="h5">Étiquettes</h3>
           <ul class="list-inline {{container-class}}">
             {{# tags}}
             <li class="list-inline-item">{{> atoms-badge}}</li>
@@ -71,7 +71,7 @@
           {{/ has-tags}}
 
           {{# has-video }}
-          <h3 class="h4">{{ section-title }}</h3>
+          <h3 class="h5">{{ section-title }}</h3>
           <div class="media-container">
             <div class="media embed-responsive embed-responsive-16by9">
               <iframe class="embed-responsive-item" src="{{ src }}" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
@@ -100,7 +100,7 @@
   {{/ organized-by}}
 
   {{# hasSimilarEvents}}
-  {{> organisms-page-section}}
+  {{> organisms-page-section-cards}}
   {{/ hasSimilarEvents}}
 
   {{# hasFeedbackForm}}

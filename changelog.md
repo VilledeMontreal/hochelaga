@@ -14,11 +14,16 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 - Updated to bootstrap v4.3.1
 - Updated all font-size selector to the new font-size mixin.
 - Modify usage of deprecated mixins size().
+- Refactoring of Lieux template.
+- Refactoring of Evenements template.
+- Patternlab: moved Lieux to it's own repository.
 
 ## Fixed
 - Fixed some altered variables that changed in bootstrap variables.
 - Fixed padding content-header.
-- Fixed nav-tabs padding-left on mobile breakpoints
+- Fixed nav-tabs padding-left on mobile breakpoints.
+- Fixed padding of elements inside content-header-jumbotron.
+- Fixed Date heure cards and variants bottom content padding.
 
 
 ## [3.1.0] - 2019-02-20

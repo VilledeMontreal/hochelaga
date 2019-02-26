@@ -585,6 +585,22 @@ html {
   }
 }
 
+// Generic content-block with icon and label layout
+.content-block-icon {
+  .vdm {
+    color: $gray-ink;
+    @include font-size(2rem);
+  }
+  .content-block-icon-label {
+    display: block;
+    font-weight: $font-weight-bold;
+    margin-bottom: 1rem;
+  }
+  .offset-icon {
+    padding-top: .25rem;
+  }
+}
+
 //
 // Overlay
 .overlay {

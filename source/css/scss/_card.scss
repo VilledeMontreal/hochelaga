@@ -211,11 +211,13 @@
   &.card-teaser {
     .card-body {
       text-align: left;
+      display: flex;
+      flex-direction: column;
+    }
+    .card-title {
+      margin-bottom: 2rem;
     }
     &.card-row-layout {
-      .card-title {
-        margin-bottom: 1rem;
-      }
       .card-footer {
         padding: 0;
         .vdm {
