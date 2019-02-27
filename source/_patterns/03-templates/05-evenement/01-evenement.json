@@ -202,20 +202,20 @@
         "classes": false,
         "card-item" : [
           {
-            "bsgrid-classes": "col-12 col-md-6 col-lg-4",
+            "bsgrid-classes": "col-12 col-lg-4",
             "classes" : "card-teaser",
             "url" : "#",
             "card-title" : "Lorem ipsum dolor sit amet",
             "card-type": "Type d'événement",
 
-            "list-icon-class": "mt-auto mb-0",
+            "list-icon-class": "mb-0",
             "list-icon-item": [
               {
                 "list-icon-item-class": false,
                 "icon-item": {
                   "icon-label": "005-calendrier"
                 },
-                "item-label": "Date et heure",
+                "item-label": false,
                 "item": [
                   {
                     "class": false,
@@ -223,7 +223,7 @@
                     "tag": {
                       "span": true
                     },
-                    "content": "du 28 décembre 2019 - 17&nbsp;h&nbsp;00"
+                    "content": "du 28 décembre 2019"
                   },
                   {
                     "class": false,
@@ -231,27 +231,27 @@
                     "tag": {
                       "span": true
                     },
-                    "content": "au 19 janvier 2020 - 18&nbsp;h&nbsp;00"
+                    "content": "au 19 janvier 2020"
                   }
                 ]
               }
             ]
           },
           {
-            "bsgrid-classes": "col-12 col-md-6 col-lg-4",
+            "bsgrid-classes": "col-12 col-lg-4",
             "classes" : "card-teaser",
             "url" : "#",
             "card-title" : "Donec eget sodales neque",
             "card-type": "Type d'événement",
 
-            "list-icon-class": "mt-auto mb-0",
+            "list-icon-class": "mb-0",
             "list-icon-item": [
               {
                 "list-icon-item-class": false,
                 "icon-item": {
                   "icon-label": "005-calendrier"
                 },
-                "item-label": "Date et heure",
+                "item-label": false,
                 "item": [
                   {
                     "class": false,
@@ -260,34 +260,25 @@
                       "span": true
                     },
                     "content": "Jeudi 19 janvier"
-                  },
-                  {
-                    "class": false,
-                    "url": false,
-                    "tag": {
-                      "span": true
-                    },
-                    "content": "de 09&nbsp;h&nbsp;00 à 10&nbsp;h&nbsp;00"
                   }
                 ]
               }
             ]
           },
           {
-            "bsgrid-classes": "col-12 col-md-6 col-lg-4",
+            "bsgrid-classes": "col-12 col-lg-4",
             "classes" : "card-teaser",
             "url" : "#",
             "card-title" : "Aliquam sit amet gravida velit",
             "card-type": "Type d'événement",
-
-            "list-icon-class": "mt-auto mb-0",
+            "list-icon-class": "mb-0",
             "list-icon-item": [
               {
                 "list-icon-item-class": false,
                 "icon-item": {
                   "icon-label": "005-calendrier"
                 },
-                "item-label": "Date et heure",
+                "item-label": false,
                 "item": [
                   {
                     "class": false,
@@ -296,14 +287,6 @@
                       "span": true
                     },
                     "content": "Jeudi 19 janvier"
-                  },
-                  {
-                    "class": false,
-                    "url": false,
-                    "tag": {
-                      "span": true
-                    },
-                    "content": "de 09&nbsp;h&nbsp;00 à 10&nbsp;h&nbsp;00"
                   }
                 ]
               }

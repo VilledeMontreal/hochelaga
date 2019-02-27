@@ -392,9 +392,11 @@ input[type="button"] {
   // Hide button label at small breakpoint
   &.btn-hide-label-#{$breakpoint} {
     @include media-breakpoint-down($breakpoint) {
-      padding-right: 1rem;
+      padding-left: 2.4375rem;
+      padding-right: .4375rem;
       .vdm {
         margin-right: 0;
+        margin-left: -2rem;
       }
       .btn-label {
         display: none;
@@ -402,7 +404,11 @@ input[type="button"] {
 
       // Tweak padding for small modifier
       &.btn-sm {
-        padding-right: .75rem;
+        padding-left: 1.875rem;
+        padding-right: .375rem;
+        .vdm {
+          margin-left: -1.5rem;
+        }
       }
     }
   }
