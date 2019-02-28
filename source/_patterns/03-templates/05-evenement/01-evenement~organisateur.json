@@ -1,7 +1,7 @@
 {
-  "has-organizer": {
+  "promoter": {
     "url": "#",
-    "title": "Ville de Montréal"
+    "title": "Nom de l'organisateur"
   },
   "list-icon-item": [
     {
@@ -64,24 +64,20 @@
       ]
     }
   ],
-  "organized-by": {
+  "hasPromoter": {
     "page-section": {
       "section-headings": {
         "heading": "Organisé par",
         "button": false
       },
       "cards": false,
-      "organized-by": true
+      "promoter": true
     }
   },
   "hasSimilarEvents": {
     "page-section": {
       "section-headings": {
-        "heading": "Plus d'événements de cet organisateur",
-        "button": {
-          "buttonClass": "btn-secondary", 
-          "buttonText": "Tous les événements"
-        }
+        "heading": "Plus d'événements de cet organisateur"
       },
       "organized-by": false,
       "cards": {

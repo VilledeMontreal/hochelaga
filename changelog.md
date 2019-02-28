@@ -5,10 +5,11 @@ The format is based on [Keep a Changelog](http://keepachangelog.com/en/1.0.0/)
 and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.html).
 
 
-## [3.2.0] - Unreleased
+## [3.2.0] - 2019-02-28
 
 ## Added
 - Organisms Subnav Service Tabs variant
+- New molecule: molecules > media > Logo grid.
 
 ## Changed
 - Updated to bootstrap v4.3.1
@@ -18,6 +19,7 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 - Refactoring of Evenements template.
 - Patternlab: moved Lieux to it's own repository.
 - Élus cards field order and font-weight.
+- Refactor section order of lieux and evenements template on mobile.
 
 ## Fixed
 - Fixed some altered variables that changed in bootstrap variables.
@@ -26,6 +28,7 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 - Fixed padding of elements inside content-header-jumbotron.
 - Fixed Date heure cards and variants bottom content padding.
 - Fixed responsive button with icons size when label is hidden.
+- Fixed responsive for promoter-teaser component.
 
 
 ## [3.1.0] - 2019-02-20

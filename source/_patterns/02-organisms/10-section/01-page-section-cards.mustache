@@ -6,11 +6,6 @@
       <div class="col">
         <h2 class="section-heading">{{ heading }}</h2>
       </div>
-      {{# button}}
-      <div class="col-auto">
-        {{> atoms-button}}
-      </div>
-      {{/ button}}
     </div>
     {{/ section-headings}}
     {{# cards}}
@@ -25,6 +20,11 @@
     {{# organized-by}}
     {{> molecules-block-teaser-organism}}
     {{/ organized-by}}
+    {{# button}}
+    <div class="pagination-wrapper">
+      {{> atoms-button}}
+    </div>
+    {{/ button}}
   </div>
 </section>
 {{/ page-section}}
