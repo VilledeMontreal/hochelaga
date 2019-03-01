@@ -35,197 +35,15 @@ html {
   padding-left: $grid-gutter-width;
 }
 
-//
-// Main content header
-.content-header {
-  padding-top: 4rem;
-  padding-bottom: 0;
-  .container-fluid {
-    max-width: map-get($content-max-widths, xl);    // 1600px
-    padding-bottom: 2rem;
-  };
-  .container-fluid-xl {
-    max-width: map-get($container-max-widths, xl);   // 1170px
-  }
-  // Dark variant
-  &.content-header-dark {
-    background-color: $gray-700;
-    color: $white;
-    h1,h2,h3,h4,h5,h6 {
-      color: $white;
-    }
-    .hub-link a {
-      color: $white;
-      @include hover-focus {
-        color: $sarcelle-light;
-      }
-    }
-  }
-
-  // Title
-  &-title {
-    padding-bottom: 3rem;
-    // Limit max width of title
-    max-width: 1450px;
-    h1 {
-      margin-bottom: 0;
-      &:after {
-        content: "";
-        display: block;
-        height: .5rem;
-        width: 4rem;
-        margin-top: 2.5rem;
-        background-color: $brand;
-      }
-    }
-
-    // 576px and up
-    @include media-breakpoint-up(md) {
-      h1 {
-        &:after {
-          width: 6rem;
-        }
-      }
-    }
-  }
-
-  &-metadata {
-    color: $gray-600;
-    font-size: $font-size-base;
-    padding-bottom: 2rem;
-  }
-
-  // used for specific contente header infos like Evenement
-  .metadata-infos {
-    color: $headings-color;
-    font-weight: $font-weight-bold;
-    > * {
-      margin-bottom: .5rem;
-      &:last-child {
-        margin-bottom: 0;
-      }
-    }
-    .infos-event {
-      vertical-align: middle;
-      > span {
-        display: block;
-      }
-      .infos-lieu {
-        font-weight: $font-weight-normal;
-      }
-    }
-
-    // 1200px and up
-    @include media-breakpoint-up(lg) {
-      > * {
-        margin-right: 1rem;
-        margin-bottom: 0;
-      }
-      .infos-event {
-        display: inline-block;
-        > span {
-          display: inline-block;
-          margin-right: 1rem;
-          &:last-child {
-            margin-right: 0;
-          }
-        }
-        .infos-lieu {
-          &:before {
-            content: "—";
-            margin-right: 1rem;
-          }
-        }
-      }
-    }
-  }
-
-  // Content header profile variant
-  &.content-header-profile {
-    padding-top: 3.5rem;
-    padding-bottom: 3.5rem;
-    .img-profile {
-      margin: 0 auto 30px auto;
-      max-width: 250px;
-    }
-    .hub-link {
-      justify-content: flex-start;
-      padding-bottom: 2rem;
-    }
-    .content-header-infos {
-      color: $headings-color;
-      margin-bottom: 1rem;
-      span {
-        display: block;
-      }
-      .profile-title {
-        color: $headings-color;
-        font-size: $font-size-xl;
-        line-height: $line-height-sm;
-      }
-      .profile-member {
-        color: $headings-color;
-        font-size: $font-size-base;
-      }
-      .profile-label {
-        color: $gray-600;
-      }
-    }
-    @include media-breakpoint-up(lg) {
-      .img-profile {
-        margin: 0;
-        max-width: none;
-        padding-right: $grid-gutter-width/2;
-      }
-      .content-header-infos {
-        margin-bottom: 0;
-      }
-    }
-  }
-
-  &.content-header-hub {
-    background-color: $gray-sky;
-    // Need to Harmonise this with other content-header
-    padding-top: 6rem;
-    padding-bottom: 3rem;
-    h1 {
-      font-weight: $font-weight-normal;
-      margin-bottom: 1rem;
-    }
-    .display-1 {
-      margin-bottom: 3rem;
-    }
-  }
-
-  // Use to set bg-image and overlay
-  &.content-header-overlay {
-    position: relative;
-    background-size: cover;
-    background-position: center;
-    &:before {
-      position: absolute;
-      content:" ";
-      top:0;
-      left:0;
-      width:100%;
-      height:100%;
-      display: block;
-      z-index:0;
-      background-color: rgba(255, 255, 255, 0.7);
-    }
-  }
+.container-fluid-max-xl {
+  max-width: map-get($content-max-widths, xl);    // 1600px
 }
 
-// Remove padding when we have .content-header followed by .page-section and neither is .bg-gray-sky
-.content-header:not(.bg-gray-sky):not(.content-header-dark) {
-  + .page-section:not(.bg-gray-sky) {
-    padding-top: 0;
-  }
-}
 
 // Quick links
 .quick-links {
-  font-size: $font-size-sm;
+  @include font-size($font-size-sm);
+  padding-bottom: 2rem;
   .quick-links-label {
     color: $gray-700;
     display: inline-block;
@@ -252,24 +70,7 @@ html {
 
 // Hub link
 .hub-link {
-  color: $gray-600;
-  font-size: $font-size-base;
   padding-bottom: 2rem;
-  a {
-    color: $gray-ink;
-    @include transition(color .15s ease-in-out);
-    @include hover-focus {
-      color: $sarcelle;
-    }
-  }
-  // 992px and up
-  @include media-breakpoint-up(xl) {
-    display: flex;
-    //flex-flow: row wrap;
-    justify-content: flex-end;
-    align-self: flex-end;
-    padding-bottom: 0;
-  }
 }
 
 .region-content {
@@ -310,8 +111,8 @@ html {
 .hub-section-heading {
   h1,h2,h3,h4,h5,h6 {
     color: $headings-color;
+    @include font-size($font-size-xl);
     font-weight: $font-weight-bold;
-    font-size: $font-size-xl;
     line-height: $line-height-sm;
     margin-bottom: 1.5rem;
   }
@@ -324,6 +125,7 @@ html {
 
 
 // Sidebar left and right mobile spacing
+/*
 .sidebar-right {
   margin-top: 3rem;
   margin-bottom: -3rem;
@@ -332,6 +134,7 @@ html {
     margin-bottom: 0;
   }
 }
+*/
 
 //
 // Section with BG image
@@ -413,7 +216,7 @@ html {
   .title {
     color: $headings-color;
     display: block;
-    font-size: $font-size-lg;
+    @include font-size($font-size-lg);
     line-height: $line-height-sm;
     font-weight: $font-weight-bold;
     margin-bottom: 1rem;
@@ -490,7 +293,7 @@ html {
     }
     .vdm {
       color: $primary;
-      font-size: 4rem;
+      @include font-size(4rem);
       margin-top: -.5rem;
       margin-right: 1rem;
     }
@@ -548,9 +351,9 @@ html {
     }
   }
   .title {
-    font-size: $font-size-xl;
-    line-height: $line-height-sm;
+    @include font-size($font-size-xl);
     font-weight: $font-weight-bold;
+    line-height: $line-height-sm;
     padding-top: 1rem;
   }
   .item-label {
@@ -572,7 +375,6 @@ html {
 }
 
 // border-bottom-content
-
 .border-bottom-content {
   > div {
     border-bottom: 1px solid $gray-700;
@@ -607,7 +409,7 @@ html {
     margin-bottom: 2rem;
     .vdm {
       color: $gray-300;
-      font-size: 7.5rem;
+      @include font-size(7.5rem);
     }
   }
 
@@ -694,11 +496,11 @@ html {
             }
           }
           &.nav-filters {
-            font-size: $font-size-sm;
-            margin-right: 2rem;
             display: flex;
             flex: 1 0 auto;
             align-self: center;
+            @include font-size($font-size-sm);
+            margin-right: 2rem;
           }
         }
       }
@@ -711,7 +513,6 @@ html {
   }
 }
 
-//
 // Alternative layout for fluid-like content types (sujet, nouvelles)
 // fluid up to a max-width
 // A helper class .section-inner-media is used to deal with media margin and centering
@@ -764,11 +565,11 @@ html {
   margin-bottom: 3rem;
   .content-block-infos {
     color: $headings-color;
-    font-size: $font-size-lg;
+    @include font-size($font-size-lg);
     line-height: $line-height-base;
     margin-bottom: 2rem;
     .content-block-infos-title {
-      font-size: $font-size-xl;
+      @include font-size($font-size-xl);
       font-weight: bold;
       line-height: $line-height-sm;
     }
@@ -781,6 +582,22 @@ html {
     .vdm {
       color: $gray-ink;
     }
+  }
+}
+
+// Generic content-block with icon and label layout
+.content-block-icon {
+  .vdm {
+    color: $gray-ink;
+    @include font-size(2rem);
+  }
+  .content-block-icon-label {
+    display: block;
+    font-weight: $font-weight-bold;
+    margin-bottom: 1rem;
+  }
+  .offset-icon {
+    padding-top: .25rem;
   }
 }
 
@@ -813,14 +630,14 @@ html {
 //
 // empty-results
 .empty-results {
-  // TODO: REMOVE list-group-heading in v3.0.0
+  // TODO: REMOVE list-group-heading in v4.0.0
   // list-group-heading will be deprecated,
   // Use empty-results-heading inside empty-results div
   .list-group-heading,
   .empty-results-heading {
     display: block;
     color: $headings-color;
-    font-size: $font-size-xl;
+    @include font-size($font-size-xl);
     line-height: $line-height-sm;
     padding-bottom: 1.275rem;
   }

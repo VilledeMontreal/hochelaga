@@ -8,7 +8,6 @@ body {
 //
 // Headings are responsive
 // @see responsive-font-size mixin
-
 h1, .h1 {
   @include responsive-font-size($h1-font-size, .75, 44px);
   // 576px and up
@@ -119,16 +118,16 @@ h6, .h6 {
 // Utility class for font-size
 
 .font-size-xl {
-  font-size: $font-size-xl;
+  @include font-size($font-size-xl);
 }
 .font-size-lg {
-  font-size: $font-size-lg;
+  @include font-size($font-size-lg);
 }
 .font-size-sm {
-  font-size: $font-size-sm;
+  @include font-size($font-size-sm);
 }
 .font-size-xs {
-  font-size: $font-size-xs;
+  @include font-size($font-size-xs);
 }
 
 // Lead
@@ -214,7 +213,7 @@ a {
     border-bottom: none;
     .vdm {
       color: $primary;
-      font-size: 1.42857em;
+      @include font-size(2rem);
       vertical-align: top;
     }
   }
@@ -231,6 +230,12 @@ a {
       }
     }
   }
+
+  // Utility classes to remove border-bottom
+  &.img-link,
+  &.no-border {
+    border: none;
+  }
 }
 
 // Add .icon class to display vertically centered icon and text
@@ -240,7 +245,7 @@ a {
   // we need this code to prevent icon from getting underlined on hover
   .vdm {
     display: inline-block;
-    font-size: 1.5rem;
+    @include font-size(1.5rem);
     &:before {
       display: inline-block;
     }
@@ -266,17 +271,17 @@ a {
     @include iconvdm($position: after, $icon: '112-lien-externe');
     margin-right: 1.125em;
     &:after {
-      font-size: 1.125em;
-      padding-left: 0.125rem;
-      vertical-align: baseline;
+      @include font-size($font-size-base);
       overflow: hidden;
       margin-right: -1.125em;
       margin-top: -.625rem;
       margin-bottom: -.625rem;
-
+      padding-left: 0.125rem;
+      vertical-align: baseline;
     }
   }
   // List some exclusion
+  .media-gallery,
   .list-icon,
   .social-media-list,
   .cards,
@@ -300,7 +305,7 @@ a {
 //
 .blockquote {
   color: $gray-900;
-  font-size: $blockquote-font-size;
+  @include font-size($blockquote-font-size);
   line-height: $line-height-base;
   font-weight: $font-weight-normal;
   margin-bottom: 2rem;
@@ -322,8 +327,8 @@ a {
   }
 
   .blockquote-footer {
-    font-size: $font-size-base;
     color: $body-color;
+    @include font-size($font-size-base);
     font-style: normal;
     &:before {
       display: none;
@@ -383,19 +388,13 @@ a {
   @include bullet-left();
 }
 
-/*
-.meta {
-  font-size: $font-size-xs;
-}
-*/
-
 .footer-notes {
   border-top: 1px solid $gray-700;
-  font-size: $font-size-sm;
+  @include font-size($font-size-sm);
   padding-top: 2rem;
   margin-bottom: 4rem;
   small, .small {
-    font-size: 100%;
+    @include font-size(100%);
   }
 }
 
@@ -420,7 +419,7 @@ a {
 //
 // for the rendering of dates in general
 .date {
-  font-size: $h5-font-size;
+  @include font-size($h5-font-size);
   // Fat day, discrete month, block level headings
   &.day-month {
     > .day {

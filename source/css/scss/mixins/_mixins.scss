@@ -6,44 +6,6 @@
  * - - - - - - - - - -
  */
 
-// @arg $level - integrer [1-6]
-// @arg $weight - string ['light','regular','bold']
-@mixin heading($level: 1, $weight: "regular", $display: block) {
-  // color: $headings-color;
-  //font-family: $font-family-base;
-  //font-weight: $headings-font-weight;
-  //display: $display;
-
-  @if $level == 1 {
-    font-size: $h1-font-size;                             // 48px
-    line-height: get-line-height($h1-font-size, 64px);    // 60px
-  }
-  @if $level == 2 {
-    font-size: $h2-font-size;                             // 42px
-    line-height: get-line-height($h2-font-size, 56px);    // 52px
-  }
-  @if $level == 3 {
-    font-size: $h3-font-size;                             // 36px
-    line-height: get-line-height($h3-font-size, 48px);    // 44px
-  } 
-  @if $level == 4 {
-    font-size: $h4-font-size;                             // 32px
-    line-height: get-line-height($h4-font-size, 40px);    // 40px
-  } 
-  @if $level == 5 {
-    font-size: $h5-font-size;                             // 26px
-    line-height: get-line-height($h5-font-size, 32px);    // 32px
-  } 
-  @if $level == 6 {
-    font-size: $h6-font-size;                             // 22px
-    line-height:get-line-height($h6-font-size, 24px);     // 28px
-  }
-
-  @if $weight == "bold" {
-    font-weight: $font-weight-bold;
-  }
-}
-
 // Responsive headings
 // @arg $font-size - rem
 // @arg $multiplier - integer
@@ -57,7 +19,7 @@
   $font-size-rem: px-to-rem($font-size-px);
 
   // Generate font-size and line-height
-  font-size: $font-size-rem;
+  @include font-size($font-size-rem);
   line-height: get-line-height($font-size-px, $line-height);
 
 }
@@ -66,8 +28,8 @@
 @mixin card-heading($font-size: $font-size-xl, $line-height: $line-height-sm, $font-weight: $font-weight-regular, $color: $headings-color, $display: block) {
   color: $color;
   display: $display;
+  @include font-size($font-size);
   font-weight: $font-weight;
-  font-size: $font-size;
   line-height: $line-height;
 }
 
@@ -158,7 +120,7 @@
 
   @if $size {
     &:after {
-      font-size: $size;
+      @include font-size($size);
       left: calc(100% - #{ $size / 2 });
     }
   }
@@ -226,9 +188,9 @@
 // Buttons
 //
 @mixin button-size($padding-y, $padding-x, $font-size, $line-height, $border-radius) {
-  padding: $padding-y $padding-x;
-  font-size: $font-size;
+  @include font-size($font-size);
   line-height: $line-height;
+  padding: $padding-y $padding-x;
   // Manually declare to provide an override to the browser default
   @if $enable-rounded {
     border-radius: $border-radius;
@@ -257,10 +219,10 @@
 
 // Button sizes
 @mixin button-alter-size($padding-vertical, $padding-horizontal, $font-size, $line-height, $border-radius) {
-  padding: $padding-vertical $padding-horizontal;
-  font-size: $font-size;
-  line-height: $line-height;
   border-radius: $border-radius;
+  @include font-size($font-size);
+  line-height: $line-height;
+  padding: $padding-vertical $padding-horizontal;
 }
 
 
@@ -337,4 +299,28 @@
   @if $border {
     border: 1px solid $border-color;
   }
+}
+
+// Truncate text with show-more/show-less buttons
+@mixin truncate($rows, $line-height, $background: '') {
+  position: relative;
+  overflow: hidden;
+  max-height: $line-height * $rows;
+  line-height: $line-height;
+
+  &:after {
+    content: "";
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    width: 100%;
+    height: 3rem;
+
+    @if $background != '' {
+      background: -moz-linear-gradient(top, rgba(255,255,255,0) 0%, rgba(255,255,255,1) 100%); /* FF3.6-15 */
+      background: -webkit-linear-gradient(top, rgba(255,255,255,0) 0%,rgba(255,255,255,1) 100%); /* Chrome10-25,Safari5.1-6 */
+      background: linear-gradient(to bottom, rgba(255,255,255,0) 0%,rgba(255,255,255,1) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+    }
+  }
+  
 }

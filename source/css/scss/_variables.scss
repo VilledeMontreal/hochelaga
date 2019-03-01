@@ -64,23 +64,29 @@ $dark:          $gray-900;
 
 $theme-colors: ();
 // stylelint-disable-next-line scss/dollar-variable-default
-$theme-colors: map-merge((
-  "primary":    $primary,
-  "secondary":  $secondary,
-  "success":    $success,
-  "info":       $info,
-  "warning":    $warning,
-  "danger":     $danger,
-  "light":      $light,
-  "dark":       $dark
-), $theme-colors);
+$theme-colors: map-merge(
+  (
+    "primary":    $primary,
+    "secondary":  $secondary,
+    "success":    $success,
+    "info":       $info,
+    "warning":    $warning,
+    "danger":     $danger,
+    "light":      $light,
+    "dark":       $dark
+  ),
+  $theme-colors
+);
 
 $button-colors: () !default;
 // stylelint-disable-next-line scss/dollar-variable-default
-$button-colors: map-merge((
-  "primary":    $primary,
-  "secondary":  $secondary,
-), $button-colors);
+$button-colors: map-merge(
+  (
+    "primary":    $primary,
+    "secondary":  $secondary,
+  ),
+  $button-colors
+);
 
 $dialog-colors: () !default;
 // stylelint-disable-next-line scss/dollar-variable-default
@@ -107,29 +113,31 @@ $enable-validation-icons:   false;
 $spacer: .5rem;
 $spacers: ();
 // stylelint-disable-next-line scss/dollar-variable-default
-$spacers: map-merge((
-  0:  0,
-  1:  ($spacer),
-  2:  ($spacer * 2),
-  3:  ($spacer * 3),
-  4:  ($spacer * 4),
-  5:  ($spacer * 5),
-  6:  ($spacer * 6),
-  7:  ($spacer * 7),
-  8:  ($spacer * 8),
-  9:  ($spacer * 9),
-  10: ($spacer * 10),
-  11: ($spacer * 11),
-  12: ($spacer * 12),
-  13: ($spacer * 13),
-  14: ($spacer * 14),
-  15: ($spacer * 15),
-  16: ($spacer * 16),
-  17: ($spacer * 17),
-  18: ($spacer * 18),
-  19: ($spacer * 19),
-  20: ($spacer * 20)
-), $spacers);
+  $spacers: map-merge((
+    0:  0,
+    1:  ($spacer),
+    2:  ($spacer * 2),
+    3:  ($spacer * 3),
+    4:  ($spacer * 4),
+    5:  ($spacer * 5),
+    6:  ($spacer * 6),
+    7:  ($spacer * 7),
+    8:  ($spacer * 8),
+    9:  ($spacer * 9),
+    10: ($spacer * 10),
+    11: ($spacer * 11),
+    12: ($spacer * 12),
+    13: ($spacer * 13),
+    14: ($spacer * 14),
+    15: ($spacer * 15),
+    16: ($spacer * 16),
+    17: ($spacer * 17),
+    18: ($spacer * 18),
+    19: ($spacer * 19),
+    20: ($spacer * 20)
+  ),
+  $spacers
+);
 
 
 // Body
@@ -162,30 +170,32 @@ $paragraph-margin-bottom:     2rem;
 //
 // Define the maximum width of `.container` for different screen sizes.
 
-$container-max-widths: ();
-// stylelint-disable-next-line scss/dollar-variable-default
-$container-max-widths: map-merge(
-  (
-    sm: 570px,
-    md: 750px,
-    lg: 990px,
-    xl: 1170px
-  ),
-  $container-max-widths
+$container-max-widths: (
+  sm: 570px,
+  md: 750px,
+  lg: 990px,
+  xl: 1170px
 );
 
-$content-max-widths: () !default;
-// stylelint-disable-next-line scss/dollar-variable-default
-$content-max-widths: map-merge(
-  (
-    md: 750px,
-    lg: 1110px,
-    xl: 1600px
-  ),
-  $content-max-widths
+@include _assert-ascending($container-max-widths, "$container-max-widths");
+
+// Grid content
+//
+// Define the maximum width of content for different screen sizes.
+$content-max-widths: (
+  md: 750px,
+  lg: 1110px,
+  xl: 1600px
 );
 
 @include _assert-ascending($content-max-widths, "$content-max-widths");
+
+// Grid columns
+//
+// Set the number of columns and specify the width of the gutters.
+
+$grid-columns:                12;
+$grid-gutter-width:           30px;
 
 
 // Components
@@ -210,11 +220,13 @@ $backdrop-bg:                 $gray-800;
 $backdrop-opacity:            .3;
 
 
-// Fonts
+// Typography
 //
 // Font, line-height, and color for body text, headings, and more.
 
+// stylelint-disable value-keyword-case
 $font-family-base:            'Nunito Sans', Helvetica, Arial, sans-serif;
+// stylelint-enable value-keyword-case
 
 $font-size-base:              1.125rem;     // ~18px if browser default is 16px
 $font-size-xl:                1.5rem;       // ~24px
@@ -306,7 +318,10 @@ $table-striped-order:         odd;
 // Icons fonts vdm class, imported from "@villemontreal/font-icon
 $vdm-icon-font-family : 'vdm';
 
-// Input btn
+
+// Buttons + Forms
+//
+// Shared variables that are reassigned to `$input-` and `$btn-` specific variables.
 
 $input-btn-padding-y:         .375rem;
 $input-btn-padding-x:         .75rem;
@@ -362,14 +377,17 @@ $btn-transition:              color .15s ease-in-out, background-color .15s ease
 
 $input-padding-y:                       $input-btn-padding-y;
 $input-padding-x:                       $input-btn-padding-x;
+$input-font-size:                       $font-size-base;
 $input-line-height:                     $input-btn-line-height;
 
 $input-padding-y-sm:                    $input-btn-padding-y-sm;
 $input-padding-x-sm:                    $input-btn-padding-x-sm;
+$input-font-size-sm:                    $font-size-sm;
 $input-line-height-sm:                  $input-btn-line-height-sm;
 
 $input-padding-y-lg:                    1rem;
 $input-padding-x-lg:                    $input-btn-padding-x-lg;
+$input-font-size-lg:                    $font-size-lg;
 $input-line-height-lg:                  $input-btn-line-height-lg;
 
 $input-bg:                              $white;
@@ -396,13 +414,13 @@ $input-plaintext-color:                 $body-color;
 
 $input-height-border:                   $input-border-width * 2;
 
-$input-height-inner:                    ($font-size-base * $input-line-height) + ($input-padding-y * 2);
+$input-height-inner:                    ($input-font-size * $input-line-height) + ($input-padding-y * 2);
 $input-height:                          calc(#{$input-height-inner} + #{$input-height-border});
 
-$input-height-inner-sm:                 ($font-size-sm * $input-line-height-sm) + ($input-padding-y-sm * 2);
+$input-height-inner-sm:                 ($input-font-size-sm * $input-line-height-sm) + ($input-padding-y-sm * 2);
 $input-height-sm:                       calc(#{$input-height-inner-sm} + #{$input-height-border});
 
-$input-height-inner-lg:                 ($font-size-lg * $input-line-height-lg) + ($input-padding-y-lg * 2);
+$input-height-inner-lg:                 ($input-font-size-lg * $input-line-height-lg) + ($input-padding-y-lg * 2);
 $input-height-lg:                       calc(#{$input-height-inner-lg} + #{$input-height-border});
 
 // custom forms
@@ -447,6 +465,8 @@ $form-feedback-font-size:           $font-size-sm;
 
 
 // Checkbox Toggle :on/off switches
+//
+// Will be removed in V4 - we now use custom-switch
 
 $checkbox-toggle-border-width:          2px;
 $checkbox-toggle-border-color:          $primary;
@@ -458,6 +478,29 @@ $checkbox-toggle-width-inside:          30px;
 $checkbox-toggle-padding:               5px;
 $checkbox-toggle-bg:                    $white;
 $checkbox-toggle-bg-toggled:            $primary;
+
+
+// Navs
+
+$nav-link-padding-y:                1.5rem;
+$nav-link-padding-x:                2rem;
+
+$nav-tabs-border-color:             $gray-300;
+$nav-tabs-border-width:             1px;
+$nav-tabs-border-radius:            0;
+$nav-tabs-link-hover-border-color:  $brand;
+$nav-tabs-link-active-color:        $black;
+$nav-tabs-link-active-bg:           $body-bg;
+$nav-tabs-link-active-border-color: $brand;
+
+$nav-tabs-spacing:                  4px;
+$nav-tabs-active-border-width:      4px;
+
+
+// Navbar
+
+$header-icon-width:               60px;
+$header-icon-height:              $header-icon-width;
 
 
 // Dropdowns
@@ -483,76 +526,18 @@ $dropdown-item-padding-x:           2.5rem;
 $dropdown-header-color:             $gray-600;
 
 
-// Navs
-
-// We need to clarify these doublons
-$nav-link-padding-y:                1.5rem;
-$nav-link-padding-x:                2rem;
-$nav-link-padding-y:                1rem;
-$nav-link-padding-x:                1rem;
-
-$nav-tabs-border-color:             $gray-300;
-$nav-tabs-border-width:             1px;
-$nav-tabs-border-radius:            0;
-$nav-tabs-link-hover-border-color:  $brand;
-$nav-tabs-link-active-color:        $black;
-$nav-tabs-link-active-bg:           $body-bg;
-$nav-tabs-link-active-border-color: $brand;
-
-$nav-tabs-spacing:                  4px;
-$nav-tabs-active-border-width:      4px;
-
-$nav-divider-margin-y:              $spacer;
-
-
-// Navbar
-
-$navbar-height: 114px;
-$top-banner-height : 50px;
-
-$header-total-height : $top-banner-height + $navbar-height;
-
-$navbar-padding-y:                  $spacer;
-$navbar-padding-x:                  0;
-
-$navbar-nav-link-padding-x:         .5rem !default;
-
-$navbar-brand-font-size:            $font-size-lg !default;
-// Compute the navbar-brand padding-y so the navbar-brand will have the same height as navbar-text and nav-link
-$nav-link-height:                   ($font-size-base * $line-height-base + $nav-link-padding-y * 2) !default;
-$navbar-brand-height:               $navbar-brand-font-size * $line-height-base !default;
-$navbar-brand-padding-y:            ($nav-link-height - $navbar-brand-height) / 2 !default;
-
-$navbar-toggler-padding-y:          0;
-$navbar-toggler-padding-x:          0;
-$navbar-toggler-font-size:          2rem;
-$navbar-toggler-border-radius:      0.25rem;
-
-$navbar-dark-color:                 rgba($white, .5) !default;
-$navbar-dark-hover-color:           rgba($white, .75) !default;
-$navbar-dark-active-color:          $white !default;
-$navbar-dark-disabled-color:        rgba($white, .25) !default;
-$navbar-dark-toggler-border-color:  rgba($white, .1) !default;
-
-$navbar-light-color:                $black;
-$navbar-light-hover-color:          $black;
-$navbar-light-active-color:         $black;
-$navbar-light-disabled-color:       $gray-700;
-$navbar-light-toggler-border-color: $black;
-
-
 // Pagination
 
 $pagination-padding-y:              .625rem;
 $pagination-padding-x:              1.125rem;
-$pagination-padding-y-sm:           .3rem;
+$pagination-padding-y-sm:           .45rem;
 $pagination-padding-x-sm:           .6rem;
 $pagination-padding-y-lg:           .75rem;
 $pagination-padding-x-lg:           1.5625rem;
 $pagination-line-height:            1.25;
 
 $pagination-icon-padding:           .785rem;
-$pagination-icon-padding-sm:        .425rem;
+$pagination-icon-padding-sm:        .5rem;
 $pagination-icon-padding-lg:        1.0625rem;
 
 $pagination-color:                  $gray-600;
@@ -681,11 +666,11 @@ $figure-caption-color:              $gray-ink;
 
 // Breadcrumbs
 
-$breadcrumb-padding-y:              .75rem;
+$breadcrumb-padding-y:              2rem;
 $breadcrumb-padding-x:              0;
 $breadcrumb-item-padding:           1rem;
 
-$breadcrumb-margin-bottom:          1rem;
+$breadcrumb-margin-bottom:          0;
 
 $breadcrumb-bg:                     transparent;
 $breadcrumb-divider-color:          $gray-700;
@@ -703,15 +688,9 @@ $slide-menu-border-width:         1px;
 $slide-menu-border-color:         $gray-700;
 $slide-menu-link-color:           $white;
 $slide-menu-link-hover-color:     $sarcelle-surprise;
-$slide-menu-link-font-size:       1.125rem; // 18px
+$slide-menu-link-font-size:       $font-size-base;
 $slide-menu-icon-size:            3rem;
 $slide-menu-icon-color:           $sarcelle-surprise;
 $slide-menu-link-padding:         1rem 2.8125rem;
 $slide-menu-transition-dur:       300ms;
 $slide-menu-transition-easing:    ease-in-out;
-
-
-// Header
-
-$header-icon-width:               60px;
-$header-icon-height:              $header-icon-width;

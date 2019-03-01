@@ -1,11 +1,21 @@
 {
-  "informations-event": {
-    "date": "Du 12 au 18 septembre 2018",
-    "lieu": false
-  },
-  "informations-state": {
-    "state-cancel": true,
+  "state": {
     "badge": "Annulé",
-    "badgeClass": "badge-danger"
-  }
+    "badgeClass": "badge-pill badge-danger",
+    "badge-sr-text": ""
+  },
+  "list-icon-item": [
+    {
+      "icon-item": {
+        "icon-label": "005-calendrier"
+      },
+      "item": [
+        {
+          "url": false,
+          "class": false,
+          "content": "Samedi 12 septembre 2018 à 17 h 00"
+        }
+      ]
+    }
+  ]
 }

@@ -1,0 +1,186 @@
+{
+  "jumbotronClasses": "jumbotron-bg-sarcelle",
+  "jumbotron": {
+    "headings": {
+      "tag": "h2",
+      "classes": "jumbotron-title",
+      "content": "Jumbotron heading"
+    },
+    "cards": {
+      "classes": false,
+      "bsgrid-classes": "col-12",
+      "card-item": [
+        {
+          "classes": "card-fw card-featured",
+          "url": "#",
+          "card-title": "Card with featured content",
+          "card-text":
+            "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec non justo sit amet quam scelerisque blandit.",
+          "card-media" : {
+            "icon" : false,
+            "img" : {
+              "url" : "https://picsum.photos/768/480?image=396",
+              "alt" : "featured card img alt."
+            }
+          },
+          "footer" : {
+            "inside-body": true,
+            "text": "En savoir plus"
+          }
+        }
+      ]
+    }
+  },
+  "has-hub-link": true,
+  "hub-link-text": "Toutes les nouvelles",
+  "has-lead-text" : true,
+  "inputGroupSearch": [
+    {
+      "formGroupLabel": false,
+      "inputID": "input-group-search-actualites",
+      "inputGroupIconClass": "input-group-icon-lg input-group-icon-left",
+      "iconAfter": false,
+      "icon-label": "002-recherche",
+      "formControlClass": "form-control-lg form-control-dark",
+      "inputPlaceholder": "Rechercher une actualité"
+    }
+  ],
+  "hasPagination": true,
+  "text-elements": {
+    "headings": {
+      "display": {
+        "tag": "h1",
+        "classes": "display-1",
+        "content": "Collectrice Nouvelles"
+      }
+    }
+  },
+  "nouvellesListes": {
+    "headings": {
+      "text": "Dernières actualités"
+    },
+    "load-more": {
+      "buttonText": "Afficher plus d'actualités",
+      "buttonClass": "btn-primary"
+    },
+    "listGroupClass": "list-group-hub",
+    "listGroups": [
+      {
+        "listGroup": [
+          {
+            "url": "#",
+            "title": "Signaler la présence des coyotes : pour une coexistence réussie",
+            "infos": {
+              "infos-items": [
+                {
+                  "class": false,
+                  "text": "09 h 30"
+                }
+              ]
+            }
+          },
+          {
+            "url": "#",
+            "title": "Sommet de la réconciliation : reconnaître les peuples autochtones",
+            "infos": {
+              "infos-items": [
+                {
+                  "class": false,
+                  "text": "08 h 12"
+                },
+                {
+                  "class": "text-dark separator-brand",
+                  "text": "Nom de l'arrondissement concerné"
+                }
+              ]
+            }
+          },
+          {
+            "url": "#",
+            "title": "Nouveau règlement animalier : prévention et bien-être animal au cœur de la démarche",
+            "infos": {
+              "infos-items": [
+                {
+                  "class": false,
+                  "text": "Hier"
+                }
+              ]
+            }
+          },
+          {
+            "url": "#",
+            "title": "Rues piétonnes : nouvelles venues en 2018",
+            "infos": {
+              "infos-items": [
+                {
+                  "class": false,
+                  "text": "Hier"
+                },
+                {
+                  "class": "text-dark separator-brand",
+                  "text": "Nom de l'arrondissement concerné"
+                }
+              ]
+            }
+          },
+          {
+            "url": "#",
+            "title": "Mois de l'archéologie : plus de 100 activités riches en découvertes",
+            "infos": {
+              "infos-items": [
+                {
+                  "class": false,
+                  "text": "Hier"
+                },
+                {
+                  "class": "text-dark separator-brand",
+                  "text": "Nom de l'arrondissement concerné"
+                }
+              ]
+            }
+          },
+          {
+            "url": "#",
+            "title": "Les parcs-nature de Montréal : planifiez votre été sans quitter l’île!",
+            "infos": {
+              "infos-items": [
+                {
+                  "class": false,
+                  "text": "13 septembre"
+                }
+              ]
+            }
+          },
+          {
+            "url": "#",
+            "title": "Une page de notre histoire à l’hôtel de ville",
+            "infos": {
+              "infos-items": [
+                {
+                  "class": false,
+                  "text": "11 septembre"
+                }
+              ]
+            }
+          },
+          {
+            "url": "#",
+            "title": "Réseau Express Vélo : à vous la parole!",
+            "infos": {
+              "infos-items": [
+                {
+                  "class": false,
+                  "text": "9 septembre"
+                },
+                {
+                  "class": "text-dark separator-brand",
+                  "text": "Nom de l'arrondissement concerné"
+                }
+              ]
+            }
+          }
+        ]
+      }
+    ]
+  }
+}

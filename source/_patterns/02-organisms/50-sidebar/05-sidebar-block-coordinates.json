@@ -1,31 +1,33 @@
 {
-  "coordinates": {
-    "list-icon-item": [
-      {
-        "url": false,
-        "icon-item": {
-          "icon-label": "091-localisation"
+  "coordinates": [
+    {
+      "list-icon-heading": "Bureau d'arrondissement",
+      "list-icon-item": [
+        {
+          "icon-item": {
+            "icon-label": "091-localisation"
+          },
+          "item": [
+            {
+              "url": false,
+              "content": "<address>275, rue Notre-Dame Est<br>Montréal (Québec) H2Y 1C6</address>"
+            }
+          ]
         },
-        "content": "<address>275, rue Notre-Dame Est<br>Montréal (Québec) H2Y 1C6</address>"
-      },
-      {
-        "url": false,
-        "icon-item": {
-          "icon-label": "012-telephone"
-        },
-        "content": "514 872-5678"
-      },
-      {
-        "url": "mailto:test@montreal.ca",
-        "modal": true,
-        "class": "elided-text",
-        "icon-item": {
-          "icon-label": "028-enveloppe"
-        },
-        "content": "Envoyer un courriel"
-      }
-    ]
-  },
+        {
+          "icon-item": {
+            "icon-label": "012-telephone"
+          },
+          "item": [
+            {
+              "url": false,
+              "content": "514 872-5678"
+            }
+          ]
+        }
+      ]
+    }
+  ],
   "social-media-icons-list": {
     "has-label": false,
     "has-facebook": true,

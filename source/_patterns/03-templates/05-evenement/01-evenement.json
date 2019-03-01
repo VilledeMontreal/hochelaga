@@ -1,73 +1,299 @@
 {
-  "contentHeaderClasses": "bg-gray-sky",
+  "breadcrumbContainerClasses": "px-4",
   "text-elements": {
     "headings":{
       "display":{
+        "classes": "h2",
         "content": "Template événement"
       }
     }
   },
-  "has-header-meta": true,
-  "has-publication-date": false,
+  "promoter": false,
   "has-informations": true,
-  "has-hub-link": {
-    "url": "#",
-    "link-text": "Tous les événements"
+  "has-media-image": true,
+  "has-media-gallery": true,
+  "media-image": {
+    "mediaSrc": "https://picsum.photos/1000/667?image=1072",
+    "mediaSize": "1000x667",
+    "mediaAlt": "Media #1072"
   },
-  
-  "informations-event": {
-    "date": "Du 12 au 18 septembre 2018",
-    "lieu": "Maison de la culture Ahuntsic-Cartierville"
-  },
-  "badges":[
+  "list-icon-class": "row no-gutters",
+  "list-icon-item": [
     {
-      "badge": "Catégorie",
-      "badgeClass": "",
-      "badgeUrl": "#"
+      "list-icon-item-class": "col-12",
+      "icon-item": {
+        "icon-label": "005-calendrier"
+      },
+      "item-label": "Date et heure",
+      "item": [
+        {
+          "url": false,
+          "class": false,
+          "content": "Jeudi 17 janvier de 09&nbsp;h&nbsp;00 à 10&nbsp;h&nbsp;00"
+        }
+      ]
+    },
+    {
+      "list-icon-item-class": "col-lg-6",
+      "icon-item": {
+        "icon-label": "113-prix"
+      },
+      "item-label": "Tarif",
+      "item": [
+        {
+          "class": false,
+          "url": false,
+          "tag": {
+            "span": true
+          },
+          "content": "Gratuit"
+        }
+      ]
+    },
+    {
+      "list-icon-item-class": "col-lg-6",
+      "icon-item": {
+        "icon-label": "007-billet"
+      },
+      "item-label": "Droit d'entrée",
+      "item": [
+        {
+          "class": false,
+          "url": false,
+          "tag": {
+            "span": true
+          },
+          "content": "Avec billet"
+        }
+      ]
     }
   ],
-  "has-image": true,
-  "has-documents": true,
-  "has-gallery": true,
-  "has-video": true,
+  "has-documents": {
+    "documents": [
+      {
+        "url": "test.pdf",
+        "title": "Titre du document"
+      }
+    ]
+  },
+  "has-tags": {
+    "container-class": "badges-lg",
+    "tags": [
+      {
+        "badge": "Tag #1",
+        "badgeClass": false,
+        "badgeUrl": "#"
+      },
+      {
+        "badge": "Tag #2",
+        "badgeClass": false,
+        "badgeUrl": "#"
+      }
+    ]
+  },
+  "has-video": {
+    "section-title": "Vidéo",
+    "src": "//www.youtube.com/embed/rBfphgabDhU"
+  },
+  "evenement-list-infos": {
+    "list-icon-class": false
+  },
   "social-media-icons-list": {
     "has-label": false,
     "has-facebook": true,
     "has-instagram": false,
     "has-twitter": true,
-    "has-linkedin": true,
+    "has-linkedin": false,
     "has-youtube": false
   },
   "mediaGallery": [
     {
-      "mediaSrc": "https://picsum.photos/3872/2592?image=1072",
-      "mediaAlt": "Media #1070"
+      "mediaSrc": "https://picsum.photos/2000/990?image=1072",
+      "mediaSize": "2000x990",
+      "mediaCaption": "This is a dummy caption",
+      "mediaAuthor": "Jamie Mink",
+      "mediaAlt": "Media #1070",
+      "thumbnail" : {
+        "mediaSrc": "https://picsum.photos/600/400?image=1072",
+        "height": "400",
+        "width": "600"
+      }
     },
     {
-      "mediaSrc": "https://picsum.photos/3872/2592?image=1071",
-      "mediaAlt": "Media #1071"
+      "mediaSrc": "https://picsum.photos/1000/667?image=1071",
+      "mediaSize": "1000x667",
+      "mediaCaption": "This is a dummy caption",
+      "mediaAuthor": "Tim Stief",
+      "mediaAlt": "Media #1071",
+      "thumbnail" : {
+        "mediaSrc": "https://picsum.photos/600/400?image=1071",
+        "height": "400",
+        "width": "600"
+      }
     },
     {
-      "mediaSrc": "https://picsum.photos/3872/2592?image=1070",
-      "mediaAlt": "Media #1072"
+      "mediaSrc": "https://picsum.photos/1000/667?image=1070",
+      "mediaSize": "1000x667",
+      "mediaCaption": "This is a dummy caption",
+      "mediaAuthor": "Sean Stratton",
+      "mediaAlt": "Media #1070",
+      "thumbnail" : {
+        "mediaSrc": "https://picsum.photos/600/400?image=1070",
+        "height": "400",
+        "width": "600"
+      }
+    },
+    {
+      "mediaSrc": "https://picsum.photos/1000/667?image=943",
+      "mediaSize": "1000x667",
+      "mediaCaption": "This is a dummy caption",
+      "mediaAuthor": "Paul Earle",
+      "mediaAlt": "Media #943",
+      "thumbnail" : {
+        "mediaSrc": "https://picsum.photos/600/400?image=943",
+        "height": "400",
+        "width": "600"
+      }
+    },
+    {
+      "mediaSrc": "https://picsum.photos/1350/901?image=767",
+      "mediaSize": "1350x901",
+      "mediaCaption": "This is a dummy caption",
+      "mediaAuthor": "Sébastien Marchand",
+      "mediaAlt": "Media #767",
+      "thumbnail" : {
+        "mediaSrc": "https://picsum.photos/600/400?image=767",
+        "height": "400",
+        "width": "600"
+      }
+    },
+    {
+      "mediaSrc": "https://picsum.photos/1350/901?image=655",
+      "mediaSize": "1350x901",
+      "mediaCaption": "This is a dummy caption",
+      "mediaAuthor": "Kyle Szegedi",
+      "mediaAlt": "Media #655",
+      "thumbnail" : {
+        "mediaSrc": "https://picsum.photos/600/400?image=655",
+        "height": "400",
+        "width": "600"
+      }
     }
   ],
-  "has-tags": false,
-  "tags": [
-    {
-      "badge": "Mot-clé #1",
-      "badgeClass": "",
-      "badgeUrl": "#"
-    },
-    {
-      "badge": "Mot-clé #2",
-      "badgeClass": "",
-      "badgeUrl": "#"
-    },
-    {
-      "badge": "Mot-clé #3",
-      "badgeClass": "",
-      "badgeUrl": "#"
+  "map": {
+    "address": "<address><a href='#'>Bibliothèque Jacqueline-De Repentigny</a><br>5955, avenue Bannantyne<br>Montréal (Québec) H4H 1H6</address>",
+    "lngLat": "-73.577946, 45.448775"
+  },
+  "hasPromoter": false,
+  "hasSimilarEvents": {
+    "page-section": {
+      "section-headings": {
+        "heading": "Événements similaires"
+      },
+      "button": {
+        "buttonAsLink": true,
+        "buttonUrl": "#",
+        "buttonClass": "btn-secondary", 
+        "buttonText": "Tous les événements"
+      },
+      "organized-by": false,
+      "cards": {
+        "section-classes": "bg-gray-sky",
+        "classes": false,
+        "card-item" : [
+          {
+            "bsgrid-classes": "col-12 col-lg-4",
+            "classes" : "card-teaser",
+            "url" : "#",
+            "card-title" : "Lorem ipsum dolor sit amet",
+            "card-type": "Type d'événement",
+
+            "list-icon-class": "mb-0",
+            "list-icon-item": [
+              {
+                "list-icon-item-class": false,
+                "icon-item": {
+                  "icon-label": "005-calendrier"
+                },
+                "item-label": false,
+                "item": [
+                  {
+                    "class": false,
+                    "url": false,
+                    "tag": {
+                      "span": true
+                    },
+                    "content": "du 28 décembre 2019"
+                  },
+                  {
+                    "class": false,
+                    "url": false,
+                    "tag": {
+                      "span": true
+                    },
+                    "content": "au 19 janvier 2020"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "bsgrid-classes": "col-12 col-lg-4",
+            "classes" : "card-teaser",
+            "url" : "#",
+            "card-title" : "Donec eget sodales neque",
+            "card-type": "Type d'événement",
+
+            "list-icon-class": "mb-0",
+            "list-icon-item": [
+              {
+                "list-icon-item-class": false,
+                "icon-item": {
+                  "icon-label": "005-calendrier"
+                },
+                "item-label": false,
+                "item": [
+                  {
+                    "class": false,
+                    "url": false,
+                    "tag": {
+                      "span": true
+                    },
+                    "content": "Jeudi 19 janvier"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "bsgrid-classes": "col-12 col-lg-4",
+            "classes" : "card-teaser",
+            "url" : "#",
+            "card-title" : "Aliquam sit amet gravida velit",
+            "card-type": "Type d'événement",
+            "list-icon-class": "mb-0",
+            "list-icon-item": [
+              {
+                "list-icon-item-class": false,
+                "icon-item": {
+                  "icon-label": "005-calendrier"
+                },
+                "item-label": false,
+                "item": [
+                  {
+                    "class": false,
+                    "url": false,
+                    "tag": {
+                      "span": true
+                    },
+                    "content": "Jeudi 19 janvier"
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      }
     }
-  ]
+  }
 }

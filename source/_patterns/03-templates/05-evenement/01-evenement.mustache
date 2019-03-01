@@ -3,60 +3,108 @@
 
 <main class="main-content {{ pageClasses }}" id="main-content" aria-label="Main Content">
 
-  {{> organisms-content-header }}
+  {{# has-breadcrumb}}
+  <div class="container-fluid container-fluid-max-xl">
+    <div class="row">
+      <div class="col-12">
+      {{> molecules-breadcrumbs}}
+      </div>
+    </div>
+  </div>
+  {{/ has-breadcrumb}}
+
+  {{> organisms-content-header-jumbotron }}
+
+  {{# alerts }}
+  <div class="container">
+    {{> molecules-alerts }}
+  </div>
+  {{/ alerts }}
 
   <!-- Begin main-content region-->
   <div class="region-content {{ regionMainClasses }}">
     <div class="container {{ regionMainContainerClasses }}">
       <div class="row">
-        <article class="col-12 col-lg-8 {{ regionMainContentClasses }}">
-          <p class="lead">Ut quis rhoncus libero. Donec molestie et nunc nec commodo. Nulla eu leo purus. Curabitur elementum, quam eu pharetra vestibulum, 
-          justo nisl rutrum nisi, non egestas nisl libero eget magna. Suspendisse lectus sapien, aliquet in enim sed, convallis consectetur sapien. Integer laoreet tempor tellus.</p>
-          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas blandit quam a volutpat fermentum. Proin ut dictum metus. Ut eget lectus sit amet nibh aliquam placerat sed et augue. 
-          Etiam vel mollis tellus. Suspendisse nunc sapien, auctor non nunc convallis, ultricies convallis lectus. Mauris sed nisi egestas, convallis erat eu, faucibus urna. Morbi ornare arcu non mauris blandit suscipit. 
-          Aenean at nisl a orci fringilla maximus. Fusce nisl justo, vestibulum at tellus id, fringilla pretium mi.</p>
-          <p>Cras quis gravida leo, id blandit elit. <a href="https://ville.montreal.qc.ca">Vivamus placerat</a> felis massa, consectetur fringilla ante ultricies feugiat. Sed imperdiet semper rhoncus. 
-          Aenean quis augue consequat, viverra mi mollis, suscipit arcu. Vestibulum vitae urna ipsum. Nulla turpis dolor, facilisis a eleifend in, facilisis quis augue. Donec ullamcorper ligula blandit, pulvinar tellus eu, venenatis arcu. 
-          Nam id finibus erat, eget sollicitudin lectus. Curabitur vel est id est rutrum cursus. Donec nunc neque, auctor et lectus eget, faucibus ullamcorper turpis. Phasellus malesuada magna ac turpis volutpat mollis. Ut suscipit condimentum augue vel placerat. 
-          Sed fermentum eleifend dui. Nam aliquet malesuada neque sit amet sodales. Integer mauris nibh, sodales ut diam vel, venenatis pretium ex. Donec vulputate ut felis sit amet varius.</p>
-          <p>Nulla facilisi. Nullam convallis massa sapien, id blandit lorem sodales pretium. Nam tempor erat et accumsan rhoncus. Nunc quis posuere magna. Ut elementum, velit eu venenatis venenatis, velit elit pellentesque leo, ac finibus enim orci eu lectus. 
-          Sed vel risus nec nisl ultricies mollis at eu diam. Donec vitae orci congue, vulputate lacus ut, posuere ipsum.</p>
-          {{# has-documents }}
-          <h3>Document</h3>
-          <ul>
-            <li><a href="test.pdf">Programme de l'événement</a></li>
-          </ul>
-          {{/ has-documents}}
-          {{# has-gallery }}
-          {{> organisms-media-gallery}}
-          {{/ has-gallery }}
-          {{# has-video }}
-          <div class="media-container">
-            <div class="media embed-responsive embed-responsive-16by9">
-              <iframe class="embed-responsive-item" src="//www.youtube.com/embed/rBfphgabDhU" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
-            </div>
+        <article class="col-12 col-lg-7 col-xl-8 {{ regionMainContentClasses }}">
+          <div class="content-block">
+            <p class="lead">Ut quis rhoncus libero. Donec molestie et nunc nec commodo. Nulla eu leo purus. Curabitur elementum, quam eu pharetra vestibulum, 
+              justo nisl rutrum nisi, non egestas nisl libero eget magna. Suspendisse lectus sapien, aliquet in enim sed, convallis consectetur sapien. Integer laoreet tempor tellus.</p>
+
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas blandit quam a volutpat fermentum. Proin ut dictum metus. Ut eget lectus sit amet nibh aliquam placerat sed et augue. 
+                  Etiam vel mollis tellus. Suspendisse nunc sapien, auctor non nunc convallis, ultricies convallis lectus. Mauris sed nisi egestas, convallis erat eu, faucibus urna. Morbi ornare arcu non mauris blandit suscipit. 
+                  Aenean at nisl a orci fringilla maximus. Fusce nisl justo, vestibulum at tellus id, fringilla pretium mi.</p>
+
+            <p>Cras quis gravida leo, id blandit elit. <a href="https://ville.montreal.qc.ca">Vivamus placerat</a> felis massa, consectetur fringilla ante ultricies feugiat. Sed imperdiet semper rhoncus. 
+                Aenean quis augue consequat, viverra mi mollis, suscipit arcu. Vestibulum vitae urna ipsum. Nulla turpis dolor, facilisis a eleifend in, facilisis quis augue. Donec ullamcorper ligula blandit, pulvinar tellus eu, venenatis arcu. 
+                Nam id finibus erat, eget sollicitudin lectus. Curabitur vel est id est rutrum cursus. Donec nunc neque, auctor et lectus eget, faucibus ullamcorper turpis. Phasellus malesuada magna ac turpis volutpat mollis. Ut suscipit condimentum augue vel placerat. 
+                Sed fermentum eleifend dui. Nam aliquet malesuada neque sit amet sodales. Integer mauris nibh, sodales ut diam vel, venenatis pretium ex. Donec vulputate ut felis sit amet varius.</p>
+              
+            <p>Nulla facilisi. Nullam convallis massa sapien, id blandit lorem sodales pretium. Nam tempor erat et accumsan rhoncus. Nunc quis posuere magna. Ut elementum, velit eu venenatis venenatis, velit elit pellentesque leo, ac finibus enim orci eu lectus. 
+                Sed vel risus nec nisl ultricies mollis at eu diam. Donec vitae orci congue, vulputate lacus ut, posuere ipsum.</p>
           </div>
-          {{/ has-video }}
-          {{# has-tags }}
-            <h3 class="h6">Mots-clés</h3>
-            <ul class="list-inline">
+          {{# has-documents }}
+          <div class="content-block">
+            <h3 class="h5">Documents</h3>
+            <ul>
+              {{# documents}}
+              <li><a href="{{ url }}">{{ title }}</a></li>
+              {{/ documents}}
+            </ul>
+          </div>
+          {{/ has-documents}}
+
+          {{# has-partners}}
+          <div class="content-block">
+            <h3 class="h5">Partenaires</h3>
+            {{> molecules-logo-grid}}
+          </div>
+          {{/ has-partners}}
+
+          {{# has-tags}}
+          <div class="content-block">
+            <h3 class="h5">Étiquettes</h3>
+            <ul class="list-inline {{container-class}}">
               {{# tags}}
               <li class="list-inline-item">{{> atoms-badge}}</li>
               {{/ tags}}
             </ul>
-          {{/ has-tags }}
+          </div>
+          {{/ has-tags}}
+
+          {{# has-video }}
+          <div class="content-block">
+            <h3 class="h5">{{ section-title }}</h3>
+            <div class="media-container">
+              <div class="media embed-responsive embed-responsive-16by9">
+                <iframe class="embed-responsive-item" src="{{ src }}" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+              </div>
+            </div>
+          </div>
+          {{/ has-video }}
+
         </article>
         <!-- Sidebar Right -->
-        <aside class="col-12 col-lg-4 sidebar-right" role="complementary">
+        <aside class="col-12 col-lg-5 col-xl-4 sidebar-right" role="complementary">
           {{> organisms-sidebar-block-evenement }}
         </aside>
+      </div>
+      <div class="row">
+        <div class="col-12">
+          <div class="map-section">
+            <div id="mapEventId" style="height:500px"></div>
+          </div>
+        </div>
       </div>
     </div>
   </div>
 
-  <section class="map-section">
-    <div id="mapEventId" style="height:500px"></div>
-  </section>
+  {{# hasPromoter}}
+  {{> organisms-page-section-organisateur }}
+  {{/ hasPromoter}}
+
+  {{# hasSimilarEvents}}
+  {{> organisms-page-section-cards}}
+  {{/ hasSimilarEvents}}
 
   {{# hasFeedbackForm}}
   {{> organisms-feedback-form}}
@@ -67,9 +115,11 @@
 
  <script>
     var startZoom = 16;
-    var center = [-73.662623, 45.553576];
+    var pointLngLat = [{{{ map.lngLat }}}];
+    var center = pointLngLat;
     var maxBounds = [[-74.3965936,45.319517],[-73.442801,45.751651]];
     var marker = new mapboxgl.Marker(defaultMarker());
+    var address = "{{{map.address}}}";
     var mapboxStyle = {
     version: 8,
     name: 'basic',
@@ -411,7 +461,7 @@
     interactive: false,
   });
 
-  marker.setLngLat([-73.662623, 45.553576]).addTo(map);
+  marker.setLngLat(pointLngLat).addTo(map);
 
   var markerHeight = 50, markerRadius = 10, linearOffset = 25;
   var popupOffsets = {
@@ -425,8 +475,8 @@
   'right': [-markerRadius, (markerHeight - markerRadius) * -1]
   };
   var popup = new mapboxgl.Popup({closeButton: false, closeOnClick: false, offset: popupOffsets, className: 'map-popup'})
-    .setLngLat([-73.662623, 45.553576])
-    .setHTML("<address><strong>Maison de la culture Ahuntsic-Cartierville</strong><br>10300, rue Lajeunesse<br>Montréal (Québec) H3L 2E5</address>")
+    .setLngLat(pointLngLat)
+    .setHTML(address)
     .addTo(map);
 
   function defaultMarker() {

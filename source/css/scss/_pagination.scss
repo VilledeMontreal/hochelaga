@@ -68,7 +68,7 @@
       line-height: 1;
       .vdm {
         display: block;
-        font-size: 1em;
+        @include font-size($font-size-base);
         line-height: 1;
         color: $pagination-color;
       }
@@ -89,7 +89,7 @@
       > .page-link {
         padding: $pagination-icon-padding-lg;
         .vdm {
-          font-size: 1.2em;
+          @include font-size(1.75rem);
         }
       }
     }
@@ -104,6 +104,9 @@
     &:last-child {
       > .page-link {
         padding: $pagination-icon-padding-sm;
+        .vdm {
+          @include font-size(.85rem);
+        }
       }
     }
   }

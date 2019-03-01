@@ -84,16 +84,16 @@ legend,
   width: 100%;
 
   > .vdm {
-    position: absolute;
-    height: 100%;
+    color: $gray-900;
     display: flex;
     flex-wrap: wrap;
     align-items: center;
-    pointer-events: none;
-    top: 0;
-    color: $gray-900;
-    font-size: 2rem;
+    @include font-size(2rem);
+    height: 100%;
     padding: 0 .3rem;
+    pointer-events: none;
+    position: absolute;
+    top: 0;
   }
 
   &.input-group-icon-left {
@@ -116,7 +116,7 @@ legend,
   // Large input-group with icon
   &.input-group-icon-lg {
     > .vdm {
-      font-size: 3rem;
+      @include font-size(3rem);
       padding: 0 .5rem;
     }
 
@@ -137,7 +137,7 @@ legend,
   // Small input-group with icon
   &.input-group-icon-sm {
     > .vdm {
-      font-size: 1.5rem;
+      @include font-size(1.5rem);
       padding: 0 .2rem;
     }
 
@@ -165,7 +165,7 @@ legend,
     @include button-reset();
     pointer-events: inherit;
     cursor: pointer;
-    font-size: 1.5rem;
+    @include font-size(1.5rem);
     z-index: 10;
     position: absolute;
     top: 50%;
@@ -185,7 +185,7 @@ legend,
     display: flex;
     align-items: center;
     padding: $input-padding-y $input-padding-x;
-    font-size: $font-size-base; // Match inputs
+    @include font-size($font-size-base); // Match inputs
     font-weight: $font-weight-normal;
     line-height: $input-line-height;
     color: $input-group-addon-color;
@@ -488,69 +488,6 @@ legend,
   }
 }
 
-// Form-combo and variants
-// TODO: Validate if this is still Wanted
-.dropdown-combo {
-  position: relative;
-  .dropdown-combo-toggle {
-    border-bottom: 1px solid $black;
-    cursor: pointer;
-    display: flex;
-    flex: 1 1 100%;
-  }
-  .dropdown-combo-placeholder,
-  .select-container {
-    color: $gray-500;
-    flex-grow: 1;
-    align-self: center;
-    white-space: nowrap;
-    overflow: hidden;
-    text-overflow: ellipsis;
-  }
-  .select-container {
-    z-index: 1;
-  }
-  .dropdown-combo-select {
-    background: transparent;
-    -webkit-appearance: none;
-    -moz-appearance: none;
-    appearance: none;
-    z-index: 1;
-    flex-shrink: 1;
-    width: 100%;
-    padding-right: 40px;
-    color: $primary;
-    border: none;
-    border-radius: 0px;
-  }
-
-  .dropdown-combo-select-button {
-    position: absolute;
-    right: 0;
-    top: 50%;
-    transform: translateY(-50%);
-    background-color: transparent;
-    color: $primary;
-  }
-  .dropdown-menu {
-    border: none;
-    border-radius: 0;
-    margin: 0;
-    margin-top: 1px;
-    max-height: 235px;
-    overflow-x: hidden;
-    box-shadow: $dropdown-box-shadow; // Use available variables to normalize dropdown-box-shadow
-    width: 100%;
-    li {
-      padding-bottom: 0;
-    }
-    .dropdown-item {
-      display: inline-block;
-      padding: .625rem 1rem .625rem 2rem;
-    }
-  }
-}
-
 //
 // file drop container
 .file-drop-container {
@@ -597,8 +534,8 @@ legend,
   
     // Icon
     .vdm {
-      font-size: 2.5rem;
       color: $primary;
+      @include font-size(2.5rem);
       margin-right: .5rem;
     }
   }
@@ -625,7 +562,7 @@ legend,
   .feedback-question-label {
     color: $headings-color;
     display: block;
-    font-size: $font-size-lg;
+    @include font-size($font-size-lg);
     line-height: $line-height-sm;
     margin-bottom: 1.5rem;
   }
@@ -636,12 +573,12 @@ legend,
   }
 
   .notice {
-    font-size: $font-size-sm;
+    @include font-size($font-size-sm);
   }
 
   @include media-breakpoint-up(md) {
     .feedback-question-label {
-      font-size: $font-size-xl;
+      @include font-size($font-size-xl);
     }
   }
 

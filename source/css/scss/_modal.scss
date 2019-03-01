@@ -43,7 +43,7 @@
       z-index: $zindex-modal + 1;
       .vdm {
         color: $gray-900;
-        font-size: 1.5rem;
+        @include font-size(1.5rem);
       }
     }
   }
@@ -79,13 +79,13 @@
     padding: 1rem 1rem 1rem .75rem;
     align-items: center;
     .vdm {
-      font-size: 4rem;
+      @include font-size(4rem);
       margin-right: .75rem;
     }
     .user-info {
-      flex: 1;
       color: $gray-600;
-      font-size: $font-size-sm;
+      flex: 1;
+      @include font-size($font-size-sm);
       line-height: $line-height-sm;
       overflow: hidden;
       span {
@@ -93,9 +93,8 @@
       }
       .user-profil {
         color: $headings-color;
-        font-size: $font-size-lg;
+        @include font-size($font-size-lg);
         font-weight: $font-weight-bold;
-        // padding-bottom: .25rem;
       }
       .user-name {
         font-weight: $font-weight-bold;
@@ -155,12 +154,12 @@
     }
     .modal-header {
       .vdm {
-        font-size: 4em;
+        @include font-size(4.5rem);
       }
       .btn-close {
         .vdm {
           color: $gray-900;
-          font-size: 1.5rem;
+          @include font-size(1.5rem);
         }
       }
     }
@@ -176,12 +175,12 @@
       text-align: center;
       .vdm {
         color: $white;
-        font-size: 4rem;
+        @include font-size(4.5rem);
       }
       .btn-close {
         .vdm {
           color: $gray-900;
-          font-size: 1.5rem;
+          @include font-size(1.5rem);
         }
       }
     }
@@ -196,8 +195,7 @@
       color: $gray-ink;
       .date-time {
         color: $gray-700;
-        font-size: .875rem;
-        line-height: get-line-height(14px, 16px);
+        @include font-size($font-size-sm);
         font-weight: bold;
         margin-bottom: 2rem;
       }
@@ -241,9 +239,6 @@
       .modal-header {
         padding-left: 2.5rem;
         padding-right: 2.5rem;
-        .vdm {
-          font-size: 5rem;
-        }
       }
       .modal-content {
         text-align: left;

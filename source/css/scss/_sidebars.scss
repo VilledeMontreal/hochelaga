@@ -17,22 +17,22 @@
   // Other fixtures
   // Titles
   .subtitle {
-    font-size: $font-size-lg;         // 21px
+    @include font-size($font-size-lg);
     line-height: $line-height-sm;     // 1.33
     margin-bottom: 1rem;
   }
   .sidebar-title {
     color: $headings-color;
-    font-size: $font-size-xl;         // 24px
-    line-height: $line-height-sm;     // 1.33
-    font-weight: $font-weight-bold;   
     display: flex;
+    @include font-size($font-size-xl);
+    font-weight: $font-weight-bold;  
+    line-height: $line-height-sm;     // 1.33 
     margin-bottom: 2rem;
     // Tweak some styles for icon inside title
     &.icon {
       .vdm {
-        font-size: 2rem;
         color: $headings-color;
+        @include font-size(2rem);
       }
     }
   }
@@ -59,6 +59,7 @@
 // The base unit for a sidebar component, stacked
 .sb-block {
   margin-bottom: 3rem;
+  @include clearfix;
   > *:last-child {
     margin-bottom: 0;
   }
@@ -78,7 +79,13 @@
   // TODO: Refactor this code
   .schedule-content {
     align-items: flex-start;
+    @include font-size($font-size-sm);
     width: 100%;
+
+    .schedule-day,
+    .schedule-data {
+      color: $headings-color;
+    }
 
     .schedule-data {
       display: flex;
@@ -98,9 +105,9 @@
         }
       }
       .vdm {
-        margin-left: .5rem;
-        font-size: 1rem;
         cursor: pointer;
+        @include font-size(1rem);
+        margin-left: .5rem;
       }
     }
   }
