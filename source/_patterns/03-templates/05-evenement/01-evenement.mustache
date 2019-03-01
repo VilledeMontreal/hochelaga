@@ -26,51 +26,65 @@
     <div class="container {{ regionMainContainerClasses }}">
       <div class="row">
         <article class="col-12 col-lg-7 col-xl-8 {{ regionMainContentClasses }}">
-          <p class="lead">Ut quis rhoncus libero. Donec molestie et nunc nec commodo. Nulla eu leo purus. Curabitur elementum, quam eu pharetra vestibulum, 
-            justo nisl rutrum nisi, non egestas nisl libero eget magna. Suspendisse lectus sapien, aliquet in enim sed, convallis consectetur sapien. Integer laoreet tempor tellus.</p>
+          <div class="content-block">
+            <p class="lead">Ut quis rhoncus libero. Donec molestie et nunc nec commodo. Nulla eu leo purus. Curabitur elementum, quam eu pharetra vestibulum, 
+              justo nisl rutrum nisi, non egestas nisl libero eget magna. Suspendisse lectus sapien, aliquet in enim sed, convallis consectetur sapien. Integer laoreet tempor tellus.</p>
 
-          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas blandit quam a volutpat fermentum. Proin ut dictum metus. Ut eget lectus sit amet nibh aliquam placerat sed et augue. 
-                Etiam vel mollis tellus. Suspendisse nunc sapien, auctor non nunc convallis, ultricies convallis lectus. Mauris sed nisi egestas, convallis erat eu, faucibus urna. Morbi ornare arcu non mauris blandit suscipit. 
-                Aenean at nisl a orci fringilla maximus. Fusce nisl justo, vestibulum at tellus id, fringilla pretium mi.</p>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas blandit quam a volutpat fermentum. Proin ut dictum metus. Ut eget lectus sit amet nibh aliquam placerat sed et augue. 
+                  Etiam vel mollis tellus. Suspendisse nunc sapien, auctor non nunc convallis, ultricies convallis lectus. Mauris sed nisi egestas, convallis erat eu, faucibus urna. Morbi ornare arcu non mauris blandit suscipit. 
+                  Aenean at nisl a orci fringilla maximus. Fusce nisl justo, vestibulum at tellus id, fringilla pretium mi.</p>
 
-          <p>Cras quis gravida leo, id blandit elit. <a href="https://ville.montreal.qc.ca">Vivamus placerat</a> felis massa, consectetur fringilla ante ultricies feugiat. Sed imperdiet semper rhoncus. 
-              Aenean quis augue consequat, viverra mi mollis, suscipit arcu. Vestibulum vitae urna ipsum. Nulla turpis dolor, facilisis a eleifend in, facilisis quis augue. Donec ullamcorper ligula blandit, pulvinar tellus eu, venenatis arcu. 
-              Nam id finibus erat, eget sollicitudin lectus. Curabitur vel est id est rutrum cursus. Donec nunc neque, auctor et lectus eget, faucibus ullamcorper turpis. Phasellus malesuada magna ac turpis volutpat mollis. Ut suscipit condimentum augue vel placerat. 
-              Sed fermentum eleifend dui. Nam aliquet malesuada neque sit amet sodales. Integer mauris nibh, sodales ut diam vel, venenatis pretium ex. Donec vulputate ut felis sit amet varius.</p>
-            
-          <p>Nulla facilisi. Nullam convallis massa sapien, id blandit lorem sodales pretium. Nam tempor erat et accumsan rhoncus. Nunc quis posuere magna. Ut elementum, velit eu venenatis venenatis, velit elit pellentesque leo, ac finibus enim orci eu lectus. 
-              Sed vel risus nec nisl ultricies mollis at eu diam. Donec vitae orci congue, vulputate lacus ut, posuere ipsum.</p>
-
+            <p>Cras quis gravida leo, id blandit elit. <a href="https://ville.montreal.qc.ca">Vivamus placerat</a> felis massa, consectetur fringilla ante ultricies feugiat. Sed imperdiet semper rhoncus. 
+                Aenean quis augue consequat, viverra mi mollis, suscipit arcu. Vestibulum vitae urna ipsum. Nulla turpis dolor, facilisis a eleifend in, facilisis quis augue. Donec ullamcorper ligula blandit, pulvinar tellus eu, venenatis arcu. 
+                Nam id finibus erat, eget sollicitudin lectus. Curabitur vel est id est rutrum cursus. Donec nunc neque, auctor et lectus eget, faucibus ullamcorper turpis. Phasellus malesuada magna ac turpis volutpat mollis. Ut suscipit condimentum augue vel placerat. 
+                Sed fermentum eleifend dui. Nam aliquet malesuada neque sit amet sodales. Integer mauris nibh, sodales ut diam vel, venenatis pretium ex. Donec vulputate ut felis sit amet varius.</p>
+              
+            <p>Nulla facilisi. Nullam convallis massa sapien, id blandit lorem sodales pretium. Nam tempor erat et accumsan rhoncus. Nunc quis posuere magna. Ut elementum, velit eu venenatis venenatis, velit elit pellentesque leo, ac finibus enim orci eu lectus. 
+                Sed vel risus nec nisl ultricies mollis at eu diam. Donec vitae orci congue, vulputate lacus ut, posuere ipsum.</p>
+          </div>
           {{# has-documents }}
-          <h3 class="h4">Documents</h3>
-          <ul>
-            {{# documents}}
-            <li><a href="{{ url }}">{{ title }}</a></li>
-            {{/ documents}}
-          </ul>
+          <div class="content-block">
+            <h3 class="h5">Documents</h3>
+            <ul>
+              {{# documents}}
+              <li><a href="{{ url }}">{{ title }}</a></li>
+              {{/ documents}}
+            </ul>
+          </div>
           {{/ has-documents}}
 
+          {{# has-partners}}
+          <div class="content-block">
+            <h3 class="h5">Partenaires</h3>
+            {{> molecules-logo-grid}}
+          </div>
+          {{/ has-partners}}
+
           {{# has-tags}}
-          <h3 class="h4">Étiquettes</h3>
-          <ul class="list-inline {{container-class}}">
-            {{# tags}}
-            <li class="list-inline-item">{{> atoms-badge}}</li>
-            {{/ tags}}
-          </ul>
+          <div class="content-block">
+            <h3 class="h5">Étiquettes</h3>
+            <ul class="list-inline {{container-class}}">
+              {{# tags}}
+              <li class="list-inline-item">{{> atoms-badge}}</li>
+              {{/ tags}}
+            </ul>
+          </div>
           {{/ has-tags}}
 
           {{# has-video }}
-          <h3 class="h4">{{ section-title }}</h3>
-          <div class="media-container">
-            <div class="media embed-responsive embed-responsive-16by9">
-              <iframe class="embed-responsive-item" src="{{ src }}" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+          <div class="content-block">
+            <h3 class="h5">{{ section-title }}</h3>
+            <div class="media-container">
+              <div class="media embed-responsive embed-responsive-16by9">
+                <iframe class="embed-responsive-item" src="{{ src }}" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+              </div>
             </div>
           </div>
           {{/ has-video }}
 
         </article>
         <!-- Sidebar Right -->
-        <aside class="col-12 col-lg-5 col-xl-4 sidebar-right order-first order-lg-last" role="complementary">
+        <aside class="col-12 col-lg-5 col-xl-4 sidebar-right" role="complementary">
           {{> organisms-sidebar-block-evenement }}
         </aside>
       </div>
@@ -83,6 +97,14 @@
       </div>
     </div>
   </div>
+
+  {{# hasPromoter}}
+  {{> organisms-page-section-organisateur }}
+  {{/ hasPromoter}}
+
+  {{# hasSimilarEvents}}
+  {{> organisms-page-section-cards}}
+  {{/ hasSimilarEvents}}
 
   {{# hasFeedbackForm}}
   {{> organisms-feedback-form}}

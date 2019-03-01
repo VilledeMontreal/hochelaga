@@ -66,7 +66,7 @@ ol {
     > .vdm {
       background: transparent;
       color: $gray-ink;
-      font-size: 1.5em;
+      @include font-size(1.75rem); // Normalize this?
       padding-right: .5rem;
     }
   }
@@ -137,7 +137,7 @@ ol {
       }
       .vdm {
         color: $gray-900;
-        font-size: 2rem;
+        @include font-size(2rem);
         padding-right: .5rem;
       }
       .label {
@@ -210,11 +210,11 @@ ol {
     margin-bottom: 0;
   }
   a {
-    font-size: $font-size-xl;
-    font-weight: $font-weight-bold;
-    line-height: $line-height-sm;
     border: none;
     display: inline-block;
+    @include font-size($font-size-xl);
+    font-weight: $font-weight-bold;
+    line-height: $line-height-sm;
     margin-bottom: .5rem;
   }
   p {

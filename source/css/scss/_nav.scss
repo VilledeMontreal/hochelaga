@@ -1,14 +1,14 @@
 // Breadcrumb
 .breadcrumb {
-  font-size: $font-size-base;
+  @include font-size($font-size-base);
   li {
     padding-bottom: 0;
   }
   a {
     border: none;
     color: $gray-700;
-    @include transition(color .15s ease-in-out);
     font-weight: $font-weight-bold;
+    @include transition(color .15s ease-in-out);
     &:hover {
       color: $sarcelle-surprise;
     }
@@ -47,14 +47,13 @@
       border: none;
       color: $headings-color;
       display: flex;
-      font-size: $font-size-lg;
+      @include font-size($font-size-lg);
       line-height: $line-height-sm;
       padding: 1.4rem 4rem 1.4rem 1.5rem;
       cursor: pointer;
       @include iconvdm(after, '069-mini-plus-circulaire');
 
       &[aria-expanded="true"] {
-        //color: $primary;
         @include iconvdm(after, '070-mini-moins-circulaire');
       }
 
@@ -70,15 +69,15 @@
       }
 
       &:after {
-        font-size: 2rem;
+        align-self: center;
+        color: $primary;
+        display: block;
+        @include font-size(2rem);
         line-height: 1;
+        position: absolute;
+        right: 1rem;
         width: 2rem;
         height: 2rem;
-        position: absolute;
-        align-self: center;
-        right: 1rem;
-        display: block;
-        color: $primary;
       }
 
       span {
@@ -94,7 +93,7 @@
   .collapsible-block {
     padding: 2rem 4rem 2rem 2rem;
     h2, .h2, h3, .h3, h4, .h4, h5, .h5 {
-      font-size: $font-size-lg;
+      @include font-size($font-size-lg);
     }
     > *:last-child {
       margin-bottom: 0;
@@ -111,16 +110,17 @@
         padding: 1.4rem 4rem 1.4rem 4rem;
         span {
           &.collapsible-icon {
-            @include size(2rem);
             color: $primary;
             display: flex;
             flex: 0 0 auto;
             align-items: center;
-            font-size: 2rem;
+            @include font-size(2rem);
             font-weight: $font-weight-bold;
             content: "";
             position: absolute;
             left: 1rem;
+            width: 2rem;
+            height: 2rem;
           }
           &.circle,
           &.default-icon {
@@ -157,7 +157,7 @@
       margin-right: 15px;
     }
     .badge-pill {
-      font-size: $font-size-xs;
+      @include font-size($font-size-xs);
     }
   }
 
@@ -274,7 +274,7 @@ nav {
   }
 
   .nav-link {
-    font-size: $font-size-sm;   //~15px
+    @include font-size($font-size-sm);
     line-height: 1.4;           //~21px
     padding: .5rem;
     position: relative;
@@ -338,6 +338,7 @@ nav {
   flex-wrap: nowrap;
   overflow-x: auto;
   overflow-y: hidden;
+  padding-left: 1.5rem;
   white-space: nowrap;
   text-align: center;
   width: 100%;
@@ -369,7 +370,7 @@ nav {
   .nav-link {
     flex-shrink: 0;
     color: $gray-700;
-    font-size: $font-size-sm;         //~15px
+    @include font-size($font-size-sm);
     line-height: 1.4;                 //~21px
     font-weight: $font-weight-bold;
     padding: 1.5rem .5rem;
@@ -417,6 +418,7 @@ nav {
   }
   @include media-breakpoint-up(lg) {
     justify-content: center;
+    padding-left: 0;
     .nav-link {
       padding: 2rem 2.5rem;
       &:hover,
@@ -448,7 +450,7 @@ nav {
   align-items: center;
   justify-content: center;
   color: $gray-500;
-  font-size: $font-size-sm;     // ~15px
+  @include font-size($font-size-sm);
   flex: 1 0 auto;
   line-height: $line-height-base;
   padding: 1.125rem;
@@ -456,7 +458,7 @@ nav {
   // Absolute positionning on larger breakpoint
   @include media-breakpoint-up(md) {
     color: $gray-ink;
-    font-size: $font-size-lg;
+    @include font-size($font-size-lg);
     line-height: $line-height-base;
     font-weight: $font-weight-bold;
     padding: 1.5rem 1rem 1.125rem 1.875rem;
@@ -516,7 +518,7 @@ nav {
   .caption {
     color: $gray-600;
     display: inline-block;
-    font-size: $font-size-sm;
+    @include font-size($font-size-sm);
     line-height: $line-height-sm;
     padding-bottom: .5rem;
   }
@@ -603,7 +605,7 @@ nav {
 
   .db-label {
     display: inline-block;
-    font-size: $font-size-sm;           // ~15px
+    @include font-size($font-size-sm);
     font-weight: $font-weight-bold;
     margin-bottom: .5rem;
     text-transform: uppercase;
@@ -611,19 +613,20 @@ nav {
 
   .db-title {
     display: flex;
-    font-size: $font-size-xl;
+    @include font-size($font-size-xl);
     line-height: $line-height-sm;
     font-weight: $font-weight-bold;
     justify-content: space-between;
   }
 }
 
-// Subnav will replace navbar navbar-services
+// Subnav
+// Replacement for .navbar .navbar-services
 .subnav {
   border-bottom: 1px solid $gray-400;
   display: flex;
   justify-content: space-between;
-  padding: 1.5rem;
+  padding: 1.5rem 2rem;
   .subnav-container,
   .subnav-links {
     display: flex;
@@ -635,24 +638,15 @@ nav {
   }
   .subnav-title {
     color: $headings-color;
-    font-size: $font-size-base;         // 18px
-    line-height: $line-height-sm;       // 1.33
+    @include font-size($font-size-base);
+    line-height: $line-height-sm;
     font-weight: $font-weight-bold;
-    padding-left: .25rem;
-    padding-right: .25rem;
-    @include media-breakpoint-up(sm) {
-      padding-left: .375rem;
-      padding-right: .375rem;
-    }
     @include media-breakpoint-up(md) {
-      font-size: $font-size-xl;         // 24px
-      line-height: $line-height-sm;     // 1.33  
-      padding-left: .5rem;
-      padding-right: .5rem;
+      @include font-size($font-size-xl);
+      line-height: $line-height-sm;
     }
   }
   .subnav-links {
-    //padding-right: 1.375rem;
     ul {
       margin-bottom: 0;
     }
@@ -675,19 +669,19 @@ nav {
   .navbar-link {
     color: $headings-color;
     display: flex;
-    font-size: $font-size-base;  // 18px
+    @include font-size($font-size-base);
     line-height: 1.333333;
     padding: 0;
   }
 
   .navbar-brand {
-    font-size: $font-size-xl;
+    @include font-size($font-size-xl);
     font-weight: $font-weight-bold;
   }
 
   .navbar-icon {
-    font-size: 4rem;
     color: $primary;
+    @include font-size(4rem);
     margin-right: 1rem;
   }
 
@@ -695,14 +689,10 @@ nav {
     display: flex;
     flex-direction: row;
     align-items: center;
-    /* 
-    @include media-breakpoint-up(md) {
-      margin-left: $header-icon-width;
-    }
-    */
+
     &.navbar-header-service-link {
       .navbar-brand {
-        font-size: 1.125rem;  // 18px
+        @include font-size($font-size-base);
       }
     }
     a {
@@ -720,7 +710,7 @@ nav {
         flex-direction: row;
         flex-wrap: wrap;
         padding-bottom: 0;
-        font-size: 1.125rem;
+        @include font-size($font-size-base);
         a {
           font-weight: $font-weight-bold;
           text-decoration: none;

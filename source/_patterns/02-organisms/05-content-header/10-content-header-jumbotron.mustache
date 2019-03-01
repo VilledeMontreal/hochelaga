@@ -10,12 +10,18 @@
             </div>
             {{/ state}}
             {{> atoms-display-heading }}
-            {{# organised-by}}
+            {{# promoter}}
             <div class="content-header-label">
               <span class="label">Organisé par</span>
               <a href="{{ url }}">{{ title }}</a>
             </div>
-            {{/ organised-by}}
+            {{/ promoter}}
+            {{# borough}}
+            <div class="content-header-label">
+              <span class="label">Situé dans l'arrondissement</span>
+              <a href="{{ url }}">{{ borough }}</a>
+            </div>
+            {{/ borough}}
           </div>
           <div class="content-header-metadata">
             {{> atoms-text-icons-list}}

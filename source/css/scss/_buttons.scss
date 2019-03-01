@@ -58,7 +58,7 @@ button {
   }
   .vdm {
     color: inherit;
-    font-size: 2rem;
+    @include font-size(2rem);
     margin-left: -1.5rem;
     margin-right: .5rem;
     margin-top: -.3125rem;
@@ -70,11 +70,12 @@ button {
   }
 
   .loader {
-    @include size(1.5rem);
     margin-left: -1.5rem;
     margin-right: 1rem;
     margin-top: -.0625rem;
     margin-bottom: -.0625rem;
+    width: 1.5rem;
+    height: 1.5rem;
     .loader-child {
       border-width: .125rem;
       border-color: $white transparent transparent transparent;
@@ -167,7 +168,7 @@ fieldset:disabled a.btn {
   // Icons in button
   .vdm {
     color: inherit;
-    font-size: 1.5rem;
+    @include font-size(1.5rem);
     margin-left: -1.25rem;
     margin-right: .25rem;
     margin-top: -3px;
@@ -179,11 +180,12 @@ fieldset:disabled a.btn {
   }
   // Loaders in button
   .loader {
-    @include size(1rem);
     margin-left: -1.25rem;
     margin-right: .75rem;
     margin-top: -3px;
     margin-bottom: -3px;
+    width: 1rem;
+    height: 1rem;
     .loader-child {
       border-width: .125rem ;
     }
@@ -265,9 +267,10 @@ input[type="button"] {
   background: $danger;
   flex-shrink: 0;
   padding: 0;
-  @include size(50px);
+  width: 50px;
+  height: 50px;
   .vdm {
-    font-size: 2rem;
+    @include font-size(2rem);
     margin: 0;
     color: $white;
     margin: auto;
@@ -295,10 +298,10 @@ input[type="button"] {
   @include transition($btn-transition);
   .vdm {
     color: inherit;
-    font-size: 1.5rem;
+    @include font-size(1.5rem);
   }
   .button-label {
-    font-size: $font-size-sm;
+    @include font-size($font-size-sm);
     margin-left: 1rem;
   }
 
@@ -312,16 +315,16 @@ input[type="button"] {
 
   @include media-breakpoint-up(sm) {
     .vdm {
-      font-size: 2rem;
+      @include font-size(2rem);
     }
   }
 
   @include media-breakpoint-up(lg) {
     .btn-label {
-      font-size: $slide-menu-link-font-size;
+      @include font-size($slide-menu-link-font-size);
     }
     .vdm {
-      font-size: 2.5rem;
+      @include font-size(2.5rem);
     }
   }
 }
@@ -343,7 +346,7 @@ input[type="button"] {
   }
   .vdm {
     color: inherit;
-    font-size: 2rem;
+    @include font-size(2rem);
     margin-left: 0;
     margin-right: 0;
   }
@@ -389,9 +392,11 @@ input[type="button"] {
   // Hide button label at small breakpoint
   &.btn-hide-label-#{$breakpoint} {
     @include media-breakpoint-down($breakpoint) {
-      padding-right: 1rem;
+      padding-left: 2.4375rem;
+      padding-right: .4375rem;
       .vdm {
         margin-right: 0;
+        margin-left: -2rem;
       }
       .btn-label {
         display: none;
@@ -399,7 +404,11 @@ input[type="button"] {
 
       // Tweak padding for small modifier
       &.btn-sm {
-        padding-right: .75rem;
+        padding-left: 1.875rem;
+        padding-right: .375rem;
+        .vdm {
+          margin-left: -1.5rem;
+        }
       }
     }
   }
