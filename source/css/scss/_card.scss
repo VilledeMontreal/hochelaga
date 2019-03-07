@@ -407,6 +407,15 @@
         }
       }
     }
+
+    // Invert Image and body Order on larger breakpoint
+    &.card-featured-inv {
+      @include media-breakpoint-up(lg) {
+        .card-img-top {
+          order: -1;
+        }
+      }
+    }
   }
 
   &.card-complex-layout,

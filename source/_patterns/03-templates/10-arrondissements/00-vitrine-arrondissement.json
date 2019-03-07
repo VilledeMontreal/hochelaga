@@ -19,7 +19,7 @@
           "card-media" : {
             "icon" : false,
             "img" : {
-              "url" : "https://picsum.photos/768/480?image=1074",
+              "url" : "https://picsum.photos/768/480?image=1058",
               "alt" : "Card #2 img alt."
             }
           },
@@ -37,7 +37,7 @@
           "card-media" : {
             "icon" : false,
             "img" : {
-              "url" : "https://picsum.photos/768/480?image=1075",
+              "url" : "https://picsum.photos/768/480?image=859",
               "alt" : "Card #1 img alt."
             }
           },
@@ -55,7 +55,7 @@
           "card-media" : {
             "icon" : false,
             "img" : {
-              "url" : "https://picsum.photos/768/480?image=1076",
+              "url" : "https://picsum.photos/768/480?image=1073",
               "alt" : "Card #1 img alt."
             }
           },
@@ -141,12 +141,118 @@
   "newsSection": {
     "headings": {
       "text": "Dernières actualités"
-    }
+    },
+    "listGroup": [
+      {
+        "url": "#",
+        "title": "Cras justo odio",
+        "infos": {
+          "infos-items": [
+            {
+              "class": false,
+              "text": "9 h 20"
+            }
+          ]
+        }
+      },
+      {
+        "url": "https://google.ca",
+        "title": "Dapibus ac facilisis in",
+        "infos": {
+          "infos-items": [
+            {
+              "class": false,
+              "text": "6 mars"
+            }
+          ]
+        },
+        "footer": {
+          "icon-label": false
+        }
+      },
+      {
+        "url": "#",
+        "title": "Morbi leo risus",
+        "infos": {
+          "infos-items": [
+            {
+              "class": false,
+              "text": "24 décembre 2018"
+            }
+          ]
+        }
+      }
+    ]
   },
   "evenementSection": {
     "headings": {
       "text": "Événements"
-    }
+    },
+    "listGroup": [
+      {
+        "url": "#",
+        "title": "Cras justo odio",
+        "infos": {
+          "infos-items": [
+            {
+              "class": false,
+              "text": "10 mars"
+            },
+            {
+              "class": false,
+              "text": "9 h 20"
+            },
+            {
+              "class": false,
+              "text": "Nom du lieu"
+            }
+          ]
+        }
+      },
+      {
+        "url": "https://google.ca",
+        "title": "Dapibus ac facilisis in",
+        "infos": {
+          "infos-items": [
+            {
+              "class": false,
+              "text": "23 mars"
+            },
+            {
+              "class": false,
+              "text": "19 h 00"
+            },
+            {
+              "class": false,
+              "text": "Nom du lieu"
+            }
+          ]
+        },
+        "footer": {
+          "icon-label": false
+        }
+      },
+      {
+        "url": "#",
+        "title": "Morbi leo risus",
+        "infos": {
+          "infos-items": [
+            {
+              "class": false,
+              "text": "2 avril"
+            },
+            {
+              "class": false,
+              "text": "18 h 15"
+            },
+            {
+              "class": false,
+              "text": "Nom du lieu"
+            }
+          ]
+        }
+      }
+    ]
   },
   "elusSection": {
     "headings": {

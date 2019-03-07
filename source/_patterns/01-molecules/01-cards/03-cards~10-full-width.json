@@ -89,7 +89,6 @@
         "card-title": "Card with featured content",
         "card-text":
           "Big title, image and content side by side on larger breakpoint. Call to action link is sticking at the bottom of the card.",
-        "card-text-muted": "Some muted text.",
         "card-media" : {
           "icon" : false,
           "img" : {
@@ -99,16 +98,15 @@
         },
         "footer" : {
           "inside-body": true,
-          "text": "Read more"
+          "text": "En savoir plus"
         }
       },
       {
-        "classes": "card-fw card-featured",
+        "classes": "card-fw card-featured card-featured-inv",
         "url": "#",
-        "card-title": "Card with featured content",
+        "card-title": "Card with featured content - Inverted order",
         "card-text":
           "Big title, image and content side by side on larger breakpoint. Call to action link is sticking at the bottom of the card.",
-        "card-text-muted": "Some muted text.",
         "card-media" : {
           "icon" : false,
           "img" : {
@@ -118,7 +116,7 @@
         },
         "footer" : {
           "inside-body": true,
-          "text": "Read more"
+          "text": "En savoir plus"
         }
       }
     ]
