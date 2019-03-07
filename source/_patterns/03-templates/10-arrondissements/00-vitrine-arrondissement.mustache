@@ -30,7 +30,13 @@
           <h2 class="section-heading">{{ headings.text }}</h2>
         </div>
       </div>
-      <div class="text-center">TODO: Add featured cards</div>
+      <div class="row cards {{ cards.classes }}">
+      {{# cards.card-item }}
+        <div class="{{ bsgrid-classes }}">
+          {{> molecules-card-item }}
+        </div>
+      {{/ cards.card-item }}
+      </div>
     </div>
   </div>
   {{/ featuredSection}}
@@ -64,13 +70,13 @@
       </div>
       <div class="row">
         <div class="col-12 col-lg-4">
-          <div class="h1 text-center">1</div>
+          <div class="display-1 text-center">1</div>
         </div>
         <div class="col-12 col-lg-4">
-          <div class="h1 text-center">2</div>
+          <div class="display-1 text-center">2</div>
         </div>
         <div class="col-12 col-lg-4">
-          <div class="h1 text-center">3</div>
+          <div class="display-1 text-center">3</div>
         </div>
       </div>
       <div class="pagination-wrapper">
