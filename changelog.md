@@ -5,6 +5,12 @@ The format is based on [Keep a Changelog](http://keepachangelog.com/en/1.0.0/)
 and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.html).
 
 
+## [3.2.1] - Unreleased
+
+## Added
+- New organism: page-section-featured-search
+
+
 ## [3.2.0] - 2019-02-28
 
 ## Added
@@ -439,6 +445,7 @@ remove index from the name. Which makes it possible to update font-icon without 
 - Removed vdm prefix for buttons classes
 
 
+[3.2.0]: https://bitbucket.org/villemontreal/boite-outils-web/src/3.2.0/
 [3.1.0]: https://bitbucket.org/villemontreal/boite-outils-web/src/3.1.0/
 [3.0.0]: https://bitbucket.org/villemontreal/boite-outils-web/src/3.0.0/
 [2.6.3]: https://bitbucket.org/villemontreal/boite-outils-web/src/2.6.3/
