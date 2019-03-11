@@ -302,5 +302,47 @@
       "text": "Mairie d'arrondissement"
     },
     "cards": false
+  },
+  "conseilSection": {
+    "section-classes": "bg-gray-sky",
+    "headings": {
+      "text": "Conseil et consultations - prochaines séances"
+    },
+    "cards": {
+      "classes": false,
+      "bsgrid-classes": "col-12 col-md-6 col-lg-4",
+      "card-item" : [
+        {
+          "classes" : "card-link",
+          "url" : "#",
+          "card-title" : "Lorem ipsum dolor sit amet",
+          "card-text" : false,
+          "card-media" : false,
+          "footer" : {
+            "outside-body": true
+          }
+        },
+        {
+          "classes" : "card-link",
+          "url" : "#",
+          "card-title" : "Consectetur adipiscing elit",
+          "card-text" : false,
+          "card-media" : false,
+          "footer" : {
+            "outside-body": true
+          }
+        },
+        {
+          "classes" : "card-link",
+          "url" : "#",
+          "card-title" : "Lorem ipsum dolor sit amet",
+          "card-text" : false,
+          "card-media" : false,
+          "footer" : {
+            "outside-body": true
+          }
+        }
+      ]
+    }
   }
 }
