@@ -71,21 +71,21 @@
       <div class="row">
         <div class="col-12 col-lg-4">
           <div class="text-center">
-            <div class="">15 décembre au plus tard</div>
+            <div class="mb-2">15 décembre au plus tard</div>
             <div class="h5">Lorem ipsum dolor sit amet, consectetur adipiscing elit</div>
             {{> atoms-button(buttonClass: btn-secondary, buttonText: "CTA lorem ipsum")}}
           </div>
         </div>
         <div class="col-12 col-lg-4">
           <div class="text-center">
-            <div class="">À partir du 1er février</div>
+            <div class="mb-2">À partir du 1er février</div>
             <div class="h5">Proin sed ante arcu</div>
             {{> atoms-button(buttonClass: btn-secondary, buttonText: "CTA lorem ipsum")}}
           </div>
         </div>
         <div class="col-12 col-lg-4">
           <div class="text-center">
-            <div class="">Du 15 décembre 2018 au 23 mars 2019</div>
+            <div class="mb-2">Du 15 décembre 2018 au 23 mars 2019</div>
             <div class="h5">Curabitur nulla mi imperdiet vitae velit ut venenatis venenatis nunc</div>
             {{> atoms-button(buttonClass: btn-secondary, buttonText: "CTA lorem ipsum")}}
           </div>
@@ -99,28 +99,7 @@
   {{/ dateSection}}
 
   {{# featuredSearch}}
-  <section id="{{ featuredContentID }}" class="bg-image-section" {{# featuredContentBgImage }} style="{{ featuredContentBgImage }}" {{/ featuredContentBgImage }}>
-    <div class="container">
-      <div class="row">
-        <div class="col-12 col-lg-10 offset-lg-1">
-          {{# inputGroupSearch }}
-            {{> atoms-input-icon }}
-          {{/ inputGroupSearch }}
-          {{# quickLinks }}
-          <div class="quick-links">
-            <ul class="list-inline">
-              {{# quickLinksItem }}
-              <li class="list-inline-item">
-                <a href="{{ url }}" class="btn btn-primary btn-light btn-sm">{{ label }}</a>
-              </li>
-              {{/ quickLinksItem }}
-            </ul>
-          </div>
-          {{/ quickLinks }}
-        </div>
-      </div>
-    </div>
-  </section>
+  {{> organisms-page-section-featured-search}}
   {{/ featuredSearch}}
 
   {{# newsSection }}
