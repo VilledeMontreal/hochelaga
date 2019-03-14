@@ -3,6 +3,7 @@
 
 <main class="main-content {{ pageClasses }}" id="main-content" aria-label="Main Content">
 
+  {{# has-breadcrumb}}
   <div class="container-fluid container-fluid-max-xl">
     <div class="row">
       <div class="col-12">
@@ -10,6 +11,7 @@
       </div>
     </div>
   </div>
+  {{/ has-breadcrumb}}
 
   {{> organisms-content-header-jumbotron }}
 
