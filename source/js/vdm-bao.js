@@ -181,7 +181,7 @@
 
     // Scroll & resize events
     $(window).on('scroll.sticky-onscroll resize.sticky-onscroll', function() {
-      if(window.matchMedia("(min-width: 992px").matches) {
+      if(window.matchMedia("(min-width: 992px)").matches) {
         //console.log("It matches!");
         stickyToggle(sticky, stickyWrapper, stickyLimit, $(window));
       } else {
@@ -199,7 +199,7 @@
       target = target.length ? target : $('[name=' + this.hash.slice(1) + ']');
       if (target.length) {
         if($(".sticky").length > 0){
-          if(window.matchMedia("(min-width: 992px").matches) {
+          if(window.matchMedia("(min-width: 992px)").matches) {
             $navOffset = $(".sticky").height();
           } else {
             $navOffset = 0;
