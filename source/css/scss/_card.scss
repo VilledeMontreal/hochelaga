@@ -136,6 +136,8 @@
     align-items: center;
 
     .card-footer-label {
+      color: $sarcelle;
+      font-weight: $font-weight-bold;
       padding-right: 0.5rem;
     }
 
@@ -252,6 +254,8 @@
         margin-left: 1rem;
         max-width: 300px;
         order: 100;
+        @include border-radius(0);
+        @include border-right-radius($card-inner-border-radius);
       }
     }
   }
@@ -383,6 +387,9 @@
       min-height: 300px;
     }
     .card-body {
+      .card-title {
+        @include font-size($h4-font-size);
+      }
       .text-muted {
         display: inline-block;
         margin-bottom: 1.5rem;

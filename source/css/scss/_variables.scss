@@ -566,9 +566,10 @@ $jumbotron-bg:                      $gray-sky;
 
 // Cards
 
-$card-border-radius:                0;
+$card-border-width:                 0rem;
+$card-border-radius:                $border-radius;
 $card-border-color:                 $gray-400;
-$card-inner-border-radius:          0;
+$card-inner-border-radius:          calc(#{$card-border-radius} - #{$card-border-width}) !default;
 $card-box-shadow:                   0 1px 7px 0 rgba(0,0,0,0.1);
 
 
