@@ -1,14 +1,5 @@
 {
-  "text-elements": {
-    "headings":{
-      "display":{
-        "classes": "h4",
-        "content": "Template lieu"
-      }
-    }
-  },
-  "has-informations": true,
-  "has-breadcrumb": true,
+  "has-breadcrumb": false,
   "breadcrumbs": [
     {
       "url": "link.template-homepage",
@@ -20,6 +11,16 @@
     }
   ],
   "breadcrumbContainerClasses": "px-4",
+  "contentHeaderClasses": "mt-4 mt-lg-11",
+  "text-elements": {
+    "headings":{
+      "display":{
+        "classes": "h4",
+        "content": "Template lieu"
+      }
+    }
+  },
+  "has-informations": true,
   "promoter": false,
   "borough": {
     "url": "#",
