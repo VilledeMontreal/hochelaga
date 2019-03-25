@@ -2,21 +2,14 @@
 {{> organisms-header-portal }}
 
 <main class="main-content {{ pageClasses }}" id="main-content" aria-label="Main Content">
-  <section class="page-section">
-    <div class="container">
-      <div class="row">
-        <div class="col-12 text-center">
-          <h1>Ville-Marie</h1>
-        </div>
-      </div>
-    </div>
-  </section>
+
+  {{> organisms-content-header }}
 
   {{# alertSection }}
   <section>
     <div class="alert {{ alertClass }} mb-0" role="alert">
       <div class="container text-center">
-        <strong>Prochain conseil d'arrondissement :</strong> jj mm aaaa, hh:mm <a href="" class="alert-link ml-2">En savoir plus</a>
+        <strong>Ouvert ou fermé?</strong> Horaire municipal du temps des fêtes <a href="" class="alert-link ml-2">En savoir plus</a>
       </div>
     </div>
   </section>
