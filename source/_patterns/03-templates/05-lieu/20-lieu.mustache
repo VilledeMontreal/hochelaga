@@ -30,33 +30,35 @@
           {{# commodites}}
           <div class="content-block">
             <h3 class="h5">Commodités</h3>
-            <ul class="list-unstyled">
-              <li>Lorem ipsum dolor sit amet</li>
-              <li>Consectetur adipiscing elit</li>
-              <li>Integer molestie lorem at massa</li>
-              <li>Facilisis in pretium nisl aliquet</li>
+            {{# items}}
+            <ul class="list-unstyled row">
+              {{# item}}
+              <li class="col-12 col-md-6">{{ text }}</li>
+              {{/ item}}
             </ul>
+            {{/ items}}
           </div>
           {{/ commodites}}
 
           {{# installations}}
           <div class="content-block">
             <h3 class="h5">Installations</h3>
+            {{# items}}
             <div class="row">
               <div class="col-12 col-md-6 col-lg-12 col-xl-6">
                 <div class="content-block-icon h-100">
-                  <span class="content-block-icon-label">Sportives</span>
+                  {{# item-heading}}
+                  <span class="content-block-icon-label">{{ item-heading }}</span>
+                  {{/ item-heading}}
                   <ul class="mb-0">
-                    <li>Lorem ipsum</li>
-                    <li>Dolor sit amet</li>
-                    <li>Consectetur adipiscing</li>
-                    <li>Aenean vel</li>
-                    <li>Feugiat quam</li>
-                    <li>Eget eleifend</li>
+                    {{# item}}
+                    <li>{{ text }}</li>
+                    {{/ item}}
                   </ul>
                 </div>
               </div>
             </div>
+            {{/ items}}
           </div>
           {{/ installations}}
 
@@ -98,9 +100,9 @@
           <div class="content-block">
             <h3 class="h5">Mode de paiement</h3>
             {{# items}}
-            <ul class="list-unstyled">
+            <ul class="list-unstyled row">
               {{# item}}
-              <li>{{ text }}</li>
+              <li class="col-12 col-md-6">{{ text }}</li>
               {{/ item}}
             </ul>
             {{/ items}}
@@ -111,10 +113,9 @@
           <div class="content-block">
             <h3 class="h5">Accessibilité</h3>
             {{# items}}
-            <ul class="list-unstyled">
+            <ul class="list-unstyled row">
               {{# item}}
-              <li>Lorem ipsum dolor sit amet</li>
-              <li>Consectetur adipiscing elit</li>
+              <li class="col-12 col-md-6">{{ text }}</li>
               {{/ item}}
             </ul>
             {{/ items}}

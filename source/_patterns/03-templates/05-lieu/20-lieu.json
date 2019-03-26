@@ -23,7 +23,7 @@
   "has-informations": true,
   "promoter": false,
   "borough": {
-    "url": "#",
+    "url": "link.templates-collectrice-lieux",
     "borough": "Ville-Marie"
   },
   "has-media-image": true,
@@ -32,13 +32,6 @@
     "mediaSize": "1000x667",
     "mediaAlt": "Media #1058"
   },
-  "badges":[
-    {
-      "badge": "Catégorie",
-      "badgeClass": "",
-      "badgeUrl": "#"
-    }
-  ],
   "list-icon-item": [
     {
       "icon-item": {
@@ -77,8 +70,29 @@
     }
   ],
   "sidebarRight": true,
-  "commodites": true,
-  "installations": true,
+  "sidebar-title-classes": "d-none d-sm-block",
+  "sidebarTitle": "Heures d'ouverture",
+  "commodites": {
+    "items": [
+      {
+        "item": [
+          {"text":"Lorem ipsum"},
+          {"text":"Dolor sit amet"}
+        ]
+      }
+    ]
+  },
+  "installations": {
+    "items": [
+      {
+        "item-heading": "Sportives",
+        "item": [
+          {"text":"Lorem ipsum"},
+          {"text":"Dolor sit amet"}
+        ]
+      }
+    ]
+  },
   "tc-references": {
     "items": [
       {
@@ -159,6 +173,16 @@
       }
     ]
   },
+  "accessibilite": {
+    "items": [
+      {
+        "item": [
+          {"text":"Lorem ipsum"},
+          {"text":"Dolor sit amet"}
+        ]
+      }
+    ]
+  },
   "has-tags": {
     "container-class": "badges-lg",
     "tags": [
@@ -182,12 +206,7 @@
       "section-headings": {
         "heading": "Lieux à proximité"
       },
-      "button": {
-        "buttonAsLink": true,
-        "buttonUrl": "#",
-        "buttonClass": "btn-secondary", 
-        "buttonText": "Tous les événements"
-      },
+      "button": false,
       "promoter": false,
       "cards": {
         "section-classes": "bg-gray-sky",
