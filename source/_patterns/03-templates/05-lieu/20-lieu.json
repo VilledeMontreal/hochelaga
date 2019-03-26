@@ -65,22 +65,46 @@
     },
     {
       "icon-item": {
-        "icon-label": "115-glissant"
+        "icon-label": "012-telephone"
       },
       "item": [
         {
           "url": false,
           "class": false,
-          "content": "Accessible aux personnes handicapées"
+          "content": "514 822-1234"
         }
       ]
     }
   ],
   "sidebarRight": true,
-  "equipements": true,
   "commodites": true,
+  "installations": true,
+  "tc-references": {
+    "items": [
+      {
+        "item": [
+          {
+            "url": "#",
+            "title": "Link title #1",
+            "description": "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec quis lorem sem.</p>"
+          },
+          {
+            "url": "#",
+            "title": "Link title #2",
+            "description": "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec quis lorem sem.</p>"
+          }
+        ]
+      }
+    ]
+  },
   "events": {
     "listGroupClass": "list-group-hub mb-4",
+    "button": {
+      "buttonAsLink": true,
+      "buttonUrl": "#",
+      "buttonText": "Tous les événements",
+      "buttonClass": "btn-secondary btn-sm"
+    },
     "listGroup": [
       {
         "url": "#",
@@ -89,27 +113,19 @@
           "infos-items": [
             {
               "class": false,
-              "text": "00 h 00"
-            },
-            {
-              "class": "text-dark separator-brand",
-              "text": "Type d'événement"
+              "text": "26 juin 2019"
             }
           ]
         }
       },
       {
         "url": "#",
-        "title": "Dapibus ac facilisis in",
+        "title": "Maximus suscipit augue gravida",
         "infos": {
           "infos-items": [
             {
               "class": false,
-              "text": "00 h 00"
-            },
-            {
-              "class": "text-dark separator-brand",
-              "text": "Type d'événement"
+              "text": "31 décembre 2019"
             }
           ]
         },
@@ -119,19 +135,27 @@
       },
       {
         "url": "#",
-        "title": "Morbi leo risus",
+        "title": "Mauris convallis aliquet nibh condimentum mollis",
         "infos": {
           "infos-items": [
             {
               "class": false,
-              "text": "00 h 00"
-            },
-            {
-              "class": "text-dark separator-brand",
-              "text": "Type d'événement"
+              "text": "2 janvier 2020"
             }
           ]
         }
+      }
+    ]
+  },
+  "mode-paiement": {
+    "items": [
+      {
+        "item": [
+          {"text":"Argent comptant"},
+          {"text":"Visa"},
+          {"text":"Interac"},
+          {"text":"Mastercard"}
+        ]
       }
     ]
   },
