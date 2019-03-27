@@ -1,213 +1,89 @@
 <div class="sidebar {{sidebarClasses}}">
+  {{# schedule }}
   <section class="sb-block {{ sb-classes }}">
     {{> organisms-heading-sidebar }}
     <ul class="list-icon">
       <li class="list-icon-item">
         {{> atoms-fonticon-item(icon-label: "037-horloge") }}
         <div class="list-icon-content">
-          <span class="list-icon-label">Horaire Hiver-printemps</span>
+          {{# schedule-heading}}
+          <span class="list-icon-label">{{ schedule-heading }}</span>
+          {{/ schedule-heading}}
           <div class="schedule-content">
-            <div class="schedule-description mb-2">du 2 janvier au 23 juin 2019</div>
+            {{# schedule-description}}
+            <div class="schedule-description mb-2">{{ schedule-description}}</div>
+            {{/ schedule-description}}
+
+            {{# schedule-row}}
             <div class="row mb-2">
               <div class="col">
-                <span class="schedule-day">Lundi</span>
+                <span class="schedule-day">{{ day }}</span>
               </div>
               <div class="col">
+                {{# schedule-data}}
                 <div class="schedule-data">
-                  <span class="schedule-start-time">09 h 00</span>
-                  <span class="schedule-end-time">12 h 00</span>
+                  {{# time}}
+                  {{# start-time}}
+                  <span class="schedule-start-time">{{start-time}}</span>
+                  {{/start-time}}
+                  {{#end-time}}
+                  <span class="schedule-end-time">{{end-time}}</span>
+                  {{/end-time}}
+                  {{/ time}}
+                  {{^ time}}
+                  {{# extra}}
+                  {{ extra }}
+                  {{/ extra}}
+                  {{/ time}}
                 </div>
-                 <div class="schedule-data">
-                  <span class="schedule-start-time">13 h 00</span>
-                  <span class="schedule-end-time">17 h 00</span>
-                </div>
+                {{/ schedule-data}}
               </div>
             </div>
-            <div class="row mb-2">
-              <div class="col">
-                <span class="schedule-day">Mardi</span>
-              </div>
-              <div class="col">
-                <div class="schedule-data">
-                  <span class="schedule-start-time">09 h 00</span>
-                  <span class="schedule-end-time">12 h 00</span>
-                </div>
-                <div class="schedule-data">
-                  <span class="schedule-start-time">13 h 00</span>
-                  <span class="schedule-end-time">17 h 00</span>
-                </div>
-              </div>
-            </div>
-            <div class="row mb-2">
-              <div class="col">
-                <span class="schedule-day">Mercredi</span>
-              </div>
-              <div class="col">
-                <div class="schedule-data">
-                  <span class="schedule-start-time">09 h 00</span>
-                  <span class="schedule-end-time">12 h 00</span>
-                </div>
-                <div class="schedule-data">
-                  <span class="schedule-start-time">13 h 00</span>
-                  <span class="schedule-end-time">17 h 00</span>
-                </div>
-              </div>
-            </div>
-            <div class="row mb-2">
-              <div class="col">
-                <span class="schedule-day">Jeudi</span>
-              </div>
-              <div class="col">
-                <div class="schedule-data">
-                  <span class="schedule-start-time">09 h 00</span>
-                  <span class="schedule-end-time">12 h 00</span>
-                </div>
-                <div class="schedule-data">
-                  <span class="schedule-start-time">13 h 00</span>
-                  <span class="schedule-end-time">17 h 00</span>
-                </div>
-              </div>
-            </div>
-            <div class="row mb-2">
-              <div class="col">
-                <span class="schedule-day">Vendredi</span>
-              </div>
-              <div class="col">
-                <div class="schedule-data">
-                  <span class="schedule-start-time">09 h 00</span>
-                  <span class="schedule-end-time">12 h 00</span>
-                </div>
-                <div class="schedule-data">
-                  <span class="schedule-start-time">13 h 00</span>
-                  <span class="schedule-end-time">17 h 00</span>
-                </div>
-              </div>
-            </div>
-            <div class="row mb-2">
-              <div class="col">
-                <span class="schedule-day">Samedi</span>
-              </div>
-              <div class="col">
-                <div class="schedule-data">
-                  <span class="schedule-start-time">09 h 00</span>
-                  <span class="schedule-end-time">18 h 00</span>
-                </div>
-              </div>
-            </div>
-            <div class="row mb-2">
-              <div class="col">
-                <span class="schedule-day">Dimanche</span>
-              </div>
-              <div class="col">
-                <div class="schedule-data">Fermé</div>
-              </div>
-            </div>
+            {{/ schedule-row}}
           </div>
         </div>
       </li>
     </ul>
+    {{# schedule-extra}}
     <div class="collapse collapse-content" id="collapseExtraScheduleData">
       <ul class="list-icon">
         <li class="list-icon-item">
           {{> atoms-fonticon-item(icon-label: "037-horloge") }}
           <div class="list-icon-content">
-            <span class="list-icon-label">Horaire Estival</span>
+            {{# schedule-heading}}
+            <span class="list-icon-label">{{ schedule-heading }}</span>
+            {{/ schedule-heading}}
             <div class="schedule-content">
-              <div class="schedule-description mb-2">du 24 juin au 2 septembre 2019</div>
+              {{# schedule-description}}
+              <div class="schedule-description mb-2">{{ schedule-description}}</div>
+              {{/ schedule-description}}
+
+              {{# schedule-row}}
               <div class="row mb-2">
                 <div class="col">
-                  <span class="schedule-day">Lundi</span>
+                  <span class="schedule-day">{{ day }}</span>
                 </div>
                 <div class="col">
+                  {{# schedule-data}}
                   <div class="schedule-data">
-                    <span class="schedule-start-time">09 h 00</span>
-                    <span class="schedule-end-time">12 h 00</span>
+                    {{# time}}
+                    {{# start-time}}
+                    <span class="schedule-start-time">{{start-time}}</span>
+                    {{/start-time}}
+                    {{#end-time}}
+                    <span class="schedule-end-time">{{end-time}}</span>
+                    {{/end-time}}
+                    {{/ time}}
+                    {{^ time}}
+                    {{# extra}}
+                    {{ extra }}
+                    {{/ extra}}
+                    {{/ time}}
                   </div>
-                  <div class="schedule-data">
-                    <span class="schedule-start-time">13 h 00</span>
-                    <span class="schedule-end-time">21 h 00</span>
-                  </div>
+                  {{/ schedule-data}}
                 </div>
               </div>
-              <div class="row mb-2">
-                <div class="col">
-                  <span class="schedule-day">Mardi</span>
-                </div>
-                <div class="col">
-                  <div class="schedule-data">
-                    <span class="schedule-start-time">09 h 00</span>
-                    <span class="schedule-end-time">12 h 00</span>
-                  </div>
-                  <div class="schedule-data">
-                    <span class="schedule-start-time">13 h 00</span>
-                    <span class="schedule-end-time">21 h 00</span>
-                  </div>
-                </div>
-              </div>
-              <div class="row mb-2">
-                <div class="col">
-                  <span class="schedule-day">Mercredi</span>
-                </div>
-                <div class="col">
-                  <div class="schedule-data">
-                    <span class="schedule-start-time">09 h 00</span>
-                    <span class="schedule-end-time">12 h 00</span>
-                  </div>
-                  <div class="schedule-data">
-                    <span class="schedule-start-time">13 h 00</span>
-                    <span class="schedule-end-time">21 h 00</span>
-                  </div>
-                </div>
-              </div>
-              <div class="row mb-2">
-                <div class="col">
-                  <span class="schedule-day">Jeudi</span>
-                </div>
-                <div class="col">
-                  <div class="schedule-data">
-                    <span class="schedule-start-time">09 h 00</span>
-                    <span class="schedule-end-time">12 h 00</span>
-                  </div>
-                  <div class="schedule-data">
-                    <span class="schedule-start-time">13 h 00</span>
-                    <span class="schedule-end-time">21 h 00</span>
-                  </div>
-                </div>
-              </div>
-              <div class="row mb-2">
-                <div class="col">
-                  <span class="schedule-day">Vendredi</span>
-                </div>
-                <div class="col">
-                  <div class="schedule-data">
-                    <span class="schedule-start-time">09 h 00</span>
-                    <span class="schedule-end-time">12 h 00</span>
-                  </div>
-                  <div class="schedule-data">
-                    <span class="schedule-start-time">13 h 00</span>
-                    <span class="schedule-end-time">21 h 00</span>
-                  </div>
-                </div>
-              </div>
-              <div class="row mb-2">
-                <div class="col">
-                  <span class="schedule-day">Samedi</span>
-                </div>
-                <div class="col">
-                  <div class="schedule-data">
-                    <span class="schedule-start-time">09 h 00</span>
-                    <span class="schedule-end-time">18 h 00</span>
-                  </div>
-                </div>
-              </div>
-              <div class="row mb-2">
-                <div class="col">
-                  <span class="schedule-day">Dimanche</span>
-                </div>
-                <div class="col">
-                  <div class="schedule-data">Fermé</div>
-                </div>
-              </div>
+              {{/ schedule-row}}
             </div>
           </div>
         </li>
@@ -216,5 +92,7 @@
     <div class="w-100 text-center">
       <button class="btn btn-link" type="button" data-toggle="collapse" data-target="#collapseExtraScheduleData" aria-expanded="false" aria-controls="collapseExtraScheduleData">Voir plus</button>
     </div>
+    {{/ schedule-extra}}
   </section>
+  {{/ schedule}}
 </div>
