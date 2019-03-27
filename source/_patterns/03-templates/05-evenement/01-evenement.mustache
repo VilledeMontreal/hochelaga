@@ -88,13 +88,16 @@
           {{> organisms-sidebar-block-evenement }}
         </aside>
       </div>
+
+      {{# map }}
       <div class="row">
         <div class="col-12">
           <div class="map-section">
-            <div id="mapEventId" style="height:500px"></div>
+            <div id="{{ mapID }}" style="height:500px"></div>
           </div>
         </div>
       </div>
+      {{/ map }}
     </div>
   </div>
 
@@ -453,7 +456,7 @@
   };
   mapboxgl.accessToken = 'undefined';
   var map = new mapboxgl.Map({
-    container: 'mapEventId',
+    container: '{{ map.mapID }}',
     zoom: startZoom,
     style: mapboxStyle,  
     center,
