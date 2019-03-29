@@ -158,6 +158,13 @@
     }
   }
 
+  &.card-thumbnail {
+    text-align: left;
+    .card-title {
+      font-weight: $font-weight-bold;
+    }
+  }
+
   // Simple link inside a card with right arrow
   &.card-link {
     flex-direction: row;
@@ -217,6 +224,7 @@
     }
     .card-title {
       margin-bottom: 2rem;
+      font-weight: $font-weight-bold;
     }
     &.card-row-layout {
       .card-footer {
@@ -238,6 +246,7 @@
   &.card-featured {
     .card-title {
       @include card-heading();
+      font-weight: $font-weight-bold;
     }
     .card-body {
       text-align: left;
@@ -246,6 +255,9 @@
 
   // Full-width card override
   &.card-fw {
+    .card-title {
+      font-weight: $font-weight-bold;
+    }
     .card-body {
       align-self: flex-start;
     }
@@ -321,6 +333,7 @@
     }
   }
 
+  // Deprecated will be removed in v4.0.0
   // Inception card
   // Cards as a link with sublinks
   &.card-inception {
@@ -339,7 +352,6 @@
   }
 
   // Card tarification specification
-
   &.card-tarif {
     .row > div {
       &:first-child {
@@ -441,6 +453,11 @@
 
   &[data-toggle="modal"] {
     cursor: pointer;
+  }
+
+  &.bg-variant {
+    box-shadow: none;
+    background-color: $gray-sky;
   }
 }
 
