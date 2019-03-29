@@ -57,27 +57,27 @@
   <div class="page-section" id="dateSection">
     <div class="container">
       <div class="row ">
-        <div class="col-12 text-center">
+        <div class="col-12">
           <h2 class="section-heading">{{ headings.text }}</h2>
         </div>
       </div>
       <div class="row">
         <div class="col-12 col-lg-4">
-          <div class="text-center">
+          <div class="">
             <div class="mb-2">15 décembre au plus tard</div>
             <div class="h5">Lorem ipsum dolor sit amet, consectetur adipiscing elit</div>
             {{> atoms-button(buttonClass: btn-secondary, buttonText: "CTA lorem ipsum")}}
           </div>
         </div>
         <div class="col-12 col-lg-4">
-          <div class="text-center">
+          <div class="">
             <div class="mb-2">À partir du 1er février</div>
             <div class="h5">Proin sed ante arcu</div>
             {{> atoms-button(buttonClass: btn-secondary, buttonText: "CTA lorem ipsum")}}
           </div>
         </div>
         <div class="col-12 col-lg-4">
-          <div class="text-center">
+          <div class="">
             <div class="mb-2">Du 15 décembre 2018 au 23 mars 2019</div>
             <div class="h5">Curabitur nulla mi imperdiet vitae velit ut venenatis venenatis nunc</div>
             {{> atoms-button(buttonClass: btn-secondary, buttonText: "CTA lorem ipsum")}}
@@ -99,7 +99,7 @@
   <section class="page-section">
     <div class="container">
       <div class="row ">
-        <div class="col-12 text-center">
+        <div class="col-12">
           <h2 class="section-heading">{{ headings.text }}</h2>
         </div>
       </div> 
@@ -128,7 +128,7 @@
   {{/ evenementSection}}
 
   {{# elusSection}}
-  <div class="page-section" id="elusSection">
+  <div class="page-section {{section-classes}}" id="elusSection">
     <div class="container">
       <div class="row ">
         <div class="col-12 text-center">

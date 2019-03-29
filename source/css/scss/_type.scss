@@ -232,9 +232,17 @@ a {
   }
 
   // Utility classes to remove border-bottom
+  // Need important to override any local styles that may be applied later
   &.img-link,
-  &.no-border {
-    border: none;
+  &.no-border,
+  &.no-underline {
+    border: none !important;
+    text-decoration: none !important;
+  }
+
+  &.no-style {
+    border: none !important;
+    color: inherit !important;
   }
 }
 

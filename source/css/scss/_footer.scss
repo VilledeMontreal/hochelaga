@@ -119,9 +119,42 @@ footer {
     }
   }
 
+  // Pre footer
+  // Use-case: Vitrine d'arrondissement
   &.pre-footer {
-    background-color: $gray-300;
+    background-color: $gray-200;
+    color: $body-color;
     padding-top: 3.5rem;
     padding-bottom: 3.5rem;
+    
+    .font-size-sm {
+      p {
+        margin-bottom: 1rem;
+      }
+    }
+
+    // Links
+    a {
+      border-bottom: $link-border-width solid $link-border-color;
+      color: $link-color;
+      &:hover,
+      &:active {
+        color: $link-hover-color;;
+        text-decoration: none;
+      }
+    }
+
+    // Social media list
+    .social-media-list {
+      li a {
+        .vdm {
+          @include font-size($font-size-xl);
+          padding: 0;
+        }
+      }
+    }
+
+
+
   }
 }

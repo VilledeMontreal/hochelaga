@@ -28,7 +28,7 @@
           "card-media" : {
             "icon" : false,
             "img" : {
-              "url" : "https://picsum.photos/768/480?image=1058",
+              "url" : "https://picsum.photos/768/432?image=1058",
               "alt" : "Card #2 img alt."
             }
           },
@@ -46,7 +46,7 @@
           "card-media" : {
             "icon" : false,
             "img" : {
-              "url" : "https://picsum.photos/768/480?image=859",
+              "url" : "https://picsum.photos/768/432?image=859",
               "alt" : "Card #1 img alt."
             }
           },
@@ -64,7 +64,7 @@
           "card-media" : {
             "icon" : false,
             "img" : {
-              "url" : "https://picsum.photos/768/480?image=1073",
+              "url" : "https://picsum.photos/768/432?image=1073",
               "alt" : "Card #1 img alt."
             }
           },
@@ -78,7 +78,7 @@
   },
   "serviceSection": {
     "headings": {
-      "text": "Informations les plus recherchées"
+      "text": "Laissez-nous vous aider"
     },
     "cards": {
       "section-classes": "bg-gray-sky",
@@ -149,7 +149,7 @@
   },
   "featuredSearch": {
     "featuredContentID": "featured-home-search",
-    "featuredContentBgImage": "background-image: url(https://picsum.photos/3888/2592?image=972)",
+    "featuredContentBgImage": "background-image: url(https://picsum.photos/1200/675?image=972)",
     "inputGroupSearch": [
       {
         "formGroupLabel": false,
@@ -192,7 +192,7 @@
   },
   "newsSection": {
     "headings": {
-      "text": "Dernières actualités"
+      "text": "Nouvelles"
     },
     "listGroup": [
       {
@@ -307,6 +307,7 @@
     ]
   },
   "elusSection": {
+    "section-classes": "bg-gray-sky",
     "headings": {
       "text": "Mairie d'arrondissement"
     },
@@ -353,5 +354,6 @@
         }
       ]
     }
-  }
+  },
+  "hasFeedbackForm": false
 }

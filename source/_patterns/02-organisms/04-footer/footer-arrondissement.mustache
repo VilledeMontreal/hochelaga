@@ -1,5 +1,36 @@
-<footer class="footer pre-footer" role="contentinfo">
+<footer class="pre-footer" role="contentinfo">
   <div class="container">
-    <div class="text-center font-size-xl">Pied de page de l'arrondissement</div>
+    <div class="row mb-8">
+      <div class="col-12 col-md-6 col-lg-4">
+        <img src="https://imgplaceholder.com/225x108/f4f6f8/212529?text=Logo+arrondissement&font-family=Roboto_Bold" alt="Logo de l'arrondissement XYZ" />
+      </div>
+      <div class="col-12 col-md-6 col-lg-8 align-self-end">
+        <p class="mb-0">En tant que force motrice de l’activité montréalaise, Ville-Marie reste sûrement le territoire administratif le plus représentatif du dynamisme local. — <a href="#" class="font-weight-bold">Découvrir l'arrondissement</a></p>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-12 col-lg-4 font-size-sm">
+        <div class="font-weight-bold mb-2">Liens utiles</div>
+        <ul class="list-unstyled">
+          <li><a href="#" class="font-weight-bold no-border">Joindre l'arrondissement</a></li>
+          <li><a href="#" class="font-weight-bold no-border">Carte de l'arrondissement</a></li>
+        </ul>
+      </div>
+      <div class="col-12 col-lg-4 font-size-sm">
+        <div class="font-weight-bold mb-2">Annonces</div>
+        <ul class="list-unstyled">
+          <li><a href="#" class="no-style">Appels d'offres</a></li>
+          <li><a href="#" class="no-style">Avis publics</a></li>
+          <li><a href="#" class="no-style">Communiqués</a></li>
+        </ul>
+      </div>
+      <div class="col-12 col-lg-4 font-size-sm">
+        <div class="font-weight-bold mb-2">Suivez-nous</div>
+        <p>Abonnez-vous à notre <a href="#" class="font-weight-bold">infolettre</a> mensuelle ou suivez-nous sur les réseaux sociaux.</p>
+        {{# prefooterSocialMediaIcons}}
+        {{> atoms-social-media-icons-list}}
+        {{/ prefooterSocialMediaIcons}}
+      </div>
+    </div>
   </div>
 </footer>
