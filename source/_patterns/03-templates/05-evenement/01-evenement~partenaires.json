@@ -112,7 +112,16 @@
     "src": "//www.youtube.com/embed/rBfphgabDhU"
   },
   "evenement-list-infos": {
-    "list-icon-class": false
+    "list-icon-item": [
+      {
+        "item": [
+          {},
+          {
+            "content": "<a href=\"#mapEvent005\" class=\"js-scroll-trigger\">Afficher la carte</a>"
+          }
+        ]
+      }
+    ]
   },
   "social-media-icons-list": {
     "has-label": false,
@@ -197,6 +206,7 @@
     }
   ],
   "map": {
+    "mapID": "mapEvent005",
     "address": "<address><a href='#'>Bibliothèque Jacqueline-De Repentigny</a><br>5955, avenue Bannantyne<br>Montréal (Québec) H4H 1H6</address>",
     "lngLat": "-73.577946, 45.448775"
   },

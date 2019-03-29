@@ -16,20 +16,15 @@
     "headings":{
       "display":{
         "classes": "h4",
-        "content": "Template lieu"
+        "content": "Auditorium Le Prévost"
       }
     }
-  },
-  "state": {
-    "badge": "Fermeture exceptionnelle",
-    "badgeClass": "badge-pill badge-danger",
-    "badge-sr-text": ""
   },
   "has-informations": true,
   "promoter": false,
   "borough": {
     "url": "link.templates-collectrice-lieux",
-    "borough": "Ville-Marie"
+    "borough": "Villeray—Saint-Michel—Parc-Extension"
   },
   "has-media-image": true,
   "media-image": {
@@ -37,25 +32,8 @@
     "mediaSize": "1000x667",
     "mediaAlt": "Media #1058"
   },
-  "has-media-gallery": true,
-  "mediaGallery": [
-    {
-      "mediaSrc": "https://picsum.photos/2000/990?image=1058",
-      "mediaSize": "2000x990",
-      "mediaCaption": "This is a dummy caption",
-      "mediaAuthor": "Placeholder author",
-      "mediaAlt": "Media #1058",
-      "thumbnail" : false
-    },
-    {
-      "mediaSrc": "https://picsum.photos/2000/990?image=1059",
-      "mediaSize": "2000x990",
-      "mediaCaption": "This is a dummy caption",
-      "mediaAuthor": "Placeholder author",
-      "mediaAlt": "Media #1059",
-      "thumbnail" : false
-    }
-  ],
+  "has-media-gallery": false,
+  "media-gallery": false,
   "list-icon-item": [
     {
       "icon-item": {
@@ -68,7 +46,7 @@
           "tag": {
             "div": true
           },
-          "content": "<address>1411, rue Lapierre<br>Montréal (Québec) H8N 2J4</address>"
+          "content": "<address>7355, avenue Christophe-Colomb<br>Montréal (Québec) H82X 1A4</address>"
         },
         {
           "url": false,
@@ -76,7 +54,7 @@
           "tag": {
             "div": true
           },
-          "content": "<a href=\"#mapLieu001\" class=\"js-scroll-trigger\">Afficher la carte</a>"
+          "content": "<a href=\"#mapLieuAuditoriumLePrevost\" class=\"js-scroll-trigger\">Afficher la carte</a>"
         }
       ]
     },
@@ -88,7 +66,7 @@
         {
           "url": false,
           "class": false,
-          "content": "514 822-1234"
+          "content": "514 872-0311"
         }
       ]
     }
@@ -96,46 +74,21 @@
   "sidebarRight": true,
   "sidebar-title-classes": "d-none d-sm-block",
   "sidebarTitle": "Heures d'ouverture",
-  "lead": "Jeg elsker å spille fotball og håndball, men i Amerika vil jeg heller være med venner og spise. Nå er det bare noen måneder igjen før jeg reiser hjem til Norge, å får se familie og venner igjen. Men jeg gleder meg mest til å se hunden min igjen.",
+  "lead": "L’auditorium Le Prévost est l’une des principales salles de diffusion de la maison de la culture de Villeray–Saint-Michel–Parc-Extension. L'auditorium présente des spectacles de théâtre, de musique, de danse et du cinéma.",
   "commodites": {
     "items": [
       {
         "item": [
-          {"text":"Lorem ipsum"},
-          {"text":"Dolor sit amet"}
+          {"text":"Casiers"},
+          {"text":"Toilettes"},
+          {"text":"Réseau sans fil - WIFI"},
+          {"text":"Tables à langer"} 
         ]
       }
     ]
   },
-  "installations": {
-    "items": [
-      {
-        "item-heading": "Sportives",
-        "item": [
-          {"text":"Lorem ipsum"},
-          {"text":"Dolor sit amet"}
-        ]
-      }
-    ]
-  },
-  "tc-references": {
-    "items": [
-      {
-        "item": [
-          {
-            "url": "#",
-            "title": "Link title #1",
-            "description": "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec quis lorem sem.</p>"
-          },
-          {
-            "url": "#",
-            "title": "Link title #2",
-            "description": "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec quis lorem sem.</p>"
-          }
-        ]
-      }
-    ]
-  },
+  "installations": false,
+  "tc-references": false,
   "events": {
     "listGroupClass": "list-group-hub mb-4",
     "button": {
@@ -147,7 +100,7 @@
     "listGroup": [
       {
         "url": "#",
-        "title": "Cras justo odio",
+        "title": "Astéroîde B 612",
         "infos": {
           "infos-items": [
             {
@@ -202,8 +155,8 @@
     "items": [
       {
         "item": [
-          {"text":"Lorem ipsum"},
-          {"text":"Dolor sit amet"}
+          {"text":"Rampe d'accès"},
+          {"text":"interprète"}
         ]
       }
     ]
@@ -224,102 +177,9 @@
     ]
   },
   "map": {
-    "mapID": "mapLieu001",
+    "mapID": "mapLieuAuditoriumLePrevost",
     "lngLat": "-73.614577,45.544109",
-    "address": "1411, rue Lapierre<br>Montréal (Québec) H8N 2J4"
-  },
-  "hasLieux": {
-    "page-section": {
-      "section-headings": {
-        "heading": "Lieux à proximité"
-      },
-      "button": false,
-      "promoter": false,
-      "cards": {
-        "section-classes": "bg-gray-sky",
-        "classes": false,
-        "card-item" : [
-          {
-            "bsgrid-classes": "col-12 col-lg-4",
-            "classes" : "card-teaser",
-            "url" : "#",
-            "card-title" : "Lorem ipsum dolor sit amet",
-            "card-type": "Type de lieu",
-
-            "list-icon-class": "mb-0",
-            "list-icon-item": [
-              {
-                "list-icon-item-class": false,
-                "icon-item": {
-                  "icon-label": "091-localisation"
-                },
-                "item-label": false,
-                "item": [
-                  {
-                    "class": false,
-                    "url": false,
-                    "tag": false,
-                    "content": "<address>1411, rue Lapierre<br>Montréal (Québec) H8N 2J4</address>"
-                  }
-                ]
-              }
-            ]
-          },
-          {
-            "bsgrid-classes": "col-12 col-lg-4",
-            "classes" : "card-teaser",
-            "url" : "#",
-            "card-title" : "Donec eget sodales neque",
-            "card-type": "Type de lieu",
-
-            "list-icon-class": "mb-0",
-            "list-icon-item": [
-              {
-                "list-icon-item-class": false,
-                "icon-item": {
-                  "icon-label": "091-localisation"
-                },
-                "item-label": false,
-                "item": [
-                  {
-                    "class": false,
-                    "url": false,
-                    "tag": false,
-                    "content": "<address>1411, rue Lapierre<br>Montréal (Québec) H8N 2J4</address>"
-                  }
-                ]
-              }
-            ]
-          },
-          {
-            "bsgrid-classes": "col-12 col-lg-4",
-            "classes" : "card-teaser",
-            "url" : "#",
-            "card-title" : "Aliquam sit amet gravida velit",
-            "card-type": "Type de lieu",
-
-            "list-icon-class": "mb-0",
-            "list-icon-item": [
-              {
-                "list-icon-item-class": false,
-                "icon-item": {
-                  "icon-label": "091-localisation"
-                },
-                "item-label": false,
-                "item": [
-                  {
-                    "class": false,
-                    "url": false,
-                    "tag": false,
-                    "content": "<address>1323, Boulevard René-Lévesque Est<br>Montréal (Québec) H2L 2L9</address>"
-                  }
-                ]
-              }
-            ]
-          }
-        ]
-      }
-    }
+    "address": "7355, avenue Christophe-Colomb<br>Montréal (Québec) H82X 1A4"
   },
   "schedule": {
     "schedule-heading": "Horaire hiver-printemps",
@@ -333,6 +193,12 @@
               "start-time": "09 h 00",
               "end-time": "12 h 00"
             }
+          },
+          {
+            "time": {
+              "start-time": "13 h 00",
+              "end-time": "17 h 00"
+            }
           }
         ]
       },
@@ -343,6 +209,12 @@
             "time": {
               "start-time": "09 h 00",
               "end-time": "12 h 00"
+            }
+          },
+          {
+            "time": {
+              "start-time": "13 h 00",
+              "end-time": "17 h 00"
             }
           }
         ]
@@ -355,6 +227,12 @@
               "start-time": "09 h 00",
               "end-time": "12 h 00"
             }
+          },
+          {
+            "time": {
+              "start-time": "13 h 00",
+              "end-time": "17 h 00"
+            }
           }
         ]
       },
@@ -365,6 +243,12 @@
             "time": {
               "start-time": "09 h 00",
               "end-time": "12 h 00"
+            }
+          },
+          {
+            "time": {
+              "start-time": "13 h 00",
+              "end-time": "17 h 00"
             }
           }
         ]
@@ -377,6 +261,12 @@
               "start-time": "09 h 00",
               "end-time": "12 h 00"
             }
+          },
+          {
+            "time": {
+              "start-time": "13 h 00",
+              "end-time": "17 h 00"
+            }
           }
         ]
       },
@@ -386,7 +276,7 @@
           {
             "time": {
               "start-time": "09 h 00",
-              "end-time": "12 h 00"
+              "end-time": "18 h 00"
             }
           }
         ]

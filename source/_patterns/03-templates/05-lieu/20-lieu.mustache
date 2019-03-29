@@ -20,118 +20,107 @@
       <div class="row">
         <article class="col-12 col-lg-7 col-xl-8">
           <div class="content-block">
-            <p class="lead">Jeg elsker å spille fotball og håndball, men i Amerika vil jeg heller være med venner og spise. Nå er det bare noen måneder igjen før jeg reiser hjem til Norge, 
-            å får se familie og venner igjen. Men jeg gleder meg mest til å se hunden min igjen.</p>
+            <p class="lead">{{ lead }}</p>
+
             <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras at convallis felis. Sed non purus ligula. Phasellus vulputate aliquam libero nec sollicitudin. 
             Integer vel egestas neque, eu faucibus tellus. Ut consequat tortor justo, blandit convallis ex malesuada vel. Ut dapibus enim pretium diam lacinia porttitor et a ante. 
             Maecenas a ligula at urna accumsan mollis. Quisque congue erat nec lacus dapibus, ut sodales mi finibus. Proin rhoncus nibh vel justo cursus pharetra.</p>
           </div>
-          {{# equipements}}
-          <div class="content-block">
-            <h3 class="h5">Équipements</h3>
-            <div class="row">
-              <div class="col-12 col-md-6 col-lg-12 col-xl-6 mb-4">
-                <div class="content-block-icon border p-4 h-100">
-                  {{> atoms-fonticon-item("icon-label": "115-glissant", icon-class: "mb-2") }}
-                  <span class="content-block-icon-label">Aquatiques</span>
-                  <ul class="list-unstyled">
-                    <li>Piscine</li>
-                    <li>Bassin de plongeon</li>
-                  </ul>
-                </div>
-              </div>
-              <div class="col-12 col-md-6 col-lg-12 col-xl-6 mb-4">
-                <div class="content-block-icon border p-4 h-100">
-                  {{> atoms-fonticon-item("icon-label": "087-banc-de-parc", icon-class: "mb-2") }}
-                  <span class="content-block-icon-label">Conditionnement physique et mise en forme</span>
-                  <ul class="list-unstyled">
-                    <li>Salle multisport</li>
-                    <li>Piste d'athlétisme</li>
-                  </ul>
-                </div>
-              </div>
-              <div class="col-12 col-md-6 col-lg-12 col-xl-6">
-                <div class="content-block-icon border p-4 h-100">
-                  {{> atoms-fonticon-item("icon-label": "122-terrain-sport", icon-class: "mb-2") }}
-                  <span class="content-block-icon-label">Sports d'équipe</span>
-                  <ul class="list-unstyled">
-                    <li>Salle multisport</li>
-                    <li>Piste d'athlétisme</li>
-                  </ul>
-                </div>
-              </div>
-            </div>
-          </div>
-          {{/ equipements}}
 
           {{# commodites}}
           <div class="content-block">
             <h3 class="h5">Commodités</h3>
+            {{# items}}
+            <ul class="list-unstyled row">
+              {{# item}}
+              <li class="col-12 col-md-6">{{ text }}</li>
+              {{/ item}}
+            </ul>
+            {{/ items}}
+          </div>
+          {{/ commodites}}
+
+          {{# installations}}
+          <div class="content-block">
+            <h3 class="h5">Installations</h3>
+            {{# items}}
             <div class="row">
-              <div class="col-12 col-md-6 col-lg-12 col-xl-6 mb-4">
-                <div class="content-block-icon d-flex h-100">
-                  {{> atoms-fonticon-item("icon-label": "115-glissant", icon-class: "pr-1") }}
-                  <div class="w-100">
-                    <span class="content-block-icon-label offset-icon">Généraux</span>
-                    <ul class="list-unstyled">
-                      <li>Lorem ipsum dolor sit amet</li>
-                      <li>Consectetur adipiscing elit</li>
-                      <li>Integer molestie lorem at massa</li>
-                      <li>Facilisis in pretium nisl aliquet</li>
-                      <li>Eget porttitor lorem</li>
-                    </ul>
-                  </div>
-                </div>
-              </div>
-              <div class="col-12 col-md-6 col-lg-12 col-xl-6 mb-4">
-                <div class="content-block-icon d-flex h-100">
-                  {{> atoms-fonticon-item("icon-label": "082-residus-verts", icon-class: "pr-1") }}
-                  <div class="w-100">
-                    <span class="content-block-icon-label offset-icon">Alimentaires</span>
-                    <ul class="list-unstyled">
-                      <li>Facilisis in pretium</li>
-                      <li>Eget porttitor lorem</li>
-                    </ul>
-                  </div>
-                </div>
-              </div>
-              <div class="col-12 col-md-6 col-lg-12 col-xl-6 mb-4">
-                <div class="content-block-icon d-flex h-100">
-                  {{> atoms-fonticon-item("icon-label": "109-profil-sourire", icon-class: "pr-1") }}
-                  <div class="w-100">
-                    <span class="content-block-icon-label offset-icon">Familles</span>
-                    <ul class="list-unstyled">
-                      <li>Facilisis in pretium</li>
-                      <li>Eget porttitor lorem</li>
-                    </ul>
-                  </div>
-                </div>
-              </div>
               <div class="col-12 col-md-6 col-lg-12 col-xl-6">
-                <div class="content-block-icon d-flex h-100">
-                  {{> atoms-fonticon-item("icon-label": "085-lampadaire", icon-class: "pr-1") }}
-                  <div class="w-100">
-                    <span class="content-block-icon-label offset-icon">Installations</span>
-                    <ul class="list-unstyled">
-                      <li>Facilisis in pretium</li>
-                      <li>Eget porttitor lorem</li>
-                      <li>Lorem ipsum dolor sit amet</li>
-                      <li>Consectetur adipiscing elit</li>
-                      <li>Integer molestie lorem at massa</li>
-                    </ul>
-                  </div>
+                <div class="content-block-icon h-100">
+                  {{# item-heading}}
+                  <span class="content-block-icon-label">{{ item-heading }}</span>
+                  {{/ item-heading}}
+                  <ul class="mb-0">
+                    {{# item}}
+                    <li>{{ text }}</li>
+                    {{/ item}}
+                  </ul>
                 </div>
               </div>
             </div>
+            {{/ items}}
           </div>
-          {{/ commodites}}
+          {{/ installations}}
+
+          {{# tc-references}}
+          <div class="content-block">
+            <h3 class="h5">Sujets et démarches</h3>
+            {{# items }}
+            <div class="hub-list-container">
+              <ul class="hub-list">
+                {{# item }}
+                <li class="hub-list-item">
+                  {{# link}}
+                  <a href="{{ url }}">{{ title }}</a>
+                  {{/ link}}
+                  {{# description}}
+                    {{{ description}}}
+                  {{/ description}}
+                </li>
+                {{/ item}}
+              </ul>
+            </div>
+            {{/ items}}
+          </div>
+          {{/ tc-references}}
 
           {{# events}}
           <div class="content-block">
             <h3 class="h5">Événements à venir</h3>
             {{> molecules-list-group-hub }}
+            {{# button}}
+            <div class="pagination-wrapper pt-0">
+              {{> atoms-button}}
+            </div>
+            {{/ button}}
           </div>
           {{/ events}}
+
+          {{# mode-paiement}}
+          <div class="content-block">
+            <h3 class="h5">Mode de paiement</h3>
+            {{# items}}
+            <ul class="list-unstyled row">
+              {{# item}}
+              <li class="col-12 col-md-6">{{ text }}</li>
+              {{/ item}}
+            </ul>
+            {{/ items}}
+          </div>
+          {{/ mode-paiement}}
+
+          {{# accessibilite}}
+          <div class="content-block">
+            <h3 class="h5">Accessibilité</h3>
+            {{# items}}
+            <ul class="list-unstyled row">
+              {{# item}}
+              <li class="col-12 col-md-6">{{ text }}</li>
+              {{/ item}}
+            </ul>
+            {{/ items}}
+          </div>
+          {{/ accessibilite}}
 
           {{# has-tags}}
           <div class="content-block">
@@ -147,7 +136,7 @@
         </article>
 
         {{# sidebarRight }}
-        <aside class="col-12 col-lg-5 col-xl-4 sidebar-right" role="complementary">
+        <aside class="col-12 col-lg-5 col-xl-4 sidebar-right order-first order-lg-last" role="complementary">
           {{> organisms-sidebar-block-schedule }}
         </aside>
         {{/ sidebarRight }}
@@ -177,8 +166,10 @@
 {{> organisms-footer-portal }}
 
 <script>
+    var pointLngLat = [{{{ map.lngLat }}}];
+    var address = "{{{map.address}}}";
     var startZoom = 16;
-    var center = [-73.607951, 45.437203];
+    var center = pointLngLat;
     var maxBounds = [[-74.3965936,45.319517],[-73.442801,45.751651]];
     var marker = new mapboxgl.Marker(defaultMarker());
     var mapboxStyle = {
@@ -523,7 +514,7 @@
   });
 
 
-  marker.setLngLat([-73.607951, 45.437203]).addTo(map);
+  marker.setLngLat(pointLngLat).addTo(map);
 
   var markerHeight = 50, markerRadius = 10, linearOffset = 25;
   var popupOffsets = {
@@ -537,8 +528,8 @@
   'right': [-markerRadius, (markerHeight - markerRadius) * -1]
   };
   var popup = new mapboxgl.Popup({closeButton: false, closeOnClick: false, offset: popupOffsets, className: 'map-popup'})
-    .setLngLat([-73.607951, 45.437203])
-    .setHTML("<address>1411, rue Lapierre<br>Montréal (Québec) H8N 2J4</address>")
+    .setLngLat(pointLngLat)
+    .setHTML("<address><strong>{{{text-elements.headings.display.content}}}</strong><br>{{{map.address}}}</address>")
     .addTo(map);
 
   function defaultMarker() {
