@@ -194,47 +194,58 @@
     "headings": {
       "text": "Nouvelles"
     },
-    "listGroup": [
-      {
-        "url": "#",
-        "title": "Cras justo odio",
-        "infos": {
-          "infos-items": [
-            {
-              "class": false,
-              "text": "9 h 20"
+    "cards": {
+      "section-classes": "bg-gray-sky",
+      "classes": false,
+      "bsgrid-classes": "col-12",
+      "card-item": [
+        {
+          "classes": "card-fw card-row-layout",
+          "url": "#",
+          "card-date": false,
+          "card-title": "Maecenas massa leo molestie ut efficitur ut consequat sit amet augue",
+          "card-text": "20 Mars 2019",
+          "card-media" : {
+            "icon" : false,
+            "img" : {
+              "url" : "https://picsum.photos/768/432?image=396",
+              "alt" : "Card teaser news #1 img alt."
             }
-          ]
-        }
-      },
-      {
-        "url": "https://google.ca",
-        "title": "Dapibus ac facilisis in",
-        "infos": {
-          "infos-items": [
-            {
-              "class": false,
-              "text": "6 mars"
-            }
-          ]
+          },
+          "footer" : false
         },
-        "footer": {
-          "icon-label": false
-        }
-      },
-      {
-        "url": "#",
-        "title": "Morbi leo risus",
-        "infos": {
-          "infos-items": [
-            {
-              "class": false,
-              "text": "24 décembre 2018"
+        {
+          "classes": "card-fw card-row-layout",
+          "url": "#",
+          "card-date": false,
+          "card-title": "Integer et nulla ut nunc posuere malesuada",
+          "card-text": "20 février 2019",
+          "card-media" : {
+            "icon" : false,
+            "img" : {
+              "url" : "https://picsum.photos/768/432?image=396",
+              "alt" : "Card teaser news #2 img alt."
             }
-          ]
+          },
+          "footer" : false
+        },
+        {
+          "classes": "card-fw card-row-layout",
+          "url": "#",
+          "card-date": false,
+          "card-title": "Integer tristique nunc vel sollicitudin elementum",
+          "card-text": "20 décembre 2018",
+          "card-media" : {
+            "icon" : false,
+            "img" : {
+              "url" : "https://picsum.photos/768/432?image=396",
+              "alt" : "Card teaser news #3 img alt."
+            }
+          },
+          "footer" : false
         }
-      }
-    ]
+      ]
+    }
   },
   "evenementSection": {
     "headings": {

@@ -41,7 +41,7 @@
         <div class="col-12 text-center">
           <h2 class="section-heading">{{ headings.text }}</h2>
         </div>
-      </div> 
+      </div>
       <div class="row cards {{ cards.classes }}">
         {{# cards.card-item}}
         <div class="{{ cards.bsgrid-classes }}">
@@ -103,7 +103,14 @@
           <h2 class="section-heading">{{ headings.text }}</h2>
         </div>
       </div> 
-      {{> molecules-list-group-hub }}
+      <div class="row cards {{ cards.classes }}">
+        {{# cards.card-item}}
+        <div class="{{ cards.bsgrid-classes }}">
+          {{> molecules-card-item }}
+        </div>
+        {{/ cards.card-item}}
+      </div>
+      <!-- {{> molecules-list-group-hub }} -->
       <div class="pagination-wrapper">
         <a href="#" class="btn btn-secondary">Toutes les nouvelles</a>
       </div>
@@ -115,11 +122,11 @@
   <div class="page-section" id="evenementSection">
     <div class="container">
       <div class="row ">
-        <div class="col-12 text-center">
+        <div class="col-12">
           <h2 class="section-heading">{{ headings.text }}</h2>
         </div>
       </div>
-      {{> molecules-list-group-hub }}
+      <!-- {{> molecules-list-group-hub }} -->
       <div class="pagination-wrapper">
         <a href="#" class="btn btn-secondary">Tous les événements</a>
       </div>
