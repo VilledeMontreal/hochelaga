@@ -15,12 +15,12 @@
       "text": "À la une"
     },
     "cards": {
-      "section-classes": "bg-gray-sky",
+      "section-classes": false,
       "classes": false,
       "card-item": [
         {
           "bsgrid-classes": "col-12",
-          "classes": "card-fw card-featured",
+          "classes": "card-fw card-featured card-bg-variant",
           "url": "#",
           "card-title": "Card with featured content",
           "card-text":
@@ -39,7 +39,7 @@
         },
         {
           "bsgrid-classes": "col-12 col-md-6",
-          "classes" : "card-large",
+          "classes" : "card-large card-bg-variant",
           "url" : "#",
           "card-title" : "Praesent maximus odio at convallis scelerisque",
           "card-text" : false,
@@ -57,7 +57,7 @@
         },
         {
           "bsgrid-classes": "col-12 col-md-6",
-          "classes" : "card-large",
+          "classes" : "card-large card-bg-variant",
           "url" : "#",
           "card-title" : "Fusce facilisis elit nibh",
           "card-text" : false,
@@ -195,12 +195,12 @@
       "text": "Nouvelles"
     },
     "cards": {
-      "section-classes": "bg-gray-sky",
+      "section-classes": false,
       "classes": false,
       "bsgrid-classes": "col-12",
       "card-item": [
         {
-          "classes": "card-fw card-row-layout",
+          "classes": "card-fw card-row-layout card-bg-variant",
           "url": "#",
           "card-date": false,
           "card-title": "Maecenas massa leo molestie ut efficitur ut consequat sit amet augue",
@@ -215,7 +215,7 @@
           "footer" : false
         },
         {
-          "classes": "card-fw card-row-layout",
+          "classes": "card-fw card-row-layout card-bg-variant",
           "url": "#",
           "card-date": false,
           "card-title": "Integer et nulla ut nunc posuere malesuada",
@@ -230,7 +230,7 @@
           "footer" : false
         },
         {
-          "classes": "card-fw card-row-layout",
+          "classes": "card-fw card-row-layout card-bg-variant",
           "url": "#",
           "card-date": false,
           "card-title": "Integer tristique nunc vel sollicitudin elementum",
@@ -250,72 +250,7 @@
   "evenementSection": {
     "headings": {
       "text": "Événements"
-    },
-    "listGroup": [
-      {
-        "url": "#",
-        "title": "Cras justo odio",
-        "infos": {
-          "infos-items": [
-            {
-              "class": false,
-              "text": "10 mars"
-            },
-            {
-              "class": false,
-              "text": "9 h 20"
-            },
-            {
-              "class": false,
-              "text": "Nom du lieu"
-            }
-          ]
-        }
-      },
-      {
-        "url": "https://google.ca",
-        "title": "Dapibus ac facilisis in",
-        "infos": {
-          "infos-items": [
-            {
-              "class": false,
-              "text": "23 mars"
-            },
-            {
-              "class": false,
-              "text": "19 h 00"
-            },
-            {
-              "class": false,
-              "text": "Nom du lieu"
-            }
-          ]
-        },
-        "footer": {
-          "icon-label": false
-        }
-      },
-      {
-        "url": "#",
-        "title": "Morbi leo risus",
-        "infos": {
-          "infos-items": [
-            {
-              "class": false,
-              "text": "2 avril"
-            },
-            {
-              "class": false,
-              "text": "18 h 15"
-            },
-            {
-              "class": false,
-              "text": "Nom du lieu"
-            }
-          ]
-        }
-      }
-    ]
+    }
   },
   "elusSection": {
     "section-classes": "bg-gray-sky",
