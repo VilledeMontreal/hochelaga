@@ -50,6 +50,14 @@
     }
   }
 
+  .card-date,
+  .card-tags,
+  .card-type,
+  .card-subtitle,
+  .card-date-text {
+    line-height: $line-height-sm;
+  }
+
   .card-subtitle {
     display: block;
     font-weight: $font-weight-bold;
@@ -59,8 +67,7 @@
   }
 
   .card-label {
-    @include card-heading();
-    font-weight: $font-weight-bold;
+    @include card-heading($font-weight: $font-weight-bold);
   }
 
   .card-description {
@@ -138,12 +145,13 @@
     .card-footer-label {
       color: $sarcelle;
       font-weight: $font-weight-bold;
+      line-height: $line-height-sm;
       padding-right: 0.5rem;
     }
 
     .vdm {
       color: $primary;
-      @include font-size(2.5rem);
+      @include font-size(2rem);
     }
   }
 
@@ -161,7 +169,7 @@
   &.card-thumbnail {
     text-align: left;
     .card-title {
-      font-weight: $font-weight-bold;
+      @include card-heading($font-weight: $font-weight-bold);
     }
   }
 
@@ -180,8 +188,7 @@
       }
     }
     .card-title {
-      @include font-size($font-size-base);
-      font-weight: $font-weight-bold;
+      @include card-heading($font-size: $font-size-base, $font-weight: $font-weight-bold);
     }
 
   }
@@ -242,11 +249,9 @@
   }
 
   // Large and featured cards override
-  &.card-large,
-  &.card-featured {
+  &.card-large {
     .card-title {
-      @include card-heading();
-      font-weight: $font-weight-bold;
+      @include card-heading($font-weight: $font-weight-bold);
     }
     .card-body {
       text-align: left;
@@ -256,18 +261,25 @@
   // Full-width card override
   &.card-fw {
     .card-title {
-      font-weight: $font-weight-bold;
+      @include card-heading($font-weight: $font-weight-bold);
     }
     .card-body {
       align-self: flex-start;
     }
     @include media-breakpoint-up(lg) {
       .card-img-top {
-        margin-left: 1rem;
-        max-width: 300px;
+        // Max-height is more important 
+        max-height: 169px;
+        width: auto;
         order: 100;
         @include border-radius(0);
         @include border-right-radius($card-inner-border-radius);
+
+        &.card-img-first {
+          order: -1;
+          @include border-radius(0);
+          @include border-left-radius($card-inner-border-radius);
+        }
       }
     }
   }
@@ -279,23 +291,6 @@
         text-align: center;
         @include media-breakpoint-up(lg) {
           text-align: left;
-        }
-      }
-    }
-    &.card-fw {
-      @include media-breakpoint-up(lg) {
-        .card-img-top {
-          margin-left: 1rem;
-          max-width: 400px;
-          order: 100;
-        }
-        .vdm {
-          color: $white;
-        }
-      }
-      @include media-breakpoint-up(xl) {
-        .card-img-top {
-          max-width: 500px;
         }
       }
     }
@@ -330,24 +325,6 @@
       .card-body {
         align-self: flex-start;
       }
-    }
-  }
-
-  // Deprecated will be removed in v4.0.0
-  // Inception card
-  // Cards as a link with sublinks
-  &.card-inception {
-    cursor: pointer;
-    transition: all 100ms ease-in-out;
-    &:hover {
-      transform: scale(1.04);
-      .card-title {
-        color: $primary;
-      }
-    }
-    // Links inside inception card
-    a {
-      border-bottom: none;
     }
   }
 
@@ -394,13 +371,13 @@
 
   // Featured card specific
   &.card-featured {
-    margin-bottom: 0;
+    text-align: left;
     .card-bg-image {
       min-height: 300px;
     }
     .card-body {
       .card-title {
-        @include font-size($h4-font-size);
+        @include card-heading($font-size: $h4-font-size, $line-height: 1.25, $font-weight: $font-weight-bold);
       }
       .text-muted {
         display: inline-block;
@@ -417,6 +394,9 @@
         @include make-col(6);
         margin: 0;
         align-self: start;
+        order: 100;
+        @include border-radius(0);
+        @include border-right-radius($card-inner-border-radius);
       }
       .card-body {
         display: flex;
@@ -424,6 +404,59 @@
         height: 100%;
         .card-footer {
           margin-top: auto;
+        }
+      }
+    }
+    // Invert Image and body Order on larger breakpoint
+    &.card-featured-inv {
+      @include media-breakpoint-up(lg) {
+        .card-img-top {
+          order: -1;
+          @include border-radius(0);
+          @include border-left-radius($card-inner-border-radius);
+        }
+      }
+    }
+
+    // Featured member
+    &.card-featured-member {
+      text-align: center;
+      .card-footer {
+        justify-content: center;
+      }
+      .card-img-top {
+        max-width: 256px;
+      }
+      .card-subtitle {
+        font-weight: $font-weight-normal;
+        margin-top: 0;
+      }
+      @include media-breakpoint-up(lg) {
+        text-align: left;
+        padding-top: 4rem;
+        padding-bottom: 4rem;
+        .card-img-container {
+          @include make-col(4);
+          @include make-col-offset(2);
+          .card-img-top {
+            width: 100%;
+            @include make-col(12);
+            max-width: 256px;
+          }
+        }
+        .card-body {
+          @include make-col(6);
+          padding-left: 0;
+          justify-content: center;
+        }
+        .card-img-top {
+          order: -1;
+
+        }
+        .card-footer {
+          margin-top: 0;
+          padding-top: 1rem;
+          justify-content: flex-start;
         }
       }
     }
@@ -523,7 +556,7 @@ a.card {
   &:hover {
     transform: scale(1.04);
     .card-title {
-      color: $primary;
+      color: $primary !important;
     }
   }
 }
