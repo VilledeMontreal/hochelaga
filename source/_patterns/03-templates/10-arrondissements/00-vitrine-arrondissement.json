@@ -1,6 +1,7 @@
 {
   "contentHeaderContainerClasses": "container-fluid container-fluid-xl",
-  "contentHeaderClasses": "bg-gray-sky",
+  "contentHeaderClasses": "bg-gray-mid",
+  "contentHeaderSubtitle": "Arrondissement",
   "text-elements": {
     "headings":{
       "display":{
@@ -9,7 +10,9 @@
       }
     }
   },
-  "alertSection": true,
+  "alertSection": {
+    "alertClass": "alert-info-dark"
+  },
   "featuredSection": {
     "headings": {
       "text": "À la une"
