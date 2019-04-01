@@ -1,8 +1,8 @@
 //
 // Main content header
 .content-header {
-  padding-top: 4rem;
-  padding-bottom: 2rem;
+  padding-top: 6rem;
+  padding-bottom: 4rem;
   .container-fluid {
     max-width: map-get($content-max-widths, xl);    // 1600px
   };
@@ -15,6 +15,14 @@
     padding: 0 0 1.5rem 0;
   }
 
+  // Content-header child
+
+  // Subtitle 
+  &-subtitle {
+    color: $headings-color;
+    font-weight: $font-weight-bold;
+    margin-bottom: 1rem;
+  }
   // Title
   &-title {
     padding-bottom: 2rem;

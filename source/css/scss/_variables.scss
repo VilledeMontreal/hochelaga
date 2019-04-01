@@ -23,6 +23,8 @@ $black:    #000;
 $gray-ink: #637381; // Usage: Text default color.
 $gray-sky: #f4f6f8; // Usage: Backgrounds.
 
+$gray-mid: #e6ebf0; // Usage: Backgrounds.
+
 // Primary colors
 
 $sarcelle:          #097d6c;
@@ -619,12 +621,20 @@ $modal-transition:                  transform 300ms ease-out;
 //
 // Define alert colors, border radius, and padding.
 
-$alert-padding-y:                   1.5rem;
-$alert-padding-x:                   1.5rem;
+$alert-padding-y:                   2rem;
+$alert-padding-x:                   2rem;
 $alert-margin-bottom:               1rem;
 $alert-border-radius:               0;
 $alert-link-font-weight:            $font-weight-bold;
 $alert-border-width:                0;
+
+$alert-bg-level:                    -10 !default;
+$alert-border-level:                -9 !default;
+$alert-color-level:                 6 !default;
+
+$alert-dark-bg-level:                6 !default;
+$alert-dark-border-level:            7 !default;
+$alert-dark-color-level:             6 !default;
 
 
 // Progress circle bars
