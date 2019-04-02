@@ -23,7 +23,7 @@
       "card-item": [
         {
           "bsgrid-classes": "col-12",
-          "classes": "card-fw card-featured card-bg-variant",
+          "classes": "card-featured card-bg-variant",
           "url": "#",
           "card-title": "Card with featured content",
           "card-text":
@@ -53,10 +53,7 @@
               "alt" : "Card #1 img alt."
             }
           },
-          "footer" : {
-            "outside-body": true,
-            "text" : "En savoir plus"
-          }
+          "footer" : false
         },
         {
           "bsgrid-classes": "col-12 col-md-6",
@@ -71,10 +68,7 @@
               "alt" : "Card #1 img alt."
             }
           },
-          "footer" : {
-            "outside-body": true,
-            "text" : "En savoir plus"
-          }
+          "footer" : false
         }
       ]
     }

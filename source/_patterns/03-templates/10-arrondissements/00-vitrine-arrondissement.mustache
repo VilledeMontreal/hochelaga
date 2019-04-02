@@ -66,26 +66,26 @@
           <div class="">
             <div class="mb-2">15 décembre au plus tard</div>
             <div class="h5">Lorem ipsum dolor sit amet, consectetur adipiscing elit</div>
-            {{> atoms-button(buttonClass: btn-secondary, buttonText: "CTA lorem ipsum")}}
+            {{> atoms-button(buttonClass: "btn-secondary btn-sm", buttonText: "CTA lorem ipsum")}}
           </div>
         </div>
         <div class="col-12 col-lg-4">
           <div class="">
             <div class="mb-2">À partir du 1er février</div>
             <div class="h5">Proin sed ante arcu</div>
-            {{> atoms-button(buttonClass: btn-secondary, buttonText: "CTA lorem ipsum")}}
+            {{> atoms-button(buttonClass: "btn-secondary btn-sm", buttonText: "CTA lorem ipsum")}}
           </div>
         </div>
         <div class="col-12 col-lg-4">
           <div class="">
             <div class="mb-2">Du 15 décembre 2018 au 23 mars 2019</div>
             <div class="h5">Curabitur nulla mi imperdiet vitae velit ut venenatis venenatis nunc</div>
-            {{> atoms-button(buttonClass: btn-secondary, buttonText: "CTA lorem ipsum")}}
+            {{> atoms-button(buttonClass: "btn-secondary btn-sm", buttonText: "CTA lorem ipsum")}}
           </div>
         </div>
       </div>
       <div class="pagination-wrapper">
-        <a href="#" class="btn btn-secondary">Voir plus</a>
+        <a href="#" class="btn btn-secondary btn-sm">Voir plus</a>
       </div>
     </div>
   </div>
@@ -110,9 +110,8 @@
         </div>
         {{/ cards.card-item}}
       </div>
-      <!-- {{> molecules-list-group-hub }} -->
       <div class="pagination-wrapper">
-        <a href="#" class="btn btn-secondary">Toutes les nouvelles</a>
+        <a href="#" class="btn btn-secondary btn-sm">Toutes les nouvelles</a>
       </div>
     </div>
   </section>
@@ -126,9 +125,15 @@
           <h2 class="section-heading">{{ headings.text }}</h2>
         </div>
       </div>
-      <!-- {{> molecules-list-group-hub }} -->
+       <div class="row cards {{ cards.classes }}">
+        {{# cards.card-item}}
+        <div class="{{ cards.bsgrid-classes }}">
+          {{> molecules-card-item }}
+        </div>
+        {{/ cards.card-item}}
+      </div>
       <div class="pagination-wrapper">
-        <a href="#" class="btn btn-secondary">Tous les événements</a>
+        <a href="#" class="btn btn-secondary btn-sm">Tous les événements</a>
       </div>
     </div>
   </div>
@@ -142,8 +147,15 @@
           <h2 class="section-heading">{{ headings.text }}</h2>
         </div>
       </div>
+      <div class="row cards {{ cards.classes }}">
+        {{# cards.card-item}}
+        <div class="{{ cards.bsgrid-classes }}">
+          {{> molecules-card-item }}
+        </div>
+        {{/ cards.card-item}}
+      </div>
       <div class="pagination-wrapper">
-        <a href="#" class="btn btn-secondary">Tous les élus de l'arrondissement</a>
+        <a href="#" class="btn btn-secondary btn-sm">Tous les élus</a>
       </div>
     </div>
   </div>
@@ -165,7 +177,7 @@
         {{/ cards.card-item}}
       </div>
       <div class="pagination-wrapper">
-        <a href="#" class="btn btn-secondary">Toutes les séances</a>
+        <a href="#" class="btn btn-secondary btn-sm">Toutes les séances</a>
       </div>
     </div>
   </div>
