@@ -254,7 +254,33 @@
     "headings": {
       "text": "Mairie d'arrondissement"
     },
-    "cards": false
+    "cards": {
+      "section-classes": "bg-gray-sky",
+      "classes": false,
+      "bsgrid-classes": "col-12",
+      "card-item": [
+        {
+          "classes": "card-featured card-featured-member",
+          "url": "#",
+          "card-title": "Prénom Nom",
+          "card-subtitle": "Fonction au sein du conseil",
+          "card-text": false,
+          "card-media": {
+            "icon": false,
+            "img" : {
+              "container": true,
+              "classes": "rounded-circle",
+              "url" : "https://picsum.photos/480?image=786",
+              "alt" : "Member #1 img alt."
+            }
+          },
+          "footer" : {
+            "inside-body": true,
+            "text": "Label"
+          }
+        }
+      ]
+    }
   },
   "conseilSection": {
     "section-classes": "bg-gray-sky",
