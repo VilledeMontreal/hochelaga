@@ -205,6 +205,7 @@
           "card-media" : {
             "icon" : false,
             "img" : {
+              "classes": "card-img-first",
               "url" : "https://picsum.photos/768/432?image=396",
               "alt" : "Card teaser news #1 img alt."
             }
@@ -220,6 +221,7 @@
           "card-media" : {
             "icon" : false,
             "img" : {
+              "classes": "card-img-first",
               "url" : "https://picsum.photos/768/432?image=396",
               "alt" : "Card teaser news #2 img alt."
             }
@@ -235,6 +237,7 @@
           "card-media" : {
             "icon" : false,
             "img" : {
+              "classes": "card-img-first",
               "url" : "https://picsum.photos/768/432?image=396",
               "alt" : "Card teaser news #3 img alt."
             }
@@ -247,7 +250,8 @@
   "evenementSection": {
     "headings": {
       "text": "Événements"
-    }
+    },
+    "cards": false
   },
   "elusSection": {
     "section-classes": "bg-gray-sky",
