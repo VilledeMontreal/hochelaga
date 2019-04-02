@@ -492,6 +492,30 @@
     box-shadow: none;
     background-color: $gray-sky;
   }
+
+  &.card-plain {
+    box-shadow: none;
+    text-align: left;
+    .card-date {
+      font-weight: $font-weight-bold;
+      margin-bottom: 2rem;
+      &:after {
+        content: "";
+        display: block;
+        height: .25rem;
+        width: 2rem;
+        margin-top: 1rem;
+        background-color: $brand;
+      }
+    }
+    .card-body {
+      padding: 0;
+    }
+    .card-title {
+      font-weight: $font-weight-bold;
+      margin-bottom: 2rem;
+    }
+  }
 }
 
 // Card section is used to build multi-layer cards

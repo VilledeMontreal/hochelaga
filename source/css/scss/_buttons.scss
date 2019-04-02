@@ -125,6 +125,16 @@ fieldset:disabled a.btn {
       color: $gray-900;
     }
   }
+
+  &.btn-collapse {
+    @include iconvdm($position: after, $icon: "055-chevron-haut", $styles: true);
+    &:after {
+      padding-left: .5rem;
+    }
+    &.collapsed {
+      @include iconvdm($position: after, $icon: "057-chevron-bas", $styles: true);
+    }
+  }
 }
 
 
@@ -187,7 +197,7 @@ fieldset:disabled a.btn {
     @include button-variant($background: $white, $border: $white, $color: $sarcelle, $hover-background: $sarcelle-surprise, $hover-border: $sarcelle-surprise, $hover-color: $sarcelle, $active-color: $white);
   }
   &.btn-secondary {
-    @include button-variant($background: transparent, $border: $white, $color: $white, $hover-background: transparent, $hover-border: $sarcelle-surprise, $hover-color: $sarcelle-surprise, $active-color: $white);
+    @include button-variant($background: rgba(0,0,0,.3), $border: $white, $color: $white, $hover-background: transparent, $hover-border: $sarcelle-surprise, $hover-color: $sarcelle-surprise, $active-color: $white);
   }
 }
 
