@@ -98,6 +98,8 @@ fieldset:disabled a.btn {
 .btn-link {
   color: $link-color;
   background-color: transparent;
+  padding-left: 0;
+  padding-right: 0;
   &:not(:disabled):not(.disabled) {
     @include hover {
       color: $link-hover-color;
@@ -117,6 +119,11 @@ fieldset:disabled a.btn {
   &.disabled {
     color: $btn-link-disabled-color;
     pointer-events: none;
+  }
+
+  &.btn-sm {
+    padding-left: 0;
+    padding-right: 0;
   }
 
   &.btn-reset {

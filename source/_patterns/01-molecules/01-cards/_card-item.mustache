@@ -3,8 +3,9 @@
 <a href="{{ url }}" class="card {{ classes }}">
 {{/ url}}
 {{^ url}}
-<div class="card {{ classes }}" {{# data-href }} data-href="{{ data-href }}" {{/ data-href }}>
+<div class="card {{ classes }}">
 {{/ url}}
+
   {{# card-media }}
     {{# card-media.icon }}
     <span class="card-icon-top {{ card-media.classes }} vdm {{ card-media.icon }}" aria-hidden="true"></span>
@@ -19,13 +20,17 @@
     {{/ card-media.img.container}}
     {{/ card-media.img }}
   {{/ card-media }}
+
   <div class="card-body">
-    {{# card-tags }}
-    <span class="card-tags {{class}}">{{ tag }}</span>
-    {{/ card-tags }}
+
+    {{# card-type }}
+    <span class="card-type">{{ card-type }}</span>
+    {{/ card-type}}
+
     {{# card-date }}
       <span class="card-date">{{ card-date }}</span>
     {{/ card-date }}
+
     {{# card-subheading-section }}
     <div class="card-subheading">
       {{# card-tags }}
@@ -36,30 +41,35 @@
       {{/ card-date }}
     </div>
     {{/ card-subheading-section }}
+
     {{# card-title }}
     <span class="card-title">{{ card-title }}</span>
     {{/ card-title }}
+
     {{# card-subtitle }}
     <span class="card-subtitle">{{ card-subtitle }}</span>
     {{/ card-subtitle }}
+
     {{# card-date-text }}
       <span class="card-date-text">{{ card-date-text }}</span>
     {{/ card-date-text }}
+    
     {{# card-text }}
     <p class="card-text">{{{ card-text }}}</p>
     {{/ card-text }}
+
     {{# card-html-content }}
     {{{ card-html-content }}}
     {{/ card-html-content }}
-    {{# card-inception-links }}
-      {{{ card-inception-links }}}
-    {{/ card-inception-links }}
-    {{# card-text-muted }}
-    <span class="text-muted">{{ card-text-muted }}</span>
-    {{/ card-text-muted }}
+
     {{# card-badge-after }}
     {{> atoms-badge }}
     {{/ card-badge-after }}
+
+    {{# card-button }}
+      {{> atoms-button}}
+    {{/ card-button }}
+
     {{# card-complex-content }}
       <div class="row">
         <div class="col-12 col-md-8 col-lg-9 align-self-center">
@@ -94,9 +104,7 @@
         </div>
       </div>
     {{/ card-complex-content }}
-    {{# card-button }}
-    <a href="#" class="btn btn-primary">Go somewhere</a>
-    {{/ card-button }}
+
     {{# footer.inside-body }}
     <div class="card-footer">
       {{# footer.text}}
@@ -107,7 +115,9 @@
       <span class="vdm vdm-063-fleche-droite" aria-hidden="true"></span>
     </div>
     {{/ footer.inside-body }}
+
   </div>
+
   {{# card-metadata }}
   <div class="card-metadata">
     <span class="identifier">
@@ -115,6 +125,7 @@
     </span>
   </div>
   {{/ card-metadata }}
+
   {{# footer.outside-body }}
   <div class="card-footer">
     {{# footer.text}}
@@ -125,6 +136,7 @@
     <span class="vdm vdm-063-fleche-droite" aria-hidden="true"></span>
   </div>
   {{/ footer.outside-body }}
+
 {{# url }}
 </a>
 {{/ url }}

@@ -166,13 +166,6 @@
     }
   }
 
-  &.card-thumbnail {
-    text-align: left;
-    .card-title {
-      @include card-heading($font-weight: $font-weight-bold);
-    }
-  }
-
   // Simple link inside a card with right arrow
   &.card-link {
     flex-direction: row;
@@ -230,7 +223,6 @@
       text-align: left;
     }
     .card-title {
-      margin-bottom: 2rem;
       font-weight: $font-weight-bold;
     }
     &.card-row-layout {
@@ -427,26 +419,32 @@
       .card-img-top {
         max-width: 256px;
       }
+      .rounded-circle {
+        margin: 2rem auto 0 auto;
+      }
       .card-subtitle {
         font-weight: $font-weight-normal;
         margin-top: 0;
       }
-      @include media-breakpoint-up(lg) {
+      // @tablet
+      @include media-breakpoint-up(md) {
+        flex-direction: row;
         text-align: left;
         padding-top: 4rem;
         padding-bottom: 4rem;
         .card-img-container {
-          @include make-col(4);
-          @include make-col-offset(2);
+          @include make-col(5);
+          @include make-col-offset(1);
           .card-img-top {
+            margin: 0;
             width: 100%;
             @include make-col(12);
             max-width: 256px;
           }
         }
         .card-body {
-          @include make-col(6);
-          padding-left: 0;
+          @include make-col(5);
+          padding: 0;
           justify-content: center;
         }
         .card-img-top {
@@ -459,9 +457,27 @@
           justify-content: flex-start;
         }
       }
+      @include media-breakpoint-up(lg) {
+        .card-img-container {
+          @include make-col(4);
+          @include make-col-offset(2);
+          .card-img-top {
+            margin: 0;
+            width: 100%;
+            @include make-col(12);
+            max-width: 256px;
+          }
+        }
+        .card-body {
+          @include make-col(4);
+          padding: 0;
+          justify-content: center;
+        }
+      }
     }
   }
 
+  // Complex-layout and label-content
   &.card-complex-layout,
   &.card-label-content {
     text-align: left;
@@ -480,19 +496,22 @@
   }
 
   .rounded-circle {
-    margin: 2rem auto 1rem auto;
-    width: 61.5%;
+    margin: 2rem auto 0 auto;
+    max-width: 61.5%;
   }
 
   &[data-toggle="modal"] {
     cursor: pointer;
   }
 
+  // Generic class to remove box-shadow and add bg-color
   &.card-bg-variant {
     box-shadow: none;
     background-color: $gray-sky;
   }
 
+  // Plain variant
+  // Use-case: dates importantes
   &.card-plain {
     box-shadow: none;
     text-align: left;
@@ -510,11 +529,15 @@
     }
     .card-body {
       padding: 0;
+      > :last-child {
+        margin-bottom: 0;
+      }
     }
     .card-title {
       font-weight: $font-weight-bold;
       margin-bottom: 2rem;
     }
+    
   }
 }
 
@@ -585,7 +608,7 @@ a.card {
   }
 }
 
-// Color variant overrides
+// Generic flex capacity for equalheight
 .cards {
   > div,
   .card-item {
