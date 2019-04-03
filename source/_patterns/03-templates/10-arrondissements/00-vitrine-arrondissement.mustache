@@ -9,7 +9,7 @@
   <section>
     <div class="alert {{ alertClass }} mb-0 px-0" role="alert">
       <div class="container text-center">
-        <strong>Ouvert ou fermé?</strong> Horaire municipal du temps des fêtes <a href="#" class="alert-link ml-2">En savoir plus</a>
+        <strong>Ouvert ou fermé?</strong> Horaire municipal du temps des fêtes <a href="#" class="alert-link text-nowrap ml-2">En savoir plus</a>
       </div>
     </div>
   </section>
@@ -84,7 +84,7 @@
   {{/ newsSection}}
 
   {{# evenementSection}}
-  <div class="page-section" id="evenementSection">
+  <section class="page-section" id="evenementSection">
     <div class="container">
       <div class="row ">
         <div class="col-12">
@@ -102,11 +102,11 @@
         <a href="#" class="btn btn-secondary btn-sm">Tous les événements</a>
       </div>
     </div>
-  </div>
+  </section>
   {{/ evenementSection}}
 
   {{# elusSection}}
-  <div class="page-section {{section-classes}}" id="elusSection">
+  <section class="page-section {{section-classes}}" id="elusSection">
     <div class="container">
       <div class="row ">
         <div class="col-12 text-center">
@@ -124,11 +124,11 @@
         <a href="#" class="btn btn-secondary btn-sm">Tous les élus</a>
       </div>
     </div>
-  </div>
+  </section>
   {{/ elusSection}}
 
   {{# conseilSection}}
-  <div class="page-section {{section-classes}}" id="conseilSection">
+  <section class="page-section {{section-classes}}" id="conseilSection">
     <div class="container">
       <div class="row ">
         <div class="col-12 text-center">
@@ -146,12 +146,9 @@
         <a href="#" class="btn btn-secondary btn-sm">Toutes les séances</a>
       </div>
     </div>
-  </div>
+  </section>
   {{/ conseilSection}}
 
-  {{# hasFeedbackForm}}
-  {{> organisms-feedback-form}}
-  {{/ hasFeedbackForm }}
 </main>
 
 {{> organisms-footer-arrondissement}}
