@@ -133,6 +133,12 @@ footer {
       }
     }
 
+    .list-heading {
+      color: $headings-color;
+      font-weight: $font-weight-bold;
+      margin-bottom: 1rem;
+    }
+
     // Links
     a {
       border-bottom: $link-border-width solid $link-border-color;
@@ -141,6 +147,10 @@ footer {
       &:active {
         color: $link-hover-color;;
         text-decoration: none;
+      }
+
+      &.no-style {
+        color: $headings-color;
       }
     }
 
