@@ -1,6 +1,6 @@
 #!groovy
 
-@Library('cicd-lib')
+@Library('cicd-lib@feature/EvictJobsRunningInWrongJenkins')
 import vdmtl.cicd.MultibranchPipeline
 
 pipeline = new MultibranchPipeline();
