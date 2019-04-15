@@ -1,52 +1,6 @@
 <div class="sidebar {{ sidebarClasses }}">
-  <section class="sb-block">
-    <!--<ul class="list-icon">
-      <li class="list-icon-item">
-        {{> atoms-fonticon-item(icon-label: "091-localisation") }}
-        
-        <div class="list-icon-content">
-          <span class="list-icon-label">Lieu</span>
-          <div class="list-icon-block">
-            <address>
-              <a href="#">Bibliothèque Jacqueline-De Repentigny</a><br>
-              5955, avenue Bannantyne<br>
-              Montréal (Québec) H4H 1H6
-            </address>
-          </div>
-          <div class="list-icon-block">
-            <a href="#mapEventId" class="js-scroll-trigger">Afficher la carte</a>
-          </div>
-        </div>
-      </li>
-      <li class="list-icon-item">
-        {{> atoms-fonticon-item(icon-label: "113-prix") }}
-        <div class="list-icon-content">
-          <span class="list-icon-label">Tarif</span>
-          <span>Gratuit</span>
-        </div>
-      </li>
-      <li class="list-icon-item">
-        {{> atoms-fonticon-item(icon-label: "007-billet") }}
-        <div class="list-icon-content">
-          <span class="list-icon-label">Droit d'entrée</span>
-          <span>Avec billet</span>
-        </div>
-      </li>
-      <li class="list-icon-item">
-        {{> atoms-fonticon-item(icon-label: "031-ordinateur") }}
-        <div class="list-icon-content">
-          <span class="list-icon-label">Informations</span>
-          <div class="list-icon-block">
-            <span>514 987-0909 poste 1234</span>
-          </div>
-          <div class="list-icon-block">
-            <a href="mailto:mireille.anctil@espacetrad.ca">Courriel</a>
-            <a href="#">Site web</a>
-          </div>
-        </div>
-      </li>
-    </ul>
-    -->
+  <section class="sb-block {{ sb-classes }}">
+    {{> organisms-heading-sidebar }}
     {{# evenement-list-infos }}
     {{> atoms-text-icons-list }}
     {{> atoms-social-media-icons-list}}

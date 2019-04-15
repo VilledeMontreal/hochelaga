@@ -57,7 +57,7 @@
       "icon-item": {
         "icon-label": "007-billet"
       },
-      "item-label": "Droit d'entrée",
+      "item-label": "Entrée",
       "item": [
         {
           "class": false,
@@ -70,6 +70,9 @@
       ]
     }
   ],
+  "sidebarRight": true,
+  "sidebar-title-classes": "d-none d-sm-block",
+  "sidebarTitle": "Renseignements",
   "has-documents": {
     "documents": [
       {
@@ -82,12 +85,12 @@
     "container-class": "badges-lg",
     "tags": [
       {
-        "badge": "Tag #1",
+        "badge": "Theme #1",
         "badgeClass": false,
         "badgeUrl": "#"
       },
       {
-        "badge": "Tag #2",
+        "badge": "Theme#2",
         "badgeClass": false,
         "badgeUrl": "#"
       }
@@ -103,7 +106,7 @@
         "item": [
           {},
           {
-            "content": "<a href=\"#mapEvent001\" class=\"js-scroll-trigger\">Afficher la carte</a>"
+            "content": "<a href=\"#mapEvent001\" class=\"js-scroll-trigger\">Voir la carte</a>"
           }
         ]
       }
@@ -131,8 +134,8 @@
       }
     },
     {
-      "mediaSrc": "https://picsum.photos/1000/667?image=1071",
-      "mediaSize": "1000x667",
+      "mediaSrc": "https://picsum.photos/667/1000?image=1071",
+      "mediaSize": "667x1000",
       "mediaCaption": "This is a dummy caption",
       "mediaAuthor": "Tim Stief",
       "mediaAlt": "Media #1071",
