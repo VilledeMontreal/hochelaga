@@ -13,6 +13,7 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 
 ## Changed
 - Modification to Lieux template: Add sections, data and fix responsive issues.
+- Modification to Lieux and Evenements templates: Sidebar order, Title tags and label from copydeck
 - Patternlab: Moved lieu to it's own templates directory.
 
 ## Fixed
