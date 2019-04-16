@@ -86,14 +86,14 @@ ol {
       &:last-child {
         margin-bottom: 0;
       }
-      > * {
+      a, span {
         @include clearfix;
       }
     }
     &:last-child {
       margin-bottom: 0;
     }
-    > * {
+    span {
       @include clearfix;
     }
   }
