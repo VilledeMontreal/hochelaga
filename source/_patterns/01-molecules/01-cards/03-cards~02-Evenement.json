@@ -8,7 +8,20 @@
         "classes": "card-large",
         "url": "#",
         "card-subheading-section": {
-          "card-date": "Du 8 au 12 septembre 2018",
+          "card-date": {
+            "card-date-time": [
+              {
+                "text": "Du ",
+                "dateTimeText": "8",
+                "dateTimeFormat": "2018-09-08"
+              },
+              {
+                "text": " au ",
+                "dateTimeText": "12 septembre 2018",
+                "dateTimeFormat": "2018-09-12"
+              }
+            ]
+          },
           "card-tags": [
             {
               "tag": "Événement"

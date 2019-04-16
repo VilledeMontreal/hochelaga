@@ -1,1 +1,3 @@
-<div class="date-time updated {{ date-time-class }}">{{ date-time-text }}</div>
+{{# dateTime}}
+<span class="date-time">{{ dateTime.text }}<time datetime="{{ dateTime.dateTimeFormat}}">{{{ dateTime.dateTimeText }}}</time></span>
+{{/ dateTime}}
