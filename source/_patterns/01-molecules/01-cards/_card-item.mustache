@@ -28,7 +28,11 @@
     {{/ card-type}}
 
     {{# card-date }}
-      <span class="card-date">{{ card-date }}</span>
+      <span class="card-date">
+      {{# card-date-time}}
+      {{{text}}} <time datetime="{{dateTimeFormat}}">{{{dateTimeText}}}</time>
+      {{/ card-date-time}}
+      </span>
     {{/ card-date }}
 
     {{# card-subheading-section }}
@@ -37,7 +41,11 @@
       <span class="card-tags {{class}}">{{ tag }}</span>
       {{/ card-tags }}
       {{# card-date }}
-      <span class="card-date">{{ card-date }}</span>
+      <span class="card-date">
+        {{# card-date-time}}
+        {{{text}}} <time datetime="{{dateTimeFormat}}">{{{dateTimeText}}}</time>
+        {{/ card-date-time}}
+        </span>
       {{/ card-date }}
     </div>
     {{/ card-subheading-section }}

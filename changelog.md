@@ -12,11 +12,14 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 - Lieux pages.
 
 ## Changed
+- Use time tags for all date related html output.
 - Modification to Lieux template: Add sections, data and fix responsive issues.
+- Modification to Lieux and Evenements templates: Sidebar order, Title tags and label from copydeck
 - Patternlab: Moved lieu to it's own templates directory.
 
 ## Fixed
 - Patternlab: dynamisation of mapID in evenement and lieu templates.
+- Fix list-icon-content styles to prevent wrapping of links and span.
 
 
 ## [3.2.0] - 2019-02-28

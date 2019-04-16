@@ -31,7 +31,7 @@
         {
           "url": false,
           "class": false,
-          "content": "Jeudi 17 janvier de 09&nbsp;h&nbsp;00 à 10&nbsp;h&nbsp;00"
+          "content": "<time datetime=\"2019-01-17T13:00:00-0400\">Jeudi 17 janvier de 09&nbsp;h&nbsp;00</time> à <time datetime=\"2019-01-17T14:00:00-0400\">10&nbsp;h&nbsp;00</time>"
         }
       ]
     },
@@ -57,7 +57,7 @@
       "icon-item": {
         "icon-label": "007-billet"
       },
-      "item-label": "Droit d'entrée",
+      "item-label": "Entrée",
       "item": [
         {
           "class": false,
@@ -70,6 +70,9 @@
       ]
     }
   ],
+  "sidebarRight": true,
+  "sidebar-title-classes": "d-none d-sm-block",
+  "sidebarTitle": "Renseignements",
   "has-documents": {
     "documents": [
       {
@@ -82,12 +85,12 @@
     "container-class": "badges-lg",
     "tags": [
       {
-        "badge": "Tag #1",
+        "badge": "Theme #1",
         "badgeClass": false,
         "badgeUrl": "#"
       },
       {
-        "badge": "Tag #2",
+        "badge": "Theme#2",
         "badgeClass": false,
         "badgeUrl": "#"
       }
@@ -103,7 +106,7 @@
         "item": [
           {},
           {
-            "content": "<a href=\"#mapEvent001\" class=\"js-scroll-trigger\">Afficher la carte</a>"
+            "content": "<a href=\"#mapEvent001\" class=\"js-scroll-trigger\">Voir la carte</a>"
           }
         ]
       }
@@ -131,8 +134,8 @@
       }
     },
     {
-      "mediaSrc": "https://picsum.photos/1000/667?image=1071",
-      "mediaSize": "1000x667",
+      "mediaSrc": "https://picsum.photos/667/1000?image=1071",
+      "mediaSize": "667x1000",
       "mediaCaption": "This is a dummy caption",
       "mediaAuthor": "Tim Stief",
       "mediaAlt": "Media #1071",
@@ -235,7 +238,7 @@
                     "tag": {
                       "span": true
                     },
-                    "content": "du 28 décembre 2019"
+                    "content": "du <time datetime=\"2019-12-28\">28 décembre 2019</time>"
                   },
                   {
                     "class": false,
@@ -243,7 +246,7 @@
                     "tag": {
                       "span": true
                     },
-                    "content": "au 19 janvier 2020"
+                    "content": "au <time datetime=\"2020-01-19\">19 janvier 2020</time>"
                   }
                 ]
               }
@@ -271,7 +274,7 @@
                     "tag": {
                       "span": true
                     },
-                    "content": "Jeudi 19 janvier"
+                    "content": "<time datetime=\"2020-01-19\">Jeudi 19 janvier</time>"
                   }
                 ]
               }
@@ -298,7 +301,7 @@
                     "tag": {
                       "span": true
                     },
-                    "content": "Jeudi 19 janvier"
+                    "content": "<time datetime=\"2020-01-19\">Jeudi 19 janvier</time>"
                   }
                 ]
               }
