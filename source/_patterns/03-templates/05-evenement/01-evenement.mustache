@@ -62,7 +62,16 @@
           {{# has-partners}}
           <div class="content-block">
             <h2 class="h5">Partenaires</h2>
+            {{# grid-logos}}
             {{> molecules-logo-grid}}
+            {{/ grid-logos}}
+            {{# list-partners}}
+            <ul>
+              {{# list-partners.items}}
+              <li>{{ name }}</li>
+              {{/ list-partners.items}}
+            </ul>
+            {{/ list-partners}}
           </div>
           {{/ has-partners}}
 
@@ -95,6 +104,7 @@
       {{# map }}
       <div class="row">
         <div class="col-12">
+          <h2 class="h5">{{ section-title }}</h2>
           <div class="map-section">
             <div id="{{ mapID }}" style="height:500px"></div>
           </div>
