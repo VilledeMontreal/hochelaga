@@ -20,7 +20,7 @@
       <div class="row">
 
         {{# sidebarRight }}
-        <aside class="col-12 col-lg-5 col-xl-4 sidebar-right order-lg-last" role="complementary">
+        <aside class="col-12 col-lg-5 col-xl-4 order-lg-last" role="complementary">
           {{> organisms-sidebar-block-schedule }}
         </aside>
         {{/ sidebarRight }}
@@ -69,6 +69,32 @@
           </div>
           {{/ installations}}
 
+          {{# accessibilite}}
+          <div class="content-block">
+            <h2 class="h5">Accessibilité</h2>
+            {{# items}}
+            <ul class="list-unstyled row">
+              {{# item}}
+              <li class="col-12 col-md-6">{{ text }}</li>
+              {{/ item}}
+            </ul>
+            {{/ items}}
+          </div>
+          {{/ accessibilite}}
+
+          {{# mode-paiement}}
+          <div class="content-block">
+            <h2 class="h5">Mode de paiement</h2>
+            {{# items}}
+            <ul class="list-unstyled row">
+              {{# item}}
+              <li class="col-12 col-md-6">{{ text }}</li>
+              {{/ item}}
+            </ul>
+            {{/ items}}
+          </div>
+          {{/ mode-paiement}}
+
           {{# tc-references}}
           <div class="content-block">
             <h2 class="h5">Sujets et démarches</h2>
@@ -103,32 +129,6 @@
           </div>
           {{/ events}}
 
-          {{# mode-paiement}}
-          <div class="content-block">
-            <h2 class="h5">Mode de paiement</h2>
-            {{# items}}
-            <ul class="list-unstyled row">
-              {{# item}}
-              <li class="col-12 col-md-6">{{ text }}</li>
-              {{/ item}}
-            </ul>
-            {{/ items}}
-          </div>
-          {{/ mode-paiement}}
-
-          {{# accessibilite}}
-          <div class="content-block">
-            <h2 class="h5">Accessibilité</h2>
-            {{# items}}
-            <ul class="list-unstyled row">
-              {{# item}}
-              <li class="col-12 col-md-6">{{ text }}</li>
-              {{/ item}}
-            </ul>
-            {{/ items}}
-          </div>
-          {{/ accessibilite}}
-
           {{# has-tags}}
           <div class="content-block">
             <h2 class="h5">Thèmes associés</h2>
@@ -146,6 +146,7 @@
       {{# map }}
       <div class="row">
         <div class="col-12">
+          <h2 class="h5">{{ section-title }}</h2>
           <div class="map-section">
             <div id="{{ mapID }}" style="height:500px"></div>
           </div>

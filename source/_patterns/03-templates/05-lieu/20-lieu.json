@@ -61,6 +61,7 @@
       "icon-item": {
         "icon-label": "091-localisation"
       },
+      "item-label": "Adresse",
       "item": [
         {
           "url": false,
@@ -84,6 +85,7 @@
       "icon-item": {
         "icon-label": "012-telephone"
       },
+      "item-label": "Téléphone",
       "item": [
         {
           "url": false,
@@ -224,6 +226,7 @@
     ]
   },
   "map": {
+    "section-title": "Comment s'y rendre",
     "mapID": "mapLieu001",
     "lngLat": "-73.614577,45.544109",
     "address": "1411, rue Lapierre<br>Montréal (Québec) H8N 2J4"
@@ -323,7 +326,7 @@
   },
   "schedule": {
     "schedule-heading": "Horaire hiver-printemps",
-    "schedule-description": "du 2 janvier au 23 juin 2019",
+    "schedule-description": "du <time datetime=\"2019-01-02\">2 janvier</time> au <time datetime=\"2019-06-23\">23 juin 2019</time>",
     "schedule-row" : [
       {
         "day": "Lundi",
@@ -404,7 +407,7 @@
     "schedule-extra": [
       {
         "schedule-heading": "Horaire estival",
-        "schedule-description": "du 24 juin au 2 septembre 2019",
+        "schedule-description": "du <time datetime=\"2019-06-24\">24 juin</time> au <time datetime=\"2019-09-02\">2 septembre 2019</time>",
         "schedule-row" : [
           {
             "day": "Lundi",
