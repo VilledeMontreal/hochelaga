@@ -69,6 +69,32 @@
           </div>
           {{/ installations}}
 
+          {{# accessibilite}}
+          <div class="content-block">
+            <h2 class="h5">Accessibilité</h2>
+            {{# items}}
+            <ul class="list-unstyled row">
+              {{# item}}
+              <li class="col-12 col-md-6">{{ text }}</li>
+              {{/ item}}
+            </ul>
+            {{/ items}}
+          </div>
+          {{/ accessibilite}}
+
+          {{# mode-paiement}}
+          <div class="content-block">
+            <h2 class="h5">Mode de paiement</h2>
+            {{# items}}
+            <ul class="list-unstyled row">
+              {{# item}}
+              <li class="col-12 col-md-6">{{ text }}</li>
+              {{/ item}}
+            </ul>
+            {{/ items}}
+          </div>
+          {{/ mode-paiement}}
+
           {{# tc-references}}
           <div class="content-block">
             <h2 class="h5">Sujets et démarches</h2>
@@ -102,32 +128,6 @@
             {{/ button}}
           </div>
           {{/ events}}
-
-          {{# mode-paiement}}
-          <div class="content-block">
-            <h2 class="h5">Mode de paiement</h2>
-            {{# items}}
-            <ul class="list-unstyled row">
-              {{# item}}
-              <li class="col-12 col-md-6">{{ text }}</li>
-              {{/ item}}
-            </ul>
-            {{/ items}}
-          </div>
-          {{/ mode-paiement}}
-
-          {{# accessibilite}}
-          <div class="content-block">
-            <h2 class="h5">Accessibilité</h2>
-            {{# items}}
-            <ul class="list-unstyled row">
-              {{# item}}
-              <li class="col-12 col-md-6">{{ text }}</li>
-              {{/ item}}
-            </ul>
-            {{/ items}}
-          </div>
-          {{/ accessibilite}}
 
           {{# has-tags}}
           <div class="content-block">
