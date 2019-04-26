@@ -602,8 +602,15 @@ a.card {
   transition: all 100ms ease-in-out;
   &:hover {
     transform: scale(1.04);
+    .card-icon-top,
     .card-title {
-      color: $sarcelle !important;
+      color: $sarcelle;
+    }
+
+    .card-alert {
+      .card-icon-top {
+        color: inherit;
+      }
     }
   }
 }
