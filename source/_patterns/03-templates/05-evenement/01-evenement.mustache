@@ -25,6 +25,12 @@
   <div class="region-content {{ regionMainClasses }}">
     <div class="container {{ regionMainContainerClasses }}">
       <div class="row">
+
+        <!-- Sidebar Right -->
+        <aside class="col-12 col-lg-5 col-xl-4 order-lg-last" role="complementary">
+          {{> organisms-sidebar-block-evenement }}
+        </aside>
+
         <article class="col-12 col-lg-7 col-xl-8 {{ regionMainContentClasses }}">
           <div class="content-block">
             <p class="lead">Ut quis rhoncus libero. Donec molestie et nunc nec commodo. Nulla eu leo purus. Curabitur elementum, quam eu pharetra vestibulum, 
@@ -44,7 +50,7 @@
           </div>
           {{# has-documents }}
           <div class="content-block">
-            <h3 class="h5">Documents</h3>
+            <h2 class="h5">À consulter</h2>
             <ul>
               {{# documents}}
               <li><a href="{{ url }}">{{ title }}</a></li>
@@ -55,14 +61,23 @@
 
           {{# has-partners}}
           <div class="content-block">
-            <h3 class="h5">Partenaires</h3>
+            <h2 class="h5">Partenaires</h2>
+            {{# grid-logos}}
             {{> molecules-logo-grid}}
+            {{/ grid-logos}}
+            {{# list-partners}}
+            <ul>
+              {{# list-partners.items}}
+              <li>{{ name }}</li>
+              {{/ list-partners.items}}
+            </ul>
+            {{/ list-partners}}
           </div>
           {{/ has-partners}}
 
           {{# has-tags}}
           <div class="content-block">
-            <h3 class="h5">Étiquettes</h3>
+            <h2 class="h5">Thèmes associés</h2>
             <ul class="list-inline {{container-class}}">
               {{# tags}}
               <li class="list-inline-item">{{> atoms-badge}}</li>
@@ -73,7 +88,7 @@
 
           {{# has-video }}
           <div class="content-block">
-            <h3 class="h5">{{ section-title }}</h3>
+            <h2 class="h5">{{ section-title }}</h2>
             <div class="media-container">
               <div class="media embed-responsive embed-responsive-16by9">
                 <iframe class="embed-responsive-item" src="{{ src }}" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
@@ -83,15 +98,13 @@
           {{/ has-video }}
 
         </article>
-        <!-- Sidebar Right -->
-        <aside class="col-12 col-lg-5 col-xl-4 sidebar-right" role="complementary">
-          {{> organisms-sidebar-block-evenement }}
-        </aside>
+        
       </div>
 
       {{# map }}
       <div class="row">
         <div class="col-12">
+          <h2 class="h5">{{ section-title }}</h2>
           <div class="map-section">
             <div id="{{ mapID }}" style="height:500px"></div>
           </div>

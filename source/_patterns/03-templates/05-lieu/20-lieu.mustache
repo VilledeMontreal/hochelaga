@@ -18,6 +18,13 @@
   <div class="region-content {{ regionMainClasses }}">
     <div class="container">
       <div class="row">
+
+        {{# sidebarRight }}
+        <aside class="col-12 col-lg-5 col-xl-4 order-lg-last" role="complementary">
+          {{> organisms-sidebar-block-schedule }}
+        </aside>
+        {{/ sidebarRight }}
+
         <article class="col-12 col-lg-7 col-xl-8">
           <div class="content-block">
             <p class="lead">{{ lead }}</p>
@@ -29,7 +36,7 @@
 
           {{# commodites}}
           <div class="content-block">
-            <h3 class="h5">Commodités</h3>
+            <h2 class="h5">Commodités</h2>
             {{# items}}
             <ul class="list-unstyled row">
               {{# item}}
@@ -42,7 +49,7 @@
 
           {{# installations}}
           <div class="content-block">
-            <h3 class="h5">Installations</h3>
+            <h2 class="h5">Installations</h2>
             {{# items}}
             <div class="row">
               <div class="col-12 col-md-6 col-lg-12 col-xl-6">
@@ -62,9 +69,35 @@
           </div>
           {{/ installations}}
 
+          {{# accessibilite}}
+          <div class="content-block">
+            <h2 class="h5">Accessibilité</h2>
+            {{# items}}
+            <ul class="list-unstyled row">
+              {{# item}}
+              <li class="col-12 col-md-6">{{ text }}</li>
+              {{/ item}}
+            </ul>
+            {{/ items}}
+          </div>
+          {{/ accessibilite}}
+
+          {{# mode-paiement}}
+          <div class="content-block">
+            <h2 class="h5">Mode de paiement</h2>
+            {{# items}}
+            <ul class="list-unstyled row">
+              {{# item}}
+              <li class="col-12 col-md-6">{{ text }}</li>
+              {{/ item}}
+            </ul>
+            {{/ items}}
+          </div>
+          {{/ mode-paiement}}
+
           {{# tc-references}}
           <div class="content-block">
-            <h3 class="h5">Sujets et démarches</h3>
+            <h2 class="h5">Sujets et démarches</h2>
             {{# items }}
             <div class="hub-list-container">
               <ul class="hub-list">
@@ -86,7 +119,7 @@
 
           {{# events}}
           <div class="content-block">
-            <h3 class="h5">Événements à venir</h3>
+            <h2 class="h5">Événements à venir</h2>
             {{> molecules-list-group-hub }}
             {{# button}}
             <div class="pagination-wrapper pt-0">
@@ -96,35 +129,9 @@
           </div>
           {{/ events}}
 
-          {{# mode-paiement}}
-          <div class="content-block">
-            <h3 class="h5">Mode de paiement</h3>
-            {{# items}}
-            <ul class="list-unstyled row">
-              {{# item}}
-              <li class="col-12 col-md-6">{{ text }}</li>
-              {{/ item}}
-            </ul>
-            {{/ items}}
-          </div>
-          {{/ mode-paiement}}
-
-          {{# accessibilite}}
-          <div class="content-block">
-            <h3 class="h5">Accessibilité</h3>
-            {{# items}}
-            <ul class="list-unstyled row">
-              {{# item}}
-              <li class="col-12 col-md-6">{{ text }}</li>
-              {{/ item}}
-            </ul>
-            {{/ items}}
-          </div>
-          {{/ accessibilite}}
-
           {{# has-tags}}
           <div class="content-block">
-            <h3 class="h5">Étiquettes</h3>
+            <h2 class="h5">Thèmes associés</h2>
             <ul class="list-inline {{container-class}}">
               {{# tags}}
               <li class="list-inline-item">{{> atoms-badge}}</li>
@@ -135,16 +142,11 @@
         
         </article>
 
-        {{# sidebarRight }}
-        <aside class="col-12 col-lg-5 col-xl-4 sidebar-right order-first order-lg-last" role="complementary">
-          {{> organisms-sidebar-block-schedule }}
-        </aside>
-        {{/ sidebarRight }}
-
       </div>
       {{# map }}
       <div class="row">
         <div class="col-12">
+          <h2 class="h5">{{ section-title }}</h2>
           <div class="map-section">
             <div id="{{ mapID }}" style="height:500px"></div>
           </div>

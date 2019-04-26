@@ -54,7 +54,7 @@
           "tag": {
             "div": true
           },
-          "content": "<a href=\"#mapLieuAuditoriumLePrevost\" class=\"js-scroll-trigger\">Afficher la carte</a>"
+          "content": "<a href=\"#mapLieuAuditoriumLePrevost\" class=\"js-scroll-trigger\">Voir la carte</a>"
         }
       ]
     },
@@ -165,12 +165,12 @@
     "container-class": "badges-lg",
     "tags": [
       {
-        "badge": "Tag #1",
+        "badge": "Thème #1",
         "badgeClass": false,
         "badgeUrl": "#"
       },
       {
-        "badge": "Tag #2",
+        "badge": "Thème #2",
         "badgeClass": false,
         "badgeUrl": "#"
       }
@@ -183,7 +183,7 @@
   },
   "schedule": {
     "schedule-heading": "Horaire hiver-printemps",
-    "schedule-description": "du 2 janvier au 23 juin 2019",
+    "schedule-description": "du <time datetime=\"2019-01-02\">2 janvier</time> au <time datetime=\"2019-06-23\">23 juin 2019</time>",
     "schedule-row" : [
       {
         "day": "Lundi",
@@ -294,7 +294,7 @@
     "schedule-extra": [
       {
         "schedule-heading": "Horaire estival",
-        "schedule-description": "du 24 juin au 2 septembre 2019",
+        "schedule-description": "du <time datetime=\"2019-06-24\">24 juin</time> au <time datetime=\"2019-09-02\">2 septembre 2019</time>",
         "schedule-row" : [
           {
             "day": "Lundi",
