@@ -1,7 +1,5 @@
 {
-  "has-breadcrumb": false,
   "breadcrumbContainerClasses": "px-4",
-  "contentHeaderClasses": "mt-4 mt-lg-11",
   "text-elements": {
     "headings":{
       "display":{
@@ -31,7 +29,7 @@
         {
           "url": false,
           "class": false,
-          "content": "<time datetime=\"2019-01-17T13:00:00-0400\">Jeudi 17 janvier de 09&nbsp;h&nbsp;00</time> à <time datetime=\"2019-01-17T14:00:00-0400\">10&nbsp;h&nbsp;00</time>"
+          "content": "<time datetime=\"2020-01-17T14:00:00-0500\">Jeudi 17 janvier de 09&nbsp;h&nbsp;00</time> à <time datetime=\"2020-01-17T15:00:00-0500\">10&nbsp;h&nbsp;00</time>"
         }
       ]
     },
@@ -70,9 +68,6 @@
       ]
     }
   ],
-  "sidebarRight": true,
-  "sidebar-title-classes": "d-none d-sm-block",
-  "sidebarTitle": "Renseignements",
   "has-documents": {
     "documents": [
       {
@@ -81,16 +76,35 @@
       }
     ]
   },
+  "has-partners": {
+    "grid-logos": {
+      "items": [
+        {
+          "src": "https://imgplaceholder.com/420x320/transparent/212529/fa-android",
+          "alt": "Alt 1 - fa-android"
+        },
+        {
+          "src": "https://imgplaceholder.com/600x300/transparent/212529/fa-automobile",
+          "alt": "Alt 2 - fa-automobile"
+        },
+        {
+          "src": "https://imgplaceholder.com/420x320/transparent/212529/fa-github",
+          "alt": "Alt 2 - fa-github"
+        }
+      ]
+    },
+    "list-partners": false
+  },
   "has-tags": {
     "container-class": "badges-lg",
     "tags": [
       {
-        "badge": "Theme #1",
+        "badge": "Tag #1",
         "badgeClass": false,
         "badgeUrl": "#"
       },
       {
-        "badge": "Theme#2",
+        "badge": "Tag #2",
         "badgeClass": false,
         "badgeUrl": "#"
       }
@@ -106,7 +120,7 @@
         "item": [
           {},
           {
-            "content": "<a href=\"#mapEvent001\" class=\"js-scroll-trigger\">Voir la carte</a>"
+            "content": "<a href=\"#mapEvent005\" class=\"js-scroll-trigger\">Voir la carte</a>"
           }
         ]
       }
@@ -134,8 +148,8 @@
       }
     },
     {
-      "mediaSrc": "https://picsum.photos/667/1000?image=1071",
-      "mediaSize": "667x1000",
+      "mediaSrc": "https://picsum.photos/1000/667?image=1071",
+      "mediaSize": "1000x667",
       "mediaCaption": "This is a dummy caption",
       "mediaAuthor": "Tim Stief",
       "mediaAlt": "Media #1071",
@@ -195,22 +209,13 @@
     }
   ],
   "map": {
-    "section-title": "Comment s'y rendre",
-    "mapID": "mapEvent001",
-    "address": "<address><a href='#'>Bibliothèque Jacqueline-De Repentigny</a><br>5955, avenue Bannantyne<br>Montréal (Québec) H4H 1H6</address>",
-    "lngLat": "-73.577946, 45.448775"
+    "mapID": "mapEventLogoPartenaires"
   },
   "hasPromoter": false,
   "hasSimilarEvents": {
     "page-section": {
       "section-headings": {
         "heading": "Événements similaires"
-      },
-      "button": {
-        "buttonAsLink": true,
-        "buttonUrl": "#",
-        "buttonClass": "btn-secondary", 
-        "buttonText": "Tous les événements"
       },
       "organized-by": false,
       "cards": {

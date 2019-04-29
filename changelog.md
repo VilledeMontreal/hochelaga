@@ -5,6 +5,23 @@ The format is based on [Keep a Changelog](http://keepachangelog.com/en/1.0.0/)
 and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.html).
 
 
+## [3.2.1] - Unreleased
+
+## Added
+- New organism: page-section-featured-search
+- Lieux pages.
+
+## Changed
+- Use time tags for all date related html output.
+- Modification to Lieux template: Add sections, data and fix responsive issues.
+- Modification to Lieux and Evenements templates: Sidebar order, Title tags and label from copydeck
+- Patternlab: Moved lieu to it's own templates directory.
+
+## Fixed
+- Patternlab: dynamisation of mapID in evenement and lieu templates.
+- Fix list-icon-content styles to prevent wrapping of links and span.
+
+
 ## [3.2.0] - 2019-02-28
 
 ## Added
@@ -439,6 +456,7 @@ remove index from the name. Which makes it possible to update font-icon without 
 - Removed vdm prefix for buttons classes
 
 
+[3.2.0]: https://bitbucket.org/villemontreal/boite-outils-web/src/3.2.0/
 [3.1.0]: https://bitbucket.org/villemontreal/boite-outils-web/src/3.1.0/
 [3.0.0]: https://bitbucket.org/villemontreal/boite-outils-web/src/3.0.0/
 [2.6.3]: https://bitbucket.org/villemontreal/boite-outils-web/src/2.6.3/

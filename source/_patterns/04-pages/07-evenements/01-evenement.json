@@ -23,7 +23,7 @@
   "list-icon-class": "row no-gutters",
   "list-icon-item": [
     {
-      "list-icon-item-class": false,
+      "list-icon-item-class": "col-12",
       "icon-item": {
         "icon-label": "005-calendrier"
       },
@@ -32,7 +32,7 @@
         {
           "url": false,
           "class": false,
-          "content": "Jeudi 17 janvier de 09&nbsp;h&nbsp;00 à 10&nbsp;h&nbsp;00"
+          "content": "<time datetime=\"2019-01-17T13:00:00-0400\">Jeudi 17 janvier de 09&nbsp;h&nbsp;00</time> à <time datetime=\"2019-01-17T14:00:00-0400\">10&nbsp;h&nbsp;00</time>"
         }
       ]
     },
@@ -58,7 +58,7 @@
       "icon-item": {
         "icon-label": "007-billet"
       },
-      "item-label": "Droit d'entrée",
+      "item-label": "Entrée",
       "item": [
         {
           "class": false,
@@ -86,7 +86,7 @@
             "tag": {
               "div": true
             },
-            "content": "<address><span class=\"text-dark\">Coeur des sciences de l'UQAM</span><br>200, rue Sherbrooke Ouest<br>Local SH-4800<br>Montréal (Québec) H2X 1X5</address>"
+            "content": "<address><span class=\"text-dark\">Coeur des sciences de l'UQAM</span>200, rue Sherbrooke Ouest<br>Local SH-4800<br>Montréal (Québec) H2X 1X5</address>"
           },
           {
             "class": false,
@@ -94,7 +94,7 @@
             "tag": {
               "div": true
             },
-            "content": "<a href=\"mapEventId\" class=\"js-scroll-trigger\">Afficher la carte</a>"
+            "content": "<a href=\"#mapEventSuperMario\" class=\"js-scroll-trigger\">Voir la carte</a>"
           }
         ]
       },
@@ -110,7 +110,7 @@
             "tag": {
               "div": true
             },
-            "content": "514 987-0909 poste 1234"
+            "content": "514 987-0909, poste 1234"
           },
           {
             "class": false,
@@ -148,6 +148,7 @@
     }
   ],
   "map": {
+    "mapID": "mapEventSuperMario",
     "address": "<address><span class='text-dark'>Coeur des sciences de l'UQAM</span><br>200, rue Sherbrooke Ouest<br>Local SH-4800<br>Montréal (Québec) H2X 1X5</address>",
     "lngLat": "-73.570015, 45.509979"
   }

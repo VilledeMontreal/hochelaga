@@ -56,6 +56,7 @@ ol {
   .list-icon-item {
     display: flex;
     padding-bottom: 2rem;
+    width: 100%;
     // Use .no-icon class to add padding equal to icons width and paddings
     &.no-icon {
       padding-left: 2rem;
@@ -85,14 +86,14 @@ ol {
       &:last-child {
         margin-bottom: 0;
       }
-      > * {
+      a, span {
         @include clearfix;
       }
     }
     &:last-child {
       margin-bottom: 0;
     }
-    > * {
+    span {
       @include clearfix;
     }
   }
