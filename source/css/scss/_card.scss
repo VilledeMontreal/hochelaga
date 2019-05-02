@@ -378,7 +378,6 @@
 
   // Featured card specific
   &.card-featured {
-    margin-bottom: 0;
     .card-bg-image {
       min-height: 300px;
     }
@@ -405,6 +404,15 @@
         height: 100%;
         .card-footer {
           margin-top: auto;
+        }
+      }
+    }
+
+    // Invert Image and body Order on larger breakpoint
+    &.card-featured-inv {
+      @include media-breakpoint-up(lg) {
+        .card-img-top {
+          order: -1;
         }
       }
     }

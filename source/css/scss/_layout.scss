@@ -141,8 +141,11 @@ html {
 .bg-image-section {
   background-size: cover;
   background-color: $gray-300;
-  padding-top: 6rem;
-  padding-bottom: 8rem;
+  padding-top: 4rem;
+  padding-bottom: 3rem;
+  .section-heading {
+    color: $white;
+  }
 }
 
 // Featured content is a block content with a white background
