@@ -18,6 +18,19 @@
   }
 }
 
+// Generate contextual modifier classes for inverted colorized alert
+
+@each $color, $value in $theme-colors {
+  .alert-#{$color}-dark {
+    // Bg-color, border-color, text-color
+    @include alert-variant(theme-color-level($color, $alert-dark-bg-level), theme-color-level($color, $alert-dark-border-level), $white);
+    .alert-link {
+      color: $white;
+      border-bottom: 1px solid $white;
+    }
+  }
+}
+
 // States
 .state {
   display: flex;

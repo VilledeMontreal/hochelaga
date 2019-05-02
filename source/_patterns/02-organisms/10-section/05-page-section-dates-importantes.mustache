@@ -1,0 +1,36 @@
+{{# page-section}}
+<section class="page-section">
+  <div class="container">
+    {{# section-headings}}
+    <div class="row">
+      <div class="col">
+        <h2 class="section-heading">{{ heading }}</h2>
+      </div>
+    </div>
+    {{/ section-headings}}
+    {{# cards}}
+    <div class="row cards">
+      {{# cards.card-item }}
+      <div class="{{ bsgrid-classes }}">
+        {{> molecules-card-item}}
+      </div>
+      {{/ cards.card-item}}
+    </div>
+    {{# load-extra-item}}
+    <div id="collapseDatesImportantesSection" class="row cards collapse-content collapse">
+    {{# cards.extra-item}}
+      <div class="{{ bsgrid-classes }}">
+      {{> molecules-card-item}}
+    </div>
+    {{/ cards.extra-item}}
+    </div>
+    {{/ load-extra-item}}
+    {{/ cards}}
+    {{# button}}
+    <div class="pagination-wrapper text-center">
+      <button class="btn btn-link btn-collapse collapsed" type="button" data-toggle="collapse" data-target="#collapseDatesImportantesSection" aria-expanded="false" aria-controls="collapseDatesImportantesSection">Voir plus</button>
+    </div>
+    {{/ button}}
+  </div>
+</section>
+{{/ page-section}}

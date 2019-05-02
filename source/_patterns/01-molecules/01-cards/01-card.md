@@ -4,8 +4,8 @@ title: Card
 
 The basic card molecule.
 
-Can be use in a 3 or 4 columns bootstrap grid layout.
+Can be use in a 3 columns (col-lg-4) bootstrap grid layout.
 
 Refere to cards-large and other variants for use in 1 or 2 columns grid layout.
 
-@see reference used : https://projects.invisionapp.com/d/main#/console/11533069/246771810/preview
+Available cards variant: member, link, large, full-width, row-layout, featured-content, featured-member, complex-content, alerts, tarif.

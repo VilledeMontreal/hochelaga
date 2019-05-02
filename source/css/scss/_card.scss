@@ -50,6 +50,14 @@
     }
   }
 
+  .card-date,
+  .card-tags,
+  .card-type,
+  .card-subtitle,
+  .card-date-text {
+    line-height: $line-height-sm;
+  }
+
   .card-subtitle {
     display: block;
     font-weight: $font-weight-bold;
@@ -59,8 +67,7 @@
   }
 
   .card-label {
-    @include card-heading();
-    font-weight: $font-weight-bold;
+    @include card-heading($font-weight: $font-weight-bold);
   }
 
   .card-description {
@@ -136,12 +143,15 @@
     align-items: center;
 
     .card-footer-label {
+      color: $sarcelle;
+      font-weight: $font-weight-bold;
+      line-height: $line-height-sm;
       padding-right: 0.5rem;
     }
 
     .vdm {
       color: $primary;
-      @include font-size(2.5rem);
+      @include font-size(2rem);
     }
   }
 
@@ -171,8 +181,7 @@
       }
     }
     .card-title {
-      @include font-size($font-size-base);
-      font-weight: $font-weight-bold;
+      @include card-heading($font-size: $font-size-base, $font-weight: $font-weight-bold);
     }
 
   }
@@ -214,7 +223,7 @@
       text-align: left;
     }
     .card-title {
-      margin-bottom: 2rem;
+      font-weight: $font-weight-bold;
     }
     &.card-row-layout {
       .card-footer {
@@ -232,10 +241,9 @@
   }
 
   // Large and featured cards override
-  &.card-large,
-  &.card-featured {
+  &.card-large {
     .card-title {
-      @include card-heading();
+      @include card-heading($font-weight: $font-weight-bold);
     }
     .card-body {
       text-align: left;
@@ -244,14 +252,26 @@
 
   // Full-width card override
   &.card-fw {
+    .card-title {
+      @include card-heading($font-weight: $font-weight-bold);
+    }
     .card-body {
       align-self: flex-start;
     }
     @include media-breakpoint-up(lg) {
       .card-img-top {
-        margin-left: 1rem;
-        max-width: 300px;
+        // Max-height is more important 
+        max-height: 169px;
+        width: auto;
         order: 100;
+        @include border-radius(0);
+        @include border-right-radius($card-inner-border-radius);
+
+        &.card-img-first {
+          order: -1;
+          @include border-radius(0);
+          @include border-left-radius($card-inner-border-radius);
+        }
       }
     }
   }
@@ -263,23 +283,6 @@
         text-align: center;
         @include media-breakpoint-up(lg) {
           text-align: left;
-        }
-      }
-    }
-    &.card-fw {
-      @include media-breakpoint-up(lg) {
-        .card-img-top {
-          margin-left: 1rem;
-          max-width: 400px;
-          order: 100;
-        }
-        .vdm {
-          color: $white;
-        }
-      }
-      @include media-breakpoint-up(xl) {
-        .card-img-top {
-          max-width: 500px;
         }
       }
     }
@@ -317,25 +320,7 @@
     }
   }
 
-  // Inception card
-  // Cards as a link with sublinks
-  &.card-inception {
-    cursor: pointer;
-    transition: all 100ms ease-in-out;
-    &:hover {
-      transform: scale(1.04);
-      .card-title {
-        color: $primary;
-      }
-    }
-    // Links inside inception card
-    a {
-      border-bottom: none;
-    }
-  }
-
   // Card tarification specification
-
   &.card-tarif {
     .row > div {
       &:first-child {
@@ -378,10 +363,14 @@
 
   // Featured card specific
   &.card-featured {
+    text-align: left;
     .card-bg-image {
       min-height: 300px;
     }
     .card-body {
+      .card-title {
+        @include card-heading($font-size: $h4-font-size, $line-height: 1.25, $font-weight: $font-weight-bold);
+      }
       .text-muted {
         display: inline-block;
         margin-bottom: 1.5rem;
@@ -397,6 +386,9 @@
         @include make-col(6);
         margin: 0;
         align-self: start;
+        order: 100;
+        @include border-radius(0);
+        @include border-right-radius($card-inner-border-radius);
       }
       .card-body {
         display: flex;
@@ -407,17 +399,85 @@
         }
       }
     }
-
     // Invert Image and body Order on larger breakpoint
     &.card-featured-inv {
       @include media-breakpoint-up(lg) {
         .card-img-top {
           order: -1;
+          @include border-radius(0);
+          @include border-left-radius($card-inner-border-radius);
+        }
+      }
+    }
+
+    // Featured member
+    &.card-featured-member {
+      text-align: center;
+      .card-footer {
+        justify-content: center;
+      }
+      .card-img-top {
+        max-width: 256px;
+      }
+      .rounded-circle {
+        margin: 2rem auto 0 auto;
+      }
+      .card-subtitle {
+        font-weight: $font-weight-normal;
+        margin-top: 0;
+      }
+      // @tablet
+      @include media-breakpoint-up(md) {
+        flex-direction: row;
+        text-align: left;
+        padding-top: 4rem;
+        padding-bottom: 4rem;
+        .card-img-container {
+          @include make-col(5);
+          @include make-col-offset(1);
+          .card-img-top {
+            margin: 0;
+            width: 100%;
+            @include make-col(12);
+            max-width: 256px;
+          }
+        }
+        .card-body {
+          @include make-col(5);
+          padding: 0;
+          justify-content: center;
+        }
+        .card-img-top {
+          order: -1;
+
+        }
+        .card-footer {
+          margin-top: 0;
+          padding-top: 1rem;
+          justify-content: flex-start;
+        }
+      }
+      @include media-breakpoint-up(lg) {
+        .card-img-container {
+          @include make-col(4);
+          @include make-col-offset(2);
+          .card-img-top {
+            margin: 0;
+            width: 100%;
+            @include make-col(12);
+            max-width: 256px;
+          }
+        }
+        .card-body {
+          @include make-col(4);
+          padding: 0;
+          justify-content: center;
         }
       }
     }
   }
 
+  // Complex-layout and label-content
   &.card-complex-layout,
   &.card-label-content {
     text-align: left;
@@ -436,12 +496,48 @@
   }
 
   .rounded-circle {
-    margin: 2rem auto 1rem auto;
-    width: 61.5%;
+    margin: 2rem auto 0 auto;
+    max-width: 61.5%;
   }
 
   &[data-toggle="modal"] {
     cursor: pointer;
+  }
+
+  // Generic class to remove box-shadow and add bg-color
+  &.card-bg-variant {
+    box-shadow: none;
+    background-color: $gray-sky;
+  }
+
+  // Plain variant
+  // Use-case: dates importantes
+  &.card-plain {
+    box-shadow: none;
+    text-align: left;
+    .card-date {
+      font-weight: $font-weight-bold;
+      margin-bottom: 2rem;
+      &:after {
+        content: "";
+        display: block;
+        height: .25rem;
+        width: 2rem;
+        margin-top: 1rem;
+        background-color: $brand;
+      }
+    }
+    .card-body {
+      padding: 0;
+      > :last-child {
+        margin-bottom: 0;
+      }
+    }
+    .card-title {
+      font-weight: $font-weight-bold;
+      margin-bottom: 2rem;
+    }
+    
   }
 }
 
@@ -506,13 +602,20 @@ a.card {
   transition: all 100ms ease-in-out;
   &:hover {
     transform: scale(1.04);
+    .card-icon-top,
     .card-title {
-      color: $primary;
+      color: $sarcelle;
+    }
+
+    .card-alert {
+      .card-icon-top {
+        color: inherit;
+      }
     }
   }
 }
 
-// Color variant overrides
+// Generic flex capacity for equalheight
 .cards {
   > div,
   .card-item {
