@@ -1,0 +1,157 @@
+{{> atoms-link-skip-to-main-content }}
+{{> organisms-header-portal }}
+
+<main class="main-content {{ pageClasses }}" id="main-content" aria-label="Main Content">
+
+  {{> organisms-content-header }}
+
+  {{# alertSection }}
+  <section>
+    <div class="alert {{ alertClass }} mb-0 px-0" role="alert">
+      <div class="container text-center">
+        <strong>Ouvert ou fermé?</strong> Horaire municipal du temps des fêtes <a href="#" class="alert-link text-nowrap ml-2">En savoir plus</a>
+      </div>
+    </div>
+  </section>
+  {{/ alertSection }}
+
+  {{# featuredSection}}
+  <div class="page-section" id="featuredContent">
+    <div class="container">
+      <div class="row ">
+        <div class="col-12 text-center">
+          <h2 class="section-heading">{{ headings.text }}</h2>
+        </div>
+      </div>
+      <div class="row cards {{ cards.classes }}">
+      {{# cards.card-item }}
+        <div class="{{ bsgrid-classes }}">
+          {{> molecules-card-item }}
+        </div>
+      {{/ cards.card-item }}
+      </div>
+    </div>
+  </div>
+  {{/ featuredSection}}
+
+  {{# serviceSection}}
+  <section class="page-section {{cards.section-classes}}" id="featuredServices">
+    <div class="container">
+      <div class="row ">
+        <div class="col-12 text-center">
+          <h2 class="section-heading">{{ headings.text }}</h2>
+        </div>
+      </div>
+      <div class="row cards {{ cards.classes }}">
+        {{# cards.card-item}}
+        <div class="{{ cards.bsgrid-classes }}">
+          {{> molecules-card-item }}
+        </div>
+        {{/ cards.card-item}}
+      </div>
+    </div>
+  </section>
+  {{/ serviceSection}}
+
+  {{# dateSection}}
+  {{> organisms-page-section-dates-importantes }}
+  {{/ dateSection}}
+
+  {{# featuredSearch}}
+  {{> organisms-page-section-featured-search}}
+  {{/ featuredSearch}}
+
+  {{# newsSection }}
+  <section class="page-section">
+    <div class="container">
+      <div class="row ">
+        <div class="col-12">
+          <h2 class="section-heading">{{ headings.text }}</h2>
+        </div>
+      </div> 
+      <div class="row cards {{ cards.classes }}">
+        {{# cards.card-item}}
+        <div class="{{ cards.bsgrid-classes }}">
+          {{> molecules-card-item }}
+        </div>
+        {{/ cards.card-item}}
+      </div>
+      <div class="pagination-wrapper">
+        <a href="#" class="btn btn-secondary btn-sm">Toutes les nouvelles</a>
+      </div>
+    </div>
+  </section>
+  {{/ newsSection}}
+
+  {{# evenementSection}}
+  <section class="page-section" id="evenementSection">
+    <div class="container">
+      <div class="row ">
+        <div class="col-12">
+          <h2 class="section-heading">{{ headings.text }}</h2>
+        </div>
+      </div>
+       <div class="row cards {{ cards.classes }}">
+        {{# cards.card-item}}
+        <div class="{{ cards.bsgrid-classes }}">
+          {{> molecules-card-item }}
+        </div>
+        {{/ cards.card-item}}
+      </div>
+      <div class="pagination-wrapper">
+        <a href="#" class="btn btn-secondary btn-sm">Tous les événements</a>
+      </div>
+    </div>
+  </section>
+  {{/ evenementSection}}
+
+  {{# elusSection}}
+  <section class="page-section {{section-classes}}" id="elusSection">
+    <div class="container">
+      <div class="row ">
+        <div class="col-12 text-center">
+          <h2 class="section-heading">{{ headings.text }}</h2>
+        </div>
+      </div>
+      <div class="row cards {{ cards.classes }}">
+        {{# cards.card-item}}
+        <div class="{{ cards.bsgrid-classes }}">
+          {{> molecules-card-item }}
+        </div>
+        {{/ cards.card-item}}
+      </div>
+      <div class="pagination-wrapper">
+        <a href="#" class="btn btn-secondary btn-sm">Tous les élus</a>
+      </div>
+    </div>
+  </section>
+  {{/ elusSection}}
+
+  {{# conseilSection}}
+  <section class="page-section {{section-classes}}" id="conseilSection">
+    <div class="container">
+      <div class="row ">
+        <div class="col-12 text-center">
+          <h2 class="section-heading">{{ headings.text }}</h2>
+        </div>
+      </div>
+      <div class="row cards {{ cards.classes }}">
+        {{# cards.card-item}}
+        <div class="{{ cards.bsgrid-classes }}">
+          {{> molecules-card-item }}
+        </div>
+        {{/ cards.card-item}}
+      </div>
+      <div class="pagination-wrapper">
+        <a href="#" class="btn btn-secondary btn-sm">Toutes les séances</a>
+      </div>
+    </div>
+  </section>
+  {{/ conseilSection}}
+
+</main>
+
+{{> organisms-footer-arrondissement}}
+
+{{> organisms-footer-portal }}
+

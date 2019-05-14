@@ -1,4 +1,23 @@
 // List groups
+
+// Interactive list items
+//
+// Use anchor or button elements instead of `li`s or `div`s to create interactive
+// list items. Includes an extra `.active` modifier class for selected items.
+
+.list-group-item-action {
+
+  // Fix active state and class for list-group-item-action
+  &:active,
+  &.active {
+    color: $list-group-action-active-color;
+    .list-group-item-title,
+    .vdm {
+      color: $list-group-action-active-color;
+    }
+  }
+}
+
 //
 // Individual list items
 //

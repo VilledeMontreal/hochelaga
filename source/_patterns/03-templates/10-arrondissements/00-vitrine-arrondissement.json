@@ -1,0 +1,384 @@
+{
+  "contentHeaderContainerClasses": "container-fluid container-fluid-xl",
+  "contentHeaderClasses": false,
+  "contentHeaderSubtitle": "Arrondissement",
+  "text-elements": {
+    "headings":{
+      "display":{
+        "classes": "display-4",
+        "content": "Nom de l'arrondissement"
+      }
+    }
+  },
+  "alertSection": {
+    "alertClass": "alert-info-dark"
+  },
+  "featuredSection": {
+    "headings": {
+      "text": "À la une"
+    },
+    "cards": {
+      "section-classes": false,
+      "classes": false,
+      "card-item": [
+        {
+          "bsgrid-classes": "col-12",
+          "classes": "card-featured card-bg-variant",
+          "url": "#",
+          "card-title": "Card with featured content",
+          "card-text":
+            " Sed vel dignissim diam, ac dignissim lacus. Aliquam erat volutpat. Nam ac mi arcu.",
+          "card-media" : {
+            "icon" : false,
+            "img" : {
+              "url" : "https://picsum.photos/768/432?image=1058",
+              "alt" : "Card #2 img alt."
+            }
+          },
+          "footer" : {
+            "inside-body": true,
+            "text": "En savoir plus"
+          }
+        },
+        {
+          "bsgrid-classes": "col-12 col-md-6",
+          "classes" : "card-large card-bg-variant",
+          "url" : "#",
+          "card-title" : "Praesent maximus odio at convallis scelerisque",
+          "card-text" : false,
+          "card-media" : {
+            "icon" : false,
+            "img" : {
+              "url" : "https://picsum.photos/768/432?image=859",
+              "alt" : "Card #1 img alt."
+            }
+          },
+          "footer" : false
+        },
+        {
+          "bsgrid-classes": "col-12 col-md-6",
+          "classes" : "card-large card-bg-variant",
+          "url" : "#",
+          "card-title" : "Fusce facilisis elit nibh",
+          "card-text" : false,
+          "card-media" : {
+            "icon" : false,
+            "img" : {
+              "url" : "https://picsum.photos/768/432?image=1073",
+              "alt" : "Card #1 img alt."
+            }
+          },
+          "footer" : false
+        }
+      ]
+    }
+  },
+  "serviceSection": {
+    "headings": {
+      "text": "Laissez-nous vous aider"
+    },
+    "cards": {
+      "section-classes": "bg-gray-sky",
+      "classes": false,
+      "bsgrid-classes": "col-12 col-md-6 col-lg-4",
+      "card-item" : [
+        {
+          "classes" : false,
+          "url" : "#",
+          "card-title" : "Consectetur adipiscing elit",
+          "card-text" : false,
+          "card-media" : {
+            "icon" : "vdm-103-311-mobile"
+          }
+        },
+        {
+          "classes" : false,
+          "url" : "#",
+          "card-title" : "Lorem ipsum dolor sit amet",
+          "card-text" : false,
+          "card-media" : {
+            "icon" : "vdm-124-coyote"
+          }
+        },
+        {
+          "classes" : false,
+          "url" : "#",
+          "card-title" : "Pellentesque non tincidunt sapien",
+          "card-text" : false,
+          "card-media" : {
+            "icon" : "vdm-107-excavatrice"
+          }
+        },
+        {
+          "classes" : false,
+          "url" : "#",
+          "card-title" : "Vel aliquet orci",
+          "card-text" : false,
+          "card-media" : {
+            "icon" : "vdm-082-residus-verts"
+          }
+        },
+        {
+          "classes" : false,
+          "url" : "#",
+          "card-title" : "Praesent vitae eleifend erat",
+          "card-text" : false,
+          "card-media" : {
+            "icon" : "vdm-089-travaux-routiers"
+          }
+        },
+        {
+          "classes" : false,
+          "url" : "#",
+          "card-title" : "SMalesuada sed libero et",
+          "card-text" : false,
+          "card-media" : {
+            "icon" : "vdm-013-livre"
+          }
+        }
+      ]
+    }
+  },
+  "dateSection": {
+    "headings": {
+      "text": "Dates importantes"
+    }
+  },
+  "featuredSearch": {
+    "featuredContentID": "featured-home-search",
+    "featuredContentBgImage": "background-image: url(https://picsum.photos/1200/675?image=972)",
+    "inputGroupSearch": [
+      {
+        "formGroupLabel": false,
+        "inputID": "input-group-search",
+        "inputGroupIconClass": "input-group-icon-lg input-group-icon-left",
+        "iconAfter": false,
+        "icon-label": "002-recherche",
+        "formControlClass": "form-control-lg form-control-dark",
+        "inputPlaceholder": "Rechercher vestibulum justo"
+      }
+    ],
+    "quickLinks": {
+      "quickLinksItem": [
+        {
+          "url": "#",
+          "label": "Lorem ipsum"
+        },
+        {
+          "url": "#",
+          "label": "Dolor sit amet"
+        },
+        {
+          "url": "#",
+          "label": "Consectetur"
+        },
+        {
+          "url": "#",
+          "label": "Adipiscing elit"
+        },
+        {
+          "url": "#",
+          "label": "Curabitur"
+        },
+        {
+          "url": "#",
+          "label": "Vestibulum"
+        }
+      ]
+    }
+  },
+  "newsSection": {
+    "headings": {
+      "text": "Nouvelles"
+    },
+    "cards": {
+      "section-classes": false,
+      "classes": false,
+      "bsgrid-classes": "col-12",
+      "card-item": [
+        {
+          "classes": "card-fw card-row-layout card-bg-variant",
+          "url": "#",
+          "card-date": false,
+          "card-title": "Maecenas massa leo molestie ut efficitur ut consequat sit amet augue",
+          "card-text": "20 mars 2019",
+          "card-media" : {
+            "icon" : false,
+            "img" : {
+              "classes": "card-img-first",
+              "url" : "https://picsum.photos/768/432?image=396",
+              "alt" : "Card teaser news #1 img alt."
+            }
+          },
+          "footer" : false
+        },
+        {
+          "classes": "card-fw card-row-layout card-bg-variant",
+          "url": "#",
+          "card-date": false,
+          "card-title": "Integer et nulla ut nunc posuere malesuada",
+          "card-text": "20 février 2019",
+          "card-media" : {
+            "icon" : false,
+            "img" : {
+              "classes": "card-img-first",
+              "url" : "https://picsum.photos/768/432?image=396",
+              "alt" : "Card teaser news #2 img alt."
+            }
+          },
+          "footer" : false
+        },
+        {
+          "classes": "card-fw card-row-layout card-bg-variant",
+          "url": "#",
+          "card-date": false,
+          "card-title": "Integer tristique nunc vel sollicitudin elementum",
+          "card-text": "20 décembre 2018",
+          "card-media" : {
+            "icon" : false,
+            "img" : {
+              "classes": "card-img-first",
+              "url" : "https://picsum.photos/768/432?image=396",
+              "alt" : "Card teaser news #3 img alt."
+            }
+          },
+          "footer" : false
+        }
+      ]
+    }
+  },
+  "evenementSection": {
+    "headings": {
+      "text": "Événements"
+    },
+    "cards": {
+      "section-classes": false,
+      "classes": false,
+      "bsgrid-classes": "col-12 col-lg-4",
+      "card-item": [
+        {
+          "classes" : "card-teaser card-bg-variant",
+          "url" : "#",
+          "card-type": "Type d'événement",
+          "card-title" : "Lorem ipsum dolor sit amet consectetur adipiscing elit",
+          "card-text" : "Dates",
+          "card-media" : {
+            "icon" : false,
+            "img" : {
+              "url" : "https://picsum.photos/768/432?image=1074",
+              "alt" : "Card #1 img alt."
+            }
+          }
+        },
+        {
+          "classes" : "card-teaser card-bg-variant",
+          "url" : "#",
+          "card-type": "Type d'événement",
+          "card-title" : "Donec posuere congue ex sit amet placerat felis",
+          "card-text" : "Dates",
+          "card-media" : {
+            "icon" : false,
+            "img" : {
+              "url" : "https://picsum.photos/768/432?image=1074",
+              "alt" : "Card #2 img alt."
+            }
+          }
+        },
+        {
+          "classes" : "card-teaser card-bg-variant",
+          "url" : "#",
+          "card-type": "Type d'événement",
+          "card-title" : "Nunc faucibus imperdiet tortor non sollicitudin",
+          "card-text" : "Dates",
+          "card-media" : {
+            "icon" : false,
+            "img" : {
+              "url" : "https://picsum.photos/768/432?image=1074",
+              "alt" : "Card #3 img alt."
+            }
+          }
+        }
+      ]
+    }
+  },
+  "elusSection": {
+    "section-classes": "bg-gray-sky",
+    "headings": {
+      "text": "Mairie d'arrondissement"
+    },
+    "cards": {
+      "section-classes": "bg-gray-sky",
+      "classes": false,
+      "bsgrid-classes": "col-12",
+      "card-item": [
+        {
+          "classes": "card-featured card-featured-member",
+          "url": "#",
+          "card-title": "Prénom Nom",
+          "card-subtitle": "Fonction au sein du conseil",
+          "card-text": false,
+          "card-media": {
+            "icon": false,
+            "img" : {
+              "container": true,
+              "classes": "rounded-circle",
+              "url" : "https://picsum.photos/480?image=786",
+              "alt" : "Member #1 img alt."
+            }
+          },
+          "footer" : {
+            "inside-body": true,
+            "text": "Label"
+          }
+        }
+      ]
+    }
+  },
+  "conseilSection": {
+    "section-classes": "bg-gray-sky",
+    "headings": {
+      "text": "Conseil et consultations - prochaines séances"
+    },
+    "cards": {
+      "section-classes": false,
+      "classes": false,
+      "bsgrid-classes": "col-12 col-lg-4",
+      "card-item": [
+        {
+          "classes" : "card-teaser",
+          "url" : "#",
+          "card-type": false,
+          "card-title" : "Lorem ipsum dolor sit amet consectetur adipiscing elit",
+          "card-text" : "Durée et dates de l'événement",
+          "card-media" : {
+            "icon" : false,
+            "img" : false
+          }
+        },
+        {
+          "classes" : "card-teaser",
+          "url" : "#",
+          "card-type": false,
+          "card-title" : "Donec posuere congue ex sit amet placerat felis",
+          "card-text" : "Durée et dates de l'événement",
+          "card-media" : {
+            "icon" : false,
+            "img" : false
+          }
+        },
+        {
+          "classes" : "card-teaser",
+          "url" : "#",
+          "card-type": false,
+          "card-title" : "Nunc faucibus imperdiet tortor non sollicitudin",
+          "card-text" : "Durée et dates de l'événement",
+          "card-media" : {
+            "icon" : false,
+            "img" : false
+          }
+        }
+      ]
+    }
+  },
+  "hasFeedbackForm": false
+}

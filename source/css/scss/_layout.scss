@@ -74,14 +74,14 @@ html {
 }
 
 .region-content {
-  padding-top: 4.5rem;
-  padding-bottom: 4.5rem;
+  padding-top: 4rem;
+  padding-bottom: 4rem;
 }
 
 // Generic section layouts
 .page-section {
-  padding-top: 4.5rem;
-  padding-bottom: 4.5rem;
+  padding-top: 4rem;
+  padding-bottom: 4rem;
 
   // Remove padding on 2 consecutive section with bg-gray-sky
   &.bg-gray-sky {
@@ -136,13 +136,16 @@ html {
 }
 */
 
-//
+
 // Section with BG image
 .bg-image-section {
   background-size: cover;
-  background-color: $gray-300;
-  padding-top: 6rem;
-  padding-bottom: 8rem;
+  background-color: $gray-600;
+  padding-top: 4rem;
+  padding-bottom: 3rem;
+  .section-heading {
+    color: $white;
+  }
 }
 
 // Featured content is a block content with a white background
@@ -614,6 +617,25 @@ html {
   background-color: $backdrop-bg;
   opacity: $backdrop-opacity;
   z-index: 1020;
+}
+
+// Overlay on background-image
+// Might need some variant for dark and light overlay
+.overlay-mid {
+  position: relative;
+  background-size: cover;
+  background-position: center;
+  &:before {
+    position: absolute;
+    content:" ";
+    top:0;
+    left:0;
+    width:100%;
+    height:100%;
+    display: block;
+    z-index:0;
+    background-color: rgba(0, 0, 0, 0.5);
+  }
 }
 
 //

@@ -11,12 +11,18 @@
     {{# card-type }}
     <span class="card-type {{class}}">{{ card-type }}</span>
     {{/ card-type }}
+    {{# card-date}}
+    <span class="card-date {{class}}">{{ card-date }}</span>
+    {{/ card-date}}
     {{# card-title }}
     <span class="card-title">{{ card-title }}</span>
     {{/ card-title }}
-    
+    {{# callToAction}}
+    {{> atoms-button }}
+    {{/ callToAction}}
+    {{# list-icon-item}}
     {{> atoms-text-icons-list}}
-    
+    {{/ list-icon-item}}
     {{/has-bs-class}}
 
     {{# has-bs-class }}

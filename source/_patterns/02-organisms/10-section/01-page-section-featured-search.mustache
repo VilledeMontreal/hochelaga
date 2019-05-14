@@ -1,8 +1,11 @@
 {{# featuredSearch}}
-<section id="{{ featuredContentID }}" class="bg-image-section" {{# featuredContentBgImage }} style="{{ featuredContentBgImage }}" {{/ featuredContentBgImage }}>
+<section id="{{ featuredContentID }}" class="bg-image-section overlay-mid" {{# featuredContentBgImage }} style="{{ featuredContentBgImage }}" {{/ featuredContentBgImage }}>
   <div class="container">
     <div class="row">
-      <div class="col-12 col-lg-10 offset-lg-1">
+      <div class="col-12 col-lg-8 offset-lg-2">
+        {{# section-headings}}
+          <h2 class="section-heading">{{ heading }}</h2>
+        {{/ section-headings}}
         {{# inputGroupSearch }}
           {{> atoms-input-icon }}
         {{/ inputGroupSearch }}
@@ -10,7 +13,9 @@
         <div class="quick-links">
           <ul class="list-inline">
             {{# quickLinksItem }}
-            <li class="list-inline-item"><a href="{{ url }}" class="btn btn-primary btn-light btn-sm">{{ label }}</a></li>
+            <li class="list-inline-item">
+              <a href="{{ url }}" class="btn btn-sm btn-secondary btn-inverse">{{ label }}</a>
+            </li>
             {{/ quickLinksItem }}
           </ul>
         </div>

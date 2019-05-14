@@ -232,9 +232,17 @@ a {
   }
 
   // Utility classes to remove border-bottom
+  // Need important to override any local styles that may be applied later
   &.img-link,
-  &.no-border {
-    border: none;
+  &.no-border,
+  &.no-underline {
+    border: none !important;
+    text-decoration: none !important;
+  }
+
+  &.no-style {
+    border: none !important;
+    color: inherit !important;
   }
 }
 
@@ -264,10 +272,11 @@ a {
 
 // External link icon
 // Apply to .region-content and sb-block
+// Everything not on montreal.ca or of /villemontreal/ AKA cloudinary directory
 .sb-block,
 .region-content,
 .lead {
-  a[href*="//"]:not([href*="montreal.ca"]) {
+  a[href*="//"]:not([href*="montreal.ca"]):not([href$=".pdf"]) {
     @include iconvdm($position: after, $icon: '112-lien-externe');
     margin-right: 1.125em;
     &:after {
@@ -277,7 +286,7 @@ a {
       margin-top: -.625rem;
       margin-bottom: -.625rem;
       padding-left: 0.125rem;
-      vertical-align: baseline;
+      vertical-align: middle;
     }
   }
   // List some exclusion
@@ -286,7 +295,7 @@ a {
   .social-media-list,
   .cards,
   .list-group-hub {
-    a[href*="//"]:not([href*="montreal.ca"]) {
+    a[href*="//"]:not([href*="montreal.ca"]):not([href$=".pdf"]) {
       margin-right: 0;
       &:after {
         content: none;
