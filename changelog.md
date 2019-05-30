@@ -5,7 +5,19 @@ The format is based on [Keep a Changelog](http://keepachangelog.com/en/1.0.0/)
 and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.html).
 
 
-## [3.3.0] - unreleased
+## [3.3.1] - 2019-05-31
+
+## Added
+- Template Profile d'arrondissement
+
+## Changed
+- Nav anchors font-weight to bold
+
+## Fixed
+- Fix various js bugs for nav anchors and maps examples.
+- 
+
+## [3.3.0] - 2019-05-13
 
 ## Added
 - Template Vitrine d'arrondissement
@@ -17,7 +29,6 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 - List-groups - update styles (link color, hover and active states color)
 - Buttons - update styles (bold labels, btn-link)
 - Generic - Links color updates (sarcelle)
-- 
 
 ## [3.2.1] - 2019-04-29
 
@@ -470,6 +481,8 @@ remove index from the name. Which makes it possible to update font-icon without 
 - Removed vdm prefix for buttons classes
 
 
+[3.3.1]: https://bitbucket.org/villemontreal/boite-outils-web/src/3.3.1/
+[3.3.0]: https://bitbucket.org/villemontreal/boite-outils-web/src/3.3.0/
 [3.2.1]: https://bitbucket.org/villemontreal/boite-outils-web/src/3.2.1/
 [3.2.0]: https://bitbucket.org/villemontreal/boite-outils-web/src/3.2.0/
 [3.1.0]: https://bitbucket.org/villemontreal/boite-outils-web/src/3.1.0/
