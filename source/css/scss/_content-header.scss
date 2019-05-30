@@ -214,6 +214,16 @@
       z-index:0;
       background-color: rgba(255, 255, 255, 0.7);
     }
+  
+    // Dark overlay variant for profil?
+    &.overlay-dark {
+      * {
+        color: $white !important;
+      }
+      &:before {
+        background-color: rgba(0, 0, 0, 0.3);
+      }
+    }
   }
 }
 
