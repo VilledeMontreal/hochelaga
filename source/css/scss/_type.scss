@@ -423,6 +423,12 @@ a {
   text-overflow: ellipsis;
 }
 
+.formatted-text-container {
+  :last-child {
+    margin-bottom: 0;
+  }
+}
+
 //
 // Dates display
 //

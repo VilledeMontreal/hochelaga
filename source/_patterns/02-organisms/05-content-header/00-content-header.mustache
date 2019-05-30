@@ -1,4 +1,4 @@
-<header class="content-header {{ contentHeaderClasses }}">
+<header class="content-header {{# contentHeaderBgImage }}content-header-overlay {{contentHeaderOverlayClasses}}{{/ contentHeaderBgImage }} {{ contentHeaderClasses }}" {{# contentHeaderBgImage }} style="{{ contentHeaderBgImage }}" {{/ contentHeaderBgImage }}>
   <div class="{{ contentHeaderContainerClasses }}">
     <div class="row">
       {{# has-breadcrumb}}

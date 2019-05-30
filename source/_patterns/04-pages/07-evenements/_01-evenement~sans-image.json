@@ -53,7 +53,7 @@
             "tag": {
               "div": true
             },
-            "content": "<address><a href=\"#\">Hôtel de ville</a><br>Salle Peter-McGill<br>275, rue Notre-Dame Est<br>Montréal (Québec) H2Y 1C6</address>"
+            "content": "<address><div class=\"mb-1\"><a href=\"#\">Hôtel de ville</a></div>275, rue Notre-Dame Est<br>Salle Peter-McGill<br>Montréal (Québec) H2Y 1C6</address>"
           },
           {
             "class": false,
@@ -138,7 +138,9 @@
   },
   "mediaGallery": false,
   "map": {
-    "address": "<address><a href='#'>Hôtel de ville</a><br>Salle Peter-McGill<br>275, rue Notre-Dame Est<br>Montréal (Québec) H2Y 1C6</address>",
+    "addressInfos": {
+      "address": "275, rue Notre-Dame Est<br>Salle Peter-McGill<br>Montréal (Québec) H2Y 1C6"
+    },
     "lngLat": "-73.554217, 45.509051"
   }
 }
