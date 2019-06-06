@@ -16,18 +16,19 @@
 
             {{# schedule-row}}
             <div class="row mb-2">
-              <div class="col">
+              <div class="col-12 col-sm-5">
                 <span class="schedule-day">{{ day }}</span>
               </div>
-              <div class="col">
+              <div class="col-auto">
                 {{# schedule-data}}
                 <div class="schedule-data">
                   {{# time}}
                   {{# start-time}}
-                  <span class="schedule-start-time">{{start-time}}</span>
+                  {{start-time}}
                   {{/start-time}}
+                  {{{schedule.separator}}}
                   {{#end-time}}
-                  <span class="schedule-end-time">{{end-time}}</span>
+                  {{end-time}}
                   {{/end-time}}
                   {{/ time}}
                   {{^ time}}
@@ -60,18 +61,19 @@
 
               {{# schedule-row}}
               <div class="row mb-2">
-                <div class="col">
+                <div class="col-12 col-sm-5">
                   <span class="schedule-day">{{ day }}</span>
                 </div>
-                <div class="col">
+                <div class="col-auto">
                   {{# schedule-data}}
                   <div class="schedule-data">
                     {{# time}}
                     {{# start-time}}
-                    <span class="schedule-start-time">{{start-time}}</span>
+                    {{start-time}}
                     {{/start-time}}
+                    {{{schedule.separator}}}
                     {{#end-time}}
-                    <span class="schedule-end-time">{{end-time}}</span>
+                    {{end-time}}
                     {{/end-time}}
                     {{/ time}}
                     {{^ time}}
