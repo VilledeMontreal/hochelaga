@@ -111,7 +111,7 @@ html {
 .hub-section-heading {
   h1,h2,h3,h4,h5,h6 {
     color: $headings-color;
-    @include font-size($font-size-xl);
+    @include font-size($h4-font-size);
     font-weight: $font-weight-bold;
     line-height: $line-height-sm;
     margin-bottom: 1.5rem;

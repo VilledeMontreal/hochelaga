@@ -384,6 +384,25 @@
     $(this).parent().find("button").text('Voir plus');
   });
 
+  $("#triggerMap").on('click', function(){
+    $("#contentList").toggleClass('d-none');
+    $("#contentMap").toggleClass('d-none');
+    $("#contentNavSorts").toggleClass('d-none');
+    $(".pagination-arrow").toggleClass('d-none');
+    $(this).toggleClass('d-none d-flex');
+    map.resize();
+    $("#triggerList").toggleClass('d-none d-flex');
+  });
+  
+  $("#triggerList").on('click', function(){
+    $("#contentList").toggleClass('d-none');
+    $("#contentMap").toggleClass('d-none');
+    $("#contentNavSorts").toggleClass('d-none');
+    $(".pagination-arrow").toggleClass('d-none');
+    $(this).toggleClass('d-none d-flex');
+    $("#triggerMap").toggleClass('d-none d-flex');
+  });
+
 })(jQuery);
 
 
