@@ -57,11 +57,9 @@ RUN dpkg --print-architecture
 RUN curl -SLO $NODE_URL
 # RUN grep node-v$NODE_VERSION-linux-$ARCH.tar.xz
 RUN echo " Node package installed :"  $NODE_PACKAGE
-RUN ls -al
 RUN echo " Node URL : "  $NODE_URL
 RUN tar -xJf "$NODE_PACKAGE" -C /usr/local --strip-components=1 --no-same-owner
 RUN rm $NODE_PACKAGE
-RUN ls -al
 RUN ln -s /usr/local/bin/node /usr/local/bin/nodejs
 
 RUN node -v
@@ -72,9 +70,7 @@ RUN gulp -v
 RUN chmod o+w /usr/src/app
 COPY . /usr/src/app
 WORKDIR /usr/src/app
-VOLUME /usr/src/app/source
 
-RUN ls -al
 RUN npm install
 RUN composer install
 
