@@ -36,7 +36,7 @@
   &::after {
     content: " ";
     display: block;
-    margin-bottom: .75rem;
+    //margin-bottom: .75rem;
   }
 
   // Main menu
@@ -46,6 +46,11 @@
     li {
       padding: 0;
     }
+  }
+
+  form {
+    padding-top: .75rem;
+    padding-bottom: 1rem;
   }
 
   // Dropdown section
@@ -85,15 +90,9 @@
 
     // Handle form-group in dropdown-item
     &.form-group {
-      margin-bottom: 0;
-      padding-top: .375rem;
-      padding-bottom: .375rem;
-      .custom-control {
-        margin-bottom: 0;
-      }
-      .custom-control-label {
-        padding-top: .125rem;
-      }
+      margin-bottom: .75rem;
+      padding-top: 0;
+      padding-bottom: 0;
     }
   }
 }

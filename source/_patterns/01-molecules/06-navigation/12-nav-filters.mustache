@@ -1,70 +1,90 @@
 {{# nav-filters }}
 <section id="nav-filters" class="section-filters">
   <div class="container">
-    <!-- Nav Modal on mobile, becomes static nav with dropdowns on tablets and up -->
-    <div class="nav-modal modal modal-left-pane fade" id="{{ navModalID }}" aria-labelledby="navFiltersModalLabel">
-      <div class="modal-dialog">
-        <div class="modal-content">
-          <div class="modal-header d-flex d-md-none">
-            <h5 class="modal-title" id="navFiltersModalLabel">Filtres de recherche</h5>
-            <button type="button" class="btn btn-primary btn-sm" data-dismiss="modal">Recherche</button>
-          </div>
-          <div class="modal-body">
-            <ul class="nav nav-filters">
-              {{# nav.navItem }}
-              <li class="nav-item dropdown {{ dropdownClass }}">
-                <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false" data-display="static">{{ title }}</a>
-                <div class="dropdown-menu {{ dropdownMenuClass }}">
-                  <form>
-                    {{# radios }}
-                    <div class="dropdown-item form-group">
-                      <div class="custom-control custom-radio {{ class }} ">
-                        <input type="radio" id="{{ id }}" name="{{ name }}" class="custom-control-input" value="{{ id }}" {{ state }}>
-                        <label class="custom-control-label" for="{{ id }}">{{{ label }}}</label>
-                      </div>
-                    </div>
-                    {{/ radios }}
-                    {{# checkboxes }}
-                    <div class="dropdown-item form-group">
-                      <div class="custom-control custom-checkbox {{ class }}">
-                        <input type="checkbox" class="custom-control-input" id="{{ id }}" value="{{ id }}" {{ state }}>
-                        <label class="custom-control-label" for="{{ id }}">{{{ label }}}</label>
-                      </div>
-                    </div>
-                    {{/ checkboxes }}
-                    {{# dates }}
-                    <div class="dropdown-item">
-                      This molecule is not yet available.
-                    </div>
-                    {{/ dates }}
-                  </form>
+    <div class="d-none d-md-block">
+      <ul class="nav nav-filters">
+        {{# nav.navItem }}
+        <li class="nav-item {{ dropdownClass }}">
+          <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false" data-display="static">{{ title }}</a>
+          <div class="dropdown-menu {{ dropdownMenuClass }}">
+            <form>
+              {{# radios }}
+              <div class="dropdown-item form-group">
+                <div class="custom-control custom-control-sm custom-radio {{ class }} ">
+                  <input type="radio" id="{{ id }}" name="{{ name }}" class="custom-control-input" value="{{ id }}" {{ state }}>
+                  <label class="custom-control-label" for="{{ id }}">{{{ label }}}</label>
                 </div>
-              </li>
-              {{/ nav.navItem }}
-            </ul>
-
-            {{# filters-applied }}
-            <div class="row d-md-none">
-              <div class="col-12 filters-applied mt-4">
-                <span class="sr-only">Filtres sélectionnés : </span>
-                {{> atoms-badges}}
-                {{> atoms-button(buttonClass: "btn-link btn-sm btn-reset",buttonText: "Tout effacer")}}
               </div>
-            </div>
-            {{/ filters-applied }}
-
+              {{/ radios }}
+              {{# checkboxes }}
+              <div class="dropdown-item form-group">
+                <div class="custom-control custom-control-sm custom-checkbox {{ class }}">
+                  <input type="checkbox" class="custom-control-input" id="{{ id }}" value="{{ id }}" {{ state }}>
+                  <label class="custom-control-label" for="{{ id }}">{{{ label }}}</label>
+                </div>
+              </div>
+              {{/ checkboxes }}
+            </form>
           </div>
-        </div>
-      </div>
+        </li>
+        {{/ nav.navItem }}
+        {{# nav.more-filters }}
+        <li class="nav-item my-auto">
+          <button type="button" class="btn btn-secondary" data-toggle="modal" data-target="#{{modalId}}">
+            <span class="vdm vdm-090-preferences" aria-hidden="true"></span>
+            <span class="btn-label">{{ label }}</span>
+            {{# numb-filters}}
+            <span>({{ numb-filters }})</span>
+            {{/ numb-filters}}
+          </button>
+        </li>
+        {{/ nav.more-filters }}
+      </ul>
+
     </div>
   </div>
 </section>
-<div class="container">
-  <div class="row">
-    <div class="col-12 d-block d-md-none pt-4">
-      <button type="button" class="btn btn-secondary btn-block" data-toggle="modal" data-target="#{{ navModalID }}" data-backdrop="false">
-        Filtres de recherche
-      </button>
+
+<!-- Modal More Filters -->
+<div class="modal modal-filters fade" id="{{nav.more-filters.modalId}}" tabindex="-1" role="dialog" aria-labelledby="moreFiltersModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-scrollable modal-dialog-centered" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="moreFiltersModalLabel">Filtres</h5>
+        <button type="button" class="close btn-close" data-dismiss="modal" aria-label="Close">
+          <span class="vdm vdm-046-grand-x" aria-hidden="true"></span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <form>
+          {{# nav.more-filters.filter}}
+          <div class="filters-content">
+            <span class="filters-title">{{ title }}</span>
+            {{# radios}}
+            <div class="form-group">
+              <div class="custom-control custom-control-sm custom-radio {{ class }} ">
+                <input type="radio" id="{{ id }}" name="{{ name }}" class="custom-control-input" value="{{ id }}" {{ state }}>
+                <label class="custom-control-label" for="{{ id }}">{{{ label }}}</label>
+              </div>
+            </div>
+            {{/ radios}}
+            {{# checkboxes}}
+            <div class="form-group">
+              <div class="custom-control custom-control-sm custom-checkbox {{ class }}">
+                <input type="checkbox" class="custom-control-input" id="{{ id }}" value="{{ id }}" {{ state }}>
+                <label class="custom-control-label" for="{{ id }}">{{{ label }}}</label>
+              </div>
+            </div>
+            {{/ checkboxes}}
+          </div>
+          {{/ nav.more-filters.filter}}
+        </form>
+      </div>
+      <div class="modal-footer">
+        <div class="ml-auto">
+          <button type="button" class="btn btn-primary btn-sm">Appliquer</button>
+        </div>
+      </div>
     </div>
   </div>
 </div>

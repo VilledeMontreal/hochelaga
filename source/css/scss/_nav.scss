@@ -187,15 +187,9 @@ nav {
   border-bottom: $nav-tabs-border-width solid $nav-tabs-border-color;
 }
 
-.nav-filters {
+.nav-filters,
+.nav-sorts {
   width: 100%;
-  padding: 1rem 0;
-  .nav-item {
-    margin-right: 2rem;
-    &:last-child {
-      margin-right: 0;
-    }
-  }
   .nav-link {
     color: $headings-color;
     padding-left: 0;
@@ -206,10 +200,27 @@ nav {
   }
 }
 
+.nav-filters {
+  padding: 1rem 0;
+  .nav-item {
+    margin-right: 2rem;
+    &:last-child {
+      margin-right: 0;
+    }
+  }
+}
+
+.nav-sorts {
+  padding: 0;
+  .nav-link {
+    padding: 0;
+  }
+}
+
 // filters applied section
 .filters-applied {
   a {
-    margin-bottom: .75rem;
+    margin-bottom: .5rem;
   }
 }
 
