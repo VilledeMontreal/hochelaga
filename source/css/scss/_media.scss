@@ -66,3 +66,57 @@
   padding: 0;
   margin: 0;
 }
+
+// Figures
+.figure {
+  display: table;
+  .figure-img {
+    margin-bottom: 0;
+    line-height: 1;
+  }
+  .figure-caption {
+    margin-top: $spacer;
+    display: table-caption;
+    caption-side: bottom;
+    font-size: $font-size-sm;
+    line-height: 1.4;
+  }
+}
+
+// Copyright
+.img-container {
+  position: relative;
+  display: table;
+  .img-copyright {
+    position: absolute;
+    bottom: 1rem;
+    right: 1rem;
+    min-width: 25px;
+    min-height: 25px;
+    background-color: $black;
+    border-radius: 1rem;
+    color: $white;
+    cursor: pointer;
+    display: flex;
+    font-size: .8125rem;
+    line-height: 1.23076923077;
+    margin-left: 1rem;
+    .copyright-glyph {
+      font-size: .8125rem;
+      line-height: 1;
+      width: 25px;
+      height: 25px;
+      // Nunito messes with character's height so we switch to Arial
+      font-family: Arial, sans-serif;
+      display: flex;
+      align-self: center;
+      align-items: center;
+      flex-shrink: 0;
+      justify-content: center;
+    }
+    .copyright-text {
+      margin-right: $spacer*2;
+      padding: .25rem 0;
+    }
+  }
+}

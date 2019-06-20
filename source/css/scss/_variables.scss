@@ -434,6 +434,7 @@ $custom-control-gutter:                         .625rem;
 $custom-control-spacer-y:                       1rem; // Custom VDM addon
 
 $custom-control-indicator-size:                 1.375rem;
+$custom-control-indicator-size-sm:              1.25rem;
 $custom-control-indicator-bg:                   $white;
 $custom-control-indicator-border-width:         $input-border-width;
 
@@ -594,7 +595,7 @@ $modal-dialog-margin-y-sm-up:       1.75rem;
 $modal-title-line-height:           $line-height-base;
 
 $modal-content-bg:                  $white;
-$modal-content-border-color:        rgba($black, .2);
+$modal-content-border-color:        $gray-200;
 $modal-content-border-width:        0;
 $modal-content-border-radius:       0;
 $modal-content-box-shadow-xs:       0 .25rem .5rem rgba($black, .5);
@@ -671,7 +672,7 @@ $list-group-action-active-bg:       $sarcelle-lightest;
 
 // Figures
 
-$figure-caption-font-size:          90%;
+$figure-caption-font-size:          $font-size-sm;
 $figure-caption-color:              $gray-ink;
 
 

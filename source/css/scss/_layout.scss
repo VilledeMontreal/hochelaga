@@ -123,20 +123,6 @@ html {
   }
 }
 
-
-// Sidebar left and right mobile spacing
-/*
-.sidebar-right {
-  margin-top: 3rem;
-  margin-bottom: -3rem;
-  @include media-breakpoint-up(lg) {
-    margin-top: 0;
-    margin-bottom: 0;
-  }
-}
-*/
-
-
 // Section with BG image
 .bg-image-section {
   background-size: cover;
@@ -179,7 +165,6 @@ html {
   }
 }
 
-//
 // Lead container
 .lead-container {
   padding-top: 3rem;
@@ -548,7 +533,7 @@ html {
       margin-bottom: 3rem;
       .media {
         > * {
-          flex: 0 0 auto;
+          flex: 0 1 auto;
         }
         justify-content: center;
 

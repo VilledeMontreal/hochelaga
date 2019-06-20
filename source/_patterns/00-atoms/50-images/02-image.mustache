@@ -1,0 +1,11 @@
+{{# media.copyright}}
+<div class="img-container">
+{{/ media.copyright}}
+  <img src="{{ media.src }}" class="img-fluid" alt="{{ media.alt }}">
+{{# media.copyright }}
+  <div class="img-copyright">
+    <span class="copyright-glyph">&copy;</span>
+    <span class="copyright-text sr-only">{{ media.copyright }}</span>
+  </div>
+</div>
+{{/ media.copyright }}
