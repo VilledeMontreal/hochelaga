@@ -398,5 +398,5 @@ copyrights.forEach((copyright) => {
 
 function showHideCopyright(copyright) {
   const copyrightText = copyright.querySelector('.copyright-text');
-  copyrightText.classList.toggle('sr-only');
+  copyrightText.classList.toggle('d-none');
 }
