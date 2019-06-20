@@ -76,8 +76,9 @@
   }
   .figure-caption {
     margin-top: $spacer;
-    display: table-caption;
-    caption-side: bottom;
+    // Bug with Safari prevented the use of table-caption to constrain caption to image width
+    // display: table-caption;
+    // caption-side: bottom;
     font-size: $font-size-sm;
     line-height: 1.4;
   }
