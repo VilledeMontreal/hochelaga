@@ -1,0 +1,24 @@
+.jumbotron {
+  padding: $jumbotron-padding ($jumbotron-padding / 2);
+  margin-bottom: 0;
+
+  // Jumbotron heading
+  &-heading {
+    margin-bottom: 2rem;
+  }
+  // Jumbotron title
+  &-title {
+    @extend h3;
+    margin-bottom: 0;
+    
+  }
+
+  // jumbotron bg alternate aka highlight-light old sarcelle-ligthtest
+  &.jumbotron-bg-sarcelle {
+    background-color: $highlight-light;
+  }
+
+  @include media-breakpoint-up(sm) {
+    padding: ($jumbotron-padding * 2) $jumbotron-padding;
+  }
+}

@@ -75,6 +75,18 @@
   $('[data-toggle="popover"]').popover();
 
 
+  // Whole clickable div with links inside
+  //
+  $('.card-inception').click(function(evnt) {
+    var $originatingTarget = $(evnt.target);
+    if ($originatingTarget && $originatingTarget.is('a')) {
+      evnt.stopPropagation(); // Allows other handlers on the event.target to be executed.
+    } else {
+      window.location = $(this).data("href");
+    }
+  });
+  
+
   // Wizard
   //
   $('a[data-toggle="tab"]').on("show.bs.tab", function (e) {
@@ -152,8 +164,8 @@
     } else if (scrollElement.scrollTop() > stickyTop){
       stickyWrapper.height(stickyHeight);
       sticky.addClass("is-sticky");
-      sticky.removeAttr('style');
-    } else {
+    }
+    else{
       sticky.removeClass("is-sticky");
       stickyWrapper.height('auto');
     }
@@ -250,26 +262,26 @@
 
   $('.media-gallery').each( function() {
     var $pic     = $(this),
-      getItems = function() {
-        var items = [];
-        $pic.find('a').each(function() {
-          var $href   = $(this).attr('href'),
-              $size   = $(this).data('size').split('x'),
-              $width  = $size[0],
-              $height = $size[1];
-
-          var item = {
-              src     : $href,
-              w       : $width,
-              h       : $height,
-              author  : $(this).data('author'),
-              legend   : $(this).data('legend'),
-          }
-
-          items.push(item);
-        });
-        return items;
-      }
+        getItems = function() {
+            var items = [];
+            $pic.find('a').each(function() {
+                var $href   = $(this).attr('href'),
+                    $size   = $(this).data('size').split('x'),
+                    $width  = $size[0],
+                    $height = $size[1];
+ 
+                var item = {
+                    src     : $href,
+                    w       : $width,
+                    h       : $height,
+                    author  : $(this).data('author'),
+                    title   : $(this).data('title'),
+                }
+ 
+                items.push(item);
+            });
+            return items;
+        }
  
     var items = getItems();
     
@@ -278,29 +290,21 @@
       event.preventDefault();
       
       var $index = $(this).index();
-      let legend = '';
-      let author = '';
-      const options = {
+      var author = "";
+      var options = {
         index: $index,
         showHideOpacity: true,
         shareEl: false,
-        addCaptionHTMLFn: (item, captionEl, isFake) => {
-          if (!item.legend && !item.author) {
-            captionEl.children[0].innerHTML = '';
+        addCaptionHTMLFn: function(item, captionEl, isFake) {
+          if(!item.title) {
+            captionEl.children[0].innerText = '';
             return false;
           }
-  
-          if (item.legend) {
-            legend = `<span class="pswp__legend d-block font-weight-bold text-white text-center">${item.legend}</span>`;
+
+          if(item.author) {
+            author = '<br/><small>Photo: ' + item.author + '</small>';
           }
-  
-          if (item.author) {
-            author = `<span class="pswp__copyright d-block text-white text-center">&copy; ${item.author}</span>`;
-          }
-  
-          captionEl.children[0].innerHTML = legend + author;
-          // We need to set item.title to true based on photoswipe caption display validation...
-          item.title = true;
+          captionEl.children[0].innerHTML = item.title +  author;
           return true;
         }
       }
@@ -309,58 +313,50 @@
       var lightBox = new PhotoSwipe($pswp, PhotoSwipeUI_Default, items, options);
       lightBox.init();
     });
-  });
 
   var openPhotoSwipe = function() {
 
     $('.media-gallery').each( function() {
-      var $pic     = $(this), getItems = function() {
-        var items = [];
-        $pic.find('a').each(function() {
-            var $href   = $(this).attr('href'),
-                $size   = $(this).data('size').split('x'),
-                $width  = $size[0],
-                $height = $size[1];
-
-            var item = {
-                src     : $href,
-                w       : $width,
-                h       : $height,
-                author  : $(this).data('author'),
-                legend   : $(this).data('legend'),
-            }
-
-            items.push(item);
-        });
-        return items;
-      }
+      var $pic     = $(this),
+          getItems = function() {
+            var items = [];
+            $pic.find('a').each(function() {
+                var $href   = $(this).attr('href'),
+                    $size   = $(this).data('size').split('x'),
+                    $width  = $size[0],
+                    $height = $size[1];
+  
+                var item = {
+                    src     : $href,
+                    w       : $width,
+                    h       : $height,
+                    author  : $(this).data('author'),
+                    title   : $(this).data('title'),
+                }
+  
+                items.push(item);
+            });
+            return items;
+          }
    
       var items = getItems();
       
       var $pswp = $('.pswp')[0];
-      let legend = '';
-      let author = '';
-      const options = {
+      var author = "";
+      var options = {
         index: 0,
         showHideOpacity: true,
         shareEl: false,
-        addCaptionHTMLFn: (item, captionEl, isFake) => {
-          if (!item.legend && !item.author) {
-            captionEl.children[0].innerHTML = '';
+        addCaptionHTMLFn: function(item, captionEl, isFake) {
+          if(!item.title) {
+            captionEl.children[0].innerText = '';
             return false;
           }
-  
-          if (item.legend) {
-            legend = `<span class="pswp__legend d-block font-weight-bold text-white text-center">${item.legend}</span>`;
+
+          if(item.author) {
+            author = '<br/><small>Photo: ' + item.author + '</small>';
           }
-  
-          if (item.author) {
-            author = `<span class="pswp__copyright d-block text-white text-center">&copy; ${item.author}</span>`;
-          }
-  
-          captionEl.children[0].innerHTML = legend + author;
-          // We need to set item.title to true based on photoswipe caption display validation...
-          item.title = true;
+          captionEl.children[0].innerHTML = item.title +  author;
           return true;
         }
       }
@@ -370,52 +366,93 @@
     });
   };
 
-  // Trigger gallery on click
+ 
+
+  /*
+ var openPhotoSwipe = function() {
+  var parseThumbnailElements = function(el) {
+      var thumbElements = el.childNodes,
+          numNodes = thumbElements.length,
+          items = [],
+          figureEl,
+          linkEl,
+          size,
+          item;
+
+      for(var i = 0; i < numNodes; i++) {
+
+          figureEl = thumbElements[i]; // <figure> element
+
+          // include only element nodes 
+          if(figureEl.nodeType !== 1) {
+              continue;
+          }
+
+          linkEl = figureEl.children[0]; // <a> element
+
+          size = linkEl.getAttribute('data-size').split('x');
+
+          // create slide object
+          item = {
+              src: linkEl.getAttribute('href'),
+              w: parseInt(size[0], 10),
+              h: parseInt(size[1], 10)
+          };
+
+
+
+          if(figureEl.children.length > 1) {
+              // <figcaption> content
+              item.title = figureEl.children[1].innerHTML; 
+          }
+
+          if(linkEl.children.length > 0) {
+              // <img> thumbnail element, retrieving thumbnail url
+              item.msrc = linkEl.children[0].getAttribute('src');
+          } 
+
+          item.el = figureEl; // save link to element for getThumbBoundsFn
+          items.push(item);
+      }
+
+      return items;
+  };
+
+  var pswpElement = document.querySelectorAll('.pswp')[0],
+      gallery,
+      options,
+      items;
+
+  var galleryElements = document.querySelectorAll('.media-gallery')[0];
+  items = parseThumbnailElements(galleryElements);
+
+  // define options (if needed)
+  var options = {
+      index: 0 // start at first slide
+  };
+
+  
+  var gallery = new PhotoSwipe( pswpElement, PhotoSwipeUI_Default, items, options);
+  gallery.init();
+};
+*/
+
   $(".js-gallery-trigger").click(function() {
+    
     openPhotoSwipe();
+
   });
 
-  // Change text based on language
   $('.collapse-content').on('show.bs.collapse', function () {
     $(this).parent().find("button").text('Voir moins');
-  });
+ });
 
-  $('.collapse-content').on('hide.bs.collapse', function () {
+ $('.collapse-content').on('hide.bs.collapse', function () {
     $(this).parent().find("button").text('Voir plus');
-  });
+ });
 
-  $("#triggerMap").on('click', function(){
-    $("#contentList").toggleClass('d-none');
-    $("#contentMap").toggleClass('d-none');
-    $("#contentNavSorts").toggleClass('d-none');
-    $(".pagination-arrow").toggleClass('d-none');
-    $(this).toggleClass('d-none d-flex');
-    map.resize();
-    $("#triggerList").toggleClass('d-none d-flex');
-  });
-  
-  $("#triggerList").on('click', function(){
-    $("#contentList").toggleClass('d-none');
-    $("#contentMap").toggleClass('d-none');
-    $("#contentNavSorts").toggleClass('d-none');
-    $(".pagination-arrow").toggleClass('d-none');
-    $(this).toggleClass('d-none d-flex');
-    $("#triggerMap").toggleClass('d-none d-flex');
-  });
-
-})(jQuery);
-
-
-// Copyright toggle
-const copyrights = document.querySelectorAll('.img-copyright');
-
-copyrights.forEach((copyright) => {
-  copyright.addEventListener('click', () => {
-    showHideCopyright(copyright);
-  });
 });
 
-function showHideCopyright(copyright) {
-  const copyrightText = copyright.querySelector('.copyright-text');
-  copyrightText.classList.toggle('d-none');
-}
+
+
+})(jQuery);

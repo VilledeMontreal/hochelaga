@@ -1,0 +1,230 @@
+// List groups
+
+// Interactive list items
+//
+// Use anchor or button elements instead of `li`s or `div`s to create interactive
+// list items. Includes an extra `.active` modifier class for selected items.
+
+.list-group-item-action {
+
+  // Fix active state and class for list-group-item-action
+  &:active,
+  &.active {
+    color: $list-group-action-active-color;
+    .list-group-item-title,
+    .vdm {
+      color: $list-group-action-active-color;
+    }
+  }
+}
+
+//
+// Individual list items
+//
+// Use on `li`s or `div`s within the `.list-group` parent.
+.list-group-item {
+  border: $list-group-border-width solid $list-group-border-color;
+  // remove right and left border
+  border-right: 0;
+  border-left: 0;
+  display: flex;
+  @include border-radius(0);
+
+  // remove border-top-radius
+  &:first-child {
+    @include border-top-radius(0);
+  }
+
+  // remove border-bottom-radius
+  &:last-child {
+    @include border-bottom-radius(0);
+  }
+
+  a {
+    border-bottom: none;
+    &:hover {
+      .list-group-item-title {
+        color: $action;
+      }
+    }
+  }
+
+  .vdm {
+    @include font-size(1.5rem);
+    padding-right: .5rem;
+  }
+
+  .list-group-item-title {
+    color: $headings-color;
+    display: block;
+    @include font-size($font-size-xl);
+    line-height: $line-height-sm;
+    padding-bottom: .5rem;
+  }
+  
+  .list-group-item-label {
+    display: block;
+    font-weight: $font-weight-bold;
+  }
+
+}
+
+.list-group-heading {
+  color: $headings-color;
+  @include font-size($font-size-xl);
+  line-height: $line-height-sm;
+  margin-bottom: 2rem;
+  padding-top: .7rem;
+  padding-bottom: 0;
+}
+
+
+// List-group-hub and list-group-content variants
+//
+// Use with more complex content
+.list-group-hub,
+.list-group-content {
+  margin-bottom: 0;
+  .list-group-item {
+    color: $neutral-secondary;
+    display: flex;
+    padding: 2.25rem 2rem;
+    > *:last-child {
+      padding-bottom: 0;
+    }
+    flex-direction: row;
+    align-items: center;
+    .list-group-item-body {
+      flex: 1 0 0%;
+      min-width: 0; // this is needed for the text-overflow property to work
+      text-align: left;
+    }
+    .list-group-item-footer {
+      display: none;
+      margin-left: auto;
+      .vdm {
+        color: $gray-300;
+        @include font-size(3rem);
+        padding-right: 0;
+      }
+    }
+
+    // Make sure we always have margin between body and footer
+    .list-group-item-body + .list-group-item-footer {
+      margin-left: 1.5rem;
+    }
+
+    // list-broup-item-content for complexe content inside list-group-item-body
+    .list-group-item-content {
+      display: flex;
+      flex-wrap: wrap;
+      flex-direction: column;
+      > span {
+        margin-right: .75rem;
+        &:last-child {
+          margin-right: 0;
+        }
+      }
+      // Remove all pseudo glittering on mobile
+      @include media-breakpoint-down(md) {
+        .separator-brand {
+          &:before {
+            content: none;
+          }
+        }
+      }
+
+      // Switch to flex-direction row and show pseudo element
+      @include media-breakpoint-up(lg) {
+        flex-direction: row;
+        > span:nth-child(n + 2):not(.separator-brand) {
+          &:before {
+            content: "·";
+            color: $gray-900;
+            margin-right: .75rem;
+          }
+        }
+      }
+
+    }
+
+  }
+
+  @include media-breakpoint-up(md) {
+    .list-group-item {
+      .list-group-item-footer {
+        display: flex;
+      }
+    }
+  }
+
+}
+
+// List group hub for Collectrices list-group layout
+// Title and simple data inline with divider. Optionnal footer icon
+.list-group-hub {
+
+  a.list-group-item {
+    &:hover {
+      color: $neutral-secondary;
+      .list-group-item-title {
+        color: $action;
+      }
+      .list-group-item-footer {
+        .vdm {
+          color: $action;
+        }
+      }
+    }
+  }
+
+}
+
+.list-group-max-width {
+  max-width: 800px;
+}
+
+// List group content for list-group layout inside content
+// Title and complexe data structure. With or without bs grid layout.
+.list-group-content {
+
+  //remove extra margin on last child item of last-child...
+  .list-group-item-body {
+    > :last-child {
+      > * {
+        margin-bottom: 0;
+      }
+    }
+  }
+
+  .list-group-item-row,
+  .list-group-item-column {
+    padding-bottom: 1rem;
+    &:last-child {
+      padding-bottom: 0;
+    }
+  }
+
+  // A column is not inside bootstrap grid layout
+  .list-group-item-column {
+    width: 100%;
+    display: block;
+    .list-group-item-label {
+      color: $headings-color;
+      padding-bottom: 1rem;
+    }
+  }
+  
+}
+
+// Flush bottom list items
+//
+// Remove borders bottom
+// use list-group-flush to remove both
+.list-group-flush-bottom {
+  &:last-child {
+    .list-group-item:last-child {
+      border-bottom: 0;
+    }
+  }
+}

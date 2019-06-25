@@ -1,0 +1,274 @@
+// Slide menu
+//
+
+// Slide menu header
+// Contains the close button
+.slide-menu-header {
+  margin: .625rem;
+
+  @include media-breakpoint-up(sm) {
+    margin: 1rem;
+  }
+
+  @include media-breakpoint-up(lg) {
+    margin: 4rem 4rem 2.5rem 4rem;
+  }
+
+}
+
+// Slide menu close button
+.btn-close {
+  @include button-reset();
+  display: inline-flex;
+  align-items: center;
+  cursor: pointer;
+  color: $gray-600;
+  margin: 0;
+  padding: .5rem;
+  .vdm {
+    color: inherit;
+    @include font-size(1.5rem);
+  }
+  .button-label {
+    @include font-size($font-size-sm);
+    margin-left: 1rem;
+  }
+
+  &:focus {
+    box-shadow: none;
+  }
+
+  @include media-breakpoint-up(sm) {
+    .vdm {
+      @include font-size(2rem);
+    }
+  }
+
+  @include media-breakpoint-up(lg) {
+    .button-label {
+      @include font-size($slide-menu-link-font-size);
+    }
+    .vdm {
+      @include font-size(2.5rem);
+    }
+  }
+}
+
+// Slide menu search
+//
+.slide-menu-search {
+
+  .form-group {
+    margin-bottom: 0;
+    &.has-clear {
+      .form-control {
+        padding-right: 3.5rem;
+      }
+      .btn-clear {
+        margin-right: 1rem;
+      }
+    }
+  }
+
+  .vdm {
+    color: $gray-100;
+  }
+  .form-control {
+    background-color: $gray-800;
+    border: none;
+    border-radius: 0;
+    color: $gray-100;
+    @include font-size($font-size-sm);
+    line-height: 1;
+    padding: 1.1875rem;
+
+    &::placeholder {
+      color: $gray-100;
+    }
+
+    &:focus {
+      background: $gray-400;
+      box-shadow: none;
+      color: $gray-900;
+
+      &::placeholder {
+        color: $gray-900;
+      }
+
+    }
+  }
+  .input-group-icon {
+    &.input-group-icon-left {
+      > .vdm {
+        color: $white;
+        @include font-size(2.5rem);
+        padding-left: .625rem;
+      }
+      input {
+        padding-left: 3.75rem;
+      }
+    }
+  }
+
+  .btn-close-search {
+    z-index: 10;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    color: $gray-900;
+    display: flex;
+    @include font-size(2.5rem);
+    padding: 0;
+    margin-left: .625rem;
+  }
+
+  // Mobile
+  @include media-breakpoint-up(sm) {
+    .form-control {
+      @include font-size($slide-menu-link-font-size);
+      padding: 1.75rem;
+    }
+    .input-group-icon {
+      &.input-group-icon-left {
+        > .vdm {
+          @include font-size(3rem);
+          padding-left: 1rem;
+        }
+        input {
+          padding-left: 5rem;
+        }
+      }
+    }
+    .btn-close-search {
+      @include font-size(3rem);
+      margin-left: 1rem;
+    }
+  }
+}
+
+// Trigger search mode on focus
+.js-search-focus {
+  .vdm {
+    color: $black;
+  }
+  .input-group-icon {
+    &.input-group-icon-left {
+      > .vdm {
+        display: none;
+      }
+    }
+  }
+  .form-control {
+    background: $gray-400;
+    box-shadow: none;
+    color: $gray-900;
+
+    &::placeholder {
+      color: $gray-900;
+    }
+  }
+
+}
+
+// Main slide-menu container
+.slide-menu {
+	position: fixed;
+	width: 100%;
+	max-width: 100%;
+	height: 100vh;
+	top: 0;
+	right: 0;
+	display: none;
+  overflow-x: hidden;
+  overflow-y: auto;
+	box-sizing: border-box;
+	background: $slide-menu-bg;
+	transition: transform $slide-menu-transition-dur $slide-menu-transition-easing;
+	transform: translateX(100%);
+	will-change: transform;
+	z-index: $zindex-fixed;
+
+	.slider {
+		width: 100%;
+		transition: transform $slide-menu-transition-dur $slide-menu-transition-easing;
+		transform: translateX(0);
+		will-change: transform;
+	}
+
+	ul {
+		@extend .list-unstyled;
+		position: relative;
+		width: 100%;
+		max-width: 100%;
+    margin: 0;
+    margin-top: 1.5rem;
+    margin-bottom: 3rem;
+    
+    li {
+      display: flex;
+      padding: 0;
+    }
+
+		ul {
+			position: absolute;
+			top: 0;
+			left: 100%;
+      display: none;
+      padding: 0;
+      margin: 0;
+		}
+
+		a {
+      color: $slide-menu-link-color;
+      @include font-size($slide-menu-link-font-size);
+      display: flex;
+      flex: 1;
+      align-items: center;
+      padding: 1.5rem 3.75rem;
+      cursor: pointer;
+      &:hover,
+      &:active,
+      &.active {
+        color: $action-lighter;
+        text-decoration: none;
+        
+        .vdm {
+          color: $action-lighter;
+        }
+      }
+      .vdm {
+        color: $gray-600;
+        @include font-size(3rem);
+        margin-left: 1.5rem;
+        margin-top: -.75rem;
+        margin-bottom: -.75rem;
+      }
+
+      &.back-link {
+        color: $slide-menu-link-hover-color;
+        @include font-size($font-size-sm);
+
+        .vdm {
+          color: $slide-menu-icon-color;
+          @include font-size(1rem);
+          line-height: 1;
+          margin-left: 0;
+        }
+      }
+    }
+    
+    @include media-breakpoint-up(sm) {
+      a {
+        padding-left: 5rem;
+        padding-right: 5rem;
+        .vdm {
+          margin-left: auto;
+        }
+      }
+    }
+	}
+  
+  @include media-breakpoint-up(sm) {
+    width: $slide-menu-width;
+  }
+}

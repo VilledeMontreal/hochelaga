@@ -1,0 +1,56 @@
+//style for utility icons
+
+:root {
+  --icon-xs: 16px;
+  --icon-sm: 24px;
+  --icon-md: 32px;
+  --icon-lg: 48px;
+  --icon-xl: 64px;
+}
+
+/* icon size */
+.icon--xs {
+  font-size: var(--icon-xs);
+}
+
+.icon--sm {
+  font-size: var(--icon-sm);
+}
+
+.icon--md {
+  font-size: var(--icon-md);
+}
+
+.icon--lg {
+  font-size: var(--icon-lg);
+}
+
+.icon--xl {
+  font-size: var(--icon-xl);
+}
+
+
+.icon-text-aligner {
+  /* element that contains icon + text */
+  display: flex;
+  align-items: center;
+}
+.icon-text-aligner .icon {
+  /* svg element */
+  display: inline-block;
+  height: 1em;
+  width: 1em;
+  color: inherit;
+  margin-right: 0.4em; //you can change this
+  flex-shrink: 0;
+}
+
+.icon {
+  display: inline-block;
+  width: 1em;
+  height: 1em;
+  stroke-width: 0;
+  stroke: currentColor;
+  fill: currentColor;
+}
+

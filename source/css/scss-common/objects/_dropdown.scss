@@ -1,0 +1,106 @@
+// Dropdown Menu toggle (user)
+.dropdown {
+  margin-bottom: 0;
+  padding-bottom: 0;
+
+  &.dropdown-align-right {
+    margin-left: auto;
+  }
+}
+// Replace caret by our own icon
+.dropdown-toggle {
+  display: inline-flex;
+  align-items: center;
+
+  // Replace carets
+  &:after {
+    border: 0;
+    color: inherit;
+    @include font-size(1.125rem);
+    margin-left: .5rem;
+    width: auto;
+    height: auto;
+  }
+  //@include iconvdm($position: after, $icon: '057-chevron-bas');
+}
+
+// Dropdown menu
+.dropdown-menu {
+  @include font-size($font-size-sm);
+  max-height: 60vh;
+  overflow-y: auto;
+  padding: .75rem 0 0 0;
+  margin-top: 1rem;
+
+  // Fix some weird padding + max-height issue in some browser like Firefox and IE.
+  &::after {
+    content: " ";
+    display: block;
+    margin-bottom: .75rem;
+  }
+
+  // Main menu
+  ul {
+    padding: 0;
+    margin-bottom: 0;
+    li {
+      padding: 0;
+    }
+  }
+
+  // Dropdown section
+  .dropdown-item-section {
+    color: $black;
+    @include font-size($font-size-sm);
+    padding: .75rem $dropdown-item-padding-x;
+    > * {
+      margin-bottom: 1.5rem;
+      &:last-child {
+        margin-bottom: 0;
+      }
+    }
+  }
+
+  .dropdown-item {
+    display: flex;
+    align-items: center;
+    padding: .75rem 1.25rem;
+
+    @include hover-focus {
+      color: $link-color;
+      @include gradient-bg($white);
+    }
+  
+    &.active,
+    &:active {
+      color: $link-color;
+      @include gradient-bg($white);
+    }
+  
+    &.disabled,
+    &:disabled {
+      color: $dropdown-link-disabled-color;
+      background-color: transparent;
+    }
+
+    // Handle form-group in dropdown-item
+    &.form-group {
+      margin-bottom: 0;
+      padding-top: .375rem;
+      padding-bottom: .375rem;
+      .custom-control {
+        margin-bottom: 0;
+      }
+      .custom-control-label {
+        padding-top: .125rem;
+      }
+    }
+  }
+}
+
+// change icon when dropdown is open
+.dropdown.show {
+  .dropdown-toggle {
+    //@include iconvdm($position: after, $icon: '055-chevron-haut');
+  }
+}

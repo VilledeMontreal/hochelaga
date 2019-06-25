@@ -6,17 +6,8 @@
  * @see pattern-scaffolding.css in mustache demo starterkit for reference
  */
 
- @import "../scss/functions";
- @import "~bootstrap/scss/functions";
- // Default variables override.
- // MUST come before bootstrap variables in SASS because of !default tags used in framework variables
- @import "../scss/variables";
-
-// Import variables and bootstrap framework - duplicate but required
-// @import '../scss/variables';
-
 // Bootstrap Framework.
-@import '../styles';
+@import '../styles.citoyens.scss';
 
 .sg-main {
   padding: 20px 20px;
@@ -68,7 +59,7 @@
 
 .pl-placeholder-block {
   @extend .pl-padding-10;
-  background: $gray-sky;
+  background: $gray-100;
   margin-bottom: 1rem;
 }
 
@@ -113,7 +104,7 @@
 .pl-size-block {
   border-top: 1px solid $gray-600;
   border-bottom: 1px solid $gray-600;
-  background: $gray-sky;
+  background: $gray-100;
   text-align: center;
   position: relative;
   margin-bottom: 30px;
@@ -169,20 +160,20 @@ $pl-size-box-wrapper-padding: 1rem;
       auto;
   }
   .pl-size-box-margin {
-    background: darken($gray-sky, 20%);
+    background: darken($gray-100, 20%);
     border: 1px solid $gray-600;
     z-index: -5;
     width: $pl-size-box-wrapper-size - $pl-size-box-wrapper-padding;
     height: $pl-size-box-wrapper-size - $pl-size-box-wrapper-padding;
     .pl-size-box-base {
-      background: $gray-sky;
+      background: $gray-100;
       border: 1px solid $gray-600;
       z-index: 0;
       width: $pl-size-box-wrapper-size - $pl-size-box-wrapper-padding * 2;
       height: $pl-size-box-wrapper-size - $pl-size-box-wrapper-padding * 2;
 
       .pl-size-box-padding {
-        background: lighten($gray-sky, 20%);
+        background: lighten($gray-100, 20%);
         border: 1px solid $gray-600;
         z-index: 5;
         width: $pl-size-box-wrapper-size - $pl-size-box-wrapper-padding * 3;
@@ -242,7 +233,7 @@ $pl-size-box-wrapper-padding: 1rem;
       pre {
         width: 40%;
         color: $gray-600;
-        background: $gray-sky;
+        background: $gray-100;
       }
     }
   }
@@ -253,45 +244,32 @@ $pl-size-box-wrapper-padding: 1rem;
 
 .pl-atom-icons-grid {
   .pl-atom-icon-item {
-    text-align: center;
+    text-align: left;
     margin: 1rem;
     position: relative;
     transition: all .5s cubic-bezier(.165,.84,.44,1);
     transform: translateZ(0);
-    &:after {
-      content: "";
-      box-shadow: 0 0.25rem 0.125rem 0 rgba(0,0,0,.05);
-      opacity: 0;
-      position: absolute;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      z-index: -1;
-      transition: opacity .5s cubic-bezier(.165,.84,.44,1);
-    }
     &:hover {
       &:after {
         opacity: 1;
       }
-      .vdm {
-        background-color: $gray-sky;
-      }
     }
-    .vdm {
-      font-family: 'vdm';
-      display: block;
-      font-size: 50px;
-      font-weight: normal;
-      font-variant: normal;
-      text-transform: none;
-      padding-top: .5rem;
-      padding-bottom: .5rem;
-    }
+	&.icon-editorial {
+		text-align: center;
+		svg {
+			width: 48px;
+			height: 48px;
+		}
+	}
+	&.icon-utility {
+		 svg {
+			 margin-right: 12px;
+			 width: 24px;
+			 height: 24px;
+		 }
+	}
     .ic-name {
-      color: $body-color;
-      display: flex;
-      justify-content: center;
+      color: $black;
       font-size: .8rem;
       user-select: all;
       line-height: 1.1;
@@ -533,71 +511,177 @@ $pl-size-box-wrapper-padding: 1rem;
  @extend .h2;
 }
 
+
+// Logos
+// - - - - - - - - - -  - - - - - -
+.pl-atom-logos-grid {
+  .pl-atom-logo-item {
+    text-align: center;
+    position: relative;
+	border: 1px solid $gray-200;
+    transition: all .5s cubic-bezier(.165,.84,.44,1);
+    transform: translateZ(0);
+	svg {
+		  max-height: 100px;
+		  margin: 2.5rem 1.875rem;
+
+		  &#logo-rosace {
+			  max-height: 120px;
+			  max-width: 120px;
+		  }
+		
+		  &#logo-mtl-rosace {
+			  max-height: 100px;
+			  padding: 0 0.5rem;
+		  }
+	}
+	&.color{
+		background-color: $white;
+		.logo-version {
+			color:$gray-700;
+		}
+	}
+	&.black{
+		background-color: $white;
+		.logo-version {
+			color:$gray-700;
+		}
+	}
+	&.reverse {
+		background-color: $gray-800;
+		.logo-version {
+			color:$white;
+		}
+	}
+	&.arrond {
+		position: relative;
+		height:200px;
+		  div {
+			  display: flex;
+			  align-content: center;
+			  text-align: center;
+			  width: 100%;
+			  height: 100%;
+			  * {
+				align-self: center;
+				margin: 0 auto;
+			  }
+			  svg {
+				max-width: 200px;
+				width: 100%;
+				overflow: visible;
+				
+		  	}
+		  }  
+	  }
+	.logo-version {
+		padding: 1rem 0.5rem 0; 
+		display: block;
+		line-height: 1em;
+	}
+	
+  }
+}
+
+
 // Colors
 //
 // Contextual variations (linked badges get darker on :hover).
 
 @each $color, $value in $theme-colors {
   .pl-#{$color} {
-    background: $value;
+    //background: $value;
   }
 }
 
 @each $color, $value in $grays {
   .pl-gray-#{$color} {
-    background: $value;
+    //background: $value;
   }
 }
-
-.pl-gray-ink {
-  background: $gray-ink;
-}
-
-.pl-gray-sky {
-  background: $gray-sky;
-}
-
 .pl-brand {
   background: $brand;
 }
-
+.pl-brand-black{
+  background: $brand-black;
+}
+.pl-neutral-primary {
+  background: $neutral-primary; 
+}
+.pl-neutral-primary-reverse{
+  background: $neutral-primary-reverse; 
+  border: 1px solid $gray-500;
+}
+.pl-neutral-secondary {
+  background: $neutral-secondary;	
+}
+.pl-neutral-tertiary {
+  background: $neutral-tertiary;	
+}
+.pl-neutral-stroke {
+  background: $neutral-stroke;
+}
+.pl-neutral-underground-1 {
+  background: $neutral-underground-1;	
+}
+.pl-neutral-underground-2 {
+  background: $neutral-underground-2; 
+}
+.pl-action {
+  background: $action;	
+}
+.pl-action-lighter {
+  background: $action-lighter;
+}
+.pl-highlight-light {
+  background: $highlight-light;
+}
+.pl-highlight-strong {
+  background: $highlight-strong;	
+}
+.pl-informative-dark {
+  background: $informative-dark;
+}
+.pl-informative-light {
+  background: $informative-light;				
+}
+.pl-informative {
+  background: $informative;
+}
+.pl-positive-dark {
+  background: $positive-dark;
+}
+.pl-positive-light {
+  background: $positive-light;
+}
+.pl-positive {
+  background: $positive;
+}
+.pl-warning-dark {
+  background: $warning-dark;
+}
+.pl-warning-light {
+  background: $warning-light;	
+}
+.pl-warning {
+  background: $warning;
+}
+.pl-negative-dark {
+  background: $negative-dark;
+}
+.pl-negative-light {
+  background: $negative-light;	
+}
+.pl-negative {
+  background: $negative;
+}
 .pl-black {
   background: $black;
 }
-
 .pl-white {
-  background: $white
+  background: $white;
 }
 
-// Accent
-
-.pl-sarcelle {
-  background: $sarcelle;
-}
-.pl-sarcelle-dark {
-  background: $sarcelle-dark;
-}
-
-.pl-sarcelle-surprise {
-  background: $sarcelle-surprise;
-}
-
-.pl-sarcelle-atmos {
-  background: $sarcelle-atmos;
-}
-
-.pl-sarcelle-light {
-  background: $sarcelle-light;
-}
-
-.pl-sarcelle-lightest {
-  background: $sarcelle-lightest;
-}
-
-// modal examples
-.pl-example-modal {
-
-}
 
 .pl-example-modal {
   .modal {

@@ -1,0 +1,125 @@
+// Sidebar
+.sidebar {
+  margin-bottom: 1rem;
+  overflow: hidden;
+
+  .social-media-list {
+    padding-left: 2rem;
+    .vdm {
+      color: $neutral-secondary;
+    }
+  }
+
+  p {
+    margin-bottom: $paragraph-margin-bottom;
+  }
+
+  // Other fixtures
+  // Titles
+  .subtitle {
+    @include font-size($font-size-lg);
+    line-height: $line-height-sm;     // 1.33
+    margin-bottom: 1rem;
+  }
+  .sidebar-title {
+    color: $headings-color;
+    display: flex;
+    @include font-size($font-size-xl);
+    font-weight: $font-weight-bold;  
+    line-height: $line-height-sm;     // 1.33 
+    margin-bottom: 2rem;
+    // Tweak some styles for icon inside title
+    &.icon {
+      .vdm {
+        color: $headings-color;
+        @include font-size(2rem);
+      }
+    }
+  }
+
+  // Top stroke variant
+  &.sidebar-top-stroke {
+    border-top: 4px solid $headings-color;
+    padding: 2rem 2rem 0 2rem;
+  }
+
+  // 4 sides border variant
+  &.sidebar-border {
+    .sb-block {
+      border: 1px solid $gray-200;
+      background-color: transparent;
+      padding: 1.5rem 1.75rem 2rem 1.75rem;
+      .sidebar-title {
+        margin-bottom: 1rem;
+      }
+    }
+  }
+}
+
+// The base unit for a sidebar component, stacked
+.sb-block {
+  margin-bottom: 3rem;
+  @include clearfix;
+  > *:last-child {
+    margin-bottom: 0;
+  }
+
+  // The basic grouping tool for visual effect, with a padding/margin-bottom;
+  .subsection {
+    padding-bottom: 1.5rem;
+    &:last-of-type {
+      padding-bottom: 0;
+    }
+    .subsection-content {
+      flex: 1;
+    }
+  }
+
+  // Schedule data
+  // TODO: Refactor this code
+  .schedule-content {
+    align-items: flex-start;
+    @include font-size($font-size-sm);
+    width: 100%;
+
+    .schedule-day,
+    .schedule-data {
+      color: $headings-color;
+    }
+
+    .schedule-data {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      .schedule-start-time,
+      .schedule-end-time {
+        white-space: nowrap
+      }
+      .schedule-start-time { 
+        margin-right: .25rem;
+      }
+      .schedule-end-time {
+        &:before {
+          content: "-";
+          margin-right: .25rem;
+        }
+      }
+      .vdm {
+        cursor: pointer;
+        @include font-size(1rem);
+        margin-left: .5rem;
+      }
+    }
+  }
+  
+  // Note
+  .note {
+    margin-bottom: 1rem;
+  }
+
+  .elided-text {
+    display: inline-block;
+    max-width: 100%;
+    white-space: nowrap;
+  }
+}

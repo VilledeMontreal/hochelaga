@@ -1,0 +1,256 @@
+// @file mixins.scss
+
+/**
+ * - - - - - - - - - -
+ * == Typography
+ * - - - - - - - - - -
+ */
+
+// Responsive headings
+// @arg $font-size - rem
+// @arg $multiplier - integer
+// @arg $line-height - px
+
+@mixin responsive-font-size($font-size, $multiplier, $line-height) {
+
+  $heading-multiplier: check-multiplier-value($multiplier);
+  $font-size: $font-size * $heading-multiplier;
+  $font-size-px: rem-to-px($font-size);
+  $font-size-rem: px-to-rem($font-size-px);
+
+  // Generate font-size and line-height
+  @include font-size($font-size-rem);
+  line-height: get-line-height($font-size-px, $line-height);
+
+}
+
+// Card heading
+@mixin card-heading($font-size: $font-size-xl, $line-height: $line-height-sm, $font-weight: $font-weight-regular, $color: $headings-color, $display: block) {
+  color: $color;
+  display: $display;
+  @include font-size($font-size);
+  font-weight: $font-weight;
+  line-height: $line-height;
+}
+
+//  @arg $size - string - any valid text size declaration
+//  @arg $color - string any valid color declaration
+//  @arg $color - string any valid color declaration
+@mixin bullet-left($size: 0.8em, $color: $primary, $textcolor: $black) {
+  display: inline-block;
+  position: relative;
+  padding-left: $size * 1.75;
+  color: $textcolor;
+  &:before {
+    content: " ";
+    position: absolute;
+    display: block;
+    left: 0;
+    top: 46%; // Perceptual
+    transform: translateY(-50%);
+    background: $color;
+    border-radius: $size;
+    width: $size;
+    height: $size;
+  }
+}
+
+
+
+// Add background variant to .header-banner.
+
+@mixin banner-variant($bg) {
+  color: color-yiq($bg);
+  background-color: $bg;
+
+  a {
+    color: color-yiq($bg);
+    box-shadow: inset 0 -1px color-yiq($bg);
+    &:active,
+    &:hover {
+      color: color-yiq($bg);
+    }
+  }
+}
+
+// Add color variant to .progress-bar.
+@mixin progress-variant($bg) {
+  .progress-bar {
+    border-color: $bg;
+  }
+}
+
+@mixin badge-variant($bg) {
+  color: color-yiq($bg);
+  background-color: $bg;
+  border-color: $bg;
+}
+
+/**
+ * - - - - - - - - - -
+ * == UI
+ * - - - - - - - - - -
+ */
+
+//== Accents
+// - - - - - - - - - -
+
+@mixin drop-shadow(
+  $dist-top: 0,
+  $dist-right: 5px,
+  $dist-bottom: 11px,
+  $dist-left: 0 ,
+  $r: 0,
+  $g: 0,
+  $b: 0,
+  $opacity: 0.27
+) {
+  box-shadow: $dist-top $dist-right $dist-bottom $dist-left rgba($r, $g, $b, $opacity);
+}
+
+/**
+ * - - - - - - - - - -
+ * == Forms
+ * - - - - - - - - - -
+ */
+
+
+// Buttons
+//
+@mixin button-size($padding-y, $padding-x, $font-size, $line-height, $border-radius) {
+  @include font-size($font-size);
+  line-height: $line-height;
+  padding: $padding-y $padding-x;
+  // Manually declare to provide an override to the browser default
+  @if $enable-rounded {
+    border-radius: $border-radius;
+  } @else {
+    border-radius: 0;
+  }
+}
+
+@mixin button-alter($color, $background, $border) {
+  color: $color;
+  background-color: $background;
+  border-color: $border;
+
+  &:focus,
+  &.focus {
+    color: $color;
+    background-color: darken($background, 10%);
+    border-color: darken($border, 25%);
+  }
+  &:hover {
+    color: $color;
+    background-color: darken($background, 10%);
+    border-color: darken($border, 12%);
+  }
+}
+
+// Button sizes
+@mixin button-alter-size($padding-vertical, $padding-horizontal, $font-size, $line-height, $border-radius) {
+  border-radius: $border-radius;
+  @include font-size($font-size);
+  line-height: $line-height;
+  padding: $padding-vertical $padding-horizontal;
+}
+
+
+/**
+ * - - - - - - - - - -
+ * == Utilities
+ * - - - - - - - - - -
+ */
+
+ @mixin button-reset() {
+  color: inherit;
+  font: inherit;
+  text-transform: none;
+  background-color: transparent;
+  border: 0;
+  margin: 0;
+  overflow: visible;
+ }
+
+ //@include n-columns(200px,  10px, true, 5);
+@mixin n-columns($child-selector, $min-width, $gutter, $last-equal: false, $max-cols: 5) {
+  display: flex;
+  flex-wrap: wrap;
+  margin-left: -$gutter;
+  margin-top: -$gutter;
+
+  > #{ $child-selector } {
+    flex: 1 0 $min-width;
+    margin-left: $gutter;
+    margin-top: $gutter;
+
+    @if $last-equal {
+      @for $i from 2 through $max-cols {
+        $screen-width: ($min-width*$i)+($gutter*$i);
+        $column-width: (100%/$i);
+        @media (min-width: $screen-width) {
+          max-width: calc(#{$column-width} - #{$gutter});
+        }
+      }
+
+      $column-width: (100%/$max-cols);
+      @media (min-width: $min-width*$max-cols) {
+        min-width: calc(#{$column-width} - #{$gutter});
+      }
+    }
+  }
+}
+
+/// Replace `$search` with `$replace` in `$string`
+/// @author Hugo Giraudel
+/// @param {String} $string - Initial string
+/// @param {String} $search - Substring to replace
+/// @param {String} $replace ('') - New value
+/// @return {String} - Updated string
+@function str-replace($string, $search, $replace: '') {
+  $index: str-index($string, $search);
+  
+  @if $index {
+    @return str-slice($string, 1, $index - 1) + $replace + str-replace(str-slice($string, $index + str-length($search)), $search, $replace);
+  }
+  
+  @return $string;
+}
+
+// Creates a filled circle
+@mixin circle($size: 1rem, $background-color: $primary, $border: false, $border-color: $gray-600) {
+  background-color: $background-color;
+  border-radius: 50%;
+  content: "";
+  display: block;
+  width: $size;
+  height: $size;
+
+  @if $border {
+    border: 1px solid $border-color;
+  }
+}
+
+// Truncate text with show-more/show-less buttons
+@mixin truncate($rows, $line-height, $background: '') {
+  position: relative;
+  overflow: hidden;
+  max-height: $line-height * $rows;
+  line-height: $line-height;
+
+  &:after {
+    content: "";
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    width: 100%;
+    height: 3rem;
+
+    @if $background != '' {
+      background: -moz-linear-gradient(top, rgba(255,255,255,0) 0%, rgba(255,255,255,1) 100%); /* FF3.6-15 */
+      background: -webkit-linear-gradient(top, rgba(255,255,255,0) 0%,rgba(255,255,255,1) 100%); /* Chrome10-25,Safari5.1-6 */
+      background: linear-gradient(to bottom, rgba(255,255,255,0) 0%,rgba(255,255,255,1) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+    }
+  }
+  
+}

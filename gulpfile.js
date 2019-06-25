@@ -72,20 +72,20 @@ gulp.task('nodemodulescripts-dist', function () {
 // Font files -- VDM font icons
 // From node_modules to source -- stay up to date with curent versions
 // Thin of piping these files with a rename so the final filename is more significant.
-gulp.task('nodemodulesfonts', function () {
+/*gulp.task('nodemodulesfonts', function () {
   return gulp.src(config.nodemodulesfonts.files)
       .pipe(gulp.dest(
           config.nodemodulesfonts.dest
       ))
       .pipe(browserSync.reload({stream:true}));
-});
+});*/
 
 
 // VDM font-metadata -- 
 // Load and transform the json file to provide looping data for mustache templates in a new .json file.
 // Provide a sass $icons map variable in a separate .scss file as well.
 
-gulp.task('nodemodulesfontsdata', function() {
+/*gulp.task('nodemodulesfontsdata', function() {
   fs.readFile(config.nodemodulesfontsdata.input, "utf-8", function(err, json) {
     if (err) {
       return console.log(err);
@@ -139,7 +139,7 @@ gulp.task('nodemodulesfontsdata', function() {
       console.log("The sass icons file has been created");
     });
   });// read file
-});
+});*/
 
 // Scripts from source to public
 gulp.task('scripts', function () {
@@ -188,7 +188,7 @@ gulp.task('photoswipe', function () {
 });
 
 // Fonts, copy
-gulp.task('fonts', function () {
+/*gulp.task('fonts', function () {
     return gulp.src(config.fonts.files)
       .pipe(gulp.dest(
         config.fonts.dest
@@ -203,7 +203,7 @@ gulp.task('glyphs', function () {
       config.glyphs.dest
     ))
     .pipe(browserSync.reload({stream:true}));
-});
+});*/
 
 // Images copy and minimize
 gulp.task('images', function () {
@@ -369,12 +369,6 @@ gulp.task('watch', function () {
     ['pl-sass']
   );
 
-  // Watch fonts
-  gulp.watch(
-    config.fonts.files,
-    ['fonts']
-  );
-
 });
 
 // Task: Default
@@ -385,15 +379,11 @@ gulp.task('default', ['cleanable:before'], function () {
   gulp.start(
     'patternlab',
     'styleguide',
-    'fonts',
-    'glyphs',
     'sass',
     'pl-sass',
     'images',
     'nodemodulescripts',
     'photoswipe',
-    'nodemodulesfonts',
-    'nodemodulesfontsdata',
     'scripts'
   );
 });
@@ -417,11 +407,29 @@ gulp.task('distribute', ['clean-dist:before'], function () {
   production = true;
   gulp.start(
     'nodemodulescripts-dist',
-    'nodemodulesfontsdata',
     'scripts',
     'images-dist',
     'sass',
     'scss-dist'
   );
 });
+
+
+/*
+var glob = require("glob");
+var gulpicon = require("gulpicon/tasks/gulpicon");
+
+// grab the config, tack on the output destination
+var config = require("./example/config.js");
+config.dest = "example/output";
+
+// grab the file paths
+var files = glob.sync("images/icons/*.svg");
+
+// set up the gulp task
+gulp.task("icons", gulpicon(files, config));
+
+*/
+
+
 

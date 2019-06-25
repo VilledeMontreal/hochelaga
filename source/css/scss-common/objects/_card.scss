@@ -1,0 +1,624 @@
+/**
+ * Generic cards styles and variants
+ * Built on bootstrap card component 
+ */
+.card {
+  text-align: center;
+  display: flex;
+  margin-bottom: $grid-gutter-width;
+  width: 100%;
+  border: none;
+  box-shadow: $card-box-shadow;
+
+  .card-icon-top {
+    @include font-size(4.5rem);
+    margin-top: 3rem;
+  }
+
+  .card-img-top {
+    flex: 0 0 auto; // IE needs this
+  }
+
+  .card-type {
+    font-weight: $font-weight-bold;
+    display: inline-block;
+    margin-bottom: .5rem;
+  }
+  .card-tags,
+  .card-date {
+    display: inline-block;
+    margin-bottom: 1rem;
+  }
+
+  .card-subheading {
+    margin-bottom: 1rem;
+    > span {
+      display: block;
+      margin-bottom: 0;
+    }
+    .card-date {
+      color: $gray-900;
+      font-weight: $font-weight-bold;
+    }
+  }
+
+  .card-title {
+    @include card-heading();
+    margin-bottom: 1rem;
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+
+  .card-date,
+  .card-tags,
+  .card-type,
+  .card-subtitle,
+  .card-date-text {
+    line-height: $line-height-sm;
+  }
+
+  .card-subtitle {
+    display: block;
+    font-weight: $font-weight-bold;
+    line-height: $line-height-sm;
+    margin-top: -.5rem;
+    margin-bottom: 1rem;
+  }
+
+  .card-label {
+    @include card-heading($font-weight: $font-weight-bold);
+  }
+
+  .card-description {
+    display: inline-block;
+    @include font-size($font-size-sm);
+    line-height: $line-height-base;
+  }
+
+  .card-link {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    border-bottom: none;
+    color: $action;
+    @include font-size($font-size-base);
+    @include transition(color .15s ease-in-out);
+    .vdm {
+      @include font-size(3rem);
+      margin-left: 1rem;
+      color: inherit;
+    }
+
+    &:hover {
+      color: $action-lighter;
+    }
+  }
+
+  .tarif-value {
+    @include font-size($font-size-lg);
+    font-weight: $font-weight-bold;
+    padding: 0 .5rem;
+  }
+
+  .card-body {
+    padding: 2rem;
+    align-self: center;
+    width: 100%;
+
+    // remove margin-bottom on last-child of card-body
+    > :last-child {
+      margin-bottom: 0;
+    }
+
+    .popover-wrapper {
+      .vdm {
+        color: $gray-900;
+      }
+      &.right {
+        position: absolute;
+        right: 0;
+      }
+    }
+  }
+
+  .card-metadata {
+    min-width: 10rem;
+    padding: 2rem;
+    padding-top: 0;
+    text-align: left;
+    
+    @include media-breakpoint-up(lg) {
+      padding-top: 2rem;
+      padding-left: 0;
+      padding-right: 0;
+    }
+  }
+
+  .card-footer {
+    border-top: none;
+    padding: 0 2rem 2rem 2rem;
+    background-color: inherit;
+    display: flex;
+    align-items: center;
+
+    .card-footer-label {
+      color: $action;
+      font-weight: $font-weight-bold;
+      line-height: $line-height-sm;
+      padding-right: 0.5rem;
+    }
+
+    .vdm {
+      color: $primary;
+      @include font-size(2rem);
+    }
+  }
+
+  .vdm {
+    color: $primary;
+  }
+
+  .card-alert {
+    .vdm {
+      color: inherit;
+      @include font-size(3rem);
+    }
+  }
+
+  // Simple link inside a card with right arrow
+  &.card-link {
+    flex-direction: row;
+    align-items: center;
+    .card-body {
+      padding-right: 1rem;
+      text-align: left;
+    }
+    .card-footer {
+      padding: 1.5rem 1rem 1.5rem 0;
+      .vdm {
+        @include font-size(3rem);
+      }
+    }
+    .card-title {
+      @include card-heading($font-size: $font-size-base, $font-weight: $font-weight-bold);
+    }
+
+  }
+
+  // Row layout is used for icon placement to the left or right at larger breakpoint
+  &.card-row-layout {
+    .card-body {
+      text-align: left;
+    }
+
+    @include media-breakpoint-up(lg) {
+      flex-direction: row;
+      align-items: center;
+
+      .card-icon-top {
+        margin-top: 0;
+        margin-left: 2rem;
+        &.card-icon-right {
+          // Icon placement to the right on large breakpoint and up
+          order: 100;
+          margin-right: 2rem;
+        }
+      }
+
+      .card-footer {
+        padding: 2rem;
+        .vdm {
+          @include font-size(3.5rem);
+          margin-left: 2rem;
+          margin-right: 2rem;
+        }
+      }
+    }
+  }
+
+  // Teaser layout
+  &.card-teaser {
+    .card-body {
+      text-align: left;
+    }
+    .card-title {
+      font-weight: $font-weight-bold;
+    }
+    &.card-row-layout {
+      .card-footer {
+        padding: 0;
+        .vdm {
+          margin-right: 0;
+        }
+      }
+      @include media-breakpoint-up(lg) {
+        .card-title {
+          margin-bottom: 0;
+        }
+      }
+    }
+  }
+
+  // Large and featured cards override
+  &.card-large {
+    .card-title {
+      @include card-heading($font-weight: $font-weight-bold);
+    }
+    .card-body {
+      text-align: left;
+    }
+  }
+
+  // Full-width card override
+  &.card-fw {
+    .card-title {
+      @include card-heading($font-weight: $font-weight-bold);
+    }
+    .card-body {
+      align-self: flex-start;
+    }
+    @include media-breakpoint-up(lg) {
+      .card-img-top {
+        // Max-height is more important 
+        max-height: 169px;
+        width: auto;
+        order: 100;
+        @include border-radius(0);
+        @include border-right-radius($card-inner-border-radius);
+
+        &.card-img-first {
+          order: -1;
+          @include border-radius(0);
+          @include border-left-radius($card-inner-border-radius);
+        }
+      }
+    }
+  }
+
+  // Large cards specifc
+  &.card-large {
+    &.card-row-layout {
+      .card-body {
+        text-align: center;
+        @include media-breakpoint-up(lg) {
+          text-align: left;
+        }
+      }
+    }
+  }
+
+  // Card member variants
+  &.card-member {
+    .card-img-top {
+      margin: 2rem auto 0 auto;
+    }
+    .card-body {
+      *:last-child {
+        margin-bottom: 0;
+      }
+    }
+    // 992px and up
+    @include media-breakpoint-up(lg){
+      .card-img-top {
+        width: 130px;
+        margin: 2rem;
+        margin-right: 0;
+        align-self: flex-start;
+      }
+    }
+  }
+
+  // Card member extra variants
+  // Card-body is not centered vertically when there is extra information
+  &.card-member-extra {
+    // 992px and up
+    @include media-breakpoint-up(lg){
+      .card-body {
+        align-self: flex-start;
+      }
+    }
+  }
+
+  // Card tarification specification
+  &.card-tarif {
+    .row > div {
+      &:first-child {
+        .card-section {
+          border-top: none;
+        }
+      }
+    }
+    .card-section {
+      border-top: 1px solid $gray-500;
+    }
+    .card-footer {
+      padding: 2rem;
+      align-self: center;
+      justify-content: center;
+      text-align: left;
+      height: 100%;
+      width: 100%;
+    }
+    .card-link {
+      justify-content: center;
+    }
+
+    @include media-breakpoint-up(lg) {
+      .row > div {
+        &:last-child {
+          .card-section {
+            border-top: 1px solid $gray-500;
+          }
+        }
+      }
+      .card-section {
+        border: none;
+      }
+      .card-link {
+        justify-content: flex-end;
+      }
+    }
+  }
+
+  // Featured card specific
+  &.card-featured {
+    text-align: left;
+    .card-bg-image {
+      min-height: 300px;
+    }
+    .card-body {
+      .card-title {
+        @include card-heading($font-size: $h4-font-size, $line-height: 1.25, $font-weight: $font-weight-bold);
+      }
+      .text-muted {
+        display: inline-block;
+        margin-bottom: 1.5rem;
+      }
+      .card-footer {
+        padding: 0;
+      }
+    }
+    @include media-breakpoint-up(lg) {
+      flex-direction: row;
+      align-items: center;
+      .card-img-top {
+        @include make-col(6);
+        margin: 0;
+        align-self: start;
+        order: 100;
+        @include border-radius(0);
+        @include border-right-radius($card-inner-border-radius);
+      }
+      .card-body {
+        display: flex;
+        flex-flow: column nowrap;
+        height: 100%;
+        .card-footer {
+          margin-top: auto;
+        }
+      }
+    }
+    // Invert Image and body Order on larger breakpoint
+    &.card-featured-inv {
+      @include media-breakpoint-up(lg) {
+        .card-img-top {
+          order: -1;
+          @include border-radius(0);
+          @include border-left-radius($card-inner-border-radius);
+        }
+      }
+    }
+
+    // Featured member
+    &.card-featured-member {
+      text-align: center;
+      .card-footer {
+        justify-content: center;
+      }
+      .card-img-top {
+        max-width: 256px;
+      }
+      .rounded-circle {
+        margin: 2rem auto 0 auto;
+      }
+      .card-subtitle {
+        font-weight: $font-weight-normal;
+        margin-top: 0;
+      }
+      // @tablet
+      @include media-breakpoint-up(md) {
+        flex-direction: row;
+        text-align: left;
+        padding-top: 4rem;
+        padding-bottom: 4rem;
+        .card-img-container {
+          @include make-col(5);
+          @include make-col-offset(1);
+          .card-img-top {
+            margin: 0;
+            width: 100%;
+            @include make-col(12);
+            max-width: 256px;
+          }
+        }
+        .card-body {
+          @include make-col(5);
+          padding: 0;
+          justify-content: center;
+        }
+        .card-img-top {
+          order: -1;
+
+        }
+        .card-footer {
+          margin-top: 0;
+          padding-top: 1rem;
+          justify-content: flex-start;
+        }
+      }
+      @include media-breakpoint-up(lg) {
+        .card-img-container {
+          @include make-col(4);
+          @include make-col-offset(2);
+          .card-img-top {
+            margin: 0;
+            width: 100%;
+            @include make-col(12);
+            max-width: 256px;
+          }
+        }
+        .card-body {
+          @include make-col(4);
+          padding: 0;
+          justify-content: center;
+        }
+      }
+    }
+  }
+
+  // Complex-layout and label-content
+  &.card-complex-layout,
+  &.card-label-content {
+    text-align: left;
+    .card-body {
+      flex: none;
+      > .row {
+        margin-bottom: 1rem;
+      }
+    }
+    .card-title {
+      font-weight: $font-weight-bold;
+    }
+    .card-label {
+      @include font-size($font-size-base);
+    }
+  }
+
+  .rounded-circle {
+    margin: 2rem auto 0 auto;
+    max-width: 61.5%;
+  }
+
+  &[data-toggle="modal"] {
+    cursor: pointer;
+  }
+
+  // Generic class to remove box-shadow and add bg-color
+  &.card-bg-variant {
+    box-shadow: none;
+    background-color: $gray-100;
+  }
+
+  // Plain variant
+  // Use-case: dates importantes
+  &.card-plain {
+    box-shadow: none;
+    text-align: left;
+    .card-date {
+      font-weight: $font-weight-bold;
+      margin-bottom: 2rem;
+      &:after {
+        content: "";
+        display: block;
+        height: .25rem;
+        width: 2rem;
+        margin-top: 1rem;
+        background-color: $brand;
+      }
+    }
+    .card-body {
+      padding: 0;
+      > :last-child {
+        margin-bottom: 0;
+      }
+    }
+    .card-title {
+      font-weight: $font-weight-bold;
+      margin-bottom: 2rem;
+    }
+    
+  }
+}
+
+// Card section is used to build multi-layer cards
+// multiple sections stacked up and are divided with a border
+.card-section {
+  display: flex;
+  .card-body {
+    text-align: left;
+  }
+  .card-label {
+    @include font-size($font-size-xl);
+    font-weight: $font-weight-bold;
+    &.card-label-normal {
+      font-weight: $font-weight-normal;
+    }
+  }
+
+  + .card-section {
+    border-top: 1px solid $gray-500;
+  }
+
+  .table {
+    margin-bottom: 0;
+    th, td {
+      padding-top: 1.5rem;
+      padding-bottom: 1.5rem;
+    }
+    td:first-child,
+    th:first-child {
+      text-align: left;
+      padding-left: 2rem;
+    }
+  }
+
+  @include media-breakpoint-up(lg) {
+    flex-direction: row;
+    align-items: center;
+
+    .card-icon-top {
+      margin-top: 0;
+      margin-left: 2rem;
+    }
+  }
+
+  &.card-alert {
+    .card-icon-top {
+      margin-left: 2rem;
+    }
+  }
+  .alert-heading {
+    @include font-size($font-size-lg);
+    font-weight: $font-weight-bold;
+    color: inherit;
+    margin-bottom: 0;
+  }
+}
+
+// Set interactivity on linked card
+a.card {
+  color: $neutral-secondary;
+  transition: all 100ms ease-in-out;
+  &:hover {
+    transform: scale(1.04);
+    .card-icon-top,
+    .card-title {
+      color: $action;
+    }
+
+    .card-alert {
+      .card-icon-top {
+        color: inherit;
+      }
+    }
+  }
+}
+
+// Generic flex capacity for equalheight
+.cards {
+  > div,
+  .card-item {
+    display: flex; // must add flex capacity to col to get equalheight
+  }
+}

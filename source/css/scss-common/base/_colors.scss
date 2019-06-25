@@ -1,0 +1,24 @@
+
+.bg-primary,
+.bg-secondary {
+  background-color: transparent !important;
+}
+
+.text-secondary,
+.text-primary,
+.text-black-50,
+.text-white-50 {
+	color: $body-color !important;
+}
+
+@each $color, $value in $dialog-colors-dark {
+  @include text-emphasis-variant(".text-#{$color}-dark", $value);
+}
+
+@each $color, $value in $dialog-colors-light {
+  @include text-emphasis-variant(".text-#{$color}-light", $value);
+}
+
+@each $color, $value in $dialog-colors-light{
+  @include bg-variant(".bg-#{$color}-light", $value);
+}

@@ -1,0 +1,585 @@
+// FORMS
+
+legend,
+.group-label {
+  @extend legend;
+  color: $headings-color;
+  font-weight: $font-weight-bold;
+  line-height: $line-height-sm;
+  margin-bottom: 1rem;
+}
+
+.form-group {
+  margin-bottom: 2rem;
+  &.required {
+    > label {
+      &:after {
+        content: "*";
+        color: $red;
+        display: inline-block;
+        margin-left: 0.25em;
+      }
+    }
+  }
+}
+
+.form-control-dark {
+  border-color: $gray-500;
+}
+
+// Set label color
+.form-group label,
+.custom-control-label {
+  &:not(.btn) {
+    color: $input-label-color;
+  }
+}
+
+// wrapper around input that needs inline text addon
+.input-inline-addon {
+  @extend .form-inline;
+  // Allow folks to *not* use `.form-group`
+  .form-control {
+    display: inline-block;
+    width: 160px;
+    vertical-align: middle;
+  }
+  .input-inline-text {
+    color: $gray-500;
+    padding-left: 0.8125rem;
+  }
+}
+
+// TO DO: Is this generic or specific to wizard forms
+.form-action-group {
+  margin: 2rem auto;
+  ul {
+    @extend .list-inline;
+    display: flex;
+    //justify-content: space-between;
+    li {
+      @extend .list-inline-item;
+      &:not(:last-child) {
+        margin-right: inherit;
+      }
+
+      &:last-child {
+        margin-left: auto;
+      }
+    }
+  }
+}
+
+// Input Groups
+//
+.input-group-date {
+  .input-group-append {
+    cursor: pointer;
+  }
+}
+
+// Theme icon as input-group-icon for easy placement and scalability
+.input-group-icon {
+  position: relative;
+  width: 100%;
+
+  > .vdm {
+    color: $gray-900;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    @include font-size(2rem);
+    height: 100%;
+    padding: 0 .3rem;
+    pointer-events: none;
+    position: absolute;
+    top: 0;
+  }
+
+  &.input-group-icon-left {
+    > .vdm {
+      left: 0;
+    }
+    input {
+      padding-left: 2.625rem;
+    }
+  }
+  &.input-group-icon-right {
+    > .vdm {
+      right: 0;
+    }
+    input {
+      padding-right: 2.625rem;
+    }
+  }
+
+  // Large input-group with icon
+  &.input-group-icon-lg {
+    > .vdm {
+      @include font-size(3rem);
+      padding: 0 .5rem;
+    }
+
+    &.input-group-icon-left {
+      input {
+        padding-left: 4rem;
+      }
+    }
+
+    &.input-group-icon-right {
+      input {
+        padding-right: 4rem;
+      }
+    }
+
+  }
+
+  // Small input-group with icon
+  &.input-group-icon-sm {
+    > .vdm {
+      @include font-size(1.5rem);
+      padding: 0 .2rem;
+    }
+
+    &.input-group-icon-left {
+      input {
+        padding-left: 2rem;
+      }
+    }
+
+    &.input-group-icon-right {
+      input {
+        padding-right: 2rem;
+      }
+    }
+
+  }
+
+}
+
+.has-clear {
+  .form-control {
+    padding-right: 2.5rem;
+  }
+  .btn-clear {
+    @include button-reset();
+    pointer-events: inherit;
+    cursor: pointer;
+    @include font-size(1.5rem);
+    z-index: 10;
+    position: absolute;
+    top: 50%;
+    right: 0;
+    transform: translateY(-50%);
+    display: flex;
+    color: $gray-900;
+    margin-right: .3rem;
+    padding: 0;
+    border-radius: 50%;
+  }
+}
+
+
+.input-group-append {
+  .btn {
+    display: flex;
+    align-items: center;
+    padding: $input-padding-y $input-padding-x;
+    @include font-size($font-size-base); // Match inputs
+    font-weight: $font-weight-normal;
+    line-height: $input-line-height;
+    color: $input-group-addon-color;
+    text-align: center;
+    white-space: nowrap;
+    background-color: $input-group-addon-bg;
+    border: $input-border-width solid $input-group-addon-border-color;
+    @include border-radius($input-border-radius);
+  }
+}
+
+// Custom control indicators
+//
+// Build the custom controls out of pseudo-elements.
+// Radios
+//
+// Tweak just a few things for radios.
+.custom-control {
+  margin-bottom: $custom-control-spacer-y;
+
+  .custom-control-label::before {
+    border: 1px solid $input-border-color;
+  }
+
+  .custom-control-input:checked ~ .custom-control-label {
+    &::before {
+      border-color: $custom-control-indicator-checked-bg;
+    }
+  }
+
+  .custom-control-input:disabled {
+    &:checked ~ .custom-control-label::before {
+      border-color: $custom-control-indicator-checked-disabled-bg;
+    }
+    &:indeterminate ~ .custom-control-label::before {
+      border-color: $custom-control-indicator-checked-disabled-bg;
+    }
+  }
+
+}
+
+.custom-control-input {
+  position: absolute;
+  z-index: -1; // Put the input behind the label so it doesn't overlay text
+  opacity: 0;
+
+  &:disabled {
+    ~ .custom-control-label {
+      &::before {
+        border-color: $custom-control-indicator-disabled-bg;
+      }
+    }
+  }
+}
+
+// Custom control indicators
+//
+// Build the custom controls out of pseudo-elements.
+
+/*
+.custom-control-label {
+  // Background-color and (when enabled) gradient
+  &::before {
+    top: .125rem;
+  }
+
+  // Foreground (icon)
+  &::after {
+    top: .125rem;
+  }
+}
+
+*/
+
+
+// Checkboxes
+//
+.custom-checkbox {
+  // We need to grow the checkbox a bit cuz it's too thin...
+  .custom-control-input:checked ~ .custom-control-label {
+    &::after {
+      background-size: $custom-checkbox-indicator-icon-checked-bg-size;
+    }
+  }
+}
+
+// Radios
+//
+// Tweak just a few things for radios.
+.custom-radio {
+  // We need to grow the checkbox a bit cuz it's too thin...
+  .custom-control-input:checked ~ .custom-control-label {
+    &::after {
+      background-size: $custom-radio-indicator-icon-checked-bg-size;
+    }
+  }
+}
+
+//
+// Custom checkboxes and radios themed as card
+.custom-control-card {
+  padding: 0;
+  margin-bottom: 1.5rem;
+
+  .custom-control-label {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    justify-content: center;
+    padding: 2rem;
+    padding-left: 5.3125rem;
+    position: relative;
+    border: 1px solid $gray-400;
+    min-height: 8rem; // Make sur card has minimum height
+
+    // Background-color and (when enabled) gradient
+    &::before {
+      top: calc(50% - (#{$custom-control-indicator-size}/2));
+      left: 0;
+      right: auto;
+      margin-left: 2rem;
+    }
+
+    // Foreground (icon)
+    &::after {
+      top: calc(50% - (#{$custom-control-indicator-size}/2));
+      left: 0;
+      right: auto;
+      margin-left: 2rem;
+    }
+
+    .card-label {
+      @include card-heading();
+    }
+
+    .card-title {
+      @include card-heading();
+    }
+  }
+
+  .custom-control-input:disabled ~ .custom-control-label {
+    .card-title, .card-label {
+      color: $custom-control-label-disabled-color;
+    }
+  }
+}
+
+// switches
+//
+// Tweak a few things for switches
+
+.custom-switch {
+  padding-left: $custom-switch-width + $custom-control-gutter;
+
+  .custom-control-label {
+    padding: 1px 0;
+    &::before {
+      top: 0;
+      left: -($custom-switch-width + $custom-control-gutter);
+      width: $custom-switch-width;
+      height: $custom-switch-control-indicator-size + $custom-switch-inner-padding;
+      pointer-events: all;
+      border-radius: $custom-switch-indicator-border-radius;
+    }
+
+    &::after {
+      top: calc(#{$custom-switch-inner-padding} + #{$custom-control-indicator-border-width});
+      left: calc(#{-($custom-switch-width + $custom-control-gutter - $custom-switch-inner-padding)} + #{$custom-control-indicator-border-width * 2});
+      width: $custom-switch-indicator-size;
+      height: $custom-switch-indicator-size;
+      background-color: $custom-switch-control-indicator-color;
+      border-radius: $custom-switch-indicator-border-radius;
+      @include transition(transform .15s ease-in-out, $custom-forms-transition);
+    }
+  }
+
+  .custom-control-input:checked ~ .custom-control-label {
+    &::after {
+      background-color: $custom-control-indicator-bg;
+      transform: translateX($custom-switch-width - $custom-switch-control-indicator-size - ($custom-switch-inner-padding * 2));
+    }
+  }
+
+  .custom-control-input:disabled {
+    &:checked ~ .custom-control-label::before {
+      background-color: $custom-control-indicator-checked-disabled-bg;
+    }
+
+    & ~ .custom-control-label::after {
+      background-color: $custom-switch-control-indicator-disabled-color;
+    }
+  }
+}
+
+
+// Switches - Checkboxes as state toggles
+// Deprecated - use custom-switch instead
+.checkbox-toggle {
+  // Massive negative offset clears the original checkbox & label.
+  position: relative;
+  input {
+    &[type="checkbox"] {
+      position: absolute;
+      left: -10000px;
+      visibility: hidden;
+
+      // Graphics container
+      & + label {
+        position: relative;
+        text-indent: -10000px;
+        height: $checkbox-toggle-height;
+        width: $checkbox-toggle-width;
+        user-select: none;
+        cursor: pointer;
+
+        &:before,
+        &:after {
+          display: block;
+          position: absolute;
+          content: "";
+        }
+
+        // Inside button
+        &:after {
+          top: $checkbox-toggle-padding;
+          left: $checkbox-toggle-padding;
+          bottom: $checkbox-toggle-padding;
+          right: $checkbox-toggle-padding;
+          background-color: $checkbox-toggle-bg-toggled;
+          border-radius: $checkbox-toggle-border-radius;
+          width: $checkbox-toggle-width-inside;
+          -webkit-transition: 0.3s;
+          transition: 0.3s;
+        }
+
+        // Outside pill
+        &:before {
+          top: 0;
+          left: 0;
+          bottom: 0;
+          right: 0;
+          background-color: $checkbox-toggle-bg;
+          border: $checkbox-toggle-border-width solid $checkbox-toggle-border-color;
+          border-radius: $checkbox-toggle-border-radius-inside;
+          width: $checkbox-toggle-width;
+        }
+      }
+
+      // checked
+      &[checked="checked"],
+      &:checked {
+        & + label {
+          // Inside button
+          &:after {
+            background-color: $checkbox-toggle-bg;
+            margin-left: $checkbox-toggle-width-inside + $checkbox-toggle-padding;
+          }
+
+          // Outside pill
+          &:before {
+            background-color: $checkbox-toggle-bg-toggled;
+            border: 0;
+          }
+        }
+      }
+
+      // Disabled
+      &:disabled {
+        & + label {
+          cursor: not-allowed;
+          // Inside button
+          &:after {
+            background-color: $checkbox-toggle-bg;
+            margin-left: 0;
+          }
+
+          // Outside pill
+          &:before {
+            background-color: $custom-control-indicator-disabled-bg;
+            border: 0;
+          }
+        }
+        // Disabled & checked
+        &:checked {
+          & + label {
+            // Inside button
+            &:after {
+              margin-left: $checkbox-toggle-width-inside + $checkbox-toggle-padding;
+            }
+
+            // Outside pill
+            &:before {
+              background-color: $custom-control-indicator-disabled-bg;
+            }
+          }
+        }
+      }
+
+    }
+  }
+}
+
+//
+// file drop container
+.file-drop-container {
+  border-radius: $input-border-radius;
+  border: dashed 2px $gray-400;
+  display: flex;
+  padding: 2rem;
+  flex-direction: column;
+  align-items: center;
+
+  .help-text {
+    color: $input-color;
+    margin-bottom: 1rem;
+    text-align: center;
+  }
+
+  &.file-over{
+    background: $gray-400;
+  }
+}
+
+//
+// Feedback form
+// TODO: Normalisation
+.feedback-form-container {
+  background: $white;
+  box-shadow: $card-box-shadow;
+  margin-top: 4rem;
+  margin-bottom: 4rem;
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+
+  .feedback-form-header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 1.5rem;
+
+    .h5 {
+      display: block;
+      margin-bottom: 0;
+    }
+  
+    // Icon
+    .vdm {
+      color: $primary;
+      @include font-size(2.5rem);
+      margin-right: .5rem;
+    }
+  }
+
+  @include media-breakpoint-up(md) {
+    padding: 3rem 4rem;
+  }
+}
+
+.feedback-form {
+  textarea {
+    -webkit-transform: translateZ(0px);
+  }
+
+  button {
+    + button {
+      margin-left: .5rem;
+      &.btn-link {
+        margin-left: 1rem;
+      }
+    }
+  }
+  
+  .feedback-question-label {
+    color: $headings-color;
+    display: block;
+    @include font-size($font-size-lg);
+    line-height: $line-height-sm;
+    margin-bottom: 1.5rem;
+  }
+
+  .feedback-details-content,
+  .feedback-details-display {
+    display: none;
+  }
+
+  .notice {
+    @include font-size($font-size-sm);
+  }
+
+  @include media-breakpoint-up(md) {
+    .feedback-question-label {
+      @include font-size($font-size-xl);
+    }
+  }
+
+}

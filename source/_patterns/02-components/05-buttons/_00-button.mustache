@@ -1,0 +1,6 @@
+{{# buttonAsLink}}
+<a class="btn {{ buttonClass }}" href="{{ buttonUrl }}" {{ buttonState }}>{{# buttonIcon }}{{> atoms-fonticon-item }}{{/ buttonIcon}}{{ buttonText }}</a>
+{{/ buttonAsLink}}
+{{^ buttonAsLink}}
+<button type="{{ buttonType }}" class="btn {{ buttonClass }}" {{ buttonState }}>{{# buttonIcon }}{{> atoms-fonticon-item }}{{/ buttonIcon}}{{ buttonText }}</button>
+{{/ buttonAsLink}}
