@@ -1,0 +1,44 @@
+{{# collapsibleItem }}
+<div class="collapsible-item">
+  <div class="collapsible-header" role="tab" id="{{ heading-id }}">
+    <div class="collapsible-title">
+      <a data-toggle="collapse" href="#" data-target="#{{ block-id }}" aria-expanded="{{# show}}true{{/ show}}{{^ show}}false{{/ show}}" aria-controls="{{ block-id }}">
+        {{# icon }}
+        <span class="collapsible-icon vdm {{ icon }}" aria-hidden="true"></span>
+        {{/ icon }}
+        {{^ icon }}
+        {{# has-default-icon }}
+        <span class="collapsible-icon circle" aria-hidden="true"></span>
+        {{/ has-default-icon }}
+        {{/ icon }}
+        <span>{{ title }}</span>
+        {{# badge }}
+          {{> styles-badge }}
+        {{/ badge}}
+      </a>
+    </div>
+  </div>
+  <div id="{{ block-id }}" class="collapse {{# show }}show{{/ show}}" role="tabpanel" aria-labelledby="{{ heading-id }}">
+    <div class="collapsible-block">
+      {{{ content }}}
+      {{# has-links}}
+      <div class="list-group">
+        <a href="#" class="list-group-item list-group-item-action" data-toggle="modal" data-target="#modalDocuments">{{> styles-fonticon-item(icon-label: "019-document")}} Consulter les documents nécessaires</a>
+        <a href="#tarifs" class="list-group-item list-group-item-action js-scroll-trigger">{{> styles-fonticon-item(icon-label: "113-prix")}} Consulter les tarifs</a>
+      </div>
+      {{/ has-links}}
+      {{# has-mode-paiement}}
+      <h3>Mode de paiement acceptés</h3>
+      <ul>
+        <li>Argent comptant</li>
+        <li>Carte de débit ou de crédit (MasterCard, Visa)</li>
+        <li>Chèque ou mandat à l'ordre de la Ville de Montréal</li>
+      </ul>
+      {{/ has-mode-paiement}}
+      {{# has-call-to-action}}
+      <a href="{{ cta-url }}" class="btn btn-sm btn-primary">{{ cta-title }}</a>
+      {{/ has-call-to-action}}
+    </div>
+  </div>
+</div>
+{{/ collapsibleItem }}

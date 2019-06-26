@@ -37,6 +37,32 @@
   // border-top: 1px solid #ddd;
   width: 93%;
 }
+.sg-pattern-category {
+	margin-top: 4rem !important;
+}
+//h2
+//h2
+.sg-pattern-category-title a,
+h3.sg-pattern-title a,
+h4.pl-pattern-subtitle,
+h5.pl-pattern-subtitle {
+	color:#000 !important;
+	font-weight: bold;
+}
+
+.sg-pattern-category-title a {
+	font-size: 24px;
+}
+h3.sg-pattern-title a {
+	font-size: 18px;
+	text-transform: none;
+}
+h4.pl-pattern-subtitle {
+	font-size: 16px;
+}
+h5.pl-pattern-subtitle {
+	font-size: 14px;
+}
 
 // Scalers
 .pl-small {
@@ -245,7 +271,7 @@ $pl-size-box-wrapper-padding: 1rem;
 .pl-atom-icons-grid {
   .pl-atom-icon-item {
     text-align: left;
-    margin: 1rem;
+    margin: 0.75rem;
     position: relative;
     transition: all .5s cubic-bezier(.165,.84,.44,1);
     transform: translateZ(0);
@@ -262,7 +288,9 @@ $pl-size-box-wrapper-padding: 1rem;
 		}
 	}
 	&.icon-utility {
+		margin: 0.25rem;
 		 svg {
+			 fill: $gray-500;
 			 margin-right: 12px;
 			 width: 24px;
 			 height: 24px;
@@ -295,7 +323,7 @@ $pl-size-box-wrapper-padding: 1rem;
       display: flex;
       flex-flow: column nowrap;
       justify-content: space-between;
-      margin-bottom: 3rem;
+      margin-bottom: 2rem;
 
       // Header
       .pl-swatch-header {
@@ -307,11 +335,11 @@ $pl-size-box-wrapper-padding: 1rem;
       // Row
       .pl-swatch {
         width: 100%;
-        border-bottom: 1px solid $gray-300;
+        border-bottom: 1px solid $gray-100;
         margin-bottom: 1rem;
         @include media-breakpoint-up(md) {
           border-bottom: none;
-          border-top: 1px solid $gray-300;
+          border-top: 1px solid $gray-100;
           display: flex;
           flex-flow: row nowrap;
           justify-content: center;

@@ -1,0 +1,29 @@
+<header class="content-header content-header-hub {{# contentHeaderBgImage }}content-header-overlay{{/ contentHeaderBgImage }} {{ contentHeaderClasses }}" {{# contentHeaderBgImage }} style="{{ contentHeaderBgImage }}" {{/ contentHeaderBgImage }}>
+  <div class="container-fluid {{ contentHeaderContainerClasses }}">
+    <div class="row">
+      <div class="col-12">
+        {{> styles-display-heading }}
+        {{# header-subtitle }}
+        <h2 class="display-1">{{ header-subtitle}}</h2>
+        {{/ header-subtitle }}
+      </div>
+      {{# inputGroupSearch }}
+      <div class="col-12 col-lg-8">
+        {{> styles-input-icon }}
+      </div>
+      {{/ inputGroupSearch }}
+      {{# quickLinks }}
+      <div class="col-12">
+        <div class="quick-links">
+          <span class="quick-links-label">Recherche rapide : </span>
+          <ul class="list-inline">
+            {{# quickLinksItem }}
+            <li class="list-inline-item"><a href="{{ url }}">{{ label }}</a></li>
+            {{/ quickLinksItem }}
+          </ul>
+        </div>
+        {{/ quickLinks }}
+      </div>
+    </div>
+  </div>
+</header>

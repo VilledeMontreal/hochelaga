@@ -1,0 +1,106 @@
+{{> styles-link-skip-to-main-content }}
+{{> organisms-header-portal }}
+
+<main class="main-content {{ pageClasses }}" id="main-content" aria-label="Main Content">
+
+  {{> organisms-content-header-hub }}
+
+  {{# nav-filters }}
+  {{> molecules-nav-filters }}
+  {{/ nav-filters }}
+
+  {{# filters-applied }}
+  <div class="container mt-4">
+    <div class="row">
+      <span class="col-12 filters-applied">
+        <span class="sr-only">Filtres sélectionnés : </span>
+        <div class="badge-group badges-lg">
+          {{> styles-badges}}
+          {{> styles-button(buttonClass: "btn-link btn-sm btn-reset",buttonText: "Tout effacer")}}
+        </div>
+      </span>
+    </div>
+  </div>
+  {{/ filters-applied }}
+
+  {{# has-empty-state}}
+  <div class="container mt-4">
+    <div class="row">
+      <div class="col-12">
+        {{> molecules-empty-state }}
+      </div>
+    </div>
+  </div>
+  {{/ has-empty-state}}
+  {{^ has-empty-state}}
+  {{# elusListes }}
+  <section class="page-section">
+    <div class="container">
+      <div class="hub-section-heading">
+        {{# headings }}
+        <div class="row">
+          <div class="col-12 col-lg">
+            <h2 class="{{ headings.class }}">{{ headings.text }}</h2>
+          </div>
+          {{# nav-sorts }}
+          <div class="col-12 col-lg-auto">
+            <div class="d-flex justify-content-end">
+              {{# nav }}
+              <ul class="nav nav-filters">
+                {{# navItem }}
+                <li class="nav-item dropdown">
+                  <a class="nav-link dropdown-toggle font-weight-bold" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false" data-display="static">{{ title }}</a>
+                  <div class="dropdown-menu dropdown-menu-right">
+                    {{# dropdown }}
+                    <a class="dropdown-item" href="{{ url }}">{{ title }}</a>
+                    {{/ dropdown }}
+                  </div>
+                </li>
+                {{/ navItem }}
+              </ul>
+              {{/ nav}}
+            </div>
+          </div>
+          {{/ nav-sorts }}
+        </div>
+        {{/ headings }}
+      </div>
+
+      {{# listGroups }}
+      <div class="row">
+        <div class="col-12">
+          {{> molecules-list-group-hub}}
+        </div>
+      </div>
+      {{/ listGroups }}
+
+    </div>
+  </section>
+  {{/ elusListes }}
+
+  <!-- Empty results -->
+  {{^ elusListes }}
+  <section class="page-section">
+    <div class="container">
+      <div class="row">
+        <div class="col-12">
+          {{> molecules-empty-search-results }}
+        </div>
+      </div>
+    </div>
+  </section>
+  {{/ elusListes }}
+  {{/ has-empty-state}}
+
+  <!-- Teaser -->
+  {{# has-lead-text}}
+  {{> molecules-lead }}
+  {{/ has-lead-text}}
+
+  {{# hasFeedbackForm}}
+  {{> organisms-feedback-form}}
+  {{/ hasFeedbackForm }}
+</main>
+
+{{> organisms-footer-portal }}
+

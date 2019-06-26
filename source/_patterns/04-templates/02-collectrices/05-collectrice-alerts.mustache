@@ -1,0 +1,88 @@
+{{> styles-link-skip-to-main-content }}
+{{> organisms-header-portal }}
+
+<main class="main-content {{ pageClasses }}" id="main-content" aria-label="Main Content">
+
+  {{> organisms-content-header }}
+
+    <!-- Teaser -->
+  {{# has-lead-text}}
+  {{> molecules-lead }}
+  {{/ has-lead-text}}
+
+  {{# alertsCards }}
+  <section class="page-section bg-gray-sky pt-0">
+    <div class="container">
+      <div class="hub-section-heading">
+        {{# inputGroupSearch}}
+        <div class="row">
+          <div class="col-12 col-lg-8">
+            {{> styles-input-icon }}
+          </div>
+        </div>
+        {{/ inputGroupSearch}}
+      </div>
+      {{# cards }}
+      <div class="row">
+        <div class="col-12">
+          <ul class="date-list">
+            {{# items }}
+            <li>
+              {{# date }}
+              <h2 class="date day-month">
+                <span class="day">{{ day }}</span>{{ month}}
+              </h2>
+              {{/ date}}
+              <div class="row cards {{ cards.classes }}">
+              {{# item }}
+                <div class="{{ cards.bsgrid-classes }}">
+                  {{> molecules-card-item }}
+                </div>
+              {{/ item }}
+              </div>
+            </li>
+            {{/ items }}
+          </ul>
+        </div>
+      </div>
+
+      {{# hasPagination }}
+      <div class="pagination-wrapper">
+        {{> molecules-pagination("paginationClass": justify-content-center) }}
+      </div>
+      {{/ hasPagination }}
+
+      {{/ cards }}
+    </div>
+  </section>
+  {{/ alertsCards }}
+
+  <!-- Empty results -->
+  {{^ alertsCards }}
+  <section class="page-section">
+    <div class="container">
+      <div class="hub-section-heading">
+        {{# inputGroupSearch }}
+        <div class="row">
+          <div class="col-12 col-lg-8">
+            {{> styles-input-icon }}
+          </div>
+        </div>
+        {{/ inputGroupSearch }}
+      </div>
+      <div class="row">
+        <div class="col-12">
+          {{> molecules-empty-search-results }}
+        </div>
+      </div>
+    </div>
+  </section>
+  {{/ alertsCards }}
+
+  {{# hasFeedbackForm}}
+  {{> organisms-feedback-form}}
+  {{/ hasFeedbackForm }}
+</main>
+
+{{> organisms-footer-portal }}
+

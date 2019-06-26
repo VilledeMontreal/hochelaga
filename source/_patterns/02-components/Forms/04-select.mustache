@@ -1,0 +1,12 @@
+<div class="form-group {{ selectWrapperClasses }}">
+  {{# formAttributes.select.label }}
+  <label for="{{ formAttributes.select.id }}">{{ formAttributes.select.label }}</label>
+  {{/ formAttributes.select.label }}
+  <select class="form-control {{ formAttributes.select.formControlClass }}" name="{{ formAttributes.select.id }}" id="{{ formAttributes.select.id }}"> 
+    <option value="">{{ formAttributes.select.defaultOptionLabel  }}</option> 
+    {{# formAttributes.select.options }}
+      {{> styles-option }}
+    {{/ formAttributes.select.options }}
+  </select>
+</div>
+

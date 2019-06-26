@@ -1,0 +1,66 @@
+{{> styles-link-skip-to-main-content }}
+{{> organisms-header-portal }}
+{{> organisms-subnav-service }}
+
+<main class="main-content {{ pageClasses }}" id="main-content" aria-label="Main Content" role="main">
+  <div class="container box-header">
+    <div class="box-header-title">
+      <h1 class="h5 strong">Demande PA234545409</h1> {{> styles-badge(badgeClass: "badge-pill badge-success", badge: "Ouverte")}}
+    </div>
+    <div class="box-header-controls">
+      <ul class="nav">
+        <li class="nav-item">{{> styles-button(buttonClass: "btn-secondary btn-sm", buttonText: "Imprimer") }}</li>
+        <li class="nav-item">{{> styles-button(buttonClass: "btn-primary btn-sm", buttonText: "Modifier") }}</li>
+      </ul>
+    </div>
+  </div>
+  <div class="container box-content container-padding">
+    <div class="row">
+      {{# hasAlert}}
+      <div class="col-12">
+        <div class="alert-container">
+          {{> molecules-alerts }}
+        </div>
+      </div>
+      {{/ hasAlert}}
+
+      <div class="col-12">
+        <div class="label-content-header">
+          <div class="row">
+            <div class="col-md-6 col-lg-4">
+              <span class="item-label">PA234545409</span>
+              <div class="item-content small">Dernière mise à jour le <time datetie="2018-03-30">30 mars 2018</time></div>
+            </div>
+            <div class="col-md-6 col-lg-4">
+              <span class="item-label">Permis pour chien</span>
+              <div class="item-content">Roberto</div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-lg-8 border-bottom-content">
+        {{# labelContentMain}}
+        {{> organisms-label-content }}
+        {{/ labelContentMain}}
+      </div>
+      <aside class="col-lg-4">
+        <!-- Side content -->
+        {{# labelContentSide}}
+        {{> organisms-label-content }}
+        {{/ labelContentSide}}
+        <!-- End side content -->
+      </aside>
+
+      {{# hasFooterNotes}}
+      <div class="col-12">
+        {{> styles-footer-notes }}
+      </div>
+      {{/ hasFooterNotes}}
+
+      </div>
+    </div>
+  </div>
+</main>
+
+{{> organisms-footer-portal }}

@@ -1,0 +1,88 @@
+{{> styles-link-skip-to-main-content }}
+{{> organisms-header-portal }}
+
+<main class="main-content {{ pageClasses }}" id="main-content" aria-label="Main Content">
+
+  {{> organisms-content-header }}
+
+  <!-- Teaser -->
+  {{# has-lead-text }}
+  {{> molecules-lead }}
+  {{/ has-lead-text }}
+
+  {{# has-nav-anchors }}
+  {{> molecules-nav-anchors }}
+  {{/ has-nav-anchors }}
+
+  <!-- Begin main-content region-->
+  <div id="navTop" class="region-content {{ regionMainClasses }}">
+    <div class="container {{ regionMainContainerClasses }}">
+      <div class="row">
+        <article class="col-12 col-lg-7 col-xl-8">
+          {{{ content }}}
+        </article>
+        <aside class="col-12 col-lg-5 col-xl-4" role="complementary">
+        {{# has-sb-seance}}
+          {{> organisms-sidebar-block-seance }}
+        {{/ has-sb-seance}}
+        {{# has-sb-newsletter}}
+          {{> organisms-sidebar-block-abonnement }}
+        {{/ has-sb-newsletter}}
+        </aside>
+      </div>
+    </div>
+  </div>
+
+  {{# cards-membres}}
+  <section id="members" class="page-section {{ regionAfterClasses }} bg-gray-sky">
+    <div class="container">
+      <div class="row">
+        <div class="col-12 text-center">
+          <h2 class="section-heading">Membres</h2>
+        </div>
+      </div>
+      <div class="row cards">
+        {{# cards.card-item }}
+        <div class="{{ cards.bsgrid-classes }}">
+          {{> molecules-card-item}}
+        </div>
+        {{/ cards.card-item }}
+      </div>
+      {{# load-more }}
+      <div class="pagination-wrapper">
+        {{> styles-button }}
+      </div>
+      {{/ load-more }}
+    </div>
+  </section>
+  {{/ cards-membres}}
+
+  {{# featured-section}}
+  {{> molecules-featured-content}}
+  {{/ featured-section}}
+
+  {{# informations}}
+  <section id="informations" class="page-section {{ regionAfterClasses }} bg-gray-sky">
+    <div class="container">
+      <div class="row">
+        <div class="col-12 text-center">
+          <h2 class="section-heading">Plus d'information</h2>
+        </div>
+      </div>
+      <div class="row cards">
+        {{# cards.card-item }}
+        <div class="{{ cards.bsgrid-classes }}">
+          {{> molecules-card-item}}
+        </div>
+        {{/ cards.card-item }}
+      </div>
+    </div>
+  </section>
+  {{/ informations}}
+
+  {{# hasFeedbackForm}}
+  {{> organisms-feedback-form}}
+  {{/ hasFeedbackForm }}
+</main>
+
+{{> organisms-footer-portal }}

@@ -1,0 +1,20 @@
+
+<div class="sidebar {{sidebarClasses}}">
+  <section class="sb-block {{ sb-classes }}">
+    {{> organisms-heading-sidebar }}
+    <ul class="list-icon">
+     <li class="list-icon-item">
+        {{> styles-fonticon-item(icon-label: "005-calendrier") }}
+        <span>{{ seance-date }}</span>
+      </li>
+      <li class="list-icon-item">
+        {{> styles-fonticon-item(icon-label: "091-localisation") }}
+        {{> styles-address }}
+      </li>
+      <li class="list-icon-item no-icon">
+        <a href="#" class="icon right read-more">En savoir plus {{> styles-fonticon-item(icon-label: "063-fleche-droite") }}</a>
+      </li>
+    </ul>
+    {{> styles-button(buttonClass: "btn-secondary", buttonText: "Toutes les séances")}}
+  </section>
+</div>

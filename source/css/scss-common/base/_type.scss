@@ -5,29 +5,99 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
+.regular {
+	font-weight: 400;
+}
+.bold {
+	font-weight: 600;
+}
 
 // Headings
-// for line-height specific for each
+//
+// Headings are responsive
+// @see responsive-font-size mixin
 h1, .h1 {
-  line-height: $h1-line-height;
+  @include responsive-font-size($h1-font-size, .8, 40px);
+  // 576px and up
+  @include media-breakpoint-up(md) {
+    @include responsive-font-size($h1-font-size, 1, 56px);
+  }
 }
 h2, .h2 {
-  line-height: $h2-line-height;
+  @include responsive-font-size($h2-font-size, .75, 32px);
+  // 576px and up
+  @include media-breakpoint-up(md) {
+    @include responsive-font-size($h2-font-size, 1, 40px);
+  }
 }
 h3, .h3 {
-  line-height: $h3-line-height;
+  @include responsive-font-size($h3-font-size, .85, 28px);
+  // 576px and up
+  @include media-breakpoint-up(md) {
+    @include responsive-font-size($h3-font-size, 1, 32px);
+  }
 }
 h4, .h4 {
-  line-height: $h4-line-height;
+  @include responsive-font-size($h4-font-size, .8, 24px);
+  // 576px and up
+  @include media-breakpoint-up(md) {
+    @include responsive-font-size($h4-font-size, 1, 28px);
+  }
 }
 h5, .h5 {
-  line-height: $h5-line-height;
+  @include responsive-font-size($h5-font-size, .846153, 20px);
+  // 576px and up
+  @include media-breakpoint-up(md) {
+    @include responsive-font-size($h5-font-size, 1, 24px);
+  }
 }
 h6, .h6 {
-  line-height: $h6-line-height;
+  @include responsive-font-size($h6-font-size, .85, 14px);
+  // 576px and up
+  @include media-breakpoint-up(md) {
+    @include responsive-font-size($h6-font-size, 1, 20px);
+  }
 }
 
+// Display headings
+//
+// Display headings are responsive
+// @see responsive-font-size mixin
 
+.display-1,
+.display-2 {
+  @include responsive-font-size($display1-size, .625, 52px);
+  // 576px and up
+  @include media-breakpoint-up(sm) {
+    @include responsive-font-size($display1-size, .78125, 64px);
+  }
+  // 768px and up
+  @include media-breakpoint-up(md) {
+    @include responsive-font-size($display1-size, 1, 80px);
+  }
+}
+.display-3 {
+  @include responsive-font-size($display3-size, .642857, 44px);
+  // 576px and up
+  @include media-breakpoint-up(sm) {
+    @include responsive-font-size($display3-size, .82142, 60px);
+  }
+  // 768px and up
+  @include media-breakpoint-up(md) {
+    @include responsive-font-size($display3-size, 1, 72px);
+  }
+}
+.display-4 {
+  @include responsive-font-size($display4-size, .64, 40px);
+  // 576px and up
+  @include media-breakpoint-up(sm) {
+    @include responsive-font-size($display4-size, .84, 56px);
+  }
+  // 768px and up
+  @include media-breakpoint-up(md) {
+    @include responsive-font-size($display4-size, 1, 64px);
+  }
+}
 
 
 // Utility class for font-size

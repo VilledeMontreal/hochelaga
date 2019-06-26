@@ -1,0 +1,32 @@
+<!-- Modal Alert -->
+<!-- pl-example-modal is used to show modal, used only for examples -->
+<div class="pl-example-modal pl-gray-sky py-md-4">
+  <div class="modal modal-alert" id="alertModal" tabindex="-1" role="dialog" aria-labelledby="alertModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <div class="m-auto">
+            {{> styles-fonticon-item(icon-label: 093-porte-voix)}}
+          </div>
+          <button type="button" class="close btn-close" data-dismiss="modal" aria-label="Close">
+            <span class="vdm vdm-046-grand-x"></span>
+          </button>
+        </div>
+        <div class="">
+          <div class="modal-body">
+            <div class="date-time">Mise à jour le <time datetime="2018-07-23T16:34:00-0400">23 juillet 2018 à 12:34</time></div>
+            <h5 class="modal-title" id="alertModalLabel">Modal title</h5>
+            <p>Prolongation des heures d'ouverture des plages, piscines extérieures, pataugeoires et jeux et des lieux publics climatisés (bibliothèques, centres communautaires, etc.).</p>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-secondary btn-sm">M'abonner aux alertes</button>
+            <button type="button" class="btn btn-primary btn-sm">En savoir plus</button>
+          </div>
+        </div>
+        <div class="modal-footer-logo d-md-none ">
+          {{> styles-logo-svg }}
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,148 @@
+{{> styles-link-skip-to-main-content }}
+{{> organisms-header-portal }}
+
+<main class="main-content {{ pageClasses }}" id="main-content" aria-label="Main Content">
+
+  {{> organisms-content-header }}
+
+  <!-- Teaser -->
+  {{# has-lead-text}}
+  {{> molecules-lead }}
+  {{/ has-lead-text}}
+
+  <!-- Tabs -->
+  {{# has-nav-tabs}}
+    {{> molecules-nav-tab }}
+  {{/ has-nav-tabs}}
+
+  <div class="region-content {{ regionMainClasses }}">
+    <div class="container">
+      <div class="row">
+        {{# has-empty-state}}
+        <article class="col-12">
+          {{> molecules-empty-state-arrondissement}}
+        </article>
+        {{/ has-empty-state}}
+        {{^ has-empty-state}}
+        <article class="col-12 col-lg-8">
+          {{{ main-content }}}
+          {{# collapsibleHowTo }}
+          {{> molecules-collapsible }}
+          {{/ collapsibleHowTo }}
+
+          {{# pieces-justificatives}}
+          <div class="modal" id="modalDocuments" tabindex="-1" role="dialog" aria-labelledby="modalDocumentsLabel" aria-hidden="true">
+            <div class="modal-dialog modal-lg" role="document">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <h5 class="modal-title" id="modalDocumentsLabel">Documents nécessaires</h5>
+                  <button type="button" class="btn-close close" data-dismiss="modal" aria-label="Close">
+                    <span class="vdm vdm-046-grand-x"></span>
+                  </button>
+                </div>
+                <div class="modal-body">
+                  <h6>Preuve de possession ou de location du véhicule personnel</h6>
+                  <p>Une photocopie des documents suivants :</p>
+                  <ul>
+                    <li>permis de conduire valide et certificat d’immatriculation du véhicule qui indique vos nom et adresse</li>
+                    <li>contrat de location qui indique vos nom et adresse, accompagné du certificat d’immatriculation</li>
+                    <li>certificat d’assurance automobile qui indique vos nom et adresse</li>
+                  </ul>
+
+                  <h6>Preuve d'assurance du véhicule</h6>
+                  <p>Une photocopie des documents suivants :</p>
+                  <ul>
+                    <li>certificat d’assurance automobile qui indique vos nom et adresse</li>
+                    <li>preuve d’assurance automobile attestant que vous êtes le conducteur principal, accompagnée du certificat d’immatriculation</li>
+                  </ul>
+
+                  <h6>Preuve de possession ou de location du véhicule appartenant à une compagnie</h6>
+                  <p>Dans le cas d'un véhicule assuré au nom et à l’adresse d'une compagnie :</p>
+                  <ul>
+                    <li>certificat d'immatriculation accompagné d'une lettre officielle avec le logo de l'entreprise indiquant que vous êtes le conducteur principal du véhicule. Cette lettre doit inclure les détails de la voiture (marque, modèle, année) et vos coordonnées (adresse civique complète).</li>
+                  </ul>
+
+                  <h6>Preuve de possession ou de location du véhicule appartenant à une compagnie à propriétaire unique</h6>
+                  <p>Si vous êtes un utilisateur de véhicules de compagnie à propriétaire unique, vous devez présenter ces documents :</p>
+                  <ul>
+                    <li>certificat d'immatriculation accompagné de l'état de renseignements d'une personne morale inscrit au Registre des entreprises du Québec (REQ) confirmant que le propriétaire est l'unique actionnaire et le seul membre du conseil d'administration (la carte professionnelle ou une lettre manuscrite sont refusées).</li>
+                  </ul>
+
+                  <h6>Preuves de résidences</h6>
+                  <p>2 preuves de résidence (de moins de 3 mois) parmi les documents suivants :</p>
+                  <ul>
+                    <li>permis de conduire valide</li>
+                    <li>facture de services publics (Hydro-Québec, entreprise de télécommunication telle que Bell, Vidéotron, Rogers ou autre)</li>
+                    <li>facture de gaz naturel</li>
+                    <li>facture ou lettre officielle d'un établissement d'enseignement</li>
+                    <li>relevé mensuel d'une institution financière ou de crédit</li>
+                    <li>relevé de placements d'une institution financière ou d'une fiducie</li>
+                    <li>avis de changement d'adresse ou preuve de réacheminement du courrier de Postes Canada (autocollant)</li>
+                    <li>documents officiels de Revenu Québec ou de l’Agence du revenu du Canada (ARC)</li>
+                    <li>relevé d'assurance-emploi</li>
+                    <li>avis de renouvellement de la carte de la Régie de l'assurance maladie du Québec (RAMQ)</li>
+                    <li>avis de renouvellement du permis de conduire de la Société de l'assurance automobile du Québec (SAAQ)</li>
+                    <li>correspondance de la cour municipale</li>
+                    <li>certificat ou extrait du contrat d'assurance automobile attestant que vous êtes le conducteur principal</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+          {{/ pieces-justificatives}}
+
+        </article>
+        {{# sidebarRight}}
+        <aside class="col-12 col-lg-4 sidebar-right" role="complementary">
+          {{> organisms-sidebar-block-top-stroke}}
+        </aside>
+        {{/ sidebarRight}}
+        {{/ has-empty-state}}
+      </div>
+    </div>
+  </div>
+
+  {{# tarifs}}
+  <section class="page-section bg-gray-sky" id="tarifs">
+    <div class="container">
+      <div class="row">
+        <div class="col-12 text-center">
+          <h2 class="section-heading">Tarifs</h2>
+        </div>
+      </div>
+      <div class="row cards">
+        {{# cards.card-item }}
+        <div class="{{ cards.bsgrid-classes }}">
+          {{> molecules-card-item-tarif }}
+        </div>
+        {{/ cards.card-item }}
+      </div>
+    </div>
+  </section>
+  {{/ tarifs}}
+
+  {{# informations}}
+  <section class="page-section {{ regionAfterClasses }} bg-gray-sky">
+    <div class="container">
+      <div class="row">
+        <div class="col-12 text-center">
+          <h2 class="section-heading">Plus d'information</h2>
+        </div>
+      </div>
+      <div class="row cards">
+        {{# cards.card-item }}
+        <div class="{{ cards.bsgrid-classes }}">
+          {{> molecules-card-item}}
+        </div>
+        {{/ cards.card-item }}
+      </div>
+    </div>
+  </section>
+  {{/ informations}}
+
+  {{# hasFeedbackForm}}
+  {{> organisms-feedback-form}}
+  {{/ hasFeedbackForm }}
+</main>
+
+{{> organisms-footer-portal }}
