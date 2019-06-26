@@ -7,11 +7,11 @@
 
   <!-- Teaser -->
   {{# has-lead-text }}
-  {{> molecules-lead }}
+  {{> components-lead }}
   {{/ has-lead-text }}
 
   {{# has-nav-anchors }}
-  {{> molecules-nav-anchors }}
+  {{> components-nav-anchors }}
   {{/ has-nav-anchors }}
 
   <!-- Begin main-content region-->
@@ -44,7 +44,7 @@
       <div class="row cards">
         {{# cards.card-item }}
         <div class="{{ cards.bsgrid-classes }}">
-          {{> molecules-card-item}}
+          {{> components-card-item}}
         </div>
         {{/ cards.card-item }}
       </div>
@@ -58,7 +58,7 @@
   {{/ cards-membres}}
 
   {{# featured-section}}
-  {{> molecules-featured-content}}
+  {{> components-featured-content}}
   {{/ featured-section}}
 
   {{# informations}}
@@ -72,7 +72,7 @@
       <div class="row cards">
         {{# cards.card-item }}
         <div class="{{ cards.bsgrid-classes }}">
-          {{> molecules-card-item}}
+          {{> components-card-item}}
         </div>
         {{/ cards.card-item }}
       </div>

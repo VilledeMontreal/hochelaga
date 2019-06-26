@@ -1,5 +1,5 @@
 ---
-title: Button large
+title: Button
 ---
 
 Buttons are custom implementation based on bootstrap buttons classes.

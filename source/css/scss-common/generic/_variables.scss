@@ -17,8 +17,9 @@ $neutral-primary: 			#212529;
 $neutral-primary-reverse: 	#FFF;
 	$white:    				$neutral-primary-reverse;
 $neutral-secondary:			#637381;
+	$gray-500: 				$neutral-secondary;
 $neutral-tertiary:			#ADB5BD;
-	$gray-500: 				$neutral-tertiary;
+	$gray-500: 				$neutral-secondary;
 	$gray-600: 				$neutral-tertiary; // disabled states
 	$gray-700:				$neutral-tertiary; // gradient mixin
 $neutral-stroke:			#CED4DA;

@@ -7,7 +7,7 @@
 
     <!-- Teaser -->
   {{# has-lead-text}}
-  {{> molecules-lead }}
+  {{> components-lead }}
   {{/ has-lead-text}}
 
   <section class="page-section pt-0">
@@ -15,18 +15,18 @@
       <div class="row">
         <div class="col-12 col-lg-4">
           {{^ list-group-results }}
-          {{> molecules-empty-search-results }}
+          {{> components-empty-search-results }}
           {{/ list-group-results }}
           {{# list-group-results }}
           {{# headings }}
           <h2 class="list-group-heading">{{ headings.text }}</h2>
           {{/ headings }}
 
-          {{> molecules-list-group-hub}}
+          {{> components-list-group-hub}}
 
           {{# hasPagination }}
           <div class="pagination-wrapper">
-            {{> molecules-pagination("paginationClass": justify-content-center) }}
+            {{> components-pagination("paginationClass": justify-content-center) }}
           </div>
           {{/ hasPagination }}
 

@@ -7,11 +7,11 @@
 
   <!-- Teaser -->
   {{# has-lead-text }}
-  {{> molecules-lead }}
+  {{> components-lead }}
   {{/ has-lead-text }}
 
   {{# featuredSection}}
-    {{> molecules-card }}
+    {{> components-card }}
   {{/ featuredSection}}
 
 
@@ -31,7 +31,7 @@
       {{^ cards }}
       <div class="row">
         <div class="col-12">
-        {{> molecules-empty-search-results }}
+        {{> components-empty-search-results }}
         </div>
       </div>
       {{/ cards }}
@@ -48,7 +48,7 @@
       <div class="row cards {{ cards.classes }}">
         {{# cards.card-item }}
         <div class="{{ cards.bsgrid-classes }}">
-          {{> molecules-card-item }}
+          {{> components-card-item }}
         </div>
         {{/ cards.card-item }}
       </div>
@@ -56,7 +56,7 @@
       {{# hasPagination }}
       <div class="row">
         <div class="col-12">
-          {{> molecules-pagination("paginationClass": justify-content-center) }}
+          {{> components-pagination("paginationClass": justify-content-center) }}
         </div>
       </div>
       {{/ hasPagination }}
@@ -90,14 +90,14 @@
       {{# listGroups }}
       <div class="row">
         <div class="col-12">
-          {{> molecules-list-group-hub}}
+          {{> components-list-group-hub}}
         </div>
       </div>
       {{/ listGroups }}
 
       {{# hasPagination }}
       <div class="pagination-wrapper">
-        {{> molecules-pagination("paginationClass": justify-content-center) }}
+        {{> components-pagination("paginationClass": justify-content-center) }}
       </div>
       {{/ hasPagination }}
 
@@ -120,7 +120,7 @@
       </div>
       <div class="row">
         <div class="col-12">
-          {{> molecules-empty-search-results }}
+          {{> components-empty-search-results }}
         </div>
       </div>
     </div>

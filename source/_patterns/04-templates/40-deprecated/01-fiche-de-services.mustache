@@ -7,12 +7,12 @@
 
   <!-- Teaser -->
   {{# has-lead-text}}
-  {{> molecules-lead }}
+  {{> components-lead }}
   {{/ has-lead-text}}
 
   <!-- Tabs -->
   {{# has-nav-tabs}}
-    {{> molecules-nav-tab }}
+    {{> components-nav-tab }}
   {{/ has-nav-tabs}}
 
   <div class="region-content {{ regionMainClasses }}">
@@ -20,14 +20,14 @@
       <div class="row">
         {{# has-empty-state}}
         <article class="col-12">
-          {{> molecules-empty-state-arrondissement}}
+          {{> components-empty-state-arrondissement}}
         </article>
         {{/ has-empty-state}}
         {{^ has-empty-state}}
         <article class="col-12 col-lg-8">
           {{{ main-content }}}
           {{# collapsibleHowTo }}
-          {{> molecules-collapsible }}
+          {{> components-collapsible }}
           {{/ collapsibleHowTo }}
 
           {{# pieces-justificatives}}
@@ -113,7 +113,7 @@
       <div class="row cards">
         {{# cards.card-item }}
         <div class="{{ cards.bsgrid-classes }}">
-          {{> molecules-card-item-tarif }}
+          {{> components-card-item-tarif }}
         </div>
         {{/ cards.card-item }}
       </div>
@@ -132,7 +132,7 @@
       <div class="row cards">
         {{# cards.card-item }}
         <div class="{{ cards.bsgrid-classes }}">
-          {{> molecules-card-item}}
+          {{> components-card-item}}
         </div>
         {{/ cards.card-item }}
       </div>
