@@ -7,7 +7,7 @@
 
   <!-- Teaser -->
   {{# has-lead-text }}
-  {{> molecules-lead }}
+  {{> components-lead }}
   {{/ has-lead-text }}
 
   <div class="region-content {{ regionContentClasses }}">
@@ -101,7 +101,7 @@
       {{# contact }}
       <div class="section-inner section-inner-md section-divider">
         <h2 class="section-subheading">Contact</h2>
-        {{> molecules-block-contact }}
+        {{> components-block-contact }}
       </div>
       {{/ contact}}
     </article>
@@ -118,7 +118,7 @@
       <div class="row cards">
         {{# cards.card-item }}
         <div class="{{ cards.bsgrid-classes }}">
-          {{> molecules-card-item-tarif }}
+          {{> components-card-item-tarif }}
         </div>
         {{/ cards.card-item }}
       </div>
@@ -137,7 +137,7 @@
       <div class="row cards">
         {{# cards.card-item }}
         <div class="{{ cards.bsgrid-classes }}">
-          {{> molecules-card-item}}
+          {{> components-card-item}}
         </div>
         {{/ cards.card-item }}
       </div>

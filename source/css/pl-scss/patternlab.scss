@@ -56,7 +56,11 @@ h5.pl-pattern-subtitle {
 h3.sg-pattern-title a {
 	font-size: 18px;
 	text-transform: none;
+	&::first-letter { 
+  		text-transform: uppercase;
+	}
 }
+
 h4.pl-pattern-subtitle {
 	font-size: 16px;
 }

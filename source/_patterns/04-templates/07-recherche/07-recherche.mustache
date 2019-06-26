@@ -24,18 +24,18 @@
 
         <div class="col-12">
           {{^ list-group-results }}
-          {{> molecules-empty-search-results }}
+          {{> components-empty-search-results }}
           {{/ list-group-results }}
           {{# list-group-results }}
           {{# headings }}
           <h1 class="list-group-heading">{{ headings.text }}</h1>
           {{/ headings }}
 
-          {{> molecules-list-group-hub}}
+          {{> components-list-group-hub}}
 
           {{# hasPagination }}
           <div class="pagination-wrapper">
-              {{> molecules-pagination("paginationClass": justify-content-center) }}
+              {{> components-pagination("paginationClass": justify-content-center) }}
           </div>
           {{/ hasPagination }}
 

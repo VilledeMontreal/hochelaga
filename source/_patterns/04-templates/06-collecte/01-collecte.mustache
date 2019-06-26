@@ -7,12 +7,12 @@
 
   <!-- Teaser -->
   {{# has-lead-text}}
-  {{> molecules-lead }}
+  {{> components-lead }}
   {{/ has-lead-text}}
 
   <!-- Nav Anchors -->
   {{# has-nav-anchors }}
-  {{> molecules-nav-anchors }}
+  {{> components-nav-anchors }}
   {{/ has-nav-anchors }}
 
   <div id="navTop" class="region-content {{ regionMainClasses }}">
@@ -20,7 +20,7 @@
       <div class="row">
        {{# has-empty-state}}
         <article class="col-12">
-          {{> molecules-empty-state-arrondissement}}
+          {{> components-empty-state-arrondissement}}
         </article>
         {{/ has-empty-state}}
         {{^ has-empty-state}}
@@ -34,7 +34,7 @@
           <div id="{{ id }}" class="page-section-anchor">
             <h2 class="h3">{{ title }}</h2>
             
-            {{> molecules-collapsible }}
+            {{> components-collapsible }}
             
           </div>
           {{/ matieres-collapsible-item}}
@@ -73,7 +73,7 @@
       <div class="row cards">
         {{# cards.card-item }}
         <div class="{{ cards.bsgrid-classes }}">
-          {{> molecules-card-item}}
+          {{> components-card-item}}
         </div>
         {{/ cards.card-item }}
       </div>

@@ -2,7 +2,7 @@
 title: Cards - 3 columns layout
 ---
 
-Cards are a set of card item molecules assemble in a 3 or 4 columns bootstrap grid layout.
+Cards are a set of card item components assemble in a 3 or 4 columns bootstrap grid layout.
 
 ## Large Cards
 

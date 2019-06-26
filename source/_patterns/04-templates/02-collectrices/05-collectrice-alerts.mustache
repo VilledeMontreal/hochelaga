@@ -7,7 +7,7 @@
 
     <!-- Teaser -->
   {{# has-lead-text}}
-  {{> molecules-lead }}
+  {{> components-lead }}
   {{/ has-lead-text}}
 
   {{# alertsCards }}
@@ -36,7 +36,7 @@
               <div class="row cards {{ cards.classes }}">
               {{# item }}
                 <div class="{{ cards.bsgrid-classes }}">
-                  {{> molecules-card-item }}
+                  {{> components-card-item }}
                 </div>
               {{/ item }}
               </div>
@@ -48,7 +48,7 @@
 
       {{# hasPagination }}
       <div class="pagination-wrapper">
-        {{> molecules-pagination("paginationClass": justify-content-center) }}
+        {{> components-pagination("paginationClass": justify-content-center) }}
       </div>
       {{/ hasPagination }}
 
@@ -72,7 +72,7 @@
       </div>
       <div class="row">
         <div class="col-12">
-          {{> molecules-empty-search-results }}
+          {{> components-empty-search-results }}
         </div>
       </div>
     </div>
