@@ -17,11 +17,10 @@ $neutral-primary: 			#212529;
 $neutral-primary-reverse: 	#FFF;
 	$white:    				$neutral-primary-reverse;
 $neutral-secondary:			#637381;
-	$gray-500: 				$neutral-secondary;
+	$gray-700: 				$neutral-secondary;
 $neutral-tertiary:			#ADB5BD;
-	$gray-500: 				$neutral-secondary;
+	$gray-500: 				$neutral-tertiary;
 	$gray-600: 				$neutral-tertiary; // disabled states
-	$gray-700:				$neutral-tertiary; // gradient mixin
 $neutral-stroke:			#CED4DA;
 	$gray-400: 				$neutral-stroke;
 
@@ -69,7 +68,7 @@ $red:     					$negative;
 $danger:     				$negative !default;
 
 $light:         			$gray-100 !default;
-$dark:          			$gray-800 !default;
+$dark:          			$gray-900 !default;
 
 $theme-colors: () !default;
 // stylelint-disable-next-line scss/dollar-variable-default
@@ -146,7 +145,7 @@ $enable-validation-icons:                     false;
 //
 // Settings for the `<body>` element.
 $body-bg:               $white;
-$body-color:            $neutral-secondary;
+$body-color:            $neutral-secondary !default;
 
 
 // Links
@@ -158,6 +157,13 @@ $link-border-width:           1px;
 $link-decoration:             none;
 $link-hover-color:            $action-lighter;
 $link-hover-decoration:       none;
+
+/*$link-color:                              theme-color("primary") !default;
+$link-decoration:                         underline !default;
+$link-hover-color:                        $primary-lighter !default;
+$link-hover-decoration:                   underline !default;
+// Darken percentage for links with `.text-*` class (e.g. `.text-success`)
+$emphasized-link-hover-darken-percentage: 15% !default;*/
 
 
 // Grid containers
