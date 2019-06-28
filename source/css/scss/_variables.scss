@@ -3,6 +3,291 @@
 // Variables should follow the `$component-state-property-size` formula for
 // consistent naming. Ex: $nav-link-disabled-color and $modal-content-box-shadow-xs.
 
+// Color system
+
+// Brand colors
+$brand: 					#e00000;
+$brand-black: 				#1D1D1B;
+
+// Actions
+$action:					#097d6c; 
+$action-lighter: 			#0cb097;
+$primary:       			$action !default;
+$primary-lighter:			$action-lighter;
+
+// Highlight
+$highlight-light:			#EEFAF8;
+$highlight-strong:			#d0f3ee;
+
+// Neutral
+$neutral-primary: 			#212529;
+$neutral-primary-reverse: 	#FFF;	
+$neutral-secondary:			#637381;	
+$neutral-tertiary:			#ADB5BD;
+$neutral-stroke:			#CED4DA;
+$neutral-underground-1:		#f8f9fa;	
+$neutral-underground-2: 	#dee2e6;
+
+$black:    					#000000;
+$white:    					$neutral-primary-reverse;
+
+$gray-900: 					$neutral-primary;
+$gray-800: 					$neutral-primary; // gradient mixin, table dark
+$gray-700: 					$neutral-secondary;
+$gray-500: 					$neutral-tertiary;
+$gray-600: 					$neutral-tertiary; // disabled states
+$gray-400: 					$neutral-stroke;
+$gray-300:					$neutral-underground-2;
+$gray-200: 					$highlight-light;
+$gray-100: 					$neutral-underground-1;
+
+
+// Alert colors
+$informative-dark:			#014E64;
+$informative:				#0296C0;
+$informative-light:			#E6F5F9;
+$blue:						$informative;
+$info:       				$informative !default;
+
+$positive-dark:				#075635;
+$positive:					#0DA566;
+$positive-light:			#E7F6F0;
+$green:   					$positive;
+$success:    				$positive !default;
+
+$warning-dark:				#846A02;
+$warning:					#FECC03;
+$warning-light:				#FEFAE6;
+$yellow:  					$warning; 
+$warning:    				$warning !default;
+
+$negative-dark:				#851A00;
+$negative-light:			#FFEBE6;
+$negative:					#FF3200;
+$red:     					$negative;
+$danger:     				$negative !default;
+
+$colors: () !default;
+$colors: map-merge(
+  (
+    "black":       $black,
+  ),
+  $colors
+);
+
+$theme-colors: () !default;
+$theme-colors: map-merge(
+  (
+    "primary":    			$primary,
+	"primary-lighter":    	$primary-lighter,
+	"neutral-primary":   	$gray-900,
+	"neutral-secondary":   	$gray-700,
+	"neutral-tertiary":   	$gray-500,
+	"success":    			$positive,
+    "info":       			$informative,
+    "warning":    			$warning,
+    "danger":     			$negative,
+  ),
+  $theme-colors
+);
+
+$dialog-colors: () !default;
+$dialog-colors: map-merge(
+  (
+    "success":    $positive,
+    "info":       $informative,
+    "warning":    $warning,
+    "danger":     $negative,
+  ),
+  $dialog-colors
+);
+
+$dialog-colors-dark: () !default;
+$dialog-colors-dark: map-merge(
+  (
+    "success":    $positive-dark,
+    "info":       $informative-dark,
+    "warning":    $warning-dark,
+    "danger":     $negative-dark,
+  ),
+  $dialog-colors-dark
+);
+
+$dialog-colors-light: () !default;
+$dialog-colors-light: map-merge(
+  (
+    "success":    $positive-light,
+    "info":       $informative-light,
+    "warning":    $warning-light,
+    "danger":     $negative-light,
+  ),
+  $dialog-colors-light
+);
+
+$button-colors: () !default;
+$button-colors: map-merge(
+  (
+    "primary":    	$primary,
+	"primary-red":  $brand,
+  ),
+  $button-colors
+);
+
+// Options
+//
+// Quickly modify global styling by enabling or disabling optional features.
+$enable-validation-icons:                     false;
+
+
+
+// Body
+//
+// Settings for the `<body>` element.
+$body-bg:               $white;
+$body-color:            $neutral-secondary !default;
+
+$text-muted: 			$gray-500;
+// Links
+//
+// Style anchor elements.
+$link-color:                  $action;
+$link-border-color:           $action;
+$link-border-width:           1px;
+$link-decoration:             none;
+$link-hover-color:            $action-lighter;
+$link-hover-decoration:       none;
+
+/*$link-color:                              theme-color("primary") !default;
+$link-decoration:                         underline !default;
+$link-hover-color:                        $primary-lighter !default;
+$link-hover-decoration:                   underline !default;
+// Darken percentage for links with `.text-*` class (e.g. `.text-success`)
+$emphasized-link-hover-darken-percentage: 15% !default;*/
+$emphasized-link-hover-ligthen-percentage: 15% !default;
+
+
+// Grid containers
+//
+// Define the maximum width of `.container` for different screen sizes.
+
+$container-max-widths: (
+  sm: 570px,
+  md: 750px,
+  lg: 990px,
+  xl: 1170px
+);
+
+//@include _assert-ascending($container-max-widths, "$container-max-widths");
+
+// Grid content
+//
+// Define the maximum width of content for different screen sizes.
+$content-max-widths: (
+  md: 750px,
+  lg: 1110px,
+  xl: 1600px
+);
+
+//@include _assert-ascending($content-max-widths, "$content-max-widths");
+
+// Grid columns
+//
+// Set the number of columns and specify the width of the gutters.
+
+$grid-columns:                12;
+$grid-gutter-width:           32px;
+
+
+// Components
+//
+// Define common padding and border radius sizes and more.
+
+$line-height-lg:              1.75;
+$line-height-sm:              1.5;
+
+$border-width:                1px;
+$border-color:                $gray-300;
+
+$border-radius:               .25rem;
+$border-radius-lg:            .3125rem;
+$border-radius-sm:            .2rem;
+
+$component-active-color:      $white;
+$component-active-bg:         $primary;
+
+// Generic value for backdrop bg and opacity
+$backdrop-bg:                 $gray-800;
+$backdrop-opacity:            .3;
+
+
+// Typography
+//
+// // see specifics variables for the theme
+$font-family-base:            'Open Sans', Helvetica, Arial, sans-serif;
+$font-weight-light:           300; // Open Sans Light
+$font-weight-normal:          400;  // Open Sans Regular     
+$font-weight-regular:         $font-weight-normal;
+$font-weight-bold:            600; // Open Sans Bold
+
+
+$font-size-base:              1rem !default; // Assumes the browser default, typically `16px`
+$font-size-xl:				  $font-size-base * 1.3125;
+$font-size-lg:                $font-size-base * 1.25 !default;
+$font-size-sm:                $font-size-base * .875 !default;
+$font-size-xs:                $font-size-base * .75;      
+
+
+$line-height-base:            $line-height-lg;
+
+$headings-font-family: 		  $font-family-base;
+$headings-margin-bottom:      1.5rem;
+$headings-font-weight:        $font-weight-bold;         
+$headings-color:              $gray-900;
+
+$h1-font-size:                $font-size-base * 2.5;         // 40px
+$h2-font-size:                $font-size-base * 2;       	  // 32px
+$h3-font-size:                $font-size-base * 1.5;        // 24px
+$h4-font-size:                $font-size-base * 1.25;        // 20px
+$h5-font-size:                $font-size-base * 1;       	  // 16px
+$h6-font-size:                $font-size-base * 0.875;       // 16px
+
+
+/*$display1-size:                3.0rem;
+$display2-size:                2.5rem;         
+$display3-size:                2rem;       	  
+$display4-size:                1.55rem;        
+
+$display1-weight:             400;
+$display2-weight:             400;
+$display3-weight:             400;
+$display4-weight:             400;*/
+
+// Headings font-size and line-height are made responsive
+// @see type.scss
+// These values represent the largest font-size for those headings
+$display1-size:               4rem;           //64px;
+$display2-size:               4rem;           //64px;
+$display3-size:               3.5rem;         //56px;
+$display4-size:               3.125rem;       //50px;
+
+$display1-weight:             700;
+$display2-weight:             400;
+$display3-weight:             400;
+$display4-weight:             400;
+
+$display-line-height:         1.5;
+
+
+$lead-font-size:              $font-size-xl;              // 24px
+$lead-line-height:            1.5;                        // 36px
+$lead-font-weight:            $font-weight-regular;
+
+$mark-color:                  $gray-900;
+
+$small-font-size:             .75em;
+
+$blockquote-small-color:      $body-color;
+$blockquote-font-size:        $font-size-lg;
 
 // Spacing
 //
@@ -509,7 +794,3 @@ $slide-menu-icon-color:           $action-lighter;
 $slide-menu-link-padding:         1rem 2.8125rem;
 $slide-menu-transition-dur:       300ms;
 $slide-menu-transition-easing:    ease-in-out;
-
-
-
-

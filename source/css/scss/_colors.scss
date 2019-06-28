@@ -1,9 +1,12 @@
-
 // Utilities of bootstrap modified
+
+// Use background.scss logic to add bg-variants for grays
+@each $color, $value in $grays {
+  @include bg-variant(".bg-gray-#{$color}", $value);
+}
 
 //Text
 .text-secondary,
-.text-primary,
 .text-black-50,
 .text-white-50 {
 	color: $body-color !important;
@@ -12,12 +15,10 @@
 .text-light {
 	color: $white !important;
 }
-
 @each $color, $value in $dialog-colors-dark {
   @include text-emphasis-variant(".text-#{$color}", $value);
 }
 
-//Link
 
 
 // Background

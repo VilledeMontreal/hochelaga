@@ -5,7 +5,18 @@
  * == Typography
  * - - - - - - - - - -
  */
-
+@mixin vdm-text-emphasis-variant($parent, $color, $hover-color) {
+  #{$parent} {
+    color: $color !important;
+  }
+  @if $emphasized-link-hover-darken-percentage != 0 {
+    a#{$parent} {
+      @include hover-focus {
+        color: lighten($color, $emphasized-link-hover-darken-percentage) !important;
+      }
+    }
+  }
+}
 // Responsive headings
 // @arg $font-size - rem
 // @arg $multiplier - integer
