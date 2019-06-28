@@ -291,6 +291,13 @@ html {
         margin-bottom: 0;
       }
     }
+    &.dark {
+      color: $gray-900;
+      .subtext {
+        font-size: $font-size-sm;
+        color: $body-color;
+      }
+    }
   }
   .summary-icon-offset {
     @include media-breakpoint-up(md){
