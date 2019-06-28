@@ -1,9 +1,7 @@
 
-.bg-primary,
-.bg-secondary {
-  background-color: transparent !important;
-}
+// Utilities of bootstrap modified
 
+//Text
 .text-secondary,
 .text-primary,
 .text-black-50,
@@ -11,14 +9,23 @@
 	color: $body-color !important;
 }
 
+.text-light {
+	color: $white !important;
+}
+
 @each $color, $value in $dialog-colors-dark {
-  @include text-emphasis-variant(".text-#{$color}-dark", $value);
+  @include text-emphasis-variant(".text-#{$color}", $value);
+}
+
+//Link
+
+
+// Background
+.bg-primary,
+.bg-secondary {
+  background-color: transparent !important;
 }
 
 @each $color, $value in $dialog-colors-light {
-  @include text-emphasis-variant(".text-#{$color}-light", $value);
-}
-
-@each $color, $value in $dialog-colors-light{
-  @include bg-variant(".bg-#{$color}-light", $value);
+  @include bg-variant(".bg-#{$color}", $value);
 }
