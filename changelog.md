@@ -10,7 +10,8 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 - Modals variant for more-filters (scrollable body).
 - Indexes variant for map and list switches.
 - Copyright and caption handling for images.
-- Added custom styles for copyright and caption in photoswipe.
+- Custom styles for copyright and caption in photoswipe.
+- Card Services variant for DCI. 
 
 ## Changed
 - Nav filters structure and responsive behaviors.
