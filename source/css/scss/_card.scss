@@ -549,7 +549,119 @@
       font-weight: $font-weight-bold;
       margin-bottom: 2rem;
     }
-    
+  }
+
+  // Fullwidth service cards
+  &.card-services {
+    padding: 1.5rem 2rem;
+    flex-flow: row wrap;
+
+    &.draft {
+      border: 2px dashed $gray-400;
+      -webkit-box-shadow: none;
+      -moz-box-shadow: none;
+      box-shadow: none;
+    }
+
+    .card-id-text {
+      font-weight: $font-weight-bold;
+    }
+
+    .card-id {
+      @include font-size($font-size-sm);
+      color: $gray-900;
+    }
+
+    .card-text {
+      color: $body-color;
+    }
+
+    .badge {
+      background-color: $green;
+      color: $white;
+    }
+
+    .card-date {
+      @include font-size($font-size-sm);
+      display: block;
+      margin: 0;
+    }
+
+    .card-menu {
+      margin-top: 0.75rem;
+    }
+
+    .card-body {
+      padding: 0;
+      order: 1;
+      display: flex;
+      flex-wrap: wrap;
+      > .flex-content {
+        flex-basis: 100%;
+        margin-bottom: 1rem;
+      }
+    }
+
+    @include media-breakpoint-up(md) {
+      .card-icon-top {
+        flex: 0;
+        padding-right: 1rem;
+      }
+      .card-body {
+        padding-top: 0.3rem;
+        flex: 1;
+        order: 1;
+      }
+      .card-menu {
+        order: 2;
+      }
+    }
+    @include media-breakpoint-up(lg) {
+      .card-body{
+        align-items: center;
+        min-width: 0;
+        padding: 0;
+        margin: auto;
+        flex-wrap: nowrap;
+        > .flex-content {
+          display:flex;
+          height: 4rem;
+          flex: 0 0 13rem;
+          margin: 0 2rem 0 0;
+          align-content: space-between;
+          flex-wrap: wrap;
+
+          &:first-child {
+            flex: 1 1 auto;
+            white-space: nowrap;
+            min-width: 0;
+            overflow: hidden;
+            > * {
+              overflow: hidden;
+              text-overflow: ellipsis;
+            }
+          }
+        }
+      }
+
+      .card-date > span {
+        display: block;
+      }
+
+      .card-icon-top {
+        margin: 0;
+      }
+      
+      .badge {
+        margin-right: 2rem;
+      }
+
+      .card-text,
+      .card-title,
+      .card-menu {
+        margin: 0;
+      }
+    }
   }
 }
 

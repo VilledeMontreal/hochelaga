@@ -30,7 +30,8 @@
       <div class="row mb-2 mb-md-4 align-items-center">
         <div class="col-12 col-md-auto order-first order-md-last">
           
-          <div class="row mb-2 mb-md-0">  
+          <div class="row mb-2 mb-md-0">
+            {{# nav-filters}}
             <div class="col d-md-none mb-2">
               <button type="button" class="btn btn-secondary btn-block d-flex justify-content-center" data-toggle="modal" data-target="#{{navModalID}}">
                 <span class="vdm vdm-090-preferences" aria-hidden="true"></span>
@@ -40,6 +41,8 @@
                 {{/ numb-filters}}
               </button>
             </div>
+            {{> molecules-modal-filters}}
+            {{/ nav-filters}}
             <div class="col col-md-auto mb-2 mb-md-0">
               <button type="button" id="triggerList" class="btn btn-secondary btn-block justify-content-center{{^ showMap }} d-none{{/ showMap }}{{# showMap }} d-flex{{/ showMap }}">
                 <span class="vdm vdm-106-menu-simple" aria-hidden="true"></span>
