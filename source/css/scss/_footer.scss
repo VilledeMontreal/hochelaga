@@ -28,7 +28,7 @@ footer {
       li a {
         .vdm {
           color: $white;
-          @include font-size($font-size-xl);
+          @include font-size($font-size-lg);
           padding: 0;
         }
         @include hover-focus {
@@ -46,7 +46,7 @@ footer {
       border-radius: 2px;
       cursor: pointer;
       @include font-size($font-size-xs);
-      line-height: $line-height-sm;
+      line-height: $line-height-component;
       padding: .75rem 3.5rem;
       &:hover {
         border-color: $action;
@@ -143,7 +143,7 @@ footer {
     .social-media-list {
       li a {
         .vdm {
-          @include font-size($font-size-xl);
+          @include font-size($font-size-lg);
           padding: 0;
         }
       }

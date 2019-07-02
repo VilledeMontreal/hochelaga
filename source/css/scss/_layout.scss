@@ -111,7 +111,7 @@ html {
 .hub-section-heading {
   h1,h2,h3,h4,h5,h6 {
     color: $headings-color;
-    @include font-size($font-size-xl);
+    @include font-size($font-size-lg);
     font-weight: $font-weight-bold;
     line-height: $line-height-sm;
     margin-bottom: 1.5rem;
@@ -354,7 +354,7 @@ html {
     }
   }
   .title {
-    @include font-size($font-size-xl);
+    @include font-size($font-size-lg);
     font-weight: $font-weight-bold;
     line-height: $line-height-sm;
     padding-top: 1rem;
@@ -572,7 +572,7 @@ html {
     line-height: $line-height-base;
     margin-bottom: 2rem;
     .content-block-infos-title {
-      @include font-size($font-size-xl);
+      @include font-size($font-size-lg);
       font-weight: bold;
       line-height: $line-height-sm;
     }
@@ -659,7 +659,7 @@ html {
   .empty-results-heading {
     display: block;
     color: $headings-color;
-    @include font-size($font-size-xl);
+    @include font-size($font-size-lg);
     line-height: $line-height-sm;
     padding-bottom: 1.275rem;
   }

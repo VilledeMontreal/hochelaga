@@ -81,7 +81,7 @@
 //
 
 .pagination-lg {
-  @include pagination-size($pagination-padding-y-lg, $pagination-padding-x-lg, $font-size-xl, $line-height-lg, 0);
+  @include pagination-size($pagination-padding-y-lg, $pagination-padding-x-lg, $font-size-lg, $line-height-component, 0);
 
   .page-item {
     &:first-child,
@@ -97,7 +97,7 @@
 }
 
 .pagination-sm {
-  @include pagination-size($pagination-padding-y-sm, $pagination-padding-x-sm, $font-size-xs, $line-height-sm, 0);
+  @include pagination-size($pagination-padding-y-sm, $pagination-padding-x-sm, $font-size-xs, $line-height-component, 0);
 
   .page-item {
     &:first-child,

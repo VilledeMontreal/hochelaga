@@ -182,9 +182,10 @@ $grid-gutter-width:           32px;
 // Components
 //
 // Define common padding and border radius sizes and more.
-
-$line-height-lg:              1.75;
-$line-height-sm:              1.5;
+$line-height-component:       1.5; // component
+// Map old bootstrap variables to the new line-height-component for compatibility
+$line-height-lg:              $line-height-component;
+$line-height-sm:              $line-height-component;
 
 $border-width:                1px;
 $border-color:                $gray-300;
@@ -211,14 +212,14 @@ $font-weight-regular:         $font-weight-normal;
 $font-weight-bold:            600; // Open Sans Bold
 
 
-$font-size-base:              1rem; // Assumes the browser default, typically `16px`
-$font-size-xl:				        $font-size-base * 1.3125;
+$font-size-base:              1rem; // Assumes the browser default, typically `16px
 $font-size-lg:                $font-size-base * 1.25;
 $font-size-sm:                $font-size-base * .875;
-$font-size-xs:                $font-size-base * .75;      
+$font-size-xs:                $font-size-base * .75;   
 
 
-$line-height-base:            $line-height-lg;
+$line-height-base:            1.75; //paragraph
+
 
 $headings-font-family: 		    $font-family-base;
 $headings-margin-bottom:      1.5rem;
@@ -261,8 +262,8 @@ $display4-weight:             400;
 $display-line-height:         1.5;
 
 
-$lead-font-size:              $font-size-xl;              // 24px
-$lead-line-height:            1.5;                        // 36px
+$lead-font-size:              $font-size-lg;              // 20px
+$lead-line-height:            1.5;                        // 30px
 $lead-font-weight:            $font-weight-regular;
 
 $mark-color:                  $gray-900;
@@ -317,29 +318,6 @@ $spacers: map-merge(
 // Style p element.
 $paragraph-margin-bottom:     2rem;
 
-
-
-// Typography
-//
-// Font, line-height, and color for body text, headings, and more.
-$font-size-base:              1rem !default; // Assumes the browser default, typically `16px`
-$font-size-xl:				        $font-size-base * 1.3125;
-$font-size-lg:                $font-size-base * 1.25 !default;
-$font-size-sm:                $font-size-base * .875 !default;
-$font-size-xs:                $font-size-base * .75;      
-
-$line-height-base:            $line-height-lg;
-
-$lead-font-size:              $font-size-xl;              // 24px
-$lead-line-height:            1.5;                        // 36px
-$lead-font-weight:            $font-weight-regular;
-
-$mark-color:                  $gray-900;
-
-$small-font-size:             .75em;
-
-$blockquote-small-color:      $body-color;
-$blockquote-font-size:        $font-size-lg;
 
 $hr-margin-y:                 ($spacer * 2);
 
@@ -423,7 +401,7 @@ $btn-padding-x-lg:            $input-btn-padding-x-lg;
 $btn-font-size-lg:            $input-btn-font-size-lg;
 $btn-line-height-lg:          $input-btn-line-height-lg;
 
-$btn-border-width:            2px;
+$btn-border-width:            1px;
 
 $btn-font-size:               $font-size-sm;
 $btn-font-weight:             $font-weight-bold;
