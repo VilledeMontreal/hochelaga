@@ -1,19 +1,27 @@
 // stylelint-disable declaration-no-important
 
-@each $color, $value in $theme-colors {
-  @include bg-variant(".bg-#{$color}", $value);
+//
+// Background
+//
+
+//map the gray background-colors
+@each $color, $value in $grays {
+  @include bg-variant(".bg-gray-#{$color}", $value);
 }
 
-@if $enable-gradients {
-  @each $color, $value in $theme-colors {
-    @include bg-gradient-variant(".bg-gradient-#{$color}", $value);
+// Make the color of dialog light
+@each $label, $map in $dialog-colors {
+  $color-light: map-get($map, light);
+  .bg-#{$label} {
+  	background-color: $color-light !important;
   }
 }
 
-.bg-white {
-  background-color: $white !important;
+// Overrides colors
+.bg-primary {
+  background-color: transparent !important;
 }
 
-.bg-transparent {
-  background-color: transparent !important;
+.bg-highlight-light {
+	background-color: $highlight-light;
 }

@@ -63,15 +63,5 @@
   @include list-group-item-variant($color, theme-color-level($color, -9), theme-color-level($color, 6));
 }
 
-// Background
-// Use background.scss logic to add bg-variants for grays
-@each $color, $value in $grays {
-  @include bg-variant(".bg-gray-#{$color}", $value);
-}
-
-.bg-primary,
-.bg-secondary {
-  background-color: transparent !important;
-}
 
 
