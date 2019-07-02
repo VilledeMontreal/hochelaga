@@ -4,4 +4,4 @@ $theme-colors: map-remove($theme-colors, "secondary");
 
 $colors: map-remove($colors, "blue", "indigo", "purple", "pink", "red", "orange", "yellow", "green", "teal", "cyan", "gray", "gray-dark");
 
-$grays: map-remove($grays, "600", "800");
+$grays: map-remove($grays, "200", "600", "800");
