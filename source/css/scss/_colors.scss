@@ -1,6 +1,8 @@
 // Utilities of bootstrap modified
 
 
+//WORK IN PROGRESS
+
 @each $label, $map in $dialog-colors {
   $keys: map-keys($map);
   $color-default: map-get($map, base);
@@ -22,29 +24,13 @@
     @include alert-variant(theme-color-level($color, $alert-bg-level), theme-color-level($color, $alert-border-level), theme-color-level($color, $alert-color-level));
   }
 }
-//Text
-
-//@each $color, $value in $dialog-colors-light {
-  //@include bg-variant(".bg-#{$color}", $value);
-//}
-//@each $color, $value in $dialog-colors-dark {
-  //@include text-emphasis-variant(".text-#{$color}", $value);
-//}
-
 
 // Colors
 //
 // Contextual variations (linked badges get darker on :hover).
-
 @each $color, $value in $theme-colors {
   .badge-#{$color} {
     @include badge-variant($value);
-  }
-}
-
-@each $color, $value in $theme-colors {
-  .border-#{$color} {
-    border-color: $value !important;
   }
 }
 
@@ -54,14 +40,7 @@
 }
 
 
-// Contextual variants
-//
-// Add modifier classes to change text and background color on individual items.
-// Organizationally, this must come after the `:hover` states.
 
-@each $color, $value in $theme-colors {
-  @include list-group-item-variant($color, theme-color-level($color, -9), theme-color-level($color, 6));
-}
 
 
 
