@@ -549,7 +549,7 @@
     text-align: left;
   }
   .card-label {
-    @include font-size($font-size-xl);
+    @include font-size($font-size-lg);
     font-weight: $font-weight-bold;
     &.card-label-normal {
       font-weight: $font-weight-normal;

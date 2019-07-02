@@ -17,6 +17,9 @@
 @import "scss/medias";
 @import "scss/colors";
 
+/*-- MIXINS --*/
+@import "scss/mixins/buttons";
+
 /*-- COMPONENTS --*/
 @import "scss/header";
 //@import "scss/alert";
@@ -31,10 +34,10 @@
 @import "scss/lists";
 @import "scss/list-group";
 //@import "scss/badge";
+@import "scss/buttons";
 @import "scss/forms";
 @import "scss/media";
 @import "scss/card";
-@import "scss/mixins/buttons";
 @import "scss/pagination";
 @import "scss/jumbotron";
 @import "scss/messaging";

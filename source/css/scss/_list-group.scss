@@ -57,7 +57,7 @@
   .list-group-item-title {
     color: $headings-color;
     display: block;
-    @include font-size($font-size-xl);
+    @include font-size($font-size-lg);
     line-height: $line-height-sm;
     padding-bottom: .5rem;
   }
@@ -71,7 +71,7 @@
 
 .list-group-heading {
   color: $headings-color;
-  @include font-size($font-size-xl);
+  @include font-size($font-size-lg);
   line-height: $line-height-sm;
   margin-bottom: 2rem;
   padding-top: .7rem;

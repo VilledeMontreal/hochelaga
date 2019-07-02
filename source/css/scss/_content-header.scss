@@ -123,8 +123,8 @@
       }
       .profile-title {
         color: $headings-color;
-        @include font-size($font-size-xl);
-        line-height: $line-height-sm;
+        @include font-size($font-size-lg);
+        line-height: $line-height-component;
       }
       .profile-member {
         color: $headings-color;
