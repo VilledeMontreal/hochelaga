@@ -5,21 +5,78 @@
   @include bg-variant(".bg-gray-#{$color}", $value);
 }
 
+@each $label, $map in $dialog-colors {
+  $keys: map-keys($map);
+  $color-default: map-get($map, base);
+  $color-dark: map-get($map, dark);
+  $color-light: map-get($map, light);
+	
+  @warn $label, #{nth($keys, 1)}, $color-default;
+  @warn $label, #{nth($keys, 2)}, $color-dark;
+  @warn $label, #{nth($keys, 3)}, $color-light;
+
+}
+
+
+// Alternate styles
+//
+// Generate contextual modifier classes for colorizing the alert.
+@each $color, $value in $theme-colors {
+  .alert-#{$color} {
+    @include alert-variant(theme-color-level($color, $alert-bg-level), theme-color-level($color, $alert-border-level), theme-color-level($color, $alert-color-level));
+  }
+}
 //Text
 .text-secondary,
 .text-black-50,
 .text-white-50 {
 	color: $body-color !important;
 }
+.text-primary-lighter {
+	color: $primary-lighter;
+}
 
 .text-light {
 	color: $white !important;
 }
-@each $color, $value in $dialog-colors-dark {
-  @include text-emphasis-variant(".text-#{$color}", $value);
+//@each $color, $value in $dialog-colors-light {
+  //@include bg-variant(".bg-#{$color}", $value);
+//}
+//@each $color, $value in $dialog-colors-dark {
+  //@include text-emphasis-variant(".text-#{$color}", $value);
+//}
+
+
+// Colors
+//
+// Contextual variations (linked badges get darker on :hover).
+
+@each $color, $value in $theme-colors {
+  .badge-#{$color} {
+    @include badge-variant($value);
+  }
+}
+
+@each $color, $value in $theme-colors {
+  .border-#{$color} {
+    border-color: $value !important;
+  }
 }
 
 
+@each $color, $value in $theme-colors {
+  @include table-row-variant($color, theme-color-level($color, $table-bg-level), theme-color-level($color, $table-border-level));
+}
+
+
+// Contextual variants
+//
+// Add modifier classes to change text and background color on individual items.
+// Organizationally, this must come after the `:hover` states.
+
+@each $color, $value in $theme-colors {
+  @include list-group-item-variant($color, theme-color-level($color, -9), theme-color-level($color, 6));
+}
 
 // Background
 .bg-primary,
@@ -27,6 +84,4 @@
   background-color: transparent !important;
 }
 
-@each $color, $value in $dialog-colors-light {
-  @include bg-variant(".bg-#{$color}", $value);
-}
+
