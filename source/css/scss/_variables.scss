@@ -6,27 +6,27 @@
 // Color system
 
 // Brand colors
-$brand: 					#e00000;
-$brand-black: 				#1D1D1B;
+$brand: 					  #e00000;
+$brand-black: 		  #1d1d1b;
 
 // Actions
-$action:					#097d6c; 
-$action-lighter: 			#0cb097;
-$primary:       			$action !default;
-$primary-lighter:			$action-lighter;
+$action:					  #097d6c;
+$action-lighter: 	  #0cb097;
+$primary:       	  $action;
+$primary-lighter:	  $action-lighter;
 
 // Highlight
-$highlight-light:			#EEFAF8;
-$highlight-strong:			#d0f3ee;
+$highlight-light:	  #eefaf8;
+$highlight-strong:  #d0f3ee;
 
 // Neutral
-$neutral-primary: 			#212529;
-$neutral-primary-reverse: 	#FFF;	
-$neutral-secondary:			#637381;	
-$neutral-tertiary:			#ADB5BD;
-$neutral-stroke:			#CED4DA;
-$neutral-underground-1:		#f8f9fa;	
-$neutral-underground-2: 	#dee2e6;
+$neutral-primary: 			    #212529;
+$neutral-primary-reverse: 	#ffffff;
+$neutral-secondary:		    	#637381;
+$neutral-tertiary:			    #adb5bd;
+$neutral-stroke:			      #ced4dA;
+$neutral-underground-1:		  #f8f9fa;
+$neutral-underground-2: 	  #dee2e6;
 
 $black:    					#000000;
 $white:    					$neutral-primary-reverse;
@@ -43,31 +43,30 @@ $gray-100: 					$neutral-underground-1;
 
 
 // Alert colors
-$informative-dark:			#014E64;
-$informative:				#0296C0;
-$informative-light:			#E6F5F9;
-$blue:						$informative;
-$info:       				$informative !default;
+$informative-dark:		#014e64;
+$informative:				  #0296c0;
+$informative-light:	  #e6f5f9;
+$blue:						      $informative;
+$info:       				    $informative;
 
 $positive-dark:				#075635;
-$positive:					#0DA566;
-$positive-light:			#E7F6F0;
-$green:   					$positive;
-$success:    				$positive !default;
+$positive:					  #0da566;
+$positive-light:			#e7f6f0;
+$green:   					    $positive;
+$success:    				    $positive;
 
-$warning-dark:				#846A02;
-$warning:					#FECC03;
-$warning-light:				#FEFAE6;
-$yellow:  					$warning; 
-$warning:    				$warning !default;
+$warning-dark:				#846a02;
+$warning:					    #fecc03;
+$warning-light:				#fefae6;
+$yellow:  					    $warning;
 
-$negative-dark:				#851A00;
-$negative-light:			#FFEBE6;
-$negative:					#FF3200;
-$red:     					$negative;
-$danger:     				$negative !default;
+$negative-dark:				#851a00;
+$negative-light:			#ffebe6;
+$negative:					  #ff3200;
+$red:     					    $negative;
+$danger:     				    $negative;
 
-$colors: () !default;
+$colors: ();
 $colors: map-merge(
   (
     "black":       $black,
@@ -75,23 +74,23 @@ $colors: map-merge(
   $colors
 );
 
-$theme-colors: () !default;
+$theme-colors: ();
 $theme-colors: map-merge(
   (
-    "primary":    			$primary,
-	"primary-lighter":    	$primary-lighter,
-	"neutral-primary":   	$gray-900,
-	"neutral-secondary":   	$gray-700,
-	"neutral-tertiary":   	$gray-500,
-	"success":    			$positive,
-    "info":       			$informative,
-    "warning":    			$warning,
-    "danger":     			$negative,
+    "primary":    			  $primary,
+	  "primary-lighter":    $primary-lighter,
+	  "neutral-primary":   	$gray-900,
+	  "neutral-secondary":  $gray-700,
+	  "neutral-tertiary":   $gray-500,
+	  "success":    			  $positive,
+    "info":       			  $informative,
+    "warning":    			  $warning,
+    "danger":     			  $negative,
   ),
   $theme-colors
 );
 
-$dialog-colors: () !default;
+$dialog-colors: ();
 $dialog-colors: map-merge(
   (
     "success":    $positive,
@@ -102,7 +101,7 @@ $dialog-colors: map-merge(
   $dialog-colors
 );
 
-$dialog-colors-dark: () !default;
+$dialog-colors-dark: ();
 $dialog-colors-dark: map-merge(
   (
     "success":    $positive-dark,
@@ -113,7 +112,7 @@ $dialog-colors-dark: map-merge(
   $dialog-colors-dark
 );
 
-$dialog-colors-light: () !default;
+$dialog-colors-light: ();
 $dialog-colors-light: map-merge(
   (
     "success":    $positive-light,
@@ -124,11 +123,11 @@ $dialog-colors-light: map-merge(
   $dialog-colors-light
 );
 
-$button-colors: () !default;
+$button-colors: ();
 $button-colors: map-merge(
   (
     "primary":    	$primary,
-	"primary-red":  $brand,
+	  "primary-red":  $brand,
   ),
   $button-colors
 );
@@ -143,10 +142,12 @@ $enable-validation-icons:                     false;
 // Body
 //
 // Settings for the `<body>` element.
-$body-bg:               $white;
-$body-color:            $neutral-secondary !default;
+$body-bg:         $white;
+$body-color:      $neutral-secondary;
 
 $text-muted: 			$gray-500;
+
+
 // Links
 //
 // Style anchor elements.
@@ -163,7 +164,7 @@ $link-hover-color:                        $primary-lighter !default;
 $link-hover-decoration:                   underline !default;
 // Darken percentage for links with `.text-*` class (e.g. `.text-success`)
 $emphasized-link-hover-darken-percentage: 15% !default;*/
-$emphasized-link-hover-ligthen-percentage: 15% !default;
+$emphasized-link-hover-ligthen-percentage: 15%;
 
 
 // Grid containers
@@ -230,37 +231,39 @@ $font-weight-regular:         $font-weight-normal;
 $font-weight-bold:            600; // Open Sans Bold
 
 
-$font-size-base:              1rem !default; // Assumes the browser default, typically `16px`
-$font-size-xl:				  $font-size-base * 1.3125;
-$font-size-lg:                $font-size-base * 1.25 !default;
-$font-size-sm:                $font-size-base * .875 !default;
+$font-size-base:              1rem; // Assumes the browser default, typically `16px`
+$font-size-xl:				        $font-size-base * 1.3125;
+$font-size-lg:                $font-size-base * 1.25;
+$font-size-sm:                $font-size-base * .875;
 $font-size-xs:                $font-size-base * .75;      
 
 
 $line-height-base:            $line-height-lg;
 
-$headings-font-family: 		  $font-family-base;
+$headings-font-family: 		    $font-family-base;
 $headings-margin-bottom:      1.5rem;
 $headings-font-weight:        $font-weight-bold;         
 $headings-color:              $gray-900;
 
 $h1-font-size:                $font-size-base * 2.5;         // 40px
-$h2-font-size:                $font-size-base * 2;       	  // 32px
-$h3-font-size:                $font-size-base * 1.5;        // 24px
+$h2-font-size:                $font-size-base * 2;       	   // 32px
+$h3-font-size:                $font-size-base * 1.5;         // 24px
 $h4-font-size:                $font-size-base * 1.25;        // 20px
-$h5-font-size:                $font-size-base * 1;       	  // 16px
+$h5-font-size:                $font-size-base * 1;       	   // 16px
 $h6-font-size:                $font-size-base * 0.875;       // 16px
 
 
-/*$display1-size:                3.0rem;
-$display2-size:                2.5rem;         
-$display3-size:                2rem;       	  
-$display4-size:                1.55rem;        
+/*
+$display1-size:               3.0rem;
+$display2-size:               2.5rem;         
+$display3-size:               2rem;       	  
+$display4-size:               1.55rem;        
 
 $display1-weight:             400;
 $display2-weight:             400;
 $display3-weight:             400;
-$display4-weight:             400;*/
+$display4-weight:             400;
+*/
 
 // Headings font-size and line-height are made responsive
 // @see type.scss
@@ -301,7 +304,8 @@ $blockquote-font-size:        $font-size-lg;
 $spacer: .5rem;
 $spacers: ();
 // stylelint-disable-next-line scss/dollar-variable-default
-  $spacers: map-merge((
+$spacers: map-merge(
+  (
     0:  0,
     1:  ($spacer),
     2:  ($spacer * 2),
@@ -339,7 +343,7 @@ $paragraph-margin-bottom:     2rem;
 //
 // Font, line-height, and color for body text, headings, and more.
 $font-size-base:              1rem !default; // Assumes the browser default, typically `16px`
-$font-size-xl:				  $font-size-base * 1.3125;
+$font-size-xl:				        $font-size-base * 1.3125;
 $font-size-lg:                $font-size-base * 1.25 !default;
 $font-size-sm:                $font-size-base * .875 !default;
 $font-size-xs:                $font-size-base * .75;      
@@ -397,48 +401,48 @@ $vdm-icon-font-family : 'vdm';
 //
 // Shared variables that are reassigned to `$input-` and `$btn-` specific variables.
 
-$input-btn-padding-y:         .375rem !default;
-$input-btn-padding-x:         .75rem !default;
-$input-btn-font-family:       null !default;
-$input-btn-font-size:         $font-size-base !default;
-$input-btn-line-height:       $line-height-base !default;
+$input-btn-padding-y:         .375rem;
+$input-btn-padding-x:         .75rem;
+$input-btn-font-family:       null;
+$input-btn-font-size:         $font-size-base;
+$input-btn-line-height:       $line-height-base;
 
-$input-btn-focus-width:       .2rem !default;
-$input-btn-focus-color:       rgba($component-active-bg, .25) !default;
-$input-btn-focus-box-shadow:  0 0 0 $input-btn-focus-width $input-btn-focus-color !default;
+$input-btn-focus-width:       .2rem;
+$input-btn-focus-color:       rgba($component-active-bg, .25);
+$input-btn-focus-box-shadow:  0 0 0 $input-btn-focus-width $input-btn-focus-color;
 
-$input-btn-padding-y-sm:      .25rem !default;
-$input-btn-padding-x-sm:      .5rem !default;
-$input-btn-font-size-sm:      $font-size-sm !default;
-$input-btn-line-height-sm:    $line-height-sm !default;
+$input-btn-padding-y-sm:      .25rem;
+$input-btn-padding-x-sm:      .5rem;
+$input-btn-font-size-sm:      $font-size-sm;
+$input-btn-line-height-sm:    $line-height-sm;
 
-$input-btn-padding-y-lg:      .5rem !default;
-$input-btn-padding-x-lg:      1rem !default;
-$input-btn-font-size-lg:      $font-size-lg !default;
-$input-btn-line-height-lg:    $line-height-lg !default;
+$input-btn-padding-y-lg:      .5rem;
+$input-btn-padding-x-lg:      1rem;
+$input-btn-font-size-lg:      $font-size-lg;
+$input-btn-line-height-lg:    $line-height-lg;
 
-$input-btn-border-width:      $border-width !default;
+$input-btn-border-width:      $border-width;
 
 
 // Buttons
 //
 // For each of Bootstrap's buttons, define text, background, and border color.
 
-$btn-padding-y:               $input-btn-padding-y !default;
-$btn-padding-x:               $input-btn-padding-x !default;
-$btn-font-family:             $input-btn-font-family !default;
-$btn-font-size:               $input-btn-font-size !default;
-$btn-line-height:             $input-btn-line-height !default;
+$btn-padding-y:               $input-btn-padding-y;
+$btn-padding-x:               $input-btn-padding-x;
+$btn-font-family:             $input-btn-font-family;
+$btn-font-size:               $input-btn-font-size;
+$btn-line-height:             $input-btn-line-height;
 
-$btn-padding-y-sm:            $input-btn-padding-y-sm !default;
-$btn-padding-x-sm:            $input-btn-padding-x-sm !default;
-$btn-font-size-sm:            $input-btn-font-size-sm !default;
-$btn-line-height-sm:          $input-btn-line-height-sm !default;
+$btn-padding-y-sm:            $input-btn-padding-y-sm;
+$btn-padding-x-sm:            $input-btn-padding-x-sm;
+$btn-font-size-sm:            $input-btn-font-size-sm;
+$btn-line-height-sm:          $input-btn-line-height-sm;
 
-$btn-padding-y-lg:            $input-btn-padding-y-lg !default;
-$btn-padding-x-lg:            $input-btn-padding-x-lg !default;
-$btn-font-size-lg:            $input-btn-font-size-lg !default;
-$btn-line-height-lg:          $input-btn-line-height-lg !default;
+$btn-padding-y-lg:            $input-btn-padding-y-lg;
+$btn-padding-x-lg:            $input-btn-padding-x-lg;
+$btn-font-size-lg:            $input-btn-font-size-lg;
+$btn-line-height-lg:          $input-btn-line-height-lg;
 
 $btn-border-width:            2px;
 
@@ -571,25 +575,25 @@ $checkbox-toggle-bg-toggled:            $primary;
 
 // Navs
 
-$nav-link-padding-y:                1.5rem;
-$nav-link-padding-x:                2rem;
+$nav-link-padding-y:                  1.5rem;
+$nav-link-padding-x:                  2rem;
 
-$nav-tabs-border-color:             $gray-300;
-$nav-tabs-border-width:             1px;
-$nav-tabs-border-radius:            0;
-$nav-tabs-link-hover-border-color:  $brand;
-$nav-tabs-link-active-color:        $black;
-$nav-tabs-link-active-bg:           $body-bg;
-$nav-tabs-link-active-border-color: $brand;
+$nav-tabs-border-color:               $gray-300;
+$nav-tabs-border-width:               1px;
+$nav-tabs-border-radius:              0;
+$nav-tabs-link-hover-border-color:    $brand;
+$nav-tabs-link-active-color:          $black;
+$nav-tabs-link-active-bg:             $body-bg;
+$nav-tabs-link-active-border-color:   $brand;
 
-$nav-tabs-spacing:                  4px;
-$nav-tabs-active-border-width:      4px;
+$nav-tabs-spacing:                    4px;
+$nav-tabs-active-border-width:        4px;
 
 
 // Navbar
 
-$header-icon-width:               60px;
-$header-icon-height:              $header-icon-width;
+$header-icon-width:          60px;
+$header-icon-height:         $header-icon-width;
 
 
 // Dropdowns
@@ -715,16 +719,16 @@ $alert-border-radius:               0;
 $alert-link-font-weight:            $font-weight-bold;
 $alert-border-width:                0;
 
-$alert-bg-level:                    -10 !default;
-$alert-border-level:                0 !default;
-$alert-color-level:                 6 !default;
+$alert-bg-level:                    -10;
+$alert-border-level:                0;
+$alert-color-level:                 6;
 
-$alert-bg-level-interval:			9% !default;
-$alert-color-level-interval:		8% !default;
+$alert-bg-level-interval:			      9%;
+$alert-color-level-interval:		    8%;
 
-$alert-dark-bg-level:                6 !default;
-$alert-dark-border-level:            7 !default;
-$alert-dark-color-level:             5 !default;
+$alert-dark-bg-level:               6;
+$alert-dark-border-level:           7;
+$alert-dark-color-level:            5;
 
 
 // Progress circle bars
