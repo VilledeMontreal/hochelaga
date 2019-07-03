@@ -95,15 +95,6 @@
   @include border-radius($badge-pill-border-radius);
 }
 
-// Colors
-//
-// Contextual variations for badge-pill only.
-@each $color, $value in $dialog-colors {
-  .badge-pill.badge-#{$color} {
-    @include badge-variant($value);
-  }
-}
-
 
 // Harmonize all badge classes. 
 // .badges-lg and .badges-xl will be deprecated
@@ -113,12 +104,6 @@
   @include font-size($font-size-lg);
 }
 
-/*
-.badge-xl,
-.badges-xl {
-  @include font-size($font-size-xl);
-}
-*/
 
 // Utility class to handle group of badges spacing
 
