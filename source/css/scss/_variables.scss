@@ -386,24 +386,24 @@ $input-btn-border-width:      $border-width;
 //
 // For each of Bootstrap's buttons, define text, background, and border color.
 $btn-padding-y:               $input-btn-padding-y;
-$btn-padding-x:               $input-btn-padding-x;
+$btn-padding-x:               2rem;
 $btn-font-family:             $input-btn-font-family;
 $btn-font-size:               $input-btn-font-size;
 $btn-line-height:             $input-btn-line-height;
 
 $btn-padding-y-sm:            $input-btn-padding-y-sm;
-$btn-padding-x-sm:            $input-btn-padding-x-sm;
+$btn-padding-x-sm:            1rem;
 $btn-font-size-sm:            $input-btn-font-size-sm;
 $btn-line-height-sm:          $input-btn-line-height-sm;
 
 $btn-padding-y-lg:            $input-btn-padding-y-lg;
-$btn-padding-x-lg:            $input-btn-padding-x-lg;
+$btn-padding-x-lg:            2rem;
 $btn-font-size-lg:            $input-btn-font-size-lg;
 $btn-line-height-lg:          $input-btn-line-height-lg;
 
-$btn-border-width:            1px;
+$btn-border-width:            $input-btn-border-width;
 
-$btn-font-size:               $font-size-sm;
+
 $btn-font-weight:             $font-weight-bold;
 $btn-box-shadow:              inset 0 1px 0 rgba($white, .15), 0 1px 1px rgba($black, .075);
 $btn-focus-width:             $input-btn-focus-width;
@@ -416,9 +416,10 @@ $btn-link-disabled-color:     $gray-600;
 $btn-block-spacing-y:         .5rem;
 
 // Allows for customizing button radius independently from global border radius
-$btn-border-radius:           2rem;
+$btn-border-radius:           4rem;
 $btn-border-radius-sm:        $btn-border-radius;
 $btn-border-radius-lg:        $btn-border-radius;
+$btn-border-radius-squared:   4px;
 
 $btn-transition:              color .15s ease-in-out, background-color .15s ease-in-out, border-color .15s ease-in-out, box-shadow .15s ease-in-out;
 

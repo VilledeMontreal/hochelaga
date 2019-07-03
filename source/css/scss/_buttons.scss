@@ -38,8 +38,8 @@ button {
   // Disabled comes first so active can properly restyle
   &.disabled,
   &:disabled {
-    opacity: $btn-disabled-opacity;
     @include box-shadow(none);
+    cursor: not-allowed;
   }
 
   // Opinionated: add "hand" cursor to non-disabled .btn elements
@@ -96,15 +96,15 @@ fieldset:disabled a.btn {
 
 // Make a button look and behave like a link
 .btn-link {
-  color: $link-color;
+  color: $action;
   background-color: transparent;
-  padding-left: 0;
-  padding-right: 0;
+  padding-left: 1rem;
+  padding-right: 1rem;
   &:not(:disabled):not(.disabled) {
     @include hover {
-      color: $link-hover-color;
+      color: $action;
       text-decoration: none;
-      background-color: transparent;
+      background-color: $highlight-light;
     }
   }
 
@@ -119,18 +119,7 @@ fieldset:disabled a.btn {
   &.disabled {
     color: $btn-link-disabled-color;
     pointer-events: none;
-  }
-
-  &.btn-sm {
-    padding-left: 0;
-    padding-right: 0;
-  }
-
-  &.btn-reset {
-    color: $body-color;
-    &:not(:disabled):not(.disabled):hover {
-      color: $gray-900;
-    }
+    cursor: not-allowed;
   }
 
   &.btn-collapse {
@@ -145,8 +134,7 @@ fieldset:disabled a.btn {
 }
 
 
-// We provide only 2 buttons styles with some variants
-// Primary, secondary
+// Primary, secondary, promo
 .btn-primary {
   @include button-variant($background: $action, $border: $action, $color: $white);
 }
@@ -227,6 +215,15 @@ fieldset:disabled a.btn {
       border-width: .125rem ;
     }
   }
+}
+
+// Button squared variant
+//
+
+.btn-squared {
+  border-radius:$btn-border-radius-squared;
+  padding-left: 1rem;
+  padding-right: 1rem; 
 }
 
 
