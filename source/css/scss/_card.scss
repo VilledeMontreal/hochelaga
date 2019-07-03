@@ -555,6 +555,8 @@
   &.card-services {
     padding: 1.5rem 2rem;
     flex-flow: row wrap;
+    justify-content: space-between;
+    align-items: start;
 
     &.draft {
       border: 2px dashed $gray-400;
@@ -572,13 +574,17 @@
       color: $gray-900;
     }
 
+    .card-icon-top {
+      font-size: 4rem;
+      margin: 0;
+    }
+
     .card-text {
       color: $body-color;
     }
 
-    .badge {
-      background-color: $green;
-      color: $white;
+    .badge-container {
+      flex: 0 0 8rem;
     }
 
     .card-date {
@@ -617,6 +623,7 @@
       }
     }
     @include media-breakpoint-up(lg) {
+      align-items: center;
       .card-body{
         align-items: center;
         min-width: 0;
