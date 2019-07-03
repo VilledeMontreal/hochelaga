@@ -5,20 +5,17 @@
 /*-- BOOTSTRAP --*/
 @import "~bootstrap/scss/functions";
 @import "~bootstrap/scss/variables";
-@import "scss/bootstrap_overrides";// Overrides theme-colors variables
+@import "scss/bootstrap_overrides"; // Overrides theme-colors variables
+@import "scss/mixins"; // Partial bootstrap mixins import 
 @import "scss/bootstrap";
 
 /*-- GENERIC --*/
 @import "scss/functions";
-@import "scss/mixins/mixins";
 @import "scss/utilities";
 @import "scss/type";
 @import "scss/icons-utility";
 @import "scss/medias";
 @import "scss/colors";
-
-/*-- MIXINS --*/
-@import "scss/mixins/buttons";
 
 /*-- COMPONENTS --*/
 @import "scss/header";
