@@ -4,6 +4,23 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](http://keepachangelog.com/en/1.0.0/)
 and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.html).
 
+## [3.3.2] - unreleased
+
+## Added
+- Modals variant for more-filters (scrollable body).
+- Indexes variant for map and list switches.
+- Copyright and caption handling for images.
+- Custom styles for copyright and caption in photoswipe.
+- Card Services variant for DCI. 
+
+## Changed
+- Nav filters structure and responsive behaviors.
+- Vues templates are renamed indexes templates.
+- News template now shows copyright and caption integration.
+
+## Fixed
+- section-inner-{breakpoint} now has flex capacity to shrink.
+
 
 ## [3.3.1] - 2019-05-31
 
@@ -14,8 +31,8 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 - Nav anchors font-weight to bold
 
 ## Fixed
-- Fix various js bugs for nav anchors and maps examples.
-- 
+- PatternLab: Fix various js bugs for nav anchors and maps examples.
+
 
 ## [3.3.0] - 2019-05-13
 
@@ -29,6 +46,7 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 - List-groups - update styles (link color, hover and active states color)
 - Buttons - update styles (bold labels, btn-link)
 - Generic - Links color updates (sarcelle)
+
 
 ## [3.2.1] - 2019-04-29
 

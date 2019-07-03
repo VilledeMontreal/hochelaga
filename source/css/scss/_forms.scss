@@ -204,7 +204,7 @@ legend,
 //
 // Tweak just a few things for radios.
 .custom-control {
-  margin-bottom: $custom-control-spacer-y;
+  // margin-bottom: $custom-control-spacer-y;
 
   .custom-control-label::before {
     border: 1px solid $input-border-color;
@@ -225,6 +225,26 @@ legend,
     }
   }
 
+  &.custom-control-sm {
+    min-height: $font-size-sm * $line-height-sm;
+    padding-left: $custom-control-gutter + $custom-control-indicator-size-sm;
+    font-size: $font-size-sm;
+    line-height: $line-height-sm;
+    .custom-control-label {
+      &::before {
+        width: $custom-control-indicator-size-sm;
+        height: $custom-control-indicator-size-sm;
+        top: ($font-size-sm * $line-height-sm - $custom-control-indicator-size-sm) / 2;
+      }
+    
+      // Foreground (icon)
+      &::after {
+        width: $custom-control-indicator-size-sm;
+        height: $custom-control-indicator-size-sm;
+        top: ($font-size-sm * $line-height-sm - $custom-control-indicator-size-sm) / 2;
+      }
+    }
+  }
 }
 
 .custom-control-input {

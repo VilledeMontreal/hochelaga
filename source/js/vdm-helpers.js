@@ -5,14 +5,16 @@ function stripTags(value) {
   return strippedValue;
 }
 
+var map;
 
 // GenerateMap function
+
 function generateMap(lngLat, addressInfos, mapID, addressTitle ) {
 
   var pointLngLat = lngLat;
-  var address = addressInfos.address;
-  var addressTitle = addressInfos.title ? addressInfos.title : null;
-  var addressURI = addressInfos.uri ? addressInfos.uri : null;
+  var address = addressInfos && addressInfos.address ? addressInfos.address : undefined;
+  var addressTitle = addressInfos && addressInfos.title ? addressInfos.title : null;
+  var addressURI = addressInfos && addressInfos.uri ? addressInfos.uri : null;
   var startZoom = 16;
   var center = pointLngLat;
   var maxBounds = [[-74.3965936,45.319517],[-73.442801,45.751651]];
@@ -349,7 +351,7 @@ function generateMap(lngLat, addressInfos, mapID, addressTitle ) {
     ]
   };
   mapboxgl.accessToken = 'undefined';
-  var map = new mapboxgl.Map({
+  map = new mapboxgl.Map({
     container: mapID,
     zoom: startZoom,
     style: mapboxStyle,  
@@ -373,24 +375,26 @@ function generateMap(lngLat, addressInfos, mapID, addressTitle ) {
   'right': [-markerRadius, (markerHeight - markerRadius) * -1]
   };
 
-  var strippedAddress = stripTags(address);
-  var popupContent = "<address>";
-  if(addressTitle) {
-    popupContent += "<div class='mb-1'>";
-    if(addressURI) {
-      popupContent += "<a href="+ addressURI +">"+ addressTitle +"</a>";
-    } else {
-      popupContent += "<strong>"+ addressTitle +"</strong>";
-    }
-    popupContent += "</div>";
-  }  
-  popupContent += address;
-  popupContent += "</address>";
-  popupContent += "<div class=\"mt-1\"><a href=\"https://www.google.com/maps/search/?api=1&amp;query=" + encodeURIComponent(strippedAddress) + "\" title=\"Obtenir un itinéraire\">Obtenir un itinéraire</a></div>";
-  var popup = new mapboxgl.Popup({closeButton: false, closeOnClick: false, offset: popupOffsets, className: 'map-popup'})
-    .setLngLat(pointLngLat)
-    .setHTML(popupContent)
-    .addTo(map);
+  if(address) {
+    var strippedAddress = stripTags(address);
+    var popupContent = "<address>";
+    if(addressTitle) {
+      popupContent += "<div class='mb-1'>";
+      if(addressURI) {
+        popupContent += "<a href="+ addressURI +">"+ addressTitle +"</a>";
+      } else {
+        popupContent += "<strong>"+ addressTitle +"</strong>";
+      }
+      popupContent += "</div>";
+    }  
+    popupContent += address;
+    popupContent += "</address>";
+    popupContent += "<div class=\"mt-1\"><a href=\"https://www.google.com/maps/search/?api=1&amp;query=" + encodeURIComponent(strippedAddress) + "\" title=\"Obtenir un itinéraire\">Obtenir un itinéraire</a></div>";
+    var popup = new mapboxgl.Popup({closeButton: false, closeOnClick: false, offset: popupOffsets, className: 'map-popup'})
+      .setLngLat(pointLngLat)
+      .setHTML(popupContent)
+      .addTo(map);
+  }
 
   function defaultMarker() {
     const el = document.createElement('div');

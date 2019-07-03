@@ -263,7 +263,7 @@
               w       : $width,
               h       : $height,
               author  : $(this).data('author'),
-              title   : $(this).data('title'),
+              legend   : $(this).data('legend'),
           }
 
           items.push(item);
@@ -278,21 +278,29 @@
       event.preventDefault();
       
       var $index = $(this).index();
-      var author = "";
-      var options = {
+      let legend = '';
+      let author = '';
+      const options = {
         index: $index,
         showHideOpacity: true,
         shareEl: false,
-        addCaptionHTMLFn: function(item, captionEl, isFake) {
-          if(!item.title) {
-            captionEl.children[0].innerText = '';
+        addCaptionHTMLFn: (item, captionEl, isFake) => {
+          if (!item.legend && !item.author) {
+            captionEl.children[0].innerHTML = '';
             return false;
           }
-
-          if(item.author) {
-            author = '<br/><small>Photo: ' + item.author + '</small>';
+  
+          if (item.legend) {
+            legend = `<span class="pswp__legend d-block font-weight-bold text-white text-center">${item.legend}</span>`;
           }
-          captionEl.children[0].innerHTML = item.title +  author;
+  
+          if (item.author) {
+            author = `<span class="pswp__copyright d-block text-white text-center">&copy; ${item.author}</span>`;
+          }
+  
+          captionEl.children[0].innerHTML = legend + author;
+          // We need to set item.title to true based on photoswipe caption display validation...
+          item.title = true;
           return true;
         }
       }
@@ -319,7 +327,7 @@
                 w       : $width,
                 h       : $height,
                 author  : $(this).data('author'),
-                title   : $(this).data('title'),
+                legend   : $(this).data('legend'),
             }
 
             items.push(item);
@@ -330,21 +338,29 @@
       var items = getItems();
       
       var $pswp = $('.pswp')[0];
-      var author = "";
-      var options = {
+      let legend = '';
+      let author = '';
+      const options = {
         index: 0,
         showHideOpacity: true,
         shareEl: false,
-        addCaptionHTMLFn: function(item, captionEl, isFake) {
-          if(!item.title) {
-            captionEl.children[0].innerText = '';
+        addCaptionHTMLFn: (item, captionEl, isFake) => {
+          if (!item.legend && !item.author) {
+            captionEl.children[0].innerHTML = '';
             return false;
           }
-
-          if(item.author) {
-            author = '<br/><small>Photo: ' + item.author + '</small>';
+  
+          if (item.legend) {
+            legend = `<span class="pswp__legend d-block font-weight-bold text-white text-center">${item.legend}</span>`;
           }
-          captionEl.children[0].innerHTML = item.title +  author;
+  
+          if (item.author) {
+            author = `<span class="pswp__copyright d-block text-white text-center">&copy; ${item.author}</span>`;
+          }
+  
+          captionEl.children[0].innerHTML = legend + author;
+          // We need to set item.title to true based on photoswipe caption display validation...
+          item.title = true;
           return true;
         }
       }
@@ -368,4 +384,38 @@
     $(this).parent().find("button").text('Voir plus');
   });
 
+  $("#triggerMap").on('click', function(){
+    $("#contentList").toggleClass('d-none');
+    $("#contentMap").toggleClass('d-none');
+    $("#contentNavSorts").toggleClass('d-none');
+    $(".pagination-arrow").toggleClass('d-none');
+    $(this).toggleClass('d-none d-flex');
+    map.resize();
+    $("#triggerList").toggleClass('d-none d-flex');
+  });
+  
+  $("#triggerList").on('click', function(){
+    $("#contentList").toggleClass('d-none');
+    $("#contentMap").toggleClass('d-none');
+    $("#contentNavSorts").toggleClass('d-none');
+    $(".pagination-arrow").toggleClass('d-none');
+    $(this).toggleClass('d-none d-flex');
+    $("#triggerMap").toggleClass('d-none d-flex');
+  });
+
 })(jQuery);
+
+
+// Copyright toggle
+const copyrights = document.querySelectorAll('.img-copyright');
+
+copyrights.forEach((copyright) => {
+  copyright.addEventListener('click', () => {
+    showHideCopyright(copyright);
+  });
+});
+
+function showHideCopyright(copyright) {
+  const copyrightText = copyright.querySelector('.copyright-text');
+  copyrightText.classList.toggle('d-none');
+}

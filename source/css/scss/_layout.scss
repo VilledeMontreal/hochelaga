@@ -111,7 +111,7 @@ html {
 .hub-section-heading {
   h1,h2,h3,h4,h5,h6 {
     color: $headings-color;
-    @include font-size($font-size-xl);
+    @include font-size($h4-font-size);
     font-weight: $font-weight-bold;
     line-height: $line-height-sm;
     margin-bottom: 1.5rem;
@@ -122,20 +122,6 @@ html {
     margin-top: 1rem;
   }
 }
-
-
-// Sidebar left and right mobile spacing
-/*
-.sidebar-right {
-  margin-top: 3rem;
-  margin-bottom: -3rem;
-  @include media-breakpoint-up(lg) {
-    margin-top: 0;
-    margin-bottom: 0;
-  }
-}
-*/
-
 
 // Section with BG image
 .bg-image-section {
@@ -179,7 +165,6 @@ html {
   }
 }
 
-//
 // Lead container
 .lead-container {
   padding-top: 3rem;
@@ -304,6 +289,13 @@ html {
       margin-bottom: 2rem;
       &:last-child {
         margin-bottom: 0;
+      }
+    }
+    &.dark {
+      color: $gray-900;
+      .subtext {
+        font-size: $font-size-sm;
+        color: $body-color;
       }
     }
   }
@@ -548,7 +540,7 @@ html {
       margin-bottom: 3rem;
       .media {
         > * {
-          flex: 0 0 auto;
+          flex: 0 1 auto;
         }
         justify-content: center;
 
