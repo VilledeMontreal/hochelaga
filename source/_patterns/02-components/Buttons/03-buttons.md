@@ -2,4 +2,4 @@
 title: Buttons variants
 ---
 
-Icons can be added to any buttons size and variants.
+Buttons are custom implementation based on bootstrap buttons classes.

@@ -38,8 +38,8 @@ button {
   // Disabled comes first so active can properly restyle
   &.disabled,
   &:disabled {
-    opacity: $btn-disabled-opacity;
     @include box-shadow(none);
+    cursor: not-allowed;
   }
 
   // Opinionated: add "hand" cursor to non-disabled .btn elements
@@ -56,31 +56,22 @@ button {
       @include box-shadow($btn-focus-box-shadow, $btn-active-box-shadow);
     }
   }
-  // Deal with VDM Icons
-  .vdm {
-    color: inherit;
-    @include font-size(2rem);
-    margin-left: -1.5rem;
-    margin-right: .5rem;
-    margin-top: -.3125rem;
-    margin-bottom: -.3125rem;
-    &.vdm-right {
-      margin-left: .5rem;
-      margin-right: -1.5rem;
+
+  // Icons
+  .utility-icon {
+    width: 18px;
+    height: 18px;
+    margin-left: -5px;
+    margin-right: 10px;
+    path {
+      fill: $white;
     }
   }
 
-  .loader {
-    margin-left: -1.5rem;
-    margin-right: 1rem;
-    margin-top: -.0625rem;
-    margin-bottom: -.0625rem;
-    width: 1.5rem;
-    height: 1.5rem;
-    .loader-child {
-      border-width: .125rem;
-      border-color: $white transparent transparent transparent;
-    }
+  // Spinner
+  .spinner-border {
+    margin-right: 10px;
+    @extend .spinner-border-sm;
   }
 }
 
@@ -90,63 +81,8 @@ fieldset:disabled a.btn {
   pointer-events: none;
 }
 
-//
-// Link buttons
-//
 
-// Make a button look and behave like a link
-.btn-link {
-  color: $link-color;
-  background-color: transparent;
-  padding-left: 0;
-  padding-right: 0;
-  &:not(:disabled):not(.disabled) {
-    @include hover {
-      color: $link-hover-color;
-      text-decoration: none;
-      background-color: transparent;
-    }
-  }
-
-  &:focus,
-  &.focus {
-    text-decoration: none;
-    border-color: transparent;
-    box-shadow: none;
-  }
-
-  &:disabled,
-  &.disabled {
-    color: $btn-link-disabled-color;
-    pointer-events: none;
-  }
-
-  &.btn-sm {
-    padding-left: 0;
-    padding-right: 0;
-  }
-
-  &.btn-reset {
-    color: $body-color;
-    &:not(:disabled):not(.disabled):hover {
-      color: $gray-900;
-    }
-  }
-
-  &.btn-collapse {
-    //@include iconvdm($position: after, $icon: "055-chevron-haut", $styles: true);
-    &:after {
-      padding-left: .5rem;
-    }
-    &.collapsed {
-      //@include iconvdm($position: after, $icon: "057-chevron-bas", $styles: true);
-    }
-  }
-}
-
-
-// We provide only 2 buttons styles with some variants
-// Primary, secondary
+// Primary, secondary, promo
 .btn-primary {
   @include button-variant($background: $action, $border: $action, $color: $white);
 }
@@ -155,85 +91,68 @@ fieldset:disabled a.btn {
   @include button-variant($background: transparent, $border: $neutral-stroke, $color: $action, $hover-background: transparent, $hover-border: $action, $hover-color: $action, $active-background: transparent, $active-border: $action, $active-color: $action);
 }
 
+.btn-link,
+.btn-tertiary {
+  @include button-variant($background: transparent, $border: transparent, $color: $action, $hover-background: $highlight-light, $hover-border: $highlight-light, $hover-color: $action, $active-background: $highlight-light, $active-border: $highlight-light, $active-color: $action);
+  &:focus,
+  &.focus {
+    // Avoid using mixin so we can pass custom focus shadow properly
+    @if $enable-shadows {
+      box-shadow: $btn-box-shadow, 0 0 0 $btn-focus-width rgba($highlight-light, .5);
+    } @else {
+      box-shadow: 0 0 0 $btn-focus-width rgba($highlight-light, .5);
+    }
+  }
+  &.btn-collapse {
+    &:after {
+      content: url("data:image/svg+xml,%3Csvg version='1.1' xmlns='http://www.w3.org/2000/svg' width='20' height='20' viewBox='0 0 24 24'%3E%3Ctitle%3Echevron-up%3C/title%3E%3Cpath fill='%23097d6c' d='M12 11.414l3.293 3.293c0.391 0.391 1.024 0.391 1.414 0s0.391-1.024 0-1.414l-4-4c-0.391-0.391-1.024-0.391-1.414 0l-4 4c-0.391 0.391-0.391 1.024 0 1.414s1.024 0.391 1.414 0l3.293-3.293z'%3E%3C/path%3E%3C/svg%3E");
+      vertical-align: middle;
+      vertical-align: -webkit-baseline-middle;
+      display: inline-block;
+    }
+    &.collapsed:after {
+      content: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='20' height='20' viewBox='0 0 24 24'%3E%3Ctitle%3Echevron-down%3C/title%3E%3Cpath fill='%23097d6c' d='M12 12.586l3.293-3.293c0.391-0.391 1.024-0.391 1.414 0s0.391 1.024 0 1.414l-4 4c-0.391 0.391-1.024 0.391-1.414 0l-4-4c-0.391-0.391-0.391-1.024 0-1.414s1.024-0.391 1.414 0l3.293 3.293z'%3E%3C/path%3E%3C/svg%3E");
+      vertical-align: middle;
+      vertical-align: -webkit-baseline-middle;
+      display: inline-block;
+    }
+  }
+}
 
-[class*="btn-"]:not(.btn-link) {
+.btn-promo {
+  @include button-variant($background: $brand, $border: $brand, $color: $white, $hover-background: $brand-dark, $hover-border: $brand-dark, $hover-color: $white, $active-background: $brand-dark, $active-border: $brand-dark, $active-color: $white);
+}
+
+
+[class*="btn-"] {
   &:disabled,
   &.disabled {
    @include button-variant($background: $neutral-underground-2, $border: $neutral-underground-2, $color: $neutral-secondary, $hover-background: $neutral-underground-2, $hover-border: $neutral-underground-2, $hover-color: $neutral-secondary, $active-background: $neutral-underground-2, $active-border: $neutral-underground-2, $active-color: $neutral-secondary);
   }
 }
 
-//
-// Button Large variant
-//
 
+// Button Large variant
 .btn-lg {
   @include button-size($btn-padding-y-lg, $btn-padding-x-lg, $font-size-base, $btn-line-height, $btn-border-radius);
-  // Icons in button
-  .vdm {
-    color: inherit;
-    @include font-size(1.5rem);
-    margin-left: -1.25rem;
-    margin-right: .25rem;
-    margin-top: -3px;
-    margin-bottom: -3px;
-    &.vdm-right {
-      margin-left: .25rem;
-      margin-right: -1.25rem;
-    }
-  }
-  // Loaders in button
-  .loader {
-    margin-left: -1.25rem;
-    margin-right: .75rem;
-    margin-top: -3px;
-    margin-bottom: -3px;
-    width: 1rem;
-    height: 1rem;
-    .loader-child {
-      border-width: .125rem ;
-    }
-  }
 }
 
-//
-// Button Small variant
-//
 
+// Button Small variant
 .btn-sm {
   @include button-size($btn-padding-y-sm, $btn-padding-x-sm, $font-size-xs, $btn-line-height, $btn-border-radius);
-  // Icons in button
-  .vdm {
-    color: inherit;
-    @include font-size(1.5rem);
-    margin-left: -1.25rem;
-    margin-right: .25rem;
-    margin-top: -3px;
-    margin-bottom: -3px;
-    &.vdm-right {
-      margin-left: .25rem;
-      margin-right: -1.25rem;
-    }
-  }
-  // Loaders in button
-  .loader {
-    margin-left: -1.25rem;
-    margin-right: .75rem;
-    margin-top: -3px;
-    margin-bottom: -3px;
-    width: 1rem;
-    height: 1rem;
-    .loader-child {
-      border-width: .125rem ;
-    }
-  }
 }
 
 
-//
-// Block button
-//
+// Button squared variant
+.btn-squared {
+  border-radius:$btn-border-radius-squared;
+  padding-left: 1rem;
+  padding-right: 1rem; 
+}
 
+
+// Block button
 .btn-block {
   display: block;
   width: 100%;
@@ -243,8 +162,6 @@ fieldset:disabled a.btn {
     margin-top: $btn-block-spacing-y;
   }
 }
-
-
 
 // Specificity overrides
 input[type="submit"],
@@ -264,29 +181,6 @@ input[type="button"] {
   .btn-group + .btn,
   .btn-group + .btn-group {
     margin-left: -1px;
-  }
-}
-
-// Icon only buttons
-
-.btn-notification {
-  background: $danger;
-  flex-shrink: 0;
-  padding: 0;
-  width: 50px;
-  height: 50px;
-  .vdm {
-    @include font-size(2rem);
-    margin: 0;
-    color: $white;
-    margin: auto;
-  }
-  @include hover {
-    background-color: theme-color-level(danger, 2);
-  }
-  &.focus,
-  &:focus {
-    @include box-shadow(none);
   }
 }
 
@@ -378,43 +272,18 @@ input[type="button"] {
   }
 }
 
-// Utility class to give a button label underline capacities
-// Used in main navbar - Might be refactored
-.button-underline {
-  .button-label {
-    border-bottom: 1px solid $black;
-    padding-top: 1px;
-  }
-  &:hover {
-    .button-label {
-      border-color: inherit;
-    }
-  }
-}
-
 
 // Utility class to hide button-icon label
 @each $breakpoint, $value in $grid-breakpoints {
   // Hide button label at small breakpoint
   &.btn-hide-label-#{$breakpoint} {
     @include media-breakpoint-down($breakpoint) {
-      padding-left: 2.4375rem;
-      padding-right: .4375rem;
-      .vdm {
-        margin-right: 0;
-        margin-left: -2rem;
+      .utility-icon {
+        margin-left: -5px;
+        margin-right: -5px;
       }
       .btn-label {
         display: none;
-      }
-
-      // Tweak padding for small modifier
-      &.btn-sm {
-        padding-left: 1.875rem;
-        padding-right: .375rem;
-        .vdm {
-          margin-left: -1.5rem;
-        }
       }
     }
   }
