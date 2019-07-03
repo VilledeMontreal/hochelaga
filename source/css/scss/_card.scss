@@ -89,9 +89,10 @@
       margin-left: 1rem;
       color: inherit;
     }
-
-    &:hover {
+    @include hover-focus {
       color: $action-lighter;
+      background-color: $white;
+      border: none;
     }
   }
 
@@ -508,6 +509,11 @@
   &.card-bg-variant {
     box-shadow: none;
     background-color: $gray-100;
+    border: none;
+    @include hover-focus {
+      background-color: $gray-100;
+      border: none;
+    }
   }
 
   // Plain variant
@@ -598,7 +604,7 @@
 
 // Set interactivity on linked card
 a.card {
-  color: $neutral-secondary;
+  color: $neutral-secondary !important;
   transition: all 100ms ease-in-out;
   &:hover {
     transform: scale(1.04);
@@ -612,6 +618,10 @@ a.card {
         color: inherit;
       }
     }
+  }
+  @include hover-focus {
+    background-color: $white;
+    border: none;
   }
 }
 
