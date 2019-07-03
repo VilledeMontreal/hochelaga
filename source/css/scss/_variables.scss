@@ -135,15 +135,9 @@ $link-color:                  $action;
 $link-border-color:           $action;
 $link-border-width:           1px;
 $link-decoration:             none;
-$link-hover-color:            $action-lighter;
+$link-hover-color:            $action;
 $link-hover-decoration:       none;
 
-/*$link-color:                              theme-color("primary") !default;
-$link-decoration:                         underline !default;
-$link-hover-color:                        $primary-lighter !default;
-$link-hover-decoration:                   underline !default;
-// Darken percentage for links with `.text-*` class (e.g. `.text-success`)
-$emphasized-link-hover-darken-percentage: 15% !default;*/
 $emphasized-link-hover-ligthen-percentage: 15%;
 
 

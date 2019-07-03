@@ -3,16 +3,16 @@
 // LINKS
 //Mixin that overrides all classes of links to be the $primary color
 @mixin vdm-text-emphasis-variant($parent, $color) {
+  a {
+    color: $primary !important;
+    border-bottom: $link-border-width solid $primary;
+  }
   #{$parent} {
     color: $color !important;
     a { 
       color: $color !important;
       border-bottom: $link-border-width solid $color;
     }
-  }
-  a {
-    color: $primary !important;
-    border-bottom: $link-border-width solid $primary;
   }
   a#{$parent} {
     color: $color !important;
