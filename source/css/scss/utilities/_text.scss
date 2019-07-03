@@ -4,15 +4,20 @@
 // Text
 //
 
-//map the gray colors
-@each $color, $value in $grays {
-  @include text-emphasis-variant(".text-gray-#{$color}", $value);
+// Reassign the text-color with the mixin vdm-text-emphasis-variant
+@each $color, $value in $theme-colors {
+  	@include vdm-text-emphasis-variant(".text-#{$color}", $value);
 }
 
 // Make the color of dialog dark
 @each $label, $map in $dialog-colors {
-  $color-dark: map-get($map, dark);
-  @include text-emphasis-variant(".text-#{$label}", $color-dark);
+  	$color-dark: map-get($map, dark);
+  	@include vdm-text-emphasis-variant(".text-#{$label}", $color-dark);
+}
+
+//map the gray colors
+@each $color, $value in $grays {
+  	@include vdm-text-emphasis-variant(".text-gray-#{$color}", $value);
 }
 
 // Overrides colors
@@ -22,14 +27,34 @@
 .text-gray-400,
 .text-gray-300,
 .text-gray-100 {
-  color: $body-color !important;
+  	color: $body-color !important;
 }
 
 .text-primary-lighter {
-  color: $primary-lighter;
+	color: $primary-lighter;
 }
 
 .text-light {
-  color: $white !important;
+  	color: $white !important;
 }
+
+a.text-light,
+a.text-white {
+	border-bottom: $link-border-width solid $white !important;
+	&:hover {
+		color: $white !important;
+		border-bottom: $link-border-width solid $white !important;
+		background-color: transparent;
+	}
+}
+a.text-muted {
+	cursor: text;
+	border-bottom: none;
+	&:hover {
+		color: $gray-500 !important;
+		border-bottom: none;
+		background-color: transparent;
+	}
+}
+
 

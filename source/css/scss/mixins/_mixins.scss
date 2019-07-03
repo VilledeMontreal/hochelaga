@@ -1,10 +1,37 @@
 // @file mixins.scss
 
+// LINKS
+//Mixin that overrides all classes of links to be the $primary color
+@mixin vdm-text-emphasis-variant($parent, $color) {
+  #{$parent} {
+    color: $color !important;
+    a { 
+      color: $color !important;
+      border-bottom: $link-border-width solid $color;
+    }
+  }
+  a {
+    color: $primary !important;
+    border-bottom: $link-border-width solid $primary;
+  }
+  a#{$parent} {
+    color: $color !important;
+    border-bottom: $link-border-width solid $color;
+  }
+  a#{$parent},
+  a {
+    @include hover-focus {
+      color: $primary !important;
+      background-color: $highlight-light;
+      border-bottom: $link-border-width solid $primary;
+    }
+  }
+}
+
 // Responsive headings
 // @arg $font-size - rem
 // @arg $multiplier - integer
 // @arg $line-height - px
-
 @mixin responsive-font-size($font-size, $multiplier, $line-height) {
 
   $heading-multiplier: check-multiplier-value($multiplier);
