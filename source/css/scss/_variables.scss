@@ -228,32 +228,18 @@ $h5-font-size:                $font-size-base * 1;       	   // 16px
 $h6-font-size:                $font-size-base * 0.875;       // 16px
 
 
-/*
-$display1-size:               3.0rem;
-$display2-size:               2.5rem;         
-$display3-size:               2rem;       	  
-$display4-size:               1.55rem;        
-
-$display1-weight:             400;
-$display2-weight:             400;
-$display3-weight:             400;
-$display4-weight:             400;
-*/
-
 // Headings font-size and line-height are made responsive
 // @see type.scss
 // These values represent the largest font-size for those headings
-$display1-size:               4rem;           //64px;
-$display2-size:               4rem;           //64px;
-$display3-size:               3.5rem;         //56px;
-$display4-size:               3.125rem;       //50px;
+$display1-size:               $h1-font-size;           
+$display2-size:               $h1-font-size;           
+$display3-size:               $h2-font-size;         
+$display4-size:               $h3-font-size;      
 
-$display1-weight:             700;
-$display2-weight:             400;
-$display3-weight:             400;
-$display4-weight:             400;
-
-$display-line-height:         1.5;
+$display1-weight:             600;
+$display2-weight:             600;
+$display3-weight:             600;
+$display4-weight:             600;
 
 
 $lead-font-size:              $font-size-lg;              // 20px

@@ -1,0 +1,48 @@
+{{> styles-link-skip-to-main-content }}
+
+{{> organisms-header-portal }}
+
+<main class="main-content {{ pageClasses }}" id="main-content" aria-label="Main Content">
+
+  {{> organisms-content-header }}
+
+    <!-- Teaser -->
+  {{# has-lead-text }}
+  {{> components-lead }}
+  {{/ has-lead-text }}
+
+  <div class="region-content {{ regionMainClasses }}">
+    <div class="container {{ regionMainContainerClasses }}">
+      <div class="row">
+        {{# fullTopSection }}
+        <section class="col-12">
+          <p>Full width section -- Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc quis orci ac lorem bibendum blandit. Aenean lobortis, ex pulvinar commodo congue, orci ligula ullamcorper felis, porta pretium justo diam ut erat. Sed tempus elit non justo dictum cursus. Etiam scelerisque mauris nunc, in placerat erat dictum viverra. Aliquam et vestibulum lorem, id eleifend eros. Vestibulum non mauris vitae lorem aliquam convallis et eu nibh. Proin sollicitudin sodales odio. Nunc non ipsum ut diam tincidunt ullamcorper. Morbi sem lorem, rhoncus pretium nisi vitae, sagittis tempus arcu.</p>
+        </section>
+        {{/ fullTopSection }}
+        {{# sidebarLeft }}
+        <aside class="col-12 {{ sidebarLeftClass }} sidebar sidebar-left" role="complementary">
+          {{> organisms-sidebar-block-coordinates }}
+        </aside>
+        {{/ sidebarLeft }}
+        <article class="col-12 {{ regionMainContentClasses }}">
+          {{# searchBox }}
+            {{> components-search-field-combo-base }}
+          {{/ searchBox }}
+          {{> styles-paragraph }}
+        </article>
+        {{# sidebarRight }}
+        <aside class="col-12 {{ sidebarRightClass }} sidebar-right" role="complementary">
+          {{> organisms-sidebar-block-coordinates }}
+        </aside>
+        {{/ sidebarRight }}
+        {{# fullBottomSection }}
+        <section class="col-12">
+          <p>Full width section -- Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc quis orci ac lorem bibendum blandit. Aenean lobortis, ex pulvinar commodo congue, orci ligula ullamcorper felis, porta pretium justo diam ut erat. Sed tempus elit non justo dictum cursus. Etiam scelerisque mauris nunc, in placerat erat dictum viverra. Aliquam et vestibulum lorem, id eleifend eros. Vestibulum non mauris vitae lorem aliquam convallis et eu nibh. Proin sollicitudin sodales odio. Nunc non ipsum ut diam tincidunt ullamcorper. Morbi sem lorem, rhoncus pretium nisi vitae, sagittis tempus arcu.</p>
+        </section>
+        {{/ fullBottomSection }}
+      </div>
+    </div>
+  </div>
+  {{> organisms-region-full-width-portal }}
+</main>
+{{> organisms-footer-portal }}
