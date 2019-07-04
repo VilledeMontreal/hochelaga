@@ -1,5 +1,50 @@
 // FORMS
 
+label {
+  font-size: $font-size-sm;
+  line-height: $line-height-sm;
+  span {
+    @include font-size($font-size-xs);
+    margin-left: ($spacer/2);
+    color: $gray-700;
+  }
+  &.label-sm {
+    @include font-size($font-size-xs);
+    span {
+      font-size: 0.625rem;
+    }
+  }
+  &.label-lg {
+    @include font-size($font-size-base);
+    span {
+      font-size: $font-size-sm;
+    }
+  }
+}
+
+.form-group-sm {
+  label {
+    @include font-size($font-size-xs);
+    span {
+      font-size: 0.625rem;
+    }
+  }
+  input {
+    @extend .form-control-sm;
+  }
+}
+
+.form-group-lg {
+  label {
+    @include font-size($font-size-base);
+    span {
+      font-size: $font-size-sm;
+    }
+  }
+  input {
+    @extend .form-control-lg;
+  }
+}
 
 legend,
 .group-label {
@@ -14,13 +59,16 @@ legend,
   margin-bottom: 2rem;
   &.required {
     > label {
-      &:after {
+      /*&:after {
         content: "*";
         color: $red;
         display: inline-block;
         margin-left: 0.25em;
-      }
+      }*/
     }
+  }
+  small {
+    color: $gray-700;
   }
 }
 
@@ -182,11 +230,15 @@ legend,
 
 
 .input-group-append {
+  svg {
+    width: 16px;
+    height: 16px;
+  }
   .btn {
     display: flex;
     align-items: center;
     padding: $input-padding-y $input-padding-x;
-    @include font-size($font-size-base); // Match inputs
+    @include font-size($font-size-sm); // Match inputs
     font-weight: $font-weight-normal;
     line-height: $input-line-height;
     color: $input-group-addon-color;
