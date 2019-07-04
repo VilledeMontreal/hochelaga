@@ -3,10 +3,6 @@
 // LINKS
 //Mixin that overrides all classes of links to be the $primary color
 @mixin vdm-text-emphasis-variant($parent, $color) {
-  a {
-    color: $primary !important;
-    border-bottom: $link-border-width solid $primary;
-  }
   #{$parent} {
     color: $color !important;
     a { 
@@ -14,12 +10,9 @@
       border-bottom: $link-border-width solid $color;
     }
   }
-  a#{$parent} {
+  a#{$parent}{
     color: $color !important;
     border-bottom: $link-border-width solid $color;
-  }
-  a#{$parent},
-  a {
     @include hover-focus {
       color: $primary !important;
       background-color: $highlight-light;

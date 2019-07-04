@@ -35,23 +35,22 @@
   /* element that contains icon + text */
   display: flex;
   align-items: center;
-}
-.icon-text-aligner .icon {
-  /* svg element */
-  display: inline-block;
-  height: 1em;
-  width: 1em;
-  color: inherit;
-  margin-right: 0.4em; //you can change this
-  flex-shrink: 0;
+  .icon {
+    /* svg element */
+    display: inline-block;
+    height: 1.5rem;
+    width: 1.5rem;
+    color: inherit;
+    margin-right: 0.5rem; //you can change this
+    flex-shrink: 0;
+  }
 }
 
 .icon {
   display: inline-block;
-  width: 1em;
-  height: 1em;
+  width: 1.5rem;
+  height: 1.5rem;
   stroke-width: 0;
   stroke: currentColor;
   fill: currentColor;
 }
-

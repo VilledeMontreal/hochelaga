@@ -3,7 +3,7 @@
 .navbar {
   background-color: $white;
   border-bottom: 1px solid $gray-400;
-  padding: 1.125rem 1.5rem;
+  padding: 1rem;
   a:not(.btn) {
     border-bottom: none;
   }
@@ -17,23 +17,23 @@
   // Montreal logo is the navbar-brand
   .navbar-brand {
     padding: 0;
-    img {
+    svg {
       height: 1.5rem;
       width: auto;
       flex: 0 0 auto; // This is needed because of IE weird behavior
     }
-    // 576px and up
-    @include media-breakpoint-up(sm) {
-      img {
-        height: 2rem;
-      }
-    }
     // 768px and up
     @include media-breakpoint-up(xl) {
-      img {
+      svg {
         height: 2.5rem;
+        width: auto;
       }
     }
+  }
+
+  // All svg in navbar should be neutral-primary
+  .icon-dark {
+    fill: $neutral-primary;
   }
 
   // 768px and up
@@ -41,22 +41,6 @@
     button + .dropdown,
     button + button {
       margin-left: 2.5rem;
-    }
-  }
-
-  // Special placement on smaller device...
-  .btn-notification {
-    position: fixed;
-    bottom: $grid-gutter-width;
-    right: $grid-gutter-width;
-    z-index: 2000;
-
-    // 992px and up - Reset placement
-    @include media-breakpoint-up(lg) {
-      position: static;
-      bottom: auto;
-      right: auto;
-      z-index: auto;
     }
   }
 
@@ -192,49 +176,23 @@
       width: 100%;
     }
   }
-
-  // 576px and up - Navbar padding tweaks
-  @include media-breakpoint-up(sm) {
-    padding: 1.75rem 1.5rem;
-  }
-
-  // 768px and up - Navbar padding tweaks
-  @include media-breakpoint-up(md) {
-    padding: 2.125rem 1.5rem;
-  }
 }
 
 //
 // Navbar buttons styles
 .navbar-button {
   @include button-reset();
-  color: $black;
+  color: $neutral-primary;
   cursor: pointer;
+  font-weight: $font-weight-bold;
   display: inline-flex;
   align-items: center;
   padding: .0625rem 0;
   @include transition(color .15s ease-in-out);
 
-  // Icons size in navbar
-  .vdm {
-    @include font-size(2rem);
-    vertical-align: middle;
-    @include transition(color .15s ease-in-out);
-
-    // mobile and up
-    @include media-breakpoint-up(sm) {
-      @include font-size(2.5rem);
-    }
-    // tablets and up
-    @include media-breakpoint-up(md) {
-      @include font-size(3rem);
-      margin-right: .625rem;
-    }
-  }
-
   .button-label {
-    color: $black;
-    line-height: 1;
+    color: $neutral-primary;
+    line-height: $line-height-component;
     @include transition(color .15s ease-in-out);
   }
 
@@ -251,21 +209,6 @@
   &:focus,
   &.focus {
     box-shadow: none;
-  }
-
-  &.navbar-button-lg {
-    .button-label {
-      @include font-size($font-size-base);
-    }
-  }
-  // Login button need less right margin on larger breakpoint...
-  @include media-breakpoint-up(md) {
-    &.btn-login {
-      margin-right: .5rem;
-      .vdm {
-        margin-right: .25rem;
-      }
-    }
   }
 
 }
