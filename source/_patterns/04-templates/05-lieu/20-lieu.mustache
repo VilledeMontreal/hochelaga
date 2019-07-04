@@ -1,5 +1,5 @@
 {{> styles-link-skip-to-main-content }}
-{{> organisms-header-portal }}
+{{> patterns-header-portal }}
 
 <main class="main-content {{ pageClasses }}" id="main-content" aria-label="Main Content">
 
@@ -13,7 +13,7 @@
   </div>
   {{/ has-breadcrumb}}
 
-  {{> organisms-content-header-jumbotron }}
+  {{> patterns-content-header-jumbotron }}
 
   <div class="region-content {{ regionMainClasses }}">
     <div class="container">
@@ -21,7 +21,7 @@
 
         {{# sidebarRight }}
         <aside class="col-12 col-lg-5 col-xl-4 order-lg-last" role="complementary">
-          {{> organisms-sidebar-block-schedule }}
+          {{> patterns-sidebar-block-schedule }}
         </aside>
         {{/ sidebarRight }}
 
@@ -157,15 +157,15 @@
   </div>
 
   {{# hasLieux}}
-  {{> organisms-page-section-cards}}
+  {{> patterns-page-section-cards}}
   {{/ hasLieux}}
 
   {{# hasFeedbackForm}}
-  {{> organisms-feedback-form}}
+  {{> patterns-feedback-form}}
   {{/ hasFeedbackForm }}
 </main>
 
-{{> organisms-footer-portal }}
+{{> patterns-footer-portal }}
 
 <script>
     var pointLngLat = [{{{ map.lngLat }}}];

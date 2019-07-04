@@ -1,4 +1,4 @@
-{{> organisms-header-wizard }}
+{{> patterns-header-wizard }}
 {{> components-step-wizard }}
 
 <main class="main-content {{ pageClasses }}" id="main-content" aria-label="Main Content" role="main">
@@ -9,16 +9,16 @@
         <div class="col-12 col-lg-8">
 
           {{# hasSummary }}
-            {{> organisms-service-summary }}
+            {{> patterns-service-summary }}
           {{/ hasSummary }}
 
-          {{> organisms-multistep-form }}
+          {{> patterns-multistep-form }}
 
         </div>
 
         {{# sidebarRight }}
         <aside class="col-12 col-lg-4 sidebar sidebar-right {{ sidebarClasses }}">
-          {{> organisms-sidebar-block }}
+          {{> patterns-sidebar-block }}
         </aside>
         {{/ sidebarRight }}
 

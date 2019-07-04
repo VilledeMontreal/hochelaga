@@ -1,5 +1,5 @@
 {{> styles-link-skip-to-main-content }}
-{{> organisms-header-portal }}
+{{> patterns-header-portal }}
 
 <main class="main-content {{ pageClasses }}" id="main-content" aria-label="Main Content">
 
@@ -13,7 +13,7 @@
   </div>
   {{/ has-breadcrumb}}
 
-  {{> organisms-content-header-jumbotron }}
+  {{> patterns-content-header-jumbotron }}
 
   {{# alerts }}
   <div class="container">
@@ -28,7 +28,7 @@
 
         <!-- Sidebar Right -->
         <aside class="col-12 col-lg-5 col-xl-4 order-lg-last" role="complementary">
-          {{> organisms-sidebar-block-evenement }}
+          {{> patterns-sidebar-block-evenement }}
         </aside>
 
         <article class="col-12 col-lg-7 col-xl-8 {{ regionMainContentClasses }}">
@@ -115,19 +115,19 @@
   </div>
 
   {{# hasPromoter}}
-  {{> organisms-page-section-organisateur }}
+  {{> patterns-page-section-organisateur }}
   {{/ hasPromoter}}
 
   {{# hasSimilarEvents}}
-  {{> organisms-page-section-cards}}
+  {{> patterns-page-section-cards}}
   {{/ hasSimilarEvents}}
 
   {{# hasFeedbackForm}}
-  {{> organisms-feedback-form}}
+  {{> patterns-feedback-form}}
   {{/ hasFeedbackForm }}
 </main>
 
-{{> organisms-footer-portal }}
+{{> patterns-footer-portal }}
 
  <script>
     var startZoom = 16;

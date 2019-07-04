@@ -1,9 +1,9 @@
 {{> styles-link-skip-to-main-content }}
-{{> organisms-header-portal }}
+{{> patterns-header-portal }}
 
 <main class="main-content {{ pageClasses }}" id="main-content" aria-label="Main Content">
 
-  {{> organisms-content-header }}
+  {{> patterns-content-header }}
 
   {{# nouvellesCards }}
   <section class="page-section bg-gray-sky">
@@ -54,7 +54,7 @@
         {{# inputGroupSearch }}
         <div class="row">
           <div class="col-12 col-lg-8">
-            {{> styles-input-icon }}
+            {{> components-input-icon }}
           </div>
         </div>
         {{/ inputGroupSearch }}
@@ -69,9 +69,9 @@
   {{/ nouvellesCards }}
 
   {{# hasFeedbackForm}}
-  {{> organisms-feedback-form}}
+  {{> patterns-feedback-form}}
   {{/ hasFeedbackForm }}
 </main>
 
-{{> organisms-footer-portal }}
+{{> patterns-footer-portal }}
 

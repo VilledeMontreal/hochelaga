@@ -1,9 +1,9 @@
 {{> styles-link-skip-to-main-content }}
-{{> organisms-header-portal }}
+{{> patterns-header-portal }}
 
 <main class="main-content {{ pageClasses }}" id="main-content" aria-label="Main Content">
 
-  {{> organisms-content-header }}
+  {{> patterns-content-header }}
 
   <!-- Teaser -->
   {{# has-lead-text }}
@@ -95,13 +95,13 @@
       {{# social-medias }}
       <div class="section-inner section-inner-md section-divider">
         <h2 class="section-subheading">Suivez le sujet XYZ</h2>
-        {{> styles-social-media-icons-list}}
+        {{> components-social-media-icons-list}}
       </div>
       {{/ social-medias}}
       {{# contact }}
       <div class="section-inner section-inner-md section-divider">
         <h2 class="section-subheading">Contact</h2>
-        {{> components-block-contact }}
+        {{> patterns-block-contact }}
       </div>
       {{/ contact}}
     </article>
@@ -146,8 +146,8 @@
   {{/ cards-suggested-content}}
 
   {{# hasFeedbackForm}}
-  {{> organisms-feedback-form}}
+  {{> patterns-feedback-form}}
   {{/ hasFeedbackForm }}
 </main>
 
-{{> organisms-footer-portal }}
+{{> patterns-footer-portal }}
