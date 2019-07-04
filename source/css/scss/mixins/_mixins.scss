@@ -2,7 +2,7 @@
 
 // LINKS
 //Mixin that overrides all classes of links to be the $primary color
-@mixin vdm-text-emphasis-variant($parent, $color) {
+@mixin vdm-text-emphasis-variant($parent, $color, $color-lighten) {
   #{$parent} {
     color: $color !important;
     a { 
@@ -13,10 +13,12 @@
   a#{$parent}{
     color: $color !important;
     border-bottom: $link-border-width solid $color;
-    @include hover-focus {
-      color: $primary !important;
-      background-color: $highlight-light;
-      border-bottom: $link-border-width solid $primary;
+    @if $color-lighten != 0 {
+      @include hover-focus {
+        color: $color !important;
+        background-color: $color-lighten;
+        border-bottom: $link-border-width solid $color;
+      }
     }
   }
 }
