@@ -134,13 +134,13 @@ fieldset:disabled a.btn {
 
 // Button Large variant
 .btn-lg {
-  @include button-size($btn-padding-y-lg, $btn-padding-x-lg, $font-size-base, $btn-line-height, $btn-border-radius);
+  @include button-size($btn-padding-y-lg, $btn-padding-x-lg, $font-size-base, $btn-line-height-lg, $btn-border-radius);
 }
 
 
 // Button Small variant
 .btn-sm {
-  @include button-size($btn-padding-y-sm, $btn-padding-x-sm, $font-size-xs, $btn-line-height, $btn-border-radius);
+  @include button-size($btn-padding-y-sm, $btn-padding-x-sm, $font-size-xs, $btn-line-height-sm, $btn-border-radius);
 }
 
 
