@@ -378,6 +378,8 @@ gulp.task('watch', function () {
 gulp.task('default', ['cleanable:before'], function () {
   production = false;
   gulp.start(
+    'icon-editorial',
+    'icon-utility',
     'patternlab',
     'styleguide',
     'sass',
@@ -418,7 +420,7 @@ gulp.task('distribute', ['clean-dist:before'], function () {
 // Task: Svg to json to scss
 // Description: Transform icons svg to json and scss  
 //Editorial
-gulp.task('default', function() {
+gulp.task('icon-editorial', function() {
   return gulp.src('source/images/icons/icon-editorial/*.svg')
       .pipe(gulpsvgtojsontoscss({
       jsonFile: 'source/_data/icons-editorial.json',
@@ -431,7 +433,7 @@ gulp.task('default', function() {
 });
 
 //Utility
-gulp.task('default', function() {
+gulp.task('icon-utility', function() {
   return gulp.src('source/images/icons/icon-utility/*.svg')
       .pipe(gulpsvgtojsontoscss({
       jsonFile: 'source/_data/icons-utility.json',
