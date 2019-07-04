@@ -4,24 +4,25 @@
 // PLEASE SEE ALSO
 // https://github.com/neoskop/patternlab-php && https://github.com/neoskop/patternlab-php/blob/master/gulpfile.js
 
-var gulp            = require('gulp'),
-    autoprefixer    = require('gulp-autoprefixer'),
-    clean           = require('gulp-clean'),
-    browserSync     = require('browser-sync'),
-    cssmin          = require('gulp-cssmin'),
-    fs              = require("fs"),
-    gulpif          = require('gulp-if'),
-    gutil           = require('gulp-util'),
-    imagemin        = require('gulp-imagemin'),
-    postcss         = require('gulp-postcss'),
-    rename          = require('gulp-rename'),
-    sass            = require('gulp-sass'),
-    shell           = require('gulp-shell'),
-    sourcemaps      = require('gulp-sourcemaps'),
-    tildeImporter   = require('node-sass-tilde-importer'),
-    uglify          = require('gulp-uglify-es').default,
-    config          = require('./build.config.json'),
-    package         = require('./package.json');
+var gulp                = require('gulp'),
+    autoprefixer        = require('gulp-autoprefixer'),
+    clean               = require('gulp-clean'),
+    browserSync         = require('browser-sync'),
+    cssmin              = require('gulp-cssmin'),
+    fs                  = require("fs"),
+    gulpif              = require('gulp-if'),
+    gutil               = require('gulp-util'),
+    imagemin            = require('gulp-imagemin'),
+    postcss             = require('gulp-postcss'),
+    rename              = require('gulp-rename'),
+    sass                = require('gulp-sass'),
+    shell               = require('gulp-shell'),
+    sourcemaps          = require('gulp-sourcemaps'),
+    tildeImporter       = require('node-sass-tilde-importer'),
+    uglify              = require('gulp-uglify-es').default,
+    gulpsvgtojsontoscss = require('gulp-svg-to-json-to-scss');
+    config              = require('./build.config.json'),
+    package             = require('./package.json');
 
 // Trigger and switches
 var production;
@@ -414,22 +415,32 @@ gulp.task('distribute', ['clean-dist:before'], function () {
   );
 });
 
+// Task: Svg to json to scss
+// Description: Transform icons svg to json and scss  
+//Editorial
+gulp.task('default', function() {
+  return gulp.src('source/images/icons/icon-editorial/*.svg')
+      .pipe(gulpsvgtojsontoscss({
+      jsonFile: 'source/_data/icons-editorial.json',
+      scssFile: 'source/css/scss/_icons-editorial.scss',
+      basePath:"./source/images/icons/",
+      noExt:true,
+      delim:"-"
+      }))
+      .pipe(gulp.dest('./'));
+});
 
-/*
-var glob = require("glob");
-var gulpicon = require("gulpicon/tasks/gulpicon");
-
-// grab the config, tack on the output destination
-var config = require("./example/config.js");
-config.dest = "example/output";
-
-// grab the file paths
-var files = glob.sync("images/icons/*.svg");
-
-// set up the gulp task
-gulp.task("icons", gulpicon(files, config));
-
-*/
-
+//Utility
+gulp.task('default', function() {
+  return gulp.src('source/images/icons/icon-utility/*.svg')
+      .pipe(gulpsvgtojsontoscss({
+      jsonFile: 'source/_data/icons-utility.json',
+      scssFile: 'source/css/scss/_icons-utility.scss',
+      basePath:"./source/images/icons/",
+      noExt:true,
+      delim:"-"
+      }))
+      .pipe(gulp.dest('./'));
+});
 
 
