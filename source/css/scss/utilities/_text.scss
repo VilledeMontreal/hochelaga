@@ -4,20 +4,24 @@
 // Text
 //
 
-// Reassign the text-color with the mixin vdm-text-emphasis-variant
-@each $color, $value in $theme-colors {
-  @include vdm-text-emphasis-variant(".text-#{$color}", $value);
+// Define the default link before the mixin 
+a {
+  color: $primary !important;
+  border-bottom: $link-border-width solid $primary;
+}
+a {
+    @include hover-focus {
+      color: $primary !important;
+      background-color: $highlight-light;
+      border-bottom: $link-border-width solid $primary;
+    }
 }
 
 // Make the color of dialog dark
 @each $label, $map in $dialog-colors {
   $color-dark: map-get($map, dark);
-  @include vdm-text-emphasis-variant(".text-#{$label}", $color-dark);
-}
-
-//map the gray colors
-@each $color, $value in $grays {
-  @include vdm-text-emphasis-variant(".text-gray-#{$color}", $value);
+  $color-light: map-get($map, light);
+  @include vdm-text-emphasis-variant(".text-#{$label}", $color-dark, $color-light);
 }
 
 // Overrides colors
@@ -48,7 +52,6 @@ a.text-white {
   }
 }
 a.text-muted {
-  cursor: text;
   border-bottom: none;
   &:hover {
     color: $gray-500 !important;
