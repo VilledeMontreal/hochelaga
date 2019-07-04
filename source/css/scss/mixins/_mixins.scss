@@ -10,7 +10,7 @@
       border-bottom: $link-border-width solid $color;
     }
   }
-  a#{$parent} {
+  a#{$parent}{
     color: $color !important;
     border-bottom: $link-border-width solid $color;
     @if $color-lighten != 0 {

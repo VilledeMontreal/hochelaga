@@ -23,31 +23,6 @@
     font-weight: $font-weight-bold;
     margin-bottom: 1rem;
   }
-  // Title
-  &-title {
-    padding-bottom: 2rem;
-    max-width: 1450px; // Limit max width of title
-    h1 {
-      margin-bottom: 0;
-      &:after {
-        content: "";
-        display: block;
-        height: .5rem;
-        width: 4rem;
-        margin-top: 2rem;
-        background-color: $brand;
-      }
-    }
-
-    // 576px and up
-    @include media-breakpoint-up(md) {
-      h1 {
-        &:after {
-          width: 6rem;
-        }
-      }
-    }
-  }
 
   &-metadata {
     color: $gray-600;
