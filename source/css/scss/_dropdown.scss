@@ -11,17 +11,17 @@
 .dropdown-toggle {
   display: inline-flex;
   align-items: center;
-
+  color: $gray-700;
   // Replace carets
   &:after {
-    border: 0;
-    color: inherit;
-    @include font-size(1.125rem);
-    margin-left: .5rem;
-    width: auto;
-    height: auto;
+    content: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' viewBox='0 0 24 24'%3E%3Ctitle%3Echevron-down%3C/title%3E%3Cpath fill='%23637381' d='M12 12.586l3.293-3.293c0.391-0.391 1.024-0.391 1.414 0s0.391 1.024 0 1.414l-4 4c-0.391 0.391-1.024 0.391-1.414 0l-4-4c-0.391-0.391-0.391-1.024 0-1.414s1.024-0.391 1.414 0l3.293 3.293z'%3E%3C/path%3E%3C/svg%3E");
+    vertical-align: middle;
+    vertical-align: -webkit-baseline-middle;
+    display: inline-block;
+    width: 12px;
+    height: 16px;
+    border: none;
   }
-  //@include iconvdm($position: after, $icon: '057-chevron-bas');
 }
 
 // Dropdown menu
@@ -65,9 +65,11 @@
     display: flex;
     align-items: center;
     padding: .75rem 1.25rem;
-
+    color: $gray-900 !important;
+    
     @include hover-focus {
-      color: $link-color;
+      color: $link-color !important;
+      border: none;
       @include gradient-bg($white);
     }
   
