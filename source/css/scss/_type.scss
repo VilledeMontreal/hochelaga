@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css?family=Open+Sans:400,400i,600,600i");
+@import url("https://fonts.googleapis.com/css?family=Open+Sans:400,400i,700,700i");
 
 // Font-smoothing normalisation for mac os
 body {
@@ -6,10 +6,10 @@ body {
   -moz-osx-font-smoothing: grayscale;
 }
 .regular {
-	font-weight: 400;
+	font-weight: $font-weight-regular;
 }
 .bold {
-	font-weight: 600;
+	font-weight: $font-weight-bold;
 }
 
 // Headings
