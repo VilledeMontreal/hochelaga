@@ -1,12 +1,12 @@
 {{> styles-link-skip-to-main-content }}
 
-{{> organisms-header-portal }}
+{{> patterns-header-portal }}
 
 <main class="main-content {{ pageClasses }}" id="main-content" aria-label="Main Content">
 
-  {{> organisms-content-header }}
+  {{> patterns-content-header }}
 
-    <!-- Teaser -->
+  <!-- Teaser -->
   {{# has-lead-text }}
   {{> components-lead }}
   {{/ has-lead-text }}
@@ -21,7 +21,7 @@
         {{/ fullTopSection }}
         {{# sidebarLeft }}
         <aside class="col-12 {{ sidebarLeftClass }} sidebar sidebar-left" role="complementary">
-          {{> organisms-sidebar-block-coordinates }}
+          {{> patterns-sidebar-block-coordinates }}
         </aside>
         {{/ sidebarLeft }}
         <article class="col-12 {{ regionMainContentClasses }}">
@@ -32,7 +32,7 @@
         </article>
         {{# sidebarRight }}
         <aside class="col-12 {{ sidebarRightClass }} sidebar-right" role="complementary">
-          {{> organisms-sidebar-block-coordinates }}
+          {{> patterns-sidebar-block-coordinates }}
         </aside>
         {{/ sidebarRight }}
         {{# fullBottomSection }}
@@ -43,6 +43,6 @@
       </div>
     </div>
   </div>
-  {{> organisms-region-full-width-portal }}
+  {{> patterns-region-full-width-portal }}
 </main>
-{{> organisms-footer-portal }}
+{{> patterns-footer-portal }}

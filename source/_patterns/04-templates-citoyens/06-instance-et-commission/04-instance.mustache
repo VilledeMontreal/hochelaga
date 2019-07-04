@@ -1,9 +1,9 @@
 {{> styles-link-skip-to-main-content }}
-{{> organisms-header-portal }}
+{{> patterns-header-portal }}
 
 <main class="main-content {{ pageClasses }}" id="main-content" aria-label="Main Content">
 
-  {{> organisms-content-header }}
+  {{> patterns-content-header }}
 
   <!-- Teaser -->
   {{# has-lead-text }}
@@ -23,10 +23,10 @@
         </article>
         <aside class="col-12 col-lg-5 col-xl-4" role="complementary">
         {{# has-sb-seance}}
-          {{> organisms-sidebar-block-seance }}
+          {{> patterns-sidebar-block-seance }}
         {{/ has-sb-seance}}
         {{# has-sb-newsletter}}
-          {{> organisms-sidebar-block-abonnement }}
+          {{> patterns-sidebar-block-abonnement }}
         {{/ has-sb-newsletter}}
         </aside>
       </div>
@@ -81,8 +81,8 @@
   {{/ informations}}
 
   {{# hasFeedbackForm}}
-  {{> organisms-feedback-form}}
+  {{> patterns-feedback-form}}
   {{/ hasFeedbackForm }}
 </main>
 
-{{> organisms-footer-portal }}
+{{> patterns-footer-portal }}

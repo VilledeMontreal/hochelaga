@@ -1,6 +1,6 @@
 {{> styles-link-skip-to-main-content }}
-{{> organisms-header-portal }}
-{{> organisms-subnav-service }}
+{{> patterns-header-portal }}
+{{> patterns-subnav-service }}
 
 <main class="main-content {{ pageClasses }}" id="main-content" aria-label="Main Content" role="main">
   <div class="container container-padding">
@@ -13,7 +13,7 @@
           </div>
         {{/ hasAlert }}
 
-        {{> organisms-service-summary }}
+        {{> patterns-service-summary }}
 
         <h2 class="h4">Substances visées présentes à l’établissement</h2>
 
@@ -27,7 +27,7 @@
           {{/ cards }}
 
           {{# hasResultsOwner }}
-            {{> organisms-block-coordinates }}
+            {{> patterns-block-coordinates }}
           {{/ hasResultsOwner }}
         {{/ hasResults }}
 
@@ -60,4 +60,4 @@
   </div>
 </main>
 
-{{> organisms-footer-portal }}
+{{> patterns-footer-portal }}

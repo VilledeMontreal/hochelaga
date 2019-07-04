@@ -89,11 +89,11 @@
       <legend>Description</legend>
       <div class="form-group">
         <label>Photo (facultatif)</label>
-        {{> styles-file-upload }}
+        {{> components-file-upload }}
       </div>
       {{# formRadios}}
       <div class="form-group required">
-        {{> styles-radio-custom-form-item }}
+        {{> components-radio-custom-form-item }}
       </div>
       {{/ formRadios}}
       <div class="form-group">
@@ -109,13 +109,13 @@
       <legend>Est-ce qu’une matière dangereuse visée en vertu du règlement est produite, entreposée ou détenue à cet établissement?</legend>
       <div class="form-group">
       {{# radiosDeclaration }}
-        {{> styles-radio-custom-form-item }}
+        {{> components-radio-custom-form-item }}
       {{/ radiosDeclaration}}
       </div>
     </fieldset>
     <div class="form-group">
       {{# checkboxDeclaration}}
-        {{> styles-checkbox-custom-form-item }}
+        {{> components-checkbox-custom-form-item }}
       {{/ checkboxDeclaration}}
     </div>
   </div>
@@ -123,10 +123,10 @@
   {{# hasStepSelectYear }}
   <div class="form-step">
     <label class="group-label">Pour quelle année désirez-vous faire une déclaration?</label>
-    {{> styles-select }}
+    {{> components-select }}
 
     {{# hasSummaryAfterForm }}
-      {{> organisms-service-summary }}
+      {{> patterns-service-summary }}
     {{/ hasSummaryAfterForm }}
     <div class="alert-container mb-5">
       <div class="alert alert-warning alert-icon" role="alert">
@@ -144,7 +144,7 @@
         <span class="vfi vdm-030-attention-circulaire" aria-hidden="true"></span>
         <div>Responsable de la déclaration: Personne responsable des renseignements techniques, chargée de préparer la déclaration et de répondre à toute question relative à son contenu</div>
       </div>
-      {{> styles-radio-custom-form }}
+      {{> components-radio-custom-form }}
     </div>
   </div>
   {{/ hasStepRadios }}
@@ -154,7 +154,7 @@
       <legend>Est-ce qu’une matière dangereuse visée en vertu du règlement est produite, entreposée ou détenue à cet établissement?</legend>
       <div class="form-group"> 
       {{# radiosAddReservoir}}
-        {{> styles-radio-custom-form-item }}
+        {{> components-radio-custom-form-item }}
       {{/ radiosAddReservoir}}
       </div>
     </fieldset>
@@ -224,8 +224,8 @@
         </div>
         <div class="modal-body">
           <form>
-            {{> styles-input(formAttributes.input.type-text.label: "Identification du sytème de réservoir:", formAttributes.input.type-text.id: "inputID") }}
-            {{> styles-input(formAttributes.input.type-text.label: "Choisissez la matière contenue dans le système de réservoir (nom de la matière ou #CAS)", formAttributes.input.type-text.id: "inputMatiere")}}
+            {{> components-input(formAttributes.input.type-text.label: "Identification du sytème de réservoir:", formAttributes.input.type-text.id: "inputID") }}
+            {{> components-input(formAttributes.input.type-text.label: "Choisissez la matière contenue dans le système de réservoir (nom de la matière ou #CAS)", formAttributes.input.type-text.id: "inputMatiere")}}
             <div class="form-group">
               <label for="inputConcentration">Concentration de la matière</label>
               <div class="input-inline-addon">
@@ -262,7 +262,7 @@
           </form>
         </div>
         <div class="modal-footer justify-content-start">
-          {{> styles-button(buttonClass: "btn-primary btn-sm", buttonText: "Ajouter")}}
+          {{> components-button(buttonClass: "btn-primary btn-sm", buttonText: "Ajouter")}}
         </div>
       </div>
     </div>
@@ -275,16 +275,16 @@
       <label class="group-label">Veuillez cocher les cases pour attester l'exactitude des informations avant de soumettre votre déclaration.</label>
       <div class="form-group">
         <label>Substances présentes à l’établissement</label>
-        {{> styles-checkbox-custom-form-item }}
+        {{> components-checkbox-custom-form-item }}
       </div>
     {{/ checkboxDeclarationMatiere }}
 
-    {{> organisms-block-coordinates }}
+    {{> patterns-sidebar-block-coordinates }}
 
     {{# checkboxDeclaration }}
       <div class="form-group">
         <label>Déclaration</label>
-        {{> styles-checkbox-custom-form-item }}
+        {{> components-checkbox-custom-form-item }}
       </div>
     {{/ checkboxDeclaration }}
   {{/ hasStepDeclarationOwner }}
@@ -295,13 +295,13 @@
       <div class="form-group">
         <label>Substances présentes à l’établissement</label>
         {{# checkboxDeclarationMatiere }}
-          {{> styles-checkbox-custom-form-item }}
+          {{> components-checkbox-custom-form-item }}
         {{/ checkboxDeclarationMatiere }}
       </div>
       {{# checkboxDeclaration }}
       <div class="form-group">
         <label>Déclaration</label>
-        {{> styles-checkbox-custom-form-item }}
+        {{> components-checkbox-custom-form-item }}
       </div>
       {{/ checkboxDeclaration }}
     </div>
@@ -309,10 +309,10 @@
   <div class="form-group form-action-group">
     <ul>
       <li class="first">
-        {{> styles-button("buttonClass": "btn-secondary btn-prev", "buttonText": "Précédent" ) }}
+        {{> components-button("buttonClass": "btn-secondary btn-prev", "buttonText": "Précédent" ) }}
       </li>
       <li class="last">
-        {{> styles-button("buttonClass": "btn-primary btn-next", "buttonText": "Soumettre") }}
+        {{> components-button("buttonClass": "btn-primary btn-next", "buttonText": "Soumettre") }}
       </li>
     </ul>
   </div>
