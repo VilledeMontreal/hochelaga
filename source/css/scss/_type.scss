@@ -6,10 +6,10 @@ body {
   -moz-osx-font-smoothing: grayscale;
 }
 .regular {
-	font-weight: 400;
+	font-weight: $font-weight-regular;
 }
 .bold {
-	font-weight: 700;
+	font-weight: $font-weight-bold;
 }
 
 // Headings

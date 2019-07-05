@@ -1,0 +1,7 @@
+.carousel-control-prev, 
+.carousel-control-next {
+  @include hover-focus {
+    background: transparent;
+    border:none;
+  }
+}

@@ -6,12 +6,12 @@
 
 // Define the default link before the mixin 
 a {
-  color: $primary !important;
+  color: $primary;
   border-bottom: $link-border-width solid $primary;
 }
 a {
     @include hover-focus {
-      color: $primary !important;
+      color: $primary;
       background-color: $highlight-light;
       border-bottom: $link-border-width solid $primary;
     }
