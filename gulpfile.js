@@ -428,6 +428,14 @@ gulp.task('icon-editorial', function() {
         removeXMLNS: true
       },
       {
+        removeViewBox: false
+      },
+      {
+        removeAttrs: {
+          attrs: '(fill|fill-rule)'
+        }
+      },
+      {
         removeTitle: false
       }],
       js2svg: {
@@ -451,6 +459,9 @@ gulp.task('icon-utility', function() {
     .pipe(svgmin({
       plugins: [{
         removeXMLNS: true
+      },
+      {
+        removeViewBox: false
       },
       {
         removeTitle: false
