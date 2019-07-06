@@ -18,6 +18,7 @@ var gulp                = require('gulp'),
     sass                = require('gulp-sass'),
     shell               = require('gulp-shell'),
     sourcemaps          = require('gulp-sourcemaps'),
+    svgmin              = require('gulp-svgmin'),
     tildeImporter       = require('node-sass-tilde-importer'),
     uglify              = require('gulp-uglify-es').default,
     gulpsvgtojsontoscss = require('gulp-svg-to-json-to-scss');
@@ -421,28 +422,62 @@ gulp.task('distribute', ['clean-dist:before'], function () {
 // Description: Transform icons svg to json and scss  
 //Editorial
 gulp.task('icon-editorial', function() {
-  return gulp.src('source/images/icons/icon-editorial/*.svg')
-      .pipe(gulpsvgtojsontoscss({
-      jsonFile: 'source/_data/icons-editorial.json',
-      scssFile: 'source/css/scss/_icons-editorial.scss',
-      basePath:"./source/images/icons/",
-      noExt:true,
-      delim:"-"
-      }))
-      .pipe(gulp.dest('./'));
+  return gulp.src('source/images/icons-original/icon-editorial/*.svg')
+    .pipe(svgmin({
+      plugins: [{
+        removeXMLNS: true
+      },
+      {
+        removeViewBox: false
+      },
+      {
+        removeAttrs: {
+          attrs: '(fill|fill-rule)'
+        }
+      },
+      {
+        removeTitle: false
+      }],
+      js2svg: {
+        pretty: true
+      }
+    }))
+    .pipe(gulp.dest('source/images/icons/icon-editorial'))
+    .pipe(gulpsvgtojsontoscss({
+    jsonFile: 'source/_data/icons-editorial.json',
+    scssFile: 'source/css/scss/_icons-editorial.scss',
+    basePath:"./source/images/icons/",
+    noExt:true,
+    delim:"-"
+    }))
+    .pipe(gulp.dest('./'));
 });
 
 //Utility
 gulp.task('icon-utility', function() {
-  return gulp.src('source/images/icons/icon-utility/*.svg')
-      .pipe(gulpsvgtojsontoscss({
-      jsonFile: 'source/_data/icons-utility.json',
-      scssFile: 'source/css/scss/_icons-utility.scss',
-      basePath:"./source/images/icons/",
-      noExt:true,
-      delim:"-"
-      }))
-      .pipe(gulp.dest('./'));
+  return gulp.src('source/images/icons-original/icon-utility/*.svg')
+    .pipe(svgmin({
+      plugins: [{
+        removeXMLNS: true
+      },
+      {
+        removeViewBox: false
+      },
+      {
+        removeTitle: false
+      }],
+      js2svg: {
+        pretty: true
+      }
+    }))
+    .pipe(gulp.dest('source/images/icons/icon-utility'))
+    .pipe(gulpsvgtojsontoscss({
+    jsonFile: 'source/_data/icons-utility.json',
+    scssFile: 'source/css/scss/_icons-utility.scss',
+    basePath:"./source/images/icons/",
+    noExt:true,
+    delim:"-"
+    }))
+    .pipe(gulp.dest('./'));
 });
-
 

@@ -215,151 +215,29 @@ nav {
   }
 }
 
-// Nav filters
-.section-filters {
-  background-color: $white;
-  border-bottom: $nav-tabs-border-width solid $nav-tabs-border-color;
-}
-
-.nav-filters {
-  width: 100%;
-  padding: 1rem 0;
-  .nav-item {
-    margin-right: 2rem;
-    &:last-child {
-      margin-right: 0;
+// Subnav
+.subnav {
+  border-bottom: 1px solid $neutral-stroke;
+  display: flex;
+  justify-content: space-between;
+  padding: 1.5rem 1rem;
+  .subnav-container,
+  .subnav-links {
+    display: flex;
+    > * {
+      display: flex;
+      justify-content: center;
+      align-items: center;
     }
   }
-  .nav-link {
+  .subnav-title {
+    @include font-size($font-size-base);
     color: $headings-color;
-    padding-left: 0;
-    padding-right: 0;
+    font-weight: $font-weight-bold;
   }
-  .dropdown-toggle:after {
-    color: $neutral-secondary;
-  }
-}
-
-// filters applied section
-.filters-applied {
-  a {
-    margin-bottom: .75rem;
-  }
-}
-
-// 767px and under
-@include media-breakpoint-down(sm) {
-  .nav-modal {
-
-    .nav {
-      flex-direction: column;
-      .nav-item {
-        display: block;
-      }
-    }
-
-    .nav-filters {
-      padding: 0;
-    }
-
-    .dropdown {
-
-      &.dropdown-align-right {
-        margin-left: 0;
-      }
-    }
-
-    .dropdown-menu {
-      border: none;
-      margin-top: 0;
-      max-height: none;
-      min-width: 0;
-      float: none;
-      padding-top: 0;
-      position: static;
-      .dropdown-item {
-        padding-left: .1875rem;
-        padding-right: 0;
-        white-space: inherit;
-      }
-    }
-  }
-}
-
-// Nav anchors
-.nav-anchors {
-  display: inline-block;
-  background-color: $white;
-  width: 100%;
-  border-bottom: $nav-tabs-border-width solid $nav-tabs-border-color;
-  padding: 1rem $grid-gutter-width/2;
-
-  .nav-item {
-    &.nav-top {
-      display: none;
-      .nav-link {
-        color: $gray-400;
-        &:after {
-          content: none;
-        }
-      }
-    }
-  }
-
-  .nav-link {
-    @include font-size($font-size-sm);
-    line-height: 1.4;           //~21px
-    padding: .5rem;
-    position: relative;
-    text-align: center;
-    white-space: normal;
-    &:after {
-      content: " ";
-      width: auto;
-      height: 1px;
-      background-color: $primary;
-      position: absolute;
-      left: .5rem;
-      right: .5rem;
-      display: block;
-    }
-    &:hover,
-    &.active {
-      &:not(.disabled) {
-        color: $action-lighter;
-        &:after {
-          content: none;
-        }
-      }
-    }
-    &.disabled {
-      cursor: default;
-    }
-  }
-  @include media-breakpoint-up(md) {
-    .nav-link {
-      padding: .5rem 1.5rem;
-      &:after {
-        left: 1.5rem;
-        right: 1.5rem;
-      }
-    }
-  }
-  @include media-breakpoint-up(lg) {
-    padding-top: 0;
-    padding-bottom: 0;
-    text-align: center;
-    .nav-item {
-      &.nav-top {
-        display: inline-block;
-      }
-    }
-    .nav-link {
-      padding: 2rem 2.5rem;
-      &:after {
-        left: 2.5rem;
-        right: 2.5rem;
-      }
+  .subnav-links {
+    ul {
+      margin-bottom: 0;
     }
   }
 }
@@ -371,9 +249,7 @@ nav {
   flex-wrap: nowrap;
   overflow-x: auto;
   overflow-y: hidden;
-  //padding-left: 1.5rem;
   white-space: nowrap;
-  text-align: center;
   width: 100%;
   /* Make an auto-hiding scroller for the 3 people using a IE */
   -ms-overflow-style: -ms-autohiding-scrollbar;
@@ -383,12 +259,16 @@ nav {
   &::-webkit-scrollbar {
       display: none;
   }
+  .nav {
+    flex-wrap: nowrap;
+    margin-left: -1rem;
+    margin-right: -1rem;
+  }
   .nav-item {
     display: inline-block;
     flex-shrink: 0;
     margin-bottom: 0;
     padding-bottom: 0;
-    max-width: 300px;
     &.show {
       .nav-link {
         @extend .nav-link.active;
@@ -403,12 +283,11 @@ nav {
   .nav-link {
     flex-shrink: 0;
     color: $neutral-secondary;
-    @include font-size($font-size-base);
-    line-height: $line-height-sm; //~24px
+    @include font-size($font-size-sm);
+    line-height: $line-height-sm;
     font-weight: $font-weight-bold;
-    padding: 1rem;
+    padding: .625rem 1rem;
     position: relative;
-    text-align: center;
     white-space: normal;
     &:hover,
     &.active,
@@ -430,46 +309,94 @@ nav {
         }
       }
     }
+    // Disabled state lightens text
     &.disabled {
-      cursor: default;
+      color: $nav-link-disabled-color;
+      pointer-events: none;
+      cursor: not-allowed;
     }
   }
-  /*@include media-breakpoint-up(md) {
-    .nav-link {
-      padding: 1.5rem 1.5rem;
-      &:hover,
-      &.active,
-      &:focus {
-        &:not(.disabled) {
-          &:before {
-            left: 1.5rem;
-            right: 1.5rem;
-          }
-        }
-      }
-    }
-  }*/
-
-  /*
-  @include media-breakpoint-up(lg) {
-    justify-content: center;
-    padding-left: 0;
-    .nav-link {
-      padding: 2rem 2.5rem;
-      &:hover,
-      &.active,
-      &:focus {
-        &:not(.disabled) {
-          &:before {
-            left: 2.5rem;
-            right: 2.5rem;
-          }
-        }
-      }
-    }
-  }
-  */
 }
+
+// Nav Tabs Large variant
+.nav-tabs-lg {
+  @include nav-tabs-size(1rem, 1rem, $font-size-base, $line-height-base);
+}
+
+
+// Nav Tabs Small variant
+.nav-tabs-sm {
+  @include nav-tabs-size(.625rem, .5rem, $font-size-xs, 1.3333);
+  .nav {
+    margin-left: -.5rem;
+    margin-right: -.5rem;
+  }
+}
+
+// Nav anchors
+.nav-anchors {
+  background-color: $white;
+  border-bottom: $nav-tabs-border-width solid $nav-tabs-border-color;
+  display: inline-block;
+  overflow-x: auto;
+  overflow-y: hidden;
+  white-space: nowrap;
+  width: 100%;
+  /* Make an auto-hiding scroller for the 3 people using a IE */
+  -ms-overflow-style: -ms-autohiding-scrollbar;
+  /* For WebKit implementations, provide inertia scrolling */
+  -webkit-overflow-scrolling: touch;
+  /* Remove the default scrollbar for WebKit implementations */
+  &::-webkit-scrollbar {
+      display: none;
+  }
+  .nav {
+    flex-wrap: nowrap;
+    margin-left: -1.25rem;
+    margin-right: -1.25rem;
+    padding: 1rem 0;
+  }
+
+  .nav-item {
+    flex-shrink: 0;
+    position: relative;
+    + .nav-item:before {
+      content: "";
+      background-color: $neutral-stroke;
+      border-radius: 50%;
+      position: absolute;
+      display: block;
+      left: -2px;
+      top: 50%;
+      transform: translateY(-50%);
+      width: 4px;
+      height:  4px;
+    }
+  }
+
+  .nav-link {
+    @include font-size($font-size-base);
+    border-bottom: none;
+    font-weight: $font-weight-bold;
+    line-height: $line-height-component;
+    margin: 0 1.25rem;
+    padding: 0;
+    position: relative;
+    text-align: center;
+    white-space: normal;
+    
+    &:hover,
+    &.active {
+      &:not(.disabled) {
+        color: $action;
+      }
+    }
+    &.disabled {
+      cursor: not-allowed;
+    }
+  }
+}
+
 
 //
 // Step Wizard
@@ -525,6 +452,10 @@ nav {
     padding: inherit;
     a {
       border: none;
+      @include hover-focus {
+        background-color: transparent;
+        border-bottom: none;
+      }
     }
     &:after {
       background-color: $gray-600;
@@ -621,6 +552,44 @@ nav {
   }
 }
 
+// Nav filters
+.section-filters {
+  background-color: $white;
+  border-bottom: $nav-tabs-border-width solid $nav-tabs-border-color;
+}
+
+.nav-filters {
+  width: 100%;
+  .nav-item {
+    margin-right: 2rem;
+    &:last-child {
+      margin-right: 0;
+    }
+  }
+  .nav-link {
+    color: $neutral-secondary;
+    font-weight: $font-weight-bold;
+    padding: 1rem 0;
+    @include hover-focus {
+      background-color: transparent;
+      border-bottom: none;
+    }
+  }
+  .dropdown-toggle:after {
+    color: $neutral-secondary;
+  }
+  .dropdown-menu {
+    margin-top: 0;
+  }
+}
+
+// filters applied section
+.filters-applied {
+  a {
+    margin-bottom: .75rem;
+  }
+}
+
 //
 // Nav dashboard Steps
 //
@@ -653,135 +622,5 @@ nav {
     line-height: $line-height-sm;
     font-weight: $font-weight-bold;
     justify-content: space-between;
-  }
-}
-
-// Subnav
-// Replacement for .navbar .navbar-services
-.subnav {
-  border-bottom: 1px solid $gray-400;
-  display: flex;
-  justify-content: space-between;
-  padding: 1.5rem 2rem;
-  .subnav-container,
-  .subnav-links {
-    display: flex;
-    > * {
-      display: flex;
-      justify-content: center;
-      align-items: center;
-    }
-  }
-  .subnav-title {
-    color: $headings-color;
-    @include font-size($font-size-base);
-    line-height: $line-height-sm;
-    font-weight: $font-weight-bold;
-    @include media-breakpoint-up(md) {
-      @include font-size($font-size-lg);
-      line-height: $line-height-sm;
-    }
-  }
-  .subnav-links {
-    ul {
-      margin-bottom: 0;
-    }
-  }
-}
-
-// Services sub-navigation
-// Deprecated. Update to .subnav
-// REMOVE IN V3
-.navbar-services {
-  border-bottom: 1px solid $gray-200;
-  min-height: 75px;
-
-  .container-fluid {
-    padding-left: .5rem;
-    padding-right: .5rem;
-  }
-
-  .navbar-brand,
-  .navbar-link {
-    color: $headings-color;
-    display: flex;
-    @include font-size($font-size-base);
-    line-height: 1.333333;
-    padding: 0;
-  }
-
-  .navbar-brand {
-    @include font-size($font-size-lg);
-    font-weight: $font-weight-bold;
-  }
-
-  .navbar-icon {
-    color: $primary;
-    @include font-size(4rem);
-    margin-right: 1rem;
-  }
-
-  .navbar-header {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-
-    &.navbar-header-service-link {
-      .navbar-brand {
-        @include font-size($font-size-base);
-      }
-    }
-    a {
-      border: none;
-      color: $headings-color;
-      text-decoration: underline;
-    }
-    ul {
-      @extend .list-inline;
-      display: flex;
-      margin-bottom: 0;
-      li {
-        display: flex;
-        align-items: center;
-        flex-direction: row;
-        flex-wrap: wrap;
-        padding-bottom: 0;
-        @include font-size($font-size-base);
-        a {
-          font-weight: $font-weight-bold;
-          text-decoration: none;
-        }
-      }
-      li {
-        // The separator between breadcrumbs (by default, a forward-slash: "/")
-        + li {
-          padding-left: .5rem;
-          //@include iconvdm(before, '056-chevron-droite');
-          &::before {
-            display: inline-block; // Suppress underlining of the separator in modern browsers
-            padding-right: .5rem;
-            font-weight: 700;
-          }
-        }
-      
-        // IE9-11 hack to properly handle hyperlink underlines for breadcrumbs built
-        // without `<ul>`s. The `::before` pseudo-element generates an element
-        // *within* the .breadcrumb-item and thereby inherits the `text-decoration`.
-        //
-        // To trick IE into suppressing the underline, we give the pseudo-element an
-        // underline and then immediately remove it.
-        + li:hover::before {
-          text-decoration: underline;
-        }
-        // stylelint-disable-next-line no-duplicate-selectors
-        + li:hover::before {
-          text-decoration: none;
-        }
-      }
-    }
-  }
-
-  .nav-item {
-    padding: 0 1rem;
   }
 }

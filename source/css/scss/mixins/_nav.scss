@@ -1,0 +1,18 @@
+// Tabs sizes
+@mixin nav-tabs-size($padding-y, $padding-x, $font-size, $line-height) {
+  .nav-link {
+    @include font-size($font-size);
+    line-height: $line-height;
+    padding: $padding-y $padding-x;
+    &:hover,
+    &.active,
+    &:focus {
+      &:not(.disabled) {
+        &:before {
+          left: $padding-x;
+          right: $padding-x;
+        }
+      }
+    }
+  }
+}

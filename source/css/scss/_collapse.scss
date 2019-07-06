@@ -1,0 +1,132 @@
+//
+// Collapsible Item
+//
+
+.collapsible-item {
+  margin-bottom: 30px;
+  padding: 0;
+  position: relative;
+  .collapsible-header {
+    .collapsible-title {
+      margin: 0;
+    }
+    a {
+      background: $gray-100;
+      border: none;
+      color: $headings-color;
+      display: flex;
+      @include font-size($font-size-lg);
+      line-height: $line-height-sm;
+      padding: 1.4rem 4rem 1.4rem 1.5rem;
+      cursor: pointer;
+      //@include iconvdm(after, '069-mini-plus-circulaire');
+
+      &[aria-expanded="true"] {
+        //@include iconvdm(after, '070-mini-moins-circulaire');
+      }
+
+      &:hover,
+      &:active {
+        color: $primary;
+        text-decoration: none;
+        //@include iconvdm(after, '072-mini-plus-circulaire-plein');
+
+        &[aria-expanded="true"] {
+          //@include iconvdm(after, '073-mini-moins-circulaire-plein');
+        }
+      }
+
+      &:after {
+        align-self: center;
+        color: $primary;
+        display: block;
+        @include font-size(2rem);
+        line-height: 1;
+        position: absolute;
+        right: 1rem;
+        width: 2rem;
+        height: 2rem;
+      }
+
+      span {
+        align-self: center;
+
+        &.collapsible-icon {
+          display: none;
+        }
+      }
+    }
+  }
+  // Content block wrapper
+  .collapsible-block {
+    padding: 2rem 4rem 2rem 2rem;
+    h2, .h2, h3, .h3, h4, .h4, h5, .h5 {
+      @include font-size($font-size-lg);
+    }
+    > *:last-child {
+      margin-bottom: 0;
+    }
+
+    .list-group {
+      margin-bottom: 2rem;
+    }
+  }
+
+  @include media-breakpoint-up(sm) {
+    .collapsible-header {
+      a {
+        padding: 1.4rem 4rem 1.4rem 4rem;
+        span {
+          &.collapsible-icon {
+            color: $primary;
+            display: flex;
+            flex: 0 0 auto;
+            align-items: center;
+            @include font-size(2rem);
+            font-weight: $font-weight-bold;
+            content: "";
+            position: absolute;
+            left: 1rem;
+            width: 2rem;
+            height: 2rem;
+          }
+          &.circle,
+          &.default-icon {
+            left: 1.6875rem;
+            &:after {
+              @include circle($size: .625rem);
+            }
+          }
+        }
+      }
+    }
+    .collapsible-block {
+      padding: 2rem 4rem 2rem 4rem;
+    }
+  }
+}
+
+.collapsible-variant {
+  .collapsible-item {
+    background-color: $white;
+    box-shadow: $card-box-shadow;
+    z-index: 100;
+    .collapsible-block {
+      padding-top: 0;
+      padding-bottom: 2.5rem;
+    }
+  }
+  .collapsible-header {
+    a {
+      background: transparent;
+      border: none;
+    }
+    span {
+      margin-right: 15px;
+    }
+    .badge-pill {
+      @include font-size($font-size-xs);
+    }
+  }
+
+}
