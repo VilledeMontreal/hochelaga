@@ -47,24 +47,58 @@
       border: none;
       color: $headings-color;
       display: flex;
-      @include font-size($font-size-lg);
+      @include font-size($font-size-base);
+      font-weight: $font-weight-bold;
       line-height: $line-height-sm;
-      padding: 1.4rem 4rem 1.4rem 1.5rem;
+      padding: 1rem 3rem 1rem 1rem;
       cursor: pointer;
-      //@include iconvdm(after, '069-mini-plus-circulaire');
+      &:after {
+        content: url($icon-utility-plus-circle);
+        vertical-align: middle;
+        vertical-align: -webkit-baseline-middle;
+        display: inline-block;
+        width: 24px;
+        height: 24px;
+        border: none;
+      }
 
       &[aria-expanded="true"] {
-        //@include iconvdm(after, '070-mini-moins-circulaire');
+        color: $primary;
+        &:after {
+          content: url($icon-utility-minus-circle);
+          vertical-align: middle;
+          vertical-align: -webkit-baseline-middle;
+          display: inline-block;
+          width: 24px;
+          height: 24px;
+          border: none;
+        }
       }
 
       &:hover,
       &:active {
         color: $primary;
         text-decoration: none;
-        //@include iconvdm(after, '072-mini-plus-circulaire-plein');
+        &:after {
+          content: url($icon-utility-plus-circle-full);
+          vertical-align: middle;
+          vertical-align: -webkit-baseline-middle;
+          display: inline-block;
+          width: 24px;
+          height: 24px;
+          border: none;
+        }
 
         &[aria-expanded="true"] {
-          //@include iconvdm(after, '073-mini-moins-circulaire-plein');
+          &:after {
+            content: url($icon-utility-minus-circle-full);
+            vertical-align: middle;
+            vertical-align: -webkit-baseline-middle;
+            display: inline-block;
+            width: 24px;
+            height: 24px;
+            border: none;
+          }
         }
       }
 
@@ -72,7 +106,6 @@
         align-self: center;
         color: $primary;
         display: block;
-        @include font-size(2rem);
         line-height: 1;
         position: absolute;
         right: 1rem;
@@ -91,7 +124,8 @@
   }
   // Content block wrapper
   .collapsible-block {
-    padding: 2rem 4rem 2rem 2rem;
+    padding: 1rem 3rem 1rem 1rem;
+    font-size: $font-size-sm;
     h2, .h2, h3, .h3, h4, .h4, h5, .h5 {
       @include font-size($font-size-lg);
     }
@@ -107,7 +141,7 @@
   @include media-breakpoint-up(sm) {
     .collapsible-header {
       a {
-        padding: 1.4rem 4rem 1.4rem 4rem;
+        //padding: 1.4rem 4rem 1.4rem 4rem;
         span {
           &.collapsible-icon {
             color: $primary;
@@ -133,7 +167,7 @@
       }
     }
     .collapsible-block {
-      padding: 2rem 4rem 2rem 4rem;
+      //padding: 2rem 4rem 2rem 4rem;
     }
   }
 }
@@ -145,7 +179,7 @@
     z-index: 100;
     .collapsible-block {
       padding-top: 0;
-      padding-bottom: 2.5rem;
+      padding-bottom: 1rem;
     }
   }
   .collapsible-header {

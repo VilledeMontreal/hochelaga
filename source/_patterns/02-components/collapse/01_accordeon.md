@@ -1,5 +1,5 @@
 ---
-title: Collapsible
+title: Accordeon
 ---
 
 @todo : Provide responsive behaviour, remove dots, change paddings

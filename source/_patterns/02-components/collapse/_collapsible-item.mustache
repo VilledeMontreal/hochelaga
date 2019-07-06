@@ -6,14 +6,9 @@
         {{# icon }}
         <span class="collapsible-icon vdm {{ icon }}" aria-hidden="true"></span>
         {{/ icon }}
-        {{^ icon }}
-        {{# has-default-icon }}
-        <span class="collapsible-icon circle" aria-hidden="true"></span>
-        {{/ has-default-icon }}
-        {{/ icon }}
         <span>{{ title }}</span>
         {{# badge }}
-          {{> styles-badge }}
+          {{> atoms-badge }}
         {{/ badge}}
       </a>
     </div>
@@ -23,8 +18,8 @@
       {{{ content }}}
       {{# has-links}}
       <div class="list-group">
-        <a href="#" class="list-group-item list-group-item-action" data-toggle="modal" data-target="#modalDocuments">{{> styles-fonticon-item(icon-label: "019-document")}} Consulter les documents nécessaires</a>
-        <a href="#tarifs" class="list-group-item list-group-item-action js-scroll-trigger">{{> styles-fonticon-item(icon-label: "113-prix")}} Consulter les tarifs</a>
+        <a href="#" class="list-group-item list-group-item-action" data-toggle="modal" data-target="#modalDocuments">{{> atoms-fonticon-item(icon-label: "019-document")}} Consulter les documents nécessaires</a>
+        <a href="#tarifs" class="list-group-item list-group-item-action js-scroll-trigger">{{> atoms-fonticon-item(icon-label: "113-prix")}} Consulter les tarifs</a>
       </div>
       {{/ has-links}}
       {{# has-mode-paiement}}
