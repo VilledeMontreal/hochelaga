@@ -24,6 +24,12 @@ a {
   @include vdm-text-emphasis-variant(".text-#{$label}", $color-dark, $color-light);
 }
 
+@each $color, $value in $grays {
+  .text-gray-#{$color} {
+    color: $value;
+  }
+}
+
 // Overrides colors
 .text-secondary,
 .text-black-50,

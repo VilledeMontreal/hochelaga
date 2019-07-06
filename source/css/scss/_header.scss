@@ -23,9 +23,9 @@
       flex: 0 0 auto; // This is needed because of IE weird behavior
     }
     // 768px and up
-    @include media-breakpoint-up(xl) {
+    @include media-breakpoint-up(md) {
       svg {
-        height: 2.5rem;
+        height: 2rem;
         width: auto;
       }
     }
