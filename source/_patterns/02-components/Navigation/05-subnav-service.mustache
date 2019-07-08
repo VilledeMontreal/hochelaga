@@ -1,0 +1,20 @@
+<nav class="subnav subnav-services" aria-label="Service navigation" role="navigation">
+  <div class="subnav-container">
+    <span class="subnav-title">{{ serviceName }}</span>
+  </div>
+  {{# subnav-links }}
+  <div class="subnav-links">
+    <button class="navbar-button">
+      <span class="button-label d-none d-md-inline-flex mr-2">Quitter</span>
+      <svg width="24" height="24" viewBox="0 0 24 24">
+        <title>Icons/24px/Log-out</title>
+        <path  d="M21.927 11.624a1 1 0 0 1-.22 1.083l-5 5a1 1 0 0 1-1.414-1.414L18.586 13H8a1 1 0 0 1 0-2h13a1 1 0 0 1 .921.61l.006.014zm-6.634-3.917a1 1 0 1 1 1.414-1.414l2.035 2.035a1 1 0 1 1-1.414 1.414l-2.035-2.035zM11 21a1 1 0 0 1 0 2H5a3 3 0 0 1-3-3V4a3 3 0 0 1 3-3h6a1 1 0 0 1 0 2H5a1 1 0 0 0-1 1v16a1 1 0 0 0 1 1h6z" />
+      </svg>
+      <span class="sr-only">Quitter</span>
+    </button>
+  </div>
+  {{/ subnav-links }}
+</nav>
+{{# navTabs }}
+{{> components-nav-tab }}
+{{/ navTabs }}

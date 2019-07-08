@@ -5,3 +5,18 @@
     border:none;
   }
 }
+
+.carousel-control-prev-icon, 
+.carousel-control-next-icon {
+    width: 40px;
+    height: 40px;
+}
+
+.carousel-control-prev-icon {
+    background-image: url($icon-utility-chevron-left);
+}
+
+.carousel-control-next-icon {
+    background-image: url($icon-utility-chevron-right);
+}
+

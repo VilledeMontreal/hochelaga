@@ -55,6 +55,13 @@
   fill: currentColor;
 }
 
-.icon-dark {
-  fill: $neutral-primary;
+
+@each $color, $value in $theme-colors {
+  .icon-#{$color} {
+    fill:$value;
+  }
+}
+
+.icon-white {
+  fill: $white;
 }

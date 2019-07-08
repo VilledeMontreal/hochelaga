@@ -26,24 +26,37 @@
     }
   }
   
-
+  .btn {
+    @extend .btn-squared;
+  }
   // Validate this override
   .form-group {
     margin-bottom: 1.3125rem; // 21px
   }
 
   .modal-header {
-    padding: 1.5rem;
+    padding: 1.5rem 1rem;
     flex: 0 0 auto; // IE need this
     .btn-close {
       position: absolute;
-      top: 0;
-      right: 0;
-      margin: auto;
+      top: 1.5rem;
+      right: 1rem;
+      //margin: 0;
+      //padding: 0;
       z-index: $zindex-modal + 1;
-      .vdm {
-        color: $gray-900;
-        @include font-size(1.5rem);
+      svg {
+        width: 24px;
+        height: 24px;
+        path {
+          fill: $neutral-primary;
+        }
+      }
+      &:hover {
+        svg {
+          path {
+            fill: $primary;
+          }
+        }
       }
     }
   }
@@ -51,7 +64,7 @@
   // prevent modal-body to grow and push footer to the bottom
   .modal-body {
     flex-grow: 0;
-    padding: .5rem 1.5rem 2rem 1.5rem;
+    padding: 1.5rem 1rem;
     > :last-child {
       margin-bottom: 0;
     }
@@ -60,7 +73,10 @@
   .modal-footer {
     flex-wrap: wrap;
     justify-content: space-between;
-    padding: 1rem 1.5rem 2rem 1.5rem;
+    padding: 1.5rem 1rem;
+    a {
+      line-height: $modal-title-line-height;
+    }
   }
 
   .modal-footer-logo {
@@ -78,9 +94,10 @@
     display: flex;
     padding: 1rem 1rem 1rem .75rem;
     align-items: center;
-    .vdm {
-      @include font-size(4rem);
-      margin-right: .75rem;
+    svg {
+      width: 48px;
+      height: 48px;
+      margin-right: 16px;
     }
     .user-info {
       color: $gray-600;
@@ -93,7 +110,7 @@
       }
       .user-profil {
         color: $headings-color;
-        @include font-size($font-size-lg);
+        @include font-size($font-size-base);
         font-weight: $font-weight-bold;
       }
       .user-name {
@@ -153,8 +170,12 @@
       text-align: center;
     }
     .modal-header {
-      .vdm {
-        @include font-size(4.5rem);
+      svg {
+        &.icon-editorial-attention {
+          path {
+            fill: $danger;
+          }
+        }
       }
       .btn-close {
         .vdm {
@@ -222,7 +243,7 @@
         // btn-close is white on small device for this variant
         .btn-close {
           .vdm {
-            color: $white;
+            //color: $white;
           }
         }
       }

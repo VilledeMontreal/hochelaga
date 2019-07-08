@@ -1,0 +1,11 @@
+<section class="page-section {{cards.section-classes}}">
+  <div class="container">
+    <div class="row cards">
+      {{# cards.card-item }}
+      <div class="{{ cards.bsgrid-classes }}">
+        {{> components-card-item-tarif }}
+      </div>
+      {{/ cards.card-item }}
+    </div>
+  </div>
+</section>

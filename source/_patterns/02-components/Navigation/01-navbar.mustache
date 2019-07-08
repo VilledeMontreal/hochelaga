@@ -1,0 +1,124 @@
+<nav class="navbar navbar-light navbar-expand justify-content-between" role="navigation">
+  <div class="d-flex w-100">
+    {{> components-main-menu-button }}
+    {{> components-slide-menu }}
+  </div>
+  <a class="navbar-brand mx-auto" href="{{ link.templates-homepage }}">
+    <svg id="logo-mtl-rosace" x="0px" y="0px" viewBox="0 0 184.6 39.3" xml:space="preserve">
+      <polyline class="letter" points="0,6.6 6.1,6.6 13.9,27.9 14,27.9 21.8,6.6 27.7,6.6 27.7,32.8 23.6,32.8 23.6,10.2 23.5,10.2 15.2,32.8 11.8,32.8 3.5,10.2 3.4,10.2 3.4,32.8 0,32.8 0,6.6"/>
+      <path class="letter" d="M39.3,31.6c3.7,0,4.1-4.6,4.1-7.9c0-3.3-0.4-7.9-4.1-7.9c-3.6,0-4.1,4.6-4.1,7.9C35.2,27.1,35.7,31.6,39.3,31.6 M30.7,23.8 c0-6.1,2.9-9.4,8.6-9.4s8.6,3.3,8.6,9.4s-2.9,9.4-8.6,9.4S30.7,29.9,30.7,23.8z"/>
+      <path class="letter" d="M51.1,14.7h4.1V19h0.1c0.7-1.3,2.5-4.7,6.8-4.7c3.4,0,4.9,2.7,4.9,5.3v13.2h-4.1V21.5c0-2.3-0.4-4.3-2.5-4.3
+      c-4.1,0-5.2,5.9-5.2,8.2v7.5h-4.1L51.1,14.7"/>
+      <path class="letter"d="M82,32.9c-0.8,0.2-1.9,0.3-2.9,0.3c-3.9,0-6.1-1.1-6.1-4.6V16.7h-3.1v-2H73v-4.2l4.1-2.3v6.6h5.3v2h-5.3v10.4
+      c0,2.7,0.3,3.9,2.9,3.9c0.7,0,1.4-0.1,1.9-0.3L82,32.9"/>
+      <path class="letter" d="M85.1,14.7h4.1v4.6h0.1c1.3-2.4,2.7-4.7,6.3-5v4c-4,0.1-6.4,1.4-6.4,6.2v8.3h-4.1V14.7"/>
+      <path class="letter" d="M105.8,6.6h4.3l-4,5H103L105.8,6.6 M108.8,20c0-1.4-0.5-4.1-3.6-4.1c-3.2,0-3.8,3-3.9,4.1H108.8z M112.5,32.2
+      c-1.7,0.6-3.2,1-5.7,1c-5.4,0-9.7-3-9.7-10.2c0-5,2.2-8.6,8.3-8.6c6.3,0,7.5,3.9,7.5,7.4h-11.7c0,3.6,1.7,9.5,7.6,9.5
+      c1.3,0,2.5-0.2,3.7-0.8V32.2z"/>
+      <path class="letter" d="M126.1,24.3c-1.7,0.1-6.4,0.5-6.4,3.8c0,1.6,1,2.7,2.4,2.7s4-1.3,4-4.4V24.3 M126.1,30.3L126.1,30.3 c-0.7,1.1-2.5,2.9-5.6,2.9s-5.3-2-5.3-4.5c0-5.6,8.3-5.8,10.9-6v-1.6c0-2,0-5.2-2.7-5.2c-2.5,0-3,1.8-3.2,3.9h-4.3
+      c0.2-2.7,1.4-5.5,7.5-5.5c6.4,0,6.9,3.3,6.9,6.8v11.6h-4.1L126.1,30.3L126.1,30.3z"/>
+      <rect class="letter"x="134.5" y="6.6" width="4.1" height="26.2"/>
+      <path class="rosace" d="M167.3,36c-0.8-0.8-1.3-1.9-1.3-3.1V22.7c0-1.3,1.2-1.9,1.9-1.9h10.3c2.1,0,4.4,1.7,4.4,4.4c0,2.4-1.9,4.4-4.3,4.4
+      c-1.5,0-2.6-0.7-3.2-1.3c0,0-0.4-0.4-0.5-0.5c0.1-0.2,0.2-0.5,0.2-0.9l0,0c0-1.5-1.2-2.6-2.7-2.6c-0.7,0-1.3,0.3-1.8,0.7
+      c-0.5,0.5-0.8,1.2-0.8,1.9s0.3,1.4,0.8,1.9s1.1,0.7,1.9,0.7c0.4,0,0.7-0.1,0.9-0.2c0.1,0.1,0.5,0.5,0.5,0.5
+      c0.3,0.3,1.3,1.4,1.3,3.1l0,0c0,2.7-2.3,4.4-4.4,4.4C169.3,37.3,168.2,36.8,167.3,36 M148.7,28.3c-0.8-0.8-1.3-2-1.3-3.1
+      c0-1.2,0.4-2.3,1.3-3.1c0.8-0.8,1.9-1.3,3.1-1.3H162c1.3,0,2,1.1,2,1.9v10.2c0,1.2-0.5,2.3-1.3,3.1c-0.6,0.6-1.6,1.3-3.1,1.3
+      c-2.4,0-4.4-1.9-4.4-4.3l0,0c0-1.5,0.7-2.6,1.3-3.2c0,0,0.4-0.4,0.5-0.5c0.2,0.1,0.5,0.2,0.9,0.2c1.5,0,2.6-1.2,2.6-2.7
+      c0-0.7-0.3-1.3-0.7-1.8c-0.5-0.5-1.2-0.8-1.9-0.8s-1.4,0.3-1.9,0.8s-0.7,1.1-0.7,1.8l0,0c0,0.4,0.1,0.7,0.2,0.9
+      c-0.1,0.1-0.5,0.5-0.5,0.5c-0.3,0.3-1.4,1.3-3.1,1.3C150.6,29.6,149.5,29.1,148.7,28.3z M166,6.5c0-1.2,0.5-2.3,1.3-3.1
+      c0.6-0.6,1.6-1.3,3.1-1.3c1.2,0,2.3,0.5,3.1,1.3s1.3,1.9,1.3,3l0,0c0,1.5-0.7,2.6-1.3,3.2c0,0-0.4,0.4-0.5,0.5
+      c-0.2-0.1-0.5-0.2-0.9-0.2c-1.5,0-2.6,1.2-2.6,2.7c0,0.7,0.3,1.3,0.7,1.8c0.5,0.5,1.2,0.8,1.9,0.8l0,0c0.7,0,1.4-0.3,1.9-0.8
+      s0.7-1.1,0.7-1.8l0,0c0-0.4-0.1-0.7-0.2-0.9c0.1-0.1,0.5-0.5,0.5-0.5c0.3-0.3,1.4-1.3,3.1-1.3c2.7,0,4.4,2.3,4.4,4.4
+      c0,1.2-0.5,2.3-1.3,3.1s-1.9,1.3-3.1,1.3H168c-1.3,0-1.9-1.1-1.9-1.9L166,6.5L166,6.5z M156.5,9.7L156.5,9.7
+      c-0.3-0.3-1.3-1.4-1.3-3.1l0,0c0-2.7,2.3-4.4,4.4-4.4c1.2,0,2.3,0.5,3.1,1.3s1.3,1.9,1.3,3.1v10.1c0,1.3-1.1,1.9-1.9,1.9h-10.2
+      c-1.2,0-2.3-0.5-3.1-1.3c-0.6-0.6-1.3-1.6-1.3-3.1c0-1.2,0.5-2.3,1.3-3.1c0.8-0.8,1.9-1.3,3-1.3c1.5,0,2.6,0.7,3.2,1.3
+      c0,0,0.4,0.4,0.5,0.5c-0.1,0.2-0.2,0.5-0.2,0.9c0,1.5,1.2,2.6,2.7,2.6c0.7,0,1.3-0.3,1.8-0.7c0.5-0.5,0.8-1.2,0.8-1.9
+      s-0.3-1.4-0.8-1.9s-1.1-0.7-1.9-0.7c-0.4,0-0.7,0.1-0.9,0.2C156.9,10.1,156.5,9.7,156.5,9.7z M165,3.1c-1.3-1.9-3.3-3.1-5.5-3.1
+      c-3.6,0-6.5,2.9-6.5,6.5c0,0.4,0.1,0.8,0.2,1.5c-0.3-0.1-1-0.2-1.5-0.2c-3.7,0-6.5,2.8-6.5,6.4c0,2.1,1.2,4.2,3.1,5.5
+      c-1.9,1.3-3.1,3.3-3.1,5.4c0,3.6,2.9,6.5,6.6,6.5c0.4,0,1-0.1,1.4-0.2c-0.1,0.6-0.2,1.1-0.2,1.4c0,3.7,2.8,6.5,6.5,6.5
+      c2.1,0,4.1-1.1,5.4-3c1.2,1.8,3.4,3,5.5,3c3.6,0,6.4-2.9,6.4-6.5c0-0.5-0.1-1.1-0.2-1.4c0.6,0.1,1.1,0.2,1.5,0.2
+      c3.6,0,6.5-2.9,6.5-6.5c0-2.1-1.1-4.2-3-5.4c1.8-1.2,3-3.3,3-5.4c0-3.5-3-6.4-6.6-6.4c-0.5,0-1,0.1-1.4,0.2c0.1-0.3,0.2-1,0.2-1.5
+      c0-3.7-2.8-6.5-6.4-6.5C168.3,0,166.2,1.2,165,3.1z"/>
+    </svg>
+  </a>
+  <div class="col-right d-flex w-100">
+    <div class="d-flex align-items-center ml-auto">
+      <button class="navbar-button navbar-button-lg navbar-search-toggler d-none d-lg-inline-flex" id="navbarDropdownSearch" aria-haspopup="true" aria-expanded="false">
+        <svg width="24px" height="24px" viewBox="0 0 24 24">
+          <title>Recherche</title>
+          <g id="Icons/24px/Search">
+            <path class="icon-dark" d="M15.7071068,14.2928932 L21.7071068,20.2928932 C22.0976311,20.6834175 22.0976311,21.3165825 21.7071068,21.7071068 C21.3165825,22.0976311 20.6834175,22.0976311 20.2928932,21.7071068 L14.9529022,16.3671157 C13.5746967,17.4194128 11.8329875,18 10,18 C5.581722,18 2,14.418278 2,10 C2,5.581722 5.581722,2 10,2 C14.418278,2 18,5.581722 18,10 C18,10.780355 17.8879595,11.5468125 17.6696612,12.2815954 C17.5123762,12.8110101 16.9556961,13.1126808 16.4262815,12.9553958 C15.8968668,12.7981108 15.5951961,12.2414307 15.7524811,11.7120161 C15.9159996,11.1616197 16,10.5869818 16,10 C16,6.6862915 13.3137085,4 10,4 C6.6862915,4 4,6.6862915 4,10 C4,13.3137085 6.6862915,16 10,16 C11.6632422,16 13.2085803,15.3792526 14.2922267,14.2935604 C14.6823825,13.902668 15.3155472,13.9020709 15.7064396,14.2922267 Z" id="Icon" fill="#ADB5BD"></path>
+          </g>
+        </svg>
+        <span class="sr-only">Ouvrir la barre de recherche</span>
+      </button>
+      {{^ user-authenticated }}
+      <button class="navbar-button btn-login d-inline-flex">
+        {{> styles-fonticon-item(icon-label: "003-profil") }}
+        <span class="button-label d-none d-md-inline-flex">Me connecter</span>
+        <span class="sr-only">Me connecter</span>
+      </button>
+      {{> components-button(buttonClass: "btn-secondary", buttonUrl: "#", "buttonText": "Créer mon compte")}}
+      {{/ user-authenticated }}
+      {{# user-authenticated }}
+      <div class="dropdown">
+        <button class="navbar-button dropdown-toggle" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          {{> styles-fonticon-item(icon-label: "110-profil-connecte") }}
+          <div class="user-info d-none d-md-inline-flex">
+            <span class="user-username elided-text">{{ user.username }}</span>
+            {{# user-has-profile}}
+            <span class="user-profil elided-text">{{ user.profil }}</span>
+            {{/ user-has-profile}}
+          </div>
+        </button>
+        <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdownMenuLink">
+          <div class="dropdown-item-section">
+            <div class="user-info">
+              <span class="user-name">{{ user.name }}</span>
+              {{# user-has-profile}}
+              <span class="user-profil d-block d-lg-none">{{ user.profil }}</span>
+              {{/ user-has-profile}}
+              <span class="user-email">{{ user.email }}</span>
+            </div>
+          </div>
+          {{# user-has-profile}}
+          <div class="dropdown-divider"></div>
+          <div class="user-action">
+            <a class="dropdown-item" href="#">Changer de profil {{> styles-fonticon-item(icon-label: "023-parametres") }}</a>
+          </div>
+          {{/ user-has-profile}}
+          <div class="dropdown-divider"></div>
+          <ul class="list-unstyled">
+            <li>
+              <a class="dropdown-item" href="#">Tableau de bord</a>
+            </li>
+            <li>
+              <a class="dropdown-item" href="#">Modifier mon profil</a>
+            </li>
+            <li>
+              <a class="dropdown-item" href="#">Mes services</a>
+            </li>
+            <li>
+              <a class="dropdown-item" href="#">Mes demandes</a>
+            </li>
+          </ul>
+          <div class="dropdown-divider"></div>
+          <a class="dropdown-item" href="#">Me déconnecter</a>
+        </div>
+      </div>
+      {{/ user-authenticated }}
+    </div>
+  </div>
+  <div class="overlay"></div>
+</nav>
+<div id="navbar-search" class="navbar-search">
+  <div class="container">
+    <div class="inner-container">
+      <button class="navbar-button js-button-close">
+        <span class="vdm vdm-065-fleche-gauche"></span>
+        <span class="sr-only">Quitter la recherche</span>
+      </button>
+      {{> styles-input-has-clear(inputHideLabel: true, "inputHelpText": false, placeholder: "Rechercher une information ou un service") }}
+    </div>
+  </div>
+</div>

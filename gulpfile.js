@@ -425,7 +425,7 @@ gulp.task('icon-editorial', function() {
   return gulp.src('source/images/icons-original/icon-editorial/*.svg')
     .pipe(svgmin({
       plugins: [{
-        removeXMLNS: true
+        removeXMLNS: false
       },
       {
         removeViewBox: false
@@ -458,7 +458,7 @@ gulp.task('icon-utility', function() {
   return gulp.src('source/images/icons-original/icon-utility/*.svg')
     .pipe(svgmin({
       plugins: [{
-        removeXMLNS: true
+        removeXMLNS: false
       },
       {
         removeViewBox: false

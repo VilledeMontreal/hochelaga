@@ -1,0 +1,39 @@
+<section class="page-section {{ cards.section-classes }}">
+  <div class="container">
+    {{# cards.headings}}
+    <div class="row">
+      <div class="col-12">
+        <h2>{{> cards.headings }}</h2>
+      </div>
+    </div>
+    {{/ cards.headings }}
+    <div class="row cards {{ cards.classes }}">
+    {{# cards.card-item }}
+      <div class="{{ cards.bsgrid-classes }}">
+        {{> components-card-item }}
+      </div>
+    {{/ cards.card-item }}
+    </div>
+  </div>
+</section>
+
+{{# has-bg-variant}}
+<section class="page-section {{ cards.section-classes }}">
+  <div class="container">
+    {{# cards.headings}}
+    <div class="row">
+      <div class="col-12">
+        <h2>{{> cards.headings }}</h2>
+      </div>
+    </div>
+    {{/ cards.headings }}
+    <div class="row cards {{ cards.classes }}">
+    {{# cards.card-item }}
+      <div class="{{ cards.bsgrid-classes }}">
+        {{> components-card-item }}
+      </div>
+    {{/ cards.card-item }}
+    </div>
+  </div>
+</section>
+{{/ has-bg-variant}}

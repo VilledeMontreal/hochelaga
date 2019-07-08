@@ -1,9 +1,7 @@
 @import "scss/functions";
 
 /*-- VARIABLES --*/
-@import "scss/variables"; 
-@import "scss/icons-editorial";
-@import "scss/icons-utility"; 
+@import "scss/variables";  
 
 /*-- BOOTSTRAP --*/
 @import "~bootstrap/scss/functions";
@@ -15,6 +13,8 @@
 /*-- GENERIC --*/
 @import "scss/utilities";
 @import "scss/type";
+@import "scss/icons-utility";
+@import "scss/icons-editorial";
 @import "scss/icons";
 @import "scss/medias";
 @import "scss/colors";
@@ -28,7 +28,6 @@
 //@import "scss/tables";
 @import "scss/dropdown";
 @import "scss/nav";
-@import "scss/collapse";
 @import "scss/menus";
 @import "scss/sidebars";
 @import "scss/lists";

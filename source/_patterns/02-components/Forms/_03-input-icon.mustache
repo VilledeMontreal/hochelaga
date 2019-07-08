@@ -1,0 +1,14 @@
+<div class="form-group">
+  {{# formGroupLabel }}
+  <label for="{{inputID}}">{{formGroupLabel}}</label>
+  {{/ formGroupLabel }}
+  <div class="input-group-icon {{inputGroupIconClass}}">
+    {{^ icon-after }}
+    <span class="vdm vdm-{{ icon-label }} {{ icon-class }}" aria-hidden="true"></span>
+    {{/ icon-after }}
+    <input type="text" class="form-control {{formControlClass}}" id="{{ inputID }}" placeholder="{{ inputPlaceholder }}">
+    {{# icon-after }}
+    <span class="vdm vdm-{{ icon-label }} {{ icon-class }}" aria-hidden="true"></span>
+    {{/ icon-after}}
+  </div>
+</div>

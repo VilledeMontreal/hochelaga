@@ -33,7 +33,6 @@
 //
 // Collapsible Item
 //
-
 .collapsible-item {
   margin-bottom: 30px;
   padding: 0;
@@ -47,28 +46,32 @@
       border: none;
       color: $headings-color;
       display: flex;
+      cursor: pointer;
       @include font-size($font-size-base);
       font-weight: $font-weight-bold;
       line-height: $line-height-sm;
       padding: 1rem 3rem 1rem 1rem;
       cursor: pointer;
       &:after {
-        content: url($icon-utility-plus-circle);
-        vertical-align: middle;
-        vertical-align: -webkit-baseline-middle;
-        display: inline-block;
+        content: '';
+        -webkit-mask: url($icon-utility-plus-circle) no-repeat 50% 50%;
+        mask: url($icon-utility-plus-circle) no-repeat 50% 50%;
+        -webkit-mask-size: cover;
+        mask-size: cover;
+        background-color: $primary;
         width: 24px;
         height: 24px;
-        border: none;
       }
 
       &[aria-expanded="true"] {
         color: $primary;
         &:after {
-          content: url($icon-utility-minus-circle);
-          vertical-align: middle;
-          vertical-align: -webkit-baseline-middle;
-          display: inline-block;
+          content: '';
+          -webkit-mask: url($icon-utility-minus-circle) no-repeat 50% 50%;
+          mask: url($icon-utility-minus-circle) no-repeat 50% 50%;
+          -webkit-mask-size: cover;
+          mask-size: cover;
+          background-color: $primary;
           width: 24px;
           height: 24px;
           border: none;
@@ -80,10 +83,12 @@
         color: $primary;
         text-decoration: none;
         &:after {
-          content: url($icon-utility-plus-circle-full);
-          vertical-align: middle;
-          vertical-align: -webkit-baseline-middle;
-          display: inline-block;
+          content: '';
+          -webkit-mask: url($icon-utility-plus-circle-full) no-repeat 50% 50%;
+          mask: url($icon-utility-plus-circle-full) no-repeat 50% 50%;
+          -webkit-mask-size: cover;
+          mask-size: cover;
+          background-color: $primary;
           width: 24px;
           height: 24px;
           border: none;
@@ -91,10 +96,12 @@
 
         &[aria-expanded="true"] {
           &:after {
-            content: url($icon-utility-minus-circle-full);
-            vertical-align: middle;
-            vertical-align: -webkit-baseline-middle;
-            display: inline-block;
+            content: '';
+            -webkit-mask: url($icon-utility-minus-circle-full) no-repeat 50% 50%;
+            mask: url($icon-utility-minus-circle-full) no-repeat 50% 50%;
+            -webkit-mask-size: cover;
+            mask-size: cover;
+            background-color: $primary;
             width: 24px;
             height: 24px;
             border: none;
@@ -109,8 +116,6 @@
         line-height: 1;
         position: absolute;
         right: 1rem;
-        width: 2rem;
-        height: 2rem;
       }
 
       span {
@@ -141,7 +146,6 @@
   @include media-breakpoint-up(sm) {
     .collapsible-header {
       a {
-        //padding: 1.4rem 4rem 1.4rem 4rem;
         span {
           &.collapsible-icon {
             color: $primary;
@@ -175,8 +179,10 @@
 .collapsible-variant {
   .collapsible-item {
     background-color: $white;
-    box-shadow: $card-box-shadow;
+    border: 1px solid $gray-400;
+    //box-shadow: $card-box-shadow;
     z-index: 100;
+    cursor: pointer;
     .collapsible-block {
       padding-top: 0;
       padding-bottom: 1rem;
@@ -186,6 +192,7 @@
     a {
       background: transparent;
       border: none;
+      cursor: pointer;
     }
     span {
       margin-right: 15px;
@@ -196,6 +203,7 @@
   }
 
 }
+
 
 //
 // Nav
@@ -624,3 +632,6 @@ nav {
     justify-content: space-between;
   }
 }
+
+
+
