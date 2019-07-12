@@ -1,19 +1,11 @@
 <div id="{{ carousel.carouselID }}" class="carousel slide" data-ride="carousel">
-  {{# carousel.hasIndicators }}
-    <ol class="carousel-indicators">
-    {{# carousel.carouselItem }}
-        <li data-target="#{{ carousel.carouselID }}" data-slide-to="{{ slide-number }}" class="{{ item-is-active }}"></li>
-    {{/ carousel.carouselItem }}
-    </ol>
-  {{/ carousel.hasIndicators }}
   <div class="carousel-inner">
     {{# carousel.carouselItem }}
       <div class="carousel-item {{ item-is-active }}">
         <img class="d-block w-100" src="{{ url }}" alt="{{ alt }}">
         {{# caption }}
         <div class="carousel-caption d-none d-md-block">
-          <h5>{{ caption.label }}</h5>
-          <p>{{ caption.content }}</p>
+          <p class="m-0">{{ caption.content }}</p>
         </div>
         {{/ caption }}
       </div>
@@ -21,11 +13,21 @@
   </div>
   {{# carousel.hasControls }}
     <a class="carousel-control-prev" href="#{{ carousel.carouselID }}" role="button" data-slide="prev">
-      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+      <span class="carousel-control-prev-icon" aria-hidden="true">
+        <svg width="24" height="24" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+          <title>Icons/24px/Arrow-left</title>
+          <path d="M3.073 11.624a1 1 0 0 0 .22 1.083l6 6a1 1 0 0 0 1.414-1.414L6.414 13H20a1 1 0 0 0 0-2H4a1 1 0 0 0-.921.61zm7.634-4.917a1 1 0 1 0-1.414-1.414L6.258 8.328a1 1 0 1 0 1.414 1.414l3.035-3.035z"/>
+        </svg>
+      </span>
       <span class="sr-only">Previous</span>
     </a>
     <a class="carousel-control-next" href="#{{ carousel.carouselID }}" role="button" data-slide="next">
-      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+      <span class="carousel-control-next-icon" aria-hidden="true">
+        <svg width="24" height="24" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+          <title>Icons/24px/Arrow-right</title>
+          <path d="M20.927 11.624a1 1 0 0 1-.22 1.083l-6 6a1 1 0 0 1-1.414-1.414L17.586 13H4a1 1 0 0 1 0-2h16a1 1 0 0 1 .921.61zm-7.634-4.917a1 1 0 1 1 1.414-1.414l3.035 3.035a1 1 0 1 1-1.414 1.414l-3.035-3.035z" />
+        </svg>
+      </span>
       <span class="sr-only">Next</span>
     </a>
   {{/ carousel.hasControls }}

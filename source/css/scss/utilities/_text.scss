@@ -51,7 +51,7 @@ a {
 a.text-light,
 a.text-white {
   border-bottom: $link-border-width solid $white !important;
-  &:hover {
+  @include hover-focus {
     color: $white !important;
     border-bottom: $link-border-width solid $white !important;
     background-color: transparent;
@@ -59,7 +59,7 @@ a.text-white {
 }
 a.text-muted {
   border-bottom: none;
-  &:hover {
+  @include hover-focus {
     color: $gray-500 !important;
     border-bottom: none;
     background-color: transparent;

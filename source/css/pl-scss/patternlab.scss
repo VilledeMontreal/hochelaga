@@ -296,12 +296,26 @@ $pl-size-box-wrapper-padding: 1rem;
 	}
 	&.icon-utility {
 		margin: 0.25rem;
-		 svg {
-			 fill: $gray-500;
-			 margin-right: 12px;
-			 width: 24px;
-			 height: 24px;
-		 }
+    a {
+      border: none;
+      background-color: transparent;
+      cursor: pointer;
+
+      &:hover {
+        border: none;
+        background-color: transparent;
+
+        svg {
+          fill: $neutral-primary;
+        }
+      }
+    }
+		svg {
+			fill: $gray-500;
+			margin-right: 12px;
+			width: 24px;
+			height: 24px;
+		}
 	}
     .ic-name {
       color: $black;
@@ -310,9 +324,19 @@ $pl-size-box-wrapper-padding: 1rem;
       line-height: 1.1;
       padding-top: 10px;
       padding-bottom: 10px;
+
       &:hover {
         color: $gray-900;
       }
+    }
+  }
+}
+//modal icon
+#exampleModalIcon {
+  .modal-body {
+    p {
+      font-size: $font-size-sm;
+      line-height: $line-height-sm;
     }
   }
 }
@@ -371,6 +395,9 @@ $pl-size-box-wrapper-padding: 1rem;
             &:before {
               content: none;
             }
+          }
+          &[data-header="Variable"] {
+            display: block;
           }
 
           @include media-breakpoint-up(md) {

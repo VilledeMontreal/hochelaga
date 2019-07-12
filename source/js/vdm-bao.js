@@ -1,5 +1,19 @@
 (function ($) {
 
+   
+  // ******************************
+  //Icon modal
+
+  var $linkModalIcon = $("a#linkModalIcon");
+
+  $linkModalIcon.on( "click", function() {
+    var title = $(this).attr( "class" ).toString();
+    $.getJSON( "../../js/icons-utility.json", function( donnees ) {
+      $("#exampleModalIcon #exampleModalIconLabel").text(title);
+      $("#exampleModalIcon .modal-body .select-all").text(donnees[title].data);
+    });
+  });
+
 
   // ******************************
   // Begin side menu push
@@ -366,6 +380,7 @@
     });
   };
 
+
  
 
   /*
@@ -445,14 +460,13 @@
 
   $('.collapse-content').on('show.bs.collapse', function () {
     $(this).parent().find("button").text('Voir moins');
- });
+  });
 
- $('.collapse-content').on('hide.bs.collapse', function () {
+  $('.collapse-content').on('hide.bs.collapse', function () {
     $(this).parent().find("button").text('Voir plus');
- });
+  });
+
 
 });
-
-
 
 })(jQuery);

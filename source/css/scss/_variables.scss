@@ -34,8 +34,8 @@ $black:             #000000;
 $gray-900:          $neutral-primary;
 $gray-800:          $neutral-primary; // gradient mixin, table dark
 $gray-700:          $neutral-secondary;
-$gray-500:          $neutral-tertiary;
 $gray-600:          $neutral-tertiary; // disabled states
+$gray-500:          $neutral-tertiary;
 $gray-400:          $neutral-stroke;
 $gray-300:          $neutral-underground-2;
 $gray-200:          $neutral-underground-1;
@@ -56,7 +56,7 @@ $positive-light:			#e7f6f0;
 $green:   					    $positive;
 $success:    				    $positive;
 
-$warning-dark:				#846a02;
+$warning-dark:				#6C4600;
 $warning:					    #fecc03;
 $warning-light:				#fefae6;
 $yellow:  					    $warning;
@@ -118,6 +118,7 @@ $dialog-colors: (
 //
 // Quickly modify global styling by enabling or disabling optional features.
 $enable-validation-icons:                     false;
+$enable-shadows:                              true;
 
 
 // Body
@@ -559,7 +560,7 @@ $pagination-padding-y-sm:           .45rem;
 $pagination-padding-x-sm:           .6rem;
 $pagination-padding-y-lg:           .75rem;
 $pagination-padding-x-lg:           1.5625rem;
-$pagination-line-height:            1.25;
+$pagination-line-height:            1;
 
 $pagination-icon-padding:           .785rem;
 $pagination-icon-padding-sm:        .5rem;
@@ -644,8 +645,8 @@ $modal-transition:                  transform 300ms ease-out;
 //
 // Define alert colors, border radius, and padding.
 
-$alert-padding-y:                   2rem;
-$alert-padding-x:                   2rem;
+$alert-padding-y:                   1rem;
+$alert-padding-x:                   1rem;
 $alert-margin-bottom:               1rem;
 $alert-border-radius:               0;
 $alert-link-font-weight:            $font-weight-bold;
@@ -715,6 +716,24 @@ $breadcrumb-active-color:           $gray-700;
 $breadcrumb-divider:                quote("/");
 
 $breadcrumb-border-radius:          0;
+
+
+// Carousel
+$carousel-control-opacity:           1;
+$carousel-control-hover-opacity:     .6;
+$carousel-caption-width:             100%;
+$carousel-caption-color:             $neutral-primary !default;
+
+
+// Popover
+$popover-font-size:                 $font-size-sm !default;
+$popover-bg:                        $white !default;
+$popover-border-color:              $neutral-underground-1;
+$popover-box-shadow:                0 1px 4px 0 rgba(0,0,0,0.10);
+
+$popover-header-padding-y:          0;
+$popover-header-padding-x:          0;
+
 
 
 // Slide Menus

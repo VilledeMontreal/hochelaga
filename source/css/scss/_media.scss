@@ -66,3 +66,116 @@
   padding: 0;
   margin: 0;
 }
+
+// Logos 
+svg {
+  .letter {
+    //fill:yellow;
+    fill: $brand-black;
+  }
+  .rosace {
+    fill: $brand;   
+  }
+  .white {
+    fill: #fff;
+  }
+  // Ahuntsic
+  .ahc-green-dark {
+    fill: #7ca43f;
+  }
+  .ahc-green-light {
+    fill: #abc379;
+  }
+  .ahc-blue {
+    fill: #0467a7;
+  }
+  //Anjou
+  .anj-red {
+    fill: #f14729;
+  }
+  .anj-blue {
+    fill: #244ba6;
+  }
+  .anj-gray-light {
+    fill: #bdbcbc;
+  }
+  .anj-yellow {
+    fill: #fbc13d;
+  }
+  .anj-green-dark {
+    fill: #004039;
+  }
+  //CDN
+  .cdn-orange {
+    fill: #D7872A;
+  }
+  .cdn-vert-light {
+    fill: #809A67;
+  }
+  .cdn-vert {
+    fill: #426A2F;
+  }
+  //Ile bizard
+  .ibi-yellow {
+    fill: #fab81f;
+  }
+  .ibi-green {
+    fill: #6ea31b;
+  }
+  .ibi-blue {
+    fill: #21518d;
+  }
+  //Mercier
+  .mhm-blue-light {
+    fill: #6F8F9D;
+  }
+  #mhm-gradient {
+      --color-stop-1: #F0A558;
+      --color-stop-2: #943036;
+  }
+  //Pierrefond
+  .pir-blue {
+    fill: #05347a;
+  }
+  .pir-yellow {
+    fill: #fdb813;
+  }
+  //Rivière-des-prairies
+  .rdp-blue {
+    fill: #3a69bc;
+  }
+  .rdp-blue-light {
+    fill: #3e89d0;
+  }
+  .rdp-yellow {
+    fill: #e39314;
+  }
+  .rdp-green {
+    fill: #4e9545;
+  }
+  //verdun
+  .ver-brown {
+    fill: #a4965f;
+  }
+  .ver-green {
+    fill: #009f96;
+  }
+  .ver-blue {
+    fill: #3067bb;
+  }
+  &.reverse {
+    .letter{
+      fill: $white;
+    } 
+    .rosace {
+      fill: $brand;
+    }
+  }
+  &.black {
+    .letter, 
+    .rosace,
+    path {
+      fill:  $brand-black;
+    }
+  }
+}

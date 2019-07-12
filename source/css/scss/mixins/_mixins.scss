@@ -8,6 +8,10 @@
     a { 
       color: $color !important;
       border-bottom: $link-border-width solid $color;
+      @include hover-focus {
+        background-color: $color-lighten;
+        border-bottom: $link-border-width solid $color;
+      }
     }
   }
   a#{$parent}{
@@ -71,22 +75,6 @@
   }
 }
 
-
-
-// Add background variant to .header-banner.
-@mixin banner-variant($bg) {
-  color: color-yiq($bg);
-  background-color: $bg;
-
-  a {
-    color: color-yiq($bg);
-    box-shadow: inset 0 -1px color-yiq($bg);
-    &:active,
-    &:hover {
-      color: color-yiq($bg);
-    }
-  }
-}
 
 // Add color variant to .progress-bar.
 @mixin progress-variant($bg) {

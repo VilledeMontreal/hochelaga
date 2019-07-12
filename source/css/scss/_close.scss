@@ -1,0 +1,19 @@
+.close {
+  opacity: 1;
+  &:not(:disabled):not(.disabled) {
+    @include hover-focus {
+      opacity: .75;
+    }
+  }
+}
+
+// stylelint-disable-next-line selector-no-qualifying-type
+button.close {
+  opacity: 1;
+
+  @include hover-focus {
+    opacity: 0.5;
+  }
+
+}
+

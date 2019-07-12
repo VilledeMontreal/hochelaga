@@ -1,22 +1,42 @@
 .carousel-control-prev, 
 .carousel-control-next {
-  @include hover-focus {
-    background: transparent;
-    border:none;
-  }
+  	opacity: 1;
+  	border:none;
+    margin-bottom: 40px;
+
+  	@include hover-focus {
+    	background: transparent;
+    	border:none;
+    	opacity: 0.6;
+  	}
 }
 
 .carousel-control-prev-icon, 
 .carousel-control-next-icon {
-    width: 40px;
-    height: 40px;
+    width: 48px;
+    height: 48px;
+	  background-color: $white;
+    background-image: none;
+    border-radius: 48px;
+
+   	svg {
+   		margin-top: 12px;
+   		fill: $primary;
+   	}
 }
 
-.carousel-control-prev-icon {
-    background-image: url($icon-utility-chevron-left);
-}
+.carousel-caption {
+  bottom: 0px;
+	text-align: left;
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
+  line-height: $line-height-sm;
+  top: 0px;
+  height: 40px;
+  position: relative;
 
-.carousel-control-next-icon {
-    background-image: url($icon-utility-chevron-right);
+  p {
+    font-size: $font-size-sm;
+    color: $neutral-secondary;
+  }
 }
-

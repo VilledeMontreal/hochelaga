@@ -1,3 +1,10 @@
+
+// Import variables for icons svg in css
+@import "icons-utility";
+@import "icons-editorial";
+
+
+
 //style for utility icons
 
 // WORK IN PROGRESS
@@ -59,6 +66,17 @@
 @each $color, $value in $theme-colors {
   .icon-#{$color} {
     fill:$value;
+  }
+}
+
+@each $label, $map in $dialog-colors {
+  $color-dark: map-get($map, dark);
+  $color-light: map-get($map, light);
+  .icon-#{$label}-dark {
+    fill: $color-dark;
+  }
+  .icon-#{$label}-light {
+    fill: $color-light;
   }
 }
 

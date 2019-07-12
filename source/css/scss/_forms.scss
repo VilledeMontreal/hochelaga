@@ -298,11 +298,12 @@ legend,
 
 // Checkboxes
 //
+
 .custom-checkbox {
   // We need to grow the checkbox a bit cuz it's too thin...
   .custom-control-input:checked ~ .custom-control-label {
     &::after {
-      background-size: $custom-checkbox-indicator-icon-checked-bg-size;
+      //background-size: $custom-checkbox-indicator-icon-checked-bg-size;
     }
   }
 }
@@ -314,7 +315,7 @@ legend,
   // We need to grow the checkbox a bit cuz it's too thin...
   .custom-control-input:checked ~ .custom-control-label {
     &::after {
-      background-size: $custom-radio-indicator-icon-checked-bg-size;
+      //background-size: $custom-radio-indicator-icon-checked-bg-size;
     }
   }
 }
@@ -546,32 +547,19 @@ legend,
 
 //
 // Feedback form
-// TODO: Normalisation
 .feedback-form-container {
-  background: $white;
-  box-shadow: $card-box-shadow;
   margin-top: 4rem;
   margin-bottom: 4rem;
   padding: 2rem;
-  display: flex;
-  flex-direction: column;
+  display: block;
+  box-shadow: none;
 
   .feedback-form-header {
-    display: flex;
-    justify-content: center;
-    align-items: center;
     margin-bottom: 1.5rem;
-
+    display: block;
     .h5 {
       display: block;
       margin-bottom: 0;
-    }
-  
-    // Icon
-    .vdm {
-      color: $primary;
-      @include font-size(2.5rem);
-      margin-right: .5rem;
     }
   }
 
