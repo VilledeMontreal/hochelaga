@@ -603,7 +603,6 @@ $card-box-shadow:                   0 1px 7px 0 rgba(0,0,0,0.1);
 
 $badge-padding-y:                   .25em;
 $badge-padding-x:                   .4em;
-
 $badge-pill-padding-x:              .6em;
 
 
@@ -611,17 +610,14 @@ $badge-pill-padding-x:              .6em;
 
 // Padding applied to the modal body
 $modal-inner-padding:               1rem;
-
 $modal-dialog-margin:               .5rem;
 $modal-dialog-margin-y-sm-up:       1.75rem;
-
 $modal-title-line-height:           $line-height-sm;
 
 $modal-content-bg:                  $white;
 $modal-content-border-color:        rgba($black, .2);
 $modal-content-border-width:        0;
-$modal-content-border-radius:       0;
-$modal-content-box-shadow-xs:       0 .25rem .5rem rgba($black, .5);
+$modal-content-box-shadow-xs:       0 1px 4px 0 rgba(0,0,0,0.10);
 $modal-content-box-shadow-sm-up:    0 .5rem 1rem rgba($black, .5);
 
 // must be the same as $menu backdrop-bg and opacity
@@ -668,7 +664,7 @@ $alert-dark-color-level:            5;
 
 $progress-circle-border-width:          5px;
 $progress-circle-border-color-default:  $gray-300;
-$progress-circle-border-color-fill:     $gray-700;
+$progress-circle-border-color-fill:     $success;
 $progress-circle-size:                  100px;
 $progress-circle-steps:                 100; //this needs to be even.
 $progress-circle-animation-timing:      .5s;
@@ -730,11 +726,8 @@ $popover-font-size:                 $font-size-sm !default;
 $popover-bg:                        $white !default;
 $popover-border-color:              $neutral-underground-1;
 $popover-box-shadow:                0 1px 4px 0 rgba(0,0,0,0.10);
-
 $popover-header-padding-y:          0;
 $popover-header-padding-x:          0;
-
-
 
 // Slide Menus
 $slide-menu-width:                440px;
