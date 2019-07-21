@@ -6,12 +6,12 @@
 </div>
 
 <h4 class="pl-pattern-subtitle">Colors</h4>
-<div class="pl-button">
-  {{> components-button(buttonClass: "btn-primary", buttonText: "Primary button")}}
-  {{> components-button(buttonClass: "btn-secondary", buttonText: "Secondary button")}}
-  {{> components-button(buttonClass: "btn-promo", buttonText: "Promo button")}}
-  {{> components-button(buttonClass: "btn-secondary-reverse", buttonText: "Secondary-reverse button")}}
-  {{> components-button(buttonClass: "btn-link", buttonText: "Tertiary button")}}
+<div class="pl-button d-flex">
+  <div class="p-1 mb-0">{{> components-button(buttonClass: "btn-primary", buttonText: "Primary button")}}</div>
+  <div class="p-1 mb-0">{{> components-button(buttonClass: "btn-promo", buttonText: "Promo button")}}</div>
+  <div class="p-1 mb-0">{{> components-button(buttonClass: "btn-secondary", buttonText: "Secondary button")}}</div>
+  <div class="p-1 mb-0 bg-gray-900 ">{{> components-button(buttonClass: "btn-secondary-reverse", buttonText: "Secondary-reverse button")}}</div>
+  <div class="p-1 mb-0">{{> components-button(buttonClass: "btn-link", buttonText: "Tertiary button")}}</div>
 </div>
 
 <h4 class="pl-pattern-subtitle">Shapes</h4>

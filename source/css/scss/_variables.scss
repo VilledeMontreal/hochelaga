@@ -118,7 +118,7 @@ $dialog-colors: (
 //
 // Quickly modify global styling by enabling or disabling optional features.
 $enable-validation-icons:                     false;
-$enable-shadows:                              true;
+$enable-shadows:                              false;
 
 
 // Body
@@ -554,25 +554,26 @@ $dropdown-header-color:             $gray-600;
 
 // Pagination
 
-$pagination-padding-y:              .625rem;
-$pagination-padding-x:              1.125rem;
-$pagination-padding-y-sm:           .45rem;
-$pagination-padding-x-sm:           .6rem;
-$pagination-padding-y-lg:           .75rem;
-$pagination-padding-x-lg:           1.5625rem;
-$pagination-line-height:            1;
+$pagination-padding-y:              0.625rem;
+$pagination-padding-x:              1.25rem;
+$pagination-padding-y-sm:           .5rem;
+$pagination-padding-x-sm:           1rem;
+$pagination-padding-y-lg:           1rem;
+$pagination-padding-x-lg:           2rem;
 
-$pagination-icon-padding:           .785rem;
-$pagination-icon-padding-sm:        .5rem;
-$pagination-icon-padding-lg:        1.0625rem;
+$pagination-icon-padding:           0.75rem;
+$pagination-icon-padding-sm:        0.5rem;
+$pagination-icon-padding-lg:        1.15rem;
 
-$pagination-color:                  $gray-600;
+$pagination-line-height:            1.125rem;
+
+$pagination-color:                  $body-color;
 $pagination-bg:                     $white;
 $pagination-border-width:           1px;
 $pagination-border-color:           $gray-400;
 
 $pagination-hover-color:            $primary;
-$pagination-hover-bg:               $gray-100;
+$pagination-hover-bg:               $highlight-light;
 $pagination-hover-border-color:     $gray-400;
 
 $pagination-active-color:           $white;
@@ -601,9 +602,9 @@ $card-box-shadow:                   0 1px 7px 0 rgba(0,0,0,0.1);
 
 // Badges
 
-$badge-padding-y:                   .66666667em;
-$badge-padding-x:                   .66666667em;
-$badge-pill-padding-x:              .66666667em;
+$badge-padding-y:                   ($spacer / 2);
+$badge-padding-x:                   ($spacer / 2);
+$badge-pill-padding-x:              $spacer;
 
 
 // Modals
@@ -620,7 +621,7 @@ $modal-content-border-width:        0;
 $modal-content-box-shadow-xs:       0 1px 4px 0 rgba(0,0,0,0.10);
 $modal-content-box-shadow-sm-up:    0 .5rem 1rem rgba($black, .5);
 
-// must be the same as $menu backdrop-bg and opacity
+
 $modal-backdrop-bg:                 $backdrop-bg;
 $modal-backdrop-opacity:            $backdrop-opacity;
 $modal-header-border-color:         $gray-200;
