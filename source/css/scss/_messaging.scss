@@ -24,9 +24,10 @@
 
   .alert-heading {
     @include font-size($h5-font-size);
-    line-height: 1.5;
     color: $neutral-primary;
-    margin-bottom: 1rem;
+    font-weight: $font-weight-bold;
+    line-height: 1.5;
+    margin-bottom: .5rem;
   }
 
   //add this class to .alert container to have an svg icon on the left
@@ -40,6 +41,11 @@
     height: 100%;
     margin-right: 1rem;
   }
+
+  .alert-icon-container svg,
+    .close svg {      
+      fill: $neutral-tertiary;
+    }
 
 }
 
@@ -72,7 +78,8 @@
       color: $color-dark;
     }
 
-    .alert-icon-container svg {      
+    .alert-icon-container svg,
+    .close svg {      
       fill: $color-dark;
     }
 

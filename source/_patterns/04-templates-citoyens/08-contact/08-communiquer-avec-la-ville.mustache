@@ -10,10 +10,9 @@
       <div class="row">
         <div class="col-12 col-lg-7 col-xl-8">
           <p class="lead">Inscrivez dans ce formulaire vos commentaires, questions, requêtes ou plaintes concernant les activités et les services de la Ville et de ses arrondissements.</p>
-          <div class="alert alert-warning alert-icon mb-6" role="alert">
-            <span class="vdm vdm-030-attention" aria-hidden="true"></span>
-            <div>Pour les urgences (police, pompiers et ambulances), composez le 911.</div>
-          </div>
+
+          {{> components-alert }}
+          
           <form id="form19" name="form19" class="wufoo" accept-charset="UTF-8" method="POST" action="https://vdmtl.wufoo.com/forms/z1vh95sz0g1mp6f/#public" novalidate="novalidate">
             <p>Les champs marqués d'un (<span class="text-danger">*</span>) sont obligatoires</p>
             <div class="row">
@@ -98,7 +97,7 @@
   </section>
 
   {{# hasFeedbackForm}}
-  {{> patterns-feedback-form}}
+  {{> components-feedback-form}}
   {{/ hasFeedbackForm }}
 </main>
 

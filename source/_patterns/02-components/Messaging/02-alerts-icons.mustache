@@ -1,79 +1,49 @@
-<div class="alert alert-with-icon" role="alert">
+{{> components-alert(
+    alertClass: "alert-with-icon",
+    alertTitle: "Alert with icon",
+    alertText: "This is an alert with an icon and  <a href=\"#\" class=\"alert-link\">an example link</a>. Give it a click if you like.",
+    alertIcon: true,
+    alertIcon.title: "Icons/24px/Generic",
+    alertIcon.path: "M20.124 4.501l-1.562 1.25a2 2 0 1 0 0 2.499l1.562 1.249a4 4 0 1 1 0-4.998zM8 9h3v2H3V9h3V5H3V3h8v2H8v4zm-1 4a4 4 0 1 1 0 8 4 4 0 0 1 0-8zm0 2a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm12 6v-4a2 2 0 1 0-4 0v4h-2v-8h2v1l.293-.293A2.414 2.414 0 0 1 17 13a4 4 0 0 1 4 4v4h-2z"
+  )
+}}
 
-  <div class="alert-icon-container">
-    <svg width="24" height="24" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-      <title>Icons/24px/Check-Circle</title>
-      <path d="M21.542 17.477a1 1 0 0 1-1.734-.997A8.953 8.953 0 0 0 21 12a9 9 0 1 0-9 9 8.953 8.953 0 0 0 4.484-1.195 1 1 0 0 1 .998 1.733A10.953 10.953 0 0 1 12 23C5.925 23 1 18.075 1 12S5.925 1 12 1s11 4.925 11 11a10.96 10.96 0 0 1-1.458 5.477zm-6.25-8.184a1 1 0 0 1 1.415 1.414l-5 5a1 1 0 0 1-1.414 0l-2-2a1 1 0 0 1 1.414-1.414L11 13.586l4.293-4.293z" />
-    </svg>
-  </div>
+{{> components-alert(
+    alertClass: "alert-success alert-with-icon",
+    alertTitle: "Alert with icon",
+    alertText: "This is an alert with an icon and  <a href=\"#\" class=\"alert-link\">an example link</a>. Give it a click if you like.",
+    alertIcon: true,
+    alertIcon.title: "Icons/24px/Check-Circle",
+    alertIcon.path: "M21.542 17.477a1 1 0 0 1-1.734-.997A8.953 8.953 0 0 0 21 12a9 9 0 1 0-9 9 8.953 8.953 0 0 0 4.484-1.195 1 1 0 0 1 .998 1.733A10.953 10.953 0 0 1 12 23C5.925 23 1 18.075 1 12S5.925 1 12 1s11 4.925 11 11c0 1.948-.508 3.824-1.458 5.477zm-6.25-8.184a1 1 0 0 1 1.415 1.414l-5 5a1 1 0 0 1-1.414 0l-2-2a1 1 0 0 1 1.414-1.414L11 13.586l4.293-4.293z"
+  )
+}}
 
-  <div class="alert-content">
-    <div class="alert-heading bold">Alert with icon</div>
-    This is an alert with an icon and  <a href="#" class="alert-link">an example link</a>. Give it a click if you like. Etiam non lacus nisi. Aliquam dignissim arcu at metus blandit pulvinar. Aenean ultrices finibus elit, non suscipit eros vestibulum at. Aliquam porta dui sem, semper tempus velit iaculis sit amet. Mauris convallis justo non semper sollicitudin. Etiam quis vehicula ante. 
-  </div>
+{{> components-alert(
+    alertClass: "alert-danger alert-with-icon",
+    alertTitle: "Alert with icon",
+    alertText: "This is an alert with an icon and  <a href=\"#\" class=\"alert-link\">an example link</a>. Give it a click if you like.",
+    alertIcon: true,
+    alertIcon.title: "Icons/24px/Check-Circle",
+    alertIcon.path: "M21.542 17.477a1 1 0 0 1-1.734-.997A8.953 8.953 0 0 0 21 12a9 9 0 1 0-9 9 8.953 8.953 0 0 0 4.484-1.195 1 1 0 0 1 .998 1.733A10.953 10.953 0 0 1 12 23C5.925 23 1 18.075 1 12S5.925 1 12 1s11 4.925 11 11c0 1.948-.508 3.824-1.458 5.477zm-6.25-8.184a1 1 0 0 1 1.415 1.414l-5 5a1 1 0 0 1-1.414 0l-2-2a1 1 0 0 1 1.414-1.414L11 13.586l4.293-4.293z"
+  )
+}}
 
-</div>
+{{> components-alert(
+    alertClass: "alert-warning alert-with-icon",
+    alertTitle: "Alert with icon",
+    alertText: "This is an alert with an icon and  <a href=\"#\" class=\"alert-link\">an example link</a>. Give it a click if you like.",
+    alertIcon: true,
+    alertIcon.title: "Icons/24px/Check-Circle",
+    alertIcon.path: "M21.542 17.477a1 1 0 0 1-1.734-.997A8.953 8.953 0 0 0 21 12a9 9 0 1 0-9 9 8.953 8.953 0 0 0 4.484-1.195 1 1 0 0 1 .998 1.733A10.953 10.953 0 0 1 12 23C5.925 23 1 18.075 1 12S5.925 1 12 1s11 4.925 11 11c0 1.948-.508 3.824-1.458 5.477zm-6.25-8.184a1 1 0 0 1 1.415 1.414l-5 5a1 1 0 0 1-1.414 0l-2-2a1 1 0 0 1 1.414-1.414L11 13.586l4.293-4.293z"
+  )
+}}
 
-<div class="alert alert-with-icon alert-success" role="alert">
-
-  <div class="alert-icon-container">
-    <svg width="24" height="24" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-      <title>Icons/24px/Check-Circle</title>
-      <path d="M21.542 17.477a1 1 0 0 1-1.734-.997A8.953 8.953 0 0 0 21 12a9 9 0 1 0-9 9 8.953 8.953 0 0 0 4.484-1.195 1 1 0 0 1 .998 1.733A10.953 10.953 0 0 1 12 23C5.925 23 1 18.075 1 12S5.925 1 12 1s11 4.925 11 11a10.96 10.96 0 0 1-1.458 5.477zm-6.25-8.184a1 1 0 0 1 1.415 1.414l-5 5a1 1 0 0 1-1.414 0l-2-2a1 1 0 0 1 1.414-1.414L11 13.586l4.293-4.293z" />
-    </svg>
-  </div>
-
-  <div class="alert-content">
-    <div class="alert-heading bold">Alert with icon</div>
-    This is an alert with an icon and  <a href="#" class="alert-link">an example link</a>. Aliquam dignissim arcu at metus blandit pulvinar. Maecenas non ante ut quam malesuada posuere in congue nisi. Donec id lectus fringilla, pharetra elit sed, efficitur erat. Mauris eu varius ante.
-  </div>
-
-</div>
-
-<div class="alert alert-with-icon alert-danger" role="alert">
-
-  <div class="alert-icon-container">
-    <svg width="24" height="24" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-      <title>Icons/24px/Check-Circle</title>
-      <path d="M21.542 17.477a1 1 0 0 1-1.734-.997A8.953 8.953 0 0 0 21 12a9 9 0 1 0-9 9 8.953 8.953 0 0 0 4.484-1.195 1 1 0 0 1 .998 1.733A10.953 10.953 0 0 1 12 23C5.925 23 1 18.075 1 12S5.925 1 12 1s11 4.925 11 11a10.96 10.96 0 0 1-1.458 5.477zm-6.25-8.184a1 1 0 0 1 1.415 1.414l-5 5a1 1 0 0 1-1.414 0l-2-2a1 1 0 0 1 1.414-1.414L11 13.586l4.293-4.293z" />
-    </svg>
-  </div>
-
-  <div class="alert-content">
-    <div class="alert-heading bold">Alert with icon</div>
-    This is an alert with an icon and  <a href="#" class="alert-link">an example link</a>. Give it a click if you like. Etiam non lacus nisi. Aliquam dignissim arcu at metus blandit pulvinar. Aenean ultrices finibus elit, non suscipit eros vestibulum at. Aliquam porta dui sem, semper tempus velit iaculis sit amet. Mauris convallis justo non semper sollicitudin. Etiam quis vehicula ante. 
-  </div>
-
-</div>
-
-<div class="alert alert-with-icon alert-warning" role="alert">
-
-  <div class="alert-icon-container">
-    <svg width="24" height="24" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-      <title>Icons/24px/Check-Circle</title>
-      <path d="M21.542 17.477a1 1 0 0 1-1.734-.997A8.953 8.953 0 0 0 21 12a9 9 0 1 0-9 9 8.953 8.953 0 0 0 4.484-1.195 1 1 0 0 1 .998 1.733A10.953 10.953 0 0 1 12 23C5.925 23 1 18.075 1 12S5.925 1 12 1s11 4.925 11 11a10.96 10.96 0 0 1-1.458 5.477zm-6.25-8.184a1 1 0 0 1 1.415 1.414l-5 5a1 1 0 0 1-1.414 0l-2-2a1 1 0 0 1 1.414-1.414L11 13.586l4.293-4.293z" />
-    </svg>
-  </div>
-
-  <div class="alert-content">
-    <div class="alert-heading bold">Alert with icon</div>
-    This is an alert with an icon and  <a href="#" class="alert-link">an example link</a>. Aliquam dignissim arcu at metus blandit pulvinar. Maecenas non ante ut quam malesuada posuere in congue nisi. Donec id lectus fringilla, pharetra elit sed, efficitur erat. Mauris eu varius ante.
-  </div>
-
-</div>
-
-<div class="alert alert-with-icon alert-info" role="alert">
-
-  <div class="alert-icon-container">
-    <svg width="24" height="24" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-      <title>Icons/24px/Check-Circle</title>
-      <path d="M21.542 17.477a1 1 0 0 1-1.734-.997A8.953 8.953 0 0 0 21 12a9 9 0 1 0-9 9 8.953 8.953 0 0 0 4.484-1.195 1 1 0 0 1 .998 1.733A10.953 10.953 0 0 1 12 23C5.925 23 1 18.075 1 12S5.925 1 12 1s11 4.925 11 11a10.96 10.96 0 0 1-1.458 5.477zm-6.25-8.184a1 1 0 0 1 1.415 1.414l-5 5a1 1 0 0 1-1.414 0l-2-2a1 1 0 0 1 1.414-1.414L11 13.586l4.293-4.293z" />
-    </svg>
-  </div>
-
-  <div class="alert-content">
-    <div class="alert-heading bold">Alert with icon</div>
-    This is an alert with an icon and  <a href="#" class="alert-link">an example link</a>. Give it a click if you like. Etiam non lacus nisi. Aliquam dignissim arcu at metus blandit pulvinar. Aenean ultrices finibus elit, non suscipit eros vestibulum at. Aliquam porta dui sem, semper tempus velit iaculis sit amet. Mauris convallis justo non semper sollicitudin. Etiam quis vehicula ante. 
-  </div>
-  
-</div>
+{{> components-alert(
+    alertClass: "alert-info alert-with-icon",
+    alertTitle: "Alert with icon",
+    alertText: "This is an alert with an icon and  <a href=\"#\" class=\"alert-link\">an example link</a>. Give it a click if you like.",
+    alertIcon: true,
+    alertIcon.title: "Icons/24px/Info",
+    alertIcon.path: "M21.542 17.477a1 1 0 0 1-1.734-.997A8.953 8.953 0 0 0 21 12a9 9 0 1 0-9 9 8.953 8.953 0 0 0 4.484-1.195 1 1 0 0 1 .998 1.733A10.953 10.953 0 0 1 12 23C5.925 23 1 18.075 1 12S5.925 1 12 1s11 4.925 11 11c0 1.948-.508 3.824-1.458 5.477zM12 6a1 1 0 1 1 0 2 1 1 0 0 1 0-2zm-1 6h-1a1 1 0 0 1 0-2h2a1 1 0 0 1 1 1v6a1 1 0 0 1-2 0v-5z"
+  )
+}}

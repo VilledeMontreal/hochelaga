@@ -9,8 +9,8 @@
     </div>
     <div class="box-header-controls">
       <ul class="nav">
-        <li class="nav-item">{{> styles-button(buttonClass: "btn-secondary btn-sm", buttonText: "Imprimer") }}</li>
-        <li class="nav-item">{{> styles-button(buttonClass: "btn-primary btn-sm", buttonText: "Modifier") }}</li>
+        <li class="nav-item">{{> components-button(buttonClass: "btn-secondary btn-sm", buttonText: "Imprimer") }}</li>
+        <li class="nav-item">{{> components-button(buttonClass: "btn-primary btn-sm", buttonText: "Modifier") }}</li>
       </ul>
     </div>
   </div>
@@ -19,7 +19,7 @@
       {{# hasAlert}}
       <div class="col-12">
         <div class="alert-container">
-          {{> components-alerts }}
+          {{> components-alert }}
         </div>
       </div>
       {{/ hasAlert}}

@@ -97,7 +97,7 @@ fieldset:disabled a.btn {
 }
 .btn-link,
 .btn-tertiary {
-  @include button-variant($background: $white, $border: transparent, $color: $action, $hover-background: $highlight-light, $hover-border: $highlight-light, $hover-color: $action, $active-background: $highlight-light, $active-border: $highlight-light, $active-color: $action);
+  @include button-variant($background: transparent, $border: transparent, $color: $action, $hover-background: $highlight-light, $hover-border: $highlight-light, $hover-color: $action, $active-background: $highlight-light, $active-border: $highlight-light, $active-color: $action);
   &:focus,
   &.focus {
     // Avoid using mixin so we can pass custom focus shadow properly
@@ -192,81 +192,12 @@ input[type="button"] {
 
 // Button close
 
-// Slide menu close button
-.btn-close {
-  @include button-reset();
-  display: inline-flex;
-  align-items: center;
-  cursor: pointer;
-  color: $gray-600;
-  margin: 0;
-  padding: .5rem;
-  @include transition($btn-transition);
-  .vdm {
-    color: inherit;
-    @include font-size(1.5rem);
-  }
-  .button-label {
-    @include font-size($font-size-sm);
-    margin-left: 1rem;
-  }
-
-  &:focus {
-    box-shadow: none;
-  }
-
-  &:hover {
-    color: $action-lighter;
-  }
-
-  @include media-breakpoint-up(sm) {
-    .vdm {
-      @include font-size(2rem);
-    }
-  }
-
-  @include media-breakpoint-up(lg) {
-    .btn-label {
-      @include font-size($slide-menu-link-font-size);
-    }
-    .vdm {
-      @include font-size(2.5rem);
-    }
-  }
-}
-
 .btn-clear {
   @include button-reset();
   pointer-events: inherit;
   cursor: pointer;
 }
 
-.btn-quit {
-  @include button-reset();
-  pointer-events: inherit;
-  color: $headings-color;
-  cursor: pointer;
-  padding: 0;
-  .button-label {
-    margin-right: .5rem;
-  }
-  .vdm {
-    color: inherit;
-    @include font-size(2rem);
-    margin-left: 0;
-    margin-right: 0;
-  }
-
-  &:not(:disabled):not(.disabled) {
-    @include hover {
-      color: $action-lighter;
-    }
-  }
-  &.focus,
-  &:focus {
-    box-shadow: none;
-  }
-}
 
 .btn-close-search {
   @include button-reset();

@@ -16,7 +16,7 @@
         <span class="sr-only">Filtres sélectionnés : </span>
         <div class="badge-group badges-lg">
           {{> styles-badges}}
-          {{> styles-button(buttonClass: "btn-link btn-sm btn-reset",buttonText: "Tout effacer")}}
+          {{> components-button(buttonClass: "btn-link btn-sm",buttonText: "Tout effacer")}}
         </div>
       </span>
     </div>
@@ -98,7 +98,7 @@
   {{/ has-lead-text}}
 
   {{# hasFeedbackForm}}
-  {{> patterns-feedback-form}}
+  {{> components-feedback-form}}
   {{/ hasFeedbackForm }}
 </main>
 

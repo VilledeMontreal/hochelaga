@@ -187,8 +187,8 @@ $border-width:                1px;
 $border-color:                $gray-300;
 
 $border-radius:               .25rem;
-$border-radius-lg:            .3125rem;
-$border-radius-sm:            .2rem;
+$border-radius-lg:            .375rem;
+$border-radius-sm:            .125rem;
 
 $component-active-color:      $white;
 $component-active-bg:         $primary;
@@ -437,8 +437,8 @@ $input-border-width:                    1px;
 $input-box-shadow:                      none;
 
 $input-border-radius:                   $border-radius;
-$input-border-radius-lg:                $border-radius-lg;
-$input-border-radius-sm:                $border-radius-sm;
+$input-border-radius-lg:                $border-radius;
+$input-border-radius-sm:                $border-radius;
 
 $input-focus-bg:                        $input-bg;
 $input-focus-border-color:              $action;
@@ -457,7 +457,7 @@ $custom-control-label-disabled-color:           $gray-600;
 $custom-control-gutter:                         .625rem;
 $custom-control-spacer-y:                       1rem; // Custom VDM addon
 
-$custom-control-indicator-size:                 1.375rem;
+$custom-control-indicator-size:                 1.25rem;
 $custom-control-indicator-bg:                   $white;
 $custom-control-indicator-border-width:         $input-border-width;
 

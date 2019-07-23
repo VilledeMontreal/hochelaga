@@ -31,16 +31,21 @@
     }
   }
 
-  // All svg in navbar should be neutral-primary
-  .icon-dark {
-    fill: $neutral-primary;
+  // Separator
+  .separator {
+    &:after {
+      content: "";
+      border-right: 1px solid $neutral-stroke;
+      height: 1.5rem;
+      margin-left: 2rem;
+    }
   }
 
   // 768px and up
   @include media-breakpoint-up(md) {
     button + .dropdown,
     button + button {
-      margin-left: 2.5rem;
+      margin-left: 2rem;
     }
   }
 
@@ -249,7 +254,6 @@
 // Wizard header
 // Optimize and normalize - we can extend from banner and build more generic containers
 .wizard-header {
-  background-color: $highlight-strong;
   display: flex;
   justify-content: space-between;
   .hdr-container,
@@ -261,32 +265,12 @@
       align-items: center;
     }
   }
-  // .home-link removed from templates
-  // Will be deprecated
-  .home-link {
-    border: none;
-    flex-shrink: 0;
-    width: $header-icon-width;
-    height: $header-icon-height;
-    background-color: $black;
-    color: $white;
-    text-decoration: none;
-    .vdm {
-      @include font-size(3rem);
-      color: $white;
-    }
-  }
   .hdr-title {
     color: $headings-color;
     @include font-size($font-size-base);
-    line-height: $line-height-base;       // 1.75
+    line-height: $line-height-base;
     font-weight: $font-weight-bold;
-    padding: 1.5rem $grid-gutter-width;
-
-    @include media-breakpoint-up(md) {
-      @include font-size($font-size-lg);
-      line-height: $line-height-sm;       // 1.5
-    }
+    padding: 1.5rem 1rem;
   }
   .hdr-links {
     padding-right: 1.375rem;

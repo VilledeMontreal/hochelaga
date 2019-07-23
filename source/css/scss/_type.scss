@@ -247,9 +247,9 @@ a {
 // Blockquote
 //
 .blockquote {
-  color: $gray-900;
+  color: $neutral-primary;
   @include font-size($blockquote-font-size);
-  line-height: $line-height-base;
+  line-height: 1.6;
   font-weight: $font-weight-normal;
   margin-bottom: 2rem;
   padding-left: 2rem;
@@ -261,12 +261,12 @@ a {
 
   &:before {
     content: "";
-    background: $brand;
+    background: $neutral-stroke;
     position: absolute;
     left: 0;
     top: 0;
     height: 100%;
-    width: 4px;
+    width: 2px;
   }
 
   .blockquote-footer {
