@@ -20,6 +20,7 @@ var gulp                = require('gulp'),
     sourcemaps          = require('gulp-sourcemaps'),
     svgmin              = require('gulp-svgmin'),
     tildeImporter       = require('node-sass-tilde-importer'),
+    embedSvg            = require('gulp-embed-svg'),
     uglify              = require('gulp-uglify-es').default,
     gulpsvgtojsontoscss = require('gulp-svg-to-json-to-scss');
     config              = require('./build.config.json'),
@@ -445,7 +446,7 @@ gulp.task('icon-editorial', function() {
     }))
     .pipe(gulp.dest('source/images/icons/icon-editorial'))
     .pipe(gulpsvgtojsontoscss({
-      jsonFile: 'source/_data/icons-editorial.json',
+      jsonFile: 'source/js/icons-editorial.json',
       scssFile: 'source/css/scss/_icons-editorial.scss',
       basePath:"./source/images/icons/",
       noExt:true,
@@ -477,9 +478,14 @@ gulp.task('icon-utility', function() {
         pretty: true
       }
     }))
+    .pipe(embedSvg({
+      selectors: '.inline-svg', // only replace tags with the class inline-svg
+      root: './source/images/icons/',
+      createSpritesheet: true
+    }))
     .pipe(gulp.dest('source/images/icons/icon-utility'))
     .pipe(gulpsvgtojsontoscss({
-      jsonFile: 'source/_data/icons-utility.json',
+      jsonFile: 'source/js/icons-utility.json',
       scssFile: 'source/css/scss/_icons-utility.scss',
       basePath:"./source/images/icons/",
       noExt:true,
@@ -487,4 +493,5 @@ gulp.task('icon-utility', function() {
     }))
     .pipe(gulp.dest('./'));
 });
+
 

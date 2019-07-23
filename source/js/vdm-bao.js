@@ -8,7 +8,7 @@
 
   $linkModalIcon.on( "click", function() {
     var title = $(this).attr( "class" ).toString();
-    $.getJSON( "../../_data/icons-utility.json", function( donnees ) {
+    $.getJSON( "../../js/icons-utility.json", function( donnees ) {
       $("#exampleModalIcon #exampleModalIconLabel").text(title);
       $("#exampleModalIcon .modal-body .select-all").text(donnees[title].data);
     });
