@@ -423,6 +423,10 @@ gulp.task('distribute', ['clean-dist:before'], function () {
 //Editorial
 gulp.task('icon-editorial', function() {
   return gulp.src('source/images/icons-original/icon-editorial/*.svg')
+    .pipe(rename(function (path) {
+      path.basename = path.basename.replace(/icon_prefix_/, '');
+      return path;
+    }))
     .pipe(svgmin({
       plugins: [
         { cleanupIDs: { remove: true, minify: true } }, 
@@ -454,9 +458,9 @@ gulp.task('icon-editorial', function() {
 gulp.task('icon-utility', function() {
   return gulp.src('source/images/icons-original/icon-utility/*.svg')
     .pipe(rename(function (path) {
-          path.basename = path.basename.replace(/icon_prefix_/, '');
-          return path;
-      }))
+      path.basename = path.basename.replace(/icon_prefix_/, '');
+      return path;
+    }))
     .pipe(svgmin({
       plugins: [
         { cleanupIDs: { remove: true, minify: true } }, 
