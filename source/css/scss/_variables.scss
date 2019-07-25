@@ -674,20 +674,20 @@ $progress-circle-animation-timing:      .5s;
 // List group
 
 $list-group-bg:                     $white;
-$list-group-border-color:           $gray-500;
+$list-group-border-color:           $neutral-stroke;
 $list-group-border-width:           $border-width;
 $list-group-border-radius:          0;
 
 $list-group-item-padding-y:         1rem;
-$list-group-item-padding-x:         1.5rem;
+$list-group-item-padding-x:         1rem;
 
-$list-group-hover-bg:               $gray-100;
+$list-group-hover-bg:               $highlight-light;
 $list-group-active-color:           $headings-color;
 $list-group-active-bg:              $highlight-light;
-$list-group-active-border-color:    $list-group-border-color;
+$list-group-active-border-color:    transparent;
 
 $list-group-action-color:           $action;
-$list-group-action-hover-color:     $action-lighter;
+$list-group-action-hover-color:     $action;
 
 $list-group-action-active-color:    $action;
 $list-group-action-active-bg:       $highlight-light;

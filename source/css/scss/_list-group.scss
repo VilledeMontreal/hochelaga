@@ -8,13 +8,26 @@
 // list items. Includes an extra `.active` modifier class for selected items.
 
 .list-group-item-action {
+  font-weight: $font-weight-bold;
+
+  @include hover-focus {
+    border-bottom: none;
+    border-top: 1px solid transparent;
+    + .list-group-item-action {
+      border-top: 1px solid transparent;
+    }
+  }
 
   // Fix active state and class for list-group-item-action
   &:active,
   &.active {
     color: $list-group-action-active-color;
-    .list-group-item-title,
-    .vdm {
+    border-bottom: none;
+    border-top: 1px solid transparent;
+    + .list-group-item-action {
+      border-top: 1px solid transparent;
+    }
+    .list-group-item-title {
       color: $list-group-action-active-color;
     }
   }
@@ -25,35 +38,26 @@
 //
 // Use on `li`s or `div`s within the `.list-group` parent.
 .list-group-item {
-  border: $list-group-border-width solid $list-group-border-color;
-  // remove right and left border
-  border-right: 0;
-  border-left: 0;
-  display: flex;
   @include border-radius(0);
+  border: 0;
+  border-top: $list-group-border-width solid $list-group-border-color;
+  display: flex;
+  align-items: center;
+  line-height: $line-height-component;
+  margin-bottom: 0;
 
-  // remove border-top-radius
   &:first-child {
-    @include border-top-radius(0);
-  }
-
-  // remove border-bottom-radius
-  &:last-child {
-    @include border-bottom-radius(0);
+    border-top: $list-group-border-width solid transparent;
   }
 
   a {
     border-bottom: none;
     &:hover {
+      border-top: 1px solid transparent;
       .list-group-item-title {
         color: $action;
       }
     }
-  }
-
-  .vdm {
-    @include font-size(1.5rem);
-    padding-right: .5rem;
   }
 
   .list-group-item-title {
@@ -78,6 +82,51 @@
   margin-bottom: 2rem;
   padding-top: .7rem;
   padding-bottom: 0;
+}
+
+// Icons - Editorial and Utility
+//
+.list-group-icon-editorial {
+  a {
+    border-bottom: none;
+      // Hover state
+    @include hover-focus {
+      svg {
+        fill: $action-lighter;
+      }
+    }
+
+    &:active,
+    &.active {
+      svg {
+        fill: $action-lighter;
+      }
+    }
+  }
+  svg {
+    margin-right: 1rem;
+    height: 2.5rem;
+    width: 2.5rem;
+    fill: $neutral-tertiary;
+  }
+}
+
+.list-group-icon-utility {
+  a {
+    border-bottom: none;
+      // Hover state
+    @include hover-focus {
+      svg {
+        fill: currentColor;
+      }
+    }
+  }
+  svg {
+    margin-right: 1rem;
+    height: 1.5rem;
+    width: 1.5rem;
+    fill: currentColor;
+  }
 }
 
 

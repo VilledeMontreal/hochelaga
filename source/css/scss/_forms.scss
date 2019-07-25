@@ -548,24 +548,18 @@ legend,
 //
 // Feedback form
 .feedback-form-container {
-  margin-top: 4rem;
-  margin-bottom: 4rem;
   padding: 2rem;
   display: block;
   box-shadow: none;
+  margin-bottom: 4rem;
 
   .feedback-form-header {
-    margin-bottom: 1.5rem;
-    display: block;
-    .h5 {
+    h4 {
       display: block;
       margin-bottom: 0;
     }
   }
 
-  @include media-breakpoint-up(md) {
-    padding: 3rem 4rem;
-  }
 }
 
 .feedback-form {
@@ -581,11 +575,15 @@ legend,
       }
     }
   }
-  
+  .feedback-question {
+    h4 {
+      margin-bottom: 1.5rem;
+    }
+  }
   .feedback-question-label {
+    @include font-size($font-size-lg);
     color: $headings-color;
     display: block;
-    @include font-size($font-size-lg);
     line-height: $line-height-sm;
     margin-bottom: 1.5rem;
   }
@@ -597,12 +595,6 @@ legend,
 
   .notice {
     @include font-size($font-size-sm);
-  }
-
-  @include media-breakpoint-up(md) {
-    .feedback-question-label {
-      @include font-size($font-size-lg);
-    }
   }
 
 }
