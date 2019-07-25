@@ -1,26 +1,25 @@
-<div class="list-group {{ listGroupClass }}">
-	{{# listGroup }}
-  	<a class="list-group-item list-group-item-action {{ class }}" href="{{ url }}">
-    <div class="list-group-item-body">
-      <div class="list-group-max-width">
-        <span class="list-group-item-title">{{ title}}</span>
-        {{# infos }}
-          <div class="list-group-item-content {{infosClass}}">
-          {{# infos.infos-items }}
-            <span class="{{class}}">{{{ text }}}</span>
-          {{/ infos.infos-items }}
-          </div>
-        {{/ infos}}
+<div class="list-group list-group-teaser">
+  {{# listGroup}}
+  <a class="list-group-item list-group-item-action" href="{{ url }}">
+    <div class="row">
+      <div class="col-12 col-sm-4">
+        <div class="list-group-teaser-img" style="background-image: url('{{ media.src }}')">
+          <span class="sr-only">{{media.alt}}</span>
+        </div>
+      </div>
+      <div class="col-12 col-sm-8">
+        {{# category }}
+        <div class="list-group-item-category">{{ category }}</div>
+        {{/ category}}
+        <span class="list-group-item-title">{{ title }}</span>
+        {{# datePublication}}
+        <div class="list-group-item-publication-date">Mis à jour le <time datetime="{{ dateTimeFormat}}">{{{ dateTimeText }}}</time></div>
+        {{/ datePublication}}
+        {{# date}}
+        <div class="list-group-item-date"><time datetime="{{dateTimeFormat}}">{{{ dateTimeText }}}</time></div>
+        {{/ date}}
       </div>
     </div>
-    <div class="list-group-item-footer">
-    {{^ footer.icon-label }}
-    {{> styles-fonticon-item(icon-label: "063-fleche-droite")}}
-    {{/ footer.icon-label }}
-    {{# footer.icon-label }}
-      {{> styles-fonticon-item(icon-label: "117-lien-externe-lg")}}
-    {{/ footer.icon-label }}
-    </div>
-    </a>
-  {{/ listGroup }}
+  </a>
+  {{/ listGroup}}
 </div>
