@@ -162,6 +162,40 @@
     }
   }
 
+  &.navbar-dark {
+    background-color: $neutral-primary;
+    border-bottom: none;
+  
+    .navbar-button,
+    .navbar-button .button-label {
+      color: $white;
+    }
+  
+    .navbar-brand {
+      @include font-size($font-size-base);
+      line-height: $line-height-component;
+      font-weight: $font-weight-bold;
+      align-items: center;
+      svg {
+        width: 1.5rem;
+        height: 1.5rem;
+        margin-right: 1rem;
+      }
+    }
+  
+    @include media-breakpoint-up(lg) {
+      .navbar-brand {
+        @include font-size($font-size-lg);
+        line-height: 1.4;
+        svg {
+          width: 2rem;
+          height: 2rem;
+        }
+      }
+    }
+  
+  }
+
   // Dropdown-menu Mobile full width
   @include media-breakpoint-down(xs) {
     .dropdown-menu {
@@ -181,6 +215,8 @@
 
 }
 
+
+
 //
 // Navbar buttons styles
 .navbar-button {
@@ -192,6 +228,10 @@
   align-items: center;
   padding: 0;
   @include transition(color .15s ease-in-out);
+
+  svg {
+    fill: currentColor;
+  }
 
   .button-label {
     color: $neutral-primary;
