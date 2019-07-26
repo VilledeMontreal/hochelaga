@@ -31,3 +31,59 @@
     }
   }
 }
+
+.document-heading {
+  height: 120px;
+  position: relative;
+  width: 100%;
+  z-index: 0;
+
+  .document-heading-background {
+    background-color: $neutral-underground-1;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 100%;
+    overflow: hidden;
+    position: absolute;
+    width: 100%;
+    z-index: 0;
+  }
+
+  .document-heading-wrapper {
+    height: 100%;
+    margin: 0 auto;
+    position: relative;
+    z-index: 2;
+  }
+
+  .document-heading-content {
+    bottom: 0;
+    position: absolute;
+    background-color: $white;
+    height: 2rem;
+    width: calc(100% - 32px);
+  }
+
+  @include media-breakpoint-up(lg) {
+    height: 304px;
+
+    .document-heading-content {
+      height: 3.5rem;
+    }
+
+    &.document-heading-left-notch {
+      .document-heading-content {
+        left: 0;
+        &:before {
+          content: '';
+          background: $white;
+          width: 1000px;
+          height: 320px;
+          position: absolute;
+          left: -1000px;
+        }
+      }
+    }
+  }
+}

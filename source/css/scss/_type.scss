@@ -182,6 +182,39 @@ a {
   }
 }
 
+// Quick links
+.quick-links {
+  @include font-size($font-size-sm);
+  padding-bottom: 2rem;
+  .quick-links-label {
+    color: $gray-700;
+    display: inline-block;
+    font-weight: $font-weight-bold;
+    margin-right: .5rem;
+    margin-bottom: .5rem;
+  }
+  ul {
+    display: inline-block;
+    margin-bottom: 0;
+  }
+  .list-inline-item:not(:last-child) {
+    margin-right: .5rem;
+  }
+  a {
+    border-color: $headings-color;
+    color: $headings-color;
+    &:hover {
+      color: $headings-color;
+      border-color: transparent;
+    }
+  }
+}
+
+// Hub link
+.hub-link {
+  padding-bottom: 2rem;
+}
+
 // Add .icon class to display vertically centered icon and text
 .icon {
   display: inline-flex;
