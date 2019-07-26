@@ -85,7 +85,6 @@
       line-height: $line-height-component;
       max-width: 170px;
       text-align: left;
-      padding-right: .5rem;
 
       &.user-has-profil {
         @include font-size($font-size-xs);
@@ -100,23 +99,14 @@
     // remove carets
     &:after {
       content: none;
-      margin: 0;
-      -webkit-mask-size: cover;
-      mask-size: cover;
-      background-color: $neutral-tertiary;
-      width: 24px;
-      height: 24px;
     }
 
     // Add chevron only on large breakpoint and up
     @include media-breakpoint-up(md) {
       &::after {
         content: '';
-        -webkit-mask: url($icon-utility-chevron-down) no-repeat 50% 50%;
-        mask: url($icon-utility-chevron-down) no-repeat 50% 50%;
       }
     }
-
   }
 
   // Dropdown menu

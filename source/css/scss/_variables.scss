@@ -121,6 +121,12 @@ $enable-validation-icons:                     false;
 $enable-shadows:                              false;
 
 
+// Icons
+$icon-utility-size:     80px;
+$icon-utility-size-sm:  40px;
+$icon-utility-size:     24px;
+$icon-utility-size-sm:  16px;
+
 // Body
 //
 // Settings for the `<body>` element.
@@ -334,11 +340,6 @@ $table-dark-color:            $body-bg;
 
 $table-striped-order:         odd;
 
-
-// Icons fonts vdm class, imported from "@villemontreal/font-icon
-$vdm-icon-font-family : 'vdm';
-
-
 // Buttons + Forms
 //
 // Shared variables that are reassigned to `$input-` and `$btn-` specific variables.
@@ -525,9 +526,6 @@ $nav-tabs-active-border-width:        2px;
 
 
 // Navbar
-
-$header-icon-width:          60px;
-$header-icon-height:         $header-icon-width;
 
 
 // Dropdowns
