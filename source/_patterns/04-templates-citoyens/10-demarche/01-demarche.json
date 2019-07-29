@@ -1,0 +1,113 @@
+{
+  "documentHeadingWrapperClass": "document-heading-left-notch",
+  "has-left-notch": true,
+  "pageClasses": "layout-has-notch",
+  "has-hub-link": {
+    "url": "#",
+    "link-text": "Toutes les démarches"
+  },
+  "heading": "Titre de la démarche d'une longueur de 80 caractères maximum",
+  "has-badges": {
+    "badges": [
+      {
+        "badge": "Libellé",
+        "badgeClass": "badge-secondary",
+        "badge-sr-text": "",
+        "badgeUrl": "#"
+      },
+      {
+        "badge": "Libellé",
+        "badgeClass": "badge-secondary",
+        "badge-sr-text": "",
+        "badgeUrl": "#"
+      },
+      {
+        "badge": "Libellé",
+        "badgeClass": "badge-secondary",
+        "badge-sr-text": "",
+        "badgeUrl": "#"
+      }
+    ]
+  },
+  "publicationDate": {
+    "dateTimeText": "24 juillet 2018",
+    "dateTimeFormat": "2018-07-24"
+  },
+  "lead": "<p>Amorce - Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi condimentum sollicitudin erat, quis convallis risus. Nullam posuere odio ligula, hendrerit suscipit ligula laoreet. Curabitur eleifend nulla purus, ut pharet urna ef id. Cras lacinia nisi id  (recommandé 300 caractères maximum).</p>",
+  "cta-button": {
+    "buttonAsLink": true,
+    "buttonClass": "btn-primary btn-lg",
+    "buttonUrl": "#",
+    "buttonText": "Appel à l'action"
+  },
+  "hasSelecteurArrondissement": false,
+  "sidebarRight": true,
+  "sidebarClasses": false,
+  "sb-classes": "",
+  "sb-block-bon-savoir": {
+    "content": "<p>Lorem ipsum dolor sit amet, consectetur <a href=\"https://ville.montreal.qc.ca\">adipiscing elit</a>. Phasellus cursus mauris non orci malesuada aliquet.</p><p>Nunc tincidunt nisi fringilla consectetur pharetra. Duis sed pretium velit, ut placerat purus. Quisque volutpat facilisis nisl, ut scelerisque orci dapibus in.</p>"
+  },
+  "sb-block-tc-lies": {
+    "listGroupClass": "list-group-icon-editorial",
+    "listGroup": [
+      {
+        "listGroupIconEditorial": true,
+        "text": "Titre sur plusieurs lignes si nécessaire",
+        "class": false
+      },
+      {
+        "listGroupIconEditorial": true,
+        "text": "Dapibus ac facilisis in",
+        "class": false
+      },
+      {
+        "listGroupIconEditorial": true,
+        "text": "Morbi leo risus",
+        "class": false
+      }
+    ]
+  },
+  "sb-block-demarches": {
+    "listGroupClass": "list-group-icon-editorial",
+    "listGroup": [
+      {
+        "listGroupIconEditorial": true,
+        "text": "Titre sur plusieurs lignes si nécessaire",
+        "class": false
+      },
+      {
+        "listGroupIconEditorial": true,
+        "text": "Dapibus ac facilisis in",
+        "class": false
+      },
+      {
+        "listGroupIconEditorial": true,
+        "text": "Morbi leo risus",
+        "class": false
+      }
+    ]
+  },
+  "pieces-justificatives": true,
+  "collapsible-links": true,
+  "collapsibleClasses": "pt-4",
+  "collapsibleHowTo": {
+    "collapsibleItem": [
+      {
+        "title": "En ligne",
+        "content": "<p>Lorem ipsum dolor sit amet, <a href=\"https://beta.montreal.ca/moncompte\">mon compte</a> consectetur adipiscing elit. Praesent vitae turpis augue. Maecenas volutpat massa vel tellus congue, eget volutpat sem accumsan. Ut sit amet vulputate felis. Pellentesque volutpat erat enim, vel efficitur ipsum scelerisque id. Integer lacinia lectus ut erat interdum, eget convallis est dapibus.</p>",
+        "block-id": "howto-rdp-enligne",
+        "heading-id": "heading-howto-rdp-enligne",
+        "show": "true",
+        "icon": false,
+        "has-default-icon": true,
+        "has-links": true,
+        "has-mode-paiement": true,
+        "has-call-to-action": {
+          "cta-url": "#",
+          "cta-title": "Appel à l'action"
+        },
+        "badge": false
+      }
+    ]
+  }
+}

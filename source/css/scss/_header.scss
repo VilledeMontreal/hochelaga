@@ -1,7 +1,7 @@
 // Main navbar based on bootstrap navbar
 
 .navbar {
-  background-color: $white;
+  background-color: transparent;
   border-bottom: 1px solid $gray-400;
   padding: 1rem;
   a:not(.btn) {
@@ -17,6 +17,10 @@
   // Montreal logo is the navbar-brand
   .navbar-brand {
     padding: 0;
+    display: inline-flex;
+    @include hover-focus {
+      background-color: transparent;
+    }
     svg {
       height: 1.5rem;
       width: auto;
@@ -37,14 +41,6 @@
       content: "";
       border-right: 1px solid $neutral-stroke;
       height: 1.5rem;
-      margin-left: 2rem;
-    }
-  }
-
-  // 768px and up
-  @include media-breakpoint-up(md) {
-    button + .dropdown,
-    button + button {
       margin-left: 2rem;
     }
   }
@@ -86,25 +82,30 @@
     // Use elided-text helper class on field to add ellipsis on truncated strings
     .user-info {
       flex-direction: column;
-      line-height: 1.25;
+      line-height: $line-height-component;
       max-width: 170px;
       text-align: left;
-      padding-right: .5rem;
-      .user-profil {
-        font-weight: $font-weight-bold;
+
+      &.user-has-profil {
+        @include font-size($font-size-xs);
+        line-height: 1.333333333;
+
+        .user-profil {
+          color: $neutral-secondary;
+          font-weight: $font-weight-normal;
+        }
       }
     }
     // remove carets
     &:after {
       content: none;
-      color: $link-color;
-      @include font-size(1.125rem);
     }
 
     // Add chevron only on large breakpoint and up
     @include media-breakpoint-up(md) {
-      padding-right: .5rem;
-       
+      &::after {
+        content: '';
+      }
     }
   }
 
@@ -118,16 +119,10 @@
     min-width: 20rem;
     box-shadow: -1px 3px 3px 0 $gray-300;
 
-    // Font-icon size and color
-    .vdm {
-      @include font-size(3rem);
-      color: $action-lighter;
-    }
-
     // Dropdown section
     .dropdown-item-section {
       .user-info {
-        line-height: 1.4;
+        line-height: $line-height-component;
         > * {
           display: flex;
         }
@@ -148,17 +143,6 @@
       padding: .75rem 2.5rem;
     }
 
-    .user-action {
-      .dropdown-item {
-        .vdm {
-          @include font-size(2.5rem);
-          margin-top: -.75rem;
-          margin-bottom: -.75rem;
-          margin-left: auto;
-        }
-      }
-    }
-
   }
 
   // change icon when dropdown is open
@@ -169,9 +153,47 @@
       }
       // Switch to chevron haut for large breakpoint and up
       @include media-breakpoint-up(md) {
-        //@include iconvdm($position: after, $icon: '055-chevron-haut');
+        &:after {
+          content: '';
+          -webkit-mask: url($icon-utility-chevron-up) no-repeat 50% 50%;
+          mask: url($icon-utility-chevron-up) no-repeat 50% 50%;
+        }
       }
     }
+  }
+
+  &.navbar-dark {
+    background-color: $neutral-primary;
+    border-bottom: none;
+  
+    .navbar-button,
+    .navbar-button .button-label {
+      color: $white;
+    }
+  
+    .navbar-brand {
+      @include font-size($font-size-base);
+      line-height: $line-height-component;
+      font-weight: $font-weight-bold;
+      align-items: center;
+      svg {
+        width: 1.5rem;
+        height: 1.5rem;
+        margin-right: 1rem;
+      }
+    }
+  
+    @include media-breakpoint-up(lg) {
+      .navbar-brand {
+        @include font-size($font-size-lg);
+        line-height: 1.4;
+        svg {
+          width: 2rem;
+          height: 2rem;
+        }
+      }
+    }
+  
   }
 
   // Dropdown-menu Mobile full width
@@ -181,7 +203,19 @@
       width: 100%;
     }
   }
+
+  // 768px and up
+  @include media-breakpoint-up(md) {
+    height: 4.5rem;
+    button + .dropdown,
+    button + button {
+      margin-left: 2rem;
+    }
+  }
+
 }
+
+
 
 //
 // Navbar buttons styles
@@ -192,8 +226,12 @@
   font-weight: $font-weight-bold;
   display: inline-flex;
   align-items: center;
-  padding: .0625rem 0;
+  padding: 0;
   @include transition(color .15s ease-in-out);
+
+  svg {
+    fill: currentColor;
+  }
 
   .button-label {
     color: $neutral-primary;
@@ -204,7 +242,6 @@
   &:hover,
   &:active {
     color: $action-lighter;
-    .vdm,
     .button-label {
       color: $action-lighter;
     }

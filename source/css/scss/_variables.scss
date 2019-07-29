@@ -121,6 +121,12 @@ $enable-validation-icons:                     false;
 $enable-shadows:                              false;
 
 
+// Icons
+$icon-utility-size:     80px;
+$icon-utility-size-sm:  40px;
+$icon-utility-size:     24px;
+$icon-utility-size-sm:  16px;
+
 // Body
 //
 // Settings for the `<body>` element.
@@ -182,6 +188,7 @@ $line-height-component:       1.5; // component
 // Map old bootstrap variables to the new line-height-component for compatibility
 $line-height-lg:              $line-height-component;
 $line-height-sm:              $line-height-component;
+$line-height-xs:              1.3333333333;
 
 $border-width:                1px;
 $border-color:                $gray-300;
@@ -332,11 +339,6 @@ $table-dark-border-color:     lighten($gray-900, 7.5%);
 $table-dark-color:            $body-bg;
 
 $table-striped-order:         odd;
-
-
-// Icons fonts vdm class, imported from "@villemontreal/font-icon
-$vdm-icon-font-family : 'vdm';
-
 
 // Buttons + Forms
 //
@@ -525,9 +527,6 @@ $nav-tabs-active-border-width:        2px;
 
 // Navbar
 
-$header-icon-width:          60px;
-$header-icon-height:         $header-icon-width;
-
 
 // Dropdowns
 //
@@ -674,20 +673,20 @@ $progress-circle-animation-timing:      .5s;
 // List group
 
 $list-group-bg:                     $white;
-$list-group-border-color:           $gray-500;
+$list-group-border-color:           $neutral-stroke;
 $list-group-border-width:           $border-width;
 $list-group-border-radius:          0;
 
 $list-group-item-padding-y:         1rem;
-$list-group-item-padding-x:         1.5rem;
+$list-group-item-padding-x:         1rem;
 
-$list-group-hover-bg:               $gray-100;
+$list-group-hover-bg:               $highlight-light;
 $list-group-active-color:           $headings-color;
 $list-group-active-bg:              $highlight-light;
-$list-group-active-border-color:    $list-group-border-color;
+$list-group-active-border-color:    transparent;
 
 $list-group-action-color:           $action;
-$list-group-action-hover-color:     $action-lighter;
+$list-group-action-hover-color:     $action;
 
 $list-group-action-active-color:    $action;
 $list-group-action-active-bg:       $highlight-light;

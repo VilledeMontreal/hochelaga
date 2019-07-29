@@ -14,13 +14,16 @@
   color: $gray-700;
   // Replace carets
   &:after {
-    content: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' viewBox='0 0 24 24'%3E%3Ctitle%3Echevron-down%3C/title%3E%3Cpath fill='%23637381' d='M12 12.586l3.293-3.293c0.391-0.391 1.024-0.391 1.414 0s0.391 1.024 0 1.414l-4 4c-0.391 0.391-1.024 0.391-1.414 0l-4-4c-0.391-0.391-0.391-1.024 0-1.414s1.024-0.391 1.414 0l3.293 3.293z'%3E%3C/path%3E%3C/svg%3E");
-    vertical-align: middle;
-    vertical-align: -webkit-baseline-middle;
-    display: inline-block;
-    width: 12px;
-    height: 16px;
     border: none;
+    margin-left: .5rem;
+    content: '';
+    -webkit-mask: url($icon-utility-chevron-down) no-repeat 50% 50%;
+    mask: url($icon-utility-chevron-down) no-repeat 50% 50%;
+    -webkit-mask-size: cover;
+    mask-size: cover;
+    background-color: $neutral-tertiary;
+    width: $icon-utility-size;
+    height: $icon-utility-size;
   }
 }
 
@@ -103,6 +106,10 @@
 // change icon when dropdown is open
 .dropdown.show {
   .dropdown-toggle {
-    //@include iconvdm($position: after, $icon: '055-chevron-haut');
+    &:after {
+      content: '';
+      -webkit-mask: url($icon-utility-chevron-up) no-repeat 50% 50%;
+      mask: url($icon-utility-chevron-up) no-repeat 50% 50%;
+    }
   }
 }
