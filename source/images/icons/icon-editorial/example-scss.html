@@ -1,0 +1,992 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+	<head>
+		<meta charset="utf-8"/>
+		<meta http-equiv="X-UA-Compatible" content="IE=Edge"/>
+		<title>SVG CSS sprite preview | svg-sprite</title>
+		<style>@charset "UTF-8";body{padding:0;margin:0;color:#666;background:#fafafa;font-family:Arial,Helvetica,sans-serif;font-size:1em;line-height:1.4}header{display:block;padding:3em 3em 2em 3em;background-color:#fff}header p{margin:2em 0 0 0}section{border-top:1px solid #eee;padding:2em 3em 0 3em}section ul{margin:0;padding:0}section li{display:inline;display:inline-block;background-color:#fff;position:relative;margin:0 2em 2em 0;vertical-align:top;border:1px solid #ccc;padding:1em 1em 3em 1em;cursor:default}.icon-box{margin:0;width:144px;height:144px;position:relative;background:#ccc url("data:image/gif;base64,R0lGODlhDAAMAIAAAMzMzP///yH/C1hNUCBEYXRhWE1QPD94cGFja2V0IGJlZ2luPSLvu78iIGlkPSJXNU0wTXBDZWhpSHpyZVN6TlRjemtjOWQiPz4gPHg6eG1wbWV0YSB4bWxuczp4PSJhZG9iZTpuczptZXRhLyIgeDp4bXB0az0iQWRvYmUgWE1QIENvcmUgNS4wLWMwNjEgNjQuMTQwOTQ5LCAyMDEwLzEyLzA3LTEwOjU3OjAxICAgICAgICAiPiA8cmRmOlJERiB4bWxuczpyZGY9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkvMDIvMjItcmRmLXN5bnRheC1ucyMiPiA8cmRmOkRlc2NyaXB0aW9uIHJkZjphYm91dD0iIiB4bWxuczp4bXA9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC8iIHhtbG5zOnhtcE1NPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvbW0vIiB4bWxuczpzdFJlZj0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wL3NUeXBlL1Jlc291cmNlUmVmIyIgeG1wOkNyZWF0b3JUb29sPSJBZG9iZSBQaG90b3Nob3AgQ1M1LjEgV2luZG93cyIgeG1wTU06SW5zdGFuY2VJRD0ieG1wLmlpZDozQjk4OTI0MUY5NTIxMUUyQkJDMEI5NEFEM0Y1QTYwQyIgeG1wTU06RG9jdW1lbnRJRD0ieG1wLmRpZDozQjk4OTI0MkY5NTIxMUUyQkJDMEI5NEFEM0Y1QTYwQyI+IDx4bXBNTTpEZXJpdmVkRnJvbSBzdFJlZjppbnN0YW5jZUlEPSJ4bXAuaWlkOjNCOTg5MjNGRjk1MjExRTJCQkMwQjk0QUQzRjVBNjBDIiBzdFJlZjpkb2N1bWVudElEPSJ4bXAuZGlkOjNCOTg5MjQwRjk1MjExRTJCQkMwQjk0QUQzRjVBNjBDIi8+IDwvcmRmOkRlc2NyaXB0aW9uPiA8L3JkZjpSREY+IDwveDp4bXBtZXRhPiA8P3hwYWNrZXQgZW5kPSJyIj8+Af/+/fz7+vn49/b19PPy8fDv7u3s6+rp6Ofm5eTj4uHg397d3Nva2djX1tXU09LR0M/OzczLysnIx8bFxMPCwcC/vr28u7q5uLe2tbSzsrGwr66trKuqqainpqWko6KhoJ+enZybmpmYl5aVlJOSkZCPjo2Mi4qJiIeGhYSDgoGAf359fHt6eXh3dnV0c3JxcG9ubWxramloZ2ZlZGNiYWBfXl1cW1pZWFdWVVRTUlFQT05NTEtKSUhHRkVEQ0JBQD8+PTw7Ojk4NzY1NDMyMTAvLi0sKyopKCcmJSQjIiEgHx4dHBsaGRgXFhUUExIREA8ODQwLCgkIBwYFBAMCAQAAIfkEAAAAAAAsAAAAAAwADAAAAhaEH6mHmmzcgzJAUG/NVGrfOZ8YLlABADs=") top left repeat;border:1px solid #ccc;display:table-cell;vertical-align:middle;text-align:center}.icon{display:inline;display:inline-block}h1{margin-top:0}h2{margin:0;padding:0;font-size:1em;font-weight:normal;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;position:absolute;left:1em;right:1em;bottom:1em}footer{display:block;margin:0;padding:0 3em 3em 3em}footer p{margin:0;font-size:.7em}footer a{color:#0f7595;margin-left:0}</style>
+		<style>i{text-indent:200%;white-space:nowrap;overflow:hidden;display:inline-block;background-size:720px 640px!important}</style>
+
+<!--
+
+Sprite CSS
+====================================================================================================
+This is an all-in-one inline version of the CSS necessary to use the SVG sprite.
+
+-->
+
+<style type="text/css">
+.icon-editorial-311-mobile {
+	background: url("vdm-icons-scss-9b21c0d9.svg") 12.5% 0 no-repeat;
+	width: 80px;
+	height: 80px;
+}
+.icon-editorial-aerosol {
+	background: url("vdm-icons-scss-9b21c0d9.svg") 37.5% 71.42857142857143% no-repeat;
+	width: 80px;
+	height: 80px;
+}
+.icon-editorial-ampoule {
+	background: url("vdm-icons-scss-9b21c0d9.svg") 0 14.285714285714286% no-repeat;
+	width: 80px;
+	height: 80px;
+}
+.icon-editorial-arbre {
+	background: url("vdm-icons-scss-9b21c0d9.svg") 12.5% 14.285714285714286% no-repeat;
+	width: 80px;
+	height: 80px;
+}
+.icon-editorial-attention {
+	background: url("vdm-icons-scss-9b21c0d9.svg") 25% 0 no-repeat;
+	width: 80px;
+	height: 80px;
+}
+.icon-editorial-autobus {
+	background: url("vdm-icons-scss-9b21c0d9.svg") 25% 14.285714285714286% no-repeat;
+	width: 80px;
+	height: 80px;
+}
+.icon-editorial-balai {
+	background: url("vdm-icons-scss-9b21c0d9.svg") 0 28.571428571428573% no-repeat;
+	width: 80px;
+	height: 80px;
+}
+.icon-editorial-banc {
+	background: url("vdm-icons-scss-9b21c0d9.svg") 12.5% 28.571428571428573% no-repeat;
+	width: 80px;
+	height: 80px;
+}
+.icon-editorial-billet {
+	background: url("vdm-icons-scss-9b21c0d9.svg") 25% 28.571428571428573% no-repeat;
+	width: 80px;
+	height: 80px;
+}
+.icon-editorial-calendrier {
+	background: url("vdm-icons-scss-9b21c0d9.svg") 37.5% 0 no-repeat;
+	width: 80px;
+	height: 80px;
+}
+.icon-editorial-carte-de-credit {
+	background: url("vdm-icons-scss-9b21c0d9.svg") 37.5% 14.285714285714286% no-repeat;
+	width: 80px;
+	height: 80px;
+}
+.icon-editorial-cloche {
+	background: url("vdm-icons-scss-9b21c0d9.svg") 37.5% 28.571428571428573% no-repeat;
+	width: 80px;
+	height: 80px;
+}
+.icon-editorial-compostage {
+	background: url("vdm-icons-scss-9b21c0d9.svg") 0 42.857142857142854% no-repeat;
+	width: 80px;
+	height: 80px;
+}
+.icon-editorial-cone {
+	background: url("vdm-icons-scss-9b21c0d9.svg") 12.5% 42.857142857142854% no-repeat;
+	width: 80px;
+	height: 80px;
+}
+.icon-editorial-coyote {
+	background: url("vdm-icons-scss-9b21c0d9.svg") 25% 42.857142857142854% no-repeat;
+	width: 80px;
+	height: 80px;
+}
+.icon-editorial-crayon {
+	background: url("vdm-icons-scss-9b21c0d9.svg") 37.5% 42.857142857142854% no-repeat;
+	width: 80px;
+	height: 80px;
+}
+.icon-editorial-curseur {
+	background: url("vdm-icons-scss-9b21c0d9.svg") 50% 0 no-repeat;
+	width: 80px;
+	height: 80px;
+}
+.icon-editorial-dossier-nouveau {
+	background: url("vdm-icons-scss-9b21c0d9.svg") 50% 14.285714285714286% no-repeat;
+	width: 80px;
+	height: 80px;
+}
+.icon-editorial-drapeau {
+	background: url("vdm-icons-scss-9b21c0d9.svg") 50% 28.571428571428573% no-repeat;
+	width: 80px;
+	height: 80px;
+}
+.icon-editorial-ecrou {
+	background: url("vdm-icons-scss-9b21c0d9.svg") 50% 42.857142857142854% no-repeat;
+	width: 80px;
+	height: 80px;
+}
+.icon-editorial-engrenage {
+	background: url("vdm-icons-scss-9b21c0d9.svg") 0 57.142857142857146% no-repeat;
+	width: 80px;
+	height: 80px;
+}
+.icon-editorial-enveloppe {
+	background: url("vdm-icons-scss-9b21c0d9.svg") 12.5% 57.142857142857146% no-repeat;
+	width: 80px;
+	height: 80px;
+}
+.icon-editorial-excavatrice {
+	background: url("vdm-icons-scss-9b21c0d9.svg") 25% 57.142857142857146% no-repeat;
+	width: 80px;
+	height: 80px;
+}
+.icon-editorial-fax {
+	background: url("vdm-icons-scss-9b21c0d9.svg") 37.5% 57.142857142857146% no-repeat;
+	width: 80px;
+	height: 80px;
+}
+.icon-editorial-feuille {
+	background: url("vdm-icons-scss-9b21c0d9.svg") 50% 57.142857142857146% no-repeat;
+	width: 80px;
+	height: 80px;
+}
+.icon-editorial-glissant {
+	background: url("vdm-icons-scss-9b21c0d9.svg") 62.5% 0 no-repeat;
+	width: 80px;
+	height: 80px;
+}
+.icon-editorial-horloge {
+	background: url("vdm-icons-scss-9b21c0d9.svg") 62.5% 14.285714285714286% no-repeat;
+	width: 80px;
+	height: 80px;
+}
+.icon-editorial-journal {
+	background: url("vdm-icons-scss-9b21c0d9.svg") 62.5% 28.571428571428573% no-repeat;
+	width: 80px;
+	height: 80px;
+}
+.icon-editorial-lampadaire {
+	background: url("vdm-icons-scss-9b21c0d9.svg") 62.5% 42.857142857142854% no-repeat;
+	width: 80px;
+	height: 80px;
+}
+.icon-editorial-livre {
+	background: url("vdm-icons-scss-9b21c0d9.svg") 62.5% 57.142857142857146% no-repeat;
+	width: 80px;
+	height: 80px;
+}
+.icon-editorial-localisation {
+	background: url("vdm-icons-scss-9b21c0d9.svg") 0 71.42857142857143% no-repeat;
+	width: 80px;
+	height: 80px;
+}
+.icon-editorial-localisation-etoile {
+	background: url("vdm-icons-scss-9b21c0d9.svg") 12.5% 71.42857142857143% no-repeat;
+	width: 80px;
+	height: 80px;
+}
+.icon-editorial-maison {
+	background: url("vdm-icons-scss-9b21c0d9.svg") 25% 71.42857142857143% no-repeat;
+	width: 80px;
+	height: 80px;
+}
+.icon-editorial-mire {
+	background: url("vdm-icons-scss-9b21c0d9.svg") 0 0 no-repeat;
+	width: 80px;
+	height: 80px;
+}
+.icon-editorial-nid-de-poule {
+	background: url("vdm-icons-scss-9b21c0d9.svg") 50% 71.42857142857143% no-repeat;
+	width: 80px;
+	height: 80px;
+}
+.icon-editorial-oeil {
+	background: url("vdm-icons-scss-9b21c0d9.svg") 62.5% 71.42857142857143% no-repeat;
+	width: 80px;
+	height: 80px;
+}
+.icon-editorial-ordinateur {
+	background: url("vdm-icons-scss-9b21c0d9.svg") 75% 0 no-repeat;
+	width: 80px;
+	height: 80px;
+}
+.icon-editorial-permis-animal-chat {
+	background: url("vdm-icons-scss-9b21c0d9.svg") 75% 14.285714285714286% no-repeat;
+	width: 80px;
+	height: 80px;
+}
+.icon-editorial-permis-animal-generique {
+	background: url("vdm-icons-scss-9b21c0d9.svg") 75% 28.571428571428573% no-repeat;
+	width: 80px;
+	height: 80px;
+}
+.icon-editorial-permis-chat {
+	background: url("vdm-icons-scss-9b21c0d9.svg") 75% 42.857142857142854% no-repeat;
+	width: 80px;
+	height: 80px;
+}
+.icon-editorial-permis-chien {
+	background: url("vdm-icons-scss-9b21c0d9.svg") 75% 57.142857142857146% no-repeat;
+	width: 80px;
+	height: 80px;
+}
+.icon-editorial-permis-generique {
+	background: url("vdm-icons-scss-9b21c0d9.svg") 75% 71.42857142857143% no-repeat;
+	width: 80px;
+	height: 80px;
+}
+.icon-editorial-permis-humain {
+	background: url("vdm-icons-scss-9b21c0d9.svg") 0 85.71428571428571% no-repeat;
+	width: 80px;
+	height: 80px;
+}
+.icon-editorial-permis-occupation-temporaire {
+	background: url("vdm-icons-scss-9b21c0d9.svg") 12.5% 85.71428571428571% no-repeat;
+	width: 80px;
+	height: 80px;
+}
+.icon-editorial-permis-stationnement {
+	background: url("vdm-icons-scss-9b21c0d9.svg") 25% 85.71428571428571% no-repeat;
+	width: 80px;
+	height: 80px;
+}
+.icon-editorial-personnes {
+	background: url("vdm-icons-scss-9b21c0d9.svg") 37.5% 85.71428571428571% no-repeat;
+	width: 80px;
+	height: 80px;
+}
+.icon-editorial-petition {
+	background: url("vdm-icons-scss-9b21c0d9.svg") 50% 85.71428571428571% no-repeat;
+	width: 80px;
+	height: 80px;
+}
+.icon-editorial-play {
+	background: url("vdm-icons-scss-9b21c0d9.svg") 62.5% 85.71428571428571% no-repeat;
+	width: 80px;
+	height: 80px;
+}
+.icon-editorial-plume {
+	background: url("vdm-icons-scss-9b21c0d9.svg") 75% 85.71428571428571% no-repeat;
+	width: 80px;
+	height: 80px;
+}
+.icon-editorial-porte-documents {
+	background: url("vdm-icons-scss-9b21c0d9.svg") 87.5% 0 no-repeat;
+	width: 80px;
+	height: 80px;
+}
+.icon-editorial-porte-voix {
+	background: url("vdm-icons-scss-9b21c0d9.svg") 87.5% 14.285714285714286% no-repeat;
+	width: 80px;
+	height: 80px;
+}
+.icon-editorial-poubelle {
+	background: url("vdm-icons-scss-9b21c0d9.svg") 87.5% 28.571428571428573% no-repeat;
+	width: 80px;
+	height: 80px;
+}
+.icon-editorial-preferences {
+	background: url("vdm-icons-scss-9b21c0d9.svg") 87.5% 42.857142857142854% no-repeat;
+	width: 80px;
+	height: 80px;
+}
+.icon-editorial-prix {
+	background: url("vdm-icons-scss-9b21c0d9.svg") 87.5% 57.142857142857146% no-repeat;
+	width: 80px;
+	height: 80px;
+}
+.icon-editorial-profil {
+	background: url("vdm-icons-scss-9b21c0d9.svg") 87.5% 71.42857142857143% no-repeat;
+	width: 80px;
+	height: 80px;
+}
+.icon-editorial-recyclage {
+	background: url("vdm-icons-scss-9b21c0d9.svg") 87.5% 85.71428571428571% no-repeat;
+	width: 80px;
+	height: 80px;
+}
+.icon-editorial-rosace {
+	background: url("vdm-icons-scss-9b21c0d9.svg") 0 100% no-repeat;
+	width: 80px;
+	height: 80px;
+}
+.icon-editorial-sapin {
+	background: url("vdm-icons-scss-9b21c0d9.svg") 12.5% 100% no-repeat;
+	width: 80px;
+	height: 80px;
+}
+.icon-editorial-signalisation {
+	background: url("vdm-icons-scss-9b21c0d9.svg") 25% 100% no-repeat;
+	width: 80px;
+	height: 80px;
+}
+.icon-editorial-soleil {
+	background: url("vdm-icons-scss-9b21c0d9.svg") 37.5% 100% no-repeat;
+	width: 80px;
+	height: 80px;
+}
+.icon-editorial-souffleuse {
+	background: url("vdm-icons-scss-9b21c0d9.svg") 50% 100% no-repeat;
+	width: 80px;
+	height: 80px;
+}
+.icon-editorial-sports {
+	background: url("vdm-icons-scss-9b21c0d9.svg") 62.5% 100% no-repeat;
+	width: 80px;
+	height: 80px;
+}
+.icon-editorial-telephone {
+	background: url("vdm-icons-scss-9b21c0d9.svg") 75% 100% no-repeat;
+	width: 80px;
+	height: 80px;
+}
+.icon-editorial-terrain-sport {
+	background: url("vdm-icons-scss-9b21c0d9.svg") 87.5% 100% no-repeat;
+	width: 80px;
+	height: 80px;
+}
+.icon-editorial-usine {
+	background: url("vdm-icons-scss-9b21c0d9.svg") 100% 0 no-repeat;
+	width: 80px;
+	height: 80px;
+}
+.icon-editorial-vente-garage {
+	background: url("vdm-icons-scss-9b21c0d9.svg") 100% 14.285714285714286% no-repeat;
+	width: 80px;
+	height: 80px;
+}
+.icon-editorial-voiture {
+	background: url("vdm-icons-scss-9b21c0d9.svg") 100% 28.571428571428573% no-repeat;
+	width: 80px;
+	height: 80px;
+}
+</style>
+
+<!--
+====================================================================================================
+-->
+
+	</head>
+	<body>
+		<header>
+			<h1>SVG CSS sprite preview</h1>
+			<p>This preview features the generated SVG file as a conventional CSS sprite. The shapes are displayed as background images of several <code>&lt;i&gt;</code> elements.</p>
+		</header>
+		<section>
+
+<!--
+
+Conventional CSS sprite
+====================================================================================================
+This technique uses CSS classes to display portions of the sprite as background image of
+appropriately sized elements.
+
+-->
+
+			<ul>
+				<li title="311-mobile">
+					<div class="icon-box">
+
+						<!-- 311-mobile -->
+						<i class="icon-editorial-311-mobile">311-mobile</i>
+
+					</div>
+					<h2>311-mobile</h2>
+				</li>
+				<li title="aerosol">
+					<div class="icon-box">
+
+						<!-- aerosol -->
+						<i class="icon-editorial-aerosol">aerosol</i>
+
+					</div>
+					<h2>aerosol</h2>
+				</li>
+				<li title="ampoule">
+					<div class="icon-box">
+
+						<!-- ampoule -->
+						<i class="icon-editorial-ampoule">ampoule</i>
+
+					</div>
+					<h2>ampoule</h2>
+				</li>
+				<li title="arbre">
+					<div class="icon-box">
+
+						<!-- arbre -->
+						<i class="icon-editorial-arbre">arbre</i>
+
+					</div>
+					<h2>arbre</h2>
+				</li>
+				<li title="attention">
+					<div class="icon-box">
+
+						<!-- attention -->
+						<i class="icon-editorial-attention">attention</i>
+
+					</div>
+					<h2>attention</h2>
+				</li>
+				<li title="autobus">
+					<div class="icon-box">
+
+						<!-- autobus -->
+						<i class="icon-editorial-autobus">autobus</i>
+
+					</div>
+					<h2>autobus</h2>
+				</li>
+				<li title="balai">
+					<div class="icon-box">
+
+						<!-- balai -->
+						<i class="icon-editorial-balai">balai</i>
+
+					</div>
+					<h2>balai</h2>
+				</li>
+				<li title="banc">
+					<div class="icon-box">
+
+						<!-- banc -->
+						<i class="icon-editorial-banc">banc</i>
+
+					</div>
+					<h2>banc</h2>
+				</li>
+				<li title="billet">
+					<div class="icon-box">
+
+						<!-- billet -->
+						<i class="icon-editorial-billet">billet</i>
+
+					</div>
+					<h2>billet</h2>
+				</li>
+				<li title="calendrier">
+					<div class="icon-box">
+
+						<!-- calendrier -->
+						<i class="icon-editorial-calendrier">calendrier</i>
+
+					</div>
+					<h2>calendrier</h2>
+				</li>
+				<li title="carte-de-credit">
+					<div class="icon-box">
+
+						<!-- carte-de-credit -->
+						<i class="icon-editorial-carte-de-credit">carte-de-credit</i>
+
+					</div>
+					<h2>carte-de-credit</h2>
+				</li>
+				<li title="cloche">
+					<div class="icon-box">
+
+						<!-- cloche -->
+						<i class="icon-editorial-cloche">cloche</i>
+
+					</div>
+					<h2>cloche</h2>
+				</li>
+				<li title="compostage">
+					<div class="icon-box">
+
+						<!-- compostage -->
+						<i class="icon-editorial-compostage">compostage</i>
+
+					</div>
+					<h2>compostage</h2>
+				</li>
+				<li title="cone">
+					<div class="icon-box">
+
+						<!-- cone -->
+						<i class="icon-editorial-cone">cone</i>
+
+					</div>
+					<h2>cone</h2>
+				</li>
+				<li title="coyote">
+					<div class="icon-box">
+
+						<!-- coyote -->
+						<i class="icon-editorial-coyote">coyote</i>
+
+					</div>
+					<h2>coyote</h2>
+				</li>
+				<li title="crayon">
+					<div class="icon-box">
+
+						<!-- crayon -->
+						<i class="icon-editorial-crayon">crayon</i>
+
+					</div>
+					<h2>crayon</h2>
+				</li>
+				<li title="curseur">
+					<div class="icon-box">
+
+						<!-- curseur -->
+						<i class="icon-editorial-curseur">curseur</i>
+
+					</div>
+					<h2>curseur</h2>
+				</li>
+				<li title="dossier-nouveau">
+					<div class="icon-box">
+
+						<!-- dossier-nouveau -->
+						<i class="icon-editorial-dossier-nouveau">dossier-nouveau</i>
+
+					</div>
+					<h2>dossier-nouveau</h2>
+				</li>
+				<li title="drapeau">
+					<div class="icon-box">
+
+						<!-- drapeau -->
+						<i class="icon-editorial-drapeau">drapeau</i>
+
+					</div>
+					<h2>drapeau</h2>
+				</li>
+				<li title="ecrou">
+					<div class="icon-box">
+
+						<!-- ecrou -->
+						<i class="icon-editorial-ecrou">ecrou</i>
+
+					</div>
+					<h2>ecrou</h2>
+				</li>
+				<li title="engrenage">
+					<div class="icon-box">
+
+						<!-- engrenage -->
+						<i class="icon-editorial-engrenage">engrenage</i>
+
+					</div>
+					<h2>engrenage</h2>
+				</li>
+				<li title="enveloppe">
+					<div class="icon-box">
+
+						<!-- enveloppe -->
+						<i class="icon-editorial-enveloppe">enveloppe</i>
+
+					</div>
+					<h2>enveloppe</h2>
+				</li>
+				<li title="excavatrice">
+					<div class="icon-box">
+
+						<!-- excavatrice -->
+						<i class="icon-editorial-excavatrice">excavatrice</i>
+
+					</div>
+					<h2>excavatrice</h2>
+				</li>
+				<li title="fax">
+					<div class="icon-box">
+
+						<!-- fax -->
+						<i class="icon-editorial-fax">fax</i>
+
+					</div>
+					<h2>fax</h2>
+				</li>
+				<li title="feuille">
+					<div class="icon-box">
+
+						<!-- feuille -->
+						<i class="icon-editorial-feuille">feuille</i>
+
+					</div>
+					<h2>feuille</h2>
+				</li>
+				<li title="glissant">
+					<div class="icon-box">
+
+						<!-- glissant -->
+						<i class="icon-editorial-glissant">glissant</i>
+
+					</div>
+					<h2>glissant</h2>
+				</li>
+				<li title="horloge">
+					<div class="icon-box">
+
+						<!-- horloge -->
+						<i class="icon-editorial-horloge">horloge</i>
+
+					</div>
+					<h2>horloge</h2>
+				</li>
+				<li title="journal">
+					<div class="icon-box">
+
+						<!-- journal -->
+						<i class="icon-editorial-journal">journal</i>
+
+					</div>
+					<h2>journal</h2>
+				</li>
+				<li title="lampadaire">
+					<div class="icon-box">
+
+						<!-- lampadaire -->
+						<i class="icon-editorial-lampadaire">lampadaire</i>
+
+					</div>
+					<h2>lampadaire</h2>
+				</li>
+				<li title="livre">
+					<div class="icon-box">
+
+						<!-- livre -->
+						<i class="icon-editorial-livre">livre</i>
+
+					</div>
+					<h2>livre</h2>
+				</li>
+				<li title="localisation">
+					<div class="icon-box">
+
+						<!-- localisation -->
+						<i class="icon-editorial-localisation">localisation</i>
+
+					</div>
+					<h2>localisation</h2>
+				</li>
+				<li title="localisation-etoile">
+					<div class="icon-box">
+
+						<!-- localisation-etoile -->
+						<i class="icon-editorial-localisation-etoile">localisation-etoile</i>
+
+					</div>
+					<h2>localisation-etoile</h2>
+				</li>
+				<li title="maison">
+					<div class="icon-box">
+
+						<!-- maison -->
+						<i class="icon-editorial-maison">maison</i>
+
+					</div>
+					<h2>maison</h2>
+				</li>
+				<li title="mire">
+					<div class="icon-box">
+
+						<!-- mire -->
+						<i class="icon-editorial-mire">mire</i>
+
+					</div>
+					<h2>mire</h2>
+				</li>
+				<li title="nid-de-poule">
+					<div class="icon-box">
+
+						<!-- nid-de-poule -->
+						<i class="icon-editorial-nid-de-poule">nid-de-poule</i>
+
+					</div>
+					<h2>nid-de-poule</h2>
+				</li>
+				<li title="oeil">
+					<div class="icon-box">
+
+						<!-- oeil -->
+						<i class="icon-editorial-oeil">oeil</i>
+
+					</div>
+					<h2>oeil</h2>
+				</li>
+				<li title="ordinateur">
+					<div class="icon-box">
+
+						<!-- ordinateur -->
+						<i class="icon-editorial-ordinateur">ordinateur</i>
+
+					</div>
+					<h2>ordinateur</h2>
+				</li>
+				<li title="permis-animal-chat">
+					<div class="icon-box">
+
+						<!-- permis-animal-chat -->
+						<i class="icon-editorial-permis-animal-chat">permis-animal-chat</i>
+
+					</div>
+					<h2>permis-animal-chat</h2>
+				</li>
+				<li title="permis-animal-generique">
+					<div class="icon-box">
+
+						<!-- permis-animal-generique -->
+						<i class="icon-editorial-permis-animal-generique">permis-animal-generique</i>
+
+					</div>
+					<h2>permis-animal-generique</h2>
+				</li>
+				<li title="permis-chat">
+					<div class="icon-box">
+
+						<!-- permis-chat -->
+						<i class="icon-editorial-permis-chat">permis-chat</i>
+
+					</div>
+					<h2>permis-chat</h2>
+				</li>
+				<li title="permis-chien">
+					<div class="icon-box">
+
+						<!-- permis-chien -->
+						<i class="icon-editorial-permis-chien">permis-chien</i>
+
+					</div>
+					<h2>permis-chien</h2>
+				</li>
+				<li title="permis-generique">
+					<div class="icon-box">
+
+						<!-- permis-generique -->
+						<i class="icon-editorial-permis-generique">permis-generique</i>
+
+					</div>
+					<h2>permis-generique</h2>
+				</li>
+				<li title="permis-humain">
+					<div class="icon-box">
+
+						<!-- permis-humain -->
+						<i class="icon-editorial-permis-humain">permis-humain</i>
+
+					</div>
+					<h2>permis-humain</h2>
+				</li>
+				<li title="permis-occupation-temporaire">
+					<div class="icon-box">
+
+						<!-- permis-occupation-temporaire -->
+						<i class="icon-editorial-permis-occupation-temporaire">permis-occupation-temporaire</i>
+
+					</div>
+					<h2>permis-occupation-temporaire</h2>
+				</li>
+				<li title="permis-stationnement">
+					<div class="icon-box">
+
+						<!-- permis-stationnement -->
+						<i class="icon-editorial-permis-stationnement">permis-stationnement</i>
+
+					</div>
+					<h2>permis-stationnement</h2>
+				</li>
+				<li title="personnes">
+					<div class="icon-box">
+
+						<!-- personnes -->
+						<i class="icon-editorial-personnes">personnes</i>
+
+					</div>
+					<h2>personnes</h2>
+				</li>
+				<li title="petition">
+					<div class="icon-box">
+
+						<!-- petition -->
+						<i class="icon-editorial-petition">petition</i>
+
+					</div>
+					<h2>petition</h2>
+				</li>
+				<li title="play">
+					<div class="icon-box">
+
+						<!-- play -->
+						<i class="icon-editorial-play">play</i>
+
+					</div>
+					<h2>play</h2>
+				</li>
+				<li title="plume">
+					<div class="icon-box">
+
+						<!-- plume -->
+						<i class="icon-editorial-plume">plume</i>
+
+					</div>
+					<h2>plume</h2>
+				</li>
+				<li title="porte-documents">
+					<div class="icon-box">
+
+						<!-- porte-documents -->
+						<i class="icon-editorial-porte-documents">porte-documents</i>
+
+					</div>
+					<h2>porte-documents</h2>
+				</li>
+				<li title="porte-voix">
+					<div class="icon-box">
+
+						<!-- porte-voix -->
+						<i class="icon-editorial-porte-voix">porte-voix</i>
+
+					</div>
+					<h2>porte-voix</h2>
+				</li>
+				<li title="poubelle">
+					<div class="icon-box">
+
+						<!-- poubelle -->
+						<i class="icon-editorial-poubelle">poubelle</i>
+
+					</div>
+					<h2>poubelle</h2>
+				</li>
+				<li title="preferences">
+					<div class="icon-box">
+
+						<!-- preferences -->
+						<i class="icon-editorial-preferences">preferences</i>
+
+					</div>
+					<h2>preferences</h2>
+				</li>
+				<li title="prix">
+					<div class="icon-box">
+
+						<!-- prix -->
+						<i class="icon-editorial-prix">prix</i>
+
+					</div>
+					<h2>prix</h2>
+				</li>
+				<li title="profil">
+					<div class="icon-box">
+
+						<!-- profil -->
+						<i class="icon-editorial-profil">profil</i>
+
+					</div>
+					<h2>profil</h2>
+				</li>
+				<li title="recyclage">
+					<div class="icon-box">
+
+						<!-- recyclage -->
+						<i class="icon-editorial-recyclage">recyclage</i>
+
+					</div>
+					<h2>recyclage</h2>
+				</li>
+				<li title="rosace">
+					<div class="icon-box">
+
+						<!-- rosace -->
+						<i class="icon-editorial-rosace">rosace</i>
+
+					</div>
+					<h2>rosace</h2>
+				</li>
+				<li title="sapin">
+					<div class="icon-box">
+
+						<!-- sapin -->
+						<i class="icon-editorial-sapin">sapin</i>
+
+					</div>
+					<h2>sapin</h2>
+				</li>
+				<li title="signalisation">
+					<div class="icon-box">
+
+						<!-- signalisation -->
+						<i class="icon-editorial-signalisation">signalisation</i>
+
+					</div>
+					<h2>signalisation</h2>
+				</li>
+				<li title="soleil">
+					<div class="icon-box">
+
+						<!-- soleil -->
+						<i class="icon-editorial-soleil">soleil</i>
+
+					</div>
+					<h2>soleil</h2>
+				</li>
+				<li title="souffleuse">
+					<div class="icon-box">
+
+						<!-- souffleuse -->
+						<i class="icon-editorial-souffleuse">souffleuse</i>
+
+					</div>
+					<h2>souffleuse</h2>
+				</li>
+				<li title="sports">
+					<div class="icon-box">
+
+						<!-- sports -->
+						<i class="icon-editorial-sports">sports</i>
+
+					</div>
+					<h2>sports</h2>
+				</li>
+				<li title="telephone">
+					<div class="icon-box">
+
+						<!-- telephone -->
+						<i class="icon-editorial-telephone">telephone</i>
+
+					</div>
+					<h2>telephone</h2>
+				</li>
+				<li title="terrain-sport">
+					<div class="icon-box">
+
+						<!-- terrain-sport -->
+						<i class="icon-editorial-terrain-sport">terrain-sport</i>
+
+					</div>
+					<h2>terrain-sport</h2>
+				</li>
+				<li title="usine">
+					<div class="icon-box">
+
+						<!-- usine -->
+						<i class="icon-editorial-usine">usine</i>
+
+					</div>
+					<h2>usine</h2>
+				</li>
+				<li title="vente-garage">
+					<div class="icon-box">
+
+						<!-- vente-garage -->
+						<i class="icon-editorial-vente-garage">vente-garage</i>
+
+					</div>
+					<h2>vente-garage</h2>
+				</li>
+				<li title="voiture">
+					<div class="icon-box">
+
+						<!-- voiture -->
+						<i class="icon-editorial-voiture">voiture</i>
+
+					</div>
+					<h2>voiture</h2>
+				</li>
+			</ul>
+
+<!--
+====================================================================================================
+-->
+
+		</section>
+		<footer>
+			<p>Generated at Thu, 25 Jul 2019 18:27:46 GMT by <a href="https://github.com/jkphl/svg-sprite" target="_blank">svg-sprite</a>.</p>
+		</footer>
+	</body>
+</html>

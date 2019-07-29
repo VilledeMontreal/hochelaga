@@ -4,33 +4,84 @@
 @import "icons-editorial";
 
 
+@import "../../images/icons/icon-utility/vdm-icons-sprite.css";
+ 
+$pathIconEditorial: "../../images/icons/icon-editrorial/";
+$pathIconUtility: "../../images/icons/icon-utility/";
+//background: url(#{$pathIconUtility}background.jpg) repeat-x fixed 0 0;
+/*.icon {
+    display: inline-block;
+    background-repeat: no-repeat;
+}*/
 
-//style for utility icons
 
-.icon {
-  display: inline-block;
-  width: 1.5rem;
-  height: 1.5rem;
+svg[role=icon] {
+  fill: currentColor;
   stroke-width: 0;
   stroke: currentColor;
   fill: currentColor;
+  height: 24px;
+  width: 24px;
 }
 
+/* SIZE */
+$icon-xs:   8px;
+$icon-sm:   16px;
+$icon-md:   24px;
+$icon-lg:   32px;
+$icon-xl:   40px;
+$icon-xxl:  80px;
+
+$icon-size: ();
+$icon-size: (
+  xs:  (
+    size: $icon-xs,
+    sprite: "../assets/icons-xs.svg" 
+  ),
+  sm:  (
+    size: $icon-sm,
+    sprite: "../assets/icons-sm.svg" 
+  ),
+  md:  (
+    size: $icon-md,
+    sprite: "../assets/icons-md.svg" 
+  ),
+  lg:  (
+    size: $icon-lg,
+    sprite: "../assets/icons-lg.svg" 
+  ),
+  xl:  (
+    size: $icon-xl,
+    sprite: "../assets/icons-xl.svg" 
+  ),
+  xxl:  (
+    size: $icon-xxl,
+    sprite: "../assets/icons-xxl.svg" 
+  )
+);
+
+
+@each $label, $map in $icon-size {
+  $size: map-get($map, size);
+  $sprite: map-get($map, sprite);
+
+  .icon-#{$label} {
+    width: $size !important;
+    height: $size !important;
+    //background-image: url($sprite);
+  }
+}
 
 @each $color, $value in $theme-colors {
   .icon-#{$color} {
-    fill:$value;
+    fill:$value !important;
   }
 }
 
 @each $label, $map in $dialog-colors {
   $color-dark: map-get($map, dark);
-  $color-light: map-get($map, light);
-  .icon-#{$label}-dark {
-    fill: $color-dark;
-  }
-  .icon-#{$label}-light {
-    fill: $color-light;
+  .icon-#{$label} {
+    fill: $color-dark !important;
   }
 }
 
@@ -40,4 +91,28 @@
 
 .icon-dark {
   fill: $neutral-primary;
+}
+
+
+// Acessibility for Windows and High Contrast Mode
+// https://css-tricks.com/accessible-svgs/#article-header-id-20
+
+@media screen and (-ms-high-contrast: active) {
+  svg[role=icon] {
+    fill: $neutral-tertiary;
+  }
+}
+
+/* black text on white background */
+@media screen and (-ms-high-contrast: black-on-white) {
+  svg[role=icon] {
+    fill: $neutral-tertiary;
+  }
+}
+
+/* black text on white background */
+@media screen and (-ms-high-contrast: white-on-black) {
+  svg[role=icon] {
+    fill: $neutral-tertiary;
+  }
 }

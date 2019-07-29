@@ -1,20 +1,32 @@
 <div class="cotainer-fluid pl-atom-icons-grid">
+  <ul class="row list-unstyled">
+  	{{#icon-utility }}
+   		<li class="col-6 col-sm-4 col-md-4 col-lg-3">
+        <div class="pl-atom-icon-item icon-utility">
+        	<a data-toggle="modal" data-target="#exampleModalIcon" class="{{ icon-name }}" id="linkModalIcon">
+  	      	<svg class="icon {{ icon-name }}" viewBox="0 0 24 24"> 
+  	      		<path d="{{ icon-path }}"></path>
+  				  </svg>
+  			  </a>
+  	      <span class="ic-name">{{ icon-name }}</span>
+        </div>
+      </li>
+    {{/icon-utility}}
+  </ul>
 
-  	<ul class="row list-unstyled">
-  		{{#icon-utility }}
-	   		<li class="col-6 col-sm-4 col-md-4 col-lg-3">
-		      <div class="pl-atom-icon-item icon-utility">
-		      	<a data-toggle="modal" data-target="#exampleModalIcon" class="{{ icon-name }}" id="linkModalIcon">
-			      	<svg class="icon {{ icon-name }}" viewBox="0 0 24 24"> 
-			      		<path d="{{ icon-path }}"></path>
-						  </svg>
-					  </a>
-			      <span class="ic-name">{{ icon-name }}</span>
-		      </div>
-		    </li>
-		  {{/icon-utility}}
-  	</ul>
 
+
+  <div style="border:1px solid red;">
+    <h5>Svg use</h5>
+    <svg class="icon-primary" role="icon">
+      <use xlink:href="{{ pathIcon }}icon-utility/vdm-icons-symbol.svg#arrow-left"></use>
+    </svg>
+    <h5>Svg inline</h5>
+    {{> ../../images/icons/icon-utility/svgs-inline-use/arrow-rigth.svg }}
+    <br/>
+   <h5>Svg background</h5>
+   <i class="icon-utility-chevron-up">chevron-up</i>
+  </div> 
 </div>
 
 <!-- Modal -->

@@ -1,0 +1,15 @@
+icons-utility: (
+	sprite: (
+		width: {{spriteWidth}}px, 
+		height: {{spriteHeight}}px, 
+		svgPath: '../icon-utility/vdm-icons-scss.svg'
+	),
+	{{#shapes}}
+	{{base}}: (
+		width: {{width.inner}}px, 
+		height: {{height.inner}}px, 
+		backgroundX: {{position.absolute.x}}px, 
+		backgroundY: {{position.absolute.y}}px
+	),
+	{{/shapes}}
+);
