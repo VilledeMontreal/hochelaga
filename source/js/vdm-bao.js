@@ -4,26 +4,16 @@
   // ******************************
   //Icon modal
 $('[id^="linkModalIcon"]').click(function() {
+  console.log( "click click");
 
-  var title = $(this).attr( "class" ).toString();
-  $.getJSON( "../../images/icons/icon-utility/svg.json", function( data ) {
-    $.each( data, function( key, val ) {
-      //console.log( key + " " + val.name );
-      if (title+".svg" == val.name){
-        $("#exampleModalIconUtilityLabel").text(val.name);
-        $("#exampleModalIconUtility .modal-body .select-all").text(val.data);
-      }
-    });
-  });
-  $.getJSON( "../../images/icons/icon-editorial/svg.json", function( data ) {
-    $.each( data, function( key, val ) {
-      //console.log( key + " " + val.name );
-      if (title+".svg" == val.name){
-        $("#exampleModalIconEditorialLabel").text(val.name);
-        $("#exampleModalIconEditorial .modal-body .select-all").text(val.data);
-      }
-    });
-  });
+  var title = $(this).next(".ic-name").html();
+  var svg = $(this).html();
+  $("#exampleModalIconUtilityLabel").text(title);
+  $("#exampleModalIconEditorialLabel").text(title);
+  $("#exampleModalIconUtility .modal-body .select-all").text(svg);
+  $("#exampleModalIconEditorial .modal-body .select-all").text(svg);
+
+  //$("#exampleModalIconUtilityLabel").text("."+title);
   
 });
 

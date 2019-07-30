@@ -3,17 +3,24 @@
 @import "icons-utility";
 @import "icons-editorial";
 
+@import "../../vdm-icon-system/icons/icon-utility/icons-utility";
+@import "../../vdm-icon-system/icons/icon-editorial/icons-editorial";
 
-@import "../../images/icons/icon-utility/vdm-icons-sprite.css";
- 
-$pathIconEditorial: "../../images/icons/icon-editrorial/";
-$pathIconUtility: "../../images/icons/icon-utility/";
-//background: url(#{$pathIconUtility}background.jpg) repeat-x fixed 0 0;
-/*.icon {
-    display: inline-block;
-    background-repeat: no-repeat;
+/*@mixin inline-svg($name) {
+  width: nth($name, 2);
+  height: nth($name, 3);
+  mask: url($name) no-repeat 50% 50%;
+  mask-size: cover;
+  background-color: $primary;
+}
+
+@function inline-svg-width($name) {
+  @return nth($name, 2);
+}
+
+@function inline-svg-height($name) {
+  @return nth($name, 3);
 }*/
-
 
 svg[role=icon] {
   fill: currentColor;
@@ -35,28 +42,22 @@ $icon-xxl:  80px;
 $icon-size: ();
 $icon-size: (
   xs:  (
-    size: $icon-xs,
-    sprite: "../assets/icons-xs.svg" 
+    size: $icon-xs
   ),
   sm:  (
-    size: $icon-sm,
-    sprite: "../assets/icons-sm.svg" 
+    size: $icon-sm
   ),
   md:  (
-    size: $icon-md,
-    sprite: "../assets/icons-md.svg" 
+    size: $icon-md
   ),
   lg:  (
-    size: $icon-lg,
-    sprite: "../assets/icons-lg.svg" 
+    size: $icon-lg
   ),
   xl:  (
-    size: $icon-xl,
-    sprite: "../assets/icons-xl.svg" 
+    size: $icon-xl
   ),
   xxl:  (
-    size: $icon-xxl,
-    sprite: "../assets/icons-xxl.svg" 
+    size: $icon-xxl
   )
 );
 
@@ -96,23 +97,26 @@ $icon-size: (
 
 // Acessibility for Windows and High Contrast Mode
 // https://css-tricks.com/accessible-svgs/#article-header-id-20
-
+/*
 @media screen and (-ms-high-contrast: active) {
   svg[role=icon] {
     fill: $neutral-tertiary;
   }
 }
 
-/* black text on white background */
+// black text on white background 
 @media screen and (-ms-high-contrast: black-on-white) {
   svg[role=icon] {
     fill: $neutral-tertiary;
   }
 }
 
-/* black text on white background */
+// black text on white background 
 @media screen and (-ms-high-contrast: white-on-black) {
   svg[role=icon] {
     fill: $neutral-tertiary;
   }
 }
+*/
+
+

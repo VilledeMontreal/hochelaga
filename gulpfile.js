@@ -289,8 +289,8 @@ gulp.task('watch', function () {
 gulp.task('default', ['cleanable:before'], function () {
   production = false;
   gulp.start(
-    'icon-utility',
-    'icon-editorial',
+    //'icon-utility',
+    //'icon-editorial',
     'patternlab',
     'styleguide',
     'sass',
