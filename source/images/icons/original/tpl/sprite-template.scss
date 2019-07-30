@@ -1,15 +1,12 @@
-icons-utility: (
-	sprite: (
-		width: {{spriteWidth}}px, 
-		height: {{spriteHeight}}px, 
-		svgPath: '../icon-utility/vdm-icons-scss.svg'
-	),
+[class^="icon-utility"] {
+	fill: currentColor;
+
 	{{#shapes}}
-	{{base}}: (
-		width: {{width.inner}}px, 
-		height: {{height.inner}}px, 
-		backgroundX: {{position.absolute.x}}px, 
-		backgroundY: {{position.absolute.y}}px
-	),
+	.icon-utility-{{base}} {
+		background-image: url("../vdm-icons-scss.svg") {{position.absolute.x}}px {{position.absolute.y}}px no-repeat;
+		width: {{width.inner}}px; 
+		height: {{height.inner}}px;
+	}
+
 	{{/shapes}}
-);
+}	

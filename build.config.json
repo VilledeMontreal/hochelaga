@@ -79,18 +79,11 @@
     "images": {
       "base" : "source/images/",
       "files": [
-        "source/images/**/*"
+        "source/images/**/*",
+        "!source/images/icons/original",
+        "!source/images/icons/original/**/*"
       ],
       "dest" : "public/images/"
-    },
-    "icons": {
-      "base" : "source/icons/",
-      "files": [
-        "source/icons/**/*",
-        "!source/icons/original",
-        "!source/icons/original/**/*"
-      ],
-      "dest" : "public/icons/"
     },
     "imagesdist": {
       "base" : "source/images/",

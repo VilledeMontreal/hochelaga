@@ -3,16 +3,29 @@
    
   // ******************************
   //Icon modal
+$('[id^="linkModalIcon"]').click(function() {
 
-  var $linkModalIcon = $("a#linkModalIcon");
-
-  $linkModalIcon.on( "click", function() {
-    var title = $(this).attr( "class" ).toString();
-    $.getJSON( "../../js/icons-utility.json", function( donnees ) {
-      $("#exampleModalIcon #exampleModalIconLabel").text(title);
-      $("#exampleModalIcon .modal-body .select-all").text(donnees[title].data);
+  var title = $(this).attr( "class" ).toString();
+  $.getJSON( "../../images/icons/icon-utility/svg.json", function( data ) {
+    $.each( data, function( key, val ) {
+      //console.log( key + " " + val.name );
+      if (title+".svg" == val.name){
+        $("#exampleModalIconUtilityLabel").text(val.name);
+        $("#exampleModalIconUtility .modal-body .select-all").text(val.data);
+      }
     });
   });
+  $.getJSON( "../../images/icons/icon-editorial/svg.json", function( data ) {
+    $.each( data, function( key, val ) {
+      //console.log( key + " " + val.name );
+      if (title+".svg" == val.name){
+        $("#exampleModalIconEditorialLabel").text(val.name);
+        $("#exampleModalIconEditorial .modal-body .select-all").text(val.data);
+      }
+    });
+  });
+  
+});
 
 
   // ******************************
