@@ -22,10 +22,7 @@
     margin-bottom: 1rem;
   }
   .sidebar-title {
-    color: $headings-color;
-    @include font-size($h3-font-size);
-    font-weight: $font-weight-bold;  
-    line-height: 1.3333333333333;
+    @extend .h3;
     margin-bottom: 1rem;
   }
 

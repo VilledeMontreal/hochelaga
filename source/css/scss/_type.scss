@@ -40,6 +40,7 @@ h3,
 .h3,
 .display-4 {
   @include responsive-font-size($h3-font-size, .85, 28px);
+  margin-bottom: 1rem;
   // 576px and up
   @include media-breakpoint-up(md) {
     @include responsive-font-size($h3-font-size, 1, 32px);
@@ -47,6 +48,7 @@ h3,
 }
 h4, .h4 {
   @include responsive-font-size($h4-font-size, .8, 24px);
+  margin-bottom: .5rem;
   // 576px and up
   @include media-breakpoint-up(md) {
     @include responsive-font-size($h4-font-size, 1, 28px);
@@ -54,6 +56,7 @@ h4, .h4 {
 }
 h5, .h5 {
   @include responsive-font-size($h5-font-size, .846153, 20px);
+  margin-bottom: .25rem;
   // 576px and up
   @include media-breakpoint-up(md) {
     @include responsive-font-size($h5-font-size, 1, 24px);
@@ -61,6 +64,7 @@ h5, .h5 {
 }
 h6, .h6 {
   @include responsive-font-size($h6-font-size, .85, 14px);
+  margin-bottom: 0;
   // 576px and up
   @include media-breakpoint-up(md) {
     @include responsive-font-size($h6-font-size, 1, 20px);
@@ -121,16 +125,9 @@ a {
   // We had border-bottom on all links and override specific case
   //border-bottom: $link-border-width solid $link-border-color;
 
-  // icons in link should be link-color
-  .vdm {
-    color: $link-color;
-  }
   &:hover,
   &:active {
     color: $link-hover-color;
-    .vdm {
-      color: $link-hover-color;
-    }
   }
 
   // File extension handling
@@ -141,16 +138,6 @@ a {
       margin-right: -3.02em;
       padding-left: .5rem;
       overflow: hidden;
-    }
-  }
-
-  &.link-scrollto {
-    color: $primary;
-    border-bottom: none;
-    .vdm {
-      color: $primary;
-      @include font-size(2rem);
-      vertical-align: top;
     }
   }
 
@@ -210,34 +197,6 @@ a {
   }
 }
 
-// Hub link
-.hub-link {
-  padding-bottom: 2rem;
-}
-
-// Add .icon class to display vertically centered icon and text
-.icon {
-  display: inline-flex;
-  align-items: center;
-  // we need this code to prevent icon from getting underlined on hover
-  .vdm {
-    display: inline-block;
-    @include font-size(1.5rem);
-    &:before {
-      display: inline-block;
-    }
-  }
-  &.right {
-    .vdm {
-      padding-left: 0.5rem;
-    }
-  }
-  &.left {
-    .vdm {
-      padding-right: 0.5rem;
-    }
-  }
-}
 
 // External link icon
 // Apply to .region-content and sb-block
@@ -245,16 +204,36 @@ a {
 .sb-block,
 .region-content,
 .lead {
-  a[href*="//"]:not([href*="montreal.ca"]):not([href$=".pdf"]) {
-    margin-right: 1.125em;
+  a[href*="//"]:not([href*="montreal.ca"]):not([href$=".pdf"]):not(.list-group-item-action) {
+    margin-right: 1.25rem;
+    position: relative;
     &:after {
-      @include font-size($font-size-base);
+      content: '';
+      -webkit-mask: url($icon-utility-external-link) no-repeat 50% 50%;
+      mask: url($icon-utility-external-link) no-repeat 50% 50%;
+      -webkit-mask-size: cover;
+      mask-size: cover;
+      background-color: $action;
+      display: inline-flex;
+      width: $icon-utility-size-sm;
+      height: $icon-utility-size-sm;
       overflow: hidden;
-      margin-right: -1.125em;
-      margin-top: -.625rem;
-      margin-bottom: -.625rem;
-      padding-left: 0.125rem;
-      vertical-align: middle;
+      margin-right: -1.25rem;
+      margin-left: .25rem;
+      vertical-align: -.125rem;
+    }
+
+    @include hover-focus {
+      &:before {
+        background-color: $highlight-light;
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: -1.25rem;
+        bottom: -1px;
+        z-index: -1;
+      }
     }
   }
   // List some exclusion
@@ -399,31 +378,4 @@ a {
   white-space: nowrap; 
   overflow: hidden;
   text-overflow: ellipsis;
-}
-
-//
-// Dates display
-//
-// for the rendering of dates in general
-.date {
-  @include font-size($h5-font-size);
-  // Fat day, discrete month, block level headings
-  &.day-month {
-    > .day {
-      @extend .h2;
-      display: inline-block;
-      position: relative;
-      margin-bottom: 0;
-      margin-right: 0.3em;
-      &:after {
-        position: absolute;
-        width: 1.1em;
-        content: " ";
-        left: .05em;
-        bottom: -.075em;
-        height: 4px;
-        background: $black;
-      }
-    }
-  }
 }

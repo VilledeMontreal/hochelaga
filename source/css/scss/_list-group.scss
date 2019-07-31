@@ -90,6 +90,7 @@
     height: 2.5rem;
     width: 2.5rem;
     fill: $neutral-tertiary;
+    flex-shrink: 0;
   }
 }
 
@@ -108,6 +109,7 @@
     height: 1.5rem;
     width: 1.5rem;
     fill: currentColor;
+    flex-shrink: 0;
   }
 }
 
@@ -171,7 +173,11 @@
     text-transform: uppercase;
     margin-bottom: .5rem;
   }
-
+  .list-group-item-publication-date,
+  .list-group-item-date {
+    @include font-size($font-size-sm);
+    line-height: 1.4285714285;
+  }
   .list-group-item-date {
     font-weight: $font-weight-bold;
   }
@@ -183,6 +189,23 @@
         padding-top: 0;
         height: 100%;
       }
+    }
+  }
+
+  &.list-group-date {
+    .list-group-item-date {
+      margin-bottom: 1rem;
+      &:after {
+        content: "";
+        display: block;
+        height: .125rem;
+        width: 2rem;
+        margin-top: 1rem;
+        background-color: $brand;
+      }
+    }
+    .list-group-item-title {
+      padding-bottom: 0;
     }
   }
 

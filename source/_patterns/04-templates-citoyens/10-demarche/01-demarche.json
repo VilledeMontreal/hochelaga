@@ -41,6 +41,252 @@
     "buttonText": "Appel à l'action"
   },
   "hasSelecteurArrondissement": false,
+  "module-content": {
+    "module-table": {
+      "table": {
+        "tableWrapper": true,
+        "caption": "",
+        "tableClass": "",
+        "thead": {
+          "theadClass": "",
+          "th": [
+            { "title": "#" },
+            { "title": "Libellé 1" },
+            { "title": "Libellé 2" }
+          ]
+        },
+        "tbody": {
+          "tr": [
+            {
+              "th": "1",
+              "td": [
+                { "text": "Libellé" },
+                { "text": "Libellé" }
+              ]
+            },
+            {
+              "th": "2",
+              "td": [
+                { "text": "Libellé" },
+                { "text": "Libellé" }
+              ]
+            },
+            {
+              "th": "3",
+              "td": [
+                { "text": "Libellé" },
+                { "text": "Libellé" }
+              ]
+            }
+          ]
+        }
+      }
+    },
+    "module-dates-importantes": {
+      "listGroupClass": "list-group-teaser list-group-date",
+      "listGroup": [
+        {
+          "class": false,
+          "url": "#",
+          "title": "At amet eos et diam sed no invidunt sadipscing no invidunt sed dolore eos amet",
+          "date": {
+            "dateTimeFormat": "2020-02-14",
+            "dateTimeText": "Jeudi 14 février"
+          }
+        },
+        {
+          "url": "https://google.ca",
+          "title": "Dolore amet aliquyam justo vero lorem accusam amet eos vero",
+          "date": {
+            "dateTimeFormat": "2020-01-01",
+            "dateTimeText": "Mercredi 1 janvier"
+          }
+        }
+      ]
+    },
+    "module-documents": {
+      "listGroupClass": "list-group-icon-utility",
+      "listGroup": [
+        {
+          "listGroupIconUtility": true,
+          "text": "Titre du document [PDF - 2 Mo]",
+          "class": "document-pdf"
+        },
+        {
+          "listGroupIconUtility": true,
+          "text": "Titre du document [PDF - 2 Mo]",
+          "class": "document-pdf"
+        },
+        {
+          "listGroupIconUtility": true,
+          "text": "Titre du document",
+          "class": "document"
+        }
+      ]
+    },
+    "module-documents-necessaires": true,
+    "module-canaux-comm": {
+      "collapsibleItem": [
+        {
+          "collapsible-item-canaux": true,
+          "en-ligne": true,
+          "block-id": "template-demarche-enligne",
+          "heading-id": "heading-template-demarche-enligne",
+          "show": "true",
+          "title": "En ligne",
+          "content": "<p>Mise en contexte</p>",
+          "has-call-to-action": {
+            "cta-url": "#",
+            "cta-title": "Appel à l'action"
+          },
+          "has-mode-paiement": true,
+          "extra-content": "<p>Information complémentaire  optionnelle- Corps de texte avec la possibilité de mettre des liens internes ou externes. Exemple : Horaire de disponibilité ou délai de transmission.</p>"
+        },
+        {
+          "collapsible-item-canaux": true,
+          "telephone": true,
+          "block-id": "template-demarche-tel",
+          "heading-id": "heading-template-demarche-tel",
+          "title": "Par téléphone (option de base)",
+          "nom-service": "Nom du service",
+          "numero-tel": {
+            "numero": "514 993-3423",
+            "extra": false
+          },
+          "extra-content": "<p>Un seul canal Par téléphone d’affiché. Information complémentaire  optionnelle - Corps de texte avec la possibilité de mettre des liens internes ou externes. Exemple : Horaire de disponibilité ou délai de transmission.</p>"
+        },
+        {
+          "collapsible-item-canaux": true,
+          "telephone": true,
+          "block-id": "template-demarche-tel-311",
+          "heading-id": "heading-template-demarche-tel-311",
+          "title": "Par téléphone (option 311)",
+          "nom-service": false,
+          "numero-tel": {
+            "numero": "3-1-1",
+            "extra": "de l'extérieur de Montréal 514 872-0311"
+          },
+          "horaire": true,
+          "extra-content": "<p>Un seul canal Par téléphone d’affiché. Information complémentaire  optionnelle - Corps de texte avec la possibilité de mettre des liens internes ou externes. Exemple : Horaire de disponibilité ou délai de transmission.</p>"
+        },
+        {
+          "collapsible-item-canaux": true,
+          "telephone": true,
+          "block-id": "template-demarche-tel-911",
+          "heading-id": "heading-template-demarche-tel-911",
+          "title": "Par téléphone (option 911)",
+          "nom-service": false,
+          "numero-tel": {
+            "numero": "9-1-1",
+            "extra": "est le numéro de téléphone qu'il faut composer lorsque l'intervention d'un service d'urgence (police, pompier, ambulance) est requise. Toute personne qui réside ou qui se trouve sur le territoire de Montréal a un accès au 9-1-1 et tous les téléphones publics du territoire donnent un accès gratuit au 9-1-1"
+          },
+          "extra-content": "<p>Un seul canal Par téléphone d’affiché. Information complémentaire  optionnelle - Corps de texte avec la possibilité de mettre des liens internes ou externes. Exemple : Horaire de disponibilité ou délai de transmission.</p>"
+        },
+        {
+          "collapsible-item-canaux": true,
+          "en-personne": true,
+          "block-id": "template-demarche-en-personne-lieu-ville",
+          "heading-id": "heading-template-demarche-en-personne-lieu-ville",
+          "title": "En personne (option Lieu Ville)",
+          "lieu": [
+            {
+              "lieu-ville": true,
+              "nom-service": "Nom du service",
+              "nom-lieu": "Nom du lieu Ville",
+              "address": "5955, Bannantyne<br>Montréal (Québec) H4H 1H6"
+            },
+            {
+              "lieu-ville": true,
+              "nom-service": "Nom du service",
+              "nom-lieu": "Autre lieu Ville (optionnel)",
+              "address": "5955, Bannantyne<br>Montréal (Québec) H4H 1H6"
+            }
+          ],
+          "has-mode-paiement": true,
+          "extra-content": "<p>Un seul canal En personne d’affiché. Information complémentaire - Corps de texte avec la possibilité de mettre des liens internes ou externes. Exemple : Horaire de disponibilité ou délai de transmission.</p>"
+        },
+        {
+          "collapsible-item-canaux": true,
+          "en-personne": true,
+          "block-id": "template-demarche-en-personne-lieu-non-ville",
+          "heading-id": "heading-template-demarche-en-personne-lieu-non-ville",
+          "title": "En personne (option Lieu non Ville)",
+          "lieu": [
+            {
+              "lieu-ville": false,
+              "nom-service": "Nom du service",
+              "address": "5955, Bannantyne<br>Montréal (Québec) H4H 1H6"
+            }
+          ],
+          "has-mode-paiement": true,
+          "extra-content": "<p>Un seul canal En personne d’affiché. Information complémentaire - Corps de texte avec la possibilité de mettre des liens internes ou externes. Exemple : Horaire de disponibilité ou délai de transmission.</p>"
+        },
+        {
+          "collapsible-item-canaux": true,
+          "courrier": true,
+          "block-id": "template-demarche-courrier-lieu-ville",
+          "heading-id": "heading-template-demarche-courrier-lieu-ville",
+          "title": "Par courrier (option Lieu Ville)",
+          "lieu": [
+            {
+              "lieu-ville": true,
+              "nom-service": "Nom du service",
+              "nom-lieu": "Nom du lieu Ville",
+              "address": "5955, Bannantyne<br>Montréal (Québec) H4H 1H6"
+            },
+            {
+              "lieu-ville": true,
+              "nom-service": "Nom du service",
+              "nom-lieu": "Autre lieu Ville (optionnel)",
+              "address": "5955, Bannantyne<br>Montréal (Québec) H4H 1H6"
+            }
+          ],
+          "has-mode-paiement": true,
+          "extra-content": "Un seul canal Par courrier d’affiché. Information complémentaire - Corps de texte avec la possibilité de mettre des liens internes ou externes. Exemple : Horaire de disponibilité ou délai de transmission."
+        },
+        {
+          "collapsible-item-canaux": true,
+          "courrier": true,
+          "block-id": "template-demarche-courrier-lieu-non-ville",
+          "heading-id": "heading-template-demarche-courrier-lieu-non-ville",
+          "title": "Par courrier (option Lieu non Ville)",
+          "lieu": [
+            {
+              "lieu-ville": false,
+              "nom-service": "Nom du service",
+              "address": "5955, Bannantyne<br>Montréal (Québec) H4H 1H6"
+            }
+          ],
+          "has-mode-paiement": true,
+          "extra-content": "Un seul canal Par courrier d’affiché. Information complémentaire - Corps de texte avec la possibilité de mettre des liens internes ou externes. Exemple : Horaire de disponibilité ou délai de transmission."
+        },
+        {
+          "collapsible-item-canaux": true,
+          "courriel": true,
+          "block-id": "template-demarche-courriel",
+          "heading-id": "heading-template-demarche-courriel",
+          "title": "Par courriel",
+          "content": "<p>Objet : Lorem ipsum dolor sit amet consectetur adipiscing elit.</p>",
+          "extra-content": "<p>Information complémentaire - Corps de texte avec la possibilité de mettre des liens internes ou externes.</p>"
+        },
+        {
+          "collapsible-item-canaux": true,
+          "telephone": true,
+          "block-id": "template-demarche-fax",
+          "heading-id": "template-demarche-fax",
+          "title": "Par télécopieur",
+          "nom-service": "Nom du service (à l’attention de …)",
+          "numero-tel": {
+            "numero": "514 993-3423",
+            "extra": false
+          },
+          "extra-content": "<p>Information complémentaire - Corps de texte avec la possibilité de mettre des liens internes ou externes. Exemple : Horaire de disponibilité ou délai de transmission.</p>"
+        
+        }
+      ]
+    },
+    "module-reglements": true
+  },
   "sidebarRight": true,
   "sidebarClasses": false,
   "sb-classes": "",
