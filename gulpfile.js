@@ -7,6 +7,7 @@
 var gulp                = require('gulp'),
     autoprefixer        = require('gulp-autoprefixer'),
     clean               = require('gulp-clean'),
+    //del                 = require('del’),
     browserSync         = require('browser-sync'),
     cssmin              = require('gulp-cssmin'),
     fs                  = require("fs"),
@@ -15,13 +16,12 @@ var gulp                = require('gulp'),
     imagemin            = require('gulp-imagemin'),
     postcss             = require('gulp-postcss'),
     rename              = require('gulp-rename'),
+    svgSprite           = require('gulp-svg-sprite'),
     sass                = require('gulp-sass'),
     shell               = require('gulp-shell'),
     sourcemaps          = require('gulp-sourcemaps'),
-    svgmin              = require('gulp-svgmin'),
     tildeImporter       = require('node-sass-tilde-importer'),
     uglify              = require('gulp-uglify-es').default,
-    gulpsvgtojsontoscss = require('gulp-svg-to-json-to-scss');
     config              = require('./build.config.json'),
     package             = require('./package.json');
 
@@ -71,78 +71,6 @@ gulp.task('nodemodulescripts-dist', function () {
       ))
 });
 
-// Font files -- VDM font icons
-// From node_modules to source -- stay up to date with curent versions
-// Thin of piping these files with a rename so the final filename is more significant.
-/*gulp.task('nodemodulesfonts', function () {
-  return gulp.src(config.nodemodulesfonts.files)
-      .pipe(gulp.dest(
-          config.nodemodulesfonts.dest
-      ))
-      .pipe(browserSync.reload({stream:true}));
-});*/
-
-
-// VDM font-metadata -- 
-// Load and transform the json file to provide looping data for mustache templates in a new .json file.
-// Provide a sass $icons map variable in a separate .scss file as well.
-
-/*gulp.task('nodemodulesfontsdata', function() {
-  fs.readFile(config.nodemodulesfontsdata.input, "utf-8", function(err, json) {
-    if (err) {
-      return console.log(err);
-    }
- 
-    var sassdir = config.nodemodulesfontsdata.sass;
-    var source = JSON.parse(json);
-    var count = Object.keys(source).length;
-    var index = 0;
-
-    var pattern = /[0-9][0-9][0-9][-]/i;
-    var output = {
-        'icons': []
-    };
-    var sass = '$vdmicons : (\n';
-
-    for (var key in source) {
-      var label = key
-      var content = `${source[key]}`;
-      
-      // Write the json line
-      output.icons.push(  { 
-          "icon-label"  : label,
-          "icon-content" : content
-        } 
-      );
-      
-      // Write the sass line
-      sass += '\t' + 'vdm-' + label + ' : ' + '"' + content + '"';
-      index ++;
-      var lineEnding = index < count ? ',' + '\n' : '\n';
-      sass += lineEnding;
-    }
-    sass += ");"  // Close the sass $newicons map variable
-
-    // Write the json icons file
-    fs.writeFile(config.nodemodulesfontsdata.json, JSON.stringify(output, null, 4), (err) => {
-        if (err) {
-            console.error(err);
-            return;
-        };
-        console.log("The json icons file has been created");
-    });
-
-    // Write the Sass icons file
-    fs.writeFile(sassdir, sass, (err) => {
-      if (err) {
-          console.error(err);
-          return;
-      };
-      console.log("The sass icons file has been created");
-    });
-  });// read file
-});*/
-
 // Scripts from source to public
 gulp.task('scripts', function () {
   return gulp.src(config.scripts.files)
@@ -188,24 +116,6 @@ gulp.task('photoswipe', function () {
       config.photoswipe.dest
     ))
 });
-
-// Fonts, copy
-/*gulp.task('fonts', function () {
-    return gulp.src(config.fonts.files)
-      .pipe(gulp.dest(
-        config.fonts.dest
-      ))
-      .pipe(browserSync.reload({stream:true}));
-});
-
-// Glyphs, copy
-gulp.task('glyphs', function () {
-  return gulp.src(config.glyphs.files)
-    .pipe(gulp.dest(
-      config.glyphs.dest
-    ))
-    .pipe(browserSync.reload({stream:true}));
-});*/
 
 // Images copy and minimize
 gulp.task('images', function () {
@@ -379,8 +289,8 @@ gulp.task('watch', function () {
 gulp.task('default', ['cleanable:before'], function () {
   production = false;
   gulp.start(
-    'icon-editorial',
-    'icon-utility',
+    //'icon-utility',
+    //'icon-editorial',
     'patternlab',
     'styleguide',
     'sass',
@@ -388,6 +298,7 @@ gulp.task('default', ['cleanable:before'], function () {
     'images',
     'nodemodulescripts',
     'photoswipe',
+    //clean:icons,
     'scripts'
   );
 });
@@ -418,73 +329,56 @@ gulp.task('distribute', ['clean-dist:before'], function () {
   );
 });
 
-// Task: Svg to json to scss
-// Description: Transform icons svg to json and scss  
-//Editorial
-gulp.task('icon-editorial', function() {
-  return gulp.src('source/images/icons-original/icon-editorial/*.svg')
-    .pipe(rename(function (path) {
-      path.basename = path.basename.replace(/icon_prefix_/, '');
-      return path;
-    }))
-    .pipe(svgmin({
-      plugins: [
-        { cleanupIDs: { remove: true, minify: true } }, 
-        { removeXMLNS: false },
-        { removeDoctype: true },
-        { removeComments: true },
-        { removeStyleElement: true },
-        { removeViewBox: false },
-        { removeTitle: false },
-        { cleanupNumericValues: { floatPrecision: 2  } },
-        { removeAttrs: { attrs: ['(fill|fill-rule|style)'] } }
-      ],
-      js2svg: {
-        pretty: true
-      }
-    }))
-    .pipe(gulp.dest('source/images/icons/icon-editorial'))
-    .pipe(gulpsvgtojsontoscss({
-      jsonFile: 'source/_data/icons-editorial.json',
-      scssFile: 'source/css/scss/_icons-editorial.scss',
-      basePath:"./source/images/icons/",
-      noExt:true,
-      delim:"-"
-    }))
-    .pipe(gulp.dest('./'));
-});
+configIconUtility = {
+  mode: {
+    symbol: {
+      dest: './',
+      example: {
+        dest: '02-icons-utility.mustache',
+        template: "source/images/icons/original/tpl/pl-icons-utility.html"
+      },
+      render: {
+        css: false, // CSS output option for icon sizing
+        scss: false // SCSS output option for icon sizing
+      },
+      sprite: 'icons-utility.svg'
+    },
+  }
+};
 
-//Utility
+configIconEditorial = {
+  mode: {
+    symbol: {
+      dest: './',
+      example: {
+        dest: '01-icons-editorial.mustache',
+        template: "source/images/icons/original/tpl/pl-icons-editorial.html"
+      },
+      render: {
+        css: false, // CSS output option for icon sizing
+        scss: false // SCSS output option for icon sizing
+      },
+      sprite: 'icons-editorial.svg'
+    },
+  }
+};
+
+//Gulp task
 gulp.task('icon-utility', function() {
-  return gulp.src('source/images/icons-original/icon-utility/*.svg')
-    .pipe(rename(function (path) {
-      path.basename = path.basename.replace(/icon_prefix_/, '');
-      return path;
-    }))
-    .pipe(svgmin({
-      plugins: [
-        { cleanupIDs: { remove: true, minify: true } }, 
-        { removeXMLNS: false },
-        { removeDoctype: true },
-        { removeComments: true },
-        { removeStyleElement: true },
-        { removeViewBox: false },
-        { removeTitle: false },
-        { cleanupNumericValues: { floatPrecision: 2  } },
-        { removeAttrs: { attrs: ['(fill|fill-rule|style)'] } }
-      ],
-      js2svg: {
-        pretty: true
-      }
-    }))
-    .pipe(gulp.dest('source/images/icons/icon-utility'))
-    .pipe(gulpsvgtojsontoscss({
-      jsonFile: 'source/_data/icons-utility.json',
-      scssFile: 'source/css/scss/_icons-utility.scss',
-      basePath:"./source/images/icons/",
-      noExt:true,
-      delim:"-"
-    }))
-    .pipe(gulp.dest('./'));
+  return gulp.src('source/images/icons/original/icon-utility/*.svg')
+  .pipe(svgSprite(configIconUtility))
+  .pipe(gulp.dest('source/_patterns/00-styles/02-iconography/'))
 });
 
+//Gulp task
+gulp.task('icon-editorial', function() {
+  return gulp.src('source/images/icons/original/icon-editorial/*.svg')
+  .pipe(svgSprite(configIconEditorial))
+  .pipe(gulp.dest('source/_patterns/00-styles/02-iconography/'))
+});
+
+/*gulp.task('clean:icons', function () {
+  return del([
+    'source/_patterns/00-styles/02-iconography/*.svg'
+  ]);
+});*/

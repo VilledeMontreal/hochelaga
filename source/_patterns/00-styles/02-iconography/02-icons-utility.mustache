@@ -4,8 +4,8 @@
   		{{#icon-utility }}
 	   		<li class="col-6 col-sm-4 col-md-4 col-lg-3">
 		      <div class="pl-atom-icon-item icon-utility">
-		      	<a data-toggle="modal" data-target="#exampleModalIcon" class="{{ icon-name }}" id="linkModalIcon">
-			      	<svg class="icon {{ icon-name }}" viewBox="0 0 24 24"> 
+		      	<a data-toggle="modal" data-target="#exampleModalIconUtility" id="linkModalIcon-{{ icon-name }}">
+			      	<svg class="icon" viewBox="0 0 24 24" role="icon"> 
 			      		<path d="{{ icon-path }}"></path>
 						  </svg>
 					  </a>
@@ -14,15 +14,14 @@
 		    </li>
 		  {{/icon-utility}}
   	</ul>
-
 </div>
 
 <!-- Modal -->
-<div class="modal fade" id="exampleModalIcon" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+<div class="modal fade" id="exampleModalIconUtility" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
   <div class="modal-dialog modal-dialog-centered" role="document">
     <div class="modal-content">
       <div class="modal-header">
-        <h5 class="modal-title" id="exampleModalIconLabel">Icon name</h5>
+        <h5 class="modal-title" id="exampleModalIconUtilityLabel">Icon name</h5>
         <button type="button" class="btn-close close" data-dismiss="modal" aria-label="Close">
           <svg width="24" height="24" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
             <title>Icons/24px/X</title>

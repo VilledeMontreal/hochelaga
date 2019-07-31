@@ -1,16 +1,37 @@
-<div class="cotainer-fluid pl-atom-icons-grid">
-	
+<div class="container-fluid pl-atom-icons-grid">
+
   	<ul class="row list-unstyled">
   		{{#icon-editorial }}
 	   		<li class="col-6 col-sm-4 col-md-4 col-lg-3">
-		      	<div class="pl-atom-icon-item icon-editorial">
-		      		<svg class="icon {{ icon-name }}" viewBox="0 0 48 48"> 
-    					<path d="{{ icon-path }}"></path>
-					</svg>
-		       		<div class="ic-name">{{ icon-name }}</div>
-		      	</div>
+		      <div class="pl-atom-icon-item icon-editorial">
+		      	<a data-toggle="modal" data-target="#exampleModalIconEditorial" id="linkModalIcon-{{ icon-name }}">
+			      	<svg class="icon" viewBox="0 0 40 40" role="icon"> 
+			      		<path d="{{ icon-path }}"></path>
+						  </svg>
+					  </a>
+			      <span class="ic-name">{{ icon-name }}</span>
+		      </div>
 		    </li>
-		{{/icon-editorial}}
+		  {{/icon-editorial}}
   	</ul>
+</div>
 
+<!-- Modal -->
+<div class="modal fade" id="exampleModalIconEditorial" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalIconEditorialLabel">Icon name</h5>
+        <button type="button" class="btn-close close" data-dismiss="modal" aria-label="Close">
+          <svg width="24" height="24" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+            <title>Icons/24px/X</title>
+            <path d="M12 13.414l-5.293 5.293a1 1 0 1 1-1.414-1.414L10.586 12 5.293 6.707a1 1 0 0 1 1.414-1.414l12 12a1 1 0 0 1-1.414 1.414L12 13.414zm5.293-8.121a1 1 0 0 1 1.414 1.414l-3 3a1 1 0 1 1-1.414-1.414l3-3z" fill="#ADB5BD" fill-rule="evenodd"/>
+          </svg>
+        </button>
+      </div>
+      <div class="modal-body">
+        <p class="select-all"></p>
+      </div>
+    </div>
+  </div>
 </div>

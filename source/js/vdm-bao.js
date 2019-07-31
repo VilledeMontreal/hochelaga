@@ -3,16 +3,19 @@
    
   // ******************************
   //Icon modal
+$('[id^="linkModalIcon"]').click(function() {
+  console.log( "click click");
 
-  var $linkModalIcon = $("a#linkModalIcon");
+  var title = $(this).next(".ic-name").html();
+  var svg = $(this).html();
+  $("#exampleModalIconUtilityLabel").text(title);
+  $("#exampleModalIconEditorialLabel").text(title);
+  $("#exampleModalIconUtility .modal-body .select-all").text(svg);
+  $("#exampleModalIconEditorial .modal-body .select-all").text(svg);
 
-  $linkModalIcon.on( "click", function() {
-    var title = $(this).attr( "class" ).toString();
-    $.getJSON( "../../_data/icons-utility.json", function( donnees ) {
-      $("#exampleModalIcon #exampleModalIconLabel").text(title);
-      $("#exampleModalIcon .modal-body .select-all").text(donnees[title].data);
-    });
-  });
+  //$("#exampleModalIconUtilityLabel").text("."+title);
+  
+});
 
 
   // ******************************

@@ -1,0 +1,12 @@
+[class^="icon-utility"] {
+	fill: currentColor;
+
+	{{#shapes}}
+	.icon-utility-{{base}} {
+		background-image: url("../vdm-icons-scss.svg") {{position.absolute.x}}px {{position.absolute.y}}px no-repeat;
+		width: {{width.inner}}px; 
+		height: {{height.inner}}px;
+	}
+
+	{{/shapes}}
+}	

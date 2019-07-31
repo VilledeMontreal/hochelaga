@@ -21,7 +21,6 @@
       "files" : [
         "public/annotations/*", 
         "public/css/*", 
-        "public/images/*", 
         "public/js/*", 
         "public/patterns/*", 
         "public/images/*"
@@ -55,6 +54,7 @@
       "base"  : "source/js/",
       "files" : [
         "source/js/**/*.js",
+        "source/js/**/*.json",
         "!source/js/vendor/**"
       ],
       "dest"  : "public/js/",
@@ -80,8 +80,8 @@
       "base" : "source/images/",
       "files": [
         "source/images/**/*",
-        "!source/images/icons-original",
-        "!source/images/icons-original/**/*"
+        "!source/images/icons/original",
+        "!source/images/icons/original/**/*"
       ],
       "dest" : "public/images/"
     },
@@ -95,14 +95,6 @@
         "!source/images/pl-demo/**/*"  
       ],
       "dest" : "dist/images/"
-    },
-    "svgbuild": {
-      "base" : "source/images/icons/",
-      "files": [
-        "source/images/icons/**/*.svg"
-      ],
-      "dest-js" : "source/js",
-      "dest-scss" : "source/css/"
     },
     "bao": {
       "files": {

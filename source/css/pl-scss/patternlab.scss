@@ -288,11 +288,18 @@ $pl-size-box-wrapper-padding: 1rem;
     }
 	&.icon-editorial {
 		text-align: center;
-		svg {
-			fill: $gray-500;
-			width: 48px;
-			height: 48px;
-		}
+    a {
+      border: none;
+      background-color: transparent;
+      cursor: pointer;
+      display: block;
+      svg {
+        fill: $gray-500;
+        width: 48px;
+        height: 48px;
+      }
+    }
+
 	}
 	&.icon-utility {
 		margin: 0.25rem;
