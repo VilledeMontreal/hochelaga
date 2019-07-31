@@ -1,13 +1,8 @@
 {{#svgs}}
 .icon-editorial-{{{name}}} {
 	&:before {
-		content: '';
-		display: inline;
 		-webkit-mask: url("{{{inline}}}") no-repeat 50% 50%;
 		mask: url("{{{inline}}}") no-repeat 50% 50%;
-		-webkit-mask-size: cover;
-		mask-size: cover;
-		background-color: $gray-500;
 		width: {{{width}}};
 		height: {{{height}}};
 	}
