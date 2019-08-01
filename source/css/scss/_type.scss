@@ -229,8 +229,8 @@ a {
     position: relative;
     &:after {
       content: '';
-      -webkit-mask: url($icon-utility-external-link) no-repeat 50% 50%;
-      mask: url($icon-utility-external-link) no-repeat 50% 50%;
+      -webkit-mask: url($data-icon-externallink) no-repeat 50% 50%;
+      mask: url($data-icon-externallink) no-repeat 50% 50%;
       -webkit-mask-size: cover;
       mask-size: cover;
       background-color: $action;
