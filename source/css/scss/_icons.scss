@@ -16,15 +16,23 @@ svg[role=icon] {
   width: 24px;
 }
 
-[class*="icon-"]{ 
-    &:before {
-      content: '';
-      display: inline-block;
-      -webkit-mask-size: cover;
-      mask-size: cover;
-      background-color: $gray-500;
-    }
+.icon {
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+  display: flex;
+  font-style: normal;
+  font-variant: normal;
+  text-rendering: auto;
+  line-height: 1;
+  &:before {
+    content: '';
+    display: inline-block;
+    -webkit-mask-size: cover;
+    mask-size: cover;
+    background-color: $neutral-tertiary;
+  }
 }
+
 
 // Add .icon class to display vertically centered icon and text
 /*.icon {

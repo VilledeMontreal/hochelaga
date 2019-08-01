@@ -28,7 +28,7 @@ gulp.task('icon-utility', function() {
         { removeViewBox: false },
         { removeTitle: false },
         { cleanupNumericValues: { floatPrecision: 2  } },
-        { addClassesToSVGElement: { classNames: ["icon"] } },
+        { addClassesToSVGElement: { classNames: ["icon-svg"] } },
         { addAttributesToSVGElement: { attributes: ['role="icon"'] } },
         { removeDimensions: true },
         { removeAttrs: { attrs: ['(fill|fill-rule|style)'] } }
@@ -89,7 +89,7 @@ gulp.task('icon-editorial', function() {
         { removeViewBox: false },
         { removeTitle: false },
         { cleanupNumericValues: { floatPrecision: 2  } },
-        { addClassesToSVGElement: { classNames: ["icon"] } },
+        { addClassesToSVGElement: { classNames: ["icon-svg"] } },
         { addAttributesToSVGElement: { attributes: ['role="icon"'] } },
         { removeDimensions: true },
         { removeAttrs: { attrs: ['(fill|fill-rule|style)'] } }

@@ -154,6 +154,9 @@
     border-bottom: none;
       // Hover state
     @include hover-focus {
+      .icon {
+        @include icon-color($action-lighter);
+      }
       svg {
         fill: $action-lighter;
       }
@@ -161,9 +164,20 @@
 
     &:active,
     &.active {
+      .icon {
+        @include icon-color($action-lighter);
+      }
       svg {
         fill: $action-lighter;
       }
+    }
+  }
+  .icon {
+    flex-shrink: 0;
+    margin-right: 1rem;
+    &:before {
+      height: 2.5rem;
+      width: 2.5rem;
     }
   }
   svg {
@@ -183,6 +197,15 @@
       svg {
         fill: currentColor;
       }
+    }
+  }
+  .icon {
+    @include icon-color($action);
+    flex-shrink: 0;
+    margin-right: 1rem;
+    &:before {
+      height: 1.5rem;
+      width: 1.5rem;
     }
   }
   svg {

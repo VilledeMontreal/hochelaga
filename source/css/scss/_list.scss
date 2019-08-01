@@ -16,7 +16,9 @@
 .list-lg {
   .list-item {
     padding: 1rem;
-
+    .icon {
+      margin-right: 1rem;
+    }
     svg {
       margin-right: 1rem;
     }
@@ -48,6 +50,11 @@
     }
   }
 
+  .icon {
+    @include icon-color($action);
+    align-self: center;
+  }
+
   &:active {
     color: $list-group-action-active-color;
     background-color: $list-group-action-active-bg;
@@ -62,7 +69,7 @@
 
 .list-item {
   position: relative;
-  display: block;
+  display: flex;
   padding: .5rem;
   color: $list-group-color;
 
@@ -83,7 +90,9 @@
     color: $list-group-active-color;
     background-color: $list-group-active-bg;
   }
-
+  .icon {
+    margin-right: .5rem;
+  }
   svg {
     margin-right: .5rem;
     height: 1.5rem;
@@ -117,6 +126,9 @@
       }
     }
   }
+  .icon {
+    margin-right: 1rem;
+  }
   svg {
     margin-right: 1rem;
     height: 2.5rem;
@@ -131,6 +143,9 @@
     padding: .5rem 0;
     display: flex;
     flex-flow: row wrap;
+    .icon {
+      margin-right: 1rem;
+    }
     svg {
       margin-right: 1rem;
       fill: $neutral-tertiary;
@@ -150,6 +165,9 @@
     flex: 1 100%;
     .list-item-icon-label {
       color: inherit;
+    }
+    .icon {
+      @include icon-color($action);
     }
     svg {
       fill: $action;

@@ -105,20 +105,20 @@
       ]
     },
     "module-documents": {
-      "listGroupClass": "list-group-icon-utility",
-      "listGroup": [
+      "listClass": "list-lg",
+      "list": [
         {
-          "listGroupIconUtility": true,
+          "listIconUtility": "icon-file-pdf",
           "text": "Titre du document [PDF - 2 Mo]",
           "class": "document-pdf"
         },
         {
-          "listGroupIconUtility": true,
+          "listIconUtility": "icon-file-pdf",
           "text": "Titre du document [PDF - 2 Mo]",
           "class": "document-pdf"
         },
         {
-          "listGroupIconUtility": true,
+          "listIconUtility": "icon-file",
           "text": "Titre du document",
           "class": "document"
         }
@@ -152,7 +152,7 @@
             "nom-service": "Nom du service",
             "list": [
               {
-                "listIconUtility": "icon-telephone",
+                "listIconUtility": "icon-phone",
                 "listItemAction": false,
                 "text": "514 993-3423",
                 "listExtraContent": false
@@ -171,7 +171,7 @@
             "nom-service": false,
             "list": [
               {
-                "listIconUtility": "icon-telephone",
+                "listIconUtility": "icon-phone",
                 "listItemAction": false,
                 "text": "3-1-1",
                 "listExtraContent": "de l'extérieur de Montréal 514 872-0311"
@@ -191,7 +191,7 @@
             "nom-service": false,
             "list": [
               {
-                "listIconUtility": "icon-telephone",
+                "listIconUtility": "icon-phone",
                 "listItemAction": false,
                 "text": "9-1-1",
                 "listExtraContent": "est le numéro de téléphone qu'il faut composer lorsque l'intervention d'un service d'urgence (police, pompier, ambulance) est requise. Toute personne qui réside ou qui se trouve sur le territoire de Montréal a un accès au 9-1-1 et tous les téléphones publics du territoire donnent un accès gratuit au 9-1-1"
@@ -211,7 +211,7 @@
               "nom-service": "Nom du service",
               "list": [
                 {
-                  "listIconUtility": "icon-location",
+                  "listIconUtility": "icon-loction",
                   "listItemAction": true,
                   "text": "Nom du lieu Ville",
                   "listExtraContent": "5955, avenue Bannantyne<br>Montréal (Québec) H4H 1H6"
@@ -222,7 +222,7 @@
               "nom-service": "Nom du service",
               "list": [
                 {
-                  "listIconUtility": "icon-location",
+                  "listIconUtility": "icon-loction",
                   "listItemAction": true,
                   "text": "Autre lieu Ville (optionnel)",
                   "listExtraContent": "5955, avenue Bannantyne<br>Montréal (Québec) H4H 1H6"
@@ -244,7 +244,7 @@
               "nom-service": "Nom du service",
               "list": [
                 {
-                  "listIconUtility": "icon-location",
+                  "listIconUtility": "icon-loction",
                   "listItemAction": false,
                   "text": false,
                   "listExtraContent": "5955, avenue Bannantyne<br>Montréal (Québec) H4H 1H6"
@@ -266,7 +266,7 @@
               "nom-service": "Nom du service",
               "list": [
                 {
-                  "listIconUtility": "icon-location",
+                  "listIconUtility": "icon-loction",
                   "listItemAction": true,
                   "text": "Nom du lieu Ville",
                   "listExtraContent": "5955, avenue Bannantyne<br>Montréal (Québec) H4H 1H6"
@@ -277,7 +277,7 @@
               "nom-service": "Nom du service",
               "list": [
                 {
-                  "listIconUtility": "icon-location",
+                  "listIconUtility": "icon-loction",
                   "listItemAction": true,
                   "text": "Autre lieu Ville (optionnel)",
                   "listExtraContent": "5955, avenue Bannantyne<br>Montréal (Québec) H4H 1H6"
@@ -299,7 +299,7 @@
               "nom-service": "Nom du service",
               "list": [
                 {
-                  "listIconUtility": "icon-location",
+                  "listIconUtility": "icon-loction",
                   "listItemAction": false,
                   "text": false,
                   "listExtraContent": "5955, avenue Bannantyne<br>Montréal (Québec) H4H 1H6"
@@ -322,7 +322,7 @@
               "nom-service": false,
               "list": [
                 {
-                  "listIconUtility": "icon-enveloppe",
+                  "listIconUtility": "icon-email",
                   "listItemAction": true,
                   "text": "Envoyer un courriel",
                   "listExtraContent": false
@@ -343,7 +343,7 @@
               "nom-service": "Nom du service (à l’attention de …)",
               "list": [
                 {
-                  "listIconUtility": "icon-location",
+                  "listIconUtility": "icon-loction",
                   "listItemAction": false,
                   "text": "514 993-3423",
                   "listExtraContent": false
@@ -368,17 +368,17 @@
     "listGroupClass": "list-group-icon-editorial",
     "listGroup": [
       {
-        "listGroupIconEditorial": true,
+        "listIconEditorial": "icon-affaires-et-economie",
         "text": "Titre sur plusieurs lignes si nécessaire",
         "class": false
       },
       {
-        "listGroupIconEditorial": true,
+        "listIconEditorial": "icon-animaux",
         "text": "Dapibus ac facilisis in",
         "class": false
       },
       {
-        "listGroupIconEditorial": true,
+        "listIconEditorial": "icon-environnement",
         "text": "Morbi leo risus",
         "class": false
       }
@@ -388,42 +388,19 @@
     "listGroupClass": "list-group-icon-editorial",
     "listGroup": [
       {
-        "listGroupIconEditorial": true,
+        "listIconEditorial": "icon-organisation-municipale",
         "text": "Titre sur plusieurs lignes si nécessaire",
         "class": false
       },
       {
-        "listGroupIconEditorial": true,
+        "listIconEditorial": "icon-sante-et-securite-publiques",
         "text": "Dapibus ac facilisis in",
         "class": false
       },
       {
-        "listGroupIconEditorial": true,
+        "listIconEditorial": "icon-vie-communautaire",
         "text": "Morbi leo risus",
         "class": false
-      }
-    ]
-  },
-  "pieces-justificatives": true,
-  "collapsible-links": true,
-  "collapsibleClasses": "pt-4",
-  "collapsibleHowTo": {
-    "collapsibleItem": [
-      {
-        "title": "En ligne",
-        "content": "<p>Lorem ipsum dolor sit amet, <a href=\"https://beta.montreal.ca/moncompte\">mon compte</a> consectetur adipiscing elit. Praesent vitae turpis augue. Maecenas volutpat massa vel tellus congue, eget volutpat sem accumsan. Ut sit amet vulputate felis. Pellentesque volutpat erat enim, vel efficitur ipsum scelerisque id. Integer lacinia lectus ut erat interdum, eget convallis est dapibus.</p>",
-        "block-id": "howto-rdp-enligne",
-        "heading-id": "heading-howto-rdp-enligne",
-        "show": "true",
-        "icon": false,
-        "has-default-icon": true,
-        "has-links": true,
-        "has-mode-paiement": true,
-        "has-call-to-action": {
-          "cta-url": "#",
-          "cta-title": "Appel à l'action"
-        },
-        "badge": false
       }
     ]
   }
