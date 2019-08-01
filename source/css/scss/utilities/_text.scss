@@ -8,13 +8,12 @@
 a {
   color: $primary;
   border-bottom: $link-border-width solid $primary;
-}
-a {
-    @include hover-focus {
-      color: $primary;
-      background-color: $highlight-light;
-      border-bottom: $link-border-width solid $primary;
-    }
+  font-weight: $font-weight-bold;
+  @include hover-focus {
+    color: $primary;
+    background-color: $highlight-light;
+    border-bottom: $link-border-width solid $primary;
+  }
 }
 
 // Make the color of dialog dark

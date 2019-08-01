@@ -1,6 +1,41 @@
 // Lists overrides and new variants
 
 // List groups
+.list-group {
+  display: flex;
+  flex-direction: column;
+
+  // No need to set list-style: none; since .list-group-item is block level
+  padding-left: 0; // reset padding because ul and ol
+  margin-bottom: 0;
+
+  // Tweaks to allow list of links as clickable wrappers
+  li {
+    list-style: none;
+    &:first-child {
+      .list-group-item {
+        &:first-child {
+          border-top: $list-group-border-width solid transparent;
+        }
+      }
+    }
+    .list-group-item {
+      &:first-child {
+        border-top: $list-group-border-width solid $list-group-border-color;
+      }
+    }
+
+    @include hover-focus {
+      .list-group-item-action {
+        border-bottom: none;
+        border-top: 1px solid transparent;
+      }
+      + li .list-group-item-action {
+        border-top: 1px solid transparent;
+      }
+    }
+  }
+}
 
 // Interactive list items
 //
@@ -8,14 +43,18 @@
 // list items. Includes an extra `.active` modifier class for selected items.
 
 .list-group-item-action {
+  border-bottom: none;
   font-weight: $font-weight-bold;
+  width: 100%; // For `<button>`s (anchors become 100% by default though)
+  color: $list-group-action-color;
+  text-align: inherit; // For `<button>`s (anchors inherit)
 
   @include hover-focus {
-    border-bottom: none;
-    border-top: 1px solid transparent;
-    + .list-group-item-action {
-      border-top: 1px solid transparent;
-    }
+    z-index: 1; // Place hover/focus items above their siblings for proper border styling
+    color: $list-group-action-hover-color;
+    text-decoration: none;
+    background-color: $list-group-hover-bg;
+    border: none;
   }
 
   .list-group-item-title {
@@ -26,6 +65,7 @@
   &:active,
   &.active {
     color: $list-group-action-active-color;
+    background-color: $list-group-action-active-bg;
     border-bottom: none;
     border-top: 1px solid transparent;
     + .list-group-item-action {
@@ -37,21 +77,62 @@
   }
 }
 
+.list-group-delimiter {
+  .list-group-item {
+    border-top: $list-group-border-width solid $list-group-border-color;
+
+    &:first-child {
+      border-top: $list-group-border-width solid transparent;
+    }
+
+    &.active {
+      border-color: $list-group-active-border-color;
+    }
+  }
+
+  .list-group-item-action {
+    @include hover-focus {
+      border-bottom: none;
+      border-top: 1px solid transparent;
+      + .list-group-item-action {
+        border-top: 1px solid transparent;
+      }
+    }
+  }
+}
+
 //
 // Individual list items
 //
 // Use on `li`s or `div`s within the `.list-group` parent.
 .list-group-item {
-  @include border-radius(0);
-  border: 0;
-  border-top: $list-group-border-width solid $list-group-border-color;
+  position: relative;
+  display: block;
+  padding: $list-group-item-padding-y $list-group-item-padding-x;
   display: flex;
   align-items: center;
   line-height: $line-height-component;
   margin-bottom: 0;
+  color: $list-group-color;
+  background-color: $list-group-bg;
 
-  &:first-child {
-    border-top: $list-group-border-width solid transparent;
+  &:last-child {
+    margin-bottom: 0;
+  }
+
+  &.disabled,
+  &:disabled {
+    color: $list-group-disabled-color;
+    pointer-events: none;
+    background-color: $list-group-disabled-bg;
+  }
+
+  // Include both here for `<a>`s and `<button>`s
+  &.active {
+    z-index: 2; // Place active items above their siblings for proper border styling
+    color: $list-group-active-color;
+    background-color: $list-group-active-bg;
+    border-color: $list-group-active-border-color;
   }
 
   a {
@@ -90,6 +171,7 @@
     height: 2.5rem;
     width: 2.5rem;
     fill: $neutral-tertiary;
+    flex-shrink: 0;
   }
 }
 
@@ -108,6 +190,7 @@
     height: 1.5rem;
     width: 1.5rem;
     fill: currentColor;
+    flex-shrink: 0;
   }
 }
 
@@ -125,8 +208,11 @@
     display: block;
     align-items: initial;
     padding: 1rem 0 1rem 0;
+    border-top: $list-group-border-width solid $list-group-border-color;
+
     &:first-child {
       padding-top: 0;
+      border-top: $list-group-border-width solid transparent;
     }
     .list-group-teaser-img {
       background-size: cover;
@@ -138,16 +224,7 @@
     }
 
     @include hover-focus {
-      border-top: $list-group-border-width solid $list-group-border-color;
-      border-top: $list-group-border-width solid $list-group-border-color;
       background-color: transparent;
-      + .list-group-item-action {
-        border-top: $list-group-border-width solid $list-group-border-color;
-      }
-
-      &:first-child {
-        border-top: $list-group-border-width solid transparent;
-      }
 
       .list-group-item-title {
         color: $list-group-action-active-color;
@@ -171,7 +248,11 @@
     text-transform: uppercase;
     margin-bottom: .5rem;
   }
-
+  .list-group-item-publication-date,
+  .list-group-item-date {
+    @include font-size($font-size-sm);
+    line-height: 1.4285714285;
+  }
   .list-group-item-date {
     font-weight: $font-weight-bold;
   }
@@ -186,23 +267,31 @@
     }
   }
 
+  &.list-group-date {
+    .list-group-item-date {
+      margin-bottom: 1rem;
+      &:after {
+        content: "";
+        display: block;
+        height: .125rem;
+        width: 2rem;
+        margin-top: 1rem;
+        background-color: $brand;
+      }
+    }
+    .list-group-item-title {
+      padding-bottom: 0;
+    }
+  }
 }
 
 
-
-
-
-
-
-// Flush bottom list items
+// Contextual variants
 //
-// Remove borders bottom
-// use list-group-flush to remove both
-.list-group-flush-bottom {
-  &:last-child {
-    .list-group-item:last-child {
-      border-bottom: 0;
-    }
-  }
+// Add modifier classes to change text and background color on individual items.
+// Organizationally, this must come after the `:hover` states.
+
+@each $color, $value in $theme-colors {
+  @include list-group-item-variant($color, theme-color-level($color, -9), theme-color-level($color, 6));
 }
 

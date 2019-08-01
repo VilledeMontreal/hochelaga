@@ -513,17 +513,12 @@ html {
   width: 100%;
 }
 
-//
-// empty-results
-.empty-results {
-  // TODO: REMOVE list-group-heading in v4.0.0
-  // list-group-heading will be deprecated,
-  // Use empty-results-heading inside empty-results div
-  .empty-results-heading {
-    display: block;
-    color: $headings-color;
-    @include font-size($font-size-lg);
-    line-height: $line-height-sm;
-    padding-bottom: 1.275rem;
+.content-module-stacked {
+  margin-bottom: 4rem;
+  > *:not(h2):not(h3):not(h4):not(h5):not(h6) {
+    margin-bottom: 2rem;
+    &:last-child {
+      margin-bottom: 0;
+    }
   }
 }
