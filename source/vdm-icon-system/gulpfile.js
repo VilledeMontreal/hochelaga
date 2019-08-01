@@ -41,7 +41,7 @@ gulp.task('icon-utility', function() {
   .pipe(gulp.dest('icons/icon-utility/svgs-inline-use'))
   .pipe(inlineSvg({
       filename: 'icons/icon-utility/_icons-utility.scss',
-      template: 'icons/original/tpl/scss-icons-utility.mustache'
+      template: 'icons/original/tpl/scss-icons.mustache'
   }))
   .pipe(gulp.dest('./'));
 
@@ -102,7 +102,7 @@ gulp.task('icon-editorial', function() {
   .pipe(gulp.dest('icons/icon-editorial/svgs-inline-use'))
   .pipe(inlineSvg({
       filename: 'icons/icon-editorial/_icons-editorial.scss',
-      template: 'icons/original/tpl/scss-icons-editorial.mustache'
+      template: 'icons/original/tpl/scss-icons.mustache'
   }))
   .pipe(gulp.dest('./'));
 

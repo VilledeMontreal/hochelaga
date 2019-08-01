@@ -3,24 +3,9 @@
 @import "icons-utility";
 @import "icons-editorial";
 
-@import "../../vdm-icon-system/icons/icon-utility/icons-utility";
-@import "../../vdm-icon-system/icons/icon-editorial/icons-editorial";
 
-/*@mixin inline-svg($name) {
-  width: nth($name, 2);
-  height: nth($name, 3);
-  mask: url($name) no-repeat 50% 50%;
-  mask-size: cover;
-  background-color: $primary;
-}
 
-@function inline-svg-width($name) {
-  @return nth($name, 2);
-}
-
-@function inline-svg-height($name) {
-  @return nth($name, 3);
-}*/
+// WORK IN PROGRESS
 
 svg[role=icon] {
   fill: currentColor;
@@ -30,6 +15,74 @@ svg[role=icon] {
   height: 24px;
   width: 24px;
 }
+
+[class*="icon-"]{ 
+    &:before {
+      content: '';
+      display: inline-block;
+      -webkit-mask-size: cover;
+      mask-size: cover;
+      background-color: $gray-500;
+    }
+}
+
+// Add .icon class to display vertically centered icon and text
+/*.icon {
+  display: inline-flex;
+  align-items: center;
+  // we need this code to prevent icon from getting underlined on hover
+  .vdm {
+    display: inline-block;
+    @include font-size(1.5rem);
+    &:before {
+      display: inline-block;
+    }
+  }
+  &.right {
+    .vdm {
+      padding-left: 0.5rem;
+    }
+  }
+  &.left {
+    .vdm {
+      padding-right: 0.5rem;
+    }
+  }
+}
+*/
+// External link icon
+// Apply to .region-content and sb-block
+// Everything not on montreal.ca or of /villemontreal/ AKA cloudinary directory
+/*.sb-block,
+.region-content,
+.lead {
+  a[href*="//"]:not([href*="montreal.ca"]):not([href$=".pdf"]) {
+    margin-right: 1.125em;
+    &:after {
+      @include font-size($font-size-base);
+      overflow: hidden;
+      margin-right: -1.125em;
+      margin-top: -.625rem;
+      margin-bottom: -.625rem;
+      padding-left: 0.125rem;
+      vertical-align: middle;
+    }
+  }
+  // List some exclusion
+  .media-gallery,
+  .list-icon,
+  .social-media-list,
+  .cards,
+  .list-group-hub {
+    a[href*="//"]:not([href*="montreal.ca"]):not([href$=".pdf"]) {
+      margin-right: 0;
+      &:after {
+        content: none;
+      }
+    }
+  }
+}*/
+
 
 /* SIZE */
 $icon-xs:   8px;

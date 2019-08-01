@@ -7,7 +7,6 @@
 var gulp                = require('gulp'),
     autoprefixer        = require('gulp-autoprefixer'),
     clean               = require('gulp-clean'),
-    //del                 = require('del’),
     browserSync         = require('browser-sync'),
     cssmin              = require('gulp-cssmin'),
     fs                  = require("fs"),
@@ -16,7 +15,6 @@ var gulp                = require('gulp'),
     imagemin            = require('gulp-imagemin'),
     postcss             = require('gulp-postcss'),
     rename              = require('gulp-rename'),
-    svgSprite           = require('gulp-svg-sprite'),
     sass                = require('gulp-sass'),
     shell               = require('gulp-shell'),
     sourcemaps          = require('gulp-sourcemaps'),
@@ -141,6 +139,17 @@ gulp.task('scss-dist', function () {
   .pipe(gulp.dest(
     config.scss.distribution
   ))
+});
+
+//Copy icons to scss folder
+gulp.task('icon-utility', function() {
+  return gulp.src('source/vdm-icon-system/icons/icon-utility/_icons-utility.scss')
+  .pipe(gulp.dest('source/css/scss/'))
+});
+
+gulp.task('icon-editorial', function() {
+  return gulp.src('source/vdm-icon-system/icons/icon-editorial/_icons-editorial.scss')
+  .pipe(gulp.dest('source/css/scss/'))
 });
 
 
@@ -289,8 +298,8 @@ gulp.task('watch', function () {
 gulp.task('default', ['cleanable:before'], function () {
   production = false;
   gulp.start(
-    //'icon-utility',
-    //'icon-editorial',
+    'icon-utility',
+    'icon-editorial',
     'patternlab',
     'styleguide',
     'sass',
@@ -298,7 +307,6 @@ gulp.task('default', ['cleanable:before'], function () {
     'images',
     'nodemodulescripts',
     'photoswipe',
-    //clean:icons,
     'scripts'
   );
 });
@@ -329,56 +337,3 @@ gulp.task('distribute', ['clean-dist:before'], function () {
   );
 });
 
-configIconUtility = {
-  mode: {
-    symbol: {
-      dest: './',
-      example: {
-        dest: '02-icons-utility.mustache',
-        template: "source/images/icons/original/tpl/pl-icons-utility.html"
-      },
-      render: {
-        css: false, // CSS output option for icon sizing
-        scss: false // SCSS output option for icon sizing
-      },
-      sprite: 'icons-utility.svg'
-    },
-  }
-};
-
-configIconEditorial = {
-  mode: {
-    symbol: {
-      dest: './',
-      example: {
-        dest: '01-icons-editorial.mustache',
-        template: "source/images/icons/original/tpl/pl-icons-editorial.html"
-      },
-      render: {
-        css: false, // CSS output option for icon sizing
-        scss: false // SCSS output option for icon sizing
-      },
-      sprite: 'icons-editorial.svg'
-    },
-  }
-};
-
-//Gulp task
-gulp.task('icon-utility', function() {
-  return gulp.src('source/images/icons/original/icon-utility/*.svg')
-  .pipe(svgSprite(configIconUtility))
-  .pipe(gulp.dest('source/_patterns/00-styles/02-iconography/'))
-});
-
-//Gulp task
-gulp.task('icon-editorial', function() {
-  return gulp.src('source/images/icons/original/icon-editorial/*.svg')
-  .pipe(svgSprite(configIconEditorial))
-  .pipe(gulp.dest('source/_patterns/00-styles/02-iconography/'))
-});
-
-/*gulp.task('clean:icons', function () {
-  return del([
-    'source/_patterns/00-styles/02-iconography/*.svg'
-  ]);
-});*/

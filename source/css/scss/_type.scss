@@ -141,6 +141,10 @@ a {
   // We had border-bottom on all links and override specific case
   //border-bottom: $link-border-width solid $link-border-color;
 
+  // icons in link should be link-color
+  .icon {
+    color: $link-color;
+  }
   &:hover,
   &:active {
     color: $link-hover-color;
@@ -354,16 +358,6 @@ a {
     color: $brand;
     margin-right: .75rem;
   }
-}
-
-
-.icon {
-  display: inline-block;
-  width: 1em;
-  height: 1em;
-  stroke-width: 0;
-  stroke: currentColor;
-  fill: currentColor;
 }
 
 .bullet-left {
