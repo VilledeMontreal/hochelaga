@@ -30,6 +30,13 @@
       <p>Aucun arrondissement sélectionné.</p>
     </div>
     {{/ selectedArrondissement}}
+    {{# selectedArrondissement}}
+      {{# demarcheContent}}
+      {{# module-content}}
+        {{> templates-citoyens-demarche-content}}
+      {{/ module-content}}
+      {{/ demarcheContent}}
+    {{/ selectedArrondissement}}
   </div>
   <!-- Modal -->
   <div class="modal fade" id="selectArrondissementModal" tabindex="-1" role="dialog" aria-labelledby="selectArrondissementModalLabel" aria-hidden="true">

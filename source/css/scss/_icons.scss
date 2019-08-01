@@ -32,6 +32,31 @@ svg[role=icon] {
   }
 }
 
+.link-has-icon {
+  display: inline-flex;
+  border: none;
+  line-height: $line-height-component;
+  .icon {
+    @include icon-color($action);
+    margin-right: .25rem;
+  }
+  @include hover-focus {
+    border: none;
+    .link-icon-label {
+      -webkit-box-shadow:inset 0px -1px $action;
+      -moz-box-shadow:inset 0px -1px $action;
+      box-shadow:inset 0px -1px $action;
+    }
+  }
+
+  &.icon-right {
+    .icon {
+      margin-right: 0;
+      margin-left: .25rem;
+    }
+  }
+}
+
 
 // Add .icon class to display vertically centered icon and text
 /*.icon {

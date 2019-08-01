@@ -82,28 +82,7 @@
         }
       }
     },
-    "module-dates-importantes": {
-      "listGroupClass": "list-group-teaser list-group-date",
-      "listGroup": [
-        {
-          "class": false,
-          "url": "#",
-          "title": "At amet eos et diam sed no invidunt sadipscing no invidunt sed dolore eos amet",
-          "date": {
-            "dateTimeFormat": "2020-02-14",
-            "dateTimeText": "Jeudi 14 février"
-          }
-        },
-        {
-          "url": "https://google.ca",
-          "title": "Dolore amet aliquyam justo vero lorem accusam amet eos vero",
-          "date": {
-            "dateTimeFormat": "2020-01-01",
-            "dateTimeText": "Mercredi 1 janvier"
-          }
-        }
-      ]
-    },
+    "module-dates-importantes": false,
     "module-documents": {
       "listClass": "list-lg",
       "list": [
@@ -336,7 +315,7 @@
           "collapsible-item-canaux": true,
           "telephone": true,
           "block-id": "template-demarche-fax",
-          "heading-id": "template-demarche-fax",
+          "heading-id": "heading-template-demarche-fax",
           "title": "Par télécopieur",
           "list-icon": [
             {
@@ -352,7 +331,6 @@
             }
           ],
           "extra-content": "<p>Information complémentaire - Corps de texte avec la possibilité de mettre des liens internes ou externes. Exemple : Horaire de disponibilité ou délai de transmission.</p>"
-        
         }
       ]
     },
@@ -365,7 +343,7 @@
     "content": "<p>Lorem ipsum dolor sit amet, consectetur <a href=\"https://ville.montreal.qc.ca\">adipiscing elit</a>. Phasellus cursus mauris non orci malesuada aliquet.</p><p>Nunc tincidunt nisi fringilla consectetur pharetra. Duis sed pretium velit, ut placerat purus. Quisque volutpat facilisis nisl, ut scelerisque orci dapibus in.</p>"
   },
   "sb-block-tc-lies": {
-    "listGroupClass": "list-group-icon-editorial",
+    "listGroupClass": "list-group-icon-editorial list-group-delimiter",
     "listGroup": [
       {
         "listIconEditorial": "icon-affaires-et-economie",
@@ -385,7 +363,7 @@
     ]
   },
   "sb-block-demarches": {
-    "listGroupClass": "list-group-icon-editorial",
+    "listGroupClass": "list-group-icon-editorial list-group-delimiter",
     "listGroup": [
       {
         "listIconEditorial": "icon-organisation-municipale",
