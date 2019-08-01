@@ -1,11 +1,19 @@
 {{#svgs}}
-.icon-{{{name}}} {
-	&:before {
-		-webkit-mask: url("{{{inline}}}") no-repeat 50% 50%;
-		mask: url("{{{inline}}}") no-repeat 50% 50%;
-		width: {{{width}}};
-		height: {{{height}}};
-	}
- } 
+$data-icon-{{{name}}}: "{{{inline}}}"; 
 {{/svgs}}
 
+{{#svgs}}
+.icon-{{{name}}} {
+	&:before {
+		-webkit-mask: url($data-icon-{{{name}}}) no-repeat 50% 50%;
+		mask: url($data-icon-{{{name}}}) no-repeat 50% 50%;
+		width: {{{width}}};
+		height: {{{height}}};
+      	content: '';
+      	display: inline-block;
+      	-webkit-mask-size: cover;
+      	mask-size: cover;
+      	background-color: $gray-500;
+	}
+}
+{{/svgs}}

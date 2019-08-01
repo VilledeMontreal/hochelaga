@@ -8,22 +8,11 @@
 // WORK IN PROGRESS
 
 svg[role=icon] {
-  fill: currentColor;
+  fill: $gray-500;
+  stroke: $gray-500;
   stroke-width: 0;
-  stroke: currentColor;
-  fill: currentColor;
   height: 24px;
   width: 24px;
-}
-
-[class*="icon-"]{ 
-    &:before {
-      content: '';
-      display: inline-block;
-      -webkit-mask-size: cover;
-      mask-size: cover;
-      background-color: $gray-500;
-    }
 }
 
 // Add .icon class to display vertically centered icon and text
@@ -85,18 +74,12 @@ svg[role=icon] {
 
 
 /* SIZE */
-$icon-xs:   8px;
 $icon-sm:   16px;
 $icon-md:   24px;
 $icon-lg:   32px;
-$icon-xl:   40px;
-$icon-xxl:  80px;
 
 $icon-size: ();
 $icon-size: (
-  xs:  (
-    size: $icon-xs
-  ),
   sm:  (
     size: $icon-sm
   ),
@@ -105,46 +88,53 @@ $icon-size: (
   ),
   lg:  (
     size: $icon-lg
-  ),
-  xl:  (
-    size: $icon-xl
-  ),
-  xxl:  (
-    size: $icon-xxl
   )
 );
 
 
 @each $label, $map in $icon-size {
   $size: map-get($map, size);
-  $sprite: map-get($map, sprite);
 
   .icon-#{$label} {
     width: $size !important;
     height: $size !important;
-    //background-image: url($sprite);
+    &:before {
+      width: $size !important;
+      height: $size !important;
+    }
   }
 }
 
 @each $color, $value in $theme-colors {
-  .icon-#{$color} {
+  .icon-color-#{$color} {
     fill:$value !important;
+    &:before {
+      background-color:$value !important;
+    }
   }
 }
 
 @each $label, $map in $dialog-colors {
   $color-dark: map-get($map, dark);
-  .icon-#{$label} {
+  .icon-color-#{$label} {
     fill: $color-dark !important;
+    &:before {
+      background-color:$color-dark !important;
+    }
   }
 }
 
-.icon-white {
-  fill: $white;
+
+.icon-color-white,
+.icon-color-light {
+  fill: $white !important;
+  &:before {
+    background-color: $white !important;
+  }
 }
 
-.icon-dark {
-  fill: $neutral-primary;
+.icon-color-dark {
+  //fill: $neutral-primary;
 }
 
 

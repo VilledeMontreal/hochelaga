@@ -1,5 +1,32 @@
 <div class="container-fluid pl-atom-icons-grid">
-<span class="icon icon-arrow-left"></span><span class="icon icon-clock"></span>
-<div class="icon-arrow-right"></div>
-<a href="#">Hello<span class="icon icon-clock"></span></a>
+
+	<h4 class="pl-pattern-subtitle">Size</h4>
+	
+	<ul class="row list-unstyled">
+  		{{#svgSize }}
+	   		<li class="col-sm-6 col-md-2">
+	   			<span class="ic-name">{{ label }}</span>
+		      	<div class="pl-atom-icon-item icon-utility">
+		      		<span class="icon {{ nameIcon }} {{ classSize }}"></span>
+			    	<svg class="icon {{ classSize }}" viewBox="0 0 24 24" role="icon"> <path d="{{ iconPath }}"></path></svg>
+		      	</div>
+		    </li>
+		{{/svgSize}}
+  	</ul>
+
+
+	<h4 class="pl-pattern-subtitle">Color</h4>
+
+	<ul class="row list-unstyled">
+  		{{#svgColor }}
+	   		<li class="col-sm-6 col-md-2">
+	   			<span class="ic-name">{{ label }}</span>
+		      	<div class="pl-atom-icon-item icon-utility">
+		      		<span class="icon {{ nameIcon }} {{ classColor }}"></span>
+			    	<svg class="icon {{ classColor }}" viewBox="0 0 24 24" role="icon"> <path d="{{ iconPath }}"></path></svg>
+		      	</div>
+		    </li>
+		{{/svgColor}}
+  	</ul>
+  	
 </div>
