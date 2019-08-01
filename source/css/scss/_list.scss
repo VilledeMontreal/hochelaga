@@ -1,0 +1,162 @@
+// List defines styled lists
+
+// Base class
+//
+// Easily usable on <ul>, <ol>, or <div>.
+
+.list {
+  display: flex;
+  flex-direction: column;
+
+  // No need to set list-style: none; since .list-group-item is block level
+  padding-left: 0; // reset padding because ul and ol
+  margin-bottom: 0;
+}
+
+.list-lg {
+  .list-item {
+    padding: 1rem;
+
+    svg {
+      margin-right: 1rem;
+    }
+  }
+}
+
+
+// Interactive list items
+//
+// Use anchor or button elements instead of `li`s or `div`s to create interactive
+// list items. Includes an extra `.active` modifier class for selected items.
+
+.list-item-action {
+  width: 100%; // For `<button>`s (anchors become 100% by default though)
+  border: none;
+  color: $list-group-action-color;
+  text-align: inherit; // For `<button>`s (anchors inherit)
+
+  // Hover state
+  @include hover-focus {
+    z-index: 1; // Place hover/focus items above their siblings for proper border styling
+    color: $list-group-action-hover-color;
+    text-decoration: none;
+    background-color: $list-group-hover-bg;
+    border: none;
+
+    svg {
+      fill: currentColor;
+    }
+  }
+
+  &:active {
+    color: $list-group-action-active-color;
+    background-color: $list-group-action-active-bg;
+  }
+
+}
+
+
+// Individual list items
+//
+// Use on `li`s or `div`s within the `.list` parent.
+
+.list-item {
+  position: relative;
+  display: block;
+  padding: .5rem;
+  color: $list-group-color;
+
+  &:last-child {
+    margin-bottom: 0;
+  }
+
+  &.disabled,
+  &:disabled {
+    color: $list-group-disabled-color;
+    pointer-events: none;
+    background-color: $list-group-disabled-bg;
+  }
+
+  // Include both here for `<a>`s and `<button>`s
+  &.active {
+    z-index: 2; // Place active items above their siblings for proper border styling
+    color: $list-group-active-color;
+    background-color: $list-group-active-bg;
+  }
+
+  svg {
+    margin-right: .5rem;
+    height: 1.5rem;
+    width: 1.5rem;
+    fill: currentColor;
+    flex-shrink: 0;
+  }
+}
+
+.list-content {
+  &.list-icon-content {
+    margin-left: 2rem;
+  }
+}
+
+// Icons - Editorial and Utility
+//
+.list-icon-editorial {
+  a {
+    // Hover state
+    @include hover-focus {
+      svg {
+        fill: $action-lighter;
+      }
+    }
+
+    &:active,
+    &.active {
+      svg {
+        fill: $action-lighter;
+      }
+    }
+  }
+  svg {
+    margin-right: 1rem;
+    height: 2.5rem;
+    width: 2.5rem;
+    fill: $neutral-tertiary;
+    flex-shrink: 0;
+  }
+}
+
+.list-icon {
+  .list-item-icon {
+    padding: .5rem 0;
+    display: flex;
+    flex-flow: row wrap;
+    svg {
+      margin-right: 1rem;
+      fill: $neutral-tertiary;
+    }
+
+  }
+  .list-item-icon-label {
+    color: $neutral-primary;
+    font-weight: $font-weight-bold;
+  }
+  .list-item-icon-action {
+    border: none;
+    color: $list-group-action-color;
+    text-align: inherit;
+    line-height: $line-height-component;
+    display: flex;
+    flex: 1 100%;
+    .list-item-icon-label {
+      color: inherit;
+    }
+    svg {
+      fill: $action;
+    }
+  }
+  .list-item-icon-content {
+    flex: 2;
+    line-height: $line-height-component;
+  }
+}

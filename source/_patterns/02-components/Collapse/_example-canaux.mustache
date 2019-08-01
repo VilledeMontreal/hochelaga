@@ -15,61 +15,30 @@
   {{/ has-mode-paiement}}
   {{{ extra-content }}}
 {{/ en-ligne}}
+
 {{# telephone}}
+  {{# list-icon}}
   {{# nom-service}}
   <h4 class="h4">{{ nom-service}}</h4>
   {{/ nom-service}}
   <div class="mb-4">
-    <span class="icon icon-utility-telephone"></span>
-    <span class="list-item">{{ numero-tel.numero }}</span>
-    {{# numero-tel.extra}}
-    <span class="list-item-description">{{{ numero-tel.extra}}}</span>
-    {{/ numero-tel.extra}}
+    {{> components-list-item-icon}}
   </div>
+  {{/ list-icon}}
   {{# horaire}}
   <p>Du lundi au vendredi : de 8 h 30 à 20 h 30 (Copydeck ?)<br>
   Samedi, dimanche et jours fériés : de 9 h à 17 h</p>
   {{/ horaire}}
   {{{ extra-content }}}
 {{/ telephone}}
-{{# telephone-311}}
-  <div class="mb-4">
-    <span class="icon icon-utility-telephone"></span>
-    <span class="list-item">{{ numero-tel.numero }}</span>
-    {{# numero-tel.extra}}
-    <span class="list-item-description">{{{ numero-tel.extra}}}</span>
-    {{/ numero-tel.extra}}
-  </div>
-  <p>Du lundi au vendredi : de 8 h 30 à 20 h 30 (Copydeck ?)<br>
-  Samedi, dimanche et jours fériés : de 9 h à 17 h</p>
-  {{{ extra-content }}}
-{{/ telephone-311}}
-{{# telephone-911}}
-  <div class="mb-4">
-    <span class="icon icon-utility-telephone"></span>
-    <span class="list-item">{{ numero-tel.numero }}</span>
-    {{# numero-tel.extra}}
-    <span class="list-item-description">{{{ numero-tel.extra}}}</span>
-    {{/ numero-tel.extra}}
-  </div>
-  {{{ extra-content }}}
-{{/ telephone-911}}
 
 {{# en-personne}}
-  {{# lieu}}
+  {{# list-icon}}
   <h4 class="h4">{{ nom-service }}</h4>
   <div class="mb-2">
-    {{# lieu-ville }}
-    <a href="">
-    {{/ lieu-ville}}
-      <span class=""></span>
-      <span class="">{{ nom-lieu }}</span>
-    {{# lieu-ville}} 
-    </a>
-    {{/ lieu-ville}}
-    <span class="">{{{ address }}}</span>
+    {{> components-list-item-icon}}
   </div>
-  {{/ lieu}}
+  {{/ list-icon}}
   {{# has-mode-paiement}}
   <h4 class="h5">Modes de paiements</h4>
   <p>Les modes de paiement disponibles peuvent varié selon le lieu. Texte standard pour les services en personne.</p>
@@ -78,23 +47,15 @@
 {{/ en-personne}}
 
 {{# courrier}}
-  {{# lieu}}
+  {{# list-icon}}
   <h4 class="h4">{{ nom-service }}</h4>
   <div class="mb-2">
-    {{# lieu-ville }}
-    <a href="">
-    {{/ lieu-ville}}
-      <span class=""></span>
-      <span class="">{{ nom-lieu }}</span>
-    {{# lieu-ville}} 
-    </a>
-    {{/ lieu-ville}}
-    <span class="">{{{ address }}}</span>
+    {{> components-list-item-icon}}
   </div>
-  {{/ lieu}}
+  {{/ list-icon}}
   {{# has-mode-paiement}}
   <h4 class="h5">Modes de paiements</h4>
-  <ul class="mb-4">
+  <ul>
     <li>Mode de paiement selon le canal de communication</li>
     <li>Mode de paiement</li>
     <li>Mode de paiement</li>
@@ -102,13 +63,13 @@
   {{/ has-mode-paiement}}
   {{{ extra-content }}}
 {{/ courrier}}
+
 {{# courriel}}
   {{{ content }}}
+  {{# list-icon}}
   <div class="mb-4">
-  <a href="mailto:test@montreal.ca">
-    <span class="icon icon-utility-courrier"></span>
-    <span class="list-item">Envoyer un courriel</span>
-  </a>
+    {{> components-list-item-icon}}
   </div>
+  {{/ list-icon}}
   {{{ extra-content }}}
 {{/ courriel}}
