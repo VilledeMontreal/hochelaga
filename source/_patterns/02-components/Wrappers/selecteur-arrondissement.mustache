@@ -3,18 +3,18 @@
     <div class="row">
       {{^ selectedArrondissement}}
       <div class="col">
-        <p class="mb-0">Veuillez sélectionner votre arrondissement pour obtenir l’information qui vous concerne.</p>
+        <p class="mb-2 mb-sm-0">Veuillez sélectionner votre arrondissement pour obtenir l’information qui vous concerne.</p>
       </div>
-      <div class="col-auto">
+      <div class="col-12 col-sm-auto">
         <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#selectArrondissementModal">Sélectionner</button>
       </div>
       {{/ selectedArrondissement}}
       {{# selectedArrondissement}}
-      <div class="col">
+      <div class="col mb-2 mb-sm-0">
         <div class="label">Arrondissement</div>
         <div class="title">{{ arrondissement }}</div>
       </div>
-      <div class="col-auto">
+      <div class="col-12 col-sm-auto">
         <button class="btn btn-secondary" data-toggle="modal" data-target="#selectArrondissementModal">Changer</button>
       </div>
       {{/ selectedArrondissement}}
@@ -36,6 +36,9 @@
         {{> templates-citoyens-demarche-content}}
       {{/ module-content}}
       {{/ demarcheContent}}
+      {{# sujetContent}}
+        {{> templates-citoyens-sujet-arron}}
+      {{/ sujetContent}}
     {{/ selectedArrondissement}}
   </div>
   <!-- Modal -->

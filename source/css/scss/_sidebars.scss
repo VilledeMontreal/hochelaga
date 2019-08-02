@@ -1,6 +1,7 @@
 // Sidebar
 .sidebar {
-  margin-bottom: 1rem;
+  border-top: 1px solid $neutral-stroke;
+  margin-bottom: 4rem;
   overflow: hidden;
 
   .social-media-list {
@@ -26,12 +27,19 @@
     margin-bottom: 1rem;
   }
 
+  @include media-breakpoint-up(lg) {
+    border-top: none;
+  }
+
 }
 
 // The base unit for a sidebar component, stacked
 .sb-block {
-  margin-bottom: 2rem;
   @include clearfix;
+  margin-bottom: 2rem;
+  &:last-child {
+    margin-bottom: 0;
+  }
   > *:last-child {
     margin-bottom: 0;
   }

@@ -136,16 +136,16 @@
   }
 
   .wrapper-arrondissement-body {
-    padding: 1rem;
+    padding: 2rem 1rem;
     .empty-state {
       @include font-size($font-size-sm);
       text-align: center;
-      padding: 4rem;
+      padding: 4rem 2rem;
       p {
         margin-bottom: 0;
       }
       svg {
-        fill: currentColor;
+        fill: $neutral-tertiary;
         margin-bottom: 1rem;
       }
     }

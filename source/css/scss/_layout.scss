@@ -37,7 +37,11 @@ html {
 
 .region-content {
   padding-top: 4rem;
-  padding-bottom: 4rem;
+  padding-bottom: 0;
+
+  @include media-breakpoint-up(lg) {
+    padding-bottom: 4rem;
+  }
 }
 
 //
@@ -518,6 +522,17 @@ html {
 .content-module-stacked {
   margin-bottom: 4rem;
   > *:not(h2):not(h3):not(h4):not(h5):not(h6) {
+    margin-bottom: 2rem;
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+}
+
+// Margin-bottom is smaller when inside the wrapper-arrondissement-body
+//
+.wrapper-arrondissement-body {
+  .content-module-stacked {
     margin-bottom: 2rem;
     &:last-child {
       margin-bottom: 0;
