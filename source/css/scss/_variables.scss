@@ -74,7 +74,7 @@ $colors: map-merge(
   ),
   $colors
 );
-$icons-utility: ();
+
 $theme-colors: ();
 $theme-colors: map-merge(
   (
@@ -122,17 +122,38 @@ $enable-shadows:                              false;
 
 
 // Icons
-$icon-utility-size:     80px;
-$icon-utility-size-sm:  40px;
-$icon-utility-size:     24px;
-$icon-utility-size-sm:  16px;
+//
+// Size
+$icon-sm:     16px;
+$icon-md:     24px;
+$icon-lg:     32px;
+$icon-xl:     40px;
+$icon-xxl:    80px;
+
+$icons-size: ();
+$icons-size: (
+  sm:  (
+    size: $icon-sm
+  ),
+  md:  (
+    size: $icon-md
+  ),
+  lg:  (
+    size: $icon-lg
+  ),
+  xl:  (
+    size: $icon-xl
+  ),
+  xxl:  (
+    size: $icon-xxl
+  )
+);
 
 // Body
 //
 // Settings for the `<body>` element.
 $body-bg:         $white;
 $body-color:      $neutral-secondary;
-
 $text-muted: 			$gray-500;
 
 

@@ -3,16 +3,12 @@
 @import "icons-utility";
 @import "icons-editorial";
 
-
-
-// WORK IN PROGRESS
-
 svg[role=icon] {
   fill: $gray-500;
   stroke: $gray-500;
   stroke-width: 0;
-  height: 24px;
-  width: 24px;
+  height: $icon-md;
+  width: $icon-md;
 }
 
 .icon {
@@ -55,89 +51,17 @@ svg[role=icon] {
       margin-left: .25rem;
     }
   }
-}
 
-
-// Add .icon class to display vertically centered icon and text
-/*.icon {
-  display: inline-flex;
-  align-items: center;
-  // we need this code to prevent icon from getting underlined on hover
-  .vdm {
-    display: inline-block;
-    @include font-size(1.5rem);
-    &:before {
-      display: inline-block;
-    }
-  }
-  &.right {
-    .vdm {
-      padding-left: 0.5rem;
-    }
-  }
-  &.left {
-    .vdm {
-      padding-right: 0.5rem;
+  &.icon-left {
+    .icon {
+      margin-left: 0;
+      margin-right: .25rem;
     }
   }
 }
-*/
-// External link icon
-// Apply to .region-content and sb-block
-// Everything not on montreal.ca or of /villemontreal/ AKA cloudinary directory
-/*.sb-block,
-.region-content,
-.lead {
-  a[href*="//"]:not([href*="montreal.ca"]):not([href$=".pdf"]) {
-    margin-right: 1.125em;
-    &:after {
-      @include font-size($font-size-base);
-      overflow: hidden;
-      margin-right: -1.125em;
-      margin-top: -.625rem;
-      margin-bottom: -.625rem;
-      padding-left: 0.125rem;
-      vertical-align: middle;
-    }
-  }
-  // List some exclusion
-  .media-gallery,
-  .list-icon,
-  .social-media-list,
-  .cards,
-  .list-group-hub {
-    a[href*="//"]:not([href*="montreal.ca"]):not([href$=".pdf"]) {
-      margin-right: 0;
-      &:after {
-        content: none;
-      }
-    }
-  }
-}*/
 
-
-/* SIZE */
-$icon-sm:   16px;
-$icon-md:   24px;
-$icon-lg:   32px;
-
-$icon-size: ();
-$icon-size: (
-  sm:  (
-    size: $icon-sm
-  ),
-  md:  (
-    size: $icon-md
-  ),
-  lg:  (
-    size: $icon-lg
-  )
-);
-
-
-@each $label, $map in $icon-size {
+@each $label, $map in $icons-size {
   $size: map-get($map, size);
-
   .icon-#{$label} {
     width: $size !important;
     height: $size !important;
@@ -162,11 +86,19 @@ $icon-size: (
   .icon-color-#{$label} {
     fill: $color-dark !important;
     &:before {
-      background-color:$color-dark !important;
+      background-color: $color-dark !important;
     }
   }
 }
 
+@each $color, $value in $grays {
+  .icon-color-gray-#{$color} {
+    fill: $value !important;
+    &:before {
+      background-color: $value !important;
+    }
+  }
+}
 
 .icon-color-white,
 .icon-color-light {
@@ -176,33 +108,10 @@ $icon-size: (
   }
 }
 
-.icon-color-dark {
-  //fill: $neutral-primary;
-}
-
-
-// Acessibility for Windows and High Contrast Mode
-// https://css-tricks.com/accessible-svgs/#article-header-id-20
-/*
-@media screen and (-ms-high-contrast: active) {
-  svg[role=icon] {
-    fill: $neutral-tertiary;
+.icon-color-primary-lighter {
+  fill: $primary-lighter !important;
+  &:before {
+    background-color: $primary-lighter !important;
   }
 }
-
-// black text on white background 
-@media screen and (-ms-high-contrast: black-on-white) {
-  svg[role=icon] {
-    fill: $neutral-tertiary;
-  }
-}
-
-// black text on white background 
-@media screen and (-ms-high-contrast: white-on-black) {
-  svg[role=icon] {
-    fill: $neutral-tertiary;
-  }
-}
-*/
-
 
