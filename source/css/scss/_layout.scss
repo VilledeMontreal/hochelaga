@@ -513,12 +513,53 @@ html {
   width: 100%;
 }
 
+// Content Modules
+//
 .content-module-stacked {
   margin-bottom: 4rem;
   > *:not(h2):not(h3):not(h4):not(h5):not(h6) {
     margin-bottom: 2rem;
     &:last-child {
       margin-bottom: 0;
+    }
+  }
+}
+
+// Content modules
+// Comparatif
+//
+.content-comparatif {
+  > .col,
+  > [class*="col-"] {
+    margin-bottom: 1rem;
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+
+  .content-wrapper {
+    background-color: $neutral-underground-1;
+    border-top: 2px solid $neutral-stroke;
+    height: 100%;
+    padding: 1rem;
+    > :last-child {
+      margin-bottom: 0;
+    }
+  }
+
+  &.comparatif-columns {
+  
+    @include media-breakpoint-up(md) {
+      > .col,
+      > [class*="col-"] {
+        margin-bottom: 0;
+        &:first-child {
+          padding-right: .5rem;
+        }
+        &:last-child {
+          padding-left: .5rem;
+        }
+      }
     }
   }
 }

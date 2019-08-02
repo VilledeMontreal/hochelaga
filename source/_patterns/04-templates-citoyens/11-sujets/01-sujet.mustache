@@ -9,9 +9,11 @@
         <article class="col-12 col-lg-7">
 
           <header class="content-header">
+            {{# header-back-link}}
             <div class="header-back-link">
-              {{> styles-link-icon( icon: "icon-arrow-left", "link-icon-label": "Toutes les démarches")}}
+              {{> styles-link-icon}}
             </div>
+            {{/ header-back-link}}
 
             <h1>{{ heading }}</h1>
 
@@ -55,7 +57,9 @@
             <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi condimentum sollicitudin erat, quis convallis risus.</p>
 
           </div>
-
+          {{# module-content}}
+          {{> templates-citoyens-sujet-content}}
+          {{/ module-content}}
           {{# hasSelecteurArrondissement}}
           <div class="mb-8">
             <h2>Votre arrondissement</h2>
@@ -66,7 +70,7 @@
         </article>
         {{# sidebarRight}}
         <aside class="col-12 col-lg-4 mt-md-8" role="complementary">
-          {{> templates-citoyens-sidebar-demarche}}
+          {{> templates-citoyens-sidebar-sujet}}
         </aside>
         {{/ sidebarRight}}
 
