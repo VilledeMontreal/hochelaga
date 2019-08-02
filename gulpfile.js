@@ -141,6 +141,14 @@ gulp.task('scss-dist', function () {
   ))
 });
 
+// Source sass v3 legacy files : copy to distribution folder
+gulp.task('bao-legacy-dist', function () {
+  return gulp.src(config.baolegacy.files)
+  .pipe(gulp.dest(
+    config.baolegacy.distribution
+  ))
+});
+
 //Copy icons to scss folder
 gulp.task('icon-utility', function() {
   return gulp.src('source/vdm-icon-system/icons/icon-utility/_icons-utility.scss')
@@ -333,7 +341,8 @@ gulp.task('distribute', ['clean-dist:before'], function () {
     'scripts',
     'images-dist',
     'sass',
-    'scss-dist'
+    'scss-dist',
+    'bao-legacy-dist'
   );
 });
 

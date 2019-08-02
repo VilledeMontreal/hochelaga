@@ -1,0 +1,354 @@
+// Main navbar based on bootstrap navbar
+
+.navbar {
+  background-color: $white;
+  border-bottom: 1px solid $gray-400;
+  padding: 1.125rem 1.5rem;
+  a:not(.btn) {
+    border-bottom: none;
+  }
+  .navbar-div {
+    display: flex;
+    flex-basis: auto; // Changes flex-bases to auto because of an IE10 bug
+    flex-grow: 1;
+    align-items: center;
+  }
+
+  // Montreal logo is the navbar-brand
+  .navbar-brand {
+    padding: 0;
+    img {
+      height: 1.5rem;
+      width: auto;
+      flex: 0 0 auto; // This is needed because of IE weird behavior
+    }
+    // 576px and up
+    @include media-breakpoint-up(sm) {
+      img {
+        height: 2rem;
+      }
+    }
+    // 768px and up
+    @include media-breakpoint-up(xl) {
+      img {
+        height: 2.5rem;
+      }
+    }
+  }
+
+  // 768px and up
+  @include media-breakpoint-up(md) {
+    button + .dropdown,
+    button + button {
+      margin-left: 2.5rem;
+    }
+  }
+
+  // Special placement on smaller device...
+  .btn-notification {
+    position: fixed;
+    bottom: $grid-gutter-width;
+    right: $grid-gutter-width;
+    z-index: 2000;
+
+    // 992px and up - Reset placement
+    @include media-breakpoint-up(lg) {
+      position: static;
+      bottom: auto;
+      right: auto;
+      z-index: auto;
+    }
+  }
+
+  .nav-link {
+    display: flex;
+    align-items: center;
+    padding: 0;
+  }
+
+  .navbar-nav {
+    align-items: center;
+    .nav-item-btn {
+      margin: 0 .5rem;
+      padding-bottom: 0;
+
+      &:last-child {
+        margin-right: 0;
+      }
+    }
+    li:last-child {
+      .nav-link {
+        padding-right: 0;
+      }
+    }
+  }
+
+
+  .dropdown {
+    position: inherit;
+    display: flex;
+  }
+  // Dropdown overrides
+  .dropdown-toggle {
+    padding-top: 0;
+    padding-bottom: 0;
+
+    // Prevent long username/profile to break layout with max-width
+    // Use elided-text helper class on field to add ellipsis on truncated strings
+    .user-info {
+      flex-direction: column;
+      line-height: 1.25;
+      max-width: 170px;
+      text-align: left;
+      padding-right: .5rem;
+      .user-profil {
+        font-weight: $font-weight-bold;
+      }
+    }
+    // remove carets
+    &:after {
+      content: none;
+      color: $link-color;
+      @include font-size(1.125rem);
+    }
+
+    // Add chevron only on large breakpoint and up
+    @include media-breakpoint-up(md) {
+      padding-right: .5rem;
+      @include iconvdm($position: after, $icon: '057-chevron-bas'); 
+    }
+  }
+
+  // Dropdown menu
+  .dropdown-menu {
+    border-right: 0;
+    top: 100%;
+    right: 0;
+    margin: 0;
+    max-height: none;
+    min-width: 20rem;
+    box-shadow: -1px 3px 3px 0 $gray-300;
+
+    // Font-icon size and color
+    .vdm {
+      @include font-size(3rem);
+      color: $sarcelle-surprise;
+    }
+
+    // Dropdown section
+    .dropdown-item-section {
+      .user-info {
+        line-height: 1.4;
+        > * {
+          display: flex;
+        }
+      }
+      .user-email {
+        @include font-size($font-size-sm);
+        color: $gray-600;
+      }
+      .user-profil {
+        font-weight: $font-weight-bold;
+        margin-bottom: 1rem;
+      }
+    }
+
+    .dropdown-item {
+      display: flex;
+      align-items: center;
+      padding: .75rem 2.5rem;
+    }
+
+    .user-action {
+      .dropdown-item {
+        .vdm {
+          @include font-size(2.5rem);
+          margin-top: -.75rem;
+          margin-bottom: -.75rem;
+          margin-left: auto;
+        }
+      }
+    }
+
+  }
+
+  // change icon when dropdown is open
+  .dropdown.show {
+    .dropdown-toggle {
+      &:after {
+        content: none;
+      }
+      // Switch to chevron haut for large breakpoint and up
+      @include media-breakpoint-up(md) {
+        @include iconvdm($position: after, $icon: '055-chevron-haut');
+      }
+    }
+  }
+
+  // Dropdown-menu Mobile full width
+  @include media-breakpoint-down(xs) {
+    .dropdown-menu {
+      border-left: 0;
+      width: 100%;
+    }
+  }
+
+  // 576px and up - Navbar padding tweaks
+  @include media-breakpoint-up(sm) {
+    padding: 1.75rem 1.5rem;
+  }
+
+  // 768px and up - Navbar padding tweaks
+  @include media-breakpoint-up(md) {
+    padding: 2.125rem 1.5rem;
+  }
+}
+
+//
+// Navbar buttons styles
+.navbar-button {
+  @include button-reset();
+  color: $black;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  padding: .0625rem 0;
+  @include transition(color .15s ease-in-out);
+
+  // Icons size in navbar
+  .vdm {
+    @include font-size(2rem);
+    vertical-align: middle;
+    @include transition(color .15s ease-in-out);
+
+    // mobile and up
+    @include media-breakpoint-up(sm) {
+      @include font-size(2.5rem);
+    }
+    // tablets and up
+    @include media-breakpoint-up(md) {
+      @include font-size(3rem);
+      margin-right: .625rem;
+    }
+  }
+
+  .button-label {
+    color: $black;
+    line-height: 1;
+    @include transition(color .15s ease-in-out);
+  }
+
+  &:hover,
+  &:active {
+    color: $sarcelle-surprise;
+    .vdm,
+    .button-label {
+      color: $sarcelle-surprise;
+    }
+  }
+
+  // remove focus from box-shadow
+  &:focus,
+  &.focus {
+    box-shadow: none;
+  }
+
+  &.navbar-button-lg {
+    .button-label {
+      @include font-size($font-size-base);
+    }
+  }
+  // Login button need less right margin on larger breakpoint...
+  @include media-breakpoint-up(md) {
+    &.btn-login {
+      margin-right: .5rem;
+      .vdm {
+        margin-right: .25rem;
+      }
+    }
+  }
+
+}
+
+//
+// Navbar search flyout
+.navbar-search {
+  display: none;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  background-color: $white;
+  z-index: $zindex-fixed;
+  padding-top: 3.5rem;
+  padding-bottom: 3.5rem;
+
+  .inner-container {
+    display: flex;
+  }
+
+  .form-group {
+    display: flex;
+    margin: 0;
+    width: 100%;
+  }
+
+  .form-control {
+    border: none;
+    @include font-size(1.875rem);
+    &:focus {
+      box-shadow: none;
+    }
+  }
+}
+
+//
+// Wizard header
+// Optimize and normalize - we can extend from banner and build more generic containers
+.wizard-header {
+  background-color: $sarcelle-light;
+  display: flex;
+  justify-content: space-between;
+  .hdr-container,
+  .hdr-links {
+    display: flex;
+    > * {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+  }
+  // .home-link removed from templates
+  // Will be deprecated
+  .home-link {
+    border: none;
+    flex-shrink: 0;
+    width: $header-icon-width;
+    height: $header-icon-height;
+    background-color: $black;
+    color: $white;
+    text-decoration: none;
+    .vdm {
+      @include font-size(3rem);
+      color: $white;
+    }
+  }
+  .hdr-title {
+    color: $headings-color;
+    @include font-size($font-size-base);
+    line-height: $line-height-base;       // 1.55
+    font-weight: $font-weight-bold;
+    padding: 1.5rem $grid-gutter-width;
+
+    @include media-breakpoint-up(md) {
+      @include font-size($font-size-xl);
+      line-height: $line-height-sm;       // 1.33
+    }
+  }
+  .hdr-links {
+    padding-right: 1.375rem;
+    ul {
+      margin-bottom: 0;
+    }
+  }
+}

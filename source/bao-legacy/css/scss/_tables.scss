@@ -1,0 +1,44 @@
+// Tables overrides
+//
+.table {
+  margin-bottom: 2rem;
+  thead th {
+    color: $table-head-color;
+    border-bottom: none;
+  }
+  tbody th {
+    color: $headings-color;
+  }
+}
+.table-dark {
+  thead th {
+    color: $table-dark-color;
+  }
+}
+
+.table {
+  .thead-dark {
+    th {
+      color: $table-head-color;
+      background-color: $table-head-dark-bg;
+      border-top: none;
+    }
+  }
+
+  .thead-light {
+    th {
+      color: $table-head-color;
+      background-color: $table-head-bg;
+      border-top: none;
+    }
+  }
+}
+
+
+@each $color, $value in $theme-colors {
+  @include table-row-variant($color, theme-color-level($color, -10));
+}
+
+@include table-row-variant(active, $table-active-bg);
+
+@include table-row-variant(primary, $sarcelle-light);
