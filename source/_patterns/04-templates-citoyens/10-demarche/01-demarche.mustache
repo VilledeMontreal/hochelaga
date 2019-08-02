@@ -56,6 +56,12 @@
 
           </div>
 
+          {{^ hasSelecteurArrondissement}}
+          {{# module-content}}
+          {{> templates-citoyens-demarche-content}}
+          {{/ module-content}}
+          {{/ hasSelecteurArrondissement}}
+
           {{# hasSelecteurArrondissement}}
           <div class="mb-8">
             <h2>Votre arrondissement</h2>
