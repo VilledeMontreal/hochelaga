@@ -4,7 +4,12 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](http://keepachangelog.com/en/1.0.0/)
 and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.html).
 
-## [3.3.2] - unreleased
+## [3.3.3] - 2019-08-05
+
+## Fixed
+- Card Services variant for DCI
+
+## [3.3.2] - 2019-07-05
 
 ## Added
 - Modals variant for more-filters (scrollable body).
@@ -499,6 +504,7 @@ remove index from the name. Which makes it possible to update font-icon without 
 - Removed vdm prefix for buttons classes
 
 
+[3.3.2]: https://bitbucket.org/villemontreal/boite-outils-web/src/3.3.2/
 [3.3.1]: https://bitbucket.org/villemontreal/boite-outils-web/src/3.3.1/
 [3.3.0]: https://bitbucket.org/villemontreal/boite-outils-web/src/3.3.0/
 [3.2.1]: https://bitbucket.org/villemontreal/boite-outils-web/src/3.2.1/
