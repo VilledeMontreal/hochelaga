@@ -1,5 +1,5 @@
 ---
-title: Input w/ Icon
+title: Input with icon
 ---
 
 Based on the <code>.input-group</code>

@@ -1,5 +1,5 @@
 ---
-title: Inputs - Variants
+title: Inputs
 ---
 
 @todo :
