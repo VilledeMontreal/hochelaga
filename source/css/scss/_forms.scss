@@ -69,12 +69,30 @@ legend,
   }
   small {
     color: $gray-700;
+    line-height: 1rem;
+  }
+  
+}
+.form-control {
+  &:disabled,
+  &[readonly] {
+    &::placeholder {
+     color: $gray-700;
+    }
   }
 }
 
-.form-control-dark {
-  border-color: $gray-500;
+.input-rounded {
+  border-radius: $btn-border-radius;
 }
+
+.invalid-feedback {
+  font-weight: $font-weight-bold;
+  line-height: 1rem;
+  font-size: $font-size-xs;
+  margin-top: 0.25rem;
+}
+
 
 // Set label color
 .form-group label,
@@ -372,157 +390,61 @@ legend,
 // switches
 //
 // Tweak a few things for switches
-
 .custom-switch {
-  padding-left: $custom-switch-width + $custom-control-gutter;
-
-  .custom-control-label {
-    padding: 1px 0;
-    &::before {
-      top: 0;
-      left: -($custom-switch-width + $custom-control-gutter);
-      width: $custom-switch-width;
-      height: $custom-switch-control-indicator-size + $custom-switch-inner-padding;
-      pointer-events: all;
-      border-radius: $custom-switch-indicator-border-radius;
-    }
-
-    &::after {
-      top: calc(#{$custom-switch-inner-padding} + #{$custom-control-indicator-border-width});
-      left: calc(#{-($custom-switch-width + $custom-control-gutter - $custom-switch-inner-padding)} + #{$custom-control-indicator-border-width * 2});
-      width: $custom-switch-indicator-size;
-      height: $custom-switch-indicator-size;
-      background-color: $custom-switch-control-indicator-color;
-      border-radius: $custom-switch-indicator-border-radius;
-      @include transition(transform .15s ease-in-out, $custom-forms-transition);
-    }
-  }
-
-  .custom-control-input:checked ~ .custom-control-label {
-    &::after {
-      background-color: $custom-control-indicator-bg;
-      transform: translateX($custom-switch-width - $custom-switch-control-indicator-size - ($custom-switch-inner-padding * 2));
-    }
-  }
-
-  .custom-control-input:disabled {
-    &:checked ~ .custom-control-label::before {
-      background-color: $custom-control-indicator-checked-disabled-bg;
-    }
-
-    & ~ .custom-control-label::after {
-      background-color: $custom-switch-control-indicator-disabled-color;
-    }
-  }
-}
-
-
-// Switches - Checkboxes as state toggles
-// Deprecated - use custom-switch instead
-.checkbox-toggle {
-  // Massive negative offset clears the original checkbox & label.
-  position: relative;
-  input {
-    &[type="checkbox"] {
+  .switch-label {
+    position: relative;
+    display: inline-block;
+    min-width: 112px;
+    cursor: pointer;
+    font-weight: 500;
+    text-align: left;
+    margin: 16px;
+    padding: 16px 0 16px 44px;
+    &::before, 
+    &:after {
+      content: "";
       position: absolute;
-      left: -10000px;
-      visibility: hidden;
+      margin: 0;
+      outline: 0;
+      top: 50%;
+      -ms-transform: translate(0, -50%);
+      -webkit-transform: translate(0, -50%);
+      transform: translate(0, -50%);
+      -webkit-transition: all 0.3s ease;
+      transition: all 0.3s ease;
+    }
+    &:before {
+      left: 1px;
+      width: 34px;
+      height: 14px;
+      background-color: $neutral-stroke;
+      border-radius: 8px;
+    }
+    &:after {
+      left: 0;
+      width: 20px;
+      height: 20px;
+      background-color: $white;
+      border-radius: 50%;
+      box-shadow: 0 3px 1px -2px rgba(0, 0, 0, 0.14), 0 2px 2px 0 rgba(0, 0, 0, 0.098), 0 1px 5px 0 rgba(0, 0, 0, 0.084);
+    }
+  }
 
-      // Graphics container
-      & + label {
-        position: relative;
-        text-indent: -10000px;
-        height: $checkbox-toggle-height;
-        width: $checkbox-toggle-width;
-        user-select: none;
-        cursor: pointer;
-
-        &:before,
+  .switch-input {
+    display: none;
+    &:checked {
+      & + .switch-label {
         &:after {
-          display: block;
-          position: absolute;
-          content: "";
-        }
-
-        // Inside button
-        &:after {
-          top: $checkbox-toggle-padding;
-          left: $checkbox-toggle-padding;
-          bottom: $checkbox-toggle-padding;
-          right: $checkbox-toggle-padding;
-          background-color: $checkbox-toggle-bg-toggled;
-          border-radius: $checkbox-toggle-border-radius;
-          width: $checkbox-toggle-width-inside;
-          -webkit-transition: 0.3s;
-          transition: 0.3s;
-        }
-
-        // Outside pill
-        &:before {
-          top: 0;
-          left: 0;
-          bottom: 0;
-          right: 0;
-          background-color: $checkbox-toggle-bg;
-          border: $checkbox-toggle-border-width solid $checkbox-toggle-border-color;
-          border-radius: $checkbox-toggle-border-radius-inside;
-          width: $checkbox-toggle-width;
+          background-color: $primary;
+          -ms-transform: translate(80%, -50%);
+          -webkit-transform: translate(80%, -50%);
+          transform: translate(80%, -50%);
         }
       }
-
-      // checked
-      &[checked="checked"],
-      &:checked {
-        & + label {
-          // Inside button
-          &:after {
-            background-color: $checkbox-toggle-bg;
-            margin-left: $checkbox-toggle-width-inside + $checkbox-toggle-padding;
-          }
-
-          // Outside pill
-          &:before {
-            background-color: $checkbox-toggle-bg-toggled;
-            border: 0;
-          }
-        }
-      }
-
-      // Disabled
-      &:disabled {
-        & + label {
-          cursor: not-allowed;
-          // Inside button
-          &:after {
-            background-color: $checkbox-toggle-bg;
-            margin-left: 0;
-          }
-
-          // Outside pill
-          &:before {
-            background-color: $custom-control-indicator-disabled-bg;
-            border: 0;
-          }
-        }
-        // Disabled & checked
-        &:checked {
-          & + label {
-            // Inside button
-            &:after {
-              margin-left: $checkbox-toggle-width-inside + $checkbox-toggle-padding;
-            }
-
-            // Outside pill
-            &:before {
-              background-color: $custom-control-indicator-disabled-bg;
-            }
-          }
-        }
-      }
-
     }
   }
 }
+
 
 //
 // file drop container
@@ -562,6 +484,7 @@ legend,
 
 }
 
+
 .feedback-form {
   textarea {
     -webkit-transform: translateZ(0px);
@@ -596,5 +519,6 @@ legend,
   .notice {
     @include font-size($font-size-sm);
   }
+
 
 }
