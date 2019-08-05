@@ -3,12 +3,10 @@
  * Built on bootstrap card component 
  */
 .card {
-  text-align: center;
   display: flex;
   margin-bottom: $grid-gutter-width;
   width: 100%;
   border: none;
-  box-shadow: $card-box-shadow;
 
   .card-icon-top {
     @include font-size(4.5rem);

@@ -1,0 +1,63 @@
+// Main wrapper styles
+//
+.wrapper {
+  border: 1px solid $neutral-stroke;
+  border-radius: $border-radius;
+  padding: 1rem;
+}
+
+// Sélecteur arrondissement
+//
+.wrapper-arrondissement {
+  padding: 0;
+
+  .wrapper-arrondissement-header {
+    @include font-size($font-size-sm);
+    border-bottom: 1px solid $neutral-stroke;
+    line-height: 1.42857142857;
+    padding: 1rem;
+
+    .title {
+      color: $neutral-primary;
+      font-weight: $font-weight-bold;
+    }
+  }
+
+  .wrapper-arrondissement-body {
+    padding: 2rem 1rem;
+    .empty-state {
+      @include font-size($font-size-sm);
+      text-align: center;
+      p {
+        margin-bottom: 0;
+      }
+      svg {
+        fill: $neutral-tertiary;
+        margin-bottom: 1rem;
+      }
+    }
+    // Margin-bottom is smaller when inside the wrapper-arrondissement-body
+    .content-module-stacked {
+      margin-bottom: 2rem;
+      &:last-child {
+        margin-bottom: 0;
+      }
+    }
+
+    @include media-breakpoint-up(md) {
+      .empty-state {
+        padding: 2rem;
+      }
+    }
+  }
+}
+
+// Wrapper Accordion
+//
+.wrapper-accordion {
+  .collapsible-item {
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+}

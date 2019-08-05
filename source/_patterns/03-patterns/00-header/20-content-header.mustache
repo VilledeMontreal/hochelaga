@@ -64,9 +64,11 @@
 
 <div class="document-heading {{ documentHeadingWrapperClass }}">
   <div style="background-image:url('https://picsum.photos/id/1025/1920/1280?grayscale')" class="document-heading-background"></div>
+  {{# documentHeadingNotch}}
   <div class="document-heading-wrapper container">
     <div class="row justify-content-center">
       <div class="document-heading-content col-12{{# has-left-notch}} col-lg-8{{/ has-left-notch}}{{^ has-left-notch}} col-lg-10{{/ has-left-notch}}"></div>
     </div>
   </div>
+  {{/ documentHeadingNotch}}
 </div>

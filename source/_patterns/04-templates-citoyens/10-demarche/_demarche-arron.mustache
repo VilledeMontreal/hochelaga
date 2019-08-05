@@ -2,9 +2,9 @@
   {{> components-badge(badgeClass: "badge-info", badge: "État de la démarche") }}
 </div>
 
-<div class="content-module-stacked">
-  <p>Corps de texte complet - Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi condimentum sollicitudin erat, quis convallis risus. Nullam posuere odio ligula, hendrerit suscipit ligula congue laoreet. Curabitur eleifend nulla purus, ut pharetra urna efficitur id. Cras lacinia nisi id quam lacinia, et orci aliquam.</p>
+<p>Corps de texte complet - Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi condimentum sollicitudin erat, quis convallis risus. Nullam posuere odio ligula, hendrerit suscipit ligula congue laoreet. Curabitur eleifend nulla purus, ut pharetra urna efficitur id. Cras lacinia nisi id quam lacinia, et orci aliquam.</p>
 
+<div class="content-module-stacked">
   <h3>Tarifs - module Corps de texte ou module Titre (exemple H3)</h3>
   <p>Courte description optionnelle - corps de texte</p>
   
@@ -15,6 +15,7 @@
   {{> styles-blockquote }}
 
   <p>Corps de texte complet - Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi condimentum sollicitudin erat, quis convallis risus. Nullam posuere odio ligula, hendrerit suscipit ligula congue laoreet. Curabitur eleifend nulla purus, ut pharetra urna efficitur id. Cras lacinia nisi id quam lacinia, et orci aliquam.</p>
+
 </div>
 
 {{# module-message }}
@@ -25,19 +26,19 @@
 
 {{# module-documents}}
 <div class="content-module-stacked">
-  <h2>Documents à télécharger</h2>
+  <h3>Documents à télécharger</h3>
   {{> components-list-item-link}}
 </div>
 {{/ module-documents }}
 
 {{# module-documents-necessaires}}
 <div class="content-module-stacked">
-  <h2>Documents nécessaires</h2>
+  <h3>Documents nécessaires</h3>
   <div>
-    <h3>Documents à fournir</h3>
+    <h4>Documents à fournir</h4>
     <p>Corps de texte complet - avec liste à puce sit amet, consectetur adipiscing elit. Morbi condimentum sollicitudin erat, quis convallis risus. Nullam posuere odio ligula, hendrerit suscipit ligula congue laoreet. Curabitur eleifend nulla purus, ut pharetra urna efficitur id. Cras lacinia nisi id quam lacinia, et orci aliquam.</p>
 
-    <h3>Pièces d'identité</h3>
+    <h4>Pièces d'identité</h4>
     <p>Un des documents suivants :</p>
     <ul>
       <li>Permis de conduire du Québec</li>
@@ -47,7 +48,7 @@
     {{> styles-link-icon("icon-right": true, icon: "icon-arrow-right", "link-icon-label": "Consulter la liste complète")}}
   </div>
   <div>
-    <h3>Preuves d'adresse</h3>
+    <h4>Preuves d'adresse</h4>
     <p>Un des documents suivants :</p>
     <ul>
       <li>Facture de services publics (Hydro-Québec, téléphone ou autre) datant de 3 mois ou moins</li>
@@ -61,7 +62,7 @@
 
 {{# module-canaux-comm}}
 <div class="content-module-stacked">
-  <h2>Canaux de communication</h2>
+  <h3>Canaux de communication</h3>
   <div id="accordion" class="wrapper-accordion" role="tablist" aria-multiselectable="true">
   {{> components-collapsible-item }}
   </div>
@@ -70,7 +71,7 @@
 
 {{# module-reglements}}
 <div class="content-module-stacked">
-  <h2>Règlements</h2>
+  <h3>Règlements</h3>
   {{> components-list-group-links}}
 </div>
 {{/ module-reglements}}

@@ -35,6 +35,15 @@ html {
   padding-left: $grid-gutter-width;
 }
 
+/*
+.main-content {
+  padding-top: 56px;
+  @include media-breakpoint-up(md) {
+    padding-top: 72px;
+  }
+}
+*/
+
 .region-content {
   padding-top: 4rem;
   padding-bottom: 0;
@@ -520,25 +529,19 @@ html {
 // Content Modules
 //
 .content-module-stacked {
-  margin-bottom: 4rem;
+  margin-bottom: 2rem;
   > *:not(h2):not(h3):not(h4):not(h5):not(h6) {
     margin-bottom: 2rem;
     &:last-child {
       margin-bottom: 0;
     }
   }
-}
 
-// Margin-bottom is smaller when inside the wrapper-arrondissement-body
-//
-.wrapper-arrondissement-body {
-  .content-module-stacked {
-    margin-bottom: 2rem;
-    &:last-child {
-      margin-bottom: 0;
-    }
+  @include media-breakpoint-up(md) {
+    margin-bottom: 4rem;
   }
 }
+
 
 // Content modules
 // Comparatif

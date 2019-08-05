@@ -92,18 +92,6 @@ $('[id^="linkModalIcon"]').click(function() {
   $('[data-toggle="popover"]').popover();
 
 
-  // Whole clickable div with links inside
-  //
-  $('.card-inception').click(function(evnt) {
-    var $originatingTarget = $(evnt.target);
-    if ($originatingTarget && $originatingTarget.is('a')) {
-      evnt.stopPropagation(); // Allows other handlers on the event.target to be executed.
-    } else {
-      window.location = $(this).data("href");
-    }
-  });
-  
-
   // Wizard
   //
   $('a[data-toggle="tab"]').on("show.bs.tab", function (e) {
@@ -165,6 +153,16 @@ $('[id^="linkModalIcon"]').click(function() {
       backLinkBefore: '<span class="vdm vdm-058-chevron-gauche" aria-hidden="true"></span> '
     });
   }
+
+
+  // sticky main nav
+  var $nav = $(".main-navbar");
+  $nav.toggleClass('navbar-scrolled', $(this).scrollTop() > $nav.height());
+  //Scroll menu
+  $(document).scroll(function () {
+    var $nav = $(".main-navbar");
+    $nav.toggleClass('navbar-scrolled', $(this).scrollTop() > $nav.height());
+  });
 
   // Sticky navbar
   //

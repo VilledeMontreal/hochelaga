@@ -215,6 +215,11 @@
 
 }
 
+.navbar-scrolled {
+  @include box-shadow($navbar-box-shadow);
+  background-color: $white;
+}
+
 
 
 //

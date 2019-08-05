@@ -15,91 +15,100 @@ body {
 // Headings
 //
 // Headings are responsive
-// @see responsive-font-size mixin
-h1, 
-.h1,
-.display-1,
+// Displays are mapped to Headings
+h1, .h1,
+.display-1 {
+  @include font-size($h2-font-size);    // 32/40
+  line-height: 1.25;
+  // 576px and up
+  @include media-breakpoint-up(md) {
+    @include font-size($h1-font-size);  // 40/56
+    line-height: 1.4;
+  }
+}
+h2, .h2,
 .display-2 {
-  @include responsive-font-size($h1-font-size, .8, 40px);
-  // 576px and up
-  @include media-breakpoint-up(md) {
-    @include responsive-font-size($h1-font-size, 1, 56px);
-  }
-}
-h2, 
-.h2,
-.display-3 {
-  @include responsive-font-size($h2-font-size, .75, 32px);
-  margin-bottom: 2rem;
-  // 576px and up
-  @include media-breakpoint-up(md) {
-    @include responsive-font-size($h2-font-size, 1, 40px);
-  }
-}
-h3, 
-.h3,
-.display-4 {
-  @include responsive-font-size($h3-font-size, .85, 28px);
+  @include font-size($h3-font-size);    // 24/32
+  line-height: 1.3333333333;
   margin-bottom: 1rem;
   // 576px and up
   @include media-breakpoint-up(md) {
-    @include responsive-font-size($h3-font-size, 1, 32px);
+    @include font-size($h2-font-size);  // 32/40
+    line-height: 1.25;
+    margin-bottom: 2rem;
   }
 }
-h4, .h4 {
-  @include responsive-font-size($h4-font-size, .8, 24px);
+h3, .h3,
+.display-3 {
+  @include font-size($h4-font-size);    // 20/28
+  line-height: 1.4;
   margin-bottom: .5rem;
   // 576px and up
   @include media-breakpoint-up(md) {
-    @include responsive-font-size($h4-font-size, 1, 28px);
+    @include font-size($h3-font-size);  // 24/32
+    line-height: 1.3333333333;
+    margin-bottom: 1rem;
   }
 }
-h5, .h5 {
-  @include responsive-font-size($h5-font-size, .846153, 20px);
+h4, .h4,
+.display-4 {
+  @include font-size($h5-font-size);    // 16/24
+  line-height: 1.5;
   margin-bottom: .25rem;
   // 576px and up
   @include media-breakpoint-up(md) {
-    @include responsive-font-size($h5-font-size, 1, 24px);
+    @include font-size($h4-font-size);  // 20/28
+  line-height: 1.4;
+    margin-bottom: .5rem;
   }
 }
-h6, .h6 {
-  @include responsive-font-size($h6-font-size, .85, 14px);
+h5, .h5 {
+  @include font-size($h6-font-size);    // 14/20
+  line-height: 1.4285714285;
   margin-bottom: 0;
   // 576px and up
   @include media-breakpoint-up(md) {
-    @include responsive-font-size($h6-font-size, 1, 20px);
+    @include font-size($h5-font-size);  // 16/24
+    line-height: 1.5;
+    margin-bottom: .25rem;
   }
 }
-
-
+h6, .h6 {
+  @include font-size($font-size-xs);    // 12/16
+  line-height: 1.3333333333;
+  margin-bottom: 0;
+  // 576px and up
+  @include media-breakpoint-up(md) {
+    @include font-size($h6-font-size);  // 14/20
+    line-height: 1.4285714285;
+  }
+}
 
 // Utility class for font-size
 
 .font-size-lg {
-  @include font-size($font-size-lg);
+  @include font-size($font-size-lg);  // 20px
+  line-height: 1.6                    // 32px
 }
 .font-size-sm {
-  @include font-size($font-size-sm);
+  @include font-size($font-size-sm);  // 14px
+  line-height: 1.7142857142;          // 24px
 }
 .font-size-xs {
-  @include font-size($font-size-xs);
+  @include font-size($font-size-xs);  // 12px
+  line-height: 1.6666666666;          // 20px
 }
 
 // Lead
 //
-// Lead font-size are responsive
-
 .lead {
-  @include responsive-font-size($lead-font-size, .9166, 32px);
-  color: $headings-color;
+  @include font-size($lead-font-size);  // 20px
+  line-height: $lead-line-height;       // 32px
+  color: $neutral-primary;
   font-weight: $lead-font-weight;
-  margin-bottom: 4rem;
+  margin-bottom: 2rem;
   > :last-child {
     margin-bottom: 0;
-  }
-  // 576px and up
-  @include media-breakpoint-up(sm) {
-    @include responsive-font-size($lead-font-size, 1, 36px);
   }
 }
 
@@ -158,19 +167,6 @@ a {
       margin-right: -3.02em;
       padding-left: .5rem;
       overflow: hidden;
-    }
-  }
-
-  // Read more links
-  &.read-more {
-    color: $link-color;
-    border: none;
-    &:hover,
-    &:active {
-      color: $link-hover-color;
-      .vdm {
-        color: $link-hover-color;
-      }
     }
   }
 
@@ -271,17 +267,11 @@ a {
   }
 }
 
-// Break word
-//
-.break-word {
-  word-wrap: break-word;
-}
-
 // Blockquote
 //
 .blockquote {
-  color: $neutral-primary;
   @include font-size($blockquote-font-size);
+  color: $neutral-primary;
   line-height: 1.6;
   font-weight: $font-weight-normal;
   margin-bottom: 2rem;
@@ -313,64 +303,6 @@ a {
   cite {
     color: $gray-900;
     font-style: normal;
-  }
-}
-
-// Mostly applied to the hr element
-// Parts or full class will be deprecated
-.divider {
-  margin-top: 0.75rem;
-  margin-bottom: 0.75rem;
-  border-style: none;
-  border-width: 0;
-  height: 2px;
-  background: $black;
-  border-radius: 0;
-  
-  &.divider-fullwidth {
-    width: 100%;
-  }
-}
-
-// Maintenance page
-.divider-brand {
-  &:after {
-    content: "";
-    display: block;
-    height: .5rem;
-    width: 4rem;
-    background-color: $brand;
-    margin-right: auto;
-    margin-left: auto;
-  }
-}
-
-.divider-lg {
-  &:after {
-    width: 6rem;
-  }
-}
-
-// Longdash
-.separator-brand {
-  &:before {
-    content: "—";
-    color: $brand;
-    margin-right: .75rem;
-  }
-}
-
-.bullet-left {
-  @include bullet-left();
-}
-
-.footer-notes {
-  border-top: 1px solid $gray-700;
-  @include font-size($font-size-sm);
-  padding-top: 2rem;
-  margin-bottom: 4rem;
-  small, .small {
-    @include font-size(100%);
   }
 }
 
