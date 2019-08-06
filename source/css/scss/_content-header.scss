@@ -60,6 +60,7 @@
   .document-heading-wrapper {
     height: 100%;
     margin: 0 auto;
+    padding-top: 3.5rem;
     position: relative;
     z-index: 2;
   }
@@ -77,6 +78,10 @@
 
     .document-heading-content {
       height: 3.5rem;
+    }
+
+    .document-heading-wrapper {
+      padding-top: 4.5rem;
     }
 
     &.document-heading-left-notch {

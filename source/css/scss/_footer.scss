@@ -5,12 +5,13 @@ footer {
   &.footer {
     background-color: $neutral-primary;
     color: $white;
-    padding-top: 4rem;
-    padding-bottom: 4rem;
+    padding-top: 2rem;
+    padding-bottom: 2rem;
 
     a {
       border: none;
       color: $white;
+      font-weight: $font-weight-normal;
       @include hover-focus {
         background-color: transparent;
         border-bottom: none;
@@ -22,6 +23,13 @@ footer {
       @include font-size($font-size-sm);
       line-height: $line-height-component;
       margin-bottom: 0;
+      li {
+        margin-bottom: .5rem;
+      }
+
+      + ul {
+        margin-top: 0;
+      }
     }
     .site-name {
       @include font-size($h3-font-size);
@@ -34,18 +42,15 @@ footer {
       margin-bottom: 1rem;
     }
 
-    .social-media-list {
+    .list-social-media-icon {
       justify-content: center;
       li a {
-        .vdm {
-          color: $white;
-          @include font-size($font-size-lg);
-          padding: 0;
+        .icon {
+          @include icon-color($white);
         }
         @include hover-focus {
-          color: $action;
-          .vdm {
-            color: inherit;
+          .icon {
+            @include icon-color($action-lighter);
           }
         }
       }
@@ -80,8 +85,60 @@ footer {
     }
 
     .footer-logo {
-      width: 150px;
-      height: auto;
+      width: auto;
+      height: 24px;
+    }
+
+    .footer-head + .footer-last {
+      &:before {
+        content: "";
+        display: block;
+        width: 100%;
+        height: $border-width;
+        background-color: $neutral-secondary;
+        margin-bottom: 2rem;
+      }
+    }
+
+    @include media-breakpoint-up(md) {
+      &.footer {
+        padding-top: 4rem;
+        padding-bottom: 4rem;
+        .footer-logo {
+          height: 40px;
+        }
+      }
+    }
+
+    // Mobile footer handling
+    // TODO: Collapse content on mobile
+    @include media-breakpoint-down(sm) {
+      &.footer {
+        .footer-sub {
+          margin-bottom: 2rem;
+          &:before {
+            content: "";
+            display: block;
+            width: 100%;
+            height: $border-width;
+            background-color: $neutral-secondary;
+            margin-bottom: 2rem;
+          }
+          &:after {
+            content: "";
+            display: block;
+            width: 100%;
+            height: $border-width;
+            background-color: $neutral-secondary;
+            margin-top: 2rem;
+          }
+        }
+        .top-separator {
+          &:before {
+            content: none;
+          }
+        }
+      }
     }
 
   }

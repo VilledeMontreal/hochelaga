@@ -54,7 +54,7 @@
 //
 // Top banner
 //
-.top-banner {
+.message-bar {
   background: $gray-900;
   color: $white;
   display: flex;
@@ -64,7 +64,7 @@
   padding: 1rem $grid-gutter-width;
   line-height: 1.2;
 
-  .top-banner-link {
+  .message-bar-link {
     display: none;
   }
 
@@ -86,7 +86,7 @@
   @include media-breakpoint-up(md) {
     justify-content: space-between;
 
-    .top-banner-link {
+    .message-bar-link {
       display: inline-block;
       margin-left: 1rem;
     }
@@ -101,7 +101,7 @@
 //
 // Contextual variations.
 @each $color, $value in $theme-colors {
-  .top-banner-#{$color} {
+  .message-bar-#{$color} {
     @include banner-variant($value);
   }
 }

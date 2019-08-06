@@ -137,8 +137,7 @@
 //
 // Top banner
 //
-.top-banner {
-  background: $gray-900;
+.message-bar {
   color: $white;
   display: flex;
   @include font-size($font-size-base);
@@ -151,10 +150,14 @@
     fill: $white;
   }
 
-  .top-banner-container {
+  .icon {
+    @include icon-color($white);
+  }
+
+  .message-bar-container {
     display: inline-flex;
 
-    .top-banner-heading {
+    .message-bar-heading {
       font-weight: $font-weight-bold;
       margin-right: 2rem;
     }
@@ -186,15 +189,18 @@
   $color-dark: map-get($map, dark);
   $color-light: map-get($map, light);
 
-  .top-banner-#{$label} {
+  .message-bar-#{$label} {
     background-color: $color-base;
 
-    @if $label == warning{
+    @if $label == warning {
       color: $color-dark;
       svg {
         fill: $color-dark;
       }
-      .top-banner-container {
+      .icon {
+        @include icon-color($color-dark);
+      }
+      .message-bar-container {
         a {
           color: $warning-dark;
           border-bottom: $link-border-width solid $warning-dark;
@@ -210,7 +216,10 @@
       svg {
         fill: $white;
       }
-      .top-banner-container {
+      .icon {
+        @include icon-color($white);
+      }
+      .message-bar-container {
         a {
           @include hover-focus {
             background-color: darken($color-base, 6%);
