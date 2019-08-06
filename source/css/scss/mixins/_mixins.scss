@@ -37,28 +37,6 @@
   line-height: $line-height;
 }
 
-//  @arg $size - string - any valid text size declaration
-//  @arg $color - string any valid color declaration
-//  @arg $color - string any valid color declaration
-@mixin bullet-left($size: 0.8em, $color: $primary, $textcolor: $black) {
-  display: inline-block;
-  position: relative;
-  padding-left: $size * 1.75;
-  color: $textcolor;
-  &:before {
-    content: " ";
-    position: absolute;
-    display: block;
-    left: 0;
-    top: 46%; // Perceptual
-    transform: translateY(-50%);
-    background: $color;
-    border-radius: $size;
-    width: $size;
-    height: $size;
-  }
-}
-
 
 // Add color variant to .progress-bar.
 @mixin progress-variant($bg) {

@@ -257,25 +257,25 @@
     "fr": "Voir ce site en français",
     "en": "View this site in English"
   },
-  "top-banner-colors": [
+  "message-bar-colors": [
     { 
-      "top-banner": {
-        "class": "top-banner-info"
+      "message-bar": {
+        "class": "message-bar-info"
       }
     },
     { 
-      "top-banner": {
-        "class": "top-banner-success"
+      "message-bar": {
+        "class": "message-bar-success"
       }
     },
     { 
-      "top-banner": {
-        "class": "top-banner-warning"
+      "message-bar": {
+        "class": "message-bar-warning"
       }
     },
     { 
-      "top-banner": {
-        "class": "top-banner-danger"
+      "message-bar": {
+        "class": "message-bar-danger"
       }
     }
   ],
@@ -345,6 +345,7 @@
       "alt": "Alt - Lorem ipsum dolor site."
     }
   },
+  "documentHeadingImageUrl": "https://picsum.photos/id/213/1920/1280?grayscale",
   "embedClass": "embed-responsive-16by9",
   "mediaEmbed": "//www.youtube.com/embed/qcEpiAwTSkg?rel=0",
   "inputClass": "",
@@ -448,7 +449,7 @@
   "alertTitle": "Titre du message",
   "alertText":
     "This is the default alert with <a href=\"#\" class=\"alert-link\">an example link</a>. Give it a click if you like.",
-  "top-banner": {
+  "message-bar": {
     "class": false
   },
   "dismissableAlert": false,
