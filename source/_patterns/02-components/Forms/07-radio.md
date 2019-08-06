@@ -1,5 +1,5 @@
 ---
-title: Radio set
+title: Radio
 ---
 
 We build up on bootstrap custom forms and replace svg with vdm icons or css
