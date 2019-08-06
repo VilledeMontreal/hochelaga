@@ -189,7 +189,7 @@ $container-max-widths: (
 $content-max-widths: (
   md: 750px,
   lg: 1110px,
-  xl: 1600px
+  xl: 1440px
 );
 
 //@include _assert-ascending($content-max-widths, "$content-max-widths");
@@ -212,7 +212,7 @@ $line-height-sm:              $line-height-component;
 $line-height-xs:              1.3333333333;
 
 $border-width:                1px;
-$border-color:                $gray-300;
+$border-color:                $gray-400;
 
 $border-radius:               .25rem;
 $border-radius-lg:            .375rem;
@@ -337,8 +337,9 @@ $hr-margin-y:                 ($spacer * 2);
 //
 // Customizes the `.table` component with basic values, each used across all table variations.
 
-$table-cell-padding:          1rem .75rem;
-$table-cell-padding-sm:       .5rem .75rem;
+$table-cell-padding-lg:       1rem 1rem;
+$table-cell-padding:          0.625rem 1rem;
+$table-cell-padding-sm:       0.5rem 1rem;
 
 $table-bg:                    transparent;
 $table-accent-bg:             $highlight-light; // used for zebra accent
@@ -346,7 +347,7 @@ $table-hover-bg:              $highlight-light; // used for hoverable
 $table-active-bg:             $table-hover-bg;
 
 $table-border-width:          $border-width;
-$table-border-color:          $gray-200;
+$table-border-color:          $gray-400;
 
 $table-head-bg:               $highlight-light;
 $table-head-color:            $headings-color;
@@ -651,10 +652,10 @@ $modal-header-border-width:         $modal-content-border-width;
 $modal-footer-border-width:         $modal-header-border-width;
 $modal-header-padding:              1rem;
 
-$modal-xl:                          1140px;
+$modal-xl:                          800px;
 $modal-lg:                          800px;
 $modal-md:                          600px;
-$modal-sm:                          300px;
+$modal-sm:                          600px;
 
 $modal-transition:                  transform 300ms ease-out;
 
