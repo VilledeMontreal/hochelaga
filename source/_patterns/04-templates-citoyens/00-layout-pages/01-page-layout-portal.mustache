@@ -14,7 +14,12 @@
         </article>
         {{# sidebarRight }}
         <aside class="col-12 col-lg-4 mt-md-8" role="complementary">
-          {{> patterns-sidebar-block-coordinates }}
+          <div class="sidebar">
+            <section class="sb-block">
+              {{> patterns-heading-sidebar(sidebarTitle: "Titre du block") }}
+              {{> components-list-group-links}}
+            </section>
+          </div>
         </aside>
         {{/ sidebarRight }}
       </div>
