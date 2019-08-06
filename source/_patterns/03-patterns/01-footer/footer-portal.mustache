@@ -1,7 +1,7 @@
 <footer class="footer" role="contentinfo">
   <div class="container">
-    <div class="footer-sub">
-      <div class="row mb-md-8 align-items-center">
+    <div class="footer-head">
+      <div class="row mb-4 mb-md-8 align-items-center">
         <div class="col">
           <span class="site-name">montreal.ca</span>
         </div>
@@ -9,10 +9,12 @@
           <button class="btn-lang">English</button>
         </div>
       </div>
-
-      <div class="row">
-        <div class="col-12 col-lg-2 top-separator">
-          <span class="list-heading">Nous joindre</span>
+    </div>
+    {{# footer-links }}
+    <div class="footer-sub">
+      <div class="row mb-md-8">
+        <div class="col-12 col-md-3 col-lg-2 top-separator">
+          <div class="list-heading">Nous joindre</div>
           <ul class="list-unstyled">
             <li>
               <a href="#">311</a>
@@ -28,8 +30,8 @@
             </li>
           </ul>
         </div>
-        <div class="col-12 col-lg-2 top-separator">
-          <span class="list-heading">Salle de presse</span>
+        <div class="col-12 col-md-3 col-lg-2 top-separator">
+          <div class="list-heading">Salle de presse</div>
           <ul class="list-unstyled">
             <li>
               <a href="#">Communiqués</a>
@@ -39,25 +41,26 @@
             </li>
           </ul>
         </div>
-        <div class="col-12 col-lg-2 top-separator">
-          <span class="list-heading">Carrières</span>
+        <div class="col-12 col-md-3 col-lg-2 top-separator">
+          <div class="list-heading">Carrières</div>
           <ul class="list-unstyled">
             <li>
               <a href="#">Consultez les offres d'emplois</a>
             </li>
           </ul>
         </div>
-        <div class="col-12 col-lg-6 top-separator">
-          <span class="list-heading">Visiter Montréal</span>
+        <div class="col-12 col-md-3 col-lg-6 top-separator">
+          <div class="list-heading">Visiter Montréal</div>
           <ul class="list-unstyled">
             <li>
               <a href="#">Tourisme Montréal</a>
             </li>
           </ul>
         </div>
-
-        <div class="col-12 top-separator mt-md-8 mb-md-8">
-          <span class="list-heading">Arrondissements</span>
+      </div>
+      <div class="row mb-md-8">
+        <div class="col-12 top-separator">
+          <div class="list-heading">Arrondissements</div>
           <div class="row">
             <ul class="list-unstyled col-12 col-md-3">
               <li>
@@ -123,20 +126,32 @@
             </ul>
           </div>
         </div>
-
       </div>
-
     </div>
+    {{/ footer-links}}
 
-    <div class="footer-section">
+    <div class="footer-last">
       <div class="row align-items-center">
-        <div class="col">
-          Media sociaux
+        <div class="col text-left">
+          <ul class="list-inline list-social-media-icon">
+            <li class="list-inline-item">
+              <a href="https://www.facebook.com/mtlville" title="Page Facebook de la ville de Montréal"><span class="icon icon-social-facebook" aria-hidden="true"></span><span class="sr-only">Page Facebook de la ville de Montréal</span></a>
+            </li>
+            <li class="list-inline-item">
+              <a href="https://www.youtube.com/user/MTLVille" title="Chaîne Youtube de la ville de Montréal"><span class="icon icon-social-youtube" aria-hidden="true"></span><span class="sr-only">Chaîne Youtube de la ville de Montréal</span></a>
+            </li>
+            <li class="list-inline-item">
+              <a href="https://www.linkedin.com/company/449259/" title="Page LinkedIn de la ville de Montréal"><span class="icon icon-social-linkedin" aria-hidden="true"></span><span class="sr-only">Page LinkedIn de la ville de Montréal</span></a>
+            </li>
+            <li class="list-inline-item">
+              <a href="https://twitter.com/mtl_ville" title="Page Twitter de la ville de Montréal"><span class="icon icon-social-twitter" aria-hidden="true"></span><span class="sr-only">Page Twitter de la ville de Montréal</span></a>
+            </li>
+          </ul>
         </div>
-        <div class="col-12 col-md order-last order-md-2">
+        <div class="col-12 col-md order-last order-md-2 text-center mt-4 mt-md-0 ">
           <span class="copyright">© 2019, Ville de Montréal</span>
         </div>
-        <div class="col-auto order-2 order-md-last">
+        <div class="col order-2 order-md-last text-right">
           <svg id="logo-mtl-rosace" class="footer-logo reverse" x="0px" y="0px" viewBox="0 0 184.6 39.3" xml:space="preserve">
             <polyline class="letter" points="0,6.6 6.1,6.6 13.9,27.9 14,27.9 21.8,6.6 27.7,6.6 27.7,32.8 23.6,32.8 23.6,10.2 23.5,10.2 15.2,32.8 
               11.8,32.8 3.5,10.2 3.4,10.2 3.4,32.8 0,32.8 0,6.6   "/>

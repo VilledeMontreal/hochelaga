@@ -24,7 +24,7 @@
 }
 
 // - - - - - - - - - -  - - - - - -
-//  * * * ATOMS * * *
+//  * * * STYLES * * *
 // - - - - - - - - - -  - - - - - -
 
 
@@ -556,27 +556,6 @@ $pl-size-box-wrapper-padding: 1rem;
   }
 }
 
-/*
-
-.pl-molecule-teaser-picture {
-  @extend .container;
-    .pl-cards-index {
-        @include make-row();
-        >li {
-         
-          @include make-xs-column(12);
-          @include make-sm-column(6);
-          @include make-md-column(6);
-
-          margin-bottom: $grid-gutter-width;
-        
-        }
-    }
-}
-
-
-*/
-
 // PL headings 
 
 .pl-h2 {
@@ -659,18 +638,6 @@ $pl-size-box-wrapper-padding: 1rem;
 // Colors
 //
 // Contextual variations (linked badges get darker on :hover).
-
-@each $color, $value in $theme-colors {
-  .pl-#{$color} {
-    //background: $value;
-  }
-}
-
-@each $color, $value in $grays {
-  .pl-gray-#{$color} {
-    //background: $value;
-  }
-}
 .pl-brand {
   background: $brand;
 }
@@ -778,12 +745,31 @@ $pl-size-box-wrapper-padding: 1rem;
 
 .sg-pattern-extra {
   a {
+    text-decoration: none;
     border: none;
+    &:hover {
+      background-color: $neutral-underground-1;
+    }
   }
+}
+
+.sg-pattern-extra-toggle:hover {
+  border-bottom: 1px solid #ddd;
 }
 
 .pl-top-banner {
   .top-banner + .top-banner {
     margin-top: 1rem;
+  }
+}
+
+// Tweak for fixed header in view all pages
+.sg-pattern-example {
+  .header-main-nav {
+    position: relative;
+    display: flex;
+  }
+  .fixed-top {
+    position: absolute;
   }
 }
