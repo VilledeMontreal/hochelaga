@@ -464,10 +464,10 @@ $input-border-radius-lg:                $border-radius;
 $input-border-radius-sm:                $border-radius;
 
 $input-focus-bg:                        $input-bg;
-$input-focus-border-color:              $action;
+$input-focus-border-color:              $primary;
 $input-focus-color:                     $input-color;
 $input-focus-width:                     $input-btn-focus-width;
-$input-focus-box-shadow:                $input-btn-focus-box-shadow;
+$input-focus-box-shadow:                none;
 
 $input-placeholder-color:               $gray-500;
 $input-plaintext-color:                 $body-color;
@@ -494,8 +494,7 @@ $custom-control-indicator-checked-disabled-bg:  $custom-control-indicator-disabl
 
 $custom-checkbox-indicator-border-radius:         $border-radius-lg;
 $custom-checkbox-indicator-icon-checked-bg-size:  1.1875rem;  
-$custom-checkbox-indicator-icon-checked:          str-replace(url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 340 340'%3E%3Cpath fill='#{$custom-control-indicator-checked-color}' d='M140,250a10,10,0,0,1-7.07-2.93l-60-60a10,10,0,0,1,14.14-14.14L140,225.86,252.93,112.93a10,10,0,0,1,14.14,14.14l-120,120A10,10,0,0,1,140,250Z'/%3E%3C/svg%3E"), "#", "%23");
-
+$custom-checkbox-indicator-icon-checked:          url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath d='M18.3 7.1c-.5-.5-1.3-.5-1.9 0l-7.1 7.1-1.7-1.7c-.5-.5-1.4-.5-1.9 0s-.5 1.4 0 1.9L8.3 17c.4.4 1.1.5 1.6.2L18.2 9c.6-.6.6-1.4.1-1.9z' fill='%23fff'/%3E%3C/svg%3E");
 $custom-radio-indicator-icon-checked-bg-size:     .625rem;
 
 $custom-switch-control-indicator-size:            1.75rem;

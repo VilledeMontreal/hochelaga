@@ -1,4 +1,11 @@
 // FORMS
+input, label {
+  position: relative;
+}
+
+textarea {
+  min-height: 80px;
+}
 
 label {
   font-size: $font-size-sm;
@@ -22,29 +29,6 @@ label {
   }
 }
 
-.form-group-sm {
-  label {
-    @include font-size($font-size-xs);
-    span {
-      font-size: 0.625rem;
-    }
-  }
-  input {
-    @extend .form-control-sm;
-  }
-}
-
-.form-group-lg {
-  label {
-    @include font-size($font-size-base);
-    span {
-      font-size: $font-size-sm;
-    }
-  }
-  input {
-    @extend .form-control-lg;
-  }
-}
 
 legend,
 .group-label {
@@ -55,24 +39,7 @@ legend,
   margin-bottom: 1rem;
 }
 
-.form-group {
-  margin-bottom: 2rem;
-  &.required {
-    > label {
-      /*&:after {
-        content: "*";
-        color: $red;
-        display: inline-block;
-        margin-left: 0.25em;
-      }*/
-    }
-  }
-  small {
-    color: $gray-700;
-    line-height: 1rem;
-  }
-  
-}
+
 .form-control {
   &:disabled,
   &[readonly] {
@@ -82,25 +49,209 @@ legend,
   }
 }
 
-.input-rounded {
-  border-radius: $btn-border-radius;
-}
-
+.valid-feedback,
 .invalid-feedback {
   font-weight: $font-weight-bold;
   line-height: 1rem;
   font-size: $font-size-xs;
   margin-top: 0.25rem;
-}
-
-
-// Set label color
-.form-group label,
-.custom-control-label {
-  &:not(.btn) {
-    color: $input-label-color;
+  color: $gray-900;
+  &:before {
+    width: 24px;
+    height: 24px;
+    content: '';
+    display: block;
+    -webkit-mask-size: cover;
+    mask-size: cover;
+    position: absolute;
+    top: calc(21px + 20px); //(height .invalid-feedback + haft of icon)+ (height of input/2)
+    right: 1.5rem;
   }
 }
+.valid-feedback {
+  &:before {
+    -webkit-mask: url($data-icon-check-circle) no-repeat 50% 50%;
+    mask: url($data-icon-check-circle) no-repeat 50% 50%;
+    background-color: $positive-dark;
+  }
+}
+
+.invalid-feedback {
+  &:before {
+    -webkit-mask: url($data-icon-warning) no-repeat 50% 50%;
+    mask: url($data-icon-warning) no-repeat 50% 50%;
+    background-color: $negative-dark;
+  }
+}
+
+.is-invalid,
+.is-valid {
+  position:relative;
+}
+
+.form-group {
+  margin-bottom: 2rem;
+  
+  small {
+    color: $gray-700;
+    line-height: 1rem;
+  }
+  .input-rounded {
+    border-radius: 1.4em;
+    padding: $btn-padding-y $btn-padding-x-sm;
+  }
+
+}
+
+.input-group-icon {
+  position: relative;
+  width: 100%;
+
+  > .icon {
+    color: $gray-900;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    @include font-size(2rem);
+    height: 100%;
+    padding: 0 0.5rem;
+    pointer-events: none;
+    position: absolute;
+    top: 0;
+  }
+
+  &.input-group-icon-left {
+    > .icon {
+      left: 0;
+    }
+    input {
+      padding-left: 2.5rem;
+    }
+  }
+  &.input-group-icon-right {
+    > .icon {
+      right: 0;
+    }
+    input {
+      padding-right: 2.5rem;
+    }
+  }
+
+}
+
+.form-group-sm {
+  label {
+    @include font-size($font-size-xs);
+    span {
+      font-size: 0.625rem;
+    }
+  }
+
+  .input-rounded {
+    border-radius: 1rem;
+    padding: $btn-padding-y-sm $btn-padding-x-sm;
+  }
+
+  .input-group-icon {
+    > .icon {
+      padding: 0 .5rem;
+      &:before{
+        width: 16px;
+        height: 16px;
+      }
+    }
+
+    &.input-group-icon-left {
+      input {
+        padding-left: 2rem;
+      }
+    }
+
+    &.input-group-icon-right {
+      input {
+        padding-right: 2rem;
+      }
+    }
+  }
+  .valid-feedback,
+  .invalid-feedback {
+    &:before {
+      width: 16px;
+      height: 16px;
+      top: calc(24px + 16px); //(height .invalid-feedback + haft of icon)+ (height of input/2)
+    }
+  }
+  input {
+    @extend .form-control-sm;
+  }
+
+  .custom-control {
+    .custom-control-label {
+      padding-top: 0.3rem;
+    }
+  }
+
+}
+
+
+
+.form-group-lg {
+  label {
+    @include font-size($font-size-base);
+    span {
+      font-size: $font-size-sm;
+    }
+  }
+  .input-rounded {
+      border-radius: 1.75rem;
+      padding: $btn-padding-y-lg $btn-padding-x-lg;
+    }
+
+  .input-group-icon {
+    > .icon {
+      padding: 0 1rem;
+    }
+
+    &.input-group-icon-left {
+      input {
+        padding-left: 3.5rem;
+      }
+    }
+
+    &.input-group-icon-right {
+      input {
+        padding-right: 3.5rem;
+      }
+    }
+  }
+  .valid-feedback,
+  .invalid-feedback {
+    &:before {
+      top: calc(21px + 28px); //(height .invalid-feedback + haft of icon)+ (height of input/2)
+    }
+  }
+
+  input {
+    @extend .form-control-lg;
+    
+  }
+
+  .custom-control {
+    .custom-control-label {
+      padding-top: 0.1rem;
+    }
+  }
+
+}
+
+.form-sm {
+  @extend .form-group-sm;
+}
+
+.form-lg {
+  @extend .form-group-lg;
+}
+
 
 // wrapper around input that needs inline text addon
 .input-inline-addon {
@@ -145,84 +296,7 @@ legend,
   }
 }
 
-// Theme icon as input-group-icon for easy placement and scalability
-.input-group-icon {
-  position: relative;
-  width: 100%;
 
-  > .vdm {
-    color: $gray-900;
-    display: flex;
-    flex-wrap: wrap;
-    align-items: center;
-    @include font-size(2rem);
-    height: 100%;
-    padding: 0 .3rem;
-    pointer-events: none;
-    position: absolute;
-    top: 0;
-  }
-
-  &.input-group-icon-left {
-    > .vdm {
-      left: 0;
-    }
-    input {
-      padding-left: 2.625rem;
-    }
-  }
-  &.input-group-icon-right {
-    > .vdm {
-      right: 0;
-    }
-    input {
-      padding-right: 2.625rem;
-    }
-  }
-
-  // Large input-group with icon
-  &.input-group-icon-lg {
-    > .vdm {
-      @include font-size(3rem);
-      padding: 0 .5rem;
-    }
-
-    &.input-group-icon-left {
-      input {
-        padding-left: 4rem;
-      }
-    }
-
-    &.input-group-icon-right {
-      input {
-        padding-right: 4rem;
-      }
-    }
-
-  }
-
-  // Small input-group with icon
-  &.input-group-icon-sm {
-    > .vdm {
-      @include font-size(1.5rem);
-      padding: 0 .2rem;
-    }
-
-    &.input-group-icon-left {
-      input {
-        padding-left: 2rem;
-      }
-    }
-
-    &.input-group-icon-right {
-      input {
-        padding-right: 2rem;
-      }
-    }
-
-  }
-
-}
 
 .has-clear {
   .form-control {
@@ -277,8 +351,11 @@ legend,
 .custom-control {
   margin-bottom: $custom-control-spacer-y;
 
-  .custom-control-label::before {
-    border: 1px solid $input-border-color;
+  .custom-control-label {
+    padding-top: 0.15rem;
+    &::before {
+      border: 1px solid $input-border-color;
+    }
   }
 
   .custom-control-input:checked ~ .custom-control-label {
@@ -312,20 +389,17 @@ legend,
   }
 }
 
-
-
-// Checkboxes
-//
-
+//Checkboxes
 .custom-checkbox {
-  // We need to grow the checkbox a bit cuz it's too thin...
   .custom-control-input:checked ~ .custom-control-label {
     &::after {
-      //background-size: $custom-checkbox-indicator-icon-checked-bg-size;
+      top: -0.4rem;
+      left: -2.45rem;
+      width: 2.5rem;
+      height: 2.5rem;
     }
   }
 }
-
 // Radios
 //
 // Tweak just a few things for radios.
