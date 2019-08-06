@@ -2,6 +2,7 @@
 .sidebar {
   border-top: 1px solid $neutral-stroke;
   margin-bottom: 4rem;
+  margin-top: 2rem;
   overflow: hidden;
 
   .social-media-list {
@@ -23,8 +24,13 @@
     margin-bottom: 1rem;
   }
   .sidebar-title {
-    @extend .h3;
+    @include font-size($h3-font-size);  // 24/32
+    line-height: 1.3333333333;
     margin-bottom: 1rem;
+  }
+
+  @include media-breakpoint-up(md) {
+    margin-top: 0;
   }
 
   @include media-breakpoint-up(lg) {

@@ -274,7 +274,7 @@ $display4-weight:             600;
 
 
 $lead-font-size:              $font-size-lg;              // 20px
-$lead-line-height:            1.5;                        // 30px
+$lead-line-height:            1.6;                        // 32px
 $lead-font-weight:            $font-weight-regular;
 
 $mark-color:                  $gray-900;
@@ -282,7 +282,7 @@ $mark-color:                  $gray-900;
 $small-font-size:             .75em;
 
 $blockquote-small-color:      $body-color;
-$blockquote-font-size:        $font-size-lg;
+$blockquote-font-size:        $font-size-lg;              // 20px
 
 // Spacing
 //
@@ -546,6 +546,8 @@ $nav-tabs-active-border-width:        2px;
 
 
 // Navbar
+
+$navbar-box-shadow:                 0 .25rem .5rem -.5rem rgba($black, .10);
 
 
 // Dropdowns
