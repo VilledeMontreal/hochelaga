@@ -1,0 +1,8 @@
+//button group
+.btn-group,
+.btn-group-vertical {
+  > .btn {
+     @extend .btn-squared;
+  }
+}
+

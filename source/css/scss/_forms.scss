@@ -465,15 +465,17 @@ legend,
 //
 // Tweak a few things for switches
 .custom-switch {
-  .switch-label {
+  padding-left: 0rem;
+
+  .custom-control-label {
     position: relative;
     display: inline-block;
     min-width: 112px;
     cursor: pointer;
     font-weight: 500;
     text-align: left;
-    margin: 16px;
-    padding: 16px 0 16px 44px;
+    padding: 0 0 0.5rem 44px;
+    
     &::before, 
     &:after {
       content: "";
@@ -487,6 +489,7 @@ legend,
       -webkit-transition: all 0.3s ease;
       transition: all 0.3s ease;
     }
+    
     &:before {
       left: 1px;
       width: 34px;
@@ -494,6 +497,7 @@ legend,
       background-color: $neutral-stroke;
       border-radius: 8px;
     }
+    
     &:after {
       left: 0;
       width: 20px;
@@ -504,10 +508,15 @@ legend,
     }
   }
 
-  .switch-input {
+  .custom-control-input {
     display: none;
+    
     &:checked {
-      & + .switch-label {
+      & + .custom-control-label {
+         &::before {
+          border-color: $neutral-stroke;
+          background-color: $neutral-stroke;
+        }
         &:after {
           background-color: $primary;
           -ms-transform: translate(80%, -50%);
@@ -516,6 +525,15 @@ legend,
         }
       }
     }
+    
+    &:disabled {
+      & + .custom-control-label {
+        &:after {
+          background-color: $neutral-underground-1;
+        }
+      }
+    }
+
   }
 }
 

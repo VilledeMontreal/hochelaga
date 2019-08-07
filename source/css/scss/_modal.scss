@@ -35,14 +35,13 @@
   }
 
   .modal-header {
-    padding: 1.5rem 1rem;
+    padding: 1rem;
     flex: 0 0 auto; // IE need this
+    border-bottom: 1px solid $neutral-stroke;
     .btn-close {
       position: absolute;
-      top: 1.5rem;
+      top: 1rem;
       right: 1rem;
-      //margin: 0;
-      //padding: 0;
       z-index: $zindex-modal + 1;
       svg {
         width: 24px;
@@ -64,7 +63,7 @@
   // prevent modal-body to grow and push footer to the bottom
   .modal-body {
     flex-grow: 0;
-    padding: 1.5rem 1rem;
+    padding: 2rem;
     > :last-child {
       margin-bottom: 0;
     }
@@ -73,7 +72,8 @@
   .modal-footer {
     flex-wrap: wrap;
     justify-content: space-between;
-    padding: 1.5rem 1rem;
+    border-top: 1px solid $neutral-stroke;
+    padding: 1rem;
     a {
       line-height: $modal-title-line-height;
     }
