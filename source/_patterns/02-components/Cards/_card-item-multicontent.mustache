@@ -1,0 +1,57 @@
+
+{{# url}}
+<a href="{{ url }}" class="card {{ classes }}">
+{{/ url}}
+{{^ url}}
+<div class="card {{ classes }}">
+{{/ url}}
+  {{# fullwidth }}
+  <div class="row w-100 no-gutters">
+    {{# card-media.img }}
+    <div class="col-12 col-lg-6 order-lg-last">
+      <div class="card-img-bg" style="background-image: url('{{ card-media.img.src }}')">
+        <span class="sr-only">{{card-media.img.alt}}</span>
+      </div>
+    </div>
+    {{/ card-media.img }}
+
+    <div class="col-12 col-lg-6">
+      <div class="card-body">
+        {{# card-title }}
+        <span class="card-title">{{ card-title }}</span>
+        {{/ card-title }}
+        
+        {{# card-text }}
+        <p class="card-text">{{{ card-text }}}</p>
+        {{/ card-text }}
+        {{# card-link }}
+        <div class="card-link">{{ card-link }} <span class="icon icon-arrow-right" aria-hidden="true"></span></div>
+        {{/ card-link }}
+      </div>
+    </div>
+  </div>
+  {{/ fullwidth}}
+  {{^ fullwidth}}
+  {{# card-media.img }}
+  <img class="card-img-top {{ card-media.img.classes }}" src="{{ card-media.img.src}}" alt="{{ card-media.img.alt }}">
+  {{/ card-media.img }}
+
+  <div class="card-body">
+    {{# card-title }}
+    <span class="card-title">{{ card-title }}</span>
+    {{/ card-title }}
+    
+    {{# card-text }}
+    <p class="card-text">{{{ card-text }}}</p>
+    {{/ card-text }}
+    {{# card-link }}
+    <div class="card-link">{{ card-link }} <span class="icon icon-arrow-right" aria-hidden="true"></span></div>
+    {{/ card-link }}
+  </div>
+  {{/ fullwidth}}
+{{# url }}
+</a>
+{{/ url }}
+{{^url}}
+</div>
+{{/ url}}

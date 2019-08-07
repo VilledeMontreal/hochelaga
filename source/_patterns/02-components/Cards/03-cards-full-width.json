@@ -1,16 +1,16 @@
 {
   "cards": {
-    "classes": "card-event",
-    "bsgrid-classes": "col-12 col-lg-4",
-    "card-item" : [
+    "classes": false,
+    "bsgrid-classes": "col-12",
+    "card-item": [
       {
-        "classes" : false,
+        "classes" : "card-fw card-event",
         "url" : "#",
         "card-media" : {
           "icon": false,
           "img" : {
             "src" : "https://picsum.photos/id/1074/768/432",
-            "alt" : "Card #1 img alt."
+            "alt" : "Card full width #1 img alt."
           }
         },
         "card-type": "Type d'événement",

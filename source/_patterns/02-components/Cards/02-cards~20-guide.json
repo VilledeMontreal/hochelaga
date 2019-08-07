@@ -1,10 +1,10 @@
 {
   "cards": {
-    "classes": "card-event",
+    "classes": false,
     "bsgrid-classes": "col-12 col-lg-4",
     "card-item" : [
       {
-        "classes" : false,
+        "classes" : "card-guide",
         "url" : "#",
         "card-media" : {
           "icon": false,
@@ -13,10 +13,10 @@
             "alt" : "Card #1 img alt."
           }
         },
-        "card-type": "Type d'événement",
-        "card-title" : "Titre de la carte sans limite de caractères mais qu'on pourrait tronquer",
+        "card-type": "Guide",
+        "card-title" : "Titre du guide sur plusieurs lignes si nécessaire",
         "card-text": false,
-        "card-date-text" : "Durée et dates de l'événement"
+        "card-date-text" : false
       }
     ]
   }

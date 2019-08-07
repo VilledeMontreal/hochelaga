@@ -28,16 +28,6 @@
 }
 
 
-// Card heading
-@mixin card-heading($font-size: $font-size-lg, $line-height: $line-height-sm, $font-weight: $font-weight-regular, $color: $headings-color, $display: block) {
-  color: $color;
-  display: $display;
-  @include font-size($font-size);
-  font-weight: $font-weight;
-  line-height: $line-height;
-}
-
-
 // Add color variant to .progress-bar.
 @mixin progress-variant($bg) {
   .progress-bar {
