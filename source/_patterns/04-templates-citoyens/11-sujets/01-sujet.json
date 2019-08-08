@@ -43,7 +43,10 @@
       "buttonUrl": "#",
       "buttonText": "Appel à l'action"
     },
-    "module-blockquote": true,
+    "module-blockquote": {
+      "blockquote-classes": "blockquote-emphasis",
+      "blockquote-footer": false
+    },
     "module-message": {
       "alertClass": "alert-warning alert-with-icon",
       "alertTitle": "Titre du message (optionnel)",

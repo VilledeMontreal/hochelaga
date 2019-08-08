@@ -267,13 +267,14 @@ a {
   }
 }
 
-// Blockquote
+// Blockquote And Blockquote emphasis
 //
 .blockquote {
   @include font-size($blockquote-font-size);
   color: $neutral-primary;
   line-height: 1.6;
   font-weight: $font-weight-normal;
+  font-style: italic;
   margin-bottom: 2rem;
   padding-left: 2rem;
   position: relative;
@@ -294,14 +295,24 @@ a {
 
   .blockquote-footer {
     color: $body-color;
-    @include font-size($font-size-base);
+    @include font-size($font-size-sm);  // 14/20
+    line-height: 1.4285714285;
     font-style: normal;
     &:before {
       display: none;
     }
+
+    .blockquote-footer-author {
+      color: $neutral-primary;
+      font-weight: $font-weight-bold;
+    }
   }
   cite {
-    color: $gray-900;
+    color: $neutral-primary;
+    font-style: normal;
+  }
+
+  &.blockquote-emphasis {
     font-style: normal;
   }
 }
