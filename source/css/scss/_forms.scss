@@ -181,13 +181,24 @@ legend,
       top: calc(24px + 16px); //(height .invalid-feedback + haft of icon)+ (height of input/2)
     }
   }
-  input {
+  input,
+  select {
     @extend .form-control-sm;
   }
 
   .custom-control {
     .custom-control-label {
       padding-top: 0.3rem;
+    }
+  }
+
+  .btn {
+      @extend .btn-sm;
+  }
+
+  .file-drop-container {
+    .help-text {
+      font-size: $font-size-xs;
     }
   }
 
@@ -224,6 +235,7 @@ legend,
       }
     }
   }
+
   .valid-feedback,
   .invalid-feedback {
     &:before {
@@ -231,6 +243,7 @@ legend,
     }
   }
 
+  select,
   input {
     @extend .form-control-lg;
     
@@ -242,6 +255,15 @@ legend,
     }
   }
 
+  .btn {
+    @extend .btn-lg;
+  }
+
+  .file-drop-container {
+    .help-text {
+      font-size: $font-size-base;
+    }
+  }
 }
 
 .form-sm {
@@ -414,7 +436,7 @@ legend,
 
 //
 // Custom checkboxes and radios themed as card
-.custom-control-card {
+/*.custom-control-card {
   padding: 0;
   margin-bottom: 1.5rem;
 
@@ -459,7 +481,7 @@ legend,
       color: $custom-control-label-disabled-color;
     }
   }
-}
+}*/
 
 // switches
 //
@@ -537,6 +559,8 @@ legend,
   }
 }
 
+//
+// select
 
 //
 // file drop container
@@ -552,6 +576,8 @@ legend,
     color: $input-color;
     margin-bottom: 1rem;
     text-align: center;
+    font-size: $font-size-sm;
+    line-height: $line-height-sm;
   }
 
   &.file-over{

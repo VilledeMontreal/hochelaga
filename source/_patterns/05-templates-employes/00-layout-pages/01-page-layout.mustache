@@ -1,0 +1,18 @@
+{{> styles-link-skip-to-main-content }}
+
+{{> components-navbar-interne }}
+
+{{> patterns-content-header-employes }}
+
+<main class="main-content {{ pageClasses }}" id="main-content" aria-label="Main Content">
+
+  <div class="region-content {{ regionMainClasses }}">
+    <div class="container {{ regionMainContainerClasses }}">
+      <div class="row{{# has-left-notch }} justify-content-between{{/ has-left-notch}}{{^ has-left-notch}} justify-content-center{{/ has-left-notch}}">
+        <article class="col-12 {{ regionMainContentClasses }}">
+          {{> styles-paragraph }}
+        </article>
+      </div>
+    </div>
+  </div>
+</main>

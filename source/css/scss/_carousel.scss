@@ -15,13 +15,14 @@
 .carousel-control-next-icon {
     width: 48px;
     height: 48px;
-	  background-color: $white;
+	  background-color: transparent;
     background-image: none;
     border-radius: 48px;
+    border: 1px solid $white;
 
    	svg {
    		margin-top: 12px;
-   		fill: $primary;
+   		fill: $white;
    	}
 }
 

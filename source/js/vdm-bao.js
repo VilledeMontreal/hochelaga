@@ -471,3 +471,18 @@ $('[id^="linkModalIcon"]').click(function() {
 });
 
 })(jQuery);
+
+
+// Copyright toggle
+const copyrights = document.querySelectorAll('.img-copyright');
+
+copyrights.forEach((copyright) => {
+  copyright.addEventListener('click', () => {
+    showHideCopyright(copyright);
+  });
+});
+
+function showHideCopyright(copyright) {
+  const copyrightText = copyright.querySelector('.copyright-text');
+  copyrightText.classList.toggle('d-none');
+}
