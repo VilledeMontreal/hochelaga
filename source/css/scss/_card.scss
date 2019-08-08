@@ -572,6 +572,11 @@
     .card-id {
       @include font-size($font-size-sm);
       color: $gray-900;
+      flex: 100%;
+    }
+
+    .card-title {
+      flex: 100%;
     }
 
     .card-icon-top {
@@ -584,7 +589,7 @@
     }
 
     .badge-container {
-      flex: 0 0 8rem;
+      flex: 0 0 11rem;
     }
 
     .card-date {
@@ -639,7 +644,7 @@
           flex-wrap: wrap;
 
           &:first-child {
-            flex: 1 1 auto;
+            flex: auto;
             white-space: nowrap;
             min-width: 0;
             overflow: hidden;
@@ -659,8 +664,10 @@
         margin: 0;
       }
       
-      .badge {
+      .badge-container {
         margin-right: 2rem;
+        display: flex;
+        justify-content: center;
       }
 
       .card-text,
