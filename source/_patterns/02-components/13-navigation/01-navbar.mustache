@@ -1,9 +1,10 @@
 <nav class="navbar navbar-light navbar-expand main-navbar justify-content-between w-100 {{ navbarPosition }}" role="navigation">
-  <div class="d-flex w-100">
+  <div class="navbar-div navbar-div-left">
     {{> components-main-menu-button }}
+    <div class="navbar-separator d-none d-md-flex"></div>
     {{> components-slide-menu }}
   </div>
-  <a class="navbar-brand mx-auto" href="{{ link.templates-homepage }}">
+  <a class="navbar-brand" href="{{ link.templates-homepage }}">
     <svg id="logo-mtl-rosace" x="0px" y="0px" viewBox="0 0 184.6 39.3" xml:space="preserve">
       <polyline class="letter" points="0,6.6 6.1,6.6 13.9,27.9 14,27.9 21.8,6.6 27.7,6.6 27.7,32.8 23.6,32.8 23.6,10.2 23.5,10.2 15.2,32.8 11.8,32.8 3.5,10.2 3.4,10.2 3.4,32.8 0,32.8 0,6.6"/>
       <path class="letter" d="M39.3,31.6c3.7,0,4.1-4.6,4.1-7.9c0-3.3-0.4-7.9-4.1-7.9c-3.6,0-4.1,4.6-4.1,7.9C35.2,27.1,35.7,31.6,39.3,31.6 M30.7,23.8 c0-6.1,2.9-9.4,8.6-9.4s8.6,3.3,8.6,9.4s-2.9,9.4-8.6,9.4S30.7,29.9,30.7,23.8z"/>
@@ -41,34 +42,35 @@
       c0-3.7-2.8-6.5-6.4-6.5C168.3,0,166.2,1.2,165,3.1z"/>
     </svg>
   </a>
-  <div class="col-right d-flex w-100">
+  <div class="navbar-div">
     <div class="d-flex align-items-center ml-auto">
-      <button class="navbar-button navbar-button-lg navbar-search-toggler d-none d-lg-inline-flex separator" id="navbarDropdownSearch" aria-haspopup="true" aria-expanded="false">
+      <button class="navbar-btn navbar-btn-search navbar-search-toggler d-none d-lg-inline-flex" id="navbarDropdownSearch" aria-haspopup="true" aria-expanded="false">
         <svg width="24px" height="24px" viewBox="0 0 24 24">
           <title>Recherche</title>
           <path d="M15.7071068,14.2928932 L21.7071068,20.2928932 C22.0976311,20.6834175 22.0976311,21.3165825 21.7071068,21.7071068 C21.3165825,22.0976311 20.6834175,22.0976311 20.2928932,21.7071068 L14.9529022,16.3671157 C13.5746967,17.4194128 11.8329875,18 10,18 C5.581722,18 2,14.418278 2,10 C2,5.581722 5.581722,2 10,2 C14.418278,2 18,5.581722 18,10 C18,10.780355 17.8879595,11.5468125 17.6696612,12.2815954 C17.5123762,12.8110101 16.9556961,13.1126808 16.4262815,12.9553958 C15.8968668,12.7981108 15.5951961,12.2414307 15.7524811,11.7120161 C15.9159996,11.1616197 16,10.5869818 16,10 C16,6.6862915 13.3137085,4 10,4 C6.6862915,4 4,6.6862915 4,10 C4,13.3137085 6.6862915,16 10,16 C11.6632422,16 13.2085803,15.3792526 14.2922267,14.2935604 C14.6823825,13.902668 15.3155472,13.9020709 15.7064396,14.2922267 Z" />
         </svg>
         <span class="sr-only">Ouvrir la barre de recherche</span>
       </button>
+      <div class="navbar-separator d-none d-lg-flex"></div>
       {{^ user-authenticated }}
-      <button class="navbar-button btn-login d-inline-flex">
-        <span class="d-flex d-xl-none">
+      <button class="navbar-btn btn-login d-inline-flex">
+        <span class="d-flex d-lg-none">
           <svg width="24" height="24" viewBox="0 0 24 24">
             <title>User-Circle</title>
             <path d="M6 18.708V18a3 3 0 0 1 3-3h6a3 3 0 0 1 3 3v2.631c0 .145-.03.282-.086.406a.996.996 0 0 1-.432.501A10.953 10.953 0 0 1 12 23C5.925 23 1 18.075 1 12S5.925 1 12 1s11 4.925 11 11c0 1.948-.508 3.824-1.458 5.477a1 1 0 0 1-1.734-.997A8.953 8.953 0 0 0 21 12a9 9 0 1 0-15 6.708zm1.998 1.355c1.205.6 2.564.937 4.002.937 1.41 0 2.77-.324 4-.935V18a1 1 0 0 0-1-1H9a1 1 0 0 0-1 1v2c0 .021 0 .042-.002.063zM12 14a4 4 0 1 1 0-8 4 4 0 0 1 0 8zm0-2a2 2 0 1 0 0-4 2 2 0 0 0 0 4z" />
           </svg>
         </span>
-        <span class="button-label d-none d-xl-inline-flex mr-4">Me connecter</span>
+        <span class="btn-label d-none d-lg-inline-flex mr-4">Me connecter</span>
         <span class="sr-only">Me connecter</span>
       </button>
-      <div class="d-none d-xl-inline-flex">
+      <div class="d-none d-lg-inline-flex">
         {{> components-button(buttonClass: "btn-secondary", buttonUrl: "#", "buttonText": "Créer mon compte")}}
       </div>
       {{/ user-authenticated }}
       {{# user-authenticated }}
       <div class="dropdown">
-        <button class="navbar-button dropdown-toggle" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-          <span class="d-flex mr-md-2">
+        <button class="navbar-btn dropdown-toggle" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          <span class="d-flex mr-lg-2">
             <svg width="24" height="24" viewBox="0 0 24 24">
               <title>User-Circle</title>
               <path d="M6 18.708V18a3 3 0 0 1 3-3h6a3 3 0 0 1 3 3v2.631c0 .145-.03.282-.086.406a.996.996 0 0 1-.432.501A10.953 10.953 0 0 1 12 23C5.925 23 1 18.075 1 12S5.925 1 12 1s11 4.925 11 11c0 1.948-.508 3.824-1.458 5.477a1 1 0 0 1-1.734-.997A8.953 8.953 0 0 0 21 12a9 9 0 1 0-15 6.708zm1.998 1.355c1.205.6 2.564.937 4.002.937 1.41 0 2.77-.324 4-.935V18a1 1 0 0 0-1-1H9a1 1 0 0 0-1 1v2c0 .021 0 .042-.002.063zM12 14a4 4 0 1 1 0-8 4 4 0 0 1 0 8zm0-2a2 2 0 1 0 0-4 2 2 0 0 0 0 4z" />
@@ -76,12 +78,12 @@
           </span>
           <span class="sr-only">Mon compte</span>
           {{^ user-has-profile}}
-          <div class="user-info d-none d-md-inline-flex">
+          <div class="user-info d-none d-lg-inline-flex">
             <span class="user-username elided-text">{{ user.username }}</span>
           </div>
           {{/ user-has-profile}}
           {{# user-has-profile}}
-          <div class="user-info user-has-profil d-none d-md-inline-flex">
+          <div class="user-info user-has-profil d-none d-lg-inline-flex">
             <span class="user-username elided-text">{{ user.username }}</span>
             <span class="user-profil elided-text">{{ user.profil }}</span>
           </div>
@@ -130,7 +132,7 @@
 <div id="navbar-search" class="navbar-search">
   <div class="container">
     <div class="inner-container">
-      <button class="navbar-button js-button-close">
+      <button class="navbar-btn js-button-close">
         <span class="vdm vdm-065-fleche-gauche"></span>
         <span class="sr-only">Quitter la recherche</span>
       </button>

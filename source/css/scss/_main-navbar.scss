@@ -1,262 +1,283 @@
 // Main navbar based on bootstrap navbar
-
-.navbar {
-  background-color: transparent;
-  border-bottom: 1px solid $gray-400;
-  padding: 1rem;
-  a:not(.btn) {
-    border-bottom: none;
-  }
-  .navbar-div {
-    display: flex;
-    flex-basis: auto; // Changes flex-bases to auto because of an IE10 bug
-    flex-grow: 1;
-    align-items: center;
-  }
-
-  // Montreal logo is the navbar-brand
-  .navbar-brand {
-    padding: 0;
-    display: inline-flex;
-    @include hover-focus {
-      background-color: transparent;
+.main-navbar {
+  &.navbar {
+    background-color: transparent;
+    border-bottom: 1px solid $gray-400;
+    padding: 1rem;
+    a:not(.btn) {
+      border-bottom: none;
     }
-    svg {
-      height: 1.5rem;
-      width: auto;
-      flex: 0 0 auto; // This is needed because of IE weird behavior
+    .navbar-div {
+      display: flex;
+      width: 100%;
     }
-    // 768px and up
-    @include media-breakpoint-up(md) {
+
+    // Montreal logo is the navbar-brand
+    .navbar-brand {
+      padding: 0;
+      margin: 0 auto;
+      display: inline-flex;
+      @include hover-focus {
+        background-color: transparent;
+      }
       svg {
-        height: 2rem;
+        height: 1.5rem;
         width: auto;
-      }
-    }
-  }
-
-  // Separator
-  .separator {
-    &:after {
-      content: "";
-      border-right: 1px solid $neutral-stroke;
-      height: 1.5rem;
-      margin-left: 2rem;
-    }
-  }
-
-  .nav-link {
-    display: flex;
-    align-items: center;
-    padding: 0;
-  }
-
-  .navbar-nav {
-    align-items: center;
-    .nav-item-btn {
-      margin: 0 .5rem;
-      padding-bottom: 0;
-
-      &:last-child {
-        margin-right: 0;
-      }
-    }
-    li:last-child {
-      .nav-link {
-        padding-right: 0;
-      }
-    }
-  }
-
-
-  .dropdown {
-    position: inherit;
-    display: flex;
-  }
-  // Dropdown overrides
-  .dropdown-toggle {
-    padding-top: 0;
-    padding-bottom: 0;
-
-    // Prevent long username/profile to break layout with max-width
-    // Use elided-text helper class on field to add ellipsis on truncated strings
-    .user-info {
-      flex-direction: column;
-      line-height: $line-height-component;
-      max-width: 170px;
-      text-align: left;
-
-      &.user-has-profil {
-        @include font-size($font-size-xs);
-        line-height: 1.333333333;
-
-        .user-profil {
-          color: $neutral-secondary;
-          font-weight: $font-weight-normal;
-        }
-      }
-    }
-    // remove carets
-    &:after {
-      content: none;
-    }
-
-    // Add chevron only on large breakpoint and up
-    @include media-breakpoint-up(md) {
-      &::after {
-        content: '';
-      }
-    }
-  }
-
-  // Dropdown menu
-  .dropdown-menu {
-    border-right: 0;
-    top: 100%;
-    right: 0;
-    margin: 0;
-    max-height: none;
-    min-width: 20rem;
-    box-shadow: -1px 3px 3px 0 $gray-300;
-
-    // Dropdown section
-    .dropdown-item-section {
-      .user-info {
-        line-height: $line-height-component;
-        > * {
-          display: flex;
-        }
-      }
-      .user-email {
-        @include font-size($font-size-sm);
-        color: $gray-600;
-      }
-      .user-profil {
-        font-weight: $font-weight-bold;
-        margin-bottom: 1rem;
+        flex: 0 0 auto; // This is needed because of IE weird behavior
       }
     }
 
-    .dropdown-item {
+    .nav-link {
       display: flex;
       align-items: center;
-      padding: .75rem 2.5rem;
+      padding: 0;
     }
 
-  }
+    .navbar-nav {
+      align-items: center;
+      .nav-item-btn {
+        margin: 0 .5rem;
+        padding-bottom: 0;
 
-  // change icon when dropdown is open
-  .dropdown.show {
+        &:last-child {
+          margin-right: 0;
+        }
+      }
+      li:last-child {
+        .nav-link {
+          padding-right: 0;
+        }
+      }
+    }
+
+    // Separator in navbar
+    // Use display utility class to hide @breakpoint
+    .navbar-separator {
+      display: flex;
+      margin-right: 2rem;
+      &:after {
+        content: "";
+        border-right: 1px solid $neutral-stroke;
+        height: 1.5rem;
+        margin-left: 2rem;
+      }
+    }
+
+    //
+    // Navbar buttons styles
+    .navbar-btn {
+      @include button-reset();
+      color: $neutral-primary;
+      cursor: pointer;
+      font-weight: $font-weight-bold;
+      display: inline-flex;
+      align-items: center;
+      padding: 0;
+      @include transition(color .15s ease-in-out);
+
+      svg {
+        fill: currentColor;
+      }
+
+      .btn-label {
+        color: $neutral-primary;
+        line-height: $line-height-component;
+        @include transition(color .15s ease-in-out);
+      }
+
+      &:hover,
+      &:active {
+        color: $action;
+        .btn-label {
+          color: $action;
+        }
+      }
+
+      // remove focus from box-shadow
+      &:focus,
+      &.focus {
+        box-shadow: none;
+      }
+    }
+
+    // Dropdown
+    .dropdown {
+      position: inherit;
+      display: flex;
+    }
+    // Dropdown overrides
     .dropdown-toggle {
+      padding-top: 0;
+      padding-bottom: 0;
+
+      // Prevent long username/profile to break layout with max-width
+      // Use elided-text helper class on field to add ellipsis on truncated strings
+      .user-info {
+        flex-direction: column;
+        line-height: $line-height-component;
+        max-width: 170px;
+        text-align: left;
+
+        &.user-has-profil {
+          @include font-size($font-size-xs);
+          line-height: 1.333333333;
+
+          .user-profil {
+            color: $neutral-secondary;
+            font-weight: $font-weight-normal;
+          }
+        }
+      }
+      // remove carets
       &:after {
         content: none;
       }
-      // Switch to chevron haut for large breakpoint and up
-      @include media-breakpoint-up(md) {
-        &:after {
-          content: '';
-          -webkit-mask: url($data-icon-chevron-up) no-repeat 50% 50%;
-          mask: url($data-icon-chevron-up) no-repeat 50% 50%;
-        }
-      }
-    }
-  }
 
-  &.navbar-dark {
-    background-color: $neutral-primary;
-    border-bottom: none;
-  
-    .navbar-button,
-    .navbar-button .button-label {
-      color: $white;
     }
-  
-    .navbar-brand {
-      @include font-size($font-size-base);
-      line-height: $line-height-component;
-      font-weight: $font-weight-bold;
-      align-items: center;
-      svg {
-        width: 1.5rem;
-        height: 1.5rem;
-        margin-right: 1rem;
-      }
-    }
-  
-    @include media-breakpoint-up(lg) {
-      .navbar-brand {
-        @include font-size($font-size-lg);
-        line-height: 1.4;
-        svg {
-          width: 2rem;
-          height: 2rem;
-        }
-      }
-    }
-  
-  }
 
-  // Dropdown-menu Mobile full width
-  @include media-breakpoint-down(xs) {
+    // Dropdown menu
     .dropdown-menu {
-      border-left: 0;
-      width: 100%;
+      border-right: 0;
+      top: 100%;
+      right: 0;
+      margin: 0;
+      max-height: none;
+      min-width: 20rem;
+      box-shadow: -1px 3px 3px 0 $gray-300;
+
+      // Dropdown section
+      .dropdown-item-section {
+        .user-info {
+          line-height: $line-height-component;
+          > * {
+            display: flex;
+          }
+        }
+        .user-email {
+          @include font-size($font-size-sm);
+          color: $gray-600;
+        }
+        .user-profil {
+          font-weight: $font-weight-bold;
+          margin-bottom: 1rem;
+        }
+      }
+
+      .dropdown-item {
+        display: flex;
+        align-items: center;
+        padding: .75rem 2.5rem;
+      }
+
+    }
+
+    // change icon when dropdown is open
+    .dropdown.show {
+      .dropdown-toggle {
+        &:after {
+          content: none;
+        }
+      }
+    }
+
+    // Dark navbar variant
+    //
+    &.navbar-dark {
+      background-color: $neutral-primary;
+      border-bottom: none;
+    
+      .navbar-btn,
+      .navbar-btn .btn-label {
+        color: $white;
+        &:hover,
+        &:active {
+          color: $action-lighter;
+          .btn-label {
+            color: $action-lighter;
+          }
+        }
+      }
+      .navbar-separator {
+        &:after {
+          border-right: 1px solid $neutral-secondary;
+        }
+      }
+      .navbar-brand {
+        @include font-size($font-size-base);
+        line-height: $line-height-component;
+        font-weight: $font-weight-bold;
+        align-items: center;
+        
+        &:hover,
+        &:active {
+          color: $action-lighter;
+        }
+      }
+
+      .dropdown-toggle {
+        &::after {
+          background-color: $white;
+        }
+      }
+    
+    }
+
+    &.navbar-scrolled {
+      background-color: $white;
+      box-shadow: $navbar-box-shadow;
+      &.navbar-dark {
+        background-color: $neutral-primary;
+      }
+    }
+
+    // Dropdown-menu Mobile full width
+    @include media-breakpoint-down(xs) {
+      .dropdown-menu {
+        border-left: 0;
+        width: 100%;
+      }
+    }
+
+    // 768px and up
+    @include media-breakpoint-up(md) {
+      .navbar-div-left {
+        width: auto;
+      }
+      .navbar-brand {
+        margin: 0;
+      }
+    }
+
+    // 992px and up
+    @include media-breakpoint-up(lg) {
+      height: 4.5rem;
+      padding: 1rem 2rem;
+      .navbar-brand {
+        svg {
+          height: 2rem;
+          width: auto;
+        }
+      }
+
+      // Add chevron
+      .dropdown-toggle {
+        &::after {
+          content: '';
+        }
+      }
+
+      // Switch to chevron up when opened
+      .dropdown.show {
+        .dropdown-toggle {
+          &:after {
+            content: '';
+            -webkit-mask: url($data-icon-chevron-up) no-repeat 50% 50%;
+            mask: url($data-icon-chevron-up) no-repeat 50% 50%;
+          }
+        }
+      }
     }
   }
-
-  // 768px and up
-  @include media-breakpoint-up(md) {
-    height: 4.5rem;
-    button + .dropdown,
-    button + button {
-      margin-left: 2rem;
-    }
-  }
-
-}
-
-.navbar-scrolled {
-  background-color: $white;
-  box-shadow: $navbar-box-shadow;
-}
-
-
-//
-// Navbar buttons styles
-.navbar-button {
-  @include button-reset();
-  color: $neutral-primary;
-  cursor: pointer;
-  font-weight: $font-weight-bold;
-  display: inline-flex;
-  align-items: center;
-  padding: 0;
-  @include transition(color .15s ease-in-out);
-
-  svg {
-    fill: currentColor;
-  }
-
-  .button-label {
-    color: $neutral-primary;
-    line-height: $line-height-component;
-    @include transition(color .15s ease-in-out);
-  }
-
-  &:hover,
-  &:active {
-    color: $action-lighter;
-    .button-label {
-      color: $action-lighter;
-    }
-  }
-
-  // remove focus from box-shadow
-  &:focus,
-  &.focus {
-    box-shadow: none;
-  }
-
 }
 
 //
@@ -287,36 +308,6 @@
     @include font-size(1.875rem);
     &:focus {
       box-shadow: none;
-    }
-  }
-}
-
-//
-// Wizard header
-// Optimize and normalize - we can extend from banner and build more generic containers
-.wizard-header {
-  display: flex;
-  justify-content: space-between;
-  .hdr-container,
-  .hdr-links {
-    display: flex;
-    > * {
-      display: flex;
-      justify-content: center;
-      align-items: center;
-    }
-  }
-  .hdr-title {
-    color: $headings-color;
-    @include font-size($font-size-base);
-    line-height: $line-height-base;
-    font-weight: $font-weight-bold;
-    padding: 1.5rem 1rem;
-  }
-  .hdr-links {
-    padding-right: 1.375rem;
-    ul {
-      margin-bottom: 0;
     }
   }
 }

@@ -99,7 +99,6 @@
   // Images are handeld like list-group-links using
   // variable height image technique (bg-image)
   &.card-fw {
-
     @include media-breakpoint-up(lg) {
       flex-direction: row;
       align-items: center;
@@ -122,18 +121,6 @@
       }
     }
   }
-
-  // Large cards specifc
-  /*&.card-large {
-    &.card-row-layout {
-      .card-body {
-        text-align: center;
-        @include media-breakpoint-up(lg) {
-          text-align: left;
-        }
-      }
-    }
-  }*/
 
   // Card profile
   &.card-profile,
@@ -176,7 +163,6 @@
     }
 
     .card-body {
-
       .card-title {
         @include font-size($h3-font-size);  // 24/32
         line-height: 1.3333333333;
@@ -266,6 +252,7 @@
   }
 
   // Featured member
+  // TODO: Wait to see what happens with featured profile
   /*&.card-featured-member {
     text-align: center;
     .card-footer {
