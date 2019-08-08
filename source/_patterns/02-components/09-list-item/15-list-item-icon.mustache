@@ -2,10 +2,12 @@
 	{{# list }}
   <div class="list-item-icon">
     {{# listItemAction}}
-    <a class="list-item-icon-action" href="{{ url }}">
-      <span class="icon {{listIconUtility}}" aria-hidden="true"></span>
-      <div class="list-item-icon-label">{{text}}</div>
-    </a>
+    <div class="list-item-icon-action">
+      <a href="{{url}}" class="link-has-icon">
+        <div><span class="icon {{ listIconUtility }}"></span></div>
+        <div><span class="link-icon-label">{{ text }}</span></div>
+      </a>
+    </div>
     {{# listExtraContent}}
     <div class="list-item-icon-content ml-5">{{{listExtraContent}}}</div>
     {{/ listExtraContent}}

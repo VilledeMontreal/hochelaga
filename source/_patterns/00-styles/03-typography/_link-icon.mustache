@@ -1,7 +1,9 @@
 {{# link-icon }}
-<a href="{{url}}" class="link-has-icon {{#icon-right}}icon-right{{/ icon-right}}">
-  {{^icon-right}}<span class="icon {{ icon }}"></span>{{/ icon-right}}
-  <span class="link-icon-label">{{ link-icon-label }}</span>
-  {{#icon-right}}<span class="icon {{ icon }}"></span>{{/ icon-right}}
+<a href="{{url}}" class="link-has-icon {{ linkIconSize}} {{#icon-right}}icon-right{{/ icon-right}}">
+  {{^icon-right}}<div><span class="icon {{ icon }}"></span></div>{{/ icon-right}}
+  <div>
+    <span class="link-icon-label">{{ link-icon-label }}</span>
+  </div>
+  {{#icon-right}}<div><span class="icon {{ icon }}"></span></div>{{/ icon-right}}
 </a>
 {{/ link-icon }}

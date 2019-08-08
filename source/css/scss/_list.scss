@@ -157,7 +157,19 @@
     font-weight: $font-weight-bold;
   }
   .list-item-icon-action {
-    border: none;
+    display: inherit;
+    width: 100%;
+    .link-has-icon {
+      .icon {
+        padding: 0;
+      }
+      @include hover-focus {
+        .icon {
+          background-color: transparent;
+        }
+      }
+    }
+    /*border: none;
     color: $list-group-action-color;
     text-align: inherit;
     line-height: $line-height-component;
@@ -171,7 +183,7 @@
     }
     svg {
       fill: $action;
-    }
+    }*/
   }
   .list-item-icon-content {
     flex: 2;

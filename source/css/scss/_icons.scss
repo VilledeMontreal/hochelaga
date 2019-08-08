@@ -34,28 +34,40 @@ svg[role=icon] {
   line-height: $line-height-component;
   .icon {
     @include icon-color($action);
-    margin-right: .25rem;
+    padding-right: .25rem;
   }
   @include hover-focus {
     border: none;
+    background-color: transparent;
+    .icon {
+      background-color: $highlight-light;
+    }
     .link-icon-label {
-      -webkit-box-shadow:inset 0px -1px $action;
-      -moz-box-shadow:inset 0px -1px $action;
-      box-shadow:inset 0px -1px $action;
+      background-color: $highlight-light;
+      display: inline;
+      border-bottom: 1px solid $action;
     }
   }
 
   &.icon-right {
     .icon {
-      margin-right: 0;
-      margin-left: .25rem;
+      padding-right: 0;
+      padding-left: .25rem;
     }
   }
 
   &.icon-left {
     .icon {
-      margin-left: 0;
-      margin-right: .25rem;
+      padding-left: 0;
+      padding-right: .25rem;
+    }
+  }
+
+  &.link-sm {
+    @include font-size($font-size-sm);
+      line-height: 1.4285714285;
+    .icon {
+      @extend .icon-sm;
     }
   }
 }
