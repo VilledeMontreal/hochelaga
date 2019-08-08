@@ -745,10 +745,12 @@ $pl-size-box-wrapper-padding: 1rem;
 
 .sg-pattern-extra {
   a {
-    text-decoration: none;
-    border: none;
-    &:hover {
-      background-color: $neutral-underground-1;
+    border-bottom: 1px solid #ccc;
+    &:hover,
+    &:active,
+    &:focus {
+      border-bottom: 1px solid #f5f2f0;
+      background-color: #f5f2f0;
     }
   }
 }

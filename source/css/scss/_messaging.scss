@@ -10,7 +10,7 @@
   border-color: $neutral-tertiary;
   background-color: $neutral-underground-1;
   font-size: $font-size-sm;
-  line-height: 1.43;
+  line-height: $line-height-xs;
   color: $neutral-secondary;
 
   a {
@@ -46,6 +46,10 @@
       fill: $neutral-tertiary;
     }
 
+  &.alert-text-base {
+    font-size: $font-size-base;
+    line-height: $line-height-component;
+  }
 }
 
 
@@ -91,6 +95,7 @@
 .popover {
   border: none;
   padding: 1.25rem 1rem;
+  @extend .shadow-sm;
 }
 
 .popover-header,
@@ -118,24 +123,7 @@
 }
 
 //
-// States
-//
-.state {
-  display: flex;
-  border-radius: 50%;
-  align-self: center;
-  width: 2rem;
-  height: 2rem;
-  .vdm {
-    text-align: right;
-    color: $white;
-    @include font-size(2rem);
-    align-self: center;
-  }
-}
-
-//
-// Top banner
+// Message bar
 //
 .message-bar {
   color: $white;

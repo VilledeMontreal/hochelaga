@@ -128,7 +128,6 @@ $icon-sm:     16px;
 $icon-md:     24px;
 $icon-lg:     32px;
 $icon-xl:     40px;
-$icon-xxl:    80px;
 
 $icons-size: ();
 $icons-size: (
@@ -143,9 +142,6 @@ $icons-size: (
   ),
   xl:  (
     size: $icon-xl
-  ),
-  xxl:  (
-    size: $icon-xxl
   )
 );
 
@@ -747,7 +743,7 @@ $carousel-caption-color:             $neutral-primary !default;
 $popover-font-size:                 $font-size-sm !default;
 $popover-bg:                        $white !default;
 $popover-border-color:              $neutral-underground-1;
-$popover-box-shadow:                0 1px 4px 0 rgba(0,0,0,0.10);
+$popover-box-shadow:                0 1px 4px 0 rgba($black, .2);
 $popover-header-padding-y:          0;
 $popover-header-padding-x:          0;
 
