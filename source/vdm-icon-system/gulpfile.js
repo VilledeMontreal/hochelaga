@@ -28,7 +28,6 @@ gulp.task('icon-utility', function() {
         { removeViewBox: false },
         { removeTitle: false },
         { cleanupNumericValues: { floatPrecision: 2  } },
-        { addClassesToSVGElement: { classNames: ["icon-svg"] } },
         { addAttributesToSVGElement: { attributes: ['role="icon"'] } },
         { removeDimensions: true },
         { removeAttrs: { attrs: ['(fill|fill-rule|style)'] } }
@@ -45,27 +44,6 @@ gulp.task('icon-utility', function() {
   }))
   .pipe(gulp.dest('./'));
 
-});
-  
-gulp.task('jsonIconUtility', function() {
-
-    gulp.src('icons/icon-utility/svgs-inline-use/*.svg')
-        .pipe(fc2json('svg.json'))
-        .pipe(jsonTransform(function(data) {
-          var resultJson = '',
-          objects = [],
-          keys = Object.keys(data);
-
-            for (var i = 0; i < keys.length; i++) {
-
-                objects.push({
-                    name: keys[i],
-                    data: data[keys[i]]
-                });
-            }
-            return objects; 
-        }))
-        .pipe(gulp.dest('icons/icon-utility/'));
 });
 
 ///////////////////////////////////////////////////
@@ -89,7 +67,6 @@ gulp.task('icon-editorial', function() {
         { removeViewBox: false },
         { removeTitle: false },
         { cleanupNumericValues: { floatPrecision: 2  } },
-        { addClassesToSVGElement: { classNames: ["icon-svg"] } },
         { addAttributesToSVGElement: { attributes: ['role="icon"'] } },
         { removeDimensions: true },
         { removeAttrs: { attrs: ['(fill|fill-rule|style)'] } }
@@ -108,24 +85,4 @@ gulp.task('icon-editorial', function() {
 
 });
 
-gulp.task('jsonIconEditorial', function() {
-    gulp.src('icons/icon-editorial/svgs-inline-use/*.svg')
-    .pipe(fc2json('svg.json'))
-    .pipe(jsonTransform(function(data) {
-          var resultJson = '',
-          objects = [],
-          keys = Object.keys(data);
-
-            for (var i = 0; i < keys.length; i++) {
-
-                objects.push({
-                    name: keys[i],
-                    data: data[keys[i]]
-                });
-            }
-            return objects; 
-        }))
-    .pipe(gulp.dest('icons/icon-editorial/'));
-});
-
-gulp.task('default', ['icon-utility', 'icon-editorial', 'jsonIconUtility', 'jsonIconEditorial']);
+gulp.task('default', ['icon-utility', 'icon-editorial']);

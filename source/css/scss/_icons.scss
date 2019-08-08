@@ -115,3 +115,10 @@ svg[role=icon] {
   }
 }
 
+.icon-color-primary-darker {
+  fill: $primary-darker !important;
+  &:before {
+    background-color: $primary-darker !important;
+  }
+}
+
