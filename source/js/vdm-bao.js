@@ -4,16 +4,16 @@
   // ******************************
   //Icon modal
 $('[id^="linkModalIcon"]').click(function() {
-  console.log( "click click");
 
   var title = $(this).next(".ic-name").html();
-  var svg = $(this).html();
+  var nameFileSvg = $(this).next(".ic-name").attr("id");
+  var textModalUtility = '&lt;span class="icon icon-'+nameFileSvg+'" role="icon"&gt;&lt;/span&gt;';
+  var textModalEditorial = '&lt;img src="pathtosvg/'+nameFileSvg+'.svg" width="40" height="40" role="icon"/&gt;';
+
   $("#exampleModalIconUtilityLabel").text(title);
   $("#exampleModalIconEditorialLabel").text(title);
-  $("#exampleModalIconUtility .modal-body .select-all").text(svg);
-  $("#exampleModalIconEditorial .modal-body .select-all").text(svg);
-
-  //$("#exampleModalIconUtilityLabel").text("."+title);
+  $("#exampleModalIconUtility .modal-body .select-all").html(textModalUtility);
+  $("#exampleModalIconEditorial .modal-body .select-all").html(textModalEditorial);
   
 });
 

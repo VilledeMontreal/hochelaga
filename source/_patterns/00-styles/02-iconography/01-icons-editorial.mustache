@@ -9,7 +9,7 @@
 			      		<path d="{{ icon-path }}"></path>
 						  </svg>
 					  </a>
-			      <span class="ic-name">icon-{{ icon-name }}</span>
+			      <span class="ic-name" id="{{ icon-name }}">icon-{{ icon-name }}</span>
 		      </div>
 		    </li>
 		  {{/icon-editorial}}
@@ -18,13 +18,12 @@
 
 <!-- Modal -->
 <div class="modal fade" id="exampleModalIconEditorial" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-  <div class="modal-dialog modal-dialog-centered" role="document">
+  <div class="modal-dialog modal-dialog-centered modal-lg" role="document">
     <div class="modal-content">
       <div class="modal-header">
         <h5 class="modal-title" id="exampleModalIconEditorialLabel">Icon name</h5>
         <button type="button" class="btn-close close" data-dismiss="modal" aria-label="Close">
           <svg width="24" height="24" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-            <title>Icons/24px/X</title>
             <path d="M12 13.414l-5.293 5.293a1 1 0 1 1-1.414-1.414L10.586 12 5.293 6.707a1 1 0 0 1 1.414-1.414l12 12a1 1 0 0 1-1.414 1.414L12 13.414zm5.293-8.121a1 1 0 0 1 1.414 1.414l-3 3a1 1 0 1 1-1.414-1.414l3-3z" fill="#ADB5BD" fill-rule="evenodd"/>
           </svg>
         </button>

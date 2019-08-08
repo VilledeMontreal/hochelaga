@@ -1,5 +1,5 @@
 ---
-title: Editorial
+title: Category
 ---
 
 [Insert description here]

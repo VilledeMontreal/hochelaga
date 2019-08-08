@@ -12,9 +12,11 @@ $brand-black: 		  #1d1d1b;
 
 // Actions
 $action:					  #097d6c;
-$action-lighter: 	  #0cb097;
 $primary:       	  $action;
-$primary-lighter:	  $action-lighter;
+$action-lighter:    #0cb097;
+$primary-lighter:   $action-lighter;
+$action-darker:     #075B4F;
+$primary-darker:   $action-darker;
 
 // Highlight
 $highlight-light:	  #eefaf8;
@@ -124,24 +126,20 @@ $enable-shadows:                              false;
 // Icons
 //
 // Size
-$icon-sm:     16px;
+$icon-xs:     16px;
+$icon-sm:     20px;
 $icon-md:     24px;
-$icon-lg:     32px;
-$icon-xl:     40px;
 
 $icons-size: ();
 $icons-size: (
+  xs:  (
+    size: $icon-xs
+  ),
   sm:  (
     size: $icon-sm
   ),
   md:  (
     size: $icon-md
-  ),
-  lg:  (
-    size: $icon-lg
-  ),
-  xl:  (
-    size: $icon-xl
   )
 );
 
