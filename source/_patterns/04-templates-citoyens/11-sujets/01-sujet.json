@@ -57,7 +57,38 @@
       }
     },
     "module-text": true,
-    "module-image-album": true,
+    "module-image-album": {
+      "carousel": {
+        "carouselID": "carousel-sujet",
+        "hasIndicators": true,
+        "hasControls": true,
+        "carouselItem": [
+          {
+            "item-is-active": "active",
+            "slide-number": "0",
+            "url": "https://picsum.photos/id/108/2000/1333",
+            "alt": "First slide",
+            "caption": {
+              "content": "Lorem ipsum dolor sit..."
+            }
+          },
+          {
+            "slide-number": "1",
+            "url": "https://picsum.photos/id/1056/3988/2720",
+            "alt": "Second slide",
+            "caption": {
+              "content": "Lorem ipsum dolor sit..."
+            }
+          },
+          {
+            "slide-number": "2",
+            "url": "https://picsum.photos/id/1056/3988/2720",
+            "alt": "Third slide",
+            "caption": false
+          }
+        ]
+      }
+    },
     "module-video": true,
     "module-collapse": {
       "collapsibleItem": [
@@ -114,19 +145,17 @@
       ]
     },
     "module-media-content": {
-      "wrapper-content": {
-        "title": "Titre de la section - Image et tete associés",
-        "img": {
-          "src": "https://picsum.photos/id/1074/768/432",
-          "alt": "Alt - Lorem ipsum dolor site."
-        }
+      "wrapperTitle": "Titre de la section - Image et tete associés",
+      "img": {
+        "src": "https://picsum.photos/id/1058/768/432",
+        "alt": "Alt - Lorem ipsum dolor site."
       }
     },
     "module-table": {
       "table": {
         "tableWrapper": true,
         "caption": "",
-        "tableClass": "",
+        "tableClass" : "table-lg",
         "thead": {
           "theadClass": "",
           "th": [
@@ -354,6 +383,7 @@
     ]
   },
   "hasSelecteurArrondissement": true,
+  "wrapperStickyHeader": true,
   "selectedArrondissement": {
     "arrondissement": "Nom-de-l'Arrondissement"
   }

@@ -51,9 +51,11 @@
   "ariaMin": 0,
   "ariaMax": 100,
   "ariaNow": 60,
-  "src": "https://picsum.photos/768/320?image=1074",
-  "imgClasses": "img-fluid",
-  "alt": "Image alt attribute",
+  "img": {
+    "src": "https://picsum.photos/id/1074/768/432",
+    "imgClasses": "img-fluid",
+    "alt": "Image alt attribute"
+  },
   "caption": "Caption Text",
   "copyright": "Copyright text",
   "figure": {
@@ -64,16 +66,11 @@
     "alt": "A generic placeholder image alt text.",
     "copyright": "Lorem ipsum dolor sit amet"
   },
-  "panelClass": "panel-default",
-  "panelHeading": false,
-  "panelFooter": false,
   "htmlClass": "",
   "pageClasses": "",
   "contentHeaderContainerClasses": false,
   "leadContainerClasses": "",
   "mainContainerClasses": "",
-  "sidebarRightClass": "col-lg-4",
-  "sidebar-blocks-demo-debug-wrapper" : false,
   "sidebarTitle": "Sidebar Block Title",
   "updatedOnText": "Mise à jour le ",
   "blockquote-classes": "blockquote-emphasis",
@@ -83,19 +80,14 @@
   "empty-results": {
     "search-term": "Fajitas"
   },
-  "combo-box-text": "Combo block title",
-  "combo-box-icon": "ic-search",
-  "combo-box-placeholder": "textfield label",
-  "paragraphClass": "lead",
+  "wrapperTitle": "Lorem ipsum dolor sit amet",
   "address": 
     "<strong>Hôtel de Ville de Montréal</strong><br>275, rue Notre-Dame Est<br>Montréal (Québec) H2Y 1C6",
-  "footerNotes": "Nous vous rappelons que, en vertu du règlement NOM, la mise à jour de cette déclaration est exigée avant le 1er avril de chaque année. Veuillez conserver une copie de ce document dans vos dossiers pendant une période minimale de 5 ans et le fournir aux représentants de la Ville sur demande.",
   "text-paragraph":
     "Kogi Cosby sweater ethical squid irony disrupt, organic tote bag gluten-free XOXO wolf typewriter mixtape small batch. DIY pickled four loko McSweeney's, Odd Future dreamcatcher plaid. PBR&B single-origin coffee gluten-free McSweeney's banjo, bicycle rights food truck gastropub vinyl four loko umami +1 narwhal chia. Fashion axe Banksy chia umami artisan, bitters 90's fanny pack. Single-origin coffee drinking vinegar blog semiotics. Fap mumblecore church-key PBR&B, direct trade 8-bit swag asymmetrical slow-carb Marfa ethical. Mustache retro four loko, church-key Thundercats Portland Helvetica Cosby sweater Echo Park sartorial 8-bit ugh bicycle rights iPhone tote bag.",
   "text-teaser":
     "Migas air plant drinking vinegar twee leggings blue bottle pop-up heirloom jean shorts locavore pug shoreditch lumbersexual tousled.",
   "lead-text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris in massa sed nisl commodo porta. Aliquam erat volutpat. Duis a sollicitudin nibh. Vivamus tincidunt vel ipsum sed euismod. Sed luctus quam vel mauris metus.",
-  "liner-text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit",
   "text-elements": {
     "headings": {
       "h1": {
@@ -366,17 +358,6 @@
   "buttonType": "button",
   "dataToggle": "modal",
   "dataTarget": "#dataTarget",
-  "breadcrumbs": [
-    {
-      "url": "#",
-      "text": "Accueil"
-    },
-    {
-      "url": "#",
-      "text": "Niveau 1"
-    }
-  ],
-  "caret": "caret",
   "dropdownClass": "dropdown",
   "dropdownList": [
     {
@@ -470,49 +451,6 @@
     { "text": "Morbi leo risus" }
   ],
   "navbarBrandText": "Boîte à outil - Pattern Lab",
-  "navbarNavClass": "",
-  "navbarNavFirst": true,
-  "navbarNavLast": {
-    "navbarNavClass": "navbar-right"
-  },
-  "navbarNav": [
-    {
-      "url": "#",
-      "text": "Link"
-    },
-    {
-      "url": "#",
-      "text": "Link"
-    },
-    {
-      "url": "#",
-      "text": "Dropdown",
-      "hasDropdown": true,
-      "dropdownMenu": [
-        {
-          "url": "#",
-          "text": "Action"
-        },
-        {
-          "url": "#",
-          "text": "Another action"
-        },
-        {
-          "url": "#",
-          "text": "Something else here"
-        },
-        {
-          "separator": "true"
-        },
-        {
-          "url": "#",
-          "text": "Link 4"
-        }
-      ]
-    }
-  ],
-  "navbarFormClass": "navbar-left",
-  "navbarClass": "navbar-default",
   "mediaList": [
     {
       "mediaLeft": true,
@@ -553,20 +491,6 @@
     "title-attr": "Plus d'information au sujet de xyz",
     "label": "Titre de la rubrique xyz"
   },
-  "primaryNav": [
-    {
-      "label": "Transactions et demandes",
-      "url": "#"
-    },
-    {
-      "label": "Avis publics",
-      "url": "#"
-    },
-    {
-      "label": "EN",
-      "url": "#"
-    }
-  ],
   "navTabs": {
     "navItem": [
       {
@@ -646,21 +570,13 @@
   },
   "cards": {
     "classes": false,
-
     "card-item": [
       {
         "classes": false,
         "url": "#",
         "card-title": "Card #1 title",
         "card-text":
-          "Some quick example text to build on the card title and make up the bulk of the card's content.",
-        "card-media": {
-          "icon": "vdm-093-porte-voix"
-        },
-        "footer": {
-          "inside-body": false,
-          "outside-body": false
-        }
+          "Some quick example text to build on the card title and make up the bulk of the card's content."
       }
     ]
   },
