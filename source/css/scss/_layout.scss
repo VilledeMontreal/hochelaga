@@ -98,20 +98,6 @@ html {
   }
 }
 
-.hub-section-heading {
-  h1,h2,h3,h4,h5,h6 {
-    color: $headings-color;
-    @include font-size($font-size-lg);
-    font-weight: $font-weight-bold;
-    line-height: $line-height-sm;
-    margin-bottom: 1.5rem;
-  }
-  margin-bottom: 1rem;
-
-  .row + .row {
-    margin-top: 1rem;
-  }
-}
 
 
 // Section with BG image
@@ -389,7 +375,6 @@ html {
 
   .box-content {
     background-color: $white;
-    box-shadow: $card-box-shadow;
   }
 }
 

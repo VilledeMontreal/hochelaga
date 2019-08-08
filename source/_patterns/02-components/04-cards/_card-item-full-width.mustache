@@ -1,0 +1,53 @@
+
+{{# url}}
+<a href="{{ url }}" class="card {{ classes }}">
+{{/ url}}
+{{^ url}}
+<div class="card {{ classes }}">
+{{/ url}}
+  <div class="row w-100 no-gutters">
+    {{# card-media.img }}
+    <div class="card-img-bg" style="background-image: url('{{ card-media.img.src }}')">
+      <span class="sr-only">{{card-media.img.alt}}</span>
+    </div>
+    {{/ card-media.img }}
+
+    <div class="col-12 col-lg-8">
+      <div class="card-body">
+
+        {{# card-type }}
+        <span class="card-type">{{ card-type }}</span>
+        {{/ card-type}}
+
+        {{# card-title }}
+        <span class="card-title">{{ card-title }}</span>
+        {{/ card-title }}
+        
+        {{# card-text }}
+        <p class="card-text">{{{ card-text }}}</p>
+        {{/ card-text }}
+
+        {{# card-text-interface }}
+        <div class="card-text-interface">{{{ card-text-interface }}}</div>
+        {{/ card-text-interface }}
+
+        {{# card-date-text }}
+          <div class="card-date-text">{{{ card-date-text }}}</div>
+        {{/ card-date-text }}
+
+        {{# card-publication-date}}
+          <div class="card-publication-date">
+          {{# dateTime}}
+          {{{text}}} <time datetime="{{dateTimeFormat}}">{{{dateTimeText}}}</time>
+          {{/ dateTime}}
+          </div>
+        {{/ card-publication-date}}
+      </div>
+    </div>
+  </div>
+{{# url }}
+</a>
+{{/ url }}
+{{^url}}
+</div>
+{{/ url}}

@@ -58,7 +58,7 @@ h4, .h4,
   // 576px and up
   @include media-breakpoint-up(md) {
     @include font-size($h4-font-size);  // 20/28
-  line-height: 1.4;
+    line-height: 1.4;
     margin-bottom: .5rem;
   }
 }

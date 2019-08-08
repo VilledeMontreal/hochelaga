@@ -11,13 +11,7 @@
     <span class="card-icon-top {{ card-media.classes }} vdm {{ card-media.icon }}" aria-hidden="true"></span>
     {{/ card-media.icon }}
     {{# card-media.img }}
-    {{# card-media.img.container}}
-    <div class="card-img-container">
-    {{/ card-media.img.container}}
-    <img class="card-img-top {{ card-media.img.classes }}" src="{{ card-media.img.url}}" alt="{{ card-media.img.alt }}">
-    {{# card-media.img.container}}
-    </div>
-    {{/ card-media.img.container}}
+    <img class="card-img-top {{ card-media.img.classes }}" src="{{ card-media.img.src}}" alt="{{ card-media.img.alt }}">
     {{/ card-media.img }}
   {{/ card-media }}
 
@@ -35,115 +29,35 @@
       </span>
     {{/ card-date }}
 
-    {{# card-subheading-section }}
-    <div class="card-subheading">
-      {{# card-tags }}
-      <span class="card-tags {{class}}">{{ tag }}</span>
-      {{/ card-tags }}
-      {{# card-date }}
-      <span class="card-date">
-        {{# card-date-time}}
-        {{{text}}} <time datetime="{{dateTimeFormat}}">{{{dateTimeText}}}</time>
-        {{/ card-date-time}}
-        </span>
-      {{/ card-date }}
-    </div>
-    {{/ card-subheading-section }}
-
     {{# card-title }}
     <span class="card-title">{{ card-title }}</span>
     {{/ card-title }}
-
-    {{# card-subtitle }}
-    <span class="card-subtitle">{{ card-subtitle }}</span>
-    {{/ card-subtitle }}
-
-    {{# card-date-text }}
-      <span class="card-date-text">{{ card-date-text }}</span>
-    {{/ card-date-text }}
     
     {{# card-text }}
     <p class="card-text">{{{ card-text }}}</p>
     {{/ card-text }}
 
-    {{# card-html-content }}
-    {{{ card-html-content }}}
-    {{/ card-html-content }}
+    {{# card-text-interface }}
+    <div class="card-text-interface">{{{ card-text-interface }}}</div>
+    {{/ card-text-interface }}
 
-    {{# card-badge-after }}
-    {{> styles-badge }}
-    {{/ card-badge-after }}
+    {{# card-date-text }}
+      <div class="card-date-text">{{{ card-date-text }}}</div>
+    {{/ card-date-text }}
 
-    {{# card-button }}
-      {{> components-button}}
-    {{/ card-button }}
-
-    {{# card-complex-content }}
-      <div class="row">
-        <div class="col-12 col-md-8 col-lg-9 align-self-center">
-          <span class="card-label">{{ label1 }}</span>
-          <p class="card-text">{{ info1 }}</p>
-          <div class="row">
-            <div class="col-12 col-lg-8">
-              <span class="card-label">{{ label2 }}</span>
-              <p class="card-text">{{ info2 }}</p>
-            </div>
-            <div class="col-12 col-lg-4">
-              <span class="card-label">{{ label3 }}</span>
-              <p class="card-text">{{ info3 }}</p>
-            </div>
-          </div>
-        </div>
-        <div class="col-12 col-md-4 col-lg-3">
-          {{> components-popovers-icon }}
-          {{# card-metadata }}
-            {{# card-metadata.success }}
-            <div class="card-progress">
-              {{> styles-progress-circle(ariaNow: 20, progressCircleClass: "progress-success", progressCompleteText: "Inférieur à 20% de la quantité seuil réglementaire") }}
-            </div>
-            {{/ card-metadata.success }}
-            {{# card-metadata.warning }}
-              {{> styles-progress-circle(ariaNow: 80, progressCircleClass: "progress-warning", progressCompleteText: "Inférieur à 80% de la quantité seuil réglementaire") }}
-            {{/ card-metadata.warning }}
-            {{# card-metadata.alert }}
-              {{> styles-progress-circle(ariaNow: 100, progressCircleClass: "progress-warning", progressCompleteText: "100% de la quantité seuil réglementaire") }}
-            {{/ card-metadata.alert }}
-          {{/ card-metadata }}
-        </div>
+    {{# card-publication-date}}
+      <div class="card-publication-date">
+      {{# dateTime}}
+      {{{text}}} <time datetime="{{dateTimeFormat}}">{{{dateTimeText}}}</time>
+      {{/ dateTime}}
       </div>
-    {{/ card-complex-content }}
+    {{/ card-publication-date}}
 
-    {{# footer.inside-body }}
-    <div class="card-footer">
-      {{# footer.text}}
-      <span class="card-footer-label">
-        {{ footer.text }}
-      </span>
-      {{/ footer.text}}
-      <span class="vdm vdm-063-fleche-droite" aria-hidden="true"></span>
-    </div>
-    {{/ footer.inside-body }}
+    {{# card-cta }}
+      {{> components-button}}
+    {{/ card-cta }}
 
   </div>
-
-  {{# card-metadata }}
-  <div class="card-metadata">
-    <span class="identifier">
-      {{ card-metadata }}
-    </span>
-  </div>
-  {{/ card-metadata }}
-
-  {{# footer.outside-body }}
-  <div class="card-footer">
-    {{# footer.text}}
-    <span class="card-footer-label">
-      {{ footer.text }}
-    </span>
-    {{/ footer.text}}
-    <span class="vdm vdm-063-fleche-droite" aria-hidden="true"></span>
-  </div>
-  {{/ footer.outside-body }}
 
 {{# url }}
 </a>
