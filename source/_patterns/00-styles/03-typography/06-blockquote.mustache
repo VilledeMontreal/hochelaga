@@ -1,6 +1,11 @@
-<blockquote class="blockquote">
-  <p>Meditation gochujang copper mug, selfies paleo yuccie gastropub single-origin coffee thundercats scenester venmo pickled. Neutra yr green juice, fixie blog literally squid lyft bitters actually bicycle rights thundercats.</p>
-  {{# hasBlockquoteFooter}}
-  <footer class="blockquote-footer">The Swedish Chef</footer>
-  {{/ hasBlockquoteFooter}}
+<blockquote class="blockquote {{ blockquote-classes}}">
+  {{{blockquote-html-text}}}
+  {{# blockquote-footer}}
+  <footer class="blockquote-footer">
+    <div class="blockquote-footer-author">{{blockquote-footer-author}}</div>
+    {{# blockquote-footer-text }}
+    <div class="blockquote-footer-text">{{blockquote-footer-text}}</div>
+    {{/ blockquote-footer-text }}
+  </footer>
+  {{/ blockquote-footer}}
 </blockquote>
