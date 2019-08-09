@@ -86,6 +86,13 @@
       fill: $color-dark;
     }
 
+    .alert-icon-container,
+    .close {
+      .icon {
+        @include icon-color($color-dark);
+      }
+    }
+
   }
 }
 

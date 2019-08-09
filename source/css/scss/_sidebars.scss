@@ -5,24 +5,10 @@
   margin-top: 2rem;
   overflow: hidden;
 
-  .social-media-list {
-    padding-left: 2rem;
-    .vdm {
-      color: $neutral-secondary;
-    }
-  }
-
   p {
     margin-bottom: $paragraph-margin-bottom;
   }
 
-  // Other fixtures
-  // Titles
-  .subtitle {
-    @include font-size($font-size-lg);
-    line-height: $line-height-sm;     // 1.5
-    margin-bottom: 1rem;
-  }
   .sidebar-title {
     @include font-size($h3-font-size);  // 24/32
     line-height: 1.3333333333;
@@ -49,17 +35,6 @@
   > *:last-child {
     margin-bottom: 0;
   }
-
-  // The basic grouping tool for visual effect, with a padding/margin-bottom;
-  /*.subsection {
-    padding-bottom: 1.5rem;
-    &:last-of-type {
-      padding-bottom: 0;
-    }
-    .subsection-content {
-      flex: 1;
-    }
-  }*/
 
   // Schedule data
   // TODO: Refactor this code

@@ -43,6 +43,9 @@
       top: 1rem;
       right: 1rem;
       z-index: $zindex-modal + 1;
+      .icon {
+        @include icon-color($neutral-primary);
+      }
       svg {
         width: 24px;
         height: 24px;
@@ -51,6 +54,9 @@
         }
       }
       &:hover {
+        .icon {
+          @include icon-color($primary);
+        }
         svg {
           path {
             fill: $primary;

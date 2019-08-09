@@ -221,7 +221,7 @@ a {
 .region-content,
 .lead {
   a[href*="//"]:not([href*="montreal.ca"]):not([href$=".pdf"]):not(.list-group-item-action) {
-    margin-right: 1.25rem;
+    margin-right: 1.625rem;
     position: relative;
     &:after {
       content: '';
@@ -231,12 +231,12 @@ a {
       mask-size: cover;
       background-color: $action;
       display: inline-flex;
-      width: $icon-sm;
-      height: $icon-sm;
+      width: $icon-md;
+      height: $icon-md;
       overflow: hidden;
-      margin-right: -1.25rem;
-      margin-left: .25rem;
-      vertical-align: -.125rem;
+      margin-right: -1.625rem;
+      margin-left: .125rem;
+      vertical-align: -.375rem;
     }
 
     @include hover-focus {
@@ -246,7 +246,7 @@ a {
         position: absolute;
         top: 0;
         left: 0;
-        right: -1.25rem;
+        right: -1.625rem;
         bottom: -1px;
         z-index: -1;
       }

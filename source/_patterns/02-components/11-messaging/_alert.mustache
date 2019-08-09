@@ -1,10 +1,7 @@
 <div class="alert {{ alertClass }}" role="alert">
   {{# alertIcon }}
    <div class="alert-icon-container">
-    <svg width="24" height="24" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-      <title>{{ alertIcon.title }}</title>
-      <path d="{{alertIcon.path}}" />
-    </svg>
+    <span class="icon {{icon-name}}" aria-hidden="true"></span>
   </div>
   {{/ alertIcon }}
   {{# alertIcon }}
@@ -18,11 +15,8 @@
   </div>
   {{/ alertIcon }}
 	{{# dismissableAlert }}
-  <button type="button" class="close" data-dismiss="alert" aria-label="Close">
-    <svg width="24" height="24" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-      <title>Icons/24px/X</title>
-      <path d="M12 13.414l-5.293 5.293a1 1 0 1 1-1.414-1.414L10.586 12 5.293 6.707a1 1 0 0 1 1.414-1.414l12 12a1 1 0 0 1-1.414 1.414L12 13.414zm5.293-8.121a1 1 0 0 1 1.414 1.414l-3 3a1 1 0 1 1-1.414-1.414l3-3z"/>
-    </svg>
+  <button type="button" class="close" data-dismiss="alert" aria-label="Fermer le message">
+    {{> styles-icon-item("icon-name": "icon-x")}}
   </button>
 	{{/ dismissableAlert }}
 </div>

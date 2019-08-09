@@ -16,6 +16,10 @@
 @import "scss/type";
 @import "scss/tables.scss";
 
+/*-- MAIN ELEMENTS --*/
+@import "scss/main-navbar";
+@import "scss/footer";
+
 /*-- COMPONENTS --*/
 @import "scss/badge.scss";
 @import "scss/buttons";
@@ -24,10 +28,8 @@
 @import "scss/close";
 @import "scss/content-header";
 @import "scss/dropdown";
-@import "scss/footer";
+@import "scss/pre-footer";
 @import "scss/forms";
-@import "scss/main-navbar";
-@import "scss/jumbotron";
 @import "scss/layout";
 @import "scss/list";
 @import "scss/list-group";
