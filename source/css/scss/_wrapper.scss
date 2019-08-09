@@ -43,9 +43,19 @@
     padding: 0 1rem 2rem 1rem;
     .empty-state {
       @include font-size($font-size-sm);
+      line-height: 1.4285714285;
       text-align: center;
       p {
         margin-bottom: 0;
+      }
+      .icon {
+        margin: 0 auto 1rem auto;
+        width: 80px;
+        height: 80px;
+        &:before {
+          width: 80px;
+          height: 80px;
+        }
       }
       svg {
         fill: $neutral-tertiary;

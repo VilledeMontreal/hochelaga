@@ -14,10 +14,19 @@
       color: $hover-color;
       @include gradient-bg($hover-background);
       border-color: $hover-border;
+      .icon {
+        @include icon-color($hover-color);
+      }
     }
   }
 
   // Icon is always the same color as button text
+  .icon {
+    @include icon-color($color);
+    margin-top: -.125rem;
+    margin-bottom: -.125rem;
+  }
+
   .utility-icon {
     path {
       fill: $color;
