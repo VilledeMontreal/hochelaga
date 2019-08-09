@@ -90,7 +90,6 @@ legend,
 }
 
 .form-group {
-  margin-bottom: 2rem;
   
   small {
     color: $gray-700;
@@ -139,176 +138,6 @@ legend,
 
 }
 
-.form-group-sm {
-  label {
-    @include font-size($font-size-xs);
-    span {
-      font-size: 0.625rem;
-    }
-  }
-
-  .input-rounded {
-    border-radius: 1rem;
-    padding: $btn-padding-y-sm $btn-padding-x-sm;
-  }
-
-  .input-group-icon {
-    > .icon {
-      padding: 0 .5rem;
-      &:before{
-        width: 16px;
-        height: 16px;
-      }
-    }
-
-    &.input-group-icon-left {
-      input {
-        padding-left: 2rem;
-      }
-    }
-
-    &.input-group-icon-right {
-      input {
-        padding-right: 2rem;
-      }
-    }
-  }
-  .valid-feedback,
-  .invalid-feedback {
-    &:before {
-      width: 16px;
-      height: 16px;
-      top: calc(24px + 16px); //(height .invalid-feedback + haft of icon)+ (height of input/2)
-    }
-  }
-  input,
-  select {
-    @extend .form-control-sm;
-  }
-
-  .custom-control {
-    .custom-control-label {
-      padding-top: 0.3rem;
-    }
-  }
-
-  .btn {
-      @extend .btn-sm;
-  }
-
-  .file-drop-container {
-    .help-text {
-      font-size: $font-size-xs;
-    }
-  }
-
-}
-
-
-
-.form-group-lg {
-  label {
-    @include font-size($font-size-base);
-    span {
-      font-size: $font-size-sm;
-    }
-  }
-  .input-rounded {
-      border-radius: 1.75rem;
-      padding: $btn-padding-y-lg $btn-padding-x-lg;
-    }
-
-  .input-group-icon {
-    > .icon {
-      padding: 0 1rem;
-    }
-
-    &.input-group-icon-left {
-      input {
-        padding-left: 3.5rem;
-      }
-    }
-
-    &.input-group-icon-right {
-      input {
-        padding-right: 3.5rem;
-      }
-    }
-  }
-
-  .valid-feedback,
-  .invalid-feedback {
-    &:before {
-      top: calc(21px + 28px); //(height .invalid-feedback + haft of icon)+ (height of input/2)
-    }
-  }
-
-  select,
-  input {
-    @extend .form-control-lg;
-    
-  }
-
-  .custom-control {
-    .custom-control-label {
-      padding-top: 0.1rem;
-    }
-  }
-
-  .btn {
-    @extend .btn-lg;
-  }
-
-  .file-drop-container {
-    .help-text {
-      font-size: $font-size-base;
-    }
-  }
-}
-
-.form-sm {
-  @extend .form-group-sm;
-}
-
-.form-lg {
-  @extend .form-group-lg;
-}
-
-
-// wrapper around input that needs inline text addon
-.input-inline-addon {
-  @extend .form-inline;
-  // Allow folks to *not* use `.form-group`
-  .form-control {
-    display: inline-block;
-    width: 160px;
-    vertical-align: middle;
-  }
-  .input-inline-text {
-    color: $gray-500;
-    padding-left: 0.8125rem;
-  }
-}
-
-// TO DO: Is this generic or specific to wizard forms
-.form-action-group {
-  margin: 2rem auto;
-  ul {
-    @extend .list-inline;
-    display: flex;
-    //justify-content: space-between;
-    li {
-      @extend .list-inline-item;
-      &:not(:last-child) {
-        margin-right: inherit;
-      }
-
-      &:last-child {
-        margin-left: auto;
-      }
-    }
-  }
-}
 
 // Input Groups
 //
@@ -317,7 +146,6 @@ legend,
     cursor: pointer;
   }
 }
-
 
 
 .has-clear {
@@ -413,6 +241,7 @@ legend,
 
 //Checkboxes
 .custom-checkbox {
+
   .custom-control-input:checked ~ .custom-control-label {
     &::after {
       top: -0.4rem;
@@ -496,7 +325,7 @@ legend,
     cursor: pointer;
     font-weight: 500;
     text-align: left;
-    padding: 0 0 0.5rem 44px;
+    padding: 0 0 0rem 44px;
     
     &::before, 
     &:after {
@@ -550,8 +379,20 @@ legend,
     
     &:disabled {
       & + .custom-control-label {
+        &::before {
+          opacity: 0.4;
+        }
         &:after {
-          background-color: $neutral-underground-1;
+          opacity: 0.8;
+          //background-color: $neutral-underground-1;
+        }
+      }
+      &:checked {
+        & + .custom-control-label {
+          &:after {
+            background-color: $primary;
+            opacity: 0.4;
+          }
         }
       }
     }
@@ -640,3 +481,191 @@ legend,
 
 
 }
+
+.form-group-sm,
+.form-group-lg {
+  margin-bottom: $form-group-margin-bottom;
+}
+
+.form-group-sm {
+  label {
+    @include font-size($font-size-xs);
+    span {
+      font-size: 0.625rem;
+    }
+  }
+
+  .input-rounded {
+    border-radius: 1rem;
+    padding: $btn-padding-y-sm $btn-padding-x-sm;
+  }
+
+  .input-group-icon {
+    > .icon {
+      padding: 0 .5rem;
+      &:before{
+        width: 16px;
+        height: 16px;
+      }
+    }
+
+    &.input-group-icon-left {
+      input {
+        padding-left: 2rem;
+      }
+    }
+
+    &.input-group-icon-right {
+      input {
+        padding-right: 2rem;
+      }
+    }
+  }
+  .valid-feedback,
+  .invalid-feedback {
+    &:before {
+      width: 16px;
+      height: 16px;
+      top: calc(24px + 16px); //(height .invalid-feedback + haft of icon)+ (height of input/2)
+    }
+  }
+  input,
+  select {
+    @extend .form-control-sm;
+  }
+
+  .custom-control {
+    .custom-control-label {
+      padding-top: 0.3rem;
+    }
+  }
+    .custom-switch {
+      margin-bottom: 0;
+      .custom-control-label {
+        padding-top: 0;
+      }
+    }
+
+  .btn {
+      @extend .btn-sm;
+  }
+
+  .file-drop-container {
+    .help-text {
+      font-size: $font-size-xs;
+    }
+  }
+
+}
+
+// wrapper around input that needs inline text addon
+.input-inline-addon {
+  @extend .form-inline;
+  // Allow folks to *not* use `.form-group`
+  .form-control {
+    display: inline-block;
+    width: 160px;
+    vertical-align: middle;
+  }
+  .input-inline-text {
+    color: $gray-500;
+    padding-left: 0.8125rem;
+  }
+}
+
+// TO DO: Is this generic or specific to wizard forms
+.form-action-group {
+  margin: 2rem auto;
+  ul {
+    @extend .list-inline;
+    display: flex;
+    //justify-content: space-between;
+    li {
+      @extend .list-inline-item;
+      &:not(:last-child) {
+        margin-right: inherit;
+      }
+
+      &:last-child {
+        margin-left: auto;
+      }
+    }
+  }
+}
+
+
+.form-group-lg {
+  label {
+    @include font-size($font-size-base);
+    span {
+      font-size: $font-size-sm;
+    }
+  }
+  .input-rounded {
+      border-radius: 1.75rem;
+      padding: $btn-padding-y-lg $btn-padding-x-lg;
+    }
+
+  .input-group-icon {
+    > .icon {
+      padding: 0 1rem;
+    }
+
+    &.input-group-icon-left {
+      input {
+        padding-left: 3.5rem;
+      }
+    }
+
+    &.input-group-icon-right {
+      input {
+        padding-right: 3.5rem;
+      }
+    }
+  }
+
+  .valid-feedback,
+  .invalid-feedback {
+    &:before {
+      top: calc(21px + 28px); //(height .invalid-feedback + haft of icon)+ (height of input/2)
+    }
+  }
+
+  select,
+  input {
+    @extend .form-control-lg;
+    
+  }
+
+  .custom-control {
+    margin-bottom: 0.75rem;
+    .custom-control-label {
+      padding-top: 0.1rem;
+    }
+    
+  }
+
+  .custom-control-inline {
+    margin-right: 1.25rem;
+  }
+
+  .btn {
+    @extend .btn-lg;
+  }
+
+  .file-drop-container {
+    .help-text {
+      font-size: $font-size-base;
+    }
+  }
+}
+
+.form-sm {
+  @extend .form-group-sm;
+}
+
+.form-lg {
+  @extend .form-group-lg;
+}
+
+

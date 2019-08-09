@@ -1,4 +1,21 @@
 {
+  "switchesSmall": [
+    {
+      "switchLabel": "Toggle this switch element",
+      "switchID": "customSwitchSmall01",
+      "switchState": false
+    },
+    {
+      "switchLabel": "Disabled switch element",
+      "switchID": "customSwitchSmall02",
+      "switchState": "disabled"
+    },
+    {
+      "switchLabel": "Disabled checked switch element",
+      "switchID": "customSwitchSmall03",
+      "switchState": "checked disabled"
+    }
+  ],
   "switches": [
     {
       "switchLabel": "Toggle this switch element",
@@ -13,6 +30,23 @@
     {
       "switchLabel": "Disabled checked switch element",
       "switchID": "customSwitch03",
+      "switchState": "checked disabled"
+    }
+  ],
+  "switchesLarges": [
+    {
+      "switchLabel": "Toggle this switch element",
+      "switchID": "customSwitchLarge01",
+      "switchState": false
+    },
+    {
+      "switchLabel": "Disabled switch element",
+      "switchID": "customSwitchLarge02",
+      "switchState": "disabled"
+    },
+    {
+      "switchLabel": "Disabled checked switch element",
+      "switchID": "customSwitchLarge03",
       "switchState": "checked disabled"
     }
   ]

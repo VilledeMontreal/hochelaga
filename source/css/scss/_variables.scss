@@ -120,7 +120,6 @@ $dialog-colors: (
 //
 // Quickly modify global styling by enabling or disabling optional features.
 $enable-validation-icons:                     false;
-$enable-shadows:                              false;
 
 
 // Icons
@@ -473,7 +472,8 @@ $custom-control-indicator-disabled-bg:          $gray-400;
 $custom-control-label-disabled-color:           $gray-600;
 
 $custom-control-gutter:                         .625rem;
-$custom-control-spacer-y:                       1rem; // Custom VDM addon
+$custom-control-spacer-y:                       0.5rem; // Custom VDM addon
+$custom-control-spacer-x:                       0.75rem;
 
 $custom-control-indicator-size:                 1.25rem;
 $custom-control-indicator-bg:                   $white;
@@ -505,7 +505,7 @@ $custom-switch-indicator-size:                    calc(#{$custom-switch-control-
 
 $form-feedback-margin-top:          .5rem;
 $form-feedback-font-size:           $font-size-sm;
-
+$form-group-margin-bottom:          1rem;
 
 // Checkbox Toggle :on/off switches
 //
