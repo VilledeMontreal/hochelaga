@@ -1,0 +1,72 @@
+{
+  "contentHeaderContainerClasses": "container-fluid container-fluid-xl",
+  "sidebarRight" : true,
+  "sidebarLeft" : false,
+  "sidebarRightClass": "col-lg-4 offset-lg-1",
+  "has-lead-text" : false,
+  "text-elements": {
+    "headings": {
+      "display": {
+        "tag": "h1",
+        "classes": "display-1",
+        "content": "Display heading 1"
+      }
+    }
+  },
+  "featuredSection": {
+    "cards": {
+      "section-classes": "bg-neutral-underground-1",
+      "classes": false,
+      "bsgrid-classes": "col-12 col-md-6 col-lg-4",
+      "headings": {
+        "text": "Section heading",
+        "class": "section-heading"
+      },
+      "card-item" : [
+        {
+          "classes" : false,
+          "url" : "#",
+          "card-title" : "Acheter un permis",
+          "card-text" : false,
+          "card-media" : {
+            "icon" : "vdm-083-permis-animal-chien"
+          }
+        },
+        {
+          "classes" : false,
+          "url" : "#",
+          "card-title" : "Demander un permis",
+          "card-text" : false,
+          "card-media" : {
+            "icon" : "vdm-040-permis-generique"
+          }
+        }
+      ]
+    }
+  },
+  "third-level-section": {
+    "heading": "Section heading",
+    "items": [
+      {
+        "subheading": "Section sub-heading",
+        "item": [
+          {
+            "url": "#",
+            "title": "Link title #1",
+            "description": "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec quis lorem sem.</p>"
+          }
+        ]
+      },
+      {
+        "subheading": "Section sub-heading",
+        "item": [
+          {
+            "url": "#",
+            "title": "Link title #1",
+            "description": "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec quis lorem sem.</p>"
+          }
+        ]
+      }
+    ]
+  }
+}

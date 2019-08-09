@@ -1,0 +1,122 @@
+// Page number
+.page-number {
+  color: $headings-color;
+  display: flex;
+  justify-content: center;
+  padding-top: 4rem;
+  padding-bottom: 4rem;
+  span {
+    &:before,
+    &:after {
+      content: "-";
+      padding: .5rem;
+    }
+  }
+}
+
+// Page load-more section
+// Load more buttons and optionnal all results link
+.pagination-wrapper {
+  padding-top: 4rem;
+  padding-bottom: 4rem;
+  text-align: center;
+  button {
+    display: block;
+    margin: 0 auto;
+  }
+  .btn-link {
+    //color: $gray-ink;
+    //margin-top: 1.5rem;
+  }
+
+  &:last-child {
+    padding-bottom: 0;
+  }
+}
+
+.cards + .pagination-wrapper {
+  margin-top: -$grid-gutter-width;
+}
+
+// Pagination
+.pagination {
+  @include border-radius(0);
+  margin-bottom: 0;
+}
+
+.pagination-arrow {
+  a {
+    border: none;
+    .vdm {
+      font-size: 2rem;
+    }
+  }
+}
+
+// Page item
+
+.page-item {
+  display: flex;
+  padding-bottom: 0;
+  &:first-child {
+    .page-link {
+      @include border-left-radius(0);
+    }
+  }
+
+  &:last-child {
+    .page-link {
+      @include border-right-radius(0);
+    }
+  }
+
+  &:first-child,
+  &:last-child {
+    > .page-link {
+      padding: $pagination-icon-padding;
+      line-height: 1;
+      .vdm {
+        display: block;
+        @include font-size($font-size-base);
+        line-height: 1;
+        color: $pagination-color;
+      }
+    }
+  }
+}
+
+//
+// Sizing
+//
+
+.pagination-lg {
+  @include pagination-size($pagination-padding-y-lg, $pagination-padding-x-lg, $font-size-xl, $line-height-lg, 0);
+
+  .page-item {
+    &:first-child,
+    &:last-child {
+      > .page-link {
+        padding: $pagination-icon-padding-lg;
+        .vdm {
+          @include font-size(1.75rem);
+        }
+      }
+    }
+  }
+}
+
+.pagination-sm {
+  @include pagination-size($pagination-padding-y-sm, $pagination-padding-x-sm, $font-size-xs, $line-height-sm, 0);
+
+  .page-item {
+    &:first-child,
+    &:last-child {
+      > .page-link {
+        padding: $pagination-icon-padding-sm;
+        .vdm {
+          @include font-size(.85rem);
+        }
+      }
+    }
+  }
+}

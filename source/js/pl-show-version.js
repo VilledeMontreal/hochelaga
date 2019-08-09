@@ -11,8 +11,6 @@
       }
    });
 
-
-
   // LoadJSON function 
   function loadJSON(callback) {   
 

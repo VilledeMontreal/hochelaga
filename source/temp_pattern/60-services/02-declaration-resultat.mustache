@@ -1,0 +1,63 @@
+{{> styles-link-skip-to-main-content }}
+{{> patterns-header-portal }}
+{{> patterns-subnav-service }}
+
+<main class="main-content {{ pageClasses }}" id="main-content" aria-label="Main Content" role="main">
+  <div class="container container-padding">
+    <div class="row">
+      <div class="col-12">
+
+        {{# hasAlert }}
+          <div class="alert-container">
+          {{> components-alert }}
+          </div>
+        {{/ hasAlert }}
+
+        {{> patterns-service-summary }}
+
+        <h2 class="h4">Substances visées présentes à l’établissement</h2>
+
+        {{# hasResults }}
+          {{# cards }}
+            <div class="cards {{ cards.classes }}">
+            {{# cards.card-item }}
+              {{> components-card-item }}
+            {{/ cards.card-item }}
+            </div>
+          {{/ cards }}
+
+          {{# hasResultsOwner }}
+            {{> patterns-block-coordinates }}
+          {{/ hasResultsOwner }}
+        {{/ hasResults }}
+
+        {{^ hasResults }}
+          {{# cards }}
+            <div class="cards {{ cards.classes }}">
+            {{# cards.card-item-no-result }}
+              {{> components-card-item }}
+            {{/ cards.card-item-no-result }}
+            </div>
+          {{/ cards }}
+        {{/ hasResults }}
+
+        {{# notes-bdp }}
+          <p class="mb-4">{{ notes-bdp }}</p>
+        {{/ notes-bdp}}
+
+        {{# hasFooterNotes }}
+          {{> styles-footer-notes }}
+        {{/ hasFooterNotes }}
+
+        {{# printButton }}
+        <div class="text-center mb-8">
+          {{> components-button("buttonText": "Imprimer") }}
+        </div>
+        {{/ printButton }}
+
+      </div>
+    </div>
+  </div>
+</main>
+
+{{> patterns-footer-portal }}

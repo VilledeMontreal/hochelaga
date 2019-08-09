@@ -1,0 +1,34 @@
+<div class="container-fluid pl-atom-icons-grid">
+
+  	<ul class="row list-unstyled">
+  		{{#icon-editorial }}
+	   		<li class="col-6 col-sm-4 col-md-4 col-lg-3">
+		      <div class="pl-atom-icon-item ic-editorial">
+		      	<a data-toggle="modal" data-target="#exampleModalIconEditorial" id="linkModalIcon-{{ icon-name }}">
+			      	<svg viewBox="0 0 24 24" role="icon"> 
+			      		<path d="{{ icon-path }}"></path>
+						  </svg>
+					  </a>
+			      <span class="ic-name" id="{{ icon-name }}">icon-{{ icon-name }}</span>
+		      </div>
+		    </li>
+		  {{/icon-editorial}}
+  	</ul>
+</div>
+
+<!-- Modal -->
+<div class="modal fade" id="exampleModalIconEditorial" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered modal-lg" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalIconEditorialLabel">Icon name</h5>
+        <button type="button" class="btn-close close" data-dismiss="modal" aria-label="Close">
+          {{> styles-icon-item("icon-name":"icon-x")}}
+        </button>
+      </div>
+      <div class="modal-body">
+        <p class="select-all"></p>
+      </div>
+    </div>
+  </div>
+</div>

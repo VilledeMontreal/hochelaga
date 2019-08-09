@@ -1,0 +1,77 @@
+{{> styles-link-skip-to-main-content }}
+{{> patterns-header-portal }}
+
+<main class="main-content {{ pageClasses }}" id="main-content" aria-label="Main Content">
+
+  {{> patterns-content-header }}
+
+  {{# nouvellesCards }}
+  <section class="page-section bg-gray-sky">
+    <div class="container">
+      <div class="hub-section-heading">
+        {{# inputGroupSearch }}
+        <div class="row">
+          <div class="col-12 col-lg-8">
+            {{> styles-input-icon }}
+          </div>
+        </div>
+        {{/ inputGroupSearch }}
+        {{# headings }}
+        <div class="row">
+          <div class="col-12">
+            <h2 class="{{ headings.class }}">{{ headings.text }}</h2>
+          </div>
+        </div>
+        {{/ headings }}
+      </div>
+
+      {{# cards }}
+      
+      <div class="row cards {{ cards.classes }}">
+        {{# cards.card-item }}
+        <div class="{{ cards.bsgrid-classes }}">
+          {{> components-card-item }}
+        </div>
+        {{/ cards.card-item }}
+      </div>
+
+      {{# hasPagination }}
+      <div class="pagination-wrapper">
+          {{> components-pagination("paginationClass": justify-content-center) }}
+      </div>
+      {{/ hasPagination }}
+
+      {{/ cards }}
+    </div>
+  </section>
+  {{/ nouvellesCards }}
+
+  <!-- Empty results -->
+  {{^ nouvellesCards }}
+  <section class="page-section pt-0">
+    <div class="container">
+      <div class="hub-section-heading">
+        {{# inputGroupSearch }}
+        <div class="row">
+          <div class="col-12 col-lg-8">
+            {{> components-input-icon }}
+          </div>
+        </div>
+        {{/ inputGroupSearch }}
+      </div>
+      <div class="row">
+        <div class="col-12">
+          {{> components-empty-search-results }}
+        </div>
+      </div>
+    </div>
+  </section>
+  {{/ nouvellesCards }}
+
+  {{# hasFeedbackForm}}
+  {{> components-feedback-form}}
+  {{/ hasFeedbackForm }}
+</main>
+
+{{> patterns-footer-portal }}
+

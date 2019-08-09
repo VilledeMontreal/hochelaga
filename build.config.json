@@ -21,8 +21,6 @@
       "files" : [
         "public/annotations/*", 
         "public/css/*", 
-        "public/images/*", 
-        "public/fonts/*",
         "public/js/*", 
         "public/patterns/*", 
         "public/images/*"
@@ -52,28 +50,11 @@
       ],
       "dest" : "public/plugin/photoswipe/dist/"
     },
-    "nodemodulesfonts": {
-      "base"  : "node_modules/",
-      "files" : [
-        "node_modules/@villemontreal/font-icon/icon-dist/vdm.css",
-        "node_modules/@villemontreal/font-icon/icon-dist/vdm.eot", 
-        "node_modules/@villemontreal/font-icon/icon-dist/vdm.svg",
-        "node_modules/@villemontreal/font-icon/icon-dist/vdm.ttf",
-        "node_modules/@villemontreal/font-icon/icon-dist/vdm.woff2",
-        "node_modules/@villemontreal/font-icon/icon-dist/vdm.woff"
-      ],
-      "dest"  : "source/fonts/",
-      "distribution"  : "dist/fonts/"
-    },
-    "nodemodulesfontsdata": {
-      "input": "node_modules/@villemontreal/font-icon/icon-dist/vdm.json",
-      "json": "./source/_data/icons.json",
-      "sass": "./source/css/scss/_font-icon-map.scss"
-    },
     "scripts": {
       "base"  : "source/js/",
       "files" : [
         "source/js/**/*.js",
+        "source/js/**/*.json",
         "!source/js/vendor/**"
       ],
       "dest"  : "public/js/",
@@ -95,24 +76,20 @@
       "dest" : "public/css/",
       "distribution"  : "dist/css/"
     },
-    "fonts": {
-      "base" : "source/fonts/",
+    "baolegacy": {
+      "base": "source/bao-legacy/",
       "files": [
-        "source/fonts/**/*"
+        "source/bao-legacy/css/**/**.css",
+        "source/bao-legacy/css/**/**.css.map"
       ],
-      "dest" : "public/fonts/"
-    },
-    "glyphs": {
-      "base" : "source/glyphs/",
-      "files": [
-        "source/glyphs/**/*"
-      ],
-      "dest" : "public/glyphs/"
+      "distribution": "dist/css/"
     },
     "images": {
       "base" : "source/images/",
       "files": [
-        "source/images/**/*"
+        "source/images/**/*",
+        "!source/images/icons/original",
+        "!source/images/icons/original/**/*"
       ],
       "dest" : "public/images/"
     },
@@ -120,6 +97,8 @@
       "base" : "source/images/",
       "files": [
         "source/images/**/*",
+        "!source/images/icons-original",
+        "!source/images/icons-original/**/*",
         "!source/images/pl-demo/",
         "!source/images/pl-demo/**/*"  
       ],

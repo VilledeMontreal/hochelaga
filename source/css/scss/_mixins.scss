@@ -24,10 +24,6 @@
 
 // // Components
 @import "~bootstrap/scss/mixins/alert";
-
-// // Custom buttons mixins
-@import "mixins/buttons";
-
 @import "~bootstrap/scss/mixins/caret";
 @import "~bootstrap/scss/mixins/pagination";
 @import "~bootstrap/scss/mixins/lists";
@@ -49,5 +45,7 @@
 @import "~bootstrap/scss/mixins/grid";
 @import "~bootstrap/scss/mixins/float";
 
-// We add our own custom mixins
+// // Custom
+@import "mixins/buttons";
 @import "mixins/mixins";
+@import "mixins/nav";

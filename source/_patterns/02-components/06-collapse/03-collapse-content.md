@@ -1,0 +1,4 @@
+---
+title: Collapsible content
+---
+

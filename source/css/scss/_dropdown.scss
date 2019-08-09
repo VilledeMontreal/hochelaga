@@ -11,17 +11,20 @@
 .dropdown-toggle {
   display: inline-flex;
   align-items: center;
-
+  color: $gray-700;
   // Replace carets
   &:after {
-    border: 0;
-    color: inherit;
-    @include font-size(1.125rem);
+    border: none;
     margin-left: .5rem;
-    width: auto;
-    height: auto;
+    content: '';
+    -webkit-mask: url($data-icon-chevron-down) no-repeat 50% 50%;
+    mask: url($data-icon-chevron-down) no-repeat 50% 50%; 
+    -webkit-mask-size: cover;
+    mask-size: cover;
+    background-color: $neutral-tertiary;
+    width: $icon-md;
+    height: $icon-md;
   }
-  @include iconvdm($position: after, $icon: '057-chevron-bas');
 }
 
 // Dropdown menu
@@ -36,7 +39,7 @@
   &::after {
     content: " ";
     display: block;
-    //margin-bottom: .75rem;
+    margin-bottom: .75rem;
   }
 
   // Main menu
@@ -46,11 +49,6 @@
     li {
       padding: 0;
     }
-  }
-
-  form {
-    padding-top: .75rem;
-    padding-bottom: 1rem;
   }
 
   // Dropdown section
@@ -70,9 +68,11 @@
     display: flex;
     align-items: center;
     padding: .75rem 1.25rem;
-
+    color: $gray-900 !important;
+    
     @include hover-focus {
-      color: $link-color;
+      color: $link-color !important;
+      border: none;
       @include gradient-bg($white);
     }
   
@@ -90,9 +90,15 @@
 
     // Handle form-group in dropdown-item
     &.form-group {
-      margin-bottom: .75rem;
-      padding-top: 0;
-      padding-bottom: 0;
+      margin-bottom: 0;
+      padding-top: .375rem;
+      padding-bottom: .375rem;
+      .custom-control {
+        margin-bottom: 0;
+      }
+      .custom-control-label {
+        padding-top: .125rem;
+      }
     }
   }
 }
@@ -100,6 +106,10 @@
 // change icon when dropdown is open
 .dropdown.show {
   .dropdown-toggle {
-    @include iconvdm($position: after, $icon: '055-chevron-haut');
+    &:after {
+      content: '';
+      -webkit-mask: url($data-icon-chevron-up) no-repeat 50% 50%;
+      mask: url($data-icon-chevron-up) no-repeat 50% 50%;     
+    }
   }
 }

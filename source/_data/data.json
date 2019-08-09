@@ -9,7 +9,11 @@
     "dateTimeText": "2 septembre 2018",
     "dateTimeFormat": "2018-09-02"
   },
-  "hub-link-text": "Lien de retour",
+  "link-icon": {
+    "icon-right": false,
+    "link-icon-label": "Link with icon (left)",
+    "icon": "icon-arrow-left"
+  },
   "heading": "Page Header",
   "subheading": "Subtext For Header",
   "serviceName": "Nom du service XYZ",
@@ -47,9 +51,11 @@
   "ariaMin": 0,
   "ariaMax": 100,
   "ariaNow": 60,
-  "src": "https://picsum.photos/768/320?image=1074",
-  "imgClasses": "img-fluid",
-  "alt": "Image alt attribute",
+  "img": {
+    "src": "https://picsum.photos/id/1074/768/432",
+    "imgClasses": "img-fluid",
+    "alt": "Image alt attribute"
+  },
   "caption": "Caption Text",
   "copyright": "Copyright text",
   "figure": {
@@ -60,36 +66,28 @@
     "alt": "A generic placeholder image alt text.",
     "copyright": "Lorem ipsum dolor sit amet"
   },
-  "panelClass": "panel-default",
-  "panelHeading": false,
-  "panelFooter": false,
   "htmlClass": "",
   "pageClasses": "",
-  "contentHeaderContainerClasses": "container-fluid",
+  "contentHeaderContainerClasses": false,
   "leadContainerClasses": "",
   "mainContainerClasses": "",
-  "sidebarLeftClass": "col-lg-4",
-  "sidebarRightClass": "col-lg-4",
-  "sidebar-blocks-demo-debug-wrapper" : false,
   "sidebarTitle": "Sidebar Block Title",
-  "hasTopBanner": true,
+  "updatedOnText": "Mise à jour le ",
+  "blockquote-classes": "blockquote-emphasis",
+  "blockquote-html-text": "<p>Nullam a tellus lectus. Aliquam rhoncus diam vitae sem egestas pharetra. Vestibulum eu euismod enim, ut malesuada libero. Aenean lobortis purus at fermentum posuere.</p>",
+  "blockquote-footer": false,
   "hasFeedbackForm": true,
   "empty-results": {
     "search-term": "Fajitas"
   },
-  "combo-box-text": "Combo block title",
-  "combo-box-icon": "ic-search",
-  "combo-box-placeholder": "textfield label",
-  "paragraphClass": "lead",
+  "wrapperTitle": "Lorem ipsum dolor sit amet",
   "address": 
     "<strong>Hôtel de Ville de Montréal</strong><br>275, rue Notre-Dame Est<br>Montréal (Québec) H2Y 1C6",
-  "footerNotes": "Nous vous rappelons que, en vertu du règlement NOM, la mise à jour de cette déclaration est exigée avant le 1er avril de chaque année. Veuillez conserver une copie de ce document dans vos dossiers pendant une période minimale de 5 ans et le fournir aux représentants de la Ville sur demande.",
   "text-paragraph":
     "Kogi Cosby sweater ethical squid irony disrupt, organic tote bag gluten-free XOXO wolf typewriter mixtape small batch. DIY pickled four loko McSweeney's, Odd Future dreamcatcher plaid. PBR&B single-origin coffee gluten-free McSweeney's banjo, bicycle rights food truck gastropub vinyl four loko umami +1 narwhal chia. Fashion axe Banksy chia umami artisan, bitters 90's fanny pack. Single-origin coffee drinking vinegar blog semiotics. Fap mumblecore church-key PBR&B, direct trade 8-bit swag asymmetrical slow-carb Marfa ethical. Mustache retro four loko, church-key Thundercats Portland Helvetica Cosby sweater Echo Park sartorial 8-bit ugh bicycle rights iPhone tote bag.",
   "text-teaser":
     "Migas air plant drinking vinegar twee leggings blue bottle pop-up heirloom jean shorts locavore pug shoreditch lumbersexual tousled.",
   "lead-text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris in massa sed nisl commodo porta. Aliquam erat volutpat. Duis a sollicitudin nibh. Vivamus tincidunt vel ipsum sed euismod. Sed luctus quam vel mauris metus.",
-  "liner-text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit",
   "text-elements": {
     "headings": {
       "h1": {
@@ -119,22 +117,11 @@
       }
     }
   },
-  "jumbotronClasses": "jumbotron-bg-sarcelle",
-  "jumbotron": {
-    "headings": {
-      "tag": "h2",
-      "classes": "jumbotron-title",
-      "content": "Jumbotron heading"
-    }
-  },
   "user": {
     "name": "Françoise Tremblay",
     "username": "Françoise",
     "email": "francoisetremblay@gmail.com",
     "profil": false
-  },
-  "schedule": {
-    "separator": "&#32à&#32"
   },
   "dropdown": {
     "title": "Les informations relatives aux collectes varient d'un arrondissement à l'autre. Sélectionnez votre arrondissement pour en savoir plus.",
@@ -272,31 +259,34 @@
     "fr": "Voir ce site en français",
     "en": "View this site in English"
   },
-  "top-banner-colors": [
+  "message-bar-colors": [
     { 
-      "top-banner": {
-        "class": "top-banner-info"
-      }
+      "message-bar": {
+        "class": "message-bar-info"
+      },
+      "icon-name": "icon-info"
     },
     { 
-      "top-banner": {
-        "class": "top-banner-success"
-      }
+      "message-bar": {
+        "class": "message-bar-success"
+      },
+      "icon-name": "icon-check-circle"
     },
     { 
-      "top-banner": {
-        "class": "top-banner-warning"
-      }
+      "message-bar": {
+        "class": "message-bar-warning"
+      },
+      "icon-name": "icon-warning"
     },
     { 
-      "top-banner": {
-        "class": "top-banner-danger"
-      }
+      "message-bar": {
+        "class": "message-bar-danger"
+      },
+      "icon-name": "icon-warning"
     }
   ],
   "theme-colors": [
     { "color": "primary" },
-    { "color": "secondary" },
     { "color": "success" },
     { "color": "info" },
     { "color": "warning" },
@@ -309,7 +299,7 @@
     "caption": "",
     "tableClass": "",
     "thead": {
-      "theadClass": "thead-dark",
+      "theadClass": "",
       "th": [
         { "title": "#" },
         { "title": "Table Heading 1" },
@@ -354,8 +344,16 @@
   "mediaLeft": true,
   "mediaRight": false,
   "mediaImage": "../../images/bootstrapthumb64.jpg",
+  "wrapper-content": {
+    "title": "Lorem ipsum dolor site",
+    "img": {
+      "src": "https://picsum.photos/id/1074/768/432",
+      "alt": "Alt - Lorem ipsum dolor site."
+    }
+  },
+  "documentHeadingImageUrl": "https://picsum.photos/id/213/1920/1280?grayscale",
   "embedClass": "embed-responsive-16by9",
-  "mediaEmbed": "//www.youtube.com/embed/zpOULjyy-n8?rel=0",
+  "mediaEmbed": "//www.youtube.com/embed/qcEpiAwTSkg?rel=0",
   "inputClass": "",
   "inputAddonBefore": "Addon",
   "inputAddonAfter": false,
@@ -364,17 +362,6 @@
   "buttonType": "button",
   "dataToggle": "modal",
   "dataTarget": "#dataTarget",
-  "breadcrumbs": [
-    {
-      "url": "#",
-      "text": "Accueil"
-    },
-    {
-      "url": "#",
-      "text": "Niveau 1"
-    }
-  ],
-  "caret": "caret",
   "dropdownClass": "dropdown",
   "dropdownList": [
     {
@@ -451,11 +438,13 @@
     { "text": "Middle" },
     { "text": "Right" }
   ],
-  "alertClass": "alert-info",
+
+  "alertClass": "",
   "alertIcon": false,
+  "alertTitle": "Titre du message",
   "alertText":
-    "This is a primary alert with <a href=\"#\" class=\"alert-link\">an example link</a>. Give it a click if you like.",
-  "top-banner": {
+    "This is the default alert with <a href=\"#\" class=\"alert-link\">an example link</a>. Give it a click if you like.",
+  "message-bar": {
     "class": false
   },
   "dismissableAlert": false,
@@ -466,49 +455,6 @@
     { "text": "Morbi leo risus" }
   ],
   "navbarBrandText": "Boîte à outil - Pattern Lab",
-  "navbarNavClass": "",
-  "navbarNavFirst": true,
-  "navbarNavLast": {
-    "navbarNavClass": "navbar-right"
-  },
-  "navbarNav": [
-    {
-      "url": "#",
-      "text": "Link"
-    },
-    {
-      "url": "#",
-      "text": "Link"
-    },
-    {
-      "url": "#",
-      "text": "Dropdown",
-      "hasDropdown": true,
-      "dropdownMenu": [
-        {
-          "url": "#",
-          "text": "Action"
-        },
-        {
-          "url": "#",
-          "text": "Another action"
-        },
-        {
-          "url": "#",
-          "text": "Something else here"
-        },
-        {
-          "separator": "true"
-        },
-        {
-          "url": "#",
-          "text": "Link 4"
-        }
-      ]
-    }
-  ],
-  "navbarFormClass": "navbar-left",
-  "navbarClass": "navbar-default",
   "mediaList": [
     {
       "mediaLeft": true,
@@ -549,20 +495,6 @@
     "title-attr": "Plus d'information au sujet de xyz",
     "label": "Titre de la rubrique xyz"
   },
-  "primaryNav": [
-    {
-      "label": "Transactions et demandes",
-      "url": "#"
-    },
-    {
-      "label": "Avis publics",
-      "url": "#"
-    },
-    {
-      "label": "EN",
-      "url": "#"
-    }
-  ],
   "navTabs": {
     "navItem": [
       {
@@ -605,50 +537,50 @@
       "title": "Collapsible item",
       "content": "Collapsible content",
       "block-id": "collapseOne",
-      "heading-id": "HeadingOne",
-      "has-default-icon": true,
-      "badge": false
+      "heading-id": "HeadingOne"
     }
   ],
   "carousel": {
-    "carouselID": "carousel-base",
-    "hasIndicators": false,
-    "hasControls": false,
+    "carouselID": "carousel-captions",
+    "hasIndicators": true,
+    "hasControls": true,
     "carouselItem": [
       {
         "item-is-active": "active",
-        "url": "https://picsum.photos/768/320?image=1074",
-        "alt": "First slide"
+        "slide-number": "0",
+        "url": "https://picsum.photos/id/1074/768/432",
+        "alt": "First slide",
+        "caption": {
+          "content": "Lorem ipsum dolor sit..."
+        }
       },
       {
-        "url": "https://picsum.photos/768/320?image=783",
-        "alt": "Second slide"
+        "slide-number": "1",
+        "url": "https://picsum.photos/id/783/768/432",
+        "alt": "Second slide",
+        "caption": {
+          "content": "Lorem ipsum dolor sit..."
+        }
       },
       {
-        "url": "https://picsum.photos/768/320?image=1025&gravity=north",
-        "alt": "Third slide"
+        "slide-number": "2",
+        "url": "https://picsum.photos/id/1025/768/432",
+        "alt": "Third slide",
+        "caption": {
+          "content": "Lorem ipsum dolor sit..."
+        }
       }
     ]
   },
   "cards": {
-    "section-classes": "bg-gray-sky",
     "classes": false,
-    "bsgrid-classes": "col-12 col-md-6 col-lg-4",
-    "headings": false,
     "card-item": [
       {
         "classes": false,
         "url": "#",
         "card-title": "Card #1 title",
         "card-text":
-          "Some quick example text to build on the card title and make up the bulk of the card's content.",
-        "card-media": {
-          "icon": "vdm-093-porte-voix"
-        },
-        "footer": {
-          "inside-body": false,
-          "outside-body": false
-        }
+          "Some quick example text to build on the card title and make up the bulk of the card's content."
       }
     ]
   },
@@ -675,8 +607,9 @@
     }
   ],
   "header-image": {
-    "src": "https://picsum.photos/2000/768/?random",
+    "src": "https://picsum.photos/2000/768?random=1",
     "alt": "Header image default alt.",
     "classes": false
-  }
+  },
+  "pathIcon": "../../images/icons/"
 }

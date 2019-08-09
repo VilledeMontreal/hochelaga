@@ -1,0 +1,193 @@
+{
+  "promoter": {
+    "url": "#",
+    "title": "Nom de l'organisateur"
+  },
+  "list-icon-item": [
+    {
+      "list-icon-item-class": "col-12",
+      "icon-item": {
+        "icon-label": "005-calendrier"
+      },
+      "item-label": "Date et heure",
+      "item": [
+        {
+          "url": false,
+          "class": false,
+          "tag": {
+            "span": true
+          },
+          "content": "du <time datetime=\"2020-01-17T22:00:00-0500\">17 janvier - 17&nbsp;h&nbsp;00</time>"
+        },
+        {
+          "url": false,
+          "class": false,
+          "tag": {
+            "span": true
+          },
+          "content": "au <time datetime=\"2020-01-19T23:00:00-0500\">19 janvier - 18&nbsp;h&nbsp;00</time>"
+        }
+      ]
+    },
+    {
+      "list-icon-item-class": "col-lg-6",
+      "icon-item": {
+        "icon-label": "113-prix"
+      },
+      "item-label": "Tarif",
+      "item": [
+        {
+          "class": false,
+          "url": false,
+          "tag": {
+            "span": true
+          },
+          "content": "Payant"
+        }
+      ]
+    },
+    {
+      "list-icon-item-class": "col-lg-6",
+      "icon-item": {
+        "icon-label": "007-billet"
+      },
+      "item-label": "Entrée",
+      "item": [
+        {
+          "class": false,
+          "url": false,
+          "tag": {
+            "span": true
+          },
+          "content": "Avec billet"
+        }
+      ]
+    }
+  ],
+  "hasPromoter": {
+    "page-section": {
+      "section-headings": {
+        "heading": "Organisé par",
+        "button": false
+      },
+      "cards": false,
+      "promoter": true
+    }
+  },
+  "evenement-list-infos": {
+    "list-icon-item": [
+      {
+        "item": [
+          {},
+          {
+            "content": "<a href=\"#mapEvent004\" class=\"js-scroll-trigger\">Voir la carte</a>"
+          }
+        ]
+      }
+    ]
+  },
+  "map": {
+    "mapID": "mapEvent004"
+  },
+  "hasSimilarEvents": {
+    "page-section": {
+      "section-headings": {
+        "heading": "Plus d'événements de cet organisateur"
+      },
+      "organized-by": false,
+      "cards": {
+        "section-classes": "bg-neutral-underground-1",
+        "classes": false,
+        "card-item" : [
+          {
+            "bsgrid-classes": "col-12",
+            "has-bs-class": true,
+            "classes" : "card-teaser card-fw card-row-layout",
+            "url" : "#",
+            "card-title" : "Curabitur in ante eu quam varius ullamcorper",
+            "card-type": "Type d'événement",
+            "list-icon-class": "mb-0",
+            "list-icon-item": [
+              {
+                "list-icon-item-class": false,
+                "icon-item": {
+                  "icon-label": "005-calendrier"
+                },
+                "item-label": false,
+                "item": [
+                  {
+                    "class": false,
+                    "url": false,
+                    "tag": {
+                      "span": true
+                    },
+                    "content": "<time datetime=\"2020-01-19\">Jeudi 19 janvier</time>"
+                  }
+                ]
+              }
+            ],
+            "has-icon": true
+          },
+          {
+            "bsgrid-classes": "col-12",
+            "has-bs-class": true,
+            "classes" : "card-teaser card-fw card-row-layout",
+            "url" : "#",
+            "card-title" : "Curabitur in ante eu quam varius ullamcorper",
+            "card-type": "Type d'événement",
+            "list-icon-class": "mb-0",
+            "list-icon-item": [
+              {
+                "list-icon-item-class": false,
+                "icon-item": {
+                  "icon-label": "005-calendrier"
+                },
+                "item-label": false,
+                "item": [
+                  {
+                    "class": false,
+                    "url": false,
+                    "tag": {
+                      "span": true
+                    },
+                    "content": "<time datetime=\"2020-01-19\">Jeudi 19 janvier</time>"
+                  }
+                ]
+              }
+            ],
+            "has-icon": true
+          },
+          {
+            "bsgrid-classes": "col-12",
+            "has-bs-class": true,
+            "classes" : "card-teaser card-fw card-row-layout",
+            "url" : "#",
+            "card-title" : "Curabitur in ante eu quam varius ullamcorper",
+            "card-type": "Type d'événement",
+            "list-icon-class": "mb-0",
+            "list-icon-item": [
+              {
+                "list-icon-item-class": false,
+                "icon-item": {
+                  "icon-label": "005-calendrier"
+                },
+                "item-label": false,
+                "item": [
+                  {
+                    "class": false,
+                    "url": false,
+                    "tag": {
+                      "span": true
+                    },
+                    "content": "<time datetime=\"2020-01-19\">Jeudi 19 janvier</time>"
+                  }
+                ]
+              }
+            ],
+            "has-icon": true
+          }
+        ]
+      }
+    }
+  }
+}

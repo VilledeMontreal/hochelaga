@@ -1,0 +1,15 @@
+<section id="{{ featuredContentID }}" class="bg-image-section {{ regionAfterClasses }}" {{# featuredContentBgImage }} style="{{ featuredContentBgImage }}" {{/ featuredContentBgImage }}>
+  <div class="container">
+    <div class="row">
+      <div class="col-12 col-lg-6">
+        <div class="featured-content">
+          <h2 class="h1">{{featuredContentTitle}}</h2>
+          <p>{{{featuredContentText}}}</p>
+          {{# featuredContentButton }}
+          <button type="{{ buttonType }}" class="btn {{ buttonClass }}" {{ buttonState }}>{{# buttonIcon }}{{> styles-fonticon-item }}{{/ buttonIcon}}{{ buttonText }}</button>
+          {{/ featuredContentButton }}
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

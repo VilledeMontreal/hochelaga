@@ -1,0 +1,98 @@
+<div class="sidebar {{sidebarClasses}}">
+  {{# schedule }}
+  <section class="sb-block {{ sb-classes }}">
+    {{> patterns-heading-sidebar }}
+    <ul class="list-icon">
+      <li class="list-icon-item">
+        {{> styles-fonticon-item(icon-label: "037-horloge") }}
+        <div class="list-icon-content">
+          {{# schedule-heading}}
+          <span class="list-icon-label">{{ schedule-heading }}</span>
+          {{/ schedule-heading}}
+          <div class="schedule-content">
+            {{# schedule-description}}
+            <div class="schedule-description mb-2">{{{schedule-description}}}</div>
+            {{/ schedule-description}}
+
+            {{# schedule-row}}
+            <div class="row mb-2">
+              <div class="col">
+                <span class="schedule-day">{{ day }}</span>
+              </div>
+              <div class="col">
+                {{# schedule-data}}
+                <div class="schedule-data">
+                  {{# time}}
+                  {{# start-time}}
+                  <span class="schedule-start-time">{{start-time}}</span>
+                  {{/start-time}}
+                  {{#end-time}}
+                  <span class="schedule-end-time">{{end-time}}</span>
+                  {{/end-time}}
+                  {{/ time}}
+                  {{^ time}}
+                  {{# extra}}
+                  {{ extra }}
+                  {{/ extra}}
+                  {{/ time}}
+                </div>
+                {{/ schedule-data}}
+              </div>
+            </div>
+            {{/ schedule-row}}
+          </div>
+        </div>
+      </li>
+    </ul>
+    {{# schedule-extra}}
+    <div class="collapse collapse-content" id="collapseExtraScheduleData">
+      <ul class="list-icon">
+        <li class="list-icon-item">
+          {{> styles-fonticon-item(icon-label: "037-horloge") }}
+          <div class="list-icon-content">
+            {{# schedule-heading}}
+            <span class="list-icon-label">{{ schedule-heading }}</span>
+            {{/ schedule-heading}}
+            <div class="schedule-content">
+              {{# schedule-description}}
+              <div class="schedule-description mb-2">{{{ schedule-description}}}</div>
+              {{/ schedule-description}}
+
+              {{# schedule-row}}
+              <div class="row mb-2">
+                <div class="col">
+                  <span class="schedule-day">{{ day }}</span>
+                </div>
+                <div class="col">
+                  {{# schedule-data}}
+                  <div class="schedule-data">
+                    {{# time}}
+                    {{# start-time}}
+                    <span class="schedule-start-time">{{start-time}}</span>
+                    {{/start-time}}
+                    {{#end-time}}
+                    <span class="schedule-end-time">{{end-time}}</span>
+                    {{/end-time}}
+                    {{/ time}}
+                    {{^ time}}
+                    {{# extra}}
+                    {{ extra }}
+                    {{/ extra}}
+                    {{/ time}}
+                  </div>
+                  {{/ schedule-data}}
+                </div>
+              </div>
+              {{/ schedule-row}}
+            </div>
+          </div>
+        </li>
+      </ul>
+    </div>
+    <div class="w-100 text-center">
+      <button class="btn btn-link" type="button" data-toggle="collapse" data-target="#collapseExtraScheduleData" aria-expanded="false" aria-controls="collapseExtraScheduleData">Voir plus</button>
+    </div>
+    {{/ schedule-extra}}
+  </section>
+  {{/ schedule}}
+</div>

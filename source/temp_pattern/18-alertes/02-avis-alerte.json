@@ -1,0 +1,72 @@
+{
+  "text-elements": {
+    "headings":{
+      "display":{
+        "classes": "display-4",
+        "content": "Coupure d'eau – Rue Duff Court, entre Croissant Roy et 24e Avenue, arrondissement de Lachine"
+      }
+    }
+  },
+  "contentHeaderClasses": "bg-neutral-underground-1",
+  "has-breadcrumb": true,
+  "has-header-meta": true,
+  "has-publication-date": true,
+  "dateTime":  {
+    "text": "Publié le ",
+    "dateTimeText": "1 octobre 2018 à 10&nbsp;h&nbsp;17",
+    "dateTimeFormat": "2019-10-01T14:17:00-0400"
+  },
+  "has-lead-text": false,
+  "sidebarRight": true,
+  "sb-abonnement": {
+    "sidebarClasses": "sidebar-top-stroke",
+    "sidebarTitle": "S'abonner aux alertes",
+    "sb-abonnement-text": "<p>Pour recevoir des avis et alertes par courriel ou texto, vous devez avoir créé un compte.</p>",
+    "buttonText": "Abonnez-vous"
+  },
+  "informations": {
+    "cards": {
+      "section-classes": "bg-neutral-underground-1",
+      "classes": false,
+      "bsgrid-classes": "col-12 col-md-6 col-lg-4",
+      "card-item" : [
+        {
+          "classes" : "card-link",
+          "url" : "#",
+          "card-title" : "Card #1 link title",
+          "card-text" : false,
+          "card-media" : false,
+          "footer" : {
+            "outside-body": true
+          }
+        },
+        {
+          "classes" : "card-link",
+          "url" : "#",
+          "card-title" : "Card #2 link title",
+          "card-text" : false,
+          "card-media" : false,
+          "footer" : {
+            "outside-body": true
+          }
+        },
+        {
+          "classes" : "card-link",
+          "url" : "#",
+          "card-title" : "Card #3 link title - longer than usual",
+          "card-text" : false,
+          "card-media" : false,
+          "footer" : {
+            "outside-body": true
+          }
+        }
+      ]
+    }
+  },
+  "map": {
+    "mapID": "mapAvis001"
+  },
+  "conseil": {
+    "conseilText": "<p>Veuillez noter qu’il est possible que les manipulations sur le réseau entraînent la coloration de l'eau dans ce secteur et les rues avoisinantes. Le cas échant, laissez couler l'eau jusqu'à ce qu'elle redevienne incolore. Il n'y a aucun danger pour la santé.</p>"
+  }
+}

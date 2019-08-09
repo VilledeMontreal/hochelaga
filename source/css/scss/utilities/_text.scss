@@ -1,0 +1,70 @@
+// stylelint-disable declaration-no-important
+
+//
+// Text
+//
+
+// Define the default link before the mixin 
+a {
+  color: $primary;
+  border-bottom: $link-border-width solid $primary;
+  font-weight: $font-weight-bold;
+  @include hover-focus {
+    color: $primary;
+    background-color: $highlight-light;
+    border-bottom: $link-border-width solid $primary;
+  }
+}
+
+// Make the color of dialog dark
+@each $label, $map in $dialog-colors {
+  $color-dark: map-get($map, dark);
+  $color-light: map-get($map, light);
+  @include vdm-text-emphasis-variant(".text-#{$label}", $color-dark, $color-light);
+}
+
+@each $color, $value in $grays {
+  .text-gray-#{$color} {
+    color: $value;
+  }
+}
+
+// Overrides colors
+.text-secondary,
+.text-black-50,
+.text-white-50,
+.text-gray-400,
+.text-gray-300,
+.text-gray-100 {
+  color: $body-color !important;
+}
+
+.text-primary-lighter {
+  color: $primary-lighter;
+}
+.text-primary-darker {
+  color: $primary-darker;
+}
+
+.text-light {
+  color: $white !important;
+}
+
+a.text-light,
+a.text-white {
+  border-bottom: $link-border-width solid $white !important;
+  @include hover-focus {
+    color: $white !important;
+    border-bottom: $link-border-width solid $white !important;
+    background-color: transparent;
+  }
+}
+a.text-muted {
+  border-bottom: none;
+  cursor: not-allowed;
+  @include hover-focus {
+    color: $gray-500 !important;
+    border-bottom: none;
+    background-color: transparent;
+  }
+}

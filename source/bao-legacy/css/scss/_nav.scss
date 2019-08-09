@@ -1,0 +1,763 @@
+// Breadcrumb
+.breadcrumb {
+  @include font-size($font-size-base);
+  li {
+    padding-bottom: 0;
+  }
+  a {
+    border: none;
+    color: $gray-700;
+    font-weight: $font-weight-bold;
+    @include transition(color .15s ease-in-out);
+    &:hover {
+      color: $sarcelle-surprise;
+    }
+  }
+
+  // Light version to be used on dark background
+  &.breadcrumb-light {
+    a {
+      color: $white;
+      &:hover {
+        color: $sarcelle-surprise;
+      }
+    }
+    .breadcrumb-item {
+      &::before {
+        color: $white;
+      }
+    }
+  }
+}
+
+//
+// Collapsible Item
+//
+
+.collapsible-item {
+  margin-bottom: 30px;
+  padding: 0;
+  position: relative;
+  .collapsible-header {
+    .collapsible-title {
+      margin: 0;
+    }
+    a {
+      background: $gray-sky;
+      border: none;
+      color: $headings-color;
+      display: flex;
+      @include font-size($font-size-lg);
+      line-height: $line-height-sm;
+      padding: 1.4rem 4rem 1.4rem 1.5rem;
+      cursor: pointer;
+      @include iconvdm(after, '069-mini-plus-circulaire');
+
+      &[aria-expanded="true"] {
+        @include iconvdm(after, '070-mini-moins-circulaire');
+      }
+
+      &:hover,
+      &:active {
+        color: $primary;
+        text-decoration: none;
+        @include iconvdm(after, '072-mini-plus-circulaire-plein');
+
+        &[aria-expanded="true"] {
+          @include iconvdm(after, '073-mini-moins-circulaire-plein');
+        }
+      }
+
+      &:after {
+        align-self: center;
+        color: $primary;
+        display: block;
+        @include font-size(2rem);
+        line-height: 1;
+        position: absolute;
+        right: 1rem;
+        width: 2rem;
+        height: 2rem;
+      }
+
+      span {
+        align-self: center;
+
+        &.collapsible-icon {
+          display: none;
+        }
+      }
+    }
+  }
+  // Content block wrapper
+  .collapsible-block {
+    padding: 2rem 4rem 2rem 2rem;
+    h2, .h2, h3, .h3, h4, .h4, h5, .h5 {
+      @include font-size($font-size-lg);
+    }
+    > *:last-child {
+      margin-bottom: 0;
+    }
+
+    .list-group {
+      margin-bottom: 2rem;
+    }
+  }
+
+  @include media-breakpoint-up(sm) {
+    .collapsible-header {
+      a {
+        padding: 1.4rem 4rem 1.4rem 4rem;
+        span {
+          &.collapsible-icon {
+            color: $primary;
+            display: flex;
+            flex: 0 0 auto;
+            align-items: center;
+            @include font-size(2rem);
+            font-weight: $font-weight-bold;
+            content: "";
+            position: absolute;
+            left: 1rem;
+            width: 2rem;
+            height: 2rem;
+          }
+          &.circle,
+          &.default-icon {
+            left: 1.6875rem;
+            &:after {
+              @include circle($size: .625rem);
+            }
+          }
+        }
+      }
+    }
+    .collapsible-block {
+      padding: 2rem 4rem 2rem 4rem;
+    }
+  }
+}
+
+.collapsible-variant {
+  .collapsible-item {
+    background-color: $white;
+    box-shadow: $card-box-shadow;
+    z-index: 100;
+    .collapsible-block {
+      padding-top: 0;
+      padding-bottom: 2.5rem;
+    }
+  }
+  .collapsible-header {
+    a {
+      background: transparent;
+      border: none;
+    }
+    span {
+      margin-right: 15px;
+    }
+    .badge-pill {
+      @include font-size($font-size-xs);
+    }
+  }
+
+}
+
+//
+// Nav
+//
+nav {
+  position: relative;
+}
+.nav {
+  .nav-item {
+    margin-bottom: 0;
+    padding-bottom: 0;
+    display: inline-block;
+  }
+  .nav-link {
+    border: none;
+    color: $primary;
+  }
+}
+
+// Nav filters
+.section-filters {
+  background-color: $white;
+  border-bottom: $nav-tabs-border-width solid $nav-tabs-border-color;
+}
+
+.nav-filters,
+.nav-sorts {
+  width: 100%;
+  .nav-link {
+    color: $headings-color;
+    padding-left: 0;
+    padding-right: 0;
+  }
+  .dropdown-toggle:after {
+    color: $gray-ink;
+  }
+}
+
+.nav-filters {
+  padding: 1rem 0;
+  .nav-item {
+    margin-right: 2rem;
+    &:last-child {
+      margin-right: 0;
+    }
+  }
+}
+
+.nav-sorts {
+  padding: 0;
+  .nav-link {
+    padding: 0;
+  }
+}
+
+// filters applied section
+.filters-applied {
+  a {
+    margin-bottom: .5rem;
+  }
+}
+
+// 767px and under
+@include media-breakpoint-down(sm) {
+  .nav-modal {
+
+    .nav {
+      flex-direction: column;
+      .nav-item {
+        display: block;
+      }
+    }
+
+    .nav-filters {
+      padding: 0;
+    }
+
+    .dropdown {
+
+      &.dropdown-align-right {
+        margin-left: 0;
+      }
+    }
+
+    .dropdown-menu {
+      border: none;
+      margin-top: 0;
+      max-height: none;
+      min-width: 0;
+      float: none;
+      padding-top: 0;
+      position: static;
+      .dropdown-item {
+        padding-left: .1875rem;
+        padding-right: 0;
+        white-space: inherit;
+      }
+    }
+  }
+}
+
+// Nav anchors
+.nav-anchors {
+  display: inline-block;
+  background-color: $white;
+  width: 100%;
+  border-bottom: $nav-tabs-border-width solid $nav-tabs-border-color;
+  padding: 1rem $grid-gutter-width/2;
+
+  
+  .nav-item {
+    &.nav-top {
+      display: none;
+      .nav-link {
+        color: $gray-400;
+        &:after {
+          content: none;
+        }
+      }
+    }
+  }
+
+  .nav-link {
+    @include font-size($font-size-sm);
+    line-height: 1.4;           //~21px
+    font-weight: $font-weight-bold;
+    padding: .5rem;
+    position: relative;
+    text-align: center;
+    white-space: normal;
+    &:after {
+      content: " ";
+      width: auto;
+      height: 1px;
+      background-color: $primary;
+      position: absolute;
+      left: .5rem;
+      right: .5rem;
+      display: block;
+    }
+    &:hover,
+    &.active {
+      &:not(.disabled) {
+        color: $sarcelle-surprise;
+        &:after {
+          content: none;
+        }
+      }
+    }
+    &.disabled {
+      cursor: default;
+    }
+  }
+  @include media-breakpoint-up(md) {
+    .nav-link {
+      padding: .5rem 1.5rem;
+      &:after {
+        left: 1.5rem;
+        right: 1.5rem;
+      }
+    }
+  }
+  @include media-breakpoint-up(lg) {
+    padding-top: 0;
+    padding-bottom: 0;
+    text-align: center;
+    .nav-item {
+      &.nav-top {
+        display: inline-block;
+      }
+    }
+    .nav-link {
+      padding: 2rem 2.5rem;
+      &:after {
+        left: 2.5rem;
+        right: 2.5rem;
+      }
+    }
+  }
+}
+
+
+// Nav tabs
+.nav-tabs {
+  background-color: $white;
+  flex-wrap: nowrap;
+  overflow-x: auto;
+  overflow-y: hidden;
+  padding-left: 1.5rem;
+  white-space: nowrap;
+  text-align: center;
+  width: 100%;
+  /* Make an auto-hiding scroller for the 3 people using a IE */
+  -ms-overflow-style: -ms-autohiding-scrollbar;
+  /* For WebKit implementations, provide inertia scrolling */
+  -webkit-overflow-scrolling: touch;
+  /* Remove the default scrollbar for WebKit implementations */
+  &::-webkit-scrollbar {
+      display: none;
+  }
+  .nav-item {
+    display: inline-block;
+    flex-shrink: 0;
+    margin-bottom: 0;
+    padding-bottom: 0;
+    max-width: 300px;
+    &.show {
+      .nav-link {
+        @extend .nav-link.active;
+      }
+    }
+    &:last-of-type {
+      .nav-link {
+        margin: 0;
+      }
+    }
+  }
+  .nav-link {
+    flex-shrink: 0;
+    color: $gray-700;
+    @include font-size($font-size-sm);
+    line-height: 1.4;                 //~21px
+    font-weight: $font-weight-bold;
+    padding: 1.5rem .5rem;
+    position: relative;
+    text-align: center;
+    white-space: normal;
+    &:hover,
+    &.active,
+    &:focus {
+      &:not(.disabled) {
+        border: none;
+        color: $black;
+        background-color: $white;
+        &:before {
+          content: " ";
+          width: auto;
+          height: $nav-tabs-active-border-width;
+          background-color: $brand;
+          position: absolute;
+          bottom: 0;
+          left: .5rem;
+          right: .5rem;
+          display: block;
+        }
+      }
+    }
+    &.disabled {
+      cursor: default;
+    }
+  }
+  @include media-breakpoint-up(md) {
+    .nav-link {
+      padding: 1.5rem 1.5rem;
+      &:hover,
+      &.active,
+      &:focus {
+        &:not(.disabled) {
+          &:before {
+            left: 1.5rem;
+            right: 1.5rem;
+          }
+        }
+      }
+    }
+  }
+  @include media-breakpoint-up(lg) {
+    justify-content: center;
+    padding-left: 0;
+    .nav-link {
+      padding: 2rem 2.5rem;
+      &:hover,
+      &.active,
+      &:focus {
+        &:not(.disabled) {
+          &:before {
+            left: 2.5rem;
+            right: 2.5rem;
+          }
+        }
+      }
+    }
+  }
+}
+
+//
+// Step Wizard
+//
+.nav-wizard {
+  background-color: $white;
+  border-bottom: 1px solid $gray-400;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+.nav-steps-count {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: $gray-500;
+  @include font-size($font-size-sm);
+  flex: 1 0 auto;
+  line-height: $line-height-base;
+  padding: 1.125rem;
+  width: 100%;
+  // Absolute positionning on larger breakpoint
+  @include media-breakpoint-up(md) {
+    color: $gray-ink;
+    @include font-size($font-size-lg);
+    line-height: $line-height-base;
+    font-weight: $font-weight-bold;
+    padding: 1.5rem 1rem 1.125rem 1.875rem;
+    position: absolute;
+    //top: 0;
+    bottom: 1rem;
+    left: 0;
+    width: auto;
+    justify-content: left;
+  }
+}
+.nav-steps-items {
+  display: none;
+  // Show steps on larger breakpoint
+  @include media-breakpoint-up(md) {
+    display: flex;
+    flex: 1;
+    padding-bottom: 1.5rem;
+  }
+}
+.nav-steps {
+  display: flex;
+  flex-direction: column;
+  @extend .flex-sm-row;
+  // Position the steps line and circle
+  li {
+    position: relative;
+    padding: inherit;
+    a {
+      border: none;
+    }
+    &:after {
+      background-color: $gray-600;
+      content: "";
+      display: block;
+      height: 100%;
+      position: absolute;
+      width: 1px;
+    }
+    &:after {
+      left: 0.5rem;
+    }
+    &:last-child {
+      &:after {
+        display: none;
+      }
+    }
+    &:not(.disabled) {
+      &:hover {
+        .circle {
+          background-color: $red;
+          border-color: $red;
+        }
+      }
+    }
+  }
+  .caption {
+    color: $gray-600;
+    display: inline-block;
+    @include font-size($font-size-sm);
+    line-height: $line-height-sm;
+    padding-bottom: .5rem;
+  }
+  .circle {
+    @include circle($background-color: $gray-200, $border: true);
+    z-index: 100;
+    position: relative;
+  }
+
+  .complete {
+    .circle {
+      background-color: $gray-600;
+    }
+  }
+
+  .active {
+    .circle {
+      background-color: $red;
+      border-color: $red;
+    }
+  }
+  .disabled {
+    .nav-link {
+      cursor: default;
+    }
+  }
+  // override nav-link padding
+  .nav-link {
+    padding: 1rem 2rem;
+  }
+  // 576px and up
+  @include media-breakpoint-up(sm) {
+    display: flex;
+    justify-content: center;
+    // Position the steps line and circle
+    .nav-item {
+      text-align: center;
+      flex-basis: 0;
+      flex-grow: 1;
+      align-self: flex-end;
+    }
+    li {
+      &:after {
+        height: 1px;
+        // bottom is $nav-link-padding-y + half of circle height (1rem/2)
+        bottom: 1.5rem;
+        width: 100%;
+      }
+      &:after {
+        left: 50%;
+      }
+    }
+    .circle {
+      margin: 0 auto;
+    }
+  }
+  // 768px and up
+  @include media-breakpoint-up(md) {
+    margin: 0 6rem;
+  }
+  // 992px and up
+  @include media-breakpoint-up(lg){
+    margin: 0 3rem;
+  }
+}
+
+//
+// Nav dashboard Steps
+//
+.nav-dashboard-item { 
+  border-bottom: 1px solid $gray-200;
+  margin-bottom: 3rem;
+  padding-bottom: 3rem;
+  > * {
+    margin-bottom: 1rem;
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+
+  button {
+    margin-top: 1rem;
+  }
+
+  .db-label {
+    display: inline-block;
+    @include font-size($font-size-sm);
+    font-weight: $font-weight-bold;
+    margin-bottom: .5rem;
+    text-transform: uppercase;
+  }
+
+  .db-title {
+    display: flex;
+    @include font-size($font-size-xl);
+    line-height: $line-height-sm;
+    font-weight: $font-weight-bold;
+    justify-content: space-between;
+  }
+}
+
+// Subnav
+// Replacement for .navbar .navbar-services
+.subnav {
+  border-bottom: 1px solid $gray-400;
+  display: flex;
+  justify-content: space-between;
+  padding: 1.5rem 2rem;
+  .subnav-container,
+  .subnav-links {
+    display: flex;
+    > * {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+  }
+  .subnav-title {
+    color: $headings-color;
+    @include font-size($font-size-base);
+    line-height: $line-height-sm;
+    font-weight: $font-weight-bold;
+    @include media-breakpoint-up(md) {
+      @include font-size($font-size-xl);
+      line-height: $line-height-sm;
+    }
+  }
+  .subnav-links {
+    ul {
+      margin-bottom: 0;
+    }
+  }
+}
+
+// Services sub-navigation
+// Deprecated. Update to .subnav
+// REMOVE IN V3
+.navbar-services {
+  border-bottom: 1px solid $gray-200;
+  min-height: 75px;
+
+  .container-fluid {
+    padding-left: .5rem;
+    padding-right: .5rem;
+  }
+
+  .navbar-brand,
+  .navbar-link {
+    color: $headings-color;
+    display: flex;
+    @include font-size($font-size-base);
+    line-height: 1.333333;
+    padding: 0;
+  }
+
+  .navbar-brand {
+    @include font-size($font-size-xl);
+    font-weight: $font-weight-bold;
+  }
+
+  .navbar-icon {
+    color: $primary;
+    @include font-size(4rem);
+    margin-right: 1rem;
+  }
+
+  .navbar-header {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+
+    &.navbar-header-service-link {
+      .navbar-brand {
+        @include font-size($font-size-base);
+      }
+    }
+    a {
+      border: none;
+      color: $headings-color;
+      text-decoration: underline;
+    }
+    ul {
+      @extend .list-inline;
+      display: flex;
+      margin-bottom: 0;
+      li {
+        display: flex;
+        align-items: center;
+        flex-direction: row;
+        flex-wrap: wrap;
+        padding-bottom: 0;
+        @include font-size($font-size-base);
+        a {
+          font-weight: $font-weight-bold;
+          text-decoration: none;
+        }
+      }
+      li {
+        // The separator between breadcrumbs (by default, a forward-slash: "/")
+        + li {
+          padding-left: .5rem;
+          @include iconvdm(before, '056-chevron-droite');
+          &::before {
+            display: inline-block; // Suppress underlining of the separator in modern browsers
+            padding-right: .5rem;
+            font-weight: 700;
+          }
+        }
+      
+        // IE9-11 hack to properly handle hyperlink underlines for breadcrumbs built
+        // without `<ul>`s. The `::before` pseudo-element generates an element
+        // *within* the .breadcrumb-item and thereby inherits the `text-decoration`.
+        //
+        // To trick IE into suppressing the underline, we give the pseudo-element an
+        // underline and then immediately remove it.
+        + li:hover::before {
+          text-decoration: underline;
+        }
+        // stylelint-disable-next-line no-duplicate-selectors
+        + li:hover::before {
+          text-decoration: none;
+        }
+      }
+    }
+  }
+
+  .nav-item {
+    padding: 0 1rem;
+  }
+}

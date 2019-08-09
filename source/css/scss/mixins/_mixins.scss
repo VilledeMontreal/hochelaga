@@ -1,149 +1,34 @@
 // @file mixins.scss
 
-/**
- * - - - - - - - - - -
- * == Typography
- * - - - - - - - - - -
- */
-
-// Responsive headings
-// @arg $font-size - rem
-// @arg $multiplier - integer
-// @arg $line-height - px
-
-@mixin responsive-font-size($font-size, $multiplier, $line-height) {
-
-  $heading-multiplier: check-multiplier-value($multiplier);
-  $font-size: $font-size * $heading-multiplier;
-  $font-size-px: rem-to-px($font-size);
-  $font-size-rem: px-to-rem($font-size-px);
-
-  // Generate font-size and line-height
-  @include font-size($font-size-rem);
-  line-height: get-line-height($font-size-px, $line-height);
-
-}
-
-// Card heading
-@mixin card-heading($font-size: $font-size-xl, $line-height: $line-height-sm, $font-weight: $font-weight-regular, $color: $headings-color, $display: block) {
-  color: $color;
-  display: $display;
-  @include font-size($font-size);
-  font-weight: $font-weight;
-  line-height: $line-height;
-}
-
-//  @arg $size - string - any valid text size declaration
-//  @arg $color - string any valid color declaration
-//  @arg $color - string any valid color declaration
-@mixin bullet-left($size: 0.8em, $color: $primary, $textcolor: $black) {
-  display: inline-block;
-  position: relative;
-  padding-left: $size * 1.75;
-  color: $textcolor;
-  &:before {
-    content: " ";
-    position: absolute;
-    display: block;
-    left: 0;
-    top: 46%; // Perceptual
-    transform: translateY(-50%);
-    background: $color;
-    border-radius: $size;
-    width: $size;
-    height: $size;
-  }
-}
-
-
-/**
-  * Vdm fonticon mixin
-  *
-  * @arg $position [string] - [before, after, both]
-  * @arg $icon [string or false] - a member of the $vdmicons variable
-  * @arg $styles [boolean] - whether the extra styles rules should be applied or just the content attribute
-  *
-  * Usage 
-  * .some-class {
-  *     @include iconvdm(before, rosace);
-  * }
-  *
-  */
-
-@mixin iconvdm($position: before, $icon: false, $styles: true) {
-  @if $position == both {
-    $position: "before, &:after";
-  }
-  // Either a :before or :after pseudo-element, or both, defaulting to :before
-  &:#{$position} {
-    @if $icon {
-      //  @debug($icon);
-      $index: str-index($icon, "vdm-");
-      @if $index {
-        $icon: str-replace($icon, "vdm-", "");
-        // @debug("replaced icon : " $icon);
+// LINKS
+//Mixin that overrides all classes of links to be the $primary color
+@mixin vdm-text-emphasis-variant($parent, $color, $color-lighten) {
+  #{$parent} {
+    color: $color !important;
+    a { 
+      color: $color !important;
+      border-bottom: $link-border-width solid $color;
+      @include hover-focus {
+        background-color: $color-lighten;
+        border-bottom: $link-border-width solid $color;
       }
-      // A specific icon has been designated
-      content: "#{map-get($vdmicons, vdm- + $icon)}";
-      // @debug(vfi- + $icon);
-      // @debug(#{map-get($vdmicons, vfi- + $icon)});
     }
-    @if $styles {
-      font-weight: normal;
-      font-style: normal;
-      font-family: "vdm";
-      text-decoration: none;
-      display: inline-block;
-      text-rendering: auto;
-      -webkit-font-smoothing: antialiased;
-      -moz-osx-font-smoothing: grayscale;
-    }
-    @content;
   }
-}
-
-// Generates a block-level link with an icon in the after position;
-@mixin icon-block-link( $icon : '063-fleche-droite', $size: false ) {
-  display: block;
-  position: relative;
-  background: transparent;
-  @include iconvdm(after, $icon);
-
-  &:after {
-    position: absolute;
-    left: calc(100% - 1.25em);
-    top: 50%;
-    transform: translateY(-50%);
-    right: 0;
-    line-height: 1;
-  }
-
-  @if $size {
-    &:after {
-      @include font-size($size);
-      left: calc(100% - #{ $size / 2 });
+  a#{$parent}{
+    color: $color !important;
+    border-bottom: $link-border-width solid $color;
+    @if $color-lighten != 0 {
+      @include hover-focus {
+        color: $color !important;
+        background-color: $color-lighten;
+        border-bottom: $link-border-width solid $color;
+      }
     }
   }
 }
 
-// Add background variant to .header-banner.
-
-@mixin banner-variant($bg) {
-  color: color-yiq($bg);
-  background-color: $bg;
-
-  a {
-    color: color-yiq($bg);
-    box-shadow: inset 0 -1px color-yiq($bg);
-    &:active,
-    &:hover {
-      color: color-yiq($bg);
-    }
-  }
-}
 
 // Add color variant to .progress-bar.
-
 @mixin progress-variant($bg) {
   .progress-bar {
     border-color: $bg;
@@ -170,12 +55,12 @@
   $dist-right: 5px,
   $dist-bottom: 11px,
   $dist-left: 0 ,
-  $color-r: 0,
-  $color-g: 0,
-  $color-b: 0,
+  $r: 0,
+  $g: 0,
+  $b: 0,
   $opacity: 0.27
 ) {
-  box-shadow: $dist-top $dist-right $dist-bottom $dist-left rgba($color-r, $color-g, $color-b, $opacity);
+  box-shadow: $dist-top $dist-right $dist-bottom $dist-left rgba($r, $g, $b, $opacity);
 }
 
 /**
@@ -323,4 +208,10 @@
     }
   }
   
+}
+
+@mixin icon-color($color) {
+  &:before {
+    background-color: $color;
+  }
 }

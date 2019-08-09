@@ -1,0 +1,29 @@
+<h4 class="pl-pattern-subtitle">Large</h4>
+<div class="list list-lg {{ listClass }}">
+	{{# list }}
+  <a class="list-item list-item-action {{ class }}" href="{{ url }}">
+    {{# listIconEditorial}}
+    <span class="icon {{ listIconEditorial}}" aria-hidden="true"></span>
+    {{/ listIconEditorial}}
+    {{# listIconUtility}}
+    <span class="icon {{listIconUtility}}" aria-hidden="true"></span>
+    {{/ listIconUtility}}
+    {{{ text }}}
+  </a>
+  {{/ list }}
+</div>
+
+<h4 class="pl-pattern-subtitle">Default</h4>
+<div class="list {{ listClass }}">
+	{{# list }}
+  <a class="list-item list-item-action {{ class }}" href="{{ url }}">
+    {{# listIconEditorial}}
+    <span class="icon {{ listIconEditorial}}" aria-hidden="true"></span>
+    {{/ listIconEditorial}}
+    {{# listIconUtility}}
+    <span class="icon {{listIconUtility}}" aria-hidden="true"></span>
+    {{/ listIconUtility}}
+    {{{ text }}}
+  </a>
+  {{/ list }}
+</div>

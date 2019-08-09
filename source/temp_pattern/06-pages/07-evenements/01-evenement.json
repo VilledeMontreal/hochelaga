@@ -1,0 +1,155 @@
+{
+  "text-elements": {
+    "headings":{
+      "display":{
+        "classes": "h2",
+        "content": "Tournoi de Super Mario Kart 8 - Semi-finale"
+      }
+    }
+  },
+  "has-informations": true,
+  "has-hub-link": false,
+  "has-media-image": true,
+  "has-media-gallery": false,
+  "media-image": {
+    "mediaSrc": "https://res.cloudinary.com/villemontreal/image/upload/c_scale,w_auto,dpr_auto/q_auto/f_auto/v1547842908/portail-dev/hgzblj05djnzsjwshp7w.jpg",
+    "mediaSize": "1456x971",
+    "mediaAlt": "Tournoi de Super Mario Kart 8 - Semi-finale"
+  },
+  "organised-by": {
+    "url": "http://www.montrealjoue.ca/",
+    "title": "Montréal Joue"
+  },
+  "list-icon-class": "row no-gutters",
+  "list-icon-item": [
+    {
+      "list-icon-item-class": "col-12",
+      "icon-item": {
+        "icon-label": "005-calendrier"
+      },
+      "item-label": "Date et heure",
+      "item": [
+        {
+          "url": false,
+          "class": false,
+          "content": "<time datetime=\"2019-01-17T13:00:00-0400\">Jeudi 17 janvier de 09&nbsp;h&nbsp;00</time> à <time datetime=\"2019-01-17T14:00:00-0400\">10&nbsp;h&nbsp;00</time>"
+        }
+      ]
+    },
+    {
+      "list-icon-item-class": "col-lg-6",
+      "icon-item": {
+        "icon-label": "113-prix"
+      },
+      "item-label": "Tarif",
+      "item": [
+        {
+          "class": false,
+          "url": false,
+          "tag": {
+            "span": true
+          },
+          "content": "Gratuit"
+        }
+      ]
+    },
+    {
+      "list-icon-item-class": "col-lg-6",
+      "icon-item": {
+        "icon-label": "007-billet"
+      },
+      "item-label": "Entrée",
+      "item": [
+        {
+          "class": false,
+          "url": false,
+          "tag": {
+            "span": true
+          },
+          "content": "Avec billet"
+        }
+      ]
+    }
+  ],
+  "evenement-list-infos": {
+    "list-icon-class": false,
+    "list-icon-item": [
+      {
+        "icon-item": {
+          "icon-label": "091-localisation"
+        },
+        "item-label": "Lieu",
+        "item": [
+          {
+            "class": false,
+            "url": false,
+            "tag": {
+              "div": true
+            },
+            "content": "<address><span class=\"text-dark\">Coeur des sciences de l'UQAM</span>200, rue Sherbrooke Ouest<br>Local SH-4800<br>Montréal (Québec) H2X 1X5</address>"
+          },
+          {
+            "class": false,
+            "url": false,
+            "tag": {
+              "div": true
+            },
+            "content": "<a href=\"#mapEventSuperMario\" class=\"js-scroll-trigger\">Voir la carte</a>"
+          }
+        ]
+      },
+      {
+        "icon-item": {
+          "icon-label": "031-ordinateur"
+        },
+        "item-label": "Informations",
+        "item": [
+          {
+            "class": false,
+            "url": false,
+            "tag": {
+              "div": true
+            },
+            "content": "514 987-0909, poste 1234"
+          },
+          {
+            "class": false,
+            "url": false,
+            "tag": {
+              "div": true
+            },
+            "content": "<a href=\"mailto:test@ville.montreal.qc.ca\">Courriel</a><a href=\"#\">Site web</a>"
+          }
+        ]
+      }
+    ],
+    "social-media-icons-list": {
+      "has-label": false,
+      "has-facebook": true,
+      "has-instagram": false,
+      "has-twitter": true,
+      "has-linkedin": false,
+      "has-youtube": false
+    }
+  },
+  "has-documents": false,
+  "has-video": {
+    "section-title": "Vidéo",
+    "src": "//www.youtube.com/embed/OftqIOqSYr4"
+  },
+  "mediaGallery": [
+    {
+      "mediaSrc": "https://res.cloudinary.com/villemontreal/image/upload/c_scale,w_auto,dpr_auto/q_auto/f_auto/v1547842908/portail-dev/hgzblj05djnzsjwshp7w.jpg",
+      "mediaSize": "1456x971",
+      "mediaCaption": "Tournoi de Super Mario Kart 8 - Semi-finale",
+      "mediaAuthor": "Mario Kalnovsky",
+      "mediaAlt": "Tournoi de Super Mario Kart 8 - Semi-finale",
+      "thumbnail" : false
+    }
+  ],
+  "map": {
+    "mapID": "mapEventSuperMario",
+    "address": "<address><span class='text-dark'>Coeur des sciences de l'UQAM</span><br>200, rue Sherbrooke Ouest<br>Local SH-4800<br>Montréal (Québec) H2X 1X5</address>",
+    "lngLat": "-73.570015, 45.509979"
+  }
+}

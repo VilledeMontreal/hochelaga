@@ -1,44 +1,30 @@
-// Tables overrides
-//
-.table {
-  margin-bottom: 2rem;
+.table { 
+  font-size: $font-size-sm;
+  th,
+  td {
+    line-height: 1.4285714285;
+  }
   thead th {
-    color: $table-head-color;
-    border-bottom: none;
+    color: $gray-900;
+    border-bottom: $table-border-width solid $table-border-color;
   }
-  tbody th {
-    color: $headings-color;
-  }
-}
-.table-dark {
-  thead th {
-    color: $table-dark-color;
-  }
+
 }
 
-.table {
-  .thead-dark {
-    th {
-      color: $table-head-color;
-      background-color: $table-head-dark-bg;
-      border-top: none;
-    }
+.table-sm {
+  font-size: $font-size-xs;
+  th,
+  td {
+    line-height: 1.3333333333;
   }
 
-  .thead-light {
-    th {
-      color: $table-head-color;
-      background-color: $table-head-bg;
-      border-top: none;
-    }
+}
+
+.table-lg {
+  font-size: $font-size-base;
+  th,
+  td {
+    line-height: $line-height-component;
+    padding: $table-cell-padding-lg;
   }
 }
-
-
-@each $color, $value in $theme-colors {
-  @include table-row-variant($color, theme-color-level($color, -10));
-}
-
-@include table-row-variant(active, $table-active-bg);
-
-@include table-row-variant(primary, $sarcelle-light);

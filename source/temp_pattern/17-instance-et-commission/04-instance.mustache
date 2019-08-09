@@ -1,0 +1,88 @@
+{{> styles-link-skip-to-main-content }}
+{{> patterns-header-portal }}
+
+<main class="main-content {{ pageClasses }}" id="main-content" aria-label="Main Content">
+
+  {{> patterns-content-header }}
+
+  <!-- Teaser -->
+  {{# has-lead-text }}
+  {{> components-lead }}
+  {{/ has-lead-text }}
+
+  {{# has-nav-anchors }}
+  {{> components-nav-anchors }}
+  {{/ has-nav-anchors }}
+
+  <!-- Begin main-content region-->
+  <div id="navTop" class="region-content {{ regionMainClasses }}">
+    <div class="container {{ regionMainContainerClasses }}">
+      <div class="row">
+        <article class="col-12 col-lg-7 col-xl-8">
+          {{{ content }}}
+        </article>
+        <aside class="col-12 col-lg-5 col-xl-4" role="complementary">
+        {{# has-sb-seance}}
+          {{> patterns-sidebar-block-seance }}
+        {{/ has-sb-seance}}
+        {{# has-sb-newsletter}}
+          {{> patterns-sidebar-block-abonnement }}
+        {{/ has-sb-newsletter}}
+        </aside>
+      </div>
+    </div>
+  </div>
+
+  {{# cards-membres}}
+  <section id="members" class="page-section {{ regionAfterClasses }} bg-gray-sky">
+    <div class="container">
+      <div class="row">
+        <div class="col-12 text-center">
+          <h2 class="section-heading">Membres</h2>
+        </div>
+      </div>
+      <div class="row cards">
+        {{# cards.card-item }}
+        <div class="{{ cards.bsgrid-classes }}">
+          {{> components-card-item}}
+        </div>
+        {{/ cards.card-item }}
+      </div>
+      {{# load-more }}
+      <div class="pagination-wrapper">
+        {{> components-button }}
+      </div>
+      {{/ load-more }}
+    </div>
+  </section>
+  {{/ cards-membres}}
+
+  {{# featured-section}}
+  {{> components-featured-content}}
+  {{/ featured-section}}
+
+  {{# informations}}
+  <section id="informations" class="page-section {{ regionAfterClasses }} bg-gray-sky">
+    <div class="container">
+      <div class="row">
+        <div class="col-12 text-center">
+          <h2 class="section-heading">Plus d'information</h2>
+        </div>
+      </div>
+      <div class="row cards">
+        {{# cards.card-item }}
+        <div class="{{ cards.bsgrid-classes }}">
+          {{> components-card-item}}
+        </div>
+        {{/ cards.card-item }}
+      </div>
+    </div>
+  </section>
+  {{/ informations}}
+
+  {{# hasFeedbackForm}}
+  {{> components-feedback-form}}
+  {{/ hasFeedbackForm }}
+</main>
+
+{{> patterns-footer-portal }}

@@ -1,170 +1,135 @@
+@import url("https://fonts.googleapis.com/css?family=Open+Sans:400,400i,700,700i");
+
 // Font-smoothing normalisation for mac os
 body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
+.regular {
+	font-weight: $font-weight-regular;
+}
+.bold {
+	font-weight: $font-weight-bold;
+}
 
 // Headings
 //
 // Headings are responsive
-// @see responsive-font-size mixin
-h1, .h1 {
-  @include responsive-font-size($h1-font-size, .75, 44px);
+// Displays are mapped to Headings
+h1, .h1,
+.display-1 {
+  @include font-size($h2-font-size);    // 32/40
+  line-height: 1.25;
   // 576px and up
-  @include media-breakpoint-up(sm) {
-    @include responsive-font-size($h1-font-size, .875, 56px);
-  }
-  // 768px and up
   @include media-breakpoint-up(md) {
-    @include responsive-font-size($h1-font-size, 1, 60px);
+    @include font-size($h1-font-size);  // 40/56
+    line-height: 1.4;
   }
 }
-h2, .h2 {
-  @include responsive-font-size($h2-font-size, .7619, 40px);
+h2, .h2,
+.display-2 {
+  @include font-size($h3-font-size);    // 24/32
+  line-height: 1.3333333333;
+  margin-bottom: 1rem;
   // 576px and up
-  @include media-breakpoint-up(sm) {
-    @include responsive-font-size($h2-font-size, .857142, 44px);
-  }
-  // 768px and up
   @include media-breakpoint-up(md) {
-    @include responsive-font-size($h2-font-size, 1, 52px);
+    @include font-size($h2-font-size);  // 32/40
+    line-height: 1.25;
+    margin-bottom: 2rem;
   }
 }
-h3, .h3 {
-  @include responsive-font-size($h3-font-size, .7777, 36px);
+h3, .h3,
+.display-3 {
+  @include font-size($h4-font-size);    // 20/28
+  line-height: 1.4;
+  margin-bottom: .5rem;
   // 576px and up
-  @include media-breakpoint-up(sm) {
-    @include responsive-font-size($h3-font-size, .8888, 40px);
-  }
-  // 768px and up
   @include media-breakpoint-up(md) {
-    @include responsive-font-size($h3-font-size, 1, 44px);
+    @include font-size($h3-font-size);  // 24/32
+    line-height: 1.3333333333;
+    margin-bottom: 1rem;
   }
 }
-h4, .h4 {
-  @include responsive-font-size($h4-font-size, .75, 32px);
+h4, .h4,
+.display-4 {
+  @include font-size($h5-font-size);    // 16/24
+  line-height: 1.5;
+  margin-bottom: .25rem;
   // 576px and up
-  @include media-breakpoint-up(sm) {
-    @include responsive-font-size($h4-font-size, .875, 36px);
-  }
-  // 768px and up
   @include media-breakpoint-up(md) {
-    @include responsive-font-size($h4-font-size, 1, 40px);
+    @include font-size($h4-font-size);  // 20/28
+    line-height: 1.4;
+    margin-bottom: .5rem;
   }
 }
 h5, .h5 {
-  @include responsive-font-size($h5-font-size, .846153, 32px);
+  @include font-size($h6-font-size);    // 14/20
+  line-height: 1.4285714285;
+  margin-bottom: 0;
   // 576px and up
-  @include media-breakpoint-up(sm) {
-    @include responsive-font-size($h5-font-size, .923076, 32px);
-  }
-  // 768px and up
   @include media-breakpoint-up(md) {
-    @include responsive-font-size($h5-font-size, 1, 32px);
+    @include font-size($h5-font-size);  // 16/24
+    line-height: 1.5;
+    margin-bottom: .25rem;
   }
 }
 h6, .h6 {
-  @include responsive-font-size($h6-font-size, .8181, 28px);
+  @include font-size($font-size-xs);    // 12/16
+  line-height: 1.3333333333;
+  margin-bottom: 0;
   // 576px and up
-  @include media-breakpoint-up(sm) {
-    @include responsive-font-size($h6-font-size, .9090, 28px);
-  }
-  // 768px and up
   @include media-breakpoint-up(md) {
-    @include responsive-font-size($h6-font-size, 1, 28px);
-  }
-}
-
-// Display headings
-//
-// Display headings are responsive
-// @see responsive-font-size mixin
-
-.display-1,
-.display-2 {
-  @include responsive-font-size($display1-size, .625, 52px);
-  // 576px and up
-  @include media-breakpoint-up(sm) {
-    @include responsive-font-size($display1-size, .78125, 64px);
-  }
-  // 768px and up
-  @include media-breakpoint-up(md) {
-    @include responsive-font-size($display1-size, 1, 80px);
-  }
-}
-.display-3 {
-  @include responsive-font-size($display3-size, .642857, 44px);
-  // 576px and up
-  @include media-breakpoint-up(sm) {
-    @include responsive-font-size($display3-size, .82142, 60px);
-  }
-  // 768px and up
-  @include media-breakpoint-up(md) {
-    @include responsive-font-size($display3-size, 1, 72px);
-  }
-}
-.display-4 {
-  @include responsive-font-size($display4-size, .64, 40px);
-  // 576px and up
-  @include media-breakpoint-up(sm) {
-    @include responsive-font-size($display4-size, .84, 56px);
-  }
-  // 768px and up
-  @include media-breakpoint-up(md) {
-    @include responsive-font-size($display4-size, 1, 64px);
+    @include font-size($h6-font-size);  // 14/20
+    line-height: 1.4285714285;
   }
 }
 
 // Utility class for font-size
 
-.font-size-xl {
-  @include font-size($font-size-xl);
-}
 .font-size-lg {
-  @include font-size($font-size-lg);
+  @include font-size($font-size-lg);  // 20px
+  line-height: 1.6                    // 32px
 }
 .font-size-sm {
-  @include font-size($font-size-sm);
+  @include font-size($font-size-sm);  // 14px
+  line-height: 1.7142857142;          // 24px
 }
 .font-size-xs {
-  @include font-size($font-size-xs);
+  @include font-size($font-size-xs);  // 12px
+  line-height: 1.6666666666;          // 20px
 }
 
 // Lead
 //
-// Lead font-size are responsive
-
 .lead {
-  @include responsive-font-size($lead-font-size, .9166, 32px);
-  color: $headings-color;
+  @include font-size($lead-font-size);  // 20px
+  line-height: $lead-line-height;       // 32px
+  color: $neutral-primary;
   font-weight: $lead-font-weight;
-  margin-bottom: 2.5rem;
+  margin-bottom: 2rem;
   > :last-child {
     margin-bottom: 0;
   }
-  // 576px and up
-  @include media-breakpoint-up(sm) {
-    @include responsive-font-size($lead-font-size, 1, 36px);
-  }
-}
-
-// Font weight - generic
-.regular {
-  font-weight: $font-weight-regular;
-}
-.bold {
-  font-weight: $font-weight-bold;
-}
-.light {
-  font-weight: $font-weight-light;
-}
-
-em {
-  font-style: italic;
 }
 
 b, strong {
   font-weight: $font-weight-bold;
+}
+
+p + p,
+p + ul,
+p + ol,
+ul + p,
+ul + ul,
+ul + ol,
+ol + p,
+ol + ul,
+ol + ol {
+  margin-top: -1rem;
+}
+
+ol, ul, dl {
+  margin-bottom: $paragraph-margin-bottom;
 }
 
 mark,
@@ -183,18 +148,15 @@ address {
 // Links - generic
 a {
   // We had border-bottom on all links and override specific case
-  border-bottom: $link-border-width solid $link-border-color;
+  //border-bottom: $link-border-width solid $link-border-color;
 
   // icons in link should be link-color
-  .vdm {
+  .icon {
     color: $link-color;
   }
   &:hover,
   &:active {
     color: $link-hover-color;
-    .vdm {
-      color: $link-hover-color;
-    }
   }
 
   // File extension handling
@@ -205,29 +167,6 @@ a {
       margin-right: -3.02em;
       padding-left: .5rem;
       overflow: hidden;
-    }
-  }
-
-  &.link-scrollto {
-    color: $primary;
-    border-bottom: none;
-    .vdm {
-      color: $primary;
-      @include font-size(2rem);
-      vertical-align: top;
-    }
-  }
-
-  // Read more links
-  &.read-more {
-    color: $link-color;
-    border: none;
-    &:hover,
-    &:active {
-      color: $link-hover-color;
-      .vdm {
-        color: $link-hover-color;
-      }
     }
   }
 
@@ -246,29 +185,34 @@ a {
   }
 }
 
-// Add .icon class to display vertically centered icon and text
-.icon {
-  display: inline-flex;
-  align-items: center;
-  // we need this code to prevent icon from getting underlined on hover
-  .vdm {
+// Quick links
+.quick-links {
+  @include font-size($font-size-sm);
+  padding-bottom: 2rem;
+  .quick-links-label {
+    color: $gray-700;
     display: inline-block;
-    @include font-size(1.5rem);
-    &:before {
-      display: inline-block;
-    }
+    font-weight: $font-weight-bold;
+    margin-right: .5rem;
+    margin-bottom: .5rem;
   }
-  &.right {
-    .vdm {
-      padding-left: 0.5rem;
-    }
+  ul {
+    display: inline-block;
+    margin-bottom: 0;
   }
-  &.left {
-    .vdm {
-      padding-right: 0.5rem;
+  .list-inline-item:not(:last-child) {
+    margin-right: .5rem;
+  }
+  a {
+    border-color: $headings-color;
+    color: $headings-color;
+    &:hover {
+      color: $headings-color;
+      border-color: transparent;
     }
   }
 }
+
 
 // External link icon
 // Apply to .region-content and sb-block
@@ -276,17 +220,36 @@ a {
 .sb-block,
 .region-content,
 .lead {
-  a[href*="//"]:not([href*="montreal.ca"]):not([href$=".pdf"]) {
-    @include iconvdm($position: after, $icon: '112-lien-externe');
-    margin-right: 1.125em;
+  a[href*="//"]:not([href*="montreal.ca"]):not([href$=".pdf"]):not(.list-group-item-action) {
+    margin-right: 1.625rem;
+    position: relative;
     &:after {
-      @include font-size($font-size-base);
+      content: '';
+      -webkit-mask: url($data-icon-externallink) no-repeat 50% 50%;
+      mask: url($data-icon-externallink) no-repeat 50% 50%;
+      -webkit-mask-size: cover;
+      mask-size: cover;
+      background-color: $action;
+      display: inline-flex;
+      width: $icon-md;
+      height: $icon-md;
       overflow: hidden;
-      margin-right: -1.125em;
-      margin-top: -.625rem;
-      margin-bottom: -.625rem;
-      padding-left: 0.125rem;
-      vertical-align: middle;
+      margin-right: -1.625rem;
+      margin-left: .125rem;
+      vertical-align: -.375rem;
+    }
+
+    @include hover-focus {
+      &:before {
+        background-color: $highlight-light;
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: -1.625rem;
+        bottom: -1px;
+        z-index: -1;
+      }
     }
   }
   // List some exclusion
@@ -304,19 +267,14 @@ a {
   }
 }
 
-// Break word
-//
-.break-word {
-  word-wrap: break-word;
-}
-
-// Blockquote
+// Blockquote And Blockquote emphasis
 //
 .blockquote {
-  color: $gray-900;
   @include font-size($blockquote-font-size);
-  line-height: $line-height-base;
+  color: $neutral-primary;
+  line-height: 1.6;
   font-weight: $font-weight-normal;
+  font-style: italic;
   margin-bottom: 2rem;
   padding-left: 2rem;
   position: relative;
@@ -327,83 +285,35 @@ a {
 
   &:before {
     content: "";
-    background: $brand;
+    background: $neutral-stroke;
     position: absolute;
     left: 0;
     top: 0;
     height: 100%;
-    width: 4px;
+    width: 2px;
   }
 
   .blockquote-footer {
     color: $body-color;
-    @include font-size($font-size-base);
+    @include font-size($font-size-sm);  // 14/20
+    line-height: 1.4285714285;
     font-style: normal;
     &:before {
       display: none;
     }
+
+    .blockquote-footer-author {
+      color: $neutral-primary;
+      font-weight: $font-weight-bold;
+    }
   }
   cite {
-    color: $gray-900;
+    color: $neutral-primary;
     font-style: normal;
   }
-}
 
-// Mostly applied to the hr element
-// Parts or full class will be deprecated
-.divider {
-  margin-top: 0.75rem;
-  margin-bottom: 0.75rem;
-  border-style: none;
-  border-width: 0;
-  height: 2px;
-  background: $black;
-  border-radius: 0;
-  
-  &.divider-fullwidth {
-    width: 100%;
-  }
-}
-
-// Maintenance page
-.divider-brand {
-  &:after {
-    content: "";
-    display: block;
-    height: .5rem;
-    width: 4rem;
-    background-color: $brand;
-    margin-right: auto;
-    margin-left: auto;
-  }
-}
-
-.divider-lg {
-  &:after {
-    width: 6rem;
-  }
-}
-
-// Longdash
-.separator-brand {
-  &:before {
-    content: "—";
-    color: $brand;
-    margin-right: .75rem;
-  }
-}
-
-.bullet-left {
-  @include bullet-left();
-}
-
-.footer-notes {
-  border-top: 1px solid $gray-700;
-  @include font-size($font-size-sm);
-  padding-top: 2rem;
-  margin-bottom: 4rem;
-  small, .small {
-    @include font-size(100%);
+  &.blockquote-emphasis {
+    font-style: normal;
   }
 }
 
@@ -421,37 +331,4 @@ a {
   white-space: nowrap; 
   overflow: hidden;
   text-overflow: ellipsis;
-}
-
-.formatted-text-container {
-  :last-child {
-    margin-bottom: 0;
-  }
-}
-
-//
-// Dates display
-//
-// for the rendering of dates in general
-.date {
-  @include font-size($h5-font-size);
-  // Fat day, discrete month, block level headings
-  &.day-month {
-    > .day {
-      @extend .h2;
-      display: inline-block;
-      position: relative;
-      margin-bottom: 0;
-      margin-right: 0.3em;
-      &:after {
-        position: absolute;
-        width: 1.1em;
-        content: " ";
-        left: .05em;
-        bottom: -.075em;
-        height: 4px;
-        background: $black;
-      }
-    }
-  }
 }

@@ -1,201 +1,16 @@
 //
 // Main content header
 .content-header {
-  padding-top: 6rem;
-  padding-bottom: 4rem;
-  .container-fluid {
-    max-width: map-get($content-max-widths, xl);    // 1600px
-  };
-  .container-fluid-xl {
-    max-width: map-get($container-max-widths, xl);   // 1170px
+  border-bottom: 1px solid $neutral-stroke;
+  margin-bottom: 4rem;
+  padding-bottom: 2rem;
+
+  > * {
+    margin-bottom: 2rem;
   }
 
-  // Fix breadcrumb padding when inside content-header-profile
-  .breadcrumb {
-    padding: 0 0 1.5rem 0;
-  }
-
-  // Content-header child
-
-  // Subtitle 
-  &-subtitle {
-    color: $headings-color;
-    font-weight: $font-weight-bold;
-    margin-bottom: 1rem;
-  }
-  // Title
-  &-title {
-    padding-bottom: 2rem;
-    max-width: 1450px; // Limit max width of title
-    h1 {
-      margin-bottom: 0;
-      &:after {
-        content: "";
-        display: block;
-        height: .5rem;
-        width: 4rem;
-        margin-top: 2rem;
-        background-color: $brand;
-      }
-    }
-
-    // 576px and up
-    @include media-breakpoint-up(md) {
-      h1 {
-        &:after {
-          width: 6rem;
-        }
-      }
-    }
-  }
-
-  &-metadata {
-    color: $gray-600;
-    @include font-size($font-size-base);
-    padding-bottom: 2rem;
-  }
-
-  // used for specific contente header infos like Evenement
-  .metadata-infos {
-    color: $headings-color;
-    font-weight: $font-weight-bold;
-    > * {
-      margin-bottom: .5rem;
-      &:last-child {
-        margin-bottom: 0;
-      }
-    }
-    .infos-event {
-      vertical-align: middle;
-      > span {
-        display: block;
-      }
-      .infos-lieu {
-        font-weight: $font-weight-normal;
-      }
-    }
-
-    // 1200px and up
-    @include media-breakpoint-up(lg) {
-      > * {
-        margin-right: 1rem;
-        margin-bottom: 0;
-      }
-      .infos-event {
-        display: inline-block;
-        > span {
-          display: inline-block;
-          margin-right: 1rem;
-          &:last-child {
-            margin-right: 0;
-          }
-        }
-        .infos-lieu {
-          &:before {
-            content: "—";
-            margin-right: 1rem;
-          }
-        }
-      }
-    }
-  }
-
-  // Dark variant
-  &.content-header-dark {
-    background-color: $gray-700;
-    color: $white;
-    h1,h2,h3,h4,h5,h6 {
-      color: $white;
-    }
-  }
-
-  // Content header profile variant
-  &.content-header-profile {
-
-    .img-profile {
-      margin: 2rem auto 0 auto;
-      max-width: 375px;
-    }
-    .content-header-infos {
-      color: $headings-color;
-      span {
-        display: block;
-      }
-      .profile-title {
-        color: $headings-color;
-        @include font-size($font-size-xl);
-        line-height: $line-height-sm;
-      }
-      .profile-member {
-        color: $headings-color;
-        @include font-size($font-size-base);
-      }
-      .profile-label {
-        color: $gray-600;
-      }
-    }
-    @include media-breakpoint-up(lg) {
-      .img-profile {
-        margin: 0;
-      }
-    }
-  }
-
-  // Variant for collectrices pages
-  &.content-header-hub {
-    background-color: $gray-sky;
-    h1 {
-      font-weight: $font-weight-normal;
-      margin-bottom: 1rem;
-    }
-    .display-1 {
-      margin-bottom: 2rem;
-    }
-  }
-
-  // Variant for jumbotron style content-header
-  &.content-header-jumbotron {
-    padding-top: 0;
-    padding-bottom: 0;
-    .content-header-wrapper {
-      height: 100%;
-      padding: 2rem;
-      display: flex;
-      flex-direction: column;
-    }
-    .content-header-headings {
-      margin-top: 3rem;
-      margin-bottom: 2rem;
-      position: relative;
-      h1 {
-        margin-bottom: 1rem;
-      }
-      .label {
-        font-weight: $font-weight-bold;
-        padding-right: .5rem;
-      }
-    }
-    .content-header-headings-state {
-      position: absolute;
-      transform: translateY(-3rem);
-    }
-    .content-header-metadata {
-      margin-top: auto;
-      padding-bottom: 0;
-    }
-    @include media-breakpoint-up(lg) {
-      .content-header-wrapper {
-        min-height: 600px;
-      }
-    }
-    @include media-breakpoint-up(xl) {
-      .list-icon {
-        margin: 0;
-        .list-icon-item {
-          padding-bottom: 2rem;
-        }
-      }
-    }
+  .publication-date {
+    line-height: $line-height-component;
   }
 
   // Use to set bg-image and overlay
@@ -214,22 +29,73 @@
       z-index:0;
       background-color: rgba(255, 255, 255, 0.7);
     }
-  
-    // Dark overlay variant for profil?
-    &.overlay-dark {
-      * {
-        color: $white !important;
-      }
-      &:before {
-        background-color: rgba(0, 0, 0, 0.3);
-      }
-    }
   }
 }
 
-// Remove padding when we have .content-header followed by .page-section and neither is .bg-gray-sky
-.content-header:not(.bg-gray-sky):not(.content-header-dark) {
-  + .page-section:not(.bg-gray-sky) {
-    padding-top: 0;
+
+.header-back-link {
+
+}
+
+// Notch design
+//
+.document-heading {
+  height: 120px;
+  position: relative;
+  width: 100%;
+  z-index: 0;
+
+  .document-heading-background {
+    background-color: $neutral-underground-1;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 100%;
+    overflow: hidden;
+    position: absolute;
+    width: 100%;
+    z-index: 0;
+  }
+
+  .document-heading-wrapper {
+    height: 100%;
+    margin: 0 auto;
+    padding-top: 3.5rem;
+    position: relative;
+    z-index: 2;
+  }
+
+  .document-heading-content {
+    bottom: 0;
+    position: absolute;
+    background-color: $white;
+    height: 2rem;
+    width: calc(100% - 32px);
+  }
+
+  @include media-breakpoint-up(lg) {
+    height: 304px;
+
+    .document-heading-content {
+      height: 3.5rem;
+    }
+
+    .document-heading-wrapper {
+      padding-top: 4.5rem;
+    }
+
+    &.document-heading-left-notch {
+      .document-heading-content {
+        left: 0;
+        &:before {
+          content: '';
+          background: $white;
+          width: 1000px;
+          height: 100%;
+          position: absolute;
+          left: -1000px;
+        }
+      }
+    }
   }
 }

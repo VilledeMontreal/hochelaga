@@ -1,0 +1,25 @@
+<div class="list-group list-group-teaser">
+  {{# listGroup}}
+  <a class="list-group-item list-group-item-action" href="{{ url }}">
+    <div class="row">
+      <div class="col-12 col-sm-4">
+        <div class="list-group-teaser-img" style="background-image: url('{{ media.src }}')">
+          <span class="sr-only">{{media.alt}}</span>
+        </div>
+      </div>
+      <div class="col-12 col-sm-8">
+        {{# category }}
+        <div class="list-group-item-category">{{ category }}</div>
+        {{/ category}}
+        <span class="list-group-item-title">{{ title }}</span>
+        {{# datePublication}}
+        <div class="list-group-item-publication-date">Mis à jour le <time datetime="{{ dateTimeFormat}}">{{{ dateTimeText }}}</time></div>
+        {{/ datePublication}}
+        {{# date}}
+        <div class="list-group-item-date"><time datetime="{{dateTimeFormat}}">{{{ dateTimeText }}}</time></div>
+        {{/ date}}
+      </div>
+    </div>
+  </a>
+  {{/ listGroup}}
+</div>

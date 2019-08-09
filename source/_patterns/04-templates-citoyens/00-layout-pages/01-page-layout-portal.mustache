@@ -1,0 +1,30 @@
+{{> styles-link-skip-to-main-content }}
+
+{{> patterns-header-portal }}
+
+<main class="main-content {{ pageClasses }}" id="main-content" aria-label="Main Content">
+
+  {{> patterns-content-header }}
+
+  <div class="region-content {{ regionMainClasses }}">
+    <div class="container {{ regionMainContainerClasses }}">
+      <div class="row{{# has-left-notch }} justify-content-between{{/ has-left-notch}}{{^ has-left-notch}} justify-content-center{{/ has-left-notch}}">
+        <article class="col-12 {{ regionMainContentClasses }}">
+          {{> styles-paragraph }}
+        </article>
+        {{# sidebarRight }}
+        <aside class="col-12 col-lg-4 mt-md-8" role="complementary">
+          <div class="sidebar">
+            <section class="sb-block">
+              {{> patterns-heading-sidebar(sidebarTitle: "Titre du block") }}
+              {{> components-list-group-links}}
+            </section>
+          </div>
+        </aside>
+        {{/ sidebarRight }}
+      </div>
+    </div>
+  </div>
+</main>
+
+{{> patterns-footer-portal }}

@@ -1,0 +1,89 @@
+{
+  "contentHeaderContainerClasses": "container-fluid container-fluid-xl",
+  "has-lead-text" : false,
+  "has-header-liner": true,
+  "user-authenticated": true,
+  "user": {
+    "username": "Françoise",
+    "email": "francoisetremblay@gmail.com",
+    "profil": "Hydro-Québec"
+  },
+  "text-elements": {
+    "headings": {
+      "display": {
+        "tag": "h1",
+        "classes": "display-1",
+        "content": "Display heading 1"
+      }
+    }
+  },
+  "pageSectionClasses": "bg-neutral-underground-1",
+  "servicesSection": {
+    "cards": {
+      "section-classes": "bg-neutral-underground-1",
+      "classes": false,
+      "bsgrid-classes": "col-12 col-md-6",
+      "card-item": [
+        {
+          "classes": "card-large card-row-layout",
+          "data-href": false,
+          "url": "#",
+          "card-title": "Animaux domestiques",
+          "card-text":
+            "Médaille de chien ou de chat. Tout savoir.",
+          "card-inception-links": false,
+          "card-media": {
+            "icon": "vdm-083-permis-animal-chien"
+          }
+        },
+        {
+          "classes": "card-large card-row-layout",
+          "data-href": false,
+          "url": "#",
+          "card-title": "Déchets et recyclage",
+          "card-text":
+            "Pour le tri intelligent des déchets",
+          "card-inception-links": false,
+          "card-media": {
+            "icon": "vdm-079-dechets-et-recyclage"
+          }
+        },
+        {
+          "classes": "card-large card-row-layout",
+          "data-href": false,
+          "url": "#",
+          "card-title": "Demandes de service",
+          "card-text": "6 types de demandes à faire en ligne",
+          "card-inception-links": false,
+          "card-media": {
+            "icon": "vdm-103-311-mobile"
+          }
+        },
+        {
+          "classes": "card-large card-row-layout",
+          "data-href": false,
+          "url": "#",
+          "card-title": "Droit et justice",
+          "card-text":
+            "Contravention à payer, documents juridiques à obtenir. Toute l'information.",
+          "card-inception-links": false,
+          "card-media": {
+            "icon": "vdm-021-dossier"
+          }
+        },
+        {
+          "classes": "card-large card-row-layout",
+          "data-href": false,
+          "url": "#",
+          "card-title": "Habitation et taxes",
+          "card-text":
+            "Compte de taxes et évaluation foncière. S'y retrouver.",
+          "card-inception-links": false,  
+          "card-media": {
+            "icon": "vdm-045-maison"
+          }
+        }
+      ]
+    }
+  }
+}

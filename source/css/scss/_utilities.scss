@@ -1,3 +1,4 @@
+/*-- BOOTSTRAP --*/
 @import "~bootstrap/scss/utilities/align";
 @import "~bootstrap/scss/utilities/background";
 @import "~bootstrap/scss/utilities/borders";
@@ -11,6 +12,11 @@
 @import "~bootstrap/scss/utilities/screenreaders";
 @import "~bootstrap/scss/utilities/shadows";
 @import "~bootstrap/scss/utilities/sizing";
+@import "~bootstrap/scss/utilities/stretched-link";
 @import "~bootstrap/scss/utilities/spacing";
 @import "~bootstrap/scss/utilities/text";
 @import "~bootstrap/scss/utilities/visibility";
+
+/*-- CUSTOM --*/
+@import "../scss/utilities/text";
+@import "../scss/utilities/background";

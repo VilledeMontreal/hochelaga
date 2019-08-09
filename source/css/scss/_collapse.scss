@@ -1,0 +1,111 @@
+//
+// Collapsible Item
+//
+.collapsible-item {
+  background-color: $white;
+  border: 1px solid $neutral-stroke;
+  border-radius: $border-radius;
+  margin-bottom: 1rem;
+  padding: 0;
+  position: relative;
+  .collapsible-header {
+    .collapsible-title {
+      margin: 0;
+    }
+    a {
+      background: transparent;
+      border: none;
+      color: $headings-color;
+      display: flex;
+      cursor: pointer;
+      @include font-size($font-size-base);
+      font-weight: $font-weight-bold;
+      line-height: $line-height-sm;
+      padding: 1rem 3.5rem 1rem 1rem;
+      cursor: pointer;
+      &:after {
+        content: '';
+        -webkit-mask: url($data-icon-plus-circle) no-repeat 50% 50%;
+        mask: url($data-icon-plus-circle) no-repeat 50% 50%;
+         -webkit-mask-size: cover;
+        mask-size: cover;
+        background-color: $primary;
+        width: 24px;
+        height: 24px;
+      }
+
+      &[aria-expanded="true"] {
+        color: $primary;
+        &:after {
+          content: '';
+          -webkit-mask: url($data-icon-minus-circle) no-repeat 50% 50%;
+          mask: url($data-icon-minus-circle) no-repeat 50% 50%;
+          -webkit-mask-size: cover;
+          mask-size: cover;
+          background-color: $primary;
+          width: 24px;
+          height: 24px;
+          border: none;
+        }
+      }
+
+      &:hover,
+      &:active {
+        color: $primary;
+        text-decoration: none;
+        &:after {
+          content: '';
+          -webkit-mask: url($data-icon-plus-circle-full) no-repeat 50% 50%;
+          mask: url($data-icon-plus-circle-full) no-repeat 50% 50%;
+          -webkit-mask-size: cover;
+          mask-size: cover;
+          background-color: $primary;
+          width: 24px;
+          height: 24px;
+          border: none;
+        }
+
+        &[aria-expanded="true"] {
+          &:after {
+            content: '';
+            -webkit-mask: url($data-icon-minus-circle-full) no-repeat 50% 50%;
+            mask: url($data-icon-minus-circle-full) no-repeat 50% 50%;
+            -webkit-mask-size: cover;
+            mask-size: cover;
+            background-color: $primary;
+            width: 24px;
+            height: 24px;
+            border: none;
+          }
+        }
+      }
+
+      &:after {
+        align-self: center;
+        color: $primary;
+        display: block;
+        line-height: 1;
+        position: absolute;
+        right: 1rem;
+      }
+
+      span {
+        align-self: center;
+
+        &.collapsible-icon {
+          display: none;
+        }
+      }
+    }
+  }
+  // Content block wrapper
+  .collapsible-block {
+    padding: 1rem;
+    > *:last-child {
+      margin-bottom: 1rem;
+    }
+  }
+
+}
+
+
