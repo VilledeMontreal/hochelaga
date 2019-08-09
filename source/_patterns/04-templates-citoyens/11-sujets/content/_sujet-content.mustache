@@ -42,6 +42,15 @@
 </div>
 {{/ module-image-album}}
 
+{{^module-image-album}}
+{{# module-image-single}}
+<div class="content-module-stacked">
+  <h2>Image simple - Module titre</h2>
+  {{> styles-figure}}
+</div>
+{{/ module-image-single}}
+{{/module-image-album}}
+
 {{# module-video}}
 <div class="content-module-stacked">
   <h2>Vidéo intégrée - Module titre</h2>
