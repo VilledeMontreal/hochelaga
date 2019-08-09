@@ -42,6 +42,9 @@ a {
 .text-primary-lighter {
   color: $primary-lighter;
 }
+.text-primary-darker {
+  color: $primary-darker;
+}
 
 .text-light {
   color: $white !important;
@@ -58,6 +61,7 @@ a.text-white {
 }
 a.text-muted {
   border-bottom: none;
+  cursor: not-allowed;
   @include hover-focus {
     color: $gray-500 !important;
     border-bottom: none;

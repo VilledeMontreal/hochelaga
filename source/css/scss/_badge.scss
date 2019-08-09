@@ -4,47 +4,119 @@
   background-color: $neutral-underground-2;
   border: 1px solid transparent;
   color: $gray-900;
+  position: relative;
 
   &.badge-dark {
     background-color: $gray-900;
     color: $white;
+    &[href] {
+      @include hover-focus {
+        color: $white;
+        background-color: lighten( $gray-900, 10% );
+      }
+    }
+    .icon {
+      &:before {
+        background-color: $white !important;
+      }
+    }
+  }
+  &.badge-light {
+    background-color: $white;
+    color: $gray-900;
+    &[href] {
+      @include hover-focus {
+        color: $gray-900;
+        background-color: darken( $white, 10% );
+      }
+    }
+    .icon {
+      &:before {
+        background-color: $gray-900 !important;
+      }
+    }
   }
   &.badge-primary {
     background-color: $primary;
     color: $white;
+    &[href] {
+      @include hover-focus {
+        color: $white;
+        background-color: darken( $primary, 10% );
+      }
+    }
+    .icon {
+      &:before {
+        background-color: $white !important;
+      }
+    }
   }
   &.badge-secondary {
     color: $primary;
     background-color: $white;
     border: 1px solid $neutral-stroke;
+    &[href] {
+      @include hover-focus {
+        color:$primary;
+        background-color: $white;
+        border: 1px solid $primary;
+      }
+    }
+    .icon {
+      &:before {
+        background-color: white;
+      }
+    }
   }
 
   &.badge-icon-left,
   &.badge-icon-right {
-    svg {
-      fill: currentColor;
-      width: 1rem;
-      height: 1rem;
+    display: inline-flex;
+    align-items: center;
+    .icon {
+      align-self: center;
+      &:before {
+        display: block;
+        width: 1.25em;
+        height: 1.25em;
+        max-height: 24px;
+        max-width: 24px;
+        background-color: $gray-900;
+      }
     }
   }
 
   &.badge-icon-left {
     .badge-label {
-      margin-left: ($spacer/4);
+      order: 2;
+      margin-left: ($spacer/2);
+    }
+    .icon {
+      order: 1;
+      &:before {
+        left: ($spacer/4);
+      }
     }
   }
 
   &.badge-icon-right {
     .badge-label {
-      margin-right: ($spacer/4);
+      margin-right: ($spacer/2);
+      order: 1;
+    }
+    .icon {
+      order: 2;
+      &:before {
+        right: ($spacer/4);
+      }
     }
   }
 
   &[href] {
     @include hover-focus {
-      color:$primary;
-      background-color: $highlight-light;
+      color: $gray-900;
       border: 1px solid transparent;
+      background-color: darken( $neutral-underground-2, 10% );
     }
   }
 
@@ -56,22 +128,55 @@
   $color-base: map-get($map, base);
   
   .badge-#{$label} {
-    
+    background-color: $color-base;
+    &[href] {
+      @include hover-focus {
+        background-color: darken( $color-base, 10% );
+      }
+    }
     @if $label == warning{
-      color: $color-dark;
-      background-color: $color-base;
+      color: $gray-900;
+      .icon {
+        &:before {
+          background-color: $gray-900;
+        }
+      }
+      &[href] {
+        @include hover-focus {
+          color: $gray-900;
+        }
+      }
     } 
     @else {
       color: $white;
-      background-color: $color-base;
-    }
-
-    &[href] {
-      @include hover-focus {
-        color: $color-dark;
-        background-color: $color-light;
+      .icon {
+        &:before {
+          background-color: $white !important;
+        }
+      }
+      &[href] {
+        @include hover-focus {
+          color: $white;
+        }
       }
     }
   }
+
+  .badge-#{$label}-light {
+    color: $color-dark;
+    background-color: $color-light;
+    .icon {
+      &:before {
+        color: $color-dark;
+      }
+    }
+    &[href] {
+      @include hover-focus {
+        color: $color-dark;
+        background-color: darken( $color-light, 8% );
+      }
+    }
+  }
+
 }
 

@@ -1,23 +1,5 @@
 <div class="pl-badge">
-	<span class="badge badge-icon-right">
-		<span class="badge-label">No link</span>
-		<svg width="24" height="24" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-			<title>Icons/24px/Check-Circle</title>
-			<path d="M21.542 17.477a1 1 0 0 1-1.734-.997A8.953 8.953 0 0 0 21 12a9 9 0 1 0-9 9 8.953 8.953 0 0 0 4.484-1.195 1 1 0 0 1 .998 1.733A10.953 10.953 0 0 1 12 23C5.925 23 1 18.075 1 12S5.925 1 12 1s11 4.925 11 11a10.96 10.96 0 0 1-1.458 5.477zm-6.25-8.184a1 1 0 0 1 1.415 1.414l-5 5a1 1 0 0 1-1.414 0l-2-2a1 1 0 0 1 1.414-1.414L11 13.586l4.293-4.293z"/>
-		</svg>
-	</span>
-	<a href="#" class="badge badge-icon-right" aria-label="Supprimer le filtre: label du filtre">
-		<span class="badge-label">Badge dismiss</span>
-		<svg width="24" height="24" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-			<title>Icons/24px/X</title>
-			<path d="M12 13.414l-5.293 5.293a1 1 0 1 1-1.414-1.414L10.586 12 5.293 6.707a1 1 0 0 1 1.414-1.414l12 12a1 1 0 0 1-1.414 1.414L12 13.414zm5.293-8.121a1 1 0 0 1 1.414 1.414l-3 3a1 1 0 1 1-1.414-1.414l3-3z"/>
-		</svg>
-	</a>
-	<a href="#" class="badge badge-icon-left" aria-label="Attention">
-		<svg width="24" height="24" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-			<title>Icons/24px/Eye</title>
-			<path d="M2.574 12.707c.575.89 1.254 1.781 2.03 2.61C6.777 17.631 9.255 19 12 19s5.224-1.368 7.395-3.684A18.513 18.513 0 0 0 21.86 12a18.513 18.513 0 0 0-2.464-3.316C17.224 6.368 14.745 5 12 5S6.776 6.368 4.605 8.684A18.513 18.513 0 0 0 2.14 12c.126.218.27.455.433.707zM.106 11.553c.14-.281.404-.75.788-1.346a20.492 20.492 0 0 1 2.251-2.89C5.661 4.631 8.62 3 12 3c3.38 0 6.339 1.632 8.855 4.316a20.492 20.492 0 0 1 2.25 2.891c.385.596.649 1.065.79 1.346a1 1 0 0 1 0 .894c-.141.281-.405.75-.79 1.346a20.492 20.492 0 0 1-2.25 2.89C18.339 19.369 15.38 21 12 21c-3.38 0-6.339-1.632-8.855-4.316a20.492 20.492 0 0 1-2.25-2.891 15.188 15.188 0 0 1-.79-1.346 1 1 0 0 1 0-.894zM12 16a4 4 0 1 1 0-8 4 4 0 0 1 0 8zm0-2a2 2 0 1 0 0-4 2 2 0 0 0 0 4z"/>
-		</svg>
-		<span class="badge-label">Badge icon right</span>
-	</a>
+	{{# badges-icons }}
+	  {{> components-badge }}
+	{{/ badges-icons }}
 </div>
