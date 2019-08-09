@@ -1,0 +1,162 @@
+{{> atoms-link-skip-to-main-content }}
+{{> organisms-header-portal }}
+
+<main class="main-content {{ pageClasses }}" id="main-content" aria-label="Main Content">
+
+  {{> organisms-content-header-hub }}
+
+  {{# nav-filters }}
+  {{> molecules-nav-filters }}
+  {{/ nav-filters }}
+
+  {{# filters-applied }}
+  <div class="container d-none d-md-flex">
+    <div class="row mt-4">
+      <div class="col-12 filters-applied">
+        <span class="sr-only">Filtres sélectionnés : </span>
+        <div class="badge-group badges-lg">
+          {{> atoms-badges}}
+          {{> atoms-button(buttonClass: "btn-link btn-sm py-1 mb-1",buttonText: "Tout effacer")}}
+        </div>
+      </div>
+    </div>
+  </div>
+  {{/ filters-applied }}
+
+  {{^ has-empty-state}}
+  {{# results }}
+  <section class="page-section pt-4 pt-md-8">
+    <div class="container">
+      <div class="row mb-2 mb-md-4 align-items-center">
+        <div class="col-12 col-md-auto order-first order-md-last">
+          
+          <div class="row mb-2 mb-md-0">
+            {{# nav-filters}}
+            <div class="col d-md-none mb-2">
+              <button type="button" class="btn btn-secondary btn-block d-flex justify-content-center" data-toggle="modal" data-target="#{{navModalID}}">
+                <span class="vdm vdm-090-preferences" aria-hidden="true"></span>
+                <span class="btn-label">Tous les filtres</span>
+                {{# numb-filters}}
+                <span>({{ numb-filters }})</span>
+                {{/ numb-filters}}
+              </button>
+            </div>
+            {{> molecules-modal-filters}}
+            {{/ nav-filters}}
+            <div class="col col-md-auto mb-2 mb-md-0">
+              <button type="button" id="triggerList" class="btn btn-secondary btn-block justify-content-center{{^ showMap }} d-none{{/ showMap }}{{# showMap }} d-flex{{/ showMap }}">
+                <span class="vdm vdm-106-menu-simple" aria-hidden="true"></span>
+                <span class="btn-label">Voir la liste</span>
+              </button>
+              <button type="button" id="triggerMap" class="btn btn-secondary btn-block justify-content-center mt-0{{# showMap }} d-none{{/ showMap }}{{^ showMap }} d-flex{{/ showMap }}">
+                <span class="vdm vdm-091-localisation" aria-hidden="true"></span>
+                <span class="btn-label">Voir la carte</span>
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <div class="col hub-section-heading mb-0 order-md-first">
+          {{# headings }}
+          <div class="row align-items-center">
+            <div class="col-auto">
+              <h2 class="{{ headings.class }} mb-0">{{ headings.text }}</h2>
+            </div>
+            {{# nav-sorts }}
+            <div class="col-auto">
+              <div class="pagination-arrow d-none">
+                <a href="#" class="page-prev">
+                  {{> atoms-fonticon-item(icon-label:"058-chevron-gauche") }}
+                  <span class="sr-only">Précédent</span>
+                </a>
+                <a href="#" class="page-next">
+                  {{> atoms-fonticon-item(icon-label:"056-chevron-droite") }}
+                  <span class="sr-only">Suivant</span>
+                </a>
+              </div>
+            </div>
+            <div class="col-auto ml-auto {{# showMap }}d-none{{/ showMap }}" id="contentNavSorts">
+              <div class="d-flex justify-content-end">
+                <div class="nav nav-sorts">
+                  <div class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false" data-display="static">{{ title }}</a>
+                    <div class="dropdown-menu dropdown-menu-right">
+                      <form>
+                      {{# dropdownItem }}
+                        <div class="dropdown-item form-group">
+                          <div class="custom-control custom-control-sm custom-radio {{ class }} ">
+                            <input type="radio" id="{{ id }}" name="{{ name }}" class="custom-control-input" value="{{ id }}" {{ state }}>
+                            <label class="custom-control-label" for="{{ id }}">{{{ label }}}</label>
+                          </div>
+                        </div>
+                      {{/ dropdownItem }}
+                      </form>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            {{/ nav-sorts }}
+
+          </div>
+        </div>
+        {{> molecules-modal-filters}}
+        {{/ headings }}
+      </div>
+
+      {{# listGroups }}
+      <div class="row {{# showMap }}d-none{{/ showMap }}" id="contentList">
+        <div class="col-12">
+          {{> molecules-list-group-hub}}
+        </div>
+      </div>
+      {{/ listGroups }}
+
+      {{# map }}
+      <div class="row {{^ showMap }}d-none{{/ showMap }}" id="contentMap">
+        <div class="col-12">
+          <div id="{{ mapID }}" style="height:850px"></div>
+        </div>
+      </div>
+      {{/ map }}
+
+      {{# hasPagination }}
+      <div class="pagination-wrapper">
+        {{> molecules-pagination("paginationClass": justify-content-center) }}
+      </div>
+      {{/ hasPagination }}
+
+    </div>
+  </section>
+  {{/ results }}
+  {{/ has-empty-state}}
+  
+  {{# has-empty-state}}
+  <div class="container mt-4">
+    <div class="row">
+      <div class="col-12">
+        {{> molecules-empty-state }}
+      </div>
+    </div>
+  </div>
+  {{/ has-empty-state}}
+
+  <!-- Teaser -->
+  {{# has-lead-text}}
+  {{> molecules-lead }}
+  {{/ has-lead-text}}
+
+  {{# hasFeedbackForm}}
+  {{> organisms-feedback-form}}
+  {{/ hasFeedbackForm }}
+</main>
+
+{{> organisms-footer-portal }}
+
+<script>
+
+  var data = null;
+
+  generateMap([{{{ map.lngLat }}}], data, {{ map.mapID }});
+</script>
+
