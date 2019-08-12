@@ -1,85 +1,41 @@
-// Dropdown Menu toggle (user)
-.dropdown {
-  margin-bottom: 0;
-  padding-bottom: 0;
-
-  &.dropdown-align-right {
-    margin-left: auto;
-  }
-}
-// Replace caret by our own icon
-.dropdown-toggle {
-  display: inline-flex;
-  align-items: center;
-  color: $gray-700;
-  // Replace carets
-  &:after {
-    border: none;
-    margin-left: .5rem;
-    content: '';
-    -webkit-mask: url($data-icon-chevron-down) no-repeat 50% 50%;
-    mask: url($data-icon-chevron-down) no-repeat 50% 50%; 
-    -webkit-mask-size: cover;
-    mask-size: cover;
-    background-color: $neutral-tertiary;
-    width: $icon-md;
-    height: $icon-md;
-  }
-}
-
-// Dropdown menu
+// The dropdown menu
 .dropdown-menu {
-  @include font-size($font-size-sm);
-  max-height: 60vh;
-  overflow-y: auto;
-  padding: .75rem 0 0 0;
-  margin-top: 1rem;
-
-  // Fix some weird padding + max-height issue in some browser like Firefox and IE.
-  &::after {
-    content: " ";
-    display: block;
-    margin-bottom: .75rem;
-  }
-
-  // Main menu
-  ul {
-    padding: 0;
-    margin-bottom: 0;
-    li {
-      padding: 0;
-    }
-  }
-
-  // Dropdown section
-  .dropdown-item-section {
-    color: $black;
-    @include font-size($font-size-sm);
-    padding: .75rem $dropdown-item-padding-x;
-    > * {
-      margin-bottom: 1.5rem;
-      &:last-child {
-        margin-bottom: 0;
-      }
-    }
-  }
+  position: absolute;
+  top: 100%;
+  left: 0;
+  z-index: $zindex-dropdown;
+  display: none; // none by default, but block on "open" of the menu
+  float: left;
+  min-width: $dropdown-min-width;
+  padding: $dropdown-padding-y 0;
+  margin: $dropdown-spacer 0 0; // override default ul
+  @include font-size($dropdown-font-size);
+  color: $dropdown-color;
+  text-align: left; // Ensures proper alignment if parent has it changed (e.g., modal footer)
+  list-style: none;
+  background-color: $dropdown-bg;
+  background-clip: padding-box;
+  border: $dropdown-border-width solid $dropdown-border-color;
+  @include border-radius($dropdown-border-radius);
+  @include box-shadow($dropdown-box-shadow);
 
   .dropdown-item {
     display: flex;
     align-items: center;
-    padding: .75rem 1.25rem;
-    color: $gray-900 !important;
+    padding: .5rem 1rem;
+    color: $neutral-primary;
+    line-height: $line-height-component;
     
     @include hover-focus {
-      color: $link-color !important;
+      color: $neutral-primary;
       border: none;
-      @include gradient-bg($white);
+      @include gradient-bg($neutral-underground-1);
     }
   
     &.active,
     &:active {
-      color: $link-color;
-      @include gradient-bg($white);
+      color: $neutral-primary;
+      @include gradient-bg($neutral-underground-1);
     }
   
     &.disabled,
@@ -100,7 +56,22 @@
         padding-top: .125rem;
       }
     }
+
+    .icon {
+      margin-right: 1rem;
+    }
   }
+}
+
+// Dropdown section headers
+.dropdown-header {
+  display: block;
+  font-weight: $font-weight-bold;
+  padding: .5rem 1rem;
+  margin-bottom: 0; // for use with heading elements
+  @include font-size($dropdown-font-size);
+  color: $dropdown-header-color;
+  white-space: nowrap; // as with > li > a
 }
 
 // change icon when dropdown is open

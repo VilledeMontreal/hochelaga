@@ -223,10 +223,8 @@ $backdrop-opacity:            .3;
 //
 // // see specifics variables for the theme
 $font-family-base:            'Open Sans', Helvetica, Arial, sans-serif;
-$font-weight-light:           300; // Open Sans Light
 $font-weight-normal:          400;  // Open Sans Regular     
 $font-weight-regular:         $font-weight-normal;
-$font-weight-semibold:        600; // Open Sans Semibold
 $font-weight-bold:            700; // Open Sans Bold
 
 
@@ -548,23 +546,33 @@ $navbar-box-shadow:                 0 .25rem .5rem -.5rem rgba($black, .5);
 //
 // Dropdown menu container and contents.
 
+$dropdown-min-width:                16rem;
+$dropdown-padding-y:                .5rem;
+$dropdown-spacer:                   .125rem;
+$dropdown-font-size:                $font-size-base;
+$dropdown-color:                    $neutral-primary;
 $dropdown-bg:                       $white;
-$dropdown-border-color:             $gray-400;
-$dropdown-border-radius:            0;
-$dropdown-border-width:             1px;
-$dropdown-divider-bg:               $gray-400;
+$dropdown-border-color:             $neutral-stroke;
+$dropdown-border-radius:            $border-radius;
+$dropdown-border-width:             $border-width;
+$dropdown-inner-border-radius:      calc(#{$dropdown-border-radius} - #{$dropdown-border-width});
+$dropdown-divider-bg:               $neutral-stroke;
+$dropdown-divider-margin-y:         .5rem;
 $dropdown-box-shadow:               0 .5rem .5rem rgba($black, .175);
 
-$dropdown-link-color:               $gray-900;
-$dropdown-link-hover-color:         darken($gray-900, 5%);
-$dropdown-link-hover-bg:            $gray-100;
+$dropdown-link-color:               $neutral-primary;
+$dropdown-link-hover-color:         $neutral-primary;
+$dropdown-link-hover-bg:            $neutral-underground-1;
 
-$dropdown-link-active-bg:           $action;
+$dropdown-link-active-color:        $neutral-primary;
+$dropdown-link-active-bg:           $neutral-underground-1;
+
+$dropdown-link-disabled-color:      $neutral-tertiary;
 
 $dropdown-item-padding-y:           .5rem;
-$dropdown-item-padding-x:           2.5rem;
+$dropdown-item-padding-x:           1rem;
 
-$dropdown-header-color:             $gray-600;
+$dropdown-header-color:             $neutral-primary;
 
 
 // Pagination
