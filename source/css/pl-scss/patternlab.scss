@@ -827,3 +827,11 @@ $pl-size-box-wrapper-padding: 1rem;
     position: absolute;
   }
 }
+
+.pl-pattern-example {
+  @extend .clearfix;
+  > .dropdown-menu:first-child {
+    position: static;
+    display: block;
+  }
+}
