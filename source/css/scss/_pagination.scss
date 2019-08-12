@@ -46,7 +46,17 @@
   margin-bottom: 0;
   color: red;
   .page-item {
+    display: none;
+    &:first-child,
+    &:last-child,
+    &.active {
+      display: flex;
+    }
     .page-link {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      align-items: center;
       &:focus,
       &:visited {
         border-bottom: 1px solid $neutral-stroke;
@@ -57,11 +67,15 @@
         height: 16px;
       }
     }
+    @include media-breakpoint-up(md){
+      display: flex;
+    }
   }
+  
 }
 
-// Page item
 
+// Page item
 .page-item {
   display: flex;
   padding-bottom: 0;
