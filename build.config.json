@@ -55,7 +55,8 @@
       "files" : [
         "source/js/**/*.js",
         "source/js/**/*.json",
-        "!source/js/vendor/**"
+        "!source/js/vendor/**",
+        "!source/js/pl-show-version.js"
       ],
       "dest"  : "public/js/",
       "distribution"  : "dist/js/"
@@ -77,12 +78,11 @@
       "distribution"  : "dist/css/"
     },
     "baolegacy": {
-      "base": "source/bao-legacy/",
+      "base": "source/",
       "files": [
-        "source/bao-legacy/css/**/**.css",
-        "source/bao-legacy/css/**/**.css.map"
+        "source/bao-legacy/**/*"
       ],
-      "distribution": "dist/css/"
+      "distribution": "dist/bao-legacy/"
     },
     "images": {
       "base" : "source/images/",
