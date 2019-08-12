@@ -442,7 +442,17 @@ $pl-size-box-wrapper-padding: 1rem;
 // - - - - - - - - - -  - - - - - -
 .pl-button,
 .pl-badge {
+  display: flex;
+  flex-wrap: wrap;
   margin-bottom: 1.5rem;
+  align-items: center;
+  .bg-gray-900 {
+    text-align: center;
+  }
+  button {
+    margin-right: 8px;
+    margin-bottom: 16px;
+  }
 }
 
 // - - - - - - - - - -  - - - - - -
