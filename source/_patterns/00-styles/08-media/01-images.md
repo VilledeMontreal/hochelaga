@@ -2,4 +2,4 @@
 title: Images
 ---
 
-Add <code>.rounded-circle</code> to any image to make it a rounded image.
+Ajouter la classe <code>.rounded-circle</code> à une image pour qu'elle soit ronde.
