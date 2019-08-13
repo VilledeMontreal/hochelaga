@@ -2,4 +2,5 @@
 title: Headings
 ---
    
-<code>.h1</code> through <code>.h6</code> classes are also available, for when you want to match the font styling of a heading but cannot use the associated HTML element.
+Les classes <code>.h1</code> à <code>.h6</code> sont disponibles pour utiliser le style des titre sans le balisage.
+Les titres et les classes de titres sont responsives.

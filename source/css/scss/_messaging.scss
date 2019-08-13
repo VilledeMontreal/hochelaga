@@ -150,7 +150,10 @@
   }
 
   .message-bar-container {
-    display: inline-flex;
+    display: block;
+    @include media-breakpoint-up(md) {
+      display: inline-flex;
+    }
 
     .message-bar-heading {
       font-weight: $font-weight-bold;
@@ -159,18 +162,26 @@
 
     p {
       margin: 0;
+      display: none;
+       @include media-breakpoint-up(md) {
+        display: block;
+       }
     }
 
     // Default link colors and underline, overrides in mixins
     a {
       color: $white;
       border-bottom: $link-border-width solid $white;
-      margin-left: 3rem;
+      margin-left: 0;
 
       &:active,
       &:hover {
         color: $white;
         background: $black;
+      }
+
+      @include media-breakpoint-up(md) {
+        margin-left: 3rem;
       }
     }
 

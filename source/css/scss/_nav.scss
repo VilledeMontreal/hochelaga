@@ -204,7 +204,7 @@ nav {
 // TODO: Updated after new design is set
 .nav-wizard {
   background-color: $white;
-  border-bottom: 1px solid $gray-400;
+  border-bottom: 1px solid $neutral-stroke;
   display: flex;
   flex-direction: row;
   align-items: center;
@@ -213,7 +213,7 @@ nav {
   display: flex;
   align-items: center;
   justify-content: center;
-  color: $gray-500;
+  color: $neutral-tertiary;
   @include font-size($font-size-sm);
   flex: 1 0 auto;
   line-height: $line-height-base;
@@ -259,7 +259,7 @@ nav {
       }
     }
     &:after {
-      background-color: $gray-600;
+      background-color: $neutral-tertiary;
       content: "";
       display: block;
       height: 100%;
@@ -284,21 +284,21 @@ nav {
     }
   }
   .caption {
-    color: $gray-600;
+    color: $neutral-tertiary;
     display: inline-block;
     @include font-size($font-size-sm);
     line-height: $line-height-sm;
     padding-bottom: .5rem;
   }
   .circle {
-    @include circle($background-color: $gray-200, $border: true);
+    @include circle($background-color: $neutral-underground-1, $border: true);
     z-index: 100;
     position: relative;
   }
 
   .complete {
     .circle {
-      background-color: $gray-600;
+      background-color: $neutral-tertiary;
     }
   }
 
