@@ -13,7 +13,7 @@ label {
   span {
     @include font-size($font-size-xs);
     margin-left: ($spacer/2);
-    color: $gray-700;
+    color: $neutral-secondary;
   }
   &.label-sm {
     @include font-size($font-size-xs);
@@ -44,7 +44,7 @@ legend,
   &:disabled,
   &[readonly] {
     &::placeholder {
-     color: $gray-700;
+     color: $neutral-secondary;
     }
   }
 }
@@ -55,7 +55,7 @@ legend,
   line-height: 1rem;
   font-size: $font-size-xs;
   margin-top: 0.25rem;
-  color: $gray-900;
+  color: $neutral-primary;
   &:before {
     width: 24px;
     height: 24px;
@@ -92,7 +92,7 @@ legend,
 .form-group {
   
   small {
-    color: $gray-700;
+    color: $neutral-secondary;
     line-height: 1rem;
   }
   .input-rounded {
@@ -107,7 +107,7 @@ legend,
   width: 100%;
 
   > .icon {
-    color: $gray-900;
+    color: $neutral-primary;
     display: flex;
     flex-wrap: wrap;
     align-items: center;
@@ -163,7 +163,7 @@ legend,
     right: 0;
     transform: translateY(-50%);
     display: flex;
-    color: $gray-900;
+    color: $neutral-primary;
     margin-right: .3rem;
     padding: 0;
     border-radius: 50%;
@@ -277,7 +277,7 @@ legend,
     padding: 2rem;
     padding-left: 5.3125rem;
     position: relative;
-    border: 1px solid $gray-400;
+    border: 1px solid $neutral-stroke;
     min-height: 8rem; // Make sur card has minimum height
 
     // Background-color and (when enabled) gradient
@@ -405,7 +405,7 @@ legend,
 // file drop container
 .file-drop-container {
   border-radius: $input-border-radius;
-  border: dashed 2px $gray-400;
+  border: dashed 2px $neutral-stroke;
   display: flex;
   padding: 2rem;
   flex-direction: column;
@@ -420,7 +420,7 @@ legend,
   }
 
   &.file-over{
-    background: $gray-400;
+    background: $neutral-stroke;
   }
 }
 
@@ -567,7 +567,7 @@ legend,
     vertical-align: middle;
   }
   .input-inline-text {
-    color: $gray-500;
+    color: $neutral-tertiary;
     padding-left: 0.8125rem;
   }
 }

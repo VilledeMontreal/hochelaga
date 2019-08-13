@@ -3,16 +3,16 @@
 .badge {
   background-color: $neutral-underground-2;
   border: 1px solid transparent;
-  color: $gray-900;
+  color: $neutral-primary;
   position: relative;
 
   &.badge-dark {
-    background-color: $gray-900;
+    background-color: $neutral-primary;
     color: $white;
     &[href] {
       @include hover-focus {
         color: $white;
-        background-color: lighten( $gray-900, 10% );
+        background-color: lighten( $neutral-primary, 10% );
       }
     }
     .icon {
@@ -23,16 +23,16 @@
   }
   &.badge-light {
     background-color: $white;
-    color: $gray-900;
+    color: $neutral-primary;
     &[href] {
       @include hover-focus {
-        color: $gray-900;
+        color: $neutral-primary;
         background-color: darken( $white, 10% );
       }
     }
     .icon {
       &:before {
-        background-color: $gray-900 !important;
+        background-color: $neutral-primary !important;
       }
     }
   }
@@ -81,7 +81,7 @@
         height: 1.25em;
         max-height: 24px;
         max-width: 24px;
-        background-color: $gray-900;
+        background-color: $neutral-primary;
       }
     }
   }
@@ -114,7 +114,7 @@
 
   &[href] {
     @include hover-focus {
-      color: $gray-900;
+      color: $neutral-primary;
       border: 1px solid transparent;
       background-color: darken( $neutral-underground-2, 10% );
     }
@@ -135,15 +135,15 @@
       }
     }
     @if $label == warning{
-      color: $gray-900;
+      color: $neutral-primary;
       .icon {
         &:before {
-          background-color: $gray-900;
+          background-color: $neutral-primary;
         }
       }
       &[href] {
         @include hover-focus {
-          color: $gray-900;
+          color: $neutral-primary;
         }
       }
     } 

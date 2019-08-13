@@ -173,7 +173,7 @@
 }
 
 // Creates a filled circle
-@mixin circle($size: 1rem, $background-color: $primary, $border: false, $border-color: $gray-600) {
+@mixin circle($size: 1rem, $background-color: $primary, $border: false, $border-color: $neutral-tertiary) {
   background-color: $background-color;
   border-radius: 50%;
   content: "";

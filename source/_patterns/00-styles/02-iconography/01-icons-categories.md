@@ -13,4 +13,4 @@ Pour utiliser ces icones, il y a 2 options:
 
 #Tailles
 
-Les icones de catégories sont uniquement 40px x 40px
+Les icones de catégories sont uniquement 40px par 40px
