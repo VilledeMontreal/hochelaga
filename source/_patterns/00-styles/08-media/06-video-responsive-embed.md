@@ -1,7 +1,5 @@
 ---
-title: Video embed responsive
+title: Media embed responsive
 ---
-
-Allow browsers to determine video or slideshow dimensions based on the width of their containing block by creating an intrinsic ratio that will properly scale on any device.
-Rules are directly applied to <code>&lt;iframe&gt;</code>, <code>&lt;embed&gt;</code>, <code>&lt;video&gt;</code>, and <code>&lt;object&gt;</code> elements; optionally use an explicit descendant class <code>.embed-responsive-item</code> when you want to match the styling for other attributes.
-Pro-Tip! You don't need to include <code>frameborder="0"</code> in your <code>&lt;iframe&gt;</code>s as we override that for you.</p>
+#Utilisation
+Pour tous les élément <code>&lt;iframe&gt;, &lt;embed&gt;, &lt;video&gt;</code> et <code>&lt;object&gt;</code>, il suffit d'ajouter la classe <code>.embed-responsive-item</code> sur l'élément et l'englober avec un contenant div possédant la classe <code>.embed-responsive</code> 

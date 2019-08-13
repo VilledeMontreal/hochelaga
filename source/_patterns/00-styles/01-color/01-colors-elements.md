@@ -1,7 +1,9 @@
 ---
 title: Elements
 ---
-Couleurs utilisées pour les différent éléments html.
+#Utilisation
+
+Couleurs utilisées pour les différents éléments html.
 
 Utiliser les variables Sass fournies plutôt que de copier les valeurs de couleur hexadécimales (hex). 
 

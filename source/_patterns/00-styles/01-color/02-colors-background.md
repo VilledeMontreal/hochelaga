@@ -1,6 +1,7 @@
 ---
 title: Background
 ---
+#Utilisation
 
 Couleurs utilisées pour les couleurs d'arrière-plan.
 

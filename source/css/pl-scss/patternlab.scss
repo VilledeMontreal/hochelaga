@@ -449,7 +449,8 @@ $pl-size-box-wrapper-padding: 1rem;
   .bg-gray-900 {
     text-align: center;
   }
-  button {
+  button,
+  .badge {
     margin-right: 8px;
     margin-bottom: 16px;
   }
@@ -769,6 +770,8 @@ $pl-size-box-wrapper-padding: 1rem;
 
   .sg-pattern-desc {
     color: $gray-900;
+    margin: 0.5rem 0 0 0;
+    border-bottom: none;
     h1 {
       font-size: 1rem;
       margin: 1rem auto;
@@ -807,7 +810,8 @@ $pl-size-box-wrapper-padding: 1rem;
   }
 }
 
-.sg-pattern-extra-toggle:hover {
+.sg-pattern-extra-toggle:hover,
+.sg-pattern-extra-toggle:focus{
   border-bottom: 1px solid #ddd;
 }
 

@@ -1,8 +1,9 @@
 ---
 title: Utilities
 ---
+#Utilisation
 
-Les classes utilitaires pour les couleurs d'arrière-plans commence par <code>.bg-</code> et le nom de la couleur que vous voulez utiliser.
+Ces classes utilitaires sont utilisées pour ajouter une couleur d'arrière-plan à un élément de type bloc. Elles commencent par <code>.bg-</code> et le nom de la couleur que vous voulez utiliser.
 Par exemple: <code>.bg-neutral-underground-1</code>
 
 #Différence avec [Bootstrap](https://getbootstrap.com/docs/4.0/utilities/colors/)
