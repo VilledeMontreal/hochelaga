@@ -431,16 +431,7 @@ legend,
   display: block;
   box-shadow: none;
   margin-bottom: 4rem;
-
-  .feedback-form-header {
-    h4 {
-      display: block;
-      margin-bottom: 0;
-    }
-  }
-
 }
-
 
 .feedback-form {
   textarea {
@@ -472,11 +463,6 @@ legend,
   .feedback-details-display {
     display: none;
   }
-
-  .notice {
-    @include font-size($font-size-sm);
-  }
-
 
 }
 

@@ -1,6 +1,7 @@
-<div class="list-group {{ listGroupClass }}">
+<ul class="list-group {{ listGroupClass }}">
 	{{# listGroup }}
-  	<a class="list-group-item list-group-item-action {{ class }}" href="{{ url }}">
+  <li class="list-group-item list-group-item-action {{ class }}">
+  	<a class="" href="{{ url }}">
       {{# listIconEditorial}}
       <span class="icon {{ listIconEditorial}}" aria-hidden="true"></span>
       {{/ listIconEditorial}}
@@ -9,5 +10,6 @@
       {{/ listIconUtility}}
       {{{ text }}}
     </a>
-  	{{/ listGroup }}
-</div>
+  </li>
+  {{/ listGroup }}
+</ul>

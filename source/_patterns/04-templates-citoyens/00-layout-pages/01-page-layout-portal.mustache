@@ -2,16 +2,16 @@
 
 {{> patterns-header-portal }}
 
-<main class="main-content {{ pageClasses }}" id="main-content" aria-label="Main Content">
+<main class="main-content {{ pageClasses }}" id="main-content" aria-label="Main Content" role="main">
 
   {{> patterns-content-header }}
 
   <div class="region-content {{ regionMainClasses }}">
     <div class="container {{ regionMainContainerClasses }}">
       <div class="row{{# has-left-notch }} justify-content-between{{/ has-left-notch}}{{^ has-left-notch}} justify-content-center{{/ has-left-notch}}">
-        <article class="col-12 {{ regionMainContentClasses }}">
+        <section class="col-12 {{ regionMainContentClasses }}">
           {{> styles-paragraph }}
-        </article>
+        </section>
         {{# sidebarRight }}
         <aside class="col-12 col-lg-4 mt-md-8" role="complementary">
           <div class="sidebar">

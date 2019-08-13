@@ -7,18 +7,16 @@
 @import "~bootstrap/scss/functions";
 @import "~bootstrap/scss/variables";
 @import "scss/bootstrap_overrides"; // Overrides theme-colors variables
-@import "scss/mixins"; // Partial bootstrap mixins import 
-
+@import "scss/mixins"; // Partial bootstrap mixins import
+@import "scss/icons";
+@import "scss/mixins/caret";
+@import "scss/bootstrap";
 
 /*-- GENERIC --*/
 @import "scss/utilities";
-@import "scss/icons";
+
 @import "scss/type";
 @import "scss/tables.scss";
-
-@import "scss/mixins/caret";
-
-@import "scss/bootstrap";
 
 /*-- MAIN ELEMENTS --*/
 @import "scss/main-navbar";

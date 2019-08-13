@@ -90,8 +90,8 @@
       }
     },
     "module-documents": {
-      "listClass": "list-lg",
-      "list": [
+      "listGroupClass": "list-group-lg",
+      "listGroup": [
         {
           "listIconUtility": "icon-file-pdf",
           "text": "Titre du document [PDF - 2 Mo]",
@@ -340,7 +340,20 @@
         }
       ]
     },
-    "module-reglements": true
+    "module-reglements": {
+      "listGroupClass": "list-group-lg",
+      "listGroup": [
+        {
+          "text": "Phasellus cursus mauris"
+        },
+        {
+          "text": "Lorem ispum dolore site"
+        },
+        {
+          "text": "Non orci malesuada aliquet"
+        }
+      ]
+    }
   },
   "sidebarRight": true,
   "sidebarClasses": false,
@@ -349,7 +362,7 @@
     "content": "<p>Lorem ipsum dolor sit amet, consectetur <a href=\"https://ville.montreal.qc.ca\">adipiscing elit</a>. Phasellus cursus mauris non orci malesuada aliquet.</p><p>Nunc tincidunt nisi fringilla consectetur pharetra. Duis sed pretium velit, ut placerat purus. Quisque volutpat facilisis nisl, ut scelerisque orci dapibus in.</p>"
   },
   "sb-block-tc-lies": {
-    "listGroupClass": "list-group-icon-editorial list-group-delimiter",
+    "listGroupClass": "",
     "listGroup": [
       {
         "listIconEditorial": "icon-affaires-economie",
@@ -369,7 +382,7 @@
     ]
   },
   "sb-block-demarches": {
-    "listGroupClass": "list-group-icon-editorial list-group-delimiter",
+    "listGroupClass": "",
     "listGroup": [
       {
         "listIconEditorial": "icon-organisation-municipale",

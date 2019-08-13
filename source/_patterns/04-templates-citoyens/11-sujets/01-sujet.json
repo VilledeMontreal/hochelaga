@@ -167,8 +167,8 @@
       }
     },
     "module-list-reference": {
-      "listClass": "list-lg",
-      "list": [
+      "listGroupClass": "list-group-lg",
+      "listGroup": [
         {
           "listIconUtility": "icon-dot-bullet",
           "text": "Titre du contenu",
@@ -187,8 +187,8 @@
       ]
     },
     "module-documents": {
-      "listClass": "list-lg",
-      "list": [
+      "listGroupClass": "list-group-lg",
+      "listGroup": [
         {
           "listIconUtility": "icon-file-pdf",
           "text": "Titre du document [PDF - 2 Mo]",
@@ -209,7 +209,7 @@
   },
   "sujetContent": {
     "sujetArronDemarches": {
-      "list": [
+      "listGroup": [
         {
           "text": "Titre de la démarche",
           "class": false
@@ -225,7 +225,7 @@
       ]
     },
     "sujetArronServices": {
-      "list": [
+      "listGroup": [
         {
           "text": "Titre du service",
           "class": false
@@ -241,7 +241,7 @@
       ]
     },
     "sujetArronActivites": {
-      "list": [
+      "listGroup": [
         {
           "text": "Titre de l'activité",
           "class": false
@@ -257,7 +257,7 @@
       ]
     },
     "sujetArronProgrammes": {
-      "list": [
+      "listGroup": [
         {
           "text": "Titre du programme",
           "class": false
@@ -273,7 +273,7 @@
       ]
     },
     "sujetArronArticles": {
-      "list": [
+      "listGroup": [
         {
           "text": "Titre de l'article",
           "class": false
@@ -289,7 +289,7 @@
       ]
     },
     "sujetArronPlans": {
-      "list": [
+      "listGroup": [
         {
           "text": "Titre du plan",
           "class": false
@@ -305,7 +305,7 @@
       ]
     },
     "sujetArronProjets": {
-      "list": [
+      "listGroup": [
         {
           "text": "Titre du projet",
           "class": false
@@ -328,7 +328,7 @@
     "content": "<p>Corps de texte simple - Pas de liens. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi condimentum sollicitudin erat, quis convallis risus. Morbi condimentum sollicitudin erat, quis convallis risus.</p>"
   },
   "sb-block-tc-lies": {
-    "listGroupClass": "list-group-icon-editorial list-group-delimiter",
+    "listGroupClass": false,
     "listGroup": [
       {
         "listIconEditorial": "icon-affaires-economie",
