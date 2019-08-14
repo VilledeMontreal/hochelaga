@@ -28,7 +28,7 @@ ctx = pipeline.createContext([
     ],
     execution: [
         service: [
-            port: 3200
+            port: 3000
         ],
         resources: [
             minCpu: '100m',
