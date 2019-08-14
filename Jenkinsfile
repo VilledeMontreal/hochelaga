@@ -190,10 +190,4 @@ pipeline.start(ctx) {
         }
     }
 
-} catch(err) {
-    // echo "Exception: ${err}"
-    pipeline.errorReport(ctx, err)
-    throw err
-} finally {
-    pipeline.postBuild(ctx) // pass build status as argument
 }
