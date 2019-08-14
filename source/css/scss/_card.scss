@@ -50,7 +50,7 @@
   // Card title
   .card-title {
     @include font-size($h4-font-size);
-    line-height: $line-height-md;
+    line-height: $line-height-xl;
     color: $neutral-primary;
     display: block;
     font-weight: $font-weight-bold;
@@ -78,7 +78,7 @@
   // smaller font-size
   .card-publication-date {
     @include font-size($font-size-sm);
-    line-height: $line-height-md;
+    line-height: $line-height-sm;
   }
 
   .card-date-text,
@@ -117,7 +117,7 @@
     &.card-news {
       .card-title {
         @include font-size($h3-font-size);  // 24/32
-        line-height: $line-height-md;
+        line-height: 2rem;
       }
     }
   }
