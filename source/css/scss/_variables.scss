@@ -207,6 +207,37 @@ $link-border-width:           1px;
 $paragraph-margin-bottom:     2rem;
 
 
+
+// Grid containers
+//
+// Define the maximum width of `.container` for different screen sizes.
+
+$container-max-widths: (
+  sm: 570px,
+  md: 750px,
+  lg: 990px,
+  xl: 1170px
+);
+
+
+// Grid columns
+//
+// Set the number of columns and specify the width of the gutters. 
+
+$grid-columns:                12;
+$grid-gutter-width:           32px;
+
+
+// Grid content
+//
+// Define the maximum width of content for different screen sizes.
+$content-max-widths: (
+  md: 750px,
+  lg: 1110px,
+  xl: 1440px
+); 
+
+
 // Components
 //
 // Define common padding and border radius sizes and more.
