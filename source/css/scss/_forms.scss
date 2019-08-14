@@ -632,4 +632,13 @@ legend,
   @extend .form-group-lg;
 }
 
+// Fix pour les select dans firefox
+@-moz-document url-prefix() {
+  .form-group {
+    select {
+      padding-top: 0;
+      padding-bottom: 0;
+    }
+  }
+}
 

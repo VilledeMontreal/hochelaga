@@ -118,6 +118,7 @@ $dialog-colors: (
 
 // Icons
 //
+
 // Size
 $icon-xs:     16px;
 $icon-sm:     20px;
@@ -139,6 +140,7 @@ $icons-size: (
 // Options
 //
 // Quickly modify global styling by enabling or disabling optional features.
+
 $enable-validation-icons:                     false;
 
 // Spacing
@@ -146,10 +148,6 @@ $enable-validation-icons:                     false;
 // Control the default styling of most Bootstrap elements by modifying these
 // variables. Mostly focused on spacing.
 
-// You can add more entries to the $spacers map, should you need more variation.
-// Spacers are multiple of 8px
-// From 8px (1) to 160px (20)
-//
 $spacer: .5rem;
 $spacers: ();
 // stylelint-disable-next-line scss/dollar-variable-default
@@ -183,6 +181,7 @@ $spacers: map-merge(
 // Body
 //
 // Settings for the `<body>` element.
+
 $body-bg:         $white;
 $body-color:      $neutral-secondary;
 
@@ -190,9 +189,9 @@ $body-color:      $neutral-secondary;
 // Links
 //
 // Style anchor elements.
+
 $link-color:                  $action;
 $link-decoration:             none;
-
 $link-hover-color:            $action;
 $link-hover-decoration:       none;
 
@@ -201,51 +200,28 @@ $link-border-color:           $action;
 $link-border-width:           1px;
 
 
-
-// Grid containers
+// Paragraphs
 //
-// Define the maximum width of `.container` for different screen sizes.
+// Style p element.
 
-$container-max-widths: (
-  sm: 570px,
-  md: 750px,
-  lg: 990px,
-  xl: 1170px
-);
-
-
-// Grid content
-//
-// Define the maximum width of content for different screen sizes.
-$content-max-widths: (
-  md: 750px,
-  lg: 1110px,
-  xl: 1440px
-);
-
-
-// Grid columns
-//
-// Set the number of columns and specify the width of the gutters.
-$grid-columns:                12;
-$grid-gutter-width:           32px;
+$paragraph-margin-bottom:     2rem;
 
 
 // Components
-$line-height-xs:              1rem;    // 16px 
-$line-height-sm:              1.25rem; // 20px
+//
+// Define common padding and border radius sizes and more.
+
+$line-height-lg:              1.75rem; // 28px 
 $line-height-md:              1.5rem;  // 24px  
-$line-height-xl:              1.75rem; // 28px 
+$line-height-sm:              1.25rem; // 20px
+$line-height-xs:              1rem;    // 16px 
 
 $border-width:                1px;
 $border-color:                $neutral-stroke;
 
-$border-radius:               .25rem;
 $border-radius-lg:            .375rem;
 $border-radius-sm:            .125rem;
 
-$component-active-color:      $white;
-$component-active-bg:         $primary;
 
 // Generic value for backdrop bg and opacity
 $backdrop-bg:                 $neutral-primary;
@@ -254,6 +230,9 @@ $backdrop-opacity:            .3;
 
 // Typography
 //
+// Font, line-height, and color for body text, headings, and more.
+
+// stylelint-disable value-keyword-case
 $font-family-base:            'Open Sans', Helvetica, Arial, sans-serif;
 
 $font-size-base:              1rem; // Assumes the browser default, typically `16px
@@ -275,8 +254,8 @@ $h4-font-size:                $font-size-base * 1.25;        // 20px
 $h5-font-size:                $font-size-base * 1;       	   // 16px
 $h6-font-size:                $font-size-base * 0.875;       // 14px
 
-$headings-font-family: 		    $font-family-base;
 $headings-margin-bottom:      1.5rem;
+$headings-font-family:        $font-family-base;
 $headings-font-weight:        $font-weight-bold;         
 $headings-color:              $neutral-primary;
 
@@ -307,10 +286,7 @@ $blockquote-small-color:      $body-color;
 $blockquote-font-size:        $font-size-lg;              // 20px
 
 
-// Paragraphs
-//
-// Style p element.
-$paragraph-margin-bottom:     2rem;
+
 
 
 $hr-margin-y:                 ($spacer * 2);
@@ -349,11 +325,11 @@ $table-striped-order:         odd;
 //
 // Shared variables that are reassigned to `$input-` and `$btn-` specific variables.
 
-$input-btn-padding-y:         0.5625rem;
+$input-btn-padding-y:         0.625rem;
 $input-btn-padding-x:         0.5rem;
 $input-btn-font-family:       null;
 $input-btn-font-size:         $font-size-sm;
-$input-btn-line-height:       1.25; // 14/20
+$input-btn-line-height:       1.28572; // 14/18
 
 $input-btn-focus-width:       .2rem;
 $input-btn-focus-color:       rgba($component-active-bg, .25);
@@ -363,12 +339,12 @@ $input-btn-focus-color:       rgba($component-active-bg, .25);
 $input-btn-padding-y-sm:      0.5rem;
 $input-btn-padding-x-sm:      0.5rem;
 $input-btn-font-size-sm:      $font-size-xs;
-$input-btn-line-height-sm:    1; // 12/16
+$input-btn-line-height-sm:    1.16666666666; // 12/14
 
 $input-btn-padding-y-lg:      1rem;
 $input-btn-padding-x-lg:      1rem;
 $input-btn-font-size-lg:      $font-size-base;
-$input-btn-line-height-lg:    1.5; // 16/24
+$input-btn-line-height-lg:    1.375; // 16/22
 
 $input-btn-border-width:      $border-width;
 

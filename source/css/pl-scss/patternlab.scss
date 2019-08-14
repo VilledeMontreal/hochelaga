@@ -772,23 +772,30 @@ $pl-size-box-wrapper-padding: 1rem;
     color: $gray-900;
     margin: 0.5rem 0 0 0;
     border-bottom: none;
+    h1:first-child {
+      margin-top: 0;
+    }
     h1 {
       font-size: 1rem;
       margin: 1rem auto;
+      line-height: 1;
     }
     h2 {
       font-size: 0.9rem;
       margin: 0.9rem auto;
+      line-height: 1;
     }
     h3 {
       font-size: 0.8rem;
       margin: 0.8rem auto;
+      line-height: 1;
     }
     h4,
     h5,
     h6{
       font-size: 0.75rem;
       margin: 0.75rem auto;
+      line-height: 1;
     }
     h1, h2, h3, h4, h5, h6 {
       
