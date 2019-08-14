@@ -1,8 +1,0 @@
-boite-outils-web:
-  image: "vdmtl/boite-outils-web:${VERSION}"
-  container_name: boite-outils-web
-  environment:
-    - NODE_ENV=development
-  ports:
-    - "3022:3000"
-  restart: always

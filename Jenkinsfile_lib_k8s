@@ -10,17 +10,17 @@ pipeline = new Pipeline()
 // For more information on the configuration options,
 // see https://bitbucket.org/villemontreal/cicd-lib/src/master/docs/Config.md
 ctx = pipeline.createContext([
-    namespace: ["sn", "boite-outils"],
+    namespace: ["sn", "boite-outils4"],
     application: [
-        name: "boite-outils-lib",
+        name: "boite-outils4-lib",
         tier: "lib",
         runtime: "nodejs", // Available Platforms: nodejs, drupal
         framework: "NA",
-        description: "lib for core-utils-geo-nodejs",
+        description: "boite-outils4-lib",
         icon: "https://cdnjs.cloudflare.com/ajax/libs/foundicons/3.0.0/svgs/fi-lightbulb.svg",
         keywords: ["boite-outils", "lib"],
         labels: [
-                key1: "boite-outils",
+                key1: "boite-outils4",
                 key2: "lib"
         ],
     ],
