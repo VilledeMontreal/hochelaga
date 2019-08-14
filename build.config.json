@@ -55,8 +55,7 @@
       "files" : [
         "source/js/**/*.js",
         "source/js/**/*.json",
-        "!source/js/vendor/**",
-        "!source/js/pl-show-version.js"
+        "!source/js/vendor/**"
       ],
       "dest"  : "public/js/",
       "distribution"  : "dist/js/"
@@ -76,13 +75,6 @@
       ],
       "dest" : "public/css/",
       "distribution"  : "dist/css/"
-    },
-    "baolegacy": {
-      "base": "source/",
-      "files": [
-        "source/bao-legacy/**/*"
-      ],
-      "distribution": "dist/bao-legacy/"
     },
     "images": {
       "base" : "source/images/",
