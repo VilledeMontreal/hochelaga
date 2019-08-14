@@ -1,0 +1,19 @@
+@import "scss/functions";
+
+/*-- VARIABLES --*/
+@import "scss/variables";  
+
+/*-- BOOTSTRAP --*/
+@import "~bootstrap/scss/functions";
+@import "~bootstrap/scss/variables";
+@import "scss/bootstrap_overrides"; // Overrides theme-colors variables
+@import "scss/mixins"; // Partial bootstrap mixins import
+@import "scss/icons";
+@import "scss/mixins/caret";
+
+@import "~bootstrap/scss/type";
+
+/*-- MAIN ELEMENTS --*/
+@import "scss/main-navbar";
+@import "scss/menus";
+@import "scss/footer";

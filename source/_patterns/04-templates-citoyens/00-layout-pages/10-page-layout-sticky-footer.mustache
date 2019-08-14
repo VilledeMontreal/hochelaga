@@ -2,12 +2,12 @@
 
 {{> patterns-header-portal }}
 
-<main class="site-main-content main-content {{ pageClasses }}" id="main-content" aria-label="Main Content">
+<main class="site-main-content main-content {{ pageClasses }}" id="main-content" aria-label="Main Content" role="main">
 
   <div class="region-content {{ regionMainClasses }}">
     <div class="container {{ regionMainContainerClasses }}">
-      <div class="row">
-        <article class="col-12 col-lg-7 col-xl-8">
+      <section class="row">
+        <div class="col-12 col-lg-7 col-xl-8">
           <div class="mb-6">
             <p>Click the button below to hide the contents of this page. Notice how the footer sticks to the bottom of the window even when there’s not enough content to fill the page.</p>
             <button class="btn btn-primary" type="button" data-toggle="collapse" data-target="#collapseStickyFooterExample" aria-expanded="false" aria-controls="collapseStickyFooterExample">Toggle content</button>
@@ -17,8 +17,8 @@
             <p>Flexbox is a perfect fit for this type of problem. While mostly known for laying out content in the horizontal direction, Flexbox actually works just as well for vertical layout problems. All you have to do is wrap the vertical sections in a flex container and choose which ones you want to expand. They’ll automatically take up all the available space in their container.</p>
             <p>In the example below, the container is set to the height of the window, and the content area is told to expand as needed. (Note: in the vertical direction you need to specify a height for the container. This is different from the horizontal direction, which automatically expands to fit.)</p>
           </div>
-        </article>
-      </div>
+        </div>
+      </section>
     </div>
   </div>
 </main>

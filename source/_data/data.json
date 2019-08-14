@@ -362,25 +362,23 @@
   "buttonType": "button",
   "dataToggle": "modal",
   "dataTarget": "#dataTarget",
-  "dropdownClass": "dropdown",
-  "dropdownList": [
-    {
-      "url": "#",
-      "text": "Action"
-    },
-    {
-      "url": "#",
-      "text": "Another action"
-    },
-    {
-      "url": "#",
-      "text": "Something else here"
-    },
-    {
-      "url": "#",
-      "text": "Link 4"
-    }
-  ],
+  "dropdownMenu": {
+    "dropdownMenuID": "dropdownMenuID",
+    "dropdownSection": [
+      {
+        "dropdownItem": [
+          {
+            "url": "#",
+            "dropdownItemLabel": "Libellé"
+          },
+          {
+            "url": "#",
+            "dropdownItemLabel": "Libellé"
+          }
+        ]
+      }
+    ]
+  },
   "navClass": "",
   "navList": [
     {

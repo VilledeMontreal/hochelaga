@@ -1,13 +1,15 @@
-<div class="list {{ listClass }}">
-	{{# list }}
-  <a class="list-item list-item-action {{ class }}" href="{{ url }}">
-    {{# listIconEditorial}}
-    <span class="icon {{ listIconEditorial}}" aria-hidden="true"></span>
-    {{/ listIconEditorial}}
-    {{# listIconUtility}}
-    <span class="icon {{listIconUtility}}" aria-hidden="true"></span>
-    {{/ listIconUtility}}
-    {{{ text }}}
-  </a>
-  {{/ list }}
-</div>
+<ul class="list-group {{ listGroupClass }}">
+	{{# listGroup }}
+  <li class="list-group-item list-group-item-action {{ class }}">
+    <a href="{{ url }}">
+      {{# listIconEditorial}}
+      <span class="icon {{ listIconEditorial}}" aria-hidden="true"></span>
+      {{/ listIconEditorial}}
+      {{# listIconUtility}}
+      <span class="icon {{listIconUtility}}" aria-hidden="true"></span>
+      {{/ listIconUtility}}
+      {{{ text }}}
+    </a>
+  </li>
+  {{/ listGroup }}
+</ul>

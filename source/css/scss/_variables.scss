@@ -116,14 +116,9 @@ $dialog-colors: (
   )
 );
 
-// Options
-//
-// Quickly modify global styling by enabling or disabling optional features.
-$enable-validation-icons:                     false;
-
-
 // Icons
 //
+
 // Size
 $icon-xs:     16px;
 $icon-sm:     20px;
@@ -142,150 +137,17 @@ $icons-size: (
   )
 );
 
-// Body
+// Options
 //
-// Settings for the `<body>` element.
-$body-bg:         $white;
-$body-color:      $neutral-secondary;
-$text-muted: 			$gray-500;
+// Quickly modify global styling by enabling or disabling optional features.
 
-
-// Links
-//
-// Style anchor elements.
-$link-color:                  $action;
-$link-border-color:           $action;
-$link-border-width:           1px;
-$link-decoration:             none;
-$link-hover-color:            $action;
-$link-hover-decoration:       none;
-
-$emphasized-link-hover-ligthen-percentage: 15%;
-
-
-// Grid containers
-//
-// Define the maximum width of `.container` for different screen sizes.
-
-$container-max-widths: (
-  sm: 570px,
-  md: 750px,
-  lg: 990px,
-  xl: 1170px
-);
-
-//@include _assert-ascending($container-max-widths, "$container-max-widths");
-
-// Grid content
-//
-// Define the maximum width of content for different screen sizes.
-$content-max-widths: (
-  md: 750px,
-  lg: 1110px,
-  xl: 1440px
-);
-
-//@include _assert-ascending($content-max-widths, "$content-max-widths");
-
-// Grid columns
-//
-// Set the number of columns and specify the width of the gutters.
-
-$grid-columns:                12;
-$grid-gutter-width:           32px;
-
-
-// Components
-//
-// Define common padding and border radius sizes and more.
-$line-height-component:       1.5; // component
-// Map old bootstrap variables to the new line-height-component for compatibility
-$line-height-lg:              $line-height-component;
-$line-height-sm:              $line-height-component;
-$line-height-xs:              1.3333333333;
-
-$border-width:                1px;
-$border-color:                $gray-400;
-
-$border-radius:               .25rem;
-$border-radius-lg:            .375rem;
-$border-radius-sm:            .125rem;
-
-$component-active-color:      $white;
-$component-active-bg:         $primary;
-
-// Generic value for backdrop bg and opacity
-$backdrop-bg:                 $gray-800;
-$backdrop-opacity:            .3;
-
-
-// Typography
-//
-// // see specifics variables for the theme
-$font-family-base:            'Open Sans', Helvetica, Arial, sans-serif;
-$font-weight-light:           300; // Open Sans Light
-$font-weight-normal:          400;  // Open Sans Regular     
-$font-weight-regular:         $font-weight-normal;
-$font-weight-semibold:        600; // Open Sans Semibold
-$font-weight-bold:            700; // Open Sans Bold
-
-
-$font-size-base:              1rem; // Assumes the browser default, typically `16px
-$font-size-lg:                $font-size-base * 1.25;   //20px
-$font-size-sm:                $font-size-base * .875;   //14px
-$font-size-xs:                $font-size-base * .75;    //12px
-
-
-$line-height-base:            1.75; //paragraph
-
-
-$headings-font-family: 		    $font-family-base;
-$headings-margin-bottom:      1.5rem;
-$headings-font-weight:        $font-weight-bold;         
-$headings-color:              $gray-900;
-
-$h1-font-size:                $font-size-base * 2.5;         // 40px
-$h2-font-size:                $font-size-base * 2;       	   // 32px
-$h3-font-size:                $font-size-base * 1.5;         // 24px
-$h4-font-size:                $font-size-base * 1.25;        // 20px
-$h5-font-size:                $font-size-base * 1;       	   // 16px
-$h6-font-size:                $font-size-base * 0.875;       // 14px
-
-
-// Headings font-size and line-height are made responsive
-// @see type.scss
-// These values represent the largest font-size for those headings
-$display1-size:               $h1-font-size;           
-$display2-size:               $h1-font-size;           
-$display3-size:               $h2-font-size;         
-$display4-size:               $h3-font-size;      
-
-$display1-weight:             600;
-$display2-weight:             600;
-$display3-weight:             600;
-$display4-weight:             600;
-
-
-$lead-font-size:              $font-size-lg;              // 20px
-$lead-line-height:            1.6;                        // 32px
-$lead-font-weight:            $font-weight-regular;
-
-$mark-color:                  $gray-900;
-
-$small-font-size:             .75em;
-
-$blockquote-small-color:      $body-color;
-$blockquote-font-size:        $font-size-lg;              // 20px
+$enable-validation-icons:                     false;
 
 // Spacing
 //
 // Control the default styling of most Bootstrap elements by modifying these
 // variables. Mostly focused on spacing.
-//
-// You can add more entries to the $spacers map, should you need more variation.
-// Spacers are multiple of 8px
-// From 8px (1) to 160px (20)
-//
+
 $spacer: .5rem;
 $spacers: ();
 // stylelint-disable-next-line scss/dollar-variable-default
@@ -316,11 +178,149 @@ $spacers: map-merge(
   $spacers
 );
 
+// Body
+//
+// Settings for the `<body>` element.
+
+$body-bg:         $white;
+$body-color:      $neutral-secondary;
+
+
+// Links
+//
+// Style anchor elements.
+
+$link-color:                  $action;
+$link-decoration:             none;
+$link-hover-color:            $action;
+$link-hover-decoration:       none;
+
+// Ajout custom
+$link-border-color:           $action;
+$link-border-width:           1px;
+
 
 // Paragraphs
 //
 // Style p element.
+
 $paragraph-margin-bottom:     2rem;
+
+
+
+// Grid containers
+//
+// Define the maximum width of `.container` for different screen sizes.
+
+$container-max-widths: (
+  sm: 570px,
+  md: 750px,
+  lg: 990px,
+  xl: 1170px
+);
+
+
+// Grid columns
+//
+// Set the number of columns and specify the width of the gutters. 
+
+$grid-columns:                12;
+$grid-gutter-width:           32px;
+
+
+// Grid content
+//
+// Define the maximum width of content for different screen sizes.
+$content-max-widths: (
+  md: 750px,
+  lg: 1110px,
+  xl: 1440px
+); 
+
+
+// Components
+//
+// Define common padding and border radius sizes and more.
+
+$line-height-lg:              1.75rem; // 28px 
+$line-height-md:              1.5rem;  // 24px  
+$line-height-sm:              1.25rem; // 20px
+$line-height-xs:              1rem;    // 16px 
+
+$border-radius:               .25rem;
+$border-width:                1px;
+$border-color:                $neutral-stroke;
+
+$border-radius-lg:            .375rem;
+$border-radius-sm:            .125rem;
+
+$component-active-color:      $white;
+$component-active-bg:         $primary;
+
+// Generic value for backdrop bg and opacity
+$backdrop-bg:                 $neutral-primary;
+$backdrop-opacity:            .3;
+
+
+// Typography
+//
+// Font, line-height, and color for body text, headings, and more.
+
+// stylelint-disable value-keyword-case
+$font-family-base:            'Open Sans', Helvetica, Arial, sans-serif;
+
+$font-size-base:              1rem; // Assumes the browser default, typically `16px
+$font-size-lg:                $font-size-base * 1.25;   //20px
+$font-size-sm:                $font-size-base * .875;   //14px
+$font-size-xs:                $font-size-base * .75;    //12px
+
+$font-weight-normal:          400;  // Open Sans Regular     
+$font-weight-regular:         $font-weight-normal;
+$font-weight-bold:            700; // Open Sans Bold
+
+$font-weight-base:            $font-weight-normal;
+$line-height-base:            1.75;
+
+$h1-font-size:                $font-size-base * 2.5;         // 40px
+$h2-font-size:                $font-size-base * 2;       	   // 32px
+$h3-font-size:                $font-size-base * 1.5;         // 24px
+$h4-font-size:                $font-size-base * 1.25;        // 20px
+$h5-font-size:                $font-size-base * 1;       	   // 16px
+$h6-font-size:                $font-size-base * 0.875;       // 14px
+
+$headings-margin-bottom:      1.5rem;
+$headings-font-family:        $font-family-base;
+$headings-font-weight:        $font-weight-bold;         
+$headings-color:              $neutral-primary;
+
+
+// Headings font-size and line-height are made responsive
+// @see type.scss
+// These values represent the largest font-size for those headings
+$display1-size:               $h1-font-size;           
+$display2-size:               $h1-font-size;           
+$display3-size:               $h2-font-size;         
+$display4-size:               $h3-font-size;      
+
+$display1-weight:             600;
+$display2-weight:             600;
+$display3-weight:             600;
+$display4-weight:             600;
+
+
+$lead-font-size:              $font-size-lg;              // 20px
+$lead-line-height:            2rem;                        // 32px
+$lead-font-weight:            $font-weight-regular;
+
+$mark-color:                  $neutral-primary;
+
+$small-font-size:             .75em;
+$text-muted:                  $neutral-tertiary;
+$blockquote-small-color:      $body-color;
+$blockquote-font-size:        $font-size-lg;              // 20px
+
+
+
 
 
 $hr-margin-y:                 ($spacer * 2);
@@ -340,17 +340,17 @@ $table-hover-bg:              $highlight-light; // used for hoverable
 $table-active-bg:             $table-hover-bg;
 
 $table-border-width:          $border-width;
-$table-border-color:          $gray-400;
+$table-border-color:          $neutral-stroke;
 
 $table-head-bg:               $highlight-light;
 $table-head-color:            $headings-color;
 
 $table-head-dark-bg:          $highlight-strong;
 
-$table-dark-bg:               $gray-900;
+$table-dark-bg:               $neutral-primary;
 $table-dark-accent-bg:        rgba($white, .05);
 $table-dark-hover-bg:         rgba($white, .075);
-$table-dark-border-color:     lighten($gray-900, 7.5%);
+$table-dark-border-color:     lighten($neutral-primary, 7.5%);
 $table-dark-color:            $body-bg;
 
 $table-striped-order:         odd;
@@ -359,11 +359,11 @@ $table-striped-order:         odd;
 //
 // Shared variables that are reassigned to `$input-` and `$btn-` specific variables.
 
-$input-btn-padding-y:         0.5625rem;
+$input-btn-padding-y:         0.625rem;
 $input-btn-padding-x:         0.5rem;
 $input-btn-font-family:       null;
 $input-btn-font-size:         $font-size-sm;
-$input-btn-line-height:       1.2857142857; // 14/18
+$input-btn-line-height:       1.28572; // 14/18
 
 $input-btn-focus-width:       .2rem;
 $input-btn-focus-color:       rgba($component-active-bg, .25);
@@ -390,7 +390,7 @@ $btn-padding-y:               $input-btn-padding-y;
 $btn-padding-x:               2rem;
 $btn-font-family:             $input-btn-font-family;
 $btn-font-size:               $input-btn-font-size;
-$btn-line-height:             1.45;
+$btn-line-height:             $input-btn-line-height;
 
 $btn-padding-y-sm:            $input-btn-padding-y-sm;
 $btn-padding-x-sm:            1rem;
@@ -412,7 +412,7 @@ $btn-focus-box-shadow:        $input-btn-focus-box-shadow;
 $btn-disabled-opacity:        .65;
 $btn-active-box-shadow:       inset 0 3px 5px rgba($black, .125);
 
-$btn-link-disabled-color:     $gray-600;
+$btn-link-disabled-color:     $neutral-tertiary;
 
 $btn-block-spacing-y:         .5rem;
 
@@ -445,11 +445,11 @@ $input-font-size-lg:                    $input-btn-font-size-lg;
 $input-line-height-lg:                  $input-btn-line-height-lg;
 
 $input-bg:                              $white;
-$input-disabled-bg:                     $gray-300;
+$input-disabled-bg:                     $neutral-underground-2;
 
 $input-label-color:                     $headings-color;
 $input-color:                           $neutral-primary;
-$input-border-color:                    $gray-400;
+$input-border-color:                    $neutral-stroke;
 $input-border-width:                    1px;
 $input-box-shadow:                      none;
 
@@ -463,13 +463,13 @@ $input-focus-color:                     $input-color;
 $input-focus-width:                     $input-btn-focus-width;
 $input-focus-box-shadow:                none;
 
-$input-placeholder-color:               $gray-500;
+$input-placeholder-color:               $neutral-tertiary;
 $input-plaintext-color:                 $body-color;
 
 // custom forms
 
-$custom-control-indicator-disabled-bg:          $gray-400;
-$custom-control-label-disabled-color:           $gray-600;
+$custom-control-indicator-disabled-bg:          $neutral-stroke;
+$custom-control-label-disabled-color:           $neutral-tertiary;
 
 $custom-control-gutter:                         .625rem;
 $custom-control-spacer-y:                       0.5rem; // Custom VDM addon
@@ -528,7 +528,7 @@ $checkbox-toggle-bg-toggled:            $primary;
 $nav-link-padding-y:                  1.5rem;
 $nav-link-padding-x:                  2rem;
 
-$nav-tabs-border-color:               $gray-300;
+$nav-tabs-border-color:               $neutral-underground-2;
 $nav-tabs-border-width:               1px;
 $nav-tabs-border-radius:              0;
 $nav-tabs-link-hover-border-color:    $action;
@@ -548,23 +548,33 @@ $navbar-box-shadow:                 0 .25rem .5rem -.5rem rgba($black, .5);
 //
 // Dropdown menu container and contents.
 
+$dropdown-min-width:                16rem;
+$dropdown-padding-y:                .5rem;
+$dropdown-spacer:                   .125rem;
+$dropdown-font-size:                $font-size-base;
+$dropdown-color:                    $neutral-primary;
 $dropdown-bg:                       $white;
-$dropdown-border-color:             $gray-400;
-$dropdown-border-radius:            0;
-$dropdown-border-width:             1px;
-$dropdown-divider-bg:               $gray-400;
+$dropdown-border-color:             $neutral-stroke;
+$dropdown-border-radius:            $border-radius;
+$dropdown-border-width:             $border-width;
+$dropdown-inner-border-radius:      calc(#{$dropdown-border-radius} - #{$dropdown-border-width});
+$dropdown-divider-bg:               $neutral-stroke;
+$dropdown-divider-margin-y:         .5rem;
 $dropdown-box-shadow:               0 .5rem .5rem rgba($black, .175);
 
-$dropdown-link-color:               $gray-900;
-$dropdown-link-hover-color:         darken($gray-900, 5%);
-$dropdown-link-hover-bg:            $gray-100;
+$dropdown-link-color:               $neutral-primary;
+$dropdown-link-hover-color:         $neutral-primary;
+$dropdown-link-hover-bg:            $neutral-underground-1;
 
-$dropdown-link-active-bg:           $action;
+$dropdown-link-active-color:        $neutral-primary;
+$dropdown-link-active-bg:           $neutral-underground-1;
+
+$dropdown-link-disabled-color:      $neutral-tertiary;
 
 $dropdown-item-padding-y:           .5rem;
-$dropdown-item-padding-x:           2.5rem;
+$dropdown-item-padding-x:           1rem;
 
-$dropdown-header-color:             $gray-600;
+$dropdown-header-color:             $neutral-primary;
 
 
 // Pagination
@@ -580,30 +590,30 @@ $pagination-icon-padding:           0.75rem;
 $pagination-icon-padding-sm:        0.5rem;
 $pagination-icon-padding-lg:        1.15rem;
 
-$pagination-line-height:            1.125rem;
+$pagination-line-height:            $line-height-sm;
 
 $pagination-color:                  $body-color;
 $pagination-bg:                     $white;
 $pagination-border-width:           1px;
-$pagination-border-color:           $gray-400;
+$pagination-border-color:           $neutral-stroke;
 
 $pagination-hover-color:            $primary;
 $pagination-hover-bg:               $highlight-light;
-$pagination-hover-border-color:     $gray-400;
+$pagination-hover-border-color:     $neutral-stroke;
 
 $pagination-active-color:           $white;
 $pagination-active-bg:              $primary;
-$pagination-active-border-color:    $gray-400; 
+$pagination-active-border-color:    $neutral-stroke; 
 
-$pagination-disabled-color:         $gray-400;
+$pagination-disabled-color:         $neutral-stroke;
 $pagination-disabled-bg:            $white;
-$pagination-disabled-border-color:  $gray-400;
+$pagination-disabled-border-color:  $neutral-stroke;
 
 
 // Jumbotron
 
 $jumbotron-padding:                 3rem;
-$jumbotron-bg:                      $gray-100;
+$jumbotron-bg:                      $neutral-underground-1;
 
 
 // Cards
@@ -679,7 +689,7 @@ $alert-dark-color-level:            5;
 // Progress circle bars
 
 $progress-circle-border-width:          5px;
-$progress-circle-border-color-default:  $gray-300;
+$progress-circle-border-color-default:  $neutral-underground-2;
 $progress-circle-border-color-fill:     $success;
 $progress-circle-size:                  100px;
 $progress-circle-steps:                 100; //this needs to be even.
@@ -723,8 +733,8 @@ $breadcrumb-item-padding:           1rem;
 $breadcrumb-margin-bottom:          0;
 
 $breadcrumb-bg:                     transparent;
-$breadcrumb-divider-color:          $gray-700;
-$breadcrumb-active-color:           $gray-700;
+$breadcrumb-divider-color:          $neutral-secondary;
+$breadcrumb-active-color:           $neutral-secondary;
 $breadcrumb-divider:                quote("/");
 
 $breadcrumb-border-radius:          0;
@@ -738,18 +748,17 @@ $carousel-caption-color:             $neutral-primary !default;
 
 
 // Popover
-$popover-font-size:                 $font-size-sm !default;
-$popover-bg:                        $white !default;
 $popover-border-color:              $neutral-underground-1;
 $popover-box-shadow:                0 1px 4px 0 rgba($black, .2);
 $popover-header-padding-y:          0;
 $popover-header-padding-x:          0;
 
+// Ajout custom
 // Slide Menus
 $slide-menu-width:                440px;
-$slide-menu-bg:                   $gray-900;
+$slide-menu-bg:                   $neutral-primary;
 $slide-menu-border-width:         1px;
-$slide-menu-border-color:         $gray-700;
+$slide-menu-border-color:         $neutral-secondary;
 $slide-menu-link-color:           $white;
 $slide-menu-link-hover-color:     $action-lighter;
 $slide-menu-link-font-size:       $font-size-base;
@@ -758,3 +767,5 @@ $slide-menu-icon-color:           $action-lighter;
 $slide-menu-link-padding:         1rem 2.8125rem;
 $slide-menu-transition-dur:       300ms;
 $slide-menu-transition-easing:    ease-in-out;
+
+

@@ -1,0 +1,11 @@
+{{# dropdownMenu}}
+<div class="dropdown-menu" aria-labelledby="{{ dropdownMenuID}}">
+  {{# dropdownSection}}
+  {{# dropdownHeader}}<span class="dropdown-header">{{dropdownHeader}}</span>{{/ dropdownHeader}}
+  {{# dropdownItem}}
+  <a class="dropdown-item" href="#">{{# dropdownItemIcon}}<span class="icon {{ icon-name }}" aria-hidden="true"></span>{{/ dropdownItemIcon}}{{ dropdownItemLabel}}</a>
+  {{/ dropdownItem}}
+  {{# dropdownSectionHasDivider}}<div class="dropdown-divider"></div>{{/ dropdownSectionHasDivider}}
+  {{/ dropdownSection}}
+</div>
+{{/ dropdownMenu}}

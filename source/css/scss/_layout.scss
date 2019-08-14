@@ -53,7 +53,7 @@ html {
 // TODO: See if still exists in new design system
 .bg-image-section {
   background-size: cover;
-  background-color: $gray-600;
+  background-color: $neutral-tertiary;
   padding-top: 4rem;
   padding-bottom: 3rem;
 }
@@ -121,7 +121,7 @@ html {
     }
 
     &.section-divider {
-      border-top: 2px solid $gray-900;
+      border-top: 2px solid $neutral-primary;
       margin-top: 4rem;
       padding-top: 4rem;
     }
@@ -245,7 +245,7 @@ html {
   .hdr-title {
     color: $headings-color;
     @include font-size($font-size-base);
-    line-height: $line-height-base;
+    line-height: $line-height-md;
     font-weight: $font-weight-bold;
     padding: 1.5rem 1rem;
   }

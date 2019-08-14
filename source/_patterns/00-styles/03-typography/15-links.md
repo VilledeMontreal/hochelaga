@@ -2,4 +2,4 @@
 title: Links
 ---
 
-Default link style.
+Lien par défault.

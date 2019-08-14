@@ -442,7 +442,18 @@ $pl-size-box-wrapper-padding: 1rem;
 // - - - - - - - - - -  - - - - - -
 .pl-button,
 .pl-badge {
+  display: flex;
+  flex-wrap: wrap;
   margin-bottom: 1.5rem;
+  align-items: center;
+  .bg-gray-900 {
+    text-align: center;
+  }
+  button,
+  .badge {
+    margin-right: 8px;
+    margin-bottom: 16px;
+  }
 }
 
 // - - - - - - - - - -  - - - - - -
@@ -756,9 +767,58 @@ $pl-size-box-wrapper-padding: 1rem;
       background-color: #f5f2f0;
     }
   }
+
+  .sg-pattern-desc {
+    color: $gray-900;
+    margin: 0.5rem 0 0 0;
+    border-bottom: none;
+    h1:first-child {
+      margin-top: 0;
+    }
+    h1 {
+      font-size: 1rem;
+      margin: 1rem auto;
+      line-height: 1;
+    }
+    h2 {
+      font-size: 0.9rem;
+      margin: 0.9rem auto;
+      line-height: 1;
+    }
+    h3 {
+      font-size: 0.8rem;
+      margin: 0.8rem auto;
+      line-height: 1;
+    }
+    h4,
+    h5,
+    h6{
+      font-size: 0.75rem;
+      margin: 0.75rem auto;
+      line-height: 1;
+    }
+    h1, h2, h3, h4, h5, h6 {
+      
+    }
+    p, ul, ol {
+      margin-top:0;
+      font-size: 0.75rem;
+      margin-bottom: 0.75rem;
+      display: block;
+      clear: both;
+    }
+    a {
+      border-bottom: none;
+      &:hover {
+        background-color: transparent;
+        text-decoration: underline;
+      }
+    }
+  }
 }
 
-.sg-pattern-extra-toggle:hover {
+.sg-pattern-extra-toggle:hover,
+.sg-pattern-extra-toggle:focus{
   border-bottom: 1px solid #ddd;
 }
 
@@ -776,5 +836,13 @@ $pl-size-box-wrapper-padding: 1rem;
   }
   .fixed-top {
     position: absolute;
+  }
+}
+
+.pl-pattern-example {
+  @extend .clearfix;
+  > .dropdown-menu:first-child {
+    position: static;
+    display: block;
   }
 }

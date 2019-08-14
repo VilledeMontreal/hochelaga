@@ -1,5 +1,5 @@
 {
-  "name": "@villemontreal/boite-outils-web",
+  "name": "@villemontreal/boite-outils4-web",
   "description": "La boite à outils web",
   "version": "4.0.0",
   "dependencies": {
@@ -11,7 +11,7 @@
   "publishConfig": {
     "registry": "https://nexus.interne.montreal.ca/repository/npm-vdmtl"
   },
-  "bugs": "https://bitbucket.org/villemontreal/boite-outils-web",
+  "bugs": "https://bitbucket.org/villemontreal/boite-outils4-web",
   "author": "Ville de Montréal",
   "scripts": {
     "start": "gulp default",
@@ -40,6 +40,7 @@
     "gulp-util": "3.0.8",
     "gulp-watch": "5.0.1",
     "node-sass-tilde-importer": "1.0.2",
-    "photoswipe": "^4.1.3"
+    "photoswipe": "^4.1.3",
+    "stylelint": "^10.1.0"
   }
 }

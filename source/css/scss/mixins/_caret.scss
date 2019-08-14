@@ -1,0 +1,95 @@
+@mixin caret-down {
+  &:after {
+    border: none;
+    margin-right: -.5rem;
+    margin-left: .5rem;
+    content: '';
+    -webkit-mask: url($data-icon-chevron-down) no-repeat 50% 50%;
+    mask: url($data-icon-chevron-down) no-repeat 50% 50%; 
+    -webkit-mask-size: cover;
+    mask-size: cover;
+    background-color: currentColor;
+    width: $icon-md;
+    height: $icon-md;
+    margin-top: -4px;
+    margin-bottom: -4px;
+  }
+}
+
+@mixin caret-up {
+  &:after {
+    border: none;
+    margin-right: -.5rem;
+    margin-left: .5rem;
+    content: '';
+    -webkit-mask: url($data-icon-chevron-up) no-repeat 50% 50%;
+    mask: url($data-icon-chevron-up) no-repeat 50% 50%; 
+    -webkit-mask-size: cover;
+    mask-size: cover;
+    background-color: currentColor;
+    width: $icon-md;
+    height: $icon-md;
+    margin-top: -4px;
+    margin-bottom: -4px;
+  }
+}
+
+@mixin caret-right {
+  &:after {
+    border: none;
+    margin-right: -.5rem;
+    margin-left: .5rem;
+    content: '';
+    -webkit-mask: url($data-icon-chevron-right) no-repeat 50% 50%;
+    mask: url($data-icon-chevron-right) no-repeat 50% 50%; 
+    -webkit-mask-size: cover;
+    mask-size: cover;
+    background-color: currentColor;
+    width: $icon-md;
+    height: $icon-md;
+    margin-top: -4px;
+    margin-bottom: -4px;
+  }
+}
+
+@mixin caret-left {
+  &:before {
+    border: none;
+    margin-left: -.5rem;
+    margin-right: .5rem;
+    content: '';
+    -webkit-mask: url($data-icon-chevron-left) no-repeat 50% 50%;
+    mask: url($data-icon-chevron-left) no-repeat 50% 50%; 
+    -webkit-mask-size: cover;
+    mask-size: cover;
+    background-color: currentColor;
+    width: $icon-md;
+    height: $icon-md;
+    margin-top: -4px;
+    margin-bottom: -4px;
+  }
+}
+
+@mixin caret($direction: down) {
+  @if $enable-caret {
+    @if $direction == down {
+      @include caret-down;
+    } @else if $direction == up {
+      @include caret-up;
+    } @else if $direction == right {
+      @include caret-right;
+    }
+
+    @if $direction == left {
+      &::after {
+        display: none;
+      }
+
+      @include caret-left;
+    }
+
+    &:empty::after {
+      margin-left: 0;
+    }
+  }
+}

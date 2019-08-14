@@ -10,7 +10,7 @@
   border-color: $neutral-tertiary;
   background-color: $neutral-underground-1;
   font-size: $font-size-sm;
-  line-height: $line-height-xs;
+  line-height: $line-height-sm;
   color: $neutral-secondary;
 
   a {
@@ -25,7 +25,7 @@
     @include font-size($h5-font-size);
     color: $neutral-primary;
     font-weight: $font-weight-bold;
-    line-height: 1.5;
+    line-height: $line-height-md;
     margin-bottom: .5rem;
   }
 
@@ -48,7 +48,7 @@
 
   &.alert-text-base {
     font-size: $font-size-base;
-    line-height: $line-height-component;
+    line-height: $line-height-md;
   }
 }
 
@@ -115,7 +115,7 @@
 }
 
 .popover-header {
-  line-height: $line-height-sm;
+  line-height: $line-height-md;
   background-color: transparent;
   border-bottom: none;
 }
@@ -139,7 +139,7 @@
   align-items: center;
   justify-content: space-between;
   padding: 1rem;
-  line-height: $line-height-sm;
+  line-height: $line-height-md;
   
   svg {
     fill: $white;
@@ -150,7 +150,10 @@
   }
 
   .message-bar-container {
-    display: inline-flex;
+    display: block;
+    @include media-breakpoint-up(md) {
+      display: inline-flex;
+    }
 
     .message-bar-heading {
       font-weight: $font-weight-bold;
@@ -159,18 +162,26 @@
 
     p {
       margin: 0;
+      display: none;
+       @include media-breakpoint-up(md) {
+        display: block;
+       }
     }
 
     // Default link colors and underline, overrides in mixins
     a {
       color: $white;
       border-bottom: $link-border-width solid $white;
-      margin-left: 3rem;
+      margin-left: 0;
 
       &:active,
       &:hover {
         color: $white;
         background: $black;
+      }
+
+      @include media-breakpoint-up(md) {
+        margin-left: 3rem;
       }
     }
 

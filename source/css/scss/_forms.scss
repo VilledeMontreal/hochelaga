@@ -13,7 +13,7 @@ label {
   span {
     @include font-size($font-size-xs);
     margin-left: ($spacer/2);
-    color: $gray-700;
+    color: $neutral-secondary;
   }
   &.label-sm {
     @include font-size($font-size-xs);
@@ -44,7 +44,7 @@ legend,
   &:disabled,
   &[readonly] {
     &::placeholder {
-     color: $gray-700;
+     color: $neutral-secondary;
     }
   }
 }
@@ -52,10 +52,10 @@ legend,
 .valid-feedback,
 .invalid-feedback {
   font-weight: $font-weight-bold;
-  line-height: 1rem;
+  line-height: $line-height-xs;
   font-size: $font-size-xs;
   margin-top: 0.25rem;
-  color: $gray-900;
+  color: $neutral-primary;
   &:before {
     width: 24px;
     height: 24px;
@@ -92,8 +92,8 @@ legend,
 .form-group {
   
   small {
-    color: $gray-700;
-    line-height: 1rem;
+    color: $neutral-secondary;
+    line-height: $line-height-xs;
   }
   .input-rounded {
     border-radius: 1.4em;
@@ -107,7 +107,7 @@ legend,
   width: 100%;
 
   > .icon {
-    color: $gray-900;
+    color: $neutral-primary;
     display: flex;
     flex-wrap: wrap;
     align-items: center;
@@ -163,34 +163,13 @@ legend,
     right: 0;
     transform: translateY(-50%);
     display: flex;
-    color: $gray-900;
+    color: $neutral-primary;
     margin-right: .3rem;
     padding: 0;
     border-radius: 50%;
   }
 }
 
-
-.input-group-append {
-  svg {
-    width: 16px;
-    height: 16px;
-  }
-  .btn {
-    display: flex;
-    align-items: center;
-    padding: $input-padding-y $input-padding-x;
-    @include font-size($font-size-sm); // Match inputs
-    font-weight: $font-weight-normal;
-    line-height: $input-line-height;
-    color: $input-group-addon-color;
-    text-align: center;
-    white-space: nowrap;
-    background-color: $input-group-addon-bg;
-    border: $input-border-width solid $input-group-addon-border-color;
-    @include border-radius($input-border-radius);
-  }
-}
 
 // Custom control indicators
 //
@@ -277,7 +256,7 @@ legend,
     padding: 2rem;
     padding-left: 5.3125rem;
     position: relative;
-    border: 1px solid $gray-400;
+    border: 1px solid $neutral-stroke;
     min-height: 8rem; // Make sur card has minimum height
 
     // Background-color and (when enabled) gradient
@@ -400,14 +379,12 @@ legend,
   }
 }
 
-//
-// select
 
 //
 // file drop container
 .file-drop-container {
   border-radius: $input-border-radius;
-  border: dashed 2px $gray-400;
+  border: dashed 2px $neutral-stroke;
   display: flex;
   padding: 2rem;
   flex-direction: column;
@@ -422,7 +399,7 @@ legend,
   }
 
   &.file-over{
-    background: $gray-400;
+    background: $neutral-stroke;
   }
 }
 
@@ -433,16 +410,7 @@ legend,
   display: block;
   box-shadow: none;
   margin-bottom: 4rem;
-
-  .feedback-form-header {
-    h4 {
-      display: block;
-      margin-bottom: 0;
-    }
-  }
-
 }
-
 
 .feedback-form {
   textarea {
@@ -474,11 +442,6 @@ legend,
   .feedback-details-display {
     display: none;
   }
-
-  .notice {
-    @include font-size($font-size-sm);
-  }
-
 
 }
 
@@ -532,6 +495,7 @@ legend,
   input,
   select {
     @extend .form-control-sm;
+    overflow: auto;
   }
 
   .custom-control {
@@ -568,7 +532,7 @@ legend,
     vertical-align: middle;
   }
   .input-inline-text {
-    color: $gray-500;
+    color: $neutral-tertiary;
     padding-left: 0.8125rem;
   }
 }
@@ -668,4 +632,13 @@ legend,
   @extend .form-group-lg;
 }
 
+// Fix pour les select dans firefox
+@-moz-document url-prefix() {
+  .form-group {
+    select {
+      padding-top: 0;
+      padding-bottom: 0;
+    }
+  }
+}
 

@@ -9,29 +9,24 @@
   padding-left: 0; // reset padding because ul and ol
   margin-bottom: 0;
 
-  // Tweaks to allow list of links as clickable wrappers
   li {
     list-style: none;
-    &:first-child {
-      .list-group-item {
-        &:first-child {
-          border-top: $list-group-border-width solid transparent;
-        }
-      }
+  }
+}
+
+.list-group-lg {
+  .list-group-item {
+    padding: 1rem;
+    .icon {
+      margin-right: 1rem;
     }
-    .list-group-item {
-      &:first-child {
-        border-top: $list-group-border-width solid $list-group-border-color;
-      }
+    svg {
+      margin-right: 1rem;
     }
 
-    @include hover-focus {
-      .list-group-item-action {
-        border-bottom: none;
-        border-top: 1px solid transparent;
-      }
-      + li .list-group-item-action {
-        border-top: 1px solid transparent;
+    &.list-group-item-action {
+      > a {
+        padding: 1rem;
       }
     }
   }
@@ -67,10 +62,6 @@
     color: $list-group-action-active-color;
     background-color: $list-group-action-active-bg;
     border-bottom: none;
-    border-top: 1px solid transparent;
-    + .list-group-item-action {
-      border-top: 1px solid transparent;
-    }
     .list-group-item-title {
       color: $list-group-action-active-color;
     }
@@ -88,6 +79,22 @@
     &.active {
       border-color: $list-group-active-border-color;
     }
+    
+    &:active,
+    &.active {
+      color: $list-group-action-active-color;
+      background-color: $list-group-action-active-bg;
+      border-bottom: none;
+      border-top: 1px solid transparent;
+      + .list-group-item-action {
+        border-top: 1px solid transparent;
+      }
+      .list-group-item-title {
+        color: $list-group-action-active-color;
+      }
+    }
+
+
   }
 
   .list-group-item-action {
@@ -108,10 +115,10 @@
 .list-group-item {
   position: relative;
   display: block;
-  padding: $list-group-item-padding-y $list-group-item-padding-x;
+  padding: .5rem;
   display: flex;
   align-items: center;
-  line-height: $line-height-component;
+  line-height: $line-height-md;
   margin-bottom: 0;
   color: $list-group-color;
   background-color: $list-group-bg;
@@ -138,10 +145,37 @@
   a {
     border-bottom: none;
     &:hover {
-      border-top: 1px solid transparent;
+      //border-top: 1px solid transparent;
       .list-group-item-title {
         color: $action;
       }
+    }
+  }
+
+  .icon {
+    @include icon-color($action);
+    flex-shrink: 0;
+    margin-right: 1rem;
+    &:before {
+      height: 1.5rem;
+      width: 1.5rem;
+    }
+  }
+  svg {
+    margin-right: 1rem;
+    height: 1.5rem;
+    width: 1.5rem;
+    fill: currentColor;
+    flex-shrink: 0;
+  }
+
+  &.list-group-item-action {
+    padding: 0;
+    > a {
+      padding: .5rem;
+      display: flex;
+      align-items: center;
+      width: 100%;
     }
   }
 
@@ -149,7 +183,7 @@
 
 // Icons - Editorial and Utility
 //
-.list-group-icon-editorial {
+.list-group-icons-categories {
   a {
     border-bottom: none;
       // Hover state
@@ -173,47 +207,16 @@
     }
   }
   .icon {
-    flex-shrink: 0;
-    margin-right: 1rem;
+    @include icon-color($neutral-tertiary);
     &:before {
       height: 2.5rem;
       width: 2.5rem;
     }
   }
   svg {
-    margin-right: 1rem;
     height: 2.5rem;
     width: 2.5rem;
     fill: $neutral-tertiary;
-    flex-shrink: 0;
-  }
-}
-
-.list-group-icon-utility {
-  a {
-    border-bottom: none;
-      // Hover state
-    @include hover-focus {
-      svg {
-        fill: currentColor;
-      }
-    }
-  }
-  .icon {
-    @include icon-color($action);
-    flex-shrink: 0;
-    margin-right: 1rem;
-    &:before {
-      height: 1.5rem;
-      width: 1.5rem;
-    }
-  }
-  svg {
-    margin-right: 1rem;
-    height: 1.5rem;
-    width: 1.5rem;
-    fill: currentColor;
-    flex-shrink: 0;
   }
 }
 
@@ -259,7 +262,7 @@
     @include font-size($font-size-lg);
     color: $headings-color;
     display: block;
-    line-height: 1.4;
+    line-height: $line-height-md;
     padding-bottom: 1rem;
   }
 
@@ -274,7 +277,7 @@
   .list-group-item-publication-date,
   .list-group-item-date {
     @include font-size($font-size-sm);
-    line-height: 1.4285714285;
+    line-height: $line-height-sm;
   }
   .list-group-item-date {
     font-weight: $font-weight-bold;
