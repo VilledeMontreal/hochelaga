@@ -16,7 +16,7 @@
   .wrapper-arrondissement-header {
     @include font-size($font-size-sm);
     border-bottom: 1px solid $neutral-stroke;
-    line-height: 1.42857142857;
+    line-height: $line-height-xs;
     padding: 1rem;
     margin-bottom: 2rem;
 
@@ -43,7 +43,7 @@
     padding: 0 1rem 2rem 1rem;
     .empty-state {
       @include font-size($font-size-sm);
-      line-height: 1.4285714285;
+      line-height: $line-height-xs;
       text-align: center;
       p {
         margin-bottom: 0;

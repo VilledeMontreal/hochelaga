@@ -52,7 +52,7 @@ legend,
 .valid-feedback,
 .invalid-feedback {
   font-weight: $font-weight-bold;
-  line-height: 1rem;
+  line-height: $line-height-xs;
   font-size: $font-size-xs;
   margin-top: 0.25rem;
   color: $neutral-primary;
@@ -93,7 +93,7 @@ legend,
   
   small {
     color: $neutral-secondary;
-    line-height: 1rem;
+    line-height: $line-height-xs;
   }
   .input-rounded {
     border-radius: 1.4em;
@@ -170,27 +170,6 @@ legend,
   }
 }
 
-
-.input-group-append {
-  svg {
-    width: 16px;
-    height: 16px;
-  }
-  .btn {
-    display: flex;
-    align-items: center;
-    padding: $input-padding-y $input-padding-x;
-    @include font-size($font-size-sm); // Match inputs
-    font-weight: $font-weight-normal;
-    line-height: $input-line-height;
-    color: $input-group-addon-color;
-    text-align: center;
-    white-space: nowrap;
-    background-color: $input-group-addon-bg;
-    border: $input-border-width solid $input-group-addon-border-color;
-    @include border-radius($input-border-radius);
-  }
-}
 
 // Custom control indicators
 //

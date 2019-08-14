@@ -18,7 +18,7 @@ svg[role=icon] {
   font-style: normal;
   font-variant: normal;
   text-rendering: auto;
-  line-height: 1;
+  line-height: $line-height-xs;
   &:before {
     content: '';
     display: inline-block;
@@ -31,7 +31,7 @@ svg[role=icon] {
 .link-has-icon {
   display: inline-flex;
   border: none;
-  line-height: $line-height-component;
+  line-height: $line-height-md;
   .icon {
     @include icon-color($action);
     padding-right: .25rem;
@@ -65,7 +65,7 @@ svg[role=icon] {
 
   &.link-sm {
     @include font-size($font-size-sm);
-      line-height: 1.4285714285;
+      line-height: $line-height-sm;
     .icon {
       @extend .icon-sm;
     }

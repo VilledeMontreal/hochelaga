@@ -79,7 +79,7 @@
     border-radius: 0;
     color: $neutral-underground-1;
     @include font-size($font-size-sm);
-    line-height: 1;
+    line-height: $line-height-xs;
     padding: 1.1875rem;
 
     &::placeholder {
@@ -251,7 +251,7 @@
         .vdm {
           color: $slide-menu-icon-color;
           @include font-size(1rem);
-          line-height: 1;
+          line-height: $line-height-xs;
           margin-left: 0;
         }
       }
