@@ -132,7 +132,7 @@ ctx = pipeline.createContext([
             ],
             prod: [
                 approvers: [
-                    'G-UNIX-Jenkins-Admin'
+                    'G-UNIX-Jenkins-Admin',
                     "utamtra",
                     "uboul8b",
                     "udesm8n"
