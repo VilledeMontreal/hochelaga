@@ -81,7 +81,7 @@
 
       .btn-label {
         color: $neutral-primary;
-        line-height: $line-height-component;
+        line-height: $line-height-md;
         @include transition(color .15s ease-in-out);
       }
 
@@ -114,13 +114,13 @@
       // Use elided-text helper class on field to add ellipsis on truncated strings
       .user-info {
         flex-direction: column;
-        line-height: $line-height-component;
+        line-height: $line-height-md;
         max-width: 170px;
         text-align: left;
 
         &.user-has-profil {
           @include font-size($font-size-xs);
-          line-height: 1.333333333;
+          line-height: $line-height-xs;
 
           .user-profil {
             color: $neutral-secondary;
@@ -148,7 +148,7 @@
       // Dropdown section
       .dropdown-item-section {
         .user-info {
-          line-height: $line-height-component;
+          line-height: $line-height-md;
           > * {
             display: flex;
           }
@@ -204,7 +204,7 @@
       }
       .navbar-brand {
         @include font-size($font-size-base);
-        line-height: $line-height-component;
+        line-height: $line-height-md;
         font-weight: $font-weight-bold;
         align-items: center;
         

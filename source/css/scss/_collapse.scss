@@ -20,7 +20,7 @@
       cursor: pointer;
       @include font-size($font-size-base);
       font-weight: $font-weight-bold;
-      line-height: $line-height-sm;
+      line-height: $line-height-md;
       padding: 1rem 3.5rem 1rem 1rem;
       cursor: pointer;
       &:after {
@@ -84,7 +84,7 @@
         align-self: center;
         color: $primary;
         display: block;
-        line-height: 1;
+        line-height: $line-height-xs;
         position: absolute;
         right: 1rem;
       }

@@ -245,7 +245,7 @@ html {
   .hdr-title {
     color: $headings-color;
     @include font-size($font-size-base);
-    line-height: $line-height-base;
+    line-height: $line-height-md;
     font-weight: $font-weight-bold;
     padding: 1.5rem 1rem;
   }

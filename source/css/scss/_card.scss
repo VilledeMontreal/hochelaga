@@ -41,7 +41,7 @@
   .card-type {
     font-weight: $font-weight-bold;
     @include font-size($font-size-xs);
-    line-height: 1.3333333333;
+    line-height: $line-height-xs;
     display: block;
     margin-bottom: .5rem;
     text-transform: uppercase;
@@ -50,7 +50,7 @@
   // Card title
   .card-title {
     @include font-size($h4-font-size);
-    line-height: 1.4;
+    line-height: $line-height-md;
     color: $neutral-primary;
     display: block;
     font-weight: $font-weight-bold;
@@ -63,14 +63,14 @@
   // Card text-interface
   // smaller line-height
   .card-text-interface {
-    line-height: $line-height-component;
+    line-height: $line-height-md;
   }
 
   // Card date-text 
   // smaller font-size and BOLD
   .card-date-text {
     @include font-size($font-size-sm);
-    line-height: 1.4285714285;
+    line-height: $line-height-sm;
     font-weight: $font-weight-bold;
   }
 
@@ -78,7 +78,7 @@
   // smaller font-size
   .card-publication-date {
     @include font-size($font-size-sm);
-    line-height: 1.4285714285;
+    line-height: $line-height-md;
   }
 
   .card-date-text,
@@ -117,7 +117,7 @@
     &.card-news {
       .card-title {
         @include font-size($h3-font-size);  // 24/32
-        line-height: 1.3333333333;
+        line-height: $line-height-md;
       }
     }
   }
@@ -139,7 +139,7 @@
     }
     .card-title {
       @include font-size($h3-font-size);  // 24/32
-      line-height: 1.3333333333;
+      line-height: 2rem;
     }
   }
 
@@ -165,14 +165,14 @@
     .card-body {
       .card-title {
         @include font-size($h3-font-size);  // 24/32
-        line-height: 1.3333333333;
+        line-height: 2rem;
         margin-bottom: 1rem;
       }
       .card-link {
         color: $action;
         display: inline-flex;
         font-weight: $font-weight-bold;
-        line-height: $line-height-component;
+        line-height: $line-height-md;
         .icon {
           @include icon-color($action);
           margin-left: .25rem;
@@ -237,7 +237,7 @@
         }
         .card-title {
           @include font-size($h2-font-size);  // 32/40
-          line-height: 1.25;
+          line-height: 2.5rem;
           margin-bottom: 2rem;
         }
       }

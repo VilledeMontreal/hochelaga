@@ -2,7 +2,7 @@
   font-size: $font-size-sm;
   th,
   td {
-    line-height: 1.4285714285;
+    line-height: $line-height-sm;
   }
   thead th {
     color: $neutral-primary;
@@ -15,7 +15,7 @@
   font-size: $font-size-xs;
   th,
   td {
-    line-height: 1.3333333333;
+    line-height: $line-height-xs;
   }
 
 }
@@ -24,7 +24,7 @@
   font-size: $font-size-base;
   th,
   td {
-    line-height: $line-height-component;
+    line-height: $line-height-md;
     padding: $table-cell-padding-lg;
   }
 }

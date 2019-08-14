@@ -186,7 +186,7 @@ svg {
   display: table;
   .figure-img {
     margin-bottom: 0;
-    line-height: 1;
+    line-height: $line-height-xs;
   }
   .figure-caption {
     margin-top: $spacer;
@@ -194,7 +194,7 @@ svg {
     // display: table-caption;
     // caption-side: bottom;
     font-size: $font-size-sm;
-    line-height: 1.4;
+    line-height: $line-height-sm;
   }
 }
 
@@ -214,7 +214,7 @@ svg {
     cursor: pointer;
     display: flex;
     font-size: .8125rem;
-    line-height: 1.23076923077;
+    line-height: $line-height-xs;
     margin-left: 1rem;
     .icon-copyright {
       width: 25px;

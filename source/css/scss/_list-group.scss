@@ -118,7 +118,7 @@
   padding: .5rem;
   display: flex;
   align-items: center;
-  line-height: $line-height-component;
+  line-height: $line-height-md;
   margin-bottom: 0;
   color: $list-group-color;
   background-color: $list-group-bg;
@@ -262,7 +262,7 @@
     @include font-size($font-size-lg);
     color: $headings-color;
     display: block;
-    line-height: 1.4;
+    line-height: $line-height-md;
     padding-bottom: 1rem;
   }
 
@@ -277,7 +277,7 @@
   .list-group-item-publication-date,
   .list-group-item-date {
     @include font-size($font-size-sm);
-    line-height: 1.4285714285;
+    line-height: $line-height-sm;
   }
   .list-group-item-date {
     font-weight: $font-weight-bold;
