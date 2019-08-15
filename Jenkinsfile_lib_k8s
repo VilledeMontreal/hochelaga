@@ -25,7 +25,7 @@ ctx = pipeline.createContext([
         ],
     ],
     packaging: [
-        dockerfilePath: "Dockerfile"
+        dockerfilePath: "Dockerfile_lib_k8s"
     ],
     notifications: [
         hipchat: [
