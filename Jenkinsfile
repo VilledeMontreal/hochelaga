@@ -123,7 +123,7 @@ ctx = pipeline.createContext([
         ],
     ],
     notifications: [
-        hipchat: [
+        chat: [
             room: 'boîte-à-outils-web',
             notify: true
         ],
