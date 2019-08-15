@@ -68,13 +68,12 @@ footer {
     }
 
     .btn-lang {
-      @include button-reset();
-      @include font-size($font-size-base);
       font-weight: $font-weight-bold;
-      cursor: pointer;
       color: $action-lighter;
       line-height: $line-height-md;
-      // TODO: Define a hover state
+      @include hover-focus {
+        border-bottom: 1px solid $action-lighter;
+      }
     }
 
     .copyright {
