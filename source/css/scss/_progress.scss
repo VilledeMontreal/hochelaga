@@ -6,7 +6,6 @@
   margin-top: 1rem;
 }
 
-
 // Progress circle
 //
 // TO DO : fix animation
@@ -77,7 +76,7 @@
     display: flex;
     border-radius: 50%;
     text-align: center;
-    line-height: 20px;
+    line-height: $line-height-sm;
     align-items: center;
     justify-content: center;
     height: 100%;
@@ -151,8 +150,14 @@
 // Colors
 //
 // Contextual variations.
-@each $color, $value in $theme-colors {
-  .progress-#{$color} {
-    @include progress-variant($value);
+@each $label, $map in $dialog-colors {
+  $color: map-get($map, base);
+  .progress-bar {
+    &.progress-#{$label} {
+      @include progress-variant($color);
+    }
+    &.bg-#{$label} {
+      background-color: $color !important;
+    }
   }
 }

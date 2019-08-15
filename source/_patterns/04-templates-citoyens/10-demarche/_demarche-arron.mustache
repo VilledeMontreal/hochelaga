@@ -1,0 +1,77 @@
+<div class="mb-4">
+  {{> components-badge(badgeClass: "badge-info", badge: "État de la démarche") }}
+</div>
+
+<p>Corps de texte complet - Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi condimentum sollicitudin erat, quis convallis risus. Nullam posuere odio ligula, hendrerit suscipit ligula congue laoreet. Curabitur eleifend nulla purus, ut pharetra urna efficitur id. Cras lacinia nisi id quam lacinia, et orci aliquam.</p>
+
+<div class="content-module-stacked">
+  <h3>Tarifs - module Corps de texte ou module Titre (exemple H3)</h3>
+  <p>Courte description optionnelle - corps de texte</p>
+  
+  {{# module-table }}
+  {{> styles-table }}
+  {{/ module-table }}
+
+  {{> styles-blockquote }}
+
+  <p>Corps de texte complet - Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi condimentum sollicitudin erat, quis convallis risus. Nullam posuere odio ligula, hendrerit suscipit ligula congue laoreet. Curabitur eleifend nulla purus, ut pharetra urna efficitur id. Cras lacinia nisi id quam lacinia, et orci aliquam.</p>
+
+</div>
+
+{{# module-message }}
+<div class="content-module-stacked">
+  {{> components-alert}}
+</div>
+{{/ module-message }}
+
+{{# module-documents}}
+<div class="content-module-stacked">
+  <h3>Documents à télécharger</h3>
+  {{> components-list-item-link}}
+</div>
+{{/ module-documents }}
+
+{{# module-documents-necessaires}}
+<div class="content-module-stacked">
+  <h3>Documents nécessaires</h3>
+  <div>
+    <h4>Documents à fournir</h4>
+    <p>Corps de texte complet - avec liste à puce sit amet, consectetur adipiscing elit. Morbi condimentum sollicitudin erat, quis convallis risus. Nullam posuere odio ligula, hendrerit suscipit ligula congue laoreet. Curabitur eleifend nulla purus, ut pharetra urna efficitur id. Cras lacinia nisi id quam lacinia, et orci aliquam.</p>
+
+    <h4>Pièces d'identité</h4>
+    <p>Un des documents suivants :</p>
+    <ul>
+      <li>Permis de conduire du Québec</li>
+      <li>Carte d’assurance maladie du Québec</li>
+      <li>Nombre de pièces à présenter variable</li>
+    </ul>
+    {{> styles-link-icon("icon-right": true, icon: "icon-arrow-right", "link-icon-label": "Consulter la liste complète")}}
+  </div>
+  <div>
+    <h4>Preuves d'adresse</h4>
+    <p>Un des documents suivants :</p>
+    <ul>
+      <li>Facture de services publics (Hydro-Québec, téléphone ou autre) datant de 3 mois ou moins</li>
+      <li>Facture d'un établissement d'enseignement datant de 3 mois ou moins</li>
+      <li>Nombre de pièces à présenter variable</li>
+    </ul>
+    {{> styles-link-icon("icon-right": true, icon: "icon-arrow-right", "link-icon-label": "Consulter la liste complète")}}
+  </div>
+</div>
+{{/ module-documents-necessaires}}
+
+{{# module-canaux-comm}}
+<div class="content-module-stacked">
+  <h3>Canaux de communication</h3>
+  <div id="accordion" class="wrapper-accordion" role="tablist" aria-multiselectable="true">
+  {{> components-collapsible-item }}
+  </div>
+</div>
+{{/ module-canaux-comm}}
+
+{{# module-reglements}}
+<div class="content-module-stacked">
+  <h3>Règlements</h3>
+  {{> components-list-group-links}}
+</div>
+{{/ module-reglements}}

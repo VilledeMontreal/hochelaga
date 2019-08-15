@@ -1,0 +1,36 @@
+<div class="container-fluid pl-atom-icons-grid">
+
+  	<ul class="row list-unstyled">
+  		{{#icon-utility }}
+	   		<li class="col-6 col-sm-6 col-md-4 col-lg-3">
+		      <div class="pl-atom-icon-item ic-utility">
+		      	<a data-toggle="modal" data-target="#exampleModalIconUtility" id="linkModalIcon-{{ icon-name }}">
+			      	<svg viewBox="0 0 24 24" role="icon"> 
+			      		<path d="{{ icon-path }}"></path>
+						  </svg>
+					  </a>
+			      <span class="ic-name" id="{{ icon-name }}">icon-{{ icon-name }}</span>
+		      </div>
+		    </li>
+		  {{/icon-utility}}
+  	</ul>
+    
+</div>
+
+
+<!-- Modal -->
+<div class="modal fade" id="exampleModalIconUtility" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalIconUtilityLabel">Icon name</h5>
+        <button type="button" class="btn-close close" data-dismiss="modal" aria-label="Close">
+          {{> styles-icon-item("icon-name":"icon-x")}}
+        </button>
+      </div>
+      <div class="modal-body">
+        <p class="select-all"></p>
+      </div>
+    </div>
+  </div>
+</div>

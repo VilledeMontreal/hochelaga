@@ -1,0 +1,42 @@
+// stylelint-disable declaration-no-important
+
+//
+// Background
+//
+
+// Make the color of dialog light
+@each $label, $map in $dialog-colors {
+  $color-light: map-get($map, light);
+  .bg-#{$label} {
+  	background-color: $color-light !important;
+  }
+}
+
+// Overrides colors
+.bg-secondary,
+.bg-primary {
+  background-color: transparent !important;
+}
+
+// Add colors
+.bg-neutral-primary,
+.bg-dark,
+.bg-gray-900 {
+	background-color: $neutral-primary;
+}
+
+.bg-neutral-underground-1,
+.bg-gray-100,
+.bg-light {
+	background-color: $neutral-underground-1;
+}
+
+.bg-neutral-underground-2,
+.bg-gray-300 {
+	background-color: $neutral-underground-2;
+}
+
+.bg-highlight-light {
+	background-color: $highlight-light;
+}
+

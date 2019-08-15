@@ -1,0 +1,38 @@
+footer {
+  // Pre footer
+  // Use-case: Vitrine d'arrondissement
+  &.pre-footer {
+    background-color: $neutral-underground-1;
+    color: $body-color;
+    padding-top: 4rem;
+    padding-bottom: 4rem;
+    
+    .font-size-sm {
+      p {
+        margin-bottom: 1rem;
+      }
+    }
+
+    .list-heading {
+      @include font-size($font-size-base);
+      line-height: $line-height-md;
+      color: $headings-color;
+      font-weight: $font-weight-bold;
+      margin-bottom: 1rem;
+    }
+    p + .list-social-medias {
+      margin-top: 0;
+    }
+    // Social media list
+    .list-social-medias {
+      li {
+        list-style: none;
+        a {
+          .icon {
+            @include icon-color($action);
+          }
+        }
+      }
+    }
+  }
+}

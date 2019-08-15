@@ -1,0 +1,22 @@
+<div class="alert {{ alertClass }}" role="alert">
+  {{# alertIcon }}
+   <div class="alert-icon-container">
+    <span class="icon {{icon-name}}" aria-hidden="true"></span>
+  </div>
+  {{/ alertIcon }}
+  {{# alertIcon }}
+  <div class="alert-content">
+  {{/ alertIcon }}
+  {{# alertTitle }}
+  <div class="alert-heading">{{ alertTitle }}</div>
+	{{/ alertTitle }}
+	{{{ alertText }}}
+  {{# alertIcon }}
+  </div>
+  {{/ alertIcon }}
+	{{# dismissableAlert }}
+  <button type="button" class="close" data-dismiss="alert" aria-label="Fermer le message">
+    {{> styles-icon-item("icon-name": "icon-x")}}
+  </button>
+	{{/ dismissableAlert }}
+</div>

@@ -1,0 +1,114 @@
+{{> styles-link-skip-to-main-content }}
+{{> patterns-header-portal }}
+
+<main class="main-content {{ pageClasses }}" id="main-content" aria-label="Main Content">
+  {{#  introSection }}
+  <section class="page-section">
+    <div class="container">
+      <div class="row">
+        <div class="col-12 col-lg-8 offset-lg-2 text-center">
+          <h1>Bienvenue!</h1>
+          <div class="lead">
+            <p>Notre nouveau site prend forme.</p>
+            <p>Vous y trouverez de l’information pratique sur certains sujets et de nouveaux services personnalisés qui seront bonifiés régulièrement.</p>
+            <p>Dites-nous ce que vous en pensez!</p>
+            <a href="#services" data-smooth-scrolling="true" class="link-scrollto js-scroll-trigger">Découvrez-le {{> styles-fonticon-item(icon-label: "057-chevron-bas") }}</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  {{/ introSection }}
+
+  <img class="w-100" src="https://res.cloudinary.com/villemontreal/image/upload/v1/portail/ko4duf4zrkr2eqz7mhki.jpg" alt="Parc Ahuntsic durant l'automne" title="">
+
+  {{# featuredSection}}
+  <section class="page-section {{cards.section-classes}}" id="services">
+  <div class="container">
+    <div class="row cards {{ cards.classes }}">
+      {{# cards.headings}}
+      <div class="col-12">
+        <h2 class="{{ cards.headings.class }}">{{ cards.headings.text }}</h2>
+      </div>
+      {{/ cards.headings}}
+      {{# cards.card-item}}
+      <div class="{{ cards.bsgrid-classes }}">
+        {{> components-card-item }}
+      </div>
+      {{/ cards.card-item}}
+    </div>
+  </div>
+</section>
+  {{/ featuredSection}}
+
+  {{# nouvellesListes }}
+  <section class="page-section bg-gray-sky">
+    <div class="container">
+      <div class="row">
+        {{# cards.headings}}
+        <div class="col-12">
+          <h2 class="{{ cards.headings.class }}">{{ cards.headings.text }}</h2>
+        </div>
+        {{/ cards.headings}}
+      </div>
+      <div class="row cards {{ cards.classes }}">
+        {{# cards.card-item }}
+        <div class="{{ cards.bsgrid-classes }}">
+          {{> components-card-item }}
+        </div>
+        {{/ cards.card-item }}
+      </div>
+      <div class="pagination-wrapper">
+        <a href="#" class="btn btn-secondary">Toutes les nouvelles</a>
+      </div>
+    </div>
+  </section>
+  {{/ nouvellesListes}}
+
+  {{# homePromo}}
+  <section class="section-promo">
+    {{# promo-featured-card }}
+    <div class="home-promo">
+      <div class="row no-gutters card card-fluid card-featured">
+        <div class="col-xs-12 col-lg-5 card-bg-image" style="background:url(https://picsum.photos/id/1033/768/480) right center / cover no-repeat"></div>
+        <div class="col-xs-12 col-lg-7">
+          <div class="card-body">
+            <span class="card-title">Montréal a besoin de vos lumières</span>
+            <p class="card-text">Rendez-vous sur simplicite.montreal.ca et participez&nbsp;avec la Ville de Montréal au développement de ses services numériques.&nbsp;Testez, commentez, échangez.</p>
+            <div class="card-footer">
+              <a href="#" class="btn btn-primary" title="Call to action">Call to action</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    {{/ promo-featured-card }}
+    {{# promo-full-width }}
+    <div class="home-promo">
+      <div class="container">
+        <div class="row no-gutters">
+          <div class="col-12 col-lg-6">
+            <div class="promo-content">
+              <h2>Découvrez l'application Montréal - Services aux citoyens</h2>
+              <p>Recevez nos avis et alertes de sécurité par texto et courriel.</p>
+              <p>Signalez-nous un problème tel un nid-de-poule ou un graffiti.</p>
+              <a href="#" class="btn btn-primary" title="Call to action">Call to action</a>
+            </div>
+          </div>
+          <div class="col-12 col-lg-6">
+            <img src="https://res.cloudinary.com/villemontreal/image/upload/v1/portail/eonsir6ecilo7r74sc3e.jpg" class="img-fluid" alt="Un main qui tient un téléphone intelligent" title="">
+          </div>
+        </div>
+      </div>
+    </div>
+    {{/ promo-full-width }}
+  </section>
+  {{/ homePromo}}
+
+  {{# hasFeedbackForm}}
+  {{> components-feedback-form}}
+  {{/ hasFeedbackForm }}
+</main>
+
+{{> patterns-footer-portal }}
+

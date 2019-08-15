@@ -3,153 +3,143 @@
 //
 footer {
   &.footer {
-    background-color: $gray-900;
+    background-color: $neutral-primary;
     color: $white;
-    padding-top: 3.5rem;
-    padding-bottom: 3.5rem;
+    padding-top: 2rem;
+    padding-bottom: 2rem;
 
-    // Links
     a {
       border: none;
       color: $white;
-      &:hover,
-      &:active {
-        color: $sarcelle-atmos;
-        text-decoration: none;
+      font-weight: $font-weight-normal;
+      @include hover-focus {
+        background-color: transparent;
+        border-bottom: none;
+        color: $action-lighter;
       }
     }
 
     ul {
+      @include font-size($font-size-sm);
+      line-height: $line-height-md;
       margin-bottom: 0;
+      li {
+        margin-bottom: .5rem;
+      }
+
+      + ul {
+        margin-top: 0;
+      }
+    }
+    .site-name {
+      @include font-size($h3-font-size);
+      font-weight: $font-weight-bold;
+      line-height: 2rem;
+    }
+    .list-heading {
+      display: block;
+      font-weight: $font-weight-bold;
+      margin-bottom: 1rem;
     }
 
-    .social-media-list {
+    .list-social-media-icon {
       justify-content: center;
       li a {
-        .vdm {
-          color: $white;
-          @include font-size($font-size-xl);
-          padding: 0;
+        .icon {
+          @include icon-color($white);
         }
         @include hover-focus {
-          color: $sarcelle-atmos;
-          .vdm {
-            color: inherit;
+          .icon {
+            @include icon-color($action-lighter);
           }
         }
       }
     }
 
-    .btn-lang {
-      @include button-reset();
-      border: 1px solid $white;
-      border-radius: 2px;
-      cursor: pointer;
-      @include font-size($font-size-xs);
-      line-height: $line-height-sm;
-      padding: .75rem 3.5rem;
-      &:hover {
-        border-color: $sarcelle-atmos;
-        color: $sarcelle-atmos;
+    .top-separator {
+      &:before {
+        content: "";
+        display: block;
+        width: 100%;
+        height: $border-width;
+        background-color: $neutral-secondary;
+        margin-bottom: 2rem;
       }
     }
 
-    .legal-links {
-      @include font-size($font-size-xs);
-      line-height: $line-height-base;
-      li {
-        padding-bottom: 0;
-      }
+    .btn-lang {
+      @include button-reset();
+      @include font-size($font-size-base);
+      font-weight: $font-weight-bold;
+      cursor: pointer;
+      color: $action-lighter;
+      line-height: $line-height-md;
+      // TODO: Define a hover state
     }
 
     .copyright {
+      color: $neutral-tertiary;
       display: inline-block;
-      @include font-size($font-size-xs);
-      line-height: $line-height-base;
+      @include font-size($font-size-sm);
+      line-height: $line-height-md;
     }
 
-    .footer-sub {
-      margin-bottom: 1.5rem;
-    }
-    .footer-section {
-      border-top: 2px solid $white;
-      padding-top: 1.5rem;
+    .footer-logo {
+      width: auto;
+      height: 24px;
     }
 
-    .col-footer-sub {
-      align-self: center;
-      justify-content: center;
-      text-align: center;
-    }
-
-    .col-footer-copyright {
-      text-align: center;
-    }
-
-    // md-up
-    @include media-breakpoint-down(md) {
-      .col-footer-sub {
-        &:first-child {
-          margin-bottom: 1.5rem;
-        }
-        &:nth-child(2) {
-          margin-bottom: 2.5rem;
-        }
-        &:last-child {
-          margin-bottom: 0;
-        }
-      }
-
-    } 
-    // lg-up
-    @include media-breakpoint-up(lg) {
-      .col-lg-text-center {
-        text-align: center;
-      }
-      .col-lg-text-right {
-        text-align: right;
-      }
-      .col-lg-text-left {
-        text-align: left;
-      }
-
-      .footer-section {
-        padding-top: 1.5rem;
-      }
-    }
-  }
-
-  // Pre footer
-  // Use-case: Vitrine d'arrondissement
-  &.pre-footer {
-    background-color: $white;
-    color: $body-color;
-    padding-top: 3.5rem;
-    padding-bottom: 3.5rem;
-    
-    .font-size-sm {
-      p {
-        margin-bottom: 1rem;
+    .footer-head + .footer-last {
+      &:before {
+        content: "";
+        display: block;
+        width: 100%;
+        height: $border-width;
+        background-color: $neutral-secondary;
+        margin-bottom: 2rem;
       }
     }
 
-    .list-heading {
-      color: $headings-color;
-      font-weight: $font-weight-bold;
-      margin-bottom: 1rem;
-    }
-
-    // Social media list
-    .social-media-list {
-      li a {
-        .vdm {
-          @include font-size($font-size-xl);
-          padding: 0;
+    @include media-breakpoint-up(md) {
+      &.footer {
+        padding-top: 4rem;
+        padding-bottom: 4rem;
+        .footer-logo {
+          height: 40px;
         }
       }
     }
 
-
+    // Mobile footer handling
+    // TODO: Collapse content on mobile
+    @include media-breakpoint-down(sm) {
+      &.footer {
+        .footer-sub {
+          margin-bottom: 2rem;
+          &:before {
+            content: "";
+            display: block;
+            width: 100%;
+            height: $border-width;
+            background-color: $neutral-secondary;
+            margin-bottom: 2rem;
+          }
+          &:after {
+            content: "";
+            display: block;
+            width: 100%;
+            height: $border-width;
+            background-color: $neutral-secondary;
+            margin-top: 2rem;
+          }
+        }
+        .top-separator {
+          &:before {
+            content: none;
+          }
+        }
+      }
+    }
 
   }
 }

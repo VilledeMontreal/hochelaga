@@ -1,0 +1,89 @@
+// Main wrapper styles
+//
+.wrapper {
+  border: 1px solid $neutral-stroke;
+  border-radius: $border-radius;
+  padding: 1rem;
+}
+
+// Sélecteur arrondissement
+//
+.wrapper-arrondissement {
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+
+  .wrapper-arrondissement-header {
+    @include font-size($font-size-sm);
+    border-bottom: 1px solid $neutral-stroke;
+    line-height: $line-height-xs;
+    padding: 1rem;
+    margin-bottom: 2rem;
+
+    .title {
+      color: $neutral-primary;
+      font-weight: $font-weight-bold;
+    }
+
+    &.wrapper-sticky-header {
+      position: -webkit-sticky;
+      position: sticky;
+      top: 3.5rem;
+      background-color: $white;
+      @include border-top-radius($border-radius);
+      z-index: 100;
+
+      @include media-breakpoint-up(lg) {
+        top: 4.5rem;
+      }
+    }
+  }
+
+  .wrapper-arrondissement-body {
+    padding: 0 1rem 2rem 1rem;
+    .empty-state {
+      @include font-size($font-size-sm);
+      line-height: $line-height-xs;
+      text-align: center;
+      p {
+        margin-bottom: 0;
+      }
+      .icon {
+        margin: 0 auto 1rem auto;
+        width: 80px;
+        height: 80px;
+        &:before {
+          width: 80px;
+          height: 80px;
+        }
+      }
+      svg {
+        fill: $neutral-tertiary;
+        margin-bottom: 1rem;
+      }
+    }
+    // Margin-bottom is smaller when inside the wrapper-arrondissement-body
+    .content-module-stacked {
+      margin-bottom: 2rem;
+      &:last-child {
+        margin-bottom: 0;
+      }
+    }
+
+    @include media-breakpoint-up(md) {
+      .empty-state {
+        padding: 2rem;
+      }
+    }
+  }
+}
+
+// Wrapper Accordion
+//
+.wrapper-accordion {
+  .collapsible-item {
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+}

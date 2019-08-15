@@ -1,0 +1,58 @@
+<header class="content-header content-header-profile bg-gray-sky {{ contentHeaderClasses }}">
+  <div class="container {{ contentHeaderContainerClasses }}">
+    {{# has-breadcrumb}}
+    <div class="row">
+      <div class="col-12">
+      {{> components-breadcrumbs}}
+      </div>
+    </div>
+    {{/ has-breadcrumb}}
+    <div class="row">
+      <div class="col-12 col-lg-7 col-xl-8">
+        <div class="content-header-title">
+          <h1>{{ heading }}</h1>
+        </div>
+        {{# profile-infos }}
+        <div class="row">
+          <div class="col-12 mb-4">
+            <div class="content-header-infos">
+              {{# title }}
+              <span class="profile-title">{{ value }}</span>
+              {{/ title }}
+            </div>
+          </div>
+          {{# parti }}
+          <div class="col-12 mb-3">
+            <div class="content-header-infos">
+              <span class="profile-label">Parti</span>
+              <span class="profile-value">{{ parti }}</span>
+            </div>
+          </div>
+          {{/ parti }}
+          {{# arrondissement }}
+          <div class="col-12 col-lg-6 mb-3">
+            <div class="content-header-infos">
+              <span class="profile-label">Arrondissement</span>
+              <span class="profile-value">{{ arrondissement }}</span>
+            </div>
+          </div>
+          {{/ arrondissement }}
+          {{# district }}
+          <div class="col-12 col-lg-6 mb-3">
+            <div class="content-header-infos">
+              <span class="profile-label">District</span>
+              <span class="profile-value">{{ district }}</span>
+            </div>
+          </div>
+          {{/ district }}
+        </div>
+        {{/ profile-infos }}
+      </div>
+      <div class="col-12 col-lg-5 col-xl-4">
+        <div class="img-profile">
+          <img src="{{ profile-infos.imageUrl }}" class="img-fluid rounded-circle" alt="{{ profile-infos.imageAlt }}" />
+        </div>
+      </div>
+    </div>
+  </div>
+</header>

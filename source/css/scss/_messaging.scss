@@ -1,49 +1,127 @@
+//
 // Alert
+//
 .alert-container {
   margin-bottom: 3rem;
 }
-.alert-heading {
-  margin-bottom: 1rem;
-}
-.alert-link {
-  border-bottom: none;
-}
-.alert-icon {
-  display: flex;
-  align-items: center;
-  .vdm {
-    color: inherit;
-    padding-right: 1.5rem;
-    @include font-size(3rem);
-  }
-}
 
-// Generate contextual modifier classes for inverted colorized alert
+.alert {
+  border-left-width: 2px;
+  border-color: $neutral-tertiary;
+  background-color: $neutral-underground-1;
+  font-size: $font-size-sm;
+  line-height: $line-height-sm;
+  color: $neutral-secondary;
 
-@each $color, $value in $theme-colors {
-  .alert-#{$color}-dark {
-    // Bg-color, border-color, text-color
-    @include alert-variant(theme-color-level($color, $alert-dark-bg-level), theme-color-level($color, $alert-dark-border-level), $white);
-    .alert-link {
-      color: $white;
-      border-bottom: 1px solid $white;
+  a {
+    color: $neutral-secondary;
+    border-bottom: $link-border-width solid $neutral-secondary;
+    @include hover-focus {
+      background-color: lighten($neutral-underground-1, 2%);
     }
   }
+
+  .alert-heading {
+    @include font-size($h5-font-size);
+    color: $neutral-primary;
+    font-weight: $font-weight-bold;
+    line-height: $line-height-md;
+    margin-bottom: .5rem;
+  }
+
+  //add this class to .alert container to have an svg icon on the left
+  &.alert-with-icon {
+    display: flex;
+  }
+
+  .alert-icon-container {
+    border: none;
+    width: 24px;
+    height: 100%;
+    margin-right: 1rem;
+  }
+
+  .alert-icon-container svg,
+    .close svg {      
+      fill: $neutral-tertiary;
+    }
+
+  &.alert-text-base {
+    font-size: $font-size-base;
+    line-height: $line-height-md;
+  }
 }
 
-// States
-.state {
-  display: flex;
-  border-radius: 50%;
-  align-self: center;
-  width: 2rem;
-  height: 2rem;
-  .vdm {
-    text-align: right;
-    color: $white;
-    @include font-size(2rem);
-    align-self: center;
+
+// override mixin alert-variant
+@each $label, $map in $dialog-colors {
+  $color-light: map-get($map, light);
+  $color-dark:  map-get($map, dark);
+  $color-base:  map-get($map, base);
+  
+  .alert-#{$label} {
+    color: $color-dark;
+    @include gradient-bg($color-light);
+    border-color: $color-base;;
+
+    hr {
+      border-top-color: $color-dark;
+    }
+
+    a,
+    .alert-link {
+      color: $color-dark;
+      border-bottom: $link-border-width solid $color-dark;
+      @include hover-focus {
+        background-color: lighten($color-light, 4%);
+      }
+    }
+
+    .alert-heading {
+      color: $color-dark;
+    }
+
+    .alert-icon-container svg,
+    .close svg {      
+      fill: $color-dark;
+    }
+
+    .alert-icon-container,
+    .close {
+      .icon {
+        @include icon-color($color-dark);
+      }
+    }
+
   }
+}
+
+//
+// Popover
+//
+.popover {
+  border: none;
+  padding: 1.25rem 1rem;
+  @extend .shadow-sm;
+}
+
+.popover-header,
+.popover-body {
+  padding-top: 1rem;
+  
+  &:first-of-type {
+    padding: 0;
+  }
+}
+
+.popover-header {
+  line-height: $line-height-md;
+  background-color: transparent;
+  border-bottom: none;
+}
+
+.popover-body {
+  line-height: $line-height-sm;
 }
 
 // Add cursor to all element containing a popover
@@ -52,56 +130,108 @@
 }
 
 //
-// Top banner
+// Message bar
 //
-.top-banner {
-  background: $gray-900;
+.message-bar {
   color: $white;
   display: flex;
-  @include font-size($font-size-sm);
+  @include font-size($font-size-base);
   align-items: center;
-  justify-content: center;
-  padding: 1rem $grid-gutter-width;
-  line-height: 1.2;
-
-  .top-banner-link {
-    display: none;
+  justify-content: space-between;
+  padding: 1rem;
+  line-height: $line-height-md;
+  
+  svg {
+    fill: $white;
   }
 
-  .back-link {
-    display: none;
+  .icon {
+    @include icon-color($white);
   }
 
-  // Default link colors and underline, overrides in mixins
-  a {
-    color: $white;
-    border: none;
-    box-shadow: inset 0 -1px $white; // Needs Harmonisation with all other links?
-    &:active,
-    &:hover {
+  .message-bar-container {
+    display: block;
+    @include media-breakpoint-up(md) {
+      display: inline-flex;
+    }
+
+    .message-bar-heading {
+      font-weight: $font-weight-bold;
+      margin-right: 2rem;
+    }
+
+    p {
+      margin: 0;
+      display: none;
+       @include media-breakpoint-up(md) {
+        display: block;
+       }
+    }
+
+    // Default link colors and underline, overrides in mixins
+    a {
       color: $white;
+      border-bottom: $link-border-width solid $white;
+      margin-left: 0;
+
+      &:active,
+      &:hover {
+        color: $white;
+        background: $black;
+      }
+
+      @include media-breakpoint-up(md) {
+        margin-left: 3rem;
+      }
     }
+
   }
 
-  @include media-breakpoint-up(md) {
-    justify-content: space-between;
-
-    .top-banner-link {
-      display: inline-block;
-      margin-left: 1rem;
-    }
-
-    .back-link {
-      display: inline-block;
-    }
-  }
 }
 
-// Colors
-//
-// Contextual variations.
-@each $color, $value in $theme-colors {
-  .top-banner-#{$color} {
-    @include banner-variant($value);
+// Remake the color of the banner
+@each $label, $map in $dialog-colors {
+  $color-base: map-get($map, base);
+  $color-dark: map-get($map, dark);
+  $color-light: map-get($map, light);
+
+  .message-bar-#{$label} {
+    background-color: $color-base;
+
+    @if $label == warning {
+      color: $color-dark;
+      svg {
+        fill: $color-dark;
+      }
+      .icon {
+        @include icon-color($color-dark);
+      }
+      .message-bar-container {
+        a {
+          color: $warning-dark;
+          border-bottom: $link-border-width solid $warning-dark;
+          @include hover-focus {
+            color: $warning-dark;
+            background-color: lighten($warning, 12%);
+          }
+        }
+      }
+    } 
+    @else {
+      color: white;
+      svg {
+        fill: $white;
+      }
+      .icon {
+        @include icon-color($white);
+      }
+      .message-bar-container {
+        a {
+          @include hover-focus {
+            background-color: darken($color-base, 6%);
+          }
+        }
+      } 
+    }
   }
 }

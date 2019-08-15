@@ -1,128 +1,182 @@
 // Base class
-//
-// Requires one of the contextual, color modifier classes for `color` and
-// `background-color`.
 
 .badge {
-  background-color: $gray-200;
-  border: 1px solid $gray-200;
-  color: $gray-900;
-  display: inline-block;
-  @include font-size($badge-font-size);
-  font-weight: $badge-font-weight;
-  line-height: 1;
-  padding: $badge-padding-y $badge-padding-x;
-  text-align: center;
-  white-space: nowrap;
-  vertical-align: middle;
-  @include border-radius($badge-border-radius);
-  @include transition($btn-transition);
+  background-color: $neutral-underground-2;
+  border: 1px solid transparent;
+  color: $neutral-primary;
+  position: relative;
 
+  &.badge-dark {
+    background-color: $neutral-primary;
+    color: $white;
+    &[href] {
+      @include hover-focus {
+        color: $white;
+        background-color: lighten( $neutral-primary, 10% );
+      }
+    }
+    .icon {
+      &:before {
+        background-color: $white !important;
+      }
+    }
+  }
   &.badge-light {
     background-color: $white;
-    border-color: $white;
-    color: $gray-900;
-  }
-
-  &.badge-dismiss {
-    @include iconvdm($position: after, $icon: '068-mini-x');
-    position: relative;
-    padding-right: 1.5em;
-    &:after {
-      @include font-size(1.5em);
-      position: absolute;
-      right: 0;
-      top: 50%;
-      transform: translateY(-50%);
+    color: $neutral-primary;
+    &[href] {
+      @include hover-focus {
+        color: $neutral-primary;
+        background-color: darken( $white, 10% );
+      }
     }
-
-    &:last-child {
-      margin-right: 0;
+    .icon {
+      &:before {
+        background-color: $neutral-primary !important;
+      }
     }
   }
+  &.badge-primary {
+    background-color: $primary;
+    color: $white;
+    &[href] {
+      @include hover-focus {
+        color: $white;
+        background-color: darken( $primary, 10% );
+      }
+    }
+    .icon {
+      &:before {
+        background-color: $white !important;
+      }
+    }
+  }
+  &.badge-secondary {
+    color: $primary;
+    background-color: $white;
+    border: 1px solid $neutral-stroke;
+    &[href] {
+      @include hover-focus {
+        color:$primary;
+        background-color: $white;
+        border: 1px solid $primary;
+      }
+    }
+    .icon {
+      &:before {
+        background-color: white;
+      }
+    }
+  }
 
-  // Empty badges collapse automatically
-  &:empty {
-    display: none;
+  &.badge-icon-left,
+  &.badge-icon-right {
+    display: inline-flex;
+    align-items: center;
+    .icon {
+      align-self: center;
+      &:before {
+        display: block;
+        width: 1.25em;
+        height: 1.25em;
+        max-height: 24px;
+        max-width: 24px;
+        background-color: $neutral-primary;
+      }
+    }
+  }
+
+  &.badge-icon-left {
+    .badge-label {
+      order: 2;
+      margin-left: ($spacer/2);
+    }
+    .icon {
+      order: 1;
+      &:before {
+        left: ($spacer/4);
+      }
+    }
+  }
+
+  &.badge-icon-right {
+    .badge-label {
+      margin-right: ($spacer/2);
+      order: 1;
+    }
+    .icon {
+      order: 2;
+      &:before {
+        right: ($spacer/4);
+      }
+    }
   }
 
   &[href] {
-    color: $primary;
-    background-color: transparent;
-    border: 1px solid $primary;
     @include hover-focus {
-      color: $white;
-      background-color: $sarcelle-surprise;
-      border-color: $sarcelle-surprise;
+      color: $neutral-primary;
+      border: 1px solid transparent;
+      background-color: darken( $neutral-underground-2, 10% );
     }
-    // Active state is same as hover-focus state
-    &.active {
-      color: $white;
-      background-color: $sarcelle-surprise;
-      border-color: $sarcelle-surprise;
-    }
+  }
 
-    &.badge-light {
-      border: 1px solid $white;
-      color: $white;
+}
+
+@each $label, $map in $dialog-colors {
+  $color-dark: map-get($map, dark);
+  $color-light: map-get($map, light);
+  $color-base: map-get($map, base);
+  
+  .badge-#{$label} {
+    background-color: $color-base;
+    &[href] {
       @include hover-focus {
-        background-color: $sarcelle-surprise;
-        border-color: $sarcelle-surprise;
+        background-color: darken( $color-base, 10% );
       }
-      // We have to set border-color for badge-light active state
-      &.active {
-        background-color: $sarcelle-surprise;
-        border-color: $sarcelle-surprise;
+    }
+    @if $label == warning{
+      color: $neutral-primary;
+      .icon {
+        &:before {
+          background-color: $neutral-primary;
+        }
+      }
+      &[href] {
+        @include hover-focus {
+          color: $neutral-primary;
+        }
+      }
+    } 
+    @else {
+      color: $white;
+      .icon {
+        &:before {
+          background-color: $white !important;
+        }
+      }
+      &[href] {
+        @include hover-focus {
+          color: $white;
+        }
       }
     }
   }
 
-}
-
-// Quick fix for badges in buttons
-.btn .badge {
-  position: relative;
-  top: -1px;
-}
-
-// Pill badges
-//
-// Make them extra rounded with a modifier to replace v3's badges.
-
-.badge-pill {
-  padding-right: $badge-pill-padding-x;
-  padding-left: $badge-pill-padding-x;
-  @include border-radius($badge-pill-border-radius);
-}
-
-// Colors
-//
-// Contextual variations for badge-pill only.
-@each $color, $value in $dialog-colors {
-  .badge-pill.badge-#{$color} {
-    @include badge-variant($value);
+  .badge-#{$label}-light {
+    color: $color-dark;
+    background-color: $color-light;
+    .icon {
+      &:before {
+        color: $color-dark;
+      }
+    }
+    &[href] {
+      @include hover-focus {
+        color: $color-dark;
+        background-color: darken( $color-light, 8% );
+      }
+    }
   }
-}
 
-
-// Harmonize all badge classes. 
-// .badges-lg and .badges-xl will be deprecated
-// Use .badge-lg and .badge-xl instead
-.badge-lg,
-.badges-lg {
-  @include font-size($font-size-lg);
-}
-
-.badge-xl,
-.badges-xl {
-  @include font-size($font-size-xl);
-}
-
-// Utility class to handle group of badges spacing
-
-.badge-group {
-  .badge {
-    margin-right: .5rem;
-  }
 }
 

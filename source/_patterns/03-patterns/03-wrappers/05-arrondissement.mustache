@@ -1,0 +1,65 @@
+<div class="wrapper wrapper-arrondissement">
+  <div class="wrapper-arrondissement-header{{# wrapperStickyHeader}} wrapper-sticky-header{{/ wrapperStickyHeader}}">
+    <div class="row">
+      {{^ selectedArrondissement}}
+      <div class="col">
+        <p class="mb-2 mb-sm-0">Veuillez sélectionner votre arrondissement pour obtenir l’information qui vous concerne.</p>
+      </div>
+      <div class="col-12 col-sm-auto">
+        <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#selectArrondissementModal">Sélectionner</button>
+      </div>
+      {{/ selectedArrondissement}}
+      {{# selectedArrondissement}}
+      <div class="col mb-2 mb-sm-0">
+        <div class="label">Arrondissement</div>
+        <div class="title">{{ arrondissement }}</div>
+      </div>
+      <div class="col-12 col-sm-auto">
+        <button class="btn btn-secondary" data-toggle="modal" data-target="#selectArrondissementModal">Changer</button>
+      </div>
+      {{/ selectedArrondissement}}
+    </div>
+  </div>
+  <div class="wrapper-arrondissement-body">
+    {{^ selectedArrondissement}}
+    <div class="empty-state">
+      {{> styles-icon-item("icon-name": "icon-loction")}}
+      <p>Aucun arrondissement sélectionné.</p>
+    </div>
+    {{/ selectedArrondissement}}
+    {{# selectedArrondissement}}
+      {{# demarcheContent}}
+      {{# module-content}}
+        {{> templates-citoyens-demarche-arron}}
+      {{/ module-content}}
+      {{/ demarcheContent}}
+      {{# sujetContent}}
+        {{> templates-citoyens-sujet-arron}}
+      {{/ sujetContent}}
+    {{/ selectedArrondissement}}
+  </div>
+  <!-- Modal -->
+  <div class="modal fade" id="selectArrondissementModal" tabindex="-1" role="dialog" aria-labelledby="selectArrondissementModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="selectArrondissementModalLabel">Sélectionner votre arrondissement</h5>
+          <button type="button" class="btn-close close" data-dismiss="modal" aria-label="Close">
+            {{> styles-icon-item("icon-name":"icon-x")}}
+          </button>
+        </div>
+        <div class="modal-body">
+        {{# dropdown}}
+          <ul>
+            {{# options }}
+            <li>
+              <a href="#">{{label}}</a>
+            </li>
+            {{/ options}}
+          </ul>
+        {{/ dropdown}}
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

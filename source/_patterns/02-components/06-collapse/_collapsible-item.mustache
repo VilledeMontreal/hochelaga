@@ -1,0 +1,23 @@
+{{# collapsibleItem }}
+<div class="collapsible-item">
+  <div class="collapsible-header" role="tab" id="{{ heading-id }}">
+    <div class="collapsible-title">
+      <a data-toggle="collapse" href="#" data-target="#{{ block-id }}" aria-expanded="{{# show}}true{{/ show}}{{^ show}}false{{/ show}}" aria-controls="{{ block-id }}">
+        <span>{{ title }}</span>
+      </a>
+    </div>
+  </div>
+  <div id="{{ block-id }}" class="collapse {{# show }}show{{/ show}}" role="tabpanel" aria-labelledby="{{ heading-id }}">
+    {{# collapsible-default-content}}
+    <div class="collapsible-block">
+      {{{ collapsible-default-content }}}
+    </div>
+    {{/ collapsible-default-content}}
+    {{# collapsible-item-canaux}}
+    <div class="collapsible-block">
+      {{> components-example-canaux}}
+    </div>
+    {{/ collapsible-item-canaux}}
+  </div>
+</div>
+{{/ collapsibleItem }}

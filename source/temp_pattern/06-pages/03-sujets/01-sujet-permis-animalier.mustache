@@ -1,0 +1,100 @@
+{{> styles-link-skip-to-main-content }}
+{{> patterns-header-portal }}
+
+<main class="main-content {{ pageClasses }}" id="main-content" aria-label="Main Content">
+
+  {{> patterns-content-header }}
+
+  <!-- Teaser -->
+  {{# has-lead-text }}
+  {{> components-lead }}
+  {{/ has-lead-text }}
+
+  <div class="region-content {{ regionContentClasses }}">
+    <article class="section-content-fluid">
+      {{# default-content}}
+      <div class="section-inner section-inner-md">
+        <h2>Détails de la réglementation</h2>
+        <p>Le Règlement sur l’encadrement des animaux domestiques établit des règles de conduite et de civisme pour assurer la sécurité des citoyens et favoriser la cohabitation avec les animaux. Elle vise l’ensemble des citoyens des 19 arrondissements.</p>
+        <p>Ainsi, tous les propriétaires de chiens et de chats résidant sur le territoire de la Ville de Montréal doivent avoir un permis valide et le renouveler chaque année.</p>
+        <p>À compter du 1er janvier 2020, <a href="#">la stérilisation et le micropuçage</a> deviendront également obligatoires pour les chiens et pour les chats.</p>
+
+        <h3>Quelques consignes</h3>
+        <ul>
+          <li>En même temps que votre permis, vous recevrez une médaille fournie pour la durée de vie de l’animal. Tout comme la micropuce, la médaille aide à retrouver votre animal s’il est perdu.</li>
+          <li>Le nombre maximum d'animaux permis dans un logement est de 4, tout en limitant le nombre de chiens gardés à 3.</li>
+          <li>Les propriétaires de lapins devront également faire stériliser leur animal avant le 1er janvier 2020.</li>
+        </ul>
+        <p>Pour les propriétaires de chiens :</p>
+        <ul>
+          <li>En tout temps, un chien doit porter sa médaille et être tenu en laisse sur le domaine public.</li>
+          <li>De plus, tout chien qui pèse 20 kg ou plus doit porter un harnais auquel s'attache la laisse.</li>
+          <li>En tout temps, votre chien doit porter sa médaille et être tenu au moyen d’une laisse de 1,85 m sur le domaine public, sinon vous pourriez recevoir une amende. Un chien de plus de 20 kg doit aussi porter un licou ou un harnais.</li>
+        </ul>
+        <p>Pour les propriétaires de chats :</p>
+        <ul> 
+          <li>Votre chat doit porter sa médaille en tout temps, sauf s’il est muni d’une micropuce, sinon vous pourriez recevoir une amende.</li>
+          <li>Pour savoir comment obtenir un permis, consultez la page Obtenir ou renouveler un permis pour chat.</li>
+          <li>Si vous déménagez ou n’êtes plus propriétaire de votre animal, veuillez nous en informer dans les 15 jours. Si votre chien ou chat est micropucé, vous devez aussi prévenir le fournisseur de la micropuce de tout changement dans le même délai.</li>
+        </ul>
+        <p>Si vous déménagez ou n’êtes plus propriétaire de votre animal, veuillez nous en informer dans les 15 jours. Si votre chien ou chat est micropucé, vous devez aussi prévenir le fournisseur de la micropuce de tout changement dans le même délai.</p>
+
+        <h3>Délai autorisé pour obtenir un permis</h3>
+        <p>Le permis est obligatoire même si le chien ou le chat ne sort pas de la maison. Il doit être obtenu avant que l’animal ait l’âge de 3 mois ou dans les 15 jours suivant son acquisition. Le délai le plus long s’applique.</p>
+        <p>Si votre animal met bas, les chiots ou les chatons peuvent être gardés pendant une période maximale de 3 mois sans permis. Après cette période, chaque animal doit avoir un permis valide.</p>
+      </div>
+      
+      <div class="section-inner section-inner-md">
+        <h2>Règlements</h2>
+        <ul>
+          <li><a href="test.pdf">Règlement sur l’encadrement des animaux domestiques</a></li>
+        </ul>
+      </div>
+      {{/ default-content}}
+    </article>
+  </div>
+
+  {{# cards-tarif}}
+  <section class="page-section {{ regionAfterClasses }} bg-gray-sky">
+    <div class="container">
+      <div class="row">
+        <div class="col-12 text-center">
+          <h2 class="section-heading">Tarifs</h2>
+        </div>
+      </div>
+      <div class="row cards">
+        {{# cards.card-item }}
+        <div class="{{ cards.bsgrid-classes }}">
+          {{> components-card-item-tarif }}
+        </div>
+        {{/ cards.card-item }}
+      </div>
+    </div>
+  </section>
+  {{/ cards-tarif}}
+
+  {{# cards-suggested-content}}
+  <section class="page-section {{ regionAfterClasses }} bg-gray-sky">
+    <div class="container">
+      <div class="row">
+        <div class="col-12 text-center">
+          <h2 class="section-heading">Plus d'information</h2>
+        </div>
+      </div>
+      <div class="row cards">
+        {{# cards.card-item }}
+        <div class="{{ cards.bsgrid-classes }}">
+          {{> components-card-item}}
+        </div>
+        {{/ cards.card-item }}
+      </div>
+    </div>
+  </section>
+  {{/ cards-suggested-content}}
+
+  {{# hasFeedbackForm}}
+  {{> patterns-feedback-form}}
+  {{/ hasFeedbackForm }}
+</main>
+
+{{> patterns-footer-portal }}

@@ -1,0 +1,150 @@
+{
+  "text-elements": {
+    "headings":{
+      "display":{
+        "content": "Template instance ou commission"
+      }
+    }
+  },
+  "has-header-meta": true,
+  "has-publication-date": true,
+  "dateTime": {
+    "dateTimeText": "23 septembre 2018",
+    "dateTimeFormat": "2018-09-23"
+  },
+  "has-hub-link": false,
+  "has-lead-text": true,
+  "leadContainerClasses": "",
+  "has-nav-anchors": true,
+  "nav": {
+    "is-sticky": true,
+    "navItem": [
+      {
+        "class": "nav-top",
+        "url": "#navTop",
+        "title": "Haut de page"
+      },
+      {
+        "class": false,
+        "url": "#members",
+        "title": "Membres"
+      },
+      {
+        "class": false,
+        "url": "#webdiffusion",
+        "title": "Webdiffusions"
+      },
+      {
+        "class": false,
+        "url": "#informations",
+        "title": "Plus d'information"
+      }
+    ]
+  },
+  "content": 
+    "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed et elementum sem. Maecenas nec ipsum eget risus dignissim luctus. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas.</p><p>Maecenas ipsum libero, consequat eget mollis id, fermentum et justo. Cras tristique ut urna vel auctor. Quisque a varius dui. Donec interdum tempor ipsum ut iaculis. In sit amet nunc pellentesque, semper turpis sit amet, congue nunc. Donec a rutrum ligula.</p><p>Mauris feugiat ex vel elit finibus, vel convallis sem ultrices. Aliquam eu magna eu purus consequat auctor.</p>",
+  "has-sb-seance": true,
+  "sidebarTitle": "Prochaine séance",
+  "featured-section": {
+    "featuredContentID": "webdiffusion",
+    "featuredContentBgImage": "background-image: url(https://picsum.photos/id/977/3888/2592)",
+    "featuredContentTitle": "Regarder le conseil en direct",
+    "featuredContentText": "Dans un esprit de plus grande transparence le conseil municipal est diffusé en direct sur Internet, ainsi qu'en différé.",
+    "featuredContentButton": {
+      "buttonText": "Visionner"
+    }
+  },
+  "cards-membres": {
+    "button-load-more": false,
+    "cards": {
+      "section-classes": "",
+      "classes": false,
+      "bsgrid-classes": "col-12 col-md-6",
+      "card-item": [
+        {
+          "classes": "card-large card-row-layout card-member",
+          "url": "#",
+          "card-title": "Prénom Nom",
+          "card-subtitle": "Fonction au sein du conseil",
+          "card-text": false,
+          "card-media": {
+            "icon": false,
+            "img" : {
+              "classes": "rounded-circle",
+              "url" : "https://picsum.photos/id/669/480",
+              "alt" : "Prénom Nom img alt."
+            }
+          },
+          "footer" : false
+        },
+        {
+          "classes": "card-large card-row-layout card-member",
+          "url": "#",
+          "card-title": "Prénom Nom",
+          "card-subtitle": "Fonction au sein du conseil",
+          "card-text": false,
+          "card-media": {
+            "icon": false,
+            "img" : {
+              "classes": "rounded-circle",
+              "url" : "https://picsum.photos/id/669/480",
+              "alt" : "Prénom Nom img alt."
+            }
+          },
+          "footer" : false
+        },
+        {
+          "classes": "card-large card-row-layout card-member",
+          "url": "#",
+          "card-title": "Prénom Nom",
+          "card-subtitle": "Fonction au sein du conseil",
+          "card-text": false,
+          "card-media": {
+            "icon": false,
+            "img" : {
+              "classes": "rounded-circle",
+              "url" : "https://picsum.photos/id/669/480",
+              "alt" : "Prénom Nom img alt."
+            }
+          },
+          "footer" : false
+        },
+        {
+          "classes": "card-large card-row-layout card-member",
+          "url": "#",
+          "card-title": "Prénom Nom",
+          "card-subtitle": "Fonction au sein du conseil",
+          "card-text": false,
+          "card-media": {
+            "icon": false,
+            "img" : {
+              "classes": "rounded-circle",
+              "url" : "https://picsum.photos/id/669/480",
+              "alt" : "Prénom Nom img alt."
+            }
+          },
+          "footer" : false
+        }
+      ]
+    }
+  },
+  "informations": {
+    "cards": {
+      "section-classes": "bg-neutral-underground-1",
+      "classes": false,
+      "bsgrid-classes": "col-12 col-md-6 col-lg-4",
+      "card-item" : [
+        {
+          "classes" : "card-link",
+          "url" : "#",
+          "card-title" : "Card #1 link title",
+          "card-text" : false,
+          "card-media" : false,
+          "footer" : {
+            "outside-body": true
+          }
+        }
+      ]
+    }
+  }
+}

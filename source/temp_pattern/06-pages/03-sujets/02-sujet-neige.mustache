@@ -1,0 +1,86 @@
+{{> styles-link-skip-to-main-content }}
+{{> patterns-header-portal }}
+
+<main class="main-content {{ pageClasses }}" id="main-content" aria-label="Main Content">
+
+  {{> patterns-content-header }}
+
+  <!-- Teaser -->
+  {{# has-lead-text }}
+  {{> components-lead }}
+  {{/ has-lead-text }}
+
+  <div class="region-content {{ regionContentClasses }}">
+    <article class="section-content-fluid">
+      <div class="section-inner section-inner-md">
+        <h2>Les opérations de déneigement en cours</h2>
+        <p>Si vous souhaitez en savoir davantage sur les opérations de déneigement en cours, vous pouvez consulter la <a href="http://ville.montreal.qc.ca/deneigement/carte">carte du déneigement</a> 
+        ou télécharger l’application INFO-Neige MTL :</p>
+        <ul>
+          <li>Télécharger sur l'<a href="https://itunes.apple.com/ca/app/info-neige-mtl/id935347695?mt=8">App Store</a></li>
+          <li>Télécharger sur <a href="https://play.google.com/store/apps/details?id=com.heritagesoftware.infoneige">Google Play</a></li>
+        </ul>
+        <h2>Faciliter vos déplacements l’hiver</h2>
+        <p>Quelques bonnes pratiques peuvent faire toute une différence dans vos déplacements et les opérations de déneigement :</p>
+        <ul>
+          <li>Éviter de stationner le véhicule en angle</li>
+          <li>Dans la rue, stationner la voiture à 30 cm du trottoir</li>
+          <li>Empruntez davantage les artères principales déblayées</li>
+          <li>Prévoyez plus de temps pour vous rendre à destination</li>
+          <li>Gardez une distance raisonnable entre votre auto et le véhicule que vous suivez</li>
+          <li>Respectez la priorité aux véhicules affectés au déneigement</li>
+          <li>Utilisez le transport en commun ou faites du covoiturage</li>
+          <li>Rabattre votre rétroviseur</li>
+        </ul>
+        <h2>Votre véhicule a été remorqué ?</h2>
+        <p>Si vous cherchez votre auto après les opérations de déneigement, consultez le service <a href="#">Info-remorquage</a> pour la retrouver.</p>
+        <p>Saviez-vous qu’à chaque fois qu'il y a remorquage d'un véhicule, l’opération de chargement de la neige est retardée de 30 minutes? En stationnant votre auto au bon endroit, 
+        en respect de la signalisation du déneigement en vigueur, vous contribuez à l’efficacité des opérations de déneigement.</p>
+      </div>
+    </article>
+  </div>
+
+  {{# cards-tarif}}
+  <section class="page-section {{ regionAfterClasses }} bg-gray-sky">
+    <div class="container">
+      <div class="row">
+        <div class="col-12 text-center">
+          <h2 class="section-heading">Tarifs</h2>
+        </div>
+      </div>
+      <div class="row cards">
+        {{# cards.card-item }}
+        <div class="{{ cards.bsgrid-classes }}">
+          {{> components-card-item-tarif }}
+        </div>
+        {{/ cards.card-item }}
+      </div>
+    </div>
+  </section>
+  {{/ cards-tarif}}
+
+  {{# cards-suggested-content}}
+  <section class="page-section {{ regionAfterClasses }} bg-gray-sky">
+    <div class="container">
+      <div class="row">
+        <div class="col-12 text-center">
+          <h2 class="section-heading">Plus d'information</h2>
+        </div>
+      </div>
+      <div class="row cards">
+        {{# cards.card-item }}
+        <div class="{{ cards.bsgrid-classes }}">
+          {{> components-card-item}}
+        </div>
+        {{/ cards.card-item }}
+      </div>
+    </div>
+  </section>
+  {{/ cards-suggested-content}}
+
+  {{# hasFeedbackForm}}
+  {{> patterns-feedback-form}}
+  {{/ hasFeedbackForm }}
+</main>
+
+{{> patterns-footer-portal }}

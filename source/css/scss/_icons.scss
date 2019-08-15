@@ -1,0 +1,136 @@
+
+// Import variables for icons svg in css
+@import "icons-utility";
+@import "icons-editorial";
+
+svg[role=icon] {
+  fill: $neutral-tertiary;
+  stroke: $neutral-tertiary;
+  stroke-width: 0;
+  height: $icon-md;
+  width: $icon-md;
+}
+
+.icon {
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+  display: flex;
+  font-style: normal;
+  font-variant: normal;
+  text-rendering: auto;
+  line-height: $line-height-xs;
+  &:before {
+    content: '';
+    display: inline-block;
+    -webkit-mask-size: cover;
+    mask-size: cover;
+    background-color: $neutral-tertiary;
+  }
+}
+
+.link-has-icon {
+  display: inline-flex;
+  border: none;
+  line-height: $line-height-md;
+  .icon {
+    @include icon-color($action);
+    padding-right: .25rem;
+  }
+  @include hover-focus {
+    border: none;
+    background-color: transparent;
+    .icon {
+      background-color: $highlight-light;
+    }
+    .link-icon-label {
+      background-color: $highlight-light;
+      display: inline;
+      border-bottom: 1px solid $action;
+    }
+  }
+
+  &.icon-right {
+    .icon {
+      padding-right: 0;
+      padding-left: .25rem;
+    }
+  }
+
+  &.icon-left {
+    .icon {
+      padding-left: 0;
+      padding-right: .25rem;
+    }
+  }
+
+  &.link-sm {
+    @include font-size($font-size-sm);
+      line-height: $line-height-sm;
+    .icon {
+      @extend .icon-sm;
+    }
+  }
+}
+
+@each $label, $map in $icons-size {
+  $size: map-get($map, size);
+  .icon-#{$label} {
+    width: $size !important;
+    height: $size !important;
+    &:before {
+      width: $size !important;
+      height: $size !important;
+    }
+  }
+}
+
+@each $color, $value in $theme-colors {
+  .icon-color-#{$color} {
+    fill:$value !important;
+    &:before {
+      background-color:$value !important;
+    }
+  }
+}
+
+@each $label, $map in $dialog-colors {
+  $color-dark: map-get($map, dark);
+  .icon-color-#{$label} {
+    fill: $color-dark !important;
+    &:before {
+      background-color: $color-dark !important;
+    }
+  }
+}
+
+@each $color, $value in $grays {
+  .icon-color-gray-#{$color} {
+    fill: $value !important;
+    &:before {
+      background-color: $value !important;
+    }
+  }
+}
+
+.icon-color-white,
+.icon-color-light {
+  fill: $white !important;
+  &:before {
+    background-color: $white !important;
+  }
+}
+
+.icon-color-primary-lighter {
+  fill: $primary-lighter !important;
+  &:before {
+    background-color: $primary-lighter !important;
+  }
+}
+
+.icon-color-primary-darker {
+  fill: $primary-darker !important;
+  &:before {
+    background-color: $primary-darker !important;
+  }
+}
+

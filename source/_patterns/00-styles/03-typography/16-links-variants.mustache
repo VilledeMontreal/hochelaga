@@ -1,0 +1,26 @@
+
+<ul class="list-inline">
+  <li class="list-inline-item"><a href="#">Link</a></li>
+  <li class="list-inline-item"><a href="#" class="text-danger">Danger link</a></li>
+  <li class="list-inline-item"><a href="#" class="text-success">Succes link</a></li>
+  <li class="list-inline-item"><a href="#" class="text-warning">Warning link</a></li>
+  <li class="list-inline-item"><a href="#" class="text-info">Info link</a></li>
+  <li class="list-inline-item"><div class="p-1 mb-1 bg-dark"><a href="#" class="text-white">White link</a></div></li>
+  <li class="list-inline-item"><a href="#" class="text-muted">Muted link</a></li>
+</ul>
+
+<h4 class="pl-pattern-subtitle">Links with icon</h4>
+<div>
+{{> styles-link-icon("icon-right": false, "link-icon-label": "Link with icon (left)", icon: "icon-arrow-left")}}
+</div>
+<div>
+{{> styles-link-icon("icon-right": true, "link-icon-label": "Link with icon (right)", icon: "icon-arrow-right")}}
+</div>
+<br/>
+<h4 class="pl-pattern-subtitle">Small</h4>
+<div>
+{{> styles-link-icon("linkIconSize": "link-sm", "icon-right": false, "link-icon-label": "Link with icon (left)", icon: "icon-arrow-left")}}
+</div>
+<div>
+{{> styles-link-icon("linkIconSize": "link-sm", "icon-right": true, "link-icon-label": "Link with icon (right)", icon: "icon-arrow-right")}}
+</div>

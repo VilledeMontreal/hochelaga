@@ -13,8 +13,7 @@ ARG ENV=unknown
 ARG GIT_COMMIT=unknown
 
 LABEL GIT_COMMIT=${GIT_COMMIT}
-
-MAINTAINER VdMtl
+LABEL MAINTAINER=VdMtl
 
 EXPOSE 3200
 
@@ -65,7 +64,8 @@ VOLUME /usr/src/app/source
 
 RUN ls -al \
   && npm install \
-  && composer install
+  && composer install \
+  && npm rebuild node-sass
 
 #	Serve the project, npm start would work just as well
 

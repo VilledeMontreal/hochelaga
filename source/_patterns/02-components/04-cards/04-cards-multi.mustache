@@ -1,0 +1,10 @@
+
+<div class="container">
+  <div class="row cards {{ cards.classes }}">
+  {{# cards.card-item }}
+    <div class="{{ cards.bsgrid-classes }}">
+      {{> components-card-item-multicontent }}
+    </div>
+  {{/ cards.card-item }}
+  </div>
+</div>

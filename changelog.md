@@ -4,6 +4,32 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](http://keepachangelog.com/en/1.0.0/)
 and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.html).
 
+## [4.0.0] - unreleased
+
+This is the first release of BAO implementing the new design system. Many things have changed. Validate all your components and template when upgrading from previous version.
+
+This version contains a bao-legacy folder which represents the latest v3.3.3 release.
+
+## Changed
+- Pattern lab reorganisation: atoms > styles, molecules > components, organisms > patterns, Templates division between citoyens and employees.
+- Vdm font icon is ditch in favor of new svgs icons. There is no direct path from the old font to the new icons. See with your designer how to migrate.
+- Nunito is ditch in favor of Open Sans. Font-size and line-height have been updated consequently.
+- Buttons makeover.
+- Cards cleanup. Many things that used to be cards are now lists.
+- List-group and list-item have changed.
+- Messaging now use svg icons.
+- top-banner is now message-bar.
+- Brand new main-navigation and footer.
+- Custom spinner ditch off in favor of default bootstrap spinner.
+- Many things have been removed from patterns.
+- First draft only shows demarches and sujets templates. All others templates are deprecated and needs to be redesigned/updated.
+
+## Deprecated
+- vdm-font-icon.
+- All old templates.
+- Lots of molecules and organisms.
+
+
 ## [3.3.3] - 2019-08-05
 
 ## Fixed
@@ -503,7 +529,7 @@ remove index from the name. Which makes it possible to update font-icon without 
 ### Removed
 - Removed vdm prefix for buttons classes
 
-
+[3.3.3]: https://bitbucket.org/villemontreal/boite-outils-web/src/3.3.3/
 [3.3.2]: https://bitbucket.org/villemontreal/boite-outils-web/src/3.3.2/
 [3.3.1]: https://bitbucket.org/villemontreal/boite-outils-web/src/3.3.1/
 [3.3.0]: https://bitbucket.org/villemontreal/boite-outils-web/src/3.3.0/

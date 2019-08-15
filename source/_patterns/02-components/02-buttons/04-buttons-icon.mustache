@@ -1,0 +1,38 @@
+<h4 class="pl-pattern-subtitle">Sizes</h4>
+<div class="pl-button">
+  {{> components-button-icon(buttonClass: "btn-primary btn-lg", buttonText: "Large button", icon-name: "icon-help", buttonIcon: true)}}
+  {{> components-button-icon(buttonClass: "btn-primary ", buttonText: "Default button", icon-name: "icon-help", buttonIcon: true)}}
+  {{> components-button-icon(buttonClass: "btn-primary btn-sm", buttonText: "Small button", icon-name: "icon-help", buttonIcon: true)}}
+</div>
+
+<h4 class="pl-pattern-subtitle">Colors</h4>
+<div class="pl-button">
+  {{> components-button-icon(buttonClass: "btn-primary", buttonText: "Primary button", icon-name: "icon-help", buttonIcon: true)}}
+  {{> components-button-icon(buttonClass: "btn-promo", buttonText: "Promo button", icon-name: "icon-help", buttonIcon: true)}}
+  {{> components-button-icon(buttonClass: "btn-secondary", buttonText: "Secondary button", icon-name: "icon-help", buttonIcon: true)}}
+  <div class="bg-gray-900 ">{{> components-button-icon(buttonClass: "btn-secondary-reverse btn-icon", buttonText: "Secondary-reverse button", icon-name: "icon-help", buttonIcon: true)}}</div>
+  {{> components-button-icon(buttonClass: "btn-link", buttonText: "Tertiary button", icon-name: "icon-help", buttonIcon: true)}}
+</div>
+
+<h4 class="pl-pattern-subtitle">Shapes</h4>
+<div class="pl-button">
+  {{> components-button-icon(buttonClass: "btn-primary", buttonText: "Default round button", icon-name: "icon-help", buttonIcon: true)}}
+  {{> components-button-icon(buttonClass: "btn-primary btn-squared", buttonText: "Square button", icon-name: "icon-help", buttonIcon: true)}}
+</div>
+
+<h4 class="pl-pattern-subtitle">States</h4>
+<div class="pl-button">
+  {{> components-button-icon(buttonClass: "btn-primary", buttonText: "Disabled state", buttonState: "disabled", icon-name: "icon-help", buttonIcon: true)}}
+  <button type="button" class="btn btn-primary btn-squared" disabled>
+    {{> components-spinner }}
+    Loading state...
+  </button>
+</div>
+
+<h4 class="pl-pattern-subtitle">Collapse</h4>
+<div class="pl-button">
+  <div class="collapse-content collapse" id="collapseExampleBtn">
+    <p>Etiam eget purus in justo venenatis consectetur vel nec magna. Fusce non neque nunc. Etiam at aliquet lectus, eu dignissim sapien. Suspendisse non elit id lectus ultricies suscipit. Duis ornare, enim quis imperdiet vestibulum, quam urna efficitur tellus, vel euismod urna lacus quis lectus. Aenean eros risus, interdum eu vehicula vitae, sagittis vel nisi. Fusce mollis orci nisl, id blandit lacus porttitor ut. Mauris nec congue odio. Nunc lacus sem, rutrum et est tempor, viverra posuere augue.</p>
+  </div>
+  <button class="btn btn-link btn-squared btn-collapse collapsed" type="button" data-toggle="collapse" data-target="#collapseExampleBtn" aria-expanded="false" aria-controls="collapseExampleBtn">Voir plus</button>
+</div>

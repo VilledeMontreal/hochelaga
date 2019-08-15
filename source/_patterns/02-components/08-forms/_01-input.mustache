@@ -1,0 +1,15 @@
+<div class="form-group {{ inputTextFgClasses }}">
+  {{^ inputHideLabel }}
+  <label for="{{ formAttributes.input.type-text.id }}">{{ formAttributes.input.type-text.label }} <span>Facultatif</span></label>
+  {{/ inputHideLabel }}
+  <input type="text" class="form-control" id="{{ formAttributes.input.type-text.id }}" placeholder="{{ formAttributes.input.placeholder }}">
+   <small id="textRequiredHelpBlock" class="form-text">
+    Help text goes here.
+  </small>
+  <div class="invalid-feedback d-block">
+    Error text goes here.
+ </div>
+  {{# inputTextHasIcon }}
+    {{> styles-fonticon-item }}
+  {{/ inputTextHasIcon }}
+</div>

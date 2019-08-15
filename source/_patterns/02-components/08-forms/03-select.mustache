@@ -1,0 +1,50 @@
+<h4 class="pl-pattern-subtitle">Size</h4>
+
+<ul class="row list-unstyled">
+  <li class="col-xs-6 col-md-4">
+    <div class="form-group-sm">
+		<div class="form-group {{ selectWrapperClasses }}">
+		  {{# formAttributes.select.label }}
+		  <label for="{{ formAttributes.select.id }}">{{ formAttributes.select.label }}</label>
+		  {{/ formAttributes.select.label }}
+		  <select class="form-control {{ formAttributes.select.formControlClass }}" name="{{ formAttributes.select.id }}" id="{{ formAttributes.select.id }}"> 
+		    <option value="">{{ formAttributes.select.defaultOptionLabel  }}</option> 
+		    {{# formAttributes.select.options }}
+		      {{> components-option }}
+		    {{/ formAttributes.select.options }}
+		  </select>
+		</div>
+	</div>
+  </li>
+  <li class="col-xs-6 col-md-4">
+    <div class="form-group">
+		<div class="form-group {{ selectWrapperClasses }}">
+		  {{# formAttributes.select.label }}
+		  <label for="{{ formAttributes.select.id }}">{{ formAttributes.select.label }}</label>
+		  {{/ formAttributes.select.label }}
+		  <select class="form-control {{ formAttributes.select.formControlClass }}" name="{{ formAttributes.select.id }}" id="{{ formAttributes.select.id }}"> 
+		    <option value="">{{ formAttributes.select.defaultOptionLabel  }}</option> 
+		    {{# formAttributes.select.options }}
+		      {{> components-option }}
+		    {{/ formAttributes.select.options }}
+		  </select>
+		</div>
+	</div>
+  </li>
+  <li class="col-xs-6 col-md-4">
+    <div class="form-group-lg">
+		<div class="form-group {{ selectWrapperClasses }}">
+		  {{# formAttributes.select.label }}
+		  <label for="{{ formAttributes.select.id }}">{{ formAttributes.select.label }}</label>
+		  {{/ formAttributes.select.label }}
+		  <select class="form-control {{ formAttributes.select.formControlClass }}" name="{{ formAttributes.select.id }}" id="{{ formAttributes.select.id }}"> 
+		    <option value="">{{ formAttributes.select.defaultOptionLabel  }}</option> 
+		    {{# formAttributes.select.options }}
+		      {{> components-option }}
+		    {{/ formAttributes.select.options }}
+		  </select>
+		</div>
+	</div>
+  </li>
+</ul>
+

@@ -1,0 +1,365 @@
+{
+  "navbarPosition": "fixed-top",
+  "pageClasses": "mt-7 mt-md-9",
+  "header-back-link": {
+    "link-icon": {
+      "url": "#",
+      "icon": "icon-arrow-left", 
+      "link-icon-label": "Touts les sujets"
+    }
+  },
+  "heading": "Titre du sujet d'une longueur de 80 caractères maximum",
+  "has-badges": {
+    "badges": [
+      {
+        "badge": "Libellé",
+        "badgeClass": "badge-secondary",
+        "badge-sr-text": "",
+        "badgeUrl": "#"
+      },
+      {
+        "badge": "Libellé",
+        "badgeClass": "badge-secondary",
+        "badge-sr-text": "",
+        "badgeUrl": "#"
+      },
+      {
+        "badge": "Libellé",
+        "badgeClass": "badge-secondary",
+        "badge-sr-text": "",
+        "badgeUrl": "#"
+      }
+    ]
+  },
+  "publicationDate": {
+    "dateTimeText": "1 août 2019",
+    "dateTimeFormat": "2019-08-01"
+  },
+  "lead": "<p>Amorce - Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi condimentum sollicitudin erat, quis convallis risus. Nullam posuere odio ligula, hendrerit suscipit ligula laoreet. Curabitur eleifend nulla purus, ut pharet urna ef id. Cras lacinia nisi id  (recommandé 300 caractères maximum).</p>",
+  "module-content": {
+    "module-cta": {
+      "buttonAsLink": true,
+      "buttonClass": "btn-primary btn-lg",
+      "buttonUrl": "#",
+      "buttonText": "Appel à l'action"
+    },
+    "module-blockquote": {
+      "blockquote-classes": "blockquote-emphasis",
+      "blockquote-footer": false
+    },
+    "module-message": {
+      "alertClass": "alert-warning alert-with-icon",
+      "alertTitle": "Titre du message (optionnel)",
+      "alertText": "Description du message. Selon la nature du message, l'icone et la couleur de fond diffèrent : gris = neutre, bleu = informatif, jaune = alerte, rouge = négatif et vert = positif.",
+      "alertIcon": {
+        "icon-name": "icon-warning"
+      }
+    },
+    "module-text": true,
+    "module-image-album": false,
+    "module-image-single": {
+      "media": {
+        "src": "https://picsum.photos/id/1024/768/432",
+        "alt": "A generic placeholder image alt text.",
+        "copyright": "Un très long copyright pour voir comment ça se comporte sur plusieurs lignes!"
+      }
+    },
+    "module-video": true,
+    "module-collapse": {
+      "collapsibleItem": [
+        {
+          "title": "Collapsible item #1",
+          "content": "Collapsible content",
+          "block-id": "sujet-template-item-1",
+          "heading-id": "sujet-template-heading-1",
+          "collapsible-default-content": "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>"
+        },
+        {
+          "title": "Collapsible item #2",
+          "content": "Collapsible content",
+          "block-id": "sujet-template-item-2",
+          "heading-id": "sujet-template-heading-2",
+          "collapsible-default-content": "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>"
+        },
+        {
+          "title": "Collapsible item #3",
+          "content": "Collapsible content",
+          "block-id": "sujet-template-item-3",
+          "heading-id": "sujet-template-heading-3",
+          "collapsible-default-content": "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>"
+        }
+      ]
+    },
+    "module-comparatif-colonne": {
+      "colonnes": true,
+      "comparatif": [
+        {
+          "title": "Titre de la section",
+          "text": "<p>Corps de texte simple - Pas de liens. Permet de structure l'information en regroupant visuellement sur deux colonnes des contenus pouvant être comparés.</p><ul><li>Liste à puce</li><li>Liste à puce</li><li>Liste à puce</li></ul>"
+        },
+        {
+          "title": "Titre de la section",
+          "text": "<p>Exemples  : Quoi faire vs Quoi pas faire ou Propriétaire vs Locataire.</p><ul><li>Liste à puce</li><li>Liste à puce</li><li>Liste à puce</li></ul>"
+        }
+      ]
+    },
+    "module-comparatif-rangee": {
+      "comparatif": [
+        {
+          "title": "Titre de la section",
+          "text": "<p>Corps de texte - Permet de structure l'information en regroupant visuellement sur plusieurs rangées des contenus pouvant être comparés. Exemple : Avant, Pendant et Après</p>"
+        },
+        {
+          "title": "Titre de la section",
+          "text": "<ul><li>Liste à puce</li><li>Liste à puce</li><li>Liste à puce</li></ul>"
+        },
+        {
+          "title": "Titre de la section",
+          "text": "<ul><li>Liste à puce</li><li>Liste à puce</li><li>Liste à puce</li></ul>"
+        }
+      ]
+    },
+    "module-media-content": {
+      "wrapperTitle": "Titre de la section - Image et tete associés",
+      "img": {
+        "src": "https://picsum.photos/id/1058/768/432",
+        "alt": "Alt - Lorem ipsum dolor site."
+      }
+    },
+    "module-table": {
+      "table": {
+        "tableWrapper": true,
+        "caption": "",
+        "tableClass" : "table-lg",
+        "thead": {
+          "theadClass": "",
+          "th": [
+            { "title": "#" },
+            { "title": "Libellé 1" },
+            { "title": "Libellé 2" }
+          ]
+        },
+        "tbody": {
+          "tr": [
+            {
+              "th": "1",
+              "td": [
+                { "text": "Libellé" },
+                { "text": "Libellé" }
+              ]
+            },
+            {
+              "th": "2",
+              "td": [
+                { "text": "Libellé" },
+                { "text": "Libellé" }
+              ]
+            },
+            {
+              "th": "3",
+              "td": [
+                { "text": "Libellé" },
+                { "text": "Libellé" }
+              ]
+            }
+          ]
+        }
+      }
+    },
+    "module-list-reference": {
+      "listGroupClass": "list-group-lg",
+      "listGroup": [
+        {
+          "listIconUtility": "icon-dot-bullet",
+          "text": "Titre du contenu",
+          "class": false
+        },
+        {
+          "listIconUtility": "icon-dot-bullet",
+          "text": "Titre du contenu",
+          "class": false
+        },
+        {
+          "listIconUtility": "icon-dot-bullet",
+          "text": "Titre du contenu",
+          "class": false
+        }
+      ]
+    },
+    "module-documents": {
+      "listGroupClass": "list-group-lg",
+      "listGroup": [
+        {
+          "listIconUtility": "icon-file-pdf",
+          "text": "Titre du document [PDF - 2 Mo]",
+          "class": "document-pdf"
+        },
+        {
+          "listIconUtility": "icon-file-pdf",
+          "text": "Titre du document [PDF - 2 Mo]",
+          "class": "document-pdf"
+        },
+        {
+          "listIconUtility": "icon-file",
+          "text": "Titre du document",
+          "class": "document"
+        }
+      ]
+    }
+  },
+  "sujetContent": {
+    "sujetArronDemarches": {
+      "listGroup": [
+        {
+          "text": "Titre de la démarche",
+          "class": false
+        },
+        {
+          "text": "Titre de la démarche",
+          "class": false
+        },
+        {
+          "text": "Titre de la démarche",
+          "class": false
+        }
+      ]
+    },
+    "sujetArronServices": {
+      "listGroup": [
+        {
+          "text": "Titre du service",
+          "class": false
+        },
+        {
+          "text": "Titre du service",
+          "class": false
+        },
+        {
+          "text": "Titre du service",
+          "class": false
+        }
+      ]
+    },
+    "sujetArronActivites": {
+      "listGroup": [
+        {
+          "text": "Titre de l'activité",
+          "class": false
+        },
+        {
+          "text": "Titre de l'activité",
+          "class": false
+        },
+        {
+          "text": "Titre de l'activité",
+          "class": false
+        }
+      ]
+    },
+    "sujetArronProgrammes": {
+      "listGroup": [
+        {
+          "text": "Titre du programme",
+          "class": false
+        },
+        {
+          "text": "Titre du programme",
+          "class": false
+        },
+        {
+          "text": "Titre du programme",
+          "class": false
+        }
+      ]
+    },
+    "sujetArronArticles": {
+      "listGroup": [
+        {
+          "text": "Titre de l'article",
+          "class": false
+        },
+        {
+          "text": "Titre de l'article",
+          "class": false
+        },
+        {
+          "text": "Titre de l'article",
+          "class": false
+        }
+      ]
+    },
+    "sujetArronPlans": {
+      "listGroup": [
+        {
+          "text": "Titre du plan",
+          "class": false
+        },
+        {
+          "text": "Titre du plan",
+          "class": false
+        },
+        {
+          "text": "Titre du plan",
+          "class": false
+        }
+      ]
+    },
+    "sujetArronProjets": {
+      "listGroup": [
+        {
+          "text": "Titre du projet",
+          "class": false
+        },
+        {
+          "text": "Titre du projet",
+          "class": false
+        },
+        {
+          "text": "Titre du projet",
+          "class": false
+        }
+      ]
+    }
+  },
+  "sidebarRight": true,
+  "sidebarClasses": false,
+  "sb-classes": "",
+  "sb-block-bon-savoir": {
+    "content": "<p>Corps de texte simple - Pas de liens. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi condimentum sollicitudin erat, quis convallis risus. Morbi condimentum sollicitudin erat, quis convallis risus.</p>"
+  },
+  "sb-block-tc-lies": {
+    "listGroupClass": false,
+    "listGroup": [
+      {
+        "listIconEditorial": "icon-affaires-economie",
+        "text": "Titre du sujet sur plusieurs lignes si nécessaire",
+        "class": false
+      },
+      {
+        "listIconEditorial": "icon-animaux",
+        "text": "Titre du sujet sur plusieurs lignes si nécessaire",
+        "class": false
+      },
+      {
+        "listIconEditorial": "icon-maison-logement",
+        "text": "Limite de 5 sujets",
+        "class": false
+      },
+      {
+        "listIconEditorial": "icon-environnement",
+        "text": "Titre du sujet sur plusieurs lignes si nécessaire",
+        "class": false
+      },
+      {
+        "listIconEditorial": "icon-environnement",
+        "text": "Titre du sujet sur plusieurs lignes si nécessaire",
+        "class": false
+      }
+    ]
+  },
+  "hasSelecteurArrondissement": true,
+  "wrapperStickyHeader": true,
+  "selectedArrondissement": {
+    "arrondissement": "Nom-de-l'Arrondissement"
+  }
+}

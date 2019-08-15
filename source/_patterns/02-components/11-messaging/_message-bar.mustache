@@ -1,0 +1,13 @@
+<div class="message-bar {{ message-bar.class }}">
+  <div class="message-bar-icon-container">
+    <span class="icon {{ icon-name }}" aria-hidden="true"></span>
+  </div>
+  <div class="message-bar-container">
+    <div class="message-bar-heading">Titre</div>
+    <p>Description du message</p>
+    <a class="message-bar-link" href="#" target="_blank">Lien</a>
+  </div>
+  <button type="button" class="close" data-dismiss="alert" aria-label="Fermer">
+    {{> styles-icon-item("icon-name": "icon-x")}}
+  </button>
+</div>

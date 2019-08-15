@@ -1,0 +1,88 @@
+{{> styles-link-skip-to-main-content }}
+{{> patterns-header-portal }}
+
+<main class="main-content {{ pageClasses }}" id="main-content" aria-label="Main Content">
+
+  {{> patterns-content-header }}
+
+  <!-- Teaser -->
+
+  {{# has-lead-text }}
+  {{> components-lead }}
+  {{/ has-lead-text }}
+
+
+  <div class="region-content {{ regionContentClasses }}">
+    <article class="section-content-fluid">
+      {{# featured-image }}
+      <div class="section-inner section-inner-lg section-inner-media">
+        <div class="media media-image">
+          <img src="{{ imgUrl }}" alt="{{ imgAlt }}" class="img-fluid">
+        </div>
+      </div>
+      {{/ featured-image }}
+
+      <div class="section-inner section-inner-md">
+        <p>Souvent confondu avec le renard roux et certaines races de chiens, le coyote se trouve de plus en plus à l'intérieur et à proximité des zones urbaines d'Amérique du Nord.</p>
+        <p><a href="https://services.montreal.ca/coyotes/">Utiliser le formulaire de signalement de coyotes</a></p>
+        <p>Bien qu'on dénombre peu de cas de morsures graves provenant de ce canidé à grandes pattes, il est important de signaler sa présence sur le territoire pour mieux comprendre sa répartition et intervenir rapidement auprès des individus aux comportements problématiques.</p>
+        <h2>Votre vigilance est essentielle</h2>
+        <p>Depuis février 2018, Montréal a mis sur pied un comité de concertation qui encadre la gestion du coyote urbain. Biologistes, acteurs municipaux et autres partenaires agissent donc ensemble pour favoriser une coexistence harmonieuse entre coyotes et citoyens. Pour intervenir efficacement, les experts de ce comité ont besoin de connaître les endroits fréquentés par ces animaux. C’est pour cette raison que la ligne info-coyotes a été mise en place en avril dernier. Depuis, elle a reçu plus de 500 appels.</p>
+        <p>Bonne nouvelle! Les citoyens peuvent maintenant compter sur un nouvel outil pour signaler la présence de ces visiteurs à quatre pattes. En quelques minutes et quelques clics, ils pourront en effet nous faire part de leurs observations par l'entremise du formulaire de signalement de coyotes. Une façon rapide et efficace de nous aider à mieux contrôler la présence de cet animal intrigant...et de plus en plus présent!</p>
+      </div>
+      <div class="section-inner section-inner-lg section-inner-media">
+        <div class="media media-image">
+          <img src="https://picsum.photos/id/980/1200/600" alt="Test image nouvelle." class="img-fluid">
+        </div>
+      </div>
+      <div class="section-inner section-inner-md">
+        <h3>H3. Un titre de niveau 3</h3>
+        <p>Événement de clôture du festival <a href="http://montrealenlumiere.ca">Montréal en Lumière</a>, la Nuit blanche est un rassemblement unique qui propose une panoplie d'activités pour tous les goûts. Arts de la scène, gastronomie, sites extérieurs gratuits, parcours thématiques... la nuit s'ouvre à vous pour (re)découvrir la ville de façon festive et magique!</p>
+      </div>
+      <div class="section-inner section-inner-lg section-inner-media">
+        <div class="media media-image">
+          <img src="https://picsum.photos/id/650/420/680" alt="Test image portrait." class="img-fluid">
+        </div>
+      </div>
+
+      
+      <div class="section-inner section-inner-md">
+        <h3>H3. Un titre de niveau 3 </h3>
+        <p>Maecenas et ipsum vitae justo gravida convallis nec quis enim. Curabitur tincidunt nibh facilisis libero tincidunt, vitae condimentum massa condimentum. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Vivamus ut tincidunt ante, a rutrum justo. Nunc in hendrerit quam. Fusce luctus nulla sed vestibulum porta. Ut ante tellus, dapibus id nisi id, facilisis placerat neque. Suspendisse eget enim in tellus gravida eleifend. Praesent elementum, turpis vitae fermentum aliquam, tellus libero malesuada ipsum, ac congue purus sapien eget mi. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; In vel tellus vel eros mollis porttitor. Mauris ullamcorper vel est eu accumsan. Curabitur vehicula sapien at nunc tincidunt, sed sodales dui suscipit. Nullam vel lectus quis leo pulvinar facilisis quis id ligula. Pellentesque et diam rhoncus, venenatis mauris ac, varius justo. Aliquam tincidunt nulla non augue dictum finibus.</p>
+        <ul>
+          <li>Item de liste</li>
+          <li>Item de liste</li>
+          <li>Item de liste</li>
+          <li>Item de liste</li>
+        </ul>
+        <p>Duis sit amet dolor lectus. Donec molestie hendrerit magna, non fringilla turpis maximus vel. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras non tellus interdum, vestibulum erat non, vestibulum metus. Vivamus in pulvinar enim. Sed justo tortor, vulputate sed lorem at, interdum aliquet quam. Morbi rhoncus arcu eget tincidunt cursus.</p>
+        {{> styles-table(tableClass:"table-striped")}}
+        <p>Duis sit amet dolor lectus. Donec molestie hendrerit magna, non fringilla turpis maximus vel. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras non tellus interdum, vestibulum erat non, vestibulum metus. Vivamus in pulvinar enim. Sed justo tortor, vulputate sed lorem at, interdum aliquet quam. Morbi rhoncus arcu eget tincidunt cursus.</p>
+      </div>
+      <div class="section-inner section-inner-lg section-inner-media">
+        <div class="media embed-responsive embed-responsive-16by9">
+          <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/MaZSEaJbDcY" allowfullscreen></iframe>
+        </div>
+      </div>
+      <div class="section-inner section-inner-md">
+        <h4>H4. Un titre de niveau 4</h4>
+        <p>Duis sit amet dolor lectus. Donec molestie hendrerit magna, non fringilla turpis maximus vel. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras non tellus interdum, vestibulum erat non, vestibulum metus. Vivamus in pulvinar enim. Sed justo tortor, vulputate sed lorem at, interdum aliquet quam. Morbi rhoncus arcu eget tincidunt cursus.</p>
+        <blockquote class="blockquote">
+          <p>Blommor doftar gott. Flingor med mjölk är inte gott, flingor är bara gott med filmjölk. Hundar är mycket bättre än katter men bästa djuret av alla måste ändå vara valrossar. Rosor är röda violer är blå jag gillar himmelen med moln på. Go och glad kexchoklad. </p>
+          <footer class="blockquote-footer">The Swedish Chef</footer>
+        </blockquote>
+        <p>Nam sed elementum magna. Fusce et malesuada elit. Aliquam semper eget ante quis tristique. Morbi hendrerit vestibulum ante vel fringilla. Etiam et diam et magna placerat posuere sit amet id neque. Etiam a ipsum arcu. Etiam neque ante, convallis vitae imperdiet sed, accumsan sit amet eros. Quisque et iaculis ante, non finibus arcu. Maecenas scelerisque vel purus in interdum. Sed id odio quis felis tempus sagittis nec at orci. Nullam bibendum dictum dolor eget varius.</p>
+        <blockquote class="blockquote">
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a ante.</p>
+        </blockquote>
+      </div>
+    </article>
+
+  </div>
+
+  {{# hasFeedbackForm}}
+  {{> components-feedback-form}}
+  {{/ hasFeedbackForm }}
+</main>
+
+{{> patterns-footer-portal }}

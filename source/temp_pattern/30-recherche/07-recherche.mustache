@@ -1,0 +1,55 @@
+{{> styles-link-skip-to-main-content }}
+{{> patterns-header-portal }}
+
+<main class="main-content {{ pageClasses }}" id="main-content" aria-label="Main Content">
+
+  <header class="content-header {{ contentHeaderClasses }}">
+    <div class="{{ contentHeaderContainerClasses }} pt-4 pb-10">
+      <div class="row justify-content-md-center">
+        <div class="col-12 col-md-8 col-lg-6">
+          <div class="form-group mb-0">
+            <div class="input-group-icon input-group-icon-lg input-group-icon-left">
+              {{> styles-fonticon-item(icon-label: "002-recherche") }}
+              <input type="text" class="form-control form-control-lg form-control-dark" id="text-icon-left" placeholder="Rechercher une information ou un service">
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <section class="page-section">
+    <div class="container">
+      <div class="row">
+
+        <div class="col-12">
+          {{^ list-group-results }}
+          {{> components-empty-search-results }}
+          {{/ list-group-results }}
+          {{# list-group-results }}
+          {{# headings }}
+          <h1 class="list-group-heading">{{ headings.text }}</h1>
+          {{/ headings }}
+
+          {{> components-list-group-hub}}
+
+          {{# hasPagination }}
+          <div class="pagination-wrapper">
+              {{> components-pagination("paginationClass": justify-content-center) }}
+          </div>
+          {{/ hasPagination }}
+
+          {{/ list-group-results }}
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  {{# hasFeedbackForm}}
+  {{> components-feedback-form}}
+  {{/ hasFeedbackForm }}
+</main>
+
+{{> patterns-footer-portal }}
+

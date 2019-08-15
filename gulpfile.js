@@ -4,24 +4,24 @@
 // PLEASE SEE ALSO
 // https://github.com/neoskop/patternlab-php && https://github.com/neoskop/patternlab-php/blob/master/gulpfile.js
 
-var gulp            = require('gulp'),
-    autoprefixer    = require('gulp-autoprefixer'),
-    clean           = require('gulp-clean'),
-    browserSync     = require('browser-sync'),
-    cssmin          = require('gulp-cssmin'),
-    fs              = require("fs"),
-    gulpif          = require('gulp-if'),
-    gutil           = require('gulp-util'),
-    imagemin        = require('gulp-imagemin'),
-    postcss         = require('gulp-postcss'),
-    rename          = require('gulp-rename'),
-    sass            = require('gulp-sass'),
-    shell           = require('gulp-shell'),
-    sourcemaps      = require('gulp-sourcemaps'),
-    tildeImporter   = require('node-sass-tilde-importer'),
-    uglify          = require('gulp-uglify-es').default,
-    config          = require('./build.config.json'),
-    package         = require('./package.json');
+var gulp                = require('gulp'),
+    autoprefixer        = require('gulp-autoprefixer'),
+    clean               = require('gulp-clean'),
+    browserSync         = require('browser-sync'),
+    cssmin              = require('gulp-cssmin'),
+    fs                  = require("fs"),
+    gulpif              = require('gulp-if'),
+    gutil               = require('gulp-util'),
+    imagemin            = require('gulp-imagemin'),
+    postcss             = require('gulp-postcss'),
+    rename              = require('gulp-rename'),
+    sass                = require('gulp-sass'),
+    shell               = require('gulp-shell'),
+    sourcemaps          = require('gulp-sourcemaps'),
+    tildeImporter       = require('node-sass-tilde-importer'),
+    uglify              = require('gulp-uglify-es').default,
+    config              = require('./build.config.json'),
+    package             = require('./package.json');
 
 // Trigger and switches
 var production;
@@ -67,78 +67,6 @@ gulp.task('nodemodulescripts-dist', function () {
       .pipe(gulp.dest(
           config.nodemodulescripts.distribution
       ))
-});
-
-// Font files -- VDM font icons
-// From node_modules to source -- stay up to date with curent versions
-// Thin of piping these files with a rename so the final filename is more significant.
-gulp.task('nodemodulesfonts', function () {
-  return gulp.src(config.nodemodulesfonts.files)
-      .pipe(gulp.dest(
-          config.nodemodulesfonts.dest
-      ))
-      .pipe(browserSync.reload({stream:true}));
-});
-
-
-// VDM font-metadata -- 
-// Load and transform the json file to provide looping data for mustache templates in a new .json file.
-// Provide a sass $icons map variable in a separate .scss file as well.
-
-gulp.task('nodemodulesfontsdata', function() {
-  fs.readFile(config.nodemodulesfontsdata.input, "utf-8", function(err, json) {
-    if (err) {
-      return console.log(err);
-    }
- 
-    var sassdir = config.nodemodulesfontsdata.sass;
-    var source = JSON.parse(json);
-    var count = Object.keys(source).length;
-    var index = 0;
-
-    var pattern = /[0-9][0-9][0-9][-]/i;
-    var output = {
-        'icons': []
-    };
-    var sass = '$vdmicons : (\n';
-
-    for (var key in source) {
-      var label = key
-      var content = `${source[key]}`;
-      
-      // Write the json line
-      output.icons.push(  { 
-          "icon-label"  : label,
-          "icon-content" : content
-        } 
-      );
-      
-      // Write the sass line
-      sass += '\t' + 'vdm-' + label + ' : ' + '"' + content + '"';
-      index ++;
-      var lineEnding = index < count ? ',' + '\n' : '\n';
-      sass += lineEnding;
-    }
-    sass += ");"  // Close the sass $newicons map variable
-
-    // Write the json icons file
-    fs.writeFile(config.nodemodulesfontsdata.json, JSON.stringify(output, null, 4), (err) => {
-        if (err) {
-            console.error(err);
-            return;
-        };
-        console.log("The json icons file has been created");
-    });
-
-    // Write the Sass icons file
-    fs.writeFile(sassdir, sass, (err) => {
-      if (err) {
-          console.error(err);
-          return;
-      };
-      console.log("The sass icons file has been created");
-    });
-  });// read file
 });
 
 // Scripts from source to public
@@ -187,24 +115,6 @@ gulp.task('photoswipe', function () {
     ))
 });
 
-// Fonts, copy
-gulp.task('fonts', function () {
-    return gulp.src(config.fonts.files)
-      .pipe(gulp.dest(
-        config.fonts.dest
-      ))
-      .pipe(browserSync.reload({stream:true}));
-});
-
-// Glyphs, copy
-gulp.task('glyphs', function () {
-  return gulp.src(config.glyphs.files)
-    .pipe(gulp.dest(
-      config.glyphs.dest
-    ))
-    .pipe(browserSync.reload({stream:true}));
-});
-
 // Images copy and minimize
 gulp.task('images', function () {
     return gulp.src(config.images.files)
@@ -229,6 +139,17 @@ gulp.task('scss-dist', function () {
   .pipe(gulp.dest(
     config.scss.distribution
   ))
+});
+
+//Copy icons to scss folder
+gulp.task('icon-utility', function() {
+  return gulp.src('source/vdm-icon-system/icons/icon-utility/_icons-utility.scss')
+  .pipe(gulp.dest('source/css/scss/'))
+});
+
+gulp.task('icon-editorial', function() {
+  return gulp.src('source/vdm-icon-system/icons/icon-editorial/_icons-editorial.scss')
+  .pipe(gulp.dest('source/css/scss/'))
 });
 
 
@@ -327,7 +248,7 @@ gulp.task('browsersync', function() {
     server: {
       baseDir: config.root,
       routes: {
-        "/boite-outils": config.root
+        "/boite-outils4": config.root
       }
     },
     ghostMode: false,
@@ -369,12 +290,6 @@ gulp.task('watch', function () {
     ['pl-sass']
   );
 
-  // Watch fonts
-  gulp.watch(
-    config.fonts.files,
-    ['fonts']
-  );
-
 });
 
 // Task: Default
@@ -383,17 +298,15 @@ gulp.task('watch', function () {
 gulp.task('default', ['cleanable:before'], function () {
   production = false;
   gulp.start(
+    'icon-utility',
+    'icon-editorial',
     'patternlab',
     'styleguide',
-    'fonts',
-    'glyphs',
     'sass',
     'pl-sass',
     'images',
     'nodemodulescripts',
     'photoswipe',
-    'nodemodulesfonts',
-    'nodemodulesfontsdata',
     'scripts'
   );
 });
@@ -417,7 +330,6 @@ gulp.task('distribute', ['clean-dist:before'], function () {
   production = true;
   gulp.start(
     'nodemodulescripts-dist',
-    'nodemodulesfontsdata',
     'scripts',
     'images-dist',
     'sass',

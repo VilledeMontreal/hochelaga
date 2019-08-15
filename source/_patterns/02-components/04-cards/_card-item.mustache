@@ -1,0 +1,67 @@
+
+{{# url}}
+<a href="{{ url }}" class="card {{ classes }}">
+{{/ url}}
+{{^ url}}
+<div class="card {{ classes }}">
+{{/ url}}
+
+  {{# card-media }}
+    {{# card-media.icon }}
+    <span class="card-icon-top {{ card-media.classes }} vdm {{ card-media.icon }}" aria-hidden="true"></span>
+    {{/ card-media.icon }}
+    {{# card-media.img }}
+    <img class="card-img-top {{ card-media.img.classes }}" src="{{ card-media.img.src}}" alt="{{ card-media.img.alt }}">
+    {{/ card-media.img }}
+  {{/ card-media }}
+
+  <div class="card-body">
+
+    {{# card-type }}
+    <span class="card-type">{{ card-type }}</span>
+    {{/ card-type}}
+
+    {{# card-date }}
+      <span class="card-date">
+      {{# card-date-time}}
+      {{{text}}} <time datetime="{{dateTimeFormat}}">{{{dateTimeText}}}</time>
+      {{/ card-date-time}}
+      </span>
+    {{/ card-date }}
+
+    {{# card-title }}
+    <span class="card-title">{{ card-title }}</span>
+    {{/ card-title }}
+    
+    {{# card-text }}
+    <p class="card-text">{{{ card-text }}}</p>
+    {{/ card-text }}
+
+    {{# card-text-interface }}
+    <div class="card-text-interface">{{{ card-text-interface }}}</div>
+    {{/ card-text-interface }}
+
+    {{# card-date-text }}
+      <div class="card-date-text">{{{ card-date-text }}}</div>
+    {{/ card-date-text }}
+
+    {{# card-publication-date}}
+      <div class="card-publication-date">
+      {{# dateTime}}
+      {{{text}}} <time datetime="{{dateTimeFormat}}">{{{dateTimeText}}}</time>
+      {{/ dateTime}}
+      </div>
+    {{/ card-publication-date}}
+
+    {{# card-cta }}
+      {{> components-button}}
+    {{/ card-cta }}
+
+  </div>
+
+{{# url }}
+</a>
+{{/ url }}
+{{^url}}
+</div>
+{{/ url}}
