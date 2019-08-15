@@ -248,7 +248,7 @@ gulp.task('browsersync', function() {
     server: {
       baseDir: config.root,
       routes: {
-        "/boite-outils": config.root
+        "/boite-outils4": config.root
       }
     },
     ghostMode: false,

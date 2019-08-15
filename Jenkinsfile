@@ -108,6 +108,10 @@ ctx = pipeline.createContext([
         ]    
     ],
     notifications: [
+        hipchat: [
+            room: "boîte-à-outils-web",
+            notify: true
+        ],
         mail: [
             to: [
                 'tola.sam',
