@@ -13,7 +13,7 @@ ctx = pipeline.createContext([
     namespace: ["sn", "boite-outils4"],
     application: [
         name: "boite-outils4-lib",
-        tier: null,
+        tier: "frontend",
         runtime: "nodejs", // Available Platforms: nodejs, drupal
         framework: "NA",
         description: "boite-outils4-lib",
