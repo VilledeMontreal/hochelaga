@@ -25,6 +25,12 @@
 
 }
 
+.list-social-medias {
+  .icon {
+    @include icon-color($action);
+  }
+}
+
 // The base unit for a sidebar component, stacked
 .sb-block {
   @include clearfix;
