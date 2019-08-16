@@ -1,0 +1,28 @@
+<div class="list">
+	{{# list }}
+  <div class="list-item {{ listItemClass }}">
+    {{# listItemAction}}
+    <div class="list-item-action">
+      <a href="{{url}}">
+        <span class="link-icon-label">{{ text }}</span>
+      </a>
+    </div>
+    {{# listExtraContent}}
+    <div class="list-item-content">
+      {{{listExtraContent}}}
+    </div>
+    {{/ listExtraContent}}
+    {{/ listItemAction}}
+    {{^ listItemAction}}
+    <div class="list-item-content">
+      {{# listItemLabel }}
+      <div class="list-item-label">{{listItemLabel}}</div>
+      {{/ listItemLabel }}
+      {{# listExtraContent}}
+      <div>{{{listExtraContent}}}</div>
+      {{/ listExtraContent}}
+    </div>
+    {{/ listItemAction}}
+  </div>
+  {{/ list }}
+</div>

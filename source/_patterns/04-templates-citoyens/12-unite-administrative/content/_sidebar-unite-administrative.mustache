@@ -1,0 +1,37 @@
+<div class="sidebar pt-8">
+  <div class="mb-8">
+    <img src="https://imgplaceholder.com/141x160/f4f6f8/212529?text=Logo&font-family=Roboto_Bold" alt="Logo de l'unité administrative XYZ" />
+  </div>
+  {{# sb-block-renseignements}}
+  <section class="sb-block mb-8">
+    {{> styles-heading-sidebar(sidebarTitle: "Renseignements")}}
+
+    <div class="mb-2">
+      {{# informations-direction}}
+        {{> components-list-item}}
+      {{/ informations-direction}}
+      {{# informations}}
+        {{> components-list-item-icon}}
+      {{/ informations}}
+    </div>
+    {{# hasSocialMediaIcons}}
+    <ul class="list-inline list-social-medias mb-0">
+      {{# socialMediaIcons}}
+      <li class="list-inline-item">
+        <a href="{{ url }}" >
+          <span class="icon {{icon-name}}" aria-hidden="true"></span>
+          <span class="sr-only">{{ sr-text}}</span>
+        </a>
+      </li>
+      {{/ socialMediaIcons}}
+    </ul>
+    {{/ hasSocialMediaIcons}}
+  </section>
+  {{/ sb-block-renseignements}}
+  {{# sb-block-liens-utiles}}
+  <section class="sb-block">
+    {{> styles-heading-sidebar(sidebarTitle: "Liens utiles") }}
+    {{> components-list-item-link}}
+  </section>
+  {{/ sb-block-liens-utiles}}
+</div>

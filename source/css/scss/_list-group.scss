@@ -249,6 +249,10 @@
       width: 100%;
     }
 
+    &:last-child {
+      padding-bottom: 0;
+    }
+
     @include hover-focus {
       background-color: transparent;
 
@@ -262,13 +266,12 @@
     @include font-size($font-size-lg);
     color: $headings-color;
     display: block;
-    line-height: $line-height-md;
+    line-height: $line-height-lg;
     padding-bottom: 1rem;
   }
 
   .list-group-item-category {
     @include font-size($font-size-xs);
-    color: $action;
     font-weight: $font-weight-bold;
     line-height: $line-height-xs;
     text-transform: uppercase;
