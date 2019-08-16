@@ -1,0 +1,311 @@
+{
+  "navbarPosition": "fixed-top",
+  "pageClasses": "mt-7 mt-md-9",
+  "header-back-link": {
+    "link-icon": {
+      "url": "#",
+      "icon": "icon-arrow-left", 
+      "link-icon-label": "Touts les sujets"
+    }
+  },
+  "heading": "Nom de l'unité administrative",
+  "has-badges": {
+    "badges": [
+      {
+        "badge": "Organigramme",
+        "badgeClass": "badge-secondary",
+        "badge-sr-text": "",
+        "badgeUrl": "#"
+      }
+    ]
+  },
+  "publicationDate": {
+    "dateTimeText": "15 août 2019",
+    "dateTimeFormat": "2019-08-15"
+  },
+  "lead": "<p>Amorce - Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi condimentum sollicitudin erat, quis convallis risus. Nullam posuere odio ligula, hendrerit suscipit ligula laoreet. Curabitur eleifend nulla purus, ut pharet urna ef id. Cras lacinia nisi id  (recommandé 300 caractères maximum).</p>",
+  "module-news": {
+    "listGroupClass": "list-group-teaser",
+    "listGroup": [
+      {
+        "class": false,
+        "url": "#",
+        "media": {
+          "alt": "",
+          "src": "https://picsum.photos/id/1025/1024/576"
+        },
+        "category": false,
+        "title": "Titre de la nouvelle d'une longueur de 80 caractères maximum",
+        "date": false,
+        "datePublication": {
+          "dateTimeFormat": "2019-08-15",
+          "dateTimeText": "15 août 2019"
+        }
+      },
+      {
+        "url": "https://google.ca",
+        "media": {
+          "alt": "",
+          "src": "https://picsum.photos/id/1026/1024/576"
+        },
+        "category": false,
+        "title": "Dolore amet aliquyam justo vero lorem accusam amet eos vero",
+        "date": false,
+        "datePublication": {
+          "dateTimeFormat": "2019-07-28",
+          "dateTimeText": "28 juillet 2019"
+        }
+      },
+      {
+        "url": "#",
+        "media": {
+          "alt": "",
+          "src": "https://picsum.photos/id/1027/1024/576"
+        },
+        "category": false,
+        "title": "Consetetur eirmod et aliquyam",
+        "date": false,
+        "datePublication": {
+          "dateTimeFormat": "2019-07-10",
+          "dateTimeText": "10 juillet 2019"
+        }
+      }
+    ],
+    "buttonAsLink": true,
+    "buttonClass": "btn-secondary",
+    "buttonUrl": "#",
+    "buttonText": "Toutes les nouvelles"
+  },
+  "module-events": {
+    "listGroupClass": "list-group-teaser",
+    "listGroup": [
+      {
+        "class": false,
+        "url": "#",
+        "media": {
+          "alt": "",
+          "src": "https://picsum.photos/id/1025/1024/576"
+        },
+        "category": "Type d'événement",
+        "title": "Activité fin de saison de l'ASRPP",
+        "date": {
+          "dateTimeFormat": "2019-08-17T15:00:00-0500",
+          "dateTimeText": "Samedi 17 août à 10&nbsp;h&nbsp;00"
+        }
+      },
+      {
+        "url": "https://google.ca",
+        "media": {
+          "alt": "",
+          "src": "https://picsum.photos/id/1026/1024/576"
+        },
+        "category": "Type d'événement",
+        "title": "Nullam efficitur turpis erat non lacinia ipsum consectetur id",
+        "date": {
+          "dateTimeFormat": "2019-08-31T22:00:00-0500",
+          "dateTimeText": "Samedi 31 août à 17&nbsp;h&nbsp;00"
+        }
+      },
+      {
+        "url": "#",
+        "media": {
+          "alt": "",
+          "src": "https://picsum.photos/id/1027/1024/576"
+        },
+        "category": "Type d'événement",
+        "title": "Mauris tristique tempor sapien et fermentum velit auctor at",
+        "date": {
+          "dateTimeFormat": "2019-09-10T20:30:00-0500",
+          "dateTimeText": "Mercredi 10 septembre à 15&nbsp;h&nbsp;30"
+        }
+      }
+    ],
+    "buttonAsLink": true,
+    "buttonClass": "btn-secondary",
+    "buttonUrl": "#",
+    "buttonText": "Tous les événements"
+  },
+  "module-documents": {
+    "listGroupClass": "list-group-lg",
+    "listGroup": [
+      {
+        "listIconUtility": "icon-file-pdf",
+        "text": "Plan ou politique XYZ [PDF - 2 Mo]",
+        "class": "document-pdf"
+      },
+      {
+        "listIconUtility": "icon-file-pdf",
+        "text": "Titre du document [PDF - 2 Mo]",
+        "class": "document-pdf"
+      },
+      {
+        "listIconUtility": "icon-file",
+        "text": "Titre du document",
+        "class": "document"
+      }
+    ]
+  },
+  "module-list-reference": {
+    "listGroupClass": "list-group-lg",
+    "listGroup": [
+      {
+        "listIconUtility": "icon-dot-bullet",
+        "text": "Titre du contenu",
+        "class": false
+      },
+      {
+        "listIconUtility": "icon-dot-bullet",
+        "text": "Titre du contenu",
+        "class": false
+      },
+      {
+        "listIconUtility": "icon-dot-bullet",
+        "text": "Titre du contenu",
+        "class": false
+      }
+    ]
+  },
+  "listAutoProgrammes": {
+    "listGroupClass": false,
+    "listGroup": [
+      {
+        "text": "Titre du programme",
+        "class": false
+      },
+      {
+        "text": "Titre du programme",
+        "class": false
+      },
+      {
+        "text": "Titre du programme",
+        "class": false
+      }
+    ]
+  },
+  "listAutoArticles": {
+    "listGroupClass": false,
+    "listGroup": [
+      {
+        "text": "Titre de l'article",
+        "class": false
+      },
+      {
+        "text": "Titre de l'article",
+        "class": false
+      },
+      {
+        "text": "Titre de l'article",
+        "class": false
+      },
+      {
+        "text": "Titre de l'article",
+        "class": false
+      },
+      {
+        "text": "Titre de l'article",
+        "class": false
+      }
+    ]
+  },
+  "listAutoProjets": {
+    "listGroupClass": false,
+    "listGroup": [
+      {
+        "text": "Titre du projet",
+        "class": false
+      },
+      {
+        "text": "Titre du projet",
+        "class": false
+      }
+    ]
+  },
+  "sidebarRight": true,
+  "sidebarClasses": false,
+  "sb-classes": "",
+  "sb-block-renseignements": {
+    "informations-direction": {
+      "list": [
+        {
+          "listItemClass": "list-item-description",
+          "listItemAction": false,
+          "listItemLabel": "Relève de la Direction....",
+          "listExtraContent": "Directeur: Prénom Nom"
+        }
+      ]
+    },
+    "informations": {
+      "list": [
+        {
+          "icon-name": "icon-loction",
+          "listItemAction": true,
+          "url": "/test-url",
+          "text": "Nom du lieu",
+          "listExtraContent": "43 5646, rue Sherbrooke Est,<br>Montréal (Québec) H1N 3K4"
+        },
+        {
+          "icon-name": "icon-phone",
+          "listItemAction": false,
+          "text": false,
+          "listExtraContent": "514 897-4933, poste 1234"
+        },
+        {
+          "icon-name": "icon-email",
+          "listItemAction": true,
+          "url": "mailto:test@montreal.ca",
+          "text": "Envoyer un courriel"
+        },
+        {
+          "icon-name": "icon-website",
+          "listItemAction": true,
+          "url": "#",
+          "text": "Site web"
+        }
+      ]
+    },
+    "hasSocialMediaIcons": {
+      "socialMediaIcons": [
+        {
+          "icon-name": "icon-social-facebook",
+          "sr-text": "Suivez Nom-Unité-Administrative sur Facebook",
+          "url": "#"
+        },
+        {
+          "icon-name": "icon-social-instagram",
+          "sr-text": "Suivez Nom-Unité-Administrative sur Instagram",
+          "url": "#"
+        },
+        {
+          "icon-name": "icon-social-linkedin",
+          "sr-text": "Suivez Nom-Unité-Administrative sur LinkedIn",
+          "url": "#"
+        },
+        {
+          "icon-name": "icon-social-twitter",
+          "sr-text": "Suivez Nom-Unité-Administrative sur Twitter",
+          "url": "#"
+        },
+        {
+          "icon-name": "icon-social-youtube",
+          "sr-text": "Suivez Nom-Unité-Administrative sur Youtube",
+          "url": "#"
+        }
+      ]
+    }
+  },
+  "sb-block-liens-utiles": {
+    "listGroupClass": "false",
+    "listGroup": [
+      {
+        "listIconUtility": "icon-externallink",
+        "text": "Lien 1",
+        "class": false
+      },
+      {
+        "listIconUtility": "icon-externallink",
+        "text": "Lien 2",
+        "class": false
+      }
+    ]
+  }
+}
