@@ -5,10 +5,10 @@
     "link-icon": {
       "url": "#",
       "icon": "icon-arrow-left", 
-      "link-icon-label": "Touts les sujets"
+      "link-icon-label": "Touts les articles"
     }
   },
-  "heading": "Titre du sujet d'une longueur de 80 caractères maximum",
+  "heading": "Titre du conseil-article d'une longueur de 80 caractères maximum",
   "has-badges": {
     "badges": [
       {
@@ -32,9 +32,10 @@
     ]
   },
   "publicationDate": {
-    "dateTimeText": "1 août 2019",
-    "dateTimeFormat": "2019-08-01"
+    "dateTimeText": "16 août 2019",
+    "dateTimeFormat": "2019-08-16"
   },
+  "readTime": "Lecture 7 min.",
   "lead": "<p>Amorce - Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi condimentum sollicitudin erat, quis convallis risus. Nullam posuere odio ligula, hendrerit suscipit ligula laoreet. Curabitur eleifend nulla purus, ut pharet urna ef id. Cras lacinia nisi id  (recommandé 300 caractères maximum).</p>",
   "module-content": {
     "module-cta": {
@@ -44,16 +45,17 @@
       "buttonText": "Appel à l'action"
     },
     "module-emphasis": {
-      "isCitation": false,
-      "blockquote-classes": false,
+      "blockquote-classes": "blockquote-emphasis",
+      "blockquote-html-text": "<p>Meditation gochujang copper mug, selfies paleo yuccie gastropub single-origin coffee thundercats scenester venmo pickled. Neutra yr green juice, fixie blog literally squid lyft bitters actually bicycle rights thundercats.</p>",
       "blockquote-footer": false
     },
-    "module-message": {
-      "alertClass": "alert-warning alert-with-icon",
-      "alertTitle": "Titre du message (optionnel)",
-      "alertText": "Description du message. Selon la nature du message, l'icone et la couleur de fond diffèrent : gris = neutre, bleu = informatif, jaune = alerte, rouge = négatif et vert = positif.",
-      "alertIcon": {
-        "icon-name": "icon-warning"
+    "module-blockquote": {
+      "isCitation": true,
+      "blockquote-classes": false,
+      "blockquote-html-text": "<p>Meditation gochujang copper mug, selfies paleo yuccie gastropub single-origin coffee thundercats scenester venmo pickled. Neutra yr green juice, fixie blog literally squid lyft bitters actually bicycle rights thundercats.</p>",
+      "blockquote-footer": {
+        "blockquote-footer-author": "Auteur",
+        "blockquote-footer-text": "Fonction"
       }
     },
     "module-text": true,
@@ -121,7 +123,7 @@
       ]
     },
     "module-media-content": {
-      "wrapperTitle": "Titre de la section - Image et tete associés",
+      "wrapperTitle": "Titre de la section - Image et texte associés",
       "img": {
         "src": "https://picsum.photos/id/1058/768/432",
         "alt": "Alt - Lorem ipsum dolor site."
@@ -206,120 +208,55 @@
           "class": "document"
         }
       ]
-    }
-  },
-  "sujetContent": {
-    "sujetArronDemarches": {
-      "listGroup": [
-        {
-          "text": "Titre de la démarche",
-          "class": false
-        },
-        {
-          "text": "Titre de la démarche",
-          "class": false
-        },
-        {
-          "text": "Titre de la démarche",
-          "class": false
-        }
-      ]
     },
-    "sujetArronServices": {
+    "module-events": {
+      "listGroupClass": "list-group-teaser",
       "listGroup": [
         {
-          "text": "Titre du service",
-          "class": false
+          "class": false,
+          "url": "#",
+          "media": {
+            "alt": "",
+            "src": "https://picsum.photos/id/1025/1024/576"
+          },
+          "category": "Type d'événement",
+          "title": "Titre de l'événement",
+          "date": {
+            "dateTimeFormat": "2019-08-17T15:00:00-0500",
+            "dateTimeText": "Samedi 17 août à 10&nbsp;h&nbsp;00"
+          }
         },
         {
-          "text": "Titre du service",
-          "class": false
+          "url": "https://google.ca",
+          "media": {
+            "alt": "",
+            "src": "https://picsum.photos/id/1026/1024/576"
+          },
+          "category": "Type d'événement",
+          "title": "Nullam efficitur turpis erat non lacinia ipsum consectetur id",
+          "date": {
+            "dateTimeFormat": "2019-08-31T22:00:00-0500",
+            "dateTimeText": "Samedi 31 août à 17&nbsp;h&nbsp;00"
+          }
         },
         {
-          "text": "Titre du service",
-          "class": false
+          "url": "#",
+          "media": {
+            "alt": "",
+            "src": "https://picsum.photos/id/1027/1024/576"
+          },
+          "category": "Type d'événement",
+          "title": "Mauris tristique tempor sapien et fermentum velit auctor at",
+          "date": {
+            "dateTimeFormat": "2019-09-10T20:30:00-0500",
+            "dateTimeText": "Mercredi 10 septembre à 15&nbsp;h&nbsp;30"
+          }
         }
-      ]
-    },
-    "sujetArronActivites": {
-      "listGroup": [
-        {
-          "text": "Titre de l'activité",
-          "class": false
-        },
-        {
-          "text": "Titre de l'activité",
-          "class": false
-        },
-        {
-          "text": "Titre de l'activité",
-          "class": false
-        }
-      ]
-    },
-    "sujetArronProgrammes": {
-      "listGroup": [
-        {
-          "text": "Titre du programme",
-          "class": false
-        },
-        {
-          "text": "Titre du programme",
-          "class": false
-        },
-        {
-          "text": "Titre du programme",
-          "class": false
-        }
-      ]
-    },
-    "sujetArronArticles": {
-      "listGroup": [
-        {
-          "text": "Titre de l'article",
-          "class": false
-        },
-        {
-          "text": "Titre de l'article",
-          "class": false
-        },
-        {
-          "text": "Titre de l'article",
-          "class": false
-        }
-      ]
-    },
-    "sujetArronPlans": {
-      "listGroup": [
-        {
-          "text": "Titre du plan",
-          "class": false
-        },
-        {
-          "text": "Titre du plan",
-          "class": false
-        },
-        {
-          "text": "Titre du plan",
-          "class": false
-        }
-      ]
-    },
-    "sujetArronProjets": {
-      "listGroup": [
-        {
-          "text": "Titre du projet",
-          "class": false
-        },
-        {
-          "text": "Titre du projet",
-          "class": false
-        },
-        {
-          "text": "Titre du projet",
-          "class": false
-        }
-      ]
+      ],
+      "buttonAsLink": true,
+      "buttonClass": "btn-secondary",
+      "buttonUrl": "#",
+      "buttonText": "Tous les événements"
     }
   },
   "sidebarRight": true,
@@ -337,22 +274,22 @@
         "class": false
       },
       {
-        "listIconEditorial": "icon-animaux",
+        "listIconEditorial": "icon-affaires-economie",
         "text": "Titre du sujet sur plusieurs lignes si nécessaire",
         "class": false
       },
       {
-        "listIconEditorial": "icon-maison-logement",
-        "text": "Limite de 5 sujets",
+        "listIconEditorial": "icon-affaires-economie",
+        "text": "Titre de l'article",
         "class": false
       },
       {
-        "listIconEditorial": "icon-environnement",
+        "listIconEditorial": "icon-affaires-economie",
         "text": "Titre du sujet sur plusieurs lignes si nécessaire",
         "class": false
       },
       {
-        "listIconEditorial": "icon-environnement",
+        "listIconEditorial": "icon-affaires-economie",
         "text": "Titre du sujet sur plusieurs lignes si nécessaire",
         "class": false
       }
