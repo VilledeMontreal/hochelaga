@@ -7,8 +7,14 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 ## [4.0.1] - unreleased
 
 ## Added
-- Unité administrative templates.
+- Unité administrative template.
+- Article template.
 - Sidebar social medias list.
+- Content header image with left notch.
+
+## Changed
+- Blockquote emphasis should be a div tag (blockquote is strickly for citation).
+- 
 
 ## Fixed
 - List Group line-heights, paddings and margins.
