@@ -1,3 +1,4 @@
+{{# isCitation}}
 <blockquote class="blockquote {{ blockquote-classes}}">
   {{{blockquote-html-text}}}
   {{# blockquote-footer}}
@@ -9,3 +10,9 @@
   </footer>
   {{/ blockquote-footer}}
 </blockquote>
+{{/ isCitation}}
+{{^ isCitation}}
+<div class="blockquote blockquote-emphasis {{ blockquote-classes}}">
+  {{{blockquote-html-text}}}
+</div>
+{{/ isCitation}}

@@ -1,0 +1,12 @@
+{{^ has-icon }}
+<a href="{{url}}" class="link-list-element {{linkSize}}"><span class="link-label">{{ link-label }}</span></a>
+{{/ has-icon }}
+{{# has-icon }}
+<a href="{{url}}" class="link-list-element link-has-icon {{linkSize}} {{#icon-right}}icon-right{{/ icon-right}}">
+  {{^icon-right}}<div><span class="icon {{ icon }}"></span></div>{{/ icon-right}}
+  <div>
+    <span class="link-label link-icon-label">{{ link-label }}</span>
+  </div>
+  {{#icon-right}}<div><span class="icon {{ icon }}"></span></div>{{/ icon-right}}
+</a>
+{{/ has-icon }}

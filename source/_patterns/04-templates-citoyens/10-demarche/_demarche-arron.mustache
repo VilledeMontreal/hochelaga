@@ -40,22 +40,22 @@
 
     <h4>Pièces d'identité</h4>
     <p>Un des documents suivants :</p>
-    <ul>
+    <ul class="mb-2">
       <li>Permis de conduire du Québec</li>
       <li>Carte d’assurance maladie du Québec</li>
       <li>Nombre de pièces à présenter variable</li>
     </ul>
-    {{> styles-link-icon("icon-right": true, icon: "icon-arrow-right", "link-icon-label": "Consulter la liste complète")}}
+    {{> styles-link-list-element("has-icon": true, "icon-right": true, "link-label": "Consulter la liste complète", icon: "icon-arrow-right")}}
   </div>
   <div>
     <h4>Preuves d'adresse</h4>
     <p>Un des documents suivants :</p>
-    <ul>
+    <ul class="mb-2">
       <li>Facture de services publics (Hydro-Québec, téléphone ou autre) datant de 3 mois ou moins</li>
       <li>Facture d'un établissement d'enseignement datant de 3 mois ou moins</li>
       <li>Nombre de pièces à présenter variable</li>
     </ul>
-    {{> styles-link-icon("icon-right": true, icon: "icon-arrow-right", "link-icon-label": "Consulter la liste complète")}}
+    {{> styles-link-list-element("has-icon": true, "icon-right": true, "link-label": "Consulter la liste complète", icon: "icon-arrow-right")}}
   </div>
 </div>
 {{/ module-documents-necessaires}}
@@ -72,6 +72,6 @@
 {{# module-reglements}}
 <div class="content-module-stacked">
   <h3>Règlements</h3>
-  {{> components-list-group-links}}
+  {{> components-list-item-link}}
 </div>
 {{/ module-reglements}}

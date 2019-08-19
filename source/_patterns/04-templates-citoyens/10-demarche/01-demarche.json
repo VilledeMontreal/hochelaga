@@ -81,6 +81,9 @@
         }
       }
     },
+    "module-emphasis": {
+      "isCitation": false
+    },
     "module-message": {
       "alertClass": "alert-info alert-with-icon",
       "alertTitle": "Titre du message",
@@ -137,7 +140,7 @@
             "nom-service": "Nom du service",
             "list": [
               {
-                "listIconUtility": "icon-phone",
+                "icon-name": "icon-phone",
                 "listItemAction": false,
                 "text": "514 993-3423",
                 "listExtraContent": false
@@ -156,7 +159,7 @@
             "nom-service": false,
             "list": [
               {
-                "listIconUtility": "icon-phone",
+                "icon-name": "icon-phone",
                 "listItemAction": false,
                 "text": "3-1-1",
                 "listExtraContent": "de l'extérieur de Montréal 514 872-0311"
@@ -176,7 +179,7 @@
             "nom-service": false,
             "list": [
               {
-                "listIconUtility": "icon-phone",
+                "icon-name": "icon-phone",
                 "listItemAction": false,
                 "text": "9-1-1",
                 "listExtraContent": "est le numéro de téléphone qu'il faut composer lorsque l'intervention d'un service d'urgence (police, pompier, ambulance) est requise. Toute personne qui réside ou qui se trouve sur le territoire de Montréal a un accès au 9-1-1 et tous les téléphones publics du territoire donnent un accès gratuit au 9-1-1"
@@ -196,7 +199,7 @@
               "nom-service": "Nom du service",
               "list": [
                 {
-                  "listIconUtility": "icon-loction",
+                  "icon-name": "icon-loction",
                   "listItemAction": true,
                   "text": "Nom du lieu Ville",
                   "listExtraContent": "5955, avenue Bannantyne<br>Montréal (Québec) H4H 1H6"
@@ -207,7 +210,7 @@
               "nom-service": "Nom du service",
               "list": [
                 {
-                  "listIconUtility": "icon-loction",
+                  "icon-name": "icon-loction",
                   "listItemAction": true,
                   "text": "Autre lieu Ville (optionnel)",
                   "listExtraContent": "5955, avenue Bannantyne<br>Montréal (Québec) H4H 1H6"
@@ -229,7 +232,7 @@
               "nom-service": "Nom du service",
               "list": [
                 {
-                  "listIconUtility": "icon-loction",
+                  "icon-name": "icon-loction",
                   "listItemAction": false,
                   "text": false,
                   "listExtraContent": "5955, avenue Bannantyne<br>Montréal (Québec) H4H 1H6"
@@ -251,7 +254,7 @@
               "nom-service": "Nom du service",
               "list": [
                 {
-                  "listIconUtility": "icon-loction",
+                  "icon-name": "icon-loction",
                   "listItemAction": true,
                   "text": "Nom du lieu Ville",
                   "listExtraContent": "5955, avenue Bannantyne<br>Montréal (Québec) H4H 1H6"
@@ -262,7 +265,7 @@
               "nom-service": "Nom du service",
               "list": [
                 {
-                  "listIconUtility": "icon-loction",
+                  "icon-name": "icon-loction",
                   "listItemAction": true,
                   "text": "Autre lieu Ville (optionnel)",
                   "listExtraContent": "5955, avenue Bannantyne<br>Montréal (Québec) H4H 1H6"
@@ -284,7 +287,7 @@
               "nom-service": "Nom du service",
               "list": [
                 {
-                  "listIconUtility": "icon-loction",
+                  "icon-name": "icon-loction",
                   "listItemAction": false,
                   "text": false,
                   "listExtraContent": "5955, avenue Bannantyne<br>Montréal (Québec) H4H 1H6"
@@ -307,7 +310,7 @@
               "nom-service": false,
               "list": [
                 {
-                  "listIconUtility": "icon-email",
+                  "icon-name": "icon-email",
                   "listItemAction": true,
                   "text": "Envoyer un courriel",
                   "listExtraContent": false
@@ -328,7 +331,7 @@
               "nom-service": "Nom du service (à l’attention de …)",
               "list": [
                 {
-                  "listIconUtility": "icon-loction",
+                  "icon-name": "icon-loction",
                   "listItemAction": false,
                   "text": "514 993-3423",
                   "listExtraContent": false

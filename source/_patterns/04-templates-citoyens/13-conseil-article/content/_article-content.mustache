@@ -11,11 +11,11 @@
 </div>
 {{/ module-emphasis}}
 
-{{# module-message }}
+{{# module-blockquote }}
 <div class="content-module-stacked">
-  {{> components-alert}}
+  {{> styles-blockquote }}
 </div>
-{{/ module-message }}
+{{/ module-blockquote}}
 
 {{# module-text}}
 <div class="content-module-stacked">
@@ -108,3 +108,19 @@
   {{> components-list-item-link}}
 </div>
 {{/ module-documents }}
+
+{{# module-events}}
+<div class="content-module-stacked">
+  <h2>Événements à venir</h2>
+  {{> components-list-group-teaser}}
+  <div class="d-flex justify-content-center">
+  {{> components-button}}
+  </div>
+</div>
+{{/ module-events}}
+
+<div class="content-module-stacked">
+  <div class="font-size-base-interface">
+    <span class="mr-1">Publié par</span><a href="#" class="link-list-element"><span class="link-label">Unité administrative</span></a>, <a href="#" class="link-list-element"><span class="link-label">Arrondissement</span></a> et <a href="#" class="link-list-element"><span class="link-label">Arrondissement</span></a>
+  </div>
+</div>

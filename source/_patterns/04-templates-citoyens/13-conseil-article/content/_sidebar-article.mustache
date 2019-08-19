@@ -1,0 +1,14 @@
+<div class="sidebar pt-8">
+  {{# sb-block-bon-savoir}}
+  <section class="sb-block">
+    {{> styles-heading-sidebar(sidebarTitle: "Bon à savoir")}}
+    {{{ content }}}
+  </section>
+  {{/ sb-block-bon-savoir}}
+  {{# sb-block-tc-lies}}
+  <section class="sb-block">
+    {{> styles-heading-sidebar(sidebarTitle: "Articles connexes") }}
+    {{> components-list-item-links-icons-categories}}
+  </section>
+  {{/ sb-block-tc-lies}}
+</div>
