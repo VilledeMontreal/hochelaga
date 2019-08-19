@@ -12,9 +12,8 @@
     </div>
     {{/ card-media.img }}
 
-    <div class="col-12 col-lg-8">
+    <div class="card-body-wrapper">
       <div class="card-body">
-
         {{# card-type }}
         <span class="card-type">{{ card-type }}</span>
         {{/ card-type}}
@@ -32,15 +31,15 @@
         {{/ card-text-interface }}
 
         {{# card-date-text }}
-          <div class="card-date-text">{{{ card-date-text }}}</div>
+        <div class="card-date-text">{{{ card-date-text }}}</div>
         {{/ card-date-text }}
 
         {{# card-publication-date}}
-          <div class="card-publication-date">
-          {{# dateTime}}
-          {{{text}}} <time datetime="{{dateTimeFormat}}">{{{dateTimeText}}}</time>
-          {{/ dateTime}}
-          </div>
+        <div class="card-publication-date">
+        {{# dateTime}}
+        {{{text}}} <time datetime="{{dateTimeFormat}}">{{{dateTimeText}}}</time>
+        {{/ dateTime}}
+        </div>
         {{/ card-publication-date}}
       </div>
     </div>
