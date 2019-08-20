@@ -3,8 +3,8 @@
 
 <main class="main-content {{ pageClasses }}" id="main-content" aria-label="Main Content" role="main">
 
-  <section class="region-content">
-    <section class="container">
+  <div class="region-content">
+    <div class="container">
       <section class="row{{# sidebarRight }} justify-content-between{{/ sidebarRight}}{{^ sidebarRight}} justify-content-center{{/ sidebarRight}}">
         <div class="col-12 col-lg-7">
 
@@ -90,6 +90,7 @@
           </div>
           {{/ module-list-reference}}
 
+          {{# module-texte-optionnel}}
           <div class="content-module-stacked">
             <h2>Module Titre de section</h2>
 
@@ -107,8 +108,8 @@
               <li>Liste numérotée</li>
               <li>Liste numérotée</li>
             </ol>
-
           </div>
+          {{/ module-texte-optionnel}}
 
           {{# listAutoProgrammes}}
           <div class="content-module-stacked">
