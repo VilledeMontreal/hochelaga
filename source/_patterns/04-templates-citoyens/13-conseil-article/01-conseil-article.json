@@ -1,6 +1,9 @@
 {
   "navbarPosition": "fixed-top",
-  "pageClasses": "mt-7 mt-md-9",
+  "documentHeadingWrapperClass": "document-heading-left-notch",
+  "documentHeadingNotch": true,
+  "has-left-notch": true,
+  "pageClasses": "mt-7 mt-lg-9",
   "header-back-link": {
     "link-icon": {
       "url": "#",
@@ -173,17 +176,17 @@
       "listGroupClass": "list-group-lg",
       "listGroup": [
         {
-          "listIconUtility": "icon-dot-bullet",
+          "icon-name": "icon-dot-bullet",
           "text": "Titre du contenu",
           "class": false
         },
         {
-          "listIconUtility": "icon-dot-bullet",
+          "icon-name": "icon-dot-bullet",
           "text": "Titre du contenu",
           "class": false
         },
         {
-          "listIconUtility": "icon-dot-bullet",
+          "icon-name": "icon-dot-bullet",
           "text": "Titre du contenu",
           "class": false
         }
@@ -193,17 +196,17 @@
       "listGroupClass": "list-group-lg",
       "listGroup": [
         {
-          "listIconUtility": "icon-file-pdf",
+          "icon-name": "icon-file-pdf",
           "text": "Titre du document [PDF - 2 Mo]",
           "class": "document-pdf"
         },
         {
-          "listIconUtility": "icon-file-pdf",
+          "icon-name": "icon-file-pdf",
           "text": "Titre du document [PDF - 2 Mo]",
           "class": "document-pdf"
         },
         {
-          "listIconUtility": "icon-file",
+          "icon-name": "icon-file",
           "text": "Titre du document",
           "class": "document"
         }
@@ -269,27 +272,27 @@
     "listGroupClass": false,
     "listGroup": [
       {
-        "listIconEditorial": "icon-affaires-economie",
+        "icon-name": "icon-affaires-economie",
         "text": "Titre du sujet sur plusieurs lignes si nécessaire",
         "class": false
       },
       {
-        "listIconEditorial": "icon-affaires-economie",
+        "icon-name": "icon-affaires-economie",
         "text": "Titre du sujet sur plusieurs lignes si nécessaire",
         "class": false
       },
       {
-        "listIconEditorial": "icon-affaires-economie",
+        "icon-name": "icon-affaires-economie",
         "text": "Titre de l'article",
         "class": false
       },
       {
-        "listIconEditorial": "icon-affaires-economie",
+        "icon-name": "icon-affaires-economie",
         "text": "Titre du sujet sur plusieurs lignes si nécessaire",
         "class": false
       },
       {
-        "listIconEditorial": "icon-affaires-economie",
+        "icon-name": "icon-affaires-economie",
         "text": "Titre du sujet sur plusieurs lignes si nécessaire",
         "class": false
       }
