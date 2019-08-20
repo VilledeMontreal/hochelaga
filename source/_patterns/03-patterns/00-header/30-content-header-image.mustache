@@ -1,0 +1,21 @@
+<div class="document-heading-container container px-0 px-lg-2">
+  <div class="document-heading-img {{ documentHeadingWrapperClass }}">
+    <div class="document-heading-image">
+      <img src="{{documentHeadingImageUrl}}" class="img-fluid" alt="" />
+      {{# media.copyright }}
+      <div class="img-copyright">
+        <span class="icon icon-copyright" aria-hidden="true"></span>
+        <span class="copyright-text d-none">{{ media.copyright }}</span>
+        <span class="sr-only">&copy; {{ media.copyright }}</span>
+      </div>
+      {{/ media.copyright }}
+    </div>
+    {{# documentHeadingNotch}}
+    <div class="document-heading-wrapper container">
+      <div class="row justify-content-center">
+        <div class="document-heading-content col-12{{# has-left-notch}} col-lg-8{{/ has-left-notch}}{{^ has-left-notch}} col-lg-10{{/ has-left-notch}}"></div>
+      </div>
+    </div>
+    {{/ documentHeadingNotch}}
+  </div>
+</div>

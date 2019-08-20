@@ -1,7 +1,9 @@
 <div class="sidebar pt-8">
+  {{# sb-logo}}
   <div class="mb-8">
-    <img src="https://imgplaceholder.com/141x160/f4f6f8/212529?text=Logo&font-family=Roboto_Bold" alt="Logo de l'unité administrative XYZ" />
+    <img src="{{ src }}" alt="{{ alt }}" />
   </div>
+  {{/ sb-logo}}
   {{# sb-block-renseignements}}
   <section class="sb-block mb-8">
     {{> styles-heading-sidebar(sidebarTitle: "Renseignements")}}

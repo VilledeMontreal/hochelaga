@@ -10,14 +10,17 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 - Unité administrative template.
 - Article template.
 - Sidebar social medias list.
-- Content header image with left notch.
+- Content header image with left and center notch.
+- Styles > Typography > link-list-element and link-list-element-icon.
+- Utilities classes for font-size-interface - font-size and line-height handling -  variants (.font-size-lg-interface, .font-size-base-interface, .font-size-sm-interface, .font-size-xs-interface)
 
 ## Changed
 - Blockquote emphasis should be a div tag (blockquote is strickly for citation).
-- 
+- .sb-block now takes 4rem margin-bottom by default.
 
 ## Fixed
 - List Group line-heights, paddings and margins.
+- Pattern Labs: Fixed various pseudo-templates inclusion.
 
 
 ## [4.0.0] - 2019-08-15

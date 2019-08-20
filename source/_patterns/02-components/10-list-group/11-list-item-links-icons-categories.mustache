@@ -1,15 +1,1 @@
-<ul class="list-group list-group-lg list-group-icons-categories list-group-delimiter">
-	{{# listGroup }}
-  <li class="list-group-item list-group-item-action {{ class }}">
-    <a href="{{ url }}">
-      {{# listIconEditorial}}
-      <span class="icon {{ listIconEditorial}}" aria-hidden="true"></span>
-      {{/ listIconEditorial}}
-      {{# listIconUtility}}
-      <span class="icon {{listIconUtility}}" aria-hidden="true"></span>
-      {{/ listIconUtility}}
-      {{{ text }}}
-    </a>
-  </li>
-  {{/ listGroup }}
-</ul>
+{{> components-list-item-link("listGroupClass": "list-group-lg list-group-icons-categories list-group-delimiter")}}

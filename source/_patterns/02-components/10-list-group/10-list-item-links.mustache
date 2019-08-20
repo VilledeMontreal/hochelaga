@@ -1,33 +1,5 @@
 <h4 class="pl-pattern-subtitle">Large</h4>
-<ul class="list-group list-group-lg {{ listGroupClass }}">
-	{{# listGroup }}
-  <li class="list-group-item list-group-item-action {{ class }}">
-    <a href="{{ url }}">
-      {{# listIconEditorial}}
-      <span class="icon {{ listIconEditorial}}" aria-hidden="true"></span>
-      {{/ listIconEditorial}}
-      {{# listIconUtility}}
-      <span class="icon {{listIconUtility}}" aria-hidden="true"></span>
-      {{/ listIconUtility}}
-      {{{ text }}}
-    </a>
-  </li>
-  {{/ listGroup }}
-</ul>
+{{> components-list-item-link("listGroupClass":"list-group-lg")}}
 
 <h4 class="pl-pattern-subtitle">Default</h4>
-<ul class="list-group {{ listGroupClass }}">
-	{{# listGroup }}
-  <li class="list-group-item list-group-item-action {{ class }}">
-    <a href="{{ url }}">
-      {{# listIconEditorial}}
-      <span class="icon {{ listIconEditorial}}" aria-hidden="true"></span>
-      {{/ listIconEditorial}}
-      {{# listIconUtility}}
-      <span class="icon {{listIconUtility}}" aria-hidden="true"></span>
-      {{/ listIconUtility}}
-      {{{ text }}}
-    </a>
-  </li>
-  {{/ listGroup }}
-</ul>
+{{> components-list-item-link}}
