@@ -11,6 +11,7 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 - Article template.
 - Sidebar social medias list.
 - Content header image with left and center notch.
+- Footer mobile behavior (dropdowns).
 - Styles > Typography > link-list-element and link-list-element-icon.
 - Utilities classes for font-size-interface - font-size and line-height handling -  variants (.font-size-lg-interface, .font-size-base-interface, .font-size-sm-interface, .font-size-xs-interface)
 
