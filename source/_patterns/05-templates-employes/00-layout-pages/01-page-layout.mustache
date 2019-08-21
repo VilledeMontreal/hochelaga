@@ -7,11 +7,20 @@
 <main class="main-content {{ pageClasses }}" id="main-content" aria-label="Main Content">
 
   <div class="region-content {{ regionMainClasses }}">
-    <div class="container {{ regionMainContainerClasses }}">
-      <div class="row{{# has-left-notch }} justify-content-between{{/ has-left-notch}}{{^ has-left-notch}} justify-content-center{{/ has-left-notch}}">
-        <article class="col-12 {{ regionMainContentClasses }}">
+    <div class="container-fluid {{ regionMainContainerClasses }}">
+      <div class="row">
+        <div class="{{ regionMainContentClasses }}">
+          	{{> components-alert(
+			    alertClass: "alert-warning alert-with-icon alert-dismissible fade show",
+			    alertTitle: "Warning!",
+			    alertText: "Close Me! This is a dismissible warning alert.",
+			    alertIcon: true,
+			    icon-name: "icon-warning",
+			    dismissableAlert: true
+			  )
+			}}
           {{> styles-paragraph }}
-        </article>
+        </div>
       </div>
     </div>
   </div>
