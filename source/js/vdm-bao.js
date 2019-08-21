@@ -8,12 +8,12 @@ $('[id^="linkModalIcon"]').click(function() {
   var title = $(this).next(".ic-name").html();
   var nameFileSvg = $(this).next(".ic-name").attr("id");
   var textModalUtility = '&lt;span class="icon icon-'+nameFileSvg+'" role="icon"&gt;&lt;/span&gt;';
-  var textModalEditorial = '&lt;img src="pathtosvg/'+nameFileSvg+'.svg" width="40" height="40" role="icon"/&gt;';
+  var textModalEditorial = '&lt;img src="pathtosvg/'+nameFileSvg+'.svg" role="icon" width="40" height="40" /&gt;';
 
   $("#exampleModalIconUtilityLabel").text(title);
   $("#exampleModalIconEditorialLabel").text(title);
   $("#exampleModalIconUtility .modal-body .select-all").html(textModalUtility);
-  $("#exampleModalIconEditorial .modal-body .select-all").html(textModalEditorial);
+  $("#exampleModalIconEditorial .modal-body").html("<p class='select-all'>"+textModalEditorial+"</p> <p>ou<p> <p class='select-all'>"+textModalUtility+"</p>");
   
 });
 
