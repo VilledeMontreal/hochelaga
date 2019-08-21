@@ -25,6 +25,9 @@ footer {
       margin-bottom: 0;
       li {
         margin-bottom: .5rem;
+        &:last-child {
+          margin-bottom: 0;
+        }
       }
 
       + ul {
@@ -32,9 +35,9 @@ footer {
       }
     }
     .site-name {
-      @include font-size($h3-font-size);
+      @include font-size($font-size-lg);
       font-weight: $font-weight-bold;
-      line-height: 2rem;
+      line-height: $line-height-lg;
     }
     .list-heading {
       display: block;
@@ -43,7 +46,10 @@ footer {
     }
 
     .list-social-media-icon {
-      justify-content: center;
+      display: flex;
+      li {
+        margin-bottom: 0;
+      }
       li a {
         .icon {
           @include icon-color($white);
@@ -68,9 +74,10 @@ footer {
     }
 
     .btn-lang {
+      @include font-size($font-size-sm);
+      line-height: $line-height-sm;
       font-weight: $font-weight-bold;
       color: $action-lighter;
-      line-height: $line-height-md;
       @include hover-focus {
         border-bottom: 1px solid $action-lighter;
       }
@@ -79,8 +86,8 @@ footer {
     .copyright {
       color: $neutral-tertiary;
       display: inline-block;
-      @include font-size($font-size-sm);
-      line-height: $line-height-md;
+      @include font-size($font-size-xs);
+      line-height: $line-height-xs;
     }
 
     .footer-logo {
@@ -98,47 +105,102 @@ footer {
         margin-bottom: 2rem;
       }
     }
-
-    @include media-breakpoint-up(md) {
-      &.footer {
-        padding-top: 4rem;
-        padding-bottom: 4rem;
-        .footer-logo {
-          height: 40px;
-        }
-      }
-    }
-
-    // Mobile footer handling
-    // TODO: Collapse content on mobile
-    @include media-breakpoint-down(sm) {
-      &.footer {
-        .footer-sub {
-          margin-bottom: 2rem;
-          &:before {
-            content: "";
-            display: block;
-            width: 100%;
-            height: $border-width;
-            background-color: $neutral-secondary;
-            margin-bottom: 2rem;
-          }
-          &:after {
-            content: "";
-            display: block;
-            width: 100%;
-            height: $border-width;
-            background-color: $neutral-secondary;
-            margin-top: 2rem;
-          }
-        }
-        .top-separator {
-          &:before {
-            content: none;
-          }
-        }
-      }
-    }
-
   }
+
+  @include media-breakpoint-up(md) {
+    &.footer {
+      padding-top: 4rem;
+      padding-bottom: 4rem;
+
+      .site-name {
+        @include font-size($h3-font-size);
+        line-height: 2rem;
+      }
+
+      .btn-lang {
+        @include font-size($font-size-base);
+        line-height: $line-height-md;
+      }
+
+      .footer-sub {
+        .collapse {
+          display: block;
+        }
+      }
+
+      .copyright {
+        @include font-size($font-size-sm);
+        line-height: $line-height-sm;
+      }
+
+      .footer-logo {
+        height: 40px;
+      }
+    }
+  }
+
+  // Mobile footer handling
+  // TODO: Collapse content on mobile
+  @include media-breakpoint-down(sm) {
+    &.footer {
+      .footer-sub {
+        margin-bottom: 2rem;
+        &:before {
+          content: "";
+          display: block;
+          width: 100%;
+          height: $border-width;
+          background-color: $neutral-secondary;
+          margin-bottom: 1rem;
+        }
+        &:after {
+          content: "";
+          display: block;
+          width: 100%;
+          height: $border-width;
+          background-color: $neutral-secondary;
+          margin-top: 1rem;
+        }
+        .list-heading {
+          @include font-size($font-size-sm);
+          line-height: $line-height-sm;
+          cursor: pointer;
+          display: flex;
+          &:after {
+            position: absolute;
+            right: 1rem;
+            content: '';
+            -webkit-mask: url($data-icon-chevron-down) no-repeat 50% 50%;
+            mask: url($data-icon-chevron-down) no-repeat 50% 50%;
+            -webkit-mask-size: cover;
+            mask-size: cover;
+            background-color: currentColor;
+            width: 24px;
+            height: 24px;
+            border: none;
+          }
+
+          &[aria-expanded="true"] {
+            &:after {
+              content: '';
+              -webkit-mask: url($data-icon-chevron-up) no-repeat 50% 50%;
+              mask: url($data-icon-chevron-up) no-repeat 50% 50%;
+              -webkit-mask-size: cover;
+              mask-size: cover;
+              background-color: currentColor;
+              width: 24px;
+              height: 24px;
+              border: none;
+            }
+          }
+        }
+      }
+      .top-separator {
+        &:before {
+          content: none;
+        }
+      }
+    }
+  }
+
 }
