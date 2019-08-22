@@ -36,13 +36,47 @@
   display: flex;
 }
 
-// Notch design
-//
+
+// Document heading
+// Left notch and centered Notch handling
 .document-heading {
-  height: 120px;
   position: relative;
   width: 100%;
   z-index: 0;
+
+  &.document-heading-grid {    
+    .document-heading-image-container {
+      padding-top: $padding-16-9;
+      .img-copyright {
+        bottom: 3rem;
+      }
+    }
+    .document-heading-content-wrapper {
+      margin: 0;
+    }
+    .document-heading-content-wrapper {
+      @include media-breakpoint-only(sm) {
+        @include make-container();
+        max-width: map-get($container-max-widths, sm);
+        margin: 0 auto;
+      }
+      @include media-breakpoint-only(md) {
+        @include make-container();
+        max-width: map-get($container-max-widths,md);
+        margin: 0 auto;
+      }
+    }
+
+    @include media-breakpoint-up(lg) {
+      @include make-container();
+      max-width: map-get($container-max-widths, lg);
+    }
+    @include media-breakpoint-up(xl) {
+      @include make-container();
+      max-width: map-get($container-max-widths, xl);
+    }
+  
+  }
 
   .document-heading-background {
     background-color: $neutral-underground-1;
@@ -52,40 +86,59 @@
     height: 100%;
     overflow: hidden;
     position: absolute;
+    top: 0;
     width: 100%;
     z-index: 0;
   }
 
   .document-heading-wrapper {
+    display: flex;
     height: 100%;
-    margin: 0 auto;
-    padding-top: 3.5rem;
-    position: relative;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
     z-index: 2;
+  }
+  .document-heading-content-wrapper {
+    width: 100%;
+    align-self: flex-end;
+    padding: 0 1rem;
+    margin: 0;
   }
 
   .document-heading-content {
-    bottom: 0;
-    position: absolute;
+
     background-color: $white;
     height: 2rem;
-    width: calc(100% - 32px);
+    margin: 0 auto;
   }
 
-  @include media-breakpoint-up(lg) {
-    height: 304px;
 
+  // 768px and up
+  @include media-breakpoint-up(md) {
+    &.document-heading-grid {
+      .document-heading-image-container {
+        padding-top: $padding-16-7;
+        .img-copyright {
+          bottom: 3rem;
+        }
+      }
+    }
+  }
+
+  // 992px and up
+  @include media-breakpoint-up(lg) {
+    // Full width bg image layout
     .document-heading-content {
       height: 3.5rem;
     }
-
-    .document-heading-wrapper {
-      padding-top: 4.5rem;
-    }
-
+    // Left notch handling
     &.document-heading-left-notch {
       .document-heading-content {
-        left: 0;
+        margin: 0;
         &:before {
           content: '';
           background: $white;
@@ -104,61 +157,28 @@
         }
       }
     }
-  }
-}
 
-// Variant for document-heading over images
-.document-heading-img {
-  position: relative;
-  width: 100%;
-  z-index: 0;
-
-  .document-heading-image {
-    z-index: 0;
-    .img-copyright {
-      bottom: 3rem;
-    }
-  }
-
-  .document-heading-wrapper {
-    height: 100%;
-    margin: 0 auto;
-    // padding-top: 3.5rem;
-    position: relative;
-    z-index: 2;
-  }
-
-  .document-heading-content {
-    bottom: 0;
-    position: absolute;
-    background-color: $white;
-    height: 2rem;
-    width: calc(100% - 32px);
-  }
-
-  @include media-breakpoint-up(lg) {
-
-    .document-heading-image {
-      z-index: 0;
-      .img-copyright {
-        bottom: 1rem;
+    // Container restricted bg image layout
+    &.document-heading-grid {
+      .document-heading-background {
+        width: calc(100% - 2rem);
       }
-    }
+      .document-heading-image-container {
+        .img-copyright {
+          bottom: 1rem;
+          right: 2rem;
+        }
+      }
+      .document-heading-content-wrapper {
+        padding: 0;
+      }
 
-    .document-heading-content {
-      height: 3.5rem;
-    }
-
-    &.document-heading-left-notch {
-      .document-heading-content {
-        left: 0;
-        &:after {
-          content: '';
-          background: $white;
-          width: 1rem;
-          height: 100%;
-          position: absolute;
-          right: -1rem;
+      // Left notch handling
+      &.document-heading-left-notch {
+        .document-heading-content {
+          &:before {
+            content: none;
+          }
         }
       }
     }
