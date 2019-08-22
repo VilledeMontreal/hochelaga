@@ -10,7 +10,7 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 - Unité administrative template.
 - Article template.
 - Sidebar social medias list.
-- Content header image with left and center notch.
+- Content header image with left and center notch. Full-width and container grid variants.
 - Footer mobile behavior (dropdowns).
 - Styles > Typography > link-list-element and link-list-element-icon.
 - Utilities classes for font-size-interface - font-size and line-height handling -  variants (.font-size-lg-interface, .font-size-base-interface, .font-size-sm-interface, .font-size-xs-interface)
@@ -18,6 +18,7 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 - Styles for buttons icon placement left or right
 - Base layout template for employes 
 - Base menu slide left for template employes 
+- Utility class .text-preserve-space for white-space: pre usage.
 
 ## Changed
 - Blockquote emphasis should be a div tag (blockquote is strickly for citation).
