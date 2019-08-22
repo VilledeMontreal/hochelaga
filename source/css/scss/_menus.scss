@@ -272,3 +272,126 @@
     width: $slide-menu-width;
   }
 }
+
+//
+// Slide menu employés
+//
+// Main slide-menu employés container
+.slide-menu-employes {
+  position: fixed;
+  width: 100%;
+  max-width: 100%;
+  height: 100vh;
+  top: 0;
+  right: 0;
+  display: none;
+  overflow-x: hidden;
+  overflow-y: auto;
+  box-sizing: border-box;
+  background: $slide-menu-employes-bg;
+  transition: transform $slide-menu-employes-transition-dur $slide-menu-employes-transition-easing;
+  transform: translateX(100%);
+  will-change: transform;
+  z-index: $zindex-fixed;
+
+  .slider {
+    width: 100%;
+    transition: transform $slide-menu-employes-transition-dur $slide-menu-employes-transition-easing;
+    transform: translateX(0);
+    will-change: transform;
+  }
+  
+  // Slide menu employés header
+  // Contains the close button
+  .slide-menu-header {
+    background-color: $neutral-underground-1;
+    height: 3.5rem;
+    margin: 0;
+
+    @include media-breakpoint-up(lg) {
+      height: 4.5rem;
+    }
+
+  }
+  .slide-menu-footer {
+    position: absolute;
+    bottom: 0;
+    padding: 1.5rem 1rem 1.5rem 1.25rem;
+
+    svg {
+      width: 100%;
+      height: 100%;
+      max-width: 110px;
+    }
+    @include media-breakpoint-up(lg) {
+      padding: 1.5rem 1.5rem 1.5rem 1.75rem;
+    }
+
+  }
+
+  // Slide menu employés close button
+  .btn-close {
+    @include button-reset();
+    display: inline-flex;
+    align-items: center;
+    cursor: pointer;
+    margin: 0;
+    padding: 1rem;
+
+    .button-label {
+      @include font-size($font-size-sm);
+      margin-left: 1rem;
+    }
+    .icon {
+      &:before {
+        background-color: $neutral-primary;
+      }
+    }
+
+    &:focus {
+      box-shadow: none;
+    }
+
+    @include media-breakpoint-up(lg) {
+      padding: 1.5rem;
+    }
+  }
+  
+  .side-menu {
+    margin: 2rem 0 3rem 0;
+    
+    .list-group-item {
+      &.list-group-item-action {
+        & > a {
+          padding: 1rem 1rem 1rem 1.25rem;
+          color: $slide-menu-employes-link-color;
+          
+          &:hover {
+            color: $slide-menu-link-hover-color;
+            .icon {
+              &:before {
+                background-color: $slide-menu-employes-icon-hover-color;
+              }
+            }
+          }
+
+          .icon {
+            &:before {
+              background-color: $slide-menu-employes-icon-color;
+              height: $slide-menu-employes-icon-size;
+              width: $slide-menu-employes-icon-size;
+            }
+          }
+
+          @include media-breakpoint-up(lg) {
+            padding: 1rem 1rem 1rem 1.75rem;
+          }
+        }
+      } 
+    }
+  }
+  
+  @include media-breakpoint-up(sm) {
+    width: $slide-menu-employes-width;
+  }
+}

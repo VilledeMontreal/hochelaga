@@ -14,6 +14,10 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 - Footer mobile behavior (dropdowns).
 - Styles > Typography > link-list-element and link-list-element-icon.
 - Utilities classes for font-size-interface - font-size and line-height handling -  variants (.font-size-lg-interface, .font-size-base-interface, .font-size-sm-interface, .font-size-xs-interface)
+- Documentation for the components; badges, buttons, cards, dropdown and collapse 
+- Styles for buttons icon placement left or right
+- Base layout template for employes 
+- Base menu slide left for template employes 
 
 ## Changed
 - Blockquote emphasis should be a div tag (blockquote is strickly for citation).
