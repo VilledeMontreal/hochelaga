@@ -12,7 +12,7 @@
   "has-badges": {
     "badges": [
       {
-        "badge": "Organigramme",
+        "badge": "Unités administratives",
         "badgeClass": "badge-secondary",
         "badge-sr-text": "",
         "badgeUrl": "#"
@@ -20,62 +20,11 @@
     ]
   },
   "publicationDate": {
-    "dateTimeText": "15 août 2019",
-    "dateTimeFormat": "2019-08-15"
+    "dateTimeText": "22 août 2019",
+    "dateTimeFormat": "2019-08-22"
   },
   "lead": "<p>Amorce - Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi condimentum sollicitudin erat, quis convallis risus. Nullam posuere odio ligula, hendrerit suscipit ligula laoreet. Curabitur eleifend nulla purus, ut pharet urna ef id. Cras lacinia nisi id  (recommandé 300 caractères maximum).</p>",
-  "module-news": {
-    "listGroupClass": "list-group-teaser",
-    "listGroup": [
-      {
-        "class": false,
-        "url": "#",
-        "media": {
-          "alt": "",
-          "src": "https://picsum.photos/id/1025/1024/576"
-        },
-        "category": false,
-        "title": "Titre de la nouvelle d'une longueur de 80 caractères maximum",
-        "date": false,
-        "datePublication": {
-          "dateTimeFormat": "2019-08-15",
-          "dateTimeText": "15 août 2019"
-        }
-      },
-      {
-        "url": "https://google.ca",
-        "media": {
-          "alt": "",
-          "src": "https://picsum.photos/id/1026/1024/576"
-        },
-        "category": false,
-        "title": "Dolore amet aliquyam justo vero lorem accusam amet eos vero",
-        "date": false,
-        "datePublication": {
-          "dateTimeFormat": "2019-07-28",
-          "dateTimeText": "28 juillet 2019"
-        }
-      },
-      {
-        "url": "#",
-        "media": {
-          "alt": "",
-          "src": "https://picsum.photos/id/1027/1024/576"
-        },
-        "category": false,
-        "title": "Consetetur eirmod et aliquyam",
-        "date": false,
-        "datePublication": {
-          "dateTimeFormat": "2019-07-10",
-          "dateTimeText": "10 juillet 2019"
-        }
-      }
-    ],
-    "buttonAsLink": true,
-    "buttonClass": "btn-secondary",
-    "buttonUrl": "#",
-    "buttonText": "Toutes les nouvelles"
-  },
+  "module-news": false,
   "module-events": false,
   "module-documents": {
     "listGroupClass": "list-group-lg",
@@ -102,22 +51,27 @@
     "listGroup": [
       {
         "icon-name": "icon-dot-bullet",
-        "text": "Titre du contenu",
+        "text": "Lien de référence interne ou externe",
         "class": false
       },
       {
         "icon-name": "icon-dot-bullet",
-        "text": "Titre du contenu",
+        "text": "Lien de référence interne ou externe",
         "class": false
       },
       {
         "icon-name": "icon-dot-bullet",
-        "text": "Titre du contenu",
+        "text": "Lien de référence interne ou externeu",
         "class": false
       }
     ]
   },
   "module-texte-optionnel": true,
+  "module-emphasis": {
+    "isCitation": false,
+    "blockquote-classes": false,
+    "blockquote-footer": false
+  },
   "listAutoProgrammes": {
     "listGroupClass": false,
     "listGroup": [
@@ -160,19 +114,7 @@
       }
     ]
   },
-  "listAutoProjets": {
-    "listGroupClass": false,
-    "listGroup": [
-      {
-        "text": "Titre du projet",
-        "class": false
-      },
-      {
-        "text": "Titre du projet",
-        "class": false
-      }
-    ]
-  },
+  "listAutoProjets": false,
   "sidebarRight": true,
   "sidebarClasses": false,
   "sb-classes": "",
@@ -191,17 +133,17 @@
     "informations": {
       "list": [
         {
-          "icon-name": "icon-loction",
-          "listItemAction": true,
-          "url": "/test-url",
-          "text": "Nom du lieu",
-          "listExtraContent": "43 5646, rue Sherbrooke Est,<br>Montréal (Québec) H1N 3K4"
+          "icon-name": "icon-user",
+          "listItemAction": false,
+          "url": "#",
+          "text": "Titre de fonction",
+          "listExtraContent": "Prénom Nom"
         },
         {
-          "icon-name": "icon-phone",
-          "listItemAction": false,
-          "text": false,
-          "listExtraContent": "514 897-4933, poste 1234"
+          "icon-name": "icon-externallink",
+          "listItemAction": true,
+          "url": "#",
+          "text": "Formulaire en ligne"
         },
         {
           "icon-name": "icon-email",
@@ -210,10 +152,22 @@
           "text": "Envoyer un courriel"
         },
         {
-          "icon-name": "icon-website",
-          "listItemAction": true,
-          "url": "#",
-          "text": "Site web"
+          "icon-name": "icon-phone",
+          "listItemAction": false,
+          "text": "3-1-1",
+          "listExtraContent": "<p>De l’extérieur de Montréal : 514 872-0311</p><p>Du lundi au vendredi : de 8 h 30 à 20 h 30 Samedi, dimanche et jours fériés : de 9 h à 17 h</p>"
+        },
+        {
+          "icon-name": "icon-phone",
+          "listItemAction": false,
+          "text": "9-1-1",
+          "listExtraContent": "Services d'urgence"
+        },
+        {
+          "icon-name": "icon-phone",
+          "listItemAction": false,
+          "text": "Nom du service",
+          "listExtraContent": "514 555-5555, poste 123"
         }
       ]
     },
@@ -247,18 +201,36 @@
       ]
     }
   },
+  "sb-block-social-media": {
+
+  },
   "sb-block-liens-utiles": {
     "listGroupClass": "false",
     "listGroup": [
       {
-        "icon-name": "icon-externallink",
-        "text": "Lien 1",
-        "class": false
+        "icon-name": "icon-social-facebook",
+        "text": "Facebook",
+        "url": "#"
       },
       {
-        "icon-name": "icon-externallink",
-        "text": "Lien 2",
-        "class": false
+        "icon-name": "icon-social-instagram",
+        "text": "Instagram",
+        "url": "#"
+      },
+      {
+        "icon-name": "icon-social-linkedin",
+        "text": "LinkedIn",
+        "url": "#"
+      },
+      {
+        "icon-name": "icon-social-twitter",
+        "text": "Twitter",
+        "url": "#"
+      },
+      {
+        "icon-name": "icon-social-youtube",
+        "text": "Youtube",
+        "url": "#"
       }
     ]
   }

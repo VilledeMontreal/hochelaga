@@ -111,6 +111,12 @@
           </div>
           {{/ module-texte-optionnel}}
 
+          {{# module-emphasis }}
+          <div class="content-module-stacked">
+          {{> styles-blockquote }}
+          </div>
+          {{/ module-emphasis}}
+
           {{# listAutoProgrammes}}
           <div class="content-module-stacked">
             <h2>Liste automatisée des programmes</h2>
@@ -131,6 +137,12 @@
             {{> components-list-item-link}}
           </div>
           {{/ listAutoProjets}}
+
+          <div class="content-module-stacked">
+            <div class="font-size-base-interface">
+              <span class="mr-1">Dirigé par</span><a href="#">Unité administrative</a>, <a href="#">Instance</a>, <a href="#">Collectrice</a>
+            </div>
+          </div>
 
         </div>
         {{# sidebarRight}}

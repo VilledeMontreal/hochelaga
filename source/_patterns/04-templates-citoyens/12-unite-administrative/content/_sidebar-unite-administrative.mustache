@@ -6,28 +6,11 @@
   {{/ sb-logo}}
   {{# sb-block-renseignements}}
   <section class="sb-block mb-8">
-    {{> styles-heading-sidebar(sidebarTitle: "Renseignements")}}
+    {{> styles-heading-sidebar(sidebarTitle: "Nous joindre")}}
 
-    <div class="mb-2">
-      {{# informations-direction}}
-        {{> components-list-item}}
-      {{/ informations-direction}}
-      {{# informations}}
-        {{> components-list-item-icon}}
-      {{/ informations}}
-    </div>
-    {{# hasSocialMediaIcons}}
-    <ul class="list-inline list-social-medias mb-0">
-      {{# socialMediaIcons}}
-      <li class="list-inline-item">
-        <a href="{{ url }}" >
-          <span class="icon {{icon-name}}" aria-hidden="true"></span>
-          <span class="sr-only">{{ sr-text}}</span>
-        </a>
-      </li>
-      {{/ socialMediaIcons}}
-    </ul>
-    {{/ hasSocialMediaIcons}}
+    {{# informations}}
+      {{> components-list-item-icon}}
+    {{/ informations}}
   </section>
   {{/ sb-block-renseignements}}
   {{# sb-block-liens-utiles}}
