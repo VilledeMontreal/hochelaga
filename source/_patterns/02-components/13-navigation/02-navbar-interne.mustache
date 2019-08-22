@@ -1,4 +1,4 @@
-<nav class="main-navbar navbar navbar-dark navbar-expand justify-content-between w-100 {{ navbarPosition }}" role="navigation">
+<nav class="main-navbar navbar navbar-dark navbar-expand justify-content-between w-100" role="navigation">
   <div class="navbar-div navbar-div-left">
     {{> components-main-menu-button }}
     <div class="navbar-separator d-none d-md-flex"></div>
@@ -55,6 +55,9 @@
           <div class="dropdown-item-section">
             <div class="user-info">
               <span class="user-name">{{ user.name }}</span>
+              {{# user-has-profile}}
+              <span class="user-profil d-block d-lg-none">{{ user.profil }}</span>
+              {{/ user-has-profile}}
               <span class="user-email">{{ user.email }}</span>
             </div>
           </div>

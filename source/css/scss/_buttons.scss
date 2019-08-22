@@ -233,6 +233,91 @@ input[type="button"] {
 }
 
 
+// Icons left / right
+
+.btn-icon-left,
+.btn-icon-right {
+  display: inline-flex;
+  align-items: center;
+  .icon {
+    align-self: center;
+    &:before {
+      display: block;
+    }
+  }
+}
+
+.btn-icon-left {
+  .btn-label {
+    order: 2;
+  }
+  .icon {
+    order: 1;
+    margin-left: -1.125rem;
+    margin-right: .5rem;
+    &:before {
+      left: ($spacer/4);
+    }
+  }
+  .utility-icon {
+    margin-left: -.5rem;
+    margin-right: .5rem;
+  }
+  &.btn-lg {
+    .icon {
+      margin-left: -.75rem;
+    }
+  }
+  &.btn-sm {
+    .icon,
+    .utility-icon {
+      margin-left: -.25rem;
+    }
+  }
+  &.btn-squared {
+    .icon,
+    .utility-icon {
+      margin-left: -.5rem;
+    }
+  }
+}
+
+.btn-icon-right {
+  .btn-label {
+    order: 1;
+  }
+  .icon {
+    order: 2;
+    margin-right: -1.125rem;
+    margin-left: .5rem;
+    &:before {
+      right: ($spacer/4);
+    }
+  }
+  .utility-icon {
+    margin-right: -.5rem;
+    margin-left: .5rem;
+  }
+  &.btn-lg {
+    .icon {
+      margin-right: -.75rem;
+    }
+  }
+  &.btn-sm {
+    .icon,
+    .utility-icon {
+      margin-right: -.25rem;
+    }
+  }
+  &.btn-squared {
+    .icon,
+    .utility-icon {
+      margin-right: -.5rem;
+    }
+  }
+}
+
+
 // Utility class to hide button-icon label
 @each $breakpoint, $value in $grid-breakpoints {
   // Hide button label at small breakpoint
@@ -243,9 +328,41 @@ input[type="button"] {
         margin-left: -5px;
         margin-right: -5px;
       }
+      
+      &.btn-icon-left {
+        .icon,
+        .utility-icon {
+          margin-left: -5px;
+          margin-right: -5px;
+        }
+        &.btn-lg {
+           .icon,
+          .utility-icon {
+            margin-left: -2px;
+            margin-right: -2px;
+          }
+        }
+      }
+
+      &.btn-icon-right {
+        .icon,
+        .utility-icon {
+          margin-right: -5px;
+          margin-left: -5px;
+        }
+        &.btn-lg {
+           .icon,
+          .utility-icon {
+            margin-right: -2px;
+            margin-left: -2px;
+          }
+        }
+      }
+
       .btn-label {
         display: none;
       }
+
     }
   }
 }

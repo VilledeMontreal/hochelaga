@@ -256,3 +256,15 @@ html {
     }
   }
 }
+
+
+// Employés
+.main-content.employes {
+  padding: 0;
+  .region-content {
+    padding-top: 1rem;
+  }
+  @include media-breakpoint-up(lg) {
+    padding: 0 1rem;
+  }
+}
