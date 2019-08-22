@@ -167,18 +167,23 @@
 
 /* Employés */
 .page-header {
-  padding: 40px 16px 8px;
+  padding:  2.5rem 1rem 0.5rem;
   height: auto;
 
   .container-title {
-    h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6 {
+    h1, .h1,
+    h2, .h2,
+    h3, .h3,
+    h4, .h4,
+    h5, .h5,
+    h6, .h6 {
       margin-bottom: 1rem;
     }
 
     .container-subtitle {
       display: inline-flex;
       align-items: center;
-      margin-bottom: 32px;
+      margin-bottom: 2rem;
 
       p {
         font-size: $font-size-sm;
@@ -186,7 +191,7 @@
         margin-bottom: 0;
       }
       * {
-        margin-right:16px;
+        margin-right: 1rem;
       }
       .icon {
         margin-right: 0;
@@ -198,7 +203,7 @@
     text-align: left;
 
     .btn {
-      margin: 0 8px 8px 0;
+      margin: 0 0.5rem 0.5rem 0;
       &:last-of-type {
         margin-right: 0;
       }
@@ -206,7 +211,7 @@
   }
 
   @include media-breakpoint-up(lg) {
-    padding: 40px 32px 8px;
+    padding: 2.5rem 2rem 0.5rem;
 
     .container-btn {  
       text-align: right;
