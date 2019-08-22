@@ -1,0 +1,25 @@
+<div class="document-heading {{ documentHeadingClass }}{{^documentHeadingFullWidth}} document-heading-grid{{/ documentHeadingFullWidth}}">
+  <div class="document-heading-image-container">
+    <div style="background-image:url('{{documentHeadingImageUrl}}')" class="document-heading-background"></div>
+    {{# media.copyright }}
+    <div class="img-copyright">
+      <span class="icon icon-copyright" aria-hidden="true"></span>
+      <span class="copyright-text d-none">{{ media.copyright }}</span>
+      <span class="sr-only">&copy; {{ media.copyright }}</span>
+    </div>
+    {{/ media.copyright }}
+  </div>
+  {{# documentHeadingNotch}}
+  {{# documentHeadingFullWidth}}<div class="container position-relative">{{/ documentHeadingFullWidth}}
+    {{# documentHeadingFullWidth}}
+    <div class="py-20">
+    </div>
+    {{/ documentHeadingFullWidth}}
+    <div class="document-heading-wrapper">
+      <div class="document-heading-content-wrapper">
+        <div class="document-heading-content col-12{{# has-left-notch}} col-lg-8{{/ has-left-notch}}{{^ has-left-notch}} col-lg-10{{/ has-left-notch}}"></div>
+      </div>
+    </div>
+  {{# documentHeadingFullWidth}}</div>{{/ documentHeadingFullWidth}}
+  {{/ documentHeadingNotch}}
+</div>
