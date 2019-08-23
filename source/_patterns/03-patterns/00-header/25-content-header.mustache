@@ -12,12 +12,21 @@
   {{# documentHeadingNotch}}
   {{# documentHeadingFullWidth}}<div class="container position-relative">{{/ documentHeadingFullWidth}}
     {{# documentHeadingFullWidth}}
-    <div class="py-20">
+    <div class="row document-heading-header pt-8 pb-10 pt-lg-16 pb-lg-22">
+      <div class="col-12 col-lg-6">
+        <h1>{{ heading }}</h1>
+        <div class="form-group form-group-lg">
+          <div class="input-group-icon input-group-icon-left">
+            <input type="text" class="form-control input-rounded" id="input-group-search" placeholder="Rechercher ...">
+            <span class="icon icon-search" aria-hidden="true"></span>
+          </div>
+        </div>
+      </div>
     </div>
     {{/ documentHeadingFullWidth}}
     <div class="document-heading-wrapper">
       <div class="document-heading-content-wrapper">
-        <div class="document-heading-content col-12{{# has-left-notch}} col-lg-8{{/ has-left-notch}}{{^ has-left-notch}} col-lg-10{{/ has-left-notch}}"></div>
+        <div class="document-heading-content col-12{{# has-left-notch}} col-lg-8{{/ has-left-notch}}{{^ has-left-notch}}{{^notch-full-width }} col-lg-10{{/notch-full-width}}{{/ has-left-notch}}"></div>
       </div>
     </div>
   {{# documentHeadingFullWidth}}</div>{{/ documentHeadingFullWidth}}
