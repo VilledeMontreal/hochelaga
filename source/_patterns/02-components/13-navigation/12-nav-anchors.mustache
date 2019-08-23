@@ -1,5 +1,7 @@
 <nav id="navAnchors" class="nav-anchors {{navAnchorsClass}}" {{# nav.is-sticky }}data-toggle="sticky-onscroll"{{/ nav.is-sticky}}>
+  {{# nav.inContainer}}
   <div class="container">
+  {{/ nav.inContainer}}
     <ul class="nav {{ navClass }}" role="tablist">
       {{# nav.navItem }}
       <li class="nav-item {{ class }}">
@@ -7,5 +9,7 @@
       </li>
       {{/ nav.navItem }}
     </ul>
+  {{# nav.inContainer}}
   </div>
+  {{/ nav.inContainer}}
 </nav>
