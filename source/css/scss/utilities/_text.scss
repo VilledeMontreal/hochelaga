@@ -50,6 +50,11 @@ a {
   color: $white !important;
 }
 
+// Preserve white space
+.text-preserve-space {
+  white-space: pre;
+}
+
 a.text-light,
 a.text-white {
   border-bottom: $link-border-width solid $white !important;
