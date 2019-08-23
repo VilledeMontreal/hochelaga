@@ -166,6 +166,17 @@ html {
   }
 }
 
+// Small variants (32px)
+.content-module-stacked-sm {
+  margin-bottom: 2rem;
+  > *:not(h2):not(h3):not(h4):not(h5):not(h6) {
+    margin-bottom: 2rem;
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+}
+
 
 // Content modules
 // Comparatif

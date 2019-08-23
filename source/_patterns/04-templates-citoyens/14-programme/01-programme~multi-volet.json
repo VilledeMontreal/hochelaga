@@ -1,0 +1,382 @@
+{
+  "navbarPosition": "fixed-top",
+  "documentHeading": true,
+  "documentHeadingClass": "document-heading-left-notch",
+  "documentHeadingImageUrl": "https://picsum.photos/id/102/1170/480",
+  "documentHeadingNotch": true,
+  "has-left-notch": true,
+  "pageClasses": "mt-7 mt-lg-9",
+  "header-back-link": {
+    "has-icon": true, 
+    "icon-right": false, 
+    "link-label": "Tous les programmes", 
+    "icon": "icon-arrow-left",
+    "url": "#"
+  },
+  "heading": "Titre du programme",
+  "has-badges": {
+    "badges": [
+      {
+        "badge": "Sous-catégorie principale",
+        "badgeClass": "badge-secondary",
+        "badge-sr-text": "",
+        "badgeUrl": "#"
+      },
+      {
+        "badge": "Autre sous-catégorie",
+        "badgeClass": "badge-secondary",
+        "badge-sr-text": "",
+        "badgeUrl": "#"
+      },
+      {
+        "badge": "Autre sous-catégorie",
+        "badgeClass": "badge-secondary",
+        "badge-sr-text": "",
+        "badgeUrl": "#"
+      }
+    ]
+  },
+  "publicationDate": {
+    "dateTimeText": "3 septembre 2019",
+    "dateTimeFormat": "2019-09-03"
+  },
+  "lead": "<p>Amorce - Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi condimentum sollicitudin erat, quis convallis risus. Nullam posuere odio ligula, hendrerit suscipit ligula laoreet. Curabitur eleifend nulla purus, ut pharet urna ef id. Cras lacinia nisi id  (recommandé 300 caractères maximum).</p>",
+  "module-anchors": {
+    "listGroupClass": false,
+    "listGroup": [
+      {
+        "icon-name": "icon-dot-bullet",
+        "url": "#pg-multi-volet-1",
+        "text": "Volet 1",
+        "classLink": "js-scroll-trigger"
+      },
+      {
+        "icon-name": "icon-dot-bullet",
+        "url": "#pg-multi-volet-2",
+        "text": "Volet 2",
+        "classLink": "js-scroll-trigger"
+      }
+    ]
+  },
+  "module-volets": [
+    {
+      "voletID": "pg-multi-volet-1",
+      "voletTitle": "Titre - Volet 1",
+      "module-state": {
+        "badgeClass": "badge-info", 
+        "badge": "État du programme"
+      },
+      "module-text": true,
+      "module-emphasis": {
+        "blockquote-classes": "blockquote-emphasis",
+        "blockquote-html-text": "<p>Impassibles parfois la je sapin rutilements éternel, vos sont enlever montant bateau toute qu'on les je repeché, loin pôles nasses dormir aubes des je, avec.</p>",
+        "blockquote-footer": false
+      },
+      "module-message": {
+        "alertClass": "alert-info alert-with-icon",
+        "alertTitle": "Titre du message",
+        "alertText": "Description du message.",
+        "alertIcon": {
+          "icon-name": "icon-info"
+        }
+      },
+      "module-list-reference": {
+        "listGroup": [
+          {
+            "icon-name": "icon-affaires-et-economie",
+            "text": "Référence : Titre de l'article lié (choix éditorial)",
+            "class": false
+          },
+          {
+            "icon-name": "icon-animaux",
+            "text": "Titre du contenu référencé",
+            "class": false
+          }
+        ]
+      },
+      "module-table": {
+        "table": {
+          "tableWrapper": true,
+          "caption": "",
+          "tableClass" : "table-lg",
+          "thead": {
+            "theadClass": "",
+            "th": [
+              { "title": "#" },
+              { "title": "Libellé 1" },
+              { "title": "Libellé 2" }
+            ]
+          },
+          "tbody": {
+            "tr": [
+              {
+                "th": "1",
+                "td": [
+                  { "text": "Libellé" },
+                  { "text": "Libellé" }
+                ]
+              },
+              {
+                "th": "2",
+                "td": [
+                  { "text": "Libellé" },
+                  { "text": "Libellé" }
+                ]
+              },
+              {
+                "th": "3",
+                "td": [
+                  { "text": "Libellé" },
+                  { "text": "Libellé" }
+                ]
+              }
+            ]
+          }
+        }
+      },
+      "module-collapse": {
+        "collapsibleItem": [
+          {
+            "title": "Collapsible item #1",
+            "content": "Collapsible content",
+            "block-id": "programme-template-item-1",
+            "heading-id": "programme-template-heading-1",
+            "collapsible-default-content": "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>"
+          },
+          {
+            "title": "Collapsible item #2",
+            "content": "Collapsible content",
+            "block-id": "programme-template-item-2",
+            "heading-id": "programme-template-heading-2",
+            "collapsible-default-content": "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>"
+          },
+          {
+            "title": "Collapsible item #3",
+            "content": "Collapsible content",
+            "block-id": "programme-template-item-3",
+            "heading-id": "programme-template-heading-3",
+            "collapsible-default-content": "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>"
+          }
+        ]
+      },
+      "module-comparatif-colonne": {
+        "colonnes": true,
+        "comparatif": [
+          {
+            "title": "Titre de la section",
+            "text": "<p>Corps de texte simple - Pas de liens. Permet de structure l'information en regroupant visuellement sur deux colonnes des contenus pouvant être comparés.</p><ul><li>Liste à puce</li><li>Liste à puce</li><li>Liste à puce</li></ul>"
+          },
+          {
+            "title": "Titre de la section",
+            "text": "<p>Exemples  : Quoi faire vs Quoi pas faire ou Propriétaire vs Locataire.</p><ul><li>Liste à puce</li><li>Liste à puce</li><li>Liste à puce</li></ul>"
+          }
+        ]
+      },
+      "module-comparatif-rangee": {
+        "comparatif": [
+          {
+            "title": "Titre de la section",
+            "text": "<p>Corps de texte - Permet de structure l'information en regroupant visuellement sur plusieurs rangées des contenus pouvant être comparés. Exemple : Avant, Pendant et Après</p>"
+          },
+          {
+            "title": "Titre de la section",
+            "text": "<ul><li>Liste à puce</li><li>Liste à puce</li><li>Liste à puce</li></ul>"
+          },
+          {
+            "title": "Titre de la section",
+            "text": "<ul><li>Liste à puce</li><li>Liste à puce</li><li>Liste à puce</li></ul>"
+          }
+        ]
+      },
+      "module-documents": {
+        "listGroupClass": "list-group-lg",
+        "listGroup": [
+          {
+            "icon-name": "icon-file-pdf",
+            "text": "Titre du document [PDF - 2 Mo]",
+            "class": "document-pdf"
+          },
+          {
+            "icon-name": "icon-file-pdf",
+            "text": "Titre du document [PDF - 2 Mo]",
+            "class": "document-pdf"
+          },
+          {
+            "icon-name": "icon-file",
+            "text": "Titre du document",
+            "class": "document"
+          }
+        ]
+      },
+      "module-card-cta": {
+        "cards": {
+          "classes": "",
+          "bsgrid-classes": "col-12",
+          "card-item": [
+            {
+              "classes": "card-fw",
+              "url": "#",
+              "card-media" : {
+                "icon": false,
+                "img": {
+                  "src": "https://picsum.photos/id/1074/768/432",
+                  "alt": "Card full width #1 img alt."
+                }
+              },
+              "card-type": "Type de l'événement",
+              "card-title": "Lien de référence à un événement vedette",
+              "card-text": false,
+              "card-publication-date": false,
+              "card-date-text" : "Date et heure du début de l'événement"
+            }
+          ]
+        }
+      },
+      "module-cta": {
+        "buttonAsLink": true,
+        "buttonClass": "btn-primary btn-lg",
+        "buttonUrl": "#",
+        "buttonText": "Appel à l'action"
+      }
+    },
+    {
+      "voletID": "pg-multi-volet-2",
+      "voletTitle": "Titre - Volet 2",
+      "module-state": {
+        "badgeClass": "badge-info", 
+        "badge": "État du programme"
+      },
+      "module-emphasis": {
+        "blockquote-classes": "blockquote-emphasis",
+        "blockquote-html-text": "<p>Impassibles parfois la je sapin rutilements éternel, vos sont enlever montant bateau toute qu'on les je repeché, loin pôles nasses dormir aubes des je, avec.</p>",
+        "blockquote-footer": false
+      },
+      "module-message": false,
+      "module-list-reference": false,
+      "module-text": true,
+      "module-table": false,
+      "module-collapse": false,
+      "module-comparatif-colonne": false,
+      "module-comparatif-rangee": false,
+      "module-documents": false,
+      "module-card-cta": false,
+      "module-cta": {
+        "buttonAsLink": true,
+        "buttonClass": "btn-primary btn-lg",
+        "buttonUrl": "#",
+        "buttonText": "Appel à l'action"
+      }
+    }
+  ],
+  "module-reglements": {
+    "listGroupClass": "list-group-lg",
+    "listGroup": [
+      {
+        "icon-name": false,
+        "text": "Titre du règlement",
+        "class": false
+      },
+      {
+        "icon-name": false,
+        "text": "Titre du règlement",
+        "class": false
+      },
+      {
+        "icon-name": false,
+        "text": "Titre du règlement",
+        "class": false
+      }
+    ]
+  },
+  "module-partners": {
+    "hasLogos": false,
+    "partnerText": "<p>Texte optionnel, la Ville de Montréal remercie ses partenaires du programme. En version 1 il n’y aura pas de logos de partenaires d’affichés.</p>",
+    "listPartners": {
+      "items": [
+        {
+          "partnerName": "Partenaire #1"
+        },
+        {
+          "partnerName": "Partenaire #2"
+        },
+        {
+          "partnerName": "Partenaire #3"
+        }
+      ]
+    }
+  },
+  "sidebarRight": true,
+  "sidebarClasses": false,
+  "sb-classes": "",
+  "sb-block-nous-joindre": {
+    "list": [
+      {
+        "icon-name": "icon-user",
+        "listItemAction": false,
+        "text": "Titre de fonction",
+        "listExtraContent": "Prénom Nom"
+      },
+      {
+        "icon-name": "icon-loction",
+        "listItemAction": true,
+        "text": "Nom du lieu",
+        "listExtraContent": "1441, rue Saint-Urbain, 4e étage<br>Montréal (Québec) H2X 2M6"
+      },
+      {
+        "icon-name": "icon-phone",
+        "listItemAction": false,
+        "text": "3-1-1",
+        "listExtraContent": "<p>De l’extérieur de Montréal : 514 872-0311</p><p>Du lundi au vendredi : de 8 h 30 à 20 h 30 Samedi, dimanche et jours fériés : de 9 h à 17 h</p><p>Texte complémentaire optionnel.</p>"
+      },
+      {
+        "icon-name": "icon-phone",
+        "listItemAction": false,
+        "text": "9-1-1",
+        "listExtraContent": "Services d'urgence"
+      },
+      {
+        "icon-name": "icon-phone",
+        "listItemAction": false,
+        "text": "Nom du service",
+        "listExtraContent": "514 555-5555, poste 123"
+      },
+      {
+        "icon-name": "icon-email",
+        "listItemAction": true,
+        "url": "mailto:test@montreal.ca",
+        "text": "Envoyer un courriel",
+        "listExtraContent": "Texte complémentaire optionnel"
+      }
+    ]
+  },
+  "sb-block-nous-suivre": {
+    "listGroupClass": "false",
+    "listGroup": [
+      {
+        "icon-name": "icon-social-facebook",
+        "text": "Facebook",
+        "url": "#"
+      },
+      {
+        "icon-name": "icon-social-instagram",
+        "text": "Instagram",
+        "url": "#"
+      },
+      {
+        "icon-name": "icon-social-linkedin",
+        "text": "LinkedIn",
+        "url": "#"
+      },
+      {
+        "icon-name": "icon-social-twitter",
+        "text": "Twitter",
+        "url": "#"
+      },
+      {
+        "icon-name": "icon-social-youtube",
+        "text": "Youtube",
+        "url": "#"
+      }
+    ]
+  }
+}

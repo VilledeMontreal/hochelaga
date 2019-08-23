@@ -1,0 +1,100 @@
+<div class="border-bottom border-neutral-stroke pb-4 mb-8" id="{{ voletID }}">
+  {{# module-state }}
+  <div class="mb-2">
+    {{> components-badge }}
+  </div>
+  {{/ module-state }}
+
+  {{# module-text}}
+  <div class="content-module-stacked-sm">
+    <h2>{{ voletTitle }}</h2>
+    <p>Corps de texte - <i>Italique</i> et <strong>gras</strong>, exposant, indice et caractères spéciaux adipiscing elit. Morbi condimentum sollicitudin erat, quis <a href="#">lien interne</a> ou <a href="https://google.com">lien externe</a> convallis risus. Nullam  posuere odio ligula, hendrerit suscipit ligula congue laoreet. Curabitur eleifend nulla purus, ut pharetra urna efficitur id. Cras lacinia nisi id quam lacinia, et orci aliquam.</p>
+    <ul>
+      <li>Liste à puce</li>
+      <li>Liste à puce</li>
+      <li>Liste à puce</li>
+      <li>Liste à puce</li>
+    </ul>
+    <ol>
+      <li>Liste numérotée</li>
+      <li>Liste numérotée</li>
+      <li>Liste numérotée</li>
+    </ol>
+  </div>
+  {{/ module-text}}
+
+  {{# module-emphasis }}
+  <div class="content-module-stacked-sm">
+    {{> styles-blockquote }}
+  </div>
+  {{/ module-emphasis}}
+
+  {{# module-message }}
+  <div class="content-module-stacked-sm">
+    {{> components-alert}}
+  </div>
+  {{/ module-message }}
+
+  {{# module-list-reference}}
+  <div class="content-module-stacked-sm">
+    {{> components-list-item-links-icons-categories}}
+  </div>
+  {{/ module-list-reference}}
+
+  {{# module-table}}
+  <div class="content-module-stacked-sm">
+    <h3>Titre tableau - module Titre</h3>
+    <p>Courte description optionnelle - module corps de texte</p>
+    {{> styles-table }}
+  </div>
+  {{/ module-table}}
+
+  {{# module-collapse}}
+  <div class="content-module-stacked-sm">
+    <h3>Contenus imbriqués Accordéons - module titre</h3>
+    <div id="accordion" class="wrapper-accordion" role="tablist" aria-multiselectable="true">
+      {{> components-collapsible-item }}
+    </div>
+  </div>
+  {{/ module-collapse}}
+
+  {{# module-comparatif-colonne}}
+  <div class="content-module-stacked-sm">
+    <h3>Comparatif Colonnes - module titre</h3>
+    {{> patterns-content-comparatif }}
+  </div>
+  {{/ module-comparatif-colonne}}
+
+  {{# module-comparatif-rangee}}
+  <div class="content-module-stacked-sm">
+    <h3>Comparatif Rangées - module titre</h3>
+    {{> patterns-content-comparatif }}
+  </div>
+  {{/ module-comparatif-rangee}}
+
+  {{# module-documents}}
+  <div class="content-module-stacked-sm">
+    <h3>Documents à télécharger</h3>
+    {{> components-list-item-link}}
+  </div>
+  {{/ module-documents }}
+
+  {{# module-card-cta}}
+  <div class="content-module-stacked-sm">
+    <div class="row cards">
+      {{# cards.card-item }}
+      <div class="{{ cards.bsgrid-classes }}">
+        {{> components-card-item-full-width }}
+      </div>
+      {{/ cards.card-item }}
+    </div>
+  </div>
+  {{/ module-card-cta}}
+
+  {{# module-cta }}
+  <div class="content-module-stacked-sm">
+    {{> components-button}}
+  </div>
+  {{/ module-cta}}
+
+</div>
