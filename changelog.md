@@ -22,10 +22,15 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 ## Changed
 - Blockquote emphasis should be a div tag (blockquote is strickly for citation).
 - .sb-block now takes 4rem margin-bottom by default.
+- Cards fw now depends on grid-class for formatting at some breakpoint.
+- Cards fw now takes a minimal height for image (~16:9 aspect ratio) @larger breakpoint.
 
 ## Fixed
 - List Group line-heights, paddings and margins.
 - Pattern Labs: Fixed various pseudo-templates inclusion.
+
+## Removed
+- Removed some cards classes (.card-sm, .card-guide, .card-events, .card-news) that introduces exception. (Cards harmonisation)
 
 
 ## [4.0.0] - 2019-08-15

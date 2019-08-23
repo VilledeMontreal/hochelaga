@@ -20,8 +20,12 @@
     padding-top: 56.25%;  /* 16:9 format = 0.5625 */
     width: 100%;
 
-    @include media-breakpoint-up(lg){
-      padding-top: 0;
+    @include media-breakpoint-up(md){
+      min-height: 178px; // Maintain a minimal 16:9 aspect ratio
+      padding: 0;
+    }
+    @include media-breakpoint-up(xl){
+      min-height: 212px; // Maintain a minimal 16:9 aspect ratio
     }
   }
 
@@ -87,19 +91,11 @@
     margin-top: auto;
   }
 
-  // Card-sm
-  // Gives a card-body smaller padding
-  &.card-sm {
-    .card-body {
-      padding: 1rem;
-    }
-  }
-
   // Card full-width
   // Images are handeld like list-group-links using
   // variable height image technique (bg-image)
   &.card-fw {
-    @include media-breakpoint-up(lg) {
+    @include media-breakpoint-up(md) {
       flex-direction: row;
       align-items: center;
       .card-img-bg {
@@ -107,14 +103,14 @@
         @include border-radius(0);
         @include border-left-radius($card-inner-border-radius);
       }
+      .card-body-wrapper {
+        @include make-col(8);
+        align-self: center;
+      }
       .card-body {
         align-self: flex-start;
         width: 100%;
       }
-    }
-
-    // Full-width news gets a bigger title...
-    &.card-news {
       .card-title {
         @include font-size($h3-font-size);  // 24/32
         line-height: 2rem;
@@ -140,12 +136,6 @@
     .card-title {
       @include font-size($h3-font-size);  // 24/32
       line-height: 2rem;
-    }
-  }
-
-  &.card-guide {
-    .card-type {
-      color: $action;
     }
   }
 
@@ -242,6 +232,13 @@
         }
       }
 
+      @include media-breakpoint-up(md){
+        .card-img-bg {
+          min-height: auto;
+          padding-top: $padding-16-9
+        }
+      }
+
       @include media-breakpoint-up(lg) {
         border: none;
         .card-body {
@@ -330,6 +327,9 @@ a.card {
     background-color: $card-bg;
     border: $card-border-width solid transparent;
     box-shadow: $card-box-shadow;
+    .card-title {
+      color: $action;
+    }
   }
   &.card-featured,
   &.card-multi {
@@ -356,5 +356,48 @@ a.card {
   > div,
   .card-item {
     display: flex; // must add flex capacity to col to get equalheight
+  }
+}
+
+.cards {
+  &:last-child {
+    .card.card-fw {
+      margin-bottom: 0;
+    }
+  }
+}
+
+
+// We handle full-width differently based on the grid size
+[class^="col-"][class$="-6"],
+[class^="col-"][class$="-7"],
+[class^="col-"][class$="-8"] {
+  .card {
+    &.card-fw {
+      @include media-breakpoint-up(md) {
+        .card-img-bg {
+          @include make-col(5);
+        }
+        .card-body-wrapper {
+          @include make-col(7);
+        }
+        .card-title {
+          @include font-size($h4-font-size);
+          line-height: $line-height-lg;
+        }
+      }
+    }
+  }
+}
+
+// Col-4
+// Gives a card-body smaller padding
+[class^="col-"][class$="-3"] {
+  @include media-breakpoint-up(lg) {
+    .card {
+      .card-body {
+        padding: 1rem;
+      }
+    }
   }
 }
