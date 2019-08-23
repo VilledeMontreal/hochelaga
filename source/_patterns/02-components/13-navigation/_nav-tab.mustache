@@ -1,5 +1,7 @@
 <nav class="nav-tabs {{navTabsClass}}">
+  {{# inContainer}}
   <div class="container">
+  {{/ inContainer}}
     <ul class="nav" role="tablist">
       {{# navTabs.navItem }}
       <li class="nav-item {{liClass}}" role="presentation">
@@ -7,5 +9,7 @@
       </li>
       {{/ navTabs.navItem }}
     </ul>
+  {{# inContainer}}
   </div>
+  {{/ inContainer}}
 </nav>
