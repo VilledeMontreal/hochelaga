@@ -52,6 +52,20 @@
   }
 }
 
+// Dismissible alerts
+//
+// Expand the right padding and account for the close button's positioning.
+
+.alert-dismissible {
+  padding-right: 3.5rem;
+
+  // Adjust close link position
+  .close {
+    margin: .5rem;
+    padding: .5rem;
+  }
+}
+
 
 // override mixin alert-variant
 @each $label, $map in $dialog-colors {
@@ -133,12 +147,14 @@
 // Message bar
 //
 .message-bar {
+  border-left-width: 0;
   color: $white;
   display: flex;
   @include font-size($font-size-base);
-  align-items: center;
-  justify-content: space-between;
-  padding: 1rem;
+  // align-items: center;
+  // justify-content: space-between;
+  margin-bottom: 0;
+  padding: 1rem 3.5rem 1rem 1rem;
   line-height: $line-height-md;
   
   svg {
@@ -151,40 +167,58 @@
 
   .message-bar-container {
     display: block;
-    @include media-breakpoint-up(md) {
-      display: inline-flex;
-    }
-
-    .message-bar-heading {
-      font-weight: $font-weight-bold;
-      margin-right: 2rem;
-    }
+    width: 100%;
 
     p {
       margin: 0;
-      display: none;
-       @include media-breakpoint-up(md) {
-        display: block;
-       }
     }
 
     // Default link colors and underline, overrides in mixins
     a {
       color: $white;
       border-bottom: $link-border-width solid $white;
-      margin-left: 0;
 
       &:active,
       &:hover {
         color: $white;
         background: $black;
       }
-
-      @include media-breakpoint-up(md) {
-        margin-left: 3rem;
-      }
     }
 
+  }
+  .message-bar-icon-container {
+    margin-right: 1rem;
+  }
+  .message-bar-heading {
+    font-weight: $font-weight-bold;
+    margin-bottom: .25rem;
+  }
+
+  .message-bar-link {
+    display: inline-block;
+    margin-top: .25rem;
+  }
+
+  .close {
+    margin-left: auto;
+    align-self: flex-start;
+  }
+
+  @include media-breakpoint-up(md) {
+    .message-bar-heading {
+      margin-right: 2rem;
+      margin-bottom: 0;
+    }
+    .message-bar-link {
+      margin-left: 4rem;
+      margin-top: 0;
+    }
+    .message-bar-container {
+      display: inline-flex;
+      width: auto;
+      margin-left: auto;
+      margin-right: auto;
+    }
   }
 
 }

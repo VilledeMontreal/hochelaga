@@ -4,3 +4,8 @@
 {{> components-message-bar }}
 {{/ message-bar-colors}}
 </div>
+
+<div class="pl-message-bar pl-mt-4">
+  <h4 class="pl-pattern-subtitle">Dismiss</h4>
+  {{> components-message-bar("dismissibleAlert":true,"messageBarClass": "message-bar-warning alert-dismissible fade show", "icon-name": "icon-warning")}}
+</div>

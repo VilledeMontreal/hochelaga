@@ -22,15 +22,15 @@
     {{/ card-type}}
 
     {{# card-date }}
-      <span class="card-date">
-      {{# card-date-time}}
+      <span class="card-type">
+      {{# date-time}}
       {{{text}}} <time datetime="{{dateTimeFormat}}">{{{dateTimeText}}}</time>
-      {{/ card-date-time}}
+      {{/ date-time}}
       </span>
     {{/ card-date }}
 
     {{# card-title }}
-    <span class="card-title">{{ card-title }}</span>
+    <span class="card-title">{{{ card-title }}}</span>
     {{/ card-title }}
     
     {{# card-text }}
@@ -56,6 +56,10 @@
     {{# card-cta }}
       {{> components-button}}
     {{/ card-cta }}
+
+    {{# card-link }}
+      <div class="card-link">{{ card-link }}</div>
+    {{/ card-link }}
 
   </div>
 

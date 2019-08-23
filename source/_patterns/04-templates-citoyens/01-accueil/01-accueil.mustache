@@ -1,0 +1,151 @@
+{{> styles-link-skip-to-main-content }}
+
+<header class="header-main-nav {{# navbarFixedTop}}is-fixed-top{{/navbarFixedTop}}">
+{{> components-navbar }}
+</header>
+
+<main class="main-content {{ pageClasses }} pb-4 pb-lg-8" id="main-content" aria-label="Main Content">
+
+  {{# messageBar}}
+  {{> components-message-bar}}
+  {{/ messageBar}}
+
+  {{> patterns-content-header}}
+
+  <div class="container">
+    <div class="mb-4 mb-lg-8 border-bottom border-neutral-stroke">
+      <div class="row mb-2 mb-lg-6 px-2 px-lg-0">
+        <div class="col-12 col-lg-6 pl-lg-12">
+          <h2 class="mb-2">Liens rapides</h2>
+          <p class="mb-2">Takimata tempor ea no rebum stet et erat, ipsum amet kasd stet no, gubergren eirmod consetetur sea vero.</p>
+        </div>
+        <div class="col-12 col-lg-6">
+          <ul class="list-inline mb-1">
+            {{# liensRapides}}
+            <li class="list-inline-item mb-1">
+              <a href="{{ url }}" class="btn btn-sm{{^btnPrimary}} btn-secondary{{/ btnPrimary}}{{#btnPrimary}} btn-primary{{/ btnPrimary}}">{{ label }}</a>
+            </li>
+            {{/ liensRapides}}
+        </div>
+      </div>
+    </div>
+  </div>
+
+  {{# categoriesAll}}
+  <div class="container">
+    <div class="mb-4 mb-lg-12">
+      <div class="column-count-md-2 column-count-lg-3">
+        {{# category }}
+        <div class="d-flex">
+          <span class="mr-2 icon {{icon-name}}" aria-hidden="true"></span>
+          <div class="flex-grow-1 mt-1">
+            <h2 class="h4">{{ categoryName}}</h2>
+            <ul class="list-unstyled mb-4">
+              {{# link-items}}
+              <li>
+                <a href="{{url}}" class="link-list-element link-sm">
+                  <span class="link-label">{{ label }}</span>
+                </a>
+              </li>
+              {{/ link-items}}
+            </ul>
+          </div>
+        </div>
+        {{/ category}}
+      </div>
+    </div>
+  </div>
+  {{/ categoriesAll}}
+
+  <section class="mb-4 mb-lg-8">
+    <div class="container">
+      {{# events }}
+      <div class="mb-4 mb-lg-8">
+        <h2>Événements</h2>
+        <div class="row cards mb-0 mb-lg-4">
+        {{# cards.card-item }}
+          <div class="{{ cards.bsgrid-classes }}">
+            {{> components-card-item }}
+          </div>
+        {{/ cards.card-item }}
+        </div>
+        <div class="d-flex justify-content-center">
+        {{> components-button}}
+        </div>
+      </div>
+      {{/ events }}
+      {{# news }}
+      <div class="border-top border-neutral-stroke pt-4 pt-lg-8">
+        <h2>Nouvelles</h2>
+        <div class="row cards mb-0 mb-lg-4">
+        {{# cards.card-item }}
+          <div class="{{ cards.bsgrid-classes }}">
+            {{> components-card-item }}
+          </div>
+        {{/ cards.card-item }}
+        </div>
+        <div class="d-flex justify-content-center">
+        {{> components-button}}
+        </div>
+      </div>
+      {{/ news }}
+    </div>
+  </section>
+
+  <section class="mb-4 mb-lg-8 border-top border-neutral-stroke pt-8 pt-lg-16">
+    <div class="container">
+      {{# mairie}}
+      <div class="mb-4">
+        <div class="row cards {{ cards.classes }}">
+        {{# cards.card-item }}
+          <div class="{{ cards.bsgrid-classes }}">
+            {{> components-card-item-featured }}
+          </div>
+        {{/ cards.card-item }}
+        </div>
+      </div>
+      {{/ mairie }}
+      {{# comite-conseils}}
+      <div class="mb-4 mb-lg-8">
+        <h2>Prochaines séances</h2>
+        <div class="row cards mb-0 mb-lg-4">
+        {{# cards.card-item }}
+          <div class="{{ cards.bsgrid-classes }}">
+            {{> components-card-item }}
+          </div>
+        {{/ cards.card-item }}
+        </div>
+        <div class="d-flex justify-content-center">
+        {{> components-button}}
+        </div>
+      </div>
+      {{/ comite-conseils }}
+  </section>
+
+  {{# homePromo}}
+  <section class="mb-4 mb-lg-8 border-top border-neutral-stroke pt-8 pt-lg-16">
+    <div class="container">
+      {{# promoContent}}
+      <div class="row mb-4 mb-lg-8">  
+        <div class="col-12 col-lg-6{{# order.last}} order-lg-last{{/order.last}} my-auto">
+          <img class="img-fluid mb-4 mb-lg-0" alt="{{img.alt}}" src="{{ img.src }}" />
+        </div>
+        <div class="col-12 col-lg-6 my-auto">
+          <h2>{{ title }}</h2>
+          <div class="formatted-text-container">
+            {{{formattedText}}}
+          </div>
+          {{# link}}
+          {{> styles-link-list-element}}
+          {{/ link}}
+        </div>
+      </div>
+      {{/ promoContent}}
+    </div>
+  </section>
+  {{/ homePromo}}
+
+</main>
+
+{{> patterns-footer-main }}
+
