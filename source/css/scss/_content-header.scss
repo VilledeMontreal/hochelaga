@@ -91,6 +91,11 @@
     z-index: 0;
   }
 
+  .document-heading-header {
+    position: relative;
+    z-index: 5;
+  }
+
   .document-heading-wrapper {
     display: flex;
     height: 100%;
@@ -110,7 +115,6 @@
   }
 
   .document-heading-content {
-
     background-color: $white;
     height: 2rem;
     margin: 0 auto;
@@ -179,6 +183,26 @@
           &:before {
             content: none;
           }
+        }
+      }
+    }
+  }
+}
+
+.has-navbar-fixed-top {
+  .document-heading {
+    &:not(.document-heading-grid) {
+      .document-heading-image-container {
+        padding-top: 3.5rem;
+      }
+    }
+  }
+
+  @include media-breakpoint-up(lg) {
+    .document-heading {
+      &:not(.document-heading-grid) {
+        .document-heading-image-container {
+          padding-top: 4.5rem;
         }
       }
     }

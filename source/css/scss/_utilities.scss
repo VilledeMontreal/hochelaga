@@ -21,6 +21,7 @@
 @import "../scss/utilities/text";
 @import "../scss/utilities/background";
 
-.top-border-neutral-stroke {
-  border-top: 1px solid $neutral-stroke;
+// Provide a utility class for neutral-stroke border color
+.border-neutral-stroke {
+  border-color: $neutral-stroke !important;
 }
