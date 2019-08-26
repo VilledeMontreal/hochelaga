@@ -93,17 +93,29 @@
 </div>
 {{/ module-comparatif-rangee}}
 
-{{# module-media-content}}
+{{# module-explainer-img-left}}
 <div class="content-module-stacked">
-  {{> patterns-wrapper-content }}
+  {{> patterns-wrapper-explainer("wrapperExplainer.imgLeft": true) }}
 </div>
-{{/ module-media-content}}
+{{/ module-explainer-img-left}}
 
-{{# module-media-content}}
+{{# module-explainer-img-right}}
 <div class="content-module-stacked">
-  {{> patterns-wrapper-content-image-col-12 }}
+  {{> patterns-wrapper-explainer("wrapperExplainer.imgRight": true) }}
 </div>
-{{/ module-media-content}}
+{{/ module-explainer-img-right}}
+
+{{# module-explainer-img-top}}
+<div class="content-module-stacked">
+  {{> patterns-wrapper-explainer("wrapperExplainer.imgTop": true) }}
+</div>
+{{/ module-explainer-img-top}}
+
+{{# module-explainer-img-bottom}}
+<div class="content-module-stacked">
+  {{> patterns-wrapper-explainer("wrapperExplainer.imgBottom": true) }}
+</div>
+{{/ module-explainer-img-bottom}}
 
 {{# module-table}}
 <div class="content-module-stacked">
