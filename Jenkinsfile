@@ -12,16 +12,23 @@ ctx = pipeline.createContext([
     // Namespaces are used in K8s to group similar microservices together.
     // For example, if two APIs and a SPA are used to provide the complete application
     // they should all use the same namespace.
-    namespace: ['sn', 'boite-outils'],
+    namespace: [
+        'sn',
+        'boite-outils',
+    ],
     application: [
         name: 'boite-outils4-web',
-        tier: "frontend",
-        runtime: "nodejs", // Available Platforms: nodejs, drupal
-        framework: "angular",
-        keywords: ["boite-outils","web","lib"],
+        tier: 'frontend',
+        runtime: 'nodejs',
+        framework: 'angular',
+        keywords: [
+            'boite-outils',
+            'web',
+            'lib',
+        ],
         type: 'service',
-        description: "boite-outils4-web",
-        icon: "https://cdnjs.cloudflare.com/ajax/libs/foundicons/3.0.0/svgs/fi-lightbulb.svg"
+        description: 'boite-outils4-web',
+        icon: 'https://cdnjs.cloudflare.com/ajax/libs/foundicons/3.0.0/svgs/fi-lightbulb.svg',
     ],
     packaging: [
         dockerfilePath: './Dockerfile',
@@ -63,53 +70,61 @@ ctx = pipeline.createContext([
             path: '/',
         ],
     ],
-    ingress : [
-        dev: [
-                [
-                    "uri" : "services.kube.dev.ile.montreal.qc.ca",
-                    "paths" : [
-                    '/boite-outils4'
-                    ]
+    ingress: [
+        overrides: [
+            dev: [
+                hosts: [
+                    [
+                        uri: 'services.kube.dev.ile.montreal.qc.ca',
+                        paths: [
+                            '/boite-outils4',
+                        ],
+                    ],
+                    [
+                        uri: 'services.dev.interne.montreal.ca',
+                        paths: [
+                            '/boite-outils4',
+                        ],
+                    ],
                 ],
-                [
-                    "uri" : "services.dev.interne.montreal.ca",
-                    "paths" : [
-                    '/boite-outils4'
-                    ]
-                ]
             ],
-        accept: [
-                [
-                    "uri" : "services.kube.acc.ile.montreal.qc.ca",
-                    "paths" : [
-                    '/boite-outils4'
-                    ]
+            accept: [
+                hosts: [
+                    [
+                        uri: 'services.kube.acc.ile.montreal.qc.ca',
+                        paths: [
+                            '/boite-outils4',
+                        ],
+                    ],
+                    [
+                        uri: 'services.accept.montreal.ca',
+                        paths: [
+                            '/boite-outils4',
+                        ],
+                    ],
                 ],
-                [
-                    "uri" : "services.accept.montreal.ca",
-                    "paths" : [
-                    '/boite-outils4'
-                    ]
-                ]
             ],
-        prod: [
-            [
-                "uri" : "services.kube.ile.montreal.qc.ca",
-                "paths" : [
-                '/boite-outils4'
-                ]
+            prod: [
+                hosts: [
+                    [
+                        uri: 'services.kube.ile.montreal.qc.ca',
+                        paths: [
+                            '/boite-outils4',
+                        ],
+                    ],
+                    [
+                        uri: 'services.montreal.ca',
+                        paths: [
+                            '/boite-outils4',
+                        ],
+                    ],
+                ],
             ],
-            [
-                "uri" : "services.montreal.ca",
-                "paths" : [
-                '/boite-outils4'
-                ]
-            ]
-        ]    
+        ],
     ],
     notifications: [
-        hipchat: [
-            room: "boîte-à-outils-web",
+        chat: [
+            room: 'boîte-à-outils-web',
             notify: true
         ],
         mail: [
@@ -125,21 +140,21 @@ ctx = pipeline.createContext([
         overrides: [
             accept: [
                 approvers: [
-                    "G-UNIX-Jenkins-Admin",
-                    "udall98",
-                    "usamtol",
-                    "utamtra",
-                    "uvalchu",
-                    "uboul8b",
-                    "udesm8n"
+                    'G-UNIX-Jenkins-Admin',
+                    'udall98',
+                    'usamtol',
+                    'utamtra',
+                    'uvalchu',
+                    'uboul8b',
+                    'udesm8n',
                 ],
             ],
             prod: [
                 approvers: [
                     'G-UNIX-Jenkins-Admin',
-                    "utamtra",
-                    "uboul8b",
-                    "udesm8n"
+                    'utamtra',
+                    'uboul8b',
+                    'udesm8n',
                 ],
             ],
         ],
@@ -150,25 +165,25 @@ ctx = pipeline.createContext([
         overrides: [
             accept: [
                 approvers: [
-                    "G-UNIX-Jenkins-Admin",
-                    "udall98",
-                    "usamtol",
-                    "utamtra",
-                    "uvalchu",
-                    "uboul8b",
-                    "udesm8n"
+                    'G-UNIX-Jenkins-Admin',
+                    'udall98',
+                    'usamtol',
+                    'utamtra',
+                    'uvalchu',
+                    'uboul8b',
+                    'udesm8n',
                 ],
             ],
             prod: [
                 approvers: [
-                    "G-UNIX-Jenkins-Admin",
-                    "utamtra",
-                    "uboul8b",
-                    "udesm8n"
+                    'G-UNIX-Jenkins-Admin',
+                    'utamtra',
+                    'uboul8b',
+                    'udesm8n',
                 ],
             ],
         ],
-    ]
+    ],
 ])
 
 pipeline.start(ctx) {

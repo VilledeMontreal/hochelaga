@@ -100,9 +100,14 @@ fieldset:disabled a.btn {
   @include button-variant($background: transparent, $border: $neutral-stroke, $color: $action, $hover-background: transparent, $hover-border: $action, $hover-color: $action, $active-background: transparent, $active-border: $action, $active-color: $action);
 }
 
+.btn-primary-reverse {
+  @include button-variant($background: $white, $border: $white, $color: $action, $hover-background: $highlight-light, $hover-border: $highlight-light, $hover-color: $action, $active-background: $highlight-light, $active-border: $highlight-light, $active-color: $action);
+}
+
 .btn-secondary-reverse {
   @include button-variant($background: transparent, $border: $white, $color: $white, $hover-background: $highlight-light, $hover-border: $highlight-light, $hover-color: $action, $active-background: $highlight-light, $active-border: $highlight-light, $active-color: $action);
 }
+
 .btn-link,
 .btn-tertiary {
   @include button-variant($background: transparent, $border: transparent, $color: $action, $hover-background: $highlight-light, $hover-border: $highlight-light, $hover-color: $action, $active-background: $highlight-light, $active-border: $highlight-light, $active-color: $action);
@@ -233,6 +238,91 @@ input[type="button"] {
 }
 
 
+// Icons left / right
+
+.btn-icon-left,
+.btn-icon-right {
+  display: inline-flex;
+  align-items: center;
+  .icon {
+    align-self: center;
+    &:before {
+      display: block;
+    }
+  }
+}
+
+.btn-icon-left {
+  .btn-label {
+    order: 2;
+  }
+  .icon {
+    order: 1;
+    margin-left: -1.125rem;
+    margin-right: .5rem;
+    &:before {
+      left: ($spacer/4);
+    }
+  }
+  .utility-icon {
+    margin-left: -.5rem;
+    margin-right: .5rem;
+  }
+  &.btn-lg {
+    .icon {
+      margin-left: -.75rem;
+    }
+  }
+  &.btn-sm {
+    .icon,
+    .utility-icon {
+      margin-left: -.25rem;
+    }
+  }
+  &.btn-squared {
+    .icon,
+    .utility-icon {
+      margin-left: -.5rem;
+    }
+  }
+}
+
+.btn-icon-right {
+  .btn-label {
+    order: 1;
+  }
+  .icon {
+    order: 2;
+    margin-right: -1.125rem;
+    margin-left: .5rem;
+    &:before {
+      right: ($spacer/4);
+    }
+  }
+  .utility-icon {
+    margin-right: -.5rem;
+    margin-left: .5rem;
+  }
+  &.btn-lg {
+    .icon {
+      margin-right: -.75rem;
+    }
+  }
+  &.btn-sm {
+    .icon,
+    .utility-icon {
+      margin-right: -.25rem;
+    }
+  }
+  &.btn-squared {
+    .icon,
+    .utility-icon {
+      margin-right: -.5rem;
+    }
+  }
+}
+
+
 // Utility class to hide button-icon label
 @each $breakpoint, $value in $grid-breakpoints {
   // Hide button label at small breakpoint
@@ -243,9 +333,41 @@ input[type="button"] {
         margin-left: -5px;
         margin-right: -5px;
       }
+      
+      &.btn-icon-left {
+        .icon,
+        .utility-icon {
+          margin-left: -5px;
+          margin-right: -5px;
+        }
+        &.btn-lg {
+           .icon,
+          .utility-icon {
+            margin-left: -2px;
+            margin-right: -2px;
+          }
+        }
+      }
+
+      &.btn-icon-right {
+        .icon,
+        .utility-icon {
+          margin-right: -5px;
+          margin-left: -5px;
+        }
+        &.btn-lg {
+           .icon,
+          .utility-icon {
+            margin-right: -2px;
+            margin-left: -2px;
+          }
+        }
+      }
+
       .btn-label {
         display: none;
       }
+
     }
   }
 }

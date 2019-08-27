@@ -3,7 +3,6 @@
   border-top: 1px solid $neutral-stroke;
   margin-bottom: 4rem;
   margin-top: 2rem;
-  overflow: hidden;
 
   p {
     margin-bottom: $paragraph-margin-bottom;
@@ -25,10 +24,16 @@
 
 }
 
+.list-social-medias {
+  .icon {
+    @include icon-color($action);
+  }
+}
+
 // The base unit for a sidebar component, stacked
 .sb-block {
   @include clearfix;
-  margin-bottom: 2rem;
+  margin-bottom: 4rem;
   &:last-child {
     margin-bottom: 0;
   }

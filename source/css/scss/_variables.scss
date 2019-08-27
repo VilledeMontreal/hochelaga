@@ -173,7 +173,11 @@ $spacers: map-merge(
     17: ($spacer * 17),
     18: ($spacer * 18),
     19: ($spacer * 19),
-    20: ($spacer * 20)
+    20: ($spacer * 20),
+    21: ($spacer * 21),
+    22: ($spacer * 22),
+    23: ($spacer * 23),
+    24: ($spacer * 24)
   ),
   $spacers
 );
@@ -753,6 +757,10 @@ $popover-box-shadow:                0 1px 4px 0 rgba($black, .2);
 $popover-header-padding-y:          0;
 $popover-header-padding-x:          0;
 
+// Media
+$padding-16-9:                    56.25%;
+$padding-16-7:                    43.75%;
+
 // Ajout custom
 // Slide Menus
 $slide-menu-width:                440px;
@@ -767,5 +775,16 @@ $slide-menu-icon-color:           $action-lighter;
 $slide-menu-link-padding:         1rem 2.8125rem;
 $slide-menu-transition-dur:       300ms;
 $slide-menu-transition-easing:    ease-in-out;
+
+// Slide Menus Employes
+$slide-menu-employes-width:                440px;
+$slide-menu-employes-bg:                   $white;
+$slide-menu-employes-link-color:           $neutral-secondary;
+$slide-menu-link-hover-color:              $action;
+$slide-menu-employes-icon-size:            1.5rem;
+$slide-menu-employes-icon-color:           $neutral-tertiary;
+$slide-menu-employes-icon-hover-color:     $action-lighter;
+$slide-menu-employes-transition-dur:       300ms;
+$slide-menu-employes-transition-easing:    ease-in-out;
 
 

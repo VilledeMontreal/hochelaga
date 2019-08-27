@@ -1,7 +1,40 @@
 {
-  "navbarPosition": "fixed-top",
-  "pageClasses": "",
-  "regionMainContentClasses": "col-lg-6",
+  "pageClasses": "employes",
+  "regionMainClasses": false,
+  "regionMainContentClasses": "col-12",
   "sidebarRight": false,
-  "documentHeadingNotch": false
+  "documentHeadingNotch": false,
+  "listGroupClass": "list-group-icons-categories list-group side-menu",
+  "listGroup": [
+    {
+      "icon-name": "icon-list",
+      "text": "Cras justo odio",
+      "class": false
+    },
+    {
+      "icon-name": "icon-participation-citoyenne",
+      "text": "Dapibus ac facilisis in",
+      "class": false
+    },
+    {
+      "icon-name": "icon-amenagement-construction",
+      "text": "Morbi leo risus",
+      "class": false
+    },
+    {
+      "icon-name": "icon-environnement",
+      "text": "Cras justo odio",
+      "class": false
+    },
+    {
+      "icon-name": "icon-affaires-economie",
+      "text": "Dapibus ac facilisis in",
+      "class": false
+    },
+    {
+      "icon-name": "icon-sante-securite-publiques",
+      "text": "Morbi leo risus",
+      "class": false
+    }
+  ]
 }

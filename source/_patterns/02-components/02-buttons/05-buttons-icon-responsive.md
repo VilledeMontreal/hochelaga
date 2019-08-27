@@ -2,8 +2,8 @@
 title: Buttons Icon Responsive
 ---
 
-Utility classes to hide label at certain breakpoint.
+#Utilisation
 
-Use <code>.btn-hide-label-{breakpoint}</code> to hide label for the breakpoint and DOWN.
+Utilisez <code>.btn-hide-label-{breakpoint}</code> pour masquer le libellé à un breakpoint prédéfini.
 
-Use of aria-label will help for accessibility since labels can be hidden for users at some breakpoints.
+Utiliser des aria-label dans ce cas afin de faciliter l'accessibilité, car les libellés seront masqués pour les utilisateurs à certains breakpoints.

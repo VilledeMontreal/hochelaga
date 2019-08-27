@@ -6,6 +6,18 @@
   padding: 1rem;
 }
 
+.wrapper-explainer {
+  padding: 2rem 1rem;
+  
+  @include media-breakpoint-up(md) {
+    [class^="col-"] {
+      > *:last-child {
+        margin-bottom: 0;
+      }
+    }
+  }
+}
+
 // Sélecteur arrondissement
 //
 .wrapper-arrondissement {

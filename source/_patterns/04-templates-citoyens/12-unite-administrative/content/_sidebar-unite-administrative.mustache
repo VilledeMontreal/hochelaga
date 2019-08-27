@@ -1,0 +1,28 @@
+<div class="sidebar pt-8">
+  {{# sb-logo}}
+  <div class="mb-8">
+    <img src="{{ src }}" alt="{{ alt }}" />
+  </div>
+  {{/ sb-logo}}
+  {{# sb-block-infos}}
+  <section class="sb-block">
+    {{> styles-heading-sidebar(sidebarTitle: "Organigramme")}}
+    {{> components-list-item}}
+    <div>
+      <span class="mr-1">Dirigé par</span><a href="#">Unité administrative</a>, <a href="#">Instance</a>, <a href="#">Collectrice</a>
+    </div>
+  </section>
+  {{/ sb-block-infos}}
+  {{# sb-block-nous-joindre}}
+  <section class="sb-block">
+    {{> styles-heading-sidebar(sidebarTitle: "Nous joindre")}}
+    {{> components-list-item-icon}}
+  </section>
+  {{/ sb-block-nous-joindre}}
+  {{# sb-block-nous-suivre}}
+  <section class="sb-block">
+    {{> styles-heading-sidebar(sidebarTitle: "Nous suivre") }}
+    {{> components-list-item-link}}
+  </section>
+  {{/ sb-block-nous-suivre}}
+</div>

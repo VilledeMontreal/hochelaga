@@ -198,39 +198,45 @@ svg {
   }
 }
 
-// Copyright
+// Image container for copyright
+// TODO: Might need some adjustement
 .img-container {
   position: relative;
   display: table;
-  .img-copyright {
-    position: absolute;
-    bottom: 1rem;
-    right: 1rem;
-    min-width: 24px;
-    min-height: 24px;
-    background-color: $black;
-    border-radius: 0.25rem;
-    color: $white;
-    cursor: pointer;
+}
+
+// Image copyright
+// Should be wrapped inside relative container for proper placement
+.img-copyright {
+  position: absolute;
+  bottom: 1rem;
+  right: 1rem;
+  min-width: 24px;
+  min-height: 24px;
+  background-color: $black;
+  border-radius: 0.25rem;
+  color: $white;
+  cursor: pointer;
+  display: flex;
+  @include font-size($font-size-xs);
+  line-height: $line-height-xs;
+  margin-left: 1rem;
+  z-index: 5;
+  .icon-copyright {
+    width: 24px;
+    height: 24px;
     display: flex;
-    font-size: .8125rem;
-    line-height: $line-height-xs;
-    margin-left: 1rem;
-    .icon-copyright {
-      width: 25px;
-      height: 25px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      &:before {
-        background-color: $white;
-        width: 12px;
-        height: 12px;
-      }
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+    &:before {
+      background-color: $white;
+      width: 12px;
+      height: 12px;
     }
-    .copyright-text {
-      margin-right: $spacer*2;
-      padding: .25rem 0;
-    }
+  }
+  .copyright-text {
+    margin-right: $spacer*2;
+    padding: .25rem 0;
   }
 }

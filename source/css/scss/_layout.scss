@@ -58,29 +58,6 @@ html {
   padding-bottom: 3rem;
 }
 
-// Promo content is a weird thing on the homepage
-// Needs to be more generic once homepage is clearly defined
-// TODO: Move to homepage stylesheet maybe?
-.home-promo {
-  padding-top: 3rem;
-  .promo-content {
-    padding-bottom: 4rem;
-    h2 {
-      margin-bottom: 1.5rem;
-    }
-  }
-
-  @include media-breakpoint-up(lg) {
-    .promo-content {
-      padding-top: 2rem;
-      padding-bottom: 2rem;
-      h2 {
-        margin-bottom: 1.5rem;
-      }
-    }
-  }
-}
-
 // Alternative layout for fluid-like content types (sujet, nouvelles)
 // fluid up to a max-width
 // A helper class .section-inner-media is used to deal with media margin and centering
@@ -254,5 +231,17 @@ html {
     ul {
       margin-bottom: 0;
     }
+  }
+}
+
+
+// Employés
+.main-content.employes {
+  padding: 0;
+  .region-content {
+    padding-top: 1rem;
+  }
+  @include media-breakpoint-up(lg) {
+    padding: 0 1rem;
   }
 }

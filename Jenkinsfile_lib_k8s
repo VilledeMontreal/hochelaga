@@ -13,7 +13,7 @@ ctx = pipeline.createContext([
     namespace: ["sn", "boite-outils4"],
     application: [
         name: "boite-outils4-lib",
-        tier: "lib",
+        tier: "frontend",
         runtime: "nodejs", // Available Platforms: nodejs, drupal
         framework: "NA",
         description: "boite-outils4-lib",
@@ -23,12 +23,13 @@ ctx = pipeline.createContext([
                 key1: "boite-outils4",
                 key2: "lib"
         ],
+        type: "lib"
     ],
     packaging: [
         dockerfilePath: "Dockerfile"
     ],
     notifications: [
-        hipchat: [
+        chat: [
             room: "boîte-à-outils-web",
             notify: true
         ],

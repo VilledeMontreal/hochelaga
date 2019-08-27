@@ -137,16 +137,17 @@
 
     // Dropdown menu
     .dropdown-menu {
-      border-right: 0;
       top: 100%;
       right: 0;
+      left: auto;
       margin: 0;
       max-height: none;
       min-width: 20rem;
-      box-shadow: -1px 3px 3px 0 $neutral-underground-2;
+      box-shadow: $navbar-box-shadow;
 
       // Dropdown section
       .dropdown-item-section {
+        padding: .5rem 1rem;
         .user-info {
           line-height: $line-height-md;
           > * {
@@ -155,7 +156,7 @@
         }
         .user-email {
           @include font-size($font-size-sm);
-          color: $neutral-tertiary;
+          color: $neutral-secondary;
         }
         .user-profil {
           font-weight: $font-weight-bold;
@@ -163,21 +164,6 @@
         }
       }
 
-      .dropdown-item {
-        display: flex;
-        align-items: center;
-        padding: .75rem 2.5rem;
-      }
-
-    }
-
-    // change icon when dropdown is open
-    .dropdown.show {
-      .dropdown-toggle {
-        &:after {
-          content: none;
-        }
-      }
     }
 
     // Dark navbar variant
@@ -263,17 +249,6 @@
       .dropdown-toggle {
         &::after {
           content: '';
-        }
-      }
-
-      // Switch to chevron up when opened
-      .dropdown.show {
-        .dropdown-toggle {
-          &:after {
-            content: '';
-            -webkit-mask: url($data-icon-chevron-up) no-repeat 50% 50%;
-            mask: url($data-icon-chevron-up) no-repeat 50% 50%;
-          }
         }
       }
     }

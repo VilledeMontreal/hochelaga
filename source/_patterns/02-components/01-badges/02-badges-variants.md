@@ -2,12 +2,19 @@
 title: Badge
 ---
 
-Badges needs the default <code>.badge</code> class.
+#Utilisation
 
-<h4>Self collapsing</h4>
-<p>When there are no new or unread items, badges will simply collapse (via CSS's <code>:empty</code> selector) provided no content exists within.</p>
+Utilisez des badges pour étiqueter les éléments de page avec une petite quantité d'informations. Les badges ont besoin de la classe <code>.badge</code>. 
 
-<div class="" id="callout-badges-ie8-empty">
-	<h4>Cross-browser compatibility</h4>
-	<p>Badges won't self collapse in Internet Explorer 8 because it lacks support for the <code>:empty</code> selector.</p>
-</div>
+#Tailles
+
+Les badges sont mis à l’échelle pour correspondre à la taille de l’élément parent immédiat.
+
+#Formes
+
+Les badges par défault sont carrés. Pour obtenir un badge arrondi, il suffit d'ajout la classe <code>.badge-pill</code>
+
+
+#Différence avec [Bootstrap](https://getbootstrap.com/docs/4.3/components/badge/)
+
+* Les classes <code>.success-light</code>, <code>.danger-light</code>,  <code>.warning-light</code>,  <code>.info-light</code> ont été ajoutées.

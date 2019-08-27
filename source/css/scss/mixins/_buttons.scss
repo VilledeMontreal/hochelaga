@@ -10,7 +10,7 @@
   border-color: $border;
   @include box-shadow($btn-box-shadow);
   &:not(:disabled):not(.disabled) {
-    @include hover {
+    @include hover-focus {
       color: $hover-color;
       @include gradient-bg($hover-background);
       border-color: $hover-border;

@@ -1,0 +1,260 @@
+{
+  "navbarPosition": "fixed-top",
+  "documentHeadingClass": "document-heading-left-notch",
+  "documentHeadingNotch": true,
+  "has-left-notch": true,
+  "pageClasses": "mt-7 mt-lg-9",
+  "header-back-link": {
+    "link-icon": {
+      "url": "#",
+      "icon": "icon-arrow-left", 
+      "link-icon-label": "Touts les articles"
+    }
+  },
+  "heading": "Titre du conseil-article d'une longueur de 80 caractères maximum",
+  "has-badges": {
+    "badges": [
+      {
+        "badge": "Libellé",
+        "badgeClass": "badge-secondary",
+        "badge-sr-text": "",
+        "badgeUrl": "#"
+      },
+      {
+        "badge": "Libellé",
+        "badgeClass": "badge-secondary",
+        "badge-sr-text": "",
+        "badgeUrl": "#"
+      },
+      {
+        "badge": "Libellé",
+        "badgeClass": "badge-secondary",
+        "badge-sr-text": "",
+        "badgeUrl": "#"
+      }
+    ]
+  },
+  "publicationDate": {
+    "dateTimeText": "16 août 2019",
+    "dateTimeFormat": "2019-08-16"
+  },
+  "readTime": "Lecture 7 min.",
+  "lead": "<p>Amorce - Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi condimentum sollicitudin erat, quis convallis risus. Nullam posuere odio ligula, hendrerit suscipit ligula laoreet. Curabitur eleifend nulla purus, ut pharet urna ef id. Cras lacinia nisi id  (recommandé 300 caractères maximum).</p>",
+  "module-content": {
+    "module-cta": {
+      "buttonAsLink": true,
+      "buttonClass": "btn-primary btn-lg",
+      "buttonUrl": "#",
+      "buttonText": "Appel à l'action"
+    },
+    "module-card-cta": {
+      "cards": {
+        "classes": "",
+        "bsgrid-classes": "col-12",
+        "card-item": [
+          {
+            "classes": "card-fw",
+            "url": "#",
+            "card-media" : {
+              "icon": false,
+              "img": {
+                "src": "https://picsum.photos/id/1074/768/432",
+                "alt": "Card full width #1 img alt."
+              }
+            },
+            "card-type": "Type",
+            "card-title": "Titre de la carte sans limite de caractères",
+            "card-text": "Description de la carte qui peut être sur plusieurs lignes si nécessaire",
+            "card-date-text": false,
+            "card-publication-date": false
+          }
+        ]
+      }
+    },
+    "module-emphasis": {
+      "blockquote-classes": "blockquote-emphasis",
+      "blockquote-html-text": "<p>Meditation gochujang copper mug, selfies paleo yuccie gastropub single-origin coffee thundercats scenester venmo pickled. Neutra yr green juice, fixie blog literally squid lyft bitters actually bicycle rights thundercats.</p>",
+      "blockquote-footer": false
+    },
+    "module-blockquote": {
+      "isCitation": true,
+      "blockquote-classes": false,
+      "blockquote-html-text": "<p>Meditation gochujang copper mug, selfies paleo yuccie gastropub single-origin coffee thundercats scenester venmo pickled. Neutra yr green juice, fixie blog literally squid lyft bitters actually bicycle rights thundercats.</p>",
+      "blockquote-footer": {
+        "blockquote-footer-author": "Auteur",
+        "blockquote-footer-text": "Fonction"
+      }
+    },
+    "module-text": true,
+    "module-image-album": false,
+    "module-image-single": {
+      "media": {
+        "src": "https://picsum.photos/id/1024/768/432",
+        "alt": "A generic placeholder image alt text.",
+        "copyright": "Un très long copyright pour voir comment ça se comporte sur plusieurs lignes!"
+      }
+    },
+    "module-video": true,
+    "module-collapse": {
+      "collapsibleItem": [
+        {
+          "title": "Collapsible item #1",
+          "content": "Collapsible content",
+          "block-id": "sujet-template-item-1",
+          "heading-id": "sujet-template-heading-1",
+          "collapsible-default-content": "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>"
+        },
+        {
+          "title": "Collapsible item #2",
+          "content": "Collapsible content",
+          "block-id": "sujet-template-item-2",
+          "heading-id": "sujet-template-heading-2",
+          "collapsible-default-content": "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>"
+        },
+        {
+          "title": "Collapsible item #3",
+          "content": "Collapsible content",
+          "block-id": "sujet-template-item-3",
+          "heading-id": "sujet-template-heading-3",
+          "collapsible-default-content": "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>"
+        }
+      ]
+    },
+    "module-comparatif-colonne": {
+      "colonnes": true,
+      "comparatif": [
+        {
+          "title": "Titre de la section",
+          "text": "<p>Corps de texte simple - Pas de liens. Permet de structure l'information en regroupant visuellement sur deux colonnes des contenus pouvant être comparés.</p><ul><li>Liste à puce</li><li>Liste à puce</li><li>Liste à puce</li></ul>"
+        },
+        {
+          "title": "Titre de la section",
+          "text": "<p>Exemples  : Quoi faire vs Quoi pas faire ou Propriétaire vs Locataire.</p><ul><li>Liste à puce</li><li>Liste à puce</li><li>Liste à puce</li></ul>"
+        }
+      ]
+    },
+    "module-comparatif-rangee": {
+      "comparatif": [
+        {
+          "title": "Titre de la section",
+          "text": "<p>Corps de texte - Permet de structure l'information en regroupant visuellement sur plusieurs rangées des contenus pouvant être comparés. Exemple : Avant, Pendant et Après</p>"
+        },
+        {
+          "title": "Titre de la section",
+          "text": "<ul><li>Liste à puce</li><li>Liste à puce</li><li>Liste à puce</li></ul>"
+        },
+        {
+          "title": "Titre de la section",
+          "text": "<ul><li>Liste à puce</li><li>Liste à puce</li><li>Liste à puce</li></ul>"
+        }
+      ]
+    },
+    "module-explainer-img-left": {
+      "wrapperTitle": "Titre - Image à gauche et texte associés",
+      "img": {
+        "src": "https://picsum.photos/id/1058/768/432",
+        "alt": "Alt - Lorem ipsum dolor site."
+      }
+    },
+    "module-explainer-img-right": {
+      "wrapperTitle": "Titre - Image à droite et texte associés",
+      "img": {
+        "src": "https://picsum.photos/id/1058/768/432",
+        "alt": "Alt - Lorem ipsum dolor site."
+      }
+    },
+    "module-explainer-img-top": {
+      "wrapperTitle": "Titre - Image en haut et texte associés",
+      "img": {
+        "src": "https://picsum.photos/id/1058/768/432",
+        "alt": "Alt - Lorem ipsum dolor site."
+      }
+    },
+    "module-explainer-img-bottom": {
+      "wrapperTitle": "Titre - Image en bas et texte associés",
+      "img": {
+        "src": "https://picsum.photos/id/1058/768/432",
+        "alt": "Alt - Lorem ipsum dolor site."
+      }
+    },
+    "module-table": {
+      "table": {
+        "tableWrapper": true,
+        "caption": "",
+        "tableClass" : "table-lg",
+        "thead": {
+          "theadClass": "",
+          "th": [
+            { "title": "#" },
+            { "title": "Libellé 1" },
+            { "title": "Libellé 2" }
+          ]
+        },
+        "tbody": {
+          "tr": [
+            {
+              "th": "1",
+              "td": [
+                { "text": "Libellé" },
+                { "text": "Libellé" }
+              ]
+            },
+            {
+              "th": "2",
+              "td": [
+                { "text": "Libellé" },
+                { "text": "Libellé" }
+              ]
+            },
+            {
+              "th": "3",
+              "td": [
+                { "text": "Libellé" },
+                { "text": "Libellé" }
+              ]
+            }
+          ]
+        }
+      }
+    },
+    "module-events": false
+  },
+  "sidebarRight": true,
+  "sidebarClasses": false,
+  "sb-classes": "",
+  "sb-block-tc-lies": {
+    "listGroupClass": false,
+    "listGroup": [
+      {
+        "icon-name": "icon-affaires-economie",
+        "text": "Titre du sujet sur plusieurs lignes si nécessaire",
+        "class": false
+      },
+      {
+        "icon-name": "icon-affaires-economie",
+        "text": "Titre du sujet sur plusieurs lignes si nécessaire",
+        "class": false
+      },
+      {
+        "icon-name": "icon-affaires-economie",
+        "text": "Titre de l'article",
+        "class": false
+      },
+      {
+        "icon-name": "icon-affaires-economie",
+        "text": "Titre du sujet sur plusieurs lignes si nécessaire",
+        "class": false
+      },
+      {
+        "icon-name": "icon-affaires-economie",
+        "text": "Titre du sujet sur plusieurs lignes si nécessaire",
+        "class": false
+      }
+    ]
+  },
+  "hasSelecteurArrondissement": true,
+  "wrapperStickyHeader": true,
+  "selectedArrondissement": {
+    "arrondissement": "Nom-de-l'Arrondissement"
+  }
+}

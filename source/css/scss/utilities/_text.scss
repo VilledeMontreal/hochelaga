@@ -50,6 +50,11 @@ a {
   color: $white !important;
 }
 
+// Preserve white space
+.text-preserve-space {
+  white-space: pre;
+}
+
 a.text-light,
 a.text-white {
   border-bottom: $link-border-width solid $white !important;
@@ -67,4 +72,42 @@ a.text-muted {
     border-bottom: none;
     background-color: transparent;
   }
+}
+
+// Utility class for font-size
+
+// Paragraph
+.font-size-lg {
+  @include font-size($font-size-lg);      // 20px
+  line-height: 2rem                       // 32px
+}
+.font-size-base {
+  @include font-size($font-size-base);    // 16px
+  line-height: $line-height-lg;           // 28px
+}
+.font-size-sm {
+  @include font-size($font-size-sm);      // 14px
+  line-height: $line-height-md            // 24px
+}
+.font-size-xs {
+  @include font-size($font-size-xs);      // 12px
+  line-height: $line-height-sm            // 20px
+}
+
+// Interface
+.font-size-lg-interface {
+  @include font-size($font-size-lg);      // 20px
+  line-height: $line-height-lg            // 28px
+}
+.font-size-base-interface {
+  @include font-size($font-size-base);    // 16px
+  line-height: $line-height-md;           // 24px
+}
+.font-size-sm-interface {
+  @include font-size($font-size-sm);      // 14px
+  line-height: $line-height-sm            // 20px
+}
+.font-size-xs-interface {
+  @include font-size($font-size-xs);      // 12px
+  line-height: $line-height-xs            // 16px
 }

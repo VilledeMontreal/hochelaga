@@ -8,6 +8,9 @@
   display: flex;
   flex-direction: column;
 
+  @include font-size($font-size-base);
+  line-height: $line-height-md;
+
   // No need to set list-style: none; since .list-group-item is block level
   list-style: none;
   padding-left: 0; // reset padding because ul and ol
@@ -71,7 +74,7 @@
 .list-item {
   position: relative;
   display: flex;
-  padding: .5rem;
+  padding: .5rem 0;
   color: $list-group-color;
 
   &:last-child {
@@ -100,6 +103,13 @@
     width: 1.5rem;
     fill: currentColor;
     flex-shrink: 0;
+  }
+
+  &.list-item-description {
+    .list-item-label {
+      color: $neutral-primary;
+      font-weight: $font-weight-bold;
+    }
   }
 }
 
@@ -147,5 +157,15 @@
   .list-item-icon-content {
     flex: 2;
     line-height: $line-height-md;
+
+    p {
+      margin-bottom: 1rem;
+      + p {
+        margin-top: 0;
+      }
+      &:last-child {
+        margin-bottom: 0;
+      }
+    }
   }
 }

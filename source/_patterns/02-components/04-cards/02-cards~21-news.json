@@ -1,0 +1,30 @@
+{
+  "cards": {
+    "classes": false,
+    "bsgrid-classes": "col-12 col-lg-4",
+    "card-item" : [
+      {
+        "classes" : "card-news",
+        "url" : "#",
+        "card-media" : {
+          "icon": false,
+          "img" : {
+            "src" : "https://picsum.photos/id/1074/768/432",
+            "alt" : "Card #1 img alt."
+          }
+        },
+        "card-type": false,
+        "card-title" : "Titre de la nouvelle d'une longueur de 80 caractères maximum",
+        "card-text": false,
+        "card-date-text": false,
+        "card-publication-date" : {
+          "dateTime": {
+            "text": "Mise à jour le ",
+            "dateTimeFormat": "2019-01-31",
+            "dateTimeText": "31 janvier 2019"
+          }
+        }
+      }
+    ]
+  }
+}

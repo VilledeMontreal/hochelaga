@@ -84,21 +84,6 @@ h6, .h6 {
   }
 }
 
-// Utility class for font-size
-
-.font-size-lg {
-  @include font-size($font-size-lg);      // 20px
-  line-height: 2rem                       // 32px
-}
-.font-size-sm {
-  @include font-size($font-size-sm);      // 14px
-  line-height: $line-height-md            // 24px
-}
-.font-size-xs {
-  @include font-size($font-size-xs);      // 12px
-  line-height: $line-height-sm            // 20px
-}
-
 // Lead
 //
 .lead {
@@ -182,6 +167,31 @@ a {
   &.no-style {
     border: none !important;
     color: inherit !important;
+  }
+
+  &.link-list-element {
+    @include font-size($font-size-base);
+    line-height: $line-height-md;
+    border: none;
+    @include hover-focus {
+      border: none;
+      background-color: transparent;
+      .link-label {
+        background-color: $highlight-light;
+        display: inline;
+        border-bottom: 1px solid $action;
+      }
+    }
+  
+    &.link-sm {
+      @include font-size($font-size-sm);
+      line-height: $line-height-sm;
+    }
+
+    &.link-xs {
+      @include font-size($font-size-xs);
+      line-height: $line-height-xs;
+    }
   }
 }
 
