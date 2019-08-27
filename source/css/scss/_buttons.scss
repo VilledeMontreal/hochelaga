@@ -100,9 +100,14 @@ fieldset:disabled a.btn {
   @include button-variant($background: transparent, $border: $neutral-stroke, $color: $action, $hover-background: transparent, $hover-border: $action, $hover-color: $action, $active-background: transparent, $active-border: $action, $active-color: $action);
 }
 
+.btn-primary-reverse {
+  @include button-variant($background: $white, $border: $white, $color: $action, $hover-background: $highlight-light, $hover-border: $highlight-light, $hover-color: $action, $active-background: $highlight-light, $active-border: $highlight-light, $active-color: $action);
+}
+
 .btn-secondary-reverse {
   @include button-variant($background: transparent, $border: $white, $color: $white, $hover-background: $highlight-light, $hover-border: $highlight-light, $hover-color: $action, $active-background: $highlight-light, $active-border: $highlight-light, $active-color: $action);
 }
+
 .btn-link,
 .btn-tertiary {
   @include button-variant($background: transparent, $border: transparent, $color: $action, $hover-background: $highlight-light, $hover-border: $highlight-light, $hover-color: $action, $active-background: $highlight-light, $active-border: $highlight-light, $active-color: $action);
