@@ -19,12 +19,15 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 - Base layout template for employes 
 - Base menu slide left for template employes 
 - Utility class .text-preserve-space for white-space: pre usage.
+- Added a readme.md file that contains a list of improvements.
+- Added a automated script that concatenates jsons for icons to use in the BAO.
 
 ## Changed
 - Blockquote emphasis should be a div tag (blockquote is strickly for citation).
 - .sb-block now takes 4rem margin-bottom by default.
 - Cards fw now depends on grid-class for formatting at some breakpoint.
 - Cards fw now takes a minimal height for image (~16:9 aspect ratio) @larger breakpoint.
+- Deleting employes and citizens separation in editorial icons 
 
 ## Fixed
 - List Group line-heights, paddings and margins.
