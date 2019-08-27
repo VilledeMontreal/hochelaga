@@ -228,6 +228,7 @@ svg {
     display: flex;
     align-items: center;
     justify-content: center;
+    flex-shrink: 0;
     &:before {
       background-color: $white;
       width: 12px;
