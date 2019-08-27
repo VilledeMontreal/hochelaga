@@ -78,7 +78,7 @@
 
           {{# module-documents}}
           <div class="content-module-stacked">
-            <h2>Documents à télécharger</h2>
+            <h2>Documents (titre éditorial)</h2>
             {{> components-list-item-link}}
           </div>
           {{/ module-documents }}
@@ -110,6 +110,12 @@
             </ol>
           </div>
           {{/ module-texte-optionnel}}
+
+          {{# module-emphasis }}
+          <div class="content-module-stacked">
+          {{> styles-blockquote }}
+          </div>
+          {{/ module-emphasis}}
 
           {{# listAutoProgrammes}}
           <div class="content-module-stacked">

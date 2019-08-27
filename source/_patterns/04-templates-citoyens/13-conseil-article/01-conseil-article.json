@@ -47,6 +47,30 @@
       "buttonUrl": "#",
       "buttonText": "Appel à l'action"
     },
+    "module-card-cta": {
+      "cards": {
+        "classes": "",
+        "bsgrid-classes": "col-12",
+        "card-item": [
+          {
+            "classes": "card-fw",
+            "url": "#",
+            "card-media" : {
+              "icon": false,
+              "img": {
+                "src": "https://picsum.photos/id/1074/768/432",
+                "alt": "Card full width #1 img alt."
+              }
+            },
+            "card-type": "Type",
+            "card-title": "Titre de la carte sans limite de caractères",
+            "card-text": "Description de la carte qui peut être sur plusieurs lignes si nécessaire",
+            "card-date-text": false,
+            "card-publication-date": false
+          }
+        ]
+      }
+    },
     "module-emphasis": {
       "blockquote-classes": "blockquote-emphasis",
       "blockquote-html-text": "<p>Meditation gochujang copper mug, selfies paleo yuccie gastropub single-origin coffee thundercats scenester venmo pickled. Neutra yr green juice, fixie blog literally squid lyft bitters actually bicycle rights thundercats.</p>",
@@ -125,8 +149,29 @@
         }
       ]
     },
-    "module-media-content": {
-      "wrapperTitle": "Titre de la section - Image et texte associés",
+    "module-explainer-img-left": {
+      "wrapperTitle": "Titre - Image à gauche et texte associés",
+      "img": {
+        "src": "https://picsum.photos/id/1058/768/432",
+        "alt": "Alt - Lorem ipsum dolor site."
+      }
+    },
+    "module-explainer-img-right": {
+      "wrapperTitle": "Titre - Image à droite et texte associés",
+      "img": {
+        "src": "https://picsum.photos/id/1058/768/432",
+        "alt": "Alt - Lorem ipsum dolor site."
+      }
+    },
+    "module-explainer-img-top": {
+      "wrapperTitle": "Titre - Image en haut et texte associés",
+      "img": {
+        "src": "https://picsum.photos/id/1058/768/432",
+        "alt": "Alt - Lorem ipsum dolor site."
+      }
+    },
+    "module-explainer-img-bottom": {
+      "wrapperTitle": "Titre - Image en bas et texte associés",
       "img": {
         "src": "https://picsum.photos/id/1058/768/432",
         "alt": "Alt - Lorem ipsum dolor site."
@@ -172,102 +217,11 @@
         }
       }
     },
-    "module-list-reference": {
-      "listGroupClass": "list-group-lg",
-      "listGroup": [
-        {
-          "icon-name": "icon-dot-bullet",
-          "text": "Titre du contenu",
-          "class": false
-        },
-        {
-          "icon-name": "icon-dot-bullet",
-          "text": "Titre du contenu",
-          "class": false
-        },
-        {
-          "icon-name": "icon-dot-bullet",
-          "text": "Titre du contenu",
-          "class": false
-        }
-      ]
-    },
-    "module-documents": {
-      "listGroupClass": "list-group-lg",
-      "listGroup": [
-        {
-          "icon-name": "icon-file-pdf",
-          "text": "Titre du document [PDF - 2 Mo]",
-          "class": "document-pdf"
-        },
-        {
-          "icon-name": "icon-file-pdf",
-          "text": "Titre du document [PDF - 2 Mo]",
-          "class": "document-pdf"
-        },
-        {
-          "icon-name": "icon-file",
-          "text": "Titre du document",
-          "class": "document"
-        }
-      ]
-    },
-    "module-events": {
-      "listGroupClass": "list-group-teaser",
-      "listGroup": [
-        {
-          "class": false,
-          "url": "#",
-          "media": {
-            "alt": "",
-            "src": "https://picsum.photos/id/1025/1024/576"
-          },
-          "category": "Type d'événement",
-          "title": "Titre de l'événement",
-          "date": {
-            "dateTimeFormat": "2019-08-17T15:00:00-0500",
-            "dateTimeText": "Samedi 17 août à 10&nbsp;h&nbsp;00"
-          }
-        },
-        {
-          "url": "https://google.ca",
-          "media": {
-            "alt": "",
-            "src": "https://picsum.photos/id/1026/1024/576"
-          },
-          "category": "Type d'événement",
-          "title": "Nullam efficitur turpis erat non lacinia ipsum consectetur id",
-          "date": {
-            "dateTimeFormat": "2019-08-31T22:00:00-0500",
-            "dateTimeText": "Samedi 31 août à 17&nbsp;h&nbsp;00"
-          }
-        },
-        {
-          "url": "#",
-          "media": {
-            "alt": "",
-            "src": "https://picsum.photos/id/1027/1024/576"
-          },
-          "category": "Type d'événement",
-          "title": "Mauris tristique tempor sapien et fermentum velit auctor at",
-          "date": {
-            "dateTimeFormat": "2019-09-10T20:30:00-0500",
-            "dateTimeText": "Mercredi 10 septembre à 15&nbsp;h&nbsp;30"
-          }
-        }
-      ],
-      "buttonAsLink": true,
-      "buttonClass": "btn-secondary",
-      "buttonUrl": "#",
-      "buttonText": "Tous les événements"
-    }
+    "module-events": false
   },
   "sidebarRight": true,
   "sidebarClasses": false,
   "sb-classes": "",
-  "sb-block-bon-savoir": {
-    "content": "<p>Corps de texte simple - Pas de liens. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi condimentum sollicitudin erat, quis convallis risus. Morbi condimentum sollicitudin erat, quis convallis risus.</p>"
-  },
   "sb-block-tc-lies": {
     "listGroupClass": false,
     "listGroup": [

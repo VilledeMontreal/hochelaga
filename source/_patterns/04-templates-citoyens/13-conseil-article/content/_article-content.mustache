@@ -5,6 +5,18 @@
 </div>
 {{/ module-cta}}
 
+{{# module-card-cta}}
+<div class="content-module-stacked">
+  <div class="row cards">
+    {{# cards.card-item }}
+    <div class="{{ cards.bsgrid-classes }}">
+      {{> components-card-item-full-width }}
+    </div>
+    {{/ cards.card-item }}
+  </div>
+</div>
+{{/ module-card-cta}}
+
 {{# module-emphasis }}
 <div class="content-module-stacked">
   {{> styles-blockquote }}
@@ -81,17 +93,29 @@
 </div>
 {{/ module-comparatif-rangee}}
 
-{{# module-media-content}}
+{{# module-explainer-img-left}}
 <div class="content-module-stacked">
-  {{> patterns-wrapper-content }}
+  {{> patterns-wrapper-explainer("wrapperExplainer.imgLeft": true) }}
 </div>
-{{/ module-media-content}}
+{{/ module-explainer-img-left}}
 
-{{# module-media-content}}
+{{# module-explainer-img-right}}
 <div class="content-module-stacked">
-  {{> patterns-wrapper-content-image-col-12 }}
+  {{> patterns-wrapper-explainer("wrapperExplainer.imgRight": true) }}
 </div>
-{{/ module-media-content}}
+{{/ module-explainer-img-right}}
+
+{{# module-explainer-img-top}}
+<div class="content-module-stacked">
+  {{> patterns-wrapper-explainer("wrapperExplainer.imgTop": true) }}
+</div>
+{{/ module-explainer-img-top}}
+
+{{# module-explainer-img-bottom}}
+<div class="content-module-stacked">
+  {{> patterns-wrapper-explainer("wrapperExplainer.imgBottom": true) }}
+</div>
+{{/ module-explainer-img-bottom}}
 
 {{# module-table}}
 <div class="content-module-stacked">
@@ -100,20 +124,6 @@
   {{> styles-table }}
 </div>
 {{/ module-table}}
-
-{{# module-list-reference}}
-<div class="content-module-stacked">
-  <h2>Liste de références de liens internes ou externes</h2>
-  {{> components-list-item-link }}
-</div>
-{{/ module-list-reference}}
-
-{{# module-documents}}
-<div class="content-module-stacked">
-  <h2>Documents à télécharger</h2>
-  {{> components-list-item-link}}
-</div>
-{{/ module-documents }}
 
 {{# module-events}}
 <div class="content-module-stacked">
@@ -127,6 +137,6 @@
 
 <div class="content-module-stacked">
   <div class="font-size-base-interface">
-    <span class="mr-1">Publié par</span><a href="#" class="link-list-element"><span class="link-label">Unité administrative</span></a>, <a href="#" class="link-list-element"><span class="link-label">Arrondissement</span></a> et <a href="#" class="link-list-element"><span class="link-label">Arrondissement</span></a>
+    <span class="mr-1">Publié par</span><a href="#">Unité administrative</a>, <a href="#">Arrondissement</a>, <a href="#">Arrondissement</a>
   </div>
 </div>

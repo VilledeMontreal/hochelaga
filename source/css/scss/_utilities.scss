@@ -20,3 +20,8 @@
 /*-- CUSTOM --*/
 @import "../scss/utilities/text";
 @import "../scss/utilities/background";
+
+// Provide a utility class for neutral-stroke border color
+.border-neutral-stroke {
+  border-color: $neutral-stroke !important;
+}
