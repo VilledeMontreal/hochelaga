@@ -7,7 +7,7 @@ title: Images
 Les images sont rendues responsives avec l'ajout de la classe <code>.img-fluid</code>.
 Pour obtenir une image ronde ajouter la classe <code>.rounded-circle</code>.
 
-Pour l'intégration de plus d'une image voir la section components/gallery
+Pour l'intégration de plus d'une image voir la section <code>components/gallery</code>
 
 #Accessibilité 
 

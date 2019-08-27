@@ -15,8 +15,8 @@ Les inputs par défault sont carrés. Pour obtenir un input arrondi, il suffit d
 
 #Validation
 
-Seuls les inputs sans icons peuvent avoir un icone de validation. Dans ce cas il faut ajouter un <code>div</code> avec la classe <code>feedback-icon et la classe de la validation soit <code>valid-feedback</code> ou bien in <code>valid valid-feedback</code>.
-Voir l'exemple ci-dessous dans la section States.
+Seuls les inputs sans icons peuvent avoir un icone de validation. Dans ce cas il faut ajouter un <code>div</code> avec la classe <code>feedback-icon</code> et la classe de la validation soit <code>valid-feedback</code> ou bien <code>invalid-feedback</code>.
 
+Voir l'exemple ci-dessous dans la section States.
 
 [Voir plus de détails sur les formulaires Bootstrap](https://getbootstrap.com/docs/4.3/components/forms/)
