@@ -25,3 +25,11 @@
 .border-neutral-stroke {
   border-color: $neutral-stroke !important;
 }
+
+// Provide the ability to "Unfix" a element using the fixed-top
+// Like when embeding a montreal.ca page inside the vue de l'agent 311
+.unfixed {
+  .fixed-top {
+    position: inherit;
+  }
+}

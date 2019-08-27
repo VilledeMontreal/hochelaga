@@ -1,15 +1,17 @@
-<ul class="menu-items {{ menuItemClass}}">
-  {{# menuItem}}
-  <li class="{{menuItemLiClass}} {{# menuItemSeparator}}menu-item-separator{{/ menuItemSeparator}}">
-    <a class="menu-item{{# class}} {{class}}{{/ class}}" href="#">
-      {{# menuItemIcon}}<span class="icon {{ icon-name }}" aria-hidden="true"></span>{{/ menuItemIcon}}
-      {{# menuItemLabel}}
-      <span class="menu-item-label">{{ menuItemLabel}}</span>
-      {{/ menuItemLabel}}
-      {{^ menuItemLabel}}
-      <span class="sr-only">{{ srMenuItemLabel}}</span>
-      {{/ menuItemLabel}}
-    </a>
-  </li>
-  {{/ menuItem}}
-</ul>
+<nav aria-label="Navigation secondaire" role="navigation">
+  <ul class="menu-items {{ menuItemClass}}">
+    {{# menuItem}}
+    <li class="{{menuItemLiClass}} {{# menuItemSeparator}}menu-item-separator{{/ menuItemSeparator}}">
+      <a class="menu-item{{# class}} {{class}}{{/ class}}" href="{{url}}" {{# modal}}data-toggle="modal"{{/ modal}}{{# target}} data-target="{{target}}"{{/ target}}>
+        {{# menuItemIcon}}<span class="icon {{ icon-name }}" aria-hidden="true"></span>{{/ menuItemIcon}}
+        {{# menuItemLabel}}
+        <span class="menu-item-label">{{ menuItemLabel}}</span>
+        {{/ menuItemLabel}}
+        {{^ menuItemLabel}}
+        <span class="sr-only">{{ srMenuItemLabel}}</span>
+        {{/ menuItemLabel}}
+      </a>
+    </li>
+    {{/ menuItem}}
+  </ul>
+</nav>

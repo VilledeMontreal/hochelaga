@@ -9,7 +9,7 @@
       </a>
     </div>
     {{# listExtraContent}}
-    <div class="list-item-icon-content ml-5">{{{listExtraContent}}}</div>
+    <div class="list-item-icon-content ml-5 {{listExtraContentClass}}">{{{listExtraContent}}}</div>
     {{/ listExtraContent}}
     {{/ listItemAction}}
     {{^ listItemAction}}
@@ -19,7 +19,7 @@
       <div class="list-item-icon-label">{{text}}</div>
       {{/ text }}
       {{# listExtraContent}}
-      <div>{{{listExtraContent}}}</div>
+      <div {{#listExtraContentClass}}class="{{listExtraContentClass}}"{{/listExtraContentClass}}>{{{listExtraContent}}}</div>
       {{/ listExtraContent}}
     </div>
     {{/ listItemAction}}
