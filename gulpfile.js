@@ -13,6 +13,7 @@ var gulp                = require('gulp'),
     gulpif              = require('gulp-if'),
     gutil               = require('gulp-util'),
     imagemin            = require('gulp-imagemin'),
+    jsonConcat          = require('gulp-json-concat'),
     postcss             = require('gulp-postcss'),
     rename              = require('gulp-rename'),
     sass                = require('gulp-sass'),
@@ -151,6 +152,16 @@ gulp.task('icon-editorial', function() {
   return gulp.src('source/vdm-icon-system/icons/icon-editorial/_icons-editorial.scss')
   .pipe(gulp.dest('source/css/scss/'))
 });
+
+//Concat and copy json in data folder for both utility and editorial icons
+gulp.task('json-icons', function() {
+  return gulp.src('source/vdm-icon-system/icons/**/*.json')
+    .pipe(jsonConcat('icons.json',function(data){
+      return Buffer.from(JSON.stringify(data));
+    }))
+    .pipe(gulp.dest("source/_data/"));
+});
+
 
 
 // Task: Handle Sass and CSS
@@ -300,6 +311,7 @@ gulp.task('default', ['cleanable:before'], function () {
   gulp.start(
     'icon-utility',
     'icon-editorial',
+    'json-icons',
     'patternlab',
     'styleguide',
     'sass',

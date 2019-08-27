@@ -1,38 +1,40 @@
-# svg-icon-system-boilerplate
 
-A boilerplate for building a custom icon system via a linked external SVG sprite. [Configuration Options](https://github.com/jkphl/svg-sprite) -- this system is based on SVG-sprite.
+# vdm-icon-system
 
-## Usage
+The svg icons availables for the projects of the city of Montreal.
 
-1. Place SVG icons into `svg/` folder (you can create subfolders within this, and the icons will be namespaced appropriately based on sublevel)
-2. Run `gulp` to build the sprite and a reference page (located at `sprite/sprite.symbol.html`)
+## Getting Started
 
-`sprite.svg` is the main file containing a sprite of each SVG included using `<symbol>` inside of SVG `<defs>`. This system implements SVG icons via [<use>](https://developer.mozilla.org/en-US/docs/Web/SVG/Element/use) to access individual icons.
+### Prerequisites
 
-The icons are their original color by default (see your reference page) but can be edited using CSS. If you use subfolders, the naming structure is as follows: `folderName--iconName`.
+To run this application, you'll need  [Node.js](https://nodejs.org/fr/) (which comes with npm) and [Gulp](https://gulpjs.com/docs/en/getting-started/quick-start) installed on your computer. 
 
-HTML:
-```html
-<svg>
-  <use xlink:href="sprite.svg#glasses--wine"></use>
-</svg>
+### Installing
+
+Run npm install to install all the dependencies.
+
+```
+ $ npm install
 ```
 
-You may then style this SVG in CSS. Make sure to give it a width and height (default is 100% of parent). It is best to edit these icons in CSS after adding a class to the `<svg>`. For example:
+And after run gulp to generate svg optimized, json and sass file.
 
-```html
-<svg class="icon--wineglass">
-  <use xlink:href="sprite.svg#glasses--wine"></use>
-</svg>
+```
+$ gulp
 ```
 
-Sass:
-```scss
-.icon--wineglass {
-  fill: red; // additional styling
+### Updating
 
-  &:hover {
-    fill: white; // styling on hover
-  }
-}
-```
+To add or remove an icon from the library you have to:
+
+1.  Place SVG icons into `src/` folder and in the folder name by the type of icon you want to replace. 
+Ex: `src/icon-editorial/ ` for category or editorials icons
+2.  Run `gulp` to regenerate svg icons, .json and .scss
+
+## Features
+- [x] Generate clean svg icons for inline use
+- [x] Generate scss data URI of the svg icons
+
+### To-do list:
+- [ ] Detach librairy from the BAO and transform it into a node module Ex: [Carbon icon library](https://github.com/carbon-design-system/carbon/tree/master/packages/icons)
+- [ ] Generate a .json more cleaner for the definition of the svg icons
