@@ -143,23 +143,18 @@ gulp.task('scss-dist', function () {
 });
 
 //Copy icons to scss folder
-gulp.task('icon-utility', function() {
-  return gulp.src('source/vdm-icon-system/icons/icon-utility/_icons-utility.scss')
-  .pipe(gulp.dest('source/css/scss/'))
-});
-
-gulp.task('icon-editorial', function() {
-  return gulp.src('source/vdm-icon-system/icons/icon-editorial/_icons-editorial.scss')
-  .pipe(gulp.dest('source/css/scss/'))
+gulp.task('icons-scss', function() {
+  return gulp.src(config.iconescss.files)
+  .pipe(gulp.dest(config.iconescss.dest))
 });
 
 //Concat and copy json in data folder for both utility and editorial icons
-gulp.task('json-icons', function() {
-  return gulp.src('source/vdm-icon-system/icons/**/*.json')
+gulp.task('icons-json', function() {
+  return gulp.src(config.iconesjson.files)
     .pipe(jsonConcat('icons.json',function(data){
       return Buffer.from(JSON.stringify(data));
     }))
-    .pipe(gulp.dest("source/_data/"));
+    .pipe(gulp.dest(config.iconesjson.dest));
 });
 
 
@@ -309,9 +304,8 @@ gulp.task('watch', function () {
 gulp.task('default', ['cleanable:before'], function () {
   production = false;
   gulp.start(
-    'icon-utility',
-    'icon-editorial',
-    'json-icons',
+    'icons-scss',
+    'icons-json',
     'patternlab',
     'styleguide',
     'sass',

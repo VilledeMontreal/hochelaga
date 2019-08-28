@@ -96,6 +96,21 @@
       ],
       "dest" : "dist/images/"
     },
+    "iconescss": {
+      "files": [
+        "source/vdm-icon-system/icons/utility/_icons-utility.scss",
+        "source/vdm-icon-system/icons/editorial/_icons-editorial.scss",
+        "!source/vdm-icon-system/icons"  
+      ],
+      "dest" : "source/css/scss"
+    },
+    "iconesjson": {
+      "files": [
+        "source/vdm-icon-system/icons/**/*.json",
+        "!source/vdm-icon-system/icons"  
+      ],
+      "dest" : "source/_data"
+    },
     "bao": {
       "files": {
         "json": "source/bao-version.json"
