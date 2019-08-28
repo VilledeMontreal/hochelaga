@@ -19,61 +19,152 @@
 
 
   // ******************************
-  // Begin side menu push
+  // Begin Menu push
 
-  var $menuOpen = $(".menu-toggler");
-  var $buttonClose = $(".js-button-close")
+  const ESCAPE_KEYCODE  = 'Escape' // KeyboardEvent.which value for Escape (Esc) key
+  const TAB_KEYCODE     = 'Tab' // KeyboardEvent.which value for tab key
 
-  $menuOpen.on("click", function () {
-    $("#navbarSideMenu").attr("aria-expanded", "true");
-    $('.overlay').show();
-  });
+  // Main Menu
+  var $menuToggler = $(".menu-toggler");
+  var $mainMenu = $("#main-menu");
+
+  // Navbar search
+  var $navbarSearchToggler = $(".navbar-search-toggler");
+  var $navbarSearch = $("#navbar-search");
 
   // Close navbarSide when the overlay is clicked
   $('.overlay').on('click', function () {
-    $('#slide-menu-left').data('slide-menu').close();
-    $('#navbar-search').hide();
-    $('.overlay').hide();
+    if($mainMenu.hasClass('show')) {
+      $mainMenu.removeClass('show');
+      // Return focus to the element that invoked it
+      $menuToggler.attr("aria-expanded", "false").toggleClass('active').focus();
+      $('body').toggleClass('modal-open');
+    }
+    if($navbarSearch.hasClass('show')) {
+      $navbarSearch.removeClass('show');
+      $navbarSearchToggler.attr("aria-expanded", "false");
+    }
+    if($('.overlay').hasClass('show')) {
+      $('.overlay').removeClass('show');
+    }
   });
 
-  $buttonClose.on("click", function () {
-    $('#slide-menu-left').data('slide-menu').close();
-    $("#navbarSideMenu").attr("aria-expanded", "false");
-    $('#navbar-search').hide();
-    $('.overlay').hide();
+  // Main menu close button (Mobile)
+  $("#main-menu .js-button-mobile-close").on("click", function (e) {
+    $mainMenu.removeClass('show');
+    $('.overlay').removeClass('show');
+    // Return focus to the element that invoked it
+    $menuToggler.attr("aria-expanded", "false").toggleClass('active').focus();
+  });
+
+  // Navbar search Close button
+  $("#navbar-search .js-button-close").on('click', function(e) {
+    $navbarSearch.removeClass('show');
+    $navbarSearchToggler.attr("aria-expanded", "false").focus();
+    if(!$mainMenu.hasClass('show')) {
+      $('.overlay').removeClass('show');
+    }
+  });
+
+  // Sous-categories Close button
+  $('.main-menu-categories > .main-menu-level1-item .main-menu-level2-close .js-button-close').on('click', function(e) {
+    e.stopPropagation();
+    $(this).parent().siblings('.main-menu-level2').addClass('main-menu-level2-hidden');
+    $(this).parent().siblings('.btn-main-menu-toggle').removeClass('active').attr('aria-expanded', false).focus();
   });
 
 
-  var $navbarSearchToggler = $(".navbar-search-toggler");
+  // Flyout Main Menu
+  $menuToggler.on("click", function () {
+    $('body').toggleClass('modal-open');
+    $mainMenu.toggleClass('show');
+    $('.overlay').toggleClass('show');
+    $(this).toggleClass('active');
+    // Set aria-expanded attribute on toggled button
+    if($mainMenu.hasClass('show')) {
+      $(this).attr("aria-expanded", "true");
+    } else {
+      $(this).attr("aria-expanded", "false");
+    }
+  });
 
   $navbarSearchToggler.on("click", function() {
-    $('#navbar-search').show();
-    $('input').focus();
-    $('.overlay').show();
+    $(this).attr("aria-expanded", "true");
+    $navbarSearch.addClass('show');
+    $('#input-navbar-search').focus();
+    if(!$('.overlay').hasClass('show')) {
+      $('.overlay').addClass('show');
+    }
+  });
+
+  // Handle esc key on menu
+  $mainMenu.keydown(function(e) {
+    if (e.key === ESCAPE_KEYCODE) {
+      // Close the menu and overlay
+      $mainMenu.toggleClass("show");
+      $('.overlay').removeClass('show');
+      // Return focus to the element that invoked it
+      $menuToggler.attr("aria-expanded", "false").toggleClass('active').focus();
+    }
   });
 
 
-  // Nav search input-group focus
-  //
-  $( ".js-nav-search .form-control" ).on("focus", function() {
-    $('#slide-menu-left').addClass('js-search-focus');
-    $('.slide-menu-header').addClass('invisible');
-    $('.slider').addClass('invisible');
-    $('.js-button-close-search').removeClass('d-none');
+  // Handle esc key on sub-menu
+  $('.main-menu-categories > .main-menu-level1-item > .main-menu-level2').keydown(function(e) {
+    e.stopPropagation();
+    if (e.key === ESCAPE_KEYCODE) {
+      // Close the menu and overlay
+      $(this).addClass("main-menu-level2-hidden");
+      // Return focus to the element that invoked it
+      $(this).siblings('.btn-main-menu-toggle').attr("aria-expanded", "false").toggleClass('active').focus();
+    }
   });
 
-  $('.js-button-close-search').on('click', function(e) {
-    e.preventDefault();
-    $(this).addClass('d-none');
-    $(this).siblings('input').val('');
-    $(this).siblings('.btn-clear').addClass('d-none');
-    $('#slide-menu-left').removeClass('js-search-focus');
-    $('.slide-menu-header').removeClass('invisible');
-    $('.slider').removeClass('invisible');
+  // Handle esc key on navbar search
+  $navbarSearch.keydown(function(e) {
+    if (e.key === ESCAPE_KEYCODE) {
+      // Close the menu and overlay
+      $navbarSearch.toggleClass("show");
+      $('.overlay').removeClass('show');
+  
+      // Return focus to the element that invoked it
+      $navbarSearchToggler.attr("aria-expanded", "false").focus();
+    }
+  });
+
+  // Handle second level for Categories
+  $('.btn-main-menu-toggle').on('click', function() {
+    $(this).parent('li').siblings().find('.main-menu-level2').addClass('main-menu-level2-hidden');
+    $(this).parent('li').siblings().find('.btn-main-menu-toggle').removeClass('active').attr('aria-expanded', false);
+    $(this).attr('aria-expanded', $(this).attr('aria-expanded') == 'true' ? 'false' : 'true');
+    $(this).toggleClass('active');
+    $(this).next('.main-menu-level2').toggleClass('main-menu-level2-hidden');
+  });
+
+  // Handle leaving submenu
+  // If key is pressed while on the last link in a sub menu
+  $('.main-menu-categories > .main-menu-level1-item > .main-menu-level2 > li:last-child > a').on('keydown', function(e) {
+    // If tabbing out of the last link in a sub menu AND NOT tabbing into another sub menu
+    if (e.key === TAB_KEYCODE) {
+      // Close this sub menu
+      $(this).parent('li').parent('ul').toggleClass('main-menu-level2-hidden');
+      $(this).parent('li').parent('ul').siblings('.btn-main-menu-toggle').removeClass('active').attr('aria-expanded', false);
+    }
+  })
+
+  // If key is pressed while on the first link in a sub menu
+  $('.main-menu-categories > .main-menu-level1-item > .main-menu-level2 > li:first-child > a').on('keydown', function(e) {
+    // If tabbing out of the last link in a sub menu AND NOT tabbing into another sub menu
+    if (e.shiftKey && e.key === TAB_KEYCODE) {
+      // Close this sub menu
+      $(this).parent('li').parent('ul').toggleClass('main-menu-level2-hidden');
+      $(this).parent('li').parent('ul').siblings('.btn-main-menu-toggle').removeClass('active').attr('aria-expanded', false);
+    }
   })
 
 
   // Clear input
+  // TODO: Test if this is still needed
   //
   $('.has-clear input').on('input propertychange', function() {
     var $this = $(this);
@@ -83,9 +174,14 @@
   
   $('.btn-clear').on('click', function(e) {
     e.preventDefault();
-    $(this).siblings('input').val('')
-      .trigger('propertychange').focus();
+    $(this).siblings('input').val('').trigger('propertychange').focus();
   });
+
+  $('.js-btn-clear').on('click', function(e) {
+    $(this).parent('.form-control').val('');
+    $(this).closest('.form-row').find('.form-control').val('').focus();
+  });
+
 
   // Toggle popover from data-toggle
   //
@@ -213,14 +309,11 @@
       var target = $(this.hash);
       target = target.length ? target : $('[name=' + this.hash.slice(1) + ']');
       if (target.length) {
-        if($(".sticky").length > 0){
-          if(window.matchMedia("(min-width: 992px)").matches) {
-            $navOffset = $(".sticky").height();
-          } else {
-            $navOffset = 0;
-          }
+        // Must match Navbar height
+        if(window.matchMedia("(min-width: 992px)").matches) {
+          $navOffset = 96;
         } else {
-          $navOffset = 0;
+          $navOffset = 80;
         }
 
         $('html, body').animate({
