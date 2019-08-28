@@ -8,7 +8,13 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 
 ## Added
 - Cookies Consent templates: Patterns/Cookies Consent
+- Add the path to icon scss and json to build.config.json
 
+##Changed
+- Changing the layout of employes for the user to be logged on.
+
+## Fixed
+- Update the gulpfile to generate the correct scss of the icons
 
 ## [4.0.1] - 2019-08-27
 
