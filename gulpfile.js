@@ -144,12 +144,12 @@ gulp.task('scss-dist', function () {
 
 //Copy icons to scss folder
 gulp.task('icon-utility', function() {
-  return gulp.src('source/vdm-icon-system/icons/icon-utility/_icons-utility.scss')
+  return gulp.src('source/vdm-icon-system/icons/utility/_icons-utility.scss')
   .pipe(gulp.dest('source/css/scss/'))
 });
 
 gulp.task('icon-editorial', function() {
-  return gulp.src('source/vdm-icon-system/icons/icon-editorial/_icons-editorial.scss')
+  return gulp.src('source/vdm-icon-system/icons/editorial/_icons-editorial.scss')
   .pipe(gulp.dest('source/css/scss/'))
 });
 
