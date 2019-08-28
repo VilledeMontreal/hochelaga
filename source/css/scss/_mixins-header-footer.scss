@@ -1,36 +1,18 @@
-// Toggles
-//
-// Used in conjunction with global variables to enable certain theme features.
-
-
 // Vendor
 @import "~bootstrap/scss/vendor/rfs";
-
-// Deprecate
-@import "~bootstrap/scss/mixins/deprecate";
 
 // Utilities
 @import "~bootstrap/scss/mixins/breakpoints";
 @import "~bootstrap/scss/mixins/hover";
-@import "~bootstrap/scss/mixins/image";
-@import "~bootstrap/scss/mixins/resize";
 @import "~bootstrap/scss/mixins/screen-reader";
-@import "~bootstrap/scss/mixins/size";
-@import "~bootstrap/scss/mixins/reset-text";
 @import "~bootstrap/scss/mixins/text-emphasis";
 @import "~bootstrap/scss/mixins/text-hide";
-@import "~bootstrap/scss/mixins/text-truncate";
 @import "~bootstrap/scss/mixins/visibility";
 
 // // Components
-@import "~bootstrap/scss/mixins/alert";
-//@import "~bootstrap/scss/mixins/caret";
-@import "~bootstrap/scss/mixins/pagination";
 @import "~bootstrap/scss/mixins/lists";
-@import "~bootstrap/scss/mixins/list-group";
 @import "~bootstrap/scss/mixins/nav-divider";
 @import "~bootstrap/scss/mixins/forms";
-@import "~bootstrap/scss/mixins/table-row";
 
 // // Skins
 @import "~bootstrap/scss/mixins/background-variant";
@@ -47,7 +29,6 @@
 
 // // Custom
 @import "mixins/buttons";
-@import "mixins/chip";
 @import "mixins/icons";
 @import "mixins/mixins";
 @import "mixins/nav";

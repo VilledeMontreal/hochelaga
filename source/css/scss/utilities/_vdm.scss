@@ -1,0 +1,29 @@
+// Provide a utility class for neutral-stroke border color
+.border-neutral-stroke {
+  border-color: $neutral-stroke !important;
+}
+
+.fullwidth-border {
+  position: relative;
+  width: 100vh;
+  height: $border-width;
+  background-color: $border-color;
+  left: 50%;
+  right: 50%;
+  margin-left: -50vh;
+  margin-right: -50vh;
+}
+
+// Provide the ability to "Unfix" a element using the fixed-top
+// Like when embeding a montreal.ca page inside the vue de l'agent 311
+.unfixed {
+  .fixed-top {
+    position: inherit;
+  }
+}
+
+.border-ltr-4 {
+  border: 4px solid $neutral-stroke;
+  border-bottom: none;
+}
+

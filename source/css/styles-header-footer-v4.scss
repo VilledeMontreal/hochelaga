@@ -7,11 +7,13 @@
 @import "~bootstrap/scss/functions";
 @import "~bootstrap/scss/variables";
 @import "scss/bootstrap_overrides"; // Overrides theme-colors variables
-@import "scss/mixins"; // Partial bootstrap mixins import
+@import "scss/mixins-header-footer"; // Partial bootstrap mixins import
 @import "scss/icons";
 @import "scss/mixins/caret";
+@import "scss/bootstrap-header-footer";
 
-@import "~bootstrap/scss/type";
+@import "scss/spinners";
+@import "scss/buttons";
 
 @import "scss/spinners";
 @import "scss/buttons";
@@ -21,3 +23,27 @@
 @import "scss/menus";
 @import "scss/menu-item";
 @import "scss/footer";
+
+/*-- Utilities --*/
+@import "~bootstrap/scss/utilities/display";
+@import "~bootstrap/scss/utilities/flex";
+@import "~bootstrap/scss/utilities/position";
+@import "~bootstrap/scss/utilities/screenreaders";
+@import "~bootstrap/scss/utilities/sizing";
+@import "~bootstrap/scss/utilities/spacing";
+
+/*-- CUSTOM --*/
+@import "scss/utilities/text";
+@import "scss/utilities/background";
+@import "scss/utilities/vdm";
+
+
+/*-- COMPONENTS --*/
+@import "scss/type";
+@import "scss/dropdown";
+@import "scss/overlay";
+@import "scss/list";
+@import "scss/modal";
+@import "scss/media";
+@import "scss/nav";
+@import "scss/collapse";
