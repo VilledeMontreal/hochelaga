@@ -4,7 +4,13 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](http://keepachangelog.com/en/1.0.0/)
 and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.html).
 
-## [4.0.1] - unreleased
+## [4.1.0] - unreleased
+
+## Added
+- Cookies Consent templates: Patterns/Cookies Consent
+
+
+## [4.0.1] - 2019-08-27
 
 ## Added
 - Unité administrative template.
@@ -21,6 +27,7 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 - Utility class .text-preserve-space for white-space: pre usage.
 - Added a readme.md file that contains a list of improvements.
 - Added a automated script that concatenates jsons for icons to use in the BAO.
+- Button primary-reverse variant.
 
 ## Changed
 - Blockquote emphasis should be a div tag (blockquote is strickly for citation).
@@ -31,6 +38,7 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 
 ## Fixed
 - List Group line-heights, paddings and margins.
+- Prevent media copyright icon from being squashed when long copyright.
 - Pattern Labs: Fixed various pseudo-templates inclusion.
 
 ## Removed
@@ -68,4 +76,5 @@ The version 3 is now deprecated. Only bug fixes will be considered. Please refer
 
 
 
+[4.0.1]: https://bitbucket.org/villemontreal/boite-outils4-web/src/4.0.1/
 [4.0.0]: https://bitbucket.org/villemontreal/boite-outils4-web/src/4.0.0/
