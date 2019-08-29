@@ -1,13 +1,11 @@
 ---
-title: Images
+title: Gallery
 ---
 
 #Utilisation
 
-Les images sont rendues responsives avec l'ajout de la classe <code>.img-fluid</code>.
-Pour obtenir une image ronde ajouter la classe <code>.rounded-circle</code>.
-
-Pour l'intégration de plus d'une image voir la section components/gallery
+La gallerie est utilisée lorsqu'il y a plus qu'une image à afficher dans le contenu.
+Pour l'intégration d'une image unique voir la section styles/images
 
 #Accessibilité 
 
