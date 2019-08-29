@@ -1,0 +1,15 @@
+<ul class="menu-items {{ menuItemClass}}">
+  {{# menuItem}}
+  <li>
+    <a class="menu-item{{# class}} {{class}}{{/ class}}" href="#">
+      {{# menuItemIcon}}<span class="icon {{ icon-name }}" aria-hidden="true"></span>{{/ menuItemIcon}}
+      {{# menuItemLabel}}
+      <span class="menu-item-label">{{ menuItemLabel}}</span>
+      {{/ menuItemLabel}}
+      {{^ menuItemLabel}}
+      <span class="sr-only">{{ srMenuItemLabel}}</span>
+      {{/ menuItemLabel}}
+    </a>
+  </li>
+  {{/ menuItem}}
+</ul>

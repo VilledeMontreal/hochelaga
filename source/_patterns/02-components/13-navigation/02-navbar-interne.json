@@ -6,37 +6,39 @@
     }
   },
   "user-authenticated": false,
-  "listGroupClass": "list-group-icons-categories list-group side-menu",
-  "listGroup": [
+  "menuItemClass": "menu-items-column menu-items-text",
+  "menuItem": [
     {
-      "icon-name": "icon-list",
-      "text": "Cras justo odio",
-      "class": false
+      "class": false,
+      "url": "#",
+      "menuItemIcon": {
+        "icon-name": "icon-layers"
+      },
+      "menuItemLabel": "Libellé"
     },
     {
-      "icon-name": "icon-participation-citoyenne",
-      "text": "Dapibus ac facilisis in",
-      "class": false
+      "class": "active",
+      "url": "#",
+      "menuItemIcon": {
+        "icon-name": "icon-map"
+      },
+      "menuItemLabel": "Libellé"
     },
     {
-      "icon-name": "icon-amenagement-et-construction",
-      "text": "Morbi leo risus",
-      "class": false
+      "class": false,
+      "url": "#",
+      "menuItemIcon": {
+        "icon-name": "icon-website"
+      },
+      "menuItemLabel": "Libellé"
     },
     {
-      "icon-name": "icon-environnement",
-      "text": "Cras justo odio",
-      "class": false
-    },
-    {
-      "icon-name": "icon-affaires-et-economie",
-      "text": "Dapibus ac facilisis in",
-      "class": false
-    },
-    {
-      "icon-name": "icon-sante-et-securite-publiques",
-      "text": "Morbi leo risus",
-      "class": false
+      "class": false,
+      "url": "#",
+      "menuItemIcon": {
+        "icon-name": "icon-info"
+      },
+      "menuItemLabel": "Libellé"
     }
   ]
 }
