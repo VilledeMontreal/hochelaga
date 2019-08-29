@@ -1,0 +1,10 @@
+<div class="form-group {{ formGroupClass}}">
+  <label for="{{formGroupInputID}}">{{ formGroupInputLabel}}{{^ formGroupInputRequired}}<span>Facultatif</span>{{/ formGroupInputRequired}}</label>
+  <div class="input-group-icon input-group-icon-left">
+    <input type="text" class="form-control {{formGroupInputClass}}" id="{{ formGroupInputID }}" {{# formGroupInputPlaceholder}}placeholder="{{ formGroupInputPlaceholder}}"{{/ formGroupInputPlaceholder}}{{# formGroupInputState}} {{ formGroupInputState}}{{/ formGroupInputState}}>
+    <span class="icon {{ icon-name }}" aria-hidden="true"></span>
+  </div>
+  {{# formGroupInputHelpText}}
+  <small id="textRequiredHelpBlock" class="form-text">{{ formGroupInputHelpText }}</small>
+  {{/ formGroupInputHelpText}}
+</div>

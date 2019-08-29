@@ -10,22 +10,20 @@ textarea {
 label {
   font-size: $font-size-sm;
   line-height: $line-height-sm;
+  color: $neutral-primary;
+  margin-bottom: .5rem;
   span {
     @include font-size($font-size-xs);
-    margin-left: ($spacer/2);
+    margin-left: .5rem;
     color: $neutral-secondary;
   }
   &.label-sm {
     @include font-size($font-size-xs);
-    span {
-      font-size: 0.625rem;
-    }
+    line-height: $line-height-xs;
   }
   &.label-lg {
     @include font-size($font-size-base);
-    span {
-      font-size: $font-size-sm;
-    }
+    line-height: $line-height-md;
   }
 }
 
@@ -53,7 +51,7 @@ legend,
   font-weight: $font-weight-bold;
   line-height: $line-height-xs;
   font-size: $font-size-xs;
-  margin-top: 0.25rem;
+  margin-top: .5rem;
   color: $neutral-primary;
   
   &.feedback-icon {
@@ -96,6 +94,10 @@ legend,
     padding: $btn-padding-y $btn-padding-x-sm;
   }
 
+}
+
+.form-text {
+  margin-top: .5rem;
 }
 
 .input-group-icon {
@@ -242,7 +244,6 @@ legend,
 
 //Checkboxes
 .custom-checkbox {
-
   .custom-control-input:checked ~ .custom-control-label {
     &::after {
       top: -0.4rem;
@@ -252,18 +253,6 @@ legend,
     }
   }
 }
-// Radios
-//
-// Tweak just a few things for radios.
-.custom-radio {
-  // We need to grow the checkbox a bit cuz it's too thin...
-  .custom-control-input:checked ~ .custom-control-label {
-    &::after {
-      //background-size: $custom-radio-indicator-icon-checked-bg-size;
-    }
-  }
-}
-
 
 // switches
 //
@@ -419,17 +408,18 @@ legend,
 
 }
 
+// Form group sizes overrides
+//
 .form-group-sm,
 .form-group-lg {
   margin-bottom: $form-group-margin-bottom;
 }
 
+// Form group sm
 .form-group-sm {
   label {
     @include font-size($font-size-xs);
-    span {
-      font-size: 0.625rem;
-    }
+    line-height: $line-height-xs;
   }
 
   .input-rounded {
@@ -557,13 +547,11 @@ legend,
   }
 }
 
-
+// Form group lg
 .form-group-lg {
   label {
     @include font-size($font-size-base);
-    span {
-      font-size: $font-size-sm;
-    }
+    line-height: $line-height-md;
   }
   .input-rounded {
       border-radius: 1.75rem;

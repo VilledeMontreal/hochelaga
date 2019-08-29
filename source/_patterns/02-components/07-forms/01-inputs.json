@@ -1,81 +1,65 @@
 {
-  "inputs-size": [
+  "inputTextSize": [
     {
-      "inputTextFgClasses": "",
-      "formGroupLabel": "Input group small, dark, with icon",
-      "inputID": "input-group-search",
-      "inputGroupIconClass": "input-group-icon-sm input-group-icon-left",
-      "iconAfter": false,
-      "icon-label": "002-recherche",
-      "formControlClass": "form-control-sm form-control-dark",
-      "inputPlaceholder": "Input sm icon placeholder"
+      "formGroupClass": "form-group-sm",
+      "formGroupInputID": "form-control-sm-one",
+      "formGroupInputLabel": "Small form group",
+      "formGroupInputPlaceholder": "Placeholder for small form group",
+      "formGroupInputHelpText": "Help text goes here."
     },
     {
-      "formGroupLabel": "Input group icon, default left icon",
-      "inputID": "input-text-left",
-      "inputGroupIconClass": "input-group-icon-left",
-      "iconAfter": false,
-      "icon-label": "002-recherche",
-      "formControlClass": false,
-      "inputPlaceholder": "Input placeholder"
+      "formGroupClass": false,
+      "formGroupInputID": "form-control-default-one",
+      "formGroupInputLabel": "Default form group",
+      "formGroupInputPlaceholder": "Placeholder for default form group",
+      "formGroupInputHelpText": "Help text goes here."
     },
     {
-      "formGroupLabel": "Input group large, dark, with icon",
-      "inputID": "input-group-search",
-      "inputGroupIconClass": "input-group-icon-lg input-group-icon-left",
-      "iconAfter": false,
-      "icon-label": "002-recherche",
-      "formControlClass": "form-control-lg form-control-dark",
-      "inputPlaceholder": "Input lg icon placeholder"
+      "formGroupClass": "form-group-lg",
+      "formGroupInputID": "form-control-lg-one",
+      "formGroupInputLabel": "Large form group",
+      "formGroupInputPlaceholder": "Placeholder for large form group",
+      "formGroupInputHelpText": "Help text goes here."
     }
   ],
-  "inputs-shapes": [
+  "inputTextShape": [
     {
-      "formGroupLabel": "Input group small, dark, with icon",
-      "inputID": "input-group-search",
-      "inputGroupIconClass": "input-group-icon-sm input-group-icon-left",
-      "iconAfter": false,
-      "icon-label": "002-recherche",
-      "formControlClass": "form-control-sm form-control-dark",
-      "inputPlaceholder": "Input sm icon placeholder"
+      "formGroupClass": false,
+      "formGroupInputID": "form-control-input",
+      "formGroupInputLabel": "Default squared input",
+      "formGroupInputRequired": true,
+      "formGroupInputPlaceholder": false,
+      "formGroupInputHelpText": false
     },
     {
-      "formGroupLabel": "Input group icon, default left icon",
-      "inputID": "input-text-left",
-      "inputGroupIconClass": "input-group-icon-left",
-      "iconAfter": false,
-      "icon-label": "002-recherche",
-      "formControlClass": false,
-      "inputPlaceholder": "Input placeholder"
+      "formGroupClass": false,
+      "formGroupInputID": "form-control-rounded",
+      "formGroupInputLabel": "Rounded input",
+      "formGroupInputClass": "input-rounded",
+      "formGroupInputRequired": true,
+      "formGroupInputPlaceholder": ".input-rounded",
+      "formGroupInputHelpText": false
     }
   ],
-  "inputs-states": [
+  "inputTextState": [
     {
-      "formGroupLabel": "Input group small, dark, with icon",
-      "inputID": "input-group-search",
-      "inputGroupIconClass": "input-group-icon-sm input-group-icon-left",
-      "iconAfter": false,
-      "icon-label": "002-recherche",
-      "formControlClass": "form-control-sm form-control-dark",
-      "inputPlaceholder": "Input sm icon placeholder"
+      "formGroupClass": false,
+      "formGroupInputID": "form-control-input-text-disabled",
+      "formGroupInputLabel": "Disabled input",
+      "formGroupInputRequired": true,
+      "formGroupInputPlaceholder": false,
+      "formGroupInputHelpText": false,
+      "formGroupInputState": "disabled"
     },
     {
-      "formGroupLabel": "Input group icon, default left icon",
-      "inputID": "input-text-left",
-      "inputGroupIconClass": "input-group-icon-left",
-      "iconAfter": false,
-      "icon-label": "002-recherche",
-      "formControlClass": false,
-      "inputPlaceholder": "Input placeholder"
-    },
-    {
-      "formGroupLabel": "Input group large, dark, with icon",
-      "inputID": "input-group-search",
-      "inputGroupIconClass": "input-group-icon-lg input-group-icon-left",
-      "iconAfter": false,
-      "icon-label": "002-recherche",
-      "formControlClass": "form-control-lg form-control-dark",
-      "inputPlaceholder": "Input lg icon placeholder"
+      "formGroupClass": false,
+      "formGroupInputID": "form-control-input-text-readonly",
+      "formGroupInputLabel": "Read only input",
+      "formGroupInputClass": false,
+      "formGroupInputRequired": true,
+      "formGroupInputPlaceholder": false,
+      "formGroupInputHelpText": false,
+      "formGroupInputState": "readonly"
     }
   ]
 }
