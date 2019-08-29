@@ -9,6 +9,7 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 ## Added
 - Cookies Consent templates: Patterns/Cookies Consent
 - Add the path to icon scss and json to build.config.json
+- Added the gallery module, a custom skin placed in the images folder and the css build into the bao with the gallery.scss file
 
 ##Changed
 - Changing the layout of employes for the user to be logged on.
