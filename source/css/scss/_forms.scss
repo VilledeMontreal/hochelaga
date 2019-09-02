@@ -48,7 +48,6 @@ legend,
     }
   }
 }
-
 .valid-feedback,
 .invalid-feedback {
   font-weight: $font-weight-bold;
@@ -56,41 +55,38 @@ legend,
   font-size: $font-size-xs;
   margin-top: 0.25rem;
   color: $neutral-primary;
-  &:before {
-    width: 24px;
-    height: 24px;
-    content: '';
-    display: block;
-    -webkit-mask-size: cover;
-    mask-size: cover;
+  
+  &.feedback-icon {
     position: absolute;
-    top: calc(21px + 20px); //(height .invalid-feedback + haft of icon)+ (height of input/2)
-    right: 1.5rem;
-  }
-}
-.valid-feedback {
-  &:before {
-    -webkit-mask: url($data-icon-check-circle) no-repeat 50% 50%;
-    mask: url($data-icon-check-circle) no-repeat 50% 50%;
-    background-color: $positive-dark;
-  }
-}
+    width: auto;
+    top: 40px;
+    right: 10px;
+    margin-top: 0;
+  } 
+} 
 
 .invalid-feedback {
-  &:before {
-    -webkit-mask: url($data-icon-warning) no-repeat 50% 50%;
-    mask: url($data-icon-warning) no-repeat 50% 50%;
-    background-color: $negative-dark;
-  }
+  &.feedback-icon {
+    .icon {
+      &:before {
+        background-color: $negative;
+      }
+    }
+  } 
 }
 
-.is-invalid,
-.is-valid {
-  position:relative;
+.valid-feedback {
+  &.feedback-icon {
+    .icon {
+      &:before {
+        background-color: $positive;
+      }
+    }
+  } 
 }
 
 .form-group {
-  
+  position: relative;
   small {
     color: $neutral-secondary;
     line-height: $line-height-xs;

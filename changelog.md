@@ -16,6 +16,7 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 
 ## Fixed
 - Update the gulpfile to generate the correct scss of the icons
+- Change the method to display the validation icon. Modify the form.scss and adding markup for displaying the icon on validation.
 
 ## [4.0.1] - 2019-08-27
 
