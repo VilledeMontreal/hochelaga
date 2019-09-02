@@ -106,38 +106,64 @@ legend,
   position: relative;
   width: 100%;
 
-  > .icon {
-    color: $neutral-primary;
-    display: flex;
-    flex-wrap: wrap;
-    align-items: center;
-    @include font-size(2rem);
-    height: 100%;
-    padding: 0 0.5rem;
-    pointer-events: none;
-    position: absolute;
-    top: 0;
+  input {
+    &:not([type]),
+    &[type="text"],
+    &[type="email"],
+    &[type="password"],
+    &[type="search"],
+    &[type="tel"],
+    &[type="url"] { 
+      & + .icon {
+        color: $neutral-primary;
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        @include font-size(2rem);
+        height: 100%;
+        padding: 0 0.5rem;
+        pointer-events: none;
+        position: absolute;
+        top: 0;
+      }
+    }
   }
+  
 
   &.input-group-icon-left {
-    > .icon {
-      left: 0;
-    }
     input {
-      padding-left: 2.5rem;
+      &:not([type]),
+      &[type="text"],
+      &[type="email"],
+      &[type="password"],
+      &[type="search"],
+      &[type="tel"],
+      &[type="url"] { 
+        padding-left: 2.5rem;
+        & + .icon {
+          left: 0;
+        }
+      }
     }
   }
+  
   &.input-group-icon-right {
-    > .icon {
-      right: 0;
-    }
     input {
-      padding-right: 2.5rem;
+      &:not([type]),
+      &[type="text"],
+      &[type="email"],
+      &[type="password"],
+      &[type="search"],
+      &[type="tel"],
+      &[type="url"] {  
+        padding-right: 2.5rem;
+        & + .icon {
+          right: 0;
+        }
+      }
     }
   }
-
 }
-
 
 // Input Groups
 //
@@ -242,54 +268,6 @@ legend,
   }
 }
 
-//
-// Custom checkboxes and radios themed as card
-/*.custom-control-card {
-  padding: 0;
-  margin-bottom: 1.5rem;
-
-  .custom-control-label {
-    display: flex;
-    flex-direction: column;
-    flex: 1;
-    justify-content: center;
-    padding: 2rem;
-    padding-left: 5.3125rem;
-    position: relative;
-    border: 1px solid $neutral-stroke;
-    min-height: 8rem; // Make sur card has minimum height
-
-    // Background-color and (when enabled) gradient
-    &::before {
-      top: calc(50% - (#{$custom-control-indicator-size}/2));
-      left: 0;
-      right: auto;
-      margin-left: 2rem;
-    }
-
-    // Foreground (icon)
-    &::after {
-      top: calc(50% - (#{$custom-control-indicator-size}/2));
-      left: 0;
-      right: auto;
-      margin-left: 2rem;
-    }
-
-    .card-label {
-      // @include card-heading();
-    }
-
-    .card-title {
-      // @include card-heading();
-    }
-  }
-
-  .custom-control-input:disabled ~ .custom-control-label {
-    .card-title, .card-label {
-      color: $custom-control-label-disabled-color;
-    }
-  }
-}*/
 
 // switches
 //
@@ -464,23 +442,49 @@ legend,
   }
 
   .input-group-icon {
-    > .icon {
-      padding: 0 .5rem;
-      &:before{
-        width: 16px;
-        height: 16px;
+    input {
+      &:not([type]),
+      &[type="text"],
+      &[type="email"],
+      &[type="password"],
+      &[type="search"],
+      &[type="tel"],
+      &[type="url"] { 
+        & + .icon {
+          padding: 0 .5rem;
+          &:before{
+            width: 16px;
+            height: 16px;
+          }
+        }
       }
     }
 
     &.input-group-icon-left {
       input {
-        padding-left: 2rem;
+        &:not([type]),
+        &[type="text"],
+        &[type="email"],
+        &[type="password"],
+        &[type="search"],
+        &[type="tel"],
+        &[type="url"] { 
+          padding-left: 2rem;
+        }
       }
     }
 
     &.input-group-icon-right {
       input {
-        padding-right: 2rem;
+        &:not([type]),
+        &[type="text"],
+        &[type="email"],
+        &[type="password"],
+        &[type="search"],
+        &[type="tel"],
+        &[type="url"] { 
+          padding-right: 2rem;
+        }
       }
     }
   }
@@ -571,21 +575,48 @@ legend,
     }
 
   .input-group-icon {
-    > .icon {
-      padding: 0 1rem;
+    input {
+      &:not([type]),
+      &[type="text"],
+      &[type="email"],
+      &[type="password"],
+      &[type="search"],
+      &[type="tel"],
+      &[type="url"] { 
+        & + .icon {
+          padding: 0 1rem;
+        }
+      }
     }
 
     &.input-group-icon-left {
       input {
-        padding-left: 3.5rem;
+        &:not([type]),
+        &[type="text"],
+        &[type="email"],
+        &[type="password"],
+        &[type="search"],
+        &[type="tel"],
+        &[type="url"] { 
+          padding-left: 3.5rem;
+        }
       }
     }
 
     &.input-group-icon-right {
       input {
-        padding-right: 3.5rem;
+        &:not([type]),
+        &[type="text"],
+        &[type="email"],
+        &[type="password"],
+        &[type="search"],
+        &[type="tel"],
+        &[type="url"] { 
+          padding-right: 3.5rem;
+        }
       }
     }
+
   }
 
   .valid-feedback,
