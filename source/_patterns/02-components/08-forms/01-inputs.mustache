@@ -7,7 +7,13 @@
       <input type="text" class="form-control" id="form-control-sm-one" placeholder="Placeholder for small form group">
         <small id="textRequiredHelpBlock" class="form-text">
           Help text goes here.
-        </small>
+        </small>        
+        <div class="valid-feedback feedback-icon">
+          <span class="icon icon-check-circle"></span>
+        </div>
+        <div class="invalid-feedback feedback-icon">
+          <span class="icon icon-warning"></span>
+        </div>
     </div>
   </li>
   <li class="col-xs-6 col-md-4">
@@ -17,6 +23,12 @@
         <small id="textRequiredHelpBlock" class="form-text">
           Help text goes here.
         </small>
+        <div class="valid-feedback feedback-icon">
+          <span class="icon icon-check-circle"></span>
+        </div>
+        <div class="invalid-feedback feedback-icon">
+          <span class="icon icon-warning"></span>
+        </div>
     </div>
   </li>
   <li class="col-xs-6 col-md-4">
@@ -26,6 +38,12 @@
         <small id="textRequiredHelpBlock" class="form-text">
           Help text goes here.
         </small>
+        <div class="valid-feedback feedback-icon">
+          <span class="icon icon-check-circle"></span>
+        </div>
+        <div class="invalid-feedback feedback-icon">
+          <span class="icon icon-warning"></span>
+        </div>
     </div>
   </li>
 </ul>
@@ -82,9 +100,15 @@
     <div class="form-group">
       <label for="form-control-default-one">Error input</label>
       <input type="text" class="form-control is-invalid" id="form-control-default-one">
-        <div class="invalid-feedback">
-          Error text goes here
-        </div>
+      <div class="valid-feedback feedback-icon">
+        <span class="icon icon-check-circle"></span>
+      </div>
+      <div class="invalid-feedback feedback-icon">
+        <span class="icon icon-warning"></span>
+      </div>
+      <div class="invalid-feedback">
+        Error text goes here
+      </div>
     </div>
   </li>
 
@@ -92,6 +116,12 @@
     <div class="form-group">
       <label for="form-control-default-one">Valid textarea</label>
       <textarea class="form-control is-valid" id="form-control-default-one"></textarea>
+      <div class="valid-feedback feedback-icon">
+        <span class="icon icon-check-circle"></span>
+      </div>
+      <div class="invalid-feedback feedback-icon">
+        <span class="icon icon-warning"></span>
+      </div>
         <div class="valid-feedback">
           Error text goes here
         </div>
@@ -99,25 +129,3 @@
   </li>
   
 </ul>
-
-<!--
-<ul class="row list-unstyled">
-  {{# inputs-size }}
-    <li class="col-xs-6 col-md-4">{{> components-input }}</li>
-  {{/ inputs-size }}
-</ul>
-
-<h4 class="pl-pattern-subtitle">Shapes</h4>
-<ul class="row list-unstyled">
-  {{# inputs-shapes }}
-    <li class="col-xs-6 col-md-4">{{> components-input }}</li>
-  {{/ inputs-shapes }}
-</ul>
-
-
-<ul class="row list-unstyled">
-  {{# inputs-states }}
-    <li class="col-xs-6 col-md-4">{{> components-input }}</li>
-  {{/ inputs-states }}
-</ul>
--->
