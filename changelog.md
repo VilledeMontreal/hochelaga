@@ -10,12 +10,15 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 - Cookies Consent templates: Patterns/Cookies Consent
 - Add the path to icon scss and json to build.config.json
 - Added the gallery module, a custom skin placed in the images folder and the css build into the bao with the gallery.scss file
+- Menu items (horizontal and vertical variant)
 
 ##Changed
 - Changing the layout of employes for the user to be logged on.
+- Change Slide-menu-interne to use the menu-items component.
 
 ## Fixed
 - Update the gulpfile to generate the correct scss of the icons
+
 
 ## [4.0.1] - 2019-08-27
 
