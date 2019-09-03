@@ -564,7 +564,7 @@ $dropdown-border-width:             $border-width;
 $dropdown-inner-border-radius:      calc(#{$dropdown-border-radius} - #{$dropdown-border-width});
 $dropdown-divider-bg:               $neutral-stroke;
 $dropdown-divider-margin-y:         .5rem;
-$dropdown-box-shadow:               0 .5rem .5rem rgba($black, .175);
+$dropdown-box-shadow:               0 .5rem 2rem 0 rgba(0,0,0,.10);
 
 $dropdown-link-color:               $neutral-primary;
 $dropdown-link-hover-color:         $neutral-primary;

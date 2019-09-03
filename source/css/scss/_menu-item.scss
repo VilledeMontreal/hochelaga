@@ -35,24 +35,11 @@
         .menu-item-label {
           color: $action;
         }
-        &:after {
-          content: none;
-        }
-      }
-
-      &:after {
-        background-color: $neutral-stroke;
-        content: "";
-        position: absolute;
-        top: .75rem;
-        bottom: .75rem;
-        width: 1px;
-        right: 0;
       }
 
       &.active,
       &:active {
-        background-color: $neutral-underground-1;
+        background-color: $highlight-light;
         .icon {
           @include icon-color($action);
         }
@@ -67,17 +54,6 @@
           width: 100%;
           background-color: $action;
         }
-        &:after {
-          content: none;
-        }
-      }
-    }
-
-    &:last-child {
-      a {
-        &:after {
-          content: none;
-        }
       }
     }
   }
@@ -88,10 +64,8 @@
       a {
         min-width: auto;
         padding: 1rem;
+        width: 100%;
         flex-direction: row;
-        &:after {
-          content: none;
-        }
 
         .menu-item-label {
           @include font-size($font-size-base);
@@ -100,19 +74,20 @@
           margin-left: 1rem;
         }
 
+        @include hover-focus {
+          .icon {
+            @include icon-color($action-lighter);
+          }
+        }
+        
         &.active,
         &:active {
-          background-color: $neutral-underground-1;
+          @include border-left-radius($border-radius);
           .icon {
-            @include icon-color($action);
-          }
-          .menu-item-label {
-            color: $action;
+            @include icon-color($action-lighter);
           }
           &:before {
-            content: "";
-            position: absolute;
-            left: 0;
+            right: 0;
             height: 100%;
             width: 2px;
             background-color: $action;
@@ -122,41 +97,26 @@
     }
   }
 
-  &.menu-items-text {
+  &.menu-items-icon-bar {
     li {
       a {
-        min-width: auto;
-        padding: 1rem;
-        width: 100%;
-        &:after {
-          content: none;
-        }
+        width: auto;
 
         @include hover-focus {
-          background-color: transparent;
           .icon {
-            @include icon-color($action-lighter);
+            @include icon-color($action);
           }
         }
-        
+
         &.active,
         &:active {
-          @include border-left-radius($border-radius);
-          background-color: $highlight-light;
+          @include border-radius(0px);
           .icon {
-            @include icon-color($action-lighter);
-          }
-          .menu-item-label {
-            color: $action;
+            @include icon-color($action);
           }
           &:before {
-            content: "";
-            position: absolute;
-            right: 0;
-            left: auto;
-            height: 100%;
-            width: 2px;
-            background-color: $action;
+            right: auto;
+            left: 0;
           }
         }
       }
