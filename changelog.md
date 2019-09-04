@@ -11,10 +11,12 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 - Add the path to icon scss and json to build.config.json
 - Added the gallery module, a custom skin placed in the images folder and the css build into the bao with the gallery.scss file
 - Menu items (horizontal and vertical variant)
+- 12 new utility icons.
 
 ##Changed
 - Changing the layout of employes for the user to be logged on.
 - Change Slide-menu-interne to use the menu-items component.
+- PL: inputs are now reusable.
 
 ## Fixed
 - Update the gulpfile to generate the correct scss of the icons
