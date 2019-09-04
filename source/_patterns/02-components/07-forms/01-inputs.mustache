@@ -1,94 +1,38 @@
 <h4 class="pl-pattern-subtitle">Size</h4>
 
 <ul class="row list-unstyled">
+  {{# inputTextSize}}
   <li class="col-xs-6 col-md-4">
-    <div class="form-group form-group-sm">
-      <label for="form-control-sm-one">Small form group <span>Facultatif</span></label>
-      <input type="text" class="form-control" id="form-control-sm-one" placeholder="Placeholder for small form group">
-        <small id="textRequiredHelpBlock" class="form-text">
-          Help text goes here.
-        </small>        
-        <div class="valid-feedback feedback-icon">
-          <span class="icon icon-check-circle"></span>
-        </div>
-        <div class="invalid-feedback feedback-icon">
-          <span class="icon icon-warning"></span>
-        </div>
-    </div>
+    {{> components-input-text }}
   </li>
-  <li class="col-xs-6 col-md-4">
-    <div class="form-group">
-      <label for="form-control-default-one">Default form group <span>Facultatif</span></label>
-      <input type="text" class="form-control" id="form-control-default-one" placeholder="Placeholder for default form group">
-        <small id="textRequiredHelpBlock" class="form-text">
-          Help text goes here.
-        </small>
-        <div class="valid-feedback feedback-icon">
-          <span class="icon icon-check-circle"></span>
-        </div>
-        <div class="invalid-feedback feedback-icon">
-          <span class="icon icon-warning"></span>
-        </div>
-    </div>
-  </li>
-  <li class="col-xs-6 col-md-4">
-    <div class="form-group form-group-lg">
-      <label for="text-one">Large form group <span>Facultatif</span></label>
-      <input type="text" class="form-control" id="form-control-lg-one" placeholder="Placeholder for large form group">
-        <small id="textRequiredHelpBlock" class="form-text">
-          Help text goes here.
-        </small>
-        <div class="valid-feedback feedback-icon">
-          <span class="icon icon-check-circle"></span>
-        </div>
-        <div class="invalid-feedback feedback-icon">
-          <span class="icon icon-warning"></span>
-        </div>
-    </div>
-  </li>
+  {{/ inputTextSize}}
 </ul>
 
 
 <h4 class="pl-pattern-subtitle">Shapes</h4>
 
 <ul class="row list-unstyled">
+  {{# inputTextShape}}
   <li class="col-xs-6 col-md-4">
-    <div class="form-group">
-      <label for="form-control-input">Default squared input</label>
-      <input type="text" class="form-control" id="form-control-input">
-    </div>
+    {{> components-input-text }}
   </li>
-  <li class="col-xs-6 col-md-4">
-    <div class="form-group">
-      <label for="form-control-rounded">Rounded input</label>
-      <input type="text" class="form-control input-rounded" id="form-control-rounded" placeholder=".input-rounded">
-    </div>
-  </li> 
-  
+  {{/ inputTextShape}}
 </ul>
+
 
 <h4 class="pl-pattern-subtitle">States</h4>
 
 <ul class="row list-unstyled">
+  {{# inputTextState}}
   <li class="col-xs-6 col-md-4">
-    <div class="form-group">
-      <label for="textdisabled"> Disabled input</label>
-      <input type="text" class="form-control" id="textdisabled" placeholder="Disabled input" disabled>
-    </div>
+    {{> components-input-text}}
   </li>
-  <li class="col-xs-6 col-md-4">
-    <div class="form-group">
-      <label for="textdisabled"> Read only input</label>
-      <input type="text" class="form-control" id="textdisabled" placeholder="Read only input" readonly>
-    </div>
-  </li>
+  {{/ inputTextState}}
   <li class="col-xs-6 col-md-4">
     <div class="form-group has-clear">
-      {{^ inputHideLabel }}
-      <label for="{{ formAttributes.input.type-text.id }}">Input has clear</label>
-      {{/ inputHideLabel }}
+      <label for="form-group-input-clear">Input has clear button</label>
       <div class="input-group-icon">
-        <input type="text" class="form-control" id="{{ formAttributes.input.type-text.id }}" placeholder="{{ formAttributes.input.placeholder }}">
+        <input type="text" class="form-control" id="form-group-input-clear" placeholder="Enter text and clear button will appear">
         <button class="btn-clear">
           <span class="icon icon-x icon-sm">
           <span class="sr-only">Clear search input</span>

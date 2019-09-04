@@ -1,0 +1,58 @@
+{
+  "selectSize": [
+    {
+      "formGroupClass": "form-group-sm",
+      "formGroupSelectID": "form-group-select-sm",
+      "formGroupSelectLabel": "Small select label",
+      "formGroupSelect": {
+        "defaultOption": "Default option",
+        "options": [
+          {
+            "option-text" : "Option 1",
+            "option-value" : "option-1"
+          },
+          {
+            "option-text" : "Option 2",
+            "option-value" : "option-2"
+          }
+        ]
+      }
+    },
+    {
+      "formGroupClass": false,
+      "formGroupSelectID": "form-group-select",
+      "formGroupSelectLabel": "Default select label",
+      "formGroupSelect": {
+        "defaultOption": "Default option",
+        "options": [
+          {
+            "option-text" : "Option 1",
+            "option-value" : "option-1"
+          },
+          {
+            "option-text" : "Option 2",
+            "option-value" : "option-2"
+          }
+        ]
+      }
+    },
+    {
+      "formGroupClass": "form-group-lg",
+      "formGroupSelectID": "form-group-select-sm",
+      "formGroupSelectLabel": "Large select label",
+      "formGroupSelect": {
+        "defaultOption": "Default option",
+        "options": [
+          {
+            "option-text" : "Option 1",
+            "option-value" : "option-1"
+          },
+          {
+            "option-text" : "Option 2",
+            "option-value" : "option-2"
+          }
+        ]
+      }
+    }
+  ]
+}
