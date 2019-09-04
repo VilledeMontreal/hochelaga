@@ -102,8 +102,17 @@
 
     // Dropdown
     .dropdown {
-      position: inherit;
+      position: relative;
       display: flex;
+
+      &.show {
+        .dropdown-toggle {
+          // remove chevron
+          &:after {
+            content: none;
+          }
+        }
+      }
     }
     // Dropdown overrides
     .dropdown-toggle {
@@ -128,7 +137,7 @@
           }
         }
       }
-      // remove carets
+      // remove chevron
       &:after {
         content: none;
       }
@@ -137,13 +146,13 @@
 
     // Dropdown menu
     .dropdown-menu {
-      top: 100%;
+      top: 2rem;
       right: 0;
       left: auto;
       margin: 0;
       max-height: none;
       min-width: 20rem;
-      box-shadow: $navbar-box-shadow;
+      box-shadow: $dropdown-box-shadow;
 
       // Dropdown section
       .dropdown-item-section {
@@ -219,7 +228,6 @@
     // Dropdown-menu Mobile full width
     @include media-breakpoint-down(xs) {
       .dropdown-menu {
-        border-left: 0;
         width: 100%;
       }
     }
@@ -242,6 +250,16 @@
         svg {
           height: 2rem;
           width: auto;
+        }
+      }
+      .dropdown {
+        &.show {
+          .dropdown-toggle {
+            // Add Chevron
+            &:after {
+              content: '';
+            }
+          }
         }
       }
 

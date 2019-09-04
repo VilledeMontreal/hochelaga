@@ -15,9 +15,9 @@
   list-style: none;
   background-color: $dropdown-bg;
   background-clip: padding-box;
-  border: $dropdown-border-width solid $dropdown-border-color;
+  border: none;
   @include border-radius($dropdown-border-radius);
-  @include box-shadow($dropdown-box-shadow);
+  box-shadow: $dropdown-box-shadow;
 
   .dropdown-item {
     display: flex;
