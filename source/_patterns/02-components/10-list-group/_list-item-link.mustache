@@ -1,7 +1,7 @@
 <ul class="list-group {{ listGroupClass }}">
 	{{# listGroup }}
   <li class="list-group-item list-group-item-action {{ class }}">
-    <a href="{{ url }}">
+    <a href="{{ url }}"{{# classLink }} class="{{classLink}}"{{/ classLink }}>
       {{# icon-name}}
       <span class="icon {{ icon-name}}" aria-hidden="true"></span>
       {{/ icon-name}}
