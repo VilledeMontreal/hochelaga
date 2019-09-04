@@ -1,6 +1,6 @@
 <ul class="menu-items {{ menuItemClass}}">
   {{# menuItem}}
-  <li>
+  <li class="{{menuItemLiClass}} {{# menuItemSeparator}}menu-item-separator{{/ menuItemSeparator}}">
     <a class="menu-item{{# class}} {{class}}{{/ class}}" href="#">
       {{# menuItemIcon}}<span class="icon {{ icon-name }}" aria-hidden="true"></span>{{/ menuItemIcon}}
       {{# menuItemLabel}}

@@ -3,17 +3,26 @@
   display: flex;
   list-style: none;
   margin: 0;
-  padding: 0;
+  padding: 0 1rem;
   li {
     padding: 0;
     display: flex;
+    &.menu-item-separator {
+      &:after {
+        background-color: $neutral-stroke;
+        position: relative;
+        content: '';
+        height: auto;
+        margin: .75rem 1rem;
+        width: 1px;
+      }
+    }
     a {
       display: flex;
       flex-direction: column;
       align-self: center;
       align-items: center;
       border-bottom: none;
-      min-width: 4.5rem;
       padding: .75rem;
       position: relative;
       .icon {
@@ -117,6 +126,50 @@
           &:before {
             right: auto;
             left: 0;
+          }
+        }
+      }
+    }
+  }
+
+  // Informative variant for Vue agent...
+  &.menu-items-info {
+    background-color: $informative;
+    li {
+      &.menu-item-separator {
+        &:after {
+          background-color: $white;
+        }
+      }
+      a {
+        .icon {
+          @include icon-color($white);
+        }
+        .menu-item-label {
+          color: $white;
+        }
+  
+        @include hover-focus {
+          background-color: $informative-dark;
+          .icon {
+            @include icon-color($white);
+          }
+          .menu-item-label {
+            color: $white;
+          }
+        }
+  
+        &.active,
+        &:active {
+          background-color: $informative-dark;
+          .icon {
+            @include icon-color($white);
+          }
+          .menu-item-label {
+            color: $white;
+          }
+          &:before {
+            content: none;
           }
         }
       }
