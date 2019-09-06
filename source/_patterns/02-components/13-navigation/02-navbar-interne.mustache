@@ -1,14 +1,17 @@
 <nav class="main-navbar navbar navbar-dark navbar-expand justify-content-between w-100" role="navigation">
+  {{# navbarInterneHasMenu}}
   <div class="navbar-div navbar-div-left">
     {{> components-main-menu-button }}
     <div class="navbar-separator d-none d-md-flex"></div>
     {{> components-slide-menu-interne }}
   </div>
+  {{/ navbarInterneHasMenu}}
   <a class="navbar-brand" href="#">
-    <span class="sitename">Nom de l'application</span>
+    <span class="sitename">{{ applicationName }}</span>
   </a>
   <div class="navbar-div">
     <div class="d-flex align-items-center ml-auto">
+      {{# navbarInterneHasSearch}}
       <button class="navbar-btn navbar-btn-search navbar-search-toggler d-none d-lg-inline-flex" id="navbarDropdownSearch" aria-haspopup="true" aria-expanded="false">
         <svg width="24px" height="24px" viewBox="0 0 24 24">
           <title>Recherche</title>
@@ -16,6 +19,7 @@
         </svg>
         <span class="sr-only">Ouvrir la barre de recherche</span>
       </button>
+      {{/ navbarInterneHasSearch}}
       <div class="navbar-separator d-none d-lg-flex"></div>
       {{^ user-authenticated }}
       <button class="navbar-btn btn-login d-inline-flex">

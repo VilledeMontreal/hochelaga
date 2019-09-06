@@ -1,0 +1,125 @@
+{
+  "pageClasses": false,
+  "navbarInterneHasMenu": false,
+  "navbarInterneHasSearch": false,
+  "user-authenticated": true,
+  "user": {
+    "name": "Uxabcd01",
+    "username": "Uxabc1b",
+    "email": "courriel@montreal.ca"
+  },
+  "applicationName": "Vue de l'agent 311",
+  "menuItemHorizontalInfo": {
+    "menuItemClass": "menu-items-info",
+    "menuItem": [
+      {
+        "menuItemLiClass": "mr-auto",
+        "class": "",
+        "url": "#",
+        "menuItemIcon": {
+          "icon-name": "icon-archive"
+        },
+        "menuItemLabel": "BDI 311"
+      },
+      {
+        "menuItemSeparator": true,
+        "class": false,
+        "url": "link.templates-employes-vue-agent-311-info",
+        "menuItemIcon": {
+          "icon-name": "icon-info"
+        },
+        "menuItemLabel": "Info"
+      },
+      {
+        "class": false,
+        "url": "link.templates-employes-vue-agent-311-signaler",
+        "menuItemIcon": {
+          "icon-name": "icon-comment"
+        },
+        "menuItemLabel": "Signaler"
+      },
+      {
+        "class": false,
+        "url": "#",
+        "target": "#vdl311-modal-share",
+        "modal": true,
+        "menuItemIcon": {
+          "icon-name": "icon-share"
+        },
+        "menuItemLabel": "Partager"
+      }
+    ]
+  },
+  "accordionListed": {
+    "collapsibleClasses": "accordeon-listed mb-3",
+    "collapsibleItem": [
+      {
+        "title": "Généralités",
+        "content": "Collapsible content",
+        "block-id": "accordeon-vdl-generalites",
+        "heading-id": "accordeon-vdl-heading-generalites",
+        "collapsible-default-content": "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>"
+      },
+      {
+        "title": "Procédures ACS - arrondissement",
+        "content": "Collapsible content",
+        "block-id": "accordeon-vdl-acs-arron",
+        "heading-id": "ccordeon-vdl-heading-acs-arron",
+        "collapsible-default-content": "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>"
+      },
+      {
+        "title": "Procédures ACS - CS311",
+        "content": "Collapsible content",
+        "block-id": "accordeon-vdl-acs-cs311",
+        "heading-id": "ccordeon-vdl-heading-cs311",
+        "collapsible-default-content": "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>"
+      },
+      {
+        "title": "Procédures ACS - IRP",
+        "content": "Collapsible content",
+        "block-id": "accordeon-vdl-acs-irp",
+        "heading-id": "ccordeon-vdl-heading-acs-irp",
+        "collapsible-default-content": "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>"
+      },
+      {
+        "title": "GDC",
+        "content": "Collapsible content",
+        "block-id": "accordeon-vdl-acs-gdc",
+        "heading-id": "ccordeon-vdl-heading-acs-gdc",
+        "collapsible-default-content": "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>"
+      },
+      {
+        "title": "Personne-ressource",
+        "content": "Collapsible content",
+        "block-id": "accordeon-vdl-pers-ressource",
+        "heading-id": "ccordeon-vdl-heading-pers-ressource",
+        "collapsible-default-content": "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>"
+      },
+      {
+        "title": "Agent de liaison",
+        "content": "Collapsible content",
+        "block-id": "accordeon-vdl-agent-liaison",
+        "heading-id": "ccordeon-vdl-heading-agent-liaison",
+        "collapsible-default-content": "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>"
+      },
+      {
+        "title": "Responsable de la mise à jour",
+        "content": "Collapsible content",
+        "block-id": "accordeon-vdl-responsable-maj",
+        "heading-id": "ccordeon-vdl-heading-responsable-maj",
+        "collapsible-default-content": "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>"
+      }
+    ]
+  },
+  "help": {
+    "list": [
+      {
+        "icon-name": "icon-help",
+        "listItemAction": true,
+        "text": "Aide à la décision",
+        "listExtraContent": "Distribution, réparation ou remplacement de bac roulant.",
+        "listExtraContentClass": "font-size-sm-interface"
+      }
+    ]
+  }
+}

@@ -23,12 +23,13 @@
       align-self: center;
       align-items: center;
       border-bottom: none;
-      padding: .75rem;
+      padding: 1rem;
       position: relative;
       .icon {
         @include icon-color($neutral-tertiary);
       }
       .menu-item-label {
+        display: none;
         @include font-size($font-size-xs);
         line-height: $line-height-xs;
         color: $neutral-secondary;
@@ -69,6 +70,7 @@
 
   &.menu-items-column {
     flex-direction: column;
+    padding: 0;
     li {
       a {
         min-width: auto;
@@ -77,6 +79,7 @@
         flex-direction: row;
 
         .menu-item-label {
+          display: flex;
           @include font-size($font-size-base);
           line-height: $line-height-md;
           margin-top: 0;
@@ -174,6 +177,49 @@
         }
       }
     }
+  }
+
+  @include media-breakpoint-up(lg) {
+    li {
+      a {
+        padding: .75rem 1rem;
+        .menu-item-label {
+          display: flex;
+        }
+      }
+    }
+  }
+}
+
+// Menu item content
+
+.menu-item-content {
+  box-shadow: $dropdown-box-shadow;
+  width: 100%;
+  z-index: 2;
+  .menu-item-content-header {
+    padding: 1.5rem 3.5rem 1rem 1.5rem;
+    position: relative;
+    .btn-close {
+      position: absolute;
+      top: 1.5rem;
+      right: 1rem;
+    }
+    &.menu-item-content-header-info {
+      background-color: $informative-dark;
+      color: $white;
+      .btn-close {
+        .icon {
+          @include icon-color($white);
+        }
+      }
+    }
+  }
+  @include media-breakpoint-up(sm) {
+    width: 320px;
+  }
+  @include media-breakpoint-up(lg) {
+    width: 480px;
   }
 }
 

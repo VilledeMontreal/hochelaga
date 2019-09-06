@@ -12,8 +12,11 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 - Added the gallery module, a custom skin placed in the images folder and the css build into the bao with the gallery.scss file
 - Menu items (horizontal and vertical variant)
 - 12 new utility icons.
+- Template employé - Vue de l'agent 311
+- Accordions listed and framed examples
+- .unfixed utility class to unfix an element that uses the class fixed-DIRECTION.
 
-##Changed
+## Changed
 - Changing the layout of employes for the user to be logged on.
 - Change Slide-menu-interne to use the menu-items component.
 - PL: inputs are now reusable.
@@ -21,6 +24,7 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 ## Fixed
 - Update the gulpfile to generate the correct scss of the icons
 - Change the method to display the validation icon. Modify the form.scss and adding markup for displaying the icon on validation.
+- Modal footer buttons alignment.
 
 
 ## [4.0.1] - 2019-08-27
