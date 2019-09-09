@@ -7,11 +7,12 @@
     <div class="container">
        <section class="row{{# sidebarRight }} justify-content-between{{/ sidebarRight}}{{^ sidebarRight}} justify-content-center{{/ sidebarRight}}">
         <div class="col-12 col-lg-7">
-
           <header class="content-header">
+            {{# header-back-link}}
             <div class="header-back-link">
               {{> styles-link-list-element("has-icon": true, "icon-right": false, "link-label": "Toutes les démarches", icon: "icon-arrow-left")}}
             </div>
+            {{/ header-back-link}}
 
             <h1>{{ heading }}</h1>
 
