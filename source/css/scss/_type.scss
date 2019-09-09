@@ -144,17 +144,6 @@ a {
     color: $link-hover-color;
   }
 
-  // File extension handling
-  &[href$=".pdf"] {
-    margin-right: 3.02em;
-    &:after {
-      content: "(PDF)";
-      margin-right: -3.02em;
-      padding-left: .5rem;
-      overflow: hidden;
-    }
-  }
-
   // Utility classes to remove border-bottom
   // Need important to override any local styles that may be applied later
   &.img-link,
@@ -223,14 +212,13 @@ a {
   }
 }
 
-
 // External link icon
 // Apply to .region-content and sb-block
 // Everything not on montreal.ca or of /villemontreal/ AKA cloudinary directory
 .sb-block,
 .region-content,
 .lead {
-  a[href*="//"]:not([href*="montreal.ca"]):not([href$=".pdf"]):not(.list-group-item-action) {
+  a[href*="//"]:not([href*="montreal.ca"]):not([href$=".pdf"]):not(.list-group-item-action):not(.link-has-icon) {
     margin-right: 1.625rem;
     position: relative;
     &:after {
@@ -262,13 +250,33 @@ a {
       }
     }
   }
+  // Generic file extension handling
+  a[href$=".pdf"] {
+    margin-right: 3.02em;
+    &:after {
+      content: "(PDF)";
+      margin-right: -3.02em;
+      padding-left: .5rem;
+      overflow: hidden;
+    }
+  }
   // List some exclusion
   .media-gallery,
-  .list-icon,
   .social-media-list,
   .cards,
+  .list-group,
+  .list,
+  .list-icon,
   .list-group-hub {
-    a[href*="//"]:not([href*="montreal.ca"]):not([href$=".pdf"]) {
+    // Don't show external link icon
+    a[href*="//"]:not([href*="montreal.ca"]):not([href$=".pdf"]):not(.list-group-item-action):not(.link-has-icon) {
+      margin-right: 0;
+      &:after {
+        content: none;
+      }
+    }
+    // Don't show (PDF)
+    a[href$=".pdf"] {
       margin-right: 0;
       &:after {
         content: none;
