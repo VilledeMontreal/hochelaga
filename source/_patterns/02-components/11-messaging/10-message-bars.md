@@ -2,6 +2,6 @@
 title: Message bars
 ---
 
-The message bar messaging zone.
+#Utilisation
 
-Add a <code>.banner-[theme-color]</code> class to create theme-color variants.
+Ajoutez une classe <code>.banner- [theme-color] </code> pour créer des variantes de couleur de dialogue.
