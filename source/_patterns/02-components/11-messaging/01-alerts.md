@@ -10,10 +10,10 @@ Enveloppez n'importe quel contenu dans un contenant avec la classe <code>.alert<
 #Couleurs 
 L'alerte par défaut est grise. Choisissez parmis les classes contextuelles pour modifier la valeur par défaut:
 
-* informative (<code>.info</code>),
-* warning (<code>.warning</code>),
-* negative (<code>.danger</code>),
-* positive (<code>.success</code>)
+* informative (<code>.alert-info</code>),
+* warning (<code>.alert-warning</code>),
+* negative (<code>.alert-danger</code>),
+* positive (<code>.alert-success</code>)
 
 #Différence avec [Bootstrap](https://getbootstrap.com/docs/4.3/components/alerts/)
 
