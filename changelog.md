@@ -20,7 +20,7 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 - Changing the layout of employes for the user to be logged on.
 - Change Slide-menu-interne to use the menu-items component.
 - PL: inputs are now reusable.
-- Rules for automated external links and (PDF) mention is more restrictive (added some exclusion - list-group, list, link with icon). 
+- Rules for automated external links and (PDF) mention is more restrictive (added some exclusion - list-group, list, link with icon, buttons).
 - PL: removed all back links and badges from templates - waiting for more infos.
 
 ## Fixed

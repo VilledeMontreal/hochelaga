@@ -218,7 +218,7 @@ a {
 .sb-block,
 .region-content,
 .lead {
-  a[href*="//"]:not([href*="montreal.ca"]):not([href$=".pdf"]):not(.list-group-item-action):not(.link-has-icon) {
+  a[href*="//"]:not([href*="montreal.ca"]):not([href$=".pdf"]):not(.list-group-item-action):not(.link-has-icon):not(.btn) {
     margin-right: 1.625rem;
     position: relative;
     &:after {
@@ -269,7 +269,7 @@ a {
   .list-icon,
   .list-group-hub {
     // Don't show external link icon
-    a[href*="//"]:not([href*="montreal.ca"]):not([href$=".pdf"]):not(.list-group-item-action):not(.link-has-icon) {
+    a[href*="//"]:not([href*="montreal.ca"]):not([href$=".pdf"]):not(.list-group-item-action):not(.link-has-icon):not(.btn) {
       margin-right: 0;
       &:after {
         content: none;
