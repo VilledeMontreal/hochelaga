@@ -2,89 +2,72 @@
 
 {{> components-navbar-interne }}
 
-{{# menuItemHorizontalInfo}}
+{{# menuItemVerticalIconBar}}
 {{> components-nav-complex-menu-item}}
-{{/ menuItemHorizontalInfo}}
+{{/ menuItemVerticalIconBar}}
 
 <main class="main-content {{ pageClasses }}" id="main-content" aria-label="Main Content">
-  <div>
-    <div class="row no-gutters">
-      <div class="col order-last order-sm-first unfixed position-relative">
-        {{> templates-citoyens-demarche}}
-      </div>
-      {{# menuItemInfo}}
-      <div class="menu-item-content" id="menu-item-info">
-        <div class="menu-item-content-header menu-item-content-header-info">
-          <div class="mb-3">
-            <div class="font-size-base-interface font-weight-bold">Nom de l'arrondissement</div>
-            <div class="font-size-sm-interface">Catégorie : Environnement</div>
+  <div class="page-wrap-iframe">
+    <iframe id="item-frame" class="is-full-frame" allowfullscreen="" sandbox="allow-forms allow-popups allow-same-origin allow-scripts" src="{{link.templates-citoyens-demarche}}">
+    </iframe>
+  </div>
+  <div class="page-drawers">
+    {{# menuItemInfo}}
+    <div class="menu-item-content" id="vdl311-info">
+      <div class="menu-item-content-header">
+        <div class="mb-2">
+          <div class="h4 mb-1">Nom de l'arrondissement</div>
+          <div class="d-flex">
+            {{# badgesCategories}}
+            {{> components-badge}}
+            {{/ badgesCategories}}
           </div>
-          <div class="font-size-xs-interface font-weight-bold text-white">Mis à jour 2019-09-04</div>
-          <button type="button" class="btn-close close" aria-label="Close">
-            {{> styles-icon-item("icon-name": "icon-x-circle-full")}}
-          </button>
         </div>
-        {{# accordionListed}}
-        {{> components-accordeon}}
-        {{/ accordionListed}}
+        <div class="font-size-xs-interface">Mis à jour 2019-09-04</div>
+      </div>
+      {{# accordionListed}}
+      {{> components-accordeon}}
+      {{/ accordionListed}}
 
-        {{# help}}
-        <div class="px-2 mb-2">
-          {{> components-list-item-icon}}
-        </div>
-        {{/ help}}
+      {{# help}}
+      <div class="pl-2 pr-7 mb-2">
+        {{> components-list-item}}
       </div>
-      {{/ menuItemInfo}}
-      {{# menuItemSignaler}}
-      <div class="menu-item-content" id="menu-item-info">
-        <div class="menu-item-content-header menu-item-content-header-info">
-          <div class="mb-1">
-            <div class="font-size-base-interface font-weight-bold">Signaler...</div>
-          </div>
-          <button type="button" class="btn-close close" aria-label="Close">
-            {{> styles-icon-item("icon-name": "icon-x-circle-full")}}
-          </button>
-        </div>
-        <div class="py-4 px-3">
-          <form id="vdl311-signaler">
-          {{# formGroupSelectProblem}}
-          {{> components-select-item}}
-          {{/ formGroupSelectProblem}}
-          {{> components-textarea("formGroupInputID": "form-group-signaler-description","formGroupInputLabel": "Description", "formGroupInputPlaceholder": true, "formGroupInputPlaceholder.text": "Placeholder", "formGroupInputRequired": true)}}
-          {{> components-textarea("formGroupInputID": "form-group-signaler-recommendation","formGroupInputLabel": "Recommandation", "formGroupInputPlaceholder": true, "formGroupInputPlaceholder.text": "Placeholder", "formGroupInputRequired": false)}}
-          {{> components-button(buttonType: "submit", buttonClass: "btn-primary btn-squared", buttonText: "Soumettre")}}
-          </form>
-        </div>
+      {{/ help}}
+    </div>
+    {{/ menuItemInfo}}
+    {{# menuItemSignaler}}
+    <div class="menu-item-content" id="vdl311-signaler">
+      <div class="menu-item-content-header">
+        <div class="h4 mb-0">Signaler...</div>
       </div>
-      {{/ menuItemSignaler}}
-
-      <!-- Modal partager -->
-      <div class="modal fade" id="vdl311-modal-share" tabindex="-1" role="dialog" aria-labelledby="vdl311-modal-share-label" aria-hidden="true">
-        <div class="modal-dialog" role="document">
-          <div class="modal-content">
-            <div class="modal-header">
-              <h5 class="modal-title" id="vdl311-modal-share-label">Partager le lien</h5>
-              <button type="button" class="btn-close close" data-dismiss="modal" aria-label="Close">
-                {{> styles-icon-item("icon-name": "icon-x")}}
-              </button>
-            </div>
-            <div class="modal-body">
-              <div class="mb-2">http://montreal.ca/collectes/collecte-des-dechets-domestiques</div>
-              <form>
-                {{> components-input-text("formGroupInputID": "form-group-partager-email","formGroupInputLabel": "Adresse courriel du destinataire", "formGroupInputRequired": true)}}
-                {{> components-textarea("formGroupInputID": "form-group-partager-comment","formGroupInputLabel": "Commentaires", "formGroupInputRequired": false)}}
-              </form>
-            </div>
-            <div class="modal-footer">
-              <div class="modal-footer-buttons">
-              {{> components-button(buttonType: "reset", buttonClass: "btn-link btn-squared", buttonText: "Annuler")}}
-              {{> components-button(buttonType: "submit", buttonClass: "btn-primary btn-squared", buttonText: "Envoyer")}}
-              </div>
-            </div>
-          </div>
-        </div>
+      <div class="p-2">
+        <form id="form-vdl311-signaler">
+        {{# formGroupSelectProblem}}
+        {{> components-select-item}}
+        {{/ formGroupSelectProblem}}
+        {{> components-textarea("formGroupInputID": "form-group-signaler-description","formGroupInputLabel": "Description", "formGroupInputPlaceholder": true, "formGroupInputPlaceholder.text": "Placeholder", "formGroupInputRequired": true)}}
+        {{> components-textarea("formGroupInputID": "form-group-signaler-recommendation","formGroupInputLabel": "Recommandation", "formGroupInputPlaceholder": true, "formGroupInputPlaceholder.text": "Placeholder", "formGroupInputRequired": false)}}
+        {{> components-button(buttonType: "submit", buttonClass: "btn-primary btn-squared", buttonText: "Soumettre")}}
+        </form>
       </div>
     </div>
+    {{/ menuItemSignaler}}
+    {{# menuItemPartager}}
+    <div class="menu-item-content" id="vdl-311-partager">
+      <div class="menu-item-content-header">
+        <div class="h4 mb-0">Partager...</div>
+      </div>
+      <div class="p-2">
+        <form id="form-vdl311-partager">
+          <div class="mb-2">http://montreal.ca/collectes/collecte-des-dechets-domestiques</div>
+          {{> components-input-text("formGroupInputID": "form-group-partager-email","formGroupInputLabel": "Adresse courriel du destinataire", "formGroupInputRequired": true)}}
+          {{> components-textarea("formGroupInputID": "form-group-partager-comment","formGroupInputLabel": "Commentaires", "formGroupInputRequired": false)}}
+          {{> components-button(buttonType: "submit", buttonClass: "btn-primary btn-squared", buttonText: "Envoyer")}}
+        </form>
+      </div>
+    </div>
+    {{/ menuItemPartager}}
   </div>
 </main>
 

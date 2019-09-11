@@ -1,26 +1,62 @@
+<h4 class="pl-pattern-subtitle mb-2">Horizontal</h4>
 {{# menuItemHorizontal}}
-<h4 class="pl-pattern-subtitle mb-2">Horizontal (Default)</h4>
+<h5 class="pl-pattern-subtitle mb-2">Default</h5>
 <div class="pl-pattern-example mb-4">
   {{> components-nav-complex-menu-item}}
 </div>
 {{/ menuItemHorizontal}}
 
-{{# menuItemHorizontalInfo}}
-<h4 class="pl-pattern-subtitle mb-2">Horizontal (Informative)</h4>
+<!--
+{{# menuItemHorizontalReverse}}
+<h5 class="pl-pattern-subtitle mb-2">Reverse</h5>
 <div class="pl-pattern-example mb-4">
   {{> components-nav-complex-menu-item}}
 </div>
-{{/ menuItemHorizontalInfo}}
+{{/ menuItemHorizontalReverse}}
+-->
 
 {{# menuItemVerticalIconOnly}}
-<h4 class="pl-pattern-subtitle mb-2">Vertical (Icon Bar)</h4>
-<div class="pl-pattern-example mb-4">
-  {{> components-nav-complex-menu-item}}
+<h4 class="pl-pattern-subtitle mb-2">Vertical Icon Bar</h4>
+<div class="d-flex">
+  <div class="mr-4">
+    <h5 class="pl-pattern-subtitle mb-2">Default</h5>
+    <div class="pl-pattern-example mb-4 pl-width-7">
+      {{> components-nav-complex-menu-item}}
+    </div>
+  </div>
+  <div class="mr-4">
+    <h5 class="pl-pattern-subtitle mb-2">Light</h5>
+    <div class="pl-pattern-example mb-4 pl-width-7">
+      {{> components-nav-complex-menu-item("menuItemClass": "menu-items-light menu-items-column menu-items-icon-bar")}}
+    </div>
+  </div>
+  <!--
+  <div class="mr-4">
+    <h5 class="pl-pattern-subtitle mb-2">Dark</h5>
+    <div class="pl-pattern-example mb-4 pl-width-7">
+      {{> components-nav-complex-menu-item("menuItemClass": "menu-items-dark menu-items-column menu-items-icon-bar")}}
+    </div>
+  </div>
+  -->
+  <div class="mr-4 position-relative">
+    <h5 class="pl-pattern-subtitle mb-2">Position Right</h5>
+    <div class="pl-pattern-example mb-4 pl-width-7">
+      {{> components-nav-complex-menu-item("navMenuItemsClass": "nav-menu-items-right position-absolute")}}
+    </div>
+  </div>
+  <div class="mr-4">
+    <h5 class="pl-pattern-subtitle mb-2">Revealing Labels</h5>
+    <div class="pl-pattern-example mb-4 pl-width-7">
+      {{> components-nav-complex-menu-item("menuItemClass": "menu-items-column menu-items-icon-bar menu-items-revealing-labels")}}
+    </div>
+  </div>
 </div>
+
+
 {{/ menuItemVerticalIconOnly}}
 
+<h4 class="pl-pattern-subtitle mb-2">Vertical Icon and text</h4>
 {{# menuItemVerticalIconAndText}}
-<h4 class="pl-pattern-subtitle mb-2">Vertical</h4>
 <div class="pl-pattern-example mb-4">
   {{> components-nav-complex-menu-item}}
 </div>

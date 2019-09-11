@@ -4,7 +4,8 @@
 //
 // Easily usable on <ul>, <ol>, or <div>.
 
-.list {
+.list,
+.list-icon {
   display: flex;
   flex-direction: column;
 
@@ -119,51 +120,48 @@
   }
 }
 
-// Icons - Editorial and Utility
-//
 
-.list-icon {
-  .list-item-icon {
-    padding: .5rem 0;
-    display: flex;
-    flex-flow: row wrap;
+// Individual list items with icon
+.list-item-icon {
+  padding: .5rem 0;
+  display: flex;
+  flex-flow: row wrap;
+  .icon {
+    margin-right: 1rem;
+  }
+  svg {
+    margin-right: 1rem;
+    fill: $neutral-tertiary;
+  }
+
+}
+.list-item-icon-label {
+  color: $neutral-primary;
+  font-weight: $font-weight-bold;
+}
+.list-item-icon-action {
+  display: inherit;
+  width: 100%;
+  .link-has-icon {
     .icon {
-      margin-right: 1rem;
+      padding: 0;
     }
-    svg {
-      margin-right: 1rem;
-      fill: $neutral-tertiary;
-    }
-
-  }
-  .list-item-icon-label {
-    color: $neutral-primary;
-    font-weight: $font-weight-bold;
-  }
-  .list-item-icon-action {
-    display: inherit;
-    width: 100%;
-    .link-has-icon {
+    @include hover-focus {
       .icon {
-        padding: 0;
-      }
-      @include hover-focus {
-        .icon {
-          background-color: transparent;
-        }
+        background-color: transparent;
       }
     }
   }
-  .list-item-icon-content {
-    flex: 2;
-    p {
-      margin-bottom: 1rem;
-      + p {
-        margin-top: 0;
-      }
-      &:last-child {
-        margin-bottom: 0;
-      }
+}
+.list-item-icon-content {
+  flex: 2;
+  p {
+    margin-bottom: 1rem;
+    + p {
+      margin-top: 0;
+    }
+    &:last-child {
+      margin-bottom: 0;
     }
   }
 }
