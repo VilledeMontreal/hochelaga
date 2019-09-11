@@ -194,14 +194,9 @@
   }
 
   // Dark variant
-  &.menu-items-dark {
+  &.menu-items-reverse {
     background-color: $neutral-primary;
     li {
-      &.menu-item-separator {
-        &:after {
-          background-color: $white;
-        }
-      }
       a {
         .icon {
           @include icon-color($white);
@@ -211,7 +206,7 @@
         }
         @include hover-focus {
           .icon {
-            @include icon-color($action);
+            @include icon-color($action-lighter);
           }
           background-color: $white;
           .menu-item-label {
@@ -221,11 +216,14 @@
         &.active,
         &:active {
           .icon {
-            @include icon-color($action);
+            @include icon-color($action-lighter);
           }
-          background-color: $white;
+          background-color: $black;
           .menu-item-label {
             color: inherit;
+          }
+          &:before {
+            background-color: $action-lighter;
           }
         }
       }
@@ -233,7 +231,7 @@
   }
 
   // Light variant
-  &.menu-items-light {
+  &.menu-items-underground {
     background-color: $neutral-underground-1;
     li {
       a {
