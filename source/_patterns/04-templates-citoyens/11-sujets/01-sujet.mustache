@@ -36,36 +36,33 @@
             {{{ lead }}}
           </div>
 
-          <div class="content-module-stacked">
+          <div class="content-modules">
             <h2>Module Titre de section</h2>
-
-            <p>Corps de texte - <i>Italique</i> et <strong>gras</strong>, exposant, indice et caractères spéciaux adipiscing elit. Morbi condimentum sollicitudin erat, quis <a href="#">lien interne</a> ou <a href="https://google.com">lien externe</a> convallis risus. Nullam  posuere odio ligula, hendrerit suscipit ligula congue laoreet. Curabitur eleifend nulla purus, ut pharetra urna efficitur id. Cras lacinia nisi id quam lacinia, et orci aliquam.</p>
-
-            <ul>
-              <li>Liste à puce</li>
-              <li>Liste à puce</li>
-              <li>Liste à puce</li>
-              <li>Liste à puce</li>
-            </ul>
-
-            <ol>
-              <li>Liste numérotée</li>
-              <li>Liste numérotée</li>
-              <li>Liste numérotée</li>
-            </ol>
-
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi condimentum sollicitudin erat, quis convallis risus.</p>
-
-          </div>
-          {{# module-content}}
-          {{> templates-citoyens-sujet-content}}
-          {{/ module-content}}
-          {{# hasSelecteurArrondissement}}
-          <div class="content-module-stacked">
+            <div class="content-module-stacked">
+              <p>Corps de texte - <i>Italique</i> et <strong>gras</strong>, exposant, indice et caractères spéciaux adipiscing elit. Morbi condimentum sollicitudin erat, quis <a href="#">lien interne</a> ou <a href="https://google.com">lien externe</a> convallis risus. Nullam  posuere odio ligula, hendrerit suscipit ligula congue laoreet. Curabitur eleifend nulla purus, ut pharetra urna efficitur id. Cras lacinia nisi id quam lacinia, et orci aliquam.</p>
+              <ul>
+                <li>Liste à puce</li>
+                <li>Liste à puce</li>
+                <li>Liste à puce</li>
+                <li>Liste à puce</li>
+              </ul>
+              <ol>
+                <li>Liste numérotée</li>
+                <li>Liste numérotée</li>
+                <li>Liste numérotée</li>
+              </ol>
+              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi condimentum sollicitudin erat, quis convallis risus.</p>
+            </div>
+            {{# module-content}}
+            {{> templates-citoyens-sujet-content}}
+            {{/ module-content}}
+            {{# hasSelecteurArrondissement}}
             <h2>Votre arrondissement</h2>
-            {{> patterns-arrondissement}}
+            <div class="content-module-stacked">
+              {{> patterns-arrondissement}}
+            </div>
+            {{/ hasSelecteurArrondissement}}
           </div>
-          {{/ hasSelecteurArrondissement}}
         </div>
 
         {{# sidebarRight}}

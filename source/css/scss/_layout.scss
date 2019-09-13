@@ -151,6 +151,30 @@ html {
 }
 
 // Content Modules
+.content-modules {
+  padding-bottom: 2rem;
+  h2 {
+    padding-top: 2rem;
+    &:first-child {
+      padding-top: 0;
+    }
+  }
+  // Use to stack module in a page content and handle spacing
+  .content-module-stacked {
+    margin-bottom: 2rem;
+    > *:not(h2):not(h3):not(h4):not(h5):not(h6) {
+      margin-bottom: 2rem;
+      &:last-child {
+        margin-bottom: 0;
+      }
+    }
+
+    @include media-breakpoint-up(md) {
+      margin-bottom: 2rem;
+    }
+  }
+}
+
 // Use to stack module in a page content and handle spacing
 .content-module-stacked {
   margin-bottom: 2rem;
@@ -166,6 +190,7 @@ html {
   }
 }
 
+// Might not needed, soon to be deprecated
 // Small variants (32px)
 .content-module-stacked-sm {
   margin-bottom: 2rem;
@@ -174,6 +199,22 @@ html {
     &:last-child {
       margin-bottom: 0;
     }
+  }
+}
+
+.content-modules,
+.content-module-stacked {
+  // We limit this insanity to .content-modules zone
+  p + p,
+  p + ul,
+  p + ol,
+  ul + p,
+  ul + ul,
+  ul + ol,
+  ol + p,
+  ol + ul,
+  ol + ol {
+    margin-top: -1rem;
   }
 }
 

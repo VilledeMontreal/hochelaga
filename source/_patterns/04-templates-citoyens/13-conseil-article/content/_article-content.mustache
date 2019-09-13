@@ -1,4 +1,20 @@
-            
+<h2>Module Titre de section</h2>
+<div class="content-module-stacked">
+  <p>Corps de texte - <i>Italique</i> et <strong>gras</strong>, exposant, indice et caractères spéciaux adipiscing elit. Morbi condimentum sollicitudin erat, quis <a href="#">lien interne</a> ou <a href="https://google.com">lien externe</a> convallis risus. Nullam  posuere odio ligula, hendrerit suscipit ligula congue laoreet. Curabitur eleifend nulla purus, ut pharetra urna efficitur id. Cras lacinia nisi id quam lacinia, et orci aliquam.</p>
+  <ul>
+    <li>Liste à puce</li>
+    <li>Liste à puce</li>
+    <li>Liste à puce</li>
+    <li>Liste à puce</li>
+  </ul>
+  <ol>
+    <li>Liste numérotée</li>
+    <li>Liste numérotée</li>
+    <li>Liste numérotée</li>
+  </ol>
+  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi condimentum sollicitudin erat, quis convallis risus.</p>
+</div>
+
 {{# module-cta }}
 <div class="content-module-stacked">
   {{> components-button}}
@@ -30,8 +46,8 @@
 {{/ module-blockquote}}
 
 {{# module-text}}
+<h2>Module Titre de section (H2, H3 ou H4)</h2>
 <div class="content-module-stacked">
-  <h2>Module Titre de section (H2, H3 ou H4)</h2>
   <p>Corps de texte - <i>Italique</i> et <strong>gras</strong>, exposant, indice et caractères spéciaux adipiscing elit. Morbi condimentum sollicitudin erat, quis <a href="#">lien interne</a> ou <a href="https://google.com">lien externe</a> convallis risus. Nullam  posuere odio ligula, hendrerit suscipit ligula congue laoreet. Curabitur eleifend nulla purus, ut pharetra urna efficitur id. Cras lacinia nisi id quam lacinia, et orci aliquam.</p>
   <ul>
     <li>Liste à puce</li>
@@ -48,31 +64,31 @@
 {{/ module-text}}
 
 {{# module-image-album}}
+<h2>Image-Album - Module titre</h2>
 <div class="content-module-stacked">
-  <h2>Image-Album - Module titre</h2>
   {{> components-carousel }}
 </div>
 {{/ module-image-album}}
 
 {{^module-image-album}}
 {{# module-image-single}}
+<h2>Image simple - Module titre</h2>
 <div class="content-module-stacked">
-  <h2>Image simple - Module titre</h2>
   {{> styles-figure}}
 </div>
 {{/ module-image-single}}
 {{/module-image-album}}
 
 {{# module-video}}
+<h2>Vidéo intégrée - Module titre</h2>
 <div class="content-module-stacked">
-  <h2>Vidéo intégrée - Module titre</h2>
   {{> styles-video-responsive-embed }}
 </div>
 {{/ module-video}}
 
 {{# module-collapse}}
+<h2>Contenus imbriqués Accordéons - module titre</h2>
 <div class="content-module-stacked">
-  <h2>Contenus imbriqués Accordéons - module titre</h2>
   <div id="accordion" class="wrapper-accordion" role="tablist" aria-multiselectable="true">
     {{> components-collapsible-item }}
   </div>
@@ -80,15 +96,15 @@
 {{/ module-collapse}}
 
 {{# module-comparatif-colonne}}
+<h2>Comparatif Colonnes - module titre (H2)</h2>
 <div class="content-module-stacked">
-  <h2>Comparatif Colonnes - module titre (H2)</h2>
   {{> patterns-content-comparatif }}
 </div>
 {{/ module-comparatif-colonne}}
 
 {{# module-comparatif-rangee}}
+<h3>Comparatif Rangées - module titre (H3)</h3>
 <div class="content-module-stacked">
-  <h3>Comparatif Rangées - module titre (H3)</h3>
   {{> patterns-content-comparatif }}
 </div>
 {{/ module-comparatif-rangee}}
@@ -118,25 +134,19 @@
 {{/ module-explainer-img-bottom}}
 
 {{# module-table}}
+<h2>Titre tableau - module Titre (H2, H3...)</h2>
 <div class="content-module-stacked">
-  <h2>Titre tableau - module Titre (H2, H3...)</h2>
   <p>Courte description optionnelle - module corps de texte</p>
   {{> styles-table }}
 </div>
 {{/ module-table}}
 
 {{# module-events}}
+<h2>Événements à venir</h2>
 <div class="content-module-stacked">
-  <h2>Événements à venir</h2>
   {{> components-list-group-teaser}}
   <div class="d-flex justify-content-center">
   {{> components-button}}
   </div>
 </div>
 {{/ module-events}}
-
-<div class="content-module-stacked">
-  <div class="font-size-base-interface">
-    <span class="mr-1">Publié par</span><a href="#">Unité administrative</a>, <a href="#">Arrondissement</a>, <a href="#">Arrondissement</a>
-  </div>
-</div>

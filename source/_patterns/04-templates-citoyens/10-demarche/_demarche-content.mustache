@@ -4,18 +4,23 @@
 
 <div class="content-module-stacked">
   <p>Corps de texte complet - Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi condimentum sollicitudin erat, quis convallis risus. Nullam posuere odio ligula, hendrerit suscipit ligula congue laoreet. Curabitur eleifend nulla purus, ut pharetra urna efficitur id. Cras lacinia nisi id quam lacinia, et orci aliquam.</p>
-
   <h3>Tarifs - module Corps de texte ou module Titre (exemple H3)</h3>
   <p>Courte description optionnelle - corps de texte</p>
-  
+</div>
+
+<div class="content-module-stacked">
   {{# module-table }}
   {{> styles-table }}
   {{/ module-table }}
+</div>
 
+<div class="content-module-stacked">
   {{# module-emphasis}}
   {{> styles-blockquote }}
   {{/ module-emphasis}}
+</div>
 
+<div class="content-module-stacked">
   <p>Corps de texte complet - Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi condimentum sollicitudin erat, quis convallis risus. Nullam posuere odio ligula, hendrerit suscipit ligula congue laoreet. Curabitur eleifend nulla purus, ut pharetra urna efficitur id. Cras lacinia nisi id quam lacinia, et orci aliquam.</p>
 </div>
 
@@ -26,44 +31,41 @@
 {{/ module-message }}
 
 {{# module-documents}}
+<h2>Documents à télécharger</h2>
 <div class="content-module-stacked">
-  <h2>Documents à télécharger</h2>
   {{> components-list-item-link}}
 </div>
 {{/ module-documents }}
 
 {{# module-documents-necessaires}}
+<h2>Documents nécessaires</h2>
 <div class="content-module-stacked">
-  <h2>Documents nécessaires</h2>
-  <div>
-    <h3>Documents à fournir</h3>
-    <p>Corps de texte complet - avec liste à puce sit amet, consectetur adipiscing elit. Morbi condimentum sollicitudin erat, quis convallis risus. Nullam posuere odio ligula, hendrerit suscipit ligula congue laoreet. Curabitur eleifend nulla purus, ut pharetra urna efficitur id. Cras lacinia nisi id quam lacinia, et orci aliquam.</p>
+  <h3>Documents à fournir</h3>
+  <p>Corps de texte complet - avec liste à puce sit amet, consectetur adipiscing elit. Morbi condimentum sollicitudin erat, quis convallis risus. Nullam posuere odio ligula, hendrerit suscipit ligula congue laoreet. Curabitur eleifend nulla purus, ut pharetra urna efficitur id. Cras lacinia nisi id quam lacinia, et orci aliquam.</p>
 
-    <h3>Pièces d'identité</h3>
-    <p>Un des documents suivants :</p>
-    <ul class="mb-2">
-      <li>Permis de conduire du Québec</li>
-      <li>Carte d’assurance maladie du Québec</li>
-      <li>Nombre de pièces à présenter variable</li>
-    </ul>
-    {{> styles-link-list-element("has-icon": true, "icon-right": true, "link-label": "Consulter la liste complète", icon: "icon-arrow-right")}}
-  </div>
-  <div>
-    <h3>Preuves d'adresse</h3>
-    <p>Un des documents suivants :</p>
-    <ul class="mb-2">
-      <li>Facture de services publics (Hydro-Québec, téléphone ou autre) datant de 3 mois ou moins</li>
-      <li>Facture d'un établissement d'enseignement datant de 3 mois ou moins</li>
-      <li>Nombre de pièces à présenter variable</li>
-    </ul>
-    {{> styles-link-list-element("has-icon": true, "icon-right": true, "link-label": "Consulter la liste complète", icon: "icon-arrow-right")}}
-  </div>
+  <h3>Pièces d'identité</h3>
+  <p>Un des documents suivants :</p>
+  <ul class="mb-2">
+    <li>Permis de conduire du Québec</li>
+    <li>Carte d’assurance maladie du Québec</li>
+    <li>Nombre de pièces à présenter variable</li>
+  </ul>
+  {{> styles-link-list-element("has-icon": true, "icon-right": true, "link-label": "Consulter la liste complète", icon: "icon-arrow-right")}}
+
+  <h3>Preuves d'adresse</h3>
+  <p>Un des documents suivants :</p>
+  <ul class="mb-2">
+    <li>Facture de services publics (Hydro-Québec, téléphone ou autre) datant de 3 mois ou moins</li>
+    <li>Facture d'un établissement d'enseignement datant de 3 mois ou moins</li>
+    <li>Nombre de pièces à présenter variable</li>
+  </ul>
+  {{> styles-link-list-element("has-icon": true, "icon-right": true, "link-label": "Consulter la liste complète", icon: "icon-arrow-right")}}
 </div>
 {{/ module-documents-necessaires}}
 
 {{# module-canaux-comm}}
+<h2>Canaux de communication</h2>
 <div class="content-module-stacked">
-  <h2>Canaux de communication</h2>
   <div id="accordion" class="wrapper-accordion" role="tablist" aria-multiselectable="true">
   {{> components-collapsible-item }}
   </div>
@@ -71,8 +73,8 @@
 {{/ module-canaux-comm}}
 
 {{# module-reglements}}
+<h2>Règlements</h2>
 <div class="content-module-stacked">
-  <h2>Règlements</h2>
   {{> components-list-item-link}}
 </div>
 {{/ module-reglements}}
