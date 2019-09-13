@@ -261,6 +261,9 @@ $border-radius-sm:            .125rem;
 $component-active-color:      $white;
 $component-active-bg:         $primary;
 
+// genaral variable box-shadow apply to card, popover, dropdown and modal
+$box-shadow:                  0 .5rem 2rem 0 rgba($black, .1);
+
 // Generic value for backdrop bg and opacity
 $backdrop-bg:                 $neutral-primary;
 $backdrop-opacity:            .3;
@@ -564,7 +567,7 @@ $dropdown-border-width:             $border-width;
 $dropdown-inner-border-radius:      calc(#{$dropdown-border-radius} - #{$dropdown-border-width});
 $dropdown-divider-bg:               $neutral-stroke;
 $dropdown-divider-margin-y:         .5rem;
-$dropdown-box-shadow:               0 .5rem 2rem 0 rgba(0,0,0,.10);
+$dropdown-box-shadow:               $box-shadow; 
 
 $dropdown-link-color:               $neutral-primary;
 $dropdown-link-hover-color:         $neutral-primary;
@@ -626,7 +629,7 @@ $card-border-width:                 $border-width;
 $card-border-radius:                $border-radius;
 $card-border-color:                 $neutral-stroke;
 $card-inner-border-radius:          calc(#{$card-border-radius} - #{$card-border-width});
-$card-box-shadow:                   0 .5rem 2rem rgba($black, .1);
+$card-box-shadow:                   $box-shadow;
 
 
 // Badges
@@ -647,8 +650,8 @@ $modal-title-line-height:           $line-height-sm;
 $modal-content-bg:                  $white;
 $modal-content-border-color:        rgba($black, .2);
 $modal-content-border-width:        0;
-$modal-content-box-shadow-xs:       0 1px 4px 0 rgba(0,0,0,0.10);
-$modal-content-box-shadow-sm-up:    0 .5rem 1rem rgba($black, .5);
+$modal-content-box-shadow-xs:       $box-shadow;
+$modal-content-box-shadow-sm-up:    $box-shadow;
 
 
 $modal-backdrop-bg:                 $backdrop-bg;
@@ -753,7 +756,8 @@ $carousel-caption-color:             $neutral-primary !default;
 
 // Popover
 $popover-border-color:              $neutral-underground-1;
-$popover-box-shadow:                0 1px 4px 0 rgba($black, .2);
+$popover-box-shadow:                $box-shadow;
+$popover-header-bg:                 $white;
 $popover-header-padding-y:          0;
 $popover-header-padding-x:          0;
 

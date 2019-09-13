@@ -17,4 +17,8 @@ Les badges par défault sont carrés. Pour obtenir un badge arrondi, il suffit d
 
 #Différence avec [Bootstrap](https://getbootstrap.com/docs/4.3/components/badge/)
 
-* Les classes <code>.success-light</code>, <code>.danger-light</code>,  <code>.warning-light</code>,  <code>.info-light</code> ont été ajoutées.
+* Les classes suivantes ont été ajoutées:
+	* <code>.success-light</code>,
+	* <code>.danger-light</code>,
+	* <code>.warning-light</code>, 
+	* <code>.info-light</code>

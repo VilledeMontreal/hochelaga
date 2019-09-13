@@ -1,7 +1,14 @@
 ---
 title: Message bars
 ---
+#Utilisation
 
-The message bar messaging zone.
+Les "Messages bars" ont besoin de la classe <code>.message-bar</code>. 
 
-Add a <code>.banner-[theme-color]</code> class to create theme-color variants.
+#Couleurs 
+Choisissez parmis les classes contextuelles pour créer des variantes de couleur de dialogue.
+
+* informative (<code>. message-bar-info</code>),
+* warning (<code>. message-bar-warning</code>),
+* negative (<code>. message-bar-danger</code>),
+* positive (<code>. message-bar-success</code>)

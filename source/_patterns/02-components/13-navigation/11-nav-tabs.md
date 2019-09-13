@@ -1,8 +1,8 @@
 ---
 title: Navigation tabs
 ---
+#Utilisation
 
-Max 4 tabs.
+Utiliser un maximum de 4 onglets.
 
-@see https://getbootstrap.com/docs/4.1/components/navs/#tabs
-@see https://getbootstrap.com/docs/4.1/components/navs/#regarding-accessibility
+[Voir plus de détails sur les tabs Bootstrap](https://getbootstrap.com/docs/4.1/components/navs/#tabs)

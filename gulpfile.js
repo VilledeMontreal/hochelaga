@@ -14,6 +14,7 @@ var gulp                = require('gulp'),
     gutil               = require('gulp-util'),
     imagemin            = require('gulp-imagemin'),
     jsonConcat          = require('gulp-json-concat'),
+    order               = require("gulp-order"),
     postcss             = require('gulp-postcss'),
     rename              = require('gulp-rename'),
     sass                = require('gulp-sass'),
@@ -151,6 +152,10 @@ gulp.task('icons-scss', function() {
 //Concat and copy json in data folder for both utility and editorial icons
 gulp.task('icons-json', function() {
   return gulp.src(config.iconesjson.files)
+    .pipe(order([
+      "vdm-icon-system/icons/editorial/icon-editorial.json",
+      "vdm-icon-system/icons/utility/icon-utility.json"
+    ], { base: 'source/' }))
     .pipe(jsonConcat('icons.json',function(data){
       return Buffer.from(JSON.stringify(data));
     }))
