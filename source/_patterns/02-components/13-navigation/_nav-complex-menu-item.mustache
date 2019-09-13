@@ -1,8 +1,8 @@
-<nav aria-label="Navigation secondaire" role="navigation">
+<nav class="nav-menu-items {{ navMenuItemsClass}}" aria-label="Navigation secondaire" role="navigation">
   <ul class="menu-items {{ menuItemClass}}">
     {{# menuItem}}
-    <li class="{{menuItemLiClass}} {{# menuItemSeparator}}menu-item-separator{{/ menuItemSeparator}}">
-      <a class="menu-item{{# class}} {{class}}{{/ class}}" href="{{url}}" {{# modal}}data-toggle="modal"{{/ modal}}{{# target}} data-target="{{target}}"{{/ target}}>
+    <li class="{{menuItemLiClass}}{{# menuItemSeparator}} menu-item-separator{{/ menuItemSeparator}}">
+      <a class="menu-item{{# class}} {{class}}{{/ class}}" href="{{url}}"{{# tooltip}} data-toggle="tooltip" data-placement="left" title="{{ menuItemLabel }}"{{/tooltip}}>
         {{# menuItemIcon}}<span class="icon {{ icon-name }}" aria-hidden="true"></span>{{/ menuItemIcon}}
         {{# menuItemLabel}}
         <span class="menu-item-label">{{ menuItemLabel}}</span>

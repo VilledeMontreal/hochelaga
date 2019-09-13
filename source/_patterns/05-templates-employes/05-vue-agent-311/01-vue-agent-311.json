@@ -9,26 +9,29 @@
     "email": "courriel@montreal.ca"
   },
   "applicationName": "Vue de l'agent 311",
-  "menuItemHorizontalInfo": {
-    "menuItemClass": "menu-items-info",
+  "menuItemVerticalIconBar": {
+    "navMenuItemsClass": "position-absolute nav-menu-items-right",
+    "menuItemClass": "menu-items-light menu-items-column menu-items-icon-bar menu-items-revealing-labels",
     "menuItem": [
       {
-        "menuItemLiClass": "mr-auto",
-        "class": "",
-        "url": "#",
-        "menuItemIcon": {
-          "icon-name": "icon-archive"
-        },
-        "menuItemLabel": "BDI 311"
-      },
-      {
-        "menuItemSeparator": true,
+        "menuItemSeparator": false,
         "class": false,
         "url": "link.templates-employes-vue-agent-311-info",
         "menuItemIcon": {
           "icon-name": "icon-info"
         },
-        "menuItemLabel": "Info"
+        "menuItemLabel": "Info",
+        "tooltip": true
+      },
+      {
+        "menuItemSeparator": false,
+        "class": false,
+        "url": "#",
+        "menuItemIcon": {
+          "icon-name": "icon-book"
+        },
+        "menuItemLabel": "Lexique",
+        "tooltip": true
       },
       {
         "class": false,
@@ -36,84 +39,47 @@
         "menuItemIcon": {
           "icon-name": "icon-comment"
         },
-        "menuItemLabel": "Signaler"
+        "menuItemLabel": "Signaler",
+        "tooltip": true
       },
       {
+        "menuItemSeparator": true,
         "class": false,
-        "url": "#",
-        "target": "#vdl311-modal-share",
-        "modal": true,
+        "url": "link.templates-employes-vue-agent-311-partager",
         "menuItemIcon": {
           "icon-name": "icon-share"
         },
-        "menuItemLabel": "Partager"
+        "menuItemLabel": "Partager",
+        "tooltip": true
+      },
+      {
+        "menuItemSeparator": false,
+        "class": false,
+        "url": "http://www1.ville.montreal.qc.ca/banque311",
+        "menuItemIcon": {
+          "icon-name": "icon-archive"
+        },
+        "menuItemLabel": "BDI 311",
+        "tooltip": true
       }
     ]
   },
-  "accordionListed": {
-    "collapsibleClasses": "accordeon-listed mb-3",
-    "collapsibleItem": [
-      {
-        "title": "Généralités",
-        "content": "Collapsible content",
-        "block-id": "accordeon-vdl-generalites",
-        "heading-id": "accordeon-vdl-heading-generalites",
-        "collapsible-default-content": "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>"
-      },
-      {
-        "title": "Procédures ACS - arrondissement",
-        "content": "Collapsible content",
-        "block-id": "accordeon-vdl-acs-arron",
-        "heading-id": "ccordeon-vdl-heading-acs-arron",
-        "collapsible-default-content": "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>"
-      },
-      {
-        "title": "Procédures ACS - CS311",
-        "content": "Collapsible content",
-        "block-id": "accordeon-vdl-acs-cs311",
-        "heading-id": "ccordeon-vdl-heading-cs311",
-        "collapsible-default-content": "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>"
-      },
-      {
-        "title": "Procédures ACS - IRP",
-        "content": "Collapsible content",
-        "block-id": "accordeon-vdl-acs-irp",
-        "heading-id": "ccordeon-vdl-heading-acs-irp",
-        "collapsible-default-content": "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>"
-      },
-      {
-        "title": "GDC",
-        "content": "Collapsible content",
-        "block-id": "accordeon-vdl-acs-gdc",
-        "heading-id": "ccordeon-vdl-heading-acs-gdc",
-        "collapsible-default-content": "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>"
-      },
-      {
-        "title": "Personne-ressource",
-        "content": "Collapsible content",
-        "block-id": "accordeon-vdl-pers-ressource",
-        "heading-id": "ccordeon-vdl-heading-pers-ressource",
-        "collapsible-default-content": "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>"
-      },
-      {
-        "title": "Agent de liaison",
-        "content": "Collapsible content",
-        "block-id": "accordeon-vdl-agent-liaison",
-        "heading-id": "ccordeon-vdl-heading-agent-liaison",
-        "collapsible-default-content": "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>"
-      },
-      {
-        "title": "Responsable de la mise à jour",
-        "content": "Collapsible content",
-        "block-id": "accordeon-vdl-responsable-maj",
-        "heading-id": "ccordeon-vdl-heading-responsable-maj",
-        "collapsible-default-content": "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>"
-      }
-    ]
-  },
+  "badgesCategories": [
+    {
+      "badge": "Catégorie",
+      "badgeClass": "",
+      "badge-sr-text": "",
+      "badgeUrl": false,
+      "badgeIconClass": false
+    }
+  ],
+  "menuItemInfo": false,
+  "menuItemSignaler": false,
+  "menuItemPartager": false,
   "help": {
     "list": [
       {
+        "hasIcon": true,
         "icon-name": "icon-help",
         "listItemAction": true,
         "text": "Aide à la décision",

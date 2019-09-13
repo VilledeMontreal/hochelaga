@@ -849,3 +849,9 @@ $pl-size-box-wrapper-padding: 1rem;
     display: block;
   }
 }
+
+@each $spacer, $value in $spacers {
+  .pl-width-#{$spacer} {
+   width: $value;
+  }
+}

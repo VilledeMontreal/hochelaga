@@ -22,16 +22,16 @@
         "menuItemLabel": "Lexique"
       },
       {
-        "class": "active",
-        "url": "#",
+        "class": false,
+        "url": "link.templates-employes-vue-agent-311-signaler",
         "menuItemIcon": {
           "icon-name": "icon-comment"
         },
         "menuItemLabel": "Signaler"
       },
       {
-        "class": false,
-        "url": "link.templates-employes-vue-agent-311-partager",
+        "class": "active",
+        "url": "#",
         "menuItemIcon": {
           "icon-name": "icon-share"
         },
@@ -40,25 +40,6 @@
     ]
   },
   "menuItemInfo": false,
-  "menuItemSignaler": {
-    "formGroupSelectProblem": {
-      "formGroupSelectID": "form-group-signaler-problem",
-      "formGroupSelectLabel": "Problème rencontré",
-      "formGroupInputRequired": true,
-      "formGroupSelect": {
-        "defaultOption": "Mauvaise orthographe",
-        "options": [
-          {
-            "option-text" : "Option 1",
-            "option-value" : "option-1"
-          },
-          {
-            "option-text" : "Option 2",
-            "option-value" : "option-2"
-          }
-        ]
-      }
-    }
-  },
-  "menuItemPartager": false
+  "menuItemSignaler": false,
+  "menuItemPartager": true
 }

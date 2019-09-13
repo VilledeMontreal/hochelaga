@@ -58,8 +58,8 @@
       }
     ]
   },
-  "menuItemHorizontalInfo": {
-    "menuItemClass": "menu-items-info",
+  "menuItemHorizontalReverse": {
+    "menuItemClass": "menu-items-reverse",
     "menuItem": [
       {
         "menuItemLiClass": "mr-auto",
@@ -114,8 +114,9 @@
         "menuItemIcon": {
           "icon-name": "icon-info"
         },
-        "menuItemLabel": false,
-        "srMenuItemLabel": "Libellé pour screen-reader"
+        "menuItemLabel": "Libellé",
+        "srMenuItemLabel": "Libellé pour screen-reader",
+        "tooltip": true
       },
       {
         "class": false,
@@ -123,8 +124,20 @@
         "menuItemIcon": {
           "icon-name": "icon-info"
         },
-        "menuItemLabel": false,
-        "srMenuItemLabel": "Libellé pour screen-reader"
+        "menuItemLabel": "Libellé",
+        "srMenuItemLabel": "Libellé pour screen-reader",
+        "tooltip": true
+      },
+      {
+        "menuItemSeparator": true,
+        "class": false,
+        "url": "#",
+        "menuItemIcon": {
+          "icon-name": "icon-info"
+        },
+        "menuItemLabel": "Libellé",
+        "srMenuItemLabel": "Libellé pour screen-reader",
+        "tooltip": true
       },
       {
         "class": false,
@@ -132,17 +145,9 @@
         "menuItemIcon": {
           "icon-name": "icon-info"
         },
-        "menuItemLabel": false,
-        "srMenuItemLabel": "Libellé pour screen-reader"
-      },
-      {
-        "class": false,
-        "url": "#",
-        "menuItemIcon": {
-          "icon-name": "icon-info"
-        },
-        "menuItemLabel": false,
-        "srMenuItemLabel": "Libellé pour screen-reader"
+        "menuItemLabel": "Libellé",
+        "srMenuItemLabel": "Libellé pour screen-reader",
+        "tooltip": true
       }
     ]
   },

@@ -1,9 +1,36 @@
+.nav-menu-items {
+  display: flex;
+}
+.nav-menu-items-right {
+  right: 0;
+  height: calc(100% - 56px);
+  z-index: 2;
+  @include media-breakpoint-up(lg) {
+    height: calc(100% - 72px);
+  }
+  .menu-items.menu-items-icon-bar {
+    li {
+      a {
+        &.active,
+        &:active {
+          &:before {
+            right: 0;
+            left: auto;
+          }
+        }
+      }
+    }
+  }
+}
+
 // Menu-item
 .menu-items {
+  background-color: $white;
   display: flex;
   list-style: none;
   margin: 0;
   padding: 0 1rem;
+  flex: 1 0 auto;
   li {
     padding: 0;
     display: flex;
@@ -71,7 +98,21 @@
   &.menu-items-column {
     flex-direction: column;
     padding: 0;
+    height: 100%;
     li {
+      position: relative;
+      &.menu-item-separator {
+        padding-bottom: 2rem;
+        &:after {
+          background-color: $neutral-stroke;
+          position: absolute;
+          bottom: 0;
+          content: '';
+          height: 1px;
+          margin: 0 .75rem 1rem .75rem;
+          width: calc(100% - 1.5rem);
+        }
+      }
       a {
         min-width: auto;
         padding: 1rem;
@@ -112,7 +153,10 @@
   &.menu-items-icon-bar {
     li {
       a {
-        width: auto;
+        width: 100%;
+        .menu-item-label {
+          display: none;
+        }
 
         @include hover-focus {
           .icon {
@@ -133,11 +177,25 @@
         }
       }
     }
+
+    // Revealing labels variants
+    &.menu-items-revealing-labels {
+      @include hover-focus {
+        box-shadow: $dropdown-box-shadow;
+        li {
+          a {
+            .menu-item-label {
+              display: flex;
+            }
+          }
+        }
+      }
+    }
   }
 
-  // Informative variant for Vue agent...
-  &.menu-items-info {
-    background-color: $informative;
+  // Dark variant
+  &.menu-items-dark {
+    background-color: $neutral-primary;
     li {
       &.menu-item-separator {
         &:after {
@@ -151,28 +209,56 @@
         .menu-item-label {
           color: $white;
         }
-  
         @include hover-focus {
-          background-color: $informative-dark;
           .icon {
-            @include icon-color($white);
+            @include icon-color($action);
           }
+          background-color: $white;
           .menu-item-label {
-            color: $white;
+            color: inherit;
           }
         }
-  
         &.active,
         &:active {
-          background-color: $informative-dark;
           .icon {
-            @include icon-color($white);
+            @include icon-color($action);
+          }
+          background-color: $white;
+          .menu-item-label {
+            color: inherit;
+          }
+        }
+      }
+    }
+  }
+
+  // Light variant
+  &.menu-items-light {
+    background-color: $neutral-underground-1;
+    li {
+      a {
+        .icon {
+          @include icon-color($neutral-secondary);
+        }
+        .menu-item-label {
+          color: $neutral-secondary;
+        }
+        @include hover-focus {
+          .icon {
+            @include icon-color($action);
           }
           .menu-item-label {
-            color: $white;
+            color: inherit;
           }
-          &:before {
-            content: none;
+        }
+        &.active,
+        &:active {
+          .icon {
+            @include icon-color($action);
+          }
+          background-color: $white;
+          .menu-item-label {
+            color: inherit;
           }
         }
       }
@@ -194,32 +280,18 @@
 // Menu item content
 
 .menu-item-content {
-  box-shadow: $dropdown-box-shadow;
+  border-left: 1px solid $neutral-stroke;
   width: 100%;
   z-index: 2;
   .menu-item-content-header {
-    padding: 1.5rem 3.5rem 1rem 1.5rem;
-    position: relative;
-    .btn-close {
-      position: absolute;
-      top: 1.5rem;
-      right: 1rem;
-    }
-    &.menu-item-content-header-info {
-      background-color: $informative-dark;
-      color: $white;
-      .btn-close {
-        .icon {
-          @include icon-color($white);
-        }
-      }
-    }
+    padding: 1rem 3.5rem 1rem 1rem;
+    color: $neutral-primary;
   }
   @include media-breakpoint-up(sm) {
-    width: 320px;
+    width: 300px;
   }
   @include media-breakpoint-up(lg) {
-    width: 480px;
+    width: 460px;
   }
 }
 
