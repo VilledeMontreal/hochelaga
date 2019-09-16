@@ -53,7 +53,7 @@
       padding: 1rem;
       position: relative;
       .icon {
-        @include icon-color($neutral-tertiary);
+        @include icon-color($neutral-secondary);
       }
       .menu-item-label {
         display: none;
@@ -118,6 +118,9 @@
         padding: 1rem;
         width: 100%;
         flex-direction: row;
+        .icon {
+          @include icon-color($neutral-tertiary);
+        }
 
         .menu-item-label {
           display: flex;
@@ -154,6 +157,9 @@
     li {
       a {
         width: 100%;
+        .icon {
+          @include icon-color($neutral-secondary);
+        }
         .menu-item-label {
           display: none;
         }
