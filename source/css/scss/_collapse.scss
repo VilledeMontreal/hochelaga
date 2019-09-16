@@ -12,17 +12,25 @@
     .collapsible-title {
       margin: 0;
     }
+    .collapsible-subtitle {
+      @include font-size($font-size-xs);
+      line-height: $line-height-xs;
+      color: $neutral-secondary;
+      font-weight: $font-weight-normal;
+    }
     a {
       background: transparent;
       border: none;
       color: $headings-color;
-      display: flex;
       cursor: pointer;
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-start;
       @include font-size($font-size-base);
       font-weight: $font-weight-bold;
       line-height: $line-height-md;
       padding: 1rem 3.5rem 1rem 1rem;
-      cursor: pointer;
+      position: relative;
       &:after {
         content: '';
         -webkit-mask: url($data-icon-plus-circle) no-repeat 50% 50%;
@@ -81,16 +89,16 @@
       }
 
       &:after {
-        align-self: center;
         color: $primary;
         display: block;
         line-height: $line-height-xs;
         position: absolute;
         right: 1rem;
+        top: 50%;
+        transform: translateY(-50%);
       }
-
       span {
-        align-self: center;
+        //align-self: center;
 
         &.collapsible-icon {
           display: none;
@@ -153,21 +161,21 @@
   }
 
   &.accordeon-listed-sm {
-    .collapsible-header {
-      a {
-        @include font-size($font-size-sm);
-        line-height: $line-height-sm;
-        padding: .5rem 2.5rem .5rem .5rem;
+    .collapsible-item {
+      .collapsible-header {
+        a {
+          @include font-size($font-size-sm);
+          line-height: $line-height-sm;
+          padding: .5rem 2.5rem .5rem .5rem;
+        }
       }
-    }
-    // Content block wrapper
-    .collapsible-block {
-      padding-top: .5rem 1rem;
-      > *:last-child {
-        margin-bottom: .5rem;
+      // Content block wrapper
+      .collapsible-block {
+        padding-top: .5rem;
+        > *:last-child {
+          margin-bottom: 0;
+        }
       }
     }
   }
 }
-
-

@@ -264,25 +264,29 @@ input[type="button"] {
       left: ($spacer/4);
     }
   }
-  .utility-icon {
-    margin-left: -.5rem;
-    margin-right: .5rem;
-  }
   &.btn-lg {
     .icon {
       margin-left: -.75rem;
     }
   }
   &.btn-sm {
-    .icon,
-    .utility-icon {
-      margin-left: -.25rem;
+    .icon {
+      margin-left: -.375rem;
     }
   }
   &.btn-squared {
-    .icon,
-    .utility-icon {
+    .icon {
       margin-left: -.5rem;
+    }
+    &.btn-lg {
+      padding-right: 1.5rem;
+      .icon {
+        margin-left: 0;
+      }
+    }
+    &.btn-sm {
+      padding-left: .875rem;
+      padding-right: .875rem;
     }
   }
 }
@@ -299,26 +303,50 @@ input[type="button"] {
       right: ($spacer/4);
     }
   }
-  .utility-icon {
-    margin-right: -.5rem;
-    margin-left: .5rem;
-  }
   &.btn-lg {
     .icon {
       margin-right: -.75rem;
     }
   }
   &.btn-sm {
-    .icon,
-    .utility-icon {
-      margin-right: -.25rem;
+    .icon {
+      margin-right: -.375rem;
     }
   }
   &.btn-squared {
-    .icon,
-    .utility-icon {
+    .icon {
       margin-right: -.5rem;
     }
+    &.btn-lg {
+      padding-left: 1.5rem;
+      .icon {
+        margin-right: 0;
+      }
+    }
+    &.btn-sm {
+      padding-left: .875rem;
+      padding-right: .875rem;
+    }
+  }
+}
+
+
+// Button with icon only
+//
+.btn-icon {
+  // reset margin on icon
+  .icon {
+    margin: 0;
+  }
+  // Handle padding on button sizes
+  &.btn {
+    padding: .4375rem;
+  }
+  &.btn-lg {
+    padding: .9375rem;
+  }
+  &.btn-sm {
+    padding: .4375rem;
   }
 }
 
@@ -328,46 +356,37 @@ input[type="button"] {
   // Hide button label at small breakpoint
   &.btn-hide-label-#{$breakpoint} {
     @include media-breakpoint-down($breakpoint) {
-      .icon,
-      .utility-icon {
-        margin-left: -5px;
-        margin-right: -5px;
-      }
-      
-      &.btn-icon-left {
-        .icon,
-        .utility-icon {
-          margin-left: -5px;
-          margin-right: -5px;
-        }
-        &.btn-lg {
-           .icon,
-          .utility-icon {
-            margin-left: -2px;
-            margin-right: -2px;
-          }
-        }
-      }
-
-      &.btn-icon-right {
-        .icon,
-        .utility-icon {
-          margin-right: -5px;
-          margin-left: -5px;
-        }
-        &.btn-lg {
-           .icon,
-          .utility-icon {
-            margin-right: -2px;
-            margin-left: -2px;
-          }
-        }
-      }
 
       .btn-label {
         display: none;
       }
 
+      // Default
+      &.btn-icon-left,
+      &.btn-icon-right {
+        padding: .4375rem;
+        .icon {
+         margin: 0;
+        }
+      }
+      &.btn-lg {
+        &.btn-icon-left,
+        &.btn-icon-right {
+          padding: .9375rem;
+          .icon {
+           margin: 0;
+          }
+        }
+      }
+      &.btn-sm {
+        &.btn-icon-left,
+        &.btn-icon-right {
+          padding: .4375rem;
+          .icon {
+           margin: 0;
+          }
+        }
+      }
     }
   }
 }
