@@ -4,6 +4,9 @@
     <div class="collapsible-title">
       <a data-toggle="collapse" href="#" data-target="#{{ block-id }}" aria-expanded="{{# show}}true{{/ show}}{{^ show}}false{{/ show}}" aria-controls="{{ block-id }}">
         <span>{{ title }}</span>
+        {{# subtitle}}
+        <span class="collapsible-subtitle">{{subtitle}}</span>
+        {{/ subtitle}}
       </a>
     </div>
   </div>
