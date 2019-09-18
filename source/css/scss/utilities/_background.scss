@@ -7,8 +7,12 @@
 // Make the color of dialog light
 @each $label, $map in $dialog-colors {
   $color-light: map-get($map, light);
+  $color-base: map-get($map, base);
   .bg-#{$label} {
   	background-color: $color-light !important;
+  }
+  .bg-#{$label}-reversed {
+    background-color: $color-base;
   }
 }
 
@@ -38,5 +42,9 @@
 
 .bg-highlight-light {
 	background-color: $highlight-light;
+}
+
+.bg-highlight-strong {
+	background-color: $highlight-strong;
 }
 

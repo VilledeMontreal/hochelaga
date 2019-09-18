@@ -64,6 +64,11 @@ a.text-white {
     background-color: transparent;
   }
 }
+a.text-white {
+  @include hover-focus {
+    background-color: rgba(255,255,255,.2);
+  }
+}
 a.text-muted {
   border-bottom: none;
   cursor: not-allowed;
