@@ -1,0 +1,34 @@
+<form id="email-subscription-form" class="needs-validation" novalidate>
+  {{> components-input-text(
+    "formGroupInputLabel": "Prénom",
+    "formGroupInputID": "simpleFormExamplePrenom",
+    "formGroupInputPlaceholder": true,
+    "formGroupInputPlaceholder.text": "Prénom",
+    "formGroupInputRequired": true,
+    "formGroupFeedbackIcon": true,
+    "formGroupInputError": true,
+    "formGroupInputError.text": "Veuillez saisir un prénom valide.")
+  }}
+  {{> components-input-text(
+    "formGroupInputLabel": "Nom",
+    "formGroupInputID": "simpleFormExampleNom",
+    "formGroupInputPlaceholder": true,
+    "formGroupInputPlaceholder.text": "Nom",
+    "formGroupInputRequired": true,
+    "formGroupFeedbackIcon": true,
+    "formGroupInputError": true,
+    "formGroupInputError.text": "Veuillez saisir un nom valide.")
+  }}
+    {{> components-input-text(
+    "formGroupInputLabel": "Courriel",
+    "formGroupInputID": "simpleFormExampleEmail",
+    "formGroupInputType": "email",
+    "formGroupInputPlaceholder": true,
+    "formGroupInputPlaceholder.text": "Courriel",
+    "formGroupInputRequired": true,
+    "formGroupFeedbackIcon": true,
+    "formGroupInputError": true,
+    "formGroupInputError.text": "Veuillez saisir un courriel valide.")
+  }}
+  {{> components-button("buttonText": "soumettre") }}
+</form>
