@@ -70,8 +70,8 @@
   -webkit-overflow-scrolling: touch;
   // position: fixed;
   position: absolute;
-  right: -300px;
-  width: 300px;
+  right: 0;
+  width: 0;
   top: 56px;
   bottom: 0;
   margin-right: 56px;
@@ -83,6 +83,8 @@
 }
 
 .showing-page-drawers .page-drawers {
+  width: 300px;
+  right: -300px;
   -webkit-transform: translate3d(-100%,0,0);
   -moz-transform: translate3d(-100%,0,0);
   -ms-transform: translate3d(-100%,0,0);
@@ -97,10 +99,12 @@
   .showing-page-drawers .page-wrap-iframe {
     margin-right: 460px;
   }
-
-  .page-drawers {
+  .showing-page-drawers .page-drawers {
     right: -460px;
     width: 460px;
+  }
+
+  .page-drawers {
     top: 72px;
   }
 }
