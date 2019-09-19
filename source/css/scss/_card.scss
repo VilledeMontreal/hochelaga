@@ -217,11 +217,11 @@
     &.card-multi-lg {
       
       .card-body {
+        height: 100%; // Force to take 100% of parent
         position: relative;
         margin-top:0;
         z-index: 1;
         padding-right: inherit;
-
         &:before {
           content: none;
         }
