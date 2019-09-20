@@ -147,6 +147,7 @@ ctx = pipeline.createContext([
                     'uvalchu',
                     'uboul8b',
                     'udesm8n',
+                    'ujanezx',
                 ],
             ],
             prod: [
@@ -155,6 +156,7 @@ ctx = pipeline.createContext([
                     'utamtra',
                     'uboul8b',
                     'udesm8n',
+                    'ujanezx',
                 ],
             ],
         ],
@@ -172,6 +174,7 @@ ctx = pipeline.createContext([
                     'uvalchu',
                     'uboul8b',
                     'udesm8n',
+                    'ujanezx',
                 ],
             ],
             prod: [
@@ -180,6 +183,7 @@ ctx = pipeline.createContext([
                     'utamtra',
                     'uboul8b',
                     'udesm8n',
+                    'ujanezx',
                 ],
             ],
         ],

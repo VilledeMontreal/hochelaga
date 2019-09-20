@@ -1,5 +1,4 @@
 {{# generalites}}
-  {{{ content }}}
   {{{ extra-content }}}
 {{/ generalites}}
 
@@ -18,6 +17,35 @@
 {{# gdc}}
   {{{ extra-content }}}
 {{/ gdc}}
+
+{{# question-type}}
+  {{{ extra-content }}}
+  <!--
+  {{# accordionFramed}}
+  <div id="accordion" class="{{ collapsibleClasses }}" role="tablist" aria-multiselectable="true">
+    {{# collapsibleItem }}
+    <div class="collapsible-item">
+      <div class="collapsible-header" role="tab" id="{{ heading-id }}">
+        <div class="collapsible-title">
+          <a data-toggle="collapse" href="#" data-target="#{{ block-id }}" aria-expanded="{{# show}}true{{/ show}}{{^ show}}false{{/ show}}" aria-controls="{{ block-id }}">
+            <span>{{ title }}</span>
+            {{# subtitle}}
+            <span class="collapsible-subtitle">{{subtitle}}</span>
+            {{/ subtitle}}
+          </a>
+        </div>
+      </div>
+      <div id="{{ block-id }}" class="collapse {{# show }}show{{/ show}}" role="tabpanel" aria-labelledby="{{ heading-id }}">
+        <div class="collapsible-block">
+          {{{ collapsible-default-content }}}
+        </div>
+      </div>
+    </div>
+    {{/ collapsibleItem }}
+  </div>
+  {{/ accordionFramed}}
+  -->
+{{/ question-type}}
 
 {{# personne-ressource}}
   {{# list-icon}}

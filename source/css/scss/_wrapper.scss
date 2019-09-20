@@ -167,3 +167,55 @@
     }
   }
 }
+
+
+// Lexique
+
+.lexique {
+  .lexique-heading {
+    @include font-size($font-size-base);
+    line-height: $line-height-md;
+    display: flex;
+    align-items: center;
+    margin-bottom: 1rem;
+    .lexique-heading-label {
+      width: 1.5rem;
+    }
+    &:after {
+      content: "";
+      width: 100%;
+      margin-right: 1.5rem;
+      height: 1px;
+      background-color: $neutral-stroke;
+    }
+  }
+  .lexique-nav {
+    ul {
+      margin: 0;
+    }
+    a {
+      @include font-size($font-size-sm);
+      line-height: $line-height-sm;
+      border: none;
+      border-radius: 50%;
+      color: $neutral-primary;
+      font-weight: $font-weight-normal;
+      display: flex;
+      align-self: center;
+      align-items: center;
+      justify-content: center;
+      width: 2rem;
+      height: 2rem;
+      @include hover-focus {
+        color: $white;
+        background: $neutral-primary;
+        font-weight: $font-weight-bold;
+      }
+      &.active {
+        color: $white;
+        background: $neutral-primary;
+        font-weight: $font-weight-bold;
+      }
+    }
+  }
+}
