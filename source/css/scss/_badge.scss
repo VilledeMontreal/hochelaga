@@ -5,6 +5,9 @@
   border: 1px solid transparent;
   color: $neutral-primary;
   position: relative;
+  .icon {
+    @include icon-color($neutral-primary);
+  }
 
   &.badge-dark {
     background-color: $neutral-primary;
@@ -12,13 +15,11 @@
     &[href] {
       @include hover-focus {
         color: $white;
-        background-color: lighten( $neutral-primary, 10% );
+        background-color: lighten($neutral-primary, 10%);
       }
     }
     .icon {
-      &:before {
-        background-color: $white !important;
-      }
+      @include icon-color($white);
     }
   }
   &.badge-light {
@@ -27,13 +28,11 @@
     &[href] {
       @include hover-focus {
         color: $neutral-primary;
-        background-color: darken( $white, 10% );
+        background-color: darken($white, 10%);
       }
     }
     .icon {
-      &:before {
-        background-color: $neutral-primary !important;
-      }
+      @include icon-color($neutral-primary);
     }
   }
   &.badge-primary {
@@ -46,9 +45,7 @@
       }
     }
     .icon {
-      &:before {
-        background-color: $white !important;
-      }
+      @include icon-color($white);
     }
   }
   &.badge-secondary {
@@ -63,9 +60,7 @@
       }
     }
     .icon {
-      &:before {
-        background-color: white;
-      }
+      @include icon-color($primary);
     }
   }
 
@@ -77,11 +72,12 @@
       align-self: center;
       &:before {
         display: block;
-        width: 1.25em;
-        height: 1.25em;
+        width: 1.166666666em;
+        height: 1.166666666em;
         max-height: 24px;
         max-width: 24px;
-        background-color: $neutral-primary;
+        margin-top: -2px;
+        margin-bottom: -2px;
       }
     }
   }
@@ -116,7 +112,7 @@
     @include hover-focus {
       color: $neutral-primary;
       border: 1px solid transparent;
-      background-color: darken( $neutral-underground-2, 10% );
+      background-color: darken($neutral-underground-2, 10%);
     }
   }
 
@@ -131,15 +127,13 @@
     background-color: $color-base;
     &[href] {
       @include hover-focus {
-        background-color: darken( $color-base, 10% );
+        background-color: darken($color-base, 10%);
       }
     }
-    @if $label == warning{
+    @if $label == warning {
       color: $neutral-primary;
       .icon {
-        &:before {
-          background-color: $neutral-primary;
-        }
+        @include icon-color($neutral-primary);
       }
       &[href] {
         @include hover-focus {
@@ -150,9 +144,7 @@
     @else {
       color: $white;
       .icon {
-        &:before {
-          background-color: $white !important;
-        }
+        @include icon-color($white);
       }
       &[href] {
         @include hover-focus {
@@ -166,14 +158,12 @@
     color: $color-dark;
     background-color: $color-light;
     .icon {
-      &:before {
-        color: $color-dark;
-      }
+      @include icon-color($color-dark);
     }
     &[href] {
       @include hover-focus {
         color: $color-dark;
-        background-color: darken( $color-light, 8% );
+        background-color: darken($color-light, 8%);
       }
     }
   }

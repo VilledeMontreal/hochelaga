@@ -99,3 +99,71 @@
     }
   }
 }
+
+// Blockquote And Emphasis
+//
+.blockquote {
+  @include font-size($blockquote-font-size);
+  color: $neutral-primary;
+  line-height: 2rem;
+  font-weight: $font-weight-normal;
+  font-style: italic;
+  margin-bottom: 2rem;
+  padding-left: 2rem;
+  position: relative;
+
+  p:last-of-type {
+    margin-bottom: 1rem;
+  }
+
+  &:before {
+    content: "";
+    background: $neutral-stroke;
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 2px;
+  }
+
+  .blockquote-footer {
+    color: $body-color;
+    @include font-size($font-size-sm);  // 14/20
+    line-height: $line-height-sm;
+    font-style: normal;
+    &:before {
+      display: none;
+    }
+
+    .blockquote-footer-author {
+      color: $neutral-primary;
+      font-weight: $font-weight-bold;
+    }
+  }
+  cite {
+    color: $neutral-primary;
+    font-style: normal;
+  }
+
+  &.blockquote-emphasis {
+    font-style: normal;
+    p:last-child {
+      margin-bottom: 0;
+    }
+    &.emphasis-lg {
+      @include font-size($font-size-lg);
+      line-height: 2rem;
+      padding-left: 2rem;
+    }
+    &.emphasis-md {
+      @include font-size($font-size-base);
+      line-height: $line-height-lg;
+      padding-left: 1rem;
+    }
+    &.emphasis-sm {
+      @include font-size($font-size-sm);
+      line-height: $line-height-md;
+      padding-left: 1rem;
+    }
+  }
+}

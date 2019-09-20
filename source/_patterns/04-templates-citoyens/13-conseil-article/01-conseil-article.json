@@ -4,36 +4,9 @@
   "documentHeadingNotch": true,
   "has-left-notch": true,
   "pageClasses": "mt-7 mt-lg-9",
-  "header-back-link": {
-    "link-icon": {
-      "url": "#",
-      "icon": "icon-arrow-left", 
-      "link-icon-label": "Touts les articles"
-    }
-  },
+  "header-back-link": false,
   "heading": "Titre du conseil-article d'une longueur de 80 caractères maximum",
-  "has-badges": {
-    "badges": [
-      {
-        "badge": "Libellé",
-        "badgeClass": "badge-secondary",
-        "badge-sr-text": "",
-        "badgeUrl": "#"
-      },
-      {
-        "badge": "Libellé",
-        "badgeClass": "badge-secondary",
-        "badge-sr-text": "",
-        "badgeUrl": "#"
-      },
-      {
-        "badge": "Libellé",
-        "badgeClass": "badge-secondary",
-        "badge-sr-text": "",
-        "badgeUrl": "#"
-      }
-    ]
-  },
+  "has-badges": false,
   "publicationDate": {
     "dateTimeText": "16 août 2019",
     "dateTimeFormat": "2019-08-16"
@@ -44,7 +17,7 @@
     "module-cta": {
       "buttonAsLink": true,
       "buttonClass": "btn-primary btn-lg",
-      "buttonUrl": "#",
+      "buttonUrl": "https://picsum.photos/",
       "buttonText": "Appel à l'action"
     },
     "module-card-cta": {
@@ -72,12 +45,9 @@
       }
     },
     "module-emphasis": {
-      "blockquote-classes": "blockquote-emphasis",
-      "blockquote-html-text": "<p>Meditation gochujang copper mug, selfies paleo yuccie gastropub single-origin coffee thundercats scenester venmo pickled. Neutra yr green juice, fixie blog literally squid lyft bitters actually bicycle rights thundercats.</p>",
-      "blockquote-footer": false
+      "emphasisHtmlText": "<p>Meditation gochujang copper mug, selfies paleo yuccie gastropub single-origin coffee thundercats scenester venmo pickled. Neutra yr green juice, fixie blog literally squid lyft bitters actually bicycle rights thundercats.</p>"
     },
     "module-blockquote": {
-      "isCitation": true,
       "blockquote-classes": false,
       "blockquote-html-text": "<p>Meditation gochujang copper mug, selfies paleo yuccie gastropub single-origin coffee thundercats scenester venmo pickled. Neutra yr green juice, fixie blog literally squid lyft bitters actually bicycle rights thundercats.</p>",
       "blockquote-footer": {
@@ -226,27 +196,27 @@
     "listGroupClass": false,
     "listGroup": [
       {
-        "icon-name": "icon-affaires-economie",
+        "icon-name": "icon-affaires-et-economie",
         "text": "Titre du sujet sur plusieurs lignes si nécessaire",
         "class": false
       },
       {
-        "icon-name": "icon-affaires-economie",
+        "icon-name": "icon-affaires-et-economie",
         "text": "Titre du sujet sur plusieurs lignes si nécessaire",
         "class": false
       },
       {
-        "icon-name": "icon-affaires-economie",
+        "icon-name": "icon-affaires-et-economie",
         "text": "Titre de l'article",
         "class": false
       },
       {
-        "icon-name": "icon-affaires-economie",
+        "icon-name": "icon-affaires-et-economie",
         "text": "Titre du sujet sur plusieurs lignes si nécessaire",
         "class": false
       },
       {
-        "icon-name": "icon-affaires-economie",
+        "icon-name": "icon-affaires-et-economie",
         "text": "Titre du sujet sur plusieurs lignes si nécessaire",
         "class": false
       }

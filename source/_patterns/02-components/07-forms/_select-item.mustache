@@ -1,0 +1,9 @@
+<div class="form-group {{ formGroupClass }}">
+  <label for="{{ formGroupSelectID }}">{{ formGroupSelectLabel }}</label>
+  <select class="form-control" name="{{ formGroupSelectID }}" id="{{formGroupSelectID}}"> 
+    <option value="">{{ formGroupSelect.defaultOption}}</option> 
+    {{# formGroupSelect.options }}
+      {{> components-option }}
+    {{/ formGroupSelect.options }}
+  </select>
+</div>

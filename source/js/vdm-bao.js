@@ -275,28 +275,29 @@ $('[id^="linkModalIcon"]').click(function() {
     });
   }
 
+
   $('.media-gallery').each( function() {
     var $pic     = $(this),
-        getItems = function() {
-            var items = [];
-            $pic.find('a').each(function() {
-                var $href   = $(this).attr('href'),
-                    $size   = $(this).data('size').split('x'),
-                    $width  = $size[0],
-                    $height = $size[1];
- 
-                var item = {
-                    src     : $href,
-                    w       : $width,
-                    h       : $height,
-                    author  : $(this).data('author'),
-                    title   : $(this).data('title'),
-                }
- 
-                items.push(item);
-            });
-            return items;
-        }
+      getItems = function() {
+        var items = [];
+        $pic.find('a').each(function() {
+          var $href   = $(this).attr('href'),
+              $size   = $(this).data('size').split('x'),
+              $width  = $size[0],
+              $height = $size[1];
+
+          var item = {
+              src     : $href,
+              w       : $width,
+              h       : $height,
+              author  : $(this).data('author'),
+              description   : $(this).data('description'),
+          }
+
+          items.push(item);
+        });
+        return items;
+      }
  
     var items = getItems();
     
@@ -305,21 +306,37 @@ $('[id^="linkModalIcon"]').click(function() {
       event.preventDefault();
       
       var $index = $(this).index();
-      var author = "";
-      var options = {
+      let description = '';
+      let author = '';
+      const options = {
         index: $index,
         showHideOpacity: true,
+        fullscreenEl: false,
+        zoomEl: false,
+        maxSpreadZoom: 1,
+        pinchToClose: false,
         shareEl: false,
-        addCaptionHTMLFn: function(item, captionEl, isFake) {
-          if(!item.title) {
-            captionEl.children[0].innerText = '';
+        preloaderEl: false,
+        getDoubleTapZoom: function(isMouseClick, item) {
+          return item.initialZoomLevel;
+        },
+        addCaptionHTMLFn: (item, captionEl, isFake) => {
+          if (!item.description && !item.author) {
+            captionEl.children[0].innerHTML = '';
             return false;
           }
-
-          if(item.author) {
-            author = '<br/><small>Photo: ' + item.author + '</small>';
+  
+          if (item.description) {
+            description = `<span class="pswp__legend d-block font-weight-bold text-white text-center">${item.description}</span>`;
           }
-          captionEl.children[0].innerHTML = item.title +  author;
+  
+          if (item.author) {
+            author = `<span class="pswp__copyright d-block text-white text-center">&copy; ${item.author}</span>`;
+          }
+  
+          captionEl.children[0].innerHTML = description + author;
+          // We need to set item.title to true based on photoswipe caption display validation...
+          item.title = true;
           return true;
         }
       }
@@ -328,50 +345,66 @@ $('[id^="linkModalIcon"]').click(function() {
       var lightBox = new PhotoSwipe($pswp, PhotoSwipeUI_Default, items, options);
       lightBox.init();
     });
+  });
 
   var openPhotoSwipe = function() {
 
     $('.media-gallery').each( function() {
-      var $pic     = $(this),
-          getItems = function() {
-            var items = [];
-            $pic.find('a').each(function() {
-                var $href   = $(this).attr('href'),
-                    $size   = $(this).data('size').split('x'),
-                    $width  = $size[0],
-                    $height = $size[1];
-  
-                var item = {
-                    src     : $href,
-                    w       : $width,
-                    h       : $height,
-                    author  : $(this).data('author'),
-                    title   : $(this).data('title'),
-                }
-  
-                items.push(item);
-            });
-            return items;
-          }
+      var $pic     = $(this), getItems = function() {
+        var items = [];
+        $pic.find('a').each(function() {
+            var $href   = $(this).attr('href'),
+                $size   = $(this).data('size').split('x'),
+                $width  = $size[0],
+                $height = $size[1];
+
+            var item = {
+                src     : $href,
+                w       : $width,
+                h       : $height,
+                author  : $(this).data('author'),
+                description   : $(this).data('description'),
+            }
+
+            items.push(item);
+        });
+        return items;
+      }
    
       var items = getItems();
       
       var $pswp = $('.pswp')[0];
-      var author = "";
-      var options = {
+      let description = '';
+      let author = '';
+      const options = {
         index: 0,
         showHideOpacity: true,
+        fullscreenEl: false,
+        zoomEl: false,
+        maxSpreadZoom: 1,
+        pinchToClose: false,
         shareEl: false,
-        addCaptionHTMLFn: function(item, captionEl, isFake) {
-          if(!item.title) {
-            captionEl.children[0].innerText = '';
+        preloaderEl: false,
+        getDoubleTapZoom: function(isMouseClick, item) {
+          return item.initialZoomLevel;
+        },
+        addCaptionHTMLFn: (item, captionEl, isFake) => {
+          if (!item.description && !item.author) {
+            captionEl.children[0].innerHTML = '';
             return false;
           }
-
-          if(item.author) {
-            author = '<br/><small>Photo: ' + item.author + '</small>';
+  
+          if (item.description) {
+            description = `<span class="pswp__legend d-block font-weight-bold text-white text-center">${item.description}</span>`;
           }
-          captionEl.children[0].innerHTML = item.title +  author;
+  
+          if (item.author) {
+            author = `<span class="pswp__copyright d-block text-white text-center">&copy; ${item.author}</span>`;
+          }
+  
+          captionEl.children[0].innerHTML = description + author;
+          // We need to set item.title to true based on photoswipe caption display validation...
+          item.title = true;
           return true;
         }
       }
@@ -381,84 +414,12 @@ $('[id^="linkModalIcon"]').click(function() {
     });
   };
 
-
- 
-
-  /*
- var openPhotoSwipe = function() {
-  var parseThumbnailElements = function(el) {
-      var thumbElements = el.childNodes,
-          numNodes = thumbElements.length,
-          items = [],
-          figureEl,
-          linkEl,
-          size,
-          item;
-
-      for(var i = 0; i < numNodes; i++) {
-
-          figureEl = thumbElements[i]; // <figure> element
-
-          // include only element nodes 
-          if(figureEl.nodeType !== 1) {
-              continue;
-          }
-
-          linkEl = figureEl.children[0]; // <a> element
-
-          size = linkEl.getAttribute('data-size').split('x');
-
-          // create slide object
-          item = {
-              src: linkEl.getAttribute('href'),
-              w: parseInt(size[0], 10),
-              h: parseInt(size[1], 10)
-          };
-
-
-
-          if(figureEl.children.length > 1) {
-              // <figcaption> content
-              item.title = figureEl.children[1].innerHTML; 
-          }
-
-          if(linkEl.children.length > 0) {
-              // <img> thumbnail element, retrieving thumbnail url
-              item.msrc = linkEl.children[0].getAttribute('src');
-          } 
-
-          item.el = figureEl; // save link to element for getThumbBoundsFn
-          items.push(item);
-      }
-
-      return items;
-  };
-
-  var pswpElement = document.querySelectorAll('.pswp')[0],
-      gallery,
-      options,
-      items;
-
-  var galleryElements = document.querySelectorAll('.media-gallery')[0];
-  items = parseThumbnailElements(galleryElements);
-
-  // define options (if needed)
-  var options = {
-      index: 0 // start at first slide
-  };
-
-  
-  var gallery = new PhotoSwipe( pswpElement, PhotoSwipeUI_Default, items, options);
-  gallery.init();
-};
-*/
-
+  // Trigger gallery on click
   $(".js-gallery-trigger").click(function() {
-    
     openPhotoSwipe();
-
   });
 
+  // Change text based on language
   $('.collapse-content').on('show.bs.collapse', function () {
     $(this).parent().find("button").text('Voir moins');
   });
@@ -467,8 +428,6 @@ $('[id^="linkModalIcon"]').click(function() {
     $(this).parent().find("button").text('Voir plus');
   });
 
-
-});
 
 })(jQuery);
 

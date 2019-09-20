@@ -1,0 +1,300 @@
+.nav-menu-items {
+  display: flex;
+}
+.nav-menu-items-right {
+  right: 0;
+  height: calc(100% - 56px);
+  z-index: 2;
+  @include media-breakpoint-up(lg) {
+    height: calc(100% - 72px);
+  }
+  .menu-items.menu-items-icon-bar {
+    li {
+      a {
+        &.active,
+        &:active {
+          &:before {
+            right: 0;
+            left: auto;
+          }
+        }
+      }
+    }
+  }
+}
+
+// Menu-item
+.menu-items {
+  background-color: $white;
+  display: flex;
+  list-style: none;
+  margin: 0;
+  padding: 0 1rem;
+  flex: 1 0 auto;
+  li {
+    padding: 0;
+    display: flex;
+    &.menu-item-separator {
+      &:after {
+        background-color: $neutral-stroke;
+        position: relative;
+        content: '';
+        height: auto;
+        margin: .75rem 1rem;
+        width: 1px;
+      }
+    }
+    a {
+      display: flex;
+      flex-direction: column;
+      align-self: center;
+      align-items: center;
+      border-bottom: none;
+      padding: 1rem;
+      position: relative;
+      .icon {
+        @include icon-color($neutral-secondary);
+      }
+      .menu-item-label {
+        display: none;
+        @include font-size($font-size-xs);
+        line-height: $line-height-xs;
+        color: $neutral-secondary;
+        margin-top: .5rem;
+      }
+
+      @include hover-focus {
+        background-color: transparent;
+        z-index: 2;
+        .icon {
+          @include icon-color($action);
+        }
+        .menu-item-label {
+          color: $action;
+        }
+      }
+
+      &.active,
+      &:active {
+        background-color: $highlight-light;
+        .icon {
+          @include icon-color($action);
+        }
+        .menu-item-label {
+          color: $action;
+        }
+        &:before {
+          content: "";
+          position: absolute;
+          top: 0;
+          height: 2px;
+          width: 100%;
+          background-color: $action;
+        }
+      }
+    }
+  }
+
+  &.menu-items-column {
+    flex-direction: column;
+    padding: 0;
+    height: 100%;
+    li {
+      position: relative;
+      &.menu-item-separator {
+        padding-bottom: 2rem;
+        &:after {
+          background-color: $neutral-stroke;
+          position: absolute;
+          bottom: 0;
+          content: '';
+          height: 1px;
+          margin: 0 .75rem 1rem .75rem;
+          width: calc(100% - 1.5rem);
+        }
+      }
+      a {
+        min-width: auto;
+        padding: 1rem;
+        width: 100%;
+        flex-direction: row;
+        .icon {
+          @include icon-color($neutral-tertiary);
+        }
+
+        .menu-item-label {
+          display: flex;
+          @include font-size($font-size-base);
+          line-height: $line-height-md;
+          margin-top: 0;
+          margin-left: 1rem;
+        }
+
+        @include hover-focus {
+          .icon {
+            @include icon-color($action-lighter);
+          }
+        }
+        
+        &.active,
+        &:active {
+          @include border-left-radius($border-radius);
+          .icon {
+            @include icon-color($action-lighter);
+          }
+          &:before {
+            right: 0;
+            height: 100%;
+            width: 2px;
+            background-color: $action;
+          }
+        }
+      }
+    }
+  }
+
+  &.menu-items-icon-bar {
+    li {
+      a {
+        width: 100%;
+        .icon {
+          @include icon-color($neutral-secondary);
+        }
+        .menu-item-label {
+          display: none;
+        }
+
+        @include hover-focus {
+          .icon {
+            @include icon-color($action);
+          }
+        }
+
+        &.active,
+        &:active {
+          @include border-radius(0px);
+          .icon {
+            @include icon-color($action);
+          }
+          &:before {
+            right: auto;
+            left: 0;
+          }
+        }
+      }
+    }
+
+    // Revealing labels variants
+    &.menu-items-revealing-labels {
+      @include hover-focus {
+        box-shadow: $dropdown-box-shadow;
+        li {
+          a {
+            .menu-item-label {
+              display: flex;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  // Dark variant
+  &.menu-items-reverse {
+    background-color: $neutral-primary;
+    li {
+      a {
+        .icon {
+          @include icon-color($white);
+        }
+        .menu-item-label {
+          color: $white;
+        }
+        @include hover-focus {
+          .icon {
+            @include icon-color($action-lighter);
+          }
+          .menu-item-label {
+            color: inherit;
+          }
+        }
+        &.active,
+        &:active {
+          .icon {
+            @include icon-color($action-lighter);
+          }
+          background-color: $black;
+          .menu-item-label {
+            color: inherit;
+          }
+          &:before {
+            background-color: $action-lighter;
+          }
+        }
+      }
+    }
+  }
+
+  // Light variant
+  &.menu-items-underground {
+    background-color: $neutral-underground-1;
+    li {
+      a {
+        .icon {
+          @include icon-color($neutral-secondary);
+        }
+        .menu-item-label {
+          color: $neutral-secondary;
+        }
+        @include hover-focus {
+          .icon {
+            @include icon-color($action);
+          }
+          .menu-item-label {
+            color: inherit;
+          }
+        }
+        &.active,
+        &:active {
+          .icon {
+            @include icon-color($action);
+          }
+          background-color: $white;
+          .menu-item-label {
+            color: inherit;
+          }
+        }
+      }
+    }
+  }
+
+  @include media-breakpoint-up(lg) {
+    li {
+      a {
+        padding: .75rem 1rem;
+        .menu-item-label {
+          display: flex;
+        }
+      }
+    }
+  }
+}
+
+// Menu item content
+
+.menu-item-content {
+  border-left: 1px solid $neutral-stroke;
+  width: 100%;
+  z-index: 2;
+  .menu-item-content-header {
+    padding: 1rem 3.5rem 1rem 1rem;
+    color: $neutral-primary;
+  }
+  @include media-breakpoint-up(sm) {
+    width: 300px;
+  }
+  @include media-breakpoint-up(lg) {
+    width: 460px;
+  }
+}
+

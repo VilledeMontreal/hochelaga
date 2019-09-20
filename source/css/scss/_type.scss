@@ -101,18 +101,6 @@ b, strong {
   font-weight: $font-weight-bold;
 }
 
-p + p,
-p + ul,
-p + ol,
-ul + p,
-ul + ul,
-ul + ol,
-ol + p,
-ol + ul,
-ol + ol {
-  margin-top: -1rem;
-}
-
 ol, ul, dl {
   margin-bottom: $paragraph-margin-bottom;
 }
@@ -142,17 +130,6 @@ a {
   &:hover,
   &:active {
     color: $link-hover-color;
-  }
-
-  // File extension handling
-  &[href$=".pdf"] {
-    margin-right: 3.02em;
-    &:after {
-      content: "(PDF)";
-      margin-right: -3.02em;
-      padding-left: .5rem;
-      overflow: hidden;
-    }
   }
 
   // Utility classes to remove border-bottom
@@ -223,14 +200,13 @@ a {
   }
 }
 
-
 // External link icon
 // Apply to .region-content and sb-block
 // Everything not on montreal.ca or of /villemontreal/ AKA cloudinary directory
 .sb-block,
 .region-content,
 .lead {
-  a[href*="//"]:not([href*="montreal.ca"]):not([href$=".pdf"]):not(.list-group-item-action) {
+  a[href*="//"]:not([href*="montreal.ca"]):not([href$=".pdf"]):not(.list-group-item-action):not(.link-has-icon):not(.btn) {
     margin-right: 1.625rem;
     position: relative;
     &:after {
@@ -262,68 +238,38 @@ a {
       }
     }
   }
+  // Generic file extension handling
+  a[href$=".pdf"] {
+    margin-right: 3.02em;
+    &:after {
+      content: "(PDF)";
+      margin-right: -3.02em;
+      padding-left: .5rem;
+      overflow: hidden;
+    }
+  }
   // List some exclusion
   .media-gallery,
-  .list-icon,
   .social-media-list,
   .cards,
+  .list-group,
+  .list,
+  .list-icon,
   .list-group-hub {
-    a[href*="//"]:not([href*="montreal.ca"]):not([href$=".pdf"]) {
+    // Don't show external link icon
+    a[href*="//"]:not([href*="montreal.ca"]):not([href$=".pdf"]):not(.list-group-item-action):not(.link-has-icon):not(.btn) {
       margin-right: 0;
       &:after {
         content: none;
       }
     }
-  }
-}
-
-// Blockquote And Blockquote emphasis
-//
-.blockquote {
-  @include font-size($blockquote-font-size);
-  color: $neutral-primary;
-  line-height: 2rem;
-  font-weight: $font-weight-normal;
-  font-style: italic;
-  margin-bottom: 2rem;
-  padding-left: 2rem;
-  position: relative;
-
-  p:last-of-type {
-    margin-bottom: 1rem;
-  }
-
-  &:before {
-    content: "";
-    background: $neutral-stroke;
-    position: absolute;
-    left: 0;
-    top: 0;
-    height: 100%;
-    width: 2px;
-  }
-
-  .blockquote-footer {
-    color: $body-color;
-    @include font-size($font-size-sm);  // 14/20
-    line-height: $line-height-sm;
-    font-style: normal;
-    &:before {
-      display: none;
+    // Don't show (PDF)
+    a[href$=".pdf"] {
+      margin-right: 0;
+      &:after {
+        content: none;
+      }
     }
-
-    .blockquote-footer-author {
-      color: $neutral-primary;
-      font-weight: $font-weight-bold;
-    }
-  }
-  cite {
-    color: $neutral-primary;
-    font-style: normal;
-  }
-
-  &.blockquote-emphasis {
-    font-style: normal;
   }
 }
 

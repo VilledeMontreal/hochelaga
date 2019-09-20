@@ -75,12 +75,7 @@ svg[role=icon] {
 @each $label, $map in $icons-size {
   $size: map-get($map, size);
   .icon-#{$label} {
-    width: $size !important;
-    height: $size !important;
-    &:before {
-      width: $size !important;
-      height: $size !important;
-    }
+   @include icon-size($size);
   }
 }
 

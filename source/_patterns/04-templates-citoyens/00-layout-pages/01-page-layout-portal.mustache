@@ -1,16 +1,53 @@
 {{> styles-link-skip-to-main-content }}
 
-{{> patterns-header-portal }}
+<header class="header-main-nav" role="banner">
+{{> components-navbar }}
+</header>
 
 <main class="main-content {{ pageClasses }}" id="main-content" aria-label="Main Content" role="main">
 
-  {{> patterns-content-header }}
+  {{# documentHeading}}
+  <div class="pt-lg-8">
+  {{> patterns-content-header}}
+  </div>
+  {{/ documentHeading}}
 
   <div class="region-content {{ regionMainClasses }}">
     <div class="container {{ regionMainContainerClasses }}">
       <section class="row{{# has-left-notch }} justify-content-between{{/ has-left-notch}}{{^ has-left-notch}} justify-content-center{{/ has-left-notch}}">
         <div class="col-12 {{ regionMainContentClasses }}">
+          <header class="content-header">
+            {{# header-back-link}}
+            <div class="header-back-link">
+              {{> styles-link-list-element("has-icon": true, "icon-right": false, "link-label": "Tous les sujets", icon: "icon-arrow-left")}}
+            </div>
+            {{/ header-back-link}}
+
+            <h1>{{ heading }}</h1>
+
+            {{# has-badges}}
+            <div class="badges-container">
+              {{# badges}}
+              {{> components-badge}}
+              {{/ badges}}
+            </div>
+            {{/ has-badges}}
+
+            {{# publicationDate}}
+            <div class="publication-date">
+              Mis à jour le <time datetime="{{dateTimeFormat}}">{{{dateTimeText}}}</time>
+            </div>
+            {{/ publicationDate}}
+          </header>
+          
+          <div class="lead content-module-stacked">
+            {{{ lead }}}
+          </div>
+
+          <div class="content-modules">
           {{> styles-paragraph }}
+          </div>
+          
         </div>
         {{#sidebarRight}}
         <aside class="col-12 col-lg-4 mt-md-8" role="complementary">

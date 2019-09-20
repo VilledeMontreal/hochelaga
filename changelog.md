@@ -4,7 +4,32 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](http://keepachangelog.com/en/1.0.0/)
 and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.html).
 
-## [4.0.1] - unreleased
+## [4.1.0] - unreleased
+
+## Added
+- Cookies Consent templates: Patterns/Cookies Consent
+- Add the path to icon scss and json to build.config.json
+- Added the gallery module, a custom skin placed in the images folder and the css build into the bao with the gallery.scss file
+- Menu items (horizontal and vertical variant)
+- 12 new utility icons.
+- Template employé - Vue de l'agent 311
+- Accordions listed and framed examples
+- .unfixed utility class to unfix an element that uses the class fixed-DIRECTION.
+
+## Changed
+- Changing the layout of employes for the user to be logged on.
+- Change Slide-menu-interne to use the menu-items component.
+- PL: inputs are now reusable.
+- Rules for automated external links and (PDF) mention is more restrictive (added some exclusion - list-group, list, link with icon, buttons).
+- PL: removed all back links and badges from templates - waiting for more infos.
+
+## Fixed
+- Update the gulpfile to generate the correct scss of the icons
+- Change the method to display the validation icon. Modify the form.scss and adding markup for displaying the icon on validation.
+- Modal footer buttons alignment.
+
+
+## [4.0.1] - 2019-08-27
 
 ## Added
 - Unité administrative template.
@@ -19,15 +44,20 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 - Base layout template for employes 
 - Base menu slide left for template employes 
 - Utility class .text-preserve-space for white-space: pre usage.
+- Added a readme.md file that contains a list of improvements.
+- Added a automated script that concatenates jsons for icons to use in the BAO.
+- Button primary-reverse variant.
 
 ## Changed
 - Blockquote emphasis should be a div tag (blockquote is strickly for citation).
 - .sb-block now takes 4rem margin-bottom by default.
 - Cards fw now depends on grid-class for formatting at some breakpoint.
 - Cards fw now takes a minimal height for image (~16:9 aspect ratio) @larger breakpoint.
+- Deleting employes and citizens separation in editorial icons 
 
 ## Fixed
 - List Group line-heights, paddings and margins.
+- Prevent media copyright icon from being squashed when long copyright.
 - Pattern Labs: Fixed various pseudo-templates inclusion.
 
 ## Removed
@@ -65,4 +95,5 @@ The version 3 is now deprecated. Only bug fixes will be considered. Please refer
 
 
 
+[4.0.1]: https://bitbucket.org/villemontreal/boite-outils4-web/src/4.0.1/
 [4.0.0]: https://bitbucket.org/villemontreal/boite-outils4-web/src/4.0.0/

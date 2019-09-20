@@ -1,0 +1,91 @@
+{
+  "pageClasses": false,
+  "navbarInterneHasMenu": false,
+  "navbarInterneHasSearch": false,
+  "user-authenticated": true,
+  "user": {
+    "name": "Uxabcd01",
+    "username": "Uxabc1b",
+    "email": "courriel@montreal.ca"
+  },
+  "applicationName": "Vue de l'agent 311",
+  "menuItemVerticalIconBar": {
+    "navMenuItemsClass": "position-absolute nav-menu-items-right",
+    "menuItemClass": "menu-items-underground menu-items-column menu-items-icon-bar menu-items-revealing-labels",
+    "menuItem": [
+      {
+        "menuItemSeparator": false,
+        "class": false,
+        "url": "link.templates-employes-vue-agent-311-info",
+        "menuItemIcon": {
+          "icon-name": "icon-info"
+        },
+        "menuItemLabel": "Info",
+        "tooltip": true
+      },
+      {
+        "menuItemSeparator": false,
+        "class": false,
+        "url": "#",
+        "menuItemIcon": {
+          "icon-name": "icon-book"
+        },
+        "menuItemLabel": "Lexique",
+        "tooltip": true
+      },
+      {
+        "class": false,
+        "url": "link.templates-employes-vue-agent-311-signaler",
+        "menuItemIcon": {
+          "icon-name": "icon-comment"
+        },
+        "menuItemLabel": "Signaler",
+        "tooltip": true
+      },
+      {
+        "menuItemSeparator": true,
+        "class": false,
+        "url": "link.templates-employes-vue-agent-311-partager",
+        "menuItemIcon": {
+          "icon-name": "icon-share"
+        },
+        "menuItemLabel": "Partager",
+        "tooltip": true
+      },
+      {
+        "menuItemSeparator": false,
+        "class": false,
+        "url": "http://www1.ville.montreal.qc.ca/banque311",
+        "menuItemIcon": {
+          "icon-name": "icon-archive"
+        },
+        "menuItemLabel": "BDI 311",
+        "tooltip": true
+      }
+    ]
+  },
+  "badgesCategories": [
+    {
+      "badge": "Catégorie",
+      "badgeClass": "",
+      "badge-sr-text": "",
+      "badgeUrl": false,
+      "badgeIconClass": false
+    }
+  ],
+  "menuItemInfo": false,
+  "menuItemSignaler": false,
+  "menuItemPartager": false,
+  "help": {
+    "list": [
+      {
+        "hasIcon": true,
+        "icon-name": "icon-help",
+        "listItemAction": true,
+        "text": "Aide à la décision",
+        "listExtraContent": "Distribution, réparation ou remplacement de bac roulant.",
+        "listExtraContentClass": "font-size-sm-interface"
+      }
+    ]
+  }
+}

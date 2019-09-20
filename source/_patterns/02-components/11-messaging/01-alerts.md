@@ -2,12 +2,20 @@
 title: Alerts
 ---
 
-<p>Provide contextual feedback messages for typical user actions with the handful of available and flexible alert messages.</p>
+Les alertes affichent un message important et les actions facultatives associées.
 
-<h2 id="alerts-examples">Examples</h2>
-<p>Wrap any text and an optional dismiss button in <code>.alert</code> and one of the contextual classes (e.g., <code>.alert-success</code>) for basic alert messages.</p>
+#Utilisation
+Enveloppez n'importe quel contenu dans un contenant avec la classe <code>.alert</code>.
 
-<div class="bs-callout bs-callout-info" id="callout-alerts-no-default">
-  <h4>Default class</h4>
-  <p>Alerts have a default classes that makes a gray alert. Choose from contextual class success, info, warning, or danger to modify the default.</p>
-</div>
+#Couleurs 
+L'alerte par défaut est grise. Choisissez parmis les classes contextuelles pour modifier la valeur par défaut:
+
+* informative (<code>.alert-info</code>),
+* warning (<code>.alert-warning</code>),
+* negative (<code>.alert-danger</code>),
+* positive (<code>.alert-success</code>)
+
+#Différence avec [Bootstrap](https://getbootstrap.com/docs/4.3/components/alerts/)
+
+* Les classes des couleurs de dialogues sont uniquement disponibles en version pâles.
+* La classe <code>.alert-secondary</code> n'est pas activée.

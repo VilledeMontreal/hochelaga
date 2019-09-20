@@ -1,15 +1,7 @@
-<ul class="row list-unstyled">
-  {{# paginations }}
-  <li class="col-md-12">
-    <div class="p-3 mb-2">
-      {{> components-pagination }}
-    </div>
-  </li>
-  {{/ paginations }}
-</ul>
 
-  
-
-
-
-
+{{# paginations }}
+<h4 class="pl-pattern-subtitle">{{ paginationTitle }}</h4>
+<div class="pl-mb-4">
+  {{> components-pagination }}
+</div>
+{{/ paginations }}

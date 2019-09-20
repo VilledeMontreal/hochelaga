@@ -1,39 +1,17 @@
 <div class="container-fluid pl-atom-icons-grid">
-<h4 class="pl-pattern-subtitle">Citoyens</h4>
   	<ul class="row list-unstyled">
-  		{{#icon-editorial-citoyens }}
+  		{{#icon-editorial }}
 	   		<li class="col-6 col-sm-4 col-md-4 col-lg-3">
 		      <div class="pl-atom-icon-item ic-editorial">
-		      	<a data-toggle="modal" data-target="#exampleModalIconEditorial" id="linkModalIcon-{{ icon-name }}">
-			      	<svg viewBox="0 0 24 24" role="icon"> 
-			      		<path d="{{ icon-path }}"></path>
-						  </svg>
+		      	<a data-toggle="modal" data-target="#exampleModalIconEditorial" id="linkModalIcon-{{ name }}">
+              {{{ data }}}
 					  </a>
-			      <span class="ic-name" id="{{ icon-name }}">icon-{{ icon-name }}</span>
+			      <span class="ic-name" id="{{ name }}">icon-{{ name }}</span>
 		      </div>
 		    </li>
-		  {{/icon-editorial-citoyens}}
+		  {{/icon-editorial}}
   	</ul>
-
-
-<h4 class="pl-pattern-subtitle">Employé(e)s</h4>
-<ul class="row list-unstyled">
-      {{#icon-editorial-employes }}
-        <li class="col-6 col-sm-4 col-md-4 col-lg-3">
-          <div class="pl-atom-icon-item ic-editorial">
-            <a data-toggle="modal" data-target="#exampleModalIconEditorial" id="linkModalIcon-{{ icon-name }}">
-              <svg viewBox="0 0 32 32" role="icon"> 
-                <path d="{{ icon-path }}"></path>
-              </svg>
-            </a>
-            <span class="ic-name" id="{{ icon-name }}">icon-{{ icon-name }}</span>
-          </div>
-        </li>
-      {{/icon-editorial-employes}}
-    </ul>
 </div>
-
-
 
 <!-- Modal -->
 <div class="modal fade" id="exampleModalIconEditorial" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">

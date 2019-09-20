@@ -2,7 +2,8 @@
 title: Pagination
 ---
 
-<code>.pagination-sm</code> and <code>.pagination-lg</code> class modifier are available for smaller or larger pagination.
+#Tailles
 
-* @see https://v4-alpha.getbootstrap.com/components/pagination
-* @see https://projects.invisionapp.com/d/main#/console/11533069/245898997/inspect
+La pagination par default est de taille médium. Elle est disponible également en version small et large avec la classe <code>.pagination-sm</code> ou bien <code>.pagination-lg</code>
+
+[Voir plus de détails sur les tabs Bootstrap](https://getbootstrap.com/docs/4.1/components/navs/#tabs)

@@ -24,10 +24,6 @@
     display: block;
     margin: 0 auto;
   }
-  .btn-link {
-    //color: $neutral-secondary;
-    //margin-top: 1.5rem;
-  }
 
   &:last-child {
     padding-bottom: 0;
@@ -40,11 +36,10 @@
 
 // Pagination
 .pagination {
-  font-size: $font-size-sm;
-  line-height: $line-height-sm; 
   @include border-radius(0);
+  @include font-size($font-size-sm);
+  line-height: $line-height-sm; 
   margin-bottom: 0;
-  color: red;
   .page-item {
     display: none;
     &:first-child,
@@ -57,15 +52,26 @@
       flex-wrap: wrap;
       justify-content: center;
       align-items: center;
+
+      .icon:before,
+      svg {
+        fill: currentColor;
+        width: 1rem;
+        height: 1rem;
+      }
+      .icon {
+        @include icon-color($pagination-color);
+      }
+      &:hover {
+        .icon {
+          @include icon-color($pagination-hover-color);
+        }
+      }
       &:focus,
       &:visited {
         border-bottom: 1px solid $neutral-stroke;
       }
-      svg {
-        fill: currentColor;
-        width: 16px;
-        height: 16px;
-      }
+      
     }
     @include media-breakpoint-up(md){
       display: flex;
@@ -111,9 +117,10 @@
     &:last-child {
       > .page-link {
         padding: $pagination-padding-y-lg $pagination-icon-padding-lg;
+        .icon:before,
         svg {
-          width: 24px;
-          height: 24px;
+          width: 1.5rem;
+          height: 1.5rem;
         }
       }
     }
@@ -128,9 +135,10 @@
     &:last-child {
       > .page-link {
         padding: $pagination-padding-y-sm $pagination-icon-padding-sm;
+        .icon:before,
         svg {
-          width: 14px;
-          height: 14px;
+          width: .875rem;
+          height: .875rem;
         }
       }
     }

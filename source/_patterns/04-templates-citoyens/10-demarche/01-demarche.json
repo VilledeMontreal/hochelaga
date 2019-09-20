@@ -1,33 +1,8 @@
 {
   "navbarPosition": "fixed-top",
   "pageClasses": "mt-7 mt-lg-9",
-  "has-hub-link": {
-    "url": "#",
-    "link-text": "Toutes les démarches"
-  },
   "heading": "Titre de la démarche d'une longueur de 80 caractères maximum",
-  "has-badges": {
-    "badges": [
-      {
-        "badge": "Libellé",
-        "badgeClass": "badge-secondary",
-        "badge-sr-text": "",
-        "badgeUrl": "#"
-      },
-      {
-        "badge": "Libellé",
-        "badgeClass": "badge-secondary",
-        "badge-sr-text": "",
-        "badgeUrl": "#"
-      },
-      {
-        "badge": "Libellé",
-        "badgeClass": "badge-secondary",
-        "badge-sr-text": "",
-        "badgeUrl": "#"
-      }
-    ]
-  },
+  "has-badges": false,
   "publicationDate": {
     "dateTimeText": "24 juillet 2018",
     "dateTimeFormat": "2018-07-24"
@@ -81,9 +56,7 @@
         }
       }
     },
-    "module-emphasis": {
-      "isCitation": false
-    },
+    "module-emphasis": true,
     "module-message": {
       "alertClass": "alert-info alert-with-icon",
       "alertTitle": "Titre du message",
@@ -96,16 +69,19 @@
       "listGroupClass": "list-group-lg",
       "listGroup": [
         {
+          "url": "test.pdf",
           "icon-name": "icon-file-pdf",
           "text": "Titre du document [PDF - 2 Mo]",
           "class": "document-pdf"
         },
         {
+          "url": "test.pdf",
           "icon-name": "icon-file-pdf",
           "text": "Titre du document [PDF - 2 Mo]",
           "class": "document-pdf"
         },
         {
+          "url": "test.doc",
           "icon-name": "icon-file",
           "text": "Titre du document",
           "class": "document"
@@ -140,6 +116,7 @@
             "nom-service": "Nom du service",
             "list": [
               {
+                "hasIcon": true,
                 "icon-name": "icon-phone",
                 "listItemAction": false,
                 "text": "514 993-3423",
@@ -159,6 +136,7 @@
             "nom-service": false,
             "list": [
               {
+                "hasIcon": true,
                 "icon-name": "icon-phone",
                 "listItemAction": false,
                 "text": "3-1-1",
@@ -179,6 +157,7 @@
             "nom-service": false,
             "list": [
               {
+                "hasIcon": true,
                 "icon-name": "icon-phone",
                 "listItemAction": false,
                 "text": "9-1-1",
@@ -199,7 +178,8 @@
               "nom-service": "Nom du service",
               "list": [
                 {
-                  "icon-name": "icon-loction",
+                  "hasIcon": true,
+                  "icon-name": "icon-location",
                   "listItemAction": true,
                   "text": "Nom du lieu Ville",
                   "listExtraContent": "5955, avenue Bannantyne<br>Montréal (Québec) H4H 1H6"
@@ -210,7 +190,8 @@
               "nom-service": "Nom du service",
               "list": [
                 {
-                  "icon-name": "icon-loction",
+                  "hasIcon": true,
+                  "icon-name": "icon-location",
                   "listItemAction": true,
                   "text": "Autre lieu Ville (optionnel)",
                   "listExtraContent": "5955, avenue Bannantyne<br>Montréal (Québec) H4H 1H6"
@@ -232,7 +213,8 @@
               "nom-service": "Nom du service",
               "list": [
                 {
-                  "icon-name": "icon-loction",
+                  "hasIcon": true,
+                  "icon-name": "icon-location",
                   "listItemAction": false,
                   "text": false,
                   "listExtraContent": "5955, avenue Bannantyne<br>Montréal (Québec) H4H 1H6"
@@ -254,7 +236,8 @@
               "nom-service": "Nom du service",
               "list": [
                 {
-                  "icon-name": "icon-loction",
+                  "hasIcon": true,
+                  "icon-name": "icon-location",
                   "listItemAction": true,
                   "text": "Nom du lieu Ville",
                   "listExtraContent": "5955, avenue Bannantyne<br>Montréal (Québec) H4H 1H6"
@@ -265,7 +248,8 @@
               "nom-service": "Nom du service",
               "list": [
                 {
-                  "icon-name": "icon-loction",
+                  "hasIcon": true,
+                  "icon-name": "icon-location",
                   "listItemAction": true,
                   "text": "Autre lieu Ville (optionnel)",
                   "listExtraContent": "5955, avenue Bannantyne<br>Montréal (Québec) H4H 1H6"
@@ -287,7 +271,8 @@
               "nom-service": "Nom du service",
               "list": [
                 {
-                  "icon-name": "icon-loction",
+                  "hasIcon": true,
+                  "icon-name": "icon-location",
                   "listItemAction": false,
                   "text": false,
                   "listExtraContent": "5955, avenue Bannantyne<br>Montréal (Québec) H4H 1H6"
@@ -304,12 +289,13 @@
           "block-id": "template-demarche-courriel",
           "heading-id": "heading-template-demarche-courriel",
           "title": "Par courriel",
-          "content": "<p>Objet : Lorem ipsum dolor sit amet consectetur adipiscing elit.</p>",
+          "content": "<p class=\"mb-2\">Objet : Lorem ipsum dolor sit amet consectetur adipiscing elit.</p>",
           "list-icon": [
             {
               "nom-service": false,
               "list": [
                 {
+                  "hasIcon": true,
                   "icon-name": "icon-email",
                   "listItemAction": true,
                   "text": "Envoyer un courriel",
@@ -331,7 +317,8 @@
               "nom-service": "Nom du service (à l’attention de …)",
               "list": [
                 {
-                  "icon-name": "icon-loction",
+                  "hasIcon": true,
+                  "icon-name": "icon-location",
                   "listItemAction": false,
                   "text": "514 993-3423",
                   "listExtraContent": false
@@ -347,6 +334,7 @@
       "listGroupClass": "list-group-lg",
       "listGroup": [
         {
+          "url": "https://rds.ca",
           "text": "Phasellus cursus mauris"
         },
         {
@@ -368,7 +356,8 @@
     "listGroupClass": "",
     "listGroup": [
       {
-        "icon-name": "icon-affaires-economie",
+        "url": "https://google.ca",
+        "icon-name": "icon-affaires-et-economie",
         "text": "Titre sur plusieurs lignes si nécessaire",
         "class": false
       },
@@ -393,7 +382,7 @@
         "class": false
       },
       {
-        "icon-name": "icon-sante-securite-publiques",
+        "icon-name": "icon-sante-et-securite-publiques",
         "text": "Dapibus ac facilisis in",
         "class": false
       },

@@ -102,7 +102,7 @@
 .popover {
   border: none;
   padding: 1.25rem 1rem;
-  @extend .shadow-sm;
+  box-shadow: $popover-box-shadow;
 }
 
 .popover-header,

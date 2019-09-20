@@ -1,0 +1,65 @@
+{
+  "inputTextSize": [
+    {
+      "formGroupClass": "form-group-sm",
+      "formGroupInputID": "form-control-sm-one",
+      "formGroupInputLabel": "Small form group",
+      "formGroupInputPlaceholder": "Placeholder for small form group",
+      "formGroupInputHelpText": "Help text goes here."
+    },
+    {
+      "formGroupClass": false,
+      "formGroupInputID": "form-control-default-one",
+      "formGroupInputLabel": "Default form group",
+      "formGroupInputPlaceholder": "Placeholder for default form group",
+      "formGroupInputHelpText": "Help text goes here."
+    },
+    {
+      "formGroupClass": "form-group-lg",
+      "formGroupInputID": "form-control-lg-one",
+      "formGroupInputLabel": "Large form group",
+      "formGroupInputPlaceholder": "Placeholder for large form group",
+      "formGroupInputHelpText": "Help text goes here."
+    }
+  ],
+  "inputTextShape": [
+    {
+      "formGroupClass": false,
+      "formGroupInputID": "form-control-input",
+      "formGroupInputLabel": "Default squared input",
+      "formGroupInputRequired": true,
+      "formGroupInputPlaceholder": false,
+      "formGroupInputHelpText": false
+    },
+    {
+      "formGroupClass": false,
+      "formGroupInputID": "form-control-rounded",
+      "formGroupInputLabel": "Rounded input",
+      "formGroupInputClass": "input-rounded",
+      "formGroupInputRequired": true,
+      "formGroupInputPlaceholder": ".input-rounded",
+      "formGroupInputHelpText": false
+    }
+  ],
+  "inputTextState": [
+    {
+      "formGroupClass": false,
+      "formGroupInputID": "form-control-input-text-disabled",
+      "formGroupInputLabel": "Disabled input",
+      "formGroupInputRequired": true,
+      "formGroupInputPlaceholder": false,
+      "formGroupInputHelpText": false,
+      "formGroupInputState": "disabled"
+    },
+    {
+      "formGroupClass": false,
+      "formGroupInputID": "form-control-input-text-readonly",
+      "formGroupInputLabel": "Read only input",
+      "formGroupInputClass": false,
+      "formGroupInputRequired": true,
+      "formGroupInputPlaceholder": false,
+      "formGroupInputHelpText": false,
+      "formGroupInputState": "readonly"
+    }
+  ]
+}

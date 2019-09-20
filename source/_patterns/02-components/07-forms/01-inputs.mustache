@@ -1,0 +1,70 @@
+<h4 class="pl-pattern-subtitle">Size</h4>
+<div class="row">
+  {{# inputTextSize}}
+  <div class="col-xs-6 col-md-4">
+    {{> components-input-text }}
+  </div>
+  {{/ inputTextSize}}
+</div>
+
+<h4 class="pl-pattern-subtitle">Shapes</h4>
+<div class="row">
+  {{# inputTextShape}}
+  <div class="col-xs-6 col-md-4">
+    {{> components-input-text }}
+  </div>
+  {{/ inputTextShape}}
+</div>
+
+<h4 class="pl-pattern-subtitle">States</h4>
+<div class="row list-unstyled">
+  {{# inputTextState}}
+  <div class="col-xs-6 col-md-4">
+    {{> components-input-text}}
+  </div>
+  {{/ inputTextState}}
+  <div class="col-xs-6 col-md-4">
+    <div class="form-group has-clear">
+      <label for="form-group-input-clear">Input has clear button</label>
+      <div class="input-group-icon">
+        <input type="text" class="form-control" id="form-group-input-clear" placeholder="Enter text and clear button will appear">
+        <button class="btn-clear">
+          <span class="icon icon-x icon-sm">
+          <span class="sr-only">Clear search input</span>
+        </button>
+      </div>
+    </div>
+  </div>
+  <div class="col-xs-6 col-md-4">
+    <div class="form-group">
+      <label for="form-control-default-one">Error input</label>
+      <input type="text" class="form-control is-invalid" id="form-control-default-one">
+      <div class="valid-feedback feedback-icon">
+        <span class="icon icon-check-circle"></span>
+      </div>
+      <div class="invalid-feedback feedback-icon">
+        <span class="icon icon-warning"></span>
+      </div>
+      <div class="invalid-feedback">
+        Error text goes here
+      </div>
+    </div>
+  </div>
+
+  <div class="col-xs-6 col-md-4">
+    <div class="form-group">
+      <label for="form-control-default-one">Valid textarea</label>
+      <textarea class="form-control is-valid" id="form-control-default-one"></textarea>
+      <div class="valid-feedback feedback-icon">
+        <span class="icon icon-check-circle"></span>
+      </div>
+      <div class="invalid-feedback feedback-icon">
+        <span class="icon icon-warning"></span>
+      </div>
+        <div class="valid-feedback">
+          Error text goes here
+        </div>
+    </div>
+  </div>
+  
+</div>

@@ -1,0 +1,75 @@
+{{# en-ligne}}
+  {{{ content }}}
+  {{# has-call-to-action}}
+  <div class="mb-4">
+    <a href="{{ cta-url }}" class="btn btn-primary btn-lg">{{ cta-title }}</a>
+  </div>
+  {{/ has-call-to-action}}
+  {{# has-mode-paiement}}
+  <h4>Modes de paiements</h4>
+  <ul class="mb-4">
+    <li>Mode de paiement standard pour tous les services numérique</li>
+    <li>Mode de paiement</li>
+    <li>Mode de paiement</li>
+  </ul>
+  {{/ has-mode-paiement}}
+  {{{ extra-content }}}
+{{/ en-ligne}}
+
+{{# telephone}}
+  {{# list-icon}}
+  {{# nom-service}}
+  <h4>{{ nom-service}}</h4>
+  {{/ nom-service}}
+  <div class="mb-2">
+    {{> components-list-item}}
+  </div>
+  {{/ list-icon}}
+  {{# horaire}}
+  <p>Du lundi au vendredi : de 8 h 30 à 20 h 30 (Copydeck ?)<br>
+  Samedi, dimanche et jours fériés : de 9 h à 17 h</p>
+  {{/ horaire}}
+  {{{ extra-content }}}
+{{/ telephone}}
+
+{{# en-personne}}
+  {{# list-icon}}
+  <h4>{{ nom-service }}</h4>
+  <div class="mb-2">
+    {{> components-list-item}}
+  </div>
+  {{/ list-icon}}
+  {{# has-mode-paiement}}
+  <h4>Modes de paiements</h4>
+  <p>Les modes de paiement disponibles peuvent varié selon le lieu. Texte standard pour les services en personne.</p>
+  {{/ has-mode-paiement}}
+  {{{ extra-content }}}
+{{/ en-personne}}
+
+{{# courrier}}
+  {{# list-icon}}
+  <h4>{{ nom-service }}</h4>
+  <div class="mb-2">
+    {{> components-list-item}}
+  </div>
+  {{/ list-icon}}
+  {{# has-mode-paiement}}
+  <h4>Modes de paiements</h4>
+  <ul>
+    <li>Mode de paiement selon le canal de communication</li>
+    <li>Mode de paiement</li>
+    <li>Mode de paiement</li>
+  </ul>
+  {{/ has-mode-paiement}}
+  {{{ extra-content }}}
+{{/ courrier}}
+
+{{# courriel}}
+  {{{ content }}}
+  {{# list-icon}}
+  <div class="mb-4">
+    {{> components-list-item}}
+  </div>
+  {{/ list-icon}}
+  {{{ extra-content }}}
+{{/ courriel}}

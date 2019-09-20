@@ -83,6 +83,14 @@
     a {
       line-height: $modal-title-line-height;
     }
+
+    .modal-footer-buttons {
+      margin-left: auto;
+      justify-content: end;
+      button + button {
+        margin-left: 1rem;
+      }
+    }
   }
 
   .modal-footer-logo {

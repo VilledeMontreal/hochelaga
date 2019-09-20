@@ -1,0 +1,45 @@
+{
+  "combo-box-title-class": "sr-only",
+  "formAttributes": {
+    "input": {
+      "placeholder": "Rechercher une information ou un service"
+    }
+  },
+  "applicationName": "Nom de l'application",
+  "user-authenticated": false,
+  "menuItemClass": "menu-items-column",
+  "menuItem": [
+    {
+      "class": false,
+      "url": "#",
+      "menuItemIcon": {
+        "icon-name": "icon-layers"
+      },
+      "menuItemLabel": "Libellé"
+    },
+    {
+      "class": "active",
+      "url": "#",
+      "menuItemIcon": {
+        "icon-name": "icon-map"
+      },
+      "menuItemLabel": "Libellé"
+    },
+    {
+      "class": false,
+      "url": "#",
+      "menuItemIcon": {
+        "icon-name": "icon-website"
+      },
+      "menuItemLabel": "Libellé"
+    },
+    {
+      "class": false,
+      "url": "#",
+      "menuItemIcon": {
+        "icon-name": "icon-info"
+      },
+      "menuItemLabel": "Libellé"
+    }
+  ]
+}

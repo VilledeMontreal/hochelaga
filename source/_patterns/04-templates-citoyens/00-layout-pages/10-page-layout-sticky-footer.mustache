@@ -1,13 +1,15 @@
 {{> styles-link-skip-to-main-content }}
 
-{{> patterns-header-portal }}
+<header class="header-main-nav" role="banner">
+{{> components-navbar }}
+</header>
 
 <main class="site-main-content main-content {{ pageClasses }}" id="main-content" aria-label="Main Content" role="main">
 
   <div class="region-content {{ regionMainClasses }}">
     <div class="container {{ regionMainContainerClasses }}">
       <section class="row">
-        <div class="col-12 col-lg-7 col-xl-8">
+        <div class="col-12 col-lg-7">
           <div class="mb-6">
             <p>Click the button below to hide the contents of this page. Notice how the footer sticks to the bottom of the window even when there’s not enough content to fill the page.</p>
             <button class="btn btn-primary" type="button" data-toggle="collapse" data-target="#collapseStickyFooterExample" aria-expanded="false" aria-controls="collapseStickyFooterExample">Toggle content</button>

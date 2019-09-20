@@ -1,0 +1,45 @@
+{
+  "pageClasses": "showing-page-drawers",
+  "menuItemVerticalIconBar": {
+    "menuItemClass": "menu-items-underground menu-items-column menu-items-icon-bar menu-items-revealing-labels",
+    "menuItem": [
+      {
+        "menuItemSeparator": false,
+        "class": false,
+        "url": "link.templates-employes-vue-agent-311-info",
+        "menuItemIcon": {
+          "icon-name": "icon-info"
+        },
+        "menuItemLabel": "Info"
+      },
+      {
+        "menuItemSeparator": false,
+        "class": false,
+        "url": "#",
+        "menuItemIcon": {
+          "icon-name": "icon-book"
+        },
+        "menuItemLabel": "Lexique"
+      },
+      {
+        "class": false,
+        "url": "link.templates-employes-vue-agent-311-signaler",
+        "menuItemIcon": {
+          "icon-name": "icon-comment"
+        },
+        "menuItemLabel": "Signaler"
+      },
+      {
+        "class": "active",
+        "url": "#",
+        "menuItemIcon": {
+          "icon-name": "icon-share"
+        },
+        "menuItemLabel": "Partager"
+      }
+    ]
+  },
+  "menuItemInfo": false,
+  "menuItemSignaler": false,
+  "menuItemPartager": true
+}

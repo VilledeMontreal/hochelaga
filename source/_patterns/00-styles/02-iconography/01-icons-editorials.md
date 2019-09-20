@@ -1,11 +1,6 @@
 ---
 title: Editorial
 ---
-Les icones éditoriaux sont divisés en deux catégories:
-
-1. Employés (Utilisation dans les application des *employés*)
-2. Citoyens (Utilisation dans les site web destiné aux *citoyens*)
-
 #Utilisation 
 
 Pour utiliser les icones editoriaux il y a deux méthodes:

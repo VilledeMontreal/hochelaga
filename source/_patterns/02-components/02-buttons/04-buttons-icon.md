@@ -1,5 +1,5 @@
 ---
-title: Buttons Icon Responsive
+title: Buttons Icon
 ---
 
 #Utilisation

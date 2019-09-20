@@ -1,0 +1,64 @@
+{
+  "pageClasses": "showing-page-drawers",
+  "menuItemVerticalIconBar": {
+    "menuItemClass": "menu-items-underground menu-items-column menu-items-icon-bar menu-items-revealing-labels",
+    "menuItem": [
+      {
+        "menuItemSeparator": false,
+        "class": false,
+        "url": "link.templates-employes-vue-agent-311-info",
+        "menuItemIcon": {
+          "icon-name": "icon-info"
+        },
+        "menuItemLabel": "Info"
+      },
+      {
+        "menuItemSeparator": false,
+        "class": false,
+        "url": "#",
+        "menuItemIcon": {
+          "icon-name": "icon-book"
+        },
+        "menuItemLabel": "Lexique"
+      },
+      {
+        "class": "active",
+        "url": "#",
+        "menuItemIcon": {
+          "icon-name": "icon-comment"
+        },
+        "menuItemLabel": "Signaler"
+      },
+      {
+        "class": false,
+        "url": "link.templates-employes-vue-agent-311-partager",
+        "menuItemIcon": {
+          "icon-name": "icon-share"
+        },
+        "menuItemLabel": "Partager"
+      }
+    ]
+  },
+  "menuItemInfo": false,
+  "menuItemSignaler": {
+    "formGroupSelectProblem": {
+      "formGroupSelectID": "form-group-signaler-problem",
+      "formGroupSelectLabel": "Problème rencontré",
+      "formGroupInputRequired": true,
+      "formGroupSelect": {
+        "defaultOption": "Mauvaise orthographe",
+        "options": [
+          {
+            "option-text" : "Option 1",
+            "option-value" : "option-1"
+          },
+          {
+            "option-text" : "Option 2",
+            "option-value" : "option-2"
+          }
+        ]
+      }
+    }
+  },
+  "menuItemPartager": false
+}

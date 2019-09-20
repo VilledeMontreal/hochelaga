@@ -1,36 +1,9 @@
 {
   "navbarPosition": "fixed-top",
   "pageClasses": "mt-7 mt-lg-9",
-  "header-back-link": {
-    "link-icon": {
-      "url": "#",
-      "icon": "icon-arrow-left", 
-      "link-icon-label": "Touts les sujets"
-    }
-  },
+  "header-back-link": false,
   "heading": "Titre du sujet d'une longueur de 80 caractères maximum",
-  "has-badges": {
-    "badges": [
-      {
-        "badge": "Libellé",
-        "badgeClass": "badge-secondary",
-        "badge-sr-text": "",
-        "badgeUrl": "#"
-      },
-      {
-        "badge": "Libellé",
-        "badgeClass": "badge-secondary",
-        "badge-sr-text": "",
-        "badgeUrl": "#"
-      },
-      {
-        "badge": "Libellé",
-        "badgeClass": "badge-secondary",
-        "badge-sr-text": "",
-        "badgeUrl": "#"
-      }
-    ]
-  },
+  "has-badges": false,
   "publicationDate": {
     "dateTimeText": "1 août 2019",
     "dateTimeFormat": "2019-08-01"
@@ -43,11 +16,7 @@
       "buttonUrl": "#",
       "buttonText": "Appel à l'action"
     },
-    "module-emphasis": {
-      "isCitation": false,
-      "blockquote-classes": false,
-      "blockquote-footer": false
-    },
+    "module-emphasis": true,
     "module-message": {
       "alertClass": "alert-warning alert-with-icon",
       "alertTitle": "Titre du message (optionnel)",
@@ -194,16 +163,19 @@
       "listGroupClass": "list-group-lg",
       "listGroup": [
         {
+          "url": "test.pdf",
           "icon-name": "icon-file-pdf",
           "text": "Titre du document [PDF - 2 Mo]",
           "class": "document-pdf"
         },
         {
+          "url": "test.pdf",
           "icon-name": "icon-file-pdf",
           "text": "Titre du document [PDF - 2 Mo]",
           "class": "document-pdf"
         },
         {
+          "url": "test.docx",
           "icon-name": "icon-file",
           "text": "Titre du document",
           "class": "document"
@@ -335,7 +307,8 @@
     "listGroupClass": false,
     "listGroup": [
       {
-        "icon-name": "icon-affaires-economie",
+        "url": "#",
+        "icon-name": "icon-affaires-et-economie",
         "text": "Titre du sujet sur plusieurs lignes si nécessaire",
         "class": false
       },
@@ -345,7 +318,7 @@
         "class": false
       },
       {
-        "icon-name": "icon-maison-logement",
+        "icon-name": "icon-maison-et-logement",
         "text": "Limite de 5 sujets",
         "class": false
       },

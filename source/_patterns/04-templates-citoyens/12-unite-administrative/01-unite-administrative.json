@@ -1,24 +1,9 @@
 {
   "navbarPosition": "fixed-top",
   "pageClasses": "mt-7 mt-lg-9",
-  "header-back-link": {
-    "link-icon": {
-      "url": "#",
-      "icon": "icon-arrow-left", 
-      "link-icon-label": "Touts les sujets"
-    }
-  },
+  "header-back-link": false,
   "heading": "Nom de l'unité administrative",
-  "has-badges": {
-    "badges": [
-      {
-        "badge": "Unités administratives",
-        "badgeClass": "badge-secondary",
-        "badge-sr-text": "",
-        "badgeUrl": "#"
-      }
-    ]
-  },
+  "has-badges": false,
   "publicationDate": {
     "dateTimeText": "226 août 2019",
     "dateTimeFormat": "2019-08-26"
@@ -30,16 +15,19 @@
     "listGroupClass": "list-group-lg",
     "listGroup": [
       {
+        "url": "test.pdf",
         "icon-name": "icon-file-pdf",
         "text": "Plan ou politique XYZ [PDF - 2 Mo]",
         "class": "document-pdf"
       },
       {
+        "url": "test.pdf",
         "icon-name": "icon-file-pdf",
         "text": "Titre du document [PDF - 2 Mo]",
         "class": "document-pdf"
       },
       {
+        "url": "test.doc",
         "icon-name": "icon-file",
         "text": "Titre du document",
         "class": "document"
@@ -50,16 +38,19 @@
     "listGroupClass": "list-group-lg",
     "listGroup": [
       {
+        "url": "test.pdf",
         "icon-name": "icon-dot-bullet",
         "text": "Lien de référence interne ou externe",
         "class": false
       },
       {
+        "url": "https://google.ca",
         "icon-name": "icon-dot-bullet",
         "text": "Lien de référence interne ou externe",
         "class": false
       },
       {
+        "url": "https://beta.montreal.ca/test",
         "icon-name": "icon-dot-bullet",
         "text": "Lien de référence interne ou externeu",
         "class": false
@@ -67,23 +58,22 @@
     ]
   },
   "module-texte-optionnel": true,
-  "module-emphasis": {
-    "isCitation": false,
-    "blockquote-classes": false,
-    "blockquote-footer": false
-  },
+  "module-emphasis": true,
   "listAutoProgrammes": {
     "listGroupClass": false,
     "listGroup": [
       {
+        "url": "/lien-interne",
         "text": "Titre du programme",
         "class": false
       },
       {
+        "url": "https://google.ca",
         "text": "Titre du programme",
         "class": false
       },
       {
+        "url": "#",
         "text": "Titre du programme",
         "class": false
       }
@@ -133,6 +123,7 @@
   "sb-block-nous-joindre": {
     "list": [
       {
+        "hasIcon": true,
         "icon-name": "icon-email",
         "listItemAction": true,
         "url": "mailto:test@montreal.ca",
@@ -140,27 +131,31 @@
         "listExtraContent": "Texte complémentaire optionnel"
       },
       {
+        "hasIcon": true,
         "icon-name": "icon-phone",
         "listItemAction": false,
         "text": "3-1-1",
         "listExtraContent": "<p>De l’extérieur de Montréal : 514 872-0311</p><p>Du lundi au vendredi : de 8 h 30 à 20 h 30 Samedi, dimanche et jours fériés : de 9 h à 17 h</p><p>Texte complémentaire optionnel.</p>"
       },
       {
+        "hasIcon": true,
         "icon-name": "icon-phone",
         "listItemAction": false,
         "text": "9-1-1",
         "listExtraContent": "Services d'urgence"
       },
       {
+        "hasIcon": true,
         "icon-name": "icon-phone",
         "listItemAction": false,
         "text": "Nom du service",
         "listExtraContent": "514 555-5555, poste 123"
       },
       {
+        "hasIcon": true,
         "icon-name": "icon-externallink",
         "listItemAction": true,
-        "url": "#",
+        "url": "https://ville.montreal.qc.ca/formulaires",
         "text": "Formulaire en ligne",
         "listExtraContent": "Texte complémentaire optionnel"
       }
@@ -172,27 +167,27 @@
       {
         "icon-name": "icon-social-facebook",
         "text": "Facebook",
-        "url": "#"
+        "url": "https://facebook.com"
       },
       {
         "icon-name": "icon-social-instagram",
         "text": "Instagram",
-        "url": "#"
+        "url": "https://instagram.com"
       },
       {
         "icon-name": "icon-social-linkedin",
         "text": "LinkedIn",
-        "url": "#"
+        "url": "https://linkedin.com"
       },
       {
         "icon-name": "icon-social-twitter",
         "text": "Twitter",
-        "url": "#"
+        "url": "https://twitter.com"
       },
       {
         "icon-name": "icon-social-youtube",
         "text": "Youtube",
-        "url": "#"
+        "url": "https://youtube.com"
       }
     ]
   }
