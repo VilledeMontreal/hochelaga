@@ -288,3 +288,58 @@ a {
   overflow: hidden;
   text-overflow: ellipsis;
 }
+
+// Definition List
+dl {
+  @include font-size($font-size-base);
+  line-height: $line-height-md;
+  // Smaller variant
+  &.dl-sm {
+    @include font-size($font-size-sm);
+    line-height: $line-height-sm;
+    dd {
+      line-height: $line-height-md;
+    }
+  }
+  > :last-child {
+    margin-bottom: 0;
+  }
+}
+
+.dl-item {
+  margin-bottom: 1rem;
+  > :last-child {
+    margin-bottom: 0;
+  }
+}
+
+dt {
+  color: $neutral-primary;
+
+  + .dd-translated {
+    margin-top: .5rem;
+  }
+}
+
+dd {
+  line-height: $line-height-lg;
+  margin-bottom: .5rem;
+  &.dd-translated {
+    color: $neutral-primary;
+    font-style: italic;
+    padding-left: 1rem;
+    position: relative;
+    &:before {
+      content: "";
+      background: $neutral-stroke;
+      position: absolute;
+      left: 0;
+      top: 0;
+      height: 100%;
+      width: 2px;
+    }
+  }
+  + dt {
+    padding-top: .5rem;
+  }
+}

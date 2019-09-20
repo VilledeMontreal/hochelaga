@@ -9,7 +9,7 @@
   <div class="region-content">
     <div class="container">
        <section class="row{{# sidebarRight }} justify-content-between{{/ sidebarRight}}{{^ sidebarRight}} justify-content-center{{/ sidebarRight}}">
-        <div class="col-12 col-lg-7">
+        <div class="col-12{{# sidebarRight }} col-lg-7{{/ sidebarRight}}{{^ sidebarRight}} col-lg-6{{/ sidebarRight}}">
           <header class="content-header">
             {{# header-back-link}}
             <div class="header-back-link">
@@ -79,7 +79,7 @@
       </section>
 
       <section class="row{{# sidebarRight }} justify-content-between{{/ sidebarRight}}{{^ sidebarRight}} justify-content-center{{/ sidebarRight}}">
-        <div class="col-12 col-lg-7">
+        <div class="col-12{{# sidebarRight }} col-lg-7{{/ sidebarRight}}{{^ sidebarRight}} col-lg-6{{/ sidebarRight}}">
         {{> components-feedback-form}}
         </div>
       </section>

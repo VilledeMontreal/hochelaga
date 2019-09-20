@@ -1,0 +1,181 @@
+{
+  "pageClasses": "showing-page-drawers",
+  "menuItemVerticalIconBar": {
+    "menuItemClass": "menu-items-underground menu-items-column menu-items-icon-bar menu-items-revealing-labels",
+    "menuItem": [
+      {
+        "menuItemSeparator": false,
+        "class": false,
+        "url": "link.templates-employes-vue-agent-311-info",
+        "menuItemIcon": {
+          "icon-name": "icon-info"
+        },
+        "menuItemLabel": "Info"
+      },
+      {
+        "menuItemSeparator": false,
+        "class": "active",
+        "url": "#",
+        "menuItemIcon": {
+          "icon-name": "icon-book"
+        },
+        "menuItemLabel": "Lexique"
+      },
+      {
+        "class": false,
+        "url": "link.templates-employes-vue-agent-311-signaler",
+        "menuItemIcon": {
+          "icon-name": "icon-comment"
+        },
+        "menuItemLabel": "Signaler"
+      },
+      {
+        "class": false,
+        "url": "link.templates-employes-vue-agent-311-partager",
+        "menuItemIcon": {
+          "icon-name": "icon-share"
+        },
+        "menuItemLabel": "Partager"
+      }
+    ]
+  },
+  "drawerInfo": false,
+  "drawerSignaler": false,
+  "drawerPartager": false,
+  "drawerLexique": {
+    "lexiqueSection": [
+      {
+        "id": "A",
+        "label": "A",
+        "dl-classes": "dl-sm mb-2",
+        "dl-item": [
+          {
+            "term": "Aenean",
+            "definition": "Aenean mattis tincidunt sapien a venenatis.",
+            "dd-translation": "Aenean english translation",
+            "dd-image": {
+              "media": {
+                "src": "https://picsum.photos/id/1024/768/432",
+                "alt": "Image alt text.",
+                "copyright": false
+              },
+              "figure": {
+                "caption": "Aenean vel blandit lectus. Aenean ex enim, tempus et ipsum eu, tristique faucibus nunc." 
+              }
+            }
+          },
+          {
+            "term": "Aliquam",
+            "definition": false,
+            "dd-translation": "Aliquam english translation"
+          }
+        ]
+      },
+      {
+        "id": "B",
+        "label": "B",
+        "dl-classes": "dl-sm mb-2",
+        "dl-item": [
+          {
+            "term": "Baenean",
+            "definition": "Baenean mattis tincidunt sapien a venenatis.",
+            "dd-translation": "Baenean english translation"
+          },
+          {
+            "term": "Baliquam",
+            "definition": false,
+            "dd-translation": "Baliquam english translation"
+          }
+        ]
+      },
+      {
+        "id": "F",
+        "label": "F",
+        "dl-classes": "dl-sm mb-2",
+        "dl-item": [
+          {
+            "term": "Fringilla",
+            "definition": "Integer fringilla dui sed mauris euismod iaculis. Quisque lorem ex, blandit quis bibendum in, scelerisque nec nisi.",
+            "dd-translation": "Fringilla english translation"
+          },
+          {
+            "term": "Fusce",
+            "definition": false,
+            "dd-translation": "Fusce english translation."
+          },
+          {
+            "term": "Finibus",
+            "definition": false,
+            "dd-translation": "Finibus english translation"
+          }
+        ]
+      },
+      {
+        "id": "M",
+        "label": "M",
+        "dl-classes": "dl-sm mb-2",
+        "dl-item": [
+          {
+            "term": "Mauris",
+            "definition": "Quisque et lorem mauris. Pellentesque augue mi, tincidunt et leo nec, suscipit venenatis purus.",
+            "dd-translation": "Mauris english translation"
+          },
+          {
+            "term": "Maximus",
+            "definition": false,
+            "dd-translation": "Maximus english translation."
+          },
+          {
+            "term": "Malesuada",
+            "definition": false,
+            "dd-translation": "Malesuada english translation"
+          }
+        ]
+      },
+      {
+        "id": "T",
+        "label": "T",
+        "dl-classes": "dl-sm mb-2",
+        "dl-item": [
+          {
+            "term": "Tauris",
+            "definition": "Quisque et lorem mauris. Pellentesque augue mi, tincidunt et leo nec, suscipit venenatis purus.",
+            "dd-translation": "Tauris english translation"
+          },
+          {
+            "term": "Taximus",
+            "definition": false,
+            "dd-translation": "Taximus english translation."
+          },
+          {
+            "term": "Talesuada",
+            "definition": false,
+            "dd-translation": "Talesuada english translation"
+          }
+        ]
+      },
+      {
+        "id": "V",
+        "label": "V",
+        "dl-classes": "dl-sm mb-2",
+        "dl-item": [
+          {
+            "term": "Vauris",
+            "definition": "Quisque et lorem mauris. Pellentesque augue mi, tincidunt et leo nec, suscipit venenatis purus.",
+            "dd-translation": "Vauris english translation"
+          },
+          {
+            "term": "Vaximus",
+            "definition": false,
+            "dd-translation": "Vaximus english translation."
+          },
+          {
+            "term": "Valesuada",
+            "definition": false,
+            "dd-translation": "Valesuada english translation"
+          }
+        ]
+      }
+    ]
+  }
+}

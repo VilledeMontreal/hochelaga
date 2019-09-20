@@ -118,7 +118,7 @@
 
 // Accodeon Listed
 .accordeon-listed {
-  .collapsible-item {
+  > .collapsible-item {
     border: none;
     border-top: 1px solid $neutral-stroke;
     border-radius: 0;
@@ -161,7 +161,7 @@
   }
 
   &.accordeon-listed-sm {
-    .collapsible-item {
+    > .collapsible-item {
       .collapsible-header {
         a {
           @include font-size($font-size-sm);
