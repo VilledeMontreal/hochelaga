@@ -4,7 +4,22 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](http://keepachangelog.com/en/1.0.0/)
 and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.html).
 
-## [4.1.0] - unreleased
+
+## [4.2.0] - unreleased
+
+## Added
+- Lexique pattern.
+- Vue de l'agent - Lexique
+- 2 new illustratives icons: icon-notifications and icon-profile.
+
+## Changed
+- Definition list theming and variants.
+
+## Fixed
+- Column classes fixed in demarche templates.
+
+
+## [4.1.0] - 2019-09-20
 
 ## Added
 - Cookies Consent templates: Patterns/Cookies Consent
@@ -95,5 +110,6 @@ The version 3 is now deprecated. Only bug fixes will be considered. Please refer
 
 
 
+[4.1.0]: https://bitbucket.org/villemontreal/boite-outils4-web/src/4.1.0/
 [4.0.1]: https://bitbucket.org/villemontreal/boite-outils4-web/src/4.0.1/
 [4.0.0]: https://bitbucket.org/villemontreal/boite-outils4-web/src/4.0.0/
