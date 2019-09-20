@@ -190,8 +190,13 @@
     }
   }
   .lexique-nav {
+    display: flex;
+    align-items: flex-start;
     ul {
       margin: 0;
+      position: -webkit-sticky;
+      position: sticky;
+      top: 0;
     }
     a {
       @include font-size($font-size-sm);
