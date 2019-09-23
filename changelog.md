@@ -7,6 +7,9 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 
 ## [4.2.0] - unreleased
 
+
+## [4.1.1] - 2019-09-23
+
 ## Added
 - Lexique pattern.
 - Vue de l'agent - Lexique
@@ -17,6 +20,7 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 
 ## Fixed
 - Column classes fixed in demarche templates.
+- Remove all gallery styles that caused issues. Use photoswipe default for now.
 
 
 ## [4.1.0] - 2019-09-20
