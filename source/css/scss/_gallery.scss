@@ -15,7 +15,15 @@
 */
 
 // PhotoSwipe uses Autoprefixer, so vendor prefixed are added automatically when needed.
-@import "~photoswipe/src/css/main-settings";
+$pswp__show-hide-transition-duration: 333ms;
+$pswp__controls-transition-duration: 333ms;
+$pswp__background-color: $black;
+$pswp__placeholder-color: $neutral-primary;
+$pswp__box-sizing-border-box: true; // disable .pswp * { box-sizing:border-box } (in case you already have it in your site css)
+$pswp__root-z-index: 1500;
+$pswp__assets-path: '../images/photoswipe/'; // path to skin assets folder (preloader, PNG and SVG sprite)
+$pswp__error-text-color: $neutral-stroke; // "Image not loaded" text color
+$pswp__include-minimal-style: true;
 
 
 /*
@@ -66,8 +74,8 @@
 .pswp__button,
 .pswp__button--arrow--left:before,
 .pswp__button--arrow--right:before {
-  background: url("../images/photoswipe-vdm-skin.png") 0 0 no-repeat;
-  background-size: 264px 88px;
+  background: url(#{$pswp__assets-path}photoswipe-vdm-skin.png) 0 0 no-repeat;
+  background-size: 149px 60px;
   width: 44px;
   height: 44px;
 }
@@ -78,7 +86,7 @@
   .pswp--svg .pswp__button,
   .pswp--svg .pswp__button--arrow--left:before,
   .pswp--svg .pswp__button--arrow--right:before {
-    background-image: url("../images/photoswipe-vdm-skin.svg");
+    background-image: url(#{$pswp__assets-path}photoswipe-vdm-skin.svg);
   }
 
   .pswp--svg .pswp__button--arrow--left,
