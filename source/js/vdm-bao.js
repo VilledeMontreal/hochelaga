@@ -267,14 +267,13 @@ $('[id^="linkModalIcon"]').click(function() {
     $('#form20 button#cancel').prop('hidden', true);
   }
   
-  // Activate scrollspy to add active class to navAnchors items on scroll
+  // Activate scrollspy for navAnchors to add active class to navAnchors items on scroll
   if($('#navAnchors').length != 0) {
     $('body').scrollspy({
       target: '#navAnchors',
       offset: $("#navAnchors").height()
     });
   }
-
 
   $('.media-gallery').each( function() {
     var $pic     = $(this),
@@ -445,3 +444,31 @@ function showHideCopyright(copyright) {
   const copyrightText = copyright.querySelector('.copyright-text');
   copyrightText.classList.toggle('d-none');
 }
+
+
+(function() {
+  'use strict';
+
+  var section = document.querySelectorAll(".lexique-section");
+  var sections = {};
+  var i = 0;
+
+  var lexique = document.querySelector('.lexique');
+
+  Array.prototype.forEach.call(section, function(e) {
+    sections[e.id] = e.offsetTop;
+  });
+
+  lexique.onscroll = function() {
+    var scrollPosition = document.documentElement.scrollTop || document.body.scrollTop;
+
+    console.log(scrollPosition);
+
+    for (i in sections) {
+      if (sections[i] <= scrollPosition) {
+        document.querySelector('.active').setAttribute('class', ' ');
+        document.querySelector('a[href*=' + i + ']').setAttribute('class', 'active');
+      }
+    }
+  };
+})();

@@ -15,7 +15,7 @@
     <ul class="list-unstyled">
       {{# lexiqueSection}}
       <li>
-        <a href="#{{ id }}">{{ label }}</a>
+        <a href="#{{ id }}" {{# menu-active}}class="active"{{/ menu-active}}>{{ label }}</a>
       </li>
       {{/ lexiqueSection}}
     </ul>
