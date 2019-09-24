@@ -1,0 +1,23 @@
+<div class="lexique d-flex">  
+  <div class="lexique-content">
+    {{# lexiqueSection}}
+    <div class="lexique-section" id="{{ id }}">
+      <div class="lexique-heading">
+        <span class="lexique-heading-label">{{ label }}</span>
+      </div>
+      <div class="lexique-content">
+        {{> styles-definition-list}}
+      </div>
+    </div>
+    {{/ lexiqueSection}}
+  </div>
+  <div class="lexique-nav">
+    <ul class="list-unstyled">
+      {{# lexiqueSection}}
+      <li>
+        <a href="#{{ id }}">{{ label }}</a>
+      </li>
+      {{/ lexiqueSection}}
+    </ul>
+  </div>
+</div>

@@ -1,8 +1,16 @@
-<dl>
-	<dt>{{ term }}</dt>
-	<dd>{{ definition }}</dd>
-  <dt>{{ term }}</dt>
-	<dd>{{ definition }}</dd>
-  <dt>{{ term }}</dt>
-	<dd>{{ definition }}</dd>
+<dl {{# dl-classes}}class="{{ dl-classes }}"{{/ dl-classes}}>
+  {{# dl-item}}
+  <div class="dl-item">
+    <dt>{{ term }}</dt>
+    {{# definition}}
+    <dd>{{ definition }}</dd>
+    {{/ definition}}
+    {{# dd-translation}}
+    <dd class="dd-translated" lang="en">{{ dd-translation }}</dd>
+    {{/ dd-translation}}
+    {{# dd-image}}
+    <dd class="dd-image pt-1">{{> styles-figure }}</dd>
+    {{/ dd-image}}
+  </div>
+  {{/ dl-item}}
 </dl>

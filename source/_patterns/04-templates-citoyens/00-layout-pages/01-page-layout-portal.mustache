@@ -14,8 +14,8 @@
 
   <div class="region-content {{ regionMainClasses }}">
     <div class="container {{ regionMainContainerClasses }}">
-      <section class="row{{# has-left-notch }} justify-content-between{{/ has-left-notch}}{{^ has-left-notch}} justify-content-center{{/ has-left-notch}}">
-        <div class="col-12 {{ regionMainContentClasses }}">
+      <section class="row{{# sidebarRight }} justify-content-between{{/ sidebarRight}}{{^ sidebarRight}} justify-content-center{{/ sidebarRight}}">
+        <div class="col-12{{# sidebarRight }} col-lg-7{{/ sidebarRight}}{{^ sidebarRight}} col-lg-6{{/ sidebarRight}}">
           <header class="content-header">
             {{# header-back-link}}
             <div class="header-back-link">

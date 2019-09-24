@@ -12,7 +12,7 @@
     </iframe>
   </div>
   <div class="page-drawers">
-    {{# menuItemInfo}}
+    {{# drawerInfo}}
     <div class="menu-item-content" id="vdl311-info">
       <div class="menu-item-content-header">
         <div class="mb-2">
@@ -35,8 +35,18 @@
       </div>
       {{/ help}}
     </div>
-    {{/ menuItemInfo}}
-    {{# menuItemSignaler}}
+    {{/ drawerInfo}}
+    {{# drawerLexique}}
+    <div class="menu-item-content" id="vdl311-lexique">
+      <div class="menu-item-content-header">
+        <div class="h4 mb-0">Lexique XYZ</div>
+      </div>
+      <div class="pt-2 pr-0 pb-2 pl-2">
+      {{> patterns-lexique}}
+      </div>
+    </div>
+    {{/ drawerLexique}}
+    {{# drawerSignaler}}
     <div class="menu-item-content" id="vdl311-signaler">
       <div class="menu-item-content-header">
         <div class="h4 mb-0">Signaler...</div>
@@ -52,8 +62,8 @@
         </form>
       </div>
     </div>
-    {{/ menuItemSignaler}}
-    {{# menuItemPartager}}
+    {{/ drawerSignaler}}
+    {{# drawerPartager}}
     <div class="menu-item-content" id="vdl-311-partager">
       <div class="menu-item-content-header">
         <div class="h4 mb-0">Partager...</div>
@@ -67,7 +77,7 @@
         </form>
       </div>
     </div>
-    {{/ menuItemPartager}}
+    {{/ drawerPartager}}
   </div>
 </main>
 
