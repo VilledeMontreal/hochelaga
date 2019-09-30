@@ -567,16 +567,22 @@ $dropdown-header-color:             $neutral-primary;
 
 // Pagination
 
-$pagination-padding-y:              0.625rem;
-$pagination-padding-x:              1.25rem;
-$pagination-padding-y-sm:           .5rem;
-$pagination-padding-x-sm:           1rem;
-$pagination-padding-y-lg:           1rem;
-$pagination-padding-x-lg:           2rem;
+$pagination-border-width:           1px;
 
-$pagination-icon-padding:           0.75rem;
-$pagination-icon-padding-sm:        0.5rem;
-$pagination-icon-padding-lg:        1.15rem;
+$pagination-padding-y:              calc(0.625rem - #{$pagination-border-width});
+$pagination-padding-x:              1rem;
+$pagination-padding-y-sm:           calc(0.5rem - #{$pagination-border-width});
+$pagination-padding-x-sm:           .75rem;
+$pagination-padding-y-lg:           calc(1rem - #{$pagination-border-width});
+$pagination-padding-x-lg:           1.4375rem;
+
+$pagination-icon-size:              $icon-md;
+$pagination-icon-size-sm:           $icon-sm;
+$pagination-icon-size-lg:           1.75rem;
+
+$pagination-icon-padding:           calc(.5rem - #{$pagination-border-width});
+$pagination-icon-padding-sm:        calc(.375rem - #{$pagination-border-width});
+$pagination-icon-padding-lg:        calc(.875rem - #{$pagination-border-width});
 
 $pagination-line-height:            $line-height-sm;
 
@@ -589,12 +595,12 @@ $pagination-hover-color:            $primary;
 $pagination-hover-bg:               $highlight-light;
 $pagination-hover-border-color:     $neutral-stroke;
 
-$pagination-active-color:           $white;
-$pagination-active-bg:              $primary;
+$pagination-active-color:           $primary;
+$pagination-active-bg:              $highlight-light;
 $pagination-active-border-color:    $neutral-stroke; 
 
-$pagination-disabled-color:         $neutral-stroke;
-$pagination-disabled-bg:            $white;
+$pagination-disabled-color:         $neutral-secondary;
+$pagination-disabled-bg:            $neutral-underground-1;
 $pagination-disabled-border-color:  $neutral-stroke;
 
 

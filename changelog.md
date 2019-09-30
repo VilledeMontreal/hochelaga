@@ -9,7 +9,7 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 
 ## Added
 - 2 new Utility icons: table et steps.
-- 2 new Editorial icons: news et not-found.
+- 3 new Editorial icons: news, ticket et not-found.
 - Flyout component.
 - Div variant for list-item component.
 - Lexique pattern.
@@ -30,6 +30,7 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 - Fix spacing in Programme template.
 - Template employé - Vue de l'agent 311 - Finalisation.
 - White background for main-navbar.
+- Mise à jour style pagination.
 
 ## Fixed
 - Prevent vdm-icon-system from cleaning too much rules from SVG, leading to some fill occuring where it shouldn't.
