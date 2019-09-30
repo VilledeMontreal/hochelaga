@@ -1,0 +1,154 @@
+.flyout {
+  position: fixed;
+  z-index: $zindex-modal;
+  margin: 1rem;
+  transition: .3s transform;
+
+  &.show {
+    transform: $flyout-show-transform;
+  }
+
+   // Flyout Top behavior
+   &.flyout-top {
+    top: 0;
+    margin-top: 0;
+    transform: translateY(-100%);
+    .flyout-content{
+      @include border-top-radius(0);
+    }
+
+    &.show {
+      transform: translateY(0);
+    }
+  }
+
+  &.flyout-bottom {
+    bottom: 0;
+    margin-bottom: 0;
+    transform: translateY(100%);
+    .flyout-content {
+      @include border-bottom-radius(0);
+    }
+
+    &.show {
+      transform: translateY(0);
+    }
+  }
+
+  // Flyout Left behavior
+  &.flyout-left {
+    left: 0;
+    margin-left: 0;
+    transform: translateX(-100%);
+    .flyout-content {
+      @include border-left-radius(0);
+    }
+    &.show {
+      transform: translateX(0);
+    }
+  }
+
+  // Flyout Right behavior
+  &.flyout-right {
+    right: 0;
+    margin-right: 0;
+    transform: translateX(100%);
+    .flyout-content {
+      @include border-right-radius(0);
+    }
+    &.show {
+      transform: translateX(0);
+    }
+  }
+
+  // Custom vdl311 positionning
+  &.flyout-custom-right {
+    right: 356px;
+    @include media-breakpoint-up(lg) {
+      right: 532px;
+    }
+  }
+}
+
+// Actual flyout
+.flyout-content {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  color: $flyout-content-color;
+  pointer-events: auto;
+  background-color: $flyout-content-bg;
+  background-clip: padding-box;
+  @include border-radius($flyout-content-border-radius);
+  box-shadow: $flyout-content-box-shadow-xs;
+  // Remove focus outline from opened flyout
+  outline: 0;
+}
+
+// Flyout header
+// Top section of the flyout w/ title and dismiss
+.flyout-header {
+  display: flex;
+  align-items: flex-start; // so the close btn always stays on the upper right corner
+  flex-shrink: 0;
+  justify-content: space-between; // Put modal header elements (title and dismiss) on opposite ends
+  padding: $flyout-header-padding;
+  border-bottom: $flyout-header-border-width solid $flyout-header-border-color;
+  @include border-top-radius($flyout-content-border-radius);
+
+  .btn-close {
+    padding: $modal-header-padding;
+    // auto on the left force icon to the right even when there is no .modal-title
+    margin: (-$modal-header-padding-y) (-$modal-header-padding-x) (-$modal-header-padding-y) auto;
+
+    // Btn close icon color
+    .icon {
+      @include icon-color($neutral-primary);
+    }
+
+    &:hover {
+      .icon {
+        @include icon-color($neutral-secondary);
+      }
+    }
+  }
+}
+
+// Title text within header
+.modal-title {
+  margin-bottom: 0;
+}
+
+// Flyout body
+// Where all flyout content resides (sibling of .flyout-header and .flyout-footer)
+.flyout-body {
+  position: relative;
+  // Enable `flex-grow: 1` so that the body take up as much space as possible
+  // when should there be a fixed height on `.modal-dialog`.
+  flex: 1 1 auto;
+  overflow-y: auto;
+  padding: $flyout-inner-padding;
+  @include border-bottom-radius($flyout-content-border-radius);
+}
+
+
+// Scale up the modal
+@include media-breakpoint-up(sm) {
+  // Automatically set modal's width for larger viewports
+  .flyout-content {
+    max-width: $flyout-md;
+    margin: 0 auto;
+    @include box-shadow($flyout-content-box-shadow-sm-up);
+
+    &.flyout-sm { max-width: $flyout-sm; }
+  }
+}
+
+@include media-breakpoint-up(lg) {
+  .flyout-content {
+    &.flyout-lg {
+      max-width: $flyout-lg;
+    }
+  }
+}

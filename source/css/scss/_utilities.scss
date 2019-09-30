@@ -60,7 +60,6 @@
   }
 }
 
-
 .showing-page-drawers .page-wrap-iframe {
   margin-right: 300px;
 }
@@ -79,6 +78,11 @@
   .menu-item-content {
     height: 100%;
     overflow: auto;
+  }
+  .content-modules {
+    h2,.h2 {
+      padding-top: 0;
+    }
   }
 }
 

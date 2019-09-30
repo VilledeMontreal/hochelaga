@@ -43,46 +43,49 @@
 
           </header>
           
-          <div class="lead content-module-stacked">
+          <div class="lead">
             {{{ lead }}}
           </div>
-
-          {{# module-anchors}}
-          <div class="content-module-stacked">
-            <div class="wrapper">
-              <h2 class="h5 mb-1">Dans cette page :</h2>
-              {{> components-list-item-link}}
+          
+          <div class="content-modules">
+            {{# module-anchors}}
+            <div class="mb-8">
+              <div class="wrapper">
+                <h2 class="h5 mb-1">Dans cette page :</h2>
+                {{> components-list-item-link}}
+              </div>
             </div>
-          </div>
-          {{/ module-anchors}}
+            {{/ module-anchors}}
 
-          {{# module-volets}}
-          {{> templates-citoyens-content-programme}}
-          {{/ module-volets}}
+            {{# module-volets}}
+            {{> templates-citoyens-content-programme}}
+            {{/ module-volets}}
 
-          {{# module-reglements}}
-          <div class="content-module-stacked">
-            <h2>Règlements</h2>
-            {{> components-list-item-link }}
-          </div>
-          {{/ module-reglements}}
+            {{# module-reglements}}
+            <div class="content-module-stacked">
+              <h2>Règlements</h2>
+              {{> components-list-item-link }}
+            </div>
+            {{/ module-reglements}}
 
-          {{# module-partners}}
-          <div class="content-module-stacked">
-            <h2>Partenaires</h2>
-            {{{ partnerText }}}
-            {{# listPartners}}
-            <ul {{# hasLogos}}class="mt-0 list-inline"{{/ hasLogos}}>
-              {{# listPartners.items }}
-              <li {{# hasLogos}}class="list-inline-item"{{/ hasLogos}}>
-                {{# hasLogos}}<img src="{{ src }}" alt="{{ alt }}" class="img-fluid" />{{/hasLogos}}
-                {{^hasLogos}}{{ partnerName }}{{/ hasLogos}}
-              </li>
-              {{/ listPartners.items }}
-            </ul>
-            {{/ listPartners}}
+            {{# module-partners}}
+            <div class="content-module-stacked">
+              <h2>Partenaires</h2>
+              {{{ partnerText }}}
+              {{# listPartners}}
+              <ul {{# hasLogos}}class="mt-0 list-inline"{{/ hasLogos}}>
+                {{# listPartners.items }}
+                <li {{# hasLogos}}class="list-inline-item"{{/ hasLogos}}>
+                  {{# hasLogos}}<img src="{{ src }}" alt="{{ alt }}" class="img-fluid" />{{/hasLogos}}
+                  {{^hasLogos}}{{ partnerName }}{{/ hasLogos}}
+                </li>
+                {{/ listPartners.items }}
+              </ul>
+              {{/ listPartners}}
+            </div>
+            {{/ module-partners}}
+
           </div>
-          {{/ module-partners}}
 
         </div>
 

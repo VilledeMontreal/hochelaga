@@ -31,7 +31,7 @@
   <div class="list-item-icon {{ listItemClass }}">
     {{# listItemAction}}
     <div class="list-item-icon-action">
-      <a href="{{url}}" class="link-has-icon">
+      <a href="{{url}}" class="link-has-icon" {{# toggle}}data-toggle="{{ type }}" data-target="{{ id }}"{{/ toggle}}>
         <div><span class="icon {{icon-name}}"></span></div>
         <div><span class="link-icon-label">{{ text }}</span></div>
       </a>

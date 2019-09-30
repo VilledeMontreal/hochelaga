@@ -208,7 +208,7 @@ $link-border-width:           1px;
 //
 // Style p element.
 
-$paragraph-margin-bottom:     2rem;
+$paragraph-margin-bottom:     1rem;
 
 
 
@@ -255,7 +255,7 @@ $border-radius:               .25rem;
 $border-width:                1px;
 $border-color:                $neutral-stroke;
 
-$border-radius-lg:            .375rem;
+$border-radius-lg:            .5rem;
 $border-radius-sm:            .125rem;
 
 $component-active-color:      $white;
@@ -422,7 +422,7 @@ $btn-block-spacing-y:         .5rem;
 $btn-border-radius:           4rem;
 $btn-border-radius-sm:        $btn-border-radius;
 $btn-border-radius-lg:        $btn-border-radius;
-$btn-border-radius-squared:   4px;
+$btn-border-radius-squared:   $border-radius;
 
 $btn-transition:              color .15s ease-in-out, background-color .15s ease-in-out, border-color .15s ease-in-out, box-shadow .15s ease-in-out;
 
@@ -489,7 +489,7 @@ $custom-control-indicator-checked-bg:           $primary;
 $custom-control-indicator-checked-disabled-bg:  $custom-control-indicator-disabled-bg;
 
 
-$custom-checkbox-indicator-border-radius:         $border-radius-lg;
+$custom-checkbox-indicator-border-radius:         $border-radius-sm;
 $custom-checkbox-indicator-icon-checked-bg-size:  1.1875rem;  
 $custom-checkbox-indicator-icon-checked:          url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath d='M18.3 7.1c-.5-.5-1.3-.5-1.9 0l-7.1 7.1-1.7-1.7c-.5-.5-1.4-.5-1.9 0s-.5 1.4 0 1.9L8.3 17c.4.4 1.1.5 1.6.2L18.2 9c.6-.6.6-1.4.1-1.9z' fill='%23fff'/%3E%3C/svg%3E");
 $custom-radio-indicator-icon-checked-bg-size:     .625rem;
@@ -508,21 +508,6 @@ $custom-switch-indicator-size:                    calc(#{$custom-switch-control-
 $form-feedback-margin-top:          .5rem;
 $form-feedback-font-size:           $font-size-sm;
 $form-group-margin-bottom:          1rem;
-
-// Checkbox Toggle :on/off switches
-//
-// Will be removed in V4 - we now use custom-switch
-
-$checkbox-toggle-border-width:          2px;
-$checkbox-toggle-border-color:          $primary;
-$checkbox-toggle-border-radius:         40px;
-$checkbox-toggle-border-radius-inside:  30px;
-$checkbox-toggle-height:                40px;
-$checkbox-toggle-width:                 75px;
-$checkbox-toggle-width-inside:          30px;
-$checkbox-toggle-padding:               5px;
-$checkbox-toggle-bg:                    $white;
-$checkbox-toggle-bg-toggled:            $primary;
 
 
 // Navs
@@ -637,10 +622,10 @@ $badge-pill-padding-x:              $spacer;
 // Modals
 
 // Padding applied to the modal body
-$modal-inner-padding:               1rem;
+$modal-inner-padding:               1rem 2rem;
 $modal-dialog-margin:               .5rem;
 $modal-dialog-margin-y-sm-up:       1.75rem;
-$modal-title-line-height:           $line-height-sm;
+$modal-title-line-height:           $line-height-md;
 
 $modal-content-bg:                  $white;
 $modal-content-border-color:        rgba($black, .2);
@@ -648,21 +633,52 @@ $modal-content-border-width:        0;
 $modal-content-box-shadow-xs:       $box-shadow;
 $modal-content-box-shadow-sm-up:    $box-shadow;
 
-
 $modal-backdrop-bg:                 $backdrop-bg;
 $modal-backdrop-opacity:            $backdrop-opacity;
-$modal-header-border-color:         $gray-200;
+$modal-header-border-color:         $neutral-stroke;
 $modal-footer-border-color:         $modal-header-border-color;
-$modal-header-border-width:         $modal-content-border-width;
-$modal-footer-border-width:         $modal-header-border-width;
-$modal-header-padding:              1rem;
+$modal-header-border-width:         $border-width;
+$modal-footer-border-width:         $border-width;
+$modal-header-padding-y:            1rem;
+$modal-header-padding-x:            1rem;
+$modal-header-padding:              $modal-header-padding-y $modal-header-padding-x;
 
-$modal-xl:                          800px;
+$modal-xl:                          1140px;
 $modal-lg:                          800px;
 $modal-md:                          600px;
-$modal-sm:                          600px;
+$modal-sm:                          460px;
 
 $modal-transition:                  transform 300ms ease-out;
+
+// Flyouts
+
+// Padding applied to the flyout body
+$flyout-inner-padding:              1rem;
+
+$flyout-title-line-height:          $line-height-base;
+
+$flyout-content-color:              null;
+$flyout-content-bg:                 $white;
+$flyout-content-border-color:       null;
+$flyout-content-border-width:       $border-width;
+$flyout-content-border-radius:      $border-radius-lg;
+$flyout-content-box-shadow-xs:      $box-shadow;
+$flyout-content-box-shadow-sm-up:   $box-shadow;
+
+$flyout-header-border-color:        $neutral-stroke;
+$flyout-footer-border-color:        $flyout-header-border-color;
+$flyout-header-border-width:        $flyout-content-border-width;
+$flyout-footer-border-width:        $flyout-header-border-width;
+$flyout-header-padding-y:           1rem;
+$flyout-header-padding-x:           1rem;
+$flyout-header-padding:             $flyout-header-padding-y $flyout-header-padding-x; // Keep this for backwards compatibility
+
+$flyout-lg:                         600px;
+$flyout-md:                         460px;
+$flyout-sm:                         320px;
+
+$flyout-show-transform:             none;
+$flyout-transition:                 transform .3s ease-out;
 
 
 // Alerts

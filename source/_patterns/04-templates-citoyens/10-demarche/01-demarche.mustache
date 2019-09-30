@@ -34,13 +34,13 @@
             {{/ publicationDate}}
           </header>
           
-          <div class="lead content-module-stacked">
+          <div class="lead">
             {{{ lead }}}
           </div>
 
           <div class="content-modules">
-            <h2>Module Titre de section</h2>
-            <div class="content-module-stacked">
+            <div class="content-module-stacked mb-8">
+              <h2>Module Titre de section</h2>
               <p>Corps de texte - <i>Italique</i> et <strong>gras</strong>, exposant, indice et caractères spéciaux adipiscing elit. Morbi condimentum sollicitudin erat, quis <a href="#">lien interne</a> ou <a href="https://google.com">lien externe</a> convallis risus. Nullam  posuere odio ligula, hendrerit suscipit ligula congue laoreet. Curabitur eleifend nulla purus, ut pharetra urna efficitur id. Cras lacinia nisi id quam lacinia, et orci aliquam.</p>
               <ul>
                 <li>Liste à puce</li>
@@ -48,6 +48,7 @@
                 <li>Liste à puce</li>
                 <li>Liste à puce</li>
               </ul>
+              <h2>Module Titre de section</h2>
               <ol>
                 <li>Liste numérotée</li>
                 <li>Liste numérotée</li>
@@ -63,8 +64,8 @@
             {{/ hasSelecteurArrondissement}}
 
             {{# hasSelecteurArrondissement}}
-            <h2>Votre arrondissement</h2>
             <div class="content-module-stacked">
+              <h2>Votre arrondissement</h2>
               {{> patterns-arrondissement}}
             </div>
             {{/ hasSelecteurArrondissement}}

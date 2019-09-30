@@ -10,6 +10,7 @@
 <div class="content-module-stacked">
   <p>Courte description optionnelle - corps de texte</p>
 </div>
+
 <div class="content-module-stacked">
   {{# module-table }}
   {{> styles-table }}
@@ -43,24 +44,26 @@
 <div class="content-module-stacked">
   <h4>Documents à fournir</h4>
   <p>Corps de texte complet - avec liste à puce sit amet, consectetur adipiscing elit. Morbi condimentum sollicitudin erat, quis convallis risus. Nullam posuere odio ligula, hendrerit suscipit ligula congue laoreet. Curabitur eleifend nulla purus, ut pharetra urna efficitur id. Cras lacinia nisi id quam lacinia, et orci aliquam.</p>
-
   <h4>Pièces d'identité</h4>
   <p>Un des documents suivants :</p>
-  <ul class="mb-2">
+  <ul>
     <li>Permis de conduire du Québec</li>
     <li>Carte d’assurance maladie du Québec</li>
     <li>Nombre de pièces à présenter variable</li>
   </ul>
+  <div class="mb-2">
   {{> styles-link-list-element("has-icon": true, "icon-right": true, "link-label": "Consulter la liste complète", icon: "icon-arrow-right")}}
-
+  </div>
   <h4>Preuves d'adresse</h4>
   <p>Un des documents suivants :</p>
-  <ul class="mb-2">
+  <ul>
     <li>Facture de services publics (Hydro-Québec, téléphone ou autre) datant de 3 mois ou moins</li>
     <li>Facture d'un établissement d'enseignement datant de 3 mois ou moins</li>
     <li>Nombre de pièces à présenter variable</li>
   </ul>
+  <div class="mb-2">
   {{> styles-link-list-element("has-icon": true, "icon-right": true, "link-label": "Consulter la liste complète", icon: "icon-arrow-right")}}
+  </div>
 </div>
 {{/ module-documents-necessaires}}
 
