@@ -37,7 +37,7 @@
     </div>
     {{/ drawerInfo}}
     {{# drawerLexique}}
-    <div class="menu-item-content" id="vdl311-lexique">
+    <div class="menu-item-content">
       <div class="menu-item-content-header">
         <div class="h4 mb-0">Lexique XYZ</div>
       </div>
@@ -52,6 +52,9 @@
         <div class="h4 mb-0">Signaler...</div>
       </div>
       <div class="p-2">
+        {{# hasMessage}}
+        {{> components-alert}}
+        {{/ hasMessage}}
         <form id="form-vdl311-signaler">
         {{# formGroupSelectProblem}}
         {{> components-select-item}}
@@ -69,6 +72,9 @@
         <div class="h4 mb-0">Partager...</div>
       </div>
       <div class="p-2">
+        {{# hasMessage}}
+        {{> components-alert}}
+        {{/ hasMessage}}
         <form id="form-vdl311-partager">
           <div class="mb-2">http://montreal.ca/collectes/collecte-des-dechets-domestiques</div>
           {{> components-input-text("formGroupInputID": "form-group-partager-email","formGroupInputLabel": "Adresse courriel du destinataire", "formGroupInputRequired": true)}}
@@ -79,6 +85,28 @@
     </div>
     {{/ drawerPartager}}
   </div>
+
+  <!-- TableData modal -->
+  <div class="modal fade" id="exampleTableData" tabindex="-1" role="dialog" aria-labelledby="exampleTableDataLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered modal-lg" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleTableDataLabel">Seuil de faible revenu</h5>
+          <button type="button" class="btn-close close" data-dismiss="modal" aria-label="Close">
+            {{> styles-icon-item("icon-name": "icon-x")}}
+          </button>
+        </div>
+        <div class="modal-body">
+          {{> styles-table}}
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Flyout Aide décision -->
+  {{# aideDecision }}
+  {{> components-flyout-item }}
+  {{/ aideDecision }}
 </main>
 
 

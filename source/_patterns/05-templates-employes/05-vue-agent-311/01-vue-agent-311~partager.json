@@ -41,5 +41,14 @@
   },
   "drawerInfo": false,
   "drawerSignaler": false,
-  "drawerPartager": true
+  "drawerPartager": {
+    "hasMessage": {
+      "alertClass": "alert-success alert-with-icon alert-dismissible",
+      "alertTitle": "Message envoyé avec succès",
+      "alertText": "à citoyen01@gmail.com",
+      "alertIcon": true,
+      "icon-name": "icon-check-circle",
+      "dismissableAlert": true
+    }
+  }
 }

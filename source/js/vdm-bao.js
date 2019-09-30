@@ -446,29 +446,29 @@ function showHideCopyright(copyright) {
 }
 
 
-(function() {
-  'use strict';
 
-  var section = document.querySelectorAll(".lexique-section");
-  var sections = {};
-  var i = 0;
+// Flyout toggle
+const flyouts = document.querySelectorAll(`[data-toggle='flyout']`);
 
-  var lexique = document.querySelector('.lexique');
-
-  Array.prototype.forEach.call(section, function(e) {
-    sections[e.id] = e.offsetTop;
+flyouts.forEach((flyout) => {
+  const flyoutId = flyout.dataset.target;
+  flyout.addEventListener('click', (ev) => {
+    ev.preventDefault();
+    console.log(document.getElementById(flyoutId));
+    document.getElementById(flyoutId).classList.toggle('show');
+    toggleHidden(flyoutId)
   });
+});
 
-  lexique.onscroll = function() {
-    var scrollPosition = document.documentElement.scrollTop || document.body.scrollTop;
 
-    console.log(scrollPosition);
 
-    for (i in sections) {
-      if (sections[i] <= scrollPosition) {
-        document.querySelector('.active').setAttribute('class', ' ');
-        document.querySelector('a[href*=' + i + ']').setAttribute('class', 'active');
-      }
-    }
-  };
-})();
+function toggleHidden(id) {
+  var attr = document.getElementById(id).attributes;
+  
+  if (attr['aria-hidden'].value == "true") {
+    document.getElementById(id).setAttribute("aria-hidden", "false");
+  } else {
+    document.getElementById(id).setAttribute("aria-hidden", "true");
+  }
+  
+}

@@ -81,11 +81,22 @@
       {
         "hasIcon": true,
         "icon-name": "icon-help",
-        "listItemAction": true,
+        "listItemAction": {
+          "toggle": {
+            "type": "flyout",
+            "id": "aideDecisionFlyout01"
+          }
+        },
         "text": "Aide à la décision",
         "listExtraContent": "Distribution, réparation ou remplacement de bac roulant.",
         "listExtraContentClass": "font-size-sm-interface"
       }
     ]
+  },
+  "aideDecision": {
+    "id": "aideDecisionFlyout01",
+    "ariaLabelledBy": "aideDecisionFlyoutLabel",
+    "flyoutPositionClass": "flyout-bottom flyout-custom-right",
+    "flyoutAideDecisionBody": true
   }
 }
