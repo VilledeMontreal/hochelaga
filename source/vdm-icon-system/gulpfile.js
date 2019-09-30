@@ -34,7 +34,7 @@ gulp.task('icon-utility', function() {
         { cleanupNumericValues: { floatPrecision: 2  } },
         { addAttributesToSVGElement: { attributes: ['role="icon"'] } },
         { removeDimensions: true },
-        { removeAttrs: { attrs: ['(fill|fill-rule|style)'] } }
+        { removeAttrs: { attrs: ['(fill|style)'] } }
       ],
        js2svg: {
         pretty: true
@@ -92,7 +92,7 @@ gulp.task('icon-editorial', function() {
         { cleanupNumericValues: { floatPrecision: 2  } },
         { addAttributesToSVGElement: { attributes: ['role="icon"'] } },
         { removeDimensions: true },
-        { removeAttrs: { attrs: ['(fill|fill-rule|style)'] } }
+        { removeAttrs: { attrs: ['(fill|style)'] } }
       ],
       js2svg: {
         pretty: true
