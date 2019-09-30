@@ -7,6 +7,27 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 
 ## [4.2.0] - unreleased
 
+## Added
+- 2 new Utility icons: table et steps.
+- 2 new Editorial icons: news et not-found.
+- Flyout component.
+- Div variant for list-item component.
+- Lexique pattern.
+
+## Changed
+- Paragraphs and list now takes 16px margin-bottom (instead of 32px).
+- Fix spacing inside .content-modules and .content-module-stacked.
+- Handle heading spacing inside .content-modules and .content-module-stacked.
+- Fix spacing in Démarche template.
+- Fix spacing in Unité administrative template.
+- Fix spacing in Sujet template.
+- Fix spacing in Article template.
+- Fix spacing in Programme template.
+- Template employé - Vue de l'agent 311 - Finalisation.
+
+## Fixed
+- Prevent vdm-icon-system from cleaning too much rules from SVG, leading to some fill occuring where it shouldn't.
+
 
 ## [4.1.1] - 2019-09-23
 
@@ -113,7 +134,7 @@ Main navbar, menu and footer are now in their own stylesheet. They will eventual
 The version 3 is now deprecated. Only bug fixes will be considered. Please refer to the old bitbucket repo https://bitbucket.org/villemontreal/boite-outils-web/.
 
 
-
+[4.1.1]: https://bitbucket.org/villemontreal/boite-outils4-web/src/4.1.1/
 [4.1.0]: https://bitbucket.org/villemontreal/boite-outils4-web/src/4.1.0/
 [4.0.1]: https://bitbucket.org/villemontreal/boite-outils4-web/src/4.0.1/
 [4.0.0]: https://bitbucket.org/villemontreal/boite-outils4-web/src/4.0.0/

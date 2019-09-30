@@ -1,16 +1,5 @@
 .modal {
 
-  &.modal-bottom {
-    .modal-dialog {
-      position: fixed;
-      bottom: 0;
-      margin-bottom: 0;
-    }
-    .modal-content {
-      @include border-bottom-radius(0);
-    }
-  }
-
   &.modal-left-pane,
   &.modal-right-pane {
     &.fade {
@@ -40,12 +29,6 @@
     }
   }
 
-  // Custom class for specific height
-  &.modal-fix-height {
-    .modal-content {
-      height: 640px;
-    }
-  }
   
   .btn {
     @extend .btn-squared;
@@ -121,52 +104,6 @@
     }
   }
 
-  // User profile
-  .modal-user {
-    border: 1px solid $neutral-underground-2;
-    display: flex;
-    padding: 1rem 1rem 1rem .75rem;
-    align-items: center;
-    svg {
-      width: 48px;
-      height: 48px;
-      margin-right: 16px;
-    }
-    .user-info {
-      color: $neutral-tertiary;
-      flex: 1;
-      @include font-size($font-size-sm);
-      line-height: $line-height-md;
-      overflow: hidden;
-      span {
-        display: block;
-      }
-      .user-profil {
-        color: $headings-color;
-        @include font-size($font-size-base);
-        font-weight: $font-weight-bold;
-      }
-      .user-name {
-        font-weight: $font-weight-bold;
-      }
-    }
-
-    &:hover {
-      background-color: $neutral-underground-1;
-      cursor: pointer;
-    }
-
-    + .modal-user {
-      margin-top: 1rem;
-    }
-
-    @include media-breakpoint-up(sm) {
-      .vdm {
-        margin-right: 1.5rem;
-      }
-    }
-  }
-
   // Full screen modal on 767px and under
   @include media-breakpoint-down(sm) {
     .modal-dialog {
@@ -193,151 +130,3 @@
     }
   }
 }
-
-// Modal icon variant
-//
-.modal {
-  &.modal-icon {
-    .modal-header,
-    .modal-body {
-      text-align: center;
-    }
-    .modal-header {
-      svg {
-        &.icon-editorial-attention {
-          path {
-            fill: $danger;
-          }
-        }
-      }
-      .btn-close {
-        .vdm {
-          color: $neutral-primary;
-          @include font-size(1.5rem);
-        }
-      }
-    }
-  }
-}
-
-// Modal alert variant
-//
-.modal {
-  &.modal-alert {
-    .modal-header {
-      background-color: $danger;
-      text-align: center;
-      .vdm {
-        color: $white;
-        @include font-size(4.5rem);
-      }
-      .btn-close {
-        .vdm {
-          color: $neutral-primary;
-          @include font-size(1.5rem);
-        }
-      }
-    }
-
-    .modal-content {
-      border-radius: 0;
-      text-align: center;
-    }
-
-    .modal-body {
-      padding: 3rem 2rem;
-      color: $neutral-secondary;
-      .date-time {
-        color: $neutral-secondary;
-        @include font-size($font-size-sm);
-        font-weight: bold;
-        margin-bottom: 2rem;
-      }
-      .modal-title {
-        margin-bottom: 1.5rem;
-      }
-    }
-
-    .modal-footer {
-      padding: 0 2rem 3rem 2rem;
-    }
-    // Full screen modal on 767px and under
-    @include media-breakpoint-down(sm) {
-      .modal-dialog {
-        min-width: 100%;
-        margin: 0;
-      }
-    
-      .modal-content {
-        min-height: 100vh;
-      }
-
-      .modal-body {
-        padding: 2rem;
-      }
-
-    }
-
-    // Switch header to side on 768px and up
-    // Specific to modal alert
-    @include media-breakpoint-up(md) {
-      .modal-header {
-        padding-left: 2.5rem;
-        padding-right: 2.5rem;
-      }
-      .modal-content {
-        text-align: left;
-        flex-direction: row;
-        min-height:  300px;
-      }
-
-      .modal-footer {
-        justify-content: flex-start;
-      }
-    }
-  }
-}
-
-// Nav modal
-// Modal on mobile that becomes static content over 768px
-.modal {
-  
-  @include media-breakpoint-up(md) {
-    // Let's override some modal key elements to make the content static
-    &.nav-modal {
-      display: block !important;
-      opacity: 1 !important;
-      position: static;
-      overflow: visible;
-  
-      .modal-dialog {
-        margin: 0;
-        max-width: none;
-        transform: none !important;
-      }
-
-      // IE had issue with display Flex on modal-content.
-      .modal-content {
-        display: block; // IE needs this or we get weird inheritance.
-      }
-  
-      .modal-body {
-        padding: 0;
-      }
-    }
-  }
-}
-
-// Custom utility modal classes
-.modal {
-  &.modal-right-custom {
-    .modal-dialog {
-      position: fixed;
-      right: 364px;
-      @include media-breakpoint-up(lg) {
-        right: 560px;
-      }
-    }
-  }
-}
-
