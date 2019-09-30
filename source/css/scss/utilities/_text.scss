@@ -116,3 +116,18 @@ a.text-muted {
   @include font-size($font-size-xs);      // 12px
   line-height: $line-height-xs            // 16px
 }
+
+// Remove last-child margin-bottom
+.rm-last-child-mb {
+  > :last-child {
+    margin-bottom: 0;
+  }
+}
+
+// Provide a utility class to give paragraph a smaller margin-bottom
+// We limit this insanity to .content-modules zone
+.element-mb-sm {
+  p, ol, ul {
+    margin-bottom: 1rem;
+  }
+}

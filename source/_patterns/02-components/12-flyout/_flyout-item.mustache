@@ -1,0 +1,19 @@
+
+<div class="flyout {{flyoutPositionClass}}" id="{{id}}" tabindex="-1" role="dialog" aria-labelledby="{{ariaLabelledBy}}" aria-hidden="true">
+  <div class="flyout-content {{flyoutSizeClass}}" role="document">
+    <div class="flyout-header">
+      <h5 class="flyout-title" id="{{ariaLabelledBy}}">Titre</h5>
+      <button type="button" class="btn-close close" data-dismiss="flyout" aria-label="Close">
+        {{> styles-icon-item("icon-name": "icon-x")}}
+      </button>
+    </div>
+    <div class="flyout-body">
+      {{# flyoutDefaultBody}}
+      <p>Et duo takimata elitr sit clita et accusam voluptua. Diam dolor duo et consetetur lorem gubergren, no gubergren diam tempor et sadipscing et et. Voluptua rebum et dolor sanctus gubergren.</p>
+      {{/ flyoutDefaultBody}}
+      {{# flyoutAideDecisionBody}}
+      {{> templates-employes-aide-decision}}
+      {{/ flyoutAideDecisionBody}}
+    </div>
+  </div>
+</div>

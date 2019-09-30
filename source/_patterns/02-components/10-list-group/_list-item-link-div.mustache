@@ -1,0 +1,12 @@
+<div class="list-group {{ listGroupClass }}">
+	{{# listGroup }}
+  <div class="list-group-item list-group-item-action {{ class }}">
+    <a href="{{ url }}"{{# classLink }} class="{{classLink}}"{{/ classLink }}>
+      {{# icon-name}}
+      <span class="icon {{ icon-name}}" aria-hidden="true"></span>
+      {{/ icon-name}}
+      {{{ text }}}
+    </a>
+  </div>
+  {{/ listGroup }}
+</div>
