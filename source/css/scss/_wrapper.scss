@@ -90,6 +90,28 @@
   }
 }
 
+
+// Wrapper Featured Call To Action
+//
+.wrapper-featured-cta {
+  border: none;
+  background-color: $neutral-underground-1;
+  padding: 2rem;
+  .wrapper-title {
+    @include font-size($h3-font-size);  // 24/32
+    line-height: 2rem;
+    color: $headings-color;
+    margin-bottom: 1rem;
+  }
+  .wrapper-body {
+    :last-child {
+      margin-bottom: 0;
+    }
+    margin-bottom: 2rem;
+  }
+}
+
+
 // Wrapper Accordion
 //
 .wrapper-accordion {
@@ -99,6 +121,29 @@
     }
   }
 }
+
+// Wrapper partial bg dark
+//
+.wrapper-partial-bg-dark {
+  position: relative;
+  &:after {
+    content: "";
+    display: block;
+    background-color: $neutral-primary;
+    position: absolute;
+    z-index: -1;
+    bottom: 0;
+    width: 100%;
+    height: 4rem;
+  }
+
+  @include media-breakpoint-up(md) {
+    &:after {
+      height: 8rem;
+    }
+  }
+}
+
 
 // Blockquote And Emphasis
 //

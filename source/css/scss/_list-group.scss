@@ -12,6 +12,13 @@
   li {
     list-style: none;
   }
+
+  &.list-2-columns {
+    display: block;
+    .list-group-item {
+      display: inline-block;
+    }
+  }
 }
 
 .list-group-lg {
@@ -148,6 +155,11 @@
       //border-top: 1px solid transparent;
       .list-group-item-title {
         color: $action;
+      }
+      // Needs to override possible overrides coming from external links behavior
+      // @see type.scss
+      &:before {
+        content: none !important;
       }
     }
   }

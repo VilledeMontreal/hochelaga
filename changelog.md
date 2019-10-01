@@ -13,6 +13,11 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 - Flyout component.
 - Div variant for list-item component.
 - Lexique pattern.
+- Collectrices template and empty-state variant.
+- Utility class to create 2-columns lists (.list-2-columns)
+- Utility class to set external-link-icon with after pseudo-class.
+- Handling of external-icon for links needs to be set up manually in some specific cases (list-group).
+- New wrapper Featured Call to action.
 
 ## Changed
 - Paragraphs and list now takes 16px margin-bottom (instead of 32px).
@@ -24,9 +29,11 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 - Fix spacing in Article template.
 - Fix spacing in Programme template.
 - Template employé - Vue de l'agent 311 - Finalisation.
+- White background for main-navbar.
 
 ## Fixed
 - Prevent vdm-icon-system from cleaning too much rules from SVG, leading to some fill occuring where it shouldn't.
+- Handling external-link-icon rules not preventing some link of getting part of the rule to apply (list-group).
 
 
 ## [4.1.1] - 2019-09-23
