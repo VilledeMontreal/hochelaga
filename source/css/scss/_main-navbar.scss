@@ -1,7 +1,7 @@
 // Main navbar based on bootstrap navbar
 .main-navbar {
   &.navbar {
-    background-color: transparent;
+    background-color: $white;
     border-bottom: 1px solid $neutral-stroke;
     padding: 1rem;
     a:not(.btn) {
@@ -218,11 +218,7 @@
     }
 
     &.navbar-scrolled {
-      background-color: $white;
       box-shadow: $navbar-box-shadow;
-      &.navbar-dark {
-        background-color: $neutral-primary;
-      }
     }
 
     // Dropdown-menu Mobile full width

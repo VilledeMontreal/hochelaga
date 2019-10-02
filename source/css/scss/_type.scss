@@ -203,38 +203,10 @@ a {
 .sb-block,
 .region-content,
 .lead {
-  a[href*="//"]:not([href*="montreal.ca"]):not([href$=".pdf"]):not(.list-group-item-action):not(.link-has-icon):not(.btn) {
-    margin-right: 1.625rem;
-    position: relative;
-    &:after {
-      content: '';
-      -webkit-mask: url($data-icon-externallink) no-repeat 50% 50%;
-      mask: url($data-icon-externallink) no-repeat 50% 50%;
-      -webkit-mask-size: cover;
-      mask-size: cover;
-      background-color: $action;
-      display: inline-flex;
-      width: $icon-md;
-      height: $icon-md;
-      overflow: hidden;
-      margin-right: -1.625rem;
-      margin-left: .125rem;
-      vertical-align: -.375rem;
-    }
-
-    @include hover-focus {
-      &:before {
-        background-color: $highlight-light;
-        content: "";
-        position: absolute;
-        top: 0;
-        left: 0;
-        right: -1.625rem;
-        bottom: -1px;
-        z-index: -1;
-      }
-    }
+  a[href*="//"]:not([href*="montreal.ca"]):not([href$=".pdf"]):not(.link-has-icon):not(.btn) {
+    @extend .is-external-link;
   }
+
   // Generic file extension handling
   a[href$=".pdf"] {
     margin-right: 3.02em;

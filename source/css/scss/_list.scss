@@ -165,3 +165,14 @@
     }
   }
 }
+
+.list-2-columns {
+  @include media-breakpoint-up(lg) {
+    -moz-column-count: 2;
+    -moz-column-gap: $grid-gutter-width;
+    -webkit-column-count: 2;
+    -webkit-column-gap: $grid-gutter-width;
+    column-count: 2;
+    column-gap: $grid-gutter-width;
+  }
+}

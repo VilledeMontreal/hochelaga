@@ -12,15 +12,20 @@
   {{# documentHeadingNotch}}
   {{# documentHeadingFullWidth}}<div class="container position-relative">{{/ documentHeadingFullWidth}}
     {{# documentHeadingFullWidth}}
-    <div class="row document-heading-header pt-8 pb-10 pt-lg-16 pb-lg-22">
+    <div class="row document-heading-header">
       <div class="col-12 col-lg-6">
         <h1>{{ heading }}</h1>
+        {{# heading-subtitle}}
+        <div class="document-heading-subtitle">{{heading-subtitle}}</div>
+        {{/ heading-subtitle}}
+        {{# has-search-form}}
         <div class="form-group form-group-lg">
           <div class="input-group-icon input-group-icon-left">
             <input type="text" class="form-control input-rounded" id="input-group-search" placeholder="Rechercher ...">
             <span class="icon icon-search" aria-hidden="true"></span>
           </div>
         </div>
+        {{/ has-search-form}}
       </div>
     </div>
     {{/ documentHeadingFullWidth}}
