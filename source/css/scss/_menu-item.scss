@@ -186,12 +186,26 @@
 
     // Revealing labels variants
     &.menu-items-revealing-labels {
+      li {
+        a {
+          .menu-item-label {
+            width: 0;
+            overflow: hidden;
+            display: block;
+            transition: width 0s, margin 0s;
+            margin-left: 0;
+            white-space: nowrap;
+          }
+        }
+      }
       @include hover-focus {
         box-shadow: $dropdown-box-shadow;
         li {
           a {
             .menu-item-label {
-              display: flex;
+              width: 100%;
+              margin-left: 1rem;
+              transition-delay: .5s;
             }
           }
         }
