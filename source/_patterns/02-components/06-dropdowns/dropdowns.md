@@ -4,7 +4,7 @@ title: Dropdown
 
 Les menus déroulants sont des superpositions contextuelles basculables permettant d’afficher des listes de liens et plus encore.
 
-#Utilisation
+## Utilisation
 
 Voir les exemples ci-dessous pour voir leur utilisation.
 

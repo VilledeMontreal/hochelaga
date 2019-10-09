@@ -3,7 +3,6 @@
     {
       "paginationClass": "pagination-sm",
       "paginationTitle": "Small",
-      "pageNumber": "1",
       "paginationList": [
         {
           "url": "#",
@@ -25,13 +24,17 @@
         {
           "url": "#",
           "text": "5"
+        },
+        {
+          "url": false,
+          "text": "...",
+          "class": "no-link"
         }
       ]
     },
     {
       "paginationClass": "",
       "paginationTitle": "Default / Medium",
-      "pageNumber": "1",
       "paginationList": [
         {
           "url": "#",
@@ -53,13 +56,17 @@
         {
           "url": "#",
           "text": "5"
+        },
+        {
+          "url": false,
+          "text": "...",
+          "class": "no-link"
         }
       ]
     },
     {
       "paginationClass": "pagination-lg",
       "paginationTitle": "Large",
-      "pageNumber": "1",
       "paginationList": [
         {
           "url": "#",
@@ -81,6 +88,11 @@
         {
           "url": "#",
           "text": "5"
+        },
+        {
+          "url": false,
+          "text": "...",
+          "class": "no-link"
         }
       ]
     }

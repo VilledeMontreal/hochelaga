@@ -1,7 +1,8 @@
 ---
 title: Elements
 ---
-#Utilisation
+
+## Utilisation
 
 Couleurs utilisées pour les différents éléments html.
 

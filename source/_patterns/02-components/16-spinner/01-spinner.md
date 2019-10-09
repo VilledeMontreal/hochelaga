@@ -2,7 +2,7 @@
 title: Spinner
 ---
 
-#Utilisation
+## Utilisation
 
 Le "spinner" utiliser est le composant de base "Border spinner" de Bootstrap. Nous n'utilisons pas le "Growing spinner".
 
