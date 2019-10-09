@@ -19,7 +19,19 @@
     </div>
   </div>
   <div class="content-module-stacked">
-  {{> styles-figure}}
+  <!-- Media Gallery -->
+  <button class="btn-media js-gallery-trigger">
+    {{> styles-figure}}
+  </button>
+
+  <div class="media-gallery d-none" itemscope itemtype="http://schema.org/ImageGallery">
+    <div itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
+      <a href="{{ mediaSrc }}" itemprop="contentUrl" data-size="{{ mediaSize }}" data-index="{{ index }}" data-description="{{ mediaCaption}}" data-author="{{ mediaAuthor }}">
+        <img src="{{ thumbnail.mediaSrc }}" class="img-fluid" height="{{ thumbnail.height }}" width="{{ thumbnail.width }}" itemprop="thumbnail" alt="{{ mediaAlt }}">
+      </a>
+    </div>
+  </div>
+  
   </div>
   <div class="content-module-stacked">
   {{> patterns-emphasis(emphasisClasses: emphasis-md)}}
