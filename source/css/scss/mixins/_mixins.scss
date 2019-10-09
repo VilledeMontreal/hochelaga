@@ -226,3 +226,10 @@
     height: $size;
   }
 }
+
+// Chip sizes
+@mixin chip-size($padding-y, $padding-x, $font-size, $line-height) {
+  padding: $padding-y $padding-x;
+  @include font-size($font-size);
+  line-height: $line-height;
+}

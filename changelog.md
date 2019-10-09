@@ -10,14 +10,16 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 ## Added
 - 2 new Utility icons: table et steps.
 - 3 new Editorial icons: news, ticket et not-found.
-- Flyout component.
 - Div variant for list-item component.
-- Lexique pattern.
 - Collectrices template and empty-state variant.
+- Indexes template and variants.
 - Utility class to create 2-columns lists (.list-2-columns)
 - Utility class to set external-link-icon with after pseudo-class.
-- Handling of external-icon for links needs to be set up manually in some specific cases (list-group).
 - New wrapper Featured Call to action.
+- Flyout component.
+- Chip component.
+- Toggle (button-group) component.
+- Lexique pattern.
 
 ## Changed
 - Paragraphs and list now takes 16px margin-bottom (instead of 32px).
@@ -30,11 +32,21 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 - Fix spacing in Programme template.
 - Template employé - Vue de l'agent 311 - Finalisation.
 - White background for main-navbar.
-- Mise à jour style pagination.
+- Update pagination styles.
+- Update button-group styles
+- Refactor badges sizes, spacing and icons handling in styles.
+- Refactor Header content fullwidth to provides more flexibility.
+- List-group-teaser harmonization. List-group-teaser now always have top border and padding-bottom
+- Class name for wrapper-comparatif harmonization, .content-comparatif will be deprecated in further version.
+- Handling of external-icon for links needs to be set up manually in some specific cases (list-group).
 
 ## Fixed
 - Prevent vdm-icon-system from cleaning too much rules from SVG, leading to some fill occuring where it shouldn't.
 - Handling external-link-icon rules not preventing some link of getting part of the rule to apply (list-group).
+- Badge spacing, line-height and font-size.
+- Buttons line-height and spacing.
+- Forms, checkbox, radios and switches sizes, and spacing.
+- Container-max-width.
 
 
 ## [4.1.1] - 2019-09-23

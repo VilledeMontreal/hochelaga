@@ -2,12 +2,12 @@
 title: Gallery
 ---
 
-#Utilisation
+## Utilisation
 
 La gallerie est utilisée lorsqu'il y a plus qu'une image à afficher dans le contenu.
 Pour l'intégration d'une image unique voir la section <code>styles/images</code>
 
-#Accessibilité 
+## Accessibilité 
 
 Les images devraient:
 

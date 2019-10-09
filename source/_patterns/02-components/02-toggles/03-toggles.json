@@ -1,0 +1,88 @@
+{
+  "toggleTypes":[
+    {
+      "toggleClass": false,
+      "aria-label": "Toggle Button Text Label",
+      "toggleButton": [
+        {
+          "toggleButtonText": "Libellé"
+        },
+        {
+          "toggleButtonText": "Libellé"
+        },
+        {
+          "toggleButtonText": "Libellé"
+        }
+      ]
+    },
+    {
+      "toggleClass": false,
+      "aria-label": "Toggle Button Icon Label",
+      "toggleButton": [
+        {
+          "toggleButtonClass": "btn-icon",
+          "toggleButtonAriaLabel": "Afficher en mode liste",
+          "toggleButtonIcon": {
+            "icon-name": "icon-list"
+          },
+          "toggleButtonText": false
+        },
+        {
+          "toggleButtonClass": "btn-icon",
+          "toggleButtonAriaLabel": "Afficher en mode carte",
+          "toggleButtonIcon": {
+            "icon-name": "icon-map"
+          },
+          "toggleButtonText": false
+        }
+      ]
+    }
+  ],
+  "toggleSizes":[
+    {
+      "toggleClass": "btn-group-sm",
+      "aria-label": "Toggle sm Label",
+      "toggleButton": [
+        {
+          "toggleButtonText": "Libellé"
+        },
+        {
+          "toggleButtonText": "Libellé"
+        },
+        {
+          "toggleButtonText": "Libellé"
+        }
+      ]
+    },
+    {
+      "toggleClass": false,
+      "aria-label": "Toggle Label",
+      "toggleButton": [
+        {
+          "toggleButtonText": "Libellé"
+        },
+        {
+          "toggleButtonText": "Libellé"
+        },
+        {
+          "toggleButtonText": "Libellé"
+        }
+      ]
+    },
+    {
+      "toggleClass": "btn-group-lg",
+      "aria-label": "Toggle lg Label",
+      "toggleButton": [
+        {
+          "toggleButtonText": "Libellé"
+        },
+        {
+          "toggleButtonText": "Libellé"
+        },
+        {
+          "toggleButtonText": "Libellé"
+        }
+      ]
+    }
+  ]
+}

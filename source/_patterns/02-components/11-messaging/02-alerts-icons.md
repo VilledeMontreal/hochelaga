@@ -2,7 +2,8 @@
 title: Alerts with icons
 ---
 
-<p>Alert can have an icon on the left</p>
+Les alertes peuvent avoir une icône à gauche
 
-<h2 id="alerts-examples">How to</h2>
-<p>First add <code>.alert-with-icon</code> to your <code>.alert</code> element. You will need two container inside; one with the svg icon <code>.alert-icon-container</code> andthe other with <code>.alert-content</code> where you put everything else inside</p>
+## Utilisation
+
+Ajouter la classe <code>.alert-with-icon</code> à l'élément <code>.alert</code>. Il faut ensuite 2 conteneurs à l'intérieur pour gérer le contenu: <code>.alert-icon-container</code> pour l'icône et <code>.alert-content</code> pour le contenu.

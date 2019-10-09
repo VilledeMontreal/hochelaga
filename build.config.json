@@ -76,6 +76,13 @@
       "dest" : "public/css/",
       "distribution"  : "dist/css/"
     },
+    "glyphs": {
+      "base" : "source/glyphs/",
+      "files": [
+        "source/glyphs/**/*"
+      ],
+      "dest" : "public/glyphs/"
+    },
     "images": {
       "base" : "source/images/",
       "files": [

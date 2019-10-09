@@ -1,21 +1,7 @@
 // Page load-more section
 // Load more buttons and optionnal all results link
 .pagination-wrapper {
-  padding-top: 4rem;
-  padding-bottom: 4rem;
-  text-align: center;
-  button {
-    display: block;
-    margin: 0 auto;
-  }
-
-  &:last-child {
-    padding-bottom: 0;
-  }
-}
-
-.cards + .pagination-wrapper {
-  margin-top: -$grid-gutter-width;
+  margin-bottom: 4rem;
 }
 
 // Pagination
@@ -24,7 +10,7 @@
   line-height: $line-height-sm; 
   margin-bottom: 0;
   .page-item {
-    display: none;
+    display: flex;
     &:first-child,
     &:last-child,
     &.active {
@@ -35,6 +21,7 @@
       flex-wrap: wrap;
       justify-content: center;
       align-items: center;
+      font-weight: $font-weight-bold;
 
       .icon {
         @include icon-color($pagination-color);
@@ -48,11 +35,12 @@
       &:focus,
       &:visited {
         border-bottom: 1px solid $neutral-stroke;
-      }
-      
+      } 
     }
-    @include media-breakpoint-up(md){
-      display: flex;
+
+    &.no-link .page-link {
+      pointer-events: none;
+      cursor: auto;
     }
   }
   

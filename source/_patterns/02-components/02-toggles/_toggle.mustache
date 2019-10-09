@@ -1,0 +1,12 @@
+<div class="btn-group {{ toggleClass }}" role="group" aria-label="{{ ariaLabel }}">
+  {{# toggleButton }}
+  <button type="button" {{# toggleButtonId}}id="{{ toggleButtonId }}" {{/ toggleButtonId}}class="btn {{ toggleButtonClass }}" {{ toggleButtonState }}>
+  {{# toggleButtonIcon }}
+    <span class="icon {{icon-name}}" aria-hidden="true"></span>
+  {{/ toggleButtonIcon}}
+  {{# toggleButtonText }}
+    <span class="btn-label">{{ toggleButtonText }}</span>
+  {{/ toggleButtonText}}
+  </button>
+  {{/ toggleButton}}
+</div>

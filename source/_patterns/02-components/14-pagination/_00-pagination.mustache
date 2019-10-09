@@ -7,7 +7,14 @@
       </a>
     </li>
   {{# paginationList}}
-    <li class="page-item {{ class }}"><a class="page-link" href="{{ url}}">{{ text }}</a></li>
+    <li class="page-item {{ class }}">
+      {{# url}}
+      <a class="page-link" href="{{ url}}">{{ text }}</a>
+      {{/ url}}
+      {{^ url}}
+      <span class="page-link">{{ text }}</span>
+      {{/ url}}
+    </li>
   {{/ paginationList}}
     <li class="page-item">
       <a class="page-link" href="#" aria-label="Suivant">

@@ -81,6 +81,13 @@ h6, .h6 {
   }
 }
 
+.list-group-heading {
+  @include font-size($font-size-sm);
+  line-height: $line-height-sm;
+  color: $headings-color;
+  margin-bottom: 0;
+}
+
 // Lead
 //
 .lead {
@@ -165,34 +172,6 @@ a {
     &.link-xs {
       @include font-size($font-size-xs);
       line-height: $line-height-xs;
-    }
-  }
-}
-
-// Quick links
-.quick-links {
-  @include font-size($font-size-sm);
-  padding-bottom: 2rem;
-  .quick-links-label {
-    color: $neutral-secondary;
-    display: inline-block;
-    font-weight: $font-weight-bold;
-    margin-right: .5rem;
-    margin-bottom: .5rem;
-  }
-  ul {
-    display: inline-block;
-    margin-bottom: 0;
-  }
-  .list-inline-item:not(:last-child) {
-    margin-right: .5rem;
-  }
-  a {
-    border-color: $headings-color;
-    color: $headings-color;
-    &:hover {
-      color: $headings-color;
-      border-color: transparent;
     }
   }
 }

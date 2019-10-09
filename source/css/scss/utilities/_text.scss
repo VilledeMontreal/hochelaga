@@ -29,6 +29,17 @@ a {
   }
 }
 
+// Brand line
+.brand-border-bottom {
+  &:after {
+    content: "";
+    display: block;
+    width: 4rem;
+    height: .25rem;
+    background-color: $brand;
+  }
+}
+
 // Overrides colors
 .text-secondary,
 .text-black-50,

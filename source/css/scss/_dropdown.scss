@@ -47,18 +47,24 @@
     // Handle form-group in dropdown-item
     &.form-group {
       margin-bottom: 0;
-      padding-top: .375rem;
-      padding-bottom: .375rem;
-      .custom-control {
-        margin-bottom: 0;
-      }
-      .custom-control-label {
-        padding-top: .125rem;
-      }
+    }
+    .custom-control {
+      margin-bottom: 0;
     }
 
     .icon {
       margin-right: 1rem;
+    }
+  }
+
+  &.dropdown-menu-sm {
+    min-width: $dropdown-sm-min-width;
+  }
+
+  &.dropdown-menu-form-group {
+    .dropdown-item {
+      padding-top: 0;
+      padding-bottom: 0;
     }
   }
 }

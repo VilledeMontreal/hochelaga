@@ -2,4 +2,4 @@
 title: Footer
 ---
 
-Main footer layout.
+Footer générique.

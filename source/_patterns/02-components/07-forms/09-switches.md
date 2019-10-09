@@ -4,11 +4,11 @@ title: Switches
 
 Une "switch" a le balisage d'une case à cocher mais utilise la classe <code>.custom-switch</code>
 
-#Utilisation
+## Utilisation
 
 Utilisez les "switch" lorsque vous devez activer ou désactiver une seule option.
 
-#Tailles
+## Tailles
 
 Les "switch" par default sont de taille médiums. Ils sont disponibles également en version small et large. L'intégration se fait de deux façons:
 

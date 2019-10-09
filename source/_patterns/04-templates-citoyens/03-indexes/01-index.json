@@ -1,0 +1,594 @@
+{
+  "navbarPosition": "fixed-top",
+  "pageClasses": "mt-7 mt-lg-9",
+  "documentHeading": true,
+  "documentHeadingFullWidth": true,
+  "documentHeadingClass": "document-heading-sm",
+  "documentHeadingImageUrl": "https://res.cloudinary.com/villemontreal/image/upload/q_auto,f_auto,dpr_auto/v1570212188/portail/background/texture-large-undeground.png",
+  "documentHeadingNotch": false,
+  "has-left-notch": false,
+  "media": false,
+  "heading-surtitle": "Type de contenu",
+  "heading": "Titre d’index sur plusieurs lignes",
+  "heading-subtitle": false,
+  "has-search-form": true,
+  "has-quick-links": {
+    "quickLinksItem": [
+      {
+        "url": "#",
+        "label": "Libellé super super long"
+      },
+      {
+        "url": "#",
+        "label": "Libellé très long"
+      },
+      {
+        "url": "#",
+        "label": "Libellé remarquablement long!"
+      },
+      {
+        "url": "#",
+        "label": "Libellé sans fin"
+      },
+      {
+        "url": "#",
+        "label": "Libellé sans fin"
+      }
+    ]
+  },
+  "navFilters": {
+    "navModalID": "navModalFiltersMoreFilters",
+    "filters":[
+      {
+        "chipLabel": "Tous les arrondissements",
+        "chipClass": false,
+        "chipID": "chipFiltre1Dropdown",
+        "block-id": "collapseFiltre1",
+        "heading-id": "collapseHeadingFiltre1",
+        "is-dropdown": true,
+        "dropdownMenu": {
+          "dropdownMenuClass": "dropdown-menu-form-group",
+          "dropdownMenuID": "chipFiltre1Dropdown",
+          "dropdownFilters":  {
+            "checkboxes": [
+              {
+                "class": "",
+                "id": "chckboxfilter-1",
+                "idMobile": "chckboxfilter-1-sm",
+                "label": "Libellé #1",
+                "state": false
+              },
+              {
+                "class": "",
+                "id": "chckboxfilter-2",
+                "idMobile": "chckboxfilter-2-sm",
+                "label": "Libellé #2",
+                "state": false
+              },
+              {
+                "class": "",
+                "id": "chckboxfilter-3",
+                "idMobile": "chckboxfilter-3-sm",
+                "label": "Libellé #3",
+                "state": false
+              },
+              {
+                "class": "",
+                "id": "chckboxfilter-4",
+                "idMobile": "chckboxfilter-4-sm",
+                "label": "Libellé #4",
+                "state": false
+              },
+              {
+                "class": "",
+                "id": "chckboxfilter-5",
+                "idMobile": "chckboxfilter-5-sm",
+                "label": "Libellé #5",
+                "state": false
+              },
+              {
+                "class": "",
+                "id": "chckboxfilter-6",
+                "idMobile": "chckboxfilter-6-sm",
+                "label": "Libellé #6",
+                "state": false
+              }
+            ]
+          }
+        }
+      },
+      {
+        "chipLabel": "Toutes les catégories",
+        "chipClass": false,
+        "chipID": "chipFiltre2Dropdown",
+        "block-id": "collapseFiltre2",
+        "heading-id": "collapseHeadingFiltre2",
+        "is-dropdown": true,
+        "dropdownMenu": {
+          "dropdownMenuClass": "dropdown-menu-form-group",
+          "dropdownMenuID": "chipFiltre2Dropdown",
+          "dropdownFilters":  {
+            "checkboxes": [
+              {
+                "class": "",
+                "id": "chckboxfilter2-1",
+                "idMobile": "chckboxfilter2-1-sm",
+                "label": "Libellé 1",
+                "state": false
+              },
+              {
+                "class": "",
+                "id": "chckboxfilter2-2",
+                "idMobile": "chckboxfilter2-2-sm",
+                "label": "Libellé #2",
+                "state": false
+              }
+            ]
+          }
+        }
+      },
+      {
+        "chipLabel": "Tous les types",
+        "chipClass": false,
+        "chipID": "chipFiltre3Dropdown",
+        "block-id": "collapseFiltre3",
+        "heading-id": "collapseHeadingFiltre3",
+        "is-dropdown": true,
+        "dropdownMenu": {
+          "dropdownMenuClass": "dropdown-menu-form-group",
+          "dropdownMenuID": "chipFiltre3Dropdown",
+          "dropdownFilters":  {
+            "checkboxes": [
+              {
+                "class": "",
+                "id": "chckboxfilter3-1",
+                "idMobile": "chckboxfilter3-1-sm",
+                "label": "Libellé #1",
+                "state": false
+              },
+              {
+                "class": "",
+                "id": "chckboxfilter3-2",
+                "idMobile": "chckboxfilter3-2-sm",
+                "label": "Libellé #2",
+                "state": false
+              }
+            ]
+          }
+        }
+      }
+    ],
+    "moreFilters": {
+      "modalId": "moreFiltersModalID",
+      "label": "Plus de filtres",
+      "numb-filters": null,
+      "filters": [
+        {
+          "title": "Filtre supplémentaire #1",
+          "block-id": "collapseMoreFilter1",
+          "heading-id": "collapseMoreFilterHeading1",
+          "radios": [
+            {
+              "class": "",
+              "id": "rdioMoreFilter-option1",
+              "idMobile": "rdioMoreFilter-1-sm",
+              "label": "Aujourd'hui",
+              "name": "radiosMoreFilterGroup1",
+              "state": false
+            },
+            {
+              "class": "",
+              "id": "rdioMoreFilter-option2",
+              "idMobile": "rdioMoreFilter-2-sm",
+              "label": "Demain",
+              "name": "radiosMoreFilterGroup1",
+              "state": false
+            },
+            {
+              "class": "",
+              "id": "rdioMoreFilter-option3",
+              "idMobile": "rdioMoreFilter-3-sm",
+              "label": "Cette semaine",
+              "name": "radiosMoreFilterGroup1",
+              "state": false
+            },
+            {
+              "class": "",
+              "id": "rdioMoreFilter-option4",
+              "idMobile": "rdioMoreFilter-4-sm",
+              "label": "Ce mois-ci",
+              "name": "radiosMoreFilterGroup1",
+              "state": false
+            }
+          ],
+          "checkboxes": false
+        },
+        {
+          "title": "Filtre supplémentaire #2",
+          "block-id": "collapseMoreFilter2",
+          "heading-id": "collapseMoreFilterHeading2",
+          "radios": false,
+          "checkboxes": [
+            {
+              "class": "",
+              "id": "chckboxMoreFilter2-option1",
+              "idMobile": "chckboxMoreFilter2-1-sm",
+              "label": "Libellé #1",
+              "state": false
+            },
+            {
+              "class": "",
+              "id": "chckboxMoreFilter2-option2",
+              "idMobile": "chckboxMoreFilter2-2-sm",
+              "label": "Libellé #2",
+              "state": false
+            }
+          ]
+        },
+        {
+          "title": "Filtre supplémentaire #3",
+          "block-id": "collapseMoreFilter3",
+          "heading-id": "collapseMoreFilterHeading3",
+          "radios": false,
+          "checkboxes": [
+            {
+              "class": "",
+              "id": "chckboxMoreFilter3-1",
+              "idMobile": "chckboxMoreFilter3-1-sm",
+              "label": "Libellé #1",
+              "state": false
+            },
+            {
+              "class": "",
+              "id": "chckboxMoreFilter3-2",
+              "idMobile": "chckboxMoreFilter3-2-sm",
+              "label": "Libellé #2",
+              "state": false
+            },
+            {
+              "class": "",
+              "id": "chckboxMoreFilter3-3",
+              "idMobile": "chckboxMoreFilter3-3-sm",
+              "label": "Libellé #3",
+              "state": false
+            },
+            {
+              "class": "",
+              "id": "chckboxMoreFilter3-4",
+              "idMobile": "chckboxMoreFilter3-4-sm",
+              "label": "Libellé #4",
+              "state": false
+            },
+            {
+              "class": "",
+              "id": "chckboxMoreFilter3-5",
+              "idMobile": "chckboxMoreFilter3-5-sm",
+              "label": "Libellé #5",
+              "state": false
+            },
+            {
+              "class": "",
+              "id": "chckboxMoreFilter3-6",
+              "idMobile": "chckboxMoreFilter3-6-sm",
+              "label": "Libellé #6",
+              "state": false
+            },
+            {
+              "class": "",
+              "id": "chckboxMoreFilter3-7",
+              "idMobile": "chckboxMoreFilter3-7-sm",
+              "label": "Libellé #7",
+              "state": false
+            },
+            {
+              "class": "",
+              "id": "chckboxMoreFilter3-8",
+              "idMobile": "chckboxMoreFilter3-8-sm",
+              "label": "Libellé #8",
+              "state": false
+            }
+          ]
+        },
+        {
+          "title": "Filtre supplémentaire #4",
+          "block-id": "collapseMoreFilter4",
+          "heading-id": "collapseMoreFilterHeading4",
+          "radios": false,
+          "checkboxes": [
+            {
+              "class": "",
+              "id": "chckboxMoreFilter4-1",
+              "idMobile": "chckboxMoreFilter4-1-sm",
+              "label": "Libellé #1",
+              "state": false
+            },
+            {
+              "class": "",
+              "id": "chckboxMoreFilter4-2",
+              "idMobile": "chckboxMoreFilter4-2-sm",
+              "label": "Libellé #2",
+              "state": false
+            },
+            {
+              "class": "",
+              "id": "chckboxMoreFilter4-3",
+              "idMobile": "chckboxMoreFilter4-3-sm",
+              "label": "Libellé #3",
+              "state": false
+            },
+            {
+              "class": "",
+              "id": "chckboxMoreFilter4-4",
+              "idMobile": "chckboxMoreFilter4-4-sm",
+              "label": "Libellé #4",
+              "state": false
+            },
+            {
+              "class": "",
+              "id": "chckboxMoreFilter4-5",
+              "idMobile": "chckboxMoreFilter4-5-sm",
+              "label": "Libellé #5",
+              "state": false
+            },
+            {
+              "class": "",
+              "id": "chckboxMoreFilter4-6",
+              "idMobile": "chckboxMoreFilter4-6-sm",
+              "label": "Libellé #6",
+              "state": false
+            },
+            {
+              "class": "",
+              "id": "chckboxMoreFilter4-7",
+              "idMobile": "chckboxMoreFilter4-7-sm",
+              "label": "Libellé #7",
+              "state": false
+            },
+            {
+              "class": "",
+              "id": "chckboxMoreFilter4-8",
+              "idMobile": "chckboxMoreFilter4-8-sm",
+              "label": "Libellé #8",
+              "state": false
+            }
+          ]
+        }
+      ]
+    }
+  },
+  "results": {
+    "headings": {
+      "text": "x à xx sur xx résultats"
+    },
+    "navSorts": {
+      "title": "Trier par",
+      "dropdownItem": [
+        {
+          "class": "",
+          "id": "sortTemplate-date",
+          "name": "radiosSortTemplateGroup1",
+          "label": "Date",
+          "state": "checked"
+        },
+        {
+          "class": "",
+          "id": "sortTemplate-az",
+          "name": "radiosSortTemplateGroup1",
+          "label": "A - Z",
+          "state": false
+        },
+        {
+          "class": "",
+          "id": "sortTemplate-za",
+          "name": "radiosSortTemplateGroup1",
+          "label": "Z - A",
+          "state": false
+        }
+      ]
+    },
+    "listing": {
+      "listGroupClass": false,
+      "listGroup": [
+        {
+          "url": "#",
+          "type": false,
+          "title": "Titre du contenu",
+          "infos": {
+            "badge": {
+              "badge": "État",
+              "badgeClass": "badge-danger-light",
+              "badgeUrl": false
+            },
+            "infos-items": [
+              {
+                "text": "Information supplémentaire"
+              },
+              {
+                "text": "Information supplémentaire"
+              }
+            ]
+          }
+        },
+        {
+          "url": "#",
+          "type": false,
+          "title": "Titre du contenu",
+          "infos": {
+            "badge": false,
+            "infos-items": [
+              {
+                "text": "Information supplémentaire"
+              },
+              {
+                "text": "Information supplémentaire"
+              }
+            ]
+          }
+        },
+        {
+          "url": "#",
+          "type": false,
+          "title": "Titre du contenu",
+          "infos": {
+            "badge": false,
+            "infos-items": [
+              {
+                "text": "Information supplémentaire"
+              },
+              {
+                "text": "Information supplémentaire"
+              }
+            ]
+          }
+        },
+        {
+          "url": "#",
+          "type": false,
+          "title": "Titre du contenu",
+          "infos": {
+            "badge": false,
+            "infos-items": [
+              {
+                "text": "Information supplémentaire"
+              },
+              {
+                "text": "Information supplémentaire"
+              }
+            ]
+          }
+        },
+        {
+          "url": "#",
+          "type": false,
+          "title": "Titre du contenu",
+          "infos": {
+            "badge": false,
+            "infos-items": [
+              {
+                "text": "Information supplémentaire"
+              },
+              {
+                "text": "Information supplémentaire"
+              }
+            ]
+          }
+        },
+        {
+          "url": "#",
+          "type": false,
+          "title": "Titre du contenu",
+          "infos": {
+            "badge": false,
+            "infos-items": [
+              {
+                "text": "Information supplémentaire"
+              },
+              {
+                "text": "Information supplémentaire"
+              }
+            ]
+          }
+        },
+        {
+          "url": "#",
+          "type": false,
+          "title": "Titre du contenu",
+          "infos": {
+            "badge": false,
+            "infos-items": [
+              {
+                "text": "Information supplémentaire"
+              },
+              {
+                "text": "Information supplémentaire"
+              }
+            ]
+          }
+        },
+        {
+          "url": "#",
+          "type": false,
+          "title": "Titre du contenu",
+          "infos": {
+            "badge": false,
+            "infos-items": [
+              {
+                "text": "Information supplémentaire"
+              },
+              {
+                "text": "Information supplémentaire"
+              }
+            ]
+          }
+        },
+        {
+          "url": "#",
+          "type": false,
+          "title": "Titre du contenu",
+          "infos": {
+            "badge": false,
+            "infos-items": [
+              {
+                "text": "Information supplémentaire"
+              },
+              {
+                "text": "Information supplémentaire"
+              }
+            ]
+          }
+        },
+        {
+          "url": "#",
+          "type": false,
+          "title": "Titre du contenu",
+          "infos": {
+            "badge": false,
+            "infos-items": [
+              {
+                "text": "Information supplémentaire"
+              },
+              {
+                "text": "Information supplémentaire"
+              }
+            ]
+          }
+        }
+      ]
+    },
+    "hasPagination": {
+      "paginationClass": false,
+      "paginationList": [
+        {
+          "url": "#",
+          "text": "1",
+          "class": false
+        },
+        {
+          "url": "#",
+          "text": "2",
+          "class": false
+        },
+        {
+          "url": "#",
+          "text": "3",
+          "class": false
+        },
+        {
+          "url": "#",
+          "text": "4",
+          "class": false
+        },
+        {
+          "url": "#",
+          "text": "5",
+          "class": false
+        },
+        {
+          "url": false,
+          "text": "...",
+          "class": "no-link"
+        }
+      ]
+    }
+  }
+}

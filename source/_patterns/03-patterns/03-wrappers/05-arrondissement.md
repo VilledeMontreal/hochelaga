@@ -2,4 +2,4 @@
 title: Arrondissement
 ---
 
-Add class <code>.wrapper-sticky-header</code> to make wrapper-header sticky inside it's container.
+Ajouter la class <code>.wrapper-sticky-header</code> pour que l'entête devienne sticky à l'intérieur de son conteneur.
