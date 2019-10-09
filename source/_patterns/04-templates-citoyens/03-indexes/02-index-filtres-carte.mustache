@@ -1,0 +1,242 @@
+{{> styles-link-skip-to-main-content }}
+
+<header class="header-main-nav" role="banner">
+{{> components-navbar }}
+</header>
+
+<main class="main-content {{ pageClasses }}" id="main-content" aria-label="Main Content" role="main">
+
+  {{# documentHeading}}
+  {{> patterns-content-header}}
+  {{/ documentHeading}}
+
+  {{# navFilters }}
+  <div id="nav-filters" class="section-filters border-bottom py-2 d-none d-md-block">
+    <div class="container">
+      <ul class="nav nav-filters">
+        {{# filters}}
+        <li class="nav-item {{ dropdownClass }}">
+          {{> components-chip }}
+        </li>
+        {{/ filters }}
+        {{# moreFilters }}
+        <li class="nav-item nav-item-btn">
+          <button class="btn btn-secondary btn-squared" type="button" id="moreFiltersModalLabel" data-toggle="modal" data-target="#{{modalId}}">
+            <span class="btn-label">{{ label }}</span>
+            {{# numb-filters}}
+            <span>({{ numb-filters }})</span>
+            {{/ numb-filters}}
+          </button>
+        </li>
+        {{/ moreFilters }}
+      </ul>
+      <!-- Modal More Filters -->
+      {{# moreFilters}}
+      <div class="modal modal-filters" id="{{modalId}}" tabindex="-1" role="dialog" aria-labelledby="moreFiltersModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-scrollable modal-dialog-centered" role="document">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title" id="moreFiltersModalLabel">Filtres</h5>
+              <button type="button" class="btn-close close" data-dismiss="modal" aria-label="Close">
+                {{> styles-icon-item("icon-name": "icon-x")}}
+              </button>
+            </div>
+            <div class="modal-body">
+              <form>
+                {{# filter}}
+                <div class="modal-filters-content">
+                  <span class="modal-filters-title">{{ title }}</span>
+                  {{# radios}}
+                  <div class="form-group">
+                    <div class="custom-control custom-control-sm custom-radio {{ class }} ">
+                      <input type="radio" id="{{ id }}" name="{{ name }}" class="custom-control-input" value="{{ id }}" {{ state }}>
+                      <label class="custom-control-label" for="{{ id }}">{{{ label }}}</label>
+                    </div>
+                  </div>
+                  {{/ radios}}
+                  {{# checkboxes}}
+                  <div class="form-group">
+                    <div class="custom-control custom-control-sm custom-checkbox {{ class }}">
+                      <input type="checkbox" class="custom-control-input" id="{{ id }}" value="{{ id }}" {{ state }}>
+                      <label class="custom-control-label" for="{{ id }}">{{{ label }}}</label>
+                    </div>
+                  </div>
+                  {{/ checkboxes}}
+                </div>
+                {{/filter}}
+              </form>
+            </div>
+            <div class="modal-footer">
+              <div class="ml-auto">
+                <button type="button" class="btn btn-primary btn-sm">Appliquer</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      {{/ moreFilters}}
+    </div>
+  </div>
+  {{/ navFilters }}
+
+  <div class="region-content pt-0 pt-md-2 pb-8">
+
+    {{# filtersApplied }}
+    <div class="container d-none d-md-flex">
+      <div class="row mb-2">
+        <div class="col-12 filters-applied">
+          <span class="sr-only">Filtres sélectionnés : </span>
+          <div class="badge-group">
+            {{# badges}}
+            {{> components-badge}}
+            {{/ badges}}
+            {{> components-button(buttonClass: "btn-link btn-sm btn-squared", buttonText: "Tout effacer")}}
+          </div>
+        </div>
+      </div>
+    </div>
+    {{/ filtersApplied }}
+
+    <div class="container mt-2">
+
+      {{# hasEmptyState}}
+      <div class="row justify-content-center">
+        <div class="col-12 col-lg-6">
+          <div class="empty-state pt-4 mb-8 text-center">
+            <div class="d-flex justify-content-center mb-2">
+              <span class="icon icon-not-found" aria-hidden="true"></span>
+            </div>
+            <div class="font-size-lg text-dark">
+              <p class="mb-0">Votre recherche ne donne aucun résultat. Essayez d'autres mots ou désactivez des filtres.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      {{/ hasEmptyState}}
+
+      {{^ hasEmptyState}}
+      {{# results }}
+      <div class="row align-items-center">
+        <div class="col-12 col-md-auto order-first order-md-last">
+          <div class="row mb-2 mb-md-0">
+            {{# navFilters}}
+            <div class="col d-md-none">
+              <button class="btn btn-secondary btn-squared btn-block" type="button" id="mobileFiltersModalLabel" data-toggle="modal" data-target="#{{navModalID}}">
+                <span class="btn-label">Tous les filtres</span>
+                {{# numb-filters}}
+                <span>({{ numb-filters }})</span>
+                {{/ numb-filters}}
+              </button>
+            </div>
+            {{/ navFilters}}
+            {{# toggleTypes }}
+            <div class="col-auto pl-0">
+            {{> components-toggle }}
+            </div>
+            {{/ toggleTypes}}
+          </div>
+          <div class="fullwidth-border d-md-none mb-2"></div>
+        </div>
+        <div class="col order-md-first">
+          {{# headings }}
+          <div class="row align-items-center">
+            <div class="col-auto">
+              <h2 class="list-group-heading mb-0">{{ headings.text }}</h2>
+            </div>
+            <div class="col-auto pagination-arrow d-none" id="paginationMap">
+              <button id="prevPage" class="btn btn-squared btn-link btn-icon" aria-label="Page précédente">
+                <span class="icon icon-chevron-left" aria-hidden="true"></span>
+              </button>
+              <button id="nextPage" class="btn btn-squared btn-link btn-icon" aria-label="Page suivante">
+                <span class="icon icon-chevron-right" aria-hidden="true"></span>
+              </button>
+            </div>
+            {{# navSorts }}
+            <div class="col-auto ml-auto">
+              <div class="d-flex justify-content-end">
+                <div class="nav nav-sorts">
+                  <div class="nav-item dropdown">
+                    <button class="btn btn-link btn-squared dropdown-toggle" type="button" id="sortFilters" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">{{ title }}</button>
+                    <div class="dropdown-menu dropdown-menu-form-group dropdown-menu-sm dropdown-menu-right" aria-labelledby="sortFilters">
+                      <form>
+                        <div class="form-group mb-0">
+                        {{# dropdownItem }}
+                          <div class="dropdown-item">
+                            <div class="custom-control custom-control custom-radio {{ class }} ">
+                              <input type="radio" id="{{ id }}" name="{{ name }}" class="custom-control-input" value="{{ id }}" {{ state }}>
+                              <label class="custom-control-label" for="{{ id }}">{{{ label }}}</label>
+                            </div>
+                          </div>
+                        {{/ dropdownItem }}
+                        </div>
+                      </form>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            {{/ navSorts }}
+          </div>
+          {{/ headings }}
+        </div>
+      </div>
+
+      {{# listing }}
+      <div class="row pt-2 mb-8 {{# showMap }}d-none{{/ showMap }}" id="contentList">
+        <div class="col-12">
+          {{> components-list-group-index }}
+        </div>
+      </div>
+      {{/ listing }}
+
+      {{# map }}
+      <div class="row pt-2 mb-8 {{^ showMap }}d-none{{/ showMap }}" id="contentMap">
+        <div class="col-12">
+          <div id="{{ mapID }}" style="height:850px"></div>
+        </div>
+      </div>
+      {{/ map }}
+      
+      {{# hasPagination }}
+      <div class="pagination-wrapper" id="paginationList">
+        {{> components-pagination }}
+      </div>
+      {{/ hasPagination }}
+      
+      {{/ results}}
+
+      {{/ hasEmptyState }}
+
+      {{# hasLeadSection}}
+      <div class="row mb-8 justify-content-between">
+        <div class="col-12 col-lg-7 d-flex align-items-center mb-4 mb-lg-0">
+          <div class="lead mb-0">
+            {{{ lead }}}
+          </div>
+        </div>
+        <div class="col-12 col-lg-4 d-flex align-items-center">
+          {{> patterns-wrapper-featured-cta}}
+        </div>
+      </div>
+      {{/ hasLeadSection}}
+
+    </div>
+  </div>
+
+</main>
+
+{{> patterns-footer-portal }}
+
+<!-- Mapbox -->
+<script src='https://api.tiles.mapbox.com/mapbox-gl-js/v0.48.0/mapbox-gl.js'></script>
+<link href='https://api.tiles.mapbox.com/mapbox-gl-js/v0.48.0/mapbox-gl.css' rel='stylesheet' />
+<!-- VDM helpers -->
+<script src="../../js/vdm-helpers.js"></script>
+
+<script>
+
+  var data = null;
+
+  generateMap([{{{ map.lngLat }}}], data, {{ map.mapID }});
+</script>
+

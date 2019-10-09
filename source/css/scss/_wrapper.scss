@@ -90,6 +90,46 @@
   }
 }
 
+// Content modules
+// Comparatif
+// Normalized classes, should use .wrapper-name instead of .content-name
+//
+.wrapper-comparatif,
+.content-comparatif {
+  > .col,
+  > [class*="col-"] {
+    margin-bottom: 1rem;
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+  .wrapper-comparatif-content,
+  .content-wrapper {
+    background-color: $neutral-underground-1;
+    border-top: 2px solid $neutral-stroke;
+    height: 100%;
+    padding: 1rem;
+    > :last-child {
+      margin-bottom: 0;
+    }
+  }
+  &.wrapper-comparatif-columns,
+  &.comparatif-columns {
+    @include media-breakpoint-up(md) {
+      > .col,
+      > [class*="col-"] {
+        margin-bottom: 0;
+        &:first-child {
+          padding-right: .5rem;
+        }
+        &:last-child {
+          padding-left: .5rem;
+        }
+      }
+    }
+  }
+}
+
 
 // Wrapper Featured Call To Action
 //
@@ -97,6 +137,7 @@
   border: none;
   background-color: $neutral-underground-1;
   padding: 2rem;
+  width: 100%;
   .wrapper-title {
     @include font-size($h3-font-size);  // 24/32
     line-height: 2rem;

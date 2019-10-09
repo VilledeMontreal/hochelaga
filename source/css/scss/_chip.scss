@@ -1,0 +1,64 @@
+// Base class
+//
+
+.chip {
+  color: $chip-color;
+  background-color: $chip-background-color;
+  display: inline-flex;
+  align-items: center;
+  font-weight: $chip-font-weight;
+  text-align: center;
+  white-space: nowrap;
+  vertical-align: middle;
+  user-select: none;
+  border: $chip-border-width solid $chip-border-color;
+  @include chip-size($chip-padding-y, $chip-padding-x, $font-size-sm, $line-height-sm);
+  @include border-radius($chip-border-radius);
+  @include transition($chip-transition);
+
+  &:after {
+    background-color: $neutral-tertiary;
+    margin-right: 0;
+    @include transition($btn-transition);
+  }
+
+  @include hover-focus {
+    color: $chip-hover-color;
+    background-color: $chip-hover-background-color;
+    text-decoration: none;
+    border-bottom-color: $chip-border-color;
+
+    &:after {
+      background-color: $chip-hover-color;
+    }
+  }
+
+  &:focus,
+  &.focus {
+    outline: 0;
+    box-shadow: $btn-focus-box-shadow;
+  }
+
+  &:not(:disabled):not(.disabled):active,
+  &:not(:disabled):not(.disabled).active {
+    color: $chip-hover-color;
+    background-color: $chip-hover-background-color;
+    &:after {
+      background-color: $chip-hover-color;
+    }
+
+    &:focus {
+      box-shadow: $btn-focus-box-shadow;
+    }
+  }
+
+}
+
+// Chip Small variant
+.chip-sm {
+  @include chip-size($chip-padding-y-sm, $chip-padding-x-sm, $font-size-xs, $line-height-xs);
+  &:after {
+    width: 1rem;
+    height: 1rem;
+  }
+}

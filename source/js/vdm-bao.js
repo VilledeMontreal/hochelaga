@@ -2,20 +2,20 @@
 
    
   // ******************************
-  //Icon modal
-$('[id^="linkModalIcon"]').click(function() {
+  // PL-internal Icon modal handling
+  $('[id^="linkModalIcon"]').click(function() {
 
-  var title = $(this).next(".ic-name").html();
-  var nameFileSvg = $(this).next(".ic-name").attr("id");
-  var textModalUtility = '&lt;span class="icon icon-'+nameFileSvg+'" role="icon"&gt;&lt;/span&gt;';
-  var textModalEditorial = '&lt;img src="pathtosvg/'+nameFileSvg+'.svg" role="icon" width="40" height="40" /&gt;';
+    var title = $(this).next(".ic-name").html();
+    var nameFileSvg = $(this).next(".ic-name").attr("id");
+    var textModalUtility = '&lt;span class="icon icon-'+nameFileSvg+'" role="icon"&gt;&lt;/span&gt;';
+    var textModalEditorial = '&lt;img src="pathtosvg/'+nameFileSvg+'.svg" role="icon" width="40" height="40" /&gt;';
 
-  $("#exampleModalIconUtilityLabel").text(title);
-  $("#exampleModalIconEditorialLabel").text(title);
-  $("#exampleModalIconUtility .modal-body .select-all").html(textModalUtility);
-  $("#exampleModalIconEditorial .modal-body").html("<p class='select-all'>"+textModalEditorial+"</p> <p>ou<p> <p class='select-all'>"+textModalUtility+"</p>");
-  
-});
+    $("#exampleModalIconUtilityLabel").text(title);
+    $("#exampleModalIconEditorialLabel").text(title);
+    $("#exampleModalIconUtility .modal-body .select-all").html(textModalUtility);
+    $("#exampleModalIconEditorial .modal-body").html("<p class='select-all'>"+textModalEditorial+"</p> <p>ou<p> <p class='select-all'>"+textModalUtility+"</p>");
+    
+  });
 
 
   // ******************************
@@ -425,6 +425,28 @@ $('[id^="linkModalIcon"]').click(function() {
 
   $('.collapse-content').on('hide.bs.collapse', function () {
     $(this).parent().find("button").text('Voir plus');
+  });
+
+
+  $("#triggerMap").on('click', function(){
+    $("#contentList").toggleClass('d-none');
+    $("#contentMap").toggleClass('d-none');
+    $("#sortFilters").toggleClass('d-none');
+    $("#paginationList").toggleClass('d-none');
+    $(".pagination-arrow").toggleClass('d-none');
+    $(this).toggleClass('active');
+    map.resize();
+    $("#triggerList").toggleClass('active');
+  });
+  
+  $("#triggerList").on('click', function(){
+    $("#contentList").toggleClass('d-none');
+    $("#contentMap").toggleClass('d-none');
+    $("#sortFilters").toggleClass('d-none');
+    $("#paginationList").toggleClass('d-none');
+    $(".pagination-arrow").toggleClass('d-none');
+    $(this).toggleClass('active');
+    $("#triggerMap").toggleClass('active');
   });
 
 

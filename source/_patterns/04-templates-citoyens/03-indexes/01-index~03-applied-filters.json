@@ -1,0 +1,87 @@
+{
+  "navFilters": {
+    "navModalID": "navModalFiltersAppMoreFilters",
+    "filters":[
+      {
+        "chipLabel": "Filtre sélectionné (4)",
+        "dropdownMenu": {
+          "dropdownMenuID": "chipFiltre1Dropdown",
+          "dropdownFilters":  {
+            "checkboxes": [
+              {
+                "class": "",
+                "id": "chckboxfilter-1",
+                "idMobile": "chckboxfilter-1-sm",
+                "label": "Libellé #1",
+                "state": "checked"
+              },
+              {
+                "class": "",
+                "id": "chckboxfilter-2",
+                "idMobile": "chckboxfilter-2-sm",
+                "label": "Libellé #2",
+                "state": "checked"
+              },
+              {
+                "class": "",
+                "id": "chckboxfilter-3",
+                "idMobile": "chckboxfilter-3-sm",
+                "label": "Libellé #3",
+                "state": false
+              },
+              {
+                "class": "",
+                "id": "chckboxfilter-4",
+                "idMobile": "chckboxfilter-4-sm",
+                "label": "Libellé #4",
+                "state": false
+              },
+              {
+                "class": "",
+                "id": "chckboxfilter-5",
+                "idMobile": "chckboxfilter-5-sm",
+                "label": "Libellé #5",
+                "state": "checked"
+              },
+              {
+                "class": "",
+                "id": "chckboxfilter-6",
+                "idMobile": "chckboxfilter-6-sm",
+                "label": "Libellé #6",
+                "state": "checked"
+              }
+            ]
+          }
+        }
+      }
+    ]
+  },
+  "filtersApplied": {
+    "badges":[
+      {
+        "badge": "Libellé #1",
+        "badgeClass": "badge-secondary badge-icon-right badge-dismiss",
+        "badgeUrl": "#",
+        "badgeIconClass": "icon-x"
+      },
+      {
+        "badge": "Libellé #2",
+        "badgeClass": "badge-secondary badge-icon-right badge-dismiss",
+        "badgeUrl": "#",
+        "badgeIconClass": "icon-x"
+      },
+      {
+        "badge": "Libellé #5",
+        "badgeClass": "badge-secondary badge-icon-right badge-dismiss",
+        "badgeUrl": "#",
+        "badgeIconClass": "icon-x"
+      },
+      {
+        "badge": "Libellé #6",
+        "badgeClass": "badge-secondary badge-icon-right badge-dismiss",
+        "badgeUrl": "#",
+        "badgeIconClass": "icon-x"
+      }
+    ]
+  } 
+}

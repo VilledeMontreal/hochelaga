@@ -1,0 +1,10 @@
+{{# is-dropdown}}
+<div class="dropdown">
+{{/ is-dropdown}}
+  <button class="chip {{ chipClass }}{{# is-dropdown}} dropdown-toggle{{/ is-dropdown}}" type="button" {{# is-dropdown}}id="{{chipID}}" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"{{/ is-dropdown}}>
+    {{ chipLabel }}
+  </button>
+{{# is-dropdown}}
+  {{> components-dropdown}}
+</div>
+{{/ is-dropdown}}
