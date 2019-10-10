@@ -2,7 +2,8 @@
   <ul class="menu-items {{ menuItemClass}}">
     {{# menuItem}}
     <li class="{{menuItemLiClass}}{{# menuItemSeparator}} menu-item-separator{{/ menuItemSeparator}}">
-      <a class="menu-item{{# class}} {{class}}{{/ class}}" href="{{url}}"{{# tooltip}} data-toggle="tooltip" data-placement="left" title="{{ menuItemLabel }}"{{/tooltip}}>
+      {{# url}}
+      <a class="menu-item{{# class}} {{class}}{{/ class}}" href="{{url}}">
         {{# menuItemIcon}}<span class="icon {{ icon-name }}" aria-hidden="true"></span>{{/ menuItemIcon}}
         {{# menuItemLabel}}
         <span class="menu-item-label">{{ menuItemLabel}}</span>
@@ -11,6 +12,18 @@
         <span class="sr-only">{{ srMenuItemLabel}}</span>
         {{/ menuItemLabel}}
       </a>
+      {{/ url}}
+      {{^ url}}
+      <span class="menu-item{{# class}} {{class}}{{/ class}}">
+        {{# menuItemIcon}}<span class="icon {{ icon-name }}" aria-hidden="true"></span>{{/ menuItemIcon}}
+        {{# menuItemLabel}}
+        <span class="menu-item-label">{{ menuItemLabel}}</span>
+        {{/ menuItemLabel}}
+        {{^ menuItemLabel}}
+        <span class="sr-only">{{ srMenuItemLabel}}</span>
+        {{/ menuItemLabel}}
+      </span>
+      {{/ url}}
     </li>
     {{/ menuItem}}
   </ul>

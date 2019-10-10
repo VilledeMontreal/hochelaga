@@ -10,7 +10,7 @@
   }
   .menu-items.menu-items-icon-bar {
     li {
-      a {
+      a.menu-item:not(.disabled) {
         &.active,
         &:active {
           &:before {
@@ -44,7 +44,7 @@
         width: 1px;
       }
     }
-    a {
+    .menu-item {
       display: flex;
       flex-direction: column;
       align-self: center;
@@ -53,16 +53,29 @@
       padding: 1rem;
       position: relative;
       .icon {
-        @include icon-color($neutral-secondary);
+        @include icon-color($neutral-stroke);
       }
       .menu-item-label {
         display: none;
         @include font-size($font-size-xs);
         line-height: $line-height-xs;
-        color: $neutral-secondary;
+        color: $neutral-stroke;
+        font-weight: $font-weight-bold;
         margin-top: .5rem;
       }
-
+    }
+    .disabled {
+      background-color: transparent;
+      cursor: not-allowed;
+    }
+    // Defines color and states for links
+    a.menu-item:not(.disabled) {
+      .icon {
+        @include icon-color($neutral-secondary);
+      }
+      .menu-item-label {
+        color: $neutral-secondary;
+      }
       @include hover-focus {
         background-color: transparent;
         z-index: 2;
@@ -113,13 +126,13 @@
           width: calc(100% - 1.5rem);
         }
       }
-      a {
+      .menu-item {
         min-width: auto;
         padding: 1rem;
         width: 100%;
         flex-direction: row;
         .icon {
-          @include icon-color($neutral-tertiary);
+          @include icon-color($neutral-stroke);
         }
 
         .menu-item-label {
@@ -129,7 +142,13 @@
           margin-top: 0;
           margin-left: 1rem;
         }
+      }
 
+      // Defines states for links
+      a.menu-item:not(.disabled) {
+        .icon {
+          @include icon-color($neutral-tertiary);
+        }
         @include hover-focus {
           .icon {
             @include icon-color($action-lighter);
@@ -155,15 +174,21 @@
 
   &.menu-items-icon-bar {
     li {
-      a {
+      .menu-item {
         width: 100%;
         .icon {
-          @include icon-color($neutral-secondary);
+          @include icon-color($neutral-stroke);
         }
         .menu-item-label {
           display: none;
         }
+      }
 
+      // Defines states for links
+      a.menu-item:not(.disabled) {
+        .icon {
+          @include icon-color($neutral-secondary);
+        }
         @include hover-focus {
           .icon {
             @include icon-color($action);
@@ -190,7 +215,7 @@
       overflow: hidden;
       transition: max-width .1s ease-in-out;
       li {
-        a {
+        .menu-item {
           .menu-item-label {
             display: block;
             white-space: nowrap;
@@ -202,7 +227,7 @@
         transition-delay: .5s;
         box-shadow: $dropdown-box-shadow;
         li {
-          a {
+          .menu-item {
             .menu-item-label {
               margin-left: 1rem;
             }
@@ -216,7 +241,8 @@
   &.menu-items-reverse {
     background-color: $neutral-primary;
     li {
-      a {
+      // Defines colors and states for links
+      a.menu-item:not(.disabled) {
         .icon {
           @include icon-color($white);
         }
@@ -252,7 +278,17 @@
   &.menu-items-underground {
     background-color: $neutral-underground-1;
     li {
-      a {
+      .menu-item {
+        .icon {
+          @include icon-color($neutral-stroke);
+        }
+        .menu-item-label {
+          color: $neutral-stroke;
+        }
+      }
+
+      // Define color and states for links
+      a.menu-item:not(.disabled) {
         .icon {
           @include icon-color($neutral-secondary);
         }
@@ -264,7 +300,7 @@
             @include icon-color($action);
           }
           .menu-item-label {
-            color: inherit;
+            color: $action;
           }
         }
         &.active,
@@ -283,7 +319,7 @@
 
   @include media-breakpoint-up(lg) {
     li {
-      a {
+      .menu-item {
         padding: .75rem 1rem;
         .menu-item-label {
           display: flex;
