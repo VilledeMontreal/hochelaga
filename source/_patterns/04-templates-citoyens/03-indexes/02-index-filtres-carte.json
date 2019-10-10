@@ -1,0 +1,577 @@
+{
+  "navbarPosition": "fixed-top",
+  "pageClasses": "mt-7 mt-lg-9",
+  "documentHeading": true,
+  "documentHeadingFullWidth": true,
+  "documentHeadingClass": "document-heading-sm",
+  "documentHeadingImageUrl": "https://res.cloudinary.com/villemontreal/image/upload/q_auto,f_auto,dpr_auto/v1570212188/portail/background/texture-large-undeground.png",
+  "documentHeadingNotch": false,
+  "has-left-notch": false,
+  "media": false,
+  "heading-surtitle": "Type de contenu",
+  "heading": "Titre d’index sur plusieurs lignes",
+  "heading-subtitle": false,
+  "has-search-form": true,
+  "has-quick-links": {
+    "quickLinksItem": [
+      {
+        "url": "#",
+        "label": "Libellé"
+      },
+      {
+        "url": "#",
+        "label": "Libellé plus long"
+      },
+      {
+        "url": "#",
+        "label": "Libellé remarquablement long"
+      },
+      {
+        "url": "#",
+        "label": "Libellé"
+      },
+      {
+        "url": "#",
+        "label": "Libellé"
+      }
+    ]
+  },
+  "navFilters": {
+    "navModalID": "navModalFiltersMapMoreFilters",
+    "filters":[
+      {
+        "chipLabel": "Tous les arrondissements",
+        "chipClass": false,
+        "chipID": "mapChipFiltre1Dropdown",
+        "is-dropdown": true,
+        "dropdownMenu": {
+          "dropdownMenuClass": "dropdown-menu-form-group",
+          "dropdownMenuID": "mapChipFiltre1Dropdown",
+          "dropdownFilters":  {
+            "checkboxes": [
+              {
+                "class": "",
+                "id": "mapChckboxfilter-1",
+                "label": "Checkbox",
+                "state": false
+              },
+              {
+                "class": "",
+                "id": "mapChckboxfilter-2",
+                "label": "Checkbox option #2",
+                "state": false
+              },
+              {
+                "class": "",
+                "id": "mapChckboxfilter-3",
+                "label": "Checkbox option #2",
+                "state": false
+              },
+              {
+                "class": "",
+                "id": "mapChckboxfilter-4",
+                "label": "Checkbox option #2",
+                "state": false
+              },
+              {
+                "class": "",
+                "id": "mapChckboxfilter-5",
+                "label": "Checkbox option #2",
+                "state": false
+              },
+              {
+                "class": "",
+                "id": "mapChckboxfilter-6",
+                "label": "Checkbox option #2",
+                "state": false
+              }
+            ]
+          }
+        }
+      },
+      {
+        "chipLabel": "Toutes les catégories",
+        "chipClass": false,
+        "chipID": "mapChipFiltre2Dropdown",
+        "is-dropdown": true,
+        "dropdownMenu": {
+          "dropdownMenuClass": "dropdown-menu-form-group",
+          "dropdownMenuID": "mapChipFiltre2Dropdown",
+          "dropdownFilters":  {
+            "checkboxes": [
+              {
+                "class": "",
+                "id": "mapChckboxfilter2-1",
+                "label": "Checkbox",
+                "state": false
+              },
+              {
+                "class": "",
+                "id": "mapChckboxfilter2-2",
+                "label": "Checkbox option #2",
+                "state": false
+              }
+            ]
+          }
+        }
+      },
+      {
+        "chipLabel": "Tous les types",
+        "chipClass": false,
+        "chipID": "mapChipFiltre3Dropdown",
+        "is-dropdown": true,
+        "dropdownMenu": {
+          "dropdownMenuClass": "dropdown-menu-form-group",
+          "dropdownMenuID": "mapChipFiltre3Dropdown",
+          "dropdownFilters":  {
+            "checkboxes": [
+              {
+                "class": "",
+                "id": "mapChckboxfilter3-1",
+                "label": "Checkbox",
+                "state": false
+              },
+              {
+                "class": "",
+                "id": "mapChckboxfilter3-2",
+                "label": "Checkbox option #2",
+                "state": false
+              }
+            ]
+          }
+        }
+      }
+    ],
+    "moreFilters": {
+      "modalId": "mapMoreFiltersModalID",
+      "label": "Plus de filtres",
+      "numb-filters": null,
+      "filter": [
+        {
+          "title": "Filter #1",
+          "radios": [
+            {
+              "class": "",
+              "id": "mapRdioMoreFilter-option1",
+              "label": "Aujourd'hui",
+              "name": "mapRadiosMoreFilterGroup1",
+              "state": false
+            },
+            {
+              "class": "",
+              "id": "mapRdioMoreFilter-option2",
+              "label": "Demain",
+              "name": "mapRadiosMoreFilterGroup1",
+              "state": false
+            },
+            {
+              "class": "",
+              "id": "mapRdioMoreFilter-option3",
+              "label": "Cette semaine",
+              "name": "mapRadiosMoreFilterGroup1",
+              "state": false
+            },
+            {
+              "class": "",
+              "id": "mapRdioMoreFilter-option4",
+              "label": "Ce mois-ci",
+              "name": "mapRadiosMoreFilterGroup1",
+              "state": false
+            }
+          ],
+          "checkboxes": false
+        },
+        {
+          "title": "Filter #2",
+          "radios": false,
+          "checkboxes": [
+            {
+              "class": "",
+              "id": "mapChckboxMoreFilter2-option1",
+              "label": "Checkbox option #1",
+              "state": false
+            },
+            {
+              "class": "",
+              "id": "mapChckboxMoreFilter2-option2",
+              "label": "Checkbox option #2",
+              "state": false
+            }
+          ]
+        },
+        {
+          "title": "Filter #3",
+          "radios": false,
+          "checkboxes": [
+            {
+              "class": "",
+              "id": "mapChckboxMoreFilter3TemplateMore-option1",
+              "label": "Checkbox option #1",
+              "state": false
+            },
+            {
+              "class": "",
+              "id": "mapChckboxMoreFilter3TemplateMore-option2",
+              "label": "Checkbox option #2",
+              "state": false
+            },
+            {
+              "class": "",
+              "id": "mapChckboxMoreFilter3TemplateMore-option3",
+              "label": "Checkbox option #3",
+              "state": false
+            },
+            {
+              "class": "",
+              "id": "mapChckboxMoreFilter3TemplateMore-option4",
+              "label": "Checkbox option #4",
+              "state": false
+            },
+            {
+              "class": "",
+              "id": "mapChckboxMoreFilter3TemplateMore-option5",
+              "label": "Checkbox option #5",
+              "state": false
+            },
+            {
+              "class": "",
+              "id": "mapChckboxMoreFilter3TemplateMore-option6",
+              "label": "Checkbox option #6",
+              "state": false
+            },
+            {
+              "class": "",
+              "id": "mapChckboxMoreFilter3TemplateMore-option7",
+              "label": "Checkbox option #7",
+              "state": false
+            },
+            {
+              "class": "",
+              "id": "mapChckboxMoreFilter3TemplateMore-option8",
+              "label": "Checkbox option #8",
+              "state": false
+            }
+          ]
+        },
+        {
+          "title": "Filter #4",
+          "radios": false,
+          "checkboxes": [
+            {
+              "class": "",
+              "id": "mapChckboxMoreFilter4TemplateMore-option1",
+              "label": "Checkbox option #1",
+              "state": false
+            },
+            {
+              "class": "",
+              "id": "mapChckboxMoreFilter4TemplateMore-option2",
+              "label": "Checkbox option #2",
+              "state": false
+            },
+            {
+              "class": "",
+              "id": "mapChckboxMoreFilter4TemplateMore-option3",
+              "label": "Checkbox option #3",
+              "state": false
+            },
+            {
+              "class": "",
+              "id": "mapChckboxMoreFilter4TemplateMore-option4",
+              "label": "Checkbox option #4",
+              "state": false
+            },
+            {
+              "class": "",
+              "id": "mapChckboxMoreFilter4TemplateMore-option5",
+              "label": "Checkbox option #5",
+              "state": false
+            },
+            {
+              "class": "",
+              "id": "mapChckboxMoreFilter4TemplateMore-option6",
+              "label": "Checkbox option #6",
+              "state": false
+            },
+            {
+              "class": "",
+              "id": "mapChckboxMoreFilter4TemplateMore-option7",
+              "label": "Checkbox option #7",
+              "state": false
+            },
+            {
+              "class": "",
+              "id": "mapChckboxMoreFilter4TemplateMore-option8",
+              "label": "Checkbox option #8",
+              "state": false
+            }
+          ]
+        }
+      ]
+    }
+  },
+  "showMap": false,
+  "toggleTypes": [
+    {
+      "toggleClass": false,
+      "aria-label": "Type d'affichage",
+      "toggleButton": [
+        {
+          "toggleButtonId": "triggerList",
+          "toggleButtonClass": "btn-icon active",
+          "toggleButtonAriaLabel": "Afficher en mode liste",
+          "toggleButtonIcon": {
+            "icon-name": "icon-list"
+          },
+          "toggleButtonText": false
+        },
+        {
+          "toggleButtonId": "triggerMap",
+          "toggleButtonClass": "btn-icon",
+          "toggleButtonAriaLabel": "Afficher en mode carte",
+          "toggleButtonIcon": {
+            "icon-name": "icon-map"
+          },
+          "toggleButtonText": false
+        }
+      ]
+    }
+  ],
+  "results": {
+    "headings": {
+      "text": "x à xx sur xx résultats"
+    },
+    "navSorts": {
+      "title": "Trier par",
+      "dropdownItem": [
+        {
+          "class": "",
+          "id": "sortTemplate-az",
+          "name": "radiosSortTemplateGroup1",
+          "label": "A - Z",
+          "state": false
+        },
+        {
+          "class": "",
+          "id": "sortTemplate-za",
+          "name": "radiosSortTemplateGroup1",
+          "label": "Z - A",
+          "state": false
+        }
+      ]
+    },
+    "listing": {
+      "listGroupClass": false,
+      "listGroup": [
+        {
+          "url": "#",
+          "type": false,
+          "title": "Nom du lieu",
+          "infos": {
+            "badge": {
+              "badge": "État",
+              "badgeClass": "badge-danger-light",
+              "badgeUrl": false
+            },
+            "infos-items": [
+              {
+                "text": "Adresse 1"
+              },
+              {
+                "text": "Arrondissement"
+              }
+            ]
+          }
+        },
+        {
+          "url": "#",
+          "type": false,
+          "title": "Nom du lieu",
+          "infos": {
+            "badge": false,
+            "infos-items": [
+              {
+                "text": "Adresse 1"
+              },
+              {
+                "text": "Arrondissement"
+              }
+            ]
+          }
+        },
+        {
+          "url": "#",
+          "type": false,
+          "title": "Nom du lieu",
+          "infos": {
+            "badge": false,
+            "infos-items": [
+              {
+                "text": "Adresse 1"
+              },
+              {
+                "text": "Arrondissement"
+              }
+            ]
+          }
+        },
+        {
+          "url": "#",
+          "type": false,
+          "title": "Nom du lieu",
+          "infos": {
+            "badge": false,
+            "infos-items": [
+              {
+                "text": "Adresse 1"
+              },
+              {
+                "text": "Arrondissement"
+              }
+            ]
+          }
+        },
+        {
+          "url": "#",
+          "type": false,
+          "title": "Nom du lieu",
+          "infos": {
+            "badge": false,
+            "infos-items": [
+              {
+                "text": "Adresse 1"
+              },
+              {
+                "text": "Arrondissement"
+              }
+            ]
+          }
+        },
+        {
+          "url": "#",
+          "type": false,
+          "title": "Nom du lieu",
+          "infos": {
+            "badge": false,
+            "infos-items": [
+              {
+                "text": "Adresse 1"
+              },
+              {
+                "text": "Arrondissement"
+              }
+            ]
+          }
+        },
+        {
+          "url": "#",
+          "type": false,
+          "title": "Nom du lieu",
+          "infos": {
+            "badge": false,
+            "infos-items": [
+              {
+                "text": "Adresse 1"
+              },
+              {
+                "text": "Arrondissement"
+              }
+            ]
+          }
+        },
+        {
+          "url": "#",
+          "type": false,
+          "title": "Nom du lieu",
+          "infos": {
+            "badge": false,
+            "infos-items": [
+              {
+                "text": "Adresse 1"
+              },
+              {
+                "text": "Arrondissement"
+              }
+            ]
+          }
+        },
+        {
+          "url": "#",
+          "type": false,
+          "title": "Nom du lieu",
+          "infos": {
+            "badge": false,
+            "infos-items": [
+              {
+                "text": "Adresse 1"
+              },
+              {
+                "text": "Arrondissement"
+              }
+            ]
+          }
+        },
+        {
+          "url": "#",
+          "type": false,
+          "title": "Nom du lieu",
+          "infos": {
+            "badge": false,
+            "infos-items": [
+              {
+                "text": "Adresse 1"
+              },
+              {
+                "text": "Arrondissement"
+              }
+            ]
+          }
+        }
+      ]
+    },
+    "hasPagination": {
+      "paginationClass": false,
+      "paginationList": [
+        {
+          "url": "#",
+          "text": "1",
+          "class": false
+        },
+        {
+          "url": "#",
+          "text": "2",
+          "class": false
+        },
+        {
+          "url": "#",
+          "text": "3",
+          "class": false
+        },
+        {
+          "url": "#",
+          "text": "4",
+          "class": false
+        },
+        {
+          "url": "#",
+          "text": "5",
+          "class": false
+        },
+        {
+          "url": false,
+          "text": "...",
+          "class": "no-link"
+        }
+      ]
+    }
+  },
+  "map": {
+    "mapID": "mapLieuxTemplate",
+    "addressInfos": {
+      "address": "5955, avenue Bannantyne<br>Montréal (Québec) H4H 1H6",
+      "title": "Bibliothèque Jacqueline-De Repentigny",
+      "uri": "#"
+    },
+    "lngLat": "-73.577946, 45.448775"
+  }
+}

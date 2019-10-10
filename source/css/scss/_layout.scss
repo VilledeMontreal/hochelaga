@@ -27,6 +27,17 @@ html {
   }
 }
 
+// Sticky behavior
+//
+.sticky.is-sticky {
+  position: fixed;
+  left: 0;
+  right: 0;
+  top: 0;
+  z-index: 1000;
+  width: 100%;
+}
+
 .region-content {
   padding-top: 4rem;
   padding-bottom: 0;
@@ -36,18 +47,6 @@ html {
   }
 }
 
-// Padding tweaks for left and centered notch
-.layout-has-notch {
-  .region-content {
-    padding-top: 2rem;
-  }
-
-  @include media-breakpoint-up(lg) {
-    .region-content {
-      padding-top: 0;
-    }
-  }
-}
 
 // Section with BG image
 // TODO: See if still exists in new design system
@@ -58,55 +57,8 @@ html {
   padding-bottom: 3rem;
 }
 
-// Alternative layout for fluid-like content types (sujet, nouvelles)
-// fluid up to a max-width
-// A helper class .section-inner-media is used to deal with media margin and centering
-.section-content-fluid {
-  .section-inner {
-    &.section-inner-md {
-      margin: 0 $grid-gutter-width;
-      max-width: map-get($content-max-widths, md);
-      @media (min-width: map-get($content-max-widths, md) + ($grid-gutter-width * 2)) {
-        margin: 0 auto;
-      }
-    }
-    &.section-inner-lg {
-      margin: 0 $grid-gutter-width;
-      max-width: map-get($content-max-widths, lg);
-      @media (min-width: map-get($content-max-widths, lg) + ($grid-gutter-width * 2)) {
-        margin: 0 auto;
-      }
-    }
-    &.section-inner-xl {
-      margin: 0 $grid-gutter-width;
-      max-width: map-get($content-max-widths, xl);
-      @media (min-width: map-get($content-max-widths, xl) + ($grid-gutter-width * 2)) {
-        margin: 0 auto;
-      }
-    }
-    &.section-inner-media {
-      margin: 0 auto;
-      padding-top: 1rem;
-      margin-bottom: 3rem;
-      .media {
-        > * {
-          flex: 0 0 auto;
-        }
-        justify-content: center;
-
-      }
-    }
-
-    &.section-divider {
-      border-top: 2px solid $neutral-primary;
-      margin-top: 4rem;
-      padding-top: 4rem;
-    }
-  }
-}
-
-//
 // Overlay
+//
 .overlay {
   position: fixed;
   display: none;
@@ -139,17 +91,6 @@ html {
   }
 }
 
-//
-// Sticky behavior
-.sticky.is-sticky {
-  position: fixed;
-  left: 0;
-  right: 0;
-  top: 0;
-  z-index: 1000;
-  width: 100%;
-}
-
 // Content Modules
 .content-modules {
   padding-bottom: 2rem;
@@ -162,97 +103,25 @@ html {
   // Use to stack module in a page content and handle spacing
   .content-module-stacked {
     margin-bottom: 2rem;
-    > *:not(h2):not(h3):not(h4):not(h5):not(h6) {
-      margin-bottom: 2rem;
-      &:last-child {
-        margin-bottom: 0;
+    :last-child {
+      margin-bottom: 0;
+    }
+    h2, .h2 {
+      padding-top: 3rem;
+      &:first-child {
+        padding-top: 0;
+      }
+    }
+    h3, .h3,
+    h4, .h4 {
+      padding-top: 1rem;
+      &:first-child {
+        padding-top: 0;
       }
     }
 
     @include media-breakpoint-up(md) {
       margin-bottom: 2rem;
-    }
-  }
-}
-
-// Use to stack module in a page content and handle spacing
-.content-module-stacked {
-  margin-bottom: 2rem;
-  > *:not(h2):not(h3):not(h4):not(h5):not(h6) {
-    margin-bottom: 2rem;
-    &:last-child {
-      margin-bottom: 0;
-    }
-  }
-
-  @include media-breakpoint-up(md) {
-    margin-bottom: 4rem;
-  }
-}
-
-// Might not needed, soon to be deprecated
-// Small variants (32px)
-.content-module-stacked-sm {
-  margin-bottom: 2rem;
-  > *:not(h2):not(h3):not(h4):not(h5):not(h6) {
-    margin-bottom: 2rem;
-    &:last-child {
-      margin-bottom: 0;
-    }
-  }
-}
-
-.content-modules,
-.content-module-stacked {
-  // We limit this insanity to .content-modules zone
-  p + p,
-  p + ul,
-  p + ol,
-  ul + p,
-  ul + ul,
-  ul + ol,
-  ol + p,
-  ol + ul,
-  ol + ol {
-    margin-top: -1rem;
-  }
-}
-
-
-// Content modules
-// Comparatif
-//
-.content-comparatif {
-  > .col,
-  > [class*="col-"] {
-    margin-bottom: 1rem;
-    &:last-child {
-      margin-bottom: 0;
-    }
-  }
-
-  .content-wrapper {
-    background-color: $neutral-underground-1;
-    border-top: 2px solid $neutral-stroke;
-    height: 100%;
-    padding: 1rem;
-    > :last-child {
-      margin-bottom: 0;
-    }
-  }
-
-  &.comparatif-columns {
-    @include media-breakpoint-up(md) {
-      > .col,
-      > [class*="col-"] {
-        margin-bottom: 0;
-        &:first-child {
-          padding-right: .5rem;
-        }
-        &:last-child {
-          padding-left: .5rem;
-        }
-      }
     }
   }
 }

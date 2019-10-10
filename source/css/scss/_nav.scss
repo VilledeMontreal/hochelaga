@@ -197,3 +197,22 @@ nav {
     }
   }
 }
+
+// Nav filters
+//
+.nav-filters {
+  .nav-item {
+    margin-right: .5rem;
+  }
+  .nav-item-btn {
+    margin-left: .5rem;
+  }
+  @include media-breakpoint-up(lg) {
+    .nav-item {
+      margin-right: 1rem;
+    }
+    .nav-item-btn {
+      margin-left: 0;
+    }
+  }
+}

@@ -29,6 +29,17 @@ a {
   }
 }
 
+// Brand line
+.brand-border-bottom {
+  &:after {
+    content: "";
+    display: block;
+    width: 4rem;
+    height: .25rem;
+    background-color: $brand;
+  }
+}
+
 // Overrides colors
 .text-secondary,
 .text-black-50,
@@ -79,6 +90,42 @@ a.text-muted {
   }
 }
 
+// Utility class to give external link icon for external link
+.is-external-link {
+  margin-right: 1.625rem;
+  position: relative;
+  width: auto !important;
+  &:after {
+    content: '';
+    -webkit-mask: url($data-icon-externallink) no-repeat 50% 50%;
+    mask: url($data-icon-externallink) no-repeat 50% 50%;
+    -webkit-mask-size: cover;
+    mask-size: cover;
+    background-color: $action;
+    display: inline-flex;
+    width: $icon-md;
+    height: $icon-md;
+    overflow: hidden;
+    margin-right: -1.625rem;
+    margin-left: .125rem;
+    vertical-align: -.375rem;
+  }
+
+  @include hover-focus {
+    &:before {
+      background-color: $highlight-light;
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: -1.625rem;
+      bottom: -1px;
+      z-index: -1;
+    }
+  }
+}
+
+
 // Utility class for font-size
 
 // Paragraph
@@ -115,4 +162,19 @@ a.text-muted {
 .font-size-xs-interface {
   @include font-size($font-size-xs);      // 12px
   line-height: $line-height-xs            // 16px
+}
+
+// Remove last-child margin-bottom
+.rm-last-child-mb {
+  > :last-child {
+    margin-bottom: 0;
+  }
+}
+
+// Provide a utility class to give paragraph a smaller margin-bottom
+// We limit this insanity to .content-modules zone
+.element-mb-sm {
+  p, ol, ul {
+    margin-bottom: 1rem;
+  }
 }

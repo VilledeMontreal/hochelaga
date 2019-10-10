@@ -1,10 +1,59 @@
 // Base class
+// Base class
+//
+// Requires one of the contextual, color modifier classes for `color` and
+// `background-color`.
 
 .badge {
   background-color: $neutral-underground-2;
   border: 1px solid transparent;
   color: $neutral-primary;
+  display: inline-block;
+  padding: $badge-padding-y $badge-padding-x;
   position: relative;
+  @include font-size($badge-font-size);
+  font-weight: $badge-font-weight;
+  line-height: $line-height-xs;
+  text-align: center;
+  white-space: nowrap;
+  vertical-align: baseline;
+  @include border-radius($badge-border-radius);
+  @include transition($badge-transition);
+
+  @at-root a#{&} {
+    @include hover-focus {
+      text-decoration: none;
+    }
+  }
+
+  // Empty badges collapse automatically
+  &:empty {
+    display: none;
+  }
+}
+
+// Quick fix for badges in buttons
+.btn .badge {
+  position: relative;
+  top: -1px;
+}
+
+
+// Pill badges
+//
+// Make them extra rounded with a modifier to replace v3's badges.
+
+.badge-pill {
+  padding-right: $badge-pill-padding-x;
+  padding-left: $badge-pill-padding-x;
+  @include border-radius($badge-pill-border-radius);
+}
+
+// Colors
+//
+// Contextual variations (linked badges get darker on :hover).
+
+.badge {
   .icon {
     @include icon-color($neutral-primary);
   }
@@ -72,12 +121,8 @@
       align-self: center;
       &:before {
         display: block;
-        width: 1.166666666em;
-        height: 1.166666666em;
-        max-height: 24px;
-        max-width: 24px;
-        margin-top: -2px;
-        margin-bottom: -2px;
+        width: 1rem;
+        height: 1rem;
       }
     }
   }
@@ -85,25 +130,23 @@
   &.badge-icon-left {
     .badge-label {
       order: 2;
-      margin-left: ($spacer/2);
     }
     .icon {
       order: 1;
-      &:before {
-        left: ($spacer/4);
-      }
+      margin-left: -.25rem;
+      margin-right: .25rem;
     }
   }
 
   &.badge-icon-right {
     .badge-label {
-      margin-right: ($spacer/2);
       order: 1;
     }
     .icon {
       order: 2;
       &:before {
-        right: ($spacer/4);
+        margin-left: .25rem;
+        margin-right: -.25rem;
       }
     }
   }

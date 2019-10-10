@@ -208,7 +208,7 @@ $link-border-width:           1px;
 //
 // Style p element.
 
-$paragraph-margin-bottom:     2rem;
+$paragraph-margin-bottom:     1rem;
 
 
 
@@ -217,10 +217,10 @@ $paragraph-margin-bottom:     2rem;
 // Define the maximum width of `.container` for different screen sizes.
 
 $container-max-widths: (
-  sm: 570px,
-  md: 750px,
-  lg: 990px,
-  xl: 1170px
+  sm: 576px,
+  md: 768px,
+  lg: 992px,
+  xl: 1200px
 );
 
 
@@ -246,6 +246,7 @@ $content-max-widths: (
 //
 // Define common padding and border radius sizes and more.
 
+$line-height-xl:              2rem;    // 32px
 $line-height-lg:              1.75rem; // 28px 
 $line-height-md:              1.5rem;  // 24px  
 $line-height-sm:              1.25rem; // 20px
@@ -255,7 +256,7 @@ $border-radius:               .25rem;
 $border-width:                1px;
 $border-color:                $neutral-stroke;
 
-$border-radius-lg:            .375rem;
+$border-radius-lg:            .5rem;
 $border-radius-sm:            .125rem;
 
 $component-active-color:      $white;
@@ -361,26 +362,26 @@ $table-striped-order:         odd;
 //
 // Shared variables that are reassigned to `$input-` and `$btn-` specific variables.
 
-$input-btn-padding-y:         0.625rem;
-$input-btn-padding-x:         0.5rem;
+$input-btn-padding-y:         .5625rem;
+$input-btn-padding-x:         .4375rem;
 $input-btn-font-family:       null;
 $input-btn-font-size:         $font-size-sm;
-$input-btn-line-height:       1.28572; // 14/18
+$input-btn-line-height:       $line-height-sm; // 14/20
 
 $input-btn-focus-width:       .2rem;
 $input-btn-focus-color:       rgba($component-active-bg, .25);
 $input-btn-focus-box-shadow:  0 0 0 $input-btn-focus-width $input-btn-focus-color;
 $input-btn-focus-color:       rgba($component-active-bg, .25);
 
-$input-btn-padding-y-sm:      0.5rem;
-$input-btn-padding-x-sm:      0.5rem;
+$input-btn-padding-y-sm:      .4375rem;
+$input-btn-padding-x-sm:      .4375rem;
 $input-btn-font-size-sm:      $font-size-xs;
-$input-btn-line-height-sm:    1.16666666666; // 12/14
+$input-btn-line-height-sm:    $line-height-xs; // 12/16
 
-$input-btn-padding-y-lg:      1rem;
-$input-btn-padding-x-lg:      1rem;
+$input-btn-padding-y-lg:      .9375rem;
+$input-btn-padding-x-lg:      .9375rem;
 $input-btn-font-size-lg:      $font-size-base;
-$input-btn-line-height-lg:    1.375; // 16/22
+$input-btn-line-height-lg:    $line-height-md; // 16/24
 
 $input-btn-border-width:      $border-width;
 
@@ -422,7 +423,7 @@ $btn-block-spacing-y:         .5rem;
 $btn-border-radius:           4rem;
 $btn-border-radius-sm:        $btn-border-radius;
 $btn-border-radius-lg:        $btn-border-radius;
-$btn-border-radius-squared:   4px;
+$btn-border-radius-squared:   $border-radius;
 
 $btn-transition:              color .15s ease-in-out, background-color .15s ease-in-out, border-color .15s ease-in-out, box-shadow .15s ease-in-out;
 
@@ -468,39 +469,49 @@ $input-focus-box-shadow:                none;
 $input-placeholder-color:               $neutral-tertiary;
 $input-plaintext-color:                 $body-color;
 
+$input-height-border:                   $input-border-width * 2;
+
+$input-height-inner:                    calc(#{$input-line-height * 1} + #{$input-padding-y * 2});
+$input-height-inner-half:               calc(#{$input-line-height * .5} + #{$input-padding-y});
+$input-height-inner-quarter:            calc(#{$input-line-height * .25} + #{$input-padding-y / 2});
+
+$input-height:                          calc(#{$input-line-height} + #{$input-padding-y * 2} + #{$input-height-border});
+$input-height-sm:                       calc(#{$input-line-height-sm} + #{$input-btn-padding-y-sm * 2} + #{$input-height-border});
+$input-height-lg:                       calc(#{$input-line-height-lg} + #{$input-btn-padding-y-lg * 2} + #{$input-height-border});
+
+
 // custom forms
 
 $custom-control-indicator-disabled-bg:          $neutral-stroke;
 $custom-control-label-disabled-color:           $neutral-tertiary;
 
-$custom-control-gutter:                         .625rem;
-$custom-control-spacer-y:                       0.5rem; // Custom VDM addon
-$custom-control-spacer-x:                       0.75rem;
+$custom-control-gutter:                         1rem;
+$custom-control-spacer-x:                       1rem;
 
 $custom-control-indicator-size:                 1.25rem;
 $custom-control-indicator-bg:                   $white;
+
+$custom-control-indicator-bg-size:              1.5rem 1.5rem;
+$custom-control-indicator-border-color:         $neutral-stroke;
 $custom-control-indicator-border-width:         $input-border-width;
 
-$custom-control-indicator-active-box-shadow:    none !important;
-$custom-control-indicator-active-bg:            none !important;
+$custom-control-indicator-active-box-shadow:    none;
+$custom-control-indicator-active-bg:            none;
+
 $custom-control-indicator-checked-color:        $white;
 $custom-control-indicator-checked-bg:           $primary;
 
 $custom-control-indicator-checked-disabled-bg:  $custom-control-indicator-disabled-bg;
 
+$custom-checkbox-indicator-border-radius:         $border-radius-sm;
+$custom-checkbox-indicator-icon-checked-size:     1.5rem;
+$custom-checkbox-indicator-icon-checked:          str-replace(url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3e%3cpath fill='#{$custom-control-indicator-checked-color}' d='M16.707 8.293a1 1 0 010 1.414l-6 6a.995.995 0 01-.53.277l-.118.014h-.118a.996.996 0 01-.648-.29l-2-2a1 1 0 111.414-1.415L10 13.585l5.293-5.292a1 1 0 011.414 0z'/%3e%3c/svg%3e"), "#", "%23");
 
-$custom-checkbox-indicator-border-radius:         $border-radius-lg;
-$custom-checkbox-indicator-icon-checked-bg-size:  1.1875rem;  
-$custom-checkbox-indicator-icon-checked:          url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath d='M18.3 7.1c-.5-.5-1.3-.5-1.9 0l-7.1 7.1-1.7-1.7c-.5-.5-1.4-.5-1.9 0s-.5 1.4 0 1.9L8.3 17c.4.4 1.1.5 1.6.2L18.2 9c.6-.6.6-1.4.1-1.9z' fill='%23fff'/%3E%3C/svg%3E");
-$custom-radio-indicator-icon-checked-bg-size:     .625rem;
+$custom-radio-indicator-icon-checked:             str-replace(url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3e%3ccircle cx='12' cy='12' r='4' fill='#{$custom-control-indicator-checked-color}'/%3e%3c/svg%3e"), "#", "%23");
 
-$custom-switch-control-indicator-size:            1.75rem;
-$custom-switch-control-indicator-color:           $primary;
-$custom-switch-control-indicator-disabled-color:  $white;
-$custom-switch-inner-padding:                     .125rem;
-$custom-switch-width:                             $custom-switch-control-indicator-size * 2;
-$custom-switch-indicator-border-radius:           $custom-switch-control-indicator-size;
-$custom-switch-indicator-size:                    calc(#{$custom-switch-control-indicator-size} - #{$custom-control-indicator-border-width * 4});
+$custom-switch-width:                             2.5rem;
+$custom-switch-indicator-border-radius:           .5rem;
+$custom-switch-indicator-size:                    1.25rem;
 
 
 // Form validation
@@ -508,21 +519,6 @@ $custom-switch-indicator-size:                    calc(#{$custom-switch-control-
 $form-feedback-margin-top:          .5rem;
 $form-feedback-font-size:           $font-size-sm;
 $form-group-margin-bottom:          1rem;
-
-// Checkbox Toggle :on/off switches
-//
-// Will be removed in V4 - we now use custom-switch
-
-$checkbox-toggle-border-width:          2px;
-$checkbox-toggle-border-color:          $primary;
-$checkbox-toggle-border-radius:         40px;
-$checkbox-toggle-border-radius-inside:  30px;
-$checkbox-toggle-height:                40px;
-$checkbox-toggle-width:                 75px;
-$checkbox-toggle-width-inside:          30px;
-$checkbox-toggle-padding:               5px;
-$checkbox-toggle-bg:                    $white;
-$checkbox-toggle-bg-toggled:            $primary;
 
 
 // Navs
@@ -551,6 +547,7 @@ $navbar-box-shadow:                 0 .25rem .5rem -.5rem rgba($black, .5);
 // Dropdown menu container and contents.
 
 $dropdown-min-width:                16rem;
+$dropdown-sm-min-width:             8rem;
 $dropdown-padding-y:                .5rem;
 $dropdown-spacer:                   .125rem;
 $dropdown-font-size:                $font-size-base;
@@ -581,16 +578,22 @@ $dropdown-header-color:             $neutral-primary;
 
 // Pagination
 
-$pagination-padding-y:              0.625rem;
-$pagination-padding-x:              1.25rem;
-$pagination-padding-y-sm:           .5rem;
-$pagination-padding-x-sm:           1rem;
-$pagination-padding-y-lg:           1rem;
-$pagination-padding-x-lg:           2rem;
+$pagination-border-width:           1px;
 
-$pagination-icon-padding:           0.75rem;
-$pagination-icon-padding-sm:        0.5rem;
-$pagination-icon-padding-lg:        1.15rem;
+$pagination-padding-y:              calc(0.625rem - #{$pagination-border-width});
+$pagination-padding-x:              1rem;
+$pagination-padding-y-sm:           calc(0.5rem - #{$pagination-border-width});
+$pagination-padding-x-sm:           .75rem;
+$pagination-padding-y-lg:           calc(1rem - #{$pagination-border-width});
+$pagination-padding-x-lg:           1.4375rem;
+
+$pagination-icon-size:              $icon-md;
+$pagination-icon-size-sm:           $icon-sm;
+$pagination-icon-size-lg:           1.75rem;
+
+$pagination-icon-padding:           calc(.5rem - #{$pagination-border-width});
+$pagination-icon-padding-sm:        calc(.375rem - #{$pagination-border-width});
+$pagination-icon-padding-lg:        calc(.875rem - #{$pagination-border-width});
 
 $pagination-line-height:            $line-height-sm;
 
@@ -603,12 +606,12 @@ $pagination-hover-color:            $primary;
 $pagination-hover-bg:               $highlight-light;
 $pagination-hover-border-color:     $neutral-stroke;
 
-$pagination-active-color:           $white;
-$pagination-active-bg:              $primary;
+$pagination-active-color:           $primary;
+$pagination-active-bg:              $highlight-light;
 $pagination-active-border-color:    $neutral-stroke; 
 
-$pagination-disabled-color:         $neutral-stroke;
-$pagination-disabled-bg:            $white;
+$pagination-disabled-color:         $neutral-secondary;
+$pagination-disabled-bg:            $neutral-underground-1;
 $pagination-disabled-border-color:  $neutral-stroke;
 
 
@@ -629,18 +632,51 @@ $card-box-shadow:                   $box-shadow;
 
 // Badges
 
-$badge-padding-y:                   ($spacer / 2);
-$badge-padding-x:                   ($spacer / 2);
-$badge-pill-padding-x:              $spacer;
+$badge-font-size:                   $font-size-xs;
+$badge-font-weight:                 $font-weight-bold;
+$badge-border-width:                $border-width;
+$badge-border-radius:               $border-radius;
+$badge-padding-y:                   calc(.25rem - #{$badge-border-width});
+$badge-padding-x:                   .5rem;
+
+$badge-transition:                  $btn-transition;
+$badge-focus-width:                 $input-btn-focus-width;
+
+$badge-pill-padding-x:              .5rem;
+// Use a higher than normal value to ensure completely rounded edges when
+// customizing padding or font-size on labels.
+$badge-pill-border-radius:          10rem;
+
+
+// Chips
+
+$chip-color:                        $neutral-primary;
+$chip-hover-color:                  $primary;
+$chip-background-color:             $white;
+$chip-hover-background-color:       $highlight-light;
+
+$chip-font-weight:                  $font-weight-bold;
+$chip-border-width:                 $border-width;
+$chip-border-radius:                $border-radius;
+$chip-border-color:                 $neutral-stroke;
+$chip-padding-y:                    calc(.625rem - #{$chip-border-width});
+$chip-padding-x:                    calc(.5rem - #{$chip-border-width});
+$chip-padding-y-sm:                 calc(.5rem - #{$chip-border-width});
+$chip-padding-x-sm:                 calc(.5rem - #{$chip-border-width});
+
+$chip-transition:                   $btn-transition;
+$chip-focus-width:                  $input-btn-focus-width;
 
 
 // Modals
 
 // Padding applied to the modal body
-$modal-inner-padding:               1rem;
+$modal-inner-padding:               1rem 2rem;
+
 $modal-dialog-margin:               .5rem;
-$modal-dialog-margin-y-sm-up:       1.75rem;
-$modal-title-line-height:           $line-height-sm;
+$modal-dialog-margin-y-sm-up:       4rem;
+
+$modal-title-line-height:           $line-height-md;
 
 $modal-content-bg:                  $white;
 $modal-content-border-color:        rgba($black, .2);
@@ -648,21 +684,52 @@ $modal-content-border-width:        0;
 $modal-content-box-shadow-xs:       $box-shadow;
 $modal-content-box-shadow-sm-up:    $box-shadow;
 
-
 $modal-backdrop-bg:                 $backdrop-bg;
 $modal-backdrop-opacity:            $backdrop-opacity;
-$modal-header-border-color:         $gray-200;
+$modal-header-border-color:         $neutral-stroke;
 $modal-footer-border-color:         $modal-header-border-color;
-$modal-header-border-width:         $modal-content-border-width;
-$modal-footer-border-width:         $modal-header-border-width;
-$modal-header-padding:              1rem;
+$modal-header-border-width:         $border-width;
+$modal-footer-border-width:         $border-width;
+$modal-header-padding-y:            1rem;
+$modal-header-padding-x:            1rem;
+$modal-header-padding:              $modal-header-padding-y $modal-header-padding-x;
 
-$modal-xl:                          800px;
+$modal-xl:                          1140px;
 $modal-lg:                          800px;
 $modal-md:                          600px;
-$modal-sm:                          600px;
+$modal-sm:                          460px;
 
 $modal-transition:                  transform 300ms ease-out;
+
+// Flyouts
+
+// Padding applied to the flyout body
+$flyout-inner-padding:              1rem;
+
+$flyout-title-line-height:          $line-height-base;
+
+$flyout-content-color:              null;
+$flyout-content-bg:                 $white;
+$flyout-content-border-color:       null;
+$flyout-content-border-width:       $border-width;
+$flyout-content-border-radius:      $border-radius-lg;
+$flyout-content-box-shadow-xs:      $box-shadow;
+$flyout-content-box-shadow-sm-up:   $box-shadow;
+
+$flyout-header-border-color:        $neutral-stroke;
+$flyout-footer-border-color:        $flyout-header-border-color;
+$flyout-header-border-width:        $flyout-content-border-width;
+$flyout-footer-border-width:        $flyout-header-border-width;
+$flyout-header-padding-y:           1rem;
+$flyout-header-padding-x:           1rem;
+$flyout-header-padding:             $flyout-header-padding-y $flyout-header-padding-x; // Keep this for backwards compatibility
+
+$flyout-lg:                         600px;
+$flyout-md:                         460px;
+$flyout-sm:                         320px;
+
+$flyout-show-transform:             none;
+$flyout-transition:                 transform .3s ease-out;
 
 
 // Alerts
@@ -700,7 +767,7 @@ $progress-circle-animation-timing:      .5s;
 
 // List group
 
-$list-group-bg:                     $white;
+$list-group-bg:                     transparent;
 $list-group-border-color:           $neutral-stroke;
 $list-group-border-width:           $border-width;
 $list-group-border-radius:          0;

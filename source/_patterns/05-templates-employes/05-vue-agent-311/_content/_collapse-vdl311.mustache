@@ -1,0 +1,146 @@
+{{# generalites}}
+<div class="content-modules mb-2 pb-0">
+  <h2 class="font-size-base-interface mb-1">Titre de niveau 2</h2>
+  <div class="content-module-stacked">
+    <p>Labore eirmod ea dolor sadipscing ipsum tempor erat, sit lorem tempor duo labore dolores takimata lorem, at amet elitr et est. At ut et eos sadipscing sadipscing. At <a href="/lien-interne">diam clita sit</a> et <a href="https://google.ca">consetetur vero accusam</a> lorem aliquyam. Aliquyam sit ea dolore ipsum ipsum, no lorem et sit diam ipsum. Lorem nonumy clita voluptua voluptua consetetur, voluptua ea est takimata sed.</p>
+    <ul>
+      <li>Item 1</li>
+      <li>Item 2</li>
+      <li>Item 3</li>
+    </ul>
+  </div>
+  <div class="content-module-stacked">
+    <div class="list-group">
+      <div class="list-group-item list-group-item-action">
+        <a href="#" data-toggle="modal" data-target="#exampleTableData">
+          <span class="icon icon-table" aria-hidden="true"></span> Seuil de faible revenue
+        </a>
+      </div>
+    </div>
+  </div>
+  <div class="content-module-stacked">
+  <!-- Media Gallery -->
+  <button class="btn-media js-gallery-trigger">
+    {{> styles-figure}}
+  </button>
+
+  <div class="media-gallery d-none" itemscope itemtype="http://schema.org/ImageGallery">
+    <div itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
+      <a href="{{ mediaSrc }}" itemprop="contentUrl" data-size="{{ mediaSize }}" data-index="{{ index }}" data-description="{{ mediaCaption}}" data-author="{{ mediaAuthor }}">
+        <img src="{{ thumbnail.mediaSrc }}" class="img-fluid" height="{{ thumbnail.height }}" width="{{ thumbnail.width }}" itemprop="thumbnail" alt="{{ mediaAlt }}">
+      </a>
+    </div>
+  </div>
+  
+  </div>
+  <div class="content-module-stacked">
+  {{> patterns-emphasis(emphasisClasses: emphasis-md)}}
+  </div>
+  {{# comment}}
+  <div class="content-module-stacked">
+  {{> components-alert}}
+  </div>
+  {{/ comment}}
+</div>
+{{/ generalites}}
+
+{{# procedures}}
+<div class="content-modules mb-2 pb-0">
+  <h2 class="font-size-base-interface mb-1">Titre de niveau 2</h2>
+  <div class="content-module-stacked">
+    <p>Labore eirmod ea dolor sadipscing ipsum tempor erat, sit lorem tempor duo labore dolores takimata lorem, at amet elitr et est. At ut et eos sadipscing sadipscing. At <a href="/lien-interne">diam clita sit</a> et <a href="https://google.ca">consetetur vero accusam</a> lorem aliquyam. Aliquyam sit ea dolore ipsum ipsum, no lorem et sit diam ipsum. Lorem nonumy clita voluptua voluptua consetetur, voluptua ea est takimata sed.</p>
+    <ul>
+      <li>Item 1</li>
+      <li>Item 2</li>
+      <li>Item 3</li>
+    </ul>
+  </div>
+  <div class="content-module-stacked">
+    <div class="list-group">
+      <div class="list-group-item list-group-item-action">
+        <a href="#" data-toggle="modal" data-target="#exampleTableData">
+          <span class="icon icon-table" aria-hidden="true"></span> Seuil de faible revenue
+        </a>
+      </div>
+    </div>
+  </div>
+  <div class="content-module-stacked">
+  {{> styles-figure}}
+  </div>
+  <h2 class="font-size-base-interface mb-1">Module titre de section</h2>
+  {{# module-documents}}
+  <div class="content-module-stacked">
+  {{> components-list-item-link}}
+  </div>
+  {{/ module-documents}}
+  <h2 class="font-size-base-interface mb-1">Module titre de section</h2>
+  {{# module-liens}}
+  <div class="content-module-stacked">
+  {{> components-list-item-link}}
+  </div>
+  {{/ module-liens}}
+</div>
+{{/ procedures}}
+
+{{# gdc}}
+<div class="mb-3">
+  <h2 class="font-size-base-interface mb-1">{{ heading }}</h2>
+  <ul class="list {{listClass}}">
+  {{# list }}
+    <li class="list-item-icon">
+      <div class="mr-2">
+        <img src="{{ src}}" alt="{{alt}}" />
+      </div>
+      <div class="list-item-icon-content">
+        {{# text }}
+        <div class="list-item-icon-label">{{text}}</div>
+        {{/ text }}
+        {{# listExtraContent}}
+        <div {{#listExtraContentClass}}class="{{listExtraContentClass}}"{{/listExtraContentClass}}>{{{listExtraContent}}}</div>
+        {{/ listExtraContent}}
+      </div>
+    </li>
+    {{/ list }}
+  </ul>
+</div>
+{{/ gdc}}
+
+{{# question-type}}
+<div class="questions-container element-mb-sm">
+  {{# question-item}}
+  <div class="question-item">
+    <h2 class="font-size-base-interface mb-1">{{ question }}</h2>
+    <div class="wrapper wrapper-answer mb-3 rm-last-child-mb">
+      {{{ answer}}}
+    </div>
+  </div>
+  {{/ question-item}}
+</div>
+{{/ question-type}}
+
+{{# personne-ressource}}
+  {{# list-icon}}
+  <div class="mb-2">
+    {{> components-list-item}}
+  </div>
+  {{/ list-icon}}
+  {{{ extra-content }}}
+{{/ personne-ressource}}
+
+{{# agent-liaison}}
+  {{# list-icon}}
+  <div class="mb-2">
+    {{> components-list-item}}
+  </div>
+  {{/ list-icon}}
+  {{{ extra-content }}}
+{{/ agent-liaison}}
+
+{{# responsable-maj}}
+  {{# list-icon}}
+  <div class="mb-2">
+    {{> components-list-item}}
+  </div>
+  {{/ list-icon}}
+  {{{ extra-content }}}
+{{/ responsable-maj}}

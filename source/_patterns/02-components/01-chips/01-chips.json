@@ -1,0 +1,60 @@
+{
+  "chips":[
+    {
+      "chipLabel": "Libellé",
+      "chipClass": false,
+      "chipID": "chipExampleDropdown",
+      "is-dropdown": true,
+      "dropdownMenu": {
+        "dropdownMenuID": "chipExampleDropdown",
+        "dropdownSection": [
+          {
+            "dropdownItem": [
+              {
+                "url": "#",
+                "dropdownItemLabel": "Libellé"
+              },
+              {
+                "url": "#",
+                "dropdownItemLabel": "Libellé"
+              },
+              {
+                "url": "#",
+                "dropdownItemLabel": "Libellé"
+              }
+            ]
+          }
+        ]
+      }
+    }
+  ],
+  "chips-sm":[
+    {
+      "chipLabel": "Libellé",
+      "chipClass": "chip-sm",
+      "chipID": "chipSmExampleDropdown",
+      "is-dropdown": true,
+      "dropdownMenu": {
+        "dropdownMenuID": "chipSmExampleDropdown",
+        "dropdownSection": [
+          {
+            "dropdownItem": [
+              {
+                "url": "#",
+                "dropdownItemLabel": "Libellé"
+              },
+              {
+                "url": "#",
+                "dropdownItemLabel": "Libellé"
+              },
+              {
+                "url": "#",
+                "dropdownItemLabel": "Libellé"
+              }
+            ]
+          }
+        ]
+      }
+    }
+  ]
+}

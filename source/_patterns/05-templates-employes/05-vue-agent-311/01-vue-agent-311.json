@@ -20,8 +20,7 @@
         "menuItemIcon": {
           "icon-name": "icon-info"
         },
-        "menuItemLabel": "Info",
-        "tooltip": true
+        "menuItemLabel": "Info"
       },
       {
         "menuItemSeparator": false,
@@ -30,8 +29,7 @@
         "menuItemIcon": {
           "icon-name": "icon-book"
         },
-        "menuItemLabel": "Lexique",
-        "tooltip": true
+        "menuItemLabel": "Lexique"
       },
       {
         "class": false,
@@ -39,8 +37,7 @@
         "menuItemIcon": {
           "icon-name": "icon-comment"
         },
-        "menuItemLabel": "Signaler",
-        "tooltip": true
+        "menuItemLabel": "Signaler"
       },
       {
         "menuItemSeparator": true,
@@ -49,8 +46,7 @@
         "menuItemIcon": {
           "icon-name": "icon-share"
         },
-        "menuItemLabel": "Partager",
-        "tooltip": true
+        "menuItemLabel": "Partager"
       },
       {
         "menuItemSeparator": false,
@@ -59,8 +55,7 @@
         "menuItemIcon": {
           "icon-name": "icon-archive"
         },
-        "menuItemLabel": "BDI 311",
-        "tooltip": true
+        "menuItemLabel": "BDI 311"
       }
     ]
   },
@@ -81,11 +76,22 @@
       {
         "hasIcon": true,
         "icon-name": "icon-help",
-        "listItemAction": true,
+        "listItemAction": {
+          "toggle": {
+            "type": "flyout",
+            "id": "aideDecisionFlyout01"
+          }
+        },
         "text": "Aide à la décision",
         "listExtraContent": "Distribution, réparation ou remplacement de bac roulant.",
         "listExtraContentClass": "font-size-sm-interface"
       }
     ]
+  },
+  "aideDecision": {
+    "id": "aideDecisionFlyout01",
+    "ariaLabelledBy": "aideDecisionFlyoutLabel",
+    "flyoutPositionClass": "flyout-bottom flyout-custom-right",
+    "flyoutAideDecisionBody": true
   }
 }

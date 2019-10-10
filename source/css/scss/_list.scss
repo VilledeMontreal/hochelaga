@@ -165,3 +165,40 @@
     }
   }
 }
+
+
+// 2 columns list layout
+//
+.list-2-columns {
+  @include media-breakpoint-up(lg) {
+    -moz-column-count: 2;
+    -moz-column-gap: $grid-gutter-width;
+    -webkit-column-count: 2;
+    -webkit-column-gap: $grid-gutter-width;
+    column-count: 2;
+    column-gap: $grid-gutter-width;
+  }
+}
+
+
+// Quick links lists
+//
+.quick-links {
+  @include font-size($font-size-sm);
+  line-height: $line-height-sm;
+  margin-bottom: .5rem;
+  .quick-links-label {
+    color: $neutral-primary;
+    display: inline-block;
+    font-weight: $font-weight-normal;
+    margin-right: .5rem;
+    margin-bottom: .5rem;
+  }
+  .list-inline {
+    display: inline;
+  }
+  .list-inline-item {
+    margin-right: .5rem;
+    margin-bottom: .5rem;
+  }
+}

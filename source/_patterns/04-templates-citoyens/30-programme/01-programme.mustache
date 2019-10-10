@@ -1,0 +1,110 @@
+{{> styles-link-skip-to-main-content }}
+
+<header class="header-main-nav" role="banner">
+{{> components-navbar }}
+</header>
+
+<main class="main-content {{ pageClasses }}" id="main-content" aria-label="Main Content" role="main">
+  
+  {{# documentHeading}}
+  <div class="pt-lg-8">
+  {{> patterns-content-header}}
+  </div>
+  {{/ documentHeading}}
+
+  <div class="region-content{{# documentHeading }} pt-0{{/ documentHeading}}">
+
+    <div class="container">
+
+      <section class="row{{# sidebarRight }} justify-content-between{{/ sidebarRight}}{{^ sidebarRight}} justify-content-center{{/ sidebarRight}}">
+        <div class="col-12 col-lg-7">
+          <header class="content-header mt-4 mt-lg-0">
+            {{# header-back-link}}
+            <div class="header-back-link">
+              {{> styles-link-list-element}}
+            </div>
+            {{/ header-back-link}}
+
+            <h1>{{ heading }}</h1>
+
+            {{# has-badges}}
+            <div class="badges-container">
+              {{# badges}}
+              {{> components-badge}}
+              {{/ badges}}
+            </div>
+            {{/ has-badges}}
+
+            {{# publicationDate}}
+            <div class="publication-date">
+              Mis à jour le <time datetime="{{dateTimeFormat}}">{{{dateTimeText}}}</time>
+            </div>
+            {{/ publicationDate}}
+
+          </header>
+          
+          <div class="lead">
+            {{{ lead }}}
+          </div>
+          
+          <div class="content-modules">
+            {{# module-anchors}}
+            <div class="mb-8">
+              <div class="wrapper">
+                <h2 class="h5 mb-1">Dans cette page :</h2>
+                {{> components-list-item-link}}
+              </div>
+            </div>
+            {{/ module-anchors}}
+
+            {{# module-volets}}
+            {{> templates-citoyens-content-programme}}
+            {{/ module-volets}}
+
+            {{# module-reglements}}
+            <div class="content-module-stacked">
+              <h2>Règlements</h2>
+              {{> components-list-item-link }}
+            </div>
+            {{/ module-reglements}}
+
+            {{# module-partners}}
+            <div class="content-module-stacked">
+              <h2>Partenaires</h2>
+              {{{ partnerText }}}
+              {{# listPartners}}
+              <ul {{# hasLogos}}class="mt-0 list-inline"{{/ hasLogos}}>
+                {{# listPartners.items }}
+                <li {{# hasLogos}}class="list-inline-item"{{/ hasLogos}}>
+                  {{# hasLogos}}<img src="{{ src }}" alt="{{ alt }}" class="img-fluid" />{{/hasLogos}}
+                  {{^hasLogos}}{{ partnerName }}{{/ hasLogos}}
+                </li>
+                {{/ listPartners.items }}
+              </ul>
+              {{/ listPartners}}
+            </div>
+            {{/ module-partners}}
+
+          </div>
+
+        </div>
+
+        {{# sidebarRight}}
+        <aside class="col-12 col-lg-4" role="complementary">
+          {{> templates-citoyens-sidebar-programme}}
+        </aside>
+        {{/ sidebarRight}}
+
+      </section>
+
+      <section class="row{{# sidebarRight }} justify-content-between{{/ sidebarRight}}{{^ sidebarRight}} justify-content-center{{/ sidebarRight}}">
+        <div class="col-12 col-lg-7">
+        {{> components-feedback-form}}
+        </div>
+      </section>
+
+    </div>
+  </div>
+</main>
+
+{{> patterns-footer-portal }}

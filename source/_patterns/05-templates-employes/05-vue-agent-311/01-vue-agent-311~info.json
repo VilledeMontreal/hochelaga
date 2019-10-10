@@ -49,6 +49,16 @@
     ]
   },
   "drawerInfo": {
+    "media": {
+      "src": "https://picsum.photos/id/1024/768/432",
+      "copyright": false
+    },
+    "imgClass": "img-zoom-in",
+    "mediaSrc": "https://picsum.photos/id/1024/1920/1280",
+    "mediaSize": "1920x1280",
+    "mediaCaption": "Légende Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse tincidunt, orci nec luctus fringilla, sapien arcu tincidunt dui, sed blandit metus arcu dignissim lorem.",
+    "mediaAuthor": "Мартин Тасев",
+    "mediaAlt": "Media #1024",
     "accordionListed": {
       "collapsibleClasses": "accordeon-listed mb-3",
       "collapsibleItem": [
@@ -58,47 +68,208 @@
           "block-id": "accordeon-vdl-generalites",
           "heading-id": "accordeon-vdl-heading-generalites",
           "title": "Généralités",
-          "extra-content": "Collapsible content"
+          "comment": {
+            "alertClass": "alert-with-icon",
+            "alertTitle": false,
+            "alertText": "<p>Diam amet lorem est amet elitr et. Lorem erat eirmod sea vero, ea sit <a href=\"#\" class=\"alert-link\">at justo</a>.</p><p>No et et eirmod no clita duo ea, dolore amet eirmod no.</p>",
+            "alertIcon": true,
+            "icon-name": "icon-comment"
+          }
         },
         {
           "collapsible-item-vdl311": true,
-          "procedures-acs-arron": true,
+          "procedures": true,
           "title": "Procédures ACS - arrondissement",
           "block-id": "accordeon-vdl-acs-arron",
           "heading-id": "accordeon-vdl-heading-acs-arron",
-          "extra-content": "Collapsible content"
+          "module-documents": {
+            "listGroupClass": "list-group-icon",
+            "listGroup": [
+              {
+                "url": "test.pdf",
+                "icon-name": "icon-file-pdf",
+                "text": "Titre du document [PDF - 2 Mo]",
+                "class": "document-pdf"
+              },
+              {
+                "url": "test.pdf",
+                "icon-name": "icon-file-pdf",
+                "text": "Titre du document [PDF - 2 Mo]",
+                "class": "document-pdf"
+              }
+            ]
+          },
+          "module-liens": {
+            "listGroup": [
+              {
+                "url": "#",
+                "text": "Cras justo odio",
+                "class": false
+              },
+              {
+                "url": "/lien-interne",
+                "text": "Dapibus ac facilisis in",
+                "class": false
+              },
+              {
+                "url": "https://rds.ca",
+                "text": "Morbi leo risus",
+                "class": false
+              }
+            ]
+          }
         },
         {
           "collapsible-item-vdl311": true,
-          "procedures-acs-cs311": true,
+          "procedures": true,
           "title": "Procédures ACS - CS311",
           "block-id": "accordeon-vdl-acs-cs311",
           "heading-id": "accordeon-vdl-heading-cs311",
-          "extra-content": "Collapsible content"
+          "module-documents": {
+            "listGroupClass": "list-group-icon",
+            "listGroup": [
+              {
+                "url": "test.pdf",
+                "icon-name": "icon-file-pdf",
+                "text": "Titre du document [PDF - 2 Mo]",
+                "class": "document-pdf"
+              },
+              {
+                "url": "test.pdf",
+                "icon-name": "icon-file-pdf",
+                "text": "Titre du document [PDF - 2 Mo]",
+                "class": "document-pdf"
+              }
+            ]
+          },
+          "module-liens": {
+            "listGroup": [
+              {
+                "url": "#",
+                "text": "Cras justo odio",
+                "class": false
+              },
+              {
+                "url": "/lien-interne",
+                "text": "Dapibus ac facilisis in",
+                "class": false
+              },
+              {
+                "url": "https://rds.ca",
+                "text": "Morbi leo risus",
+                "class": false
+              }
+            ]
+          }
         },
         {
           "collapsible-item-vdl311": true,
-          "procedures-acs-irp": true,
+          "procedures": true,
           "title": "Procédures ACS - IRP",
           "block-id": "accordeon-vdl-acs-irp",
           "heading-id": "accordeon-vdl-heading-acs-irp",
-          "extra-content": "Collapsible content"
+          "module-documents": {
+            "listGroupClass": "list-group-icon",
+            "listGroup": [
+              {
+                "url": "test.pdf",
+                "icon-name": "icon-file-pdf",
+                "text": "Titre du document [PDF - 2 Mo]",
+                "class": "document-pdf"
+              },
+              {
+                "url": "test.pdf",
+                "icon-name": "icon-file-pdf",
+                "text": "Titre du document [PDF - 2 Mo]",
+                "class": "document-pdf"
+              }
+            ]
+          },
+          "module-liens": {
+            "listGroup": [
+              {
+                "url": "#",
+                "text": "Cras justo odio",
+                "class": false
+              },
+              {
+                "url": "/lien-interne",
+                "text": "Dapibus ac facilisis in",
+                "class": false
+              },
+              {
+                "url": "https://rds.ca",
+                "text": "Morbi leo risus",
+                "class": false
+              }
+            ]
+          }
         },
         {
           "collapsible-item-vdl311": true,
-          "gdc": true,
           "title": "GDC",
           "block-id": "accordeon-vdl-acs-gdc",
           "heading-id": "accordeon-vdl-heading-acs-gdc",
-          "extra-content": "Collapsible content"
+          "gdc": [
+            {
+              "heading": "Sit ea dolor",
+              "list": [
+                {
+                  "src": "https://imgplaceholder.com/24x24/transparent/212529/fa-automobile",
+                  "alt": "Alt icone GDC XYZ",
+                  "icon-name": "icon-anchor",
+                  "text": "Nom de l'activité",
+                  "listExtraContent": false
+                },
+                {
+                  "src": "https://imgplaceholder.com/24x24/transparent/212529/fa-balance-scale",
+                  "alt": "Alt icone GDC XYZ",
+                  "icon-name": "icon-music",
+                  "text": "Nom de l'activité",
+                  "listExtraContent": false
+                }
+              ]
+            },
+            {
+              "heading": "Lorem elitr sadipscing",
+              "list": [
+                {
+                  "src": "https://imgplaceholder.com/24x24/transparent/212529/fa-bug",
+                  "alt": "Alt icone GDC XYZ",
+                  "text": "Nom de l'activité (Theme)",
+                  "listExtraContent": "Rebum aliquyam ut diam accusam diam amet vero sit vero kasd. No voluptua dolor at."
+                },
+                {
+                  "src": "https://imgplaceholder.com/24x24/transparent/212529/fa-truck",
+                  "alt": "Alt icone GDC XYZ",
+                  "text": "Nom de l'activité (Theme)",
+                  "listExtraContent": "Rebum aliquyam ut diam accusam diam amet vero sit vero kasd. No voluptua dolor at."
+                }
+              ]
+            }
+          ]
         },
         {
           "collapsible-item-vdl311": true,
-          "question-type": true,
           "title": "Questions type",
           "block-id": "accordeon-vdl-qt",
           "heading-id": "accordeon-vdl-heading-qt",
-          "extra-content": "Collapsible content"
+          "question-type": {
+            "question-item": [
+              {
+                "question": "Duo et ipsum diam sed rebum amet et ?",
+                "answer": "<p>Vero clita rebum voluptua kasd magna sed <a href=\"#\">sanctus dolor</a>, lorem ipsum elitr sea consetetur accusam kasd tempor sanctus sit, <strong>nonumy kasd</strong> ut at diam kasd et et eirmod diam, at clita nonumy tempor et lorem. Diam lorem dolores amet amet at ea, vero kasd duo ipsum sanctus erat no no, ut elitr gubergren ea stet.</p><p>Sanctus nonumy eos amet ea sea est accusam ea. Dolor sit consetetur at sadipscing sadipscing eos amet et. Sadipscing takimata sed et erat takimata clita et et takimata, gubergren consetetur lorem sea dolor elitr. Magna sanctus diam sadipscing et consetetur consetetur dolore duo accusam, sed ipsum labore sadipscing erat accusam dolor clita sit voluptua, ut lorem dolores et aliquyam sit, accusam at stet diam est.</p>"
+              },
+              {
+                "question": "Lorem ipsum elitr sea consetetur accusam ?",
+                "answer": "<p>Vero clita rebum voluptua kasd magna sed <a href=\"#\">sanctus dolor</a>, lorem ipsum elitr sea consetetur accusam kasd tempor sanctus sit, <strong>nonumy kasd</strong> ut at diam kasd et et eirmod diam, at clita nonumy tempor et lorem. Diam lorem dolores amet amet at ea, vero kasd duo ipsum sanctus erat no no, ut elitr gubergren ea stet.</p><p>Sanctus nonumy eos amet ea sea est accusam ea. Dolor sit consetetur at sadipscing sadipscing eos amet et. Sadipscing takimata sed et erat takimata clita et et takimata, gubergren consetetur lorem sea dolor elitr. Magna sanctus diam sadipscing et consetetur consetetur dolore duo accusam, sed ipsum labore sadipscing erat accusam dolor clita sit voluptua, ut lorem dolores et aliquyam sit, accusam at stet diam est.</p>"
+              },
+              {
+                "question": "Sanctus nonumy eos amet ea sea est accusam ea ?",
+                "answer": "<p>Vero clita rebum voluptua kasd magna sed <a href=\"#\">sanctus dolor</a>, lorem ipsum elitr sea consetetur accusam kasd tempor sanctus sit, <strong>nonumy kasd</strong> ut at diam kasd et et eirmod diam, at clita nonumy tempor et lorem. Diam lorem dolores amet amet at ea, vero kasd duo ipsum sanctus erat no no, ut elitr gubergren ea stet.</p><ul><li>Nulla sagittis consectetur urna</li><li>Sit amet euismod ligula tempor at</li><li>Donec a orci non mi finibus dapibus non vitae arcu</li></ul>"
+              }
+            ]
+          }
         },
         {
           "collapsible-item-vdl311": true,
@@ -109,13 +280,6 @@
           "list-icon": [
             {
               "list": [
-                {
-                  "listItemClass": "text-danger",
-                  "hasIcon": true,
-                  "icon-name": "icon-eye-off icon-color-danger",
-                  "text": false,
-                  "listExtraContent": "Cette information ne doit pas être divulguée"
-                },
                 {
                   "hasIcon": true,
                   "icon-name": "icon-user",
@@ -152,12 +316,19 @@
         {
           "collapsible-item-vdl311": true,
           "personne-ressource": true,
-          "title": "Agent de liaison",
-          "block-id": "accordeon-vdl-agent-liaison",
-          "heading-id": "accordeon-vdl-heading-agent-liaison",
+          "title": "Personne contact",
+          "block-id": "accordeon-vdl-personne-contact",
+          "heading-id": "accordeon-vdl-heading-personne-contact",
           "list-icon": [
             {
               "list": [
+                {
+                  "listItemClass": "text-danger",
+                  "hasIcon": true,
+                  "icon-name": "icon-eye-off icon-color-danger",
+                  "text": false,
+                  "listExtraContent": "Cette information ne doit pas être divulguée"
+                },
                 {
                   "hasIcon": true,
                   "icon-name": "icon-user",
@@ -187,9 +358,9 @@
         {
           "collapsible-item-vdl311": true,
           "personne-ressource": true,
-          "title": "Responsable de la mise à jour",
-          "block-id": "accordeon-vdl-responsable-maj",
-          "heading-id": "accordeon-vdl-heading-responsable-maj",
+          "title": "Rédacteur",
+          "block-id": "accordeon-vdl-redacteur",
+          "heading-id": "accordeon-vdl-heading-redacteur",
           "list-icon": [
             {
               "list": [
@@ -221,15 +392,5 @@
         }
       ]
     }
-  },
-  "help": {
-    "list": [
-      {
-        "icon-name": "icon-help",
-        "listItemAction": true,
-        "text": "Aide à la décision",
-        "listExtraContent": "Distribution, réparation ou remplacement de bac roulant."
-      }
-    ]
   }
 }

@@ -1,0 +1,132 @@
+{{> styles-link-skip-to-main-content }}
+
+<header class="header-main-nav" role="banner">
+{{> components-navbar }}
+</header>
+
+<main class="main-content {{ pageClasses }}" id="main-content" aria-label="Main Content" role="main">
+
+  {{# documentHeading}}
+  {{> patterns-content-header}}
+  {{/ documentHeading}}
+
+  <div class="region-content pt-3 pt-lg-0 pb-0">
+    <div class="container {{ regionMainContainerClasses }}">
+      <div class="row justify-content-between">
+
+        <div class="col-12 col-lg-7">
+          <div class="content-header">
+
+            {{# linkedTo}}
+            <div class="mb-4">
+              <div class="font-size-sm-interface">
+                <span class="mr-1">Relié à</span><a href="{{url}}">{{label}}</a>
+              </div>
+            </div>
+            {{/ linkedTo}}
+
+            {{# module-message }}
+            <div class="mb-8">
+              {{> components-alert}}
+            </div>
+            {{/ module-message }}
+
+            <div class="lead">
+              {{{ lead }}}
+            </div>
+          </div>
+
+          {{# topRequested }}
+          <div class="mb-8 d-lg-none">
+            <h2>Les plus demandés</h2>
+            {{> components-list-item-link}}
+          </div>
+          {{/ topRequested}}
+
+          {{# hub-list}}
+          <div class="mb-8"> 
+            <h2>{{ hub-list-heading}}</h2>
+            {{> components-list-item-link}}
+          </div>
+          {{/ hub-list}}
+
+          {{# bodyText}}
+          <div class="content-modules mb-0">
+            <div class="content-module-stacked mb-8">
+              <h2>Section optionnelle pour les collectrices éditoriales</h2>
+              <p>Corps de texte - <i>Italique</i> et <strong>gras</strong>, exposant, indice et caractères spéciaux adipiscing elit. Morbi condimentum sollicitudin erat, quis <a href="#">lien interne</a> ou <a href="https://google.com">lien externe</a> convallis risus. Nullam  posuere odio ligula, hendrerit suscipit ligula congue laoreet. Curabitur eleifend nulla purus, ut pharetra urna efficitur id. Cras lacinia nisi id quam lacinia, et orci aliquam.</p>
+              <h3>Titre de section</h3>
+              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi condimentum sollicitudin erat, quis convallis risus.</p>
+              <ul>
+                <li>Liste à puce</li>
+                <li>Liste à puce</li>
+                <li>Liste à puce</li>
+                <li>Liste à puce</li>
+              </ul>
+              <h3>Titre de section</h3>
+              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi condimentum sollicitudin erat, quis convallis risus.</p>
+              <ol>
+                <li>Liste numérotée</li>
+                <li>Liste numérotée</li>
+                <li>Liste numérotée</li>
+              </ol>
+              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi condimentum sollicitudin erat, quis convallis risus.</p>
+            </div>
+          </div>
+          {{/ bodyText}}
+
+          {{^ hub-list}}
+          <div class="mb-8">
+            <p>Nullam  posuere odio ligula, hendrerit suscipit ligula congue laoreet. Curabitur eleifend nulla purus, ut pharetra urna efficitur id. Cras lacinia nisi id quam lacinia, et orci aliquam.</p>
+          </div>
+          {{/ hub-list}}
+        </div>
+
+        {{#sidebarRight}}
+        <aside class="col-12 col-lg-4 {{ sidebarRightClass }}" role="complementary">
+          <div class="sidebar pt-lg-8 border-0">
+            {{# topRequested}}
+            <div class="sb-block d-none d-lg-block">
+              {{> styles-heading-sidebar(sidebarTitle: "Les plus demandés") }}
+              {{> components-list-item-link}}
+            </div>
+            {{/ topRequested}}
+            {{# featuredSidebarCTA}}
+            <div class="sb-block">
+              {{> patterns-wrapper-featured-cta}}
+            </div>
+            {{/ featuredSidebarCTA}}
+            {{# featuredSidebarContent}}
+            <div class="sb-block">
+              <div class="row cards {{ cards.classes }}">
+              {{# cards.card-item }}
+                <div class="col-12">
+                  {{> components-card-item }}
+                </div>
+              {{/ cards.card-item }}
+              </div>
+            </div>
+            {{/ featuredSidebarContent}}
+
+          </div>
+        </aside>
+        {{/sidebarRight}}
+          
+      </div>
+    </div>
+  </div>
+
+  <section class="wrapper-partial-bg-dark">
+    <div class="container">
+      <div class="bg-light py-4 py-md-8 px-2 px-md-8 px-lg-12">
+        <h2>Vous n'avez pas trouvé ce que vous cherchez ?</h2>
+        <p>Certains contenus ne sont pas encore accessibles sur montreal.ca. Les rubriques suivantes vous redirigeront vers notre ancien site web.</p>
+        {{# listOldContent}}
+        {{> components-list-item-link}}
+        {{/ listOldContent}}
+      </div>
+    </div>
+  </section>
+</main>
+
+{{> patterns-footer-portal }}

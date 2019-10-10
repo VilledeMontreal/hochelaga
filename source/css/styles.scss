@@ -1,10 +1,10 @@
 @import "scss/functions";
+@import "~bootstrap/scss/functions";
 
 /*-- VARIABLES --*/
 @import "scss/variables";  
 
 /*-- BOOTSTRAP --*/
-@import "~bootstrap/scss/functions";
 @import "~bootstrap/scss/variables";
 @import "scss/bootstrap_overrides"; // Overrides theme-colors variables
 @import "scss/mixins"; // Partial bootstrap mixins import
@@ -26,8 +26,10 @@
 /*-- COMPONENTS --*/
 @import "scss/badge";
 @import "scss/buttons";
+@import "scss/button-group";
 @import "scss/card";
 @import "scss/carousel";
+@import "scss/chip";
 @import "scss/close";
 @import "scss/content-header";
 @import "scss/dropdown";
@@ -39,6 +41,7 @@
 @import "scss/list";
 @import "scss/list-group";
 @import "scss/map";
+@import "scss/flyout";
 @import "scss/modal";
 @import "scss/media";
 @import "scss/messaging";

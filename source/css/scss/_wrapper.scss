@@ -28,7 +28,7 @@
   .wrapper-arrondissement-header {
     @include font-size($font-size-sm);
     border-bottom: 1px solid $neutral-stroke;
-    line-height: $line-height-xs;
+    line-height: $line-height-sm;
     padding: 1rem;
     margin-bottom: 2rem;
 
@@ -55,7 +55,7 @@
     padding: 0 1rem 2rem 1rem;
     .empty-state {
       @include font-size($font-size-sm);
-      line-height: $line-height-xs;
+      line-height: $line-height-sm;
       text-align: center;
       p {
         margin-bottom: 0;
@@ -90,6 +90,69 @@
   }
 }
 
+// Content modules
+// Comparatif
+// Normalized classes, should use .wrapper-name instead of .content-name
+//
+.wrapper-comparatif,
+.content-comparatif {
+  > .col,
+  > [class*="col-"] {
+    margin-bottom: 1rem;
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+  .wrapper-comparatif-content,
+  .content-wrapper {
+    background-color: $neutral-underground-1;
+    border-top: 2px solid $neutral-stroke;
+    height: 100%;
+    padding: 1rem;
+    > :last-child {
+      margin-bottom: 0;
+    }
+  }
+  &.wrapper-comparatif-columns,
+  &.comparatif-columns {
+    @include media-breakpoint-up(md) {
+      > .col,
+      > [class*="col-"] {
+        margin-bottom: 0;
+        &:first-child {
+          padding-right: .5rem;
+        }
+        &:last-child {
+          padding-left: .5rem;
+        }
+      }
+    }
+  }
+}
+
+
+// Wrapper Featured Call To Action
+//
+.wrapper-featured-cta {
+  border: none;
+  background-color: $neutral-underground-1;
+  padding: 2rem;
+  width: 100%;
+  .wrapper-title {
+    @include font-size($h3-font-size);  // 24/32
+    line-height: 2rem;
+    color: $headings-color;
+    margin-bottom: 1rem;
+  }
+  .wrapper-body {
+    :last-child {
+      margin-bottom: 0;
+    }
+    margin-bottom: 2rem;
+  }
+}
+
+
 // Wrapper Accordion
 //
 .wrapper-accordion {
@@ -99,6 +162,29 @@
     }
   }
 }
+
+// Wrapper partial bg dark
+//
+.wrapper-partial-bg-dark {
+  position: relative;
+  &:after {
+    content: "";
+    display: block;
+    background-color: $neutral-primary;
+    position: absolute;
+    z-index: -1;
+    bottom: 0;
+    width: 100%;
+    height: 4rem;
+  }
+
+  @include media-breakpoint-up(md) {
+    &:after {
+      height: 8rem;
+    }
+  }
+}
+
 
 // Blockquote And Emphasis
 //

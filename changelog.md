@@ -7,6 +7,47 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 
 ## [4.2.0] - unreleased
 
+## Added
+- 2 new Utility icons: table et steps.
+- 3 new Editorial icons: news, ticket et not-found.
+- Div variant for list-item component.
+- Collectrices template and empty-state variant.
+- Indexes template and variants.
+- Utility class to create 2-columns lists (.list-2-columns)
+- Utility class to set external-link-icon with after pseudo-class.
+- New wrapper Featured Call to action.
+- Flyout component.
+- Chip component.
+- Toggle (button-group) component.
+- Lexique pattern.
+
+## Changed
+- Paragraphs and list now takes 16px margin-bottom (instead of 32px).
+- Fix spacing inside .content-modules and .content-module-stacked.
+- Handle heading spacing inside .content-modules and .content-module-stacked.
+- Fix spacing in Démarche template.
+- Fix spacing in Unité administrative template.
+- Fix spacing in Sujet template.
+- Fix spacing in Article template.
+- Fix spacing in Programme template.
+- Template employé - Vue de l'agent 311 - Finalisation.
+- White background for main-navbar.
+- Update pagination styles.
+- Update button-group styles
+- Refactor badges sizes, spacing and icons handling in styles.
+- Refactor Header content fullwidth to provides more flexibility.
+- List-group-teaser harmonization. List-group-teaser now always have top border and padding-bottom
+- Class name for wrapper-comparatif harmonization, .content-comparatif will be deprecated in further version.
+- Handling of external-icon for links needs to be set up manually in some specific cases (list-group).
+
+## Fixed
+- Prevent vdm-icon-system from cleaning too much rules from SVG, leading to some fill occuring where it shouldn't.
+- Handling external-link-icon rules not preventing some link of getting part of the rule to apply (list-group).
+- Badge spacing, line-height and font-size.
+- Buttons line-height and spacing.
+- Forms, checkbox, radios and switches sizes, and spacing.
+- Container-max-width.
+
 
 ## [4.1.1] - 2019-09-23
 
@@ -113,7 +154,7 @@ Main navbar, menu and footer are now in their own stylesheet. They will eventual
 The version 3 is now deprecated. Only bug fixes will be considered. Please refer to the old bitbucket repo https://bitbucket.org/villemontreal/boite-outils-web/.
 
 
-
+[4.1.1]: https://bitbucket.org/villemontreal/boite-outils4-web/src/4.1.1/
 [4.1.0]: https://bitbucket.org/villemontreal/boite-outils4-web/src/4.1.0/
 [4.0.1]: https://bitbucket.org/villemontreal/boite-outils4-web/src/4.0.1/
 [4.0.0]: https://bitbucket.org/villemontreal/boite-outils4-web/src/4.0.0/

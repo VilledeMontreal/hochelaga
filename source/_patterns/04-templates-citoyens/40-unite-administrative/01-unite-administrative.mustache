@@ -1,0 +1,160 @@
+{{> styles-link-skip-to-main-content }}
+
+<header class="header-main-nav" role="banner">
+{{> components-navbar }}
+</header>
+
+<main class="main-content {{ pageClasses }}" id="main-content" aria-label="Main Content" role="main">
+
+  <div class="region-content">
+    <div class="container">
+      <section class="row{{# sidebarRight }} justify-content-between{{/ sidebarRight}}{{^ sidebarRight}} justify-content-center{{/ sidebarRight}}">
+        <div class="col-12 col-lg-7">
+
+          <header class="content-header">
+            <h1>{{ heading }}</h1>
+
+            {{# has-badges}}
+            <div class="badges-container">
+              {{# badges}}
+              {{> components-badge}}
+              {{/ badges}}
+            </div>
+            {{/ has-badges}}
+
+            {{# publicationDate}}
+            <div class="publication-date">
+              Mis à jour le <time datetime="{{dateTimeFormat}}">{{{dateTimeText}}}</time>
+            </div>
+            {{/ publicationDate}}
+          </header>
+          
+          <div class="lead">
+            {{{ lead }}}
+          </div>
+
+          <div class="content-modules">
+
+            <h2>Module Titre de section</h2>
+            <div class="content-module-stacked">
+              <p>Corps de texte - <i>Italique</i> et <strong>gras</strong>, exposant, indice et caractères spéciaux adipiscing elit. Morbi condimentum sollicitudin erat, quis <a href="#">lien interne</a> ou <a href="https://google.com">lien externe</a> convallis risus. Nullam  posuere odio ligula, hendrerit suscipit ligula congue laoreet. Curabitur eleifend nulla purus, ut pharetra urna efficitur id. Cras lacinia nisi id quam lacinia, et orci aliquam.</p>
+              <ul>
+                <li>Liste à puce</li>
+                <li>Liste à puce</li>
+                <li>Liste à puce</li>
+                <li>Liste à puce</li>
+              </ul>
+              <p>Fusce ultrices vitae est vel dapibus. Nullam sit amet enim nec risus pellentesque accumsan ut vitae mauris. In hac habitasse platea dictumst. Mauris sit amet nunc dignissim, volutpat odio id, scelerisque augue.</p>
+              <ol>
+                <li>Liste numérotée</li>
+                <li>Liste numérotée</li>
+                <li>Liste numérotée</li>
+              </ol>
+
+              <h2>Mission</h2>
+              <p>Sed maximum est in amicitia parem esse inferiori. Saepe enim excellentiae quaedam sunt, qualis erat Scipionis in nostro, ut ita dicam, grege. Numquam se ille Philo, numquam Rupilio, numquam Mummio anteposuit, numquam inferioris ordinis.</p>
+
+              <h2>Objectifs</h2>
+              <p>Sed maximum est in amicitia parem esse inferiori. Saepe enim excellentiae quaedam sunt, qualis erat Scipionis in nostro, ut ita dicam, grege. Numquam se ille Philo, numquam Rupilio, numquam Mummio anteposuit, numquam inferioris ordinis.</p>
+            </div>
+
+            {{# module-news}}
+            <h2>Dernières nouvelles</h2>
+            <div class="content-module-stacked">
+              {{> components-list-group-teaser}}
+              <div class="d-flex justify-content-center">
+              {{> components-button}}
+              </div>
+            </div>
+            {{/ module-news}}
+
+            {{# module-events}}
+            <h2>Événements à venir</h2>
+            <div class="content-module-stacked">
+              {{> components-list-group-teaser}}
+              <div class="d-flex justify-content-center">
+              {{> components-button}}
+              </div>
+            </div>
+            {{/ module-events}}
+
+            {{# module-documents}}
+            <h2>Documents (titre éditorial)</h2>
+            <div class="content-module-stacked">
+              {{> components-list-item-link}}
+            </div>
+            {{/ module-documents }}
+
+            {{# module-list-reference}}
+            <h2>Liste de références de liens internes ou externes</h2>
+            <div class="content-module-stacked">
+              {{> components-list-item-link }}
+            </div>
+            {{/ module-list-reference}}
+
+            {{# module-texte-optionnel}}
+            <h2>Module Titre de section</h2>
+            <div class="content-module-stacked">
+              <p>Corps de texte - <i>Italique</i> et <strong>gras</strong>, exposant, indice et caractères spéciaux adipiscing elit. Morbi condimentum sollicitudin erat, quis <a href="#">lien interne</a> ou <a href="https://google.com">lien externe</a> convallis risus. Nullam  posuere odio ligula, hendrerit suscipit ligula congue laoreet. Curabitur eleifend nulla purus, ut pharetra urna efficitur id. Cras lacinia nisi id quam lacinia, et orci aliquam.</p>
+              <ul>
+                <li>Liste à puce</li>
+                <li>Liste à puce</li>
+                <li>Liste à puce</li>
+                <li>Liste à puce</li>
+              </ul>
+
+              <ol>
+                <li>Liste numérotée</li>
+                <li>Liste numérotée</li>
+                <li>Liste numérotée</li>
+              </ol>
+            </div>
+            {{/ module-texte-optionnel}}
+
+            {{# module-emphasis }}
+            <div class="content-module-stacked">
+            {{> patterns-emphasis }}
+            </div>
+            {{/ module-emphasis}}
+            
+            {{# listAutoProgrammes}}
+            <h2>Liste automatisée des programmes</h2>
+            <div class="content-module-stacked">
+              {{> components-list-item-link}}
+            </div>
+            {{/ listAutoProgrammes}}
+
+            {{# listAutoArticles}}
+            <h2>Liste automatisée des conseils-articles</h2>
+            <div class="content-module-stacked">
+              {{> components-list-item-link}}
+            </div>
+            {{/ listAutoArticles}}
+
+            {{# listAutoProjets}}
+            <h2>Liste automatisée des projets</h2>
+            <div class="content-module-stacked">
+              {{> components-list-item-link}}
+            </div>
+            {{/ listAutoProjets}}
+          </div>
+        </div>
+        {{# sidebarRight}}
+        <aside class="col-12 col-lg-4" role="complementary">
+          {{> templates-citoyens-sidebar-unite-administrative}}
+        </aside>
+        {{/ sidebarRight}}
+
+      </section>
+
+      <section class="row{{# sidebarRight }} justify-content-between{{/ sidebarRight}}{{^ sidebarRight}} justify-content-center{{/ sidebarRight}}">
+        <div class="col-12 col-lg-7">
+        {{> components-feedback-form}}
+        </div>
+      </section>
+
+    </div>
+  </div>
+</main>
+
+{{> patterns-footer-portal }}

@@ -202,14 +202,10 @@ legend,
 //
 // Tweak just a few things for radios.
 .custom-control {
-  margin-bottom: $custom-control-spacer-y;
-
-  .custom-control-label {
-    padding-top: 0.15rem;
-    &::before {
-      border: 1px solid $input-border-color;
-    }
-  }
+  line-height: $line-height-md;
+  min-height: $line-height-md;
+  padding-top: .5rem;
+  padding-bottom: .5rem;
 
   .custom-control-input:checked ~ .custom-control-label {
     &::before {
@@ -225,7 +221,47 @@ legend,
       border-color: $custom-control-indicator-checked-disabled-bg;
     }
   }
+}
 
+// Custom control indicators
+//
+// Build the custom controls out of pseudo-elements.
+
+.custom-control-label {
+  @include font-size($font-size-base);
+  line-height: $line-height-md;
+  position: relative;
+  margin-bottom: 0;
+  vertical-align: top;
+
+  // Background-color and (when enabled) gradient
+  &::before {
+    position: absolute;
+    top: 0;
+    left: -($custom-control-gutter + $custom-control-indicator-size);
+    display: block;
+    margin: .125rem;
+    width: $custom-control-indicator-size;
+    height: $custom-control-indicator-size;
+    pointer-events: none;
+    content: "";
+    background-color: $custom-control-indicator-bg;
+    border: $custom-control-indicator-border-color solid $custom-control-indicator-border-width;
+    @include box-shadow($custom-control-indicator-box-shadow);
+  }
+
+  // Foreground (icon)
+  &::after {
+    position: absolute;
+    top: 0;
+    left: -($custom-control-gutter + $custom-control-indicator-size);
+    display: block;
+    margin: 0;
+    width: $custom-checkbox-indicator-icon-checked-size;
+    height: $custom-checkbox-indicator-icon-checked-size;
+    content: "";
+    background: no-repeat 50% / #{$custom-checkbox-indicator-icon-checked-size};
+  }
 }
 
 .custom-control-input {
@@ -242,104 +278,289 @@ legend,
   }
 }
 
-//Checkboxes
-.custom-checkbox {
-  .custom-control-input:checked ~ .custom-control-label {
-    &::after {
-      top: -0.4rem;
-      left: -2.45rem;
-      width: 2.5rem;
-      height: 2.5rem;
-    }
-  }
-}
-
 // switches
 //
 // Tweak a few things for switches
 .custom-switch {
-  padding-left: 0rem;
+  padding-left: $custom-switch-width + $custom-control-gutter;
 
   .custom-control-label {
-    position: relative;
-    display: inline-block;
-    min-width: 112px;
-    cursor: pointer;
-    font-weight: 500;
-    text-align: left;
-    padding: 0 0 0rem 44px;
-    
-    &::before, 
-    &:after {
-      content: "";
-      position: absolute;
-      margin: 0;
-      outline: 0;
-      top: 50%;
-      -ms-transform: translate(0, -50%);
-      -webkit-transform: translate(0, -50%);
-      transform: translate(0, -50%);
-      -webkit-transition: all 0.3s ease;
-      transition: all 0.3s ease;
-    }
-    
-    &:before {
-      left: 1px;
-      width: 34px;
-      height: 14px;
+    &::before {
+      top: calc(#{($line-height-md - .75rem) / 2});
+      left: -($custom-switch-width + $custom-control-gutter);
+      width: 2rem;
+      height: .75rem;
+      margin: 0 .25rem;
       background-color: $neutral-stroke;
-      border-radius: 8px;
+      border: none;
+      border-radius: $custom-switch-indicator-border-radius;
     }
     
-    &:after {
-      left: 0;
-      width: 20px;
-      height: 20px;
+    &::after {
+      top: calc(#{($line-height-md - $custom-control-indicator-size) / 2});
+      left: -($custom-switch-width + $custom-control-gutter);
+      width: $custom-switch-indicator-size;
+      height: $custom-switch-indicator-size;
+      margin: 0;
       background-color: $white;
       border-radius: 50%;
-      box-shadow: 0 3px 1px -2px rgba(0, 0, 0, 0.14), 0 2px 2px 0 rgba(0, 0, 0, 0.098), 0 1px 5px 0 rgba(0, 0, 0, 0.084);
+      box-shadow: 0 1px 4px 0 rgba(0,0,0,0.15);
+      @include transition(transform .15s ease-in-out, $custom-forms-transition);
+
     }
   }
 
-  .custom-control-input {
-    display: none;
-    
-    &:checked {
-      & + .custom-control-label {
-         &::before {
-          border-color: $neutral-stroke;
-          background-color: $neutral-stroke;
-        }
-        &:after {
-          background-color: $primary;
-          -ms-transform: translate(80%, -50%);
-          -webkit-transform: translate(80%, -50%);
-          transform: translate(80%, -50%);
-        }
-      }
+  .custom-control-input:checked ~ .custom-control-label {
+    &::before {
+      background-color: $neutral-stroke;
     }
-    
-    &:disabled {
-      & + .custom-control-label {
-        &::before {
-          opacity: 0.4;
-        }
-        &:after {
-          opacity: 0.8;
-          //background-color: $neutral-underground-1;
-        }
-      }
-      &:checked {
-        & + .custom-control-label {
-          &:after {
-            background-color: $primary;
-            opacity: 0.4;
+    &::after {
+      background-color: $primary;
+    }
+  }
+
+  .custom-control-input:disabled {
+    ~ .custom-control-label::before {
+      background-color: $neutral-underground-2;
+    }
+    ~ .custom-control-label::after {
+      background-color: $neutral-underground-1;
+    }
+    &:checked ~ .custom-control-label::before {
+      background-color: $neutral-underground-2;
+    }
+    &:checked ~ .custom-control-label::after {
+      background-color: $neutral-tertiary;
+    }
+  }
+
+}
+
+
+// Form group sizes overrides
+//
+.form-group-sm,
+.form-group-lg {
+  margin-bottom: $form-group-margin-bottom;
+}
+
+
+// Form group sm
+//
+.form-group-sm {
+  label {
+    @include font-size($font-size-xs);
+    line-height: $line-height-xs;
+  }
+
+  .input-rounded {
+    border-radius: 1rem;
+    padding: $btn-padding-y-sm $btn-padding-x-sm;
+  }
+
+  .input-group-icon {
+    input {
+      &:not([type]),
+      &[type="text"],
+      &[type="email"],
+      &[type="password"],
+      &[type="search"],
+      &[type="tel"],
+      &[type="url"] { 
+        & + .icon {
+          padding: 0 .5rem;
+          &:before{
+            width: 16px;
+            height: 16px;
           }
         }
       }
     }
 
+    &.input-group-icon-left {
+      input {
+        &:not([type]),
+        &[type="text"],
+        &[type="email"],
+        &[type="password"],
+        &[type="search"],
+        &[type="tel"],
+        &[type="url"] { 
+          padding-left: 2rem;
+        }
+      }
+    }
+
+    &.input-group-icon-right {
+      input {
+        &:not([type]),
+        &[type="text"],
+        &[type="email"],
+        &[type="password"],
+        &[type="search"],
+        &[type="tel"],
+        &[type="url"] { 
+          padding-right: 2rem;
+        }
+      }
+    }
   }
+  .valid-feedback,
+  .invalid-feedback {
+    &:before {
+      width: 16px;
+      height: 16px;
+      top: calc(24px + 16px); //(height .invalid-feedback + haft of icon)+ (height of input/2)
+    }
+  }
+  .form-control {
+    @extend .form-control-sm;
+    overflow: auto;
+  }
+
+  .custom-control {
+    line-height: $line-height-xs;
+  }
+
+  .custom-control-label {
+    @include font-size($font-size-xs);
+    line-height: $line-height-xs;
+    
+    // Background-color and (when enabled) gradient
+    &::before {
+      top: -.25rem;
+    }
+
+    // Foreground (icon)
+    &::after {
+      top: -.25rem;
+    }
+  }
+
+  .custom-switch {
+    .custom-control-label {
+      &::before {
+        top: calc(#{($line-height-xs - .75rem) / 2});
+      }
+      
+      &::after {
+        top: calc(#{($line-height-xs - $custom-control-indicator-size) / 2});
+      }
+    }
+  }
+
+  .btn {
+    @extend .btn-sm;
+  }
+
+  .file-drop-container {
+    .help-text {
+      font-size: $font-size-xs;
+    }
+  }
+
+}
+
+
+// Form group lg
+//
+.form-group-lg {
+  label {
+    @include font-size($font-size-base);
+    line-height: $line-height-md;
+  }
+  .input-rounded {
+      border-radius: 1.75rem;
+      padding: $btn-padding-y-lg $btn-padding-x-lg;
+    }
+
+  .input-group-icon {
+    input {
+      &:not([type]),
+      &[type="text"],
+      &[type="email"],
+      &[type="password"],
+      &[type="search"],
+      &[type="tel"],
+      &[type="url"] { 
+        & + .icon {
+          padding: 0 1rem;
+        }
+      }
+    }
+
+    &.input-group-icon-left {
+      input {
+        &:not([type]),
+        &[type="text"],
+        &[type="email"],
+        &[type="password"],
+        &[type="search"],
+        &[type="tel"],
+        &[type="url"] { 
+          padding-left: 3.5rem;
+        }
+      }
+    }
+
+    &.input-group-icon-right {
+      input {
+        &:not([type]),
+        &[type="text"],
+        &[type="email"],
+        &[type="password"],
+        &[type="search"],
+        &[type="tel"],
+        &[type="url"] { 
+          padding-right: 3.5rem;
+        }
+      }
+    }
+
+  }
+
+  .valid-feedback,
+  .invalid-feedback {
+    &:before {
+      top: calc(21px + 28px); //(height .invalid-feedback + haft of icon)+ (height of input/2)
+    }
+  }
+
+  .form-control {
+    @extend .form-control-lg;
+  }
+
+  .custom-control {
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+  }
+
+  .custom-control-label {
+    @include font-size($font-size-base);
+    line-height: $line-height-md;
+  }
+
+  .custom-control-inline {
+    margin-right: 1.5rem;
+  }
+
+  .btn {
+    @extend .btn-lg;
+  }
+
+  .file-drop-container {
+    .help-text {
+      font-size: $font-size-base;
+    }
+  }
+}
+
+.form-sm {
+  @extend .form-group-sm;
+}
+
+.form-lg {
+  @extend .form-group-lg;
 }
 
 
@@ -408,109 +629,6 @@ legend,
 
 }
 
-// Form group sizes overrides
-//
-.form-group-sm,
-.form-group-lg {
-  margin-bottom: $form-group-margin-bottom;
-}
-
-// Form group sm
-.form-group-sm {
-  label {
-    @include font-size($font-size-xs);
-    line-height: $line-height-xs;
-  }
-
-  .input-rounded {
-    border-radius: 1rem;
-    padding: $btn-padding-y-sm $btn-padding-x-sm;
-  }
-
-  .input-group-icon {
-    input {
-      &:not([type]),
-      &[type="text"],
-      &[type="email"],
-      &[type="password"],
-      &[type="search"],
-      &[type="tel"],
-      &[type="url"] { 
-        & + .icon {
-          padding: 0 .5rem;
-          &:before{
-            width: 16px;
-            height: 16px;
-          }
-        }
-      }
-    }
-
-    &.input-group-icon-left {
-      input {
-        &:not([type]),
-        &[type="text"],
-        &[type="email"],
-        &[type="password"],
-        &[type="search"],
-        &[type="tel"],
-        &[type="url"] { 
-          padding-left: 2rem;
-        }
-      }
-    }
-
-    &.input-group-icon-right {
-      input {
-        &:not([type]),
-        &[type="text"],
-        &[type="email"],
-        &[type="password"],
-        &[type="search"],
-        &[type="tel"],
-        &[type="url"] { 
-          padding-right: 2rem;
-        }
-      }
-    }
-  }
-  .valid-feedback,
-  .invalid-feedback {
-    &:before {
-      width: 16px;
-      height: 16px;
-      top: calc(24px + 16px); //(height .invalid-feedback + haft of icon)+ (height of input/2)
-    }
-  }
-  input,
-  select {
-    @extend .form-control-sm;
-    overflow: auto;
-  }
-
-  .custom-control {
-    .custom-control-label {
-      padding-top: 0.3rem;
-    }
-  }
-    .custom-switch {
-      margin-bottom: 0;
-      .custom-control-label {
-        padding-top: 0;
-      }
-    }
-
-  .btn {
-      @extend .btn-sm;
-  }
-
-  .file-drop-container {
-    .help-text {
-      font-size: $font-size-xs;
-    }
-  }
-
-}
 
 // wrapper around input that needs inline text addon
 .input-inline-addon {
@@ -547,105 +665,6 @@ legend,
   }
 }
 
-// Form group lg
-.form-group-lg {
-  label {
-    @include font-size($font-size-base);
-    line-height: $line-height-md;
-  }
-  .input-rounded {
-      border-radius: 1.75rem;
-      padding: $btn-padding-y-lg $btn-padding-x-lg;
-    }
-
-  .input-group-icon {
-    input {
-      &:not([type]),
-      &[type="text"],
-      &[type="email"],
-      &[type="password"],
-      &[type="search"],
-      &[type="tel"],
-      &[type="url"] { 
-        & + .icon {
-          padding: 0 1rem;
-        }
-      }
-    }
-
-    &.input-group-icon-left {
-      input {
-        &:not([type]),
-        &[type="text"],
-        &[type="email"],
-        &[type="password"],
-        &[type="search"],
-        &[type="tel"],
-        &[type="url"] { 
-          padding-left: 3.5rem;
-        }
-      }
-    }
-
-    &.input-group-icon-right {
-      input {
-        &:not([type]),
-        &[type="text"],
-        &[type="email"],
-        &[type="password"],
-        &[type="search"],
-        &[type="tel"],
-        &[type="url"] { 
-          padding-right: 3.5rem;
-        }
-      }
-    }
-
-  }
-
-  .valid-feedback,
-  .invalid-feedback {
-    &:before {
-      top: calc(21px + 28px); //(height .invalid-feedback + haft of icon)+ (height of input/2)
-    }
-  }
-
-  select,
-  input {
-    @extend .form-control-lg;
-    
-  }
-
-  .custom-control {
-    margin-bottom: 0.75rem;
-    .custom-control-label {
-      padding-top: 0.1rem;
-    }
-    
-  }
-
-  .custom-control-inline {
-    margin-right: 1.25rem;
-  }
-
-  .btn {
-    @extend .btn-lg;
-  }
-
-  .file-drop-container {
-    .help-text {
-      font-size: $font-size-base;
-    }
-  }
-}
-
-.form-sm {
-  @extend .form-group-sm;
-}
-
-.form-lg {
-  @extend .form-group-lg;
-}
 
 // Fix pour les select dans firefox
 @-moz-document url-prefix() {

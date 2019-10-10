@@ -117,6 +117,15 @@ gulp.task('photoswipe', function () {
     ))
 });
 
+// Glyphs, copy
+gulp.task('glyphs', function () {
+  return gulp.src(config.glyphs.files)
+    .pipe(gulp.dest(
+      config.glyphs.dest
+    ))
+    .pipe(browserSync.reload({stream:true}));
+});
+
 // Images copy and minimize
 gulp.task('images', function () {
     return gulp.src(config.images.files)
@@ -313,6 +322,7 @@ gulp.task('default', ['cleanable:before'], function () {
     'icons-json',
     'patternlab',
     'styleguide',
+    'glyphs',
     'sass',
     'pl-sass',
     'images',

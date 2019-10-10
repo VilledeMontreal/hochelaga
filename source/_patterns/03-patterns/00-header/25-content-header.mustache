@@ -1,4 +1,4 @@
-<div class="document-heading {{ documentHeadingClass }}{{^documentHeadingFullWidth}} document-heading-grid{{/ documentHeadingFullWidth}}">
+<div class="document-heading {{ documentHeadingClass }}{{# documentHeadingFullWidth}} document-heading-fullwidth{{/ documentHeadingFullWidth}}{{^documentHeadingFullWidth}} document-heading-grid{{/ documentHeadingFullWidth}}">
   <div class="document-heading-image-container">
     <div style="background-image:url('{{documentHeadingImageUrl}}')" class="document-heading-background"></div>
     {{# media.copyright }}
@@ -9,26 +9,50 @@
     </div>
     {{/ media.copyright }}
   </div>
-  {{# documentHeadingNotch}}
+  
   {{# documentHeadingFullWidth}}<div class="container position-relative">{{/ documentHeadingFullWidth}}
     {{# documentHeadingFullWidth}}
-    <div class="row document-heading-header pt-8 pb-10 pt-lg-16 pb-lg-22">
-      <div class="col-12 col-lg-6">
-        <h1>{{ heading }}</h1>
+    <div class="row document-heading-header">
+      <div class="col-12 col-lg-7">
+        <div class="pb-2">
+          {{# heading-surtitle}}
+          <div class="document-heading-surtitle">{{heading-surtitle}}</div>
+          {{/ heading-surtitle}}
+          <h1>{{{ heading }}}</h1>
+          {{# heading-subtitle}}
+          <div class="document-heading-subtitle">{{heading-subtitle}}</div>
+          {{/ heading-subtitle}}
+        </div>
+        {{# has-brand-border}}
+        <div class="brand-border-bottom"></div>
+        {{/ has-brand-border}}
+        {{# has-search-form}}
         <div class="form-group form-group-lg">
           <div class="input-group-icon input-group-icon-left">
             <input type="text" class="form-control input-rounded" id="input-group-search" placeholder="Rechercher ...">
             <span class="icon icon-search" aria-hidden="true"></span>
           </div>
         </div>
+        {{/ has-search-form}}
+        {{# has-quick-links}}
+        <div class="quick-links">
+          <span class="quick-links-label">Recherche rapide</span>
+          <ul class="list-inline">
+            {{# quickLinksItem }}
+            <li class="list-inline-item"><a href="{{ url }}">{{ label }}</a></li>
+            {{/ quickLinksItem }}
+          </ul>
+        </div>
+        {{/ has-quick-links}}
       </div>
     </div>
     {{/ documentHeadingFullWidth}}
+    {{# documentHeadingNotch}}
     <div class="document-heading-wrapper">
       <div class="document-heading-content-wrapper">
         <div class="document-heading-content col-12{{# has-left-notch}} col-lg-8{{/ has-left-notch}}{{^ has-left-notch}}{{^notch-full-width }} col-lg-10{{/notch-full-width}}{{/ has-left-notch}}"></div>
       </div>
     </div>
+    {{/ documentHeadingNotch}}
   {{# documentHeadingFullWidth}}</div>{{/ documentHeadingFullWidth}}
-  {{/ documentHeadingNotch}}
 </div>

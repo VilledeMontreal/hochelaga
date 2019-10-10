@@ -42,46 +42,50 @@ h3, .h3,
 .display-3 {
   @include font-size($h4-font-size);    // 20/28
   line-height: $line-height-md;
-  margin-bottom: .5rem;
+  margin-bottom: 1rem;
   // 576px and up
   @include media-breakpoint-up(md) {
     @include font-size($h3-font-size);  // 24/32
     line-height: 2rem;
-    margin-bottom: 1rem;
   }
 }
 h4, .h4,
 .display-4 {
   @include font-size($h5-font-size);    // 16/24
   line-height: $line-height-md;
-  margin-bottom: .25rem;
+  margin-bottom: 1rem;
   // 576px and up
   @include media-breakpoint-up(md) {
     @include font-size($h4-font-size);  // 20/28
     line-height: $line-height-md;
-    margin-bottom: .5rem;
   }
 }
 h5, .h5 {
   @include font-size($h6-font-size);    // 14/20
   line-height: $line-height-sm;
-  margin-bottom: 0;
+  margin-bottom: 1rem;
   // 576px and up
   @include media-breakpoint-up(md) {
     @include font-size($h5-font-size);  // 16/24
     line-height: $line-height-md;
-    margin-bottom: .25rem;
   }
 }
 h6, .h6 {
   @include font-size($font-size-xs);    // 12/16
   line-height: $line-height-xs;
-  margin-bottom: 0;
+  margin-bottom: 1rem;
   // 576px and up
   @include media-breakpoint-up(md) {
     @include font-size($h6-font-size);  // 14/20
     line-height: $line-height-sm;
   }
+}
+
+.list-group-heading {
+  @include font-size($font-size-sm);
+  line-height: $line-height-sm;
+  color: $headings-color;
+  margin-bottom: 0;
 }
 
 // Lead
@@ -91,7 +95,7 @@ h6, .h6 {
   line-height: $lead-line-height;       // 32px
   color: $neutral-primary;
   font-weight: $lead-font-weight;
-  margin-bottom: 2rem;
+  margin-bottom: 4rem;
   > :last-child {
     margin-bottom: 0;
   }
@@ -172,72 +176,16 @@ a {
   }
 }
 
-// Quick links
-.quick-links {
-  @include font-size($font-size-sm);
-  padding-bottom: 2rem;
-  .quick-links-label {
-    color: $neutral-secondary;
-    display: inline-block;
-    font-weight: $font-weight-bold;
-    margin-right: .5rem;
-    margin-bottom: .5rem;
-  }
-  ul {
-    display: inline-block;
-    margin-bottom: 0;
-  }
-  .list-inline-item:not(:last-child) {
-    margin-right: .5rem;
-  }
-  a {
-    border-color: $headings-color;
-    color: $headings-color;
-    &:hover {
-      color: $headings-color;
-      border-color: transparent;
-    }
-  }
-}
-
 // External link icon
 // Apply to .region-content and sb-block
 // Everything not on montreal.ca or of /villemontreal/ AKA cloudinary directory
 .sb-block,
 .region-content,
 .lead {
-  a[href*="//"]:not([href*="montreal.ca"]):not([href$=".pdf"]):not(.list-group-item-action):not(.link-has-icon):not(.btn) {
-    margin-right: 1.625rem;
-    position: relative;
-    &:after {
-      content: '';
-      -webkit-mask: url($data-icon-externallink) no-repeat 50% 50%;
-      mask: url($data-icon-externallink) no-repeat 50% 50%;
-      -webkit-mask-size: cover;
-      mask-size: cover;
-      background-color: $action;
-      display: inline-flex;
-      width: $icon-md;
-      height: $icon-md;
-      overflow: hidden;
-      margin-right: -1.625rem;
-      margin-left: .125rem;
-      vertical-align: -.375rem;
-    }
-
-    @include hover-focus {
-      &:before {
-        background-color: $highlight-light;
-        content: "";
-        position: absolute;
-        top: 0;
-        left: 0;
-        right: -1.625rem;
-        bottom: -1px;
-        z-index: -1;
-      }
-    }
+  a[href*="//"]:not([href*="montreal.ca"]):not([href$=".pdf"]):not(.link-has-icon):not(.btn) {
+    @extend .is-external-link;
   }
+
   // Generic file extension handling
   a[href$=".pdf"] {
     margin-right: 3.02em;

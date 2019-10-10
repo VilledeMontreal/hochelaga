@@ -10,7 +10,7 @@
 @import '../styles.scss';
 
 .sg-main {
-  padding: 20px 20px;
+  padding: 1rem;
 }
 
 .patternLink {
@@ -53,14 +53,20 @@ h5.pl-pattern-subtitle {
 }
 
 .sg-pattern-category-title a {
-	font-size: 24px;
+  font-size: 24px;
+  &:hover {
+    color: lighten($neutral-primary, 20%) !important;
+  }
 }
 h3.sg-pattern-title a {
 	font-size: 18px;
 	text-transform: none;
 	&::first-letter { 
   		text-transform: uppercase;
-	}
+  }
+  &:hover {
+    color: lighten($neutral-primary, 20%) !important;
+  }
 }
 
 h4.pl-pattern-subtitle {
@@ -757,6 +763,12 @@ $pl-size-box-wrapper-padding: 1rem;
   }
 }
 
+.pl-flyout-example {
+  .flyout {
+    position: static;
+  }
+}
+
 
 // sg-pattern-extra
 
@@ -820,6 +832,15 @@ $pl-size-box-wrapper-padding: 1rem;
 .sg-pattern-extra-toggle:hover,
 .sg-pattern-extra-toggle:focus{
   border-bottom: 1px solid #ddd;
+}
+
+.sg-pattern-extra-info {
+  a {
+    border: none;
+    &:hover {
+      border: none;
+    }
+  }
 }
 
 .pl-message-bar {
