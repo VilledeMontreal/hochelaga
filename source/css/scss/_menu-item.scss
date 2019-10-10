@@ -186,26 +186,25 @@
 
     // Revealing labels variants
     &.menu-items-revealing-labels {
+      max-width: 56px;
+      overflow: hidden;
+      transition: max-width .1s ease-in-out;
       li {
         a {
           .menu-item-label {
-            width: 0;
-            overflow: hidden;
             display: block;
-            transition: width 0s, margin 0s;
-            margin-left: 0;
             white-space: nowrap;
           }
         }
       }
       @include hover-focus {
+        max-width: 250px;
+        transition-delay: .5s;
         box-shadow: $dropdown-box-shadow;
         li {
           a {
             .menu-item-label {
-              width: 100%;
               margin-left: 1rem;
-              transition-delay: .5s;
             }
           }
         }
