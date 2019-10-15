@@ -4,8 +4,15 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](http://keepachangelog.com/en/1.0.0/)
 and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.html).
 
+## [4.2.1] - unreleased
 
-## [4.2.0] - unreleased
+## Changed
+- Spacing for badges inside badge-group.
+- Indexes empty state icon should now use icon-search.
+- Indexes mobile filters (accordeons) form-group bottom padding adjustement.
+
+
+## [4.2.0] - 2019-10-10
 
 ## Added
 - 2 new Utility icons: table et steps.
@@ -154,6 +161,7 @@ Main navbar, menu and footer are now in their own stylesheet. They will eventual
 The version 3 is now deprecated. Only bug fixes will be considered. Please refer to the old bitbucket repo https://bitbucket.org/villemontreal/boite-outils-web/.
 
 
+[4.2.0]: https://bitbucket.org/villemontreal/boite-outils4-web/src/4.2.0/
 [4.1.1]: https://bitbucket.org/villemontreal/boite-outils4-web/src/4.1.1/
 [4.1.0]: https://bitbucket.org/villemontreal/boite-outils4-web/src/4.1.0/
 [4.0.1]: https://bitbucket.org/villemontreal/boite-outils4-web/src/4.0.1/
