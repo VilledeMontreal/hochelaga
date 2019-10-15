@@ -108,7 +108,7 @@
                   <div id="{{ block-id }}" class="collapse" role="tabpanel" aria-labelledby="{{ heading-id }}">
                     {{# dropdownMenu.dropdownFilters}}
                     <div class="collapsible-block">
-                      <div class="form-group mb-0">
+                      <div class="form-group">
                         {{# radios}}
                         <div class="custom-control custom-radio {{ class }} ">
                           <input type="radio" id="{{ id }}" name="{{ name }}" class="custom-control-input" value="{{ id }}" {{ state }}>
@@ -138,7 +138,7 @@
                   </div>
                   <div id="{{ block-id }}" class="collapse" role="tabpanel" aria-labelledby="{{ heading-id }}">
                     <div class="collapsible-block">
-                      <div class="form-group mb-0">
+                      <div class="form-group">
                         {{# radios}}
                         <div class="custom-control custom-radio {{ class }} ">
                           <input type="radio" id="{{ idMobile }}" name="{{ name }}" class="custom-control-input" value="{{ idMobile }}" {{ state }}>
@@ -205,12 +205,13 @@
     {{/ filtersApplied }}
 
     <div class="container mt-2">
+
       {{# hasEmptyState}}
       <div class="row justify-content-center">
         <div class="col-12 col-lg-6">
           <div class="empty-state pt-4 mb-8 text-center">
             <div class="d-flex justify-content-center mb-2">
-              <span class="icon icon-not-found" aria-hidden="true"></span>
+              <span class="icon icon-search" aria-hidden="true"></span>
             </div>
             <div class="font-size-lg text-dark">
               <p class="mb-0">Votre recherche ne donne aucun résultat. Essayez d'autres mots ou désactivez des filtres.</p>
