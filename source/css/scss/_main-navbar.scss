@@ -1,52 +1,39 @@
+.header-main-nav {
+  // Handle fixed-top padding
+  &.is-fixed-top {
+    padding-bottom: 5rem;
+    @include media-breakpoint-up(lg) {
+      padding-bottom: 6rem;
+    }
+  }
+}
+
 // Main navbar based on bootstrap navbar
 .main-navbar {
   &.navbar {
     background-color: $white;
     border-bottom: 1px solid $neutral-stroke;
-    padding: 1rem;
+    padding: .5rem;
+    z-index: $zindex-fixed;
     a:not(.btn) {
       border-bottom: none;
     }
     .navbar-div {
       display: flex;
-      width: 100%;
     }
 
     // Montreal logo is the navbar-brand
     .navbar-brand {
-      padding: 0;
-      margin: 0 auto;
       display: inline-flex;
+      padding: .25rem;
+      margin: 0 .25rem;
       @include hover-focus {
         background-color: transparent;
       }
       svg {
-        height: 1.5rem;
-        width: auto;
         flex: 0 0 auto; // This is needed because of IE weird behavior
-      }
-    }
-
-    .nav-link {
-      display: flex;
-      align-items: center;
-      padding: 0;
-    }
-
-    .navbar-nav {
-      align-items: center;
-      .nav-item-btn {
-        margin: 0 .5rem;
-        padding-bottom: 0;
-
-        &:last-child {
-          margin-right: 0;
-        }
-      }
-      li:last-child {
-        .nav-link {
-          padding-right: 0;
-        }
+        height: 2rem;
+        width: auto;
       }
     }
 
@@ -54,12 +41,11 @@
     // Use display utility class to hide @breakpoint
     .navbar-separator {
       display: flex;
-      margin-right: 2rem;
+      margin-left: .5rem;
       &:after {
         content: "";
         border-right: 1px solid $neutral-stroke;
         height: 1.5rem;
-        margin-left: 2rem;
       }
     }
 
@@ -67,13 +53,20 @@
     // Navbar buttons styles
     .navbar-btn {
       @include button-reset();
-      color: $neutral-primary;
-      cursor: pointer;
-      font-weight: $font-weight-bold;
       display: inline-flex;
       align-items: center;
-      padding: 0;
-      @include transition(color .15s ease-in-out);
+      font-weight: $btn-font-weight;
+      text-align: center;
+      white-space: nowrap;
+      vertical-align: middle;
+      user-select: none;
+      border-radius: $btn-border-radius-squared;
+      color: $neutral-primary;
+      padding: .5rem;
+      margin-left: .5rem;
+      @include font-size($font-size-base);
+      line-height: $line-height-md;
+      @include transition($btn-transition);
 
       svg {
         fill: currentColor;
@@ -82,21 +75,47 @@
       .btn-label {
         color: $neutral-primary;
         line-height: $line-height-md;
-        @include transition(color .15s ease-in-out);
+        @include transition($btn-transition);
       }
 
-      &:hover,
-      &:active {
+      &:active,
+      &.active {
         color: $action;
         .btn-label {
           color: $action;
         }
       }
 
-      // remove focus from box-shadow
-      &:focus,
-      &.focus {
-        box-shadow: none;
+      @include hover-focus {
+        color: $action;
+        .btn-label {
+          color: $action;
+        }
+      }
+
+      &.navbar-btn-icon {
+        .btn-label {
+          margin-left: 1rem;
+        }
+      }
+
+      &.navbar-btn-alert {
+        background-color: $danger;
+        border-radius: $btn-border-radius;
+        .btn-label {
+          @include font-size($btn-font-size);
+          line-height: $btn-line-height;
+          color: $white;
+          margin-left: .5rem;
+          margin-right: .5rem;
+        }
+        svg {
+          fill: $white;
+        }
+
+        @include hover-focus {
+          background-color: $negative-dark;
+        }
       }
     }
 
@@ -116,8 +135,6 @@
     }
     // Dropdown overrides
     .dropdown-toggle {
-      padding-top: 0;
-      padding-bottom: 0;
 
       // Prevent long username/profile to break layout with max-width
       // Use elided-text helper class on field to add ellipsis on truncated strings
@@ -142,11 +159,16 @@
         content: none;
       }
 
+      @include hover-focus {
+        .user-avatar {
+          background-color: $action-lighter;
+        }
+      }
+
     }
 
     // Dropdown menu
     .dropdown-menu {
-      top: 2rem;
       right: 0;
       left: auto;
       margin: 0;
@@ -172,7 +194,16 @@
           margin-bottom: 1rem;
         }
       }
+    }
 
+    .user-avatar {
+      background-color: $action;
+      border-radius: $btn-border-radius;
+      height: 1.5rem;
+      width: 1.5rem;
+      color: $white;
+      @include font-size($font-size-xs);
+      line-height: $line-height-md;
     }
 
     // Dark navbar variant
@@ -181,11 +212,14 @@
       background-color: $neutral-primary;
       border-bottom: none;
     
-      .navbar-btn,
-      .navbar-btn .btn-label {
+      .navbar-btn {
         color: $white;
-        &:hover,
-        &:active {
+
+        .btn-label {
+          color: $white;
+        }
+
+        @include hover-focus {
           color: $action-lighter;
           .btn-label {
             color: $action-lighter;
@@ -203,8 +237,7 @@
         font-weight: $font-weight-bold;
         align-items: center;
         
-        &:hover,
-        &:active {
+        @include hover-focus {
           color: $action-lighter;
         }
       }
@@ -214,7 +247,11 @@
           background-color: $white;
         }
       }
-    
+
+      .user-avatar {
+        background-color: $action-lighter;
+        color: $white;
+      }
     }
 
     &.navbar-scrolled {
@@ -230,23 +267,39 @@
 
     // 768px and up
     @include media-breakpoint-up(md) {
-      .navbar-div-left {
-        width: auto;
-      }
+      // Montreal logo is the navbar-brand
       .navbar-brand {
-        margin: 0;
+        margin: 0;        
+        padding: .375rem .5rem;
+        svg {
+          height: 1.75rem;
+        }
+      }
+
+      .navbar-separator {
+        margin-left: 1rem;
       }
     }
 
     // 992px and up
     @include media-breakpoint-up(lg) {
       height: 4.5rem;
-      padding: 1rem 2rem;
+      padding: 1rem 1.5rem;
+
+      // Montreal logo is the navbar-brand
       .navbar-brand {
+        padding: .25rem .5rem;
         svg {
           height: 2rem;
-          width: auto;
         }
+      }
+
+      .navbar-separator {
+        margin-left: 1.5rem;
+      }
+      
+      .navbar-btn {
+        margin-left: 1.5rem;
       }
       .dropdown {
         &.show {
@@ -263,40 +316,136 @@
       .dropdown-toggle {
         &::after {
           content: '';
+          background-color: $neutral-tertiary;
+        }
+        @include hover-focus {
+          &::after {
+            background-color: $primary;
+          }
         }
       }
     }
   }
 }
 
+.navbar-lang-switcher {
+  background-color: $neutral-primary;
+  color: $white;
+  padding: 0;
+  height: 1.5rem;
+  position: relative;
+  z-index: $zindex-fixed + 1;
+  .btn-lang {
+    padding-top: .125rem;
+    padding-bottom: .125rem;
+  }
+  .not-translated {
+    @include font-size($font-size-sm);
+    line-height: $line-height-sm;
+    font-weight: $font-weight-bold;
+    align-self: center;
+    margin-left: auto;
+    margin-right: 1rem;
+    > * {
+      margin-bottom: 0;
+    } 
+  }
+  @include media-breakpoint-up(lg) {
+    padding: 0 1rem;
+  }
+}
+
 //
 // Navbar search flyout
 .navbar-search {
-  display: none;
-  position: absolute;
-  top: 0;
+  position: fixed;
+  top: -3.5rem;
   left: 0;
   right: 0;
+  width: 100%;
+  height: 3.5rem;
   background-color: $white;
+  overflow: hidden;
+  visibility: hidden;
   z-index: $zindex-fixed;
-  padding-top: 3.5rem;
-  padding-bottom: 3.5rem;
+  transition: top .3s ease-out, visibility 0s linear 300ms;
 
-  .inner-container {
-    display: flex;
+  .navbar-search-form {
+    padding: .5rem;
   }
 
-  .form-group {
-    display: flex;
-    margin: 0;
-    width: 100%;
-  }
-
-  .form-control {
-    border: none;
-    @include font-size(1.875rem);
-    &:focus {
-      box-shadow: none;
+  .input-group {
+    .icon {
+      align-self: center;
+      @include icon-color($neutral-primary);
+    }
+    .form-control {
+      @include font-size($input-btn-font-size-lg);
+      border: none;
+      line-height: $line-height-md;
+      padding: 0 1rem;
     }
   }
+
+  .btn + .btn {
+    margin-left: .5rem;
+  }
+
+  .btn-search-submit {
+    .icon {
+      @include icon-color($action);
+      display: none;
+    }
+  }
+  
+
+  &.show {
+    top: 1.5rem;
+    display: block;
+    visibility: visible;
+    transition: top .3s ease-out, visibility 0s linear 0s;
+  }
+
+  @include media-breakpoint-up(lg) {
+    top : -4.5rem;
+    height: 4.5rem;
+
+    .navbar-search-form {
+      padding: 1rem 1.5rem;
+    }
+
+  }
+
+  @include media-breakpoint-down(md) {
+    
+    .input-group {
+      margin-left: .5rem;
+    }
+
+    .btn + .btn {
+      margin-left: .25rem;
+    }
+    .btn-primary.btn-search-submit:not(:disabled):not(.disabled) {
+      background-color: transparent;
+      padding: .5rem;
+      border: 0;
+      .icon {
+        @include icon-color($action);
+        display: inline-flex;
+        margin-right: 0;
+        margin: 0;
+      }
+      .btn-label {
+        display: none;
+      }
+      &:hover,
+      &:focus {
+        background-color: $highlight-light;
+        .btn-label {
+          color: $action;
+        }
+      }
+    }
+  }
+
 }

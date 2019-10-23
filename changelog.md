@@ -8,7 +8,12 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 ## [4.3.0] - unreleased
 
 ## Changed
-- Footer Pattern update
+- Footer Pattern update.
+- Main navbar template update.
+- New menu structure and behavior.
+- New search strucutre and behavior.
+- Mesures d'urgences button in navbar.
+- Mesures d'urgences modal template.
 
 
 ## [4.2.2] - 2019-10-24

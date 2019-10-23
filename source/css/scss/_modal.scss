@@ -73,12 +73,36 @@
     line-height: $line-height-md;
   }
 
+  .modal-date-time {
+    @include font-size($font-size-sm);
+    line-height: $line-height-sm;
+    font-weight: $font-weight-bold;
+    margin-bottom: 1rem;
+  }
+
   // prevent modal-body to grow and push footer to the bottom
   .modal-body {
     flex-grow: 0;
     padding: $modal-inner-padding;
     > :last-child {
       margin-bottom: 0;
+    }
+  }
+
+  // Modal alert section with bg and icon
+  // Background-image is provided with inline styles for better customization.
+  .modal-alert-icon {
+    background-color: $danger;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    margin-bottom: 2rem;
+    padding: 5.5rem;
+    .icon {
+      @include icon-color($white);
+      @include icon-size(5rem);
     }
   }
 

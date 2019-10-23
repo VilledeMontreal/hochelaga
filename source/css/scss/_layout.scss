@@ -69,7 +69,11 @@ html {
   cursor: pointer;
   background-color: $backdrop-bg;
   opacity: $backdrop-opacity;
-  z-index: 1020;
+  z-index: $zindex-sticky - 1;
+
+  &.show {
+    display: block;
+  }
 }
 
 // Overlay on background-image

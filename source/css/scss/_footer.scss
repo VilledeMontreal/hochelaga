@@ -105,7 +105,6 @@ footer {
     @include media-breakpoint-up(md) {
       .list-inline-dot {
         .list-inline-item {
-      
           &:last-child {
             &:after {
               content: '';
@@ -131,6 +130,11 @@ footer {
       height: 2.5rem;
     }
 
+    .btn-lang {
+      padding-left: 0;
+      padding-right: 0;
+      margin-right: .5rem;
+    }
   }
 
   // md and up
