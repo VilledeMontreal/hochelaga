@@ -11,6 +11,12 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 - Footer Pattern update
 
 
+## [4.2.2] - 2019-10-24
+
+## Changed
+- VDL template: List-item for GDC.
+
+
 ## [4.2.1] - 2019-10-16
 
 ## Changed
@@ -168,6 +174,8 @@ Main navbar, menu and footer are now in their own stylesheet. They will eventual
 The version 3 is now deprecated. Only bug fixes will be considered. Please refer to the old bitbucket repo https://bitbucket.org/villemontreal/boite-outils-web/.
 
 
+[4.2.2]: https://bitbucket.org/villemontreal/boite-outils4-web/src/4.2.2/
+[4.2.1]: https://bitbucket.org/villemontreal/boite-outils4-web/src/4.2.1/
 [4.2.0]: https://bitbucket.org/villemontreal/boite-outils4-web/src/4.2.0/
 [4.1.1]: https://bitbucket.org/villemontreal/boite-outils4-web/src/4.1.1/
 [4.1.0]: https://bitbucket.org/villemontreal/boite-outils4-web/src/4.1.0/

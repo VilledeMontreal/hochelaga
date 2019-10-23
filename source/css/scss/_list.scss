@@ -166,6 +166,24 @@
   }
 }
 
+.list-item-icon-sub-content {
+  position: relative;
+  &:before {
+    content: "";
+    background: $neutral-stroke;
+    position: absolute;
+    left: -1.75rem;
+    top: 0;
+    height: 100%;
+    width: 2px;
+  }
+  > * {
+    margin-bottom: .5rem;
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+}
 
 .list-inline-dot {
   margin-top: .375rem;
