@@ -83,7 +83,7 @@
 {{/ procedures}}
 
 {{# gdc}}
-<div class="mb-3">
+<div class="mb-2">
   <h2 class="font-size-base-interface mb-1">{{ heading }}</h2>
   <ul class="list {{listClass}}">
   {{# list }}
@@ -92,12 +92,14 @@
         <img src="{{ src}}" alt="{{alt}}" />
       </div>
       <div class="list-item-icon-content">
-        {{# text }}
-        <div class="list-item-icon-label">{{text}}</div>
-        {{/ text }}
-        {{# listExtraContent}}
-        <div {{#listExtraContentClass}}class="{{listExtraContentClass}}"{{/listExtraContentClass}}>{{{listExtraContent}}}</div>
-        {{/ listExtraContent}}
+        <div class="list-item-icon-label mb-1">{{title}}</div>
+        <div class="font-weight-bold font-size-xs-interface mb-1">{{type}}</div>
+        {{# description }}
+        <p class="font-size-xs mb-1">{{description}}</p>
+        {{/ description}}
+        {{# comment}}
+        {{> patterns-emphasis("emphasisClasses": "emphasis-sm mb-1")}}
+        {{/ comment}}
       </div>
     </li>
     {{/ list }}
