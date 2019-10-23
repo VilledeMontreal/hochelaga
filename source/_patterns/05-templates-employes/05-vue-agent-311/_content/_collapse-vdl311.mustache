@@ -83,29 +83,36 @@
 {{/ procedures}}
 
 {{# gdc}}
-<div class="mb-2">
+<div class="mb-1">
   <h2 class="font-size-base-interface mb-1">{{ heading }}</h2>
-  <ul class="list {{listClass}}">
+  <div class="list {{listClass}}">
   {{# list }}
-    <li class="list-item-icon">
-      <div class="mr-2">
-        <img src="{{ src}}" alt="{{alt}}" />
+    <div class="mb-2">
+      <div class="list-item-icon">
+        <div class="mr-2">
+          <img src="{{ src}}" alt="{{alt}}" />
+        </div>
+        <div class="list-item-icon-content">
+          <div class="list-item-icon-label">{{iconLabel}}</div>
+          <div>{{type}}</div>
+        </div>
       </div>
-      <div class="list-item-icon-content">
-        <div class="list-item-icon-label mb-1">{{title}}</div>
-        <div class="font-weight-bold font-size-xs-interface mb-1">{{type}}</div>
+      {{# has-subcontent}}
+      <div class="list-item-icon-sub-content py-1 ml-5 mb-1">
+        <div class="font-weight-bold font-size-md-interface text-dark mb-0">{{ title }}</div>
         {{# description }}
-        <div class="font-size-xs element-mb-xs mb-1">
-        {{{description}}}
+        <div class="element-mb-xs">
+          {{{description}}}
         </div>
         {{/ description}}
         {{# comment}}
-        {{> patterns-emphasis("emphasisClasses": "emphasis-sm mb-1")}}
+        {{> patterns-emphasis("emphasisClasses": "emphasis-sm")}}
         {{/ comment}}
       </div>
-    </li>
-    {{/ list }}
-  </ul>
+      {{/ has-subcontent}}
+    </div>
+  {{/ list }}
+  </div>
 </div>
 {{/ gdc}}
 
