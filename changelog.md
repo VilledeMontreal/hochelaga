@@ -7,13 +7,20 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 
 ## [4.3.0] - unreleased
 
+Header (main-navbar, menu and search) and footer structure and styles now reflect the final design implementation. Make sure you
+now use the latest structure before upgrading to 4.3.0. 
+
 ## Changed
 - Footer Pattern update.
 - Main navbar template update.
 - New menu structure and behavior.
-- New search strucutre and behavior.
+- New search structure and behavior.
 - Mesures d'urgences button in navbar.
 - Mesures d'urgences modal template.
+- Reorganization of partial stylesheets.
+
+## Fixed
+- styles-header-footer-v4.scss is now fully optimized and usable as a standalone style sheet (ex.: For header/footer minimal styles).
 
 
 ## [4.2.2] - 2019-10-24
