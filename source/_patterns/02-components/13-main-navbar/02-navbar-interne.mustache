@@ -1,9 +1,7 @@
 <nav class="main-navbar navbar navbar-dark navbar-expand w-100" role="navigation">
   {{# navbarInterneHasMenu}}
-  <button type="button" class="btn navbar-btn navbar-btn-icon btn-hide-label-sm menu-toggler ml-0" aria-expanded="false" aria-controls="navbarSideMenu" data-target="slide-menu-left" data-action="toggle">
-    <svg width="24" height="24" viewBox="0 0 24 24" role="icon">
-      <path d="M3 13a1 1 0 0 1 0-2h18a1 1 0 0 1 0 2H3zm.176-6C2.526 7 2 6.552 2 6s.527-1 1.176-1h17.648C21.474 5 22 5.448 22 6s-.527 1-1.176 1H3.176zM3 19a1 1 0 0 1 0-2h10a1 1 0 0 1 0 2H3zm14-2h4a1 1 0 0 1 0 2h-4a1 1 0 0 1 0-2z" />
-    </svg>
+  <button type="button" id="menu-interne-toggler" class="btn navbar-btn navbar-btn-icon btn-hide-label-sm ml-0" aria-expanded="false" aria-controls="slide-menu-left">
+    <span class="icon icon-menu" aria-hidden="true"></span>
     <span class="btn-label">Menu</span>
   </button>
   {{> components-main-menu-interne }}
@@ -16,18 +14,14 @@
     <div class="d-flex align-items-center">
       {{# navbarInterneHasSearch}}
       <button class="btn navbar-btn navbar-btn-icon navbar-search-toggler btn-hide-label-md" id="navbarDropdownSearch" aria-haspopup="true" aria-expanded="false">
-        <svg width="24px" height="24px" viewBox="0 0 24 24">
-          <path d="M15.7071068,14.2928932 L21.7071068,20.2928932 C22.0976311,20.6834175 22.0976311,21.3165825 21.7071068,21.7071068 C21.3165825,22.0976311 20.6834175,22.0976311 20.2928932,21.7071068 L14.9529022,16.3671157 C13.5746967,17.4194128 11.8329875,18 10,18 C5.581722,18 2,14.418278 2,10 C2,5.581722 5.581722,2 10,2 C14.418278,2 18,5.581722 18,10 C18,10.780355 17.8879595,11.5468125 17.6696612,12.2815954 C17.5123762,12.8110101 16.9556961,13.1126808 16.4262815,12.9553958 C15.8968668,12.7981108 15.5951961,12.2414307 15.7524811,11.7120161 C15.9159996,11.1616197 16,10.5869818 16,10 C16,6.6862915 13.3137085,4 10,4 C6.6862915,4 4,6.6862915 4,10 C4,13.3137085 6.6862915,16 10,16 C11.6632422,16 13.2085803,15.3792526 14.2922267,14.2935604 C14.6823825,13.902668 15.3155472,13.9020709 15.7064396,14.2922267 Z" />
-        </svg>
+        <span class="icon icon-search" aria-hidden="true"></span>
         <span class="btn-label">Recherche</span>
       </button>
       {{/ navbarInterneHasSearch}}
       <div class="navbar-separator d-none d-lg-flex"></div>
         {{^ user-authenticated }}
         <button class="btn navbar-btn navbar-btn-icon btn-hide-label-md">
-          <svg width="24" height="24" viewBox="0 0 24 24">
-            <path d="M6 18.708V18a3 3 0 0 1 3-3h6a3 3 0 0 1 3 3v2.631c0 .145-.03.282-.086.406a.996.996 0 0 1-.432.501A10.953 10.953 0 0 1 12 23C5.925 23 1 18.075 1 12S5.925 1 12 1s11 4.925 11 11c0 1.948-.508 3.824-1.458 5.477a1 1 0 0 1-1.734-.997A8.953 8.953 0 0 0 21 12a9 9 0 1 0-15 6.708zm1.998 1.355c1.205.6 2.564.937 4.002.937 1.41 0 2.77-.324 4-.935V18a1 1 0 0 0-1-1H9a1 1 0 0 0-1 1v2c0 .021 0 .042-.002.063zM12 14a4 4 0 1 1 0-8 4 4 0 0 1 0 8zm0-2a2 2 0 1 0 0-4 2 2 0 0 0 0 4z" />
-          </svg>
+          <span class="icon icon-user-circle" aria-hidden="true"></span>
           <span class="btn-label">Me connecter</span>
         </button>
         {{/ user-authenticated }}
@@ -83,14 +77,3 @@
   </div>
   <div class="overlay"></div>
 </nav>
-<div id="navbar-search" class="navbar-search">
-  <div class="container">
-    <div class="inner-container">
-      <button class="navbar-btn js-button-close">
-        <span class="vdm vdm-065-fleche-gauche"></span>
-        <span class="sr-only">Quitter la recherche</span>
-      </button>
-      {{> components-input-has-clear(inputHideLabel: true, "inputHelpText": false, placeholder: "Rechercher une information ou un service") }}
-    </div>
-  </div>
-</div>

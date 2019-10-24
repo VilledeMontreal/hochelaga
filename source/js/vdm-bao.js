@@ -25,8 +25,12 @@
   const TAB_KEYCODE     = 'Tab' // KeyboardEvent.which value for tab key
 
   // Main Menu
-  var $menuToggler = $(".menu-toggler");
+  var $menuToggler = $("#main-menu-toggler");
   var $mainMenu = $("#main-menu");
+
+  // Menu interne
+  var $menuInterneToggler = $("#menu-interne-toggler");
+  var $slideMenu = $("#slide-menu-left");
 
   // Navbar search
   var $navbarSearchToggler = $(".navbar-search-toggler");
@@ -38,6 +42,12 @@
       $mainMenu.removeClass('show');
       // Return focus to the element that invoked it
       $menuToggler.attr("aria-expanded", "false").toggleClass('active').focus();
+      $('body').toggleClass('modal-open');
+    }
+    if($slideMenu.hasClass('show')) {
+      $slideMenu.removeClass('show');
+      // Return focus to the element that invoked it
+      $menuInterneToggler.attr("aria-expanded", "false").focus();
       $('body').toggleClass('modal-open');
     }
     if($navbarSearch.hasClass('show')) {
@@ -163,6 +173,45 @@
   })
 
 
+  // Slide-menu interne
+  //
+
+  if($('#slide-menu-left').length != 0) {
+    
+    $menuInterneToggler.on("click", function () {
+      $('body').toggleClass('modal-open');
+      $slideMenu.toggleClass('show');
+      $('.overlay').toggleClass('show');
+      // Set aria-expanded attribute on toggled button
+      if($slideMenu.hasClass('show')) {
+        $(this).attr("aria-expanded", "true");
+      } else {
+        $(this).attr("aria-expanded", "false");
+      }
+    });
+
+    // Handle esc key on menu
+    $slideMenu.keydown(function(e) {
+      if (e.key === ESCAPE_KEYCODE) {
+        // Close the menu and overlay
+        $slideMenu.toggleClass("show");
+        $('.overlay').removeClass('show');
+        // Return focus to the element that invoked it
+        $menuInterneToggler.attr("aria-expanded", "false").focus();
+      }
+    });
+
+    // Slide menu
+    $("#slide-menu-left .js-button-close").on("click", function (e) {
+      $slideMenu.removeClass('show');
+      $('.overlay').removeClass('show');
+      // Return focus to the element that invoked it
+      $menuInterneToggler.attr("aria-expanded", "false").focus();
+    });
+  
+  }
+
+
   // Clear input
   // TODO: Test if this is still needed
   //
@@ -234,21 +283,6 @@
     $(this).siblings().children().removeClass('active');
     $(this).children().addClass('active');
   });
-
-  // Slide-menu initialisation
-  // @see slide-menu.js 
-  //
-
-  if($('#slide-menu-left').length != 0) {
-
-    $('#slide-menu-left').slideMenu({
-      position: 'left',
-      submenuLinkAfter: '<span class="vdm vdm-063-fleche-droite" aria-hidden="true"></span>',
-      backLinkTitle: 'Retour',
-      backLinkClass: 'back-link',
-      backLinkBefore: '<span class="vdm vdm-058-chevron-gauche" aria-hidden="true"></span> '
-    });
-  }
 
 
   // sticky main nav
