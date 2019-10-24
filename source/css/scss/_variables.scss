@@ -839,28 +839,13 @@ $main-menu-active-bg:             $highlight-light;
 $main-menu-transition:            transform 300ms ease-out;
 $main-menu-box-shadow:            0 .125rem .5rem 0 rgba($black, .1);
 
-// Ajout custom
-// Slide Menus
-$slide-menu-width:                440px;
-$slide-menu-bg:                   $neutral-primary;
-$slide-menu-border-width:         1px;
-$slide-menu-border-color:         $neutral-secondary;
-$slide-menu-link-color:           $white;
-$slide-menu-link-hover-color:     $action-lighter;
-$slide-menu-link-font-size:       $font-size-base;
-$slide-menu-icon-size:            3rem;
-$slide-menu-icon-color:           $action-lighter;
-$slide-menu-link-padding:         1rem 2.8125rem;
-$slide-menu-transition-dur:       300ms;
-$slide-menu-transition-easing:    ease-in-out;
 
-// Slide Menus Employes
-$slide-menu-employes-width:                440px;
-$slide-menu-employes-bg:                   $white;
-$slide-menu-employes-link-color:           $neutral-secondary;
-$slide-menu-link-hover-color:              $action;
-$slide-menu-employes-icon-size:            1.5rem;
-$slide-menu-employes-icon-color:           $neutral-tertiary;
-$slide-menu-employes-icon-hover-color:     $action-lighter;
-$slide-menu-employes-transition-dur:       300ms;
-$slide-menu-employes-transition-easing:    ease-in-out;
+// Slide Menus Interne
+$slide-menu-interne-width:                440px;
+$slide-menu-interne-bg:                   $white;
+$slide-menu-interne-link-color:           $neutral-secondary;
+$slide-menu-interne-link-hover-color:     $action;
+$slide-menu-interne-icon-size:            1.5rem;
+$slide-menu-interne-icon-color:           $neutral-tertiary;
+$slide-menu-interne-icon-hover-color:     $action-lighter;
+$slide-menu-interne-transition:           transform 300ms ease-out;

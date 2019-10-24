@@ -68,6 +68,11 @@
       line-height: $line-height-md;
       @include transition($btn-transition);
 
+      .icon {
+        margin: 0;
+        @include icon-color($neutral-primary);
+      }
+
       svg {
         fill: currentColor;
       }
@@ -81,6 +86,9 @@
       &:active,
       &.active {
         color: $action;
+        .icon {
+          @include icon-color($action);
+        }
         .btn-label {
           color: $action;
         }
@@ -88,6 +96,9 @@
 
       @include hover-focus {
         color: $action;
+        .icon {
+          @include icon-color($action);
+        }
         .btn-label {
           color: $action;
         }
@@ -108,6 +119,9 @@
           color: $white;
           margin-left: .5rem;
           margin-right: .5rem;
+        }
+        .icon {
+          @include icon-color($white);
         }
         svg {
           fill: $white;
@@ -214,6 +228,9 @@
     
       .navbar-btn {
         color: $white;
+        .icon {
+          @include icon-color($white);
+        }
 
         .btn-label {
           color: $white;
@@ -221,6 +238,9 @@
 
         @include hover-focus {
           color: $action-lighter;
+          .icon {
+            @include icon-color($action-lighter);
+          }
           .btn-label {
             color: $action-lighter;
           }
