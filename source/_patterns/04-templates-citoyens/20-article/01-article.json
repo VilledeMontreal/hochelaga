@@ -1,5 +1,20 @@
 {
   "navbarFixedTop": true,
+  "breadcrumbs": [
+    {
+      "url": "#",
+      "text": "Accueil"
+    },
+    {
+      "url": "#",
+      "text": "Articles"
+    },
+    {
+      "url": "#",
+      "text": "Taxonomie type"
+    }
+  ],
+  "documentHeading": true,
   "documentHeadingClass": "document-heading-left-notch",
   "documentHeadingNotch": true,
   "has-left-notch": true,
@@ -16,7 +31,7 @@
   "module-content": {
     "module-cta": {
       "buttonAsLink": true,
-      "buttonClass": "btn-primary btn-lg",
+      "buttonClass": "btn-primary",
       "buttonUrl": "https://picsum.photos/",
       "buttonText": "Appel à l'action"
     },

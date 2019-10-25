@@ -10,6 +10,10 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 Header (main-navbar, menu and search) and footer structure and styles now reflect the final design implementation. Make sure you
 now use the latest structure before upgrading to 4.3.0. 
 
+## Added
+- Added back breadcrumbs.
+- Breadcrumbs integration in template that requires.
+
 ## Changed
 - Footer Pattern update.
 - Main navbar template update.

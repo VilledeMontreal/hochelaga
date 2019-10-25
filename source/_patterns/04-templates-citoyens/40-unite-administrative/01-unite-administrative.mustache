@@ -6,7 +6,15 @@
 
 <main class="main-content {{ pageClasses }}" id="main-content" aria-label="Main Content" role="main">
 
-  <div class="region-content">
+  <div class="container pt-4 pt-lg-8">
+    <div class="row{{^ sidebarRight }} justify-content-center{{/ sidebarRight}}">
+      <div class="col-12{{^ sidebarRight }} col-lg-7{{/ sidebarRight}}">
+        {{> components-breadcrumbs}}
+      </div>
+    </div>
+  </div>
+
+  <div class="region-content pt-0">
     <div class="container">
       <section class="row{{# sidebarRight }} justify-content-between{{/ sidebarRight}}{{^ sidebarRight}} justify-content-center{{/ sidebarRight}}">
         <div class="col-12 col-lg-7">
