@@ -13,10 +13,11 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 - Card date variants.
 
 ## Changed
-
-## Fixed
 - Message bar now needs base class .alert.
 - Message bar dismiss option can be triggered with data-dismiss="alert" and needs .alert-dismiss class.
+- Feedback Form components update and refactoring (Simplified).
+  
+## Fixed
 - Message bar mobile behavior is now coherent with alert behavior.
 
 
