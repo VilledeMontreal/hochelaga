@@ -8,8 +8,13 @@
 
   <div class="region-content">
     <div class="container">
+      <div class="row{{^ sidebarRight }} justify-content-center{{/ sidebarRight}}">
+        <div class="col-12{{^ sidebarRight }} col-lg-7{{/ sidebarRight}}">
+          {{> components-breadcrumbs}}
+        </div>
+      </div>
 
-      <section class="row{{# sidebarRight }} justify-content-between{{/ sidebarRight}}{{^ sidebarRight}} justify-content-center{{/ sidebarRight}}">
+      <div class="row{{# sidebarRight }} justify-content-between{{/ sidebarRight}}{{^ sidebarRight}} justify-content-center{{/ sidebarRight}}">
         <div class="col-12 col-lg-7">
           <header class="content-header">
             {{# header-back-link}}
@@ -74,7 +79,7 @@
         </aside>
         {{/ sidebarRight}}
 
-      </section>
+      </div>
 
       <section class="row{{# sidebarRight }} justify-content-between{{/ sidebarRight}}{{^ sidebarRight}} justify-content-center{{/ sidebarRight}}">
         <div class="col-12 col-lg-7">
