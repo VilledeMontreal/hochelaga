@@ -105,6 +105,10 @@
     if(!$('.overlay').hasClass('show')) {
       $('.overlay').addClass('show');
     }
+    if($mainMenu.hasClass('show')) {
+      $mainMenu.toggleClass('show');
+      $mainMenu.attr("aria-expanded", "false");
+    }
   });
 
   // Handle esc key on menu
@@ -171,6 +175,7 @@
       $(this).parent('li').parent('ul').siblings('.btn-main-menu-toggle').removeClass('active').attr('aria-expanded', false);
     }
   })
+
 
 
   // Slide-menu interne
