@@ -76,3 +76,15 @@
     border-radius: 0;
   }
 }
+
+// Mixin to reset buttons properties
+// AKA plain button
+@mixin button-reset() {
+  color: inherit;
+  font: inherit;
+  text-transform: none;
+  background-color: transparent;
+  border: 0;
+  margin: 0;
+  overflow: visible;
+}

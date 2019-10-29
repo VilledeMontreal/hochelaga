@@ -1,8 +1,21 @@
 {
-  "navbarPosition": "fixed-top",
+  "navbarFixedTop": true,
+  "breadcrumbs": [
+    {
+      "url": "#",
+      "text": "Accueil"
+    },
+    {
+      "url": "#",
+      "text": "Programmes"
+    },
+    {
+      "url": "#",
+      "text": "Taxonomie type"
+    }
+  ],
   "documentHeading": false,
-  "pageClasses": "mt-7 mt-lg-9",
-  "header-back-link": false,
+  "pageClasses": false,
   "heading": "Titre du programme",
   "has-badges": false,
   "publicationDate": {
@@ -52,7 +65,7 @@
       "module-card-cta": false,
       "module-cta": {
         "buttonAsLink": true,
-        "buttonClass": "btn-primary btn-lg",
+        "buttonClass": "btn-primary",
         "buttonUrl": "#",
         "buttonText": "Appel à l'action"
       }

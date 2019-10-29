@@ -1,0 +1,15 @@
+// Icons mixins
+@mixin icon-color($color) {
+  &:before {
+    background-color: $color;
+  }
+}
+
+@mixin icon-size($size) {
+  width: $size;
+  height: $size;
+  &:before {
+    width: $size;
+    height: $size;
+  }
+}

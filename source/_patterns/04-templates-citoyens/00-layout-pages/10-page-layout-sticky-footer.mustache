@@ -1,14 +1,14 @@
 {{> styles-link-skip-to-main-content }}
 
-<header class="header-main-nav" role="banner">
+<header class="header-main-nav {{# navbarFixedTop}}is-fixed-top{{/navbarFixedTop}}">
 {{> components-navbar }}
 </header>
 
 <main class="site-main-content main-content {{ pageClasses }}" id="main-content" aria-label="Main Content" role="main">
 
   <div class="region-content {{ regionMainClasses }}">
-    <div class="container {{ regionMainContainerClasses }}">
-      <section class="row">
+    <div class="container">
+      <div class="row{{^ sidebarRight}} justify-content-center{{/ sidebarRight}}">
         <div class="col-12 col-lg-7">
           <div class="mb-6">
             <p>Click the button below to hide the contents of this page. Notice how the footer sticks to the bottom of the window even when there’s not enough content to fill the page.</p>
@@ -20,8 +20,8 @@
             <p>In the example below, the container is set to the height of the window, and the content area is told to expand as needed. (Note: in the vertical direction you need to specify a height for the container. This is different from the horizontal direction, which automatically expands to fit.)</p>
           </div>
         </div>
-      </section>
+      </div>
     </div>
   </div>
 </main>
-{{> patterns-footer-portal }}
+{{> patterns-footer-main }}

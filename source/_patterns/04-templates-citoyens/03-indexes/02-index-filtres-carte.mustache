@@ -1,6 +1,6 @@
 {{> styles-link-skip-to-main-content }}
 
-<header class="header-main-nav" role="banner">
+<header class="header-main-nav {{# navbarFixedTop}}is-fixed-top{{/navbarFixedTop}}">
 {{> components-navbar }}
 </header>
 
@@ -225,7 +225,7 @@
 
 </main>
 
-{{> patterns-footer-portal }}
+{{> patterns-footer-main }}
 
 <!-- Mapbox -->
 <script src='https://api.tiles.mapbox.com/mapbox-gl-js/v0.48.0/mapbox-gl.js'></script>

@@ -1,24 +1,32 @@
 {{> styles-link-skip-to-main-content }}
 
-<header class="header-main-nav" role="banner">
+<header class="header-main-nav {{# navbarFixedTop}}is-fixed-top{{/navbarFixedTop}}">
 {{> components-navbar }}
 </header>
 
 <main class="main-content {{ pageClasses }}" id="main-content" aria-label="Main Content" role="main">
+
+  <div class="container pt-4 pt-lg-8">
+    <div class="row{{^ sidebarRight }} justify-content-center{{/ sidebarRight}}">
+      <div class="col-12{{^ sidebarRight }} col-lg-7{{/ sidebarRight}}">
+        {{> components-breadcrumbs}}
+      </div>
+    </div>
+  </div>
   
   {{# documentHeading}}
-  <div class="pt-lg-8">
+  <div class="mb-4 mb-lg-0">
   {{> patterns-content-header}}
   </div>
   {{/ documentHeading}}
 
-  <div class="region-content{{# documentHeading }} pt-0{{/ documentHeading}}">
+  <div class="region-content pt-0">
 
     <div class="container">
 
       <section class="row{{# sidebarRight }} justify-content-between{{/ sidebarRight}}{{^ sidebarRight}} justify-content-center{{/ sidebarRight}}">
         <div class="col-12 col-lg-7">
-          <header class="content-header mt-4 mt-lg-0">
+          <header class="content-header">
             {{# header-back-link}}
             <div class="header-back-link">
               {{> styles-link-list-element}}
@@ -107,4 +115,4 @@
   </div>
 </main>
 
-{{> patterns-footer-portal }}
+{{> patterns-footer-main }}

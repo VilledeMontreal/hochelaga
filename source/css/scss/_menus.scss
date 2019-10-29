@@ -1,312 +1,326 @@
-// Slide menu
+// MENUS
+
+// Fullscreen Menu
 //
-
-// Slide menu header
-// Contains the close button
-.slide-menu-header {
-  margin: .625rem;
-
-  @include media-breakpoint-up(sm) {
-    margin: 1rem;
-  }
-
-  @include media-breakpoint-up(lg) {
-    margin: 4rem 4rem 2.5rem 4rem;
-  }
-
-}
-
-// Slide menu close button
-.btn-close {
-  @include button-reset();
-  display: inline-flex;
-  align-items: center;
-  cursor: pointer;
-  color: $neutral-tertiary;
-  margin: 0;
-  padding: .5rem;
-  .vdm {
-    color: inherit;
-    @include font-size(1.5rem);
-  }
-  .button-label {
-    @include font-size($font-size-sm);
-    margin-left: 1rem;
-  }
-
-  &:focus {
-    box-shadow: none;
-  }
-
-  @include media-breakpoint-up(sm) {
-    .vdm {
-      @include font-size(2rem);
-    }
-  }
-
-  @include media-breakpoint-up(lg) {
-    .button-label {
-      @include font-size($slide-menu-link-font-size);
-    }
-    .vdm {
-      @include font-size(2.5rem);
-    }
-  }
-}
-
-// Slide menu search
-//
-.slide-menu-search {
-
-  .form-group {
-    margin-bottom: 0;
-    &.has-clear {
-      .form-control {
-        padding-right: 3.5rem;
-      }
-      .btn-clear {
-        margin-right: 1rem;
-      }
-    }
-  }
-
-  .vdm {
-    color: $neutral-underground-1;
-  }
-  .form-control {
-    background-color: $neutral-primary;
-    border: none;
-    border-radius: 0;
-    color: $neutral-underground-1;
-    @include font-size($font-size-sm);
-    line-height: $line-height-xs;
-    padding: 1.1875rem;
-
-    &::placeholder {
-      color: $neutral-underground-1;
-    }
-
-    &:focus {
-      background: $neutral-stroke;
-      box-shadow: none;
-      color: $neutral-primary;
-
-      &::placeholder {
-        color: $neutral-primary;
-      }
-
-    }
-  }
-  .input-group-icon {
-    &.input-group-icon-left {
-      > .vdm {
-        color: $white;
-        @include font-size(2.5rem);
-        padding-left: .625rem;
-      }
-      input {
-        padding-left: 3.75rem;
-      }
-    }
-  }
-
-  .btn-close-search {
-    z-index: 10;
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-    color: $neutral-primary;
+.main-menu {
+  visibility: hidden;
+  position: fixed;
+  top: $main-navbar-height-sm;
+  left: 0;
+  right: 0;
+  width: 100%;
+  z-index: 1;
+  .main-menu-container {
     display: flex;
-    @include font-size(2.5rem);
-    padding: 0;
-    margin-left: .625rem;
+    flex-direction: column;
+    visibility: hidden;
+    padding-right: $grid-gutter-width / 2;
+    padding-left: $grid-gutter-width / 2;
+    transition: $main-menu-transition, visibility 0s linear 300ms;
+    transform: translateY(-100%);
+    will-change: transform;
+    overflow-y: auto;
+    position: relative;
+    height: calc(100vh - #{$main-navbar-height-sm}); // Set height to allow for scroll on smaller devices
   }
 
-  // Mobile
-  @include media-breakpoint-up(sm) {
-    .form-control {
-      @include font-size($slide-menu-link-font-size);
-      padding: 1.75rem;
-    }
-    .input-group-icon {
-      &.input-group-icon-left {
-        > .vdm {
-          @include font-size(3rem);
-          padding-left: 1rem;
-        }
-        input {
-          padding-left: 5rem;
-        }
-      }
-    }
-    .btn-close-search {
-      @include font-size(3rem);
-      margin-left: 1rem;
-    }
-  }
-}
-
-// Trigger search mode on focus
-.js-search-focus {
-  .vdm {
-    color: $black;
-  }
-  .input-group-icon {
-    &.input-group-icon-left {
-      > .vdm {
-        display: none;
-      }
-    }
-  }
-  .form-control {
-    background: $neutral-stroke;
-    box-shadow: none;
-    color: $neutral-primary;
-
-    &::placeholder {
-      color: $neutral-primary;
+  &.show {
+    visibility: visible;
+    .main-menu-container {
+      visibility: visible;
+      transform: translateY(0);
+      transition: $main-menu-transition, visibility 0s linear 0s;
     }
   }
 
-}
+  .main-menu-content {
+    display: flex;
+    padding: 2rem 0 2rem 0;
+    background-color: $main-menu-bg;
+    box-shadow: $main-menu-box-shadow;
+  }
 
-// Main slide-menu container
-.slide-menu {
-	position: fixed;
-	width: 100%;
-	max-width: 100%;
-	height: 100vh;
-	top: 0;
-	right: 0;
-	display: none;
-  overflow-x: hidden;
-  overflow-y: auto;
-	box-sizing: border-box;
-	background: $slide-menu-bg;
-	transition: transform $slide-menu-transition-dur $slide-menu-transition-easing;
-	transform: translateX(100%);
-	will-change: transform;
-	z-index: $zindex-fixed;
-
-	.slider {
-		width: 100%;
-		transition: transform $slide-menu-transition-dur $slide-menu-transition-easing;
-		transform: translateX(0);
-		will-change: transform;
-	}
-
-	ul {
-		@extend .list-unstyled;
-		position: relative;
-		width: 100%;
-		max-width: 100%;
+  .main-menu-heading {
+    @include font-size($h4-font-size);  // 20/28
+    line-height: $line-height-md;
+    color: $headings-color;
+    display: block;
+    font-weight: $font-weight-bold;
+    margin-bottom: 1rem;
+  }
+  ul {
+    list-style: none;
     margin: 0;
-    margin-top: 1.5rem;
-    margin-bottom: 3rem;
-    
+    padding: 0;
+  }
+
+  ul:not(.main-menu-categories) {
     li {
-      display: flex;
-      padding: 0;
+      @include font-size($font-size-sm);
+      line-height: $line-height-sm;
+      padding-bottom: 1rem;
+      &:last-child {
+        padding-bottom: 0;
+      }
+    }
+  }
+
+  .main-menu-level1 {
+    a {
+      border-bottom: none;
+      @include hover-focus {
+        border-bottom: 1px solid $action !important;
+      }
+    }
+  }
+  .main-menu-categories {
+    margin-right: -1rem;
+  }
+  .main-menu-level2 {
+    position: absolute;
+    top: -32px;
+    left: 100%;
+    width: 200%;
+    z-index: 1;
+    height: calc(100% + 64px);
+    padding: 4rem;
+    background-color: $main-menu-active-bg;
+  }
+
+  .main-menu-level2-close,
+  .main-menu-level2-hidden {
+    display: none;
+  }
+
+  .btn-main-menu-toggle {
+    @include button-reset();
+    cursor: pointer;
+    text-align: left;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    position: relative;
+    color: $neutral-primary;
+    @include font-size($font-size-sm);
+    line-height: $line-height-sm;
+    font-weight: $btn-font-weight;
+    padding: .375rem 2.5rem .375rem .5rem;
+    width: 100%;
+    @include transition($btn-transition);
+
+    &:after {
+      content: '';
+      -webkit-mask: url($data-icon-chevron-right) no-repeat 50% 50%;
+      mask: url($data-icon-chevron-right) no-repeat 50% 50%;
+      -webkit-mask-size: cover;
+      mask-size: cover;
+      display: block;
+      position: absolute;
+      right: .5rem;
+      top: 50%;
+      transform: translateY(-50%);
+      width: 24px;
+      height: 24px;
+      background-color: $neutral-tertiary;
     }
 
-		ul {
-			position: absolute;
-			top: 0;
-			left: 100%;
-      display: none;
-      padding: 0;
+    // Active state
+    &.active {
+      color: $primary;
+      background-color: $main-menu-active-bg;
+      &:after {
+        content: none;
+      }
+    }
+
+    // Hover and focus states
+    &:hover,
+    &:focus {
+      color: $action;
+      &:after {
+        background-color: $action;
+      }
+    }
+
+  }
+
+  // Mobile Menu header
+  .main-menu-mobile-header {
+    background-color: $white;
+    display: flex;
+    padding: .5rem;
+    width: 100%;
+    position: absolute;
+    top: -57px;
+    height: 56px;
+    z-index: $zindex-fixed + 1;
+    align-self: center;
+    align-items: center;
+    transition: top .3s ease-out;
+    .navbar-brand {
+      padding: .375rem .5rem;
       margin: 0;
-		}
+      svg {
+        height: 1.75rem;
+      }
+    }
+  }
 
-		a {
-      color: $slide-menu-link-color;
-      @include font-size($slide-menu-link-font-size);
-      display: flex;
-      flex: 1;
-      align-items: center;
-      padding: 1.5rem 3.75rem;
-      cursor: pointer;
-      &:hover,
-      &:active,
+  @include media-breakpoint-up(md){
+    overflow: hidden;
+
+    .main-menu-level2 {
+      width: 140%;
+    }
+
+    .main-menu-level2-close {
+      display: none;
+      position: absolute;
+      top: -1.5rem;
+      right: calc(-140% + .5rem);
+      z-index: 2;
+      .btn {
+        margin-left: 0;
+      }
+    }
+
+    .btn-main-menu-toggle.active ~ .main-menu-level2-close {
+      display: block;
+    }
+  }
+
+  // Breakpoints tweaks
+  @include media-breakpoint-up(lg) {
+    top: $main-navbar-height;
+    left: calc(50vw - (#{map-get($container-max-widths, lg)} / 2));
+    max-width: map-get($container-max-widths, lg);
+    padding: 0 .5rem .5rem .5rem;
+
+    .main-menu-container {
+      height: auto;
+    }
+
+    .main-menu-level2 {
+      width: 200%;
+    }
+
+    .main-menu-level2-close {
+      right: calc(-200% + .5rem);
+    }
+  }
+
+  @media (min-width: map-get($grid-breakpoints, md)) and (max-width: map-get($grid-breakpoints, lg)) and (min-height: 720px){
+    .main-menu-container {
+      height: auto
+    }
+  }
+
+  // Set Height for larger breakpoint if we have a small height...
+  @media (min-width: map-get($grid-breakpoints, lg)) and (max-height: 620px) {
+    .main-menu-container {
+      height: calc(100vh - #{$main-navbar-height}); // Set height to allow for scroll on smaller devices
+    }
+  }
+
+  @include media-breakpoint-down(sm) {
+    .main-menu-heading {
+      @include font-size($font-size-base);  // 16/24
+      line-height: $line-height-md;
+    }
+    .main-menu-categories {
+      margin-right: 0;
+      > li {
+        border-top: 1px solid $neutral-stroke;
+      }
+    }
+    .btn-main-menu-toggle {
+      @include font-size($font-size-sm);
+      line-height: $line-height-sm;
+      padding: .5rem 2.5rem .5rem .5rem;
+
+      &:after {
+        content: '';
+        -webkit-mask: url($data-icon-chevron-down) no-repeat 50% 50%;
+        mask: url($data-icon-chevron-down) no-repeat 50% 50%;
+      }
+
+      // Active state
       &.active {
-        color: $action-lighter;
-        text-decoration: none;
-        
-        .vdm {
-          color: $action-lighter;
+        color: $primary;
+        background-color: transparent;
+        &:after {
+          content: '';
+          -webkit-mask: url($data-icon-chevron-up) no-repeat 50% 50%;
+          mask: url($data-icon-chevron-up) no-repeat 50% 50%;
         }
       }
-      .vdm {
-        color: $neutral-tertiary;
-        @include font-size(3rem);
-        margin-left: 1.5rem;
-        margin-top: -.75rem;
-        margin-bottom: -.75rem;
-      }
 
-      &.back-link {
-        color: $slide-menu-link-hover-color;
-        @include font-size($font-size-sm);
+      &:hover,
+      &:focus {
+        &:after {
+          background-color: $primary;
+        }
 
-        .vdm {
-          color: $slide-menu-icon-color;
-          @include font-size(1rem);
-          line-height: $line-height-xs;
-          margin-left: 0;
+        &.active {
+          &:after {
+            -webkit-mask: url($data-icon-chevron-up) no-repeat 50% 50%;
+            mask: url($data-icon-chevron-up) no-repeat 50% 50%;
+            background-color: $primary;
+          }
         }
       }
     }
-    
-    @include media-breakpoint-up(sm) {
-      a {
-        padding-left: 5rem;
-        padding-right: 5rem;
-        .vdm {
-          margin-left: auto;
-        }
-      }
+
+    .main-menu-level2 {
+      position: static;
+      width: auto;
+      height: auto;
+      padding: 1rem;
+      background-color: transparent;
     }
-	}
-  
-  @include media-breakpoint-up(sm) {
-    width: $slide-menu-width;
   }
 }
 
+
+// Menu interne
 //
-// Slide menu employés
-//
-// Main slide-menu employés container
+// Main menu interne container
+.slide-menu-interne,
 .slide-menu-employes {
   position: fixed;
   width: 100%;
   max-width: 100%;
   height: 100vh;
   top: 0;
-  right: 0;
-  display: none;
+  left: 0;
+  visibility: hidden;
   overflow-x: hidden;
   overflow-y: auto;
   box-sizing: border-box;
-  background: $slide-menu-employes-bg;
-  transition: transform $slide-menu-employes-transition-dur $slide-menu-employes-transition-easing;
-  transform: translateX(100%);
+  background: $slide-menu-interne-bg;
+  transition: $slide-menu-interne-transition, visibility 0s linear 300ms;
+  transform: translateX(-100%);
   will-change: transform;
   z-index: $zindex-fixed;
 
-  .slider {
-    width: 100%;
-    transition: transform $slide-menu-employes-transition-dur $slide-menu-employes-transition-easing;
+  &.show {
+    visibility: visible;
     transform: translateX(0);
-    will-change: transform;
+    transition: $slide-menu-interne-transition, visibility 0s linear 0s;
   }
-  
-  // Slide menu employés header
+
+  // Menu interne header
   // Contains the close button
   .slide-menu-header {
     background-color: $neutral-underground-1;
     height: 3.5rem;
-    margin: 0;
+    padding: 0 1rem;
+    display: flex;
+
+    .navbar-btn {
+      align-self: center;
+      margin: 0;
+    }
 
     @include media-breakpoint-up(lg) {
       height: 4.5rem;
@@ -328,70 +342,16 @@
     }
 
   }
-
-  // Slide menu employés close button
-  .btn-close {
-    @include button-reset();
-    display: inline-flex;
-    align-items: center;
-    cursor: pointer;
-    margin: 0;
-    padding: 1rem;
-
-    .button-label {
-      @include font-size($font-size-sm);
-      margin-left: 1rem;
-    }
-    .icon {
-      &:before {
-        background-color: $neutral-primary;
-      }
-    }
-
-    &:focus {
-      box-shadow: none;
-    }
-
-    @include media-breakpoint-up(lg) {
-      padding: 1.5rem;
-    }
-  }
   
-  .side-menu {
-    margin: 2rem 0 3rem 0;
-    
-    .list-group-item {
-      &.list-group-item-action {
-        & > a {
-          padding: 1rem 1rem 1rem 1.25rem;
-          color: $slide-menu-employes-link-color;
-          
-          &:hover {
-            color: $slide-menu-link-hover-color;
-            .icon {
-              &:before {
-                background-color: $slide-menu-employes-icon-hover-color;
-              }
-            }
-          }
-
-          .icon {
-            &:before {
-              background-color: $slide-menu-employes-icon-color;
-              height: $slide-menu-employes-icon-size;
-              width: $slide-menu-employes-icon-size;
-            }
-          }
-
-          @include media-breakpoint-up(lg) {
-            padding: 1rem 1rem 1rem 1.75rem;
-          }
-        }
-      } 
-    }
-  }
-  
+  // Sm and up
   @include media-breakpoint-up(sm) {
-    width: $slide-menu-employes-width;
+    width: $slide-menu-interne-width;
+  }
+}
+
+// Needs more specifi overrides
+.main-navbar.navbar.navbar-dark .slide-menu-interne .slide-menu-header .navbar-btn {
+  .icon {
+    @include icon-color($neutral-primary);
   }
 }

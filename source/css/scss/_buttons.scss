@@ -144,6 +144,30 @@ fieldset:disabled a.btn {
   }
 }
 
+// Button squared variant
+.btn-squared {
+  border-radius:$btn-border-radius-squared;
+  padding-left: 1rem;
+  padding-right: 1rem; 
+  .icon,
+  .utility-icon {
+    margin-left: -.5rem;
+  }
+}
+
+.btn-lang {
+  @include button-variant($background: transparent, $border: transparent, $color: $white, $hover-background: transparent, $hover-border: transparent, $hover-color: $action-lighter, $active-background: transparent, $active-border: transparent, $active-color: $action-lighter);
+  @extend .btn-squared;
+  border: none;
+  padding-left: 0;
+  padding-right: 0;
+  padding-top: .375rem;
+  padding-bottom: .375rem;
+  @include hover-focus {
+    border: none;
+  }
+}
+
 .btn-promo {
   @include button-variant($background: $brand, $border: $brand, $color: $white, $hover-background: $brand-dark, $hover-border: $brand-dark, $hover-color: $white, $active-background: $brand-dark, $active-border: $brand-dark, $active-color: $white);
 }
@@ -184,7 +208,7 @@ fieldset:disabled a.btn {
 
 // Button squared variant
 .btn-squared {
-  border-radius:$btn-border-radius-squared;
+  border-radius: $btn-border-radius-squared;
   padding-left: 1rem;
   padding-right: 1rem; 
   .icon,
@@ -231,10 +255,6 @@ input[type="button"] {
   @include button-reset();
   pointer-events: inherit;
   cursor: pointer;
-  &.focus,
-  &:focus {
-    @include box-shadow(none);
-  }
 }
 
 

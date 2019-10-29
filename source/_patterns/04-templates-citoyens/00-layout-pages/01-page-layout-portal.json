@@ -1,8 +1,18 @@
 {
-  "navbarPosition": "fixed-top",
-  "pageClasses": "mt-7 mt-lg-9",
-  "regionMainClasses": false,
-  "regionMainContentClasses": "col-lg-6",
+  "navbarFixedTop": true,
+  "pageClasses": false,
+  "breadcrumb": {
+    "breadcrumbs": [
+      {
+        "url": "#",
+        "text": "Accueil"
+      },
+      {
+        "url": "#",
+        "text": "Parent 1"
+      }
+    ]
+  },
   "documentHeading": false,
   "sidebarRight": false,
   "publicationDate": {

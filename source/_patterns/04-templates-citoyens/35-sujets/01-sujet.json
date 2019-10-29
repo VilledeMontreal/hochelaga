@@ -1,7 +1,16 @@
 {
-  "navbarPosition": "fixed-top",
-  "pageClasses": "mt-7 mt-lg-9",
-  "header-back-link": false,
+  "navbarFixedTop": true,
+  "pageClasses": false,
+  "breadcrumbs": [
+    {
+      "url": "#",
+      "text": "Accueil"
+    },
+    {
+      "url": "#",
+      "text": "Sujets"
+    }
+  ],
   "heading": "Titre du sujet d'une longueur de 80 caractères maximum",
   "has-badges": false,
   "publicationDate": {
@@ -12,7 +21,7 @@
   "module-content": {
     "module-cta": {
       "buttonAsLink": true,
-      "buttonClass": "btn-primary btn-lg",
+      "buttonClass": "btn-primary",
       "buttonUrl": "#",
       "buttonText": "Appel à l'action"
     },

@@ -1,6 +1,20 @@
 {
-  "navbarPosition": "fixed-top",
-  "pageClasses": "mt-7 mt-lg-9",
+  "navbarFixedTop": true,
+  "pageClasses": false,
+  "breadcrumbs": [
+    {
+      "url": "#",
+      "text": "Accueil"
+    },
+    {
+      "url": "#",
+      "text": "Démarches"
+    },
+    {
+      "url": "#",
+      "text": "Taxonomie type"
+    }
+  ],
   "heading": "Titre de la démarche d'une longueur de 80 caractères maximum",
   "has-badges": false,
   "publicationDate": {
@@ -10,7 +24,7 @@
   "lead": "<p>Amorce - Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi condimentum sollicitudin erat, quis convallis risus. Nullam posuere odio ligula, hendrerit suscipit ligula laoreet. Curabitur eleifend nulla purus, ut pharet urna ef id. Cras lacinia nisi id  (recommandé 300 caractères maximum).</p>",
   "cta-button": {
     "buttonAsLink": true,
-    "buttonClass": "btn-primary btn-lg",
+    "buttonClass": "btn-primary",
     "buttonUrl": "#",
     "buttonText": "Appel à l'action"
   },
