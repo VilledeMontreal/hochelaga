@@ -46,7 +46,7 @@ h3, .h3,
   // 576px and up
   @include media-breakpoint-up(md) {
     @include font-size($h3-font-size);  // 24/32
-    line-height: 2rem;
+    line-height: $line-height-xl;
   }
 }
 h4, .h4,
@@ -57,7 +57,7 @@ h4, .h4,
   // 576px and up
   @include media-breakpoint-up(md) {
     @include font-size($h4-font-size);  // 20/28
-    line-height: $line-height-md;
+    line-height: $line-height-lg;
   }
 }
 h5, .h5 {

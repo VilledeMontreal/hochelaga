@@ -118,6 +118,32 @@
     }
   }
 
+  &.card-date {
+    // Card type
+    .card-type {
+      @include font-size($font-size-sm);
+      line-height: $line-height-sm;
+      margin-bottom: 1rem;
+      text-transform: none;
+      &:after {
+        content: "";
+        background-color: $brand;
+        display: block;
+        width: 2rem;
+        height: .125rem;
+        margin-top: 1rem;
+      }
+    }
+    // Optionnal bottom link-label
+    .card-link {
+      color: $action;
+      display: inline-flex;
+      font-weight: $font-weight-bold;
+      line-height: $line-height-md;
+      padding-top: 1rem;
+    }
+  }
+
   // Card profile
   &.card-profile,
   &.card-member {
@@ -205,7 +231,8 @@
       }
     }
     // Invert Image and body Order on larger breakpoint
-    &.card-multi-inv {
+    &.card-multi-inv,
+    &.card-featured-inv {
       @include media-breakpoint-up(lg) {
         .card-img-bg {
           order: -1;
@@ -213,15 +240,15 @@
         }
       }
     }
-    &.card-featured-lg,
-    &.card-multi-lg {
-      
+    &.card-multi-lg,
+    &.card-featured-lg {
       .card-body {
         height: 100%; // Force to take 100% of parent
         position: relative;
-        margin-top:0;
+        margin-top: 0;
         z-index: 1;
         padding-right: inherit;
+
         &:before {
           content: none;
         }
@@ -235,7 +262,7 @@
       @include media-breakpoint-up(md){
         .card-img-bg {
           min-height: auto;
-          padding-top: $padding-16-9
+          padding-top: $padding-16-9;
         }
       }
 
@@ -247,73 +274,6 @@
       }
     }
   }
-
-  // Featured member
-  // TODO: Wait to see what happens with featured profile
-  /*&.card-featured-member {
-    text-align: center;
-    .card-footer {
-      justify-content: center;
-    }
-    .card-img-top {
-      max-width: 256px;
-    }
-    .rounded-circle {
-      margin: 2rem auto 0 auto;
-    }
-    .card-subtitle {
-      font-weight: $font-weight-normal;
-      margin-top: 0;
-    }
-    // @tablet
-    @include media-breakpoint-up(md) {
-      flex-direction: row;
-      text-align: left;
-      padding-top: 4rem;
-      padding-bottom: 4rem;
-      .card-img-container {
-        @include make-col(5);
-        @include make-col-offset(1);
-        .card-img-top {
-          margin: 0;
-          width: 100%;
-          @include make-col(12);
-          max-width: 256px;
-        }
-      }
-      .card-body {
-        @include make-col(5);
-        padding: 0;
-        justify-content: center;
-      }
-      .card-img-top {
-        order: -1;
-
-      }
-      .card-footer {
-        margin-top: 0;
-        padding-top: 1rem;
-        justify-content: flex-start;
-      }
-    }
-    @include media-breakpoint-up(lg) {
-      .card-img-container {
-        @include make-col(4);
-        @include make-col-offset(2);
-        .card-img-top {
-          margin: 0;
-          width: 100%;
-          @include make-col(12);
-          max-width: 256px;
-        }
-      }
-      .card-body {
-        @include make-col(4);
-        padding: 0;
-        justify-content: center;
-      }
-    }
-  }*/
 
   &[data-toggle="modal"] {
     cursor: pointer;
@@ -331,15 +291,16 @@ a.card {
       color: $action;
     }
   }
-  &.card-featured,
-  &.card-multi {
+  &.card-multi,
+  &.card-featured {
     @include hover-focus {
       border: none;
       border-bottom: $card-border-width solid transparent;
     }
   }
 
-  &.card-multi-lg {
+  &.card-multi-lg,
+  &.card-featured-lg {
     @include media-breakpoint-up(lg) {
       @include hover-focus {
         border: none;

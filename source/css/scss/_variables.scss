@@ -239,7 +239,23 @@ $content-max-widths: (
   md: 750px,
   lg: 1110px,
   xl: 1440px
-); 
+);
+
+
+// Columns
+//
+// Set the number of columns to use with column-count
+$column-gap:    $grid-gutter-width;
+
+$column-count: ();
+$column-count: map-merge(
+  (
+    2:  2,
+    3:  3,
+    4:  4
+  ),
+  $column-count
+);
 
 
 // Components

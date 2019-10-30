@@ -5,7 +5,22 @@ The format is based on [Keep a Changelog](http://keepachangelog.com/en/1.0.0/)
 and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.html).
 
 
-## [4.3.0] - unreleased
+## [4.4.0] - unreleased
+
+## Added
+- Homepage template and variants.
+- Homepage mesures d'urgence.
+- Card date variants.
+
+## Changed
+
+## Fixed
+- Message bar now needs base class .alert.
+- Message bar dismiss option can be triggered with data-dismiss="alert" and needs .alert-dismiss class.
+- Message bar mobile behavior is now coherent with alert behavior.
+
+
+## [4.3.0] - 2019-10-29
 
 Header (main-navbar, menu and search) and footer structure and styles now reflect the final design implementation. Make sure you
 now use the latest structure before upgrading to 4.3.0. 

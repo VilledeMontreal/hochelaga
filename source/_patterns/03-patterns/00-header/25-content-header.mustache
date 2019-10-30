@@ -1,4 +1,5 @@
 <div class="document-heading {{ documentHeadingClass }}{{# documentHeadingFullWidth}} document-heading-fullwidth{{/ documentHeadingFullWidth}}{{^documentHeadingFullWidth}} document-heading-grid{{/ documentHeadingFullWidth}}">
+  {{# documentHeadingImageUrl}}
   <div class="document-heading-image-container">
     <div style="background-image:url('{{documentHeadingImageUrl}}')" class="document-heading-background"></div>
     {{# media.copyright }}
@@ -9,16 +10,18 @@
     </div>
     {{/ media.copyright }}
   </div>
+  {{/ documentHeadingImageUrl}}
   
   {{# documentHeadingFullWidth}}<div class="container position-relative">{{/ documentHeadingFullWidth}}
     {{# documentHeadingFullWidth}}
     <div class="row document-heading-header">
-      <div class="col-12 col-lg-7">
+      {{^ documentHeadingOverride}}
+      <div class="col-12{{^ customHeadingGridClass}} col-lg-7{{/customHeadingGridClass}}{{# customHeadingGridClass}} col-md-6 col-lg-5{{/customHeadingGridClass}}">
         <div class="pb-2">
           {{# heading-surtitle}}
           <div class="document-heading-surtitle">{{heading-surtitle}}</div>
           {{/ heading-surtitle}}
-          <h1>{{{ heading }}}</h1>
+          <h1 class="{{^headingClass}}h1{{/headingClass}}{{#headingClass}} {{headingClass}}{{/headingClass}}">{{{ heading }}}</h1>
           {{# heading-subtitle}}
           <div class="document-heading-subtitle">{{heading-subtitle}}</div>
           {{/ heading-subtitle}}
@@ -45,6 +48,24 @@
         </div>
         {{/ has-quick-links}}
       </div>
+      {{/ documentHeadingOverride}}
+      {{# documentHeadingOverride}}
+        {{# mesures-urgence}}
+        <div class="col-12 col-lg-8">
+          <div class="d-flex justify-content-center mb-4">
+            <span class="icon icon-sante-et-securite-publiques" aria-hidden="true"></span>
+          </div>
+          <div class="document-heading-surtitle">{{heading-surtitle}}</div>
+          <h2 class="h3">{{{ heading }}}</h2>
+          {{# heading-subtitle}}
+          <div class="document-heading-subtitle">{{{heading-subtitle}}}</div>
+          {{/ heading-subtitle}}
+          {{# button-cta}}
+          {{> components-button}}
+          {{/ button-cta}}
+        </div>
+        {{/ mesures-urgence}}
+      {{/ documentHeadingOverride}}
     </div>
     {{/ documentHeadingFullWidth}}
     {{# documentHeadingNotch}}
