@@ -19,6 +19,7 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
   
 ## Fixed
 - Message bar mobile behavior is now coherent with alert behavior.
+- Switches states colors.
 
 
 ## [4.3.0] - 2019-10-29
