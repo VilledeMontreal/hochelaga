@@ -585,13 +585,15 @@ legend,
   }
 }
 
-//
 // Feedback form
-.feedback-form-container {
+//
+.feedback-form-container.alert {
   padding: 2rem;
   display: block;
   box-shadow: none;
   margin-bottom: 4rem;
+  @include font-size($font-size-base);
+  line-height: $line-height-lg;
 }
 
 .feedback-form {
@@ -599,14 +601,13 @@ legend,
     -webkit-transform: translateZ(0px);
   }
 
-  button {
-    + button {
+  .btn {
+    + .btn {
       margin-left: .5rem;
-      &.btn-link {
-        margin-left: 1rem;
-      }
     }
   }
+
+  // All this will be deprecated in v4.4.0
   .feedback-question {
     h4 {
       margin-bottom: 1.5rem;

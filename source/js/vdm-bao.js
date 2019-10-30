@@ -386,6 +386,13 @@
     if (inputValue) {
       $('#form20 button').prop('disabled', false);
       $('#form20 button').prop('hidden', false);
+      if (inputValue != 'non') {
+        if(!$('#form20 [name=Field14]').parent().hasClass('d-none')) {
+          $('#form20 [name=Field14]').parent().addClass('d-none');
+        }
+      } else {
+        $('#form20 [name=Field14]').parent().removeClass('d-none');
+      }
     }
   });
 
