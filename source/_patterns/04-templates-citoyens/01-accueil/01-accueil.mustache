@@ -15,11 +15,11 @@
   <div class="container">
     <div class="mb-4 mb-lg-8 border-bottom border-neutral-stroke">
       <div class="row mb-2 mb-lg-6 px-2 px-lg-0">
-        <div class="col-12 col-lg-6 pl-lg-12">
+        <div class="col-12 col-lg-6 pl-lg-8 pl-xl-14">
           <h2 class="mb-2">Liens rapides</h2>
           <p class="mb-2">Takimata tempor ea no rebum stet et erat, ipsum amet kasd stet no, gubergren eirmod consetetur sea vero.</p>
         </div>
-        <div class="col-12 col-lg-6">
+        <div class="col-12 col-lg-6 pr-lg-8 pr-xl-14">
           <ul class="list-inline mb-1">
             {{# liensRapides}}
             <li class="list-inline-item mb-1">
@@ -62,31 +62,49 @@
       {{# events }}
       <div class="mb-4 mb-lg-8">
         <h2>Événements</h2>
+        {{# cards }}
         <div class="row cards mb-0 mb-lg-4">
-        {{# cards.card-item }}
+        {{# card-item }}
           <div class="{{ cards.bsgrid-classes }}">
             {{> components-card-item }}
           </div>
-        {{/ cards.card-item }}
+        {{/ card-item }}
         </div>
         <div class="d-flex justify-content-center">
         {{> components-button}}
         </div>
+        {{/ cards}}
+        {{^ cards}}
+        <div class="row">
+          <div class="col-12 col-lg-9 col-xl-7 font-size-lg text-dark">
+            <p class="mb-0">ll n'y a pas d'événements à venir prochainement. Consulter cette section plus tard pour rester à l'affût des prochains événements.</p>
+          </div>
+        </div>
+        {{/ cards}}
       </div>
       {{/ events }}
       {{# news }}
       <div class="border-top border-neutral-stroke pt-4 pt-lg-8">
         <h2>Nouvelles</h2>
+        {{# cards }}
         <div class="row cards mb-0 mb-lg-4">
-        {{# cards.card-item }}
+        {{# card-item }}
           <div class="{{ cards.bsgrid-classes }}">
             {{> components-card-item }}
           </div>
-        {{/ cards.card-item }}
+        {{/ card-item }}
         </div>
         <div class="d-flex justify-content-center">
         {{> components-button}}
         </div>
+        {{/ cards}}
+        {{^ cards}}
+        <div class="row">
+          <div class="col-12 col-lg-9 col-xl-7 font-size-lg text-dark">
+            <p class="mb-0">ll n'y a pas nouvelles pour le moment. Consulter cette section plus tard pour rester à l'affût.</p>
+          </div>
+        </div>
+        {{/ cards}}
       </div>
       {{/ news }}
     </div>
