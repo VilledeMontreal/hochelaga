@@ -597,9 +597,13 @@ legend,
   padding: 2rem;
   display: block;
   box-shadow: none;
-  margin-bottom: 4rem;
+  margin-bottom: 2rem;
   @include font-size($font-size-base);
   line-height: $line-height-lg;
+
+  @include media-breakpoint-up(lg) {
+    margin-bottom: 4rem;
+  }
 }
 
 .feedback-form {

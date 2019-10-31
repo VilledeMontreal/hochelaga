@@ -1,0 +1,239 @@
+{{> styles-link-skip-to-main-content }}
+
+<header class="header-main-nav {{# navbarFixedTop}}is-fixed-top{{/navbarFixedTop}}">
+{{> components-navbar }}
+</header>
+
+<main class="main-content {{ pageClasses }}" id="main-content" aria-label="Main Content">
+
+  {{> patterns-content-header }}
+
+  {{# messageBar}}
+  {{> components-message-bar}}
+  {{/ messageBar}}
+
+  {{# featuredSection}}
+  <div class="pt-8 pt-lg-16 pb-4 pb-lg-8" id="featuredContent">
+    <div class="container">
+      {{# featuredCard}}
+      <div class="mb-lg-4">
+        <div class="row cards">
+        {{# cards.card-item }}
+          <div class="{{ cards.bsgrid-classes }}">
+            {{> components-card-item-featured }}
+          </div>
+        {{/ cards.card-item }}
+        </div>
+      </div>
+      {{/ featuredCard}}
+      {{# featuredSecondaryCards}}
+      <div class="mb-lg-4">
+        <div class="row cards">
+        {{# cards.card-item }}
+          <div class="{{ cards.bsgrid-classes }}">
+            {{> components-card-item-featured }}
+          </div>
+        {{/ cards.card-item }}
+        </div>
+      </div>
+      {{/ featuredSecondaryCards}}
+    </div>
+  </div>
+  {{/ featuredSection}}
+
+  {{# serviceSection}}
+  <div class="pt-8 pt-lg-16 pb-4 pb-lg-12 bg-light" id="featuredServices">
+    <div class="container">
+      <div class="row">
+        <div class="col-12 text-center">
+          <h2>{{ headings.text }}</h2>
+        </div>
+      </div>
+      <div class="row cards">
+        {{# cards.card-item}}
+        <div class="{{ cards.bsgrid-classes }}">
+          {{> components-card-item }}
+        </div>
+        {{/ cards.card-item}}
+      </div>
+    </div>
+  </div>
+  {{/ serviceSection}}
+
+  {{# dateSection}}
+  <div class="pt-8 pt-lg-16 pb-4 pb-lg-12" id="featuredDates">
+    <div class="container">
+      <div class="row">
+        <div class="col-12">
+          <h2>{{ headings.text }}</h2>
+        </div>
+      </div>
+      {{# cards}}
+      <div class="row cards">
+        {{# cards.card-item }}
+        <div class="{{ cards.bsgrid-classes }}">
+          {{> components-card-item}}
+        </div>
+        {{/ cards.card-item}}
+      </div>
+      {{# load-extra-item}}
+      <div id="collapseDatesImportantesSection" class="row cards collapse-content collapse">
+      {{# cards.extra-item}}
+        <div class="{{ cards.bsgrid-classes }}">
+        {{> components-card-item}}
+        </div>
+      {{/ cards.extra-item}}
+      </div>
+      {{/ load-extra-item}}
+      {{/ cards}}
+      {{# has-extra-item}}
+      <div class="d-flex justify-content-center mt-0 mb-4 my-lg-4">
+        <button class="btn btn-link btn-squared btn-collapse collapsed" type="button" data-toggle="collapse" data-target="#collapseDatesImportantesSection" aria-expanded="false" aria-controls="collapseDatesImportantesSection">Voir plus</button>
+      </div>
+      {{/ has-extra-item}}
+    </div>
+  </div>
+  {{/ dateSection}}
+
+
+  {{# featuredSearch}}
+  <div id="{{ featuredContentID }}" class="bg-image-section overlay-mid pt-8 pt-lg-16 pb-6 pb-lg-12" {{# featuredContentBgImage }} style="{{ featuredContentBgImage }}" {{/ featuredContentBgImage }}>
+    <div class="container">
+      <div class="row justify-content-center">
+        <div class="col-12 col-lg-8 text-center">
+          <h2 class="text-white">{{ headings.text }}</h2>
+        </div>
+        <div class="col-12 col-lg-6 text-center">
+          <div class="form-group form-group-lg">
+            <div class="input-group-icon input-group-icon-left">
+              <input type="text" class="form-control input-rounded" id="input-group-search" placeholder="Rechercher ...">
+              <span class="icon icon-search" aria-hidden="true"></span>
+            </div>
+          </div>
+          {{# quickLinks }}
+          <div class="quick-links mb-1 mb-lg-3">
+            <ul class="list-inline">
+              {{# quickLinksItem }}
+              <li class="list-inline-item">
+                <a href="{{ url }}" class="btn btn-sm btn-primary-reverse">{{ label }}</a>
+              </li>
+              {{/ quickLinksItem }}
+            </ul>
+          </div>
+          {{/ quickLinks }}
+        </div>
+      </div>
+    </div>
+  </div>
+  {{/ featuredSearch}}
+
+  {{# showEventsNewsSection}}
+  <div class="pt-8 pb-4 pt-lg-16 pb-lg-8">
+    <div class="container">
+      {{# news }}
+      <div class="pb-lg-4">
+        <h2>Nouvelles</h2>
+        <div class="row cards">
+        {{# cards.card-item }}
+          <div class="{{ cards.bsgrid-classes }}">
+            {{^ cards.display-full-width}}
+            {{> components-card-item }}
+            {{/ cards.display-full-width}}
+            {{# cards.display-full-width}}
+            {{> components-card-item-full-width }}
+            {{/ cards.display-full-width}}
+          </div>
+        {{/ cards.card-item }}
+        </div>
+        {{# button-cta}}
+        <div class="d-flex justify-content-center mt-0 mb-4 my-lg-4">
+        {{> components-button}}
+        </div>
+        {{/ button-cta}}
+      </div>
+      {{/ news }}
+      {{# events }}
+      <div class="border-top pt-4 pt-lg-8 pb-lg-4">
+        <h2>Événements</h2>
+        <div class="row cards">
+        {{# cards.card-item }}
+          <div class="{{ cards.bsgrid-classes }}">
+            {{^ cards.display-full-width}}
+            {{> components-card-item }}
+            {{/ cards.display-full-width}}
+            {{# cards.display-full-width}}
+            {{> components-card-item-full-width }}
+            {{/ cards.display-full-width}}
+          </div>
+        {{/ cards.card-item }}
+        </div>
+        {{# button-cta}}
+        <div class="d-flex justify-content-center mt-0 mb-4 my-lg-4">
+        {{> components-button}}
+        </div>
+        {{/ button-cta}}
+      </div>
+      {{/ events }}
+    </div>
+  </div>
+  {{/ showEventsNewsSection}}
+
+  {{# mairieSection}}
+  <div class="border-top pt-8 pb-4 pt-lg-16 pb-lg-8" id="elusSection">
+    <div class="container">
+      <div class="row">
+        <div class="col-12">
+          <h2>{{ headings.text }}</h2>
+        </div>
+      </div>
+      {{# mairie}}
+      <div class="pb-lg-4">
+        <div class="row cards">
+        {{# cards.card-item }}
+          <div class="{{ cards.bsgrid-classes }}">
+            {{> components-card-item-full-width-profile }}
+          </div>
+        {{/ cards.card-item }}
+        </div>
+        <div class="d-flex justify-content-center mt-0 mb-4 my-lg-4">
+        {{> components-button}}
+        </div>
+      </div>
+      {{/ mairie }}
+      {{# comiteConseils}}
+      <div class="border-top pt-4 pt-lg-8 pb-lg-4">
+        <h2>Conseils et consultations</h2>
+        <div class="row cards">
+        {{# cards.card-item }}
+          <div class="{{ cards.bsgrid-classes }}">
+            {{> components-card-item }}
+          </div>
+        {{/ cards.card-item }}
+        </div>
+        {{# button-cta}}
+        <div class="d-flex justify-content-center mt-0 mb-4 my-lg-4">
+        {{> components-button}}
+        </div>
+        {{/ button-cta}}
+      </div>
+      {{/ comiteConseils }}
+    </div>
+  </div>
+  {{/ mairieSection}}
+
+  <section class="mb-4 mb-lg-8">
+    <div class="container">
+      <div class="row justify-content-center">
+        <div class="col-12 col-lg-7">
+        {{> components-feedback-form}}
+        </div>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+{{> patterns-footer-arrondissement}}
+
+{{> patterns-footer-main }}
+

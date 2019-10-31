@@ -1,4 +1,4 @@
-<div class="document-heading {{ documentHeadingClass }}{{# documentHeadingFullWidth}} document-heading-fullwidth{{/ documentHeadingFullWidth}}{{^documentHeadingFullWidth}} document-heading-grid{{/ documentHeadingFullWidth}}">
+<div class="document-heading {{ documentHeadingClass }}{{# documentHeadingFullWidth}} document-heading-fullwidth {{# documentHeadingNotch}}document-heading-notch{{/ documentHeadingNotch}}{{/ documentHeadingFullWidth}}{{^documentHeadingFullWidth}} document-heading-grid{{/ documentHeadingFullWidth}}">
   {{# documentHeadingImageUrl}}
   <div class="document-heading-image-container">
     <div style="background-image:url('{{documentHeadingImageUrl}}')" class="document-heading-background"></div>
@@ -16,10 +16,10 @@
     {{# documentHeadingFullWidth}}
     <div class="row document-heading-header">
       {{^ documentHeadingOverride}}
-      <div class="col-12{{^ customHeadingGridClass}} col-lg-7{{/customHeadingGridClass}}{{# customHeadingGridClass}} col-md-6 col-lg-5{{/customHeadingGridClass}}">
+      <div class="col-12{{^ customHeadingGridClass}} col-lg-7{{/customHeadingGridClass}}{{# customHeadingGridClass}} {{ customHeadingGridClass}}{{/customHeadingGridClass}}">
         <div class="pb-2">
           {{# heading-surtitle}}
-          <div class="document-heading-surtitle">{{heading-surtitle}}</div>
+          <div class="document-heading-surtitle{{# isNormal}} font-weight-normal{{/ isNormal}}">{{text}}</div>
           {{/ heading-surtitle}}
           <h1 class="{{^headingClass}}h1{{/headingClass}}{{#headingClass}} {{headingClass}}{{/headingClass}}">{{{ heading }}}</h1>
           {{# heading-subtitle}}

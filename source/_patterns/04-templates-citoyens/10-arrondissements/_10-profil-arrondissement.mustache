@@ -1,0 +1,149 @@
+{{> atoms-link-skip-to-main-content }}
+
+{{> organisms-header-portal }}
+
+<main class="main-content {{ pageClasses }}" id="main-content" aria-label="Main Content">
+
+  {{> organisms-content-header }}
+
+  {{# has-nav-anchors }}
+  {{> molecules-nav-anchors }}
+  {{/ has-nav-anchors }}
+
+  <!-- Begin main-content region-->
+  <article id="navTop" class="region-content {{ regionMainClasses }}">
+    <div class="container {{ regionMainContainerClasses }}">
+      <div class="row">
+        <div class="col-12">
+          <!-- Teaser -->
+          {{# has-lead-text }}
+          <div class="lead">{{{ lead-text }}}</div>
+          {{/ has-lead-text }}
+        </div>
+      </div>
+      {{# show-hide-description}}
+        <div id="collapseProfilDescription" class="row collapse-content collapse">
+          <div class="col-12 col-lg-8 offset-lg-2">
+            <h2>Titre de la section</h2>
+            <p>Vestibulum porttitor, libero a faucibus vehicula, ex erat ullamcorper velit, at cursus mauris dolor eu erat. Nulla malesuada finibus nisi nec cursus. Praesent ac augue euismod, congue neque id, finibus arcu. Sed faucibus purus quis augue fermentum lobortis. Mauris commodo odio id varius tempor. Vivamus ornare pulvinar ultricies. Quisque pretium condimentum ultrices.</p>
+            <h2>Titre de la section</h2>
+            <p>Proin sollicitudin mauris id sollicitudin efficitur. Donec vel ante a risus semper vestibulum ac non est. Curabitur elementum consectetur nunc. Vivamus nec ligula euismod, vestibulum orci id, eleifend ipsum. Phasellus id nibh nisi. Vestibulum tristique erat mi, in vestibulum ex imperdiet at. Nullam tempor elementum malesuada. Maecenas vulputate feugiat dolor in dapibus. Fusce eget velit in sem tempus consequat id sed ex.</p>
+            <div class="mb-4">
+              <img src="https://picsum.photos/id/1003/800/450" alt="Image #1772" class="img-fluid" />
+            </div>
+            <p>Proin sollicitudin mauris id sollicitudin efficitur. Donec vel ante a risus semper vestibulum ac non est. Curabitur elementum consectetur nunc. Vivamus nec ligula euismod, vestibulum orci id, eleifend ipsum.</p>
+          </div>
+        </div>
+        <div class="pagination-wrapper pt-0 text-center">
+          <button class="btn btn-link btn-collapse collapsed" type="button" data-toggle="collapse" data-target="#collapseProfilDescription" aria-expanded="false" aria-controls="collapseProfilDescription" data-show-more="Voir plus" data-show-less="Voir moins">Voir plus</button>
+        </div>
+        {{/ show-hide-description}}
+    </div>
+  </article>
+
+  {{# attraits}}
+  <section id="attraits" class="page-section bg-gray-sky">
+    <div class="container">
+      <div class="row">
+        <div class="col-12">
+          <h2 class="section-heading">Attraits</h2>
+          <ul class="row list-unstyled mb-0 pt-md-4">
+            {{# items }}
+            <li class="col-12 col-md-6 col-lg-4 pb-2">
+              <span class="font-weight-bold text-dark">{{counter}}</span> 
+              {{^url}}
+              {{text}}
+              {{/url}}
+              {{# url}}
+              <a href="{{url}}" class="font-weight-bold">{{text}}</a>
+              {{/url}}
+            </li>
+            {{/ items}}
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+  {{/ attraits}}
+
+  {{# quartiers}}
+  <section id="quartiers" class="page-section pb-0">
+    <div class="container">
+      <div class="row mb-lg-4">
+        <div class="col-12">
+          <h2 class="section-heading text-center">Quartiers</h2>
+        </div>
+      </div>
+      {{# items }}
+      <div class="row mb-8 mb-lg-16">  
+        <div class="col-12 col-lg-5{{# order.last}} order-lg-last ml-lg-auto{{/order.last}}{{^order.last}} mr-lg-auto{{/order.last}} my-auto">
+          <img class="img-fluid mb-4 mb-lg-0" alt="{{img.alt}}" src="{{ img.src }}" />
+        </div>
+        <div class="col-12 col-lg-6 my-auto">
+          <h3 class="h4">{{ title }}</h3>
+          <div class="formatted-text-container">
+            {{{formattedText}}}
+          </div>
+        </div>
+      </div>
+      {{/ items}}
+    </div>
+  </section>
+  {{/ quartiers}}
+
+  {{# video}}
+  <section id="video" class="page-section border-top">
+    <div class="container">
+      <div class="row">
+        <div class="col-12">
+          <h2 class="section-heading text-center">Titre qui introduit la vidéo</h2>
+        </div>
+        {{# video.src }}
+        <div class="col-12 col-lg-8 offset-lg-2">
+          <div class="media embed-responsive embed-responsive-16by9">
+            <iframe class="embed-responsive-item" src="{{ src }}" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+          </div>
+        </div>
+        {{/ video.src }}
+      </div>
+    </div>
+  </section>
+  {{/ video}}
+
+  {{# stats}}
+  <section id="chiffres-cles" class="page-section bg-gray-sky">
+    <div class="container">
+      <div class="row">
+        <div class="col-12">
+          <h2 class="section-heading text-center">Chiffres clés</h2>
+          <ul class="row list-unstyled mb-4 mb-lg-0 pt-lg-4">
+            {{# items }}
+            <li class="col-12 col-sm-6 col-lg-3 mb-4 mb-lg-8 pb-0">
+              <div class="text-center">
+                {{# highlight}}
+                <span class="d-block font-weight-bold h4 mb-1">{{{highlight}}}</span> 
+                {{/ highlight}}
+                {{# text}}
+                <span class="d-block">{{{ text }}}</span>
+                {{/ text}}
+              </div>
+            </li>
+            {{/ items}}
+          </ul>
+          {{# call_to_action}}
+          <div class="text-center">
+            <a href="{{ url }}" class="btn btn-secondary btn-sm">{{ title }}</a>
+          </div>
+          {{/ call_to_action}}
+        </div>
+      </div>
+    </div>
+  </section>
+  {{/ stats}}
+
+</main>
+
+{{> organisms-footer-arrondissement}}
+
+{{> organisms-footer-portal }}
+
