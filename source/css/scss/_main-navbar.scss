@@ -362,7 +362,7 @@
   .not-translated {
     @include font-size($font-size-sm);
     line-height: $line-height-sm;
-    font-weight: $font-weight-bold;
+    font-weight: $font-weight-normal;
     align-self: center;
     margin-left: auto;
     margin-right: 1rem;
