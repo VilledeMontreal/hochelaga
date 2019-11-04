@@ -19,21 +19,11 @@
        <section class="row{{# sidebarRight }} justify-content-between{{/ sidebarRight}}{{^ sidebarRight}} justify-content-center{{/ sidebarRight}}">
         <div class="col-12 col-lg-7">
           <header class="content-header">
+            
             <h1>{{ heading }}</h1>
+            
+            {{> patterns-content-header-extras}}
 
-            {{# has-badges}}
-            <div class="badges-container">
-              {{# badges}}
-              {{> components-badge}}
-              {{/ badges}}
-            </div>
-            {{/ has-badges}}
-
-            {{# publicationDate}}
-            <div class="publication-date">
-              Mis à jour le <time datetime="{{dateTimeFormat}}">{{{dateTimeText}}}</time>
-            </div>
-            {{/ publicationDate}}
           </header>
           
           <div class="lead">

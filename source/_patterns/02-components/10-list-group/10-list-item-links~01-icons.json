@@ -1,23 +1,53 @@
 {
-  "listGroupClass": "list-group-icon",
-  "listGroup": [
-    {
-      "icon-name": "icon-location",
-      "text": "Cras justo odio",
-      "class": false,
-      "externalLinkIcon": false
-    },
-    {
-      "icon-name": "icon-location",
-      "text": "Dapibus ac facilisis in",
-      "class": false,
-      "externalLinkIcon": false
-    },
-    {
-      "icon-name": "icon-location",
-      "text": "Morbi leo risus",
-      "class": false,
-      "externalLinkIcon": false
-    }
-  ]
+  "listGroupLarge": {
+    "listGroupClass": "list-group-lg list-group-icon",
+    "listGroup": [
+      {
+        "url": "#",
+        "icon-name": "icon-location",
+        "text": "Cras justo odio",
+        "class": false,
+        "externalLinkIcon": false
+      },
+      {
+        "url": "/lien-interne",
+        "icon-name": "icon-location",
+        "text": "Dapibus ac facilisis in",
+        "class": false,
+        "externalLinkIcon": false
+      },
+      {
+        "url": "https://rds.ca",
+        "icon-name": "icon-location",
+        "text": "Morbi leo risus",
+        "class": false
+      }
+    ]
+  },
+  "listGroupDefault": {
+    "listGroupClass": "list-group-icon",
+    "listGroup": [
+      {
+        "url": "#",
+        "icon-name": "icon-location",
+        "text": "Cras justo odio",
+        "class": false,
+        "externalLinkIcon": false
+      },
+      {
+        "url": "/lien-interne",
+        "icon-name": "icon-location",
+        "text": "Dapibus ac facilisis in",
+        "class": false,
+        "externalLinkIcon": false
+      },
+      {
+        "url": "https://rds.ca",
+        "icon-name": "icon-location",
+        "text": "Morbi leo risus",
+        "class": false
+      }
+    ]
+  }
+
 }

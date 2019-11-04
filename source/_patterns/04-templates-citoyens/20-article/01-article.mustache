@@ -30,25 +30,8 @@
 
             <h1>{{ heading }}</h1>
 
-            {{# has-badges}}
-            <div class="badges-container">
-              {{# badges}}
-              {{> components-badge}}
-              {{/ badges}}
-            </div>
-            {{/ has-badges}}
+            {{> patterns-content-header-extras}}
 
-            <div class="d-flex flex-wrap">
-              {{# publicationDate}}
-              <div class="publication-date">
-                Mis à jour le <time datetime="{{dateTimeFormat}}">{{{dateTimeText}}}</time>
-              </div>
-              {{/ publicationDate}}
-              {{# readTime}}
-                {{> styles-icon-item(icon-name: "icon-dot-interpunct")}}
-              <div class="publication-date">{{readTime}}</div>
-              {{/ readTime}}
-            </div>
           </header>
           
           <div class="lead">
