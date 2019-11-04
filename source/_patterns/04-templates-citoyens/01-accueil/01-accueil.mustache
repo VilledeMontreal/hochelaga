@@ -4,7 +4,7 @@
 {{> components-navbar }}
 </header>
 
-<main class="main-content {{ pageClasses }} pb-4 pb-lg-8" id="main-content" aria-label="Main Content">
+<main class="main-content {{ pageClasses }}" id="main-content" aria-label="Main Content">
 
   {{# messageBar}}
   {{> components-message-bar}}
@@ -57,64 +57,64 @@
   </div>
   {{/ categoriesAll}}
 
-  <section class="mb-4 mb-lg-8">
+  <div class="pb-4 pb-lg-8">
     <div class="container">
       {{# events }}
-      <div class="mb-4 mb-lg-8">
+      <div class="pb-lg-4">
         <h2>Événements</h2>
         {{# cards }}
-        <div class="row cards mb-0 mb-lg-4">
+        <div class="row cards">
         {{# card-item }}
           <div class="{{ cards.bsgrid-classes }}">
             {{> components-card-item }}
           </div>
         {{/ card-item }}
         </div>
-        <div class="d-flex justify-content-center">
+        <div class="d-flex justify-content-center mt-0 mb-4 my-lg-4">
         {{> components-button}}
         </div>
         {{/ cards}}
         {{^ cards}}
         <div class="row">
           <div class="col-12 col-lg-9 col-xl-7 font-size-lg text-dark">
-            <p class="mb-0">ll n'y a pas d'événements à venir prochainement. Consulter cette section plus tard pour rester à l'affût des prochains événements.</p>
+            <p class="mb-4">ll n'y a pas d'événements à venir prochainement. Consulter cette section plus tard pour rester à l'affût des prochains événements.</p>
           </div>
         </div>
         {{/ cards}}
       </div>
       {{/ events }}
       {{# news }}
-      <div class="border-top border-neutral-stroke pt-4 pt-lg-8">
+      <div class="border-top pt-4 pt-lg-8 pb-lg-4">
         <h2>Nouvelles</h2>
         {{# cards }}
-        <div class="row cards mb-0 mb-lg-4">
+        <div class="row cards">
         {{# card-item }}
           <div class="{{ cards.bsgrid-classes }}">
             {{> components-card-item }}
           </div>
         {{/ card-item }}
         </div>
-        <div class="d-flex justify-content-center">
+        <div class="d-flex justify-content-center mt-0 mb-4 my-lg-4">
         {{> components-button}}
         </div>
         {{/ cards}}
         {{^ cards}}
         <div class="row">
           <div class="col-12 col-lg-9 col-xl-7 font-size-lg text-dark">
-            <p class="mb-0">ll n'y a pas nouvelles pour le moment. Consulter cette section plus tard pour rester à l'affût.</p>
+            <p class="mb-4">ll n'y a pas nouvelles pour le moment. Consulter cette section plus tard pour rester à l'affût.</p>
           </div>
         </div>
         {{/ cards}}
       </div>
       {{/ news }}
     </div>
-  </section>
+  </div>
 
-  <section class="mb-4 mb-lg-8 border-top border-neutral-stroke pt-8 pt-lg-16">
+  <div class="border-top pt-8 pb-4 pt-lg-16 pb-lg-8" id="elusSection">
     <div class="container">
       {{# mairie}}
-      <div class="mb-4">
-        <div class="row cards {{ cards.classes }}">
+      <div class="pb-lg-4">
+        <div class="row cards">
         {{# cards.card-item }}
           <div class="{{ cards.bsgrid-classes }}">
             {{> components-card-item-featured }}
@@ -124,24 +124,25 @@
       </div>
       {{/ mairie }}
       {{# comite-conseils}}
-      <div class="mb-4 mb-lg-8">
+      <div class="pb-lg-4">
         <h2>Prochaines séances</h2>
-        <div class="row cards mb-0 mb-lg-4">
+        <div class="row cards">
         {{# cards.card-item }}
           <div class="{{ cards.bsgrid-classes }}">
             {{> components-card-item }}
           </div>
         {{/ cards.card-item }}
         </div>
-        <div class="d-flex justify-content-center">
+        <div class="d-flex justify-content-center mt-0 mb-4 my-lg-4">
         {{> components-button}}
         </div>
       </div>
       {{/ comite-conseils }}
-  </section>
+    </div>
+  </div>
 
   {{# homePromo}}
-  <section class="mb-4 mb-lg-8 border-top border-neutral-stroke pt-8 pt-lg-16">
+  <div class="border-top pt-8 pb-4 pt-lg-16 pb-lg-8">
     <div class="container">
       {{# promoContent}}
       <div class="row mb-4 mb-lg-8">  
@@ -160,7 +161,7 @@
       </div>
       {{/ promoContent}}
     </div>
-  </section>
+  </div>
   {{/ homePromo}}
 
 </main>
