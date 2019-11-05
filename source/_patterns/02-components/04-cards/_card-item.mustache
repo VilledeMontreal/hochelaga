@@ -8,7 +8,9 @@
 
   {{# card-media }}
     {{# card-media.icon }}
-    <span class="card-icon-top {{ card-media.classes }} vdm {{ card-media.icon }}" aria-hidden="true"></span>
+    <div class="card-icon-top">
+      <span class="icon {{ card-media.icon }}" aria-hidden="true"></span>
+    </div>
     {{/ card-media.icon }}
     {{# card-media.img }}
     <img class="card-img-top {{ card-media.img.classes }}" src="{{ card-media.img.src}}" alt="{{ card-media.img.alt }}">
