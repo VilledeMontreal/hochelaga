@@ -10,7 +10,9 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 ## Added
 - Homepage template and variants.
 - Homepage mesures d'urgence.
-- Card date variants.
+- Card date variante.
+- Card service variante.
+- Card full-width Profile variante.
 - 8 new illustratives icons: icon-city, icon-culture, icon-education, icon-farm, icon-health, icon-law, icon-service, icon-transport.
 
 ## Changed

@@ -8,6 +8,13 @@
   margin-bottom: $grid-gutter-width;
   width: 100%;
 
+  .card-icon-top {
+    padding: 2rem 2rem 0 2rem;
+    margin-bottom: -1rem;
+    .icon {
+      @include icon-size(40px);
+    }
+  }
   .card-img-top {
     flex: 0 0 auto; // IE needs this
   }
@@ -91,6 +98,17 @@
     margin-top: auto;
   }
 
+  .card-link {
+    color: $action;
+    display: inline-flex;
+    font-weight: $font-weight-bold;
+    line-height: $line-height-md;
+    .icon {
+      @include icon-color($action);
+      margin-left: .25rem;
+    }
+  }
+
   // Card full-width
   // Images are handeld like list-group-links using
   // variable height image technique (bg-image)
@@ -144,6 +162,12 @@
     }
   }
 
+  &.card-service {
+    .card-title {
+      color: $primary;
+    }
+  }
+
   // Card profile
   &.card-profile,
   &.card-member {
@@ -162,6 +186,85 @@
     .card-title {
       @include font-size($h3-font-size);  // 24/32
       line-height: 2rem;
+    }
+  }
+
+  // Featured member
+  &.card-profile {
+    &.card-fw-profile {
+      width: 100%;
+      text-align: center;
+      .card-img-top {
+        max-width: 256px;
+      }
+      .rounded-circle {
+        margin: 2rem auto 0 auto;
+      }
+
+      .card-link {
+        margin-top: 0;
+        justify-content: center;
+      }
+
+      // @tablet
+      @include media-breakpoint-up(md) {
+        text-align: left;
+        padding-top: 2rem;
+        padding-bottom: 2rem;
+        flex-flow: row;
+        .card-img-container {
+          @include make-col(3);
+          @include make-col-offset(1);
+          order: 2;
+          align-self: center;
+          .card-img-top {
+            margin: 0;
+            width: 100%;
+            max-width: 16rem;
+          }
+        }
+        .card-body {
+          @include make-col(6);
+          @include make-col-offset(1);
+          order: 1;
+          padding-left: 0;
+          padding-right: 0;
+        }
+        // Bigger title
+        .card-title {
+          @include font-size($h2-font-size);
+          line-height: 2.5rem;
+          margin-bottom: 2rem;
+        }
+        .card-link {
+          margin-top: 1rem;
+          justify-content: left;
+        }
+      }
+      @include media-breakpoint-up(lg) {
+        padding-top: 4rem;
+        padding-bottom: 4rem;
+        .card-img-container {
+          @include make-col(3);
+          @include make-col-offset(1);
+          .card-img-top {
+            margin: 0;
+            width: 100%;
+            max-width: 256px;
+          }
+        }
+        .card-body {
+          padding: 0;
+          justify-content: center;
+        }
+
+        // Bigger title
+        .card-title {
+          @include font-size($h1-font-size);
+          line-height: 3.5rem;
+          margin-bottom: 2rem;
+        }
+      }
     }
   }
 
@@ -287,6 +390,9 @@ a.card {
     background-color: $card-bg;
     border: $card-border-width solid transparent;
     box-shadow: $card-box-shadow;
+    .icon {
+      @include icon-color($primary);
+    }
     .card-title {
       color: $action;
     }
