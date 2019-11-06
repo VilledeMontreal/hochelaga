@@ -11,6 +11,8 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 - Homepage template and variants.
 - Homepage mesures d'urgence.
 - Vitrine d'arrondissement template and variants.
+- Error pages templates (404, 500).
+- Maintenance page template.
 - Card date variante.
 - Card service variante.
 - Card full-width Profile variante.

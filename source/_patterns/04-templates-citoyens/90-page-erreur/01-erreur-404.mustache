@@ -1,0 +1,43 @@
+{{> styles-link-skip-to-main-content }}
+
+<header class="header-main-nav {{# navbarFixedTop}}is-fixed-top{{/navbarFixedTop}}">
+{{> components-navbar }}
+</header>
+
+<main class="main-content {{ pageClasses }}" id="main-content" aria-label="Main Content">
+  <div class="region-content pb-8 pt-4 pt-lg-8">
+    <div class="container">
+      <div class="row justify-content-between">
+        <div class="col-12 col-md-5 order-md-last mb-4 mb-md-0">
+          <div class="d-flex justify-content-center">
+            <img src="https://res.cloudinary.com/villemontreal/image/upload/q_auto,f_auto,dpr_auto,w_256,h_256/v1573047726/portail/picto/image_erreur404.png" alt="" class="img-fluid">
+          </div>
+        </div>
+        <div class="col-12 col-md-6 col-lg-7">
+          <h1>Ah non, une page introuvable!</h1>
+          <p>Nous pouvons vous aider à trouver ce que vous cherchez.</p>
+          <div class="form-group form-group-lg mb-8 col-lg-10 col-xl-8 px-0">
+            <div class="input-group-icon input-group-icon-left">
+              <input type="text" class="form-control input-rounded" id="input-group-search" placeholder="Rechercher" aria-label="Rechercher">
+              <span class="icon icon-search" aria-hidden="true"></span>
+            </div>
+          </div>
+          <div class="mb-8">
+            <ul class="list-unstyled font-size-base-interface">
+              <li class="mb-2">
+                <a href="{{link.templates-citoyens-accueil}}" class="link-list-element"><span class="link-label">Consulter la page d'accueil</span></a>
+              </li>
+              <li>
+                <a href="#" class="link-list-element"><span class="link-label">Nous joindre</span></a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</main>
+
+{{> patterns-footer-main }}
+
