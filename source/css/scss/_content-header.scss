@@ -80,19 +80,26 @@
 
   &.document-heading-fullwidth {
     .document-heading-header {
-      padding-top: 2rem;
-      padding-bottom: 4rem;
+      padding-top: 4rem;
+      padding-bottom: 2rem;
       h1,
       .document-heading-subtitle {
         margin: 0;
         padding-bottom: 1rem;
       }
     }
+    &.document-heading-notch {
+      .document-heading-header {
+        padding-top: 2rem;
+        padding-bottom: 4rem;
+      }
+    }
   }
 
   &.document-heading-sm {
     .document-heading-header {
-      padding-bottom: 2rem;
+      padding-top: 2rem;
+      padding-bottom: 1rem;
     }
   }
 
@@ -237,13 +244,20 @@
     }
     &.document-heading-fullwidth {
       .document-heading-header {
-        padding-top: 4rem;
-        padding-bottom: 7.5rem;
+        padding-top: 8rem;
+        padding-bottom: 6rem;
+      }
+      &.document-heading-notch {
+        .document-heading-header {
+          padding-top: 4rem;
+          padding-bottom: 7.5rem;
+        }
       }
     }
     &.document-heading-sm {
       .document-heading-header {
-        padding-bottom: 2rem;
+        padding-top: 4rem;
+        padding-bottom: 1rem;
       }
     }
 
