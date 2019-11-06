@@ -17,6 +17,7 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 - Card service variante.
 - Card full-width Profile variante.
 - 8 new illustratives icons: icon-city, icon-culture, icon-education, icon-farm, icon-health, icon-law, icon-service, icon-transport.
+- Utility classes: .alternate-order-{breakpoint} Can be use to create an alternated left and right images with content.
 
 ## Changed
 - Message bar now needs base class .alert.

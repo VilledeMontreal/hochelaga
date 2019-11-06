@@ -1,96 +1,105 @@
 {
-  "contentHeaderBgImage": "background-image: url(https://picsum.photos/3888/2592?image=553)",
-  "contentHeaderContainerClasses": "container-fluid container-fluid-xl",
-  "contentHeaderOverlayClasses": "overlay-dark",
-  "contentHeaderSubtitle": "Arrondissement",
-  "text-elements": {
-    "headings":{
-      "display":{
-        "classes": "display-4 font-weight-bold",
-        "content": "À propos de Nom de l'arrondissement"
-      }
-    }
-  },
-  "has-nav-anchors": true,
-  "nav": {
-    "is-sticky": true,
-    "navItem": [
-      {
-        "class": false,
-        "url": "#navTop",
-        "title": "Présentation"
-      },
-      {
-        "class": false,
-        "url": "#attraits",
-        "title": "Attraits"
-      },
-      {
-        "class": false,
-        "url": "#quartiers",
-        "title": "Quartiers"
-      },
-      {
-        "class": false,
-        "url": "#chiffres-cles",
-        "title": "Chiffres clés"
-      }
-    ]
-  },
-  "has-lead-text": true,
-  "lead-text": "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus fringilla egestas enim, ut tempus ligula tempor maximus. Suspendisse quis lorem mauris. Proin at feugiat libero, et tincidunt tellus. Cras ut sodales sem. Maecenas libero felis, auctor eget mattis a, dapibus ut tellus.</p><p>Maecenas tempus nibh a elit scelerisque, nec scelerisque velit interdum. Proin eu magna nec arcu porta vehicula. Sed volutpat lacus nec sodales auctor. Quisque ut lacus nisl. Phasellus nec aliquet velit, eu aliquet enim.</p>",
-  "show-hide-description": true,
   "attraits": {
     "items": [  
       {
-        "counter": 125,
-        "text": "parcs et espaces verts",
-        "url": false
-      },
-      {
-        "counter": 2,
-        "text": "parcs régionaux",
-        "url": false
-      },
-      {
         "counter": 1,
-        "text": "navette fluviale",
+        "text": "maison de la culture",
         "url": "#"
-      },
-      {
-        "counter": 11,
-        "text": "jeux d'eau",
-        "url": false
       },
       {
         "counter": 2,
-        "text": "bibliothèque",
-        "url": false
-      },
-      {
-        "counter": 15,
-        "text": "patinoires extérieurs",
-        "url": false
-      },
-      {
-        "counter": 7,
-        "text": "pistes cyclables",
+        "text": "blibliothèques",
         "url": "#"
       },
       {
-        "counter": 7,
-        "text": "piscines intérieures",
+        "counter": 13,
+        "text": "microbibliothèques",
         "url": "#"
       },
       {
-        "counter": 6,
-        "text": "jardins communautaires",
+        "counter": 141,
+        "text": "parcs et espaces verts",
         "url": "#"
       },
       {
         "counter": 12,
-        "text": "stations Bixi",
+        "text": "jardins communautaires",
+        "url": "#"
+      },
+      {
+        "counter": 1,
+        "text": "aréna",
+        "url": "#"
+      },
+      {
+        "counter": 6,
+        "text": "patinoires extérieures",
+        "url": "#"
+      },
+      {
+        "counter": 6,
+        "text": "piscines intérieures",
+        "url": "#"
+      },
+      {
+        "counter": 1,
+        "text": "piscine extérieure",
+        "url": "#"
+      },
+      {
+        "counter": 3,
+        "text": "pataugeoires extérieures",
+        "url": "#"
+      },
+      {
+        "counter": 8,
+        "text": "jeux d'eau",
+        "url": "#"
+      },
+      {
+        "counter": 2,
+        "text": "plages",
+        "url": "#"
+      },
+      {
+        "counter": 2,
+        "text": "grandes universités",
         "url": false
+      },
+      {
+        "counter": 5,
+        "text": "institutions d'enseignement supérieur",
+        "url": false
+      },
+      {
+        "counter": 16,
+        "text": "stations de métro",
+        "url": "#"
+      },
+      {
+        "counter": 22,
+        "text": "musées",
+        "url": "#"
+      },
+      {
+        "counter": 7,
+        "text": "secteurs piétonniers",
+        "url": "#"
+      },
+      {
+        "counter": 2,
+        "text": "marchés publics",
+        "url": "#"
+      },
+      {
+        "counter": 1,
+        "text": "serre communautaire",
+        "url": "#"
+      },
+      {
+        "counter": 1,
+        "text": "réseau souterrain (RESO)",
+        "url": "#"
       }
     ]
   },
@@ -101,7 +110,7 @@
           "src": "https://picsum.photos/id/1026/800/450",
           "alt": "Alt image #1."
         },
-        "title": "Lorem Ipsum",
+        "title": "Nom du quartier",
         "formattedText": "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla vulputate tellus eu mollis feugiat. Aenean aliquam mi et venenatis egestas. <strong>Curabitur</strong> non cursus enim, non ornare risus. Integer lacinia quam orci, ac accumsan sem laoreet ornare. Praesent volutpat in urna convallis ultrices. Maecenas vestibulum elit sed elit sodales rutrum. Fusce egestas risus sit amet magna imperdiet auctor nec amet.</p>"
       },
       {
@@ -109,18 +118,18 @@
           "last": true
         },
         "img": {
-          "src": "https://picsum.photos/id/1027/800/450",
+          "src": "https://picsum.photos/id/857/800/450",
           "alt": "Alt image #2."
         },
-        "title": "Lorem Ipsum #2",
+        "title": "Nom du quartier",
         "formattedText": "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla vulputate tellus eu mollis feugiat. <a href=\"#\">Lien</a></p><p>Aenean aliquam mi et venenatis egestas. Curabitur non cursus</p>"
       },
       {
         "img": {
-          "src": "https://picsum.photos/id/1028/800/450",
+          "src": "https://picsum.photos/id/1047/800/450",
           "alt": "Alt image #3."
         },
-        "title": "Lorem Ipsum #3",
+        "title": "Nom du quartier",
         "formattedText": "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla vulputate tellus eu mollis feugiat. Aenean aliquam mi et venenatis egestas.</p><p>Curabitur non cursus enim, non ornare risus. Integer lacinia quam orci, ac accumsan sem laoreet ornare.</p><p>Praesent volutpat in urna convallis ultrices.</p>"
       },
       {
@@ -128,15 +137,24 @@
           "last": true
         },
         "img": {
-          "src": "https://picsum.photos/id/1029/800/450",
-          "alt": "Alt image #3."
+          "src": "https://picsum.photos/id/946/800/450",
+          "alt": "Alt image #4."
         },
-        "title": "Lorem Ipsum #3",
+        "title": "Nom du quartier",
+        "formattedText": "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla vulputate tellus eu mollis feugiat. Aenean aliquam mi et venenatis egestas. Curabitur non cursus enim, non ornare risus. Integer lacinia quam orci, ac accumsan sem laoreet ornare.</p>"
+      },
+      {
+        "img": {
+          "src": "https://picsum.photos/id/1033/800/450",
+          "alt": "Alt image #5."
+        },
+        "title": "Nom du quartier",
         "formattedText": "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla vulputate tellus eu mollis feugiat. Aenean aliquam mi et venenatis egestas. Curabitur non cursus enim, non ornare risus. Integer lacinia quam orci, ac accumsan sem laoreet ornare.</p>"
       }
     ]
   },
   "video": {
+    "title": "Titre de la vidéo",
     "src": "//www.youtube.com/embed/rBfphgabDhU"
   },
   "stats": {
@@ -178,6 +196,5 @@
       "url": "http://ville.montreal.qc.ca/portal/page?_pageid=6897,68087682&_dad=portal&_schema=PORTAL",
       "title": "Voir plus de statistiques"
     }
-  },
-  "hasFeedbackForm": false
+  }
 }

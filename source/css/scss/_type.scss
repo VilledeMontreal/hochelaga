@@ -20,6 +20,7 @@ h1, .h1,
 .display-1 {
   @include font-size($h2-font-size);    // 32/40
   line-height: 2.5rem;
+  margin-bottom: 2rem;
   // 576px and up
   @include media-breakpoint-up(md) {
     @include font-size($h1-font-size);  // 40/56

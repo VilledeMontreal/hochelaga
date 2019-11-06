@@ -144,13 +144,15 @@
   {{# homePromo}}
   <div class="border-top pt-8 pb-4 pt-lg-16 pb-lg-8">
     <div class="container">
+      <h2>Des services simples et pratiques</h2>
+      <div class="alternate-order-lg alternate-order-even">
       {{# promoContent}}
-      <div class="row mb-4 mb-lg-8">  
-        <div class="col-12 col-lg-6{{# order.last}} order-lg-last{{/order.last}} my-auto">
+      <div class="row alternate-order-content mb-4 mb-lg-8">  
+        <div class="col-12 col-lg-6 alternate-order-element my-auto">
           <img class="img-fluid mb-4 mb-lg-0" alt="{{img.alt}}" src="{{ img.src }}" />
         </div>
         <div class="col-12 col-lg-6 my-auto">
-          <h2>{{ title }}</h2>
+          <h3>{{ title }}</h3>
           <div class="formatted-text-container">
             {{{formattedText}}}
           </div>
