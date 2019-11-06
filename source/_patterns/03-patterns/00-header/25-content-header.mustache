@@ -17,15 +17,28 @@
     <div class="row document-heading-header">
       {{^ documentHeadingOverride}}
       <div class="col-12{{^ customHeadingGridClass}} col-lg-7{{/customHeadingGridClass}}{{# customHeadingGridClass}} {{ customHeadingGridClass}}{{/customHeadingGridClass}}">
+        {{^ is-homepage}}
         <div class="pb-2">
           {{# heading-surtitle}}
           <div class="document-heading-surtitle{{# isNormal}} font-weight-normal{{/ isNormal}}">{{text}}</div>
           {{/ heading-surtitle}}
+          
           <h1 class="{{^headingClass}}h1{{/headingClass}}{{#headingClass}} {{headingClass}}{{/headingClass}}">{{{ heading }}}</h1>
+
           {{# heading-subtitle}}
           <div class="document-heading-subtitle">{{heading-subtitle}}</div>
           {{/ heading-subtitle}}
         </div>
+        {{/ is-homepage}}
+        {{# is-homepage}}
+        <div class="pb-2">
+          
+          <h1 class="document-heading-surtitle font-weight-normal">Bienvenue sur Montreal.ca</h1>
+
+          <div class="h1">{{{ heading }}}</div>
+          
+        </div>
+        {{/ is-homepage}}
         {{# has-brand-border}}
         <div class="brand-border-bottom"></div>
         {{/ has-brand-border}}
@@ -56,6 +69,7 @@
             <span class="icon icon-sante-et-securite-publiques" aria-hidden="true"></span>
           </div>
           <div class="document-heading-surtitle">{{heading-surtitle}}</div>
+          <h1 class="sr-only">Bienvenue sur Montreal.ca</h1>
           <h2 class="h3">{{{ heading }}}</h2>
           {{# heading-subtitle}}
           <div class="document-heading-subtitle">{{{heading-subtitle}}}</div>
