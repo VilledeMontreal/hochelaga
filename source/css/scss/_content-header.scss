@@ -102,21 +102,41 @@
       padding-bottom: 1rem;
     }
   }
-
+  // Fullwidth homepage Document heading
   &.document-heading-fullwidth.document-heading-homepage {
+    background-color: $neutral-underground-1;
+
     .document-heading-header {
-      padding-bottom: 3rem;
+      padding-bottom: 16rem;
     }
-    @include media-breakpoint-down(sm) {
-      background-color: $neutral-underground-1;
+    // Document heading background position handling
+    // XS breakpoint
+    .document-heading-background {
+      background-position: -350px 50%;
+      height: calc(100% - 16rem);
+      top: 16rem;
+    }
+
+    // SM breakpoint
+    @include media-breakpoint-up(sm) {
       .document-heading-background {
-        height: calc(100% - 16rem);
-        top: 16rem;
+        background-position: 120% 50%;
+      }
+    }
+
+    // MD breakpoint
+    @include media-breakpoint-up(md) {
+      .document-heading-background {
+        background-position: 50% 50%;
+        height: 100%;
+        top: 0;
       }
       .document-heading-header {
-        padding-bottom: 16rem;
+        padding-bottom: 3rem;
       }
     }
+    
+    // XL breakpoint
     @include media-breakpoint-up(xl) {
       .document-heading-background {
         background-size: contain;
