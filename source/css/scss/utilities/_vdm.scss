@@ -47,18 +47,18 @@
 
   .alternate-order#{$infix} {
     @include media-breakpoint-up($breakpoint) {
-      .alternate-order-content:nth-child(odd) {
+      .alternate-order-content:nth-child(even) {
         .alternate-order-element {
           order: 1;
         }
       }
-      &.alternate-order-even {
-        .alternate-order-content:nth-child(odd) {
+      &.alternate-order-odd {
+        .alternate-order-content:nth-child(even) {
           .alternate-order-element {
             order: -1;
           }
         }
-        .alternate-order-content:nth-child(even) {
+        .alternate-order-content:nth-child(odd) {
           .alternate-order-element {
             order: 1;
           }
