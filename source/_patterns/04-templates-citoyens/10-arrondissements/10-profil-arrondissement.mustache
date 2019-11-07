@@ -1,0 +1,168 @@
+{{> styles-link-skip-to-main-content }}
+
+<header class="header-main-nav {{# navbarFixedTop}}is-fixed-top{{/navbarFixedTop}}">
+{{> components-navbar }}
+</header>
+
+<main class="main-content {{ pageClasses }}" id="main-content" aria-label="Main Content" role="main">
+  
+  <div class="container pt-4 pt-lg-8">
+    <div class="row">
+      <div class="col-12 col-lg-7">
+        {{> components-breadcrumbs}}
+      </div>
+    </div>
+  </div>
+
+  <div class="mb-4 mb-lg-0">
+  {{> patterns-content-header}}
+  </div>
+
+  <div class="pt-0 pb-4 pb-lg-12">
+    <div class="container">
+
+      <div class="row justify-content-center">
+        <div class="col-12 col-lg-8">
+          <header class="pb-4">
+            <h1>
+              <div class="font-size-lg d-block font-weight-normal">Découvrez</div>
+              {{ heading }}
+            </h1>
+          </header>
+          
+          <div class="lead m-0 pb-4 pb-lg-4">
+            {{{ lead }}}
+          </div>
+
+        </div>
+      </div>
+      {{# show-hide-description}}
+      <div id="collapseProfilDescription" class="row justify-content-center collapse-content collapse mt-4">
+        <div class="col-12 col-lg-6">
+          <div class="content-modules pb-0">
+            <div class="content-module-stacked">
+              <h2>Titre de la section</h2>
+              <p>Vestibulum porttitor, libero a faucibus vehicula, ex erat ullamcorper velit, at cursus mauris dolor eu erat. Nulla malesuada finibus nisi nec cursus. Praesent ac augue euismod, congue neque id, finibus arcu. Sed faucibus purus quis augue fermentum lobortis. Mauris commodo odio id varius tempor. Vivamus ornare pulvinar ultricies. Quisque pretium condimentum ultrices.</p>
+              <h2>Titre de la section</h2>
+              <p>Proin sollicitudin mauris id sollicitudin efficitur. Donec vel ante a risus semper vestibulum ac non est. Curabitur elementum consectetur nunc. Vivamus nec ligula euismod, vestibulum orci id, eleifend ipsum. Phasellus id nibh nisi. Vestibulum tristique erat mi, in vestibulum ex imperdiet at. Nullam tempor elementum malesuada. Maecenas vulputate feugiat dolor in dapibus. Fusce eget velit in sem tempus consequat id sed ex.</p>
+              <div class="mb-4">
+                <img src="https://picsum.photos/id/1003/800/450" alt="Image #1772" class="img-fluid" />
+              </div>
+              <p>Proin sollicitudin mauris id sollicitudin efficitur. Donec vel ante a risus semper vestibulum ac non est. Curabitur elementum consectetur nunc. Vivamus nec ligula euismod, vestibulum orci id, eleifend ipsum.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="d-flex justify-content-center mt-0 mb-4 my-lg-4">
+        <button class="btn btn-link btn-collapse collapsed" type="button" data-toggle="collapse" data-target="#collapseProfilDescription" aria-expanded="false" aria-controls="collapseProfilDescription" data-show-more="Voir plus" data-show-less="Voir moins">Voir plus</button>
+      </div>
+      {{/ show-hide-description}}
+    </div>
+  </div>
+
+  {{# attraits}}
+  <div class="bg-light py-8 py-lg-16" id="attraits">
+    <div class="container">
+      <div class="row">
+        <div class="col-12">
+          <h2 class="text-center">Attraits</h2>
+          <ul class="list-unstyled column-count-md-2 column-count-lg-3 mb-0">
+            {{# items }}
+            <li class="mb-2 font-size-base-interface">
+              <span class="font-weight-bold text-dark pr-1">{{counter}}</span>{{^url}}{{text}}{{/url}}
+              {{# url}}<a href="{{url}}">{{text}}</a>{{/url}}
+            </li>
+            {{/ items}}
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+  {{/ attraits}}
+
+  {{# quartiers}}
+  <div class="pt-8 pb-4 pt-lg-16 pb-lg-8" id="quartiers">
+    <div class="container">
+      <h2>Quartiers</h2>
+      <div class="alternate-order-lg">
+        {{# items }}
+        <div class="row justify-content-between alternate-order-content mb-4 mb-lg-8">  
+          <div class="col-12 col-lg-5 alternate-order-element mb-2 my-lg-auto">
+            <img class="img-fluid" alt="{{img.alt}}" src="{{ img.src }}" />
+          </div>
+          <div class="col-12 col-lg-6 my-auto">
+            <h3>{{ title }}</h3>
+            <div class="formatted-text-container rm-last-child-mb">
+              {{{formattedText}}}
+            </div>
+          </div>
+        </div>
+        {{/ items}}
+      </div>
+    </div>
+  </div>
+  {{/ quartiers}}
+  
+  {{# video}}
+  <div class="border-top py-8 py-lg-16" id="video">
+    <div class="container">
+      <div class="row justify-content-center">
+        <div class="col-12 col-lg-8">
+          <h2>{{title}}</h2>
+          <div class="media embed-responsive embed-responsive-16by9">
+            <iframe class="embed-responsive-item" src="{{ src }}" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  {{/ video}}
+
+  {{# stats}}
+  <div class="bg-light py-8 py-lg-16 mb-8 mb-lg-16" id="chiffres-cles">
+    <div class="container">
+      <div class="row">
+        <div class="col-12">
+          <h2 class="text-center">Chiffres clés</h2>
+          <ul class="row list-unstyled mb-2 pt-lg-4">
+            {{# items }}
+            <li class="col-12 col-sm-6 col-lg-3 pb-2 pb-lg-4">
+              <div class="text-center">
+                {{# highlight}}
+                <div class="font-size-lg-interface text-dark mb-lg-1">{{{highlight}}}</div> 
+                {{/ highlight}}
+                {{# text}}
+                <div class="font-size-sm-interface">{{{ text }}}</div>
+                {{/ text}}
+              </div>
+            </li>
+            {{/ items}}
+          </ul>
+          {{# call_to_action}}
+          <div class="d-flex justify-content-center mt-0 mt-lg-4">
+            <a href="{{ url }}" class="btn btn-secondary">{{ title }}</a>
+          </div>
+          {{/ call_to_action}}
+        </div>
+      </div>
+    </div>
+  </div>
+  {{/ stats}}
+
+  <section class="mb-4 mb-lg-8">
+    <div class="container">
+      <div class="row justify-content-center">
+        <div class="col-12 col-lg-7">
+        {{> components-feedback-form}}
+        </div>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+{{> patterns-footer-arrondissement}}
+
+{{> patterns-footer-main }}
+
+
