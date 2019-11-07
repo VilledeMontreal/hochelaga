@@ -11,6 +11,7 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 - Homepage template and variants.
 - Homepage mesures d'urgence.
 - Vitrine d'arrondissement template and variants.
+- Profil d'arrondissement template and variants.
 - Error pages templates (404, 500).
 - Maintenance page template.
 - Card date variante.
@@ -18,6 +19,7 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 - Card full-width Profile variante.
 - 8 new illustratives icons: icon-city, icon-culture, icon-education, icon-farm, icon-health, icon-law, icon-service, icon-transport.
 - Utility classes: .alternate-order-{breakpoint} Can be use to create an alternated left and right images with content.
+
 
 ## Changed
 - Message bar now needs base class .alert.
