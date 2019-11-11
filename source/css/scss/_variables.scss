@@ -239,7 +239,23 @@ $content-max-widths: (
   md: 750px,
   lg: 1110px,
   xl: 1440px
-); 
+);
+
+
+// Columns
+//
+// Set the number of columns to use with column-count
+$column-gap:    $grid-gutter-width;
+
+$column-count: ();
+$column-count: map-merge(
+  (
+    2:  2,
+    3:  3,
+    4:  4
+  ),
+  $column-count
+);
 
 
 // Components
@@ -512,6 +528,15 @@ $custom-radio-indicator-icon-checked:             str-replace(url("data:image/sv
 $custom-switch-width:                             2.5rem;
 $custom-switch-indicator-border-radius:           .5rem;
 $custom-switch-indicator-size:                    1.25rem;
+
+$custom-switch-indicator-bg:                      $neutral-stroke;
+$custom-switch-indicator-handle:                  $white;
+$custom-switch-indicator-handle-disabled:         $neutral-underground-2;
+
+$custom-switch-indicator-checked-bg:              $highlight-strong;
+$custom-switch-indicator-checked-handle:          $action;
+$custom-switch-indicator-checked-handle-disabled: $highlight-light;
+
 
 
 // Form validation

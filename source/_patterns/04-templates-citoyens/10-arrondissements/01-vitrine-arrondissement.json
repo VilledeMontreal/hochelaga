@@ -1,0 +1,140 @@
+{
+  "navbarFixedTop": true,
+  "pageClasses": false,
+  "documentHeadingFullWidth": true,
+  "documentHeadingClass": false,
+  "documentHeadingImageUrl": "/boite-outils4/images/entete-arr.jpg",
+  "documentHeadingNotch": false,
+  "has-left-notch": false,
+  "customHeadingGridClass": " ",
+  "has-search-form": false,
+  "media": false,
+  "heading": "Nom de l'arrondissement",
+  "heading-surtitle": {
+    "isNormal": true,
+    "text": "Arrondissement"
+  },
+  "messageBar": false,
+  "featuredSection": false,
+  "serviceSection": {
+    "headings": {
+      "text": "Renseignements et services les plus demandés"
+    },
+    "cards": {
+      "classes": false,
+      "bsgrid-classes": "col-12 col-md-6 col-lg-4",
+      "card-item" : [
+        {
+          "classes" : "card-service",
+          "url" : "#",
+          "card-media" : {
+            "icon" : "icon-maison-et-logement"
+          },
+          "card-title" : "Nom du service",
+          "card-text" : false
+        },
+        {
+          "classes" :  "card-service",
+          "url" : "#",
+          "card-media" : {
+            "icon" : "icon-environnement"
+          },
+          "card-title" : "Nom du service",
+          "card-text" : false
+        },
+        {
+          "classes" :  "card-service",
+          "url" : "#",
+          "card-media" : {
+            "icon" : "icon-culture-et-loisirs"
+          },
+          "card-title" : "Nom du service",
+          "card-text" : false
+          
+        }
+      ]
+    }
+  },
+  "dateSection": false,
+  "featuredSearch": {
+    "featuredContentID": "featured-home-search",
+    "featuredContentBgImage": "background-image: url(https://picsum.photos/id/972/1200/675)",
+    "headings": {
+      "text": "Trouvez une information ou un service"
+    },
+    "inputGroupSearch": [
+      {
+        "formGroupLabel": false,
+        "inputID": "input-group-search",
+        "inputGroupIconClass": "input-group-icon-lg input-group-icon-left",
+        "iconAfter": false,
+        "icon-label": "002-recherche",
+        "formControlClass": "form-control-lg form-control-dark",
+        "inputPlaceholder": "Rechercher vestibulum justo"
+      }
+    ],
+    "quickLinks": {
+      "quickLinksItem": [
+        {
+          "url": "#",
+          "label": "Lorem ipsum"
+        },
+        {
+          "url": "#",
+          "label": "Dolor sit amet"
+        },
+        {
+          "url": "#",
+          "label": "Consectetur"
+        },
+        {
+          "url": "#",
+          "label": "Adipiscing elit"
+        },
+        {
+          "url": "#",
+          "label": "Curabitur"
+        },
+        {
+          "url": "#",
+          "label": "Vestibulum"
+        }
+      ]
+    }
+  },
+  "events": false,
+  "news": false,
+  "mairieSection": {
+    "headings": {
+      "text": "Mairie d'arrondissement"
+    },
+    "mairie": {
+      "cards": {
+        "classes": false,
+        "bsgrid-classes": "col-12",
+        "card-item": [
+          {
+            "fullwidth": true,
+            "classes" : "card-profile card-fw-profile",
+            "url" : "#",
+            "card-media" : {
+              "icon": false,
+              "img" : {
+                "src" : "https://picsum.photos/id/1074/768/432",
+                "alt" : "Prénom Nom"
+              }
+            },
+            "card-title": "Prénom Nom",
+            "card-text": "Titre de l'élu",
+            "card-link": "Consulter sa fiche"
+          }
+        ]
+      },
+      "buttonAsLink": true,
+      "buttonClass": "btn-secondary",
+      "buttonUrl": "#",
+      "buttonText": "Tous les élus"
+    },
+    "comite-conseils": false
+  }
+}

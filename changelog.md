@@ -5,7 +5,33 @@ The format is based on [Keep a Changelog](http://keepachangelog.com/en/1.0.0/)
 and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.html).
 
 
-## [4.3.0] - unreleased
+## [4.4.0] - unreleased
+
+## Added
+- Homepage template and variants.
+- Homepage mesures d'urgence.
+- Vitrine d'arrondissement template and variants.
+- Profil d'arrondissement template and variants.
+- Error pages templates (404, 500).
+- Maintenance page template.
+- Card date variante.
+- Card service variante.
+- Card full-width Profile variante.
+- 8 new illustratives icons: icon-city, icon-culture, icon-education, icon-farm, icon-health, icon-law, icon-service, icon-transport.
+- Utility classes: .alternate-order-{breakpoint} Can be use to create an alternated left and right images with content.
+
+
+## Changed
+- Message bar now needs base class .alert.
+- Message bar dismiss option can be triggered with data-dismiss="alert" and needs .alert-dismiss class.
+- Feedback Form components update and refactoring (Simplified).
+  
+## Fixed
+- Message bar mobile behavior is now coherent with alert behavior.
+- Switches states colors.
+
+
+## [4.3.0] - 2019-10-29
 
 Header (main-navbar, menu and search) and footer structure and styles now reflect the final design implementation. Make sure you
 now use the latest structure before upgrading to 4.3.0. 

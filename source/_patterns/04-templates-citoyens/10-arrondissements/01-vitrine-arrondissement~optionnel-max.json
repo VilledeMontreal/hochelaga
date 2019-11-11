@@ -1,0 +1,514 @@
+{
+  "messageBar": {
+    "messageBarClass": "message-bar-info",
+    "icon-name": "icon-info"
+  },
+  "featuredSection": {
+    "featuredCard": {
+      "cards": {
+        "classes": false,
+        "bsgrid-classes": "col-12",
+        "card-item": [
+          {
+            "fullwidth": true,
+            "classes" : "card-multi card-multi-lg",
+            "url" : "#",
+            "card-media" : {
+              "icon": false,
+              "img" : {
+                "src" : "https://picsum.photos/id/1058/768/432",
+                "alt" : "Card #1 img alt."
+              }
+            },
+            "card-type": false,
+            "card-title": "Lorem ipsum dolor sit amet",
+            "card-text": "Sed vel dignissim diam, ac dignissim lacus. Aliquam erat volutpat. Nam ac mi arcu.",
+            "card-link": "Libellé"
+          }
+        ]
+      }
+    },
+    "featuredSecondaryCards": {
+      "cards": {
+        "classes": false,
+        "bsgrid-classes": "col-12 col-lg-6",
+        "card-item": [
+          {
+            "fullwidth": false,
+            "classes" : "card-multi",
+            "url" : "#",
+            "card-media" : {
+              "icon": false,
+              "img" : {
+                "src" : "https://picsum.photos/id/1074/768/432",
+                "alt" : "Card featured #1 img alt."
+              }
+            },
+            "card-title": "Titre de la carte sur trois lignes maximum",
+            "card-text": "Description de la carte. Ce paragraphe contient un nombre maximum de 140 caractères, comme sur Twitter.",
+            "card-link": "Libellé"
+          },
+          {
+            "fullwidth": false,
+            "classes" : "card-multi",
+            "url" : "#",
+            "card-media" : {
+              "icon": false,
+              "img" : {
+                "src" : "https://picsum.photos/id/1074/768/432",
+                "alt" : "Card featured #1 img alt."
+              }
+            },
+            "card-title": "Titre de la carte",
+            "card-text": "Description de la carte. Ce paragraphe contient un nombre maximum de 140 caractères.",
+            "card-link": "Libellé"
+          }
+        ]
+      }
+    }
+  },
+  "serviceSection": {
+    "cards": {
+      "classes": false,
+      "bsgrid-classes": "col-12 col-lg-4",
+      "card-item" : [
+        {
+          "classes" : "card-service",
+          "url" : "#",
+          "card-media" : {
+            "icon" : "icon-maison-et-logement"
+          },
+          "card-title" : "Nom du service",
+          "card-text" : false
+        },
+        {
+          "classes" :  "card-service",
+          "url" : "#",
+          "card-media" : {
+            "icon" : "icon-environnement"
+          },
+          "card-title" : "Nom du service",
+          "card-text" : false
+        },
+        {
+          "classes" :  "card-service",
+          "url" : "#",
+          "card-media" : {
+            "icon" : "icon-culture-et-loisirs"
+          },
+          "card-title" : "Nom du service",
+          "card-text" : false
+        },
+        {
+          "classes" : "card-service",
+          "url" : "#",
+          "card-media" : {
+            "icon" : "icon-participation-citoyenne"
+          },
+          "card-title" : "Nom du service",
+          "card-text" : false
+        },
+        {
+          "classes" :  "card-service",
+          "url" : "#",
+          "card-media" : {
+            "icon" : "icon-taxes-et-evaluation-fonciere"
+          },
+          "card-title" : "Nom du service",
+          "card-text" : false
+        },
+        {
+          "classes" :  "card-service",
+          "url" : "#",
+          "card-media" : {
+            "icon" : "icon-vie-communautaire"
+          },
+          "card-title" : "Nom du service",
+          "card-text" : false
+        }
+      ]
+    }
+  },
+  "dateSection": {
+    "headings": {
+      "text": "Dates importantes"
+    },
+    "has-extra-item": true,
+    "cards": {
+      "classes": false,
+      "bsgrid-classes": "col-12 col-lg-4",
+      "card-item" : [
+        {
+          "classes" : "card-date",
+          "url" : "#",
+          "card-date": {
+            "date-time": [
+              {
+                "text": "Du ",
+                "dateTimeFormat": "2019-11-25",
+                "dateTimeText": "25 novembre"
+              },
+              {
+                "text": " au ",
+                "dateTimeFormat": "2019-11-30",
+                "dateTimeText": "30 novembre"
+              }
+            ]
+          },
+          "card-title" : "Titre de la date importante communiquée",
+          "card-link": "Libellé"
+        },
+        {
+          "classes" : "card-date",
+          "url" : "#",
+          "card-date": {
+            "date-time": [
+              {
+                "text": "Le ",
+                "dateTimeFormat": "2019-12-03",
+                "dateTimeText": "3 décembre"
+              }
+            ]
+          },
+          "card-title" : "Titre de la date importante communiquée",
+          "card-link": "Libellé"
+        },
+        {
+          "classes" : "card-date",
+          "url" : "#",
+          "card-date": {
+            "date-time": [
+              {
+                "text": "À partir du ",
+                "dateTimeFormat": "2019-12-05",
+                "dateTimeText": "5 décembre"
+              }
+            ]
+          },
+          "card-title" : "Titre de la date importante communiquée",
+          "card-link": "Libellé"
+        }
+      ],
+      "load-extra-item": true,
+      "extra-item": [
+        {
+          "classes" : "card-date",
+          "url" : "#",
+          "card-date": {
+            "date-time": [
+              {
+                "text": "À partir du ",
+                "dateTimeFormat": "2019-12-05",
+                "dateTimeText": "5 décembre"
+              }
+            ]
+          },
+          "card-title" : "Titre de la date importante communiquée",
+          "card-link": "Libellé"
+        },
+        {
+          "classes" : "card-date",
+          "url" : "#",
+          "card-date": {
+            "date-time": [
+              {
+                "text": "À partir du ",
+                "dateTimeFormat": "2019-12-05",
+                "dateTimeText": "5 décembre"
+              }
+            ]
+          },
+          "card-title" : "Titre de la date importante communiquée",
+          "card-link": "Libellé"
+        },
+        {
+          "classes" : "card-date",
+          "url" : "#",
+          "card-date": {
+            "date-time": [
+              {
+                "text": "À partir du ",
+                "dateTimeFormat": "2019-12-05",
+                "dateTimeText": "5 décembre"
+              }
+            ]
+          },
+          "card-title" : "Titre de la date importante communiquée",
+          "card-link": "Libellé"
+        }
+      ]
+    }
+  },
+  "featuredSearch": {
+    "featuredContentID": "featured-home-search",
+    "featuredContentBgImage": "background-image: url(https://picsum.photos/id/972/1200/675)",
+    "inputGroupSearch": [
+      {
+        "formGroupLabel": false,
+        "inputID": "input-group-search",
+        "inputGroupIconClass": "input-group-icon-lg input-group-icon-left",
+        "iconAfter": false,
+        "icon-label": "002-recherche",
+        "formControlClass": "form-control-lg",
+        "inputPlaceholder": "Rechercher vestibulum justo"
+      }
+    ],
+    "quickLinks": {
+      "quickLinksItem": [
+        {
+          "url": "#",
+          "label": "Lorem ipsum"
+        },
+        {
+          "url": "#",
+          "label": "Dolor sit amet"
+        },
+        {
+          "url": "#",
+          "label": "Consectetur"
+        },
+        {
+          "url": "#",
+          "label": "Adipiscing elit"
+        },
+        {
+          "url": "#",
+          "label": "Curabitur"
+        },
+        {
+          "url": "#",
+          "label": "Vestibulum"
+        }
+      ]
+    }
+  },
+  "showEventsNewsSection": true,
+  "news": {
+    "cards": {
+      "classes": false,
+      "bsgrid-classes": "col-12 col-lg-4",
+      "card-item": [
+        {
+          "classes": false,
+          "url": "#",
+          "card-media": {
+            "img": {
+              "src": "https://picsum.photos/id/553/768/432",
+              "alt": "Card #1 img alt."
+            }
+          },
+          "card-type": false,
+          "card-title": "Quisque enim lacus mollis id fermentum quis mattis sit amet purus",
+          "card-date-text": false,
+          "card-publication-date": {
+            "dateTime": {
+              "text": false,
+              "dateTimeFormat": "2019-08-22",
+              "dateTimeText": "22 août 2019"
+            }
+          }
+        },
+        {
+          "classes": false,
+          "url": "#",
+          "card-media": {
+            "img": {
+              "src" : "https://picsum.photos/id/522/768/432",
+              "alt" : "Card #1 img alt."
+            }
+          },
+          "card-type": false,
+          "card-title": "Sed iaculis nisl justo et fermentum augue sollicitudin",
+          "card-date-text": false,
+          "card-publication-date": {
+            "dateTime": {
+              "text": "Mise à jour le ",
+              "dateTimeFormat": "2019-08-22",
+              "dateTimeText": "22 août 2019"
+            }
+          }
+        },
+        {
+          "classes": false,
+          "url": "#",
+          "card-media": {
+            "img" : {
+              "src" : "https://picsum.photos/id/527/768/432",
+              "alt" : "Card #1 img alt."
+            }
+          },
+          "card-type": false,
+          "card-title": "Sed ultrices ipsum vitae est dictum",
+          "card-date-text": false,
+          "card-publication-date": {
+            "dateTime": {
+              "text": "Mise à jour le ",
+              "dateTimeFormat": "2019-08-20",
+              "dateTimeText": "20 août 2019"
+            }
+          }
+        }
+      ]
+    },
+    "button-cta": {
+      "buttonAsLink": true,
+      "buttonClass": "btn-secondary",
+      "buttonUrl": "#",
+      "buttonText": "Toutes les nouvelles"
+    }
+  },
+  "events": {
+    "cards": {
+      "classes": false,
+      "bsgrid-classes": "col-12 col-md-6 col-lg-3",
+      "card-item": [
+        {
+          "classes" : false,
+          "url" : "#",
+          "card-media" : {
+            "icon": false,
+            "img" : {
+              "src" : "https://picsum.photos/id/605/768/432",
+              "alt" : "Card #1 img alt."
+            }
+          },
+          "card-type": "Type d'événement",
+          "card-title" : "Titre de l'événement",
+          "card-text": false,
+          "card-date-text" : "Du 2 septembre au 4 septembre"
+        },
+        {
+          "classes" : false,
+          "url" : "#",
+          "card-media" : {
+            "icon": false,
+            "img" : {
+              "src" : "https://picsum.photos/id/63/768/432",
+              "alt" : "Card #1 img alt."
+            }
+          },
+          "card-type": "Type d'événement",
+          "card-title" : "Titre de l'événement",
+          "card-text": false,
+          "card-date-text" : "Jeudi 19 septembre"
+        },
+        {
+          "classes" : false,
+          "url" : "#",
+          "card-media" : {
+            "icon": false,
+            "img" : {
+              "src" : "https://picsum.photos/id/423/768/432",
+              "alt" : "Card #1 img alt."
+            }
+          },
+          "card-type": "Type d'événement",
+          "card-title" : "Titre de l'événement",
+          "card-text": false,
+          "card-date-text" : "Du 12 décembre au 22 décembre"
+        },
+        {
+          "classes" : false,
+          "url" : "#",
+          "card-media" : {
+            "icon": false,
+            "img" : {
+              "src" : "https://picsum.photos/id/423/768/432",
+              "alt" : "Card #1 img alt."
+            }
+          },
+          "card-type": "Type d'événement",
+          "card-title" : "Titre de l'événement",
+          "card-text": false,
+          "card-date-text" : "24 décembre"
+        }
+      ]
+    },
+    "button-cta": {
+      "buttonAsLink": true,
+      "buttonClass": "btn-secondary",
+      "buttonUrl": "#",
+      "buttonText": "Tous les événements"
+    }
+  },
+  "mairie": {
+    "cards": {
+      "classes": false,
+      "bsgrid-classes": "col-12",
+      "card-item": [
+        {
+          "fullwidth": true,
+          "classes" : "card-multi card-multi-lg",
+          "url" : "#",
+          "card-media" : {
+            "icon": false,
+            "img" : {
+              "src" : "https://picsum.photos/id/669/768/432",
+              "alt" : "Card featured #1 img alt."
+            }
+          },
+          "card-type": "Maire ou mairesse de l'arrondissement",
+          "card-title": "Prénom Nom",
+          "card-text": "Praesent sodales eget odio in pellentesque. Maecenas suscipit risus mauris, eget imperdiet diam porttitor id.",
+          "card-link": "Libellé"
+        }
+      ]
+    },
+    "button-cta": {
+      "buttonAsLink": true,
+      "buttonClass": "btn-secondary",
+      "buttonUrl": "#",
+      "buttonText": "Tous les élus"
+    }
+  },
+  "comiteConseils": {
+    "cards": {
+      "classes": false,
+      "bsgrid-classes": "col-12 col-lg-4",
+      "card-item": [
+        {
+          "classes" : "card-date",
+          "url" : "#",
+          "card-media" : {
+            "icon": false,
+            "img" : false
+          },
+          "card-type": "Séance du conseil",
+          "card-title" : "Jeudi 31 octobre à 19&nbsp;h&nbsp;30",
+          "card-text": false,
+          "card-date-text" : false
+        },
+        {
+          "classes" : "card-date",
+          "url" : "#",
+          "card-media" : {
+            "icon": false,
+            "img" : false
+          },
+          "card-type": "Séance du conseil",
+          "card-title" : "Jeudi 28 octobre à 19&nbsp;h&nbsp;30",
+          "card-text": false,
+          "card-date-text" : false
+        },
+        {
+          "classes" : "card-date",
+          "url" : "#",
+          "card-media" : {
+            "icon": false,
+            "img" : false
+          },
+          "card-type": "Séance du conseil",
+          "card-title" : "Jeudi 30 janvier à 19&nbsp;h&nbsp;00",
+          "card-text": false,
+          "card-date-text" : false
+        }
+      ]
+    },
+    "button-cta": {
+      "buttonAsLink": true,
+      "buttonClass": "btn-secondary",
+      "buttonUrl": "#",
+      "buttonText": "Toutes les séances"
+    }
+  }
+}

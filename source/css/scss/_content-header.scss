@@ -44,7 +44,7 @@
   width: 100%;
   z-index: 0;
 
-  &.document-heading-grid { 
+  &.document-heading-grid {
     .document-heading-image-container {
       padding-top: $padding-16-9;
       .img-copyright {
@@ -77,22 +77,86 @@
     }
   
   }
+
   &.document-heading-fullwidth {
     .document-heading-header {
-      padding-top: 2rem;
-      padding-bottom: 4rem;
-      h1,
+      padding-top: 4rem;
+      padding-bottom: 2rem;
+      h1, .h1,
       .document-heading-subtitle {
         margin: 0;
         padding-bottom: 1rem;
+      }
+    }
+    &.document-heading-notch {
+      .document-heading-header {
+        padding-top: 2rem;
+        padding-bottom: 4rem;
       }
     }
   }
 
   &.document-heading-sm {
     .document-heading-header {
-      padding-bottom: 2rem;
+      padding-top: 2rem;
+      padding-bottom: 1rem;
     }
+  }
+  // Fullwidth homepage Document heading
+  &.document-heading-fullwidth.document-heading-homepage {
+    background-color: $neutral-underground-1;
+
+    .document-heading-header {
+      padding-bottom: 3rem;
+    }
+    
+    // XL breakpoint
+    // Switch from cover to contain for background-size to prevent "zoom in" effect" on very large screen
+    @include media-breakpoint-up(xl) {
+      .document-heading-background {
+        background-size: contain;
+      }
+    }
+  }
+
+  &.document-heading-danger {
+    background-color: $danger;
+    color: $white;
+
+    .icon {
+      @include icon-color($white);
+      @include icon-size(5rem);
+    }
+
+    .document-heading-header {
+      justify-content: center;
+      text-align: center;
+    }
+
+    h1, .h1,
+    h2, .h2,
+    h3, .h3,
+    h4, .h4 {
+      color: $white;
+    }
+
+    // surtitle
+    .document-heading-surtitle {
+      @include font-size($font-size-sm);
+      line-height: $line-height-sm;
+      color: $white;
+      font-weight: $font-weight-bold;
+    }
+
+    
+    // subtitle
+    .document-heading-subtitle {
+      @include font-size($font-size-base);
+      line-height: $line-height-lg;
+      color: $white;
+      font-weight: $font-weight-bold;
+    }
+  
   }
 
   .document-heading-background {
@@ -196,13 +260,26 @@
     }
     &.document-heading-fullwidth {
       .document-heading-header {
-        padding-top: 4rem;
-        padding-bottom: 7.5rem;
+        padding-top: 8rem;
+        padding-bottom: 6rem;
+      }
+      &.document-heading-notch {
+        .document-heading-header {
+          padding-top: 4rem;
+          padding-bottom: 7.5rem;
+        }
       }
     }
     &.document-heading-sm {
       .document-heading-header {
-        padding-bottom: 2rem;
+        padding-top: 4rem;
+        padding-bottom: 1rem;
+      }
+    }
+
+    &.document-heading-fullwidth.document-heading-homepage {
+      .document-heading-header {
+        padding-bottom: 7rem;
       }
     }
 
@@ -243,27 +320,6 @@
   }
 }
 
-/*
-.has-navbar-fixed-top {
-  .document-heading {
-    &:not(.document-heading-grid) {
-      .document-heading-image-container {
-        padding-top: 3.5rem;
-      }
-    }
-  }
-
-  @include media-breakpoint-up(lg) {
-    .document-heading {
-      &:not(.document-heading-grid) {
-        .document-heading-image-container {
-          padding-top: 4.5rem;
-        }
-      }
-    }
-  }
-}
-*/
 
 /* Employés */
 .page-header {

@@ -37,3 +37,33 @@
   border-bottom: none;
 }
 
+//
+// Content
+//
+
+// Alternate order (Left and right image) 
+@each $breakpoint in map-keys($grid-breakpoints) {
+  $infix: breakpoint-infix($breakpoint, $grid-breakpoints);
+
+  .alternate-order#{$infix} {
+    @include media-breakpoint-up($breakpoint) {
+      .alternate-order-content:nth-child(even) {
+        .alternate-order-element {
+          order: 1;
+        }
+      }
+      &.alternate-order-odd {
+        .alternate-order-content:nth-child(even) {
+          .alternate-order-element {
+            order: -1;
+          }
+        }
+        .alternate-order-content:nth-child(odd) {
+          .alternate-order-element {
+            order: 1;
+          }
+        }
+      }
+    }
+  }
+}

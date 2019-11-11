@@ -1,0 +1,32 @@
+
+{{# url}}
+<a href="{{ url }}" class="card {{ classes }}">
+{{/ url}}
+{{^ url}}
+<div class="card {{ classes }}">
+{{/ url}}
+  {{# card-media.img }}
+  <div class="card-img-container">
+    <img src="https://res.cloudinary.com/villemontreal/image/upload/q_auto,f_auto,dpr_auto,ar_1,c_crop/v1/portail/xojzwemynlufqzhvszly.jpg" alt="Prénom Nom" title="" class="card-img-top rounded-circle">
+  </div>
+  {{/ card-media.img }}
+
+  <div class="card-body">
+    {{# card-title }}
+    <span class="card-title">{{ card-title }}</span>
+    {{/ card-title }}
+    
+    {{# card-text }}
+    <p class="card-text">{{{ card-text }}}</p>
+    {{/ card-text }}
+    {{# card-link }}
+    <div class="card-link">{{ card-link }} <span class="icon icon-arrow-right" aria-hidden="true"></span></div>
+    {{/ card-link }}
+  </div>
+
+{{# url }}
+</a>
+{{/ url }}
+{{^url}}
+</div>
+{{/ url}}

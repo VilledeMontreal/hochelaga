@@ -8,7 +8,9 @@
 
   {{# card-media }}
     {{# card-media.icon }}
-    <span class="card-icon-top {{ card-media.classes }} vdm {{ card-media.icon }}" aria-hidden="true"></span>
+    <div class="card-icon-top">
+      <span class="icon {{ card-media.icon }}" aria-hidden="true"></span>
+    </div>
     {{/ card-media.icon }}
     {{# card-media.img }}
     <img class="card-img-top {{ card-media.img.classes }}" src="{{ card-media.img.src}}" alt="{{ card-media.img.alt }}">
@@ -22,15 +24,15 @@
     {{/ card-type}}
 
     {{# card-date }}
-      <span class="card-date">
-      {{# card-date-time}}
+      <span class="card-type">
+      {{# date-time}}
       {{{text}}} <time datetime="{{dateTimeFormat}}">{{{dateTimeText}}}</time>
-      {{/ card-date-time}}
+      {{/ date-time}}
       </span>
     {{/ card-date }}
 
     {{# card-title }}
-    <span class="card-title">{{ card-title }}</span>
+    <span class="card-title">{{{ card-title }}}</span>
     {{/ card-title }}
     
     {{# card-text }}
@@ -56,6 +58,10 @@
     {{# card-cta }}
       {{> components-button}}
     {{/ card-cta }}
+
+    {{# card-link }}
+      <div class="card-link">{{ card-link }}</div>
+    {{/ card-link }}
 
   </div>
 

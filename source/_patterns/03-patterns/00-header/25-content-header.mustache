@@ -1,4 +1,5 @@
-<div class="document-heading {{ documentHeadingClass }}{{# documentHeadingFullWidth}} document-heading-fullwidth{{/ documentHeadingFullWidth}}{{^documentHeadingFullWidth}} document-heading-grid{{/ documentHeadingFullWidth}}">
+<div class="document-heading {{ documentHeadingClass }}{{# documentHeadingFullWidth}} document-heading-fullwidth {{# documentHeadingNotch}}document-heading-notch{{/ documentHeadingNotch}}{{/ documentHeadingFullWidth}}{{^documentHeadingFullWidth}} document-heading-grid{{/ documentHeadingFullWidth}}">
+  {{# documentHeadingImageUrl}}
   <div class="document-heading-image-container">
     <div style="background-image:url('{{documentHeadingImageUrl}}')" class="document-heading-background"></div>
     {{# media.copyright }}
@@ -9,19 +10,25 @@
     </div>
     {{/ media.copyright }}
   </div>
+  {{/ documentHeadingImageUrl}}
   
   {{# documentHeadingFullWidth}}<div class="container position-relative">{{/ documentHeadingFullWidth}}
     {{# documentHeadingFullWidth}}
     <div class="row document-heading-header">
-      <div class="col-12 col-lg-7">
+      {{^ documentHeadingOverride}}
+      {{^ is-homepage}}
+      <div class="{{^ customHeadingGridClass}}col-12 col-lg-7{{/customHeadingGridClass}}{{# customHeadingGridClass}} {{ customHeadingGridClass}}{{/customHeadingGridClass}}">
         <div class="pb-2">
           {{# heading-surtitle}}
-          <div class="document-heading-surtitle">{{heading-surtitle}}</div>
+          <div class="document-heading-surtitle{{# isNormal}} font-weight-normal{{/ isNormal}}">{{text}}</div>
           {{/ heading-surtitle}}
-          <h1>{{{ heading }}}</h1>
+          
+          <h1 class="{{^headingClass}}h1{{/headingClass}}{{#headingClass}} {{headingClass}}{{/headingClass}}">{{{ heading }}}</h1>
+
           {{# heading-subtitle}}
           <div class="document-heading-subtitle">{{heading-subtitle}}</div>
           {{/ heading-subtitle}}
+
         </div>
         {{# has-brand-border}}
         <div class="brand-border-bottom"></div>
@@ -29,7 +36,7 @@
         {{# has-search-form}}
         <div class="form-group form-group-lg">
           <div class="input-group-icon input-group-icon-left">
-            <input type="text" class="form-control input-rounded" id="input-group-search" placeholder="Rechercher ...">
+            <input type="text" class="form-control input-rounded" id="input-group-search" placeholder="Rechercher ..." aria-label="Rechercher">
             <span class="icon icon-search" aria-hidden="true"></span>
           </div>
         </div>
@@ -45,6 +52,46 @@
         </div>
         {{/ has-quick-links}}
       </div>
+      {{/ is-homepage}}
+      {{# is-homepage}}
+      <div class="col-12">
+        <div class="pb-2">
+          <h1 class="document-heading-surtitle font-weight-normal">Bienvenue sur Montréal.ca</h1>
+          <div class="h1">{{{ heading }}}</div>
+        </div>
+        {{# has-search-form}}
+        <div class="row">
+          <div class="col-12 col-sm-7 col-md-6 col-lg-5">
+            <div class="form-group form-group-lg">
+              <div class="input-group-icon input-group-icon-left">
+                <input type="text" class="form-control input-rounded" id="input-group-search" placeholder="Rechercher ..." aria-label="Rechercher">
+                <span class="icon icon-search" aria-hidden="true"></span>
+              </div>
+            </div>
+          </div>
+        </div>
+        {{/ has-search-form}}
+      </div>
+      {{/ is-homepage}}
+      {{/ documentHeadingOverride}}
+      {{# documentHeadingOverride}}
+        {{# mesures-urgence}}
+        <div class="col-12 col-lg-8">
+          <div class="d-flex justify-content-center mb-4">
+            <span class="icon icon-sante-et-securite-publiques" aria-hidden="true"></span>
+          </div>
+          <div class="document-heading-surtitle">{{heading-surtitle}}</div>
+          <h1 class="sr-only">Bienvenue sur Montréal.ca</h1>
+          <h2 class="h3">{{{ heading }}}</h2>
+          {{# heading-subtitle}}
+          <div class="document-heading-subtitle">{{{heading-subtitle}}}</div>
+          {{/ heading-subtitle}}
+          {{# button-cta}}
+          {{> components-button}}
+          {{/ button-cta}}
+        </div>
+        {{/ mesures-urgence}}
+      {{/ documentHeadingOverride}}
     </div>
     {{/ documentHeadingFullWidth}}
     {{# documentHeadingNotch}}
