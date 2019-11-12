@@ -1,11 +1,11 @@
-<div class="alert message-bar {{ messageBarClass }}">
+<div class="alert message-bar {{ messageBarClass }}" data-component-type="message-barre">
   <div class="message-bar-icon-container">
     <span class="icon {{ icon-name }}" aria-hidden="true"></span>
   </div>
   <div class="message-bar-container">
     <div class="message-bar-heading">Titre</div>
     <p>Description du message</p>
-    <a class="message-bar-link" href="#" target="_blank">Lien</a>
+    <a class="message-bar-link" href="#" data-link-title="Lien">Lien</a>
   </div>
   {{# dismissibleAlert }}
   <button type="button" class="close" data-dismiss="alert" aria-label="Fermer le message">

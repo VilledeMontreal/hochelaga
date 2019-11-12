@@ -13,7 +13,7 @@
   {{> patterns-content-header}}
 
   <div class="container">
-    <div class="mb-4 mb-lg-8 border-bottom border-neutral-stroke">
+    <div class="mb-4 mb-lg-8 border-bottom border-neutral-stroke" data-component-type="liens-rapides">
       <div class="row mb-2 mb-lg-6 px-2 px-lg-0">
         <div class="col-12 col-lg-6 pl-lg-8 pl-xl-14">
           <h2 class="mb-2">Liens rapides</h2>
@@ -23,7 +23,7 @@
           <ul class="list-inline mb-1">
             {{# liensRapides}}
             <li class="list-inline-item mb-1">
-              <a href="{{ url }}" class="btn btn-sm{{^btnPrimary}} btn-secondary{{/ btnPrimary}}{{#btnPrimary}} btn-primary{{/ btnPrimary}}">{{ label }}</a>
+              <a href="{{ url }}" class="btn btn-sm{{^btnPrimary}} btn-secondary{{/ btnPrimary}}{{#btnPrimary}} btn-primary{{/ btnPrimary}}" data-link-title="{{label}}" {{^btnPrimary}}data-link-position="{{position}}"{{/btnPrimary}}>{{ label }}</a>
             </li>
             {{/ liensRapides}}
         </div>
@@ -32,7 +32,7 @@
   </div>
 
   {{# categoriesAll}}
-  <div class="container">
+  <div class="container" data-component-type="categories">
     <div class="mb-4 mb-lg-12">
       <div class="column-count-md-2 column-count-lg-3">
         {{# category }}
@@ -43,7 +43,7 @@
             <ul class="list-unstyled mb-4">
               {{# link-items}}
               <li>
-                <a href="{{url}}" class="link-list-element link-sm">
+                <a href="{{url}}" class="link-list-element link-sm" data-link-title="{{label}}">
                   <span class="link-label">{{ label }}</span>
                 </a>
               </li>
@@ -60,7 +60,7 @@
   <div class="pb-4 pb-lg-8">
     <div class="container">
       {{# events }}
-      <div class="pb-lg-4">
+      <div class="pb-lg-4" data-component-type="sommaire-evenements">
         <h2>Événements</h2>
         {{# cards }}
         <div class="row cards">
@@ -70,9 +70,11 @@
           </div>
         {{/ card-item }}
         </div>
+        {{# button-cta}}
         <div class="d-flex justify-content-center mt-0 mb-4 my-lg-4">
         {{> components-button}}
         </div>
+        {{/ button-cta}}
         {{/ cards}}
         {{^ cards}}
         <div class="row">
@@ -84,7 +86,7 @@
       </div>
       {{/ events }}
       {{# news }}
-      <div class="border-top pt-4 pt-lg-8 pb-lg-4">
+      <div class="border-top pt-4 pt-lg-8 pb-lg-4" data-component-type="sommaire-nouvelles">
         <h2>Nouvelles</h2>
         {{# cards }}
         <div class="row cards">
@@ -94,9 +96,11 @@
           </div>
         {{/ card-item }}
         </div>
+        {{# button-cta}}
         <div class="d-flex justify-content-center mt-0 mb-4 my-lg-4">
         {{> components-button}}
         </div>
+        {{/ button-cta}}
         {{/ cards}}
         {{^ cards}}
         <div class="row">
@@ -113,7 +117,7 @@
   <div class="border-top pt-8 pb-4 pt-lg-16 pb-lg-8" id="elusSection">
     <div class="container">
       {{# mairie}}
-      <div class="pb-lg-4">
+      <div class="pb-lg-4" data-component-type="mairie">
         <div class="row cards">
         {{# cards.card-item }}
           <div class="{{ cards.bsgrid-classes }}">
@@ -124,7 +128,7 @@
       </div>
       {{/ mairie }}
       {{# comite-conseils}}
-      <div class="pb-lg-4">
+      <div class="pb-lg-4" data-component-type="sommaire-seances">
         <h2>Prochaines séances</h2>
         <div class="row cards">
         {{# cards.card-item }}
@@ -133,16 +137,18 @@
           </div>
         {{/ cards.card-item }}
         </div>
+        {{# button-cta}}
         <div class="d-flex justify-content-center mt-0 mb-4 my-lg-4">
         {{> components-button}}
         </div>
+        {{/ button-cta}}
       </div>
       {{/ comite-conseils }}
     </div>
   </div>
 
   {{# homePromo}}
-  <div class="border-top pt-8 pb-4 pt-lg-16 pb-lg-8">
+  <div class="border-top pt-8 pb-4 pt-lg-16 pb-lg-8" data-component-type="promotion">
     <div class="container">
       <h2>Des services simples et pratiques</h2>
       <div class="alternate-order-lg">
