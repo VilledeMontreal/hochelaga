@@ -1,5 +1,5 @@
 {{# buttonAsLink}}
-<a class="btn {{ buttonClass }}" href="{{ buttonUrl }}" {{ buttonState }}>{{# buttonIcon }}{{> styles-fonticon-item }}{{/ buttonIcon}}{{ buttonText }}</a>
+<a class="btn {{ buttonClass }}" href="{{ buttonUrl }}" {{# data-link-title}}data-link-title="{{data-link-title}}"{{/ data-link-title}} {{ buttonState }}>{{# buttonIcon }}{{> styles-fonticon-item }}{{/ buttonIcon}}{{ buttonText }}</a>
 {{/ buttonAsLink}}
 {{^ buttonAsLink}}
 <button type="{{ buttonType }}" class="btn {{ buttonClass }}" {{ buttonState }}>{{# buttonIcon }}{{> styles-fonticon-item }}{{/ buttonIcon}}{{ buttonText }}</button>

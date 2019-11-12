@@ -15,7 +15,7 @@
 
 
 {{# badgeUrl }}
-	<a href="{{ badgeUrl }}" class="badge {{ badgeClass }}" {{# aria-label }}aria-label="{{aria-label}}"{{/ aria-label }}>
+	<a href="{{ badgeUrl }}" class="badge {{ badgeClass }}" {{# aria-label }}aria-label="{{aria-label}}"{{/ aria-label }} {{# data-link-title}}data-link-title="{{badge}}"{{/ data-link-title}}>
 		{{# badgeIconClass }}
 			<span class="badge-label">{{ badge }}</span>
 			<span class="icon {{ badgeIconClass }}"></span>

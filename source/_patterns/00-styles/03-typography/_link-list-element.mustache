@@ -1,8 +1,8 @@
 {{^ has-icon }}
-<a href="{{url}}" class="link-list-element {{linkSize}}"><span class="link-label">{{ link-label }}</span></a>
+<a href="{{url}}" class="link-list-element {{linkSize}}"{{# data-link-title}} data-link-title="{{data-link-title}}"{{/ data-link-title}}{{# data-link-position}} data-link-position="{{data-link-position}}"{{/ data-link-position}}><span class="link-label">{{ link-label }}</span></a>
 {{/ has-icon }}
 {{# has-icon }}
-<a href="{{url}}" class="link-list-element link-has-icon {{linkSize}} {{#icon-right}}icon-right{{/ icon-right}}">
+<a href="{{url}}" class="link-list-element link-has-icon {{linkSize}}{{#icon-right}} icon-right{{/ icon-right}}"{{# data-link-title}} data-link-title="{{data-link-title}}"{{/ data-link-title}}{{# data-link-position}} data-link-position="{{data-link-position}}"{{/ data-link-position}}>
   {{^icon-right}}<div><span class="icon {{ icon }}"></span></div>{{/ icon-right}}
   <div>
     <span class="link-label link-icon-label">{{ link-label }}</span>

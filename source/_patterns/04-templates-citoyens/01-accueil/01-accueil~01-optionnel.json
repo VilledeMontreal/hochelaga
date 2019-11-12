@@ -10,6 +10,7 @@
       "card-item": [
         {
           "classes" : false,
+          "data-link-title": "Titre de l'événement",
           "url" : "#",
           "card-media" : {
             "icon": false,
@@ -25,6 +26,7 @@
         },
         {
           "classes" : false,
+          "data-link-title": "Titre de l'événement",
           "url" : "#",
           "card-media" : {
             "icon": false,
@@ -40,6 +42,7 @@
         },
         {
           "classes" : false,
+          "data-link-title": "Titre de l'événement",
           "url" : "#",
           "card-media" : {
             "icon": false,
@@ -55,10 +58,13 @@
         }
       ]
     },
-    "buttonAsLink": true,
-    "buttonClass": "btn-secondary",
-    "buttonUrl": "#",
-    "buttonText": "Tous les événements"
+    "button-cta": {
+      "data-link-title": "Tous les événements",
+      "buttonAsLink": true,
+      "buttonClass": "btn-secondary",
+      "buttonUrl": "#",
+      "buttonText": "Tous les événements"
+    }
   },
   "news": {
     "cards": {
@@ -67,6 +73,7 @@
       "card-item": [
         {
           "classes": false,
+          "data-link-title": "Quisque enim lacus mollis id fermentum quis mattis sit amet purus",
           "url": "#",
           "card-media": {
             "img": {
@@ -87,6 +94,7 @@
         },
         {
           "classes": false,
+          "data-link-title": "Sed iaculis nisl justo et fermentum augue sollicitudin",
           "url": "#",
           "card-media": {
             "img": {
@@ -107,6 +115,7 @@
         },
         {
           "classes": false,
+          "data-link-title": "Sed ultrices ipsum vitae est dictum",
           "url": "#",
           "card-media": {
             "img" : {
@@ -127,6 +136,7 @@
         },
         {
           "classes": false,
+          "data-link-title": "Fusce mattis ante sit amet aliquam porttitor",
           "url": "#",
           "card-media": {
             "img" : {
@@ -147,10 +157,13 @@
         }
       ]
     },
-    "buttonAsLink": true,
-    "buttonClass": "btn-secondary",
-    "buttonUrl": "#",
-    "buttonText": "Toutes les nouvelles"
+    "button-cta": {
+      "data-link-title": "Toutes les nouvelles",
+      "buttonAsLink": true,
+      "buttonClass": "btn-secondary",
+      "buttonUrl": "#",
+      "buttonText": "Toutes les nouvelles"
+    }
   },
   "homePromo": {
     "promoContent": [
@@ -161,7 +174,9 @@
         },
         "title": "Lorem ipsum dolor sit amet, consectetur adipiscing elit",
         "formattedText": "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed iaculis nisl justo, et fermentum augue sollicitudin vitae. Sed ultrices ipsum vitae est dictum, et tempor erat convallis.</p><p>Fusce mattis ante sit amet aliquam porttitor. Quisque enim lacus, mollis id fermentum quis, mattis sit amet purus. </p>",
-        "link":{
+        "link": {
+          "data-link-title": "Lorem ipsum dolor sit amet, consectetur adipiscing elit",
+          "data-link-position": 1,
           "has-icon": true,
           "icon-right": true,
           "link-label": "Lorem ipsum",
@@ -179,7 +194,9 @@
         },
         "title": "Vestibulum et fermentum libero",
         "formattedText": "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed iaculis nisl justo, et fermentum augue sollicitudin vitae. Sed ultrices ipsum vitae est dictum, et tempor erat convallis.</p><p>Fusce mattis ante sit amet aliquam porttitor. Quisque enim lacus, mollis id fermentum quis, mattis sit amet purus. </p>",
-        "link":{
+        "link": {
+          "data-link-title": "Vestibulum et fermentum libero",
+          "data-link-position": 2,
           "has-icon": true,
           "icon-right": true,
           "link-label": "Vestibulum fermentum libero",
