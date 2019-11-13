@@ -3,6 +3,11 @@
   border-color: $neutral-stroke !important;
 }
 
+.border-ltr-4 {
+  border: 4px solid $neutral-stroke;
+  border-bottom: none;
+}
+
 .fullwidth-border {
   position: relative;
   width: 100vh;
@@ -15,7 +20,6 @@
 }
 
 // Provide the ability to "Unfix" a element using the fixed-top
-// Like when embeding a montreal.ca page inside the vue de l'agent 311
 .unfixed {
   .fixed-top {
     position: inherit;
@@ -32,9 +36,16 @@
   border-bottom: none;
 }
 
-.border-ltr-4 {
-  border: 4px solid $neutral-stroke;
-  border-bottom: none;
+// IFRAMES
+iframe {
+  border: 0;
+  &.is-full-frame {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+  }
 }
 
 //

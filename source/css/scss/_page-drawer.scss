@@ -1,28 +1,25 @@
+// DEPRECATED
+// Use new iframes utility @utilities
 // IFrames utility
 .page-wrap-iframe {
   -webkit-overflow-scrolling: touch;
   overflow: auto;
-  text-align: center;
-  vertical-align: middle;
+  //text-align: center;
+  //vertical-align: middle;
   white-space: nowrap;
   position: relative;
-  position: absolute;
-  top: 56px;
-  left: 0;
-  right: 56px;
-  bottom: 0;
+  display: flex;
+  height: calc(100vh - 56px);
+  margin-right: 56px;
 
-  iframe {
-    border: 0;
-    &.is-full-frame {
-      position: absolute;
-      left: 0;
-      top: 0;
-      width: 100%;
-      height: 100%;
-    }
+  @include media-breakpoint-up(lg) {
+    height: calc(100vh - 72px);
   }
 }
+
+// .page-drawer will be DEPRECATED
+// Upgrade to new .drawer strucutre.
+// Page drawer should be use with nav-interne only
 
 .showing-page-drawers .page-wrap-iframe {
   margin-right: 300px;
@@ -60,12 +57,14 @@
 }
 
 @include media-breakpoint-up(lg) {
+  /*
   .page-wrap-iframe {
     top: 72px;
   }
+  */
 
   .showing-page-drawers .page-wrap-iframe {
-    margin-right: 460px;
+    margin-right: calc(460px + 56px);
   }
   .showing-page-drawers .page-drawers {
     right: -460px;
@@ -74,5 +73,48 @@
 
   .page-drawers {
     top: 72px;
+  }
+}
+
+// .drawer replaces .page-drawer
+//
+
+
+// Substract main-navbar height from page height
+.has-drawer {
+  height: calc(100vh - 56px);
+
+  @include media-breakpoint-up(lg) {
+    height: calc(100vh - 72px);
+  }
+}
+
+// Page drawers
+.drawer {
+  height: calc(100vh - 56px);
+  transition: all 100ms ease;
+  -webkit-overflow-scrolling: touch;
+  overflow: auto;
+  float: left; // Allow nav to go next to page-drawers section
+  width: 0;
+  .menu-item-content {
+    height: 100%;
+    overflow: auto;
+  }
+  .content-modules {
+    h2,.h2 {
+      padding-top: 0;
+    }
+  }
+  @include media-breakpoint-up(lg) {
+    height: calc(100vh - 72px);
+  }
+}
+
+.show-drawer .drawer {
+  width: 320px;
+
+  @include media-breakpoint-up(lg) {
+    width: 480px;
   }
 }

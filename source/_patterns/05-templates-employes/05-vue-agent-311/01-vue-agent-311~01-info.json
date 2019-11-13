@@ -1,5 +1,5 @@
 {
-  "pageClasses": "showing-page-drawers",
+  "pageClasses": "show-drawer",
   "navbarInterneHasMenu": false,
   "navbarInterneHasSearch": false,
   "user-authenticated": true,
@@ -9,8 +9,7 @@
     "email": "courriel@montreal.ca"
   },
   "applicationName": "Vue de l'agent 311",
-  "menuItemVerticalIconBar": {
-    "menuItemClass": "menu-items-underground menu-items-column menu-items-icon-bar menu-items-revealing-labels",
+  "menuItemVerticalLabeledBar": {
     "menuItem": [
       {
         "menuItemSeparator": false,
@@ -63,6 +62,7 @@
       "collapsibleClasses": "accordeon-listed mb-3",
       "collapsibleItem": [
         {
+          "disabled": false,
           "collapsible-item-vdl311": true,
           "generalites": true,
           "block-id": "accordeon-vdl-generalites",
@@ -120,90 +120,20 @@
           }
         },
         {
+          "item-disabled": true,
           "collapsible-item-vdl311": true,
           "procedures": true,
-          "title": "Procédures ACS - CS311",
-          "block-id": "accordeon-vdl-acs-cs311",
-          "heading-id": "accordeon-vdl-heading-cs311",
-          "module-documents": {
-            "listGroupClass": "list-group-icon",
-            "listGroup": [
-              {
-                "url": "test.pdf",
-                "icon-name": "icon-file-pdf",
-                "text": "Titre du document [PDF - 2 Mo]",
-                "class": "document-pdf"
-              },
-              {
-                "url": "test.pdf",
-                "icon-name": "icon-file-pdf",
-                "text": "Titre du document [PDF - 2 Mo]",
-                "class": "document-pdf"
-              }
-            ]
-          },
-          "module-liens": {
-            "listGroup": [
-              {
-                "url": "#",
-                "text": "Cras justo odio",
-                "class": false
-              },
-              {
-                "url": "/lien-interne",
-                "text": "Dapibus ac facilisis in",
-                "class": false
-              },
-              {
-                "url": "https://rds.ca",
-                "text": "Morbi leo risus",
-                "class": false
-              }
-            ]
-          }
+          "title": "Procédures IRP",
+          "block-id": "accordeon-vdl-irp",
+          "heading-id": "accordeon-vdl-heading-irp"
         },
-        {
+        { 
+          "item-disabled": true,
           "collapsible-item-vdl311": true,
           "procedures": true,
-          "title": "Procédures ACS - IRP",
-          "block-id": "accordeon-vdl-acs-irp",
-          "heading-id": "accordeon-vdl-heading-acs-irp",
-          "module-documents": {
-            "listGroupClass": "list-group-icon",
-            "listGroup": [
-              {
-                "url": "test.pdf",
-                "icon-name": "icon-file-pdf",
-                "text": "Titre du document [PDF - 2 Mo]",
-                "class": "document-pdf"
-              },
-              {
-                "url": "test.pdf",
-                "icon-name": "icon-file-pdf",
-                "text": "Titre du document [PDF - 2 Mo]",
-                "class": "document-pdf"
-              }
-            ]
-          },
-          "module-liens": {
-            "listGroup": [
-              {
-                "url": "#",
-                "text": "Cras justo odio",
-                "class": false
-              },
-              {
-                "url": "/lien-interne",
-                "text": "Dapibus ac facilisis in",
-                "class": false
-              },
-              {
-                "url": "https://rds.ca",
-                "text": "Morbi leo risus",
-                "class": false
-              }
-            ]
-          }
+          "title": "Procédures Info-travaux",
+          "block-id": "accordeon-vdl-info-travaux",
+          "heading-id": "accordeon-vdl-heading-info-travaux"
         },
         {
           "collapsible-item-vdl311": true,
