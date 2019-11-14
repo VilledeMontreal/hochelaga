@@ -5,7 +5,7 @@ The format is based on [Keep a Changelog](http://keepachangelog.com/en/1.0.0/)
 and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.html).
 
 
-## [4.4.1] - unreleased
+## [4.4.1] - 2019-11-14
 
 ## Added
 - Analytics Homepage: data-component-type, data-link-title and data-link-position attributes and corresponding values.
@@ -13,7 +13,7 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 
 ## Fixed
 - Homepage template: fix Dates importantes View More btn hover state should be rounded and not squared.
-- Vitrine tempalte: 
+- Vitrine template: fix Dates importantes View More btn hover state should be rounded and not squared.
 
 
 ## [4.4.0] - 2019-11-11
