@@ -67,62 +67,6 @@
       }
     ]
   },
-  "menuItemHorizontalReverse": {
-    "menuItemClass": "menu-items-reverse",
-    "menuItem": [
-      {
-        "menuItemLiClass": "mr-auto",
-        "class": "",
-        "url": "#",
-        "menuItemIcon": {
-          "icon-name": "icon-info"
-        },
-        "menuItemLabel": "Libellé"
-      },
-      {
-        "menuItemSeparator": true,
-        "class": "active",
-        "url": "#",
-        "menuItemIcon": {
-          "icon-name": "icon-info"
-        },
-        "menuItemLabel": "Libellé"
-      },
-      {
-        "class": false,
-        "url": "#",
-        "menuItemIcon": {
-          "icon-name": "icon-info"
-        },
-        "menuItemLabel": "Libellé"
-      },
-      {
-        "class": false,
-        "url": "#",
-        "menuItemIcon": {
-          "icon-name": "icon-info"
-        },
-        "menuItemLabel": "Libellé"
-      },
-      {
-        "class": false,
-        "url": "#",
-        "menuItemIcon": {
-          "icon-name": "icon-info"
-        },
-        "menuItemLabel": "Libellé long"
-      },
-      {
-        "menuItemSeparator": false,
-        "class": "disabled",
-        "url": false,
-        "menuItemIcon": {
-          "icon-name": "icon-info"
-        },
-        "menuItemLabel": "Disabled"
-      }
-    ]
-  },
   "menuItemVerticalIconOnly": {
     "menuItemClass": "menu-items-column menu-items-icon-bar",
     "menuItem": [
@@ -180,7 +124,6 @@
     ]
   },
   "menuItemVerticalIconAndText": {
-    "menuItemClass": "menu-items-column",
     "menuItem": [
       {
         "class": "active",
@@ -207,6 +150,7 @@
         "menuItemLabel": "Libellé"
       },
       {
+        "menuItemSeparator": true,
         "class": false,
         "url": "#",
         "menuItemIcon": {
