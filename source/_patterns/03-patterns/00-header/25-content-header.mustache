@@ -24,7 +24,10 @@
           {{/ heading-surtitle}}
           
           <h1 class="{{^headingClass}}h1{{/headingClass}}{{#headingClass}} {{headingClass}}{{/headingClass}}">{{{ heading }}}</h1>
-
+          
+          {{# heading-fake-title}}
+          <h2 class="h1">{{ heading-fake-title }}</h2>
+          {{/ heading-fake-title}}
           {{# heading-subtitle}}
           <div class="document-heading-subtitle">{{heading-subtitle}}</div>
           {{/ heading-subtitle}}
