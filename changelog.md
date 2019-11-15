@@ -14,6 +14,7 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 
 ### Changed
 - Navigation complexe: Normalisation and in-line with design system updates.
+- Template index: Modified H1 and H2 in header.
 
 ### Deprecated
 - .page-drawer and classes used for vda311 templates.
