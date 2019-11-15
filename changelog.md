@@ -13,6 +13,8 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 - Disabled accordion states and styles.
 - Related to links added to various Templates.
 - New class (.list-group-allow-ext-icon) to allow for external link icons inside list-group.
+- 4 new utility icons (partner-bell, partner-hydroquebec, exclamation, cone-fill)
+- 1 modified icon (social-facebook)
 
 ### Changed
 - Navigation complexe: Normalisation and in-line with design system updates.
