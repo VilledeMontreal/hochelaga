@@ -1,0 +1,31 @@
+<div class="content-header-extras">
+  {{^ customExtras}}
+  <div class="content-header-extras-item list-inline-interpunct mb-0">
+    {{# publicationDate}}
+    <div class="list-inline-item">Mis à jour le&nbsp;<time datetime="{{dateTimeFormat}}">{{{dateTimeText}}}</time></div>
+    {{/ publicationDate}}
+    {{# readTime}}
+    <div class="list-inline-item">Temps de lecture : {{readTime}}</div>
+    {{/ readTime}}
+  </div>
+  {{/ customExtras}}
+  {{# customExtras}}
+  <div class="content-header-extras-item">
+    {{# customExtrasItems}}
+    <span class="font-weight-bold mr-1">{{ customLabel}}</span>
+    <span>{{{ customContent }}}</span>
+    {{/ customExtrasItems}}
+  </div>
+  {{/ customExtras}}
+  {{# linkedContent}}
+  <div class="content-header-extras-item">
+    {{^ customLabel}}
+    <span>Relié à </span>
+    {{/ customLabel}}
+    {{# customLabel}}
+    <span>{{ customLabel }}</span>
+    {{/ customLabel}}
+    {{# linkedContentItem}}<a href="{{url}}" class="ml-1">{{label}}</a>{{/ linkedContentItem}}
+  </div>
+  {{/ linkedContent}}
+</div>

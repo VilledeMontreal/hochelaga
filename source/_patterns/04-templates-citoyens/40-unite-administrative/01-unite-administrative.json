@@ -12,10 +12,30 @@
     }
   ],
   "heading": "Nom de l'unité administrative",
-  "has-badges": false,
-  "publicationDate": {
-    "dateTimeText": "226 août 2019",
-    "dateTimeFormat": "2019-08-26"
+  "customExtras": {
+    "customExtrasItems": [
+      {
+        "customLabel": "Titre de fonction",
+        "customContent": "Prénom Nom"
+      }
+    ]
+  },
+  "linkedContent": {
+    "customLabel": "Relève de ",
+    "linkedContentItem": [
+      {
+        "url": "#",
+        "label": "Unité administrative"
+      },
+      {
+        "url": "#",
+        "label": "Instance"
+      },
+      {
+        "url": "#",
+        "label": "Collectrice"
+      }
+    ]
   },
   "lead": "<p>Amorce - Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi condimentum sollicitudin erat, quis convallis risus. Nullam posuere odio ligula, hendrerit suscipit ligula laoreet. Curabitur eleifend nulla purus, ut pharet urna ef id. Cras lacinia nisi id  (recommandé 300 caractères maximum).</p>",
   "module-news": false,
@@ -44,24 +64,21 @@
     ]
   },
   "module-list-reference": {
-    "listGroupClass": "list-group-lg",
+    "listGroupClass": "list-group-lg list-group-allow-ext-icon",
     "listGroup": [
       {
         "url": "test.pdf",
-        "icon-name": "icon-dot-bullet",
-        "text": "Lien de référence interne ou externe",
+        "text": "Lien de référence interne",
         "class": false
       },
       {
         "url": "https://google.ca",
-        "icon-name": "icon-dot-bullet",
-        "text": "Lien de référence interne ou externe",
+        "text": "Lien de référence externe",
         "class": false
       },
       {
         "url": "https://beta.montreal.ca/test",
-        "icon-name": "icon-dot-bullet",
-        "text": "Lien de référence interne ou externeu",
+        "text": "Lien de référence interne",
         "class": false
       }
     ]

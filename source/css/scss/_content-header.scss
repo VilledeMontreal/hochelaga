@@ -9,8 +9,26 @@
     margin-bottom: 2rem;
   }
 
+  .content-header-extras {
+    @include font-size($font-size-sm);
+    line-height: $line-height-sm;
+    
+    .content-header-extras-item {
+      display: flex;
+      flex-wrap: wrap;
+      
+      + .content-header-extras-item {
+        margin-top: .25rem;
+      }
+    }
+  }
+
+  // Deprecated
+  // Use content-header-extras
+  //
   .publication-date {
-    line-height: $line-height-md;
+    @include font-size($font-size-sm);
+    line-height: $line-height-sm;
   }
 
   // Use to set bg-image and overlay
@@ -30,10 +48,6 @@
       background-color: rgba(255, 255, 255, 0.7);
     }
   }
-}
-
-.header-back-link {
-  display: flex;
 }
 
 
