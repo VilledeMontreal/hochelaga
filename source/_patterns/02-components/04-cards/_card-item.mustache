@@ -1,6 +1,6 @@
 
 {{# url}}
-<a href="{{ url }}" class="card {{ classes }}">
+<a href="{{ url }}" class="card {{ classes }}"{{# data-link-title}} data-link-title="{{data-link-title}}"{{/ data-link-title}}{{# data-link-position}} data-link-position="{{data-link-position}}"{{/ data-link-position}}>
 {{/ url}}
 {{^ url}}
 <div class="card {{ classes }}">

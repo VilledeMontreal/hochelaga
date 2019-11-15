@@ -5,7 +5,18 @@ The format is based on [Keep a Changelog](http://keepachangelog.com/en/1.0.0/)
 and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.html).
 
 
-## [4.4.0] - unreleased
+## [4.4.1] - 2019-11-14
+
+## Added
+- Analytics Homepage: data-component-type, data-link-title and data-link-position attributes and corresponding values.
+- Analytics Vitrine d'arrondissement: data-component-type, data-link-title and data-link-position attributes and corresponding values.
+
+## Fixed
+- Homepage template: fix Dates importantes View More btn hover state should be rounded and not squared.
+- Vitrine template: fix Dates importantes View More btn hover state should be rounded and not squared.
+
+
+## [4.4.0] - 2019-11-11
 
 ## Added
 - Homepage template and variants.
@@ -215,7 +226,8 @@ Main navbar, menu and footer are now in their own stylesheet. They will eventual
 
 The version 3 is now deprecated. Only bug fixes will be considered. Please refer to the old bitbucket repo https://bitbucket.org/villemontreal/boite-outils-web/.
 
-
+[4.4.0]: https://bitbucket.org/villemontreal/boite-outils4-web/src/4.4.0/
+[4.3.0]: https://bitbucket.org/villemontreal/boite-outils4-web/src/4.3.0/
 [4.2.2]: https://bitbucket.org/villemontreal/boite-outils4-web/src/4.2.2/
 [4.2.1]: https://bitbucket.org/villemontreal/boite-outils4-web/src/4.2.1/
 [4.2.0]: https://bitbucket.org/villemontreal/boite-outils4-web/src/4.2.0/

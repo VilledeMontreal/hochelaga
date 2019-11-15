@@ -14,30 +14,37 @@
   "heading": "Mon quartier.<br>Mes services.<br>Ma ville.",
   "liensRapides": [
     {
+      "position": 1,
       "url": "#",
       "label": "Sit invidunt dolor"
     },
     {
+      "position": 2,
       "url": "#",
       "label": "Un graffiti"
     },
     {
+      "position": 3,
       "url": "#",
       "label": "Nonumy invidunt"
     },
     {
+      "position": 4,
       "url": "#",
       "label": "Diam at nonumy"
     },
     {
+      "position": 5,
       "url": "#",
       "label": "Sed voluptua lorem"
     },
     {
+      "position": 6,
       "url": "#",
       "label": "Diam diam"
     },
     {
+      "position": 7,
       "url": "#",
       "label": "Clita duo est"
     },
@@ -344,6 +351,7 @@
       "card-item": [
         {
           "classes" : false,
+          "data-link-title": "Titre de l'événement",
           "url" : "#",
           "card-media" : {
             "icon": false,
@@ -359,6 +367,7 @@
         },
         {
           "classes" : false,
+          "data-link-title": "Titre de l'événement",
           "url" : "#",
           "card-media" : {
             "icon": false,
@@ -374,6 +383,7 @@
         },
         {
           "classes" : false,
+          "data-link-title": "Titre de l'événement",
           "url" : "#",
           "card-media" : {
             "icon": false,
@@ -389,10 +399,13 @@
         }
       ]
     },
-    "buttonAsLink": true,
-    "buttonClass": "btn-secondary",
-    "buttonUrl": "#",
-    "buttonText": "Tous les événements"
+    "button-cta": {
+      "data-link-title": "Tous les événements",
+      "buttonAsLink": true,
+      "buttonClass": "btn-secondary",
+      "buttonUrl": "#",
+      "buttonText": "Tous les événements"
+    }
   },
   "news": false,
   "mairie": {
@@ -403,6 +416,7 @@
         {
           "fullwidth": true,
           "classes" : "card-multi card-multi-lg",
+          "data-link-title": "Valérie Plante",
           "url" : "#",
           "card-media" : {
             "icon": false,
@@ -417,11 +431,7 @@
           "card-link": "Communiquer avec la mairesse"
         }
       ]
-    },
-    "buttonAsLink": true,
-    "buttonClass": "btn-secondary",
-    "buttonUrl": "#",
-    "buttonText": "Tous les élus"
+    }
   },
   "comite-conseils": {
     "cards": {
@@ -430,6 +440,7 @@
       "card-item": [
         {
           "classes" : "card-date",
+          "data-link-title": "Séance du comité exécutif",
           "url" : "#",
           "card-media" : {
             "icon": false,
@@ -442,6 +453,7 @@
         },
         {
           "classes" : "card-date",
+          "data-link-title": "Séance du conseil municipal",
           "url" : "#",
           "card-media" : {
             "icon": false,
@@ -454,7 +466,7 @@
         },
         {
           "classes" : "card-date",
-          "url" : "#",
+          "url" : false,
           "card-media" : {
             "icon": false,
             "img" : false
@@ -466,10 +478,13 @@
         }
       ]
     },
-    "buttonAsLink": true,
-    "buttonClass": "btn-secondary",
-    "buttonUrl": "#",
-    "buttonText": "Toutes les séances"
+    "button-cta": {
+      "data-link-title": "Toutes les séances",
+      "buttonAsLink": true,
+      "buttonClass": "btn-secondary",
+      "buttonUrl": "#",
+      "buttonText": "Toutes les séances"
+    }
   },
   "homePromo": false
 }

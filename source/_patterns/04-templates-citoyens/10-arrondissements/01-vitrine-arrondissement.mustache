@@ -13,8 +13,9 @@
   {{/ messageBar}}
 
   {{# featuredSection}}
-  <div class="pt-8 pt-lg-16 pb-4 pb-lg-8" id="featuredContent">
+  <div class="pt-8 pt-lg-16 pb-4 pb-lg-8" id="featuredContent" data-component-type="a-la-une">
     <div class="container">
+      <h2 class="sr-only">En ce moment</h2>
       {{# featuredCard}}
       <div class="mb-lg-4">
         <div class="row cards">
@@ -42,7 +43,7 @@
   {{/ featuredSection}}
 
   {{# serviceSection}}
-  <div class="pt-8 pt-lg-16 pb-4 pb-lg-12 bg-light" id="featuredServices">
+  <div class="pt-8 pt-lg-16 pb-4 pb-lg-12 bg-light" id="featuredServices" data-component-type="services-vedettes">
     <div class="container">
       <div class="row">
         <div class="col-12 text-center">
@@ -61,7 +62,7 @@
   {{/ serviceSection}}
 
   {{# dateSection}}
-  <div class="pt-8 pt-lg-16 pb-4 pb-lg-12" id="featuredDates">
+  <div class="pt-8 pt-lg-16 pb-4 pb-lg-12" id="featuredDates" data-component-type="dates-importantes">
     <div class="container">
       <div class="row">
         <div class="col-12">
@@ -88,7 +89,7 @@
       {{/ cards}}
       {{# has-extra-item}}
       <div class="d-flex justify-content-center mt-0 mb-4 my-lg-4">
-        <button class="btn btn-link btn-squared btn-collapse collapsed" type="button" data-toggle="collapse" data-target="#collapseDatesImportantesSection" aria-expanded="false" aria-controls="collapseDatesImportantesSection">Voir plus</button>
+        <button class="btn btn-link btn-collapse collapsed" type="button" data-toggle="collapse" data-target="#collapseDatesImportantesSection" aria-expanded="false" aria-controls="collapseDatesImportantesSection" data-link-title="Voir plus">Voir plus</button>
       </div>
       {{/ has-extra-item}}
     </div>
@@ -97,7 +98,7 @@
 
 
   {{# featuredSearch}}
-  <div id="{{ featuredContentID }}" class="bg-image-section overlay-mid pt-8 pt-lg-16 pb-6 pb-lg-12" {{# featuredContentBgImage }} style="{{ featuredContentBgImage }}" {{/ featuredContentBgImage }}>
+  <div id="{{ featuredContentID }}" class="bg-image-section overlay-mid pt-8 pt-lg-16 pb-6 pb-lg-12"{{# featuredContentBgImage }} style="{{ featuredContentBgImage }}"{{/ featuredContentBgImage }} data-component-type="recherche">
     <div class="container">
       <div class="row justify-content-center">
         <div class="col-12 col-lg-8 text-center">
@@ -115,7 +116,7 @@
             <ul class="list-inline">
               {{# quickLinksItem }}
               <li class="list-inline-item">
-                <a href="{{ url }}" class="btn btn-sm btn-primary-reverse">{{ label }}</a>
+                <a href="{{ url }}" class="btn btn-sm btn-primary-reverse" data-link-title="{{label}}">{{ label }}</a>
               </li>
               {{/ quickLinksItem }}
             </ul>
@@ -131,7 +132,7 @@
   <div class="pt-8 pb-4 pt-lg-16 pb-lg-8">
     <div class="container">
       {{# news }}
-      <div class="pb-lg-4">
+      <div class="pb-lg-4" data-component-type="sommaire-nouvelles">
         <h2>Nouvelles</h2>
         <div class="row cards">
         {{# cards.card-item }}
@@ -153,7 +154,7 @@
       </div>
       {{/ news }}
       {{# events }}
-      <div class="border-top pt-4 pt-lg-8 pb-lg-4">
+      <div class="border-top pt-4 pt-lg-8 pb-lg-4" data-component-type="sommaire-evenements">
         <h2>Événements</h2>
         <div class="row cards">
         {{# cards.card-item }}
@@ -187,7 +188,7 @@
         </div>
       </div>
       {{# mairie}}
-      <div class="pb-lg-4">
+      <div class="pb-lg-4" data-component-type="mairie">
         <div class="row cards">
         {{# cards.card-item }}
           <div class="{{ cards.bsgrid-classes }}">
@@ -195,13 +196,15 @@
           </div>
         {{/ cards.card-item }}
         </div>
+        {{# button-cta}}
         <div class="d-flex justify-content-center mt-0 mb-4 my-lg-4">
         {{> components-button}}
         </div>
+        {{/ button-cta}}
       </div>
       {{/ mairie }}
       {{# comiteConseils}}
-      <div class="border-top pt-4 pt-lg-8 pb-lg-4">
+      <div class="border-top pt-4 pt-lg-8 pb-lg-4" data-component-type="sommaire-seances">
         <h2>Conseils et consultations</h2>
         <div class="row cards">
         {{# cards.card-item }}

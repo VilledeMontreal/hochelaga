@@ -12,6 +12,7 @@
           {
             "fullwidth": true,
             "classes" : "card-multi card-multi-lg",
+            "data-link-title": "Lorem ipsum dolor sit amet",
             "url" : "#",
             "card-media" : {
               "icon": false,
@@ -39,6 +40,7 @@
       "card-item" : [
         {
           "classes" : "card-date",
+          "data-link-title": "Titre de la date importante communiquée",
           "url" : "#",
           "card-media" : {
             "icon": false,
@@ -120,6 +122,7 @@
       "card-item": [
         {
           "classes": "card-fw card-news",
+          "data-link-title": "Quisque enim lacus mollis id fermentum quis mattis sit amet purus",
           "url": "#",
           "card-media": {
             "img": {
@@ -140,6 +143,7 @@
         },
         {
           "classes": "card-fw card-news",
+          "data-link-title": "Sed iaculis nisl justo et fermentum augue sollicitudin",
           "url": "#",
           "card-media": {
             "img": {
@@ -170,6 +174,7 @@
       "card-item": [
         {
           "classes" : "card-fw",
+          "data-link-title": "Titre de l'événement",
           "url" : "#",
           "card-media" : {
             "icon": false,
@@ -185,6 +190,7 @@
         },
         {
           "classes" : "card-fw",
+          "data-link-title": "Titre de l'événement",
           "url" : "#",
           "card-media" : {
             "icon": false,
@@ -210,6 +216,7 @@
         {
           "fullwidth": true,
           "classes" : "card-multi card-multi-lg",
+          "data-link-title": "Prénom Nom",
           "url" : "#",
           "card-media" : {
             "icon": false,
@@ -225,10 +232,13 @@
         }
       ]
     },
-    "buttonAsLink": true,
-    "buttonClass": "btn-secondary",
-    "buttonUrl": "#",
-    "buttonText": "Tous les élus"
+    "button-cta": {
+      "data-link-title": "Tous les élus",
+      "buttonAsLink": true,
+      "buttonClass": "btn-secondary",
+      "buttonUrl": "#",
+      "buttonText": "Tous les élus"
+    }
   },
   "comiteConseils": {
     "cards": {
@@ -237,6 +247,7 @@
       "card-item": [
         {
           "classes" : "card-date",
+          "data-link-title": "Séance du conseil d'arrondissement de Nom-de-l'Arrondissement",
           "url" : "#",
           "card-media" : {
             "icon": false,

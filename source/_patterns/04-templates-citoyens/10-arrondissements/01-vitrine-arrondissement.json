@@ -6,7 +6,7 @@
   "documentHeadingImageUrl": "/boite-outils4/images/entete-arr.jpg",
   "documentHeadingNotch": false,
   "has-left-notch": false,
-  "customHeadingGridClass": " ",
+  "customHeadingGridClass": "col-12",
   "has-search-form": false,
   "media": false,
   "heading": "Nom de l'arrondissement",
@@ -26,6 +26,8 @@
       "card-item" : [
         {
           "classes" : "card-service",
+          "data-link-title": "Nom du service",
+          "data-link-position": 1,
           "url" : "#",
           "card-media" : {
             "icon" : "icon-maison-et-logement"
@@ -35,6 +37,8 @@
         },
         {
           "classes" :  "card-service",
+          "data-link-title": "Nom du service",
+          "data-link-position": 2,
           "url" : "#",
           "card-media" : {
             "icon" : "icon-environnement"
@@ -44,6 +48,8 @@
         },
         {
           "classes" :  "card-service",
+          "data-link-title": "Nom du service",
+          "data-link-position": 3,
           "url" : "#",
           "card-media" : {
             "icon" : "icon-culture-et-loisirs"
@@ -116,6 +122,7 @@
           {
             "fullwidth": true,
             "classes" : "card-profile card-fw-profile",
+            "data-link-title": "Prénom Nom",
             "url" : "#",
             "card-media" : {
               "icon": false,
@@ -130,10 +137,13 @@
           }
         ]
       },
-      "buttonAsLink": true,
-      "buttonClass": "btn-secondary",
-      "buttonUrl": "#",
-      "buttonText": "Tous les élus"
+      "button-cta": {
+        "data-link-title": "Tous les élus",
+        "buttonAsLink": true,
+        "buttonClass": "btn-secondary",
+        "buttonUrl": "#",
+        "buttonText": "Tous les élus"
+      }
     },
     "comite-conseils": false
   }

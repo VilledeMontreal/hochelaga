@@ -12,6 +12,7 @@
           {
             "fullwidth": true,
             "classes" : "card-multi card-multi-lg",
+            "data-link-title": "Lorem ipsum dolor sit amet",
             "url" : "#",
             "card-media" : {
               "icon": false,
@@ -36,6 +37,7 @@
           {
             "fullwidth": false,
             "classes" : "card-multi",
+            "data-link-title": "Titre de la carte sur trois lignes maximum",
             "url" : "#",
             "card-media" : {
               "icon": false,
@@ -51,6 +53,7 @@
           {
             "fullwidth": false,
             "classes" : "card-multi",
+            "data-link-title": "Titre de la carte",
             "url" : "#",
             "card-media" : {
               "icon": false,
@@ -74,6 +77,8 @@
       "card-item" : [
         {
           "classes" : "card-service",
+          "data-link-title": "Nom du service",
+          "data-link-position": 1,
           "url" : "#",
           "card-media" : {
             "icon" : "icon-maison-et-logement"
@@ -82,7 +87,9 @@
           "card-text" : false
         },
         {
-          "classes" :  "card-service",
+          "classes" : "card-service",
+          "data-link-title": "Nom du service",
+          "data-link-position": 2,
           "url" : "#",
           "card-media" : {
             "icon" : "icon-environnement"
@@ -91,7 +98,9 @@
           "card-text" : false
         },
         {
-          "classes" :  "card-service",
+          "classes" : "card-service",
+          "data-link-title": "Nom du service",
+          "data-link-position": 3,
           "url" : "#",
           "card-media" : {
             "icon" : "icon-culture-et-loisirs"
@@ -101,6 +110,8 @@
         },
         {
           "classes" : "card-service",
+          "data-link-title": "Nom du service",
+          "data-link-position": 4,
           "url" : "#",
           "card-media" : {
             "icon" : "icon-participation-citoyenne"
@@ -110,6 +121,8 @@
         },
         {
           "classes" :  "card-service",
+          "data-link-title": "Nom du service",
+          "data-link-position": 5,
           "url" : "#",
           "card-media" : {
             "icon" : "icon-taxes-et-evaluation-fonciere"
@@ -119,6 +132,8 @@
         },
         {
           "classes" :  "card-service",
+          "data-link-title": "Nom du service",
+          "data-link-position": 6,
           "url" : "#",
           "card-media" : {
             "icon" : "icon-vie-communautaire"
@@ -140,6 +155,7 @@
       "card-item" : [
         {
           "classes" : "card-date",
+          "data-link-title": "Titre de la date importante communiquée",
           "url" : "#",
           "card-date": {
             "date-time": [
@@ -160,6 +176,7 @@
         },
         {
           "classes" : "card-date",
+          "data-link-title": "Titre de la date importante communiquée",
           "url" : "#",
           "card-date": {
             "date-time": [
@@ -175,6 +192,7 @@
         },
         {
           "classes" : "card-date",
+          "data-link-title": "Titre de la date importante communiquée",
           "url" : "#",
           "card-date": {
             "date-time": [
@@ -193,6 +211,7 @@
       "extra-item": [
         {
           "classes" : "card-date",
+          "data-link-title": "Titre de la date importante communiquée",
           "url" : "#",
           "card-date": {
             "date-time": [
@@ -208,6 +227,7 @@
         },
         {
           "classes" : "card-date",
+          "data-link-title": "Titre de la date importante communiquée",
           "url" : "#",
           "card-date": {
             "date-time": [
@@ -223,6 +243,7 @@
         },
         {
           "classes" : "card-date",
+          "data-link-title": "Titre de la date importante communiquée",
           "url" : "#",
           "card-date": {
             "date-time": [
@@ -290,6 +311,7 @@
       "card-item": [
         {
           "classes": false,
+          "data-link-title": "Quisque enim lacus mollis id fermentum quis mattis sit amet purus",
           "url": "#",
           "card-media": {
             "img": {
@@ -310,6 +332,7 @@
         },
         {
           "classes": false,
+          "data-link-title": "Sed iaculis nisl justo et fermentum augue sollicitudin",
           "url": "#",
           "card-media": {
             "img": {
@@ -330,6 +353,7 @@
         },
         {
           "classes": false,
+          "data-link-title": "Sed ultrices ipsum vitae est dictum",
           "url": "#",
           "card-media": {
             "img" : {
@@ -351,6 +375,7 @@
       ]
     },
     "button-cta": {
+      "data-link-title": "Toutes les nouvelles",
       "buttonAsLink": true,
       "buttonClass": "btn-secondary",
       "buttonUrl": "#",
@@ -364,6 +389,7 @@
       "card-item": [
         {
           "classes" : false,
+          "data-link-title": "Titre de l'événement",
           "url" : "#",
           "card-media" : {
             "icon": false,
@@ -379,6 +405,7 @@
         },
         {
           "classes" : false,
+          "data-link-title": "Titre de l'événement",
           "url" : "#",
           "card-media" : {
             "icon": false,
@@ -394,6 +421,7 @@
         },
         {
           "classes" : false,
+          "data-link-title": "Titre de l'événement",
           "url" : "#",
           "card-media" : {
             "icon": false,
@@ -409,6 +437,7 @@
         },
         {
           "classes" : false,
+          "data-link-title": "Titre de l'événement",
           "url" : "#",
           "card-media" : {
             "icon": false,
@@ -425,6 +454,7 @@
       ]
     },
     "button-cta": {
+      "data-link-title": "Tous les événements",
       "buttonAsLink": true,
       "buttonClass": "btn-secondary",
       "buttonUrl": "#",
@@ -439,6 +469,7 @@
         {
           "fullwidth": true,
           "classes" : "card-multi card-multi-lg",
+          "data-link-title": "Prénom Nom",
           "url" : "#",
           "card-media" : {
             "icon": false,
@@ -455,6 +486,7 @@
       ]
     },
     "button-cta": {
+      "data-link-title": "Tous les élus",
       "buttonAsLink": true,
       "buttonClass": "btn-secondary",
       "buttonUrl": "#",
@@ -468,36 +500,39 @@
       "card-item": [
         {
           "classes" : "card-date",
+          "data-link-title": "Séance du conseil d'arrondissement de Nom-de-l'Arrondissement",
           "url" : "#",
           "card-media" : {
             "icon": false,
             "img" : false
           },
-          "card-type": "Séance du conseil",
+          "card-type": "Séance du conseil d'arrondissement de Nom-de-l'Arrondissement",
           "card-title" : "Jeudi 31 octobre à 19&nbsp;h&nbsp;30",
           "card-text": false,
           "card-date-text" : false
         },
         {
           "classes" : "card-date",
+          "data-link-title": "Séance du conseil d'arrondissement de Nom-de-l'Arrondissement",
           "url" : "#",
           "card-media" : {
             "icon": false,
             "img" : false
           },
-          "card-type": "Séance du conseil",
+          "card-type": "Séance du conseil d'arrondissement de Nom-de-l'Arrondissement",
           "card-title" : "Jeudi 28 octobre à 19&nbsp;h&nbsp;30",
           "card-text": false,
           "card-date-text" : false
         },
         {
           "classes" : "card-date",
+          "data-link-title": "Séance du conseil d'arrondissement de Nom-de-l'Arrondissement",
           "url" : "#",
           "card-media" : {
             "icon": false,
             "img" : false
           },
-          "card-type": "Séance du conseil",
+          "card-type": "Séance du conseil d'arrondissement de Nom-de-l'Arrondissement",
           "card-title" : "Jeudi 30 janvier à 19&nbsp;h&nbsp;00",
           "card-text": false,
           "card-date-text" : false
@@ -505,6 +540,7 @@
       ]
     },
     "button-cta": {
+      "data-link-title": "Toutes les séances",
       "buttonAsLink": true,
       "buttonClass": "btn-secondary",
       "buttonUrl": "#",
