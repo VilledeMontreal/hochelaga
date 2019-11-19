@@ -615,7 +615,6 @@ flyouts.forEach((flyout) => {
   const flyoutId = flyout.dataset.target;
   flyout.addEventListener('click', (ev) => {
     ev.preventDefault();
-    console.log(document.getElementById(flyoutId));
     document.getElementById(flyoutId).classList.toggle('show');
     toggleHidden(flyoutId)
   });
@@ -633,3 +632,14 @@ function toggleHidden(id) {
   }
   
 }
+
+const focusableLinks = document.querySelectorAll(".sr-focusable-js");
+
+focusableLinks.forEach((focusableLink) => {
+  focusableLink.addEventListener('focus', (ev) => {
+    focusableLink.parentElement.classList.add('skip-links-focus');
+  });
+  focusableLink.addEventListener('blur', (ev) => {
+    focusableLink.parentElement.classList.remove('skip-links-focus');
+  })
+})
