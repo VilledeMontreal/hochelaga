@@ -34,7 +34,8 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 - .list-group-icons-categories.
 
 ### Fixed
-- Icons in list-group shouldn't be align-items: center. 
+- Icons in list-group shouldn't be align-items: center.
+- Issues with menu on iOS devices. Last link in menu was hidden by the bottom navbar of the device.
 
 
 ## [4.4.1] - 2019-11-14
