@@ -1,9 +1,9 @@
 .header-main-nav {
   // Handle fixed-top padding
   &.is-fixed-top {
-    padding-bottom: 5rem;
+    padding-bottom: 5.5rem;
     @include media-breakpoint-up(lg) {
-      padding-bottom: 6rem;
+      padding-bottom: 6.5rem;
     }
   }
 }
@@ -25,14 +25,14 @@
     // Montreal logo is the navbar-brand
     .navbar-brand {
       display: inline-flex;
-      padding: .25rem;
+      padding: .375rem;
       margin: 0 .25rem;
       @include hover-focus {
         background-color: transparent;
       }
       svg {
         flex: 0 0 auto; // This is needed because of IE weird behavior
-        height: 2rem;
+        height: 1.75rem;
         width: auto;
       }
     }
@@ -175,7 +175,7 @@
 
       @include hover-focus {
         .user-avatar {
-          background-color: $action-lighter;
+          background-color: $action-darker;
         }
       }
 
@@ -266,6 +266,15 @@
         &::after {
           background-color: $white;
         }
+
+        @include hover-focus {
+          &::after {
+            background-color: $action-lighter;
+          }
+          .user-avatar {
+            background-color: $action-lighter;
+          }
+        }
       }
 
       .user-avatar {
@@ -352,9 +361,10 @@
   background-color: $neutral-primary;
   color: $white;
   padding: 0;
-  height: 1.5rem;
+  height: 2rem;
   position: relative;
   z-index: $zindex-fixed + 1;
+  align-items: center;
   .btn-lang {
     padding-top: .125rem;
     padding-bottom: .125rem;

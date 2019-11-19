@@ -23,6 +23,10 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 - Publication date size for various Templates.
 - Some refactoring for Unité administrative template.
 - Unité administrative template: Remove Organigramme from sidebar, add info inside .content-header-extras
+- Skip links is now a collection of links.
+- Main-navigation: Rosace on mobile size correction (now 28px).
+- Main-navigation: Language bar height correction (now 32px).
+- Some elements now use $action-darker for their hover states (.btn-primary, user-avatar). 
 
 ### Deprecated
 - .page-drawer and classes used for vda311 templates.

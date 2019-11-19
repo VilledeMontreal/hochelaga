@@ -14,6 +14,7 @@
         &.active,
         &:active {
           &:before {
+            bottom: auto;
             left: -1px;
             right: auto;
           }
@@ -202,6 +203,7 @@
             @include icon-color($action);
           }
           &:before {
+            bottom: auto;
             right: -1px;
             height: 100%;
             width: 2px;
