@@ -137,6 +137,11 @@ a {
     color: $link-hover-color;
   }
 
+  &:focus {
+    outline: 0;
+    box-shadow: $input-btn-focus-box-shadow;
+  }
+
   // Utility classes to remove border-bottom
   // Need important to override any local styles that may be applied later
   &.img-link,
