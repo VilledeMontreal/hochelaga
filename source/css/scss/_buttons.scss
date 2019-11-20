@@ -50,10 +50,10 @@ button {
   &:not(:disabled):not(.disabled):active,
   &:not(:disabled):not(.disabled).active {
     background-image: none;
-    @include box-shadow($btn-active-box-shadow);
+    box-shadow: $btn-focus-box-shadow;
 
     &:focus {
-      @include box-shadow($btn-focus-box-shadow, $btn-active-box-shadow);
+      box-shadow: $btn-focus-box-shadow;
     }
   }
 
@@ -102,24 +102,23 @@ fieldset:disabled a.btn {
 
 .btn-primary-reverse {
   @include button-variant($background: $white, $border: $white, $color: $action, $hover-background: $highlight-light, $hover-border: $highlight-light, $hover-color: $action, $active-background: $highlight-light, $active-border: $highlight-light, $active-color: $action);
+  &:focus,
+  &.focus {
+    box-shadow: $input-btn-reverse-focus-box-shadow;
+  }
 }
 
 .btn-secondary-reverse {
   @include button-variant($background: transparent, $border: $white, $color: $white, $hover-background: $highlight-light, $hover-border: $highlight-light, $hover-color: $action, $active-background: $highlight-light, $active-border: $highlight-light, $active-color: $action);
+  &:focus,
+  &.focus {
+    box-shadow: $input-btn-reverse-focus-box-shadow;
+  }
 }
 
 .btn-link,
 .btn-tertiary {
   @include button-variant($background: transparent, $border: transparent, $color: $action, $hover-background: $highlight-light, $hover-border: $highlight-light, $hover-color: $action, $active-background: $highlight-light, $active-border: $highlight-light, $active-color: $action);
-  &:focus,
-  &.focus {
-    // Avoid using mixin so we can pass custom focus shadow properly
-    @if $enable-shadows {
-      box-shadow: $btn-box-shadow, 0 0 0 $btn-focus-width rgba($highlight-light, .5);
-    } @else {
-      box-shadow: 0 0 0 $btn-focus-width rgba($highlight-light, .5);
-    }
-  }
   &.btn-collapse {
     &:after {
       content: '';
@@ -166,10 +165,18 @@ fieldset:disabled a.btn {
   @include hover-focus {
     border: none;
   }
+  &:focus,
+  &.focus {
+    box-shadow: $input-btn-reverse-focus-box-shadow;
+  }
 }
 
 .btn-promo {
   @include button-variant($background: $brand, $border: $brand, $color: $white, $hover-background: $brand-dark, $hover-border: $brand-dark, $hover-color: $white, $active-background: $brand-dark, $active-border: $brand-dark, $active-color: $white);
+  &:focus,
+  .focus {
+    box-shadow: 0 0 0 $btn-focus-width rgba($brand, .5);
+  }
 }
 
 

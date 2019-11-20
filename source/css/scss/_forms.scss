@@ -568,8 +568,8 @@ legend,
 }
 
 
-//
 // file drop container
+//
 .file-drop-container {
   border-radius: $input-border-radius;
   border: dashed 2px $neutral-stroke;
@@ -586,8 +586,17 @@ legend,
     line-height: $line-height-sm;
   }
 
-  &.file-over{
+  &.file-over {
     background: $neutral-stroke;
+  }
+
+  .file-selector-button {
+    input:focus {
+      ~ .btn-secondary {
+        border-color: $action;
+        box-shadow: $btn-focus-box-shadow;
+      }
+    }
   }
 }
 

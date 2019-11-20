@@ -1,5 +1,4 @@
 // Base class
-// Base class
 //
 // Requires one of the contextual, color modifier classes for `color` and
 // `background-color`.
@@ -23,6 +22,11 @@
   @at-root a#{&} {
     @include hover-focus {
       text-decoration: none;
+    }
+    &:focus,
+    &.focus {
+      outline: 0;
+      box-shadow: 0 0 0 $badge-focus-width rgba($neutral-underground-2, .3);
     }
   }
 
@@ -66,6 +70,11 @@
         color: $white;
         background-color: lighten($neutral-primary, 10%);
       }
+      &:focus,
+      &.focus {
+        outline: 0;
+        box-shadow: 0 0 0 $badge-focus-width rgba($neutral-primary, .3);
+      }
     }
     .icon {
       @include icon-color($white);
@@ -92,6 +101,11 @@
         color: $white;
         background-color: darken( $primary, 10% );
       }
+      &:focus,
+      &.focus {
+        outline: 0;
+        box-shadow: 0 0 0 $badge-focus-width rgba($primary, .3);
+      }
     }
     .icon {
       @include icon-color($white);
@@ -106,6 +120,11 @@
         color:$primary;
         background-color: $white;
         border: 1px solid $primary;
+      }
+      &:focus,
+      &.focus {
+        outline: 0;
+        box-shadow: 0 0 0 $badge-focus-width rgba($primary, .3);
       }
     }
     .icon {
@@ -172,6 +191,11 @@
       @include hover-focus {
         background-color: darken($color-base, 10%);
       }
+      &:focus,
+      &.focus {
+        outline: 0;
+        box-shadow: 0 0 0 $badge-focus-width rgba($color-base, .3);
+      }
     }
     @if $label == warning {
       color: $neutral-primary;
@@ -207,6 +231,11 @@
       @include hover-focus {
         color: $color-dark;
         background-color: darken($color-light, 8%);
+      }
+      &:focus,
+      &.focus {
+        outline: 0;
+        box-shadow: 0 0 0 $badge-focus-width rgba($color-dark, .3);
       }
     }
   }

@@ -17,6 +17,13 @@
   }
   .card-img-top {
     flex: 0 0 auto; // IE needs this
+    margin: -1px;
+    width: calc(100% + 2px); // Add the 2px from the negative margins to overlap border
+    @include border-top-radius($border-radius);
+  }
+
+  .card-img-bottom {
+    @include border-bottom-radius($border-radius);
   }
 
   // Used to provide variable height images
@@ -26,6 +33,7 @@
     flex: 1 0 auto;
     padding-top: 56.25%;  /* 16:9 format = 0.5625 */
     width: 100%;
+    margin: -1px;
 
     @include media-breakpoint-up(md){
       min-height: 178px; // Maintain a minimal 16:9 aspect ratio
@@ -119,7 +127,7 @@
       .card-img-bg {
         @include make-col(4);
         @include border-radius(0);
-        @include border-left-radius($card-inner-border-radius);
+        @include border-left-radius($border-radius);
       }
       .card-body-wrapper {
         @include make-col(8);
@@ -276,9 +284,11 @@
     border: none;
     @include border-radius(0);
     border-bottom: 1px solid $neutral-stroke;
-
+    .card-img-bg,
     .card-img-top {
       @include border-radius(0);
+      margin: 0;
+      width: 100%;
     }
 
     .card-body {
@@ -343,6 +353,7 @@
         }
       }
     }
+    // Bigger multi-lg card
     &.card-multi-lg,
     &.card-featured-lg {
       .card-body {
@@ -350,15 +361,9 @@
         position: relative;
         margin-top: 0;
         z-index: 1;
-        padding-right: inherit;
 
         &:before {
           content: none;
-        }
-        .card-title {
-          @include font-size($h2-font-size);  // 32/40
-          line-height: 2.5rem;
-          margin-bottom: 2rem;
         }
       }
 
@@ -373,6 +378,13 @@
         border: none;
         .card-body {
           border-bottom: 1px solid $neutral-stroke;
+          padding-right: 2rem;
+
+          .card-title {
+            @include font-size($h2-font-size);  // 32/40
+            line-height: 2.5rem;
+            margin-bottom: 2rem;
+          }
         }
       }
     }
@@ -396,6 +408,10 @@ a.card {
     .card-title {
       color: $action;
     }
+  }
+  &:focus,
+  &.focus {
+    box-shadow: $card-box-shadow, $input-btn-focus-box-shadow;
   }
   &.card-multi,
   &.card-featured {
@@ -425,14 +441,6 @@ a.card {
     display: flex; // must add flex capacity to col to get equalheight
   }
 }
-
-/*.cards {
-  &:last-child {
-    .card.card-fw {
-      margin-bottom: 0;
-    }
-  }
-}*/
 
 
 // We handle full-width differently based on the grid size
