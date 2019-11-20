@@ -4,21 +4,27 @@
       "formGroupClass": "form-group-sm",
       "formGroupInputID": "form-control-sm-one",
       "formGroupInputLabel": "Small form group",
-      "formGroupInputPlaceholder": "Placeholder for small form group",
+      "formGroupInputPlaceholder": {
+        "text": "Placeholder for small form group"
+      },
       "formGroupInputHelpText": "Help text goes here."
     },
     {
       "formGroupClass": false,
       "formGroupInputID": "form-control-default-one",
       "formGroupInputLabel": "Default form group",
-      "formGroupInputPlaceholder": "Placeholder for default form group",
+      "formGroupInputPlaceholder": {
+        "text": "Placeholder for default form group"
+      },
       "formGroupInputHelpText": "Help text goes here."
     },
     {
       "formGroupClass": "form-group-lg",
       "formGroupInputID": "form-control-lg-one",
       "formGroupInputLabel": "Large form group",
-      "formGroupInputPlaceholder": "Placeholder for large form group",
+      "formGroupInputPlaceholder":{
+        "text": "Placeholder for large form group"
+      },
       "formGroupInputHelpText": "Help text goes here."
     }
   ],
@@ -37,7 +43,7 @@
       "formGroupInputLabel": "Rounded input",
       "formGroupInputClass": "input-rounded",
       "formGroupInputRequired": true,
-      "formGroupInputPlaceholder": ".input-rounded",
+      "formGroupInputPlaceholder": false,
       "formGroupInputHelpText": false
     }
   ],

@@ -422,6 +422,10 @@ legend,
     overflow: auto;
   }
 
+  textarea.form-control {
+    height: auto;
+  }
+
   .custom-control {
     line-height: $line-height-xs;
   }
@@ -534,6 +538,10 @@ legend,
     @extend .form-control-lg;
   }
 
+  textarea.form-control {
+    height: auto;
+  }
+
   .custom-control {
     padding-top: 1rem;
     padding-bottom: 1rem;
@@ -617,7 +625,7 @@ legend,
 
 .feedback-form {
   textarea {
-    -webkit-transform: translateZ(0px);
+    transform: translateZ(0px);
   }
 
   .btn {
