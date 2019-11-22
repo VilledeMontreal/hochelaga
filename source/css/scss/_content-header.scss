@@ -102,7 +102,8 @@
         padding-bottom: 1rem;
       }
     }
-    &.document-heading-notch {
+    &.document-heading-notch,
+    &.document-heading-left-notch {
       .document-heading-header {
         padding-top: 2rem;
         padding-bottom: 4rem;
@@ -277,6 +278,7 @@
         padding-top: 8rem;
         padding-bottom: 6rem;
       }
+      &.document-heading-left-notch,
       &.document-heading-notch {
         .document-heading-header {
           padding-top: 4rem;

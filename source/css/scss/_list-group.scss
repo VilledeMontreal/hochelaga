@@ -12,8 +12,15 @@
   li {
     list-style: none;
   }
-
+  // DEPRECATED
+  // Use column-count utility classes
   &.list-2-columns {
+    display: block;
+    .list-group-item {
+      display: inline-block;
+    }
+  }
+  &[class*="column-count"] {
     display: block;
     .list-group-item {
       display: inline-block;
