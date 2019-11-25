@@ -94,46 +94,37 @@
 
   &.document-heading-fullwidth {
     .document-heading-header {
-      padding-top: 4rem;
-      padding-bottom: 2rem;
+      padding-top: 2rem;
+      padding-bottom: 4rem;
       h1, .h1,
       .document-heading-subtitle {
         margin: 0;
         padding-bottom: 1rem;
       }
     }
-    &.document-heading-notch,
-    &.document-heading-left-notch {
+
+    // Give smaller padding top and bottom (Index)
+    &.document-heading-sm {
       .document-heading-header {
         padding-top: 2rem;
-        padding-bottom: 4rem;
+        padding-bottom: 1rem;
       }
     }
-  }
-
-  &.document-heading-sm {
-    .document-heading-header {
-      padding-top: 2rem;
-      padding-bottom: 1rem;
-    }
-  }
-  // Fullwidth homepage Document heading
-  &.document-heading-fullwidth.document-heading-homepage {
-    background-color: $neutral-underground-1;
-
-    .document-heading-header {
-      padding-bottom: 3rem;
-    }
-    
-    // XL breakpoint
-    // Switch from cover to contain for background-size to prevent "zoom in" effect" on very large screen
-    @include media-breakpoint-up(xl) {
-      .document-heading-background {
-        background-size: contain;
+    // Give bigger padding top and bottom (vitrine)
+    &.document-heading-xl {
+      .document-heading-header {
+        padding-top: 4rem;
+        padding-bottom: 2rem;
       }
     }
+
+    // Homepage
+    &.document-heading-homepage {
+      background-color: $neutral-underground-1;
+    }
   }
 
+  &.document-heading-emergency,
   &.document-heading-danger {
     background-color: $danger;
     color: $white;
@@ -232,6 +223,10 @@
     color: $neutral-primary;
   }
 
+  .brand-border-bottom {
+    margin-bottom: 1rem;
+  }
+
 
   // 768px and up
   @include media-breakpoint-up(md) {
@@ -275,29 +270,33 @@
     }
     &.document-heading-fullwidth {
       .document-heading-header {
-        padding-top: 8rem;
-        padding-bottom: 6rem;
+        padding-top: 4rem;
+        padding-bottom: 7rem;
       }
-      &.document-heading-left-notch,
-      &.document-heading-notch {
+
+      &.document-heading-xl {
         .document-heading-header {
-          padding-top: 4rem;
-          padding-bottom: 7.5rem;
+          padding-top: 8rem;
+          padding-bottom: 6rem;
         }
       }
+
+      &.document-heading-sm {
+        .document-heading-header {
+          padding-top: 4rem;
+          padding-bottom: 1rem;
+        }
+      }
+
     }
+    /*
     &.document-heading-sm {
       .document-heading-header {
         padding-top: 4rem;
         padding-bottom: 1rem;
       }
     }
-
-    &.document-heading-fullwidth.document-heading-homepage {
-      .document-heading-header {
-        padding-bottom: 7rem;
-      }
-    }
+    */
 
     // Container restricted bg image layout
     &.document-heading-grid {
@@ -332,6 +331,19 @@
     .document-heading-subtitle {
       @include font-size($font-size-lg);
       line-height: $line-height-xl;
+    }
+  }
+
+  // 1200px and up
+  @include media-breakpoint-up(xl) {
+    // Fullwidth homepage Document heading
+    &.document-heading-fullwidth {
+      &.document-heading-homepage {
+        // Switch from cover to contain for background-size to prevent "zoom in" effect" on very large screen
+        .document-heading-background {
+          background-size: contain;
+        }
+      }
     }
   }
 }

@@ -63,9 +63,11 @@
       }
 
       &:hover,
-      &:active {
+      &:active,
+      &:focus {
         color: $primary;
         text-decoration: none;
+        border-radius: $border-radius;
         &:after {
           content: '';
           -webkit-mask: url($data-icon-plus-circle-full) no-repeat 50% 50%;
@@ -164,7 +166,9 @@
         }
   
         &:hover,
-        &:active {
+        &:active,
+        &:focus {
+          border-radius: 0;
           &:after {
             -webkit-mask: url($data-icon-chevron-down) no-repeat 50% 50%;
             mask: url($data-icon-chevron-down) no-repeat 50% 50%;
