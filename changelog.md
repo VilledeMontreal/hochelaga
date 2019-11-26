@@ -5,6 +5,46 @@ The format is based on [Keep a Changelog](http://keepachangelog.com/en/1.0.0/)
 and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.html).
 
 
+## [4.5.0] - unreleased
+
+### Added
+- .drawer structure for better drawer handling
+- Utility class for full-page iframe
+- Disabled accordion states and styles.
+- Related to links added to various Templates.
+- New class (.list-group-allow-ext-icon) to allow for external link icons inside list-group.
+- 4 new utility icons (partner-bell, partner-hydroquebec, exclamation, cone-fill)
+- 1 modified icon (social-facebook)
+
+### Changed
+- Navigation complexe: Normalisation and in-line with design system updates.
+- Template index: Modified H1 and H2 in header.
+- .list-group-lg.list-group-icons-categories is Deprecated and replaced with .list-group-xl
+- Publication date size for various Templates.
+- Some refactoring for Unité administrative template.
+- Unité administrative template: Remove Organigramme from sidebar, add info inside .content-header-extras
+- Skip links is now a collection of links.
+- Main-navigation: Rosace on mobile size correction (now 28px).
+- Main-navigation: Language bar height correction (now 32px).
+- Some elements now use $action-darker for their hover states (.btn-primary, user-avatar).
+- Button focus states.
+- Main navigation links and buttons focus state.
+- Inputs focus states.
+
+### Deprecated
+- .page-drawer and classes used for vda311 templates.
+- .menu-items-revealing-labels.
+- .list-group-icons-categories.
+
+### Fixed
+- Icons in list-group shouldn't be align-items: center.
+- Issues with menu on iOS devices. Last link in menu was hidden by the bottom navbar of the device.
+- Cards: .multi-lg padding was wrongly calculated on mobile.
+- Cards: Cards with top images (or side at larger breakpoint): Images should overlap border to create wanted effects on hover
+- Cards: Focus box-shadow added.
+- Badges: Focus states added back.
+
+
 ## [4.4.1] - 2019-11-14
 
 ## Added
@@ -226,6 +266,7 @@ Main navbar, menu and footer are now in their own stylesheet. They will eventual
 
 The version 3 is now deprecated. Only bug fixes will be considered. Please refer to the old bitbucket repo https://bitbucket.org/villemontreal/boite-outils-web/.
 
+[4.4.1]: https://bitbucket.org/villemontreal/boite-outils4-web/src/4.4.1/
 [4.4.0]: https://bitbucket.org/villemontreal/boite-outils4-web/src/4.4.0/
 [4.3.0]: https://bitbucket.org/villemontreal/boite-outils4-web/src/4.3.0/
 [4.2.2]: https://bitbucket.org/villemontreal/boite-outils4-web/src/4.2.2/

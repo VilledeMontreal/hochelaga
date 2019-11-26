@@ -1,6 +1,7 @@
 {
   "navbarFixedTop": true,
-  "pageClasses": false,
+  "bodyClass": "site-sticky-footer",
+  "pageClasses": "site-main-content d-flex flex-column",
   "documentHeading": true,
   "documentHeadingFullWidth": true,
   "documentHeadingClass": "document-heading-hub document-heading-left-notch",
@@ -49,6 +50,7 @@
     },
     {
       "hub-list-heading": "Titre de la liste (module répétable)",
+      "listGroupClass": "list-group-allow-ext-icon",
       "listGroup": [
         {
           "url": "#",
@@ -93,7 +95,7 @@
   "featuredSidebarCTA": true,
   "featuredSidebarContent": false,
   "listOldContent": {
-    "listGroupClass": "list-2-columns list-group-lg",
+    "listGroupClass": "column-count-lg-2 list-group-lg",
     "listGroup": [
       {
         "url": "https://ville.montreal.qc.ca",

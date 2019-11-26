@@ -1,0 +1,333 @@
+{
+  "pageClasses": false,
+  "navbarInterneHasMenu": false,
+  "navbarInterneHasSearch": false,
+  "user-authenticated": true,
+  "user": {
+    "name": "Uxabcd01",
+    "username": "Uxabc1b",
+    "email": "courriel@montreal.ca"
+  },
+  "applicationName": "Vue de l'agent 311",
+  "menuItemVerticalLabeledBar": {
+    "menuItem": [
+      {
+        "class": "disabled",
+        "url": false,
+        "menuItemIcon": {
+          "icon-name": "icon-info"
+        },
+        "menuItemLabel": "Info"
+      },
+      {
+        "class": "disabled",
+        "url": false,
+        "menuItemIcon": {
+          "icon-name": "icon-book"
+        },
+        "menuItemLabel": "Lexique"
+      },
+      {
+        "class": false,
+        "url": "link.templates-employes-vue-agent-311-signaler",
+        "menuItemIcon": {
+          "icon-name": "icon-comment"
+        },
+        "menuItemLabel": "Signaler"
+      },
+      {
+        "class": false,
+        "url": "link.templates-employes-vue-agent-311-partager",
+        "menuItemIcon": {
+          "icon-name": "icon-share"
+        },
+        "menuItemLabel": "Partager"
+      }
+    ]
+  },
+  "drawerInfo": {
+    "media": {
+      "src": "https://picsum.photos/id/1024/768/432",
+      "copyright": false
+    },
+    "imgClass": "img-zoom-in",
+    "mediaSrc": "https://picsum.photos/id/1024/1920/1280",
+    "mediaSize": "1920x1280",
+    "mediaCaption": "Légende Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse tincidunt, orci nec luctus fringilla, sapien arcu tincidunt dui, sed blandit metus arcu dignissim lorem.",
+    "mediaAuthor": "Мартин Тасев",
+    "mediaAlt": "Media #1024",
+    "accordionListed": {
+      "collapsibleClasses": "accordeon-listed mb-3",
+      "collapsibleItem": [
+        {
+          "disabled": false,
+          "collapsible-item-vdl311": true,
+          "generalites": true,
+          "block-id": "accordeon-vdl-generalites",
+          "heading-id": "accordeon-vdl-heading-generalites",
+          "title": "Généralités",
+          "comment": {
+            "alertClass": "alert-with-icon",
+            "alertTitle": false,
+            "alertText": "<p>Diam amet lorem est amet elitr et. Lorem erat eirmod sea vero, ea sit <a href=\"#\" class=\"alert-link\">at justo</a>.</p><p>No et et eirmod no clita duo ea, dolore amet eirmod no.</p>",
+            "alertIcon": true,
+            "icon-name": "icon-comment"
+          }
+        },
+        {
+          "collapsible-item-vdl311": true,
+          "procedures": true,
+          "title": "Procédures ACS - arrondissement",
+          "block-id": "accordeon-vdl-acs-arron",
+          "heading-id": "accordeon-vdl-heading-acs-arron",
+          "module-documents": {
+            "listGroupClass": "list-group-icon",
+            "listGroup": [
+              {
+                "url": "test.pdf",
+                "icon-name": "icon-file-pdf",
+                "text": "Titre du document [PDF - 2 Mo]",
+                "class": "document-pdf"
+              },
+              {
+                "url": "test.pdf",
+                "icon-name": "icon-file-pdf",
+                "text": "Titre du document [PDF - 2 Mo]",
+                "class": "document-pdf"
+              }
+            ]
+          },
+          "module-liens": {
+            "listGroup": [
+              {
+                "url": "#",
+                "text": "Cras justo odio",
+                "class": false
+              },
+              {
+                "url": "/lien-interne",
+                "text": "Dapibus ac facilisis in",
+                "class": false
+              },
+              {
+                "url": "https://rds.ca",
+                "text": "Morbi leo risus",
+                "class": false
+              }
+            ]
+          }
+        },
+        {
+          "item-disabled": true,
+          "collapsible-item-vdl311": true,
+          "procedures": true,
+          "title": "Procédures IRP",
+          "block-id": "accordeon-vdl-irp",
+          "heading-id": "accordeon-vdl-heading-irp"
+        },
+        { 
+          "item-disabled": true,
+          "collapsible-item-vdl311": true,
+          "procedures": true,
+          "title": "Procédures Info-travaux",
+          "block-id": "accordeon-vdl-info-travaux",
+          "heading-id": "accordeon-vdl-heading-info-travaux"
+        },
+        {
+          "collapsible-item-vdl311": true,
+          "title": "GDC",
+          "block-id": "accordeon-vdl-acs-gdc",
+          "heading-id": "accordeon-vdl-heading-acs-gdc",
+          "gdc": [
+            {
+              "heading": "Sit ea dolor",
+              "list": [
+                {
+                  "src": "https://res.cloudinary.com/villemontreal/image/upload/w_24,h_24,q_auto,f_auto,dpr_auto/v1571776078/portail-accept/jirwfmjlysc08ssq78cy.gif",
+                  "alt": "Alt icone GDC XYZ",
+                  "iconLabel": "Nom de l'icône GDC",
+                  "type": "Type d'activité",
+                  "has-subcontent": true,
+                  "title": "Activité",
+                  "description": "<p>Rebum aliquyam ut <strong>diam accusam</strong> diam amet vero sit vero kasd. No voluptua dolor at.</p><p>Rebum aliquyam ut diam accusam diam amet vero sit vero kasd. No voluptua dolor at.</p>",
+                  "comment": {
+                    "emphasisHtmlText": "<p>Meditation gochujang copper mug.</p>"
+                  }
+                },
+                {
+                  "src": "https://res.cloudinary.com/villemontreal/image/upload/w_24,h_24,q_auto,f_auto,dpr_auto/v1571777466/portail-accept/noluyhhlbjmqsqukic6g.gif",
+                  "alt": "Alt icone GDC XYZ",
+                  "iconLabel": "Nom de l'icône GDC",
+                  "type": "Type d'activité",
+                  "has-subcontent": false
+                }
+              ]
+            },
+            {
+              "heading": "Lorem elitr sadipscing",
+              "list": [
+                {
+                  "src": "https://res.cloudinary.com/villemontreal/image/upload/w_24,h_24,q_auto,f_auto,dpr_auto/v1571776217/portail-accept/lkwpudc0gddro8ouqoj3.gif",
+                  "alt": "Alt icone GDC XYZ",
+                  "iconLabel": "Nom de l'icône GDC",
+                  "type": "Type d'activité",
+                  "has-subcontent": true,
+                  "title": "Activité",
+                  "description": "<p>Rebum aliquyam ut diam accusam diam amet vero sit vero kasd. No voluptua dolor at.</p>"
+                },
+                {
+                  "src": "https://res.cloudinary.com/villemontreal/image/upload/w_24,h_24,q_auto,f_auto,dpr_auto/v1571776721/portail-accept/xkosgrjn3wh9bjh8y9o6.gif",
+                  "alt": "Alt icone GDC XYZ",
+                  "iconLabel": "Nom de l'icône GDC",
+                  "type": "Type d'activité",
+                  "has-subcontent": false
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "collapsible-item-vdl311": true,
+          "title": "Questions type",
+          "block-id": "accordeon-vdl-qt",
+          "heading-id": "accordeon-vdl-heading-qt",
+          "question-type": {
+            "question-item": [
+              {
+                "question": "Duo et ipsum diam sed rebum amet et ?",
+                "answer": "<p>Vero clita rebum voluptua kasd magna sed <a href=\"#\">sanctus dolor</a>, lorem ipsum elitr sea consetetur accusam kasd tempor sanctus sit, <strong>nonumy kasd</strong> ut at diam kasd et et eirmod diam, at clita nonumy tempor et lorem. Diam lorem dolores amet amet at ea, vero kasd duo ipsum sanctus erat no no, ut elitr gubergren ea stet.</p><p>Sanctus nonumy eos amet ea sea est accusam ea. Dolor sit consetetur at sadipscing sadipscing eos amet et. Sadipscing takimata sed et erat takimata clita et et takimata, gubergren consetetur lorem sea dolor elitr. Magna sanctus diam sadipscing et consetetur consetetur dolore duo accusam, sed ipsum labore sadipscing erat accusam dolor clita sit voluptua, ut lorem dolores et aliquyam sit, accusam at stet diam est.</p>"
+              },
+              {
+                "question": "Lorem ipsum elitr sea consetetur accusam ?",
+                "answer": "<p>Vero clita rebum voluptua kasd magna sed <a href=\"#\">sanctus dolor</a>, lorem ipsum elitr sea consetetur accusam kasd tempor sanctus sit, <strong>nonumy kasd</strong> ut at diam kasd et et eirmod diam, at clita nonumy tempor et lorem. Diam lorem dolores amet amet at ea, vero kasd duo ipsum sanctus erat no no, ut elitr gubergren ea stet.</p><p>Sanctus nonumy eos amet ea sea est accusam ea. Dolor sit consetetur at sadipscing sadipscing eos amet et. Sadipscing takimata sed et erat takimata clita et et takimata, gubergren consetetur lorem sea dolor elitr. Magna sanctus diam sadipscing et consetetur consetetur dolore duo accusam, sed ipsum labore sadipscing erat accusam dolor clita sit voluptua, ut lorem dolores et aliquyam sit, accusam at stet diam est.</p>"
+              },
+              {
+                "question": "Sanctus nonumy eos amet ea sea est accusam ea ?",
+                "answer": "<p>Vero clita rebum voluptua kasd magna sed <a href=\"#\">sanctus dolor</a>, lorem ipsum elitr sea consetetur accusam kasd tempor sanctus sit, <strong>nonumy kasd</strong> ut at diam kasd et et eirmod diam, at clita nonumy tempor et lorem. Diam lorem dolores amet amet at ea, vero kasd duo ipsum sanctus erat no no, ut elitr gubergren ea stet.</p><ul><li>Nulla sagittis consectetur urna</li><li>Sit amet euismod ligula tempor at</li><li>Donec a orci non mi finibus dapibus non vitae arcu</li></ul>"
+              }
+            ]
+          }
+        },
+        {
+          "collapsible-item-vdl311": true,
+          "personne-ressource": true,
+          "title": "Personne-ressource",
+          "block-id": "accordeon-vdl-pers-ressource",
+          "heading-id": "accordeon-vdl-heading-pers-ressource",
+          "list-icon": [
+            {
+              "list": [
+                {
+                  "hasIcon": true,
+                  "icon-name": "icon-user",
+                  "text": "Nom Prénom",
+                  "listExtraContent": "Fonction<br>Unité administrative"
+                },
+                {
+                  "hasIcon": true,
+                  "icon-name": "icon-phone",
+                  "listItemAction": false,
+                  "text": false,
+                  "listExtraContent": "514 897-4933, poste 1234"
+                },
+                {
+                  "hasIcon": true,
+                  "icon-name": "icon-email",
+                  "listItemAction": true,
+                  "url": "mailto:prenom.nom@montreal.ca",
+                  "text": "prenom.nom@montreal.ca",
+                  "listExtraContent": false
+                },
+                {
+                  "hasIcon": true,
+                  "icon-name": "icon-comment",
+                  "listItemAction": false,
+                  "text": false,
+                  "listExtraContent": "Rebum aliquyam ut diam accusam diam amet vero sit vero kasd. No voluptua dolor at."
+                }
+              ]
+            }
+          ],
+          "extra-content": false
+        },
+        {
+          "collapsible-item-vdl311": true,
+          "personne-ressource": true,
+          "title": "Personne contact",
+          "block-id": "accordeon-vdl-personne-contact",
+          "heading-id": "accordeon-vdl-heading-personne-contact",
+          "list-icon": [
+            {
+              "list": [
+                {
+                  "listItemClass": "text-danger",
+                  "hasIcon": true,
+                  "icon-name": "icon-eye-off icon-color-danger",
+                  "text": false,
+                  "listExtraContent": "Cette information ne doit pas être divulguée"
+                },
+                {
+                  "hasIcon": true,
+                  "icon-name": "icon-user",
+                  "text": "Nom Prénom",
+                  "listExtraContent": false
+                },
+                {
+                  "hasIcon": true,
+                  "icon-name": "icon-phone",
+                  "listItemAction": false,
+                  "text": false,
+                  "listExtraContent": "514 897-4933, poste 1234"
+                },
+                {
+                  "hasIcon": true,
+                  "icon-name": "icon-email",
+                  "listItemAction": true,
+                  "url": "mailto:prenom.nom@montreal.ca",
+                  "text": "prenom.nom@montreal.ca",
+                  "listExtraContent": false
+                }
+              ]
+            }
+          ],
+          "extra-content": false
+        },
+        {
+          "collapsible-item-vdl311": true,
+          "personne-ressource": true,
+          "title": "Rédacteur",
+          "block-id": "accordeon-vdl-redacteur",
+          "heading-id": "accordeon-vdl-heading-redacteur",
+          "list-icon": [
+            {
+              "list": [
+                {
+                  "hasIcon": true,
+                  "icon-name": "icon-user",
+                  "text": "Nom Prénom",
+                  "listExtraContent": false
+                },
+                {
+                  "hasIcon": true,
+                  "icon-name": "icon-phone",
+                  "listItemAction": false,
+                  "text": false,
+                  "listExtraContent": "514 897-4933, poste 1234"
+                },
+                {
+                  "hasIcon": true,
+                  "icon-name": "icon-email",
+                  "listItemAction": true,
+                  "url": "mailto:prenom.nom@montreal.ca",
+                  "text": "prenom.nom@montreal.ca",
+                  "listExtraContent": false
+                }
+              ]
+            }
+          ],
+          "extra-content": false
+        }
+      ]
+    }
+  }
+}

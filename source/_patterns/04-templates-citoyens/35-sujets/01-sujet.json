@@ -12,10 +12,25 @@
     }
   ],
   "heading": "Titre du sujet d'une longueur de 80 caractères maximum",
-  "has-badges": false,
   "publicationDate": {
-    "dateTimeText": "1 août 2019",
-    "dateTimeFormat": "2019-08-01"
+    "dateTimeText": "15 novembre 2019",
+    "dateTimeFormat": "2019-11-15"
+  },
+  "linkedContent": {
+    "linkedContentItem": [
+      {
+        "url": "#",
+        "label": "Sous catégorie principale"
+      },
+      {
+        "url": "#",
+        "label": "Sous catégorie"
+      },
+      {
+        "url": "#",
+        "label": "Sous catégorie"
+      }
+    ]
   },
   "lead": "<p>Amorce - Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi condimentum sollicitudin erat, quis convallis risus. Nullam posuere odio ligula, hendrerit suscipit ligula laoreet. Curabitur eleifend nulla purus, ut pharet urna ef id. Cras lacinia nisi id  (recommandé 300 caractères maximum).</p>",
   "module-content": {
@@ -149,21 +164,21 @@
       }
     },
     "module-list-reference": {
-      "listGroupClass": "list-group-lg",
+      "listGroupClass": "list-group-lg list-group-allow-ext-icon",
       "listGroup": [
         {
-          "icon-name": "icon-dot-bullet",
+          "url": "#",
           "text": "Titre du contenu",
           "class": false
         },
         {
-          "icon-name": "icon-dot-bullet",
+          "url": "#",
           "text": "Titre du contenu",
           "class": false
         },
         {
-          "icon-name": "icon-dot-bullet",
-          "text": "Titre du contenu",
+          "url": "https://perdu.com",
+          "text": "Titre du contenu super super long qui va sur plusieurs ligne! Mon dieu qu'est ce que ca va donner!",
           "class": false
         }
       ]
@@ -313,7 +328,7 @@
     "content": "<p>Corps de texte simple - Pas de liens. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi condimentum sollicitudin erat, quis convallis risus. Morbi condimentum sollicitudin erat, quis convallis risus.</p>"
   },
   "sb-block-tc-lies": {
-    "listGroupClass": false,
+    "listGroupClass": "list-group-xl list-group-delimiter",
     "listGroup": [
       {
         "url": "#",

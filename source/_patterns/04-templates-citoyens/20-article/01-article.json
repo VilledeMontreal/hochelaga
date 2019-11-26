@@ -26,7 +26,15 @@
     "dateTimeText": "16 août 2019",
     "dateTimeFormat": "2019-08-16"
   },
-  "readTime": "Lecture 7 min.",
+  "readTime": "7 min",
+  "linkedContent": {
+    "linkedContentItem": [
+      {
+        "url": "#",
+        "label": "Lien vers sujet"
+      }
+    ]
+  },
   "lead": "<p>Amorce - Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi condimentum sollicitudin erat, quis convallis risus. Nullam posuere odio ligula, hendrerit suscipit ligula laoreet. Curabitur eleifend nulla purus, ut pharet urna ef id. Cras lacinia nisi id  (recommandé 300 caractères maximum).</p>",
   "module-content": {
     "module-cta": {
@@ -208,9 +216,10 @@
   "sidebarClasses": false,
   "sb-classes": "",
   "sb-block-tc-lies": {
-    "listGroupClass": false,
+    "listGroupClass": "list-group-xl list-group-delimiter",
     "listGroup": [
       {
+        "url": "https://rds.ca",
         "icon-name": "icon-affaires-et-economie",
         "text": "Titre du sujet sur plusieurs lignes si nécessaire",
         "class": false

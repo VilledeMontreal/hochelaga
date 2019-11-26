@@ -17,6 +17,11 @@ footer {
         border-bottom: none;
         color: $action-lighter;
       }
+      // Custom focus for footer links
+      &:focus,
+      &.focus {
+        box-shadow: 0 0 0 $input-btn-focus-width $input-btn-focus-reverse-color;
+      }
 
       &.link-page-top {
         @include font-size($font-size-xs);

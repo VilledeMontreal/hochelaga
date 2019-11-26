@@ -1,6 +1,6 @@
 <div class="form-group {{ formGroupClass}}">
   <label for="{{formGroupInputID}}">{{ formGroupInputLabel}}{{^ formGroupInputRequired}}<span>Facultatif</span>{{/ formGroupInputRequired}}</label>
-  <textarea class="form-control {{formGroupInputClass}}" id="{{ formGroupInputID }}" {{# formGroupInputPlaceholder}}placeholder="{{ formGroupInputPlaceholder.text}}"{{/ formGroupInputPlaceholder}}></textarea>
+  <textarea class="form-control {{formGroupInputClass}}" id="{{ formGroupInputID }}" {{# formGroupInputPlaceholder}}placeholder="{{ formGroupInputPlaceholder.text}}"{{/ formGroupInputPlaceholder}}{{# formGroupTextareaRows}} rows="{{formGroupTextareaRows}}"{{/ formGroupTextareaRows}}></textarea>
   {{# formGroupFeedbackIcon}}
   <div class="valid-feedback feedback-icon">
     <span class="icon icon-check-circle"></span>

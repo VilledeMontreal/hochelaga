@@ -12,8 +12,15 @@
   li {
     list-style: none;
   }
-
+  // DEPRECATED
+  // Use column-count utility classes
   &.list-2-columns {
+    display: block;
+    .list-group-item {
+      display: inline-block;
+    }
+  }
+  &[class*="column-count"] {
     display: block;
     .list-group-item {
       display: inline-block;
@@ -21,6 +28,7 @@
   }
 }
 
+.list-group-xl,
 .list-group-lg {
   .list-group-item {
     padding: 1rem;
@@ -38,6 +46,28 @@
     }
   }
 }
+
+// Clickable wrapper
+// .list-group-icons-categories is Deprecated, use list-group-xl
+.list-group-icons-categories,
+.list-group-xl {
+  .list-group-item {
+    &.list-group-item-action {
+      > a {
+        align-items: center;
+      }
+    }
+  }
+}
+
+.list-group-allow-ext-icon {
+  a[href*="//"]:not([href*="montreal.ca"]):not([href*="ville.montreal.qc.ca"]):not([href$=".pdf"]):not(.link-has-icon):not(.btn) {
+    .list-group-item-label {
+      @extend .is-external-link;
+    }
+  }
+}
+
 
 // Interactive list items
 //
@@ -63,6 +93,7 @@
     font-weight: $font-weight-bold;
   }
 
+
   // Fix active state and class for list-group-item-action
   &:active,
   &.active {
@@ -73,6 +104,7 @@
       color: $list-group-action-active-color;
     }
   }
+
 }
 
 .list-group-delimiter {
@@ -124,7 +156,7 @@
   display: block;
   padding: .5rem;
   display: flex;
-  align-items: center;
+  //align-items: center;
   line-height: $line-height-md;
   margin-bottom: 0;
   color: $list-group-color;
@@ -162,6 +194,7 @@
         content: none !important;
       }
     }
+
   }
 
   .icon {
@@ -186,7 +219,7 @@
     > a {
       padding: .5rem;
       display: flex;
-      align-items: center;
+      // align-items: center;
       width: 100%;
     }
   }
@@ -195,6 +228,7 @@
 
 // Icons - Editorial and Utility
 //
+.list-group-xl,
 .list-group-icons-categories {
   a {
     border-bottom: none;
@@ -244,7 +278,7 @@
   }
   .list-group-item {
     display: block;
-    align-items: initial;
+    // align-items: initial;
     padding: 1rem 0;
     border-top: $list-group-border-width solid $list-group-border-color;
 

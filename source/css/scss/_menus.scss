@@ -38,6 +38,10 @@
     padding: 2rem 0 2rem 0;
     background-color: $main-menu-bg;
     box-shadow: $main-menu-box-shadow;
+    // Fix weird behavior for ios Device...
+    @supports (-webkit-overflow-scrolling: touch) {
+      padding-bottom: 6rem;
+    }
   }
 
   .main-menu-heading {

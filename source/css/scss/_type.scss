@@ -137,6 +137,12 @@ a {
     color: $link-hover-color;
   }
 
+  &:focus {
+    outline: 0;
+    box-shadow: $input-btn-focus-box-shadow;
+    z-index: 1;
+  }
+
   // Utility classes to remove border-bottom
   // Need important to override any local styles that may be applied later
   &.img-link,
@@ -202,6 +208,7 @@ a {
   .social-media-list,
   .cards,
   .list-group,
+  .list-group-xl,
   .list,
   .list-icon,
   .list-group-hub {
@@ -209,6 +216,9 @@ a {
     a[href*="//"]:not([href*="montreal.ca"]):not([href$=".pdf"]):not(.list-group-item-action):not(.link-has-icon):not(.btn) {
       margin-right: 0;
       &:after {
+        content: none;
+      }
+      &:before {
         content: none;
       }
     }

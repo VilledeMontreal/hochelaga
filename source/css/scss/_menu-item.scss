@@ -1,6 +1,44 @@
 .nav-menu-items {
   display: flex;
+  height: 100%;
 }
+.nav-menu-items-rtl {
+  .menu-items,
+  .menu-items.menu-items-column {
+    border-right: none;
+    border-left: 1px solid $neutral-stroke;
+  }
+  .menu-items.menu-items-column {
+    li {
+      a.menu-item:not(.disabled) {
+        &.active,
+        &:active {
+          &:before {
+            bottom: auto;
+            left: -1px;
+            right: auto;
+          }
+        }
+      }
+    }
+  }
+  // Invert border-radius side for menu-items-column
+  .menu-items.menu-items-labeled-bar {
+    padding: 1rem 1rem 1rem 0;
+    li {
+      a.menu-item:not(.disabled) {
+        &.active,
+        &:active {
+          @include border-left-radius(0px);
+          @include border-right-radius($border-radius);
+        }
+      }
+    }
+  }
+}
+
+// DEPRECATED
+
 .nav-menu-items-right {
   right: 0;
   height: calc(100% - 56px);
@@ -25,11 +63,12 @@
 
 // Menu-item
 .menu-items {
+  border-bottom: 1px solid $neutral-stroke;
   background-color: $white;
   display: flex;
   list-style: none;
   margin: 0;
-  padding: 0 1rem;
+  padding: 0;
   flex: 1 0 auto;
   li {
     padding: 0;
@@ -99,7 +138,8 @@
         &:before {
           content: "";
           position: absolute;
-          top: 0;
+          right: auto;
+          bottom: -1px;
           height: 2px;
           width: 100%;
           background-color: $action;
@@ -109,8 +149,9 @@
   }
 
   &.menu-items-column {
+    border-bottom: none;
+    border-right: 1px solid $neutral-stroke;
     flex-direction: column;
-    padding: 0;
     height: 100%;
     li {
       position: relative;
@@ -147,11 +188,11 @@
       // Defines states for links
       a.menu-item:not(.disabled) {
         .icon {
-          @include icon-color($neutral-tertiary);
+          @include icon-color($neutral-secondary);
         }
         @include hover-focus {
           .icon {
-            @include icon-color($action-lighter);
+            @include icon-color($action);
           }
         }
         
@@ -159,10 +200,11 @@
         &:active {
           @include border-left-radius($border-radius);
           .icon {
-            @include icon-color($action-lighter);
+            @include icon-color($action);
           }
           &:before {
-            right: 0;
+            bottom: auto;
+            right: -1px;
             height: 100%;
             width: 2px;
             background-color: $action;
@@ -170,6 +212,10 @@
         }
       }
     }
+  }
+
+  &.menu-items-labeled-bar {
+    padding: 1rem 0 1rem 1rem;
   }
 
   &.menu-items-icon-bar {
@@ -201,14 +247,11 @@
           .icon {
             @include icon-color($action);
           }
-          &:before {
-            right: auto;
-            left: 0;
-          }
         }
       }
     }
 
+    // DEPRECATED 
     // Revealing labels variants
     &.menu-items-revealing-labels {
       max-width: 56px;
@@ -240,6 +283,7 @@
   // Dark variant
   &.menu-items-reverse {
     background-color: $neutral-primary;
+    border-color: $neutral-primary;
     li {
       // Defines colors and states for links
       a.menu-item:not(.disabled) {
@@ -275,42 +319,38 @@
   }
 
   // Light variant
+  &.menu-items-light,
   &.menu-items-underground {
     background-color: $neutral-underground-1;
-    li {
-      .menu-item {
-        .icon {
-          @include icon-color($neutral-stroke);
-        }
-        .menu-item-label {
-          color: $neutral-stroke;
+  }
+
+  // Handle right or left side positionning of border and active state
+  &.menu-items-right {
+    border-right: none;
+    border-left: 1px solid $neutral-stroke;
+
+    &.menu-items-column {
+      li {
+        a.menu-item:not(.disabled) {
+          &.active,
+          &:active {
+            &:before {
+              left: -1px;
+              right: auto;
+            }
+          }
         }
       }
+    }
 
-      // Define color and states for links
-      a.menu-item:not(.disabled) {
-        .icon {
-          @include icon-color($neutral-secondary);
-        }
-        .menu-item-label {
-          color: $neutral-secondary;
-        }
-        @include hover-focus {
-          .icon {
-            @include icon-color($action);
-          }
-          .menu-item-label {
-            color: $action;
-          }
-        }
-        &.active,
-        &:active {
-          .icon {
-            @include icon-color($action);
-          }
-          background-color: $white;
-          .menu-item-label {
-            color: inherit;
+    &.menu-items-labeled-bar {
+      padding: 1rem 1rem 1rem 0;
+      li {
+        a.menu-item:not(.disabled) {
+          &.active,
+          &:active {
+            @include border-left-radius(0px);
+            @include border-right-radius($border-radius);
           }
         }
       }
@@ -332,18 +372,11 @@
 // Menu item content
 
 .menu-item-content {
-  border-left: 1px solid $neutral-stroke;
   width: 100%;
   z-index: 2;
   .menu-item-content-header {
     padding: 1rem 3.5rem 1rem 1rem;
     color: $neutral-primary;
-  }
-  @include media-breakpoint-up(sm) {
-    width: 300px;
-  }
-  @include media-breakpoint-up(lg) {
-    width: 460px;
   }
 }
 

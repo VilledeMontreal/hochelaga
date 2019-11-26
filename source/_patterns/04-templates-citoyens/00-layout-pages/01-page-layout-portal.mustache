@@ -1,4 +1,4 @@
-{{> styles-link-skip-to-main-content }}
+{{> styles-skip-links-section }}
 
 <header class="header-main-nav{{# navbarFixedTop}} is-fixed-top{{/navbarFixedTop}}">
 {{> components-navbar }}
@@ -30,19 +30,8 @@
 
             <h1>{{ heading }}</h1>
 
-            {{# has-badges}}
-            <div class="badges-container">
-              {{# badges}}
-              {{> components-badge}}
-              {{/ badges}}
-            </div>
-            {{/ has-badges}}
+            {{> patterns-content-header-extras}}
 
-            {{# publicationDate}}
-            <div class="publication-date">
-              Mis à jour le <time datetime="{{dateTimeFormat}}">{{{dateTimeText}}}</time>
-            </div>
-            {{/ publicationDate}}
           </header>
           
           <div class="lead content-module-stacked">
@@ -59,7 +48,7 @@
           <div class="sidebar pt-8{{^ documentHeading}} pt-lg-0{{/documentHeading}}">
             <section class="sb-block">
               {{> styles-heading-sidebar(sidebarTitle: "Titre du block") }}
-              {{> components-list-item-link}}
+              {{> components-list-item-link("listGroupClass": "list-group-allow-ext-icon")}}
             </section>
           </div>
         </aside>

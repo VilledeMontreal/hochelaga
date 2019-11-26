@@ -1,4 +1,4 @@
-<div class="document-heading {{ documentHeadingClass }}{{# documentHeadingFullWidth}} document-heading-fullwidth {{# documentHeadingNotch}}document-heading-notch{{/ documentHeadingNotch}}{{/ documentHeadingFullWidth}}{{^documentHeadingFullWidth}} document-heading-grid{{/ documentHeadingFullWidth}}">
+<div class="document-heading {{ documentHeadingClass }}{{# documentHeadingFullWidth}} document-heading-fullwidth {{/ documentHeadingFullWidth}}{{^documentHeadingFullWidth}} document-heading-grid{{/ documentHeadingFullWidth}}">
   {{# documentHeadingImageUrl}}
   <div class="document-heading-image-container">
     <div style="background-image:url('{{documentHeadingImageUrl}}')" class="document-heading-background"></div>
@@ -24,7 +24,10 @@
           {{/ heading-surtitle}}
           
           <h1 class="{{^headingClass}}h1{{/headingClass}}{{#headingClass}} {{headingClass}}{{/headingClass}}">{{{ heading }}}</h1>
-
+          
+          {{# heading-fake-title}}
+          <h2 class="h1">{{ heading-fake-title }}</h2>
+          {{/ heading-fake-title}}
           {{# heading-subtitle}}
           <div class="document-heading-subtitle">{{heading-subtitle}}</div>
           {{/ heading-subtitle}}

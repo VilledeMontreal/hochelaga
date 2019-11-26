@@ -1,4 +1,4 @@
-{{> styles-link-skip-to-main-content }}
+{{> styles-skip-links-section }}
 
 <header class="header-main-nav {{# navbarFixedTop}}is-fixed-top{{/navbarFixedTop}}">
 {{> components-navbar }}
@@ -27,27 +27,10 @@
       <section class="row{{# sidebarRight }} justify-content-between{{/ sidebarRight}}{{^ sidebarRight}} justify-content-center{{/ sidebarRight}}">
         <div class="col-12 col-lg-7">
           <header class="content-header">
-            {{# header-back-link}}
-            <div class="header-back-link">
-              {{> styles-link-list-element}}
-            </div>
-            {{/ header-back-link}}
 
             <h1>{{ heading }}</h1>
 
-            {{# has-badges}}
-            <div class="badges-container">
-              {{# badges}}
-              {{> components-badge}}
-              {{/ badges}}
-            </div>
-            {{/ has-badges}}
-
-            {{# publicationDate}}
-            <div class="publication-date">
-              Mis à jour le <time datetime="{{dateTimeFormat}}">{{{dateTimeText}}}</time>
-            </div>
-            {{/ publicationDate}}
+            {{> patterns-content-header-extras}}
 
           </header>
           

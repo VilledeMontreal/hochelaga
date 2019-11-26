@@ -18,6 +18,7 @@
       color: $neutral-secondary;
       font-weight: $font-weight-normal;
     }
+    .disabled,
     a {
       background: transparent;
       border: none;
@@ -32,6 +33,10 @@
       padding: 1rem 3.5rem 1rem 1rem;
       position: relative;
       &:after {
+        position: absolute;
+        right: 1rem;
+        top: 50%;
+        transform: translateY(-50%);
         content: '';
         -webkit-mask: url($data-icon-plus-circle) no-repeat 50% 50%;
         mask: url($data-icon-plus-circle) no-repeat 50% 50%;
@@ -58,9 +63,11 @@
       }
 
       &:hover,
-      &:active {
+      &:active,
+      &:focus {
         color: $primary;
         text-decoration: none;
+        border-radius: $border-radius;
         &:after {
           content: '';
           -webkit-mask: url($data-icon-plus-circle-full) no-repeat 50% 50%;
@@ -88,21 +95,32 @@
         }
       }
 
-      &:after {
-        color: $primary;
-        display: block;
-        line-height: $line-height-xs;
-        position: absolute;
-        right: 1rem;
-        top: 50%;
-        transform: translateY(-50%);
-      }
+      // TODO: Is this still needed?
       span {
-        //align-self: center;
-
         &.collapsible-icon {
           display: none;
         }
+      }
+    }
+
+    // Disabled state
+    .disabled {
+      color: $neutral-stroke;
+      &:after {
+        background-color: $neutral-stroke;
+      }
+      &:hover,
+      &:active {
+        cursor: not-allowed;
+        color: $neutral-stroke;
+        &:after {
+          -webkit-mask: url($data-icon-plus-circle) no-repeat 50% 50%;
+          mask: url($data-icon-plus-circle) no-repeat 50% 50%;
+          background-color: $neutral-stroke;
+        }
+      }
+      .collapsible-subtitle {
+        color: $neutral-stroke;
       }
     }
   }
@@ -148,7 +166,9 @@
         }
   
         &:hover,
-        &:active {
+        &:active,
+        &:focus {
+          border-radius: 0;
           &:after {
             -webkit-mask: url($data-icon-chevron-down) no-repeat 50% 50%;
             mask: url($data-icon-chevron-down) no-repeat 50% 50%;
@@ -162,6 +182,21 @@
               background-color: $primary;
             }
           }
+        }
+      }
+    }
+    .disabled {
+      &:after {
+        -webkit-mask: url($data-icon-chevron-down) no-repeat 50% 50%;
+        mask: url($data-icon-chevron-down) no-repeat 50% 50%;
+        background-color: $neutral-stroke;
+      }
+      &:hover,
+      &:active {
+        &:after {
+          -webkit-mask: url($data-icon-chevron-down) no-repeat 50% 50%;
+          mask: url($data-icon-chevron-down) no-repeat 50% 50%;
+          background-color: $neutral-stroke;
         }
       }
     }

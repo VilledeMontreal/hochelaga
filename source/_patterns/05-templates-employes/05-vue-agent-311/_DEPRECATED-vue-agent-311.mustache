@@ -1,0 +1,112 @@
+{{> styles-skip-link }}
+
+{{> components-navbar-interne }}
+
+{{# menuItemVerticalIconBar}}
+{{> components-nav-complex-menu-item}}
+{{/ menuItemVerticalIconBar}}
+
+<main class="main-content {{ pageClasses }}" id="main-content" aria-label="Main Content">
+  <div class="page-wrap-iframe border-ltr-4">
+    <iframe id="item-frame" class="is-full-frame" allowfullscreen="" sandbox="allow-forms allow-popups allow-same-origin allow-scripts" src="{{link.templates-citoyens-demarche}}">
+    </iframe>
+  </div>
+  <div class="page-drawers">
+    {{# drawerInfo}}
+    <div class="menu-item-content" id="vdl311-info">
+      <div class="menu-item-content-header">
+        <div class="mb-2">
+          <div class="h4 mb-1">Nom de l'arrondissement</div>
+          <div class="d-flex">
+            {{# badgesCategories}}
+            {{> components-badge}}
+            {{/ badgesCategories}}
+          </div>
+        </div>
+        <div class="font-size-xs-interface">Mis à jour 2019-09-04</div>
+      </div>
+      {{# accordionListed}}
+      {{> components-accordeon}}
+      {{/ accordionListed}}
+
+      {{# help}}
+      <div class="pl-2 pr-7 mb-2">
+        {{> components-list-item}}
+      </div>
+      {{/ help}}
+    </div>
+    {{/ drawerInfo}}
+    {{# drawerLexique}}
+    <div class="menu-item-content">
+      <div class="menu-item-content-header">
+        <div class="h4 mb-0">Lexique XYZ</div>
+      </div>
+      <div class="pt-2 pr-0 pb-2 pl-2">
+      {{> patterns-lexique}}
+      </div>
+    </div>
+    {{/ drawerLexique}}
+    {{# drawerSignaler}}
+    <div class="menu-item-content" id="vdl311-signaler">
+      <div class="menu-item-content-header">
+        <div class="h4 mb-0">Signaler...</div>
+      </div>
+      <div class="p-2">
+        {{# hasMessage}}
+        {{> components-alert}}
+        {{/ hasMessage}}
+        <form id="form-vdl311-signaler">
+        {{# formGroupSelectProblem}}
+        {{> components-select-item}}
+        {{/ formGroupSelectProblem}}
+        {{> components-textarea("formGroupInputID": "form-group-signaler-description","formGroupInputLabel": "Description", "formGroupInputPlaceholder": true, "formGroupInputPlaceholder.text": "Placeholder", "formGroupInputRequired": true)}}
+        {{> components-textarea("formGroupInputID": "form-group-signaler-recommendation","formGroupInputLabel": "Recommandation", "formGroupInputPlaceholder": true, "formGroupInputPlaceholder.text": "Placeholder", "formGroupInputRequired": false)}}
+        {{> components-button(buttonType: "submit", buttonClass: "btn-primary btn-squared", buttonText: "Soumettre")}}
+        </form>
+      </div>
+    </div>
+    {{/ drawerSignaler}}
+    {{# drawerPartager}}
+    <div class="menu-item-content" id="vdl-311-partager">
+      <div class="menu-item-content-header">
+        <div class="h4 mb-0">Partager...</div>
+      </div>
+      <div class="p-2">
+        {{# hasMessage}}
+        {{> components-alert}}
+        {{/ hasMessage}}
+        <form id="form-vdl311-partager">
+          <div class="mb-2">http://montreal.ca/collectes/collecte-des-dechets-domestiques</div>
+          {{> components-input-text("formGroupInputID": "form-group-partager-email","formGroupInputLabel": "Adresse courriel du destinataire", "formGroupInputRequired": true)}}
+          {{> components-textarea("formGroupInputID": "form-group-partager-comment","formGroupInputLabel": "Commentaires", "formGroupInputRequired": false)}}
+          {{> components-button(buttonType: "submit", buttonClass: "btn-primary btn-squared", buttonText: "Envoyer")}}
+        </form>
+      </div>
+    </div>
+    {{/ drawerPartager}}
+  </div>
+
+  <!-- TableData modal -->
+  <div class="modal fade" id="exampleTableData" tabindex="-1" role="dialog" aria-labelledby="exampleTableDataLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered modal-lg" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleTableDataLabel">Seuil de faible revenu</h5>
+          <button type="button" class="btn-close close" data-dismiss="modal" aria-label="Close">
+            {{> styles-icon-item("icon-name": "icon-x")}}
+          </button>
+        </div>
+        <div class="modal-body">
+          {{> styles-table}}
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Flyout Aide décision -->
+  {{# aideDecision }}
+  {{> components-flyout-item }}
+  {{/ aideDecision }}
+</main>
+
+

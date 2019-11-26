@@ -1,9 +1,9 @@
 .header-main-nav {
   // Handle fixed-top padding
   &.is-fixed-top {
-    padding-bottom: 5rem;
+    padding-bottom: 5.5rem;
     @include media-breakpoint-up(lg) {
-      padding-bottom: 6rem;
+      padding-bottom: 6.5rem;
     }
   }
 }
@@ -15,6 +15,26 @@
     border-bottom: 1px solid $neutral-stroke;
     padding: .5rem;
     z-index: $zindex-fixed;
+  
+    a,
+    button,
+    .btn {
+      &:focus {
+        box-shadow: $main-navbar-focus-box-shadow;
+      }
+      &:not(:disabled):not(.disabled):active,
+      &:not(:disabled):not(.disabled).active {
+        background-image: none;
+        box-shadow: $main-navbar-focus-box-shadow;
+    
+        &:focus {
+          box-shadow: $main-navbar-focus-box-shadow;
+        }
+      }
+    }
+    
+
+
     a:not(.btn) {
       border-bottom: none;
     }
@@ -25,14 +45,14 @@
     // Montreal logo is the navbar-brand
     .navbar-brand {
       display: inline-flex;
-      padding: .25rem;
+      padding: .375rem;
       margin: 0 .25rem;
       @include hover-focus {
         background-color: transparent;
       }
       svg {
         flex: 0 0 auto; // This is needed because of IE weird behavior
-        height: 2rem;
+        height: 1.75rem;
         width: auto;
       }
     }
@@ -175,7 +195,7 @@
 
       @include hover-focus {
         .user-avatar {
-          background-color: $action-lighter;
+          background-color: $action-darker;
         }
       }
 
@@ -266,6 +286,15 @@
         &::after {
           background-color: $white;
         }
+
+        @include hover-focus {
+          &::after {
+            background-color: $action-lighter;
+          }
+          .user-avatar {
+            background-color: $action-lighter;
+          }
+        }
       }
 
       .user-avatar {
@@ -352,9 +381,10 @@
   background-color: $neutral-primary;
   color: $white;
   padding: 0;
-  height: 1.5rem;
+  height: $navbar-lang-height;
   position: relative;
   z-index: $zindex-fixed + 1;
+  align-items: center;
   .btn-lang {
     padding-top: .125rem;
     padding-bottom: .125rem;
@@ -379,7 +409,7 @@
 // Navbar search flyout
 .navbar-search {
   position: fixed;
-  top: -3.5rem;
+  top: -4rem;
   left: 0;
   right: 0;
   width: 100%;
@@ -420,7 +450,7 @@
   
 
   &.show {
-    top: 1.5rem;
+    top: $navbar-lang-height;
     display: block;
     visibility: visible;
     transition: top .3s ease-out, visibility 0s linear 0s;

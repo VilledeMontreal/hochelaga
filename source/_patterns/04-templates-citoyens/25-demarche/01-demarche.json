@@ -16,10 +16,21 @@
     }
   ],
   "heading": "Titre de la démarche d'une longueur de 80 caractères maximum",
-  "has-badges": false,
   "publicationDate": {
     "dateTimeText": "24 juillet 2018",
     "dateTimeFormat": "2018-07-24"
+  },
+  "linkedContent": {
+    "linkedContentItem": [
+      {
+        "url": "#",
+        "label": "Lien vers Sujet ou Programme"
+      },
+      {
+        "url": "#",
+        "label": "Autre lien possible"
+      }
+    ]
   },
   "lead": "<p>Amorce - Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi condimentum sollicitudin erat, quis convallis risus. Nullam posuere odio ligula, hendrerit suscipit ligula laoreet. Curabitur eleifend nulla purus, ut pharet urna ef id. Cras lacinia nisi id  (recommandé 300 caractères maximum).</p>",
   "cta-button": {
@@ -366,41 +377,23 @@
   "sb-block-bon-savoir": {
     "content": "<p>Lorem ipsum dolor sit amet, consectetur <a href=\"https://ville.montreal.qc.ca\">adipiscing elit</a>. Phasellus cursus mauris non orci malesuada aliquet.</p><p>Nunc tincidunt nisi fringilla consectetur pharetra. Duis sed pretium velit, ut placerat purus. Quisque volutpat facilisis nisl, ut scelerisque orci dapibus in.</p>"
   },
-  "sb-block-tc-lies": {
-    "listGroupClass": "",
+  "sb-block-demarches": {
+    "listGroupClass": "list-group-xl list-group-delimiter",
     "listGroup": [
       {
         "url": "https://google.ca",
-        "icon-name": "icon-affaires-et-economie",
-        "text": "Titre sur plusieurs lignes si nécessaire",
-        "class": false
-      },
-      {
-        "icon-name": "icon-animaux",
-        "text": "Dapibus ac facilisis in",
-        "class": false
-      },
-      {
-        "icon-name": "icon-environnement",
-        "text": "Morbi leo risus",
-        "class": false
-      }
-    ]
-  },
-  "sb-block-demarches": {
-    "listGroupClass": "",
-    "listGroup": [
-      {
         "icon-name": "icon-organisation-municipale",
         "text": "Titre sur plusieurs lignes si nécessaire",
         "class": false
       },
       {
+        "url": "#",
         "icon-name": "icon-sante-et-securite-publiques",
         "text": "Dapibus ac facilisis in",
         "class": false
       },
       {
+        "url": "#",
         "icon-name": "icon-vie-communautaire",
         "text": "Morbi leo risus",
         "class": false

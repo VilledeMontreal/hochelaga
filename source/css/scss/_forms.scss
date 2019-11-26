@@ -422,6 +422,10 @@ legend,
     overflow: auto;
   }
 
+  textarea.form-control {
+    height: auto;
+  }
+
   .custom-control {
     line-height: $line-height-xs;
   }
@@ -534,6 +538,10 @@ legend,
     @extend .form-control-lg;
   }
 
+  textarea.form-control {
+    height: auto;
+  }
+
   .custom-control {
     padding-top: 1rem;
     padding-bottom: 1rem;
@@ -568,8 +576,8 @@ legend,
 }
 
 
-//
 // file drop container
+//
 .file-drop-container {
   border-radius: $input-border-radius;
   border: dashed 2px $neutral-stroke;
@@ -586,8 +594,17 @@ legend,
     line-height: $line-height-sm;
   }
 
-  &.file-over{
+  &.file-over {
     background: $neutral-stroke;
+  }
+
+  .file-selector-button {
+    input:focus {
+      ~ .btn-secondary {
+        border-color: $action;
+        box-shadow: $btn-focus-box-shadow;
+      }
+    }
   }
 }
 
@@ -608,7 +625,7 @@ legend,
 
 .feedback-form {
   textarea {
-    -webkit-transform: translateZ(0px);
+    transform: translateZ(0px);
   }
 
   .btn {

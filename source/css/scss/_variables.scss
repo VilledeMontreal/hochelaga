@@ -278,8 +278,11 @@ $border-radius-sm:            .125rem;
 $component-active-color:      $white;
 $component-active-bg:         $primary;
 
-// genaral variable box-shadow apply to card, popover, dropdown and modal
-$box-shadow:                  0 .5rem 2rem 0 rgba($black, .1);
+$focus-color:                 $informative;
+$focus-reverse-color:         $informative-light;
+
+// generic variable box-shadow apply to card, popover, dropdown and modal
+$box-shadow:                  0 0 2rem 0 rgba($black, .1);
 
 // Generic value for backdrop bg and opacity
 $backdrop-bg:                 $neutral-primary;
@@ -384,10 +387,11 @@ $input-btn-font-family:       null;
 $input-btn-font-size:         $font-size-sm;
 $input-btn-line-height:       $line-height-sm; // 14/20
 
-$input-btn-focus-width:       .2rem;
-$input-btn-focus-color:       rgba($component-active-bg, .25);
+$input-btn-focus-width:       .1875rem;
+$input-btn-focus-color:       rgba($focus-color, .5);
+$input-btn-focus-reverse-color: rgba($focus-reverse-color, .3);
 $input-btn-focus-box-shadow:  0 0 0 $input-btn-focus-width $input-btn-focus-color;
-$input-btn-focus-color:       rgba($component-active-bg, .25);
+$input-btn-reverse-focus-box-shadow:  0 0 0 $input-btn-focus-width $input-btn-focus-reverse-color;
 
 $input-btn-padding-y-sm:      .4375rem;
 $input-btn-padding-x-sm:      .4375rem;
@@ -480,7 +484,7 @@ $input-focus-bg:                        $input-bg;
 $input-focus-border-color:              $primary;
 $input-focus-color:                     $input-color;
 $input-focus-width:                     $input-btn-focus-width;
-$input-focus-box-shadow:                none;
+$input-focus-box-shadow:                $input-btn-focus-box-shadow;
 
 $input-placeholder-color:               $neutral-tertiary;
 $input-plaintext-color:                 $body-color;
@@ -626,6 +630,9 @@ $pagination-color:                  $body-color;
 $pagination-bg:                     $white;
 $pagination-border-width:           1px;
 $pagination-border-color:           $neutral-stroke;
+
+$pagination-focus-box-shadow:       $input-btn-focus-box-shadow;
+$pagination-focus-outline:          0;
 
 $pagination-hover-color:            $primary;
 $pagination-hover-bg:               $highlight-light;
@@ -848,8 +855,12 @@ $padding-16-7:                    43.75%;
 
 
 // Main navbar
-$main-navbar-height:              96px;
-$main-navbar-height-sm:           81px;
+$main-navbar-height:              104px;
+$main-navbar-height-sm:           89px;
+
+$navbar-lang-height:              2rem;
+
+$main-navbar-focus-box-shadow:  0 0 0 $input-btn-focus-width rgba($action, .3);
 
 
 // Main menu

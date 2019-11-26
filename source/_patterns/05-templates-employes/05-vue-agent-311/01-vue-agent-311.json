@@ -1,5 +1,5 @@
 {
-  "pageClasses": false,
+  "pageClasses": "has-drawer",
   "navbarInterneHasMenu": false,
   "navbarInterneHasSearch": false,
   "user-authenticated": true,
@@ -9,9 +9,8 @@
     "email": "courriel@montreal.ca"
   },
   "applicationName": "Vue de l'agent 311",
-  "menuItemVerticalIconBar": {
-    "navMenuItemsClass": "position-absolute nav-menu-items-right",
-    "menuItemClass": "menu-items-underground menu-items-column menu-items-icon-bar menu-items-revealing-labels",
+  "menuItemVerticalLabeledBar": {
+    "menuItemClass": "menu-items-column menu-items-labeled-bar menu-items-right",
     "menuItem": [
       {
         "menuItemSeparator": false,

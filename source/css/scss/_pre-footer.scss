@@ -25,11 +25,21 @@ footer {
     }
     // Social media list
     .list-social-medias {
+      display: flex;
       li {
         list-style: none;
+        display: inline-flex;
         a {
+          border: 0;
           .icon {
             @include icon-color($action);
+          }
+          &:hover,
+          &:focus {
+            background-color: transparent;
+            .icon {
+              @include icon-color($action-darker);
+            }
           }
         }
       }
