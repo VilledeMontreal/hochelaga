@@ -4,8 +4,13 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](http://keepachangelog.com/en/1.0.0/)
 and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.html).
 
+## [4.5.1] - 2019-11-27
 
-## [4.5.0] - unreleased
+### Changed
+- $custom-checkbox-indicator-icon-checked svg path optimisation.
+
+
+## [4.5.0] - 2019-11-26
 
 ### Added
 - .drawer structure for better drawer handling
@@ -47,18 +52,18 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 
 ## [4.4.1] - 2019-11-14
 
-## Added
+### Added
 - Analytics Homepage: data-component-type, data-link-title and data-link-position attributes and corresponding values.
 - Analytics Vitrine d'arrondissement: data-component-type, data-link-title and data-link-position attributes and corresponding values.
 
-## Fixed
+### Fixed
 - Homepage template: fix Dates importantes View More btn hover state should be rounded and not squared.
 - Vitrine template: fix Dates importantes View More btn hover state should be rounded and not squared.
 
 
 ## [4.4.0] - 2019-11-11
 
-## Added
+### Added
 - Homepage template and variants.
 - Homepage mesures d'urgence.
 - Vitrine d'arrondissement template and variants.
@@ -71,13 +76,12 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 - 8 new illustratives icons: icon-city, icon-culture, icon-education, icon-farm, icon-health, icon-law, icon-service, icon-transport.
 - Utility classes: .alternate-order-{breakpoint} Can be use to create an alternated left and right images with content.
 
-
-## Changed
+### Changed
 - Message bar now needs base class .alert.
 - Message bar dismiss option can be triggered with data-dismiss="alert" and needs .alert-dismiss class.
 - Feedback Form components update and refactoring (Simplified).
   
-## Fixed
+### Fixed
 - Message bar mobile behavior is now coherent with alert behavior.
 - Switches states colors.
 
@@ -87,11 +91,11 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 Header (main-navbar, menu and search) and footer structure and styles now reflect the final design implementation. Make sure you
 now use the latest structure before upgrading to 4.3.0. 
 
-## Added
+### Added
 - Added back breadcrumbs.
 - Breadcrumbs integration in template that requires.
 
-## Changed
+### Changed
 - Footer Pattern update.
 - Main navbar template update.
 - New menu structure and behavior.
@@ -100,19 +104,19 @@ now use the latest structure before upgrading to 4.3.0.
 - Mesures d'urgences modal template.
 - Reorganization of partial stylesheets.
 
-## Fixed
+### Fixed
 - styles-header-footer-v4.scss is now fully optimized and usable as a standalone style sheet (ex.: For header/footer minimal styles).
 
 
 ## [4.2.2] - 2019-10-24
 
-## Changed
+### Changed
 - VDL template: List-item for GDC.
 
 
 ## [4.2.1] - 2019-10-16
 
-## Changed
+### Changed
 - Spacing for badges inside badge-group.
 - Indexes empty state icon should now use icon-search.
 - Indexes mobile filters (accordeons) form-group bottom padding adjustement.
@@ -120,7 +124,7 @@ now use the latest structure before upgrading to 4.3.0.
 
 ## [4.2.0] - 2019-10-10
 
-## Added
+### Added
 - 2 new Utility icons: table et steps.
 - 3 new Editorial icons: news, ticket et not-found.
 - Div variant for list-item component.
@@ -134,7 +138,7 @@ now use the latest structure before upgrading to 4.3.0.
 - Toggle (button-group) component.
 - Lexique pattern.
 
-## Changed
+### Changed
 - Paragraphs and list now takes 16px margin-bottom (instead of 32px).
 - Fix spacing inside .content-modules and .content-module-stacked.
 - Handle heading spacing inside .content-modules and .content-module-stacked.
@@ -153,7 +157,7 @@ now use the latest structure before upgrading to 4.3.0.
 - Class name for wrapper-comparatif harmonization, .content-comparatif will be deprecated in further version.
 - Handling of external-icon for links needs to be set up manually in some specific cases (list-group).
 
-## Fixed
+### Fixed
 - Prevent vdm-icon-system from cleaning too much rules from SVG, leading to some fill occuring where it shouldn't.
 - Handling external-link-icon rules not preventing some link of getting part of the rule to apply (list-group).
 - Badge spacing, line-height and font-size.
@@ -164,22 +168,22 @@ now use the latest structure before upgrading to 4.3.0.
 
 ## [4.1.1] - 2019-09-23
 
-## Added
+### Added
 - Lexique pattern.
 - Vue de l'agent - Lexique
 - 2 new illustratives icons: icon-notifications and icon-profile.
 
-## Changed
+### Changed
 - Definition list theming and variants.
 
-## Fixed
+### Fixed
 - Column classes fixed in demarche templates.
 - Remove all gallery styles that caused issues. Use photoswipe default for now.
 
 
 ## [4.1.0] - 2019-09-20
 
-## Added
+### Added
 - Cookies Consent templates: Patterns/Cookies Consent
 - Add the path to icon scss and json to build.config.json
 - Added the gallery module, a custom skin placed in the images folder and the css build into the bao with the gallery.scss file
@@ -189,14 +193,14 @@ now use the latest structure before upgrading to 4.3.0.
 - Accordions listed and framed examples
 - .unfixed utility class to unfix an element that uses the class fixed-DIRECTION.
 
-## Changed
+### Changed
 - Changing the layout of employes for the user to be logged on.
 - Change Slide-menu-interne to use the menu-items component.
 - PL: inputs are now reusable.
 - Rules for automated external links and (PDF) mention is more restrictive (added some exclusion - list-group, list, link with icon, buttons).
 - PL: removed all back links and badges from templates - waiting for more infos.
 
-## Fixed
+### Fixed
 - Update the gulpfile to generate the correct scss of the icons
 - Change the method to display the validation icon. Modify the form.scss and adding markup for displaying the icon on validation.
 - Modal footer buttons alignment.
@@ -204,7 +208,7 @@ now use the latest structure before upgrading to 4.3.0.
 
 ## [4.0.1] - 2019-08-27
 
-## Added
+### Added
 - Unité administrative template.
 - Article template.
 - Sidebar social medias list.
@@ -221,19 +225,19 @@ now use the latest structure before upgrading to 4.3.0.
 - Added a automated script that concatenates jsons for icons to use in the BAO.
 - Button primary-reverse variant.
 
-## Changed
+### Changed
 - Blockquote emphasis should be a div tag (blockquote is strickly for citation).
 - .sb-block now takes 4rem margin-bottom by default.
 - Cards fw now depends on grid-class for formatting at some breakpoint.
 - Cards fw now takes a minimal height for image (~16:9 aspect ratio) @larger breakpoint.
 - Deleting employes and citizens separation in editorial icons 
 
-## Fixed
+### Fixed
 - List Group line-heights, paddings and margins.
 - Prevent media copyright icon from being squashed when long copyright.
 - Pattern Labs: Fixed various pseudo-templates inclusion.
 
-## Removed
+### Removed
 - Removed some cards classes (.card-sm, .card-guide, .card-events, .card-news) that introduces exception. (Cards harmonisation)
 
 
@@ -243,7 +247,7 @@ This is the first release of BAO implementing the new design system. Many things
 
 Main navbar, menu and footer are now in their own stylesheet. They will eventually be taken out of the BAO and into the shell itself. Until then, you can use styles-header-footer-v4 to include these styles in your project.
 
-## Changed
+### Changed
 - Pattern lab reorganisation: atoms > styles, molecules > components, organisms > patterns, Templates division between citoyens and employees.
 - Vdm font icon is ditch in favor of new svgs icons. There is no direct path from the old font to the new icons. See with your designer how to migrate.
 - Nunito is ditch in favor of Open Sans. Font-size and line-height have been updated consequently.
@@ -256,7 +260,7 @@ Main navbar, menu and footer are now in their own stylesheet. They will eventual
 - Many things have been removed from patterns.
 - First draft only shows demarches and sujets templates. All others templates are deprecated and needs to be redesigned/updated.
 
-## Deprecated
+### Deprecated
 - vdm-font-icon.
 - All old templates.
 - Lots of molecules and organisms.
@@ -266,6 +270,8 @@ Main navbar, menu and footer are now in their own stylesheet. They will eventual
 
 The version 3 is now deprecated. Only bug fixes will be considered. Please refer to the old bitbucket repo https://bitbucket.org/villemontreal/boite-outils-web/.
 
+[4.5.1]: https://bitbucket.org/villemontreal/boite-outils4-web/src/4.5.1/
+[4.5.0]: https://bitbucket.org/villemontreal/boite-outils4-web/src/4.5.0/
 [4.4.1]: https://bitbucket.org/villemontreal/boite-outils4-web/src/4.4.1/
 [4.4.0]: https://bitbucket.org/villemontreal/boite-outils4-web/src/4.4.0/
 [4.3.0]: https://bitbucket.org/villemontreal/boite-outils4-web/src/4.3.0/
