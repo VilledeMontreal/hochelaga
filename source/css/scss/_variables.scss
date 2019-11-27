@@ -525,7 +525,7 @@ $custom-control-indicator-checked-disabled-bg:  $custom-control-indicator-disabl
 
 $custom-checkbox-indicator-border-radius:         $border-radius-sm;
 $custom-checkbox-indicator-icon-checked-size:     1.5rem;
-$custom-checkbox-indicator-icon-checked:          str-replace(url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3e%3cpath fill='#{$custom-control-indicator-checked-color}' d='M16.707 8.293a1 1 0 010 1.414l-6 6a.995.995 0 01-.53.277l-.118.014h-.118a.996.996 0 01-.648-.29l-2-2a1 1 0 111.414-1.415L10 13.585l5.293-5.292a1 1 0 011.414 0z'/%3e%3c/svg%3e"), "#", "%23");
+$custom-checkbox-indicator-icon-checked:          str-replace(url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3e%3cpath fill='#{$custom-control-indicator-checked-color}' d='M16.7 8.3C17.1 8.7 17.1 9.3 16.7 9.7L10.7 15.7 10.7 15.7C10.6 15.9 10.4 15.9 10.2 16L10.1 16 10.1 16 9.9 16C9.7 16 9.5 15.9 9.3 15.7L7.3 13.7C6.9 13.3 6.9 12.7 7.3 12.3 7.7 11.9 8.3 11.9 8.7 12.3L10 13.6 15.3 8.3C15.7 7.9 16.3 7.9 16.7 8.3Z'/%3e%3c/svg%3e"), "#", "%23");
 
 $custom-radio-indicator-icon-checked:             str-replace(url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3e%3ccircle cx='12' cy='12' r='4' fill='#{$custom-control-indicator-checked-color}'/%3e%3c/svg%3e"), "#", "%23");
 
