@@ -1,7 +1,7 @@
 {{# is-dropdown}}
 <div class="dropdown">
 {{/ is-dropdown}}
-  <button class="chip {{ chipClass }}{{# is-dropdown}} dropdown-toggle{{/ is-dropdown}}" type="button" {{# is-dropdown}}id="{{chipID}}" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"{{/ is-dropdown}}>
+  <button class="chip {{ chipClass }}{{# is-dropdown}} dropdown-toggle{{/ is-dropdown}}" type="button" {{# is-dropdown}}id="{{chipID}}" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"{{/ is-dropdown}}{{# isStatic}} data-display="static"{{/ isStatic}}>
     {{ chipLabel }}
   </button>
 {{# is-dropdown}}
