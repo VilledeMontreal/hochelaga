@@ -68,14 +68,22 @@ html {
   }
   // Use to stack module in a page content and handle spacing
   .content-module-stacked {
+    &:first-child {
+      h2:first-child,
+      .h2:first-child {
+        padding-top: 0;
+      }
+    }
     margin-bottom: 2rem;
-    :last-child {
-      margin-bottom: 0;
+    :not(.media-gallery-button) {
+      :last-child {
+        margin-bottom: 0;
+      }
     }
     h2, .h2 {
       padding-top: 3rem;
       &:first-child {
-        padding-top: 0;
+        padding-top: 2rem;
       }
     }
     h3, .h3,
