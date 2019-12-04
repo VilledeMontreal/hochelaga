@@ -10,10 +10,13 @@ textarea {
 label {
   font-size: $font-size-sm;
   line-height: $line-height-sm;
+  // Valider le font-weight parce que ça impact tous les forms label.
+  font-weight: $font-weight-bold;
   color: $neutral-primary;
   margin-bottom: .5rem;
   span {
     @include font-size($font-size-xs);
+    font-weight: $font-weight-normal;
     margin-left: .5rem;
     color: $neutral-secondary;
   }
@@ -54,34 +57,12 @@ legend,
   margin-top: .5rem;
   color: $neutral-primary;
   
+  // DEPRECATED
+  // We now conform to bootstrap validation 
   &.feedback-icon {
-    position: absolute;
-    width: auto;
-    top: 40px;
-    right: 10px;
-    margin-top: 0;
+    display: none;
   } 
 } 
-
-.invalid-feedback {
-  &.feedback-icon {
-    .icon {
-      &:before {
-        background-color: $negative;
-      }
-    }
-  } 
-}
-
-.valid-feedback {
-  &.feedback-icon {
-    .icon {
-      &:before {
-        background-color: $positive;
-      }
-    }
-  } 
-}
 
 .form-group {
   position: relative;
@@ -228,6 +209,7 @@ legend,
 .custom-control-label {
   @include font-size($font-size-base);
   line-height: $line-height-md;
+  font-weight: $font-weight-normal; // custom-control-label should not be bold
   position: relative;
   margin-bottom: 0;
   vertical-align: top;
