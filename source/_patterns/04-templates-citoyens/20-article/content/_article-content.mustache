@@ -13,6 +13,12 @@
     <li>Liste numérotée</li>
   </ol>
   <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi condimentum sollicitudin erat, quis convallis risus.</p>
+  <h2>Titre H2 dans un éditeur texte</h2>
+  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi condimentum sollicitudin erat, quis convallis risus.</p>
+  <h3>Titre H3 dans un éditeur texte</h3>
+  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi condimentum sollicitudin erat, quis convallis risus.</p>
+  <h3>Titre H3 dans un éditeur texte</h3>
+  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi condimentum sollicitudin erat, quis convallis risus.</p>
 </div>
 
 {{# module-cta }}
@@ -66,18 +72,16 @@
 {{# module-image-album}}
 <h2>Image-Album - Module titre</h2>
 <div class="content-module-stacked">
-  {{> components-carousel }}
+  {{> components-gallery }}
 </div>
 {{/ module-image-album}}
 
-{{^module-image-album}}
 {{# module-image-single}}
 <h2>Image simple - Module titre</h2>
 <div class="content-module-stacked">
   {{> styles-figure}}
 </div>
 {{/ module-image-single}}
-{{/module-image-album}}
 
 {{# module-video}}
 <h2>Vidéo intégrée - Module titre</h2>
@@ -98,14 +102,14 @@
 {{# module-comparatif-colonne}}
 <h2>Comparatif Colonnes - module titre (H2)</h2>
 <div class="content-module-stacked">
-  {{> patterns-content-comparatif }}
+  {{> patterns-wrapper-comparatif }}
 </div>
 {{/ module-comparatif-colonne}}
 
 {{# module-comparatif-rangee}}
 <h3>Comparatif Rangées - module titre (H3)</h3>
 <div class="content-module-stacked">
-  {{> patterns-content-comparatif }}
+  {{> patterns-wrapper-comparatif }}
 </div>
 {{/ module-comparatif-rangee}}
 

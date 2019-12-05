@@ -4,10 +4,18 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](http://keepachangelog.com/en/1.0.0/)
 and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.html).
 
+## [4.6.0] - unreleased
+
+### Changed
+- Headings margin-bottom adjustement (h2 = 32px, h3 = 16px, h4,h5,h6 = 8px).
+- Adjustement for .content-modules and .content-module-stacked content and stacking (h2 determines section spacing)
+
+
 ## [4.5.1] - 2019-11-27
 
 ### Changed
 - $custom-checkbox-indicator-icon-checked svg path optimisation.
+- Media gallery images: Ajustement button size (btn-sm). Handle hover and focus states. Allow placement inside content-module-stacked.
 
 
 ## [4.5.0] - 2019-11-26
@@ -269,6 +277,7 @@ Main navbar, menu and footer are now in their own stylesheet. They will eventual
 ## Version 3 and earlier
 
 The version 3 is now deprecated. Only bug fixes will be considered. Please refer to the old bitbucket repo https://bitbucket.org/villemontreal/boite-outils-web/.
+
 
 [4.5.1]: https://bitbucket.org/villemontreal/boite-outils4-web/src/4.5.1/
 [4.5.0]: https://bitbucket.org/villemontreal/boite-outils4-web/src/4.5.0/
