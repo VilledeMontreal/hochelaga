@@ -79,6 +79,17 @@
     }
   }
 
+  // stylelint-disable-next-line selector-no-qualifying-type
+  textarea.form-control {
+    .was-validated &:#{$state},
+    &.is-#{$state} {
+      @if $enable-validation-icons {
+        padding-right: 2.5rem;
+        background-position: top .5625rem right .5625rem;
+      }
+    }
+  }
+
   // Small input needs smaller icons and right padding
   .form-group-sm {
     .form-control {
@@ -90,6 +101,36 @@
           background-size: $icon-xs;
         }
 
+      }
+    }
+
+    textarea.form-control {
+      .was-validated &:#{$state},
+      &.is-#{$state} {
+        @if $enable-validation-icons {
+          background-position: top .4375rem right .4375rem;
+        }
+      }
+    }
+  }
+
+  .form-group-lg {
+    .form-control {
+      .was-validated &:#{$state},
+      &.is-#{$state} {
+        @if $enable-validation-icons {
+          padding-right: 3.375rem;
+          background-position: center right .9375rem;
+        }
+      }
+    }
+
+    textarea.form-control {
+      .was-validated &:#{$state},
+      &.is-#{$state} {
+        @if $enable-validation-icons {
+          background-position: top .9375rem right .9375rem;
+        }
       }
     }
   }
@@ -105,17 +146,6 @@
         @if $state == invalid {
           color: $negative-dark;
         }
-      }
-    }
-  }
-
-  // stylelint-disable-next-line selector-no-qualifying-type
-  textarea.form-control {
-    .was-validated &:#{$state},
-    &.is-#{$state} {
-      @if $enable-validation-icons {
-        padding-right: 2.5rem;
-        background-position: center right .5rem;
       }
     }
   }
