@@ -23,6 +23,12 @@ footer {
     p + .list-social-medias {
       margin-top: 0;
     }
+    .list-unstyled {
+      li {
+        line-height: $line-height-sm;
+        padding-bottom: .5rem;
+      }
+    }
     // Social media list
     .list-social-medias {
       display: flex;
