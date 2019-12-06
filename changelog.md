@@ -6,9 +6,19 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 
 ## [4.6.0] - unreleased
 
+### Added
+- Forms: example for error icons and messages for input text, textarea and select.
+- Templates: examples for content-modules and content-module-stacking with different Headings.
+  This is a way to reproduce the structure that we get from the content-api.
+- Feedback form: add validation example for No option. Textarea is mandatory.
+
 ### Changed
 - Headings margin-bottom adjustement (h2 = 32px, h3 = 16px, h4,h5,h6 = 8px).
 - Adjustement for .content-modules and .content-module-stacked content and stacking (h2 determines section spacing)
+- Roll-back to the bootstrap way for forms errors icons handling. No need for span .icon anymore.
+- Forms: Labels are now Bold except for custom-form-label (checkboxes, radios and switches).
+- Forms: Placeholder color chanded from $neutral-tertiary to  $neutral-secondary (Accessibility)
+
 
 
 ## [4.5.1] - 2019-11-27

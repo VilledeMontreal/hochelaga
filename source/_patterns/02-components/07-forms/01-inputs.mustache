@@ -17,7 +17,7 @@
 </div>
 
 <h4 class="pl-pattern-subtitle">States</h4>
-<div class="row list-unstyled">
+<div class="row">
   {{# inputTextState}}
   <div class="col-xs-6 col-md-4">
     {{> components-input-text}}
@@ -35,36 +35,13 @@
       </div>
     </div>
   </div>
-  <div class="col-xs-6 col-md-4">
-    <div class="form-group">
-      <label for="form-control-default-one">Error input</label>
-      <input type="text" class="form-control is-invalid" id="form-control-default-one">
-      <div class="valid-feedback feedback-icon">
-        <span class="icon icon-check-circle"></span>
-      </div>
-      <div class="invalid-feedback feedback-icon">
-        <span class="icon icon-warning"></span>
-      </div>
-      <div class="invalid-feedback">
-        Error text goes here
-      </div>
-    </div>
-  </div>
+</div>
 
+<h4 class="pl-pattern-subtitle">Validation</h4>
+<div class="row">
+  {{# inputTextSizeError}}
   <div class="col-xs-6 col-md-4">
-    <div class="form-group">
-      <label for="form-control-default-one">Valid textarea</label>
-      <textarea class="form-control is-valid" id="form-control-default-one"></textarea>
-      <div class="valid-feedback feedback-icon">
-        <span class="icon icon-check-circle"></span>
-      </div>
-      <div class="invalid-feedback feedback-icon">
-        <span class="icon icon-warning"></span>
-      </div>
-        <div class="valid-feedback">
-          Error text goes here
-        </div>
-    </div>
+    {{> components-input-text }}
   </div>
-  
+  {{/ inputTextSizeError}}
 </div>

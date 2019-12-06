@@ -30,5 +30,52 @@
       "formGroupInputHelpText": "Help text goes here.",
       "formGroupTextareaRows": "5"
     }
+  ],
+  "textareaValidation": [
+    {
+      "formGroupClass": "form-group-sm",
+      "formGroupInputID": "form-control-sm-validation-one",
+      "formGroupInputClass": "is-invalid",
+      "formGroupInputRequired": true,
+      "formGroupInputLabel": "Small textarea invalid",
+      "formGroupInputPlaceholder": {
+        "text": "Placeholder for small form group"
+      },
+      "formGroupInputHelpText": "Help text goes here.",
+      "formGroupTextareaRows": "3",
+      "formGroupInputError": {
+        "text": "Message d'erreur personnalisé."
+      }
+    },
+    {
+      "formGroupClass": false,
+      "formGroupInputID": "form-control-default-validation-one",
+      "formGroupInputClass": "is-invalid",
+      "formGroupInputRequired": true,
+      "formGroupInputLabel": "Default textarea invalid",
+      "formGroupInputPlaceholder": {
+        "text": "Placeholder for default form group"
+      },
+      "formGroupInputHelpText": "Help text goes here.",
+      "formGroupTextareaRows": "5",
+      "formGroupInputError": {
+        "text": "Message d'erreur personnalisé."
+      }
+    },
+    {
+      "formGroupClass": "form-group-lg",
+      "formGroupInputID": "form-control-lg-validation-one",
+      "formGroupInputClass": "is-invalid",
+      "formGroupInputRequired": true,
+      "formGroupInputLabel": "Large textarea invalid",
+      "formGroupInputPlaceholder": {
+        "text":"Placeholder for large form group"
+      },
+      "formGroupInputHelpText": "Help text goes here.",
+      "formGroupTextareaRows": "5",
+      "formGroupInputError": {
+        "text": "Message d'erreur personnalisé."
+      }
+    }
   ]
 }

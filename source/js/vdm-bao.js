@@ -380,30 +380,61 @@
     }
   });
 
-  // Feedback form example
-  $('#form20 input[name=Field10]').change(evt => {
+  $('#form21').validate({
+    showErrors: (errorMap, errorList) => {
+      if ('Field14' in errorMap) {
+
+        if ($('#rdioFeedback01-2').is(':checked') &&
+          ($('#form21 textarea').val() === '' ||
+            $('#form21 textarea').length === 1)
+        ) {
+
+          $('textarea').focus(() => {
+            $(".form-control").addClass("is-invalid");
+          });
+          $('#form21 .invalid-feedback').show();
+        }
+      }
+    },
+    rules: {
+      Field14: 'required'
+    },
+    submitHandler: form => {
+      const message = $('#form21 textarea').val();
+      if (($('#rdioFeedback01-2').is(':checked') && $.trim(message) !== '') || $('#rdioFeedback01-1').is(':checked')
+      ) form.submit();
+      else {
+        $('textarea').addClass("is-invalid");
+        $('#form21 .invalid-feedback').show();
+      }
+    }
+
+  });
+
+  $('#form21 input[name=Field10]').change(evt => {
     const inputValue = $(evt.target).val();
     if (inputValue) {
-      $('#form20 button').prop('disabled', false);
-      $('#form20 button').prop('hidden', false);
+      $('#form21 button').prop('disabled', false);
+      $('#form21 button').prop('hidden', false);
       if (inputValue != 'non') {
-        if(!$('#form20 [name=Field14]').parent().hasClass('d-none')) {
-          $('#form20 [name=Field14]').parent().addClass('d-none');
+        if(!$('#form21 [name=Field14]').parent().hasClass('d-none')) {
+          $('#form21 [name=Field14]').parent().addClass('d-none');
         }
       } else {
-        $('#form20 [name=Field14]').parent().removeClass('d-none');
+        $('#form21 [name=Field14]').parent().removeClass('d-none');
+        $('#form21 [name=Field14]').prop('required', true);
       }
     }
   });
 
-  $('#form20 button.reset-button').click(evt => {
+  $('#form21 button.reset-button').click(evt => {
     resetAllValues();
   });
 
   function resetAllValues() {
-    $('#form20 input[name=Field10]').prop('checked', false);
-    $('#form20 button').prop('disabled', true);
-    $('#form20 button#cancel').prop('hidden', true);
+    $('#form21 input[name=Field10]').prop('checked', false);
+    $('#form21 button').prop('disabled', true);
+    $('#form21 button#cancel').prop('hidden', true);
   }
   
   // Activate scrollspy for navAnchors to add active class to navAnchors items on scroll
@@ -587,7 +618,6 @@
     $(this).toggleClass('active');
     $("#triggerMap").toggleClass('active');
   });
-
 
 })(jQuery);
 

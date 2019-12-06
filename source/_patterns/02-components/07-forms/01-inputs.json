@@ -7,7 +7,7 @@
       "formGroupInputPlaceholder": {
         "text": "Placeholder for small form group"
       },
-      "formGroupInputHelpText": "Help text goes here."
+      "formGroupInputHelpText": "Message d'aide personnalisé."
     },
     {
       "formGroupClass": false,
@@ -16,7 +16,7 @@
       "formGroupInputPlaceholder": {
         "text": "Placeholder for default form group"
       },
-      "formGroupInputHelpText": "Help text goes here."
+      "formGroupInputHelpText": "Message d'aide personnalisé."
     },
     {
       "formGroupClass": "form-group-lg",
@@ -25,7 +25,7 @@
       "formGroupInputPlaceholder":{
         "text": "Placeholder for large form group"
       },
-      "formGroupInputHelpText": "Help text goes here."
+      "formGroupInputHelpText": "Message d'aide personnalisé."
     }
   ],
   "inputTextShape": [
@@ -66,6 +66,50 @@
       "formGroupInputPlaceholder": false,
       "formGroupInputHelpText": false,
       "formGroupInputState": "readonly"
+    }
+  ],
+  "inputTextSizeError": [
+    {
+      "formGroupClass": "form-group-sm",
+      "formGroupInputID": "form-control-sm-error-one",
+      "formGroupInputClass": "is-invalid",
+      "formGroupInputRequired": true,
+      "formGroupInputLabel": "Small invalid",
+      "formGroupInputPlaceholder": {
+        "text": "Placeholder for small form group"
+      },
+      "formGroupInputHelpText": "Message d'aide personnalisé.",
+      "formGroupInputError": {
+        "text": "Message d'erreur personnalisé."
+      }
+    },
+    {
+      "formGroupClass": false,
+      "formGroupInputID": "form-control-default-error-one",
+      "formGroupInputClass": "is-invalid",
+      "formGroupInputRequired": true,
+      "formGroupInputLabel": "Default invalid",
+      "formGroupInputPlaceholder": {
+        "text": "Placeholder for default form group"
+      },
+      "formGroupInputHelpText": "Message d'aide personnalisé.",
+      "formGroupInputError": {
+        "text": "Message d'erreur personnalisé."
+      }
+    },
+    {
+      "formGroupClass": "form-group-lg",
+      "formGroupInputID": "form-control-lg-error-one",
+      "formGroupInputClass": "is-invalid",
+      "formGroupInputRequired": true,
+      "formGroupInputLabel": "Large invalid",
+      "formGroupInputPlaceholder":{
+        "text": "Placeholder for large form group"
+      },
+      "formGroupInputHelpText": "Message d'aide personnalisé.",
+      "formGroupInputError": {
+        "text": "Message d'erreur personnalisé."
+      }
     }
   ]
 }
