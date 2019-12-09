@@ -30,17 +30,26 @@
   .card-img-bg {
     background-size: cover;
     background-position: center center;
-    flex: 1 0 auto;
-    padding-top: 56.25%;  /* 16:9 format = 0.5625 */
-    width: 100%;
+    position: relative;
+    width: calc(100% + 2px); // Add the 2px from the negative margins to overlap border
     margin: -1px;
+    @include border-top-radius($border-radius);
 
-    @include media-breakpoint-up(md){
-      min-height: 178px; // Maintain a minimal 16:9 aspect ratio
-      padding: 0;
+    &:before {
+      content: "";
+      display: block;
+      padding-top: 56.25%;  /* 16:9 format = 0.5625 */
     }
-    @include media-breakpoint-up(xl){
-      min-height: 212px; // Maintain a minimal 16:9 aspect ratio
+
+    // Placeholder is a mix of a background image and an icon
+    .icon {
+      position: absolute;
+      top: 50%;
+      margin-top: -1.75rem;
+      left: 50%;
+      margin-left: -1.75rem;
+      @include icon-size(3.5rem);
+      @include icon-color($action-lighter);
     }
   }
 
@@ -280,7 +289,6 @@
   // Featured card specific
   &.card-multi,
   &.card-featured {
-
     border: none;
     @include border-radius(0);
     border-bottom: 1px solid $neutral-stroke;
@@ -367,13 +375,6 @@
         }
       }
 
-      @include media-breakpoint-up(md){
-        .card-img-bg {
-          min-height: auto;
-          padding-top: $padding-16-9;
-        }
-      }
-
       @include media-breakpoint-up(lg) {
         border: none;
         .card-body {
@@ -388,10 +389,6 @@
         }
       }
     }
-  }
-
-  &[data-toggle="modal"] {
-    cursor: pointer;
   }
 }
 

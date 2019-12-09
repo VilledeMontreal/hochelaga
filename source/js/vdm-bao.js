@@ -380,36 +380,38 @@
     }
   });
 
-  $('#form21').validate({
-    showErrors: (errorMap, errorList) => {
-      if ('Field14' in errorMap) {
+  if($('#form21').length != 0) {
+    $('#form21').validate({
+      showErrors: (errorMap, errorList) => {
+        if ('Field14' in errorMap) {
 
-        if ($('#rdioFeedback01-2').is(':checked') &&
-          ($('#form21 textarea').val() === '' ||
-            $('#form21 textarea').length === 1)
-        ) {
+          if ($('#rdioFeedback01-2').is(':checked') &&
+            ($('#form21 textarea').val() === '' ||
+              $('#form21 textarea').length === 1)
+          ) {
 
-          $('textarea').focus(() => {
-            $(".form-control").addClass("is-invalid");
-          });
+            $('textarea').focus(() => {
+              $(".form-control").addClass("is-invalid");
+            });
+            $('#form21 .invalid-feedback').show();
+          }
+        }
+      },
+      rules: {
+        Field14: 'required'
+      },
+      submitHandler: form => {
+        const message = $('#form21 textarea').val();
+        if (($('#rdioFeedback01-2').is(':checked') && $.trim(message) !== '') || $('#rdioFeedback01-1').is(':checked')
+        ) form.submit();
+        else {
+          $('textarea').addClass("is-invalid");
           $('#form21 .invalid-feedback').show();
         }
       }
-    },
-    rules: {
-      Field14: 'required'
-    },
-    submitHandler: form => {
-      const message = $('#form21 textarea').val();
-      if (($('#rdioFeedback01-2').is(':checked') && $.trim(message) !== '') || $('#rdioFeedback01-1').is(':checked')
-      ) form.submit();
-      else {
-        $('textarea').addClass("is-invalid");
-        $('#form21 .invalid-feedback').show();
-      }
-    }
 
-  });
+    });
+  };
 
   $('#form21 input[name=Field10]').change(evt => {
     const inputValue = $(evt.target).val();
