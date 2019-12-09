@@ -1,0 +1,66 @@
+{{# module-text}}
+<h2>Module Titre de section (H2, H3 ou H4)</h2>
+<div class="content-module-stacked">
+  <p>Corps de texte - <i>Italique</i> et <strong>gras</strong>, exposant, indice et caractères spéciaux adipiscing elit. Morbi condimentum sollicitudin erat, quis <a href="#">lien interne</a> ou <a href="https://google.com">lien externe</a> convallis risus. Nullam  posuere odio ligula, hendrerit suscipit ligula congue laoreet. Curabitur eleifend nulla purus, ut pharetra urna efficitur id. Cras lacinia nisi id quam lacinia, et orci aliquam.</p>
+  <ul>
+    <li>Liste à puce</li>
+    <li>Liste à puce</li>
+    <li>Liste à puce</li>
+    <li>Liste à puce</li>
+  </ul>
+  <ol>
+    <li>Liste numérotée</li>
+    <li>Liste numérotée</li>
+    <li>Liste numérotée</li>
+  </ol>
+</div>
+{{/ module-text}}
+
+{{# module-emphasis }}
+<div class="content-module-stacked">
+  {{> patterns-emphasis }}
+</div>
+{{/ module-emphasis}}
+
+{{# module-blockquote }}
+<div class="content-module-stacked">
+  {{> patterns-blockquote }}
+</div>
+{{/ module-blockquote}}
+
+{{# module-cta }}
+<div class="content-module-stacked">
+  {{> components-button}}
+</div>
+{{/ module-cta}}
+
+{{# module-card-cta}}
+<div class="content-module-stacked">
+  <div class="row cards">
+    {{# cards.card-item }}
+    <div class="{{ cards.bsgrid-classes }}">
+      {{> components-card-item-full-width }}
+    </div>
+    {{/ cards.card-item }}
+  </div>
+</div>
+{{/ module-card-cta}}
+
+{{# module-image-single}}
+<div class="content-module-stacked">
+  {{> styles-figure}}
+</div>
+{{/ module-image-single}}
+
+{{# module-image-album}}
+<div class="content-module-stacked">
+  {{> components-gallery }}
+</div>
+{{/ module-image-album}}
+
+{{# module-video}}
+<h2>Vidéo intégrée - Module titre</h2>
+<div class="content-module-stacked">
+  {{> styles-video-responsive-embed }}
+</div>
+{{/ module-video}}
