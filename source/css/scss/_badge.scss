@@ -248,3 +248,13 @@
   }
 }
 
+.badges-container {
+  .list-inline {
+    line-height: $line-height-md;
+    .list-inline-item {
+      margin-bottom: .5rem;
+      margin-right: .25rem;
+    }
+  }
+}
+
