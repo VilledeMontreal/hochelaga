@@ -13,7 +13,8 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 - List-group-teaser: Image placeholder for content type with optionnal image.
 - Templates: examples for content-modules and content-module-stacking with different Headings.
   This is a way to reproduce the structure that we get from the content-api.
-- Templates: Nouvelle
+- Templates: Nouvelle.
+- Patterns: New Wrapper Sommaire navigation.
 
 ### Changed
 - Headings margin-bottom adjustement (h2 = 32px, h3 = 16px, h4,h5,h6 = 8px).
@@ -21,6 +22,7 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 - Roll-back to the bootstrap way for forms errors icons handling. No need for span .icon anymore.
 - Forms: Labels are now Bold except for custom-form-label (checkboxes, radios and switches).
 - Forms: Placeholder color chanded from $neutral-tertiary to  $neutral-secondary (Accessibility)
+- Templates: Normalization of content-modules and content-module-stacked for all templates.
 
 ### Fixed
 - Removed focus from active state for toggle buttons.
