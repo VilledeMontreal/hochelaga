@@ -289,10 +289,25 @@
       margin-bottom: 1rem;
       padding-top: 56.25%;  /* 16:9 format = 0.5625 */
       width: 100%;
+
+      .icon {
+        position: absolute;
+        top: 50%;
+        margin-top: -1.75rem;
+        left: 50%;
+        margin-left: -1.75rem;
+        @include icon-size(3.5rem);
+        @include icon-color($action-lighter);
+      }
+
     }
 
     @include hover-focus {
       background-color: transparent;
+
+      .icon {
+        @include icon-color($primary);
+      }
 
       .list-group-item-title {
         color: $list-group-action-active-color;
