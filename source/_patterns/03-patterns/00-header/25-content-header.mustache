@@ -1,6 +1,6 @@
 <div class="document-heading {{ documentHeadingClass }}{{# documentHeadingFullWidth}} document-heading-fullwidth {{/ documentHeadingFullWidth}}{{^documentHeadingFullWidth}} document-heading-grid{{/ documentHeadingFullWidth}}">
   {{# documentHeadingImageUrl}}
-  <div class="document-heading-image-container">
+  <div class="document-heading-image-container{{# hideDocumentHeadingImageMobile}} d-none d-sm-block{{/ hideDocumentHeadingImageMobile}}">
     <div style="background-image:url('{{documentHeadingImageUrl}}')" class="document-heading-background"></div>
     {{# media.copyright }}
     <div class="img-copyright">
