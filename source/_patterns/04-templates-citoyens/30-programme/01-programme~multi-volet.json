@@ -13,21 +13,23 @@
   },
   "lead": "<p>Amorce - Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi condimentum sollicitudin erat, quis convallis risus. Nullam posuere odio ligula, hendrerit suscipit ligula laoreet. Curabitur eleifend nulla purus, ut pharet urna ef id. Cras lacinia nisi id  (recommandé 300 caractères maximum).</p>",
   "module-anchors": {
-    "listGroupClass": false,
-    "listGroup": [
-      {
-        "icon-name": "icon-dot-bullet",
-        "url": "#pg-multi-volet-1",
-        "text": "Volet 1",
-        "classLink": "js-scroll-trigger"
-      },
-      {
-        "icon-name": "icon-dot-bullet",
-        "url": "#pg-multi-volet-2",
-        "text": "Volet 2",
-        "classLink": "js-scroll-trigger"
-      }
-    ]
+    "navtoc": {
+      "listGroupClass": false,
+      "listGroup": [
+        {
+          "icon-name": "icon-dot-bullet",
+          "url": "#pg-multi-volet-1",
+          "text": "Titre - Volet 1",
+          "classLink": "js-scroll-trigger"
+        },
+        {
+          "icon-name": "icon-dot-bullet",
+          "url": "#pg-multi-volet-2",
+          "text": "Titre - Volet 2",
+          "classLink": "js-scroll-trigger"
+        }
+      ]
+    }
   },
   "module-volets": [
     {

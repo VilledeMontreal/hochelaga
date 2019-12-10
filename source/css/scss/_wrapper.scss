@@ -130,6 +130,18 @@
   }
 }
 
+// Wrapper Sommaire navigation
+//
+.wrapper-navtoc {
+  .wrapper-heading {
+    color: $headings-color;
+    @include font-size($font-size-base);
+    line-height: $line-height-md;
+    font-weight: $font-weight-bold;
+    margin-bottom: .5rem;
+  }
+}
+
 
 // Wrapper Featured Call To Action
 //
