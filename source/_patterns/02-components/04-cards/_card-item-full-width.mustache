@@ -6,6 +6,10 @@
 <div class="card {{ classes }}">
 {{/ url}}
   <div class="row w-100 no-gutters">
+
+    {{# card-media.document}}
+    <img class="card-img {{ card-media.document.img.classes }}" src="{{ card-media.document.img.src}}" alt="{{ card-media.document.img.alt }}">
+    {{/ card-media.document}}
     {{# card-media.img }}
     <div class="card-img-bg" style="background-image: url('{{ card-media.img.src }}')">
       <span class="sr-only">{{card-media.img.alt}}</span>
@@ -42,6 +46,10 @@
           {{/ date-time}}
         </div>
         {{/ card-text-interface }}
+
+        {{# card-link }}
+        <div class="card-link mt-4">{{ card-link }} <span class="icon icon-arrow-right" aria-hidden="true"></span></div>
+        {{/ card-link }}
 
       </div>
     </div>
