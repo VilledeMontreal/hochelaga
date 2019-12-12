@@ -1,12 +1,16 @@
 // Vendor
 @import "~bootstrap/scss/vendor/rfs";
 
+// Deprecate
+@import "~bootstrap/scss/mixins/deprecate";
+
 // Utilities
 @import "~bootstrap/scss/mixins/breakpoints";
 @import "~bootstrap/scss/mixins/hover";
 @import "~bootstrap/scss/mixins/screen-reader";
 @import "~bootstrap/scss/mixins/text-emphasis";
 @import "~bootstrap/scss/mixins/text-hide";
+@import "~bootstrap/scss/mixins/text-truncate";
 @import "~bootstrap/scss/mixins/visibility";
 
 // // Components
