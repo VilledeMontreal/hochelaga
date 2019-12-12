@@ -33,20 +33,16 @@
         {{/ card-text }}
 
         {{# card-text-interface }}
-        <div class="card-text-interface">{{{ card-text-interface }}}</div>
+        <div class="card-text-interface">
+          {{^ date-time}}
+          {{{ card-text-interface }}}
+          {{/ date-time}}
+          {{# date-time}}
+          {{{text}}} <time datetime="{{dateTimeFormat}}">{{{dateTimeText}}}</time>{{# line-break}}<br>{{/ line-break}}
+          {{/ date-time}}
+        </div>
         {{/ card-text-interface }}
 
-        {{# card-date-text }}
-        <div class="card-date-text">{{{ card-date-text }}}</div>
-        {{/ card-date-text }}
-
-        {{# card-publication-date}}
-        <div class="card-publication-date">
-        {{# dateTime}}
-        {{{text}}} <time datetime="{{dateTimeFormat}}">{{{dateTimeText}}}</time>
-        {{/ dateTime}}
-        </div>
-        {{/ card-publication-date}}
       </div>
     </div>
   </div>

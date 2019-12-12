@@ -28,13 +28,14 @@
             "card-type": "Type d'événement",
             "card-title": "Titre de l'événement",
             "card-text": false,
-            "card-date-text": false,
-            "card-publication-date": {
-              "dateTime": {
-                "text": false,
-                "dateTimeFormat": "2019-12-24",
-                "dateTimeText": "24 décembre 2019 de 8&nbsp;h&nbsp;00 à 18&nbsp;h&nbsp;00"
-              }
+            "card-text-interface": {
+              "date-time": [
+                {
+                  "text": false,
+                  "dateTimeFormat": "2019-12-24",
+                  "dateTimeText": "24 décembre 2019 de 8&nbsp;h&nbsp;00 à 18&nbsp;h&nbsp;00"
+                }
+              ]
             }
           }
         ]

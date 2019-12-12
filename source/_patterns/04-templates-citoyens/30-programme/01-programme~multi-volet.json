@@ -198,8 +198,22 @@
               "card-type": "Type de l'événement",
               "card-title": "Lien de référence à un événement vedette",
               "card-text": false,
-              "card-publication-date": false,
-              "card-date-text" : "Date et heure du début de l'événement"
+              "card-text-interface": {
+                "date-range": true,
+                "date-time": [
+                  {
+                    "line-break": true,
+                    "text": "Du ",
+                    "dateTimeFormat": "2019-12-12",
+                    "dateTimeText": "12 décembre 2019 - 8&nbsp;h&nbsp;00"
+                  },
+                  {
+                    "text": "au ",
+                    "dateTimeFormat": "2019-12-22",
+                    "dateTimeText": "22 décembre 2019 - 18&nbsp;h&nbsp;00"
+                  }
+                ]
+              }
             }
           ]
         }
