@@ -380,7 +380,7 @@ input[type="button"] {
 // Utility class to hide button-icon label
 @each $breakpoint, $value in $grid-breakpoints {
   // Hide button label at small breakpoint
-  &.btn-hide-label-#{$breakpoint} {
+  .btn-hide-label-#{$breakpoint} {
     @include media-breakpoint-down($breakpoint) {
 
       .btn-label {
