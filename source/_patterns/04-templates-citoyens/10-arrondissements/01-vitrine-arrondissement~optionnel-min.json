@@ -132,13 +132,14 @@
           },
           "card-type": false,
           "card-title": "Quisque enim lacus mollis id fermentum quis mattis sit amet purus",
-          "card-date-text": false,
-          "card-publication-date": {
-            "dateTime": {
-              "text": false,
-              "dateTimeFormat": "2019-08-22",
-              "dateTimeText": "22 août 2019"
-            }
+          "card-text-interface": {
+            "date-time": [
+              {
+                "text": false,
+                "dateTimeFormat": "2019-08-22",
+                "dateTimeText": "22 août 2019"
+              }
+            ]
           }
         },
         {
@@ -153,13 +154,14 @@
           },
           "card-type": false,
           "card-title": "Sed iaculis nisl justo et fermentum augue sollicitudin",
-          "card-date-text": false,
-          "card-publication-date": {
-            "dateTime": {
-              "text": false,
-              "dateTimeFormat": "2019-08-22",
-              "dateTimeText": "22 août 2019"
-            }
+          "card-text-interface": {
+            "date-time": [
+              {
+                "text": false,
+                "dateTimeFormat": "2019-08-22",
+                "dateTimeText": "22 août 2019"
+              }
+            ]
           }
         }
       ]
@@ -185,8 +187,21 @@
           },
           "card-type": "Type d'événement",
           "card-title" : "Titre de l'événement",
-          "card-text": false,
-          "card-date-text" : "Du 2 septembre au 4 septembre"
+          "card-text-interface": {
+            "date-time": [
+              {
+                "line-break": true,
+                "text": "Du ",
+                "dateTimeFormat": "2019-12-12",
+                "dateTimeText": "12 décembre 2019 - 19&nbsp;h&nbsp;45"
+              },
+              {
+                "text": "au ",
+                "dateTimeFormat": "2019-12-22",
+                "dateTimeText": "22 décembre 2019 - 22&nbsp;h&nbsp;45"
+              }
+            ]
+          }
         },
         {
           "classes" : "card-fw",
@@ -201,8 +216,16 @@
           },
           "card-type": "Type d'événement",
           "card-title" : "Titre de l'événement",
-          "card-text": false,
-          "card-date-text" : "Jeudi 19 septembre"
+          "card-text-interface": {
+            "date-time": [
+              {
+                "line-break": true,
+                "text": "Jeudi ",
+                "dateTimeFormat": "2019-12-12",
+                "dateTimeText": "12 décembre 2019 à 19&nbsp;h&nbsp;30"
+              }
+            ]
+          }
         }
       ]
     },

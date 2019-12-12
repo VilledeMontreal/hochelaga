@@ -363,7 +363,21 @@
           "card-type": "Type d'événement",
           "card-title" : "Titre de l'événement",
           "card-text": false,
-          "card-date-text" : "Du 2 septembre au 4 septembre"
+          "card-text-interface" : {
+            "date-time": [
+              {
+                "line-break": true,
+                "text": "Du ",
+                "dateTimeFormat": "2019-12-12",
+                "dateTimeText": "12 décembre 2019 - 17&nbsp;h&nbsp;00"
+              },
+              {
+                "text": "au ",
+                "dateTimeFormat": "2019-12-15",
+                "dateTimeText": "15 décembre 2019 - 23&nbsp;h&nbsp;30"
+              }
+            ]
+          }
         },
         {
           "classes" : false,
@@ -379,7 +393,15 @@
           "card-type": "Type d'événement",
           "card-title" : "Titre de l'événement",
           "card-text": false,
-          "card-date-text" : "Jeudi 19 septembre"
+          "card-text-interface" : {
+            "date-time": [
+              {
+                "text": "Jeudi ",
+                "dateTimeFormat": "2019-12-19",
+                "dateTimeText": "19 décembre 2019"
+              }
+            ]
+          }
         },
         {
           "classes" : false,
@@ -395,7 +417,21 @@
           "card-type": "Type d'événement",
           "card-title" : "Titre de l'événement",
           "card-text": false,
-          "card-date-text" : "Du 12 décembre au 22 décembre"
+          "card-text-interface" : {
+            "date-time": [
+              {
+                "line-break": true,
+                "text": "Du ",
+                "dateTimeFormat": "2019-12-24",
+                "dateTimeText": "24 décembre 2019 - 18&nbsp;h&nbsp;00"
+              },
+              {
+                "text": "au ",
+                "dateTimeFormat": "2019-12-314",
+                "dateTimeText": "31 décembre 2019 - 23&nbsp;h&nbsp;59"
+              }
+            ]
+          }
         }
       ]
     },
@@ -448,8 +484,7 @@
           },
           "card-type": "Séance du comité exécutif",
           "card-title" : "Mercredi 4 septembre 2019 à 8&nbsp;h&nbsp;30",
-          "card-text": false,
-          "card-date-text" : false
+          "card-text": false
         },
         {
           "classes" : "card-date",
@@ -461,8 +496,7 @@
           },
           "card-type": "Séance du conseil municipal",
           "card-title" : "Lundi 16 septembre à 13&nbsp;h&nbsp;00",
-          "card-text": false,
-          "card-date-text" : false
+          "card-text": false
         },
         {
           "classes" : "card-date",
@@ -473,8 +507,7 @@
           },
           "card-type": "Séance du conseil d'agglomération",
           "card-title" : "Date à venir",
-          "card-text": false,
-          "card-date-text" : false
+          "card-text": false
         }
       ]
     },

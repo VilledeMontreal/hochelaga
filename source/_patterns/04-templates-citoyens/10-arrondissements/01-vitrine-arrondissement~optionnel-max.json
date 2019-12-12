@@ -321,13 +321,14 @@
           },
           "card-type": false,
           "card-title": "Quisque enim lacus mollis id fermentum quis mattis sit amet purus",
-          "card-date-text": false,
-          "card-publication-date": {
-            "dateTime": {
-              "text": false,
-              "dateTimeFormat": "2019-08-22",
-              "dateTimeText": "22 août 2019"
-            }
+          "card-text-interface": {
+            "date-time": [
+              {
+                "text": false,
+                "dateTimeFormat": "2019-12-11",
+                "dateTimeText": "11 décembre 2019"
+              }
+            ]
           }
         },
         {
@@ -342,13 +343,14 @@
           },
           "card-type": false,
           "card-title": "Sed iaculis nisl justo et fermentum augue sollicitudin",
-          "card-date-text": false,
-          "card-publication-date": {
-            "dateTime": {
-              "text": "Mise à jour le ",
-              "dateTimeFormat": "2019-08-22",
-              "dateTimeText": "22 août 2019"
-            }
+          "card-text-interface": {
+            "date-time": [
+              {
+                "text": false,
+                "dateTimeFormat": "2019-12-10",
+                "dateTimeText": "10 décembre 2019"
+              }
+            ]
           }
         },
         {
@@ -363,13 +365,14 @@
           },
           "card-type": false,
           "card-title": "Sed ultrices ipsum vitae est dictum",
-          "card-date-text": false,
-          "card-publication-date": {
-            "dateTime": {
-              "text": "Mise à jour le ",
-              "dateTimeFormat": "2019-08-20",
-              "dateTimeText": "20 août 2019"
-            }
+          "card-text-interface": {
+            "date-time": [
+              {
+                "text": false,
+                "dateTimeFormat": "2019-12-09",
+                "dateTimeText": "9 décembre 2019"
+              }
+            ]
           }
         }
       ]
@@ -400,8 +403,21 @@
           },
           "card-type": "Type d'événement",
           "card-title" : "Titre de l'événement",
-          "card-text": false,
-          "card-date-text" : "Du 2 septembre au 4 septembre"
+          "card-text-interface": {
+            "date-time": [
+              {
+                "line-break": true,
+                "text": "Du ",
+                "dateTimeFormat": "2019-12-10",
+                "dateTimeText": "10 décembre 2019 - 16&nbsp;h&nbsp;00"
+              },
+              {
+                "text": " au ",
+                "dateTimeFormat": "2019-12-10",
+                "dateTimeText": "21 décembre 2019 - 17&nbsp;h&nbsp;00"
+              }
+            ]
+          }
         },
         {
           "classes" : false,
@@ -416,8 +432,15 @@
           },
           "card-type": "Type d'événement",
           "card-title" : "Titre de l'événement",
-          "card-text": false,
-          "card-date-text" : "Jeudi 19 septembre"
+          "card-text-interface": {
+            "date-time": [
+              {
+                "text": "Jeudi ",
+                "dateTimeFormat": "2019-12-19",
+                "dateTimeText": "19 décembre 2019 à 6&nbsp;h&nbsp;45"
+              }
+            ]
+          }
         },
         {
           "classes" : false,
@@ -432,8 +455,21 @@
           },
           "card-type": "Type d'événement",
           "card-title" : "Titre de l'événement",
-          "card-text": false,
-          "card-date-text" : "Du 12 décembre au 22 décembre"
+          "card-text-interface": {
+            "date-time": [
+              {
+                "line-break": true,
+                "text": "Du ",
+                "dateTimeFormat": "2019-12-12",
+                "dateTimeText": "12 décembre 2019 - 16&nbsp;h&nbsp;00"
+              },
+              {
+                "text": " au ",
+                "dateTimeFormat": "2019-12-22",
+                "dateTimeText": "22 décembre 2019 - 18&nbsp;h&nbsp;00"
+              }
+            ]
+          }
         },
         {
           "classes" : false,
@@ -448,8 +484,15 @@
           },
           "card-type": "Type d'événement",
           "card-title" : "Titre de l'événement",
-          "card-text": false,
-          "card-date-text" : "24 décembre"
+          "card-text-interface": {
+            "date-time": [
+              {
+                "text": false,
+                "dateTimeFormat": "2019-12-24",
+                "dateTimeText": "24 décembre 2019"
+              }
+            ]
+          }
         }
       ]
     },
@@ -508,8 +551,7 @@
           },
           "card-type": "Séance du conseil d'arrondissement de Nom-de-l'Arrondissement",
           "card-title" : "Jeudi 31 octobre à 19&nbsp;h&nbsp;30",
-          "card-text": false,
-          "card-date-text" : false
+          "card-text": false
         },
         {
           "classes" : "card-date",
@@ -521,8 +563,7 @@
           },
           "card-type": "Séance du conseil d'arrondissement de Nom-de-l'Arrondissement",
           "card-title" : "Jeudi 28 octobre à 19&nbsp;h&nbsp;30",
-          "card-text": false,
-          "card-date-text" : false
+          "card-text": false
         },
         {
           "classes" : "card-date",
@@ -534,8 +575,7 @@
           },
           "card-type": "Séance du conseil d'arrondissement de Nom-de-l'Arrondissement",
           "card-title" : "Jeudi 30 janvier à 19&nbsp;h&nbsp;00",
-          "card-text": false,
-          "card-date-text" : false
+          "card-text": false
         }
       ]
     },

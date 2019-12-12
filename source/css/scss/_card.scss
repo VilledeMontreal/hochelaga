@@ -94,21 +94,15 @@
     line-height: $line-height-md;
   }
 
-  // Card date-text 
-  // smaller font-size and BOLD
-  .card-date-text {
-    @include font-size($font-size-sm);
-    line-height: $line-height-sm;
-    font-weight: $font-weight-bold;
-  }
-
-  // Card-publication-date
-  // smaller font-size
+  // Deprecated
+  // Use card-text-interface
+  .card-date-text,
   .card-publication-date {
-    @include font-size($font-size-sm);
-    line-height: $line-height-sm;
+    line-height: $line-height-md;
   }
 
+  .card-text-sticky-bottom,
+  .card-text-interface,
   .card-date-text,
   .card-publication-date,
   .card-link {

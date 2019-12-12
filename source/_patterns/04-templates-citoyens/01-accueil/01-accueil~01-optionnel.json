@@ -3,69 +3,6 @@
     "messageBarClass": "message-bar-warning",
     "icon-name": "icon-warning"
   },
-  "events": {
-    "cards": {
-      "classes": false,
-      "bsgrid-classes": "col-12 col-lg-4",
-      "card-item": [
-        {
-          "classes" : false,
-          "data-link-title": "Titre de l'événement",
-          "url" : "#",
-          "card-media" : {
-            "icon": false,
-            "img" : {
-              "src" : "https://picsum.photos/id/605/768/432",
-              "alt" : "Card #1 img alt."
-            }
-          },
-          "card-type": "Type d'événement",
-          "card-title" : "Titre de l'événement",
-          "card-text": false,
-          "card-date-text" : "Du 2 septembre au 4 septembre"
-        },
-        {
-          "classes" : false,
-          "data-link-title": "Titre de l'événement",
-          "url" : "#",
-          "card-media" : {
-            "icon": false,
-            "img" : {
-              "src" : "https://picsum.photos/id/63/768/432",
-              "alt" : "Card #1 img alt."
-            }
-          },
-          "card-type": "Type d'événement",
-          "card-title" : "Titre de l'événement",
-          "card-text": false,
-          "card-date-text" : "Jeudi 19 septembre"
-        },
-        {
-          "classes" : false,
-          "data-link-title": "Titre de l'événement",
-          "url" : "#",
-          "card-media" : {
-            "icon": false,
-            "img" : {
-              "src" : "https://picsum.photos/id/423/768/432",
-              "alt" : "Card #1 img alt."
-            }
-          },
-          "card-type": "Type d'événement",
-          "card-title" : "Titre de l'événement",
-          "card-text": false,
-          "card-date-text" : "Du 12 décembre au 22 décembre"
-        }
-      ]
-    },
-    "button-cta": {
-      "data-link-title": "Tous les événements",
-      "buttonAsLink": true,
-      "buttonClass": "btn-secondary",
-      "buttonUrl": "#",
-      "buttonText": "Tous les événements"
-    }
-  },
   "news": {
     "cards": {
       "classes": false,
@@ -83,12 +20,11 @@
           },
           "card-type": false,
           "card-title": "Quisque enim lacus mollis id fermentum quis mattis sit amet purus",
-          "card-date-text": false,
-          "card-publication-date": {
-            "dateTime": {
+          "card-text-interface": {
+            "date-time": {
               "text": false,
-              "dateTimeFormat": "2019-08-22",
-              "dateTimeText": "22 août 2019"
+              "dateTimeFormat": "2019-12-22",
+              "dateTimeText": "22 décembre 2019"
             }
           }
         },
@@ -104,12 +40,11 @@
           },
           "card-type": false,
           "card-title": "Sed iaculis nisl justo et fermentum augue sollicitudin",
-          "card-date-text": false,
-          "card-publication-date": {
-            "dateTime": {
-              "text": "Mise à jour le ",
-              "dateTimeFormat": "2019-08-22",
-              "dateTimeText": "22 août 2019"
+          "card-text-interface": {
+            "date-time": {
+              "text": false,
+              "dateTimeFormat": "2019-11-22",
+              "dateTimeText": "22 novembre 2019"
             }
           }
         },
@@ -125,12 +60,11 @@
           },
           "card-type": false,
           "card-title": "Sed ultrices ipsum vitae est dictum",
-          "card-date-text": false,
-          "card-publication-date": {
-            "dateTime": {
-              "text": "Mise à jour le ",
-              "dateTimeFormat": "2019-08-20",
-              "dateTimeText": "20 août 2019"
+          "card-text-interface": {
+            "date-time": {
+              "text": false,
+              "dateTimeFormat": "2019-10-22",
+              "dateTimeText": "22 octobre 2019"
             }
           }
         },
@@ -146,12 +80,11 @@
           },
           "card-type": false,
           "card-title": "Fusce mattis ante sit amet aliquam porttitor",
-          "card-date-text": false,
-          "card-publication-date": {
-            "dateTime": {
-              "text": "Mise à jour le ",
-              "dateTimeFormat": "2019-08-20",
-              "dateTimeText": "20 août 2019"
+          "card-text-interface": {
+            "date-time": {
+              "text": false,
+              "dateTimeFormat": "2019-09-22",
+              "dateTimeText": "22 septembre 2019"
             }
           }
         }
