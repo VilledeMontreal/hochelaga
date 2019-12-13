@@ -20,12 +20,12 @@
   {{# linkedContent}}
   <div class="content-header-extras-item">
     {{^ customLabel}}
-    <span>Relié à </span>
+    <span class="mr-1">Relié à </span>
     {{/ customLabel}}
     {{# customLabel}}
-    <span>{{ customLabel }}</span>
+    <span class="mr-1">{{ customLabel }}</span>
     {{/ customLabel}}
-    {{# linkedContentItem}}<a href="{{url}}" class="ml-1">{{label}}</a>{{/ linkedContentItem}}
+    {{# linkedContentItem}}<a href="{{url}}" class="mr-1">{{label}}</a>{{/ linkedContentItem}}
   </div>
   {{/ linkedContent}}
 </div>
