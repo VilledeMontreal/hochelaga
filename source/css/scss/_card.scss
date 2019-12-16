@@ -153,6 +153,7 @@
   &.card-document {
     .card-img {
       width: 198px;
+      @include border-radius(0);
       border: $card-border-width solid $card-border-color;
       margin: 2rem auto 0 auto;
     }
