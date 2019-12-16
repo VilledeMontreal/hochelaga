@@ -10,6 +10,7 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 - Forms: example for error icons and messages for input text, textarea and select.
 - Feedback form: add validation example for No option. Textarea is mandatory.
 - Cards: Image placeholder for content type with optionnal image.
+- Cards: New card-document variant.
 - List-group-teaser: Image placeholder for content type with optionnal image.
 - Templates: examples for content-modules and content-module-stacking with different Headings.
   This is a way to reproduce the structure that we get from the content-api.

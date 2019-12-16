@@ -1,0 +1,91 @@
+<h2>Module Titre de section</h2>
+<div class="content-module-stacked">
+  <p>Corps de texte - <i>Italique</i> et <strong>gras</strong>, exposant, indice et caractères spéciaux adipiscing elit. Morbi condimentum sollicitudin erat, quis <a href="#">lien interne</a> ou <a href="https://google.com">lien externe</a> convallis risus. Nullam  posuere odio ligula, hendrerit suscipit ligula congue laoreet. Curabitur eleifend nulla purus, ut pharetra urna efficitur id. Cras lacinia nisi id quam lacinia, et orci aliquam.</p>
+  <ul>
+    <li>Liste à puce</li>
+    <li>Liste à puce</li>
+    <li>Liste à puce</li>
+    <li>Liste à puce</li>
+  </ul>
+  <ol>
+    <li>Liste numérotée</li>
+    <li>Liste numérotée</li>
+    <li>Liste numérotée</li>
+  </ol>
+  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi condimentum sollicitudin erat, quis convallis risus.</p>
+  <h2>Titre H2 dans un éditeur texte</h2>
+  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi condimentum sollicitudin erat, quis convallis risus.</p>
+  <h3>Titre H3 dans un éditeur texte</h3>
+  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi condimentum sollicitudin erat, quis convallis risus.</p>
+  <h3>Titre H3 dans un éditeur texte</h3>
+  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi condimentum sollicitudin erat, quis convallis risus.</p>
+</div>
+
+{{# module-emphasis }}
+<div class="content-module-stacked">
+  {{> patterns-emphasis }}
+</div>
+{{/ module-emphasis}}
+
+{{# module-blockquote }}
+<div class="content-module-stacked">
+  {{> patterns-blockquote }}
+</div>
+{{/ module-blockquote}}
+
+{{# module-text}}
+<h2>Module Titre de section (H2, H3 ou H4)</h2>
+<div class="content-module-stacked">
+  <p>Corps de texte - <i>Italique</i> et <strong>gras</strong>, exposant, indice et caractères spéciaux adipiscing elit. Morbi condimentum sollicitudin erat, quis <a href="#">lien interne</a> ou <a href="https://google.com">lien externe</a> convallis risus. Nullam  posuere odio ligula, hendrerit suscipit ligula congue laoreet. Curabitur eleifend nulla purus, ut pharetra urna efficitur id. Cras lacinia nisi id quam lacinia, et orci aliquam.</p>
+  <ul>
+    <li>Liste à puce</li>
+    <li>Liste à puce</li>
+    <li>Liste à puce</li>
+    <li>Liste à puce</li>
+  </ul>
+  <ol>
+    <li>Liste numérotée</li>
+    <li>Liste numérotée</li>
+    <li>Liste numérotée</li>
+  </ol>
+</div>
+{{/ module-text}}
+
+{{# module-table}}
+<h2>Titre tableau - module Titre (H2, H3...)</h2>
+<div class="content-module-stacked">
+  {{# table-description}}
+  <p>Courte description optionnelle - module corps de texte</p>
+  {{/ table-description}}
+  {{> styles-table }}
+</div>
+{{/ module-table}}
+
+{{# module-list-reference}}
+<h2>Liste de références de liens internes ou externes</h2>
+<div class="content-module-stacked">
+  {{> components-list-item-link }}
+</div>
+{{/ module-list-reference}}
+
+{{# module-documents}}
+<h3>Publications complémentaires</h3>
+<div class="content-module-stacked">
+  {{> components-list-item-link }}
+</div>
+{{/ module-documents }}
+
+{{# module-collapse}}
+<h2>Contenus imbriqués Accordéons - module titre</h2>
+<div class="content-module-stacked">
+  <div id="accordion" class="wrapper-accordion" role="tablist" aria-multiselectable="true">
+    {{> components-collapsible-item }}
+  </div>
+</div>
+{{/ module-collapse}}
+
+{{# module-message }}
+<div class="content-module-stacked">
+  {{> components-alert}}
+</div>
+{{/ module-message }}
