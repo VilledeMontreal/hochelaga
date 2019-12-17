@@ -11,6 +11,7 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 - Feedback form: add validation example for No option. Textarea is mandatory.
 - Cards: Image placeholder for content type with optionnal image.
 - Cards: New card-document variant.
+- Main-navbar: Allow menu and search to be used with or without fixed positionning of navbar.
 - List-group-teaser: Image placeholder for content type with optionnal image.
 - Templates: examples for content-modules and content-module-stacking with different Headings.
   This is a way to reproduce the structure that we get from the content-api.
