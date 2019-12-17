@@ -4,8 +4,8 @@
 //
 .main-menu {
   visibility: hidden;
-  position: fixed;
-  top: $main-navbar-height-sm;
+  position: absolute;
+  top: calc(100% + 1px);
   left: 0;
   right: 0;
   width: 100%;
@@ -195,7 +195,6 @@
 
   // Breakpoints tweaks
   @include media-breakpoint-up(lg) {
-    top: $main-navbar-height;
     left: calc(50vw - (#{map-get($container-max-widths, lg)} / 2));
     max-width: map-get($container-max-widths, lg);
     padding: 0 .5rem .5rem .5rem;

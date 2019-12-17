@@ -42,20 +42,22 @@
       $mainMenu.removeClass('show');
       // Return focus to the element that invoked it
       $menuToggler.attr("aria-expanded", "false").toggleClass('active').focus();
-      $('body').toggleClass('modal-open');
+      $('body').removeClass('modal-open');
     }
     if($slideMenu.hasClass('show')) {
       $slideMenu.removeClass('show');
       // Return focus to the element that invoked it
       $menuInterneToggler.attr("aria-expanded", "false").focus();
-      $('body').toggleClass('modal-open');
+      $('body').removeClass('modal-open');
     }
     if($navbarSearch.hasClass('show')) {
       $navbarSearch.removeClass('show');
       $navbarSearchToggler.attr("aria-expanded", "false");
+      $('body').removeClass('modal-open');
     }
     if($('.overlay').hasClass('show')) {
       $('.overlay').removeClass('show');
+      $('body').removeClass('modal-open');
     }
   });
 
@@ -63,6 +65,7 @@
   $("#main-menu .js-button-mobile-close").on("click", function (e) {
     $mainMenu.removeClass('show');
     $('.overlay').removeClass('show');
+    $('body').removeClass('modal-open');
     // Return focus to the element that invoked it
     $menuToggler.attr("aria-expanded", "false").toggleClass('active').focus();
   });
@@ -73,6 +76,7 @@
     $navbarSearchToggler.attr("aria-expanded", "false").focus();
     if(!$mainMenu.hasClass('show')) {
       $('.overlay').removeClass('show');
+      $('body').removeClass('modal-open');
     }
   });
 
@@ -104,6 +108,7 @@
     $('#input-navbar-search').focus();
     if(!$('.overlay').hasClass('show')) {
       $('.overlay').addClass('show');
+      $('body').addClass('modal-open');
     }
     if($mainMenu.hasClass('show')) {
       $mainMenu.toggleClass('show');
