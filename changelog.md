@@ -7,6 +7,7 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 ## [4.6.0] - unreleased
 
 ### Added
+- 2 new editorial icons: location-empty and megaphone.
 - Forms: example for error icons and messages for input text, textarea and select.
 - Feedback form: add validation example for No option. Textarea is mandatory.
 - Cards: Image placeholder for content type with optionnal image.
