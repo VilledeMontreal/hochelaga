@@ -1,0 +1,439 @@
+{
+  "navbarFixedTop": true,
+  "pageClasses": false,
+  "documentHeading": true,
+  "documentHeadingFullWidth": true,
+  "documentHeadingClass": "document-heading-sm",
+  "documentHeadingImageUrl": "https://res.cloudinary.com/villemontreal/image/upload/q_auto,f_auto,dpr_auto/v1570212188/portail/background/texture-large-undeground.png",
+  "documentHeadingNotch": false,
+  "has-left-notch": false,
+  "media": false,
+  "headingClass": "document-heading-surtitle",
+  "heading": "Recherche",
+  "heading-fake-title": "Diam accusam ipsum aliquyam",
+  "heading-subtitle": false,
+  "has-search-form": true,
+  "has-quick-links": false,
+  "navFilters": {
+    "navModalID": "navModalFiltersMoreFilters",
+    "filters":[
+      {
+        "chipLabel": "Tous les arrondissements",
+        "chipClass": false,
+        "chipID": "chipFiltre1Dropdown",
+        "block-id": "collapseFiltre1",
+        "heading-id": "collapseHeadingFiltre1",
+        "is-dropdown": true,
+        "isStatic": true,
+        "dropdownMenu": {
+          "dropdownMenuClass": "dropdown-menu-form-group",
+          "dropdownMenuID": "chipFiltre1Dropdown",
+          "dropdownFilters":  {
+            "checkboxes": [
+              {
+                "class": "",
+                "id": "chckboxfilter-1",
+                "idMobile": "chckboxfilter-1-sm",
+                "label": "Ahuntsic-Cartierville",
+                "state": false
+              },
+              {
+                "class": "",
+                "id": "chckboxfilter-2",
+                "idMobile": "chckboxfilter-2-sm",
+                "label": "Anjou",
+                "state": false
+              },
+              {
+                "class": "",
+                "id": "chckboxfilter-3",
+                "idMobile": "chckboxfilter-3-sm",
+                "label": "Côte-des-Neiges–Notre-Dame-de-Grâce",
+                "state": false
+              },
+              {
+                "class": "",
+                "id": "chckboxfilter-4",
+                "idMobile": "chckboxfilter-4-sm",
+                "label": "L'Île-Bizard–Sainte-Geneviève",
+                "state": false
+              },
+              {
+                "class": "",
+                "id": "chckboxfilter-5",
+                "idMobile": "chckboxfilter-5-sm",
+                "label": "Lachine",
+                "state": false
+              },
+              {
+                "class": "",
+                "id": "chckboxfilter-6",
+                "idMobile": "chckboxfilter-6-sm",
+                "label": "LaSalle",
+                "state": false
+              },
+              {
+                "class": "",
+                "id": "chckboxfilter-7",
+                "idMobile": "chckboxfilter-7-sm",
+                "label": "Le Plateau-Mont-Royal",
+                "state": false
+              },
+              {
+                "class": "",
+                "id": "chckboxfilter-8",
+                "idMobile": "chckboxfilter-8-sm",
+                "label": "Le Sud-Ouest",
+                "state": false
+              },
+              {
+                "class": "",
+                "id": "chckboxfilter-9",
+                "idMobile": "chckboxfilter-9-sm",
+                "label": "Mercier–Hochelaga-Maisonneuve",
+                "state": false
+              },
+              {
+                "class": "",
+                "id": "chckboxfilter-10",
+                "idMobile": "chckboxfilter-10-sm",
+                "label": "Montréal-Nord",
+                "state": false
+              },
+              {
+                "class": "",
+                "id": "chckboxfilter-11",
+                "idMobile": "chckboxfilter-11-sm",
+                "label": "Outremont",
+                "state": false
+              },
+              {
+                "class": "",
+                "id": "chckboxfilter-12",
+                "idMobile": "chckboxfilter-12-sm",
+                "label": "Pierrefonds-Roxboro",
+                "state": false
+              },
+              {
+                "class": "",
+                "id": "chckboxfilter-13",
+                "idMobile": "chckboxfilter-13-sm",
+                "label": "Rivière-des-Prairies–Pointe-aux-Trembles",
+                "state": false
+              },
+              {
+                "class": "",
+                "id": "chckboxfilter-14",
+                "idMobile": "chckboxfilter-14-sm",
+                "label": "Rosemont–La Petite-Patrie",
+                "state": false
+              },
+              {
+                "class": "",
+                "id": "chckboxfilter-15",
+                "idMobile": "chckboxfilter-15-sm",
+                "label": "Saint-Laurent",
+                "state": false
+              },
+              {
+                "class": "",
+                "id": "chckboxfilter-16",
+                "idMobile": "chckboxfilter-16-sm",
+                "label": "Saint-Léonard",
+                "state": false
+              },
+              {
+                "class": "",
+                "id": "chckboxfilter-17",
+                "idMobile": "chckboxfilter-17-sm",
+                "label": "Verdun",
+                "state": false
+              },
+              {
+                "class": "",
+                "id": "chckboxfilter-18",
+                "idMobile": "chckboxfilter-18-sm",
+                "label": "Ville-Marie",
+                "state": false
+              },
+              {
+                "class": "",
+                "id": "chckboxfilter-19",
+                "idMobile": "chckboxfilter-19-sm",
+                "label": "Villeray–Saint-Michel–Parc-Extension",
+                "state": false
+              }
+            ]
+          }
+        }
+      },
+      {
+        "chipLabel": "Toutes les catégories",
+        "chipClass": false,
+        "chipID": "chipFiltre2Dropdown",
+        "block-id": "collapseFiltre2",
+        "heading-id": "collapseHeadingFiltre2",
+        "is-dropdown": true,
+        "isStatic": true,
+        "dropdownMenu": {
+          "dropdownMenuClass": "dropdown-menu-form-group",
+          "dropdownMenuID": "chipFiltre2Dropdown",
+          "dropdownFilters":  {
+            "checkboxes": [
+              {
+                "class": "",
+                "id": "chckboxfilter2-1",
+                "idMobile": "chckboxfilter2-1-sm",
+                "label": "Libellé 1",
+                "state": false
+              },
+              {
+                "class": "",
+                "id": "chckboxfilter2-2",
+                "idMobile": "chckboxfilter2-2-sm",
+                "label": "Libellé #2",
+                "state": false
+              }
+            ]
+          }
+        }
+      },
+      {
+        "chipLabel": "Tous les types",
+        "chipClass": false,
+        "chipID": "chipFiltre3Dropdown",
+        "block-id": "collapseFiltre3",
+        "heading-id": "collapseHeadingFiltre3",
+        "is-dropdown": true,
+        "isStatic": true,
+        "dropdownMenu": {
+          "dropdownMenuClass": "dropdown-menu-form-group",
+          "dropdownMenuID": "chipFiltre3Dropdown",
+          "dropdownFilters":  {
+            "checkboxes": [
+              {
+                "class": "",
+                "id": "chckboxfilter3-1",
+                "idMobile": "chckboxfilter3-1-sm",
+                "label": "Libellé #1",
+                "state": false
+              },
+              {
+                "class": "",
+                "id": "chckboxfilter3-2",
+                "idMobile": "chckboxfilter3-2-sm",
+                "label": "Libellé #2",
+                "state": false
+              }
+            ]
+          }
+        }
+      }
+    ],
+    "moreFilters": false
+  },
+  "results": {
+    "headings": {
+      "text": "x à xx sur xx résultats"
+    },
+    "navSorts": false,
+    "listing": {
+      "listGroupClass": false,
+      "listGroup": [
+        {
+          "url": "#",
+          "type": "Type de contenu",
+          "title": "Titre du contenu",
+          "infos": {
+            "badge": {
+              "badge": "État",
+              "badgeClass": "badge-danger-light",
+              "badgeUrl": false
+            },
+            "infos-items": [
+              {
+                "text": "Information supplémentaire"
+              },
+              {
+                "text": "Information supplémentaire"
+              }
+            ]
+          }
+        },
+        {
+          "url": "#",
+          "type": "Sujet",
+          "title": "Titre de la page sujet",
+          "infos": {
+            "badge": false,
+            "infos-items": [
+              {
+                "text": "Duo dolor vero diam takimata diam sed tempor, diam sed labore dolor."
+              }
+            ]
+          }
+        },
+        {
+          "url": "#",
+          "type": "Service",
+          "title": "Titre de la page service",
+          "infos": {
+            "badge": {
+              "badge": "État",
+              "badgeClass": "badge-warning-light",
+              "badgeUrl": false
+            },
+            "infos-items": [
+              {
+                "text": "Duo dolor vero diam takimata diam sed tempor, diam sed labore dolor."
+              }
+            ]
+          }
+        },
+        {
+          "url": "#",
+          "type": "Nouvelle",
+          "title": "Titre de la page nouvelle",
+          "infos": {
+            "badge": false,
+            "infos-items": [
+              {
+                "text": "Date de publication"
+              },
+              {
+                "text": "Émetteur (autre que Ville de Montréal)"
+              }
+            ]
+          }
+        },
+        {
+          "url": "#",
+          "type": "Événement",
+          "title": "Titre de la page événement",
+          "infos": {
+            "badge": {
+              "badge": "État",
+              "badgeClass": "badge-warning-light",
+              "badgeUrl": false
+            },
+            "infos-items": [
+              {
+                "text": "Date et heure début de l'événement"
+              },
+              {
+                "text": "Nom du lieu"
+              }
+            ]
+          }
+        },
+        {
+          "url": "#",
+          "type": "Lieu",
+          "title": "Titre de la page lieu",
+          "infos": {
+            "badge": {
+              "badge": "État",
+              "badgeClass": "badge-danger-light",
+              "badgeUrl": false
+            },
+            "infos-items": [
+              {
+                "text": "Adresse 1"
+              },
+              {
+                "text": "Arrondissement"
+              }
+            ]
+          }
+        },
+        {
+          "url": "#",
+          "type": false,
+          "title": "Prénom Nom",
+          "infos": {
+            "badge": false,
+            "infos-items": [
+              {
+                "text": "Titre de fonction"
+              }
+            ]
+          }
+        },
+        {
+          "url": "#",
+          "type": "Démarche",
+          "title": "Titre de la page démarche",
+          "infos": {
+            "badge": false,
+            "infos-items": [
+              {
+                "text": "Sadipscing dolore est diam sit et at et dolore ipsum. Eos dolor invidunt amet kasd."
+              }
+            ]
+          }
+        },
+        {
+          "url": "#",
+          "type": "Article",
+          "title": "Titre de la page article",
+          "infos": {
+            "badge": false,
+            "infos-items": [
+              {
+                "text": "Amet lorem dolores takimata sed clita eos et, sed eos diam stet ipsum no. Gubergren."
+              }
+            ]
+          }
+        },
+        {
+          "url": "#",
+          "type": "Arrondissement",
+          "title": "Nom de l'arrondissement",
+          "infos": {
+            "badge": false,
+            "infos-items": [
+              {
+                "text": "Invidunt sea takimata clita sit diam labore amet, consetetur voluptua lorem et diam ipsum ut nonumy et, et ipsum sea stet sed sea vero et, justo gubergren nonumy consetetur eirmod."
+              }
+            ]
+          }
+        }
+      ]
+    },
+    "hasPagination": {
+      "paginationClass": false,
+      "paginationList": [
+        {
+          "url": "#",
+          "text": "1",
+          "class": false
+        },
+        {
+          "url": "#",
+          "text": "2",
+          "class": false
+        },
+        {
+          "url": "#",
+          "text": "3",
+          "class": false
+        },
+        {
+          "url": "#",
+          "text": "4",
+          "class": false
+        },
+        {
+          "url": "#",
+          "text": "5",
+          "class": false
+        },
+        {
+          "url": false,
+          "text": "...",
+          "class": "no-link"
+        }
+      ]
+    }
+  }
+}
