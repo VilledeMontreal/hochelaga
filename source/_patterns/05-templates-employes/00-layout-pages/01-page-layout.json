@@ -1,13 +1,41 @@
 {
-  "pageClasses": "employes",
+  "pageClasses": false,
   "regionMainClasses": false,
   "regionMainContentClasses": "col-12",
   "sidebarRight": false,
-  "documentHeadingNotch": false,
-   "user-authenticated": true,
+  "user-authenticated": true,
   "user": {
     "name": "Uxabcd01",
     "username": "Uxabcd01",
     "email": "courriel@montreal.ca"
+  },
+  "module-alert": {
+    "alertClass": "alert-warning alert-with-icon alert-dismissible fade show",
+    "alertTitle": "Titre du message",
+    "alertText": "Description du message.",
+    "alertIcon": true,
+    "icon-name": "icon-warning",
+    "dismissableAlert": true
+  },
+  "module-filters": {
+    "searchInput": {
+      "formGroupClass": false,
+      "formGroupInputID": "form-control-input-default-icon",
+      "formGroupInputLabel": false,
+      "formGroupInputClass": false,
+      "formGroupInputRequired": true,
+      "formGroupInputPlaceholder": {
+        "text": "Rechercher..."
+      },
+      "icon-name": "icon-search",
+      "formGroupInputHelpText": false,
+      "formGroupInputState": false
+    },
+    "buttonFilter": {
+      "buttonClass": "btn-secondary btn-squared btn-icon-left",
+      "buttonText": "Filtres",
+      "icon-name": "icon-list",
+      "buttonIcon": true
+    }
   }
 }

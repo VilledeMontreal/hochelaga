@@ -389,6 +389,25 @@
 
 }
 
+.list-group-complex {
+  .custom-control {
+    padding-top: 0;
+    padding-bottom: 0;
+    margin-left: 1rem;
+    margin-right: 1rem;
+    padding-left: 1.5rem;
+  }
+
+  .custom-checkbox .custom-control-label {
+    &::before {
+      left: -1.5rem;
+    }
+    &::after {
+      left: -1.5rem;
+    }
+  }
+}
+
 
 // Contextual variants
 //

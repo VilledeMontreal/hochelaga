@@ -2,22 +2,27 @@
 
 {{> components-navbar-interne }}
 
-{{> patterns-content-header-employes }}
-
-<main class="main-content {{ pageClasses }}" id="main-content" aria-label="Main Content">
+<main class="main-content {{ pageClasses }} mx-md-2" id="main-content" aria-label="Main Content">
   <div class="container-fluid {{ regionMainContainerClasses }}">
+    {{> patterns-content-header-employes }}
     <div class="row">
       <div class="{{ regionMainContentClasses }}">
-        {{> components-alert(
-            alertClass: "alert-warning alert-with-icon alert-dismissible fade show",
-            alertTitle: "Warning!",
-            alertText: "Close Me! This is a dismissible warning alert.",
-            alertIcon: true,
-            icon-name: "icon-warning",
-            dismissableAlert: true
-          )
-        }}
-        {{> styles-paragraph }}
+        {{# module-alert}}{{> components-alert }}{{/ module-alert}}
+
+        {{# module-filters}}
+        <div class="row no-gutters">
+          {{# searchInput}}
+          <div class="col-auto">
+            {{> components-input-icon}}
+          </div>
+          {{/ searchInput}}
+          {{# buttonFilter}}
+          <div class="col-auto ml-auto">
+            {{> components-button-icon}}
+          </div>
+          {{/ buttonFilter}}
+        </div>
+        {{/ module-filters}}
       </div>
     </div>
   </div>
