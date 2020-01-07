@@ -1,18 +1,21 @@
 // Vendor
 @import "~bootstrap/scss/vendor/rfs";
 
+// Deprecate
+@import "~bootstrap/scss/mixins/deprecate";
+
 // Utilities
 @import "~bootstrap/scss/mixins/breakpoints";
 @import "~bootstrap/scss/mixins/hover";
 @import "~bootstrap/scss/mixins/screen-reader";
 @import "~bootstrap/scss/mixins/text-emphasis";
 @import "~bootstrap/scss/mixins/text-hide";
+@import "~bootstrap/scss/mixins/text-truncate";
 @import "~bootstrap/scss/mixins/visibility";
 
 // // Components
 @import "~bootstrap/scss/mixins/lists";
 @import "~bootstrap/scss/mixins/nav-divider";
-@import "~bootstrap/scss/mixins/forms";
 
 // // Skins
 @import "~bootstrap/scss/mixins/background-variant";
@@ -29,6 +32,7 @@
 
 // // Custom
 @import "mixins/buttons";
+@import "mixins/forms";
 @import "mixins/icons";
 @import "mixins/mixins";
 @import "mixins/nav";

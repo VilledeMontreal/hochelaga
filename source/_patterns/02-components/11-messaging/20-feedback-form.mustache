@@ -5,8 +5,8 @@
     <p class="mb-0">Merci d’avoir répondu à ce formulaire.</p>
     {{/ has-success-message }}
     {{^ has-success-message }}
-    <form id="form20" name="form20" class="wufoo feedback-form" accept-charset="UTF-8"
-      autocomplete="off" enctype="multipart/form-data" method="post" novalidate="novalidate" action="#">
+    <form id="form21" name="form21" class="wufoo feedback-form needs-validation" accept-charset="UTF-8"
+      autocomplete="off" enctype="multipart/form-data" method="post" action="#" novalidate>
       <h2 class="h4 mb-1">Cette page répond-elle à vos besoins?</h2>
       <p>Aidez-nous à optimiser notre site.</p>
       <div class="form-group">
@@ -15,12 +15,15 @@
           <label class="custom-control-label" for="rdioFeedback01-1">Oui</label>
         </div>
         <div class="custom-control custom-radio">
-          <input type="radio" id="rdioFeedback01-3" name="Field10" class="custom-control-input" value="non" >
-          <label class="custom-control-label" for="rdioFeedback01-3">Non</label>
+          <input type="radio" id="rdioFeedback01-2" name="Field10" class="custom-control-input" value="non" {{# is-active}}checked{{/ is-active}}>
+          <label class="custom-control-label" for="rdioFeedback01-2">Non</label>
         </div>
       </div>
       <div class="form-group d-none">
         <textarea class="form-control" placeholder="Expliquez" name="Field14"></textarea>
+        <div class="invalid-feedback">
+          Message d'erreur personnalisé
+        </div>
       </div>
       <input type="hidden" name="Field4" value="BAO-test">
       <input type="hidden" name="Field5" value="BAO-test">

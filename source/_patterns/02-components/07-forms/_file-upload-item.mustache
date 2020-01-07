@@ -1,9 +1,12 @@
 <div class="form-group {{ formGroupClass }}">
-  <div class="file-drop-container">
+  <div class="file-drop-container {{formGroupFileClass}}">
     <span class="help-text">{{ formGroupFileDropHelpText }}</span>
     <div class="file-selector-button">
-      <input type="file" id="{{ formGroupFileDropID}}" class="sr-only">
+      <input type="file" id="{{ formGroupFileDropID}}" class="sr-only"{{# formGroupFileState}} {{formGroupFileState}}{{/ formGroupFileState}}>
       <label class="btn btn-secondary" for="{{ formGroupFileDropID}}">{{ formGroupFileDropLabel }}</label>
     </div>
   </div>
+  {{# formGroupInputError}}
+  <div class="invalid-feedback">{{ formGroupInputError.text }}</div>
+  {{/ formGroupInputError}}
 </div>

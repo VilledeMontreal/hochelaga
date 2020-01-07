@@ -141,7 +141,7 @@ $icons-size: (
 //
 // Quickly modify global styling by enabling or disabling optional features.
 
-$enable-validation-icons:                     false;
+$enable-validation-icons:                     true;
 
 // Spacing
 //
@@ -486,7 +486,7 @@ $input-focus-color:                     $input-color;
 $input-focus-width:                     $input-btn-focus-width;
 $input-focus-box-shadow:                $input-btn-focus-box-shadow;
 
-$input-placeholder-color:               $neutral-tertiary;
+$input-placeholder-color:               $neutral-secondary;
 $input-plaintext-color:                 $body-color;
 
 $input-height-border:                   $input-border-width * 2;
@@ -498,6 +498,9 @@ $input-height-inner-quarter:            calc(#{$input-line-height * .25} + #{$in
 $input-height:                          calc(#{$input-line-height} + #{$input-padding-y * 2} + #{$input-height-border});
 $input-height-sm:                       calc(#{$input-line-height-sm} + #{$input-btn-padding-y-sm * 2} + #{$input-height-border});
 $input-height-lg:                       calc(#{$input-line-height-lg} + #{$input-btn-padding-y-lg * 2} + #{$input-height-border});
+
+$form-text-margin-top:                  .5rem;
+$form-group-margin-bottom:              1rem;
 
 
 // custom forms
@@ -542,12 +545,20 @@ $custom-switch-indicator-checked-handle:          $action;
 $custom-switch-indicator-checked-handle-disabled: $highlight-light;
 
 
-
 // Form validation
 
-$form-feedback-margin-top:          .5rem;
-$form-feedback-font-size:           $font-size-sm;
-$form-group-margin-bottom:          1rem;
+$form-feedback-margin-top:          $form-text-margin-top;
+$form-feedback-font-size:           $small-font-size;
+$form-feedback-valid-color:         $success;
+$form-feedback-invalid-color:       $negative;
+
+$form-feedback-icon-valid-color:    $form-feedback-valid-color;
+$form-feedback-icon-valid:          str-replace(url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3e%3cpath fill='#{$form-feedback-icon-valid-color}' d='M21.5 17.5C21.3 18 20.7 18.1 20.2 17.8 19.7 17.6 19.5 17 19.8 16.5 20.6 15.1 21 13.6 21 12 21 7 17 3 12 3 7 3 3 7 3 12 3 17 7 21 12 21 13.6 21 15.1 20.6 16.5 19.8 17 19.5 17.6 19.7 17.8 20.2 18.1 20.7 18 21.3 17.5 21.5 15.8 22.5 13.9 23 12 23 5.9 23 1 18.1 1 12 1 5.9 5.9 1 12 1 18.1 1 23 5.9 23 12 23 13.9 22.5 15.8 21.5 17.5ZM15.3 9.3C15.7 8.9 16.3 8.9 16.7 9.3 17.1 9.7 17.1 10.3 16.7 10.7L11.7 15.7C11.3 16.1 10.7 16.1 10.3 15.7L8.3 13.7C7.9 13.3 7.9 12.7 8.3 12.3 8.7 11.9 9.3 11.9 9.7 12.3L11 13.6 15.3 9.3z'/%3e%3c/svg%3e"), "#", "%23");
+//$form-feedback-icon-valid:          str-replace(url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 8 8'%3e%3cpath fill='#{$form-feedback-icon-valid-color}' d='M2.3 6.73L.6 4.53c-.4-1.04.46-1.4 1.1-.8l1.1 1.4 3.4-3.8c.6-.63 1.6-.27 1.2.7l-4 4.6c-.43.5-.8.4-1.1.1z'/%3e%3c/svg%3e"), "#", "%23");
+$form-feedback-icon-invalid-color:  $negative-dark;
+$form-feedback-icon-invalid:        str-replace(url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='#{$form-feedback-icon-invalid-color}'%3e%3cpath d='M21.5 17.5C21.3 18 20.7 18.1 20.2 17.8 19.7 17.6 19.5 17 19.8 16.5 20.6 15.1 21 13.6 21 12 21 7 17 3 12 3 7 3 3 7 3 12 3 17 7 21 12 21 13.6 21 15.1 20.6 16.5 19.8 17 19.5 17.6 19.7 17.8 20.2 18.1 20.7 18 21.3 17.5 21.5 15.8 22.5 13.9 23 12 23 5.9 23 1 18.1 1 12 1 5.9 5.9 1 12 1 18.1 1 23 5.9 23 12 23 13.9 22.5 15.8 21.5 17.5ZM12 6C12.6 6 13 6.4 13 7L13 13C13 13.6 12.6 14 12 14 11.4 14 11 13.6 11 13L11 7C11 6.4 11.4 6 12 6ZM12 16C12.6 16 13 16.4 13 17 13 17.6 12.6 18 12 18 11.4 18 11 17.6 11 17 11 16.4 11.4 16 12 16z'/%3e%3c/svg%3e"), "#", "%23");
+//$form-feedback-icon-invalid:        str-replace(url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' fill='#{$form-feedback-icon-invalid-color}' viewBox='-2 -2 7 7'%3e%3cpath stroke='#{$form-feedback-icon-invalid-color}' d='M0 0l3 3m0-3L0 3'/%3e%3ccircle r='.5'/%3e%3ccircle cx='3' r='.5'/%3e%3ccircle cy='3' r='.5'/%3e%3ccircle cx='3' cy='3' r='.5'/%3e%3c/svg%3E"), "#", "%23");
+
 
 
 // Navs

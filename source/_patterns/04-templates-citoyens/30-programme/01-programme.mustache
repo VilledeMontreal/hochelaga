@@ -38,20 +38,17 @@
             {{{ lead }}}
           </div>
           
+          {{# module-anchors}}
+          <div class="mb-8">
+            {{> patterns-sommaire-navigation}}
+          </div>
+          {{/ module-anchors}}
+
+          {{# module-volets}}
+          {{> templates-citoyens-content-programme}}
+          {{/ module-volets}}
+          
           <div class="content-modules">
-            {{# module-anchors}}
-            <div class="mb-8">
-              <div class="wrapper">
-                <h2 class="h5 mb-1">Dans cette page :</h2>
-                {{> components-list-item-link}}
-              </div>
-            </div>
-            {{/ module-anchors}}
-
-            {{# module-volets}}
-            {{> templates-citoyens-content-programme}}
-            {{/ module-volets}}
-
             {{# module-reglements}}
             <div class="content-module-stacked">
               <h2>Règlements</h2>
@@ -75,7 +72,6 @@
               {{/ listPartners}}
             </div>
             {{/ module-partners}}
-
           </div>
 
         </div>

@@ -41,7 +41,13 @@
     position: absolute;
     bottom: 0;
     right: 0;
-    margin: 1.5rem;
+    margin: 1rem;
+  }
+  @include hover-focus {
+    .btn-media-gallery {
+      background-color: $highlight-light;
+      border-color: $highlight-light;
+    }
   }
 }
 

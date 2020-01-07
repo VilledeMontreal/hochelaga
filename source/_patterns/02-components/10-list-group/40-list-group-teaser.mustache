@@ -3,9 +3,16 @@
   <a class="list-group-item list-group-item-action" href="{{ url }}" role="listitem">
     <div class="row">
       <div class="col-12 col-sm-4">
-        <div class="list-group-teaser-img" style="background-image: url('{{ media.src }}')">
-          <span class="sr-only">{{media.alt}}</span>
+        {{# media.img}}
+        <div class="list-group-teaser-img" style="background-image: url('{{ src }}')">
+          <span class="sr-only">{{alt}}</span>
         </div>
+        {{/ media.img}}
+        {{# media.placeholder}}
+        <div class="list-group-teaser-img list-group-teaser-placeholder-img" style="background-image:url(https://res.cloudinary.com/villemontreal/image/upload/q_auto,f_auto,dpr_auto,w_768,c_fill/v1571398706/portail/background/texture-Small-highlight.png)">
+          <span class="icon {{ icon }}" aria-hidden="true"></span>
+        </div>
+        {{/ media.placeholder}}
       </div>
       <div class="col-12 col-sm-8">
         {{# category }}

@@ -43,18 +43,19 @@ h3, .h3,
 .display-3 {
   @include font-size($h4-font-size);    // 20/28
   line-height: $line-height-md;
-  margin-bottom: 1rem;
+  margin-bottom: .5rem;
   // 576px and up
   @include media-breakpoint-up(md) {
     @include font-size($h3-font-size);  // 24/32
     line-height: $line-height-xl;
+    margin-bottom: 1rem;
   }
 }
 h4, .h4,
 .display-4 {
   @include font-size($h5-font-size);    // 16/24
   line-height: $line-height-md;
-  margin-bottom: 1rem;
+  margin-bottom: .5rem;
   // 576px and up
   @include media-breakpoint-up(md) {
     @include font-size($h4-font-size);  // 20/28
@@ -64,7 +65,7 @@ h4, .h4,
 h5, .h5 {
   @include font-size($h6-font-size);    // 14/20
   line-height: $line-height-sm;
-  margin-bottom: 1rem;
+  margin-bottom: .5rem;
   // 576px and up
   @include media-breakpoint-up(md) {
     @include font-size($h5-font-size);  // 16/24
@@ -74,7 +75,7 @@ h5, .h5 {
 h6, .h6 {
   @include font-size($font-size-xs);    // 12/16
   line-height: $line-height-xs;
-  margin-bottom: 1rem;
+  margin-bottom: .5rem;
   // 576px and up
   @include media-breakpoint-up(md) {
     @include font-size($h6-font-size);  // 14/20
@@ -189,7 +190,7 @@ a {
 .sb-block,
 .region-content,
 .lead {
-  a[href*="//"]:not([href*="montreal.ca"]):not([href$=".pdf"]):not(.link-has-icon):not(.btn) {
+  a[href*="//"]:not([href*="montreal.ca"]):not([href*="ville.montreal.qc.ca"]):not([href$=".pdf"]):not(.link-has-icon):not(.btn) {
     @extend .is-external-link;
   }
 
@@ -213,7 +214,7 @@ a {
   .list-icon,
   .list-group-hub {
     // Don't show external link icon
-    a[href*="//"]:not([href*="montreal.ca"]):not([href$=".pdf"]):not(.list-group-item-action):not(.link-has-icon):not(.btn) {
+    a[href*="//"]:not([href*="montreal.ca"]):not([href*="ville.montreal.qc.ca"]):not([href$=".pdf"]):not(.list-group-item-action):not(.link-has-icon):not(.btn) {
       margin-right: 0;
       &:after {
         content: none;

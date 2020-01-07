@@ -15,6 +15,11 @@
     {{# card-media.img }}
     <img class="card-img-top {{ card-media.img.classes }}" src="{{ card-media.img.src}}" alt="{{ card-media.img.alt }}">
     {{/ card-media.img }}
+    {{# card-media.placeholder}}
+    <div class="card-img-bg img-placeholder" style="background-image:url(https://res.cloudinary.com/villemontreal/image/upload/q_auto,f_auto,dpr_auto,w_768,c_fill/v1571398706/portail/background/texture-Small-highlight.png)">
+      <span class="icon {{ card-media.placeholder.icon }}" aria-hidden="true"></span>
+    </div>
+    {{/ card-media.placeholder}}
   {{/ card-media }}
 
   <div class="card-body">
@@ -40,20 +45,15 @@
     {{/ card-text }}
 
     {{# card-text-interface }}
-    <div class="card-text-interface">{{{ card-text-interface }}}</div>
+    <div class="card-text-interface">
+      {{^ date-time}}
+      {{{ card-text-interface }}}
+      {{/ date-time}}
+      {{# date-time}}
+      {{{text}}} <time datetime="{{dateTimeFormat}}">{{{dateTimeText}}}</time>{{# line-break}}<br>{{/ line-break}}
+      {{/ date-time}}
+    </div>
     {{/ card-text-interface }}
-
-    {{# card-date-text }}
-      <div class="card-date-text">{{{ card-date-text }}}</div>
-    {{/ card-date-text }}
-
-    {{# card-publication-date}}
-      <div class="card-publication-date">
-      {{# dateTime}}
-      {{{text}}} <time datetime="{{dateTimeFormat}}">{{{dateTimeText}}}</time>
-      {{/ dateTime}}
-      </div>
-    {{/ card-publication-date}}
 
     {{# card-cta }}
       {{> components-button}}

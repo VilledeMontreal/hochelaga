@@ -54,5 +54,27 @@
         ]
       }
     }
+  ],
+  "selectValidation": [
+    {
+      "formGroupClass": false,
+      "formGroupSelectID": "form-group-select-validation",
+      "formGroupSelectLabel": false,
+      "formGroupSelectClass": "is-invalid",
+      "formGroupSelectRequired": true,
+      "formGroupSelect": {
+        "defaultOption": "Default option",
+        "options": [
+          {
+            "option-text" : "Option 1",
+            "option-value" : "option-1"
+          },
+          {
+            "option-text" : "Option 2",
+            "option-value" : "option-2"
+          }
+        ]
+      }
+    }
   ]
 }

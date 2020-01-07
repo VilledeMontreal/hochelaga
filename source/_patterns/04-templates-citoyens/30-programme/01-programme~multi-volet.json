@@ -13,21 +13,23 @@
   },
   "lead": "<p>Amorce - Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi condimentum sollicitudin erat, quis convallis risus. Nullam posuere odio ligula, hendrerit suscipit ligula laoreet. Curabitur eleifend nulla purus, ut pharet urna ef id. Cras lacinia nisi id  (recommandé 300 caractères maximum).</p>",
   "module-anchors": {
-    "listGroupClass": false,
-    "listGroup": [
-      {
-        "icon-name": "icon-dot-bullet",
-        "url": "#pg-multi-volet-1",
-        "text": "Volet 1",
-        "classLink": "js-scroll-trigger"
-      },
-      {
-        "icon-name": "icon-dot-bullet",
-        "url": "#pg-multi-volet-2",
-        "text": "Volet 2",
-        "classLink": "js-scroll-trigger"
-      }
-    ]
+    "navtoc": {
+      "listGroupClass": false,
+      "listGroup": [
+        {
+          "icon-name": "icon-dot-bullet",
+          "url": "#pg-multi-volet-1",
+          "text": "Titre - Volet 1",
+          "classLink": "js-scroll-trigger"
+        },
+        {
+          "icon-name": "icon-dot-bullet",
+          "url": "#pg-multi-volet-2",
+          "text": "Titre - Volet 2",
+          "classLink": "js-scroll-trigger"
+        }
+      ]
+    }
   },
   "module-volets": [
     {
@@ -196,8 +198,22 @@
               "card-type": "Type de l'événement",
               "card-title": "Lien de référence à un événement vedette",
               "card-text": false,
-              "card-publication-date": false,
-              "card-date-text" : "Date et heure du début de l'événement"
+              "card-text-interface": {
+                "date-range": true,
+                "date-time": [
+                  {
+                    "line-break": true,
+                    "text": "Du ",
+                    "dateTimeFormat": "2019-12-12",
+                    "dateTimeText": "12 décembre 2019 - 8&nbsp;h&nbsp;00"
+                  },
+                  {
+                    "text": "au ",
+                    "dateTimeFormat": "2019-12-22",
+                    "dateTimeText": "22 décembre 2019 - 18&nbsp;h&nbsp;00"
+                  }
+                ]
+              }
             }
           ]
         }

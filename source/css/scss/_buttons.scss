@@ -50,7 +50,6 @@ button {
   &:not(:disabled):not(.disabled):active,
   &:not(:disabled):not(.disabled).active {
     background-image: none;
-    box-shadow: $btn-focus-box-shadow;
 
     &:focus {
       box-shadow: $btn-focus-box-shadow;
@@ -381,7 +380,7 @@ input[type="button"] {
 // Utility class to hide button-icon label
 @each $breakpoint, $value in $grid-breakpoints {
   // Hide button label at small breakpoint
-  &.btn-hide-label-#{$breakpoint} {
+  .btn-hide-label-#{$breakpoint} {
     @include media-breakpoint-down($breakpoint) {
 
       .btn-label {

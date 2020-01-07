@@ -29,7 +29,7 @@
 @import "~bootstrap/scss/mixins/lists";
 @import "~bootstrap/scss/mixins/list-group";
 @import "~bootstrap/scss/mixins/nav-divider";
-@import "~bootstrap/scss/mixins/forms";
+//@import "~bootstrap/scss/mixins/forms";
 @import "~bootstrap/scss/mixins/table-row";
 
 // // Skins
@@ -47,6 +47,7 @@
 
 // // Custom
 @import "mixins/buttons";
+@import "mixins/forms";
 @import "mixins/chip";
 @import "mixins/icons";
 @import "mixins/mixins";

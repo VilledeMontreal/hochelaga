@@ -30,17 +30,26 @@
   .card-img-bg {
     background-size: cover;
     background-position: center center;
-    flex: 1 0 auto;
-    padding-top: 56.25%;  /* 16:9 format = 0.5625 */
-    width: 100%;
+    position: relative;
+    width: calc(100% + 2px); // Add the 2px from the negative margins to overlap border
     margin: -1px;
+    @include border-top-radius($border-radius);
 
-    @include media-breakpoint-up(md){
-      min-height: 178px; // Maintain a minimal 16:9 aspect ratio
-      padding: 0;
+    &:before {
+      content: "";
+      display: block;
+      padding-top: 56.25%;  /* 16:9 format = 0.5625 */
     }
-    @include media-breakpoint-up(xl){
-      min-height: 212px; // Maintain a minimal 16:9 aspect ratio
+
+    // Placeholder is a mix of a background image and an icon
+    .icon {
+      position: absolute;
+      top: 50%;
+      margin-top: -1.75rem;
+      left: 50%;
+      margin-left: -1.75rem;
+      @include icon-size(3.5rem);
+      @include icon-color($action-lighter);
     }
   }
 
@@ -85,21 +94,15 @@
     line-height: $line-height-md;
   }
 
-  // Card date-text 
-  // smaller font-size and BOLD
-  .card-date-text {
-    @include font-size($font-size-sm);
-    line-height: $line-height-sm;
-    font-weight: $font-weight-bold;
-  }
-
-  // Card-publication-date
-  // smaller font-size
+  // Deprecated
+  // Use card-text-interface
+  .card-date-text,
   .card-publication-date {
-    @include font-size($font-size-sm);
-    line-height: $line-height-sm;
+    line-height: $line-height-md;
   }
 
+  .card-text-sticky-bottom,
+  .card-text-interface,
   .card-date-text,
   .card-publication-date,
   .card-link {
@@ -141,9 +144,42 @@
         @include font-size($h3-font-size);  // 24/32
         line-height: 2rem;
       }
+
     }
   }
 
+  // Card Document
+  //
+  &.card-document {
+    .card-img {
+      width: 198px;
+      @include border-radius(0);
+      border: $card-border-width solid $card-border-color;
+      margin: 2rem auto 0 auto;
+    }
+
+    .card-body-wrapper {
+      width: 100%;
+    }
+
+    @include media-breakpoint-up(sm) {
+      .card-img {
+        margin: 2rem 0 2rem 2rem;
+      }
+      .card-body-wrapper {
+        display: flex;
+        flex-grow: 1;
+        max-width: 100%;
+        align-self: flex-start;
+        width: auto;
+      }
+      .card-body {
+        width: auto;
+      }
+    }
+  }
+
+  // Card Date
   &.card-date {
     // Card type
     .card-type {
@@ -280,7 +316,6 @@
   // Featured card specific
   &.card-multi,
   &.card-featured {
-
     border: none;
     @include border-radius(0);
     border-bottom: 1px solid $neutral-stroke;
@@ -367,13 +402,6 @@
         }
       }
 
-      @include media-breakpoint-up(md){
-        .card-img-bg {
-          min-height: auto;
-          padding-top: $padding-16-9;
-        }
-      }
-
       @include media-breakpoint-up(lg) {
         border: none;
         .card-body {
@@ -388,10 +416,6 @@
         }
       }
     }
-  }
-
-  &[data-toggle="modal"] {
-    cursor: pointer;
   }
 }
 
@@ -413,6 +437,7 @@ a.card {
   &.focus {
     box-shadow: $card-box-shadow, $input-btn-focus-box-shadow;
   }
+
   &.card-multi,
   &.card-featured {
     @include hover-focus {
