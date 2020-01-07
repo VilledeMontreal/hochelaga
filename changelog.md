@@ -17,6 +17,7 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 - Templates: examples for content-modules and content-module-stacking with different Headings.
   This is a way to reproduce the structure that we get from the content-api.
 - Templates: Nouvelle.
+- Templates: Index Recherche.
 - Patterns: New Wrapper Sommaire navigation.
 
 ### Changed
@@ -26,6 +27,7 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 - Forms: Labels are now Bold except for custom-form-label (checkboxes, radios and switches).
 - Forms: Placeholder color chanded from $neutral-tertiary to  $neutral-secondary (Accessibility)
 - Templates: Normalization of content-modules and content-module-stacked for all templates.
+- Removed texture from modal Mesures d'urgences.
 
 ### Fixed
 - Removed focus from active state for toggle buttons.
