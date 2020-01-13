@@ -3,7 +3,7 @@
     <div class="row">
       {{^ selectedArrondissement}}
       <div class="col">
-        <p class="mb-2 mb-sm-0">Veuillez sélectionner votre arrondissement pour obtenir l’information qui vous concerne.</p>
+        <p class="mb-2 mb-sm-0">Sélectionnez votre arrondissement et trouvez l’information qui vous concerne.</p>
       </div>
       <div class="col-12 col-sm-auto">
         <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#selectArrondissementModal">Sélectionner</button>
@@ -23,7 +23,7 @@
   <div class="wrapper-arrondissement-body">
     {{^ selectedArrondissement}}
     <div class="empty-state">
-      {{> styles-icon-item("icon-name": "icon-loction")}}
+      {{> styles-icon-item("icon-name": "icon-location-empty")}}
       <p>Aucun arrondissement sélectionné.</p>
     </div>
     {{/ selectedArrondissement}}
