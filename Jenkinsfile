@@ -124,7 +124,7 @@ ctx = pipeline.createContext([
     ],
     notifications: [
         chat: [
-            room: 'boite-outils-web',
+            room: 'boîte-à-outils-web',
             notify: true
         ],
         mail: [
