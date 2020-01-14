@@ -10,6 +10,7 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 - Sidebar Block: Handling of spacing between multiple .list inside a single .sb-block (Programmes > contacts)
 - Components - Buttons: Modifier for dialog-colors (success, danger, warning, info, danger).
 - Components - Cards - Document: Add example for marking untranslated Document content.
+- Components - Toasts: Add toasts (snackbar) example and styles.
 - Patterns - Footer: Added minimal footer version.
 - Templates - index: Add example for badge-primary usage in applied filters section.
 
