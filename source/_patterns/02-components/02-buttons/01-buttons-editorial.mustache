@@ -1,0 +1,35 @@
+<h4 class="pl-pattern-subtitle">Tailles</h4>
+<div class="pl-button">
+  {{> components-button(buttonClass: "btn-primary btn-lg", buttonText: "Large")}}
+  {{> components-button(buttonClass: "btn-primary ", buttonText: "Medium")}}
+  {{> components-button(buttonClass: "btn-primary btn-sm", buttonText: "Small")}}
+</div>
+
+<h4 class="pl-pattern-subtitle">Hiérarchie</h4>
+<div class="pl-button d-flex">
+  {{> components-button(buttonClass: "btn-primary", buttonText: "Primary")}}
+  {{> components-button(buttonClass: "btn-secondary", buttonText: "Secondary")}}
+  {{> components-button(buttonClass: "btn-link", buttonText: "Tertiary")}}
+</div>
+
+<h4 class="pl-pattern-subtitle">États</h4>
+<div class="pl-button">
+  {{> components-button(buttonClass: "btn-primary", buttonText: "Disabled", buttonState: "disabled" )}}
+  {{> components-button(buttonClass: "btn-secondary", buttonText: "Disabled", buttonState: "disabled" )}}
+  {{> components-button(buttonClass: "btn-link", buttonText: "Disabled", buttonState: "disabled" )}}
+</div>
+
+<h3 class="pl-pattern-subtitle">Reversed</h3>
+<h4 class="pl-pattern-subtitle">Hiérarchie</h4>
+<div class="pl-button d-flex bg-gray-900 pl-pt-2 pl-pl-2">
+  {{> components-button(buttonClass: "btn-primary btn-reversed", buttonText: "Primary")}}
+  {{> components-button(buttonClass: "btn-secondary btn-reversed", buttonText: "Secondary")}}
+  {{> components-button(buttonClass: "btn-link btn-reversed", buttonText: "Tertiary")}}
+</div>
+
+<h4 class="pl-pattern-subtitle">États</h4>
+<div class="pl-button d-flex bg-gray-900 pl-pt-2 pl-pl-2">
+  {{> components-button(buttonClass: "btn-primary btn-reversed", buttonText: "Disabled", buttonState: "disabled" )}}
+  {{> components-button(buttonClass: "btn-secondary btn-reversed", buttonText: "Disabled", buttonState: "disabled" )}}
+  {{> components-button(buttonClass: "btn-link btn-reversed", buttonText: "Disabled", buttonState: "disabled" )}}
+</div>

@@ -99,25 +99,10 @@ fieldset:disabled a.btn {
   @include button-variant($background: transparent, $border: $neutral-stroke, $color: $action, $hover-background: transparent, $hover-border: $action, $hover-color: $action, $active-background: transparent, $active-border: $action, $active-color: $action);
 }
 
-.btn-primary-reverse {
-  @include button-variant($background: $white, $border: $white, $color: $action, $hover-background: $highlight-light, $hover-border: $highlight-light, $hover-color: $action, $active-background: $highlight-light, $active-border: $highlight-light, $active-color: $action);
-  &:focus,
-  &.focus {
-    box-shadow: $input-btn-reverse-focus-box-shadow;
-  }
-}
-
-.btn-secondary-reverse {
-  @include button-variant($background: transparent, $border: $white, $color: $white, $hover-background: $highlight-light, $hover-border: $highlight-light, $hover-color: $action, $active-background: $highlight-light, $active-border: $highlight-light, $active-color: $action);
-  &:focus,
-  &.focus {
-    box-shadow: $input-btn-reverse-focus-box-shadow;
-  }
-}
-
 .btn-link,
 .btn-tertiary {
   @include button-variant($background: transparent, $border: transparent, $color: $action, $hover-background: $highlight-light, $hover-border: $highlight-light, $hover-color: $action, $active-background: $highlight-light, $active-border: $highlight-light, $active-color: $action);
+
   &.btn-collapse {
     &:after {
       content: '';
@@ -142,16 +127,116 @@ fieldset:disabled a.btn {
   }
 }
 
-// Button squared variant
-.btn-squared {
-  border-radius:$btn-border-radius-squared;
-  padding-left: 1rem;
-  padding-right: 1rem; 
-  .icon,
-  .utility-icon {
-    margin-left: -.5rem;
+// Dialog Color Modifier
+@each $label, $map in $dialog-colors {
+  $color-dark: map-get($map, dark);
+  $color-base: map-get($map, base);
+  $color-light: map-get($map, light);
+  $color-dark-lighten: lighten($color-dark, 10%);
+  .btn-#{$label} {
+    // Primary
+    &.btn-primary {
+      @include button-variant($background: $color-dark, $border: $color-dark, $hover-background: $color-dark-lighten, $hover-border: $color-dark-lighten, $active-background: $color-dark-lighten, $active-border: $color-dark-lighten);
+    }
+    // Secondary
+    &.btn-secondary {
+      @include button-variant($background: transparent, $border: $neutral-stroke, $color: $color-dark, $hover-background: transparent, $hover-border: $color-dark, $hover-color: $color-dark, $active-background: transparent, $active-border: $color-dark, $active-color: $color-dark);
+    }
+    // Tertiary
+    &.btn-tertiary,
+    &.btn-link {
+      @include button-variant($background: transparent, $border: transparent, $color: $color-dark, $hover-background: $color-light, $hover-border: $color-light, $hover-color: $color-dark, $active-background: $color-light, $active-border: $color-light, $active-color: $color-dark);
+    }
+  }
+
+}
+
+// DEPRECATED
+// USE .btn-reversed modifier
+.btn-primary-reverse {
+  @include button-variant($background: $white, $border: $white, $color: $neutral-primary, $hover-background: $highlight-light, $hover-border: $highlight-light, $hover-color: $action, $active-background: $highlight-light, $active-border: $highlight-light, $active-color: $action);
+  &:focus,
+  &.focus {
+    box-shadow: $input-btn-reverse-focus-box-shadow;
   }
 }
+
+.btn-secondary-reverse {
+  @include button-variant($background: transparent, $border: $white, $color: $white, $hover-background: transparent, $hover-border: $action-lighter, $hover-color: $action-lighter, $active-background: transparent, $active-border: $action-lighter, $active-color: $action-lighter);
+  &:focus,
+  &.focus {
+    box-shadow: $input-btn-reverse-focus-box-shadow;
+  }
+}
+
+.btn-link-reverse,
+.btn-tertiary-reverse {
+  @include button-variant($background: transparent, $border: transparent, $color: $white, $hover-background: transparent, $hover-border: transparent, $hover-color: $action-lighter, $active-background: transparent, $active-border: transparent, $active-color: $action-lighter);
+  &:focus,
+  &.focus {
+    box-shadow: $input-btn-reverse-focus-box-shadow;
+  }
+}
+
+// Reversed modifier
+.btn-reversed {
+  &:focus,
+  &.focus {
+    box-shadow: $input-btn-reverse-focus-box-shadow;
+  }
+  &.btn-primary {
+    @include button-variant($background: $white, $border: $white, $color: $neutral-primary, $hover-background: $white, $hover-border: $white, $hover-color: $neutral-primary, $active-background: $white, $active-border: $white, $active-color: $neutral-primary);
+  }
+  &.btn-secondary {
+    @include button-variant($background: transparent, $border: rgba($white, .5), $color: $white, $hover-background: transparent, $hover-border: $white, $hover-color: $white, $active-background: transparent, $active-border: $white, $active-color: $white);
+  }
+  &.btn-link,
+  &.btn-tertiary {
+    @include button-variant($background: transparent, $border: transparent, $color: $white, $hover-background: rgba($white, .2), $hover-border: transparent, $hover-color: $white, $active-background: rgba($white, .2), $active-border: transparent, $active-color: $white);
+  }
+}
+
+// Disabled states by hierarchy
+:disabled,
+.disabled {
+  // Primary
+  &.btn-primary {
+    @include button-variant($background: $neutral-underground-2, $border: $neutral-underground-2, $color: $neutral-secondary, $hover-background: $neutral-underground-2, $hover-border: $neutral-underground-2, $hover-color: $neutral-secondary, $active-background: $neutral-underground-2, $active-border: $neutral-underground-2, $active-color: $neutral-secondary);
+  }
+  // Secondary
+  &.btn-secondary {
+    @include button-variant($background: transparent, $border: $neutral-stroke, $color: $neutral-tertiary, $hover-background: transparent, $hover-border: rgba($white, .5), $hover-color: $neutral-tertiary, $active-background: transparent, $active-border: rgba($white, .5), $active-color: $neutral-tertiary);
+  }
+  // Tertiary
+  &.btn-link,
+  &.btn-tertiary {
+    @include button-variant($background: transparent, $border: transparent, $color: $neutral-tertiary, $hover-background: transparent, $hover-border: transparent, $hover-color: $neutral-tertiary, $active-background: transparent, $active-border: transparent, $active-color: $neutral-tertiary);
+  }
+
+  // Reversed
+  &.btn-reversed {
+    &.btn-primary {
+      @include button-variant($background: rgba($white, .3), $border: transparent, $color: rgba($white, .5), $hover-background: rgba($white, .3), $hover-border: transparent, $hover-color: rgba($white, .5), $active-background: rgba($white, .3), $active-border: transparent, $active-color: rgba($white, .5));
+    }
+    &.btn-secondary {
+      @include button-variant($background: transparent, $border: rgba($white, .5), $color: rgba($white, .5), $hover-background: transparent, $hover-border: rgba($white, .5), $hover-color: rgba($white, .5), $active-background: transparent, $active-border: rgba($white, .5), $active-color: rgba($white, .5));
+    }
+    &.btn-link,
+    &.btn-tertiary {
+      @include button-variant($background: transparent, $border: transparent, $color: rgba($white, .5), $hover-background: transparent, $hover-border: transparent, $hover-color: rgba($white, .5), $active-background: transparent, $active-border: transparent, $active-color: rgba($white, .5));
+    }
+
+    // We need to override btn-icon inside .btn-reversed
+    // See if we can simplify the whole think
+    &.btn-icon {
+      .icon {
+        margin: 0;
+      }
+    }
+  }
+
+}
+
 
 .btn-lang {
   @include button-variant($background: transparent, $border: transparent, $color: $white, $hover-background: transparent, $hover-border: transparent, $hover-color: $action-lighter, $active-background: transparent, $active-border: transparent, $active-color: $action-lighter);
@@ -170,19 +255,12 @@ fieldset:disabled a.btn {
   }
 }
 
+// DEPRECATED
 .btn-promo {
   @include button-variant($background: $brand, $border: $brand, $color: $white, $hover-background: $brand-dark, $hover-border: $brand-dark, $hover-color: $white, $active-background: $brand-dark, $active-border: $brand-dark, $active-color: $white);
   &:focus,
   .focus {
     box-shadow: 0 0 0 $btn-focus-width rgba($brand, .5);
-  }
-}
-
-
-[class*="btn-"] {
-  &:disabled,
-  &.disabled {
-   @include button-variant($background: $neutral-underground-2, $border: $neutral-underground-2, $color: $neutral-secondary, $hover-background: $neutral-underground-2, $hover-border: $neutral-underground-2, $hover-color: $neutral-secondary, $active-background: $neutral-underground-2, $active-border: $neutral-underground-2, $active-color: $neutral-secondary);
   }
 }
 
@@ -211,8 +289,8 @@ fieldset:disabled a.btn {
   }
 }
 
-
-// Button squared variant
+// Button squared modifier
+// Must comes after sizes variant to override border-radius
 .btn-squared {
   border-radius: $btn-border-radius-squared;
   padding-left: 1rem;
@@ -223,8 +301,7 @@ fieldset:disabled a.btn {
   }
 }
 
-
-// Block button
+// Block button modifier
 .btn-block {
   display: block;
   width: 100%;
@@ -361,6 +438,10 @@ input[type="button"] {
 //
 .btn-icon {
   // reset margin on icon
+  &.btn-primary .icon,
+  &.btn-secondary .icon,
+  &.btn-tertiary .icon,
+  &.btn-link .icon,
   .icon {
     margin: 0;
   }
