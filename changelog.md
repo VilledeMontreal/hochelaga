@@ -8,6 +8,7 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 
 ### Added
 - Sidebar Block: Handling of spacing between multiple .list inside a single .sb-block (Programmes > contacts)
+- Components - Badges: New badges-notification.
 - Components - Buttons: Modifier for dialog-colors (success, danger, warning, info, danger).
 - Components - Cards - Document: Add example for marking untranslated Document content.
 - Components - Toasts: Add toasts (snackbar) example and styles.
@@ -32,6 +33,7 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 - Templates - Article: Add featured document module example.
 
 - Pattern Lab - Components - Buttons: New layout for buttons (Editorial, Utility and Icons)
+- Pattern Lab - Components - Badges: Rework layout for badges. 
 
 ### Fixed
 - Links - external link: Fixed weird behavior for multiline external links.
