@@ -8,6 +8,7 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 
 ### Changed
 - Add class to hide illustration on homepage for mobile.
+- Patterns - header: Adjustement to document-heading-sm bottom padding.
 
 
 ## [4.6.0] - 2020-01-07
