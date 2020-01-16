@@ -2,8 +2,11 @@
   {{^ customExtras}}
   <div class="content-header-extras-item list-inline-interpunct mb-0">
     {{# publicationDate}}
-    <div class="list-inline-item">Mis à jour le&nbsp;<time datetime="{{dateTimeFormat}}">{{{dateTimeText}}}</time></div>
+    <div class="list-inline-item">Publié le&nbsp;<time datetime="{{dateTimeFormat}}">{{{dateTimeText}}}</time></div>
     {{/ publicationDate}}
+    {{# updatedDate}}
+    <div class="list-inline-item">Mis à jour le&nbsp;<time datetime="{{dateTimeFormat}}">{{{dateTimeText}}}</time></div>
+    {{/ updatedDate}}
     {{# readTime}}
     <div class="list-inline-item">Temps de lecture : {{readTime}}</div>
     {{/ readTime}}
