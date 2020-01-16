@@ -1,16 +1,40 @@
-<h4 class="pl-pattern-subtitle">Medium</h4>
+<h4 class="pl-pattern-subtitle">Default (Medium)</h4>
 <div class="mb-2">
-{{> styles-link-list-element("link-label": "Link label")}}
+  <div class="mb-1">
+  {{> styles-link-list-element("link-label": "Link label")}}
+  </div>
+  <div>
+  {{> styles-link-list-element("has-icon": true, "icon-right": false, "link-label": "Link with icon (left)", icon: "icon-arrow-left")}}
+  </div>
+  <div>
+  {{> styles-link-list-element("has-icon": true,"icon-right": true, "link-label": "Link with icon (right)", icon: "icon-arrow-right")}}
+  </div>
 </div>
 
 
 <h4 class="pl-pattern-subtitle">Small</h4>
 <div class="mb-2">
-{{> styles-link-list-element("linkSize": "link-sm", "link-label": "Link label")}}
+  <div class="mb-1">
+  {{> styles-link-list-element("linkSize": "link-sm", "link-label": "Libellé")}}
+  </div>
+  <div>
+  {{> styles-link-list-element("has-icon": true,"linkSize": "link-sm", "icon-right": false, "link-label": "Link with icon (left)", icon: "icon-arrow-left")}}
+  </div>
+  <div>
+  {{> styles-link-list-element("has-icon": true,"linkSize": "link-sm", "icon-right": true, "link-label": "Link with icon (right)", icon: "icon-arrow-right")}}
+  </div>
 </div>
 
 
 <h4 class="pl-pattern-subtitle">ExtraSmall</h4>
 <div class="mb-2">
-{{> styles-link-list-element("linkSize": "link-xs", "link-label": "Link label")}}
+  <div class="mb-1">
+  {{> styles-link-list-element("linkSize": "link-xs", "link-label": "Libellé")}}
+  </div>
+  <div>
+  {{> styles-link-list-element("has-icon": true,"linkSize": "link-xs", "icon-right": false, "link-label": "Link with icon (left)", icon: "icon-arrow-left")}}
+  </div>
+  <div>
+  {{> styles-link-list-element("has-icon": true,"linkSize": "link-xs", "icon-right": true, "link-label": "Link with icon (right)", icon: "icon-arrow-right")}}
+  </div>
 </div>

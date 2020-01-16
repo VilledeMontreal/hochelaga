@@ -402,6 +402,11 @@ $pl-size-box-wrapper-padding: 1rem;
           padding: .5em 1rem;
           //word-break: break-word;
           align-items: center;
+          &-child-wrapper {
+            display: flex;
+            height: 100%;
+            flex-direction: column;
+          }
           &:before {
             content: attr(data-header);
             color: $headings-color;
@@ -413,9 +418,6 @@ $pl-size-box-wrapper-padding: 1rem;
             &:before {
               content: none;
             }
-          }
-          &[data-header="Variable"] {
-            display: block;
           }
 
           @include media-breakpoint-up(md) {

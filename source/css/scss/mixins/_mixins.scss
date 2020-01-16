@@ -5,12 +5,22 @@
 @mixin vdm-text-emphasis-variant($parent, $color, $color-lighten) {
   #{$parent} {
     color: $color !important;
-    a { 
+    a {
       color: $color !important;
       border-bottom: $link-border-width solid $color;
       @include hover-focus {
         background-color: $color-lighten;
         border-bottom: $link-border-width solid $color;
+        &:before {
+          background-color: $color-lighten;
+        }
+      }
+      // Handle specific cases here...
+      &:after {
+        background-color: $color;
+      }
+      .icon {
+        @include icon-color($color);
       }
     }
   }
@@ -23,6 +33,16 @@
         background-color: $color-lighten;
         border-bottom: $link-border-width solid $color;
       }
+    }
+    &:before {
+      background-color: $color-lighten;
+    }
+    // Handle specific cases here...
+    &:after {
+      background-color: $color;
+    }
+    .icon {
+      @include icon-color($color);
     }
   }
 }

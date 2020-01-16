@@ -25,6 +25,7 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 
 ### Changed
 - Add class to hide illustration on homepage for mobile.
+- Styles - Links: normalisation between inline and element links. Added ability to put .icon span tags inside inline links.
 - Components - Buttons: reversed, hover and states.
 - Components - Buttons: Disabled states by hierarchy button type.
 - Components - Buttons: .btn-reversed is now a modifier and can be applied to any types of buttons.
@@ -43,7 +44,7 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 - Templates - Sujet: handling of related content with and without borough wrapper.
 - Templates - Article: Add featured document module example.
 - Icons: icon-warning becomes icon-error and a new icon-warning has been created.
-
+- Pattern Lab - Styles - Links: Refactoring of link inline and link element presentation with and without icon.
 - Pattern Lab - Components - Buttons: New layout for buttons (Editorial, Utility and Icons)
 - Pattern Lab - Components - Badges: Rework layout for badges. 
 
