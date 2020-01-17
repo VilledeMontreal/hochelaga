@@ -10,6 +10,7 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 - Add class to hide illustration on homepage for mobile.
 - Patterns - header: Adjustement to document-heading-sm bottom padding.
 - List: list-inline-interpunct icon placement handling and stacking behavior.
+- Patterns - Wrappers - Arrondissement: Center texte and button inside .wrapper-arrondissement-header.
 
 
 ## [4.6.0] - 2020-01-07

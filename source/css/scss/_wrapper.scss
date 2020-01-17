@@ -31,6 +31,19 @@
     line-height: $line-height-sm;
     padding: 1rem;
     margin-bottom: 2rem;
+    align-items: center;
+
+    // Might need classes to gain more control
+    .col {
+      display: flex;
+      justify-content: center;
+      flex-direction: column;
+    }
+
+    // Might need classes to gain more control
+    [class*="col-"] {
+      align-self: center;
+    }
 
     .title {
       color: $neutral-primary;
