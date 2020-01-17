@@ -227,20 +227,25 @@
   flex-wrap: wrap;
   .list-inline-item {
     display: inline-flex;
-    margin-right: .25rem;
+    margin-right: 0;
     margin-bottom: .25rem;
-    + .list-inline-item {
-      &:before {
-        -webkit-mask: url($data-icon-dot-interpunct) no-repeat 50% 50%;
-        mask: url($data-icon-dot-interpunct) no-repeat 50% 50%;
-        width: 20px;
-        height: 20px;
-        content: '';
-        display: inline-flex;
-        -webkit-mask-size: cover;
-        mask-size: cover;
-        background-color: $neutral-tertiary;
-        margin-right: .25rem;
+    &:after {
+      -webkit-mask: url($data-icon-dot-interpunct) no-repeat 50% 50%;
+      mask: url($data-icon-dot-interpunct) no-repeat 50% 50%;
+      width: $icon-sm;
+      height: $icon-sm;
+      content: '';
+      display: inline-flex;
+      -webkit-mask-size: cover;
+      mask-size: cover;
+      background-color: $neutral-tertiary;
+      margin-left: .25rem;
+      margin-right: .25rem;
+    }
+    // Remove interpunct from last item
+    &:last-child {
+      &:after {
+        content: none;
       }
     }
 
