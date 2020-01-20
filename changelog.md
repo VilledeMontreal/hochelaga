@@ -14,6 +14,8 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 - Patterns - header: Adjustement to document-heading-sm bottom padding.
 - List: list-inline-interpunct icon placement handling and stacking behavior.
 - Patterns - Wrappers - Arrondissement: Center texte and button inside .wrapper-arrondissement-header.
+- Templates - Sujet: handling of related content with and without borough wrapper.
+- Templates - Article: Add featured document module example.
 
 
 ## [4.6.0] - 2020-01-07

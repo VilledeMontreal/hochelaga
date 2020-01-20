@@ -258,6 +258,34 @@
         }
       }
     },
+    "module-featured-document": {
+      "cards": {
+        "classes": false,
+        "bsgrid-classes": "col-12",
+        "card-item": [
+          {
+            "classes": "card-fw card-document",
+            "url": "https://res.cloudinary.com/villemontreal/image/upload/v1573053516/portail/gfipioiuaxit5nkyea0l.pdf",
+            "card-media" : {
+              "icon": false,
+              "img": false,
+              "document": {
+                "img": {
+                  "classes": false,
+                  "src": "https://res.cloudinary.com/villemontreal/image/upload/q_auto,f_auto,dpr_auto,w_200/v1/portail/gfipioiuaxit5nkyea0l.png",
+                  "alt": "Alt de l'image de couverture du PDF."
+                }
+              }
+            },
+            "card-type": "Type",
+            "card-title": "Titre du document",
+            "card-text": false,
+            "card-text-interface": "Document PDF de X Mo",
+            "card-link": "Télécharger"
+          }
+        ]
+      }
+    },
     "module-events": false
   },
   "sidebarRight": true,
