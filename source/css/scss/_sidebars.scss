@@ -41,6 +41,11 @@
     margin-bottom: 0;
   }
 
+  // Handle multplie lists in a single sidebar block
+  .list + .list {
+    margin-top: 1.5rem;
+  }
+
   // Schedule data
   // TODO: Refactor this code
   .schedule-content {
