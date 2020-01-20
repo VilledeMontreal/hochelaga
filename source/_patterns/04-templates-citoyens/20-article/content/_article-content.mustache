@@ -145,6 +145,19 @@
 </div>
 {{/ module-table}}
 
+{{# module-featured-document}}
+<h2>Module Titre</h2>
+<div class="content-module-stacked">
+  <div class="row cards">
+    {{# cards.card-item }}
+    <div class="{{ cards.bsgrid-classes }}">
+      {{> components-card-item-full-width }}
+    </div>
+    {{/ cards.card-item }}
+  </div>
+</div>
+{{/ module-featured-document}}
+
 {{# module-events}}
 <h2>Événements à venir</h2>
 <div class="content-module-stacked">
