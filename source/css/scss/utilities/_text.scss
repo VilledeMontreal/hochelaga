@@ -94,7 +94,6 @@ a.text-muted {
 .is-external-link {
   margin-right: 1.625rem;
   position: relative;
-  width: auto !important;
   &:after {
     content: '';
     -webkit-mask: url($data-icon-externallink) no-repeat 50% 50%;
@@ -109,19 +108,6 @@ a.text-muted {
     margin-right: -1.625rem;
     margin-left: .125rem;
     vertical-align: -.375rem;
-  }
-
-  @include hover-focus {
-    &:before {
-      background-color: $highlight-light;
-      content: "";
-      position: absolute;
-      top: 0;
-      left: 0;
-      right: -1.625rem;
-      bottom: -1px;
-      z-index: -1;
-    }
   }
 }
 

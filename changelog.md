@@ -17,6 +17,9 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 - Templates - Sujet: handling of related content with and without borough wrapper.
 - Templates - Article: Add featured document module example.
 
+### Fixed
+- Links - external link: Fixed weird behavior for multiline external links.
+
 
 ## [4.6.0] - 2020-01-07
 
