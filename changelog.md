@@ -8,6 +8,7 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 
 ### Added
 - Sidebar Block: Handling of spacing between multiple .list inside a single .sb-block (Programmes > contacts)
+- Patterns - Footer: Added minimal footer version.
 
 ### Changed
 - Add class to hide illustration on homepage for mobile.

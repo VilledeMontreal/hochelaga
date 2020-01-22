@@ -1,5 +1,6 @@
-<footer class="footer" id="main-footer">
+<footer class="footer{{# footerMinimal}} footer-minimal{{/ footerMinimal}}" id="main-footer">
   <div class="container">
+    {{^ footerMinimal}}
     <div class="d-flex font-size-xs-interface pb-1 pb-md-2">
       <a href="#main-content" class="link-page-top ml-auto js-scroll-trigger">Haut de la page</a>
     </div>
@@ -190,6 +191,7 @@
         </div>
       </div>
     </div>
+    {{/ footerMinimal}}
     <div class="row footer-last align-items-center justify-content-center justify-content-lg-between">
       <div class="col-auto mb-4 mb-lg-0">
         <svg id="logo-mtl-rosace" class="footer-logo reverse" x="0px" y="0px" viewBox="0 0 184.6 39.3" xml:space="preserve">
