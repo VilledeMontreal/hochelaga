@@ -1,5 +1,5 @@
 ---
-title: List group
+title: Clickable Wrapper
 ---
 
 Les list group sont des composants souples qui permettent d'afficher du contenu complexe tandis que les list item sont des liste simples.
