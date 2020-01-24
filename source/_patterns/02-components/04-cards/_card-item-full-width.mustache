@@ -1,6 +1,6 @@
 
 {{# url}}
-<a href="{{ url }}" class="card {{ classes }}"{{# data-link-title}} data-link-title="{{data-link-title}}"{{/ data-link-title}}{{# data-link-position}} data-link-position="{{data-link-position}}"{{/ data-link-position}}>
+<a href="{{ url }}" class="card {{ classes }}"{{# data-link-title}} data-link-title="{{data-link-title}}"{{/ data-link-title}}{{# data-link-position}} data-link-position="{{data-link-position}}"{{/ data-link-position}}{{# hreflang}} hreflang="{{hreflang}}"{{/ hreflang}}>
 {{/ url}}
 {{^ url}}
 <div class="card {{ classes }}">
@@ -39,7 +39,7 @@
         {{# card-text-interface }}
         <div class="card-text-interface">
           {{^ date-time}}
-          {{{ card-text-interface }}}
+          {{{ card-text-interface }}}{{# card-text-extra}} <span class="font-weight-bold">{{card-text-extra}}</span>{{/ card-text-extra}}
           {{/ date-time}}
           {{# date-time}}
           {{{text}}} <time datetime="{{dateTimeFormat}}">{{{dateTimeText}}}</time>{{# line-break}}<br>{{/ line-break}}
