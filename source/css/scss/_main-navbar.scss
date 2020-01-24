@@ -479,14 +479,13 @@
     }
 
     .btn + .btn {
-      margin-left: .25rem;
+      margin-left: .5rem;
     }
     .btn-primary.btn-search-submit:not(:disabled):not(.disabled) {
-      background-color: transparent;
       padding: .5rem;
       border: 0;
       .icon {
-        @include icon-color($action);
+        @include icon-color($white);
         display: inline-flex;
         margin-right: 0;
         margin: 0;
@@ -496,10 +495,7 @@
       }
       &:hover,
       &:focus {
-        background-color: $highlight-light;
-        .btn-label {
-          color: $action;
-        }
+        background-color: $action-darker;
       }
     }
   }
