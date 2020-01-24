@@ -11,7 +11,6 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 - Components - Cards - Document: Add example for marking untranslated Document content.
 - Patterns - Footer: Added minimal footer version.
 - Templates - index: Add example for badge-primary usage in applied filters section.
-- 
 
 ### Changed
 - Add class to hide illustration on homepage for mobile.
@@ -21,6 +20,7 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 - Components - Cards: Removed Content-type representation. The card component is the generic reprensentation of a card anatomy.
 - Components - Cards: Normalization of .card-service Title color.
 - Components - Cards: Icon placeholder is now 80px and hover is $action-lighter.
+- Components - Main-navbar: Search submit button on mobile conforms to btn-primary styles.
 - Patterns - header: Adjustement to document-heading-sm bottom padding.
 - Patterns - Wrappers - Arrondissement: Center texte and button inside .wrapper-arrondissement-header.
 - Templates - Sujet: handling of related content with and without borough wrapper.
