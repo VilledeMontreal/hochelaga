@@ -673,6 +673,18 @@ $card-inner-border-radius:          calc(#{$card-border-radius} - #{$card-border
 $card-box-shadow:                   $box-shadow;
 
 
+// Toasts
+
+$toast-padding-x:                   1rem;
+$toast-padding-y:                   1rem;
+$toast-font-size:                   $font-size-sm;
+$toast-line-height:                 $line-height-sm;
+$toast-color:                       $white;
+$toast-background-color:            $neutral-primary;
+$toast-border-radius:               .25rem;
+$toast-box-shadow:                  0 .125rem .5rem rgba($black, .1);
+
+
 // Badges
 
 $badge-font-size:                   $font-size-xs;
