@@ -1,0 +1,56 @@
+<h4 class="pl-pattern-subtitle">Tailles</h4>
+<div class="pl-button">
+  {{> components-button(buttonClass: "btn-primary btn-squared", buttonText: "Medium")}}
+  {{> components-button(buttonClass: "btn-primary btn-squared btn-sm", buttonText: "Small")}}
+</div>
+
+<h4 class="pl-pattern-subtitle">Hiérarchie</h4>
+<div class="pl-button d-flex">
+  {{> components-button(buttonClass: "btn-primary btn-squared", buttonText: "Primary")}}
+  {{> components-button(buttonClass: "btn-secondary btn-squared", buttonText: "Secondary")}}
+  {{> components-button(buttonClass: "btn-link btn-squared", buttonText: "Tertiary")}}
+</div>
+
+<h4 class="pl-pattern-subtitle">Modificateurs</h4>
+<div class="pl-button pl-mb-0">
+  {{> components-button(buttonClass: "btn-primary btn-success btn-squared", buttonText: "Libellé")}}
+  {{> components-button(buttonClass: "btn-secondary btn-success btn-squared", buttonText: "Libellé")}}
+  {{> components-button(buttonClass: "btn-tertiary btn-success btn-squared", buttonText: "Libellé")}}
+</div>
+<div class="pl-button pl-mb-0">
+  {{> components-button(buttonClass: "btn-primary btn-danger btn-squared", buttonText: "Libellé")}}
+  {{> components-button(buttonClass: "btn-secondary btn-danger btn-squared", buttonText: "Libellé")}}
+  {{> components-button(buttonClass: "btn-tertiary btn-danger btn-squared", buttonText: "Libellé")}}
+</div>
+<div class="pl-button pl-mb-0">
+  {{> components-button(buttonClass: "btn-primary btn-warning btn-squared", buttonText: "Libellé")}}
+  {{> components-button(buttonClass: "btn-secondary btn-warning btn-squared", buttonText: "Libellé")}}
+  {{> components-button(buttonClass: "btn-tertiary btn-warning btn-squared", buttonText: "Libellé")}}
+</div>
+<div class="pl-button">
+  {{> components-button(buttonClass: "btn-primary btn-info btn-squared", buttonText: "Libellé")}}
+  {{> components-button(buttonClass: "btn-secondary btn-info btn-squared", buttonText: "Libellé")}}
+  {{> components-button(buttonClass: "btn-tertiary btn-info btn-squared", buttonText: "Libellé")}}
+</div>
+
+<h4 class="pl-pattern-subtitle">États</h4>
+<div class="pl-button">
+  {{> components-button(buttonClass: "btn-primary btn-squared ", buttonText: "Disabled", buttonState: "disabled" )}}
+  {{> components-button(buttonClass: "btn-secondary btn-squared ", buttonText: "Disabled", buttonState: "disabled" )}}
+  {{> components-button(buttonClass: "btn-link btn-squared ", buttonText: "Disabled", buttonState: "disabled" )}}
+</div>
+
+<h3 class="pl-pattern-subtitle">Reversed</h3>
+<h4 class="pl-pattern-subtitle">Hiérarchie</h4>
+<div class="pl-button d-flex bg-gray-900 pl-pt-2 pl-pl-2">
+  {{> components-button(buttonClass: "btn-primary btn-squared btn-reversed", buttonText: "Primary")}}
+  {{> components-button(buttonClass: "btn-secondary btn-squared btn-reversed", buttonText: "Secondary")}}
+  {{> components-button(buttonClass: "btn-link btn-squared btn-reversed", buttonText: "Tertiary")}}
+</div>
+
+<h4 class="pl-pattern-subtitle">États</h4>
+<div class="pl-button d-flex bg-gray-900 pl-pt-2 pl-pl-2">
+  {{> components-button(buttonClass: "btn-primary btn-squared btn-reversed", buttonText: "Disabled", buttonState: "disabled")}}
+  {{> components-button(buttonClass: "btn-secondary btn-squared btn-reversed", buttonText: "Disabled", buttonState: "disabled")}}
+  {{> components-button(buttonClass: "btn-link btn-squared btn-reversed", buttonText: "Disabled", buttonState: "disabled")}}
+</div>

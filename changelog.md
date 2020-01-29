@@ -8,12 +8,16 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 
 ### Added
 - Sidebar Block: Handling of spacing between multiple .list inside a single .sb-block (Programmes > contacts)
+- Components - Buttons: Modifier for dialog-colors (success, danger, warning, info, danger).
 - Components - Cards - Document: Add example for marking untranslated Document content.
 - Patterns - Footer: Added minimal footer version.
 - Templates - index: Add example for badge-primary usage in applied filters section.
 
 ### Changed
 - Add class to hide illustration on homepage for mobile.
+- Components - Buttons: reversed, hover and states.
+- Components - Buttons: Disabled states by hierarchy button type.
+- Components - Buttons: .btn-reversed is now a modifier and can be applied to any types of buttons.
 - Components - List: list-inline-interpunct icon placement handling and stacking behavior.
 - Components - List-group: Add border-top to .list-group-xl
 - Components - List-group: Some refactoring for .list-group.
@@ -25,6 +29,8 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 - Patterns - Wrappers - Arrondissement: Center texte and button inside .wrapper-arrondissement-header.
 - Templates - Sujet: handling of related content with and without borough wrapper.
 - Templates - Article: Add featured document module example.
+
+- Pattern Lab - Components - Buttons: New layout for buttons (Editorial, Utility and Icons)
 
 ### Fixed
 - Links - external link: Fixed weird behavior for multiline external links.
