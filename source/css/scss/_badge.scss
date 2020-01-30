@@ -81,12 +81,12 @@
     }
   }
   &.badge-light {
-    background-color: $white;
+    background-color: $neutral-underground-2;
     color: $neutral-primary;
     &[href] {
       @include hover-focus {
         color: $neutral-primary;
-        background-color: darken($white, 10%);
+        background-color: darken($neutral-underground-2, 10%);
       }
     }
     .icon {
@@ -239,9 +239,50 @@
       }
     }
   }
-
 }
 
+// Notification badges
+.badge-notification {
+  &-dot {
+    position: relative;
+    &:after {
+      border-radius: 50%;
+      width: .5rem;
+      height: .5rem;
+      background-color: $danger;
+      content: "";
+      display: block;
+      position: absolute;
+      z-index: 1;
+      top: 0;
+      right: 0;
+    }
+  }
+}
+
+// Helper to wrap notification dot
+.badge-notification-wrapper {
+  display: flex;
+  position: relative;
+  min-width: 1.5rem;
+  min-height: 1.5rem;
+  
+  .badge-notification-dot {
+    display: flex;
+    align-self: center;
+    justify-content: center;
+    width: 100%;
+    &:after {
+      display: flex;
+      align-self: center;
+      position: relative;
+      top: auto;
+      right: auto;
+    }
+  }
+}
+
+// Handle badges horizontal spacing inside container
 .badge-group {
   .badge + .badge {
     margin-left: .25rem;
