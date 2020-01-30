@@ -6,6 +6,8 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 
 ## [4.7.0] - unreleased
 
+**icon-warning has been renamed icon-error and a new icon-warning icon has been created. Please review your icons integration accordingly.**
+
 ### Added
 - Sidebar Block: Handling of spacing between multiple .list inside a single .sb-block (Programmes > contacts)
 - Components - Badges: New badges-notification.
@@ -14,6 +16,7 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 - Components - Toasts: Add toasts (snackbar) example and styles.
 - Patterns - Footer: Added minimal footer version.
 - Templates - index: Add example for badge-primary usage in applied filters section.
+- Icons: New filters and error icon.
 
 ### Changed
 - Add class to hide illustration on homepage for mobile.
@@ -31,6 +34,7 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 - Patterns - Wrappers - Arrondissement: Center texte and button inside .wrapper-arrondissement-header.
 - Templates - Sujet: handling of related content with and without borough wrapper.
 - Templates - Article: Add featured document module example.
+- Icons: icon-warning becomes icon-error and a new icon-warning has been created.
 
 - Pattern Lab - Components - Buttons: New layout for buttons (Editorial, Utility and Icons)
 - Pattern Lab - Components - Badges: Rework layout for badges. 
