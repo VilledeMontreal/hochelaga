@@ -58,6 +58,18 @@
       }
     }
 
+    .navbar-brand {
+      @include font-size($font-size-base);
+      line-height: $line-height-md;
+      font-weight: $font-weight-bold;
+      align-items: center;
+      @include transition(color .15s ease-in-out);
+      
+      @include hover-focus {
+        color: $action;
+      }
+    }
+
     // Separator in navbar
     // Use display utility class to hide @breakpoint
     .navbar-separator {
