@@ -43,12 +43,6 @@
     right: 0;
     margin: 1rem;
   }
-  @include hover-focus {
-    .btn-media-gallery {
-      background-color: $highlight-light;
-      border-color: $highlight-light;
-    }
-  }
 }
 
 .media-cover {
