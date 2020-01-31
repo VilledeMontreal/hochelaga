@@ -29,9 +29,11 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 - Components - Cards: Removed Content-type representation. The card component is the generic reprensentation of a card anatomy.
 - Components - Cards: Normalization of .card-service Title color.
 - Components - Cards: Icon placeholder is now 80px and hover is $action-lighter.
+- Components - Gallery: Update button classes.
 - Components - Main-navbar: Search submit button on mobile conforms to btn-primary styles.
 - Patterns - header: Adjustement to document-heading-sm bottom padding.
 - Patterns - Wrappers - Arrondissement: Center texte and button inside .wrapper-arrondissement-header.
+- Patterns - Forms: Update button classes (Always use .btn-squared in forms).
 - Templates - Sujet: handling of related content with and without borough wrapper.
 - Templates - Article: Add featured document module example.
 - Icons: icon-warning becomes icon-error and a new icon-warning has been created.

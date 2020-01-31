@@ -154,7 +154,7 @@ fieldset:disabled a.btn {
 // DEPRECATED
 // USE .btn-reversed modifier
 .btn-primary-reverse {
-  @include button-variant($background: $white, $border: $white, $color: $neutral-primary, $hover-background: $highlight-light, $hover-border: $highlight-light, $hover-color: $action, $active-background: $highlight-light, $active-border: $highlight-light, $active-color: $action);
+  @include button-variant($background: $white, $border: $white, $color: $neutral-primary, $hover-background: $white, $hover-border: $white, $hover-color: $neutral-primary, $active-background: $white, $active-border: $white, $active-color: $neutral-primary);
   &:focus,
   &.focus {
     box-shadow: $input-btn-reverse-focus-box-shadow;
@@ -162,7 +162,7 @@ fieldset:disabled a.btn {
 }
 
 .btn-secondary-reverse {
-  @include button-variant($background: transparent, $border: $white, $color: $white, $hover-background: transparent, $hover-border: $action-lighter, $hover-color: $action-lighter, $active-background: transparent, $active-border: $action-lighter, $active-color: $action-lighter);
+  @include button-variant($background: transparent, $border: rgba($white, .5), $color: $white, $hover-background: transparent, $hover-border: $white, $hover-color: $white, $active-background: transparent, $active-border: $white, $active-color: $white);
   &:focus,
   &.focus {
     box-shadow: $input-btn-reverse-focus-box-shadow;
@@ -171,7 +171,7 @@ fieldset:disabled a.btn {
 
 .btn-link-reverse,
 .btn-tertiary-reverse {
-  @include button-variant($background: transparent, $border: transparent, $color: $white, $hover-background: transparent, $hover-border: transparent, $hover-color: $action-lighter, $active-background: transparent, $active-border: transparent, $active-color: $action-lighter);
+  @include button-variant($background: transparent, $border: transparent, $color: $white, $hover-background: rgba($white, .2), $hover-border: transparent, $hover-color: $white, $active-background: rgba($white, .2), $active-border: transparent, $active-color: $white);
   &:focus,
   &.focus {
     box-shadow: $input-btn-reverse-focus-box-shadow;
