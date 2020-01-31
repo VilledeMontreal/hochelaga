@@ -13,6 +13,7 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 - Components - Badges: New badges-notification.
 - Components - Buttons: Modifier for dialog-colors (success, danger, warning, info, danger).
 - Components - Cards - Document: Add example for marking untranslated Document content.
+- Components - Main-navbar: Navbar mini example.
 - Components - Toasts: Add toasts (snackbar) example and styles.
 - Patterns - Footer: Added minimal footer version.
 - Templates - index: Add example for badge-primary usage in applied filters section.
