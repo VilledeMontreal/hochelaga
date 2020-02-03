@@ -13,6 +13,7 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 - Components - Badges: New badges-notification.
 - Components - Buttons: Modifier for dialog-colors (success, danger, warning, info, danger).
 - Components - Cards - Document: Add example for marking untranslated Document content.
+- Components - List-group: .list-group-complexe examples.
 - Components - Main-navbar: Navbar mini example.
 - Components - Toasts: Add toasts (snackbar) example and styles.
 - Patterns - Footer: Added minimalist and hybrid footer examples.
@@ -27,6 +28,7 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 - Components - List: list-inline-interpunct icon placement handling and stacking behavior.
 - Components - List-group: Add border-top to .list-group-xl
 - Components - List-group: Some refactoring for .list-group.
+- Components - List-group: .list-group-teaser with optionnal thumbnail or placeholder.
 - Components - Cards: Removed Content-type representation. The card component is the generic reprensentation of a card anatomy.
 - Components - Cards: Normalization of .card-service Title color.
 - Components - Cards: Icon placeholder is now 80px and hover is $action-lighter.
@@ -47,6 +49,8 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 
 ### Deprecated
 - Components - List-group: .list-group-delimiter has become useless. Styles were only used by .list-group-xl.
+- Components - List-group: .list-group-date.
+- Components - List-group: .list-group-teaser-img. Use image tags instead. No more background-image with variable height.
 
 
 ## [4.6.0] - 2020-01-07
