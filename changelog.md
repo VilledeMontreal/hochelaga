@@ -15,8 +15,11 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 - Components - Cards - Document: Add example for marking untranslated Document content.
 - Components - List-group: .list-group-complexe examples.
 - Components - Main-navbar: Navbar mini example.
+- Components - Main-navbar: .is-mini class to use when main-navbar is sticky and is not used with language bar.
 - Components - Toasts: Add toasts (snackbar) example and styles.
 - Patterns - Footer: Added minimalist and hybrid footer examples.
+- Patterns - Pre-footer: Added pre-footer arrondissement and pre-footer a propos examples.
+- Templates Citoyens - Layout pages: Page layout minimal example (mini main-navbar and minimalist footer)
 - Templates - index: Add example for badge-primary usage in applied filters section.
 - Icons: New filters and error icon.
 

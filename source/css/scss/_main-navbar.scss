@@ -6,6 +6,13 @@
     @include media-breakpoint-up(lg) {
       padding-bottom: 6.5rem;
     }
+    // Handle navbar without top bar when is-fixed-top
+    &.is-mini {
+      padding-bottom: 3.5rem;
+      @include media-breakpoint-up(lg) {
+        padding-bottom: 4.5rem;
+      }
+    }
   }
 }
 
