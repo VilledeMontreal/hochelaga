@@ -13,6 +13,7 @@
     margin-bottom: -1rem;
     .icon {
       @include icon-size(40px);
+      @include icon-color($neutral-tertiary);
     }
   }
   .card-img-top {

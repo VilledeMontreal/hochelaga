@@ -81,9 +81,10 @@ $theme-colors: ();
 $theme-colors: map-merge(
   (
     "primary":    			  $primary,
-	  "neutral-primary":   	$gray-900,
-	  "neutral-secondary":  $gray-700,
-	  "neutral-tertiary":   $gray-500,
+	  "neutral-primary":   	$neutral-primary,
+	  "neutral-secondary":  $neutral-secondary,
+    "neutral-tertiary":   $neutral-tertiary,
+    "neutral-stroke":     $neutral-stroke,
 	  "success":    			  $positive,
     "info":       			  $informative,
     "warning":    			  $warning,
