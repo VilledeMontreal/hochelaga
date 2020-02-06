@@ -241,44 +241,35 @@
   }
 }
 
-// Notification badges
-.badge-notification {
-  &-dot {
-    position: relative;
-    &:after {
-      border-radius: 50%;
-      width: .5rem;
-      height: .5rem;
-      background-color: $danger;
-      content: "";
-      display: block;
-      position: absolute;
-      z-index: 1;
-      top: 0;
-      right: 0;
-    }
+// Position over icon or chunk of content (top, right)
+.badge-notification-top-right {
+  position: relative;
+  display: flex;
+  align-items: center;
+  .badge-notification-dot {
+    position: absolute;
+    top: -2px;
+    right: -2px;
   }
 }
 
-// Helper to wrap notification dot
-.badge-notification-wrapper {
-  display: flex;
+.badge-notification-dot {
+  width: .75rem;
+  height: .75rem;
+  background-color: $white;
+  border-radius: 50%;
   position: relative;
-  min-width: 1.5rem;
-  min-height: 1.5rem;
-  
-  .badge-notification-dot {
-    display: flex;
-    align-self: center;
-    justify-content: center;
-    width: 100%;
-    &:after {
-      display: flex;
-      align-self: center;
-      position: relative;
-      top: auto;
-      right: auto;
-    }
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  &:after {
+    content: "";
+    border-radius: 50%;
+    width: .5rem;
+    height: .5rem;
+    background-color: $danger;
+    display: block;
+    z-index: 1;
   }
 }
 

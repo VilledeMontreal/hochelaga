@@ -101,7 +101,7 @@ fieldset:disabled a.btn {
 
 .btn-link,
 .btn-tertiary {
-  @include button-variant($background: transparent, $border: transparent, $color: $action, $hover-background: $highlight-light, $hover-border: $highlight-light, $hover-color: $action, $active-background: $highlight-light, $active-border: $highlight-light, $active-color: $action);
+  @include button-variant($background: transparent, $border: transparent, $color: $action, $hover-background: $neutral-underground-1, $hover-border: $neutral-underground-1, $hover-color: $action, $active-background: $neutral-underground-1, $active-border: $neutral-underground-1, $active-color: $action);
 
   &.btn-collapse {
     &:after {
@@ -162,7 +162,7 @@ fieldset:disabled a.btn {
 }
 
 .btn-secondary-reverse {
-  @include button-variant($background: transparent, $border: rgba($white, .5), $color: $white, $hover-background: transparent, $hover-border: $white, $hover-color: $white, $active-background: transparent, $active-border: $white, $active-color: $white);
+  @include button-variant($background: transparent, $border: $overlay-mid-reversed, $color: $white, $hover-background: transparent, $hover-border: $white, $hover-color: $white, $active-background: transparent, $active-border: $white, $active-color: $white);
   &:focus,
   &.focus {
     box-shadow: $input-btn-reverse-focus-box-shadow;
@@ -171,7 +171,7 @@ fieldset:disabled a.btn {
 
 .btn-link-reverse,
 .btn-tertiary-reverse {
-  @include button-variant($background: transparent, $border: transparent, $color: $white, $hover-background: rgba($white, .2), $hover-border: transparent, $hover-color: $white, $active-background: rgba($white, .2), $active-border: transparent, $active-color: $white);
+  @include button-variant($background: transparent, $border: transparent, $color: $white, $hover-background: $overlay-light-reversed, $hover-border: transparent, $hover-color: $white, $active-background: $overlay-light-reversed, $active-border: transparent, $active-color: $white);
   &:focus,
   &.focus {
     box-shadow: $input-btn-reverse-focus-box-shadow;
@@ -185,14 +185,14 @@ fieldset:disabled a.btn {
     box-shadow: $input-btn-reverse-focus-box-shadow;
   }
   &.btn-primary {
-    @include button-variant($background: $white, $border: $white, $color: $neutral-primary, $hover-background: $white, $hover-border: $white, $hover-color: $neutral-primary, $active-background: $white, $active-border: $white, $active-color: $neutral-primary);
+    @include button-variant($background: $white, $border: $white, $color: $neutral-primary, $hover-background: $white, $hover-border: $white, $hover-color: $action, $active-background: $white, $active-border: $white, $active-color: $action);
   }
   &.btn-secondary {
-    @include button-variant($background: transparent, $border: rgba($white, .5), $color: $white, $hover-background: transparent, $hover-border: $white, $hover-color: $white, $active-background: transparent, $active-border: $white, $active-color: $white);
+    @include button-variant($background: transparent, $border: $overlay-mid-reversed, $color: $white, $hover-background: transparent, $hover-border: $white, $hover-color: $white, $active-background: transparent, $active-border: $white, $active-color: $white);
   }
   &.btn-link,
   &.btn-tertiary {
-    @include button-variant($background: transparent, $border: transparent, $color: $white, $hover-background: rgba($white, .2), $hover-border: transparent, $hover-color: $white, $active-background: rgba($white, .2), $active-border: transparent, $active-color: $white);
+    @include button-variant($background: transparent, $border: transparent, $color: $white, $hover-background: $overlay-light-reversed, $hover-border: transparent, $hover-color: $white, $active-background: $overlay-light-reversed, $active-border: transparent, $active-color: $white);
   }
 }
 
@@ -205,7 +205,7 @@ fieldset:disabled a.btn {
   }
   // Secondary
   &.btn-secondary {
-    @include button-variant($background: transparent, $border: $neutral-stroke, $color: $neutral-tertiary, $hover-background: transparent, $hover-border: rgba($white, .5), $hover-color: $neutral-tertiary, $active-background: transparent, $active-border: rgba($white, .5), $active-color: $neutral-tertiary);
+    @include button-variant($background: transparent, $border: $neutral-stroke, $color: $neutral-tertiary, $hover-background: transparent, $hover-border: $neutral-stroke, $hover-color: $neutral-tertiary, $active-background: transparent, $active-border: $neutral-stroke, $active-color: $neutral-tertiary);
   }
   // Tertiary
   &.btn-link,
@@ -216,14 +216,14 @@ fieldset:disabled a.btn {
   // Reversed
   &.btn-reversed {
     &.btn-primary {
-      @include button-variant($background: rgba($white, .3), $border: transparent, $color: rgba($white, .5), $hover-background: rgba($white, .3), $hover-border: transparent, $hover-color: rgba($white, .5), $active-background: rgba($white, .3), $active-border: transparent, $active-color: rgba($white, .5));
+      @include button-variant($background: $overlay-light-reversed, $border: transparent, $color: $overlay-mid-reversed, $hover-background: $overlay-light-reversed, $hover-border: transparent, $hover-color: $overlay-mid-reversed, $active-background: $overlay-light-reversed, $active-border: transparent, $active-color: $overlay-mid-reversed);
     }
     &.btn-secondary {
-      @include button-variant($background: transparent, $border: rgba($white, .5), $color: rgba($white, .5), $hover-background: transparent, $hover-border: rgba($white, .5), $hover-color: rgba($white, .5), $active-background: transparent, $active-border: rgba($white, .5), $active-color: rgba($white, .5));
+      @include button-variant($background: transparent, $border: $overlay-mid-reversed, $color: $overlay-mid-reversed, $hover-background: transparent, $hover-border: $overlay-mid-reversed, $hover-color: $overlay-mid-reversed, $active-background: transparent, $active-border: $overlay-mid-reversed, $active-color: $overlay-mid-reversed);
     }
     &.btn-link,
     &.btn-tertiary {
-      @include button-variant($background: transparent, $border: transparent, $color: rgba($white, .5), $hover-background: transparent, $hover-border: transparent, $hover-color: rgba($white, .5), $active-background: transparent, $active-border: transparent, $active-color: rgba($white, .5));
+      @include button-variant($background: transparent, $border: transparent, $color: $overlay-mid-reversed, $hover-background: transparent, $hover-border: transparent, $hover-color: $overlay-mid-reversed, $active-background: transparent, $active-border: transparent, $active-color: $overlay-mid-reversed);
     }
 
     // We need to override btn-icon inside .btn-reversed

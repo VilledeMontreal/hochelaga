@@ -2,7 +2,7 @@
 <div class="dropdown">
 {{/ is-dropdown}}
   <button class="chip {{ chipClass }}{{# is-dropdown}} dropdown-toggle{{/ is-dropdown}}" type="button" {{# is-dropdown}}id="{{chipID}}" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"{{/ is-dropdown}}{{# isStatic}} data-display="static"{{/ isStatic}}>
-    {{ chipLabel }}
+    {{ chipLabel }}{{# has-icon}}{{> styles-icon-item}}{{/ has-icon}}
   </button>
 {{# is-dropdown}}
   {{> components-dropdown}}

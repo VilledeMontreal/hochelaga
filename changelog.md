@@ -10,9 +10,10 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 
 ### Added
 - Sidebar Block: Handling of spacing between multiple .list inside a single .sb-block (Programmes > contacts)
-- Components - Badges: New badges-notification.
+- Components - Badges: New .badges-notification.
 - Components - Buttons: Modifier for dialog-colors (success, danger, warning, info, danger).
 - Components - Cards - Document: Add example for marking untranslated Document content.
+- Components - Chips: New .chips-xs examples.
 - Components - List-group: .list-group-complexe examples.
 - Components - Main-navbar: Navbar mini example.
 - Components - Main-navbar: .is-mini class to use when main-navbar is sticky and is not used with language bar.
@@ -25,6 +26,7 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 
 ### Changed
 - Add class to hide illustration on homepage for mobile.
+- Normalization of overlay rgba with overlay-[x] and overlay-[x]-reversed variables.
 - Styles - Links: normalisation between inline and element links. Added ability to put .icon span tags inside inline links.
 - Components - Buttons: reversed, hover and states.
 - Components - Buttons: Disabled states by hierarchy button type.
@@ -52,6 +54,8 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 - Links - external link: Fixed weird behavior for multiline external links.
 
 ### Deprecated
+- Components - Buttons: .btn-promo.
+- Components - Buttons: .btn-primary-reversed, .btn-secondary-reversed, .btn-tertiary-reversed. Use the .btn-reversed modifier instead.
 - Components - List-group: .list-group-delimiter has become useless. Styles were only used by .list-group-xl.
 - Components - List-group: .list-group-date.
 - Components - List-group: .list-group-teaser-img. Use image tags instead. No more background-image with variable height.
