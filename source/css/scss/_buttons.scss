@@ -132,20 +132,20 @@ fieldset:disabled a.btn {
   $color-dark: map-get($map, dark);
   $color-base: map-get($map, base);
   $color-light: map-get($map, light);
-  $color-dark-lighten: lighten($color-dark, 10%);
+  $color-darker: darken($color-dark, 10%);
   .btn-#{$label} {
     // Primary
     &.btn-primary {
-      @include button-variant($background: $color-dark, $border: $color-dark, $hover-background: $color-dark-lighten, $hover-border: $color-dark-lighten, $active-background: $color-dark-lighten, $active-border: $color-dark-lighten);
+      @include button-variant($background: $color-dark, $border: $color-dark, $hover-background: $color-darker, $hover-border: $color-darker, $active-background: $color-darker, $active-border: $color-darker, $box-shadow-color: $color-dark);
     }
     // Secondary
     &.btn-secondary {
-      @include button-variant($background: transparent, $border: $neutral-stroke, $color: $color-dark, $hover-background: transparent, $hover-border: $color-dark, $hover-color: $color-dark, $active-background: transparent, $active-border: $color-dark, $active-color: $color-dark);
+      @include button-variant($background: transparent, $border: $neutral-stroke, $color: $color-dark, $hover-background: transparent, $hover-border: $color-dark, $hover-color: $color-dark, $active-background: transparent, $active-border: $color-dark, $active-color: $color-dark, $box-shadow-color: $color-dark);
     }
     // Tertiary
     &.btn-tertiary,
     &.btn-link {
-      @include button-variant($background: transparent, $border: transparent, $color: $color-dark, $hover-background: $color-light, $hover-border: $color-light, $hover-color: $color-dark, $active-background: $color-light, $active-border: $color-light, $active-color: $color-dark);
+      @include button-variant($background: transparent, $border: transparent, $color: $color-dark, $hover-background: $color-light, $hover-border: $color-light, $hover-color: $color-dark, $active-background: $color-light, $active-border: $color-light, $active-color: $color-dark, $box-shadow-color: $color-dark);
     }
   }
 
@@ -154,45 +154,29 @@ fieldset:disabled a.btn {
 // DEPRECATED
 // USE .btn-reversed modifier
 .btn-primary-reverse {
-  @include button-variant($background: $white, $border: $white, $color: $neutral-primary, $hover-background: $white, $hover-border: $white, $hover-color: $neutral-primary, $active-background: $white, $active-border: $white, $active-color: $neutral-primary);
-  &:focus,
-  &.focus {
-    box-shadow: $input-btn-reverse-focus-box-shadow;
-  }
+  @include button-variant($background: $white, $border: $white, $color: $neutral-primary, $hover-background: $white, $hover-border: $white, $hover-color: $action, $active-background: $white, $active-border: $white, $active-color: $action, $reversed: true);
 }
 
 .btn-secondary-reverse {
-  @include button-variant($background: transparent, $border: $overlay-mid-reversed, $color: $white, $hover-background: transparent, $hover-border: $white, $hover-color: $white, $active-background: transparent, $active-border: $white, $active-color: $white);
-  &:focus,
-  &.focus {
-    box-shadow: $input-btn-reverse-focus-box-shadow;
-  }
+  @include button-variant($background: transparent, $border: $overlay-mid-reversed, $color: $white, $hover-background: transparent, $hover-border: $white, $hover-color: $white, $active-background: transparent, $active-border: $white, $active-color: $white, $reversed: true);
 }
 
 .btn-link-reverse,
 .btn-tertiary-reverse {
-  @include button-variant($background: transparent, $border: transparent, $color: $white, $hover-background: $overlay-light-reversed, $hover-border: transparent, $hover-color: $white, $active-background: $overlay-light-reversed, $active-border: transparent, $active-color: $white);
-  &:focus,
-  &.focus {
-    box-shadow: $input-btn-reverse-focus-box-shadow;
-  }
+  @include button-variant($background: transparent, $border: transparent, $color: $white, $hover-background: $overlay-light-reversed, $hover-border: transparent, $hover-color: $white, $active-background: $overlay-light-reversed, $active-border: transparent, $active-color: $white, $reversed: true);
 }
 
 // Reversed modifier
 .btn-reversed {
-  &:focus,
-  &.focus {
-    box-shadow: $input-btn-reverse-focus-box-shadow;
-  }
   &.btn-primary {
-    @include button-variant($background: $white, $border: $white, $color: $neutral-primary, $hover-background: $white, $hover-border: $white, $hover-color: $action, $active-background: $white, $active-border: $white, $active-color: $action);
+    @include button-variant($background: $white, $border: $white, $color: $neutral-primary, $hover-background: $white, $hover-border: $white, $hover-color: $action, $active-background: $white, $active-border: $white, $active-color: $action, $reversed: true);
   }
   &.btn-secondary {
-    @include button-variant($background: transparent, $border: $overlay-mid-reversed, $color: $white, $hover-background: transparent, $hover-border: $white, $hover-color: $white, $active-background: transparent, $active-border: $white, $active-color: $white);
+    @include button-variant($background: transparent, $border: $overlay-mid-reversed, $color: $white, $hover-background: transparent, $hover-border: $white, $hover-color: $white, $active-background: transparent, $active-border: $white, $active-color: $white, $reversed: true);
   }
   &.btn-link,
   &.btn-tertiary {
-    @include button-variant($background: transparent, $border: transparent, $color: $white, $hover-background: $overlay-light-reversed, $hover-border: transparent, $hover-color: $white, $active-background: $overlay-light-reversed, $active-border: transparent, $active-color: $white);
+    @include button-variant($background: transparent, $border: transparent, $color: $white, $hover-background: $overlay-light-reversed, $hover-border: transparent, $hover-color: $white, $active-background: $overlay-light-reversed, $active-border: transparent, $active-color: $white, $reversed: true);
   }
 }
 
@@ -239,7 +223,7 @@ fieldset:disabled a.btn {
 
 
 .btn-lang {
-  @include button-variant($background: transparent, $border: transparent, $color: $white, $hover-background: transparent, $hover-border: transparent, $hover-color: $action-lighter, $active-background: transparent, $active-border: transparent, $active-color: $action-lighter);
+  @include button-variant($background: transparent, $border: transparent, $color: $white, $hover-background: transparent, $hover-border: transparent, $hover-color: $action-lighter, $active-background: transparent, $active-border: transparent, $active-color: $action-lighter, $reversed: true);
   @extend .btn-squared;
   border: none;
   padding-left: 0;
@@ -248,10 +232,6 @@ fieldset:disabled a.btn {
   padding-bottom: .375rem;
   @include hover-focus {
     border: none;
-  }
-  &:focus,
-  &.focus {
-    box-shadow: $input-btn-reverse-focus-box-shadow;
   }
 }
 
