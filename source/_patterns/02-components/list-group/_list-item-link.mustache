@@ -5,8 +5,12 @@
       {{# icon-name}}
       <span class="icon {{ icon-name}}" aria-hidden="true"></span>
       {{/ icon-name}}
-      <span class="list-group-item-label">{{{ text }}}
-      </span>
+      <span class="list-group-item-label">{{{ text }}}</span>
+      {{# has-badge}}
+      <div class="ml-auto">
+        {{> components-badge}}
+      </div>
+      {{/ has-badge}}
     </a>
   </li>
   {{/ listGroup }}

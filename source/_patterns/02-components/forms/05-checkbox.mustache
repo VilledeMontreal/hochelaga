@@ -1,15 +1,4 @@
-<h4 class="pl-pattern-subtitle">Size</h4>
 <div class="row">
-  <div class="col-xs-6 col-md-4">
-    <div class="form-group-sm">
-		{{# formCheckboxesSmall }}
-		  {{# headings }}
-		  	<label class="d-block">{{ headings }}</label>
-		  {{/ headings }}
-		  {{> components-checkbox-item }}
-		{{/ formCheckboxesSmall }}
-	  </div>
-  </div>
   <div class="col-xs-6 col-md-4">
     <div class="form-group">
 		{{# formCheckboxes }}
@@ -20,30 +9,10 @@
 		{{/ formCheckboxes }}
 	  </div>
   </div>
-  <div class="col-xs-6 col-md-4">
-    <div class="form-group-lg">
-		{{# formCheckboxesLarge }}
-		  {{# headings }}
-		  	<label class="d-block">{{ headings }}</label>
-		  {{/ headings }}
-		  {{> components-checkbox-item }}
-		{{/ formCheckboxesLarge }}
-	  </div>
-  </div>
 </div>
 
 <h4 class="pl-pattern-subtitle">Position inline</h4>
 <div class="row">
-  <div class="col-md-12">
-    <div class="form-group-sm">
-		{{# formCheckboxesSmallInline }}
-		  {{# headings }}
-		  	<label class="d-block">{{ headings }}</label>
-		  {{/ headings }}
-		  {{> components-checkbox-item }}
-		{{/ formCheckboxesSmallInline }}
-	  </div>
-  </div>
   <div class="col-md-12">
     <div class="form-group">
 		{{# formCheckboxesInline }}
@@ -54,34 +23,5 @@
 		{{/ formCheckboxesInline }}
 	  </div>
   </div>
-  <div class="col-md-12">
-    <div class="form-group-lg">
-		{{# formCheckboxesLargeInline }}
-		  {{# headings }}
-		  	<label class="d-block">{{ headings }}</label>
-		  {{/ headings }}
-		  {{> components-checkbox-item }}
-		{{/ formCheckboxesLargeInline }}
-	  </div>
-  </div>
 </div>
 
-
-<h4 class="pl-pattern-subtitle">Validation</h4>
-<div class="row">
-  <div class="col-md-12">
-    {{# formGroupCheckboxes}}
-      <div class="form-group form-group-checkboxes required {{ formGroupCheckboxesClass}}">
-      {{# formCheckboxesValidation }}
-        {{# headings }}
-          <label class="d-block">{{ headings }}</label>
-        {{/ headings }}
-        {{> components-checkbox-item }}
-      {{/ formCheckboxesValidation }}
-      </div>
-      {{# formGroupInputError}}
-      <div class="invalid-feedback">{{ formGroupInputError.text }}</div>
-      {{/ formGroupInputError}}
-    {{/ formGroupCheckboxes}}
-  </div>
-</div>

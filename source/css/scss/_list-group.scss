@@ -12,6 +12,11 @@
   li {
     list-style: none;
   }
+
+  .list-group-item-title {
+    font-weight: $font-weight-bold;
+  }
+
   // DEPRECATED
   // Use column-count utility classes
   &.list-2-columns {
@@ -112,10 +117,6 @@
     text-decoration: none;
     background-color: $list-group-hover-bg;
     border: none;
-  }
-
-  .list-group-item-title {
-    font-weight: $font-weight-bold;
   }
 
 
@@ -259,10 +260,7 @@
 //
 .list-group-teaser {
   margin-bottom: 0;
-  .list-group-item-action {
-    color: $neutral-secondary;
-    font-weight: $font-weight-normal;
-  }
+
   .list-group-item {
     display: block;
     // align-items: initial;
@@ -291,8 +289,23 @@
 
     }
 
+    a.list-group-item-title {
+      @include hover-focus {
+        background-color: transparent;
+        color: $list-group-action-active-color;
+      }
+    }
+
+  }
+
+  // List-group-item-action for actionnable content (links or complexe toggling)
+  .list-group-item-action {
+    color: $neutral-secondary;
+    font-weight: $font-weight-normal;
+
     @include hover-focus {
       background-color: transparent;
+      cursor: pointer;
 
       .icon {
         @include icon-color($primary);

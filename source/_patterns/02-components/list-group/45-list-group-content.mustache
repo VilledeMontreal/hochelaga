@@ -1,6 +1,11 @@
 <div class="list-group list-group-teaser" role="list">
   {{# listGroup}}
+  {{# url}}
   <a class="list-group-item list-group-item-action" href="{{ url }}" role="listitem">
+  {{/ url}}
+  {{^ url}}
+  <div class="list-group-item" role="listitem">
+  {{/ url}}
     <div class="list-group-item-max-width">
       {{# media}}
       <div class="media"> 
@@ -19,7 +24,12 @@
       {{# type }}
       <div class="list-group-item-type">{{ type }}</div>
       {{/ type}}
+      {{^ has-linked-title}}
       <div class="list-group-item-title">{{ title }}</div>
+      {{/ has-linked-title}}
+      {{# has-linked-title}}
+      <a href="{{ url }}" class="list-group-item-title">{{ title }}</a>
+      {{/ has-linked-title}}
       {{# infos }}
       <div class="list-group-item-content {{infosClass}}">
         {{# badge}}
@@ -32,12 +42,29 @@
         {{/ infos.infos-items }}
       </div>
       {{/ infos}}
+      {{# extras}}
+      <div class="list-group-item-content {{extrasClass}}">
+        <div class="font-size-sm">{{{ text }}}</div>
+        {{# badges}}
+        <div class="mt-2">
+          {{# badge}}
+          {{> components-badge}}
+          {{/ badge}}
+        </div>
+        {{/ badges}}
+      </div>
+      {{/ extras}}
       {{# media}}
       </div>
       </div>
       {{/ media}}
     </div>
+  {{^ url}}
+  </div>
+  {{/ url}}
+  {{# url}}
   </a>
+  {{/ url}}
   {{/ listGroup}}
 </div>
 

@@ -284,7 +284,7 @@ legend,
       margin: 0;
       background-color: $custom-switch-indicator-handle;
       border-radius: 50%;
-      box-shadow: 0 1px 4px 0 rgba(0,0,0,0.15);
+      box-shadow: 0 1px 4px 0 $overlay-subtle;
       @include transition(transform .15s ease-in-out, $custom-forms-transition);
 
     }
