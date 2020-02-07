@@ -3,7 +3,7 @@
 // Easily pump out default styles, as well as :hover, :focus, :active,
 // and disabled options for all buttons
 
-@mixin button-variant($background, $border, $color: color-yiq($background), $hover-background: $action-darker, $hover-border: $action-darker, $hover-color: $white, $active-background: $action-darker, $active-border: $action-darker, $active-color: $white) {
+@mixin button-variant($background, $border, $color: color-yiq($background), $hover-background: $action-darker, $hover-border: $action-darker, $hover-color: $white, $active-background: $action-darker, $active-border: $action-darker, $active-color: $white, $reversed: false, $box-shadow-color: false) {
   
   color: $color;
   @include gradient-bg($background);
@@ -33,26 +33,64 @@
     }
   }
   
-  &:focus,
-  &.focus {
-    box-shadow: $btn-focus-box-shadow;
-  }
-
-  &:not(:disabled):not(.disabled):active,
-  &:not(:disabled):not(.disabled).active,
-  .show > &.dropdown-toggle {
-    color: $active-color;
-    background-color: $active-background;
-    @if $enable-gradients {
-      background-image: none; // Remove the gradient for the pressed/active state
+  // Change focus and active focus states if reversed
+  @if $reversed {
+    &:focus,
+    &.focus {
+      box-shadow: $input-btn-reverse-focus-box-shadow;
     }
-    border-color: $active-border;
 
-    &:focus {
-      // Avoid using mixin so we can pass custom focus shadow properly
+    &:not(:disabled):not(.disabled):active,
+    &:not(:disabled):not(.disabled).active,
+    .show > &.dropdown-toggle {
+
+      &:focus {
+        // Avoid using mixin so we can pass custom focus shadow properly
+        box-shadow: $input-btn-reverse-focus-box-shadow;
+      }
+    }
+  } @else {
+    &:focus,
+    &.focus {
       box-shadow: $btn-focus-box-shadow;
     }
+
+    &:not(:disabled):not(.disabled):active,
+    &:not(:disabled):not(.disabled).active,
+    .show > &.dropdown-toggle {
+      color: $active-color;
+      background-color: $active-background;
+      @if $enable-gradients {
+        background-image: none; // Remove the gradient for the pressed/active state
+      }
+      border-color: $active-border;
+
+      &:focus {
+        // Avoid using mixin so we can pass custom focus shadow properly
+        box-shadow: $btn-focus-box-shadow;
+      }
+    }
   }
+
+  @if $box-shadow-color {
+    // Scoped dialog-box-shadow variable definition
+    $custom-box-shadow: 0 0 0 $input-btn-focus-width rgba($box-shadow-color, .3);
+    
+    &:focus,
+    &.focus {
+      box-shadow: $custom-box-shadow;
+    }
+
+    &:not(:disabled):not(.disabled):active,
+    &:not(:disabled):not(.disabled).active {
+
+      &:focus {
+        // Avoid using mixin so we can pass custom focus shadow properly
+        box-shadow: $custom-box-shadow;
+      }
+    }
+  }
+
 }
 
 // Button sizes

@@ -51,6 +51,7 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 - Pattern Lab - Components - Badges: Rework layout for badges. 
 
 ### Fixed
+- Components - Buttons: focus and active-focus states.
 - Links - external link: Fixed weird behavior for multiline external links.
 
 ### Deprecated
