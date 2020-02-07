@@ -22,7 +22,7 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 - Patterns - Pre-footer: Added pre-footer arrondissement and pre-footer a propos examples.
 - Templates Citoyens - Layout pages: Page layout minimal example (mini main-navbar and minimalist footer)
 - Templates - index: Add example for badge-primary usage in applied filters section.
-- Icons: New filters and error icon.
+- Icons - utility: filters, error and ticket icons.
 
 ### Changed
 - Add class to hide illustration on homepage for mobile.
