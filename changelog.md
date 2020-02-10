@@ -9,8 +9,14 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 ## Added
 - Patterns - Header: Added Content header profile.
 
+## Changed
+- Changed and fixed some issues and normalisation of .list-item and .list-item-icon.
+- Remove margin-top from sidebars on mobile
+- Fix padding bottom for region-content on mobile
 
-## [4.7.0] - unreleased
+
+
+## [4.7.0] - 2020-02-12
 
 **icon-warning has been renamed icon-error and a new icon-warning icon has been created. Please review your icons integration accordingly.**
 
@@ -365,6 +371,7 @@ Main navbar, menu and footer are now in their own stylesheet. They will eventual
 The version 3 is now deprecated. Only bug fixes will be considered. Please refer to the old bitbucket repo https://bitbucket.org/villemontreal/boite-outils-web/.
 
 
+[4.7.0]: https://bitbucket.org/villemontreal/boite-outils4-web/src/4.7.0/
 [4.6.0]: https://bitbucket.org/villemontreal/boite-outils4-web/src/4.6.0/
 [4.5.1]: https://bitbucket.org/villemontreal/boite-outils4-web/src/4.5.1/
 [4.5.0]: https://bitbucket.org/villemontreal/boite-outils4-web/src/4.5.0/
