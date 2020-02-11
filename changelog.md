@@ -19,7 +19,6 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 - Components - Main-navbar: .is-mini class to use when main-navbar is sticky and is not used with language bar.
 - Components - Toasts: Add toasts (snackbar) example and styles.
 - Patterns - Footer: Added minimalist and hybrid footer examples.
-- Patterns - Pre-footer: Added pre-footer arrondissement and pre-footer a propos examples.
 - Templates Citoyens - Layout pages: Page layout minimal example (mini main-navbar and minimalist footer)
 - Templates - index: Add example for badge-primary usage in applied filters section.
 - Icons - utility: filters, error and ticket icons.
@@ -41,6 +40,7 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 - Components - Gallery: Update button classes.
 - Components - Main-navbar: Search submit button on mobile conforms to btn-primary styles.
 - Patterns - header: Adjustement to document-heading-sm bottom padding.
+- Patterns - Pre-footer: Pre-footer is now detached from footer patterns.
 - Patterns - Wrappers - Arrondissement: Center texte and button inside .wrapper-arrondissement-header.
 - Patterns - Forms: Update button classes (Always use .btn-squared in forms).
 - Templates - Sujet: handling of related content with and without borough wrapper.
