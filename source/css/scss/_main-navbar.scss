@@ -6,6 +6,13 @@
     @include media-breakpoint-up(lg) {
       padding-bottom: 6.5rem;
     }
+    // Handle navbar without top bar when is-fixed-top
+    &.is-mini {
+      padding-bottom: 3.5rem;
+      @include media-breakpoint-up(lg) {
+        padding-bottom: 4.5rem;
+      }
+    }
   }
 }
 
@@ -55,6 +62,18 @@
         flex: 0 0 auto; // This is needed because of IE weird behavior
         height: 1.75rem;
         width: auto;
+      }
+    }
+
+    .navbar-brand {
+      @include font-size($font-size-base);
+      line-height: $line-height-md;
+      font-weight: $font-weight-bold;
+      align-items: center;
+      @include transition(color .15s ease-in-out);
+      
+      @include hover-focus {
+        color: $action;
       }
     }
 
@@ -479,14 +498,13 @@
     }
 
     .btn + .btn {
-      margin-left: .25rem;
+      margin-left: .5rem;
     }
     .btn-primary.btn-search-submit:not(:disabled):not(.disabled) {
-      background-color: transparent;
       padding: .5rem;
       border: 0;
       .icon {
-        @include icon-color($action);
+        @include icon-color($white);
         display: inline-flex;
         margin-right: 0;
         margin: 0;
@@ -496,10 +514,7 @@
       }
       &:hover,
       &:focus {
-        background-color: $highlight-light;
-        .btn-label {
-          color: $action;
-        }
+        background-color: $action-darker;
       }
     }
   }

@@ -13,6 +13,7 @@
     margin-bottom: -1rem;
     .icon {
       @include icon-size(40px);
+      @include icon-color($neutral-tertiary);
     }
   }
   .card-img-top {
@@ -45,10 +46,10 @@
     .icon {
       position: absolute;
       top: 50%;
-      margin-top: -1.75rem;
+      margin-top: -2.5rem;
       left: 50%;
-      margin-left: -1.75rem;
-      @include icon-size(3.5rem);
+      margin-left: -2.5rem;
+      @include icon-size(5rem);
       @include icon-color($action-lighter);
     }
   }
@@ -203,12 +204,6 @@
       font-weight: $font-weight-bold;
       line-height: $line-height-md;
       padding-top: 1rem;
-    }
-  }
-
-  &.card-service {
-    .card-title {
-      color: $primary;
     }
   }
 
@@ -428,6 +423,13 @@ a.card {
     box-shadow: $card-box-shadow;
     .icon {
       @include icon-color($primary);
+    }
+    .card-icon-top,
+    .card-img-placeholder,
+    .img-placeholder {
+      .icon {
+        @include icon-color($action-lighter);
+      }
     }
     .card-title {
       color: $action;

@@ -1,0 +1,202 @@
+{
+  "chips":[
+    {
+      "chipLabel": "Libellé",
+      "chipClass": false,
+      "chipID": "chipExampleDropdown",
+      "has-icon": false,
+      "is-dropdown": true,
+      "dropdownMenu": {
+        "dropdownMenuID": "chipExampleDropdown",
+        "dropdownSection": [
+          {
+            "dropdownItem": [
+              {
+                "url": "#",
+                "dropdownItemLabel": "Libellé"
+              },
+              {
+                "url": "#",
+                "dropdownItemLabel": "Libellé"
+              },
+              {
+                "url": "#",
+                "dropdownItemLabel": "Libellé"
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "chipLabel": "Libellé (99)",
+      "chipClass": "active",
+      "chipID": "chipExampleDropdownNbr",
+      "has-icon": false,
+      "is-dropdown": true,
+      "dropdownMenu": {
+        "dropdownMenuID": "chipExampleDropdownNbr",
+        "dropdownSection": [
+          {
+            "dropdownItem": [
+              {
+                "url": "#",
+                "dropdownItemLabel": "Libellé"
+              },
+              {
+                "url": "#",
+                "dropdownItemLabel": "Libellé"
+              },
+              {
+                "url": "#",
+                "dropdownItemLabel": "Libellé"
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "chipLabel": "Libellé",
+      "chipClass": "active",
+      "chipID": "chipExampleDeletable",
+      "has-icon": {
+        "icon-name": "icon-x-circle-full"
+      },
+      "is-dropdown": false,
+      "dropdownMenu": false
+    }
+  ],
+  "chips-sm":[
+    {
+      "chipLabel": "Libellé",
+      "chipClass": "chip-sm",
+      "chipID": "chipSmExampleDropdown",
+      "is-dropdown": true,
+      "dropdownMenu": {
+        "dropdownMenuID": "chipSmExampleDropdown",
+        "dropdownSection": [
+          {
+            "dropdownItem": [
+              {
+                "url": "#",
+                "dropdownItemLabel": "Libellé"
+              },
+              {
+                "url": "#",
+                "dropdownItemLabel": "Libellé"
+              },
+              {
+                "url": "#",
+                "dropdownItemLabel": "Libellé"
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "chipLabel": "Libellé (99)",
+      "chipClass": "chip-sm active",
+      "chipID": "chipSmExampleDropdownNbr",
+      "is-dropdown": true,
+      "dropdownMenu": {
+        "dropdownMenuID": "chipSmExampleDropdownNbr",
+        "dropdownSection": [
+          {
+            "dropdownItem": [
+              {
+                "url": "#",
+                "dropdownItemLabel": "Libellé"
+              },
+              {
+                "url": "#",
+                "dropdownItemLabel": "Libellé"
+              },
+              {
+                "url": "#",
+                "dropdownItemLabel": "Libellé"
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "chipLabel": "Libellé",
+      "chipClass": "chip-sm active",
+      "chipID": "chipSmExampleDeletable",
+      "has-icon": {
+        "icon-name": "icon-x-circle-full"
+      },
+      "is-dropdown": false,
+      "dropdownMenu": false
+    }
+  ],
+  "chips-xs":[
+    {
+      "chipLabel": "Libellé",
+      "chipClass": "chip-xs",
+      "chipID": "chipXsExampleDropdown",
+      "is-dropdown": true,
+      "dropdownMenu": {
+        "dropdownMenuID": "chipXsExampleDropdown",
+        "dropdownSection": [
+          {
+            "dropdownItem": [
+              {
+                "url": "#",
+                "dropdownItemLabel": "Libellé"
+              },
+              {
+                "url": "#",
+                "dropdownItemLabel": "Libellé"
+              },
+              {
+                "url": "#",
+                "dropdownItemLabel": "Libellé"
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "chipLabel": "Libellé (99)",
+      "chipClass": "chip-xs active",
+      "chipID": "chipXsExampleDropdownNbr",
+      "is-dropdown": true,
+      "dropdownMenu": {
+        "dropdownMenuID": "chipXsExampleDropdownNbr",
+        "dropdownSection": [
+          {
+            "dropdownItem": [
+              {
+                "url": "#",
+                "dropdownItemLabel": "Libellé"
+              },
+              {
+                "url": "#",
+                "dropdownItemLabel": "Libellé"
+              },
+              {
+                "url": "#",
+                "dropdownItemLabel": "Libellé"
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "chipLabel": "Libellé",
+      "chipClass": "chip-xs active",
+      "chipID": "chipXsExampleDeletable",
+      "has-icon": {
+        "icon-name": "icon-x"
+      },
+      "is-dropdown": false,
+      "dropdownMenu": false
+    }
+  ]
+}

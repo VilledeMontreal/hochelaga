@@ -1,30 +1,27 @@
 <div class="container-fluid pl-atom-icons-grid">
 
 	<h4 class="pl-pattern-subtitle">Size</h4>
-	
 	<ul class="row list-unstyled">
-  		{{#svgSize }}
-	   		<li class="col-xs-6 col-sm-4 col-md-2">
-		      	<div class="pl-atom-icon-item icon-utility">
-		      		<span class="icon {{ nameIcon }} {{ classSize }}"></span>
-		      		<span class="ic-name">{{ label }}</span>
-		      	</div>
-		    </li>
-		{{/svgSize}}
-  	</ul>
-
+    {{#svgSize }}
+    <li class="col-xs-6 col-sm-4 col-md-2">
+      <div class="pl-atom-icon-item icon-utility">
+        <span class="icon {{ nameIcon }} {{ classSize }}"></span>
+        <span class="ic-name">{{ label }}</span>
+      </div>
+    </li>
+    {{/svgSize}}
+  </ul>
 
 	<h4 class="pl-pattern-subtitle">Color</h4>
-
 	<ul class="row list-unstyled">
-  		{{#svgColor }}
-	   		<li class="col-xs-6 col-sm-4 col-md-2">
-		      	<div class="pl-atom-icon-item icon-utility">
-		      		<span class="icon {{ nameIcon }} {{ classColor }}"></span>
-		      		<span class="ic-name">{{ label }}</span>
-		      	</div>
-		    </li>
+  	{{#svgColor }}
+    <li class="col-xs-6 col-sm-4 col-md-2">
+      <div class="pl-atom-icon-item icon-utility">
+        <span class="icon {{ nameIcon }} {{ classColor }}"></span>
+        <span class="ic-name">{{ label }}</span>
+      </div>
+    </li>
 		{{/svgColor}}
-  	</ul>
-  	
+  </ul>
+
 </div>

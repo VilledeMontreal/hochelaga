@@ -12,7 +12,7 @@
     }
   ],
   "heading": "Titre du sujet d'une longueur de 80 caractères maximum",
-  "publicationDate": {
+  "updatedDate": {
     "dateTimeText": "15 novembre 2019",
     "dateTimeFormat": "2019-11-15"
   },
@@ -208,6 +208,10 @@
     }
   },
   "sujetContent": {
+    "hasSelecteurArrondissement": true,
+    "selectedArrondissement": {
+      "arrondissement": "Nom-de-l'Arrondissement"
+    },
     "sujetArronDemarches": {
       "listGroup": [
         {
@@ -328,7 +332,7 @@
     "content": "<p>Corps de texte simple - Pas de liens. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi condimentum sollicitudin erat, quis convallis risus. Morbi condimentum sollicitudin erat, quis convallis risus.</p>"
   },
   "sb-block-tc-lies": {
-    "listGroupClass": "list-group-xl list-group-delimiter",
+    "listGroupClass": "list-group-xl",
     "listGroup": [
       {
         "url": "#",
@@ -357,10 +361,5 @@
         "class": false
       }
     ]
-  },
-  "hasSelecteurArrondissement": true,
-  "wrapperStickyHeader": false,
-  "selectedArrondissement": {
-    "arrondissement": "Nom-de-l'Arrondissement"
   }
 }

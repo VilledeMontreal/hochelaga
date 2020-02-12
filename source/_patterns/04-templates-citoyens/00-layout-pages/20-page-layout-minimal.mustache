@@ -1,0 +1,38 @@
+{{> styles-skip-links-section }}
+
+<header class="header-main-nav {{# navbarFixedTop}}is-fixed-top{{/navbarFixedTop}} is-mini">
+{{> components-navbar-mini }}
+</header>
+
+<main class="site-main-content main-content {{ pageClasses }}" id="main-content" aria-label="Main Content" role="main">
+
+  <div class="region-content {{ regionMainClasses }}">
+    <div class="container">
+      <div class="row{{^ sidebarRight}} justify-content-center{{/ sidebarRight}}">
+        <div class="col-12 col-lg-7">
+          <header class="content-header">
+
+              <h1>{{ heading }}</h1>
+
+              {{> patterns-content-header-extras}}
+
+            </header>
+            {{# lead}}
+            <div class="lead">
+              {{{ lead }}}
+            </div>
+            {{/ lead}}
+            <div class="content-modules">
+              <div class="content-module-stacked">
+                <p>Diam sea takimata ut lorem ipsum sea eos ut dolores. Amet et est labore amet clita, dolore diam sadipscing et dolores vero, eirmod et ipsum ipsum diam consetetur, ipsum sanctus sanctus rebum ut sed.</p>
+                <p>Amet kasd sanctus invidunt dolores et ut. Dolores takimata ut et accusam eos tempor, sea nonumy.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</main>
+
+{{> patterns-footer-main }}

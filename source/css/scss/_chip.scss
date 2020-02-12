@@ -19,7 +19,16 @@
   &:after {
     background-color: $neutral-tertiary;
     margin-right: 0;
-    @include transition($btn-transition);
+    @include transition($chip-transition);
+  }
+
+  .icon {
+    margin-top: -.1875rem;
+    margin-bottom: -.1875rem;
+    margin-left: .5rem;
+    &:before {
+      @include transition($chip-transition);
+    }
   }
 
   @include hover-focus {
@@ -30,6 +39,9 @@
 
     &:after {
       background-color: $chip-hover-color;
+    }
+    .icon {
+      @include icon-color($chip-hover-color);
     }
   }
 
@@ -47,6 +59,10 @@
       background-color: $chip-hover-color;
     }
 
+    .icon {
+      @include icon-color($action);
+    }
+
     &:focus {
       box-shadow: $btn-focus-box-shadow;
     }
@@ -57,8 +73,37 @@
 // Chip Small variant
 .chip-sm {
   @include chip-size($chip-padding-y-sm, $chip-padding-x-sm, $font-size-xs, $line-height-xs);
-  &:after {
+  
+  // Icons handling
+  &:after,
+  .icon::before {
     width: 1rem;
     height: 1rem;
+  }
+  .icon {
+    margin-top: -.1875rem;
+    margin-bottom: -.1875rem;
+    margin-left: .5rem;
+  }
+}
+
+// Chip XSmall variant
+.chip-xs {
+  @include chip-size($chip-padding-y-xs, $chip-padding-x-xs, $font-size-xs, $line-height-xs);
+  
+  // Icons handling
+  &:after,
+  .icon::before {
+    width: 1rem;
+    height: 1rem;
+  }
+  &:after,
+  .icon {
+    margin-right: -.25rem;
+  }
+  .icon {
+    margin-top: -.1875rem;
+    margin-bottom: -.1875rem;
+    margin-left: .5rem;
   }
 }

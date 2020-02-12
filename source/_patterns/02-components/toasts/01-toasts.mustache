@@ -1,0 +1,16 @@
+<div class="toast show" role="alert" aria-live="assertive" aria-atomic="true">
+  {{# showIcon}}
+  <div class="toast-icon">
+    <span class="icon icon-check-circle" aria-hidden="true"></span>
+  </div>
+  {{/ showIcon}}
+  <div class="toast-body">
+    {{{ toast-body }}}
+  </div>
+  {{# showAction}}
+  <div class="toast-action">
+    <button class="btn btn-tertiary btn-reversed">{{ label }}</button>
+  </div>
+  {{/ showAction}}
+</div>
+

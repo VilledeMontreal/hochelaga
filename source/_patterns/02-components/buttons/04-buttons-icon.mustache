@@ -1,0 +1,120 @@
+<h4 class="pl-pattern-subtitle">Position</h4>
+<div class="pl-button">
+  {{> components-button-icon(buttonClass: "btn-primary btn-squared btn-icon-left", buttonText: "Primary icon", icon-name: "icon-help", buttonIcon: true)}}
+  {{> components-button-icon(buttonClass: "btn-primary btn-squared btn-icon-right", buttonText: "Primary icon", icon-name: "icon-help", buttonIcon: true)}}
+  {{> components-button-icon(buttonClass: "btn-primary btn-squared btn-icon", buttonText: false, icon-name: "icon-help", buttonIcon: true)}}
+</div>
+
+<h4 class="pl-pattern-subtitle">Tailles</h4>
+<div class="pl-button">
+  {{> components-button-icon(buttonClass: "btn-primary btn-squared btn-icon-left", buttonText: "Default icon", icon-name: "icon-help", buttonIcon: true)}}
+  {{> components-button-icon(buttonClass: "btn-primary btn-squared btn-icon", buttonText: false, icon-name: "icon-help", buttonIcon: true)}}
+  {{> components-button-icon(buttonClass: "btn-primary btn-squared btn-icon-left btn-sm", buttonText: "Small square icon", icon-name: "icon-help", buttonIcon: true)}}
+  {{> components-button-icon(buttonClass: "btn-primary btn-squared btn-icon btn-sm", buttonText: false, icon-name: "icon-help", buttonIcon: true)}}
+</div>
+
+<h4 class="pl-pattern-subtitle">Hiérarchie</h4>
+<div class="pl-button">
+  {{> components-button-icon(buttonClass: "btn-primary btn-squared btn-icon-left", buttonText: "Primary", icon-name: "icon-help", buttonIcon: true)}}
+  {{> components-button-icon(buttonClass: "btn-primary btn-squared btn-icon", buttonText: false, icon-name: "icon-help", buttonIcon: true)}}
+  {{> components-button-icon(buttonClass: "btn-secondary btn-squared btn-icon-left", buttonText: "Secondary", icon-name: "icon-help", buttonIcon: true)}}
+  {{> components-button-icon(buttonClass: "btn-secondary btn-squared btn-icon", buttonText: false, icon-name: "icon-help", buttonIcon: true)}}
+  {{> components-button-icon(buttonClass: "btn-link btn-squared btn-icon-left", buttonText: "Tertiary", icon-name: "icon-help", buttonIcon: true)}}
+  {{> components-button-icon(buttonClass: "btn-link btn-squared btn-icon", buttonText: false, icon-name: "icon-help", buttonIcon: true)}}
+</div>
+
+<h4 class="pl-pattern-subtitle">État</h4>
+<div class="pl-button">
+  {{> components-button-icon(buttonClass: "btn-primary btn-squared btn-icon-left", buttonText: "Disabled", icon-name: "icon-help", buttonIcon: true, buttonState: "disabled" )}}
+  {{> components-button-icon(buttonClass: "btn-secondary btn-squared btn-icon-left", buttonText: "Disabled", icon-name: "icon-help", buttonIcon: true, buttonState: "disabled" )}}
+  {{> components-button-icon(buttonClass: "btn-tertiary btn-squared btn-icon-left", buttonText: "Disabled", icon-name: "icon-help", buttonIcon: true, buttonState: "disabled" )}}
+</div>
+
+<h4 class="pl-pattern-subtitle">Spinner</h4>
+<div class="pl-button">
+  <button type="button" class="btn btn-primary btn-squared" disabled>
+    {{> components-spinner }} Loading...
+  </button>
+  <button type="button" class="btn btn-secondary btn-squared" disabled>
+    {{> components-spinner }} Loading...
+  </button>
+  <button type="button" class="btn btn-tertiary btn-squared" disabled>
+    {{> components-spinner }} Loading...
+  </button>
+</div>
+
+<h4 class="pl-pattern-subtitle">Modificateurs</h4>
+<div class="pl-button pl-mb-0">
+  {{> components-button-icon(buttonClass: "btn-primary btn-success btn-squared btn-icon-left", buttonText: "Libellé", icon-name: "icon-help", buttonIcon: true)}}
+  {{> components-button-icon(buttonClass: "btn-primary btn-success btn-squared btn-icon", buttonText: false, icon-name: "icon-help", buttonIcon: true)}}
+  {{> components-button-icon(buttonClass: "btn-secondary btn-success btn-squared btn-icon-left", buttonText: "Libellé", icon-name: "icon-help", buttonIcon: true)}}
+  {{> components-button-icon(buttonClass: "btn-secondary btn-success btn-squared btn-icon", buttonText: false, icon-name: "icon-help", buttonIcon: true)}}
+  {{> components-button-icon(buttonClass: "btn-tertiary btn-success btn-squared btn-icon-left", buttonText: "Libellé", icon-name: "icon-help", buttonIcon: true)}}
+  {{> components-button-icon(buttonClass: "btn-tertiary btn-success btn-squared btn-icon", buttonText: false, icon-name: "icon-help", buttonIcon: true)}}
+</div>
+<div class="pl-button pl-mb-0">
+  {{> components-button-icon(buttonClass: "btn-primary btn-danger btn-squared btn-icon-left", buttonText: "Libellé", icon-name: "icon-help", buttonIcon: true)}}
+  {{> components-button-icon(buttonClass: "btn-primary btn-danger btn-squared btn-icon", buttonText: false, icon-name: "icon-help", buttonIcon: true)}}
+  {{> components-button-icon(buttonClass: "btn-secondary btn-danger btn-squared btn-icon-left", buttonText: "Libellé", icon-name: "icon-help", buttonIcon: true)}}
+  {{> components-button-icon(buttonClass: "btn-secondary btn-danger btn-squared btn-icon", buttonText: false, icon-name: "icon-help", buttonIcon: true)}}
+  {{> components-button-icon(buttonClass: "btn-tertiary btn-danger btn-squared btn-icon-left", buttonText: "Libellé", icon-name: "icon-help", buttonIcon: true)}}
+  {{> components-button-icon(buttonClass: "btn-tertiary btn-danger btn-squared btn-icon", buttonText: false, icon-name: "icon-help", buttonIcon: true)}}
+</div>
+<div class="pl-button pl-mb-0">
+  {{> components-button-icon(buttonClass: "btn-primary btn-warning btn-squared btn-icon-left", buttonText: "Libellé", icon-name: "icon-help", buttonIcon: true)}}
+  {{> components-button-icon(buttonClass: "btn-primary btn-warning btn-squared btn-icon", buttonText: false, icon-name: "icon-help", buttonIcon: true)}}
+  {{> components-button-icon(buttonClass: "btn-secondary btn-warning btn-squared btn-icon-left", buttonText: "Libellé", icon-name: "icon-help", buttonIcon: true)}}
+  {{> components-button-icon(buttonClass: "btn-secondary btn-warning btn-squared btn-icon", buttonText: false, icon-name: "icon-help", buttonIcon: true)}}
+  {{> components-button-icon(buttonClass: "btn-tertiary btn-warning btn-squared btn-icon-left", buttonText: "Libellé", icon-name: "icon-help", buttonIcon: true)}}
+  {{> components-button-icon(buttonClass: "btn-tertiary btn-warning btn-squared btn-icon", buttonText: false, icon-name: "icon-help", buttonIcon: true)}}
+</div>
+<div class="pl-button">
+  {{> components-button-icon(buttonClass: "btn-primary btn-info btn-squared btn-icon-left", buttonText: "Libellé", icon-name: "icon-help", buttonIcon: true)}}
+  {{> components-button-icon(buttonClass: "btn-primary btn-info btn-squared btn-icon", buttonText: false, icon-name: "icon-help", buttonIcon: true)}}
+  {{> components-button-icon(buttonClass: "btn-secondary btn-info btn-squared btn-icon-left", buttonText: "Libellé", icon-name: "icon-help", buttonIcon: true)}}
+  {{> components-button-icon(buttonClass: "btn-secondary btn-info btn-squared btn-icon", buttonText: false, icon-name: "icon-help", buttonIcon: true)}}
+  {{> components-button-icon(buttonClass: "btn-tertiary btn-info btn-squared btn-icon-left", buttonText: "Libellé", icon-name: "icon-help", buttonIcon: true)}}
+  {{> components-button-icon(buttonClass: "btn-tertiary btn-info btn-squared btn-icon", buttonText: false, icon-name: "icon-help", buttonIcon: true)}}
+</div>
+
+<h3 class="pl-pattern-subtitle">Reversed</h3>
+<h4 class="pl-pattern-subtitle">Hiérarchie</h4>
+<div class="pl-button d-flex bg-gray-900 pt-2 pl-pl-2">
+  {{> components-button-icon(buttonClass: "btn-primary btn-reversed btn-squared btn-icon-left", buttonText: "Libellé", icon-name: "icon-help", buttonIcon: true)}}
+  {{> components-button-icon(buttonClass: "btn-primary btn-reversed btn-squared btn-icon", buttonText: false, icon-name: "icon-help", buttonIcon: true)}}
+  {{> components-button-icon(buttonClass: "btn-secondary btn-reversed btn-squared btn-icon-left", buttonText: "Libellé", icon-name: "icon-help", buttonIcon: true)}}
+  {{> components-button-icon(buttonClass: "btn-secondary btn-reversed btn-squared btn-icon", buttonText: false, icon-name: "icon-help", buttonIcon: true)}}
+  {{> components-button-icon(buttonClass: "btn-link btn-reversed btn-squared btn-icon-left", buttonText: "Libellé", icon-name: "icon-help", buttonIcon: true)}}
+  {{> components-button-icon(buttonClass: "btn-tertiary btn-reversed btn-squared btn-icon", buttonText: false, icon-name: "icon-help", buttonIcon: true)}}
+</div>
+
+<h4 class="pl-pattern-subtitle">États</h4>
+<div class="pl-button d-flex bg-gray-900 pt-2 pl-pl-2">
+  {{> components-button-icon(buttonClass: "btn-primary btn-reversed btn-squared btn-icon-left", buttonText: "Disabled", icon-name: "icon-help", buttonIcon: true, buttonState: "disabled")}}
+  {{> components-button-icon(buttonClass: "btn-primary btn-reversed btn-squared btn-icon", buttonText: false, icon-name: "icon-help", buttonIcon: true, buttonState: "disabled")}}
+  {{> components-button-icon(buttonClass: "btn-secondary btn-reversed btn-squared btn-icon-left", buttonText: "Disabled", icon-name: "icon-help", buttonIcon: true, buttonState: "disabled")}}
+  {{> components-button-icon(buttonClass: "btn-secondary btn-reversed btn-squared btn-icon", buttonText: false, icon-name: "icon-help", buttonIcon: true, buttonState: "disabled")}}
+  {{> components-button-icon(buttonClass: "btn-link btn-reversed btn-squared btn-icon-left",buttonText: "Disabled", icon-name: "icon-help", buttonIcon: true, buttonState: "disabled")}}
+  {{> components-button-icon(buttonClass: "btn-tertiary btn-reversed btn-squared btn-icon", buttonText: false, icon-name: "icon-help", buttonIcon: true, buttonState: "disabled")}}
+</div>
+
+<h4 class="pl-pattern-subtitle">Spinner</h4>
+<div class="pl-button d-flex bg-gray-900 pt-2 pl-pl-2">
+  <button type="button" class="btn btn-primary btn-squared btn-reversed" disabled>
+    {{> components-spinner }} Loading...
+  </button>
+  <button type="button" class="btn btn-secondary btn-squared btn-reversed" disabled>
+    {{> components-spinner }} Loading...
+  </button>
+  <button type="button" class="btn btn-tertiary btn-squared btn-reversed" disabled>
+    {{> components-spinner }} Loading...
+  </button>
+</div>
+
+<h4 class="pl-pattern-subtitle">Collapse</h4>
+<div class="pl-button">
+  <div class="collapse-content collapse" id="collapseExampleBtn">
+    <p>Etiam eget purus in justo venenatis consectetur vel nec magna. Fusce non neque nunc. Etiam at aliquet lectus, eu dignissim sapien. Suspendisse non elit id lectus ultricies suscipit. Duis ornare, enim quis imperdiet vestibulum, quam urna efficitur tellus, vel euismod urna lacus quis lectus. Aenean eros risus, interdum eu vehicula vitae, sagittis vel nisi. Fusce mollis orci nisl, id blandit lacus porttitor ut. Mauris nec congue odio. Nunc lacus sem, rutrum et est tempor, viverra posuere augue.</p>
+  </div>
+  <button class="btn btn-link btn-squared btn-collapse collapsed" type="button" data-toggle="collapse" data-target="#collapseExampleBtn" aria-expanded="false" aria-controls="collapseExampleBtn">Voir plus</button>
+</div>

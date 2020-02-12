@@ -22,7 +22,7 @@
   "header-back-link": false,
   "heading": "Titre du conseil-article d'une longueur de 80 caractères maximum",
   "has-badges": false,
-  "publicationDate": {
+  "updatedDate": {
     "dateTimeText": "16 août 2019",
     "dateTimeFormat": "2019-08-16"
   },
@@ -258,13 +258,41 @@
         }
       }
     },
+    "module-featured-document": {
+      "cards": {
+        "classes": false,
+        "bsgrid-classes": "col-12",
+        "card-item": [
+          {
+            "classes": "card-fw card-document",
+            "url": "https://res.cloudinary.com/villemontreal/image/upload/v1573053516/portail/gfipioiuaxit5nkyea0l.pdf",
+            "card-media" : {
+              "icon": false,
+              "img": false,
+              "document": {
+                "img": {
+                  "classes": false,
+                  "src": "https://res.cloudinary.com/villemontreal/image/upload/q_auto,f_auto,dpr_auto,w_200/v1/portail/gfipioiuaxit5nkyea0l.png",
+                  "alt": "Alt de l'image de couverture du PDF."
+                }
+              }
+            },
+            "card-type": "Type",
+            "card-title": "Titre du document",
+            "card-text": false,
+            "card-text-interface": "Document PDF de X Mo",
+            "card-link": "Télécharger"
+          }
+        ]
+      }
+    },
     "module-events": false
   },
   "sidebarRight": true,
   "sidebarClasses": false,
   "sb-classes": "",
   "sb-block-tc-lies": {
-    "listGroupClass": "list-group-xl list-group-delimiter",
+    "listGroupClass": "list-group-xl",
     "listGroup": [
       {
         "url": "https://rds.ca",

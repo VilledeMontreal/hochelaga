@@ -14,6 +14,112 @@ a {
     background-color: $highlight-light;
     border-bottom: $link-border-width solid $primary;
   }
+  &:after {
+    background-color: $primary;
+  }
+  .icon {
+    @include icon-color($action);
+  }
+}
+
+
+.link-list-element {
+  @include font-size($font-size-base);
+  line-height: $line-height-md;
+  border: none;
+  @include hover-focus {
+    border: none;
+    background-color: transparent;
+    .link-label {
+      background-color: $highlight-light;
+      display: inline;
+      border-bottom: 1px solid $action;
+    }
+  }
+
+  // Utility class for link element with icon tag.
+  &.link-has-icon {
+    display: inline-flex;
+    border: none;
+    line-height: $line-height-md;
+    .icon {
+      @include icon-color($action);
+      padding-right: .25rem;
+    }
+    @include hover-focus {
+      border: none;
+      background-color: transparent;
+      .link-icon-label {
+        background-color: $highlight-light;
+        display: inline;
+        border-bottom: 1px solid $action;
+      }
+    }
+
+    &.icon-right {
+      .icon {
+        padding-right: 0;
+        padding-left: .25rem;
+      }
+    }
+
+    &.icon-left {
+      .icon {
+        padding-left: 0;
+        padding-right: .25rem;
+      }
+    }
+
+    &.link-sm {
+      @include font-size($font-size-sm);
+        line-height: $line-height-sm;
+      .icon {
+        @extend .icon-sm;
+      }
+    }
+
+    &.link-xs {
+      @include font-size($font-size-xs);
+        line-height: $line-height-xs;
+      .icon {
+        @extend .icon-xs;
+      }
+    }
+  }
+}
+
+// Utility class for inline link with icon tag.
+.link-has-icon:not(.link-list-element) {
+  margin-right: 1.75rem;
+  .icon {
+    display: inline;
+    @include icon-size($icon-md);
+    margin-left: .25rem;
+    margin-right: -1.75rem;
+    vertical-align: -6px;
+  }
+
+  // Override icon size and margins for link-sm
+  &.link-sm {
+    margin-right: 1.5rem;
+    .icon {
+      @include icon-size($icon-sm);
+      margin-left: .25rem;
+      margin-right: -1.5rem;
+      vertical-align: -5px;
+    }
+  }
+
+  // Override icon size and margins for link-xs
+  &.link-xs {
+    margin-right: 1.25rem;
+    .icon {
+      @include icon-size($icon-xs);
+      margin-left: .25rem;
+      margin-right: -1.25rem;
+      vertical-align: -4px;
+    }
+  }
 }
 
 // Make the color of dialog dark
@@ -74,12 +180,21 @@ a.text-white {
     border-bottom: $link-border-width solid $white !important;
     background-color: transparent;
   }
-}
-a.text-white {
-  @include hover-focus {
-    background-color: rgba(255,255,255,.2);
+  // Handle specific cases here...
+  &:after {
+    background-color: $white;
+  }
+  .icon {
+    @include icon-color($white);
   }
 }
+
+a.text-white {
+  @include hover-focus {
+    background-color: $overlay-light-reversed;
+  }
+}
+
 a.text-muted {
   border-bottom: none;
   cursor: not-allowed;
@@ -87,14 +202,22 @@ a.text-muted {
     color: $neutral-tertiary !important;
     border-bottom: none;
     background-color: transparent;
+    outline: none;
+    box-shadow: none;
+  }
+  // Handle specific cases here...
+  &:after {
+    background-color: $neutral-tertiary;
+  }
+  .icon {
+    @include icon-color($neutral-tertiary);
   }
 }
 
 // Utility class to give external link icon for external link
 .is-external-link {
-  margin-right: 1.625rem;
+  margin-right: 1.75rem;
   position: relative;
-  width: auto !important;
   &:after {
     content: '';
     -webkit-mask: url($data-icon-externallink) no-repeat 50% 50%;
@@ -106,21 +229,29 @@ a.text-muted {
     width: $icon-md;
     height: $icon-md;
     overflow: hidden;
-    margin-right: -1.625rem;
-    margin-left: .125rem;
+    margin-left: .25rem;
+    margin-right: -1.75rem;
     vertical-align: -.375rem;
   }
 
-  @include hover-focus {
-    &:before {
-      background-color: $highlight-light;
-      content: "";
-      position: absolute;
-      top: 0;
-      left: 0;
-      right: -1.625rem;
-      bottom: -1px;
-      z-index: -1;
+  &.link-sm {
+    margin-right: 1.5rem;
+    position: relative;
+    &:after {
+      width: $icon-sm;
+      height: $icon-sm;
+      margin-right: -1.5rem;
+      vertical-align: -5px;
+    }
+  }
+
+  &.link-xs {
+    margin-right: 1.25rem;
+    &:after {
+      width: $icon-xs;
+      height: $icon-xs;
+      margin-right: -1.25rem;
+      vertical-align: -4px;
     }
   }
 }

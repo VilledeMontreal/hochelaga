@@ -81,12 +81,12 @@
     }
   }
   &.badge-light {
-    background-color: $white;
+    background-color: $neutral-underground-2;
     color: $neutral-primary;
     &[href] {
       @include hover-focus {
         color: $neutral-primary;
-        background-color: darken($white, 10%);
+        background-color: darken($neutral-underground-2, 10%);
       }
     }
     .icon {
@@ -239,9 +239,41 @@
       }
     }
   }
-
 }
 
+// Position over icon or chunk of content (top, right)
+.badge-notification-top-right {
+  position: relative;
+  display: flex;
+  align-items: center;
+  .badge-notification-dot {
+    position: absolute;
+    top: -2px;
+    right: -2px;
+  }
+}
+
+.badge-notification-dot {
+  width: .75rem;
+  height: .75rem;
+  background-color: $white;
+  border-radius: 50%;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  &:after {
+    content: "";
+    border-radius: 50%;
+    width: .5rem;
+    height: .5rem;
+    background-color: $danger;
+    display: block;
+    z-index: 1;
+  }
+}
+
+// Handle badges horizontal spacing inside container
 .badge-group {
   .badge + .badge {
     margin-left: .25rem;

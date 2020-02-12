@@ -107,6 +107,10 @@ b, strong {
   font-weight: $font-weight-bold;
 }
 
+ol, ul {
+  padding-left: 2rem;
+}
+
 ol, ul, dl {
   margin-bottom: $paragraph-margin-bottom;
 }
@@ -125,18 +129,8 @@ address {
 }
 
 // Links - generic
+// @see text.scss utility for links generic rules 
 a {
-  // We had border-bottom on all links and override specific case
-  //border-bottom: $link-border-width solid $link-border-color;
-
-  // icons in link should be link-color
-  .icon {
-    color: $link-color;
-  }
-  &:hover,
-  &:active {
-    color: $link-hover-color;
-  }
 
   &:focus {
     outline: 0;
@@ -158,30 +152,16 @@ a {
     color: inherit !important;
   }
 
-  &.link-list-element {
-    @include font-size($font-size-base);
-    line-height: $line-height-md;
-    border: none;
-    @include hover-focus {
-      border: none;
-      background-color: transparent;
-      .link-label {
-        background-color: $highlight-light;
-        display: inline;
-        border-bottom: 1px solid $action;
-      }
-    }
-  
-    &.link-sm {
-      @include font-size($font-size-sm);
-      line-height: $line-height-sm;
-    }
-
-    &.link-xs {
-      @include font-size($font-size-xs);
-      line-height: $line-height-xs;
-    }
+  &.link-sm {
+    @include font-size($font-size-sm);
+    line-height: $line-height-sm;
   }
+
+  &.link-xs {
+    @include font-size($font-size-xs);
+    line-height: $line-height-xs;
+  }
+
 }
 
 // External link icon
@@ -199,6 +179,7 @@ a {
     margin-right: 3.02em;
     &:after {
       content: "(PDF)";
+      background-color: transparent;
       margin-right: -3.02em;
       padding-left: .5rem;
       overflow: hidden;

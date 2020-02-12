@@ -143,11 +143,26 @@
   display: inherit;
   width: 100%;
   .link-has-icon {
+    display: inline-flex;
+    border: none;
+    line-height: $line-height-md;
     .icon {
+      @include icon-color($action);
+      display: block;
+      margin: 0;
       padding: 0;
+      margin-right: 1rem;
     }
     @include hover-focus {
+      border: none;
+      background-color: transparent;
+      .link-icon-label {
+        background-color: $highlight-light;
+        display: inline;
+        border-bottom: 1px solid $action;
+      }
       .icon {
+        border: none;
         background-color: transparent;
       }
     }
@@ -227,20 +242,25 @@
   flex-wrap: wrap;
   .list-inline-item {
     display: inline-flex;
-    margin-right: .25rem;
+    margin-right: 0;
     margin-bottom: .25rem;
-    + .list-inline-item {
-      &:before {
-        -webkit-mask: url($data-icon-dot-interpunct) no-repeat 50% 50%;
-        mask: url($data-icon-dot-interpunct) no-repeat 50% 50%;
-        width: 20px;
-        height: 20px;
-        content: '';
-        display: inline-flex;
-        -webkit-mask-size: cover;
-        mask-size: cover;
-        background-color: $neutral-tertiary;
-        margin-right: .25rem;
+    &:after {
+      -webkit-mask: url($data-icon-dot-interpunct) no-repeat 50% 50%;
+      mask: url($data-icon-dot-interpunct) no-repeat 50% 50%;
+      width: $icon-sm;
+      height: $icon-sm;
+      content: '';
+      display: inline-flex;
+      -webkit-mask-size: cover;
+      mask-size: cover;
+      background-color: $neutral-tertiary;
+      margin-left: .25rem;
+      margin-right: .25rem;
+    }
+    // Remove interpunct from last item
+    &:last-child {
+      &:after {
+        content: none;
       }
     }
 

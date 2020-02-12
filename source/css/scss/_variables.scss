@@ -81,9 +81,10 @@ $theme-colors: ();
 $theme-colors: map-merge(
   (
     "primary":    			  $primary,
-	  "neutral-primary":   	$gray-900,
-	  "neutral-secondary":  $gray-700,
-	  "neutral-tertiary":   $gray-500,
+	  "neutral-primary":   	$neutral-primary,
+	  "neutral-secondary":  $neutral-secondary,
+    "neutral-tertiary":   $neutral-tertiary,
+    "neutral-stroke":     $neutral-stroke,
 	  "success":    			  $positive,
     "info":       			  $informative,
     "warning":    			  $warning,
@@ -116,6 +117,22 @@ $dialog-colors: (
   )
 );
 
+
+// Overlays
+//
+$overlay-almost-visible:            rgba($black, .05);
+$overlay-subtle:                    rgba($black, .1);
+$overlay-light:                     rgba($black, .3);
+$overlay-mid:                       rgba($black, .5);
+$overlay-strong:                    rgba($black, .7);
+
+$overlay-almost-visible-reversed:   rgba($white, .05);
+$overlay-subtle-reversed:           rgba($white, .1);
+$overlay-light-reversed:            rgba($white, .3);
+$overlay-mid-reversed:              rgba($white, .5);
+$overlay-strong-reversed:           rgba($white, .7);
+
+
 // Icons
 //
 
@@ -123,6 +140,9 @@ $dialog-colors: (
 $icon-xs:     16px;
 $icon-sm:     20px;
 $icon-md:     24px;
+
+$icon-cat:    40px;
+$icon-cat-xl: 80px;
 
 $icons-size: ();
 $icons-size: (
@@ -282,7 +302,7 @@ $focus-color:                 $informative;
 $focus-reverse-color:         $informative-light;
 
 // generic variable box-shadow apply to card, popover, dropdown and modal
-$box-shadow:                  0 0 2rem 0 rgba($black, .1);
+$box-shadow:                  0 0 2rem 0 $overlay-subtle;
 
 // Generic value for backdrop bg and opacity
 $backdrop-bg:                 $neutral-primary;
@@ -580,7 +600,7 @@ $nav-tabs-active-border-width:        2px;
 
 // Navbar
 
-$navbar-box-shadow:                 0 .25rem .5rem -.5rem rgba($black, .5);
+$navbar-box-shadow:                 0 .25rem .5rem -.5rem $overlay-mid;
 
 // Dropdowns
 //
@@ -673,6 +693,18 @@ $card-inner-border-radius:          calc(#{$card-border-radius} - #{$card-border
 $card-box-shadow:                   $box-shadow;
 
 
+// Toasts
+
+$toast-padding-x:                   1rem;
+$toast-padding-y:                   1rem;
+$toast-font-size:                   $font-size-sm;
+$toast-line-height:                 $line-height-sm;
+$toast-color:                       $white;
+$toast-background-color:            $neutral-primary;
+$toast-border-radius:               .25rem;
+$toast-box-shadow:                  0 .125rem .5rem $overlay-subtle;
+
+
 // Badges
 
 $badge-font-size:                   $font-size-xs;
@@ -706,6 +738,8 @@ $chip-padding-y:                    calc(.625rem - #{$chip-border-width});
 $chip-padding-x:                    calc(.5rem - #{$chip-border-width});
 $chip-padding-y-sm:                 calc(.5rem - #{$chip-border-width});
 $chip-padding-x-sm:                 calc(.5rem - #{$chip-border-width});
+$chip-padding-y-xs:                 calc(.25rem - #{$chip-border-width});
+$chip-padding-x-xs:                 calc(.5rem - #{$chip-border-width});
 
 $chip-transition:                   $btn-transition;
 $chip-focus-width:                  $input-btn-focus-width;
@@ -878,7 +912,7 @@ $main-navbar-focus-box-shadow:  0 0 0 $input-btn-focus-width rgba($action, .3);
 $main-menu-bg:                    $white;
 $main-menu-active-bg:             $highlight-light;
 $main-menu-transition:            transform 300ms ease-out;
-$main-menu-box-shadow:            0 .125rem .5rem 0 rgba($black, .1);
+$main-menu-box-shadow:            0 .125rem .5rem 0 $overlay-subtle;
 
 
 // Slide Menus Interne

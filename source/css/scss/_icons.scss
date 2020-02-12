@@ -28,50 +28,6 @@ svg[role=icon] {
   }
 }
 
-.link-has-icon {
-  display: inline-flex;
-  border: none;
-  line-height: $line-height-md;
-  .icon {
-    @include icon-color($action);
-    padding-right: .25rem;
-  }
-  @include hover-focus {
-    border: none;
-    background-color: transparent;
-    .icon {
-      background-color: $highlight-light;
-    }
-    .link-icon-label {
-      background-color: $highlight-light;
-      display: inline;
-      border-bottom: 1px solid $action;
-    }
-  }
-
-  &.icon-right {
-    .icon {
-      padding-right: 0;
-      padding-left: .25rem;
-    }
-  }
-
-  &.icon-left {
-    .icon {
-      padding-left: 0;
-      padding-right: .25rem;
-    }
-  }
-
-  &.link-sm {
-    @include font-size($font-size-sm);
-      line-height: $line-height-sm;
-    .icon {
-      @extend .icon-sm;
-    }
-  }
-}
-
 @each $label, $map in $icons-size {
   $size: map-get($map, size);
   .icon-#{$label} {
@@ -81,9 +37,9 @@ svg[role=icon] {
 
 @each $color, $value in $theme-colors {
   .icon-color-#{$color} {
-    fill:$value !important;
+    fill: $value !important;
     &:before {
-      background-color:$value !important;
+      background-color: $value !important;
     }
   }
 }

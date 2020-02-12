@@ -54,6 +54,7 @@
     }
 
     .icon {
+      @include icon-color($neutral-tertiary);
       margin-right: 1rem;
     }
   }

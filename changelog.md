@@ -4,7 +4,65 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](http://keepachangelog.com/en/1.0.0/)
 and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.html).
 
-## [4.6.0] - unreleased
+## [4.7.0] - unreleased
+
+**icon-warning has been renamed icon-error and a new icon-warning icon has been created. Please review your icons integration accordingly.**
+
+### Added
+- Sidebar Block: Handling of spacing between multiple .list inside a single .sb-block (Programmes > contacts)
+- Components - Badges: New .badges-notification.
+- Components - Buttons: Modifier for dialog-colors (success, danger, warning, info, danger).
+- Components - Cards - Document: Add example for marking untranslated Document content.
+- Components - Chips: New .chips-xs examples.
+- Components - List-group: .list-group-complexe examples.
+- Components - Main-navbar: Navbar mini example.
+- Components - Main-navbar: .is-mini class to use when main-navbar is sticky and is not used with language bar.
+- Components - Toasts: Add toasts (snackbar) example and styles.
+- Patterns - Footer: Added minimalist and hybrid footer examples.
+- Templates Citoyens - Layout pages: Page layout minimal example (mini main-navbar and minimalist footer)
+- Templates - index: Add example for badge-primary usage in applied filters section.
+- Icons - utility: filters, error and ticket icons.
+
+### Changed
+- Add class to hide illustration on homepage for mobile.
+- Normalization of overlay rgba with overlay-[x] and overlay-[x]-reversed variables.
+- Styles - Links: normalisation between inline and element links. Added ability to put .icon span tags inside inline links.
+- Components - Buttons: reversed, hover and states.
+- Components - Buttons: Disabled states by hierarchy button type.
+- Components - Buttons: .btn-reversed is now a modifier and can be applied to any types of buttons.
+- Components - List: list-inline-interpunct icon placement handling and stacking behavior.
+- Components - List-group: Add border-top to .list-group-xl
+- Components - List-group: Some refactoring for .list-group.
+- Components - List-group: .list-group-teaser with optionnal thumbnail or placeholder.
+- Components - Cards: Removed Content-type representation. The card component is the generic reprensentation of a card anatomy.
+- Components - Cards: Normalization of .card-service Title color.
+- Components - Cards: Icon placeholder is now 80px and hover is $action-lighter.
+- Components - Gallery: Update button classes.
+- Components - Main-navbar: Search submit button on mobile conforms to btn-primary styles.
+- Patterns - header: Adjustement to document-heading-sm bottom padding.
+- Patterns - Pre-footer: Pre-footer is now detached from footer patterns.
+- Patterns - Wrappers - Arrondissement: Center texte and button inside .wrapper-arrondissement-header.
+- Patterns - Forms: Update button classes (Always use .btn-squared in forms).
+- Templates - Sujet: handling of related content with and without borough wrapper.
+- Templates - Article: Add featured document module example.
+- Icons: icon-warning becomes icon-error and a new icon-warning has been created.
+- Pattern Lab - Styles - Links: Refactoring of link inline and link element presentation with and without icon.
+- Pattern Lab - Components - Buttons: New layout for buttons (Editorial, Utility and Icons)
+- Pattern Lab - Components - Badges: Rework layout for badges. 
+
+### Fixed
+- Components - Buttons: focus and active-focus states.
+- Links - external link: Fixed weird behavior for multiline external links.
+
+### Deprecated
+- Components - Buttons: .btn-promo.
+- Components - Buttons: .btn-primary-reversed, .btn-secondary-reversed, .btn-tertiary-reversed. Use the .btn-reversed modifier instead.
+- Components - List-group: .list-group-delimiter has become useless. Styles were only used by .list-group-xl.
+- Components - List-group: .list-group-date.
+- Components - List-group: .list-group-teaser-img. Use image tags instead. No more background-image with variable height.
+
+
+## [4.6.0] - 2020-01-07
 
 ### Added
 - 2 new editorial icons: location-empty and megaphone.
@@ -301,6 +359,7 @@ Main navbar, menu and footer are now in their own stylesheet. They will eventual
 The version 3 is now deprecated. Only bug fixes will be considered. Please refer to the old bitbucket repo https://bitbucket.org/villemontreal/boite-outils-web/.
 
 
+[4.6.0]: https://bitbucket.org/villemontreal/boite-outils4-web/src/4.6.0/
 [4.5.1]: https://bitbucket.org/villemontreal/boite-outils4-web/src/4.5.1/
 [4.5.0]: https://bitbucket.org/villemontreal/boite-outils4-web/src/4.5.0/
 [4.4.1]: https://bitbucket.org/villemontreal/boite-outils4-web/src/4.4.1/

@@ -48,12 +48,16 @@
             {{# module-content}}
             {{> templates-citoyens-sujet-content}}
             {{/ module-content}}
+            
+            {{# sujetContent}}
+            <h2>Renseignements et services</h2>
             {{# hasSelecteurArrondissement}}
-            <h2>Votre arrondissement</h2>
-            <div class="content-module-stacked">
               {{> patterns-arrondissement}}
-            </div>
             {{/ hasSelecteurArrondissement}}
+            {{^ hasSelecteurArrondissement}}
+              {{> templates-citoyens-sujet-arron}}
+            {{/ hasSelecteurArrondissement}}
+            {{/ sujetContent}}
           </div>
         </div>
 

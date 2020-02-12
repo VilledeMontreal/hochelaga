@@ -130,7 +130,6 @@ ctx = pipeline.createContext([
         mail: [
             to: [
                 'tola.sam',
-                'hugo.valcourt',
                 'alexis.boulerice'
             ],
         ],

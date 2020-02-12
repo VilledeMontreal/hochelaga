@@ -1,0 +1,70 @@
+<div class="list-group list-group-teaser" role="list">
+  {{# listGroup}}
+  {{# url}}
+  <a class="list-group-item list-group-item-action" href="{{ url }}" role="listitem">
+  {{/ url}}
+  {{^ url}}
+  <div class="list-group-item" role="listitem">
+  {{/ url}}
+    <div class="list-group-item-max-width">
+      {{# media}}
+      <div class="media"> 
+      {{# media.img}}
+      <div class="list-group-thumb mr-2 mr-lg-4">
+        <img src="{{ src }}" alt="{{ alt }}" class="img-fluid" />
+      </div>
+      {{/ media.img}}
+      {{# media.placeholder}}
+      <div class="list-group-thumb list-group-thumb-placeholder mr-2 mr-lg-4" style="background-image:url(https://res.cloudinary.com/villemontreal/image/upload/q_auto,f_auto,dpr_auto,w_768,c_fill/v1571398706/portail/background/texture-Small-highlight.png)">
+        <span class="icon {{ icon }}" aria-hidden="true"></span>
+      </div>
+      {{/ media.placeholder}}
+      <div class="media-body">
+      {{/ media}}
+      {{# type }}
+      <div class="list-group-item-type">{{ type }}</div>
+      {{/ type}}
+      {{^ has-linked-title}}
+      <div class="list-group-item-title">{{ title }}</div>
+      {{/ has-linked-title}}
+      {{# has-linked-title}}
+      <a href="{{ url }}" class="list-group-item-title">{{ title }}</a>
+      {{/ has-linked-title}}
+      {{# infos }}
+      <div class="list-group-item-content {{infosClass}}">
+        {{# badge}}
+        <div class="list-group-item-badge">
+          {{> components-badge}}
+        </div>
+        {{/ badge}}
+        {{# infos.infos-items }}
+        <div class="list-group-item-infos {{class}}">{{{ text }}}</div>
+        {{/ infos.infos-items }}
+      </div>
+      {{/ infos}}
+      {{# extras}}
+      <div class="list-group-item-content {{extrasClass}}">
+        <div class="font-size-sm">{{{ text }}}</div>
+        {{# badges}}
+        <div class="mt-2">
+          {{# badge}}
+          {{> components-badge}}
+          {{/ badge}}
+        </div>
+        {{/ badges}}
+      </div>
+      {{/ extras}}
+      {{# media}}
+      </div>
+      </div>
+      {{/ media}}
+    </div>
+  {{^ url}}
+  </div>
+  {{/ url}}
+  {{# url}}
+  </a>
+  {{/ url}}
+  {{/ listGroup}}
+</div>
+
