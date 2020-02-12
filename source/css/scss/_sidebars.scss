@@ -2,7 +2,7 @@
 .sidebar {
   border-top: 1px solid $neutral-stroke;
   margin-bottom: 4rem;
-  margin-top: 2rem;
+  //margin-top: 2rem;
 
   p {
     margin-bottom: $paragraph-margin-bottom;
@@ -43,7 +43,7 @@
 
   // Handle multplie lists in a single sidebar block
   .list + .list {
-    margin-top: 1.5rem;
+    margin-top: 2rem;
   }
 
   // Schedule data

@@ -1,0 +1,84 @@
+{{^ hasIcon}}
+  <div class="list-item {{ listItemClass }}">
+    {{# listItemAction}}
+    <div class="list-item-action">
+      <a href="{{url}}">
+        <span class="link-label">{{listItemLabel}}</span>
+      </a>
+    </div>
+    {{# listExtraContent}}
+    <div class="list-item-content">
+      {{# extraContentBold }}
+      <div class="font-weight-bold">{{{extraContentBold}}}</div>
+      {{/ extraContentBold }}
+      {{{extraContent}}}
+    </div>
+    {{/ listExtraContent}}
+    {{/ listItemAction}}
+    {{^ listItemAction}}
+    <div class="list-item-content">
+      {{# listItemLabel }}
+      <div class="list-item-label">{{listItemLabel}}</div>
+      {{/ listItemLabel }}
+      {{# listExtraContent}}
+      <div class="list-item-content">
+        {{# extraContentAction}}
+        <div class="list-item-action">
+          <a href="{{url}}">
+            <span class="link-label">{{ text }}</span>
+          </a>
+        </div>
+        {{/ extraContentAction}}
+        {{# extraContentBold }}
+        <div class="font-weight-bold">{{{extraContentBold}}}</div>
+        {{/ extraContentBold }}
+        {{{extraContent}}}
+      </div>
+      {{/ listExtraContent}}
+    </div>
+    {{/ listItemAction}}
+  </div>
+  {{/ hasIcon}}
+  {{# hasIcon}}
+  <div class="list-item-icon {{ listItemClass }}">
+    {{# listItemAction}}
+    <div class="list-item-icon-action">
+      <a href="{{url}}" class="link-has-icon" {{# toggle}}data-toggle="{{ type }}" data-target="{{ id }}"{{/ toggle}}>
+        <div><span class="icon {{icon-name}}"></span></div>
+        <div><span class="link-icon-label">{{ listItemLabel }}</span></div>
+      </a>
+    </div>
+    {{# listExtraContent}}
+    <div class="list-item-icon-content ml-5 {{listExtraContentClass}}">
+      {{# extraContentBold }}
+      <div class="font-weight-bold">{{{extraContentBold}}}</div>
+      {{/ extraContentBold }}
+      {{{extraContent}}}
+    </div>
+    {{/ listExtraContent}}
+    {{/ listItemAction}}
+    {{^ listItemAction}}
+    <span class="icon {{icon-name}}" aria-hidden="true"></span>
+    <div class="list-item-icon-content">
+      {{# listItemLabel }}
+      <div class="list-item-icon-label">{{listItemLabel}}</div>
+      {{/ listItemLabel}}
+      {{# listExtraContent}}
+      <div {{#listExtraContentClass}}class="{{listExtraContentClass}}"{{/listExtraContentClass}}>
+        {{# extraContentAction}}
+        <div class="list-item-action">
+          <a href="{{url}}">
+            <span class="link-label">{{ text }}</span>
+          </a>
+        </div>
+        {{/ extraContentAction}}
+        {{# extraContentBold }}
+        <div class="font-weight-bold">{{{extraContentBold}}}</div>
+        {{/ extraContentBold }}
+        {{{extraContent}}}
+      </div>
+      {{/ listExtraContent}}
+    </div>
+    {{/ listItemAction}}
+  </div>
+  {{/ hasIcon}}

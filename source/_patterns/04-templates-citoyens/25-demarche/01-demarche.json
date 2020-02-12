@@ -144,7 +144,7 @@
                 "hasIcon": true,
                 "icon-name": "icon-phone",
                 "listItemAction": false,
-                "text": "514 993-3423",
+                "listItemLabel": "514 993-3423",
                 "listExtraContent": false
               }
             ]
@@ -164,8 +164,10 @@
                 "hasIcon": true,
                 "icon-name": "icon-phone",
                 "listItemAction": false,
-                "text": "3-1-1",
-                "listExtraContent": "de l'extérieur de Montréal 514 872-0311"
+                "listItemLabel": "3-1-1",
+                "listExtraContent": {
+                  "extraContent": "de l'extérieur de Montréal 514 872-0311"
+                }
               }
             ]
           },
@@ -185,8 +187,10 @@
                 "hasIcon": true,
                 "icon-name": "icon-phone",
                 "listItemAction": false,
-                "text": "9-1-1",
-                "listExtraContent": "est le numéro de téléphone qu'il faut composer lorsque l'intervention d'un service d'urgence (police, pompier, ambulance) est requise. Toute personne qui réside ou qui se trouve sur le territoire de Montréal a un accès au 9-1-1 et tous les téléphones publics du territoire donnent un accès gratuit au 9-1-1"
+                "listItemLabel": "9-1-1",
+                "listExtraContent": {
+                  "extraContent": "est le numéro de téléphone qu'il faut composer lorsque l'intervention d'un service d'urgence (police, pompier, ambulance) est requise. Toute personne qui réside ou qui se trouve sur le territoire de Montréal a un accès au 9-1-1 et tous les téléphones publics du territoire donnent un accès gratuit au 9-1-1"
+                }
               }
             ]
           },
@@ -206,8 +210,10 @@
                   "hasIcon": true,
                   "icon-name": "icon-location",
                   "listItemAction": true,
-                  "text": "Nom du lieu Ville",
-                  "listExtraContent": "5955, avenue Bannantyne<br>Montréal (Québec) H4H 1H6"
+                  "listItemLabel": "Nom du lieu Ville",
+                  "listExtraContent": {
+                    "extraContent": "5955, avenue Bannantyne<br>Montréal (Québec) H4H 1H6"
+                  }
                 }
               ]
             },
@@ -218,8 +224,10 @@
                   "hasIcon": true,
                   "icon-name": "icon-location",
                   "listItemAction": true,
-                  "text": "Autre lieu Ville (optionnel)",
-                  "listExtraContent": "5955, avenue Bannantyne<br>Montréal (Québec) H4H 1H6"
+                  "listItemLabel": "Autre lieu Ville (optionnel)",
+                  "listExtraContent": {
+                    "extraContent": "5955, avenue Bannantyne<br>Montréal (Québec) H4H 1H6"
+                  }
                 }
               ]
             }
@@ -241,8 +249,10 @@
                   "hasIcon": true,
                   "icon-name": "icon-location",
                   "listItemAction": false,
-                  "text": false,
-                  "listExtraContent": "5955, avenue Bannantyne<br>Montréal (Québec) H4H 1H6"
+                  "listItemLabel": false,
+                  "listExtraContent": {
+                    "extraContent": "5955, avenue Bannantyne<br>Montréal (Québec) H4H 1H6"
+                  }
                 }
               ]
             }
@@ -264,8 +274,10 @@
                   "hasIcon": true,
                   "icon-name": "icon-location",
                   "listItemAction": true,
-                  "text": "Nom du lieu Ville",
-                  "listExtraContent": "5955, avenue Bannantyne<br>Montréal (Québec) H4H 1H6"
+                  "listItemLabel": "Nom du lieu Ville",
+                  "listExtraContent": {
+                    "extraContent": "5955, avenue Bannantyne<br>Montréal (Québec) H4H 1H6"
+                  }
                 }
               ]
             },
@@ -276,8 +288,10 @@
                   "hasIcon": true,
                   "icon-name": "icon-location",
                   "listItemAction": true,
-                  "text": "Autre lieu Ville (optionnel)",
-                  "listExtraContent": "5955, avenue Bannantyne<br>Montréal (Québec) H4H 1H6"
+                  "listItemLabel": "Autre lieu Ville (optionnel)",
+                  "listExtraContent": {
+                    "extraContent": "5955, avenue Bannantyne<br>Montréal (Québec) H4H 1H6"
+                  }
                 }
               ]
             }
@@ -299,8 +313,10 @@
                   "hasIcon": true,
                   "icon-name": "icon-location",
                   "listItemAction": false,
-                  "text": false,
-                  "listExtraContent": "5955, avenue Bannantyne<br>Montréal (Québec) H4H 1H6"
+                  "listItemLabel": false,
+                  "listExtraContent": {
+                    "extraContent": "5955, avenue Bannantyne<br>Montréal (Québec) H4H 1H6"
+                  }
                 }
               ]
             }
@@ -323,7 +339,7 @@
                   "hasIcon": true,
                   "icon-name": "icon-email",
                   "listItemAction": true,
-                  "text": "Envoyer un courriel",
+                  "listItemLabel": "Envoyer un courriel",
                   "listExtraContent": false
                 }
               ]
@@ -345,7 +361,7 @@
                   "hasIcon": true,
                   "icon-name": "icon-phone",
                   "listItemAction": false,
-                  "text": "514 993-3423",
+                  "listItemLabel": "514 993-3423",
                   "listExtraContent": false
                 }
               ]

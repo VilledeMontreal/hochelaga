@@ -1,57 +1,6 @@
 
 <div class="list {{listClass}}">
 	{{# list }}
-  {{^ hasIcon}}
-  <div class="list-item {{ listItemClass }}">
-    {{# listItemAction}}
-    <div class="list-item-action">
-      <a href="{{url}}">
-        <span class="link-icon-label">{{ text }}</span>
-      </a>
-    </div>
-    {{# listExtraContent}}
-    <div class="list-item-content">
-      {{{listExtraContent}}}
-    </div>
-    {{/ listExtraContent}}
-    {{/ listItemAction}}
-    {{^ listItemAction}}
-    <div class="list-item-content">
-      {{# listItemLabel }}
-      <div class="list-item-label">{{listItemLabel}}</div>
-      {{/ listItemLabel }}
-      {{# listExtraContent}}
-      <div>{{{listExtraContent}}}</div>
-      {{/ listExtraContent}}
-    </div>
-    {{/ listItemAction}}
-  </div>
-  {{/ hasIcon}}
-  {{# hasIcon}}
-  <div class="list-item-icon {{ listItemClass }}">
-    {{# listItemAction}}
-    <div class="list-item-icon-action">
-      <a href="{{url}}" class="link-has-icon" {{# toggle}}data-toggle="{{ type }}" data-target="{{ id }}"{{/ toggle}}>
-        <div><span class="icon {{icon-name}}"></span></div>
-        <div><span class="link-icon-label">{{ text }}</span></div>
-      </a>
-    </div>
-    {{# listExtraContent}}
-    <div class="list-item-icon-content ml-5 {{listExtraContentClass}}">{{{listExtraContent}}}</div>
-    {{/ listExtraContent}}
-    {{/ listItemAction}}
-    {{^ listItemAction}}
-    <span class="icon {{icon-name}}" aria-hidden="true"></span>
-    <div class="list-item-icon-content">
-      {{# text }}
-      <div class="list-item-icon-label">{{text}}</div>
-      {{/ text }}
-      {{# listExtraContent}}
-      <div {{#listExtraContentClass}}class="{{listExtraContentClass}}"{{/listExtraContentClass}}>{{{listExtraContent}}}</div>
-      {{/ listExtraContent}}
-    </div>
-    {{/ listItemAction}}
-  </div>
-  {{/ hasIcon}}
+  {{> components-list-item-element}}
   {{/ list }}
 </div>

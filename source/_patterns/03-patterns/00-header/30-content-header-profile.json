@@ -1,30 +1,36 @@
 {
+  "header-in-container": true,
   "heading": "Prénom-Prénom Nom-Nom",
   "heading-subtitle": [
     {
       "content": "Titre de fonction"
     }
   ],
-  "has-profile-extras": true,
   "extras": {
     "list": [
       {
         "listItemClass": "list-item-description",
         "listItemAction": false,
         "listItemLabel": "Parti",
-        "listExtraContent": "Nom du parti"
+        "listExtraContent": {
+          "extraContent": "Nom du parti"
+        }
       },
       {
         "listItemClass": "list-item-description",
         "listItemAction": false,
         "listItemLabel": "Arrondissement",
-        "listExtraContent": "Nom-de-l'Arrondissement"
+        "listExtraContent": {
+          "extraContent": "Nom-de-l'Arrondissement"
+        }
       },
       {
         "listItemClass": "list-item-description",
         "listItemAction": false,
         "listItemLabel": "District",
-        "listExtraContent": "Nom du district"
+        "listExtraContent": {
+          "extraContent": "Nom du district"
+        }
       }
     ]
   }

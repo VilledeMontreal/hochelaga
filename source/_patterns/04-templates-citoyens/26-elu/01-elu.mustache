@@ -1,0 +1,50 @@
+{{> styles-skip-links-section }}
+
+<header class="header-main-nav {{# navbarFixedTop}}is-fixed-top{{/navbarFixedTop}}">
+{{> components-navbar }}
+</header>
+
+<main class="main-content {{ pageClasses }}" id="main-content" aria-label="Main Content" role="main">
+  <div class="container pt-4 pt-lg-8">
+    <div class="row{{^ sidebarRight }} justify-content-center{{/ sidebarRight}}">
+      <div class="col-12{{^ sidebarRight }} col-lg-7{{/ sidebarRight}}">
+        {{> components-breadcrumbs}}
+      </div>
+    </div>
+  </div>
+  <div class="region-content pt-0">
+    <div class="container">
+      
+      {{> patterns-content-header-profile}}
+
+      <div class="row justify-content-between">
+        <div class="col-12 col-lg-7">
+          <div class="content-modules">
+            {{# module-content}}
+            <h2>{{ title }}</h2>
+            <div class="content-module-stacked">
+              {{> components-list-item}}
+            </div>
+            {{/ module-content}}
+          </div>
+        </div>
+
+        {{# sidebarRight}}
+        <aside class="col-12 col-lg-4" role="complementary">
+          {{> templates-citoyens-sidebar-elu}}
+        </aside>
+        {{/ sidebarRight}}
+
+      </div>
+
+      <section class="row{{# sidebarRight }} justify-content-between{{/ sidebarRight}}{{^ sidebarRight}} justify-content-center{{/ sidebarRight}}">
+        <div class="col-12 col-lg-7">
+        {{> components-feedback-form}}
+        </div>
+      </section>
+
+    </div>
+  </div>
+</main>
+
+{{> patterns-footer-main }}

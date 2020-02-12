@@ -18,6 +18,7 @@
   margin-bottom: 0;
 }
 
+// TODO: Do we need large and small variant?
 .list-lg {
   .list-item {
     padding: 1rem;
@@ -31,50 +32,41 @@
 }
 
 
-// Interactive list items
+// Interactive list item
 //
-// Use anchor or button elements instead of `li`s or `div`s to create interactive
-// list items. Includes an extra `.active` modifier class for selected items.
-
 .list-item-action {
-  width: 100%; // For `<button>`s (anchors become 100% by default though)
-  border: none;
-  color: $list-group-action-color;
-  text-align: inherit; // For `<button>`s (anchors inherit)
-
-  // Hover state
-  @include hover-focus {
-    z-index: 1; // Place hover/focus items above their siblings for proper border styling
-    color: $list-group-action-hover-color;
-    text-decoration: none;
-    background-color: $list-group-hover-bg;
+  text-align: inherit;
+  display: inherit;
+  width: 100%;
+  
+  a {
+    display: inline-block;
     border: none;
+    color: $list-group-action-color;
 
-    svg {
-      fill: currentColor;
+    // Hover state
+    @include hover-focus {
+      background-color: $highlight-light;
+      color: $list-group-action-hover-color;
+      text-decoration: none;
+      z-index: 1; // Place hover/focus items above their siblings for proper border styling
+      .link-label {
+        border-bottom: 1px solid $action;
+        display: inline;
+      }
     }
   }
-
-  .icon {
-    @include icon-color($action);
-    align-self: center;
-  }
-
-  &:active {
-    color: $list-group-action-active-color;
-    background-color: $list-group-action-active-bg;
-  }
-
 }
 
 
-// Individual list items
+// list item
 //
 // Use on `li`s or `div`s within the `.list` parent.
 
 .list-item {
   position: relative;
   display: flex;
+  flex-flow: row wrap;
   padding: .5rem 0;
   color: $list-group-color;
 
@@ -105,15 +97,15 @@
     fill: currentColor;
     flex-shrink: 0;
   }
-
-  &.list-item-description {
-    .list-item-label {
-      color: $neutral-primary;
-      font-weight: $font-weight-bold;
-    }
-  }
 }
 
+// Default list-item-label styles
+.list-item-label {
+  color: $neutral-primary;
+  font-weight: $font-weight-bold;
+}
+
+// TODO: see what this is for and document and/or remove
 .list-content {
   &.list-icon-content {
     margin-left: 2rem;
@@ -121,11 +113,14 @@
 }
 
 
-// Individual list items with icon
+// list item icon
+//
 .list-item-icon {
   padding: .5rem 0;
   display: flex;
   flex-flow: row wrap;
+
+  // Icon and svgs handling
   .icon {
     margin-right: 1rem;
   }
@@ -133,12 +128,15 @@
     margin-right: 1rem;
     fill: $neutral-tertiary;
   }
-
 }
+
+// Default list-item-icon-label styles
 .list-item-icon-label {
   color: $neutral-primary;
   font-weight: $font-weight-bold;
 }
+
+// Label is a link
 .list-item-icon-action {
   display: inherit;
   width: 100%;
@@ -168,6 +166,10 @@
     }
   }
 }
+
+// Content handling
+// TODO: validate all this and set use case if still good.
+.list-item-content,
 .list-item-icon-content {
   flex: 2;
   p {
@@ -181,6 +183,7 @@
   }
 }
 
+// TODO: validate if this is still needed
 .list-item-icon-sub-content {
   position: relative;
   &:before {
