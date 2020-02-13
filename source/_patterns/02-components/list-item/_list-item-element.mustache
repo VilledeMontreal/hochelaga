@@ -23,8 +23,8 @@
       {{# listExtraContent}}
       <div class="list-item-content">
         {{# extraContentAction}}
-        <div class="list-item-action">
-          <a href="{{url}}">
+        <div class="list-item-action{{# classes}} {{classes}}{{/classes}}">
+          <a href="{{url}}"{{# actionClasses}} class="{{actionClasses}}"{{/ actionClasses}}>
             <span class="link-label">{{ text }}</span>
           </a>
         </div>
@@ -48,14 +48,25 @@
         <div><span class="link-icon-label">{{ listItemLabel }}</span></div>
       </a>
     </div>
-    {{# listExtraContent}}
+    {{# hasExtraContent}}
     <div class="list-item-icon-content ml-5 {{listExtraContentClass}}">
-      {{# extraContentBold }}
-      <div class="font-weight-bold">{{{extraContentBold}}}</div>
-      {{/ extraContentBold }}
-      {{{extraContent}}}
+      {{# listExtraContent}}
+      <div>
+        {{# extraContentBold }}
+        <div class="font-weight-bold">{{{extraContentBold}}}</div>
+        {{/ extraContentBold }}
+        {{{extraContent}}}
+        {{# extraContentAction}}
+        <div class="list-item-action {{# classes}} {{classes}}{{/classes}}">
+          <a href="{{url}}"{{# actionClasses}} class="{{actionClasses}}"{{/ actionClasses}}>
+            <span class="link-label">{{ text }}</span>
+          </a>
+        </div>
+        {{/ extraContentAction}}
+      </div>
+      {{/ listExtraContent}}
     </div>
-    {{/ listExtraContent}}
+    {{/ hasExtraContent}}
     {{/ listItemAction}}
     {{^ listItemAction}}
     <span class="icon {{icon-name}}" aria-hidden="true"></span>
@@ -66,8 +77,8 @@
       {{# listExtraContent}}
       <div {{#listExtraContentClass}}class="{{listExtraContentClass}}"{{/listExtraContentClass}}>
         {{# extraContentAction}}
-        <div class="list-item-action">
-          <a href="{{url}}">
+        <div class="list-item-action {{# classes}} {{classes}}{{/classes}}">
+          <a href="{{url}}"{{# actionClasses}} class="{{actionClasses}}"{{/ actionClasses}}>
             <span class="link-label">{{ text }}</span>
           </a>
         </div>

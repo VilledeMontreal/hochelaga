@@ -263,7 +263,6 @@
 
   .list-group-item {
     display: block;
-    // align-items: initial;
     padding: 1rem 0;
     border-top: $list-group-border-width solid $list-group-border-color;
 
@@ -360,8 +359,8 @@
   }
   .list-group-item-publication-date,
   .list-group-item-date {
-    @include font-size($font-size-sm);
-    line-height: $line-height-sm;
+    @include font-size($font-size-base);
+    line-height: $line-height-md;
   }
   .list-group-item-date {
     font-weight: $font-weight-bold;
@@ -372,7 +371,7 @@
   }
   .list-group-item-infos {
     display: inline-block;
-    @include font-size($font-size-sm);
+    @include font-size($font-size-base);
     line-height: $line-height-md;
     position: relative;
     padding-right: 1.5rem;
@@ -472,6 +471,12 @@
     @include font-size($font-size-base);
     line-height: $line-height-md;
     margin-bottom: 0;
+  }
+
+  // Smaller font-size for list-group-complex
+  .list-group-item-infos {
+    @include font-size($font-size-sm);
+    line-height: $line-height-sm;
   }
 
   .list-group-item {
