@@ -10,14 +10,23 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 
 ## Added
 - Patterns - Header: Added Content header profile.
+- Templates citoyens: Added Événement templates (Minimum and maximum variants).
+- SASS utilities: Responsive borders utilities classes.
+- Maps (Cartography) integrations examples (Evenements).
+- Sidebar: Allow for Sidebar Title classes.
 
 ## Changed
 - Changed and fixed some issues and normalisation of .list-item and .list-item-icon.
 - Remove margin-top from sidebars on mobile
-- Fix padding bottom for region-content on mobile
+- Components - List Item: Allow some elements to be added inside list-item-content (links, bold, etc).
+- Components - List Group: .list-group-item-infos default and .list-group-complex font size.
+
 
 ## Fixed
 - Changed icon-ticket to icon-event to prevent 2 icons having same name (icon-ticket in utility and icon-ticket in editorial)
+- Fix padding bottom for region-content on mobile.
+- Fix Feedback form validation integration in all templates.
+
 
 
 ## [4.7.0] - 2020-02-12

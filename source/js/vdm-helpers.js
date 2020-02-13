@@ -363,34 +363,20 @@ function generateMap(lngLat, addressInfos, mapID, addressTitle ) {
 
   marker.setLngLat(pointLngLat).addTo(map);
 
-  var markerHeight = 50, markerRadius = 10, linearOffset = 25;
-  var popupOffsets = {
-  'top': [0, 0],
-  'top-left': [0,0],
-  'top-right': [0,0],
-  'bottom': [0, -markerHeight],
-  'bottom-left': [linearOffset, (markerHeight - markerRadius + linearOffset) * -1],
-  'bottom-right': [-linearOffset, (markerHeight - markerRadius + linearOffset) * -1],
-  'left': [markerRadius, (markerHeight - markerRadius) * -1],
-  'right': [-markerRadius, (markerHeight - markerRadius) * -1]
-  };
-
   if(address) {
     var strippedAddress = stripTags(address);
-    var popupContent = "<address>";
+    var popupContent = "<div>";
     if(addressTitle) {
-      popupContent += "<div class='mb-1'>";
       if(addressURI) {
-        popupContent += "<a href="+ addressURI +">"+ addressTitle +"</a>";
+        popupContent += `<a href="${addressURI}" class="link-sm link-list-element"><span class="link-label">${addressTitle}</span></a>`;
       } else {
-        popupContent += "<strong>"+ addressTitle +"</strong>";
+        popupContent += `<strong>${addressTitle}</strong>`;
       }
-      popupContent += "</div>";
     }  
-    popupContent += address;
-    popupContent += "</address>";
-    popupContent += "<div class=\"mt-1\"><a href=\"https://www.google.com/maps/search/?api=1&amp;query=" + encodeURIComponent(strippedAddress) + "\" title=\"Obtenir un itinéraire\">Obtenir un itinéraire</a></div>";
-    var popup = new mapboxgl.Popup({closeButton: false, closeOnClick: false, offset: popupOffsets, className: 'map-popup'})
+    popupContent += `<div class="font-size-sm-interface">${address}</div>`;
+    popupContent += "</div>";
+    popupContent += `<div class="d-flex mt-1"><a class="link-sm is-external-link" href="https://www.google.com/maps/search/?api=1&amp;query=${encodeURIComponent(strippedAddress)}" title="Obtenir un itinéraire">Obtenir un itinéraire</a></div>`;
+    var popup = new mapboxgl.Popup({closeButton: false, closeOnClick: false, offset: 30, className: 'map-popup'})
       .setLngLat(pointLngLat)
       .setHTML(popupContent)
       .addTo(map);
