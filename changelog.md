@@ -6,6 +6,8 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 
 ## [4.8.0] - unreleased
 
+**icon-ticket (editorial) has been renamed icon-event to prevent conflict with utility icon-ticket.**
+
 ## Added
 - Patterns - Header: Added Content header profile.
 
@@ -14,6 +16,8 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 - Remove margin-top from sidebars on mobile
 - Fix padding bottom for region-content on mobile
 
+## Fixed
+- Changed icon-ticket to icon-event to prevent 2 icons having same name (icon-ticket in utility and icon-ticket in editorial)
 
 
 ## [4.7.0] - 2020-02-12
