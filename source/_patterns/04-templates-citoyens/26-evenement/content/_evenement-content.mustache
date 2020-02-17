@@ -1,0 +1,81 @@
+<h2>Description</h2>
+<div class="content-module-stacked">
+  <p>Corps de texte - <i>Italique</i> et <strong>gras</strong>, exposant, indice et caractères spéciaux adipiscing elit. Morbi condimentum sollicitudin erat, quis <a href="#">lien interne</a> ou <a href="https://google.com">lien externe</a> convallis risus. Nullam  posuere odio ligula, hendrerit suscipit ligula congue laoreet. Curabitur eleifend nulla purus, ut pharetra urna efficitur id. Cras lacinia nisi id quam lacinia, et orci aliquam.</p>
+  <ul>
+    <li>Liste à puce</li>
+    <li>Liste à puce</li>
+    <li>Liste à puce</li>
+    <li>Liste à puce</li>
+  </ul>
+  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi condimentum sollicitudin erat, quis convallis risus.</p>
+  <ol>
+    <li>Liste numérotée</li>
+    <li>Liste numérotée</li>
+    <li>Liste numérotée</li>
+  </ol>
+  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi condimentum sollicitudin erat, quis convallis risus.</p>
+</div>
+
+{{# module-image-album}}
+<div class="content-module-stacked">
+  {{> components-gallery }}
+</div>
+{{/ module-image-album}}
+
+{{# module-documents}}
+<h3>À consulter</h3>
+<div class="content-module-stacked">
+  {{> components-list-item-link}}
+</div>
+{{/ module-documents }}
+
+{{# module-partners}}
+<div class="content-module-stacked">
+  <h3>Partenaires</h3>
+  {{# listPartners}}
+  <ul>
+    {{# listPartners.items}}
+    <li>{{ partnerName }}</li>
+    {{/ listPartners.items}}
+  </ul>
+  {{/ listPartners}}
+</div>
+{{/ module-partners}}
+
+{{# module-video}}
+<h2>Vidéo (Titre éditorial)</h2>
+<div class="content-module-stacked">
+  {{> styles-video-responsive-embed }}
+</div>
+{{/ module-video}}
+
+{{# module-etiquettes}}
+<div class="badges-container pt-4 pb-1">
+  <ul class="list-inline">
+    {{# badges-links }}
+    <li class="list-inline-item">{{> components-badge }}</li>
+    {{/ badges-links }}
+  </ul>
+</div>
+{{/ module-etiquettes}}
+
+{{# module-map}}
+{{# location}}
+<div class="content-module-stacked" id="section-{{mapID}}">
+  <h2>{{heading}}</h2>
+  <div id="{{ mapID }}" style="height: 400px"></div>
+</div>
+{{/ location}}
+{{/ module-map }}
+
+{{# module-events}}
+<h2>Suggestions d'événements</h2>
+<div class="content-module-stacked">
+  {{> components-list-group-content}}
+  {{# button-cta}}
+  <div class="d-flex justify-content-center mt-0 mb-4">
+  {{> components-button}}
+  </div>
+  {{/ button-cta}}
+</div>
+{{/ module-events}}

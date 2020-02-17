@@ -1,15 +1,6 @@
 .mapboxgl-popup {
-  @include font-size($font-size-sm);
   font-family: $font-family-base;
   .mapboxgl-popup-content {
     padding: 1rem;
-  }
-  address {
-    margin-bottom: 0;
-    strong {
-      color: $headings-color;
-      display: inline-block;
-      padding-bottom: .5rem;
-    }
   }
 }

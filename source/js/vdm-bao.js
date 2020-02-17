@@ -355,9 +355,9 @@
       if (target.length) {
         // Must match Navbar height
         if(window.matchMedia("(min-width: 992px)").matches) {
-          $navOffset = 96;
+          $navOffset = 104;
         } else {
-          $navOffset = 80;
+          $navOffset = 88;
         }
 
         $('html, body').animate({
