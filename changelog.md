@@ -14,6 +14,7 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 - SASS utilities: Responsive borders utilities classes.
 - Maps (Cartography) integrations examples (Evenements).
 - Sidebar: Allow for Sidebar Title classes.
+- Iconography: position and social-flickr icons.
 
 ## Changed
 - Changed and fixed some issues and normalisation of .list-item and .list-item-icon.
