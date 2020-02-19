@@ -9,12 +9,15 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 **icon-ticket (editorial) has been renamed icon-event to prevent conflict with utility icon-ticket.**
 
 ## Added
-- Patterns - Header: Added Content header profile.
-- Templates citoyens: Added Événement templates (Minimum and maximum variants).
+
 - SASS utilities: Responsive borders utilities classes.
 - Maps (Cartography) integrations examples (Evenements).
 - Sidebar: Allow for Sidebar Title classes.
 - Iconography: position and social-flickr icons.
+- Patterns - Header: Content header profile.
+- Templates citoyens: Élus template.
+- Templates citoyens: Événement templates (Minimum and maximum variants).
+- Templates citoyens: Lieux templates (Minimum and maximum variants).
 
 ## Changed
 - Changed and fixed some issues and normalisation of .list-item and .list-item-icon.
@@ -27,6 +30,7 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 - Changed icon-ticket to icon-event to prevent 2 icons having same name (icon-ticket in utility and icon-ticket in editorial)
 - Fix padding bottom for region-content on mobile.
 - Fix Feedback form validation integration in all templates.
+- Buttons: btn-collapse btn-sm and btn-reversed integration.
 
 
 

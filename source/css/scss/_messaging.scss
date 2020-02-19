@@ -147,15 +147,13 @@
 // Message bar
 //
 .message-bar {
+  @include font-size($font-size-base);
+  line-height: $line-height-md;
   border-left-width: 0;
   color: $white;
   display: flex;
-  @include font-size($font-size-base);
-  // align-items: center;
-  // justify-content: space-between;
   margin-bottom: 0;
   padding: 1rem 3.5rem 1rem 1rem;
-  line-height: $line-height-md;
   
   svg {
     fill: $white;

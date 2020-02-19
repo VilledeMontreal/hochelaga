@@ -41,11 +41,10 @@
       }
     }
     
-
-
     a:not(.btn) {
       border-bottom: none;
     }
+
     .navbar-div {
       display: flex;
     }
@@ -518,9 +517,9 @@
       }
     }
   }
-
 }
 
+// Minimal main-navbar with logo, site name
 .main-navbar-minimal {
   &.navbar {
     // Montreal logo is the navbar-brand

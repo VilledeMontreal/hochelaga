@@ -16,38 +16,58 @@
   <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi condimentum sollicitudin erat, quis convallis risus.</p>
 </div>
 
-{{# module-image-album}}
+{{# module-commodites}}
+<h3>Commodités</h3>
 <div class="content-module-stacked">
-  {{> components-gallery }}
-</div>
-{{/ module-image-album}}
-
-{{# module-documents}}
-<h3>À consulter</h3>
-<div class="content-module-stacked">
-  {{> components-list-item-link}}
-</div>
-{{/ module-documents }}
-
-{{# module-partners}}
-<div class="content-module-stacked">
-  <h3>Partenaires</h3>
-  {{# listPartners}}
-  <ul>
-    {{# listPartners.items}}
-    <li>{{ partnerName }}</li>
-    {{/ listPartners.items}}
+  <ul class="list d-block{{#listClass}} {{listClass}}{{/listClass}}">
+    {{# list}}
+    {{> components-list-item-element-li}}
+    {{/ list}}
   </ul>
-  {{/ listPartners}}
 </div>
-{{/ module-partners}}
+{{/ module-commodites}}
 
-{{# module-video}}
-<h2>Vidéo (Titre éditorial)</h2>
+{{# module-installations}}
+<h3>Installations</h3>
 <div class="content-module-stacked">
-  {{> styles-video-responsive-embed }}
+  <div class="mb-n2{{#groupClass}} {{groupClass}}{{/groupClass}}">
+    {{# groups}}
+    <div class="d-flex flex-column">
+      {{# group-heading}}
+      <div class="font-weight-bold mb-1">{{ group-heading }}</div>
+      {{/ group-heading}}
+      <ul class="list d-block mb-2{{#listClass}} {{listClass}}{{/listClass}}">
+      {{# list}}
+      {{> components-list-item-element-li}}
+      {{/ list}}
+      </ul>
+    </div>
+    {{/ groups}}
+  </div>
 </div>
-{{/ module-video}}
+{{/ module-installations}}
+
+{{# module-accessibilite}}
+<h3>Accessibilité</h3>
+<div class="content-module-stacked">
+  <ul class="list d-block{{#listClass}} {{listClass}}{{/listClass}}">
+    {{# list}}
+    {{> components-list-item-element-li}}
+    {{/ list}}
+  </ul>
+</div>
+{{/ module-accessibilite}}
+
+{{# module-mode-paiement}}
+<h3>Modes de paiement</h3>
+<div class="content-module-stacked">
+  <ul class="list d-block{{#listClass}} {{listClass}}{{/listClass}}">
+    {{# list}}
+    {{> components-list-item-element-li}}
+    {{/ list}}
+  </ul>
+</div>
+{{/ module-mode-paiement}}
 
 {{# module-etiquettes}}
 <div class="badges-container pt-4 pb-1">
@@ -59,17 +79,8 @@
 </div>
 {{/ module-etiquettes}}
 
-{{# module-map}}
-{{# location}}
-<div class="content-module-stacked" id="section-{{mapID}}">
-  <h2>{{heading}}</h2>
-  <div id="{{ mapID }}" class="h-map"></div>
-</div>
-{{/ location}}
-{{/ module-map }}
-
 {{# module-events}}
-<h2>Suggestions d'événements</h2>
+<h2>Événements à venir</h2>
 <div class="content-module-stacked">
   {{> components-list-group-content}}
   {{# button-cta}}
@@ -79,3 +90,12 @@
   {{/ button-cta}}
 </div>
 {{/ module-events}}
+
+{{# module-map}}
+{{# location}}
+<div class="content-module-stacked" id="section-{{mapID}}">
+  <h2>{{heading}}</h2>
+  <div id="{{ mapID }}" class="h-map"></div>
+</div>
+{{/ location}}
+{{/ module-map }}
