@@ -43,6 +43,13 @@
     right: 0;
     margin: 1rem;
   }
+  .btn-media {
+    &:hover {
+      ~ .btn-media-gallery {
+        color: $action;
+      }
+    }
+  }
 }
 
 .media-cover {

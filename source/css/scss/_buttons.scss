@@ -76,7 +76,6 @@ button {
   }
 
   &.btn-collapse {
-    padding-right: .5rem;
     &:after {
       content: '';
       -webkit-mask: url($data-icon-chevron-up) no-repeat 50% 50%;
@@ -309,6 +308,16 @@ fieldset:disabled a.btn {
   .utility-icon {
     margin-left: -.5rem;
   }
+
+  &.btn-collapse {
+    padding-right: .5rem;
+    
+    &.btn-sm {
+      &:after {
+        margin-left: .25rem;
+      }
+    }
+  }
 }
 
 // Block button modifier
@@ -385,6 +394,7 @@ input[type="button"] {
   &.btn-sm {
     .icon {
       margin-left: -.375rem;
+      margin-right: .25rem;
     }
   }
   &.btn-squared {
@@ -423,6 +433,7 @@ input[type="button"] {
   }
   &.btn-sm {
     .icon {
+      margin-left: .25rem;
       margin-right: -.375rem;
     }
   }

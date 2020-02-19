@@ -1,0 +1,4 @@
+---
+title: Nouvelle minimum
+---
+
