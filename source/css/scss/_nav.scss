@@ -135,69 +135,6 @@ nav {
   }
 }
 
-// Nav anchors
-.nav-anchors {
-  background-color: $white;
-  border-bottom: $nav-tabs-border-width solid $nav-tabs-border-color;
-  overflow-x: auto;
-  overflow-y: hidden;
-  white-space: nowrap;
-  width: 100%;
-  /* Make an auto-hiding scroller for the 3 people using a IE */
-  -ms-overflow-style: -ms-autohiding-scrollbar;
-  /* For WebKit implementations, provide inertia scrolling */
-  -webkit-overflow-scrolling: touch;
-  /* Remove the default scrollbar for WebKit implementations */
-  &::-webkit-scrollbar {
-      display: none;
-  }
-  .nav {
-    flex-wrap: nowrap;
-    margin-left: -1.25rem;
-    margin-right: -1.25rem;
-    padding: 1rem 0;
-  }
-
-  .nav-item {
-    flex-shrink: 0;
-    position: relative;
-    + .nav-item:before {
-      content: "";
-      background-color: $neutral-stroke;
-      border-radius: 50%;
-      position: absolute;
-      display: block;
-      left: -2px;
-      top: 50%;
-      transform: translateY(-50%);
-      width: 4px;
-      height:  4px;
-    }
-  }
-
-  .nav-link {
-    @include font-size($font-size-base);
-    border-bottom: none;
-    font-weight: $font-weight-bold;
-    line-height: $line-height-md;
-    margin: 0 1.25rem;
-    padding: 0;
-    position: relative;
-    text-align: center;
-    white-space: normal;
-    
-    &:hover,
-    &.active {
-      &:not(.disabled) {
-        color: $action;
-      }
-    }
-    &.disabled {
-      cursor: not-allowed;
-    }
-  }
-}
-
 // Nav filters
 //
 .nav-filters {

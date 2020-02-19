@@ -1,0 +1,19 @@
+<div class="sidebar border-top-0 border-bottom border-lg-bottom-0 pb-8 pb-lg-4 pt-0{{# documentHeading}} pt-lg-8{{/ documentHeading}}{{^ documentHeading}} pt-lg-0{{/documentHeading}}">
+  {{# sb-block-schedule}}
+  <div class="sb-block">
+    {{> styles-heading-sidebar(sidebarTitle: "Heures d'ouverture")}}
+    {{> components-list-item}}
+    {{# hasExtraSchedules}}
+    <div class="collapse collapse-content mt-2" id="collapseExtraSchedule">
+      {{> components-list-item}}
+    </div>
+    <div class="w-100 text-center mt-2">
+      <button class="btn btn-tertiary btn-sm btn-squared btn-collapse collapsed" type="button" data-toggle="collapse" data-target="#collapseExtraSchedule" aria-expanded="false" aria-controls="collapseContentExample">Voir plus</button>
+    </div>
+    {{/ hasExtraSchedules}}
+  </div>
+  {{/ sb-block-schedule}}
+  
+</div>
+
+

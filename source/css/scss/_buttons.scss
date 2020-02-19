@@ -75,6 +75,31 @@ button {
     }
   }
 
+  &.btn-collapse {
+    padding-right: .5rem;
+    &:after {
+      content: '';
+      -webkit-mask: url($data-icon-chevron-up) no-repeat 50% 50%;
+      mask: url($data-icon-chevron-up) no-repeat 50% 50%;
+      -webkit-mask-size: cover;
+      mask-size: cover;
+      background-color: $neutral-tertiary;
+      margin-left: .5rem;
+      width: $icon-md;
+      height: $icon-md;
+    }
+    &.collapsed:after {
+      content: '';
+      -webkit-mask: url($data-icon-chevron-down) no-repeat 50% 50%;
+      mask: url($data-icon-chevron-down) no-repeat 50% 50%;
+      -webkit-mask-size: cover;
+      mask-size: cover;
+      background-color: $neutral-tertiary;
+      width: $icon-md;
+      height: $icon-md;
+    }
+  }
+
   // Spinner
   .spinner-border {
     margin-left: -.5rem;
@@ -102,29 +127,6 @@ fieldset:disabled a.btn {
 .btn-link,
 .btn-tertiary {
   @include button-variant($background: transparent, $border: transparent, $color: $action, $hover-background: $highlight-light, $hover-border: $highlight-light, $hover-color: $action, $active-background: $highlight-light, $active-border: $highlight-light, $active-color: $action);
-
-  &.btn-collapse {
-    &:after {
-      content: '';
-      -webkit-mask: url($data-icon-chevron-up) no-repeat 50% 50%;
-      mask: url($data-icon-chevron-up) no-repeat 50% 50%;
-      -webkit-mask-size: cover;
-      mask-size: cover;
-      background-color: $primary;
-      width: 24px;
-      height: 24px;
-    }
-    &.collapsed:after {
-      content: '';
-      -webkit-mask: url($data-icon-chevron-down) no-repeat 50% 50%;
-      mask: url($data-icon-chevron-down) no-repeat 50% 50%;
-      -webkit-mask-size: cover;
-      mask-size: cover;
-      background-color: $primary;
-      width: 24px;
-      height: 24px;
-    }
-  }
 }
 
 // Dialog Color Modifier
@@ -177,6 +179,32 @@ fieldset:disabled a.btn {
   &.btn-link,
   &.btn-tertiary {
     @include button-variant($background: transparent, $border: transparent, $color: $white, $hover-background: $overlay-light-reversed, $hover-border: transparent, $hover-color: $white, $active-background: $overlay-light-reversed, $active-border: transparent, $active-color: $white, $reversed: true);
+  }
+}
+
+// Collapse is a specialized button that integrates chevron up and down
+.btn-collapse {
+  &.btn-primary {
+    @include button-collapse($white);
+    // Reversed
+    &.btn-reversed {
+      @include button-collapse($neutral-primary, $action);
+    }
+  }
+  &.btn-secondary {
+    @include button-collapse($action);
+    // Reversed
+    &.btn-reversed {
+      @include button-collapse($white);
+    }
+  }
+  &.btn-link,
+  &.btn-tertiary {
+    @include button-collapse($primary);
+    // Reversed
+    &.btn-reversed {
+      @include button-collapse($white);
+    }
   }
 }
 
@@ -235,15 +263,6 @@ fieldset:disabled a.btn {
   }
 }
 
-// DEPRECATED
-.btn-promo {
-  @include button-variant($background: $brand, $border: $brand, $color: $white, $hover-background: $brand-dark, $hover-border: $brand-dark, $hover-color: $white, $active-background: $brand-dark, $active-border: $brand-dark, $active-color: $white);
-  &:focus,
-  .focus {
-    box-shadow: 0 0 0 $btn-focus-width rgba($brand, .5);
-  }
-}
-
 
 // Button Large variant
 .btn-lg {
@@ -265,6 +284,17 @@ fieldset:disabled a.btn {
     &:before {
       width: 16px;
       height: 16px;
+    }
+  }
+
+  &.btn-collapse {
+    &:after {
+      width: $icon-xs;
+      height: $icon-xs;
+    }
+    &.collapsed:after {
+      width: $icon-xs;
+      height: $icon-xs;
     }
   }
 }

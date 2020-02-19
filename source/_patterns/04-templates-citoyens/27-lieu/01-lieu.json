@@ -1,0 +1,299 @@
+{
+  "navbarFixedTop": true,
+  "includeValidation": true,
+  "breadcrumbs": [
+    {
+      "url": "#",
+      "text": "Accueil"
+    },
+    {
+      "url": "#",
+      "text": "Lieux"
+    },
+    {
+      "url": "#",
+      "text": "Taxonomie type"
+    }
+  ],
+  "documentHeading": false,
+  "pageClasses": false,
+  "state": false,
+  "heading": "Nom du lieu ou de l'édifice sur plusieurs lignes",
+  "updatedDate": false,
+  "content-header-extras": {
+    "linkedContent": {
+      "customLabel": "Situé dans",
+      "linkedContentItem": [
+        {
+          "url": "#",
+          "label": "Arrondissement (Vitrine)"
+        }
+      ]
+    }
+  },
+  "header-extras": {
+    "listClass": "pt-4 mb-4",
+    "list": [
+      {
+        "hasIcon": true,
+        "icon-name": "icon-location",
+        "listItemAction": false,
+        "listItemLabel": "Adresse",
+        "listExtraContent": [
+          {
+            "extraContentBold": false,
+            "extraContent": "123, rue Avenue Ouest<br>Montréal (Québec) H1H 1H1"
+          },
+          {
+            "extraContentAction": {
+              "classes": "mt-1",
+              "actionClasses": "js-scroll-trigger",
+              "url": "#section-mapLieu001",
+              "text": "Voir carte"
+            }
+          }
+        ]
+      }
+    ]
+  },
+  "lead": false,
+  "module-content": {
+    "module-text": true,
+    "module-commodites": {
+      "list": [
+        {
+          "hasIcon": true,
+          "icon-name": "icon-dot-bullet",
+          "listItemAction": false,
+          "listItemLabel": false,
+          "hasExtraContent": true,
+          "listExtraContent": {
+            "extraContent": "Libellé"
+          }
+        },
+        {
+          "hasIcon": true,
+          "icon-name": "icon-dot-bullet",
+          "listItemAction": true,
+          "listItemLabel": "Test",
+          "hasExtraContent": false
+        }
+      ]
+    },
+    "module-installations": {
+      "groups": [
+        {
+          "group-heading": "Titre du groupe",
+          "list": [
+            {
+              "hasIcon": true,
+              "icon-name": "icon-dot-bullet",
+              "listItemAction": false,
+              "listItemLabel": false,
+              "hasExtraContent": true,
+              "listExtraContent": {
+                "extraContent": "Installation sans lien"
+              }
+            },
+            {
+              "hasIcon": true,
+              "icon-name": "icon-dot-bullet",
+              "listItemAction": true,
+              "listItemLabel": "Installation avec lien",
+              "hasExtraContent": false
+            }
+          ]
+        }
+      ]
+    },
+    "module-accessibilite": {
+      "list": [
+        {
+          "hasIcon": true,
+          "icon-name": "icon-dot-bullet",
+          "listItemAction": false,
+          "listItemLabel": false,
+          "hasExtraContent": true,
+          "listExtraContent": {
+            "extraContent": "Libellé"
+          }
+        },
+        {
+          "hasIcon": true,
+          "icon-name": "icon-dot-bullet",
+          "listItemAction": true,
+          "listItemLabel": "Test",
+          "hasExtraContent": false
+        }
+      ]
+    },
+    "module-mode-paiement": {
+      "list": [
+        {
+          "hasIcon": true,
+          "icon-name": "icon-dot-bullet",
+          "listItemAction": false,
+          "listItemLabel": false,
+          "hasExtraContent": true,
+          "listExtraContent": {
+            "extraContent": "Argent comptant"
+          }
+        },
+        {
+          "hasIcon": true,
+          "icon-name": "icon-dot-bullet",
+          "listItemAction": false,
+          "listItemLabel": false,
+          "hasExtraContent": true,
+          "listExtraContent": {
+            "extraContent": "Cartes de crédit"
+          }
+        }
+      ]
+    },
+    "module-etiquettes": false,
+    "module-events": {
+      "listGroupClass": "mb-4",
+      "listGroup": [
+        {
+          "url": "#",
+          "media": {
+            "img": {
+              "alt": "Alt image",
+              "src": "https://picsum.photos/id/1025/128/72"
+            },
+            "placeholder": false
+          },
+          "type": false,
+          "title": "At amet eos et diam sed no invidunt sadipscing no invidunt sed dolore eos amet",
+          "infos": {
+            "badge": false,
+            "infos-items": [
+              {
+                "text": "Dates et heures pouvant s'afficher sur deux lignes"
+              }
+            ]
+          }
+        }
+      ],
+      "button-cta": {
+        "data-link-title": "Tous les événements",
+        "buttonAsLink": true,
+        "buttonClass": "btn-secondary",
+        "buttonUrl": "#",
+        "buttonText": "Tous les événements"
+      }
+    },
+    "module-map": {
+      "heading": "Comment s'y rendre",
+      "location": {
+        "mapID": "mapLieu001",
+        "addressInfos": {
+          "uri": "#",
+          "addressTitle": "Nom du lieu",
+          "address":  "123, rue Avenue Ouest<br>Montréal (Québec) H1H 1H1"
+        },
+        "lngLat": "-73.5627778, 45.5147222"
+      }
+    }
+  },
+  "sb-block-schedule": {
+    "sidebarTitleClasses": false,
+    "list": [
+      {
+        "hasIcon": true,
+        "icon-name": "icon-clock",
+        "listItemAction": false,
+        "listItemLabel": "Horaire",
+        "hasExtraContent": true,
+        "listExtraContent": false,
+        "extraContentSchedule": {
+          "schedule" : [
+            {
+              "day": "Lundi",
+              "scheduleData": [
+                {
+                  "time": [
+                    {
+                      "startTime": "09 h 00",
+                      "endTime": "12 h 00"
+                    },
+                    {
+                      "startTime": "13 h 00",
+                      "endTime": "17 h 00"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "day": "Mardi",
+              "scheduleData": [
+                {
+                  "time": {
+                    "startTime": "09 h 00",
+                    "endTime": "12 h 00"
+                  }
+                }
+              ]
+            },
+            {
+              "day": "Mercredi",
+              "scheduleData": [
+                {
+                  "time": {
+                    "startTime": "09 h 00",
+                    "endTime": "12 h 00"
+                  }
+                }
+              ]
+            },
+            {
+              "day": "Jeudi",
+              "scheduleData": [
+                {
+                  "time": {
+                    "startTime": "09 h 00",
+                    "endTime": "12 h 00"
+                  }
+                }
+              ]
+            },
+            {
+              "day": "Vendredi",
+              "scheduleData": [
+                {
+                  "time": {
+                    "startTime": "09 h 00",
+                    "endTime": "12 h 00"
+                  }
+                }
+              ]
+            },
+            {
+              "day": "Samedi",
+              "scheduleData": [
+                {
+                  "time": {
+                    "startTime": "09 h 00",
+                    "endTime": "12 h 00"
+                  }
+                }
+              ]
+            },
+            {
+              "day": "Dimanche",
+              "scheduleData": [
+                {
+                  "time": false,
+                  "customLabel": "Fermé"
+                }
+              ]
+            }
+          ]
+        }
+      }
+    ]
+  },
+  "hasExtraSchedules": false
+}
