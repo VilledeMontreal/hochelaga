@@ -19,11 +19,7 @@
 {{# module-commodites}}
 <h3>Commodités</h3>
 <div class="content-module-stacked">
-  <ul class="list d-block{{#listClass}} {{listClass}}{{/listClass}}">
-    {{# list}}
-    {{> components-list-item-element-li}}
-    {{/ list}}
-  </ul>
+  {{> components-list-item}}
 </div>
 {{/ module-commodites}}
 
@@ -36,11 +32,7 @@
       {{# group-heading}}
       <div class="font-weight-bold mb-1">{{ group-heading }}</div>
       {{/ group-heading}}
-      <ul class="list d-block mb-2{{#listClass}} {{listClass}}{{/listClass}}">
-      {{# list}}
-      {{> components-list-item-element-li}}
-      {{/ list}}
-      </ul>
+      {{> components-list-item}}
     </div>
     {{/ groups}}
   </div>
@@ -50,22 +42,14 @@
 {{# module-accessibilite}}
 <h3>Accessibilité</h3>
 <div class="content-module-stacked">
-  <ul class="list d-block{{#listClass}} {{listClass}}{{/listClass}}">
-    {{# list}}
-    {{> components-list-item-element-li}}
-    {{/ list}}
-  </ul>
+  {{> components-list-item}}
 </div>
 {{/ module-accessibilite}}
 
 {{# module-mode-paiement}}
 <h3>Modes de paiement</h3>
 <div class="content-module-stacked">
-  <ul class="list d-block{{#listClass}} {{listClass}}{{/listClass}}">
-    {{# list}}
-    {{> components-list-item-element-li}}
-    {{/ list}}
-  </ul>
+  {{> components-list-item}}
 </div>
 {{/ module-mode-paiement}}
 

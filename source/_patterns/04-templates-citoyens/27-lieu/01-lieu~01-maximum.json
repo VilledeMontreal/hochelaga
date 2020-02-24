@@ -60,7 +60,8 @@
   "module-content": {
     "module-text": true,
     "module-commodites": {
-      "listClass": "column-count-md-2",
+      "listClass": "d-block column-count-md-2",
+      "listUL": true,
       "list": [
         {
           "hasIcon": true,
@@ -75,9 +76,12 @@
         {
           "hasIcon": true,
           "icon-name": "icon-dot-bullet",
-          "listItemAction": true,
-          "listItemLabel": "Libellé avec lien",
-          "hasExtraContent": false
+          "listItemAction": false,
+          "listItemLabel": false,
+          "hasExtraContent": true,
+          "listExtraContent": {
+            "extraContent": "Ipsum est sed magna kasd sed"
+          }
         },
         {
           "hasIcon": true,
@@ -136,6 +140,8 @@
       "groups": [
         {
           "group-heading": "Titre du groupe",
+          "listUL": true,
+          "listClass": "d-block mb-2",
           "list": [
             {
               "hasIcon": true,
@@ -144,15 +150,8 @@
               "listItemLabel": false,
               "hasExtraContent": true,
               "listExtraContent": {
-                "extraContent": "Installation sans lien"
+                "extraContent": "Duo at elitr stet"
               }
-            },
-            {
-              "hasIcon": true,
-              "icon-name": "icon-dot-bullet",
-              "listItemAction": true,
-              "listItemLabel": "Installation avec lien",
-              "hasExtraContent": false
             },
             {
               "hasIcon": true,
@@ -161,20 +160,35 @@
               "listItemLabel": false,
               "hasExtraContent": true,
               "listExtraContent": {
-                "extraContent": "Installation sans lien"
+                "extraContent": "Rebum vero eirmod amet"
               }
             },
             {
               "hasIcon": true,
               "icon-name": "icon-dot-bullet",
-              "listItemAction": true,
-              "listItemLabel": "Installation avec lien",
-              "hasExtraContent": false
+              "listItemAction": false,
+              "listItemLabel": false,
+              "hasExtraContent": true,
+              "listExtraContent": {
+                "extraContent": "At rebum est"
+              }
+            },
+            {
+              "hasIcon": true,
+              "icon-name": "icon-dot-bullet",
+              "listItemAction": false,
+              "listItemLabel": false,
+              "hasExtraContent": true,
+              "listExtraContent": {
+                "extraContent": "Nonumy dolor et ipsum aliquyam"
+              }
             }
           ]
         },
         {
           "group-heading": "Titre du groupe 2",
+          "listUL": true,
+          "listClass": "d-block mb-2",
           "list": [
             {
               "hasIcon": true,
@@ -183,20 +197,25 @@
               "listItemLabel": false,
               "hasExtraContent": true,
               "listExtraContent": {
-                "extraContent": "Installation sans lien"
+                "extraContent": "No tempor tempor"
               }
             },
             {
               "hasIcon": true,
               "icon-name": "icon-dot-bullet",
-              "listItemAction": true,
-              "listItemLabel": "Installation avec lien",
-              "hasExtraContent": false
+              "listItemAction": false,
+              "listItemLabel": false,
+              "hasExtraContent": true,
+              "listExtraContent": {
+                "extraContent": "Et ipsum clita dolores et"
+              }
             }
           ]
         },
         {
           "group-heading": "Titre du groupe 3",
+          "listUL": true,
+          "listClass": "d-block mb-2",
           "list": [
             {
               "hasIcon": true,
@@ -205,7 +224,7 @@
               "listItemLabel": false,
               "hasExtraContent": true,
               "listExtraContent": {
-                "extraContent": "Installation sans lien"
+                "extraContent": "Et dolor sanctus"
               }
             }
           ]
@@ -213,6 +232,7 @@
       ]
     },
     "module-accessibilite": {
+      "listUL": true,
       "list": [
         {
           "hasIcon": true,
@@ -221,19 +241,23 @@
           "listItemLabel": false,
           "hasExtraContent": true,
           "listExtraContent": {
-            "extraContent": "Libellé"
+            "extraContent": "Sed lorem sadipscing sea"
           }
         },
         {
           "hasIcon": true,
           "icon-name": "icon-dot-bullet",
-          "listItemAction": true,
-          "listItemLabel": "Libellé avec lien",
-          "hasExtraContent": false
+          "listItemAction": false,
+          "listItemLabel": false,
+          "hasExtraContent": true,
+          "listExtraContent": {
+            "extraContent": "Sed dolor tempor diam"
+          }
         }
       ]
     },
     "module-mode-paiement": {
+      "listUL": true,
       "list": [
         {
           "hasIcon": true,
@@ -260,25 +284,25 @@
     "module-etiquettes": {
       "badges-links": [
         {
-          "badge": "Taxonomie étiquettes",
+          "badge": "Libellé",
           "badgeClass": "badge-secondary",
           "badgeUrl": "#",
           "badgeIconClass": false
         },
         {
-          "badge": "Taxonomie Clientèle",
+          "badge": "Libellé",
           "badgeClass": "badge-secondary",
           "badgeUrl": "#",
           "badgeIconClass": false
         },
         {
-          "badge": "Taxonomie Type",
+          "badge": "Libellé",
           "badgeClass": "badge-secondary",
           "badgeUrl": "#",
           "badgeIconClass": false
         },
         {
-          "badge": "Taxonomie Catégorie principale",
+          "badge": "Libellé",
           "badgeClass": "badge-secondary",
           "badgeUrl": "#",
           "badgeIconClass": false

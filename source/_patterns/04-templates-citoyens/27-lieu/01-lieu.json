@@ -59,77 +59,13 @@
   "lead": false,
   "module-content": {
     "module-text": true,
-    "module-commodites": {
-      "list": [
-        {
-          "hasIcon": true,
-          "icon-name": "icon-dot-bullet",
-          "listItemAction": false,
-          "listItemLabel": false,
-          "hasExtraContent": true,
-          "listExtraContent": {
-            "extraContent": "Libellé"
-          }
-        },
-        {
-          "hasIcon": true,
-          "icon-name": "icon-dot-bullet",
-          "listItemAction": true,
-          "listItemLabel": "Test",
-          "hasExtraContent": false
-        }
-      ]
-    },
-    "module-installations": {
-      "groups": [
-        {
-          "group-heading": "Titre du groupe",
-          "list": [
-            {
-              "hasIcon": true,
-              "icon-name": "icon-dot-bullet",
-              "listItemAction": false,
-              "listItemLabel": false,
-              "hasExtraContent": true,
-              "listExtraContent": {
-                "extraContent": "Installation sans lien"
-              }
-            },
-            {
-              "hasIcon": true,
-              "icon-name": "icon-dot-bullet",
-              "listItemAction": true,
-              "listItemLabel": "Installation avec lien",
-              "hasExtraContent": false
-            }
-          ]
-        }
-      ]
-    },
-    "module-accessibilite": {
-      "list": [
-        {
-          "hasIcon": true,
-          "icon-name": "icon-dot-bullet",
-          "listItemAction": false,
-          "listItemLabel": false,
-          "hasExtraContent": true,
-          "listExtraContent": {
-            "extraContent": "Libellé"
-          }
-        },
-        {
-          "hasIcon": true,
-          "icon-name": "icon-dot-bullet",
-          "listItemAction": true,
-          "listItemLabel": "Test",
-          "hasExtraContent": false
-        }
-      ]
-    },
+    "module-commodites": false,
+    "module-installations": false,
+    "module-accessibilite": false,
     "module-mode-paiement": {
+      "listUL": true,
       "list": [
-        {
+        { 
           "hasIcon": true,
           "icon-name": "icon-dot-bullet",
           "listItemAction": false,
