@@ -83,6 +83,8 @@ h6, .h6 {
   }
 }
 
+// DEPRECATED
+//
 .list-group-heading {
   @include font-size($font-size-sm);
   line-height: $line-height-sm;
@@ -129,7 +131,8 @@ address {
 }
 
 // Links - generic
-// @see text.scss utility for links generic rules 
+// @see text.scss utility for links generic rules
+// We need to set this straight, too much going on here.
 a {
 
   &:focus {
