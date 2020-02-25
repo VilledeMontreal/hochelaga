@@ -423,6 +423,16 @@
       }
     }
   }
+  // Image above body for xxs custom breakpoint
+  @media (max-width: $bp-custom-xxs) {
+    .media {
+      flex-direction: column;
+    }
+
+    .list-group-thumb {
+      margin-bottom: 1rem;
+    }
+  }
 
 }
 

@@ -14,6 +14,7 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 - Maps (Cartography) integrations examples (Evenements).
 - Sidebar: Allow for Sidebar Title classes.
 - Iconography: position and social-flickr icons.
+- Components - List Group - Content: New Small mobile content stacking.
 - Patterns - Header: Content header profile.
 - Templates citoyens: Élus template.
 - Templates citoyens: Événement templates (Minimum and maximum variants).
@@ -25,13 +26,12 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 - Components - List Item: Allow some elements to be added inside list-item-content (links, bold, etc).
 - Components - List Group: .list-group-item-infos default and .list-group-complex font size.
 
-
 ## Fixed
 - Changed icon-ticket to icon-event to prevent 2 icons having same name (icon-ticket in utility and icon-ticket in editorial)
 - Fix padding bottom for region-content on mobile.
 - Fix Feedback form validation integration in all templates.
 - Buttons: btn-collapse btn-sm and btn-reversed integration.
-
+- Components - Cards - document: Fix sm breakpoint flexbox values.
 
 
 ## [4.7.0] - 2020-02-12
