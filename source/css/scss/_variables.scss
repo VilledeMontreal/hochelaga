@@ -243,6 +243,10 @@ $container-max-widths: (
   xl: 1200px
 );
 
+// Define pseudo xxs breakpoint
+//
+$bp-custom-xxs:   450px;
+
 
 // Grid columns
 //
@@ -251,15 +255,6 @@ $container-max-widths: (
 $grid-columns:                12;
 $grid-gutter-width:           32px;
 
-
-// Grid content
-//
-// Define the maximum width of content for different screen sizes.
-$content-max-widths: (
-  md: 750px,
-  lg: 1110px,
-  xl: 1440px
-);
 
 
 // Columns

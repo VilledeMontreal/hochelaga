@@ -163,13 +163,14 @@
       width: 100%;
     }
 
+    // 576px and up
     @include media-breakpoint-up(sm) {
       .card-img {
         margin: 2rem 0 2rem 2rem;
       }
       .card-body-wrapper {
         display: flex;
-        flex-grow: 1;
+        flex: 1;
         max-width: 100%;
         align-self: flex-start;
         width: auto;

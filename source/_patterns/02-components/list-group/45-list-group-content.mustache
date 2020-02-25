@@ -8,18 +8,18 @@
   {{/ url}}
     <div class="list-group-item-max-width">
       {{# media}}
-      <div class="media"> 
-      {{# media.img}}
-      <div class="list-group-thumb mr-2 mr-lg-4">
-        <img src="{{ src }}" alt="{{ alt }}" class="img-fluid" />
-      </div>
-      {{/ media.img}}
-      {{# media.placeholder}}
-      <div class="list-group-thumb list-group-thumb-placeholder mr-2 mr-lg-4" style="background-image:url(https://res.cloudinary.com/villemontreal/image/upload/q_auto,f_auto,dpr_auto,w_768,c_fill/v1571398706/portail/background/texture-Small-highlight.png)">
-        <span class="icon {{ icon }}" aria-hidden="true"></span>
-      </div>
-      {{/ media.placeholder}}
-      <div class="media-body">
+      <div class="media">
+        {{# media.img}}
+        <div class="list-group-thumb mr-2 mr-lg-4">
+          <img src="{{ src }}" alt="{{ alt }}" class="img-fluid" />
+        </div>
+        {{/ media.img}}
+        {{^media.img}}{{# media.placeholder}}
+        <div class="list-group-thumb list-group-thumb-placeholder mr-2 mr-lg-4" style="background-image:url(https://res.cloudinary.com/villemontreal/image/upload/q_auto,f_auto,dpr_auto,w_768,c_fill/v1571398706/portail/background/texture-Small-highlight.png)">
+          <span class="icon {{ icon }}" aria-hidden="true"></span>
+        </div>
+        {{/ media.placeholder}}{{/media.img}}
+        <div class="media-body">
       {{/ media}}
       {{# type }}
       <div class="list-group-item-type">{{ type }}</div>
@@ -55,7 +55,7 @@
       </div>
       {{/ extras}}
       {{# media}}
-      </div>
+        </div>
       </div>
       {{/ media}}
     </div>
