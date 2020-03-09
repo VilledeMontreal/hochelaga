@@ -14,6 +14,7 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 - Maps (Cartography) integrations examples (Evenements).
 - Sidebar: Allow for Sidebar Title classes.
 - Iconography: position and social-flickr icons.
+- Styles - Tables: Table complex examples with inputs, badges, buttons, etc.
 - Components - List Group - Content: New Small mobile content stacking.
 - Patterns - Header: Content header profile.
 - Templates citoyens: Élus template.
@@ -23,6 +24,8 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 ## Changed
 - Changed and fixed some issues and normalisation of .list-item and .list-item-icon.
 - Remove margin-top from sidebars on mobile
+- Styles - Table: Color and margin for table caption.
+- Styles - Table: Color of all TH's are now neutral-primary.
 - Components - List Item: Allow some elements to be added inside list-item-content (links, bold, etc).
 - Components - List Group: .list-group-item-infos default and .list-group-complex font size.
 

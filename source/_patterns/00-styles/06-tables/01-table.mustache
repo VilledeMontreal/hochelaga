@@ -2,7 +2,7 @@
 {{# tableWrapper}}
 <div class="table-responsive {{ tableWrapper.class }}">
 {{/ tableWrapper}}
-  <table class="table {{ tableClass }}">
+  <table class="table table-hover {{ tableClass }}">
     {{# caption }}
     <caption>{{ caption }}</caption>
     {{/ caption }}
@@ -21,10 +21,10 @@
     {{# tr }}
       <tr class="{{ trClass }}">
         {{# th }}
-        <th scope="">{{ th }}</th>
+        <th scope="row">{{ th }}</th>
         {{/ th }}
         {{# td }}
-        <td>{{ text }}</td>
+        <td>{{{ text }}}</td>
         {{/ td }}
       </tr>
     {{/ tr}}
