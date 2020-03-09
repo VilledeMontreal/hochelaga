@@ -372,17 +372,15 @@ $table-cell-padding:          0.625rem 1rem;
 $table-cell-padding-sm:       0.5rem 1rem;
 
 $table-bg:                    transparent;
-$table-accent-bg:             $highlight-light; // used for zebra accent
-$table-hover-bg:              $highlight-light; // used for hoverable
+$table-accent-bg:             $neutral-underground-1; // used for zebra accent
+$table-hover-bg:              $neutral-underground-1; // used for hoverable
 $table-active-bg:             $table-hover-bg;
 
 $table-border-width:          $border-width;
 $table-border-color:          $neutral-stroke;
 
-$table-head-bg:               $highlight-light;
+$table-head-bg:               $neutral-underground-2;
 $table-head-color:            $headings-color;
-
-$table-head-dark-bg:          $highlight-strong;
 
 $table-dark-bg:               $neutral-primary;
 $table-dark-accent-bg:        rgba($white, .05);
@@ -391,6 +389,8 @@ $table-dark-border-color:     lighten($neutral-primary, 7.5%);
 $table-dark-color:            $body-bg;
 
 $table-striped-order:         odd;
+
+$table-caption-color:         $neutral-secondary;
 
 // Buttons + Forms
 //

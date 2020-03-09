@@ -1,0 +1,55 @@
+{{# table}}
+<div class="table-responsive">
+  <table class="table table-hover {{ tableClass }}">
+    {{# caption }}
+    <caption>{{ caption }}</caption>
+    {{/ caption }}
+    <thead>
+      <tr>
+        <th scope="col">#</th>
+        <th scope="col">Libellé</th>
+        <th scope="col">Libellé</th>
+        <th scope="col">Libellé</th>
+        <th scope="col">Libellé</th>
+      </tr>
+    </thead>
+    {{# tbody }}
+    <tbody>
+      {{# tr }}
+      <tr>
+        <th scope="row">{{{ th }}}</th>
+        <td>{{#td1}}{{{ td1 }}}{{/td1}}</td>
+        <td class="align-middle">
+          {{#td2}}{{> components-input-text }}{{/td2}}
+        </td>
+        <td class="align-middle">
+          {{# td3}}
+          <div class="td-n-margin">
+            {{> components-badge}}
+          </div>
+            <!--{{# icons}}<div class="ml-1">{{> styles-icon-item}}</div>{{/ icons}}-->
+          </div>
+          {{/ td3}}
+        </td>
+        <td class="align-middle">
+          {{# td4}}
+          {{# buttons}}
+          <div class="td-n-margin">
+            {{# default}}{{> components-button}}{{/ default}}
+            {{# moreVertical}}
+            <button class="btn {{ buttonClass }}" type="button" aria-label="Label du bouton icon dans le aria-label." id="dropdownTableButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+              <span class="icon icon-more-vertical" aria-hidden="true"></span>
+            </button>
+            {{> components-dropdown}}
+            {{/ moreVertical}}
+          </div>
+          {{/ buttons}}
+          {{/ td4}}
+        </td>
+      </tr>
+      {{/ tr}}
+    </tbody>
+    {{/ tbody }}
+  </table>
+</div>
+{{/ table }}
