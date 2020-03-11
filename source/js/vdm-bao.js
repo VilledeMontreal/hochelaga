@@ -468,6 +468,7 @@
               h       : $height,
               author  : $(this).data('author'),
               description   : $(this).data('description'),
+              alt     : $(this).data('alt')
           }
 
           items.push(item);
@@ -540,6 +541,7 @@
                 h       : $height,
                 author  : $(this).data('author'),
                 description   : $(this).data('description'),
+                alt     : $(this).data('alt')
             }
 
             items.push(item);
