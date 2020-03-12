@@ -15,6 +15,7 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 - Sidebar: Allow for Sidebar Title classes.
 - Iconography: position and social-flickr icons.
 - Styles - Tables: Table complex examples with inputs, badges, buttons, etc.
+- Styles - Tables: Utility class for small adaptative cell (.cell-sm). 
 - Components - List Group - Content: New Small mobile content stacking.
 - Patterns - Header: Content header profile.
 - Templates citoyens: Élus template.

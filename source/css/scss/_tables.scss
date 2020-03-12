@@ -29,13 +29,15 @@
     margin-bottom: -.375rem;
   }
 
-  /*
-  td > .badge,
-  td > .icon {
-    margin-top: -.125rem;
-    margin-bottom: -.125rem;
+  .form-group {
+    min-width: 320px;
   }
-  */
+
+  // Allow a cell to fit it's content without wrapping
+  .cell-sm {
+    width: 1%;
+    white-space: nowrap;
+  }
 
 }
 
@@ -74,11 +76,4 @@
     margin-top: -.5rem;
     margin-bottom: -.5rem;
   }
-  /*
-  td > .badge,
-  td > .icon {
-    margin-top: 0;
-    margin-bottom: 0;
-  }
-  */
 }
