@@ -1,0 +1,75 @@
+{{> styles-skip-links-section }}
+
+<header class="header-main-nav {{# navbarFixedTop}}is-fixed-top{{/navbarFixedTop}}">
+{{> components-navbar }}
+</header>
+
+<main class="main-content {{ pageClasses }}" id="main-content" aria-label="Main Content" role="main">
+  
+  <div class="container pt-4 pt-lg-8">
+    <div class="row">
+      <div class="col-12 col-lg-7">
+        {{> components-breadcrumbs}}
+      </div>
+    </div>
+  </div>
+
+  {{# documentHeading}}
+  <div class="mb-4 mb-lg-0">
+  {{> patterns-content-header}}
+  </div>
+  {{/ documentHeading}}
+
+  <div class="region-content pt-0">
+
+    <div class="container">
+
+      <div class="row d-md-block clearfix">
+        <div class="col-12 col-lg-7 float-left">
+          <header class="content-header">
+
+            {{# state}}
+            <div class="d-flex mb-2">
+              {{> components-badge }}
+            </div>
+            {{/ state}}
+
+            <h1>{{ heading }}</h1>
+
+            {{> patterns-content-header-extras}}
+
+            {{# header-extras}}
+            {{> components-list-item}}
+            {{/ header-extras}}
+
+          </header>
+        </div>
+        <div class="col-12 col-lg-4 float-right">
+          {{> templates-citoyens-sidebar-lieu}}
+        </div>
+        <div class="col-12 col-lg-7 float-left">
+          {{# lead}}
+          <div class="lead">
+          {{{ lead }}}
+          </div>
+          {{/ lead}}
+
+          {{# module-content}}
+          <div class="content-modules">
+          {{> templates-citoyens-lieu-content}}
+          </div>
+          {{/ module-content}}
+        </div>
+      </div>
+
+      <section class="row justify-content-between">
+        <div class="col-12 col-lg-7">
+        {{> components-feedback-form}}
+        </div>
+      </section>
+
+    </div>
+  </div>
+</main>
+
+{{> patterns-footer-main }}

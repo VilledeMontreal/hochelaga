@@ -4,7 +4,41 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](http://keepachangelog.com/en/1.0.0/)
 and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.html).
 
-## [4.7.0] - unreleased
+## [4.8.0] - unreleased
+
+**icon-ticket (editorial) has been renamed icon-event to prevent conflict with utility icon-ticket.**
+
+## Added
+
+- SASS utilities: Responsive borders utilities classes.
+- Maps (Cartography) integrations examples (Evenements).
+- Sidebar: Allow for Sidebar Title classes.
+- Iconography: position and social-flickr icons.
+- Styles - Tables: Table complex examples with inputs, badges, buttons, etc.
+- Styles - Tables: Utility class for small adaptative cell (.cell-sm). 
+- Components - List Group - Content: New Small mobile content stacking.
+- Patterns - Header: Content header profile.
+- Templates citoyens: Élus template.
+- Templates citoyens: Événement templates (Minimum and maximum variants).
+- Templates citoyens: Lieux templates (Minimum and maximum variants).
+
+## Changed
+- Changed and fixed some issues and normalisation of .list-item and .list-item-icon.
+- Remove margin-top from sidebars on mobile
+- Styles - Table: Color and margin for table caption.
+- Styles - Table: Color of all TH's are now neutral-primary.
+- Components - List Item: Allow some elements to be added inside list-item-content (links, bold, etc).
+- Components - List Group: .list-group-item-infos default and .list-group-complex font size.
+
+## Fixed
+- Changed icon-ticket to icon-event to prevent 2 icons having same name (icon-ticket in utility and icon-ticket in editorial)
+- Fix padding bottom for region-content on mobile.
+- Fix Feedback form validation integration in all templates.
+- Buttons: btn-collapse btn-sm and btn-reversed integration.
+- Components - Cards - document: Fix sm breakpoint flexbox values.
+
+
+## [4.7.0] - 2020-02-12
 
 **icon-warning has been renamed icon-error and a new icon-warning icon has been created. Please review your icons integration accordingly.**
 
@@ -359,6 +393,7 @@ Main navbar, menu and footer are now in their own stylesheet. They will eventual
 The version 3 is now deprecated. Only bug fixes will be considered. Please refer to the old bitbucket repo https://bitbucket.org/villemontreal/boite-outils-web/.
 
 
+[4.7.0]: https://bitbucket.org/villemontreal/boite-outils4-web/src/4.7.0/
 [4.6.0]: https://bitbucket.org/villemontreal/boite-outils4-web/src/4.6.0/
 [4.5.1]: https://bitbucket.org/villemontreal/boite-outils4-web/src/4.5.1/
 [4.5.0]: https://bitbucket.org/villemontreal/boite-outils4-web/src/4.5.0/

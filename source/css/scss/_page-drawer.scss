@@ -57,12 +57,6 @@
 }
 
 @include media-breakpoint-up(lg) {
-  /*
-  .page-wrap-iframe {
-    top: 72px;
-  }
-  */
-
   .showing-page-drawers .page-wrap-iframe {
     margin-right: calc(460px + 56px);
   }
@@ -76,9 +70,6 @@
   }
 }
 
-// .drawer replaces .page-drawer
-//
-
 
 // Substract main-navbar height from page height
 .has-drawer {
@@ -90,6 +81,7 @@
 }
 
 // Page drawers
+// .drawer replaces .page-drawer
 .drawer {
   height: calc(100vh - 56px);
   transition: all 100ms ease;

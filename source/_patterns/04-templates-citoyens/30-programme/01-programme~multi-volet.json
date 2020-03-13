@@ -296,44 +296,58 @@
             "hasIcon": true,
             "icon-name": "icon-user",
             "listItemAction": false,
-            "text": "Titre de fonction",
-            "listExtraContent": "Prénom Nom"
+            "listItemLabel": "Titre de fonction",
+            "listExtraContent": {
+              "extraContent": "Prénom Nom"
+            }
           },
           {
             "hasIcon": true,
             "icon-name": "icon-location",
             "listItemAction": true,
-            "text": "Nom du lieu",
-            "listExtraContent": "1441, rue Saint-Urbain, 4e étage<br>Montréal (Québec) H2X 2M6"
+            "listItemLabel": "Nom du lieu",
+            "hasExtraContent": true,
+            "listExtraContent": {
+              "extraContent": "1441, rue Saint-Urbain, 4e étage<br>Montréal (Québec) H2X 2M6"
+            }
           },
           {
             "hasIcon": true,
             "icon-name": "icon-phone",
             "listItemAction": false,
-            "text": "3-1-1",
-            "listExtraContent": "<p>De l’extérieur de Montréal : 514 872-0311</p><p>Du lundi au vendredi : de 8 h 30 à 20 h 30 Samedi, dimanche et jours fériés : de 9 h à 17 h</p><p>Texte complémentaire optionnel.</p>"
+            "listItemLabel": "3-1-1",
+            "listExtraContent": {
+              "extraContent": "<p>De l’extérieur de Montréal : 514 872-0311</p><p>Du lundi au vendredi : de 8 h 30 à 20 h 30 Samedi, dimanche et jours fériés : de 9 h à 17 h</p><p>Texte complémentaire optionnel.</p>"
+            }
           },
           {
             "hasIcon": true,
             "icon-name": "icon-phone",
             "listItemAction": false,
-            "text": "9-1-1",
-            "listExtraContent": "Services d'urgence"
+            "listItemLabel": "9-1-1",
+            "listExtraContent": {
+              "extraContent": "Services d'urgence"
+            }
           },
           {
             "hasIcon": true,
             "icon-name": "icon-phone",
             "listItemAction": false,
             "text": "Nom du service",
-            "listExtraContent": "514 555-5555, poste 123"
+            "listExtraContent": {
+              "extraContent": "514 555-5555, poste 123"
+            }
           },
           {
             "hasIcon": true,
             "icon-name": "icon-email",
             "listItemAction": true,
             "url": "mailto:test@montreal.ca",
-            "text": "Envoyer un courriel",
-            "listExtraContent": "Texte complémentaire optionnel"
+            "listItemLabel": "Envoyer un courriel",
+            "hasExtraContent": true,
+            "listExtraContent": {
+              "extraContent": "Texte complémentaire optionnel"
+            }
           }
         ]
       },
@@ -343,54 +357,71 @@
             "hasIcon": true,
             "icon-name": "icon-user",
             "listItemAction": false,
-            "text": "Titre de fonction",
-            "listExtraContent": "Prénom Nom"
+            "listItemLabel": "Titre de fonction",
+            "listExtraContent": {
+              "extraContent": "Prénom Nom"
+            }
           },
           {
             "hasIcon": true,
             "icon-name": "icon-location",
             "listItemAction": true,
-            "text": "Nom du lieu",
-            "listExtraContent": "1441, rue Saint-Urbain, 4e étage<br>Montréal (Québec) H2X 2M6"
+            "listItemLabel": "Nom du lieu",
+            "hasExtraContent": true,
+            "listExtraContent": {
+              "extraContent": "1441, rue Saint-Urbain, 4e étage<br>Montréal (Québec) H2X 2M6"
+            }
           },
           {
             "hasIcon": true,
             "icon-name": "icon-phone",
             "listItemAction": false,
-            "text": "Nom du service",
-            "listExtraContent": "514 555-5555, poste 123"
+            "listItemLabel": "Nom du service",
+            "listExtraContent": {
+              "extraContent": "514 555-5555, poste 123"
+            }
           }
         ]
       }
     ]
   },
   "sb-block-nous-suivre": {
-    "listGroupClass": "false",
-    "listGroup": [
+    "list": [
       {
+        "hasIcon": true,
         "icon-name": "icon-social-facebook",
-        "text": "Facebook",
-        "url": "#"
+        "listItemAction": true,
+        "url": "https://facebook.com",
+        "listItemLabel": "Facebook"
       },
       {
+        "hasIcon": true,
         "icon-name": "icon-social-instagram",
-        "text": "Instagram",
-        "url": "#"
+        "listItemAction": true,
+        "url": "https://instagram.com",
+        "listItemLabel": "Instagram"
       },
       {
+        "hasIcon": true,
         "icon-name": "icon-social-linkedin",
-        "text": "LinkedIn",
-        "url": "#"
+        "listItemAction": true,
+        "url": "https://linkedin.com",
+        "listItemLabel": "LinkedIn"
       },
       {
+        "hasIcon": true,
         "icon-name": "icon-social-twitter",
-        "text": "Twitter",
-        "url": "#"
-      },
+        "listItemAction": true,
+        "url": "https://twitter.com",
+        "listItemLabel": "Twitter"
+      }
+      ,
       {
+        "hasIcon": true,
         "icon-name": "icon-social-youtube",
-        "text": "Youtube",
-        "url": "#"
+        "listItemAction": true,
+        "url": "https://youtube.com",
+        "listItemLabel": "Youtube"
       }
     ]
   }

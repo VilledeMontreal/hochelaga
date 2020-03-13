@@ -1,0 +1,152 @@
+{
+  "documentHeading": true,
+  "documentHeadingClass": false,
+  "documentHeadingNotch": true,
+  "has-left-notch": false,
+  "pageClasses": false,
+  "heading": "Titre de la nouvelle 80 caractères maximum",
+  "content-header-extras": true,
+  "publicationDate": {
+    "dateTimeText": "6 décembre 2019",
+    "dateTimeFormat": "2019-12-06"
+  },
+  "updatedDate": {
+    "dateTimeText": "4 janvier 2020",
+    "dateTimeFormat": "2020-01-04"
+  },
+  "linkedContent": {
+    "linkedContentItem": [
+      {
+        "url": "#",
+        "label": "Arrondissement (vitrine)"
+      }
+    ]
+  },
+  "lead": "<p>Amorce - Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi condimentum sollicitudin erat, quis convallis risus. Nullam posuere odio ligula, hendrerit suscipit ligula laoreet. Curabitur eleifend nulla purus, ut pharet urna ef id. Cras lacinia nisi id  (recommandé 300 caractères maximum).</p>",
+  "includePhotoswipe": true,
+  "module-content": {
+    "module-text": true,
+    "module-emphasis": {
+      "emphasisHtmlText": "<p>Meditation gochujang copper mug, selfies paleo yuccie gastropub single-origin coffee thundercats scenester venmo pickled. Neutra yr green juice, fixie blog literally squid lyft bitters actually bicycle rights thundercats.</p>"
+    },
+    "module-blockquote": {
+      "blockquote-classes": false,
+      "blockquote-html-text": "<p>Meditation gochujang copper mug, selfies paleo yuccie gastropub single-origin coffee thundercats scenester venmo pickled. Neutra yr green juice, fixie blog literally squid lyft bitters actually bicycle rights thundercats.</p>",
+      "blockquote-footer": {
+        "blockquote-footer-author": "Auteur",
+        "blockquote-footer-text": "Fonction"
+      }
+    },
+    "module-cta": {
+      "buttonAsLink": true,
+      "buttonClass": "btn-primary",
+      "buttonUrl": "/",
+      "buttonText": "Appel à l'action"
+    },
+    "module-card-cta": {
+      "cards": {
+        "classes": "",
+        "bsgrid-classes": "col-12",
+        "card-item": [
+          {
+            "classes": "card-fw",
+            "url": "#",
+            "card-media" : {
+              "icon": false,
+              "img": {
+                "src": "https://picsum.photos/id/1074/768/432",
+                "alt": "Card full width #1 img alt."
+              },
+              "placeholder": false
+            },
+            "card-type": "Type",
+            "card-title": "Titre de la carte sans limite de caractères",
+            "card-text": "Description de la carte qui peut être sur plusieurs lignes si nécessaire"
+          }
+        ]
+      }
+    },
+    "module-image-single": {
+      "media": {
+        "src": "https://picsum.photos/id/1024/768/432",
+        "alt": "texte alternatif.",
+        "copyright": "Un très long copyright pour voir comment ça se comporte sur plusieurs lignes!"
+      }
+    },
+    "module-image-album": {
+      "mediaGallery": [
+        {
+          "mediaSrc": "https://picsum.photos/id/1072/992/558",
+          "mediaSize": "992x558",
+          "mediaCaption": "Légende de la 1ere image.",
+          "mediaAuthor": "Jamie Mink",
+          "mediaAlt": "Media #1072",
+          "thumbnail" : {
+            "mediaSrc": "https://picsum.photos/id/1072/992/558",
+            "height": "558",
+            "width": "992"
+          }
+        },
+        {
+          "mediaSrc": "https://picsum.photos/id/1071/1000/667",
+          "mediaSize": "1000x667",
+          "mediaCaption": "Légende de la 2e image.",
+          "mediaAuthor": "Tim Stief",
+          "mediaAlt": "Media #1071",
+          "thumbnail" : {
+            "mediaSrc": "https://picsum.photos/id/1071/600/400",
+            "height": "400",
+            "width": "600"
+          }
+        },
+        {
+          "mediaSrc": "https://picsum.photos/id/1070/1275/272",
+          "mediaSize": "1275x272",
+          "mediaCaption": "Maecenas sem odio, commodo eget massa vitae, pharetra ultrices orci. Integer molestie feugiat erat. Ut efficitur ornare magna vitae consectetur. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Sed in consectetur lorem.",
+          "mediaAuthor": "Sean Stratton",
+          "mediaAlt": "Media #1070",
+          "thumbnail" : {
+            "mediaSrc": "https://picsum.photos/id/1070/600/400",
+            "height": "400",
+            "width": "600"
+          }
+        }
+      ]
+    },
+    "module-video": true
+  },
+  "module-etiquette": {
+    "badges-links": [
+      {
+        "badge": "Taxonomie étiquettes",
+        "badgeClass": "badge-secondary",
+        "badgeUrl": "#",
+        "badgeIconClass": false
+      },
+      {
+        "badge": "Taxonomie étiquettes",
+        "badgeClass": "badge-secondary",
+        "badgeUrl": "#",
+        "badgeIconClass": false
+      },
+      {
+        "badge": "Catégorie - Index",
+        "badgeClass": "badge-secondary",
+        "badgeUrl": "#",
+        "badgeIconClass": false
+      },
+      {
+        "badge": "Sous catégorie - Collectrice",
+        "badgeClass": "badge-secondary",
+        "badgeUrl": "#",
+        "badgeIconClass": false
+      },
+      {
+        "badge": "Sous catégorie - Collectrice",
+        "badgeClass": "badge-secondary",
+        "badgeUrl": "#",
+        "badgeIconClass": false
+      }
+    ]
+  }
+}

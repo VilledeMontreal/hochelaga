@@ -48,6 +48,13 @@
       background-color: $overlay-strong;
     }
   }
+
+  &.content-header-profile {
+    .img-profile-container {
+      max-width: 348px;
+      margin: 0 auto;
+    }
+  }
 }
 
 
@@ -289,14 +296,6 @@
       }
 
     }
-    /*
-    &.document-heading-sm {
-      .document-heading-header {
-        padding-top: 4rem;
-        padding-bottom: 1rem;
-      }
-    }
-    */
 
     // Container restricted bg image layout
     &.document-heading-grid {
@@ -349,7 +348,7 @@
 }
 
 
-/* Employés */
+// Page Header for Templates outils interne.
 .page-header {
   padding: 1rem 0 0 0;
   height: auto;

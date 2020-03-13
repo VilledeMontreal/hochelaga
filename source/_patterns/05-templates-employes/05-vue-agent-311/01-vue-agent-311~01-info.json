@@ -222,30 +222,36 @@
                 {
                   "hasIcon": true,
                   "icon-name": "icon-user",
-                  "text": "Nom Prénom",
-                  "listExtraContent": "Fonction<br>Unité administrative"
+                  "listItemLabel": "Nom Prénom",
+                  "listExtraContent": {
+                    "extraContent": "Fonction<br>Unité administrative"
+                  }
                 },
                 {
                   "hasIcon": true,
                   "icon-name": "icon-phone",
                   "listItemAction": false,
-                  "text": false,
-                  "listExtraContent": "514 897-4933, poste 1234"
+                  "listItemLabel": false,
+                  "listExtraContent": {
+                    "extraContent": "514 897-4933, poste 1234"
+                  }
                 },
                 {
                   "hasIcon": true,
                   "icon-name": "icon-email",
                   "listItemAction": true,
                   "url": "mailto:prenom.nom@montreal.ca",
-                  "text": "prenom.nom@montreal.ca",
+                  "listItemLabel": "prenom.nom@montreal.ca",
                   "listExtraContent": false
                 },
                 {
                   "hasIcon": true,
                   "icon-name": "icon-comment",
                   "listItemAction": false,
-                  "text": false,
-                  "listExtraContent": "Rebum aliquyam ut diam accusam diam amet vero sit vero kasd. No voluptua dolor at."
+                  "listItemLabel": false,
+                  "listExtraContent": {
+                    "extraContent": "Rebum aliquyam ut diam accusam diam amet vero sit vero kasd. No voluptua dolor at."
+                  }
                 }
               ]
             }
@@ -265,28 +271,32 @@
                   "listItemClass": "text-danger",
                   "hasIcon": true,
                   "icon-name": "icon-eye-off icon-color-danger",
-                  "text": false,
-                  "listExtraContent": "Cette information ne doit pas être divulguée"
+                  "listItemLabel": false,
+                  "listExtraContent": {
+                    "extraContent": "Cette information ne doit pas être divulguée"
+                  }
                 },
                 {
                   "hasIcon": true,
                   "icon-name": "icon-user",
-                  "text": "Nom Prénom",
+                  "listItemLabel": "Nom Prénom",
                   "listExtraContent": false
                 },
                 {
                   "hasIcon": true,
                   "icon-name": "icon-phone",
                   "listItemAction": false,
-                  "text": false,
-                  "listExtraContent": "514 897-4933, poste 1234"
+                  "listItemLabel": false,
+                  "listExtraContent": {
+                    "extraContent": "514 897-4933, poste 1234"
+                  }
                 },
                 {
                   "hasIcon": true,
                   "icon-name": "icon-email",
                   "listItemAction": true,
                   "url": "mailto:prenom.nom@montreal.ca",
-                  "text": "prenom.nom@montreal.ca",
+                  "listItemLabel": "prenom.nom@montreal.ca",
                   "listExtraContent": false
                 }
               ]
@@ -306,22 +316,24 @@
                 {
                   "hasIcon": true,
                   "icon-name": "icon-user",
-                  "text": "Nom Prénom",
+                  "listItemLabel": "Nom Prénom",
                   "listExtraContent": false
                 },
                 {
                   "hasIcon": true,
                   "icon-name": "icon-phone",
                   "listItemAction": false,
-                  "text": false,
-                  "listExtraContent": "514 897-4933, poste 1234"
+                  "listItemLabel": false,
+                  "listExtraContent": {
+                    "extraContent": "514 897-4933, poste 1234"
+                  }
                 },
                 {
                   "hasIcon": true,
                   "icon-name": "icon-email",
                   "listItemAction": true,
                   "url": "mailto:prenom.nom@montreal.ca",
-                  "text": "prenom.nom@montreal.ca",
+                  "listItemLabel": "prenom.nom@montreal.ca",
                   "listExtraContent": false
                 }
               ]

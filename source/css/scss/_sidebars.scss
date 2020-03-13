@@ -2,7 +2,6 @@
 .sidebar {
   border-top: 1px solid $neutral-stroke;
   margin-bottom: 4rem;
-  margin-top: 2rem;
 
   p {
     margin-bottom: $paragraph-margin-bottom;
@@ -12,10 +11,6 @@
     @include font-size($h3-font-size);  // 24/32
     line-height: 2rem;
     margin-bottom: 1rem;
-  }
-
-  @include media-breakpoint-up(md) {
-    margin-top: 0;
   }
 
   @include media-breakpoint-up(lg) {
@@ -43,44 +38,7 @@
 
   // Handle multplie lists in a single sidebar block
   .list + .list {
-    margin-top: 1.5rem;
-  }
-
-  // Schedule data
-  // TODO: Refactor this code
-  .schedule-content {
-    align-items: flex-start;
-    @include font-size($font-size-sm);
-    width: 100%;
-
-    .schedule-day,
-    .schedule-data {
-      color: $headings-color;
-    }
-
-    .schedule-data {
-      display: flex;
-      flex-direction: row;
-      align-items: center;
-      .schedule-start-time,
-      .schedule-end-time {
-        white-space: nowrap
-      }
-      .schedule-start-time { 
-        margin-right: .25rem;
-      }
-      .schedule-end-time {
-        &:before {
-          content: "-";
-          margin-right: .25rem;
-        }
-      }
-      .vdm {
-        cursor: pointer;
-        @include font-size(1rem);
-        margin-left: .5rem;
-      }
-    }
+    margin-top: 2rem;
   }
 
   .elided-text {

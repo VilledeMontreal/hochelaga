@@ -12,6 +12,24 @@
     <script src="../../js/vendor/bootstrap.min.js"></script>
     <script src="../../js/vdm-bao.js"></script>
 
+    {{# module-content.module-map}}
+    <!-- Mapbox -->
+    <script src='https://api.tiles.mapbox.com/mapbox-gl-js/v0.48.0/mapbox-gl.js'></script>
+    <link href='https://api.tiles.mapbox.com/mapbox-gl-js/v0.48.0/mapbox-gl.css' rel='stylesheet' />
+    
+    <!-- VDM helpers -->
+    <script src="../../js/vdm-helpers.js"></script>
+    
+    <script>
+      var data = { 
+        address : "{{{location.addressInfos.address}}}", 
+        title : "{{{location.addressInfos.addressTitle}}}",
+        uri: "{{{location.addressInfos.uri}}}"
+      }
+      generateMap([{{{ location.lngLat }}}], data, {{ location.mapID }});
+    </script>
+    {{/ module-content.module-map}}
+
     <!--DO NOT REMOVE-->
     {{{ patternLabFoot }}}
 

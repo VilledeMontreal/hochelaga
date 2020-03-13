@@ -1,15 +1,52 @@
 .table { 
   font-size: $font-size-sm;
+  line-height: $line-height-sm;
   margin-bottom: 0;
   th,
   td {
     line-height: $line-height-sm;
   }
+  th {
+    color: $headings-color;
+  }
   thead th {
-    color: $neutral-primary;
     border-bottom: $table-border-width solid $table-border-color;
   }
 
+  p:last-of-type {
+    margin-bottom: 0;
+  }
+
+  // Caption inside table
+  caption {
+    margin-top: 1rem;
+  }
+
+  // Fix padding for some elements inside Table cell.
+  td > .form-group,
+  .td-n-margin {
+    margin-top: -.375rem;
+    margin-bottom: -.375rem;
+  }
+
+  .form-group {
+    min-width: 320px;
+  }
+
+  // Allow a cell to fit it's content without wrapping
+  .cell-sm {
+    width: 1%;
+    white-space: nowrap;
+  }
+
+}
+
+.table-dark {
+  th,
+  thead th {
+    border-color: $table-dark-border-color;
+    color: $table-dark-color;
+  }
 }
 
 .table-sm {
@@ -23,9 +60,20 @@
 
 .table-lg {
   font-size: $font-size-base;
+  line-height: $line-height-md;
   th,
   td {
-    line-height: $line-height-md;
     padding: $table-cell-padding-lg;
+  }
+  caption {
+    @include font-size($font-size-sm);
+    line-height: $line-height-sm;
+  }
+
+  // Fix padding for inputs
+  td > .form-group,
+  .td-n-margin {
+    margin-top: -.5rem;
+    margin-bottom: -.5rem;
   }
 }

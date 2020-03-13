@@ -1,0 +1,27 @@
+
+{{# header-in-container}}
+<div class="container">
+{{/ header-in-container}}
+  <header class="content-header content-header-profile pb-8">
+    <div class="row justify-content-between mb-0">
+      <div class="col-12 col-lg-7">
+        <h1 class="mb-2">{{heading}}</h1>
+        <div class="font-size-lg text-dark mb-4">
+        {{# heading-subtitle}}
+          <div>{{content}}</div>
+        {{/ heading-subtitle}}
+        </div>
+        {{# extras}}
+        {{> components-list-item}}
+        {{/ extras}}
+      </div>
+      <div class="col-12 col-lg-auto mt-4 mt-lg-0">
+        <div class="img-profile-container">
+          <img src="https://res.cloudinary.com/villemontreal/image/upload/q_auto,f_auto,dpr_auto,ar_1,c_crop/w_348/v1/portail-dev/hakvj7l3hlonhygmbt0q.jpg" alt="Valérie Plante, mairesse de Montréal." class="img-fluid rounded-circle">
+        </div>
+      </div>
+    </div>
+  </header>
+{{# header-in-container}}
+</div>
+{{/ header-in-container}}

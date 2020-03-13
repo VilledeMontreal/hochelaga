@@ -1,0 +1,13 @@
+<div class="sidebar border-top-0 border-bottom border-lg-bottom-0 pb-8 pb-lg-4 pt-0{{# documentHeading}} pt-lg-8{{/ documentHeading}}{{^ documentHeading}} pt-lg-0{{/documentHeading}}">
+  {{# sb-block-coordonnees}}
+  <section class="sb-block">
+    {{> styles-heading-sidebar(sidebarTitle: "Renseignements")}}
+    {{# sb-block-contact}}
+      {{> components-list-item}}
+    {{/ sb-block-contact}}
+    {{# sb-block-ms}}
+    {{> components-list-item}}
+    {{/ sb-block-ms}}
+  </section>
+  {{/ sb-block-coordonnees}}
+</div>

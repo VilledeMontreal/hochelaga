@@ -1,0 +1,85 @@
+<h2>Description</h2>
+<div class="content-module-stacked">
+  <p>Corps de texte - <i>Italique</i> et <strong>gras</strong>, exposant, indice et caractères spéciaux adipiscing elit. Morbi condimentum sollicitudin erat, quis <a href="#">lien interne</a> ou <a href="https://google.com">lien externe</a> convallis risus. Nullam  posuere odio ligula, hendrerit suscipit ligula congue laoreet. Curabitur eleifend nulla purus, ut pharetra urna efficitur id. Cras lacinia nisi id quam lacinia, et orci aliquam.</p>
+  <ul>
+    <li>Liste à puce</li>
+    <li>Liste à puce</li>
+    <li>Liste à puce</li>
+    <li>Liste à puce</li>
+  </ul>
+  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi condimentum sollicitudin erat, quis convallis risus.</p>
+  <ol>
+    <li>Liste numérotée</li>
+    <li>Liste numérotée</li>
+    <li>Liste numérotée</li>
+  </ol>
+  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi condimentum sollicitudin erat, quis convallis risus.</p>
+</div>
+
+{{# module-commodites}}
+<h3>Commodités</h3>
+<div class="content-module-stacked">
+  {{> components-list-item}}
+</div>
+{{/ module-commodites}}
+
+{{# module-installations}}
+<h3>Installations</h3>
+<div class="content-module-stacked">
+  <div class="mb-n2{{#groupClass}} {{groupClass}}{{/groupClass}}">
+    {{# groups}}
+    <div class="d-flex flex-column">
+      {{# group-heading}}
+      <div class="font-weight-bold mb-1">{{ group-heading }}</div>
+      {{/ group-heading}}
+      {{> components-list-item}}
+    </div>
+    {{/ groups}}
+  </div>
+</div>
+{{/ module-installations}}
+
+{{# module-accessibilite}}
+<h3>Accessibilité</h3>
+<div class="content-module-stacked">
+  {{> components-list-item}}
+</div>
+{{/ module-accessibilite}}
+
+{{# module-mode-paiement}}
+<h3>Modes de paiement</h3>
+<div class="content-module-stacked">
+  {{> components-list-item}}
+</div>
+{{/ module-mode-paiement}}
+
+{{# module-etiquettes}}
+<div class="badges-container pt-4 pb-1">
+  <ul class="list-inline">
+    {{# badges-links }}
+    <li class="list-inline-item">{{> components-badge }}</li>
+    {{/ badges-links }}
+  </ul>
+</div>
+{{/ module-etiquettes}}
+
+{{# module-events}}
+<h2>Événements à venir</h2>
+<div class="content-module-stacked">
+  {{> components-list-group-content}}
+  {{# button-cta}}
+  <div class="d-flex justify-content-center mt-0 mb-4">
+  {{> components-button}}
+  </div>
+  {{/ button-cta}}
+</div>
+{{/ module-events}}
+
+{{# module-map}}
+{{# location}}
+<div class="content-module-stacked" id="section-{{mapID}}">
+  <h2>{{heading}}</h2>
+  <div id="{{ mapID }}" class="h-map"></div>
+</div>
+{{/ location}}
+{{/ module-map }}

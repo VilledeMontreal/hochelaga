@@ -1,0 +1,595 @@
+{
+  "documentHeading": true,
+  "documentHeadingClass": "document-heading-left-notch",
+  "documentHeadingNotch": true,
+  "has-left-notch": true,
+  "state": {
+    "badgeClass": "badge-warning", 
+    "badge": "État - optionnel"
+  },
+  "content-header-extras": {
+    "linkedContent": {
+      "linkedContentItem": [
+        {
+          "url": "#",
+          "label": "Arrondissement (Vitrine)"
+        },
+        {
+          "url": "#",
+          "label": "Arrondissement (Vitrine)"
+        }
+      ]
+    }
+  },
+  "header-extras": {
+    "listClass": "pt-4 mb-lg-4",
+    "list": [
+      {
+        "hasIcon": true,
+        "icon-name": "icon-location",
+        "listItemAction": false,
+        "listItemLabel": "Adresse",
+        "listExtraContent": [
+          {
+            "extraContentBold": false,
+            "extraContent": "123, rue Avenue Ouest<br>Montréal (Québec) H1H 1H1"
+          },
+          {
+            "extraContentAction": {
+              "classes": "mt-1",
+              "actionClasses": "js-scroll-trigger",
+              "url": "#section-mapLieu002",
+              "text": "Voir carte"
+            }
+          }
+        ]
+      },
+      {
+        "hasIcon": true,
+        "icon-name": "icon-phone",
+        "listItemAction": false,
+        "listItemLabel": "Téléphone",
+        "listExtraContent": {
+          "extraContentBold": false,
+          "extraContent": "514 555-5555"
+        }
+      }
+    ]
+  },
+  "lead": "<p>Amorce - Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi condimentum sollicitudin erat, quis convallis risus. Nullam posuere odio ligula, hendrerit suscipit ligula laoreet. Curabitur eleifend nulla purus, ut pharet urna ef id. Cras lacinia nisi id  (recommandé 300 caractères maximum).</p>",
+  "module-content": {
+    "module-text": true,
+    "module-commodites": {
+      "listClass": "d-block column-count-md-2",
+      "listUL": true,
+      "list": [
+        {
+          "hasIcon": true,
+          "icon-name": "icon-dot-bullet",
+          "listItemAction": false,
+          "listItemLabel": false,
+          "hasExtraContent": true,
+          "listExtraContent": {
+            "extraContent": "Ipsum est sed magna kasd sed"
+          }
+        },
+        {
+          "hasIcon": true,
+          "icon-name": "icon-dot-bullet",
+          "listItemAction": false,
+          "listItemLabel": false,
+          "hasExtraContent": true,
+          "listExtraContent": {
+            "extraContent": "Ipsum est sed magna kasd sed"
+          }
+        },
+        {
+          "hasIcon": true,
+          "icon-name": "icon-dot-bullet",
+          "listItemAction": false,
+          "listItemLabel": false,
+          "hasExtraContent": true,
+          "listExtraContent": {
+            "extraContent": "Tempor sea dolores no magna dolore"
+          }
+        },
+        {
+          "hasIcon": true,
+          "icon-name": "icon-dot-bullet",
+          "listItemAction": false,
+          "listItemLabel": false,
+          "hasExtraContent": true,
+          "listExtraContent": {
+            "extraContent": "Takimata no sea lorem"
+          }
+        },
+        {
+          "hasIcon": true,
+          "icon-name": "icon-dot-bullet",
+          "listItemAction": false,
+          "listItemLabel": false,
+          "hasExtraContent": true,
+          "listExtraContent": {
+            "extraContent": "Diam et"
+          }
+        },
+        {
+          "hasIcon": true,
+          "icon-name": "icon-dot-bullet",
+          "listItemAction": false,
+          "listItemLabel": false,
+          "hasExtraContent": true,
+          "listExtraContent": {
+            "extraContent": "Et magna gubergren amet"
+          }
+        },
+        {
+          "hasIcon": true,
+          "icon-name": "icon-dot-bullet",
+          "listItemAction": false,
+          "listItemLabel": false,
+          "hasExtraContent": true,
+          "listExtraContent": {
+            "extraContent": "Sit sed amet"
+          }
+        }
+      ]
+    },
+    "module-installations": {
+      "groupClass": "column-count-md-2",
+      "groups": [
+        {
+          "group-heading": "Titre du groupe",
+          "listUL": true,
+          "listClass": "d-block mb-2",
+          "list": [
+            {
+              "hasIcon": true,
+              "icon-name": "icon-dot-bullet",
+              "listItemAction": false,
+              "listItemLabel": false,
+              "hasExtraContent": true,
+              "listExtraContent": {
+                "extraContent": "Duo at elitr stet"
+              }
+            },
+            {
+              "hasIcon": true,
+              "icon-name": "icon-dot-bullet",
+              "listItemAction": false,
+              "listItemLabel": false,
+              "hasExtraContent": true,
+              "listExtraContent": {
+                "extraContent": "Rebum vero eirmod amet"
+              }
+            },
+            {
+              "hasIcon": true,
+              "icon-name": "icon-dot-bullet",
+              "listItemAction": false,
+              "listItemLabel": false,
+              "hasExtraContent": true,
+              "listExtraContent": {
+                "extraContent": "At rebum est"
+              }
+            },
+            {
+              "hasIcon": true,
+              "icon-name": "icon-dot-bullet",
+              "listItemAction": false,
+              "listItemLabel": false,
+              "hasExtraContent": true,
+              "listExtraContent": {
+                "extraContent": "Nonumy dolor et ipsum aliquyam"
+              }
+            }
+          ]
+        },
+        {
+          "group-heading": "Titre du groupe 2",
+          "listUL": true,
+          "listClass": "d-block mb-2",
+          "list": [
+            {
+              "hasIcon": true,
+              "icon-name": "icon-dot-bullet",
+              "listItemAction": false,
+              "listItemLabel": false,
+              "hasExtraContent": true,
+              "listExtraContent": {
+                "extraContent": "No tempor tempor"
+              }
+            },
+            {
+              "hasIcon": true,
+              "icon-name": "icon-dot-bullet",
+              "listItemAction": false,
+              "listItemLabel": false,
+              "hasExtraContent": true,
+              "listExtraContent": {
+                "extraContent": "Et ipsum clita dolores et"
+              }
+            }
+          ]
+        },
+        {
+          "group-heading": "Titre du groupe 3",
+          "listUL": true,
+          "listClass": "d-block mb-2",
+          "list": [
+            {
+              "hasIcon": true,
+              "icon-name": "icon-dot-bullet",
+              "listItemAction": false,
+              "listItemLabel": false,
+              "hasExtraContent": true,
+              "listExtraContent": {
+                "extraContent": "Et dolor sanctus"
+              }
+            }
+          ]
+        }
+      ]
+    },
+    "module-accessibilite": {
+      "listUL": true,
+      "list": [
+        {
+          "hasIcon": true,
+          "icon-name": "icon-dot-bullet",
+          "listItemAction": false,
+          "listItemLabel": false,
+          "hasExtraContent": true,
+          "listExtraContent": {
+            "extraContent": "Sed lorem sadipscing sea"
+          }
+        },
+        {
+          "hasIcon": true,
+          "icon-name": "icon-dot-bullet",
+          "listItemAction": false,
+          "listItemLabel": false,
+          "hasExtraContent": true,
+          "listExtraContent": {
+            "extraContent": "Sed dolor tempor diam"
+          }
+        }
+      ]
+    },
+    "module-mode-paiement": {
+      "listUL": true,
+      "list": [
+        {
+          "hasIcon": true,
+          "icon-name": "icon-dot-bullet",
+          "listItemAction": false,
+          "listItemLabel": false,
+          "hasExtraContent": true,
+          "listExtraContent": {
+            "extraContent": "Argent comptant"
+          }
+        },
+        {
+          "hasIcon": true,
+          "icon-name": "icon-dot-bullet",
+          "listItemAction": false,
+          "listItemLabel": false,
+          "hasExtraContent": true,
+          "listExtraContent": {
+            "extraContent": "Cartes de crédit"
+          }
+        }
+      ]
+    },
+    "module-etiquettes": {
+      "badges-links": [
+        {
+          "badge": "Libellé",
+          "badgeClass": "badge-secondary",
+          "badgeUrl": "#",
+          "badgeIconClass": false
+        },
+        {
+          "badge": "Libellé",
+          "badgeClass": "badge-secondary",
+          "badgeUrl": "#",
+          "badgeIconClass": false
+        },
+        {
+          "badge": "Libellé",
+          "badgeClass": "badge-secondary",
+          "badgeUrl": "#",
+          "badgeIconClass": false
+        },
+        {
+          "badge": "Libellé",
+          "badgeClass": "badge-secondary",
+          "badgeUrl": "#",
+          "badgeIconClass": false
+        }
+      ]
+    },
+    "module-events": {
+      "listGroupClass": "mb-4",
+      "listGroup": [
+        {
+          "url": "#",
+          "media": {
+            "img": {
+              "alt": "Alt image",
+              "src": "https://picsum.photos/id/1025/128/72"
+            },
+            "placeholder": false
+          },
+          "type": false,
+          "title": "At amet eos et diam sed no invidunt sadipscing no invidunt sed dolore eos amet",
+          "infos": {
+            "badge": false,
+            "infos-items": [
+              {
+                "text": "Dates et heures pouvant s'afficher sur deux lignes"
+              }
+            ]
+          }
+        },
+        {
+          "url": "#",
+          "media": {
+            "img": {
+              "alt": "Alt image",
+              "src": "https://picsum.photos/id/1025/128/72"
+            },
+            "placeholder": false
+          },
+          "type": false,
+          "title": "Dolore amet aliquyam justo vero lorem accusam amet eos vero",
+          "infos": {
+            "badge": false,
+            "infos-items": [
+              {
+                "text": "Dates et heures pouvant s'afficher sur deux lignes"
+              }
+            ]
+          }
+        },
+        {
+          "url": "#",
+          "media": {
+            "img": false,
+            "placeholder": {
+              "icon": "icon-event"
+            }
+          },
+          "type": false,
+          "title": "Consetetur eirmod et aliquyam",
+          "infos": {
+            "badge": false,
+            "infos-items": [
+              {
+                "text": "Dates et heures pouvant s'afficher sur deux lignes"
+              }
+            ]
+          }
+        }
+      ],
+      "button-cta": {
+        "data-link-title": "Tous les événements",
+        "buttonAsLink": true,
+        "buttonClass": "btn-secondary",
+        "buttonUrl": "#",
+        "buttonText": "Tous les événements"
+      }
+    },
+    "module-map": {
+      "heading": "Comment s'y rendre",
+      "location": {
+        "mapID": "mapLieu002",
+        "addressInfos": {
+          "uri": "#",
+          "addressTitle": "Nom du lieu",
+          "address":  "123, rue Avenue Ouest<br>Montréal (Québec) H1H 1H1"
+        },
+        "lngLat": "-73.5627778, 45.5147222"
+      }
+    }
+  },
+  "sb-block-schedule": {
+    "sidebarTitleClasses": false,
+    "list": [
+      {
+        "hasIcon": true,
+        "icon-name": "icon-clock",
+        "listItemAction": false,
+        "listItemLabel": "Horaire",
+        "hasExtraContent": true,
+        "listExtraContent": {
+          "extraContent": "du 15 décembre 2019 au 15 mars 2020"
+        },
+        "extraContentSchedule": {
+          "schedule" : [
+            {
+              "day": "Lundi",
+              "scheduleData": [
+                {
+                  "time": [
+                    {
+                      "startTime": "09 h 00",
+                      "endTime": "12 h 00"
+                    },
+                    {
+                      "startTime": "13 h 00",
+                      "endTime": "17 h 00"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "day": "Mardi",
+              "scheduleData": [
+                {
+                  "time": {
+                    "startTime": "09 h 00",
+                    "endTime": "12 h 00"
+                  }
+                }
+              ]
+            },
+            {
+              "day": "Mercredi",
+              "scheduleData": [
+                {
+                  "time": {
+                    "startTime": "09 h 00",
+                    "endTime": "12 h 00"
+                  }
+                }
+              ]
+            },
+            {
+              "day": "Jeudi",
+              "scheduleData": [
+                {
+                  "time": {
+                    "startTime": "09 h 00",
+                    "endTime": "12 h 00"
+                  }
+                }
+              ]
+            },
+            {
+              "day": "Vendredi",
+              "scheduleData": [
+                {
+                  "time": {
+                    "startTime": "09 h 00",
+                    "endTime": "12 h 00"
+                  }
+                }
+              ]
+            },
+            {
+              "day": "Samedi",
+              "scheduleData": [
+                {
+                  "time": {
+                    "startTime": "09 h 00",
+                    "endTime": "12 h 00"
+                  }
+                }
+              ]
+            },
+            {
+              "day": "Dimanche",
+              "scheduleData": [
+                {
+                  "time": false,
+                  "customLabel": "Fermé"
+                }
+              ]
+            }
+          ]
+        }
+      }
+    ],
+    "hasExtraSchedules": {
+      "list": [
+        {
+          "hasIcon": true,
+          "icon-name": "icon-clock",
+          "listItemAction": false,
+          "listItemLabel": "Horaire #2",
+          "hasExtraContent": true,
+          "listExtraContent": {
+            "extraContent": "du 15 mars 2020 au 15 mars 2030"
+          },
+          "extraContentSchedule": {
+            "schedule" : [
+              {
+                "day": "Lundi",
+                "scheduleData": [
+                  {
+                    "time": [
+                      {
+                        "startTime": "09 h 00",
+                        "endTime": "12 h 00"
+                      },
+                      {
+                        "startTime": "13 h 00",
+                        "endTime": "17 h 00"
+                      }
+                    ]
+                  }
+                ]
+              },
+              {
+                "day": "Mardi",
+                "scheduleData": [
+                  {
+                    "time": {
+                      "startTime": "09 h 00",
+                      "endTime": "12 h 00"
+                    }
+                  }
+                ]
+              },
+              {
+                "day": "Mercredi",
+                "scheduleData": [
+                  {
+                    "time": {
+                      "startTime": "09 h 00",
+                      "endTime": "12 h 00"
+                    }
+                  }
+                ]
+              },
+              {
+                "day": "Jeudi",
+                "scheduleData": [
+                  {
+                    "time": {
+                      "startTime": "09 h 00",
+                      "endTime": "12 h 00"
+                    }
+                  }
+                ]
+              },
+              {
+                "day": "Vendredi",
+                "scheduleData": [
+                  {
+                    "time": {
+                      "startTime": "09 h 00",
+                      "endTime": "12 h 00"
+                    }
+                  }
+                ]
+              },
+              {
+                "day": "Samedi",
+                "scheduleData": [
+                  {
+                    "time": {
+                      "startTime": "09 h 00",
+                      "endTime": "12 h 00"
+                    }
+                  }
+                ]
+              },
+              {
+                "day": "Dimanche",
+                "scheduleData": [
+                  {
+                    "time": false,
+                    "customLabel": "Fermé"
+                  }
+                ]
+              }
+            ]
+          }
+        }
+      ]
+    }
+  }
+}

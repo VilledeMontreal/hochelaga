@@ -106,6 +106,25 @@
   }
 }
 
+@mixin button-collapse($icon-color, $icon-hover-color: $icon-color) {
+  &:after {
+    background-color: $icon-color;
+  }
+  &.collapsed:after {
+    background-color: $icon-color;
+  }
+  @include hover-focus {
+    &:after {
+      background-color: $icon-hover-color;
+      @include transition($btn-transition);
+    }
+    &.collapsed:after {
+      background-color: $icon-hover-color;
+      @include transition($btn-transition);
+    }
+  }
+}
+
 // Mixin to reset buttons properties
 // AKA plain button
 @mixin button-reset() {

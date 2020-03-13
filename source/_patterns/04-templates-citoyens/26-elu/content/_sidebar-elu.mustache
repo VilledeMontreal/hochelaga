@@ -1,0 +1,16 @@
+<div class="sidebar pt-8 pt-lg-0">
+  {{# sb-block-coordonnees}}
+  <section class="sb-block">
+    {{> styles-heading-sidebar(sidebarTitle: "Coordonnées")}}
+    {{# sb-block-contact}}
+      {{> components-list-item}}
+    {{/ sb-block-contact}}
+    {{# sb-block-ms}}
+    {{> components-list-item}}
+    {{/ sb-block-ms}}
+    {{# sb-block-nous-suivre}}
+    {{> components-list-item-link}}
+    {{/ sb-block-nous-suivre}}
+  </section>
+  {{/ sb-block-coordonnees}}
+</div>

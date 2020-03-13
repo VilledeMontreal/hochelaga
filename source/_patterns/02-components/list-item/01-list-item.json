@@ -1,10 +1,13 @@
 {
   "list": [
     {
-      "listItemClass": "list-item-description",
+      "listItemClass": false,
       "listItemAction": false,
       "listItemLabel": "Libellé",
-      "listExtraContent": "Description"
+      "listExtraContent": {
+        "extraContentBold": false,
+        "extraContent": "Description"
+      }
     }
   ]
 }

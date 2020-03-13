@@ -212,6 +212,7 @@
 
 
 // Blockquote And Emphasis
+// These are not wrappers - Move to styles or own components
 //
 .blockquote {
   @include font-size($blockquote-font-size);
