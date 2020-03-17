@@ -49,30 +49,36 @@
                 <li>Liste numérotée</li>
                 <li>Liste numérotée</li>
               </ol>
-
-              <h2>Mission</h2>
-              <p>Sed maximum est in amicitia parem esse inferiori. Saepe enim excellentiae quaedam sunt, qualis erat Scipionis in nostro, ut ita dicam, grege. Numquam se ille Philo, numquam Rupilio, numquam Mummio anteposuit, numquam inferioris ordinis.</p>
-
-              <h2>Objectifs</h2>
-              <p>Sed maximum est in amicitia parem esse inferiori. Saepe enim excellentiae quaedam sunt, qualis erat Scipionis in nostro, ut ita dicam, grege. Numquam se ille Philo, numquam Rupilio, numquam Mummio anteposuit, numquam inferioris ordinis.</p>
             </div>
 
+            {{# module-featured-document}}
+            <div class="content-module-stacked">
+              <div class="row cards">
+                {{# cards.card-item }}
+                <div class="{{ cards.bsgrid-classes }}">
+                  {{> components-card-item-full-width }}
+                </div>
+                {{/ cards.card-item }}
+              </div>
+            </div>
+            {{/ module-featured-document}}
+
             {{# module-documents}}
-            <h2>Documents (titre éditorial)</h2>
+            <h2>Module Titre</h2>
             <div class="content-module-stacked">
               {{> components-list-item-link}}
             </div>
             {{/ module-documents }}
 
             {{# module-list-reference}}
-            <h2>Liste de références de liens internes ou externes</h2>
+            <h2>Module Titre</h2>
             <div class="content-module-stacked">
               {{> components-list-item-link }}
             </div>
             {{/ module-list-reference}}
 
             {{# module-texte-optionnel}}
-            <h2>Module Titre de section</h2>
+            <h2>Module Titre</h2>
             <div class="content-module-stacked">
               <p>Corps de texte - <i>Italique</i> et <strong>gras</strong>, exposant, indice et caractères spéciaux adipiscing elit. Morbi condimentum sollicitudin erat, quis <a href="#">lien interne</a> ou <a href="https://google.com">lien externe</a> convallis risus. Nullam  posuere odio ligula, hendrerit suscipit ligula congue laoreet. Curabitur eleifend nulla purus, ut pharetra urna efficitur id. Cras lacinia nisi id quam lacinia, et orci aliquam.</p>
               <ul>
@@ -104,7 +110,7 @@
             {{/ listAutoProgrammes}}
 
             {{# listAutoArticles}}
-            <h2>Liste automatisée des conseils-articles</h2>
+            <h2>Liste automatisée des articles</h2>
             <div class="content-module-stacked">
               {{> components-list-item-link}}
             </div>
