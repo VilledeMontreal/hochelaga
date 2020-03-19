@@ -15,6 +15,10 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 - Updated: TC nouvelle
 - Updated: TC programme
 - Updated: TC unité administrative
+- Components - Messages: Ajustement font-size 16/24 for text.
+
+### Removed
+- Components - Messages: Remove unnecessary class after font-size normalisation.
 
 ### Fixed
 - Content-header-extras-item now get 8px spacing between each elements.
@@ -24,7 +28,7 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 
 **icon-ticket (editorial) has been renamed icon-event to prevent conflict with utility icon-ticket.**
 
-## Added
+### Added
 - SASS utilities: Responsive borders utilities classes.
 - Maps (Cartography) integrations examples (Evenements).
 - Sidebar: Allow for Sidebar Title classes.
@@ -37,7 +41,7 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 - Templates citoyens: Événement templates (Minimum and maximum variants).
 - Templates citoyens: Lieux templates (Minimum and maximum variants).
 
-## Changed
+### Changed
 - Changed and fixed some issues and normalisation of .list-item and .list-item-icon.
 - Remove margin-top from sidebars on mobile
 - Styles - Table: Color and margin for table caption.
@@ -45,7 +49,7 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 - Components - List Item: Allow some elements to be added inside list-item-content (links, bold, etc).
 - Components - List Group: .list-group-item-infos default and .list-group-complex font size.
 
-## Fixed
+### Fixed
 - Changed icon-ticket to icon-event to prevent 2 icons having same name (icon-ticket in utility and icon-ticket in editorial)
 - Fix padding bottom for region-content on mobile.
 - Fix Feedback form validation integration in all templates.

@@ -6,11 +6,11 @@
 }
 
 .alert {
+  @include font-size($font-size-base);
+  line-height: $line-height-md;
   border-left-width: 2px;
   border-color: $neutral-tertiary;
   background-color: $neutral-underground-1;
-  font-size: $font-size-sm;
-  line-height: $line-height-sm;
   color: $neutral-secondary;
 
   a {
@@ -22,10 +22,8 @@
   }
 
   .alert-heading {
-    @include font-size($h5-font-size);
     color: $neutral-primary;
     font-weight: $font-weight-bold;
-    line-height: $line-height-md;
     margin-bottom: .5rem;
   }
 
@@ -42,14 +40,10 @@
   }
 
   .alert-icon-container svg,
-    .close svg {      
-      fill: $neutral-tertiary;
-    }
-
-  &.alert-text-base {
-    font-size: $font-size-base;
-    line-height: $line-height-md;
+  .close svg {      
+    fill: $neutral-tertiary;
   }
+
 }
 
 // Dismissible alerts
