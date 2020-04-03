@@ -27,6 +27,13 @@
     margin-bottom: .5rem;
   }
 
+  .alert-actions {
+    margin-top: 1rem;
+    .btn + .btn {
+      margin: .5rem;
+    }
+  }
+
   //add this class to .alert container to have an svg icon on the left
   &.alert-with-icon {
     display: flex;
