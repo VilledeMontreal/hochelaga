@@ -376,7 +376,7 @@ function generateMap(lngLat, addressInfos, mapID, addressTitle ) {
     popupContent += `<div class="font-size-sm-interface">${address}</div>`;
     popupContent += "</div>";
     popupContent += `<div class="d-flex mt-1"><a class="link-sm is-external-link" href="https://www.google.com/maps/search/?api=1&amp;query=${encodeURIComponent(strippedAddress)}" title="Obtenir un itinéraire">Obtenir un itinéraire</a></div>`;
-    var popup = new mapboxgl.Popup({closeButton: false, closeOnClick: false, offset: 30, className: 'map-popup'})
+    var popup = new mapboxgl.Popup({closeButton: false, closeOnClick: false, offset: 24, className: 'map-popup'})
       .setLngLat(pointLngLat)
       .setHTML(popupContent)
       .addTo(map);
@@ -386,8 +386,8 @@ function generateMap(lngLat, addressInfos, mapID, addressTitle ) {
     const el = document.createElement('div');
     el.className = 'marker';
     el.style.backgroundImage = "url('../../images/marker/marker.png')";
-    el.style.width = '40px';
-    el.style.height = '52px';
+    el.style.width = '24px';
+    el.style.height = '32px';
 
     return el;
   }
