@@ -11,6 +11,13 @@
   <div class="alert-heading">{{ alertTitle }}</div>
 	{{/ alertTitle }}
 	{{{ alertText }}}
+  {{# alertButtons}}
+  <div class="alert-actions">
+    {{# buttons}}
+    {{> components-button}}
+    {{/ buttons}}
+  </div>
+  {{/ alertButtons}}
   {{# alertIcon }}
   </div>
   {{/ alertIcon }}

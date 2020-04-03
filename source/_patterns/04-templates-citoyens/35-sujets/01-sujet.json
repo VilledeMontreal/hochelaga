@@ -46,7 +46,7 @@
     "module-message": {
       "alertClass": "alert-warning alert-with-icon",
       "alertTitle": "Titre du message (optionnel)",
-      "alertText": "Description du message. Selon la nature du message, l'icone et la couleur de fond diffèrent : gris = neutre, bleu = informatif, jaune = alerte, rouge = négatif et vert = positif.",
+      "alertText": "Description du message obligatoire avec <a href=\"#\" class=\"alert-link\">un lien facultatif</a> si besoin.",
       "alertIcon": {
         "icon-name": "icon-warning"
       }
@@ -191,13 +191,13 @@
         {
           "url": "test.pdf",
           "icon-name": "icon-file-pdf",
-          "text": "Titre du document [PDF - 2 Mo]",
+          "text": "Titre du document [PDF 2 Mo]",
           "class": "document-pdf"
         },
         {
           "url": "test.pdf",
           "icon-name": "icon-file-pdf",
-          "text": "Titre du document [PDF - 2 Mo]",
+          "text": "Titre du document [PDF 2 Mo]",
           "class": "document-pdf"
         },
         {
