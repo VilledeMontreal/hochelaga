@@ -39,28 +39,54 @@
     ]
   },
   "lead": "<p>Amorce - Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi condimentum sollicitudin erat, quis convallis risus. Nullam posuere odio ligula, hendrerit suscipit ligula laoreet. Curabitur eleifend nulla purus, ut pharet urna ef id. Cras lacinia nisi id  (recommandé 300 caractères maximum).</p>",
-  "module-news": false,
-  "module-events": false,
+  "module-featured-document": {
+    "cards": {
+      "classes": false,
+      "bsgrid-classes": "col-12",
+      "card-item": [
+        {
+          "classes": "card-fw card-document",
+          "url": "https://res.cloudinary.com/villemontreal/image/upload/v1573053516/portail/gfipioiuaxit5nkyea0l.pdf",
+          "card-media" : {
+            "icon": false,
+            "img": false,
+            "document": {
+              "img": {
+                "classes": false,
+                "src": "https://res.cloudinary.com/villemontreal/image/upload/q_auto,f_auto,dpr_auto,w_200/v1/portail/gfipioiuaxit5nkyea0l.png",
+                "alt": "Alt de l'image de couverture du PDF."
+              }
+            }
+          },
+          "card-type": "Type",
+          "card-title": "Titre du document",
+          "card-text": false,
+          "card-text-interface": "PDF X Mo",
+          "card-link": "Télécharger"
+        }
+      ]
+    }
+  },
   "module-documents": {
     "listGroupClass": "list-group-lg",
     "listGroup": [
       {
         "url": "test.pdf",
         "icon-name": "icon-file-pdf",
-        "text": "Plan ou politique XYZ [PDF - 2 Mo]",
+        "text": "Plan ou politique XYZ [PDF 2 Mo]",
         "class": "document-pdf"
       },
       {
         "url": "test.pdf",
         "icon-name": "icon-file-pdf",
-        "text": "Titre du document [PDF - 2 Mo]",
+        "text": "Titre du document [PDF 2 Mo]",
         "class": "document-pdf"
       },
       {
-        "url": "test.doc",
-        "icon-name": "icon-file",
-        "text": "Titre du document",
-        "class": "document"
+        "url": "test.pdf",
+        "icon-name": "icon-file-pdf",
+        "text": "Titre du document [PDF 2 Mo]",
+        "class": "document-pdf"
       }
     ]
   },
@@ -68,7 +94,7 @@
     "listGroupClass": "list-group-lg list-group-allow-ext-icon",
     "listGroup": [
       {
-        "url": "test.pdf",
+        "url": "#",
         "text": "Lien de référence interne",
         "class": false
       },

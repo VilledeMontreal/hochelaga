@@ -27,42 +27,43 @@
     "module-emphasis": false,
     "module-blockquote": false,
     "module-cta": false,
-    "module-card-cta": {
-      "cards": {
-        "classes": false,
-        "bsgrid-classes": "col-12",
-        "card-item": [
-          {
-            "classes": "card-fw",
-            "url": "#",
-            "card-media" : {
-              "icon": false,
-              "img": false,
-              "placeholder": {
-                "icon": "icon-event"
-              }
-            },
-            "card-type": "Type d'événement",
-            "card-title": "Titre de l'événement",
-            "card-text": false,
-            "card-text-interface": {
-              "date-time": [
-                {
-                  "text": false,
-                  "dateTimeFormat": "2019-12-24",
-                  "dateTimeText": "24 décembre 2019 de 8&nbsp;h&nbsp;00 à 18&nbsp;h&nbsp;00"
+    "module-card-cta": [
+      {
+        "cards": {
+          "classes": false,
+          "bsgrid-classes": "col-12",
+          "card-item": [
+            {
+              "classes": "card-fw",
+              "url": "#",
+              "card-media" : {
+                "icon": false,
+                "img": false,
+                "placeholder": {
+                  "icon": "icon-event"
                 }
-              ]
+              },
+              "card-type": "Type d'événement",
+              "card-title": "Titre de l'événement",
+              "card-text": false,
+              "card-text-interface": {
+                "date-time": [
+                  {
+                    "text": false,
+                    "dateTimeFormat": "2019-12-24",
+                    "dateTimeText": "24 décembre 2019 de 8&nbsp;h&nbsp;00 à 18&nbsp;h&nbsp;00"
+                  }
+                ]
+              }
             }
-          }
-        ]
+          ]
+        }
       }
-    },
+    ],
     "module-image-single": false,
     "module-image-album": false,
     "module-video": false
   },
-  "sidebarRight": false,
   "module-etiquette": {
     "badges-links": [
       {
@@ -78,5 +79,6 @@
         "badgeIconClass": false
       }
     ]
-  }
+  },
+  "sidebarRight": false
 }

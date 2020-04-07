@@ -43,29 +43,108 @@
       "buttonUrl": "/",
       "buttonText": "Appel à l'action"
     },
-    "module-card-cta": {
-      "cards": {
-        "classes": "",
-        "bsgrid-classes": "col-12",
-        "card-item": [
-          {
-            "classes": "card-fw",
-            "url": "#",
-            "card-media" : {
-              "icon": false,
-              "img": {
-                "src": "https://picsum.photos/id/1074/768/432",
-                "alt": "Card full width #1 img alt."
+    "module-card-cta": [
+      {
+        "cards": {
+          "classes": false,
+          "bsgrid-classes": "col-12",
+          "card-item": [
+            {
+              "classes": "card-fw",
+              "url": "#",
+              "card-media" : {
+                "icon": false,
+                "img": false,
+                "placeholder": {
+                  "icon": "icon-event"
+                }
               },
-              "placeholder": false
-            },
-            "card-type": "Type",
-            "card-title": "Titre de la carte sans limite de caractères",
-            "card-text": "Description de la carte qui peut être sur plusieurs lignes si nécessaire"
-          }
-        ]
+              "card-type": "Type d'événement",
+              "card-title": "Titre de l'événement",
+              "card-text": false,
+              "card-text-interface": {
+                "date-time": [
+                  {
+                    "text": false,
+                    "dateTimeFormat": "2019-12-24",
+                    "dateTimeText": "24 décembre 2019 de 8&nbsp;h&nbsp;00 à 18&nbsp;h&nbsp;00"
+                  }
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "cards": {
+          "classes": false,
+          "bsgrid-classes": "col-12",
+          "card-item": [
+            {
+              "classes": "card-fw",
+              "url": "#",
+              "card-media" : {
+                "icon": false,
+                "img": false,
+                "placeholder": {
+                  "icon": "icon-service"
+                }
+              },
+              "card-type": "Type de programme",
+              "card-title": "Titre du programme",
+              "card-text": false,
+              "card-text-interface": false
+            }
+          ]
+        }
+      },
+      {
+        "cards": {
+          "classes": false,
+          "bsgrid-classes": "col-12",
+          "card-item": [
+            {
+              "classes": "card-fw",
+              "url": "#",
+              "card-media" : {
+                "icon": false,
+                "img": false,
+                "placeholder": {
+                  "icon": "icon-news"
+                }
+              },
+              "card-type": "Type d'article",
+              "card-title": "Titre de l'article",
+              "card-text": false,
+              "card-text-interface": false
+            }
+          ]
+        }
+      },
+      {
+        "cards": {
+          "classes": false,
+          "bsgrid-classes": "col-12",
+          "card-item": [
+            {
+              "classes": "card-fw",
+              "url": "#",
+              "card-media" : {
+                "icon": false,
+                "img": false,
+                "placeholder": {
+                  "icon": "icon-location-empty"
+                }
+              },
+              "card-type": "Type de lieu",
+              "card-title": "Nom du lieu",
+              "card-text": false,
+              "card-text-interface": "Adresse 1"
+            }
+          ]
+        }
       }
-    },
+    ],
     "module-image-single": {
       "media": {
         "src": "https://picsum.photos/id/1024/768/432",

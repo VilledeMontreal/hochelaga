@@ -4,12 +4,31 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](http://keepachangelog.com/en/1.0.0/)
 and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.html).
 
-## [4.8.0] - unreleased
+
+## [4.9.0] - unreleased
+
+### Added
+- TC service
+
+### Changed
+- Updated: TC article
+- Updated: TC nouvelle
+- Updated: TC programme
+- Updated: TC unité administrative
+- Components - Messages: Ajustement font-size 16/24 for text.
+
+### Removed
+- Components - Messages: Remove unnecessary class after font-size normalisation.
+
+### Fixed
+- Content-header-extras-item now get 8px spacing between each elements.
+
+
+## [4.8.0] - 2020-03-13
 
 **icon-ticket (editorial) has been renamed icon-event to prevent conflict with utility icon-ticket.**
 
-## Added
-
+### Added
 - SASS utilities: Responsive borders utilities classes.
 - Maps (Cartography) integrations examples (Evenements).
 - Sidebar: Allow for Sidebar Title classes.
@@ -22,7 +41,7 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 - Templates citoyens: Événement templates (Minimum and maximum variants).
 - Templates citoyens: Lieux templates (Minimum and maximum variants).
 
-## Changed
+### Changed
 - Changed and fixed some issues and normalisation of .list-item and .list-item-icon.
 - Remove margin-top from sidebars on mobile
 - Styles - Table: Color and margin for table caption.
@@ -30,7 +49,7 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 - Components - List Item: Allow some elements to be added inside list-item-content (links, bold, etc).
 - Components - List Group: .list-group-item-infos default and .list-group-complex font size.
 
-## Fixed
+### Fixed
 - Changed icon-ticket to icon-event to prevent 2 icons having same name (icon-ticket in utility and icon-ticket in editorial)
 - Fix padding bottom for region-content on mobile.
 - Fix Feedback form validation integration in all templates.
@@ -393,6 +412,7 @@ Main navbar, menu and footer are now in their own stylesheet. They will eventual
 The version 3 is now deprecated. Only bug fixes will be considered. Please refer to the old bitbucket repo https://bitbucket.org/villemontreal/boite-outils-web/.
 
 
+[4.8.0]: https://bitbucket.org/villemontreal/boite-outils4-web/src/4.8.0/
 [4.7.0]: https://bitbucket.org/villemontreal/boite-outils4-web/src/4.7.0/
 [4.6.0]: https://bitbucket.org/villemontreal/boite-outils4-web/src/4.6.0/
 [4.5.1]: https://bitbucket.org/villemontreal/boite-outils4-web/src/4.5.1/

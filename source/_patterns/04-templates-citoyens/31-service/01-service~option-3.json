@@ -1,0 +1,126 @@
+{
+  "navbarFixedTop": true,
+  "includeValidation": true,
+  "breadcrumbs": [
+    {
+      "url": "#",
+      "text": "Accueil"
+    },
+    {
+      "url": "#",
+      "text": "Services"
+    },
+    {
+      "url": "#",
+      "text": "Type de service"
+    }
+  ],
+  "documentHeading": false,
+  "pageClasses": false,
+  "module-state": {
+    "badgeClass": "badge-warning", 
+    "badge": "État du service"
+  },
+  "heading": "Titre du service",
+  "content-header-extras": true,
+  "updatedDate": {
+    "dateTimeText": "18 mars 2020",
+    "dateTimeFormat": "2020-03-18"
+  },
+  "linkedContent": {
+    "linkedContentItem": [
+      {
+        "url": "#",
+        "label": "Sujet"
+      },
+      {
+        "url": "#",
+        "label": "Sujet"
+      }
+    ]
+  },
+  "lead": "<p>Amorce - Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi condimentum sollicitudin erat, quis convallis risus. Nullam posuere odio ligula, hendrerit suscipit ligula laoreet. Curabitur eleifend nulla purus, ut pharet urna ef id. Cras lacinia nisi id  (recommandé 300 caractères maximum).</p>",
+  "module-message": {
+    "alertClass": "alert-warning alert-with-icon",
+    "alertTitle": "Titre du message",
+    "alertText": "Description du message.",
+    "alertIcon": {
+      "icon-name": "icon-warning"
+    }
+  },
+  "module-text": true,
+  "module-cta": false,
+  "module-list-reference": false,
+  "module-clienteles": {
+    "navtoc": {
+      "listGroupClass": false,
+      "listGroup": [
+        {
+          "icon-name": "icon-dot-bullet",
+          "url": "#service-clientele-1",
+          "text": "Clientèle 1",
+          "classLink": "js-scroll-trigger"
+        },
+        {
+          "icon-name": "icon-dot-bullet",
+          "url": "#service-clientele-2",
+          "text": "Clientèle 2",
+          "classLink": "js-scroll-trigger"
+        }
+      ]
+    },
+    "clienteles": [
+      {
+        "ID": "service-clientele-1",
+        "title": "Clientèle 1",
+        "module-text": "<p>Takimata lorem gubergren no sea voluptua, lorem erat eos dolore sit invidunt clita. Magna lorem dolor consetetur et consetetur kasd.</p>",
+        "module-list-reference": {
+          "listGroupClass": "list-group-lg",
+          "listGroup": [
+            {
+              "icon-name": false,
+              "text": "Titre du contenu référencé",
+              "class": false
+            },
+            {
+              "icon-name": false,
+              "text": "Titre du contenu référencé",
+              "class": false
+            },
+            {
+              "icon-name": false,
+              "text": "Titre du contenu référencé",
+              "class": false
+            }
+          ]
+        }
+      },
+      {
+        "ID": "service-clientele-2",
+        "title": "Clientèle 2",
+        "module-text": "<p>Takimata lorem gubergren no sea voluptua, lorem erat eos dolore sit invidunt clita. Magna lorem dolor consetetur et consetetur kasd.</p>",
+        "module-list-reference": {
+          "listGroupClass": "list-group-lg",
+          "listGroup": [
+            {
+              "icon-name": false,
+              "text": "Titre du contenu référencé",
+              "class": false
+            },
+            {
+              "icon-name": false,
+              "text": "Titre du contenu référencé",
+              "class": false
+            },
+            {
+              "icon-name": false,
+              "text": "Titre du contenu référencé",
+              "class": false
+            }
+          ]
+        }
+      }
+    ]
+  },
+  "sidebarRight": false
+}

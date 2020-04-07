@@ -21,6 +21,18 @@
   <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi condimentum sollicitudin erat, quis convallis risus.</p>
 </div>
 
+{{# module-blockquote }}
+<div class="content-module-stacked">
+  {{> patterns-blockquote }}
+</div>
+{{/ module-blockquote}}
+
+{{# module-emphasis }}
+<div class="content-module-stacked">
+  {{> patterns-emphasis }}
+</div>
+{{/ module-emphasis}}
+
 {{# module-cta }}
 <div class="content-module-stacked">
   {{> components-button}}
@@ -39,17 +51,24 @@
 </div>
 {{/ module-card-cta}}
 
-{{# module-emphasis }}
+{{# module-featured-document}}
 <div class="content-module-stacked">
-  {{> patterns-emphasis }}
+  <div class="row cards">
+    {{# cards.card-item }}
+    <div class="{{ cards.bsgrid-classes }}">
+      {{> components-card-item-full-width }}
+    </div>
+    {{/ cards.card-item }}
+  </div>
 </div>
-{{/ module-emphasis}}
+{{/ module-featured-document}}
 
-{{# module-blockquote }}
+{{# module-documents}}
+<h2>Module Titre de section (H2, H3 ou H4)</h2>
 <div class="content-module-stacked">
-  {{> patterns-blockquote }}
+  {{> components-list-item-link}}
 </div>
-{{/ module-blockquote}}
+{{/ module-documents }}
 
 {{# module-text}}
 <h2>Module Titre de section (H2, H3 ou H4)</h2>
@@ -99,6 +118,13 @@
 </div>
 {{/ module-collapse}}
 
+{{# module-table}}
+<h2>Titre tableau - module Titre (H2, H3...)</h2>
+<div class="content-module-stacked">
+  {{> styles-table }}
+</div>
+{{/ module-table}}
+
 {{# module-comparatif-colonne}}
 <h2>Comparatif Colonnes - module titre (H2)</h2>
 <div class="content-module-stacked">
@@ -137,33 +163,3 @@
 </div>
 {{/ module-explainer-img-bottom}}
 
-{{# module-table}}
-<h2>Titre tableau - module Titre (H2, H3...)</h2>
-<div class="content-module-stacked">
-  <p>Courte description optionnelle - module corps de texte</p>
-  {{> styles-table }}
-</div>
-{{/ module-table}}
-
-{{# module-featured-document}}
-<h2>Module Titre</h2>
-<div class="content-module-stacked">
-  <div class="row cards">
-    {{# cards.card-item }}
-    <div class="{{ cards.bsgrid-classes }}">
-      {{> components-card-item-full-width }}
-    </div>
-    {{/ cards.card-item }}
-  </div>
-</div>
-{{/ module-featured-document}}
-
-{{# module-events}}
-<h2>Événements à venir</h2>
-<div class="content-module-stacked">
-  {{> components-list-group-teaser}}
-  <div class="d-flex justify-content-center">
-  {{> components-button}}
-  </div>
-</div>
-{{/ module-events}}
