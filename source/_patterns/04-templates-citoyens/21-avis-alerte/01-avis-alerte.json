@@ -1,0 +1,47 @@
+{
+  "navbarFixedTop": true,
+  "includeValidation": true,
+  "breadcrumbs": [
+    {
+      "url": "#",
+      "text": "Accueil"
+    },
+    {
+      "url": "#",
+      "text": "Avis et alertes"
+    }
+  ],
+  "documentHeading": false,
+  "pageClasses": false,
+  "module-state": {
+    "badgeClass": "badge-info", 
+    "badge": "Libellé"
+  },
+  "heading": "Titre de l'avis et alerte qui peut s'afficher sur plusieurs lignes",
+  "content-header-extras": true,
+  "publicationDate": {
+    "dateTimeText": "9 avril 2020 à 18&nbsp;h&nbsp;00",
+    "dateTimeFormat": "2020-05-09T18:00:00"
+  },
+  "sidebarRight": true,
+  "module-content": {
+    "module-text": false,
+    "module-map": {
+      "heading": "Emplacement",
+      "location": {
+        "mapID": "mapLieu001",
+        "addressInfos": {
+          "uri": "#",
+          "addressTitle": "Nom du lieu",
+          "address":  "123, rue Avenue Ouest<br>Montréal (Québec) H1H 1H1"
+        },
+        "lngLat": "-73.5627778, 45.5147222"
+      }
+    }
+  },
+  "sb-block-featured-cta": {
+    "wrapperTitle": "Abonnement",
+    "description": "<p>Ipsum sea eos justo accusam sanctus est voluptua erat est, et dolores lorem sea magna.</p>",
+    "buttonText": "S'abonner"
+  }
+}
