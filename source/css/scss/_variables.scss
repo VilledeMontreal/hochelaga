@@ -827,12 +827,23 @@ $alert-dark-border-level:           7;
 $alert-dark-color-level:            5;
 
 
+// Progress bars
+
+$progress-height:                   1rem;
+$progress-height-sm:                .5rem;
+$progress-font-size:                $font-size-base;
+$progress-bg:                       $neutral-underground-2;
+$progress-border-radius:            4rem;
+$progress-box-shadow:               inset 0 .1rem .1rem rgba($black, .1);
+$progress-bar-color:                $white;
+$progress-bar-bg:                   $action;
+
 // Progress circle bars
 
-$progress-circle-border-width:          5px;
+$progress-circle-border-width:          .5rem;
 $progress-circle-border-color-default:  $neutral-underground-2;
-$progress-circle-border-color-fill:     $success;
-$progress-circle-size:                  100px;
+$progress-circle-border-color-fill:     $action;
+$progress-circle-size:                  112px;
 $progress-circle-steps:                 100; //this needs to be even.
 $progress-circle-animation-timing:      .5s;
 

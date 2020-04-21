@@ -1,0 +1,16 @@
+<div class="progress-container {{progress-class}}">
+  <div class="progress">
+    {{# progress}}
+    <div class="progress-bar {{ progressBarClass }}" role="progressbar" aria-valuenow="{{ ariaNow }}" aria-valuemin="{{ ariaMin }}" aria-valuemax="{{ ariaMax }}" style="width: {{ ariaNow }}%"></div>
+    {{/ progress}}
+  </div>
+  {{# removeProgressText }}
+  <span class="sr-only">{{ progressCompleteText }}</span>
+  {{/ removeProgressText }}
+  {{^ removeProgressText }}
+  <div class="progress-info">
+    <span class="progress-info-label">{{ progressInfoLabel }}</span>
+    <span>{{ progressInfoText }}</span>
+  </div>
+  {{/ removeProgressText }}
+</div>

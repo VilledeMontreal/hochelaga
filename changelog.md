@@ -8,10 +8,17 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 ## [4.10.0] - unreleased
 
 ### Added
-- Templates Tc Avis et alerte
+- Templates: Tc Avis et alerte
+- Components - List item: Small and medium variants.
+- Components - Progress Bar: sm, md and lg Sizes.
+- Patterns - Form: Progress Bar examples with input password.
 
 ### Changed
+- Styles - Iconography: icon-color-{icon-name} and icon-color-{icon-name}-dark variants.
+- Components - List item: handle list-item-icon-content left margin with styles instead of ml-5 class. 
+- Components - Progress Bar: Label and text. Update styles based on Design system.
 
+### Fixed
 
 
 ## [4.9.0] - 2020-04-07
