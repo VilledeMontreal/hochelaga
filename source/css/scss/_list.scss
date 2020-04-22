@@ -18,20 +18,6 @@
   margin-bottom: 0;
 }
 
-// TODO: Do we need large and small variant?
-.list-lg {
-  .list-item {
-    padding: 1rem;
-    .icon {
-      margin-right: 1rem;
-    }
-    svg {
-      margin-right: 1rem;
-    }
-  }
-}
-
-
 // Interactive list item
 //
 .list-item-action {
@@ -136,6 +122,10 @@
   font-weight: $font-weight-bold;
 }
 
+.list-item-icon-action ~ .list-item-icon-content {
+  margin-left: 2.5rem;
+}
+
 // Label is a link
 .list-item-icon-action {
   display: inherit;
@@ -163,6 +153,70 @@
         border: none;
         background-color: transparent;
       }
+    }
+  }
+}
+
+
+// Sizes handling for list-item and list-item-icon.
+// TODO: Use mixins to set sizes
+.list {
+  &.list-lg {
+    .list-item,
+    .list-item-icon {
+      @include font-size($font-size-base);
+      line-height: $line-height-md;
+    }
+  }
+
+  &.list-md {
+    .list-item,
+    .list-item-icon {
+     @include font-size($font-size-sm);
+     line-height: $line-height-sm;
+    }
+
+    // list item icon
+    .list-item-icon {
+      padding: .625rem 0;
+      // Icon and svgs handling
+      .icon {
+        @include icon-size($icon-sm);
+      }
+    }
+    .list-item-icon-action {
+      .link-has-icon {
+        line-height: $line-height-sm;
+      }
+      ~ .list-item-icon-content {
+        margin-left: 2.25rem;
+      } 
+    }
+  }
+
+  &.list-sm {
+    .list-item,
+    .list-item-icon {
+      @include font-size($font-size-xs);
+      line-height: $line-height-xs;
+    }
+
+    // list item icon
+    .list-item-icon {
+      padding: .5rem 0;
+      // Icon and svgs handling
+      .icon {
+        margin-right: .5rem;
+        @include icon-size($icon-xs);
+      }
+    }
+    .list-item-icon-action {
+      .link-has-icon {
+        line-height: $line-height-xs;
+      }
+      ~ .list-item-icon-content {
+      margin-left: 1.5rem;
+      } 
     }
   }
 }
