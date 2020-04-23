@@ -3,6 +3,40 @@
   "regionMainClasses": false,
   "regionMainContentClasses": "col-12",
   "sidebarRight": false,
+  "menuItem": [
+    {
+      "class": false,
+      "url": "#",
+      "menuItemIcon": {
+        "icon-name": "icon-layers"
+      },
+      "menuItemLabel": "Libellé"
+    },
+    {
+      "class": "active",
+      "url": "#",
+      "menuItemIcon": {
+        "icon-name": "icon-map"
+      },
+      "menuItemLabel": "Libellé long"
+    },
+    {
+      "class": false,
+      "url": "#",
+      "menuItemIcon": {
+        "icon-name": "icon-website"
+      },
+      "menuItemLabel": "Libellé très long"
+    },
+    {
+      "class": false,
+      "url": "#",
+      "menuItemIcon": {
+        "icon-name": "icon-info"
+      },
+      "menuItemLabel": "Libellé"
+    }
+  ],
   "user-authenticated": true,
   "user": {
     "name": "Uxabcd01",

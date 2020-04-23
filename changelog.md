@@ -19,6 +19,10 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 - Components - Progress Bar: Label and text. Update styles based on Design system.
 
 ### Fixed
+- Components - Navigation: Fix hover border-radius for complexe navigation.
+- Components - Nav tabs: Fix scrolling glitch on tabs < width 100%.
+- Templates interne: slide-menu height now takes slide-menu-header into account to prevent scroll behavior.
+- Templates: Fix right-margin for (PDF) automatic inclusion inside .btn component.
 
 
 ## [4.9.0] - 2020-04-07

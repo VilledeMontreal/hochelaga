@@ -330,6 +330,15 @@
     }
 
   }
+
+  .nav-menu-items {
+    height: calc(100% - 3.5rem);
+
+    @include media-breakpoint-up(lg) {
+      height: calc(100% - 4.5rem);
+    }
+  }
+
   .slide-menu-footer {
     position: absolute;
     bottom: 0;

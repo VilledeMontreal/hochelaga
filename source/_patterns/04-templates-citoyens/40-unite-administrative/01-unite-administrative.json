@@ -12,31 +12,32 @@
     }
   ],
   "heading": "Nom de l'unité administrative",
-  "content-header-extras": true,
-  "customExtras": {
-    "customExtrasItems": [
-      {
-        "customLabel": "Titre de fonction",
-        "customContent": "Prénom Nom"
-      }
-    ]
-  },
-  "linkedContent": {
-    "customLabel": "Relève de ",
-    "linkedContentItem": [
-      {
-        "url": "#",
-        "label": "Unité administrative"
-      },
-      {
-        "url": "#",
-        "label": "Instance"
-      },
-      {
-        "url": "#",
-        "label": "Collectrice"
-      }
-    ]
+  "content-header-extras": {
+    "customExtras": {
+      "customExtrasItems": [
+        {
+          "customLabel": "Titre de fonction",
+          "customContent": "Prénom Nom"
+        }
+      ]
+    },
+    "linkedContent": {
+      "customLabel": "Relève de ",
+      "linkedContentItem": [
+        {
+          "url": "#",
+          "label": "Unité administrative"
+        },
+        {
+          "url": "#",
+          "label": "Instance"
+        },
+        {
+          "url": "#",
+          "label": "Collectrice"
+        }
+      ]
+    }
   },
   "lead": "<p>Amorce - Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi condimentum sollicitudin erat, quis convallis risus. Nullam posuere odio ligula, hendrerit suscipit ligula laoreet. Curabitur eleifend nulla purus, ut pharet urna ef id. Cras lacinia nisi id  (recommandé 300 caractères maximum).</p>",
   "module-featured-document": {
