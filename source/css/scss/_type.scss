@@ -187,6 +187,13 @@ a {
       padding-left: .5rem;
       overflow: hidden;
     }
+
+    &.btn {
+      margin-right: 0;
+      &:after {
+        margin-right: 0;
+      }
+    }
   }
   // List some exclusion
   .media-gallery,
