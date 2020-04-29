@@ -27,11 +27,8 @@
     padding: 1rem 1rem 1rem 0;
     li {
       a.menu-item:not(.disabled) {
-        &.active,
-        &:active {
-          @include border-left-radius(0px);
-          @include border-right-radius($border-radius);
-        }
+        @include border-left-radius(0px);
+        @include border-right-radius($border-radius);
       }
     }
   }
@@ -69,7 +66,6 @@
   list-style: none;
   margin: 0;
   padding: 0;
-  flex: 1 0 auto;
   li {
     padding: 0;
     display: flex;
@@ -153,6 +149,7 @@
     border-right: 1px solid $neutral-stroke;
     flex-direction: column;
     height: 100%;
+    width: 256px;
     li {
       position: relative;
       &.menu-item-separator {
@@ -187,6 +184,7 @@
 
       // Defines states for links
       a.menu-item:not(.disabled) {
+        @include border-left-radius($border-radius);
         .icon {
           @include icon-color($neutral-secondary);
         }
@@ -198,7 +196,6 @@
         
         &.active,
         &:active {
-          @include border-left-radius($border-radius);
           .icon {
             @include icon-color($action);
           }
@@ -219,6 +216,7 @@
   }
 
   &.menu-items-icon-bar {
+    width: 56px;
     li {
       .menu-item {
         width: 100%;
@@ -232,6 +230,7 @@
 
       // Defines states for links
       a.menu-item:not(.disabled) {
+        @include border-radius(0px);
         .icon {
           @include icon-color($neutral-secondary);
         }
@@ -243,7 +242,6 @@
 
         &.active,
         &:active {
-          @include border-radius(0px);
           .icon {
             @include icon-color($action);
           }
@@ -347,11 +345,8 @@
       padding: 1rem 1rem 1rem 0;
       li {
         a.menu-item:not(.disabled) {
-          &.active,
-          &:active {
-            @include border-left-radius(0px);
-            @include border-right-radius($border-radius);
-          }
+          @include border-left-radius(0px);
+          @include border-right-radius($border-radius);
         }
       }
     }

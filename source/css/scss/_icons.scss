@@ -46,10 +46,18 @@ svg[role=icon] {
 
 @each $label, $map in $dialog-colors {
   $color-dark: map-get($map, dark);
-  .icon-color-#{$label} {
+  .icon-color-#{$label}-dark {
     fill: $color-dark !important;
     &:before {
       background-color: $color-dark !important;
+    }
+  }
+
+  $color-base: map-get($map, base);
+  .icon-color-#{$label} {
+    fill: $color-base !important;
+    &:before {
+      background-color: $color-base !important;
     }
   }
 }

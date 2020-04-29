@@ -5,17 +5,39 @@ The format is based on [Keep a Changelog](http://keepachangelog.com/en/1.0.0/)
 and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.html).
 
 
-## [4.9.0] - unreleased
+## [4.10.0] - unreleased
 
 ### Added
-- TC service
+- Templates: Tc Avis et alerte
+- Components - List item: Small and medium variants.
+- Components - Progress Bar: sm, md and lg Sizes.
+- Patterns - Form: Progress Bar examples with input password.
+
+### Changed
+- Styles - Iconography: icon-color-{icon-name} and icon-color-{icon-name}-dark variants.
+- Components - List item: handle list-item-icon-content left margin with styles instead of ml-5 class. 
+- Components - Progress Bar: Label and text. Update styles based on Design system.
+
+### Fixed
+- Components - Navigation: Fix hover border-radius for complexe navigation.
+- Components - Nav tabs: Fix scrolling glitch on tabs < width 100%.
+- Templates interne: slide-menu height now takes slide-menu-header into account to prevent scroll behavior.
+- Templates: Fix right-margin for (PDF) automatic inclusion inside .btn component.
+
+
+## [4.9.0] - 2020-04-07
+
+### Added
+- Templates: TC service
 
 ### Changed
 - Updated: TC article
 - Updated: TC nouvelle
 - Updated: TC programme
 - Updated: TC unité administrative
-- Components - Messages: Ajustement font-size 16/24 for text.
+- Components - Messages: Adjustement font-size 16/24 for text.
+- Components - Messages: Action buttons handling.
+- Components - Maps: Update marker and popup examples.
 
 ### Removed
 - Components - Messages: Remove unnecessary class after font-size normalisation.
@@ -412,6 +434,7 @@ Main navbar, menu and footer are now in their own stylesheet. They will eventual
 The version 3 is now deprecated. Only bug fixes will be considered. Please refer to the old bitbucket repo https://bitbucket.org/villemontreal/boite-outils-web/.
 
 
+[4.9.0]: https://bitbucket.org/villemontreal/boite-outils4-web/src/4.9.0/
 [4.8.0]: https://bitbucket.org/villemontreal/boite-outils4-web/src/4.8.0/
 [4.7.0]: https://bitbucket.org/villemontreal/boite-outils4-web/src/4.7.0/
 [4.6.0]: https://bitbucket.org/villemontreal/boite-outils4-web/src/4.6.0/

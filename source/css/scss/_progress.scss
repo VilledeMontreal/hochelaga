@@ -3,7 +3,16 @@
 .progress-info {
   display: block;
   font-weight: $font-weight-bold;
-  margin-top: 1rem;
+  color: $neutral-primary;
+  margin-top: .5rem;
+  display: flex;
+  justify-content: flex-end;
+
+  .progress-info-label {
+    font-weight: $font-weight-regular;
+    color: $neutral-secondary;
+    margin-right: auto;
+  }
 }
 
 // Progress circle
@@ -104,9 +113,6 @@
         transform: rotate(#{$degrees}deg);
         //animation: loading-#{$i} $progress-circle-animation-timing linear forwards;
       }
-      .progress-left .progress-bar {
-        //animation: 0;
-      }
     }
   }
   //animation only the right side if above 50%
@@ -144,6 +150,27 @@
       -webkit-transform: rotate($degrees);
       transform: rotate(#{$degrees}deg);
     }
+  }
+}
+
+.progress-sm {
+  @extend .font-size-xs-interface;
+  .progress {
+    height: $progress-height-sm;
+  }
+}
+
+.progress-md {
+  @extend .font-size-sm-interface;
+  .progress {
+    height: $progress-height-sm;
+  }
+}
+
+.progress-lg {
+  @extend .font-size-base-interface;
+  .progress {
+    height: $progress-height;
   }
 }
 

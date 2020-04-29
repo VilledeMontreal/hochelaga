@@ -52,7 +52,7 @@
     </a>
   </div>
   {{# hasExtraContent}}
-  <div class="list-item-icon-content ml-5 {{listExtraContentClass}}">
+  <div class="list-item-icon-content {{listExtraContentClass}}">
     {{# listExtraContent}}
     <div>
       {{# extraContentBold }}
@@ -72,7 +72,7 @@
   {{/ hasExtraContent}}
   {{/ listItemAction}}
   {{^ listItemAction}}
-  <span class="icon {{icon-name}}" aria-hidden="true"></span>
+  <span class="icon {{icon-name}}{{# icon-color}} {{icon-color}}{{/icon-color}}" aria-hidden="true"></span>
   <div class="list-item-icon-content">
     {{# listItemLabel }}
     <div class="list-item-icon-label">{{listItemLabel}}</div>

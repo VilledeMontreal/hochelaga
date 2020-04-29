@@ -7,14 +7,16 @@
     "badgeClass": "badge-warning", 
     "badge": "État - optionnel"
   },
-  "content-header-extras": true,
-  "linkedContent": {
-    "linkedContentItem": [
-      {
-        "url": "#",
-        "label": "Arrondissement (Vitrine) ou Instance"
-      }
-    ]
+  "content-header-extras": {
+    "hideExtraMetaInfos": true,
+    "linkedContent": {
+      "linkedContentItem": [
+        {
+          "url": "#",
+          "label": "Arrondissement (Vitrine) ou Instance"
+        }
+      ]
+    }
   },
   "events-extras": {
     "listClass": "pt-4 mb-lg-4",

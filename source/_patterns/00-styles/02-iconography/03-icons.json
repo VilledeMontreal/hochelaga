@@ -1,5 +1,5 @@
 {
-	"svgSize": [
+	"iconSize": [
 		{
 			"label": 		".icon-xs",
 			"classSize": 	"icon-xs",
@@ -18,9 +18,9 @@
 			"nameIcon": 	"icon-minus-circle-full",
 			"iconPath": 	"M12 23c-6.075 0-11-4.925-11-11s4.925-11 11-11c6.075 0 11 4.925 11 11s-4.925 11-11 11zM8 11c-0.552 0-1 0.448-1 1s0.448 1 1 1h8c0.552 0 1-0.448 1-1s-0.448-1-1-1h-8z"
 		}
-	],
-	"svgColor": [
-		{
+  ],
+  "iconColorPrimary": [
+    {
 			"label": 		".icon-color-primary",
 			"classColor":	"icon-color-primary",
 			"nameIcon": 	"icon-minus-circle-full",
@@ -37,7 +37,9 @@
 			"classColor":	"icon-color-primary-darker",
 			"nameIcon": 	"icon-minus-circle-full",
 			"iconPath": 	"M12 23c-6.075 0-11-4.925-11-11s4.925-11 11-11c6.075 0 11 4.925 11 11s-4.925 11-11 11zM8 11c-0.552 0-1 0.448-1 1s0.448 1 1 1h8c0.552 0 1-0.448 1-1s-0.448-1-1-1h-8z"
-		},
+		}
+  ],
+	"iconColorBase": [
 		{
 			"label": 		".icon-color-dark",
 			"classColor":	"icon-color-dark",
@@ -63,6 +65,14 @@
 			"iconPath": 	"M12 23c-6.075 0-11-4.925-11-11s4.925-11 11-11c6.075 0 11 4.925 11 11s-4.925 11-11 11zM8 11c-0.552 0-1 0.448-1 1s0.448 1 1 1h8c0.552 0 1-0.448 1-1s-0.448-1-1-1h-8z"
 		},
 		{
+			"label": 		".icon-color-light",	
+			"classColor": 	"icon-color-light bg-dark",
+			"nameIcon": 	"icon-minus-circle-full",
+			"iconPath": 	"M12 23c-6.075 0-11-4.925-11-11s4.925-11 11-11c6.075 0 11 4.925 11 11s-4.925 11-11 11zM8 11c-0.552 0-1 0.448-1 1s0.448 1 1 1h8c0.552 0 1-0.448 1-1s-0.448-1-1-1h-8z"
+		}
+  ],
+  "iconColorDialog": [
+		{
 			"label": 		".icon-color-success",
 			"classColor":	"icon-color-success",
 			"nameIcon": 	"icon-minus-circle-full",
@@ -85,12 +95,32 @@
 			"classColor":	"icon-color-danger",
 			"nameIcon": 	"icon-minus-circle-full",
 			"iconPath": 	"M12 23c-6.075 0-11-4.925-11-11s4.925-11 11-11c6.075 0 11 4.925 11 11s-4.925 11-11 11zM8 11c-0.552 0-1 0.448-1 1s0.448 1 1 1h8c0.552 0 1-0.448 1-1s-0.448-1-1-1h-8z"
+    }
+  ],
+  "iconColorDialogDark": [
+    {
+			"label": 		".icon-color-success-dark",
+			"classColor":	"icon-color-success-dark",
+			"nameIcon": 	"icon-minus-circle-full",
+			"iconPath": 	"M12 23c-6.075 0-11-4.925-11-11s4.925-11 11-11c6.075 0 11 4.925 11 11s-4.925 11-11 11zM8 11c-0.552 0-1 0.448-1 1s0.448 1 1 1h8c0.552 0 1-0.448 1-1s-0.448-1-1-1h-8z"
 		},
 		{
-			"label": 		".icon-color-light",	
-			"classColor": 	"icon-color-light bg-dark",
+			"label": 		".icon-color-info-dark",
+			"classColor":	"icon-color-info-dark",
+			"nameIcon": 	"icon-minus-circle-full",
+			"iconPath": 	"M12 23c-6.075 0-11-4.925-11-11s4.925-11 11-11c6.075 0 11 4.925 11 11s-4.925 11-11 11zM8 11c-0.552 0-1 0.448-1 1s0.448 1 1 1h8c0.552 0 1-0.448 1-1s-0.448-1-1-1h-8z"
+		},
+		{
+			"label": 		".icon-color-warning-dark",
+			"classColor":	"icon-color-warning-dark",
+			"nameIcon": 	"icon-minus-circle-full",
+			"iconPath": 	"M12 23c-6.075 0-11-4.925-11-11s4.925-11 11-11c6.075 0 11 4.925 11 11s-4.925 11-11 11zM8 11c-0.552 0-1 0.448-1 1s0.448 1 1 1h8c0.552 0 1-0.448 1-1s-0.448-1-1-1h-8z"
+		},
+		{
+			"label": 		".icon-color-danger-dark",
+			"classColor":	"icon-color-danger-dark",
 			"nameIcon": 	"icon-minus-circle-full",
 			"iconPath": 	"M12 23c-6.075 0-11-4.925-11-11s4.925-11 11-11c6.075 0 11 4.925 11 11s-4.925 11-11 11zM8 11c-0.552 0-1 0.448-1 1s0.448 1 1 1h8c0.552 0 1-0.448 1-1s-0.448-1-1-1h-8z"
 		}
-	]
+  ]
 }
