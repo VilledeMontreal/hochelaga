@@ -727,12 +727,12 @@ $chip-hover-background-color:       $highlight-light;
 
 $chip-font-weight:                  $font-weight-bold;
 $chip-border-width:                 $border-width;
-$chip-border-radius:                $border-radius;
+$chip-border-radius:                4rem;
 $chip-border-color:                 $neutral-stroke;
 $chip-padding-y:                    calc(.625rem - #{$chip-border-width});
-$chip-padding-x:                    calc(.5rem - #{$chip-border-width});
+$chip-padding-x:                    calc(1rem - #{$chip-border-width});
 $chip-padding-y-sm:                 calc(.5rem - #{$chip-border-width});
-$chip-padding-x-sm:                 calc(.5rem - #{$chip-border-width});
+$chip-padding-x-sm:                 calc(1rem - #{$chip-border-width});
 $chip-padding-y-xs:                 calc(.25rem - #{$chip-border-width});
 $chip-padding-x-xs:                 calc(.5rem - #{$chip-border-width});
 
