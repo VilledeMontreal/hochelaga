@@ -4,9 +4,10 @@
 .chip {
   color: $chip-color;
   background-color: $chip-background-color;
-  display: inline-flex;
+  display: flex;
   align-items: center;
   font-weight: $chip-font-weight;
+  justify-content: center;
   text-align: center;
   white-space: nowrap;
   vertical-align: middle;

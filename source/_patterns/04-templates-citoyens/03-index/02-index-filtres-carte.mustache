@@ -115,22 +115,20 @@
         <div class="col-12 col-lg-auto order-first order-lg-last">
           <div class="row mb-2 mb-lg-0">
             {{# navFilters}}
+            {{# mobileFilters}}
             <div class="col d-lg-none">
-              <button class="btn btn-secondary btn-squared btn-block" type="button" id="mobileFiltersModalLabel" data-toggle="modal" data-target="#{{navModalID}}">
-                <span class="btn-label">Tous les filtres</span>
-                {{# numb-filters}}
-                <span>({{ numb-filters }})</span>
-                {{/ numb-filters}}
-              </button>
+              {{> components-chip }}
             </div>
+            {{/ mobileFilters}}
             {{/ navFilters}}
             {{# toggleTypes }}
             <div class="col-auto pl-0">
             {{> components-toggle }}
             </div>
             {{/ toggleTypes}}
+            {{# mobileFilters}}
             <!-- Modal Mobile Filters -->
-            <div class="modal modal-filters fade" id="{{navFilters.navModalID}}" tabindex="-1" role="dialog" aria-labelledby="mobileFiltersModalLabel" aria-hidden="true">
+            <div class="modal modal-filters fade" id="{{modalID}}" tabindex="-1" role="dialog" aria-labelledby="mobileFiltersModalLabel" aria-hidden="true">
               <div class="modal-dialog modal-dialog-scrollable modal-dialog-centered" role="document">
                 <div class="modal-content">
                   <div class="modal-header">
@@ -228,6 +226,7 @@
               </div>
             </div>
             <!-- End Modal Mobile Filters -->
+            {{/ mobileFilters}}
           </div>
           <div class="fullwidth-border d-lg-none mb-2"></div>
         </div>
