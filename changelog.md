@@ -7,8 +7,15 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 
 ## [4.11.0] - unreleased
 
+### Added
+- Components - Badges: New .badge-max-width utility class for max-width badges to 288px.
+- Components - List-group: Add example to float badge left of teaser.
+
 ### Changed
 - Templates - Sujet: Automated list ordering.
+- Component - Badges: Badges are now auto-truncated if label is longer than the viewport or zone they reside inside.
+- Component - Badges: .badge-group is now flex-based to allow truncation and spacing uniformisation.
+
 
 ## [4.10.0] - unreleased
 

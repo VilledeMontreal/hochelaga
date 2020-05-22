@@ -15,9 +15,16 @@
   line-height: $line-height-xs;
   text-align: center;
   white-space: nowrap;
+  overflow: hidden;
   vertical-align: baseline;
   @include border-radius($badge-border-radius);
   @include transition($badge-transition);
+  @extend .text-truncate;
+
+  .badge-label {
+    display: inline-block;
+    @extend .text-truncate;
+  }
 
   @at-root a#{&} {
     @include hover-focus {
@@ -60,6 +67,10 @@
 .badge {
   .icon {
     @include icon-color($neutral-primary);
+  }
+
+  &.badge-max-width {
+    max-width: 288px;
   }
 
   &.badge-dark {
@@ -275,8 +286,13 @@
 
 // Handle badges horizontal spacing inside container
 .badge-group {
-  .badge + .badge {
-    margin-left: .25rem;
+  display: flex;
+  flex-wrap: wrap;
+  margin-top: -.25rem;
+  .badge {
+    margin-right: .5rem;
+    margin-top: .25rem;
+    margin-bottom: .25rem;
   }
 }
 
