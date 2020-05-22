@@ -8,7 +8,8 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 ## [4.11.0] - unreleased
 
 ### Added
-- Component - Badges: New .badge-max-width utility class for max-width badges to 288px.
+- Components - Badges: New .badge-max-width utility class for max-width badges to 288px.
+- Components - List-group: Add example to float badge left of teaser.
 
 ### Changed
 - Templates - Sujet: Automated list ordering.
