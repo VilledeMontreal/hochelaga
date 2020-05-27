@@ -12,9 +12,12 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 - Components - List-group: Add example to float badge left of teaser.
 
 ### Changed
-- Templates - Sujet: Automated list ordering.
 - Component - Badges: Badges are now auto-truncated if label is longer than the viewport or zone they reside inside.
-- Component - Badges: .badge-group is now flex-based to allow truncation and spacing uniformisation.
+- Component - Badges: .badge-group and badges-container is now flex-based to allow truncation and spacing uniformisation.
+- Component - List-group - Clickable wrapper: Medium is downsized to 14/24 (height 40px) - montreal.ca will switch to large.
+- Templates - Sujet: Automated list ordering.
+- Templates - Collectrices: Switch to large clickable wrapper for lists.
+- Templates - Sujets: Switch to large clickable wrapper for automated lists.
 
 
 ## [4.10.0] - unreleased
