@@ -4,17 +4,18 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](http://keepachangelog.com/en/1.0.0/)
 and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.html).
 
-
 ## [4.11.0] - unreleased
 
 ### Added
 - Components - Badges: New .badge-max-width utility class for max-width badges to 288px.
+- Components - Chips: Rounded corners and spacing tweaks.
 - Components - List-group: Add example to float badge left of teaser.
 
 ### Changed
 - Component - Badges: Badges are now auto-truncated if label is longer than the viewport or zone they reside inside.
 - Component - Badges: .badge-group and badges-container is now flex-based to allow truncation and spacing uniformisation.
 - Component - List-group - Clickable wrapper: Medium is downsized to 14/24 (height 40px) - montreal.ca will switch to large.
+- Templates - Index: Use updated chips and switch breakpoint for mobile breakout of filters.
 - Templates - Sujet: Automated list ordering.
 - Templates - Collectrices: Switch to large clickable wrapper for lists.
 - Templates - Sujets: Switch to large clickable wrapper for automated lists.
@@ -450,6 +451,7 @@ Main navbar, menu and footer are now in their own stylesheet. They will eventual
 The version 3 is now deprecated. Only bug fixes will be considered. Please refer to the old bitbucket repo https://bitbucket.org/villemontreal/boite-outils-web/.
 
 
+[4.10.0]: https://bitbucket.org/villemontreal/boite-outils4-web/src/4.10.0/
 [4.9.0]: https://bitbucket.org/villemontreal/boite-outils4-web/src/4.9.0/
 [4.8.0]: https://bitbucket.org/villemontreal/boite-outils4-web/src/4.8.0/
 [4.7.0]: https://bitbucket.org/villemontreal/boite-outils4-web/src/4.7.0/

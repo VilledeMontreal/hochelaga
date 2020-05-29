@@ -1,6 +1,7 @@
 {
   "navFilters": {
     "navModalID": "navModalFiltersAppMoreFilters",
+    "navMobileBtnLabel": "Tous les filtres (5)",
     "filters":[
       {
         "chipClass": "active",
@@ -146,7 +147,15 @@
           }
         }
       }
-    ]
+    ],
+    "moreFilters": {
+      "chipLabel": "Plus de filtres (1)",
+      "chipClass": "active",
+      "chipID": "chipMoreFiltersModal",
+      "is-dropdown": false,
+      "is-modal": true,
+      "modalId": "moreFiltersModalID"
+    }
   },
   "filtersApplied": {
     "badges":[

@@ -16,9 +16,13 @@
   @include border-radius($chip-border-radius);
   @include transition($chip-transition);
 
+  &:after,
+  .icon {
+    margin-right: -.5rem;
+  }
+
   &:after {
     background-color: $neutral-tertiary;
-    margin-right: 0;
     @include transition($chip-transition);
   }
 
@@ -76,6 +80,10 @@
   
   // Icons handling
   &:after,
+  .icon {
+    margin-right: -.5rem;
+  }
+  &:after,
   .icon::before {
     width: 1rem;
     height: 1rem;
@@ -93,17 +101,19 @@
   
   // Icons handling
   &:after,
+  .icon {
+    margin-right: -.25rem;
+    margin-left: .25rem;
+  }
+
+  &:after,
   .icon::before {
     width: 1rem;
     height: 1rem;
   }
-  &:after,
-  .icon {
-    margin-right: -.25rem;
-  }
+
   .icon {
     margin-top: -.1875rem;
     margin-bottom: -.1875rem;
-    margin-left: .5rem;
   }
 }
