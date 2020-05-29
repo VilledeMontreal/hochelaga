@@ -18,9 +18,10 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 - Templates - Sujet: Automated list ordering.
 - Templates - Collectrices: Switch to large clickable wrapper for lists.
 - Templates - Sujets: Switch to large clickable wrapper for automated lists.
+- Templates - Unités administratives: Switch to large clickable wrapper for automated lists.
 
 
-## [4.10.0] - unreleased
+## [4.10.0] - 2020-04-29
 
 ### Added
 - Templates: Tc Avis et alerte
