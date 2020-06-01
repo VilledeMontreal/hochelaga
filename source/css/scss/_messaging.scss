@@ -232,26 +232,26 @@
     background-color: $color-base;
 
     @if $label == warning {
-      color: $color-dark;
+      color: $neutral-primary;
       svg {
-        fill: $color-dark;
+        fill: $neutral-primary;
       }
       .icon {
-        @include icon-color($color-dark);
+        @include icon-color($neutral-primary);
       }
       .message-bar-container {
         a {
-          color: $warning-dark;
-          border-bottom: $link-border-width solid $warning-dark;
+          color: $neutral-primary;
+          border-bottom: $link-border-width solid $neutral-primary;
           @include hover-focus {
-            color: $warning-dark;
-            background-color: lighten($warning, 12%);
+            color: $neutral-primary;
+            background-color: lighten($color-base, 10%);
           }
         }
       }
     } 
     @else {
-      color: white;
+      color: $white;
       svg {
         fill: $white;
       }
