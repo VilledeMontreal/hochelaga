@@ -71,16 +71,12 @@
       </div>
       {{/ moreFilters}}
       <!-- END - Modal More Filters -->
+      {{# mobileFilters }}
       <div class="d-lg-none">  
-        <button class="btn btn-secondary btn-squared btn-block" type="button" id="mobileFiltersModalLabel" data-toggle="modal" data-target="#{{navModalID}}">
-          <span class="btn-label">{{navMobileBtnLabel}}</span>
-          {{# numb-filters}}
-          <span>({{ numb-filters }})</span>
-          {{/ numb-filters}}
-        </button>
+        {{> components-chip }}
       </div>
       <!-- Modal Mobile Filters -->
-      <div class="modal modal-filters fade" id="{{navFilters.navModalID}}" tabindex="-1" role="dialog" aria-labelledby="mobileFiltersModalLabel" aria-hidden="true">
+      <div class="modal modal-filters fade" id="{{modalId}}" tabindex="-1" role="dialog" aria-labelledby="mobileFiltersModalLabel" aria-hidden="true">
         <div class="modal-dialog modal-dialog-scrollable modal-dialog-centered" role="document">
           <div class="modal-content">
             <div class="modal-header">
@@ -178,6 +174,8 @@
         </div>
       </div>
       <!-- End Modal Mobile Filters -->
+      {{/ mobileFilters }}
+
 
     </div>
   </div>

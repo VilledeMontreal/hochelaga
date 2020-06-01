@@ -38,7 +38,14 @@
     ]
   },
   "navFilters": {
-    "navModalID": "navModalFiltersMapMoreFilters",
+    "mobileFilters": {
+      "chipLabel": "Tous les filtres",
+      "chipClass": "btn-block",
+      "chipID": "mobileFiltersModalLabel",
+      "is-dropdown": false,
+      "is-modal": true,
+      "modalId": "navModalFiltersMapMoreFilters"
+    },
     "filters":[
       {
         "chipLabel": "Tous les arrondissements",

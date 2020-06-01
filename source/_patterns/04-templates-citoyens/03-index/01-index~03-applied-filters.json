@@ -1,7 +1,13 @@
 {
   "navFilters": {
-    "navModalID": "navModalFiltersAppMoreFilters",
-    "navMobileBtnLabel": "Tous les filtres (5)",
+    "mobileFilters": {
+      "chipLabel": "Tous les filtres (5)",
+      "chipClass": "btn-block active",
+      "chipID": "mobileFiltersAppMoreModalLabel",
+      "is-dropdown": false,
+      "is-modal": true,
+      "modalId": "navModalFiltersAppMoreFilters"
+    },
     "filters":[
       {
         "chipClass": "active",
