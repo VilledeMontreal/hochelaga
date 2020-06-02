@@ -10,16 +10,20 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 - Components - Badges: New .badge-max-width utility class for max-width badges to 288px.
 - Components - Chips: Rounded corners and spacing tweaks.
 - Components - List-group: Add example to float badge left of teaser.
+- Templates - Lieux: Add Full width bar messaging (TC diffusion).
 
 ### Changed
-- Component - Badges: Badges are now auto-truncated if label is longer than the viewport or zone they reside inside.
-- Component - Badges: .badge-group and badges-container is now flex-based to allow truncation and spacing uniformisation.
-- Component - List-group - Clickable wrapper: Medium is downsized to 14/24 (height 40px) - montreal.ca will switch to large.
+- Components - Badges: Badges are now auto-truncated if label is longer than the viewport or zone they reside inside.
+- Components - Badges: .badge-group and badges-container is now flex-based to allow truncation and spacing uniformisation.
+- Components - List-group - Clickable wrapper: Medium is downsized to 14/24 (height 40px) - montreal.ca will switch to large.
 - Templates - Index: Use updated chips and switch breakpoint for mobile breakout of filters.
 - Templates - Sujet: Automated list ordering.
 - Templates - Collectrices: Switch to large clickable wrapper for lists.
 - Templates - Sujets: Switch to large clickable wrapper for automated lists.
 - Templates - Unités administratives: Switch to large clickable wrapper for automated lists.
+
+### Fixed
+- Components - Messaging: Full width bar Warning text and icon color is now $neutral-primary.
 
 
 ## [4.10.0] - 2020-04-29
