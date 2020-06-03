@@ -24,6 +24,7 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 
 ### Fixed
 - Components - Messaging: Full width bar Warning text and icon color is now $neutral-primary.
+- Templates - Services: Removed second .content-modules container for Volet clientèles.
 
 
 ## [4.10.0] - 2020-04-29
@@ -36,7 +37,7 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 
 ### Changed
 - Styles - Iconography: icon-color-{icon-name} and icon-color-{icon-name}-dark variants.
-- Components - List item: handle list-item-icon-content left margin with styles instead of ml-5 class. 
+- Components - List item: handle list-item-icon-content left margin with styles instead of ml-5 class.
 - Components - Progress Bar: Label and text. Update styles based on Design system.
 
 ### Fixed
@@ -77,7 +78,7 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 - Sidebar: Allow for Sidebar Title classes.
 - Iconography: position and social-flickr icons.
 - Styles - Tables: Table complex examples with inputs, badges, buttons, etc.
-- Styles - Tables: Utility class for small adaptative cell (.cell-sm). 
+- Styles - Tables: Utility class for small adaptative cell (.cell-sm).
 - Components - List Group - Content: New Small mobile content stacking.
 - Patterns - Header: Content header profile.
 - Templates citoyens: Élus template.
@@ -144,7 +145,7 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 - Icons: icon-warning becomes icon-error and a new icon-warning has been created.
 - Pattern Lab - Styles - Links: Refactoring of link inline and link element presentation with and without icon.
 - Pattern Lab - Components - Buttons: New layout for buttons (Editorial, Utility and Icons)
-- Pattern Lab - Components - Badges: Rework layout for badges. 
+- Pattern Lab - Components - Badges: Rework layout for badges.
 
 ### Fixed
 - Components - Buttons: focus and active-focus states.
@@ -264,7 +265,7 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 - Message bar now needs base class .alert.
 - Message bar dismiss option can be triggered with data-dismiss="alert" and needs .alert-dismiss class.
 - Feedback Form components update and refactoring (Simplified).
-  
+
 ### Fixed
 - Message bar mobile behavior is now coherent with alert behavior.
 - Switches states colors.
@@ -273,7 +274,7 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 ## [4.3.0] - 2019-10-29
 
 Header (main-navbar, menu and search) and footer structure and styles now reflect the final design implementation. Make sure you
-now use the latest structure before upgrading to 4.3.0. 
+now use the latest structure before upgrading to 4.3.0.
 
 ### Added
 - Added back breadcrumbs.
@@ -400,10 +401,10 @@ now use the latest structure before upgrading to 4.3.0.
 - Footer mobile behavior (dropdowns).
 - Styles > Typography > link-list-element and link-list-element-icon.
 - Utilities classes for font-size-interface - font-size and line-height handling -  variants (.font-size-lg-interface, .font-size-base-interface, .font-size-sm-interface, .font-size-xs-interface)
-- Documentation for the components; badges, buttons, cards, dropdown and collapse 
+- Documentation for the components; badges, buttons, cards, dropdown and collapse
 - Styles for buttons icon placement left or right
-- Base layout template for employes 
-- Base menu slide left for template employes 
+- Base layout template for employes
+- Base menu slide left for template employes
 - Utility class .text-preserve-space for white-space: pre usage.
 - Added a readme.md file that contains a list of improvements.
 - Added a automated script that concatenates jsons for icons to use in the BAO.
@@ -414,7 +415,7 @@ now use the latest structure before upgrading to 4.3.0.
 - .sb-block now takes 4rem margin-bottom by default.
 - Cards fw now depends on grid-class for formatting at some breakpoint.
 - Cards fw now takes a minimal height for image (~16:9 aspect ratio) @larger breakpoint.
-- Deleting employes and citizens separation in editorial icons 
+- Deleting employes and citizens separation in editorial icons
 
 ### Fixed
 - List Group line-heights, paddings and margins.
