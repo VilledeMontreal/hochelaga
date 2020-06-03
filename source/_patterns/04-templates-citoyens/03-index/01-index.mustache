@@ -6,6 +6,10 @@
 
 <main class="main-content {{ pageClasses }}" id="main-content" aria-label="Main Content" role="main">
 
+  {{# messageBar}}
+  {{> components-message-bar}}
+  {{/ messageBar}}
+
   {{# documentHeading}}
   {{> patterns-content-header}}
   {{/ documentHeading}}
@@ -72,7 +76,7 @@
       {{/ moreFilters}}
       <!-- END - Modal More Filters -->
       {{# mobileFilters }}
-      <div class="d-lg-none">  
+      <div class="d-lg-none">
         {{> components-chip }}
       </div>
       <!-- Modal Mobile Filters -->
@@ -247,7 +251,7 @@
         {{/ navSorts }}
       </div>
       {{/ headings }}
-      
+
       {{# listing}}
       <div class="row pt-2 mb-8">
         <div class="col-12">
@@ -255,13 +259,13 @@
         </div>
       </div>
       {{/ listing}}
-      
+
       {{# hasPagination }}
       <div class="pagination-wrapper">
         {{> components-pagination }}
       </div>
       {{/ hasPagination }}
-      
+
       {{/ results}}
 
       {{/ hasEmptyState }}

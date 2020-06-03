@@ -11,6 +11,7 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 - Components - Chips: Rounded corners and spacing tweaks.
 - Components - List-group: Add example to float badge left of teaser.
 - Templates - Lieux: Add Full width bar messaging (TC diffusion).
+- Templates - Index: Add Full width bar messaging example.
 
 ### Changed
 - Components - Badges: Badges are now auto-truncated if label is longer than the viewport or zone they reside inside.
