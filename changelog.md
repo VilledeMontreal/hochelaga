@@ -14,6 +14,7 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 - Components - Badges: Add .badge-notification-reversed.
 - Components - Badges: Add color variants.
 - Components - Cards: Add Card location.
+- Components - Forms: Form input file and uploaded file list examples.
 - Components - List item: Possibility to add dialog color (.text-{dialog} or .text-{dialog}-reversed) to bold element under the Label.
 - Components - List item: Add examples for list items.
 - Templates - Démarches: Add examples for phone extension integration inside list-item.
@@ -53,6 +54,7 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 - Components - Badges: New .badge-max-width utility class for max-width badges to 288px.
 - Components - Chips: Rounded corners and spacing tweaks.
 - Components - List-group: Add example to float badge left of teaser.
+- Components - Forms - File upload: New component for file-upload.
 - Templates - Lieux: Add Full width bar messaging (TC diffusion).
 - Templates - Index: Add Full width bar messaging example.
 
