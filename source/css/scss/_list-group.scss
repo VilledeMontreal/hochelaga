@@ -69,7 +69,7 @@
     &.active {
       border-color: $list-group-active-border-color;
     }
-    
+
     &:active,
     &.active {
       color: $list-group-action-active-color;
@@ -401,6 +401,7 @@
     }
 
     &:last-child {
+      padding-right: 0;
       &:after {
         content: none;
       }
