@@ -11,7 +11,7 @@
   {{/ documentHeading}}
 
   {{# navFilters }}
-  <div id="nav-filters" class="section-filters border-bottom py-2 d-none d-md-block">
+  <div id="nav-filters" class="section-filters border-bottom py-2 d-none d-lg-block">
     <div class="container">
       <ul class="nav nav-filters">
         {{# filters}}
@@ -21,12 +21,7 @@
         {{/ filters }}
         {{# moreFilters }}
         <li class="nav-item nav-item-btn">
-          <button class="btn btn-secondary btn-squared" type="button" id="moreFiltersModalLabel" data-toggle="modal" data-target="#{{modalId}}">
-            <span class="btn-label">{{ label }}</span>
-            {{# numb-filters}}
-            <span>({{ numb-filters }})</span>
-            {{/ numb-filters}}
-          </button>
+          {{> components-chip }}
         </li>
         {{/ moreFilters }}
       </ul>
@@ -79,10 +74,10 @@
   </div>
   {{/ navFilters }}
 
-  <div class="region-content pt-0 pt-md-2 pb-8">
+  <div class="region-content pt-0 pt-lg-2 pb-8">
 
     {{# filtersApplied }}
-    <div class="container d-none d-md-flex">
+    <div class="container d-none d-lg-block">
       <div class="row mb-2">
         <div class="col-12 filters-applied">
           <span class="sr-only">Filtres sélectionnés : </span>
@@ -117,27 +112,125 @@
       {{^ hasEmptyState}}
       {{# results }}
       <div class="row align-items-center">
-        <div class="col-12 col-md-auto order-first order-md-last">
-          <div class="row mb-2 mb-md-0">
+        <div class="col-12 col-lg-auto order-first order-lg-last">
+          <div class="row mb-2 mb-lg-0">
             {{# navFilters}}
-            <div class="col d-md-none">
-              <button class="btn btn-secondary btn-squared btn-block" type="button" id="mobileFiltersModalLabel" data-toggle="modal" data-target="#{{navModalID}}">
-                <span class="btn-label">Tous les filtres</span>
-                {{# numb-filters}}
-                <span>({{ numb-filters }})</span>
-                {{/ numb-filters}}
-              </button>
+            {{# mobileFilters}}
+            <div class="col d-lg-none">
+              {{> components-chip }}
             </div>
+            {{/ mobileFilters}}
             {{/ navFilters}}
             {{# toggleTypes }}
             <div class="col-auto pl-0">
             {{> components-toggle }}
             </div>
             {{/ toggleTypes}}
+            {{# mobileFilters}}
+            <!-- Modal Mobile Filters -->
+            <div class="modal modal-filters fade" id="{{modalID}}" tabindex="-1" role="dialog" aria-labelledby="mobileFiltersModalLabel" aria-hidden="true">
+              <div class="modal-dialog modal-dialog-scrollable modal-dialog-centered" role="document">
+                <div class="modal-content">
+                  <div class="modal-header">
+                    <h5 class="modal-title" id="mobileFiltersModalLabel">Filtres</h5>
+                    <button type="button" class="btn-close close" data-dismiss="modal" aria-label="Close">
+                      {{> styles-icon-item("icon-name": "icon-x")}}
+                    </button>
+                  </div>
+                  <div class="modal-body">
+                    <div id="accordion" class="accordeon-listed mb-2" role="tablist" aria-multiselectable="true">
+                      {{# filters }}
+                      <div class="collapsible-item">
+                        <div class="collapsible-header" role="tab" id="{{ heading-id }}">
+                          <div class="collapsible-title">
+                            <a data-toggle="collapse" href="#" data-target="#{{ block-id }}" aria-expanded="false" aria-controls="{{ block-id }}">
+                              <span>{{ chipLabel }}</span>
+                            </a>
+                          </div>
+                        </div>
+                        <div id="{{ block-id }}" class="collapse" role="tabpanel" aria-labelledby="{{ heading-id }}">
+                          {{# dropdownMenu.dropdownFilters}}
+                          <div class="collapsible-block">
+                            <div class="form-group">
+                              {{# radios}}
+                              <div class="custom-control custom-radio {{ class }} ">
+                                <input type="radio" id="{{ id }}" name="{{ name }}" class="custom-control-input" value="{{ id }}" {{ state }}>
+                                <label class="custom-control-label" for="{{ id }}">{{{ label }}}</label>
+                              </div>
+                              {{/ radios}}
+                              {{# checkboxes}}
+                              <div class="custom-control custom-checkbox {{ class }}">
+                                <input type="checkbox" class="custom-control-input" id="{{ id }}" value="{{ id }}" {{ state }}>
+                                <label class="custom-control-label" for="{{ id }}">{{{ label }}}</label>
+                              </div>
+                              {{/ checkboxes}}
+                            </div>
+                          </div>
+                          {{/ dropdownMenu.dropdownFilters}}
+                        </div>
+                      </div>
+                      {{/ filters }}
+                      {{# moreFilters.filters}}
+                      <div class="collapsible-item">
+                        <div class="collapsible-header" role="tab" id="{{ heading-id }}">
+                          <div class="collapsible-title">
+                            <a data-toggle="collapse" href="#" data-target="#{{ block-id }}" aria-expanded="false" aria-controls="{{ block-id }}">
+                              <span>{{ title }}</span>
+                            </a>
+                          </div>
+                        </div>
+                        <div id="{{ block-id }}" class="collapse" role="tabpanel" aria-labelledby="{{ heading-id }}">
+                          <div class="collapsible-block">
+                            <div class="form-group">
+                              {{# radios}}
+                              <div class="custom-control custom-radio {{ class }} ">
+                                <input type="radio" id="{{ idMobile }}" name="{{ name }}" class="custom-control-input" value="{{ idMobile }}" {{ state }}>
+                                <label class="custom-control-label" for="{{ idMobile }}">{{{ label }}}</label>
+                              </div>
+                              {{/ radios}}
+                              {{# checkboxes}}
+                              <div class="custom-control custom-checkbox {{ class }}">
+                                <input type="checkbox" class="custom-control-input" id="{{ idMobile }}" value="{{ idMobile }}" {{ state }}>
+                                <label class="custom-control-label" for="{{ idMobile }}">{{{ label }}}</label>
+                              </div>
+                              {{/ checkboxes}}
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      {{/ moreFilters.filters}}
+                    </div>
+
+                    {{# filtersApplied }}
+                    <div class="row mb-2">
+                      <div class="col-12 filters-applied px-4" aria-label="Filtres sélectionnés">
+                        <div class="badge-group">
+                          {{# badges}}
+                          {{> components-badge}}
+                          {{/ badges}}
+                        </div>
+                      </div>
+                    </div>
+                    {{/ filtersApplied }}
+
+                  </div>
+                  <div class="modal-footer">
+                    <div class="ml-auto">
+                      <button type="button" class="btn btn-link btn-squared">Tout effacer</button>
+                    </div>
+                    <div>
+                      <button type="button" class="btn btn-primary btn-squared">Appliquer</button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- End Modal Mobile Filters -->
+            {{/ mobileFilters}}
           </div>
-          <div class="fullwidth-border d-md-none mb-2"></div>
+          <div class="fullwidth-border d-lg-none mb-2"></div>
         </div>
-        <div class="col order-md-first">
+        <div class="col order-lg-first">
           {{# headings }}
           <div class="row align-items-center">
             <div class="col-auto">

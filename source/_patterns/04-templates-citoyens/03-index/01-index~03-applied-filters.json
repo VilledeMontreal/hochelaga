@@ -1,6 +1,13 @@
 {
   "navFilters": {
-    "navModalID": "navModalFiltersAppMoreFilters",
+    "mobileFilters": {
+      "chipLabel": "Tous les filtres (5)",
+      "chipClass": "btn-block active",
+      "chipID": "mobileFiltersAppMoreModalLabel",
+      "is-dropdown": false,
+      "is-modal": true,
+      "modalId": "navModalFiltersAppMoreFilters"
+    },
     "filters":[
       {
         "chipClass": "active",
@@ -28,7 +35,7 @@
                 "id": "chckboxfilter-3",
                 "idMobile": "chckboxfilter-3-sm",
                 "label": "Côte-des-Neiges–Notre-Dame-de-Grâce",
-                "state": false
+                "state": "checked"
               },
               {
                 "class": "",
@@ -42,7 +49,7 @@
                 "id": "chckboxfilter-5",
                 "idMobile": "chckboxfilter-5-sm",
                 "label": "Lachine",
-                "state": "checked"
+                "state": false
               },
               {
                 "class": "",
@@ -146,7 +153,15 @@
           }
         }
       }
-    ]
+    ],
+    "moreFilters": {
+      "chipLabel": "Plus de filtres (1)",
+      "chipClass": "active",
+      "chipID": "chipMoreFiltersModal",
+      "is-dropdown": false,
+      "is-modal": true,
+      "modalId": "moreFiltersModalID"
+    }
   },
   "filtersApplied": {
     "badges":[
@@ -163,7 +178,7 @@
         "badgeIconClass": "icon-x"
       },
       {
-        "badge": "Lachine",
+        "badge": "Côte-des-Neiges–Notre-Dame-de-Grâce",
         "badgeClass": "badge-secondary badge-icon-right badge-dismiss",
         "badgeUrl": "#",
         "badgeIconClass": "icon-x"
@@ -176,6 +191,12 @@
       },
       {
         "badge": "Ville-Marie",
+        "badgeClass": "badge-secondary badge-icon-right badge-dismiss",
+        "badgeUrl": "#",
+        "badgeIconClass": "icon-x"
+      },
+      {
+        "badge": "Ingénieur, arpenteur-géomètre, chimiste et vétérinaire - Scientifique",
         "badgeClass": "badge-secondary badge-icon-right badge-dismiss",
         "badgeUrl": "#",
         "badgeIconClass": "icon-x"

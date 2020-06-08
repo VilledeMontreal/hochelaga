@@ -278,14 +278,17 @@
           "type": "Service",
           "title": "Titre de la page service",
           "infos": {
+            "extra-wrapper": true,
             "badge": {
+              "class": "float-left",
               "badge": "État",
               "badgeClass": "badge-warning-light",
               "badgeUrl": false
             },
             "infos-items": [
               {
-                "text": "Duo dolor vero diam takimata diam sed tempor, diam sed labore dolor."
+                "class": "d-block",
+                "text": "Duo dolor vero diam takimata diam sed tempor, diam sed labore dolor. Duo dolor vero diam takimata diam sed tempor, diam sed labore dolor."
               }
             ]
           }

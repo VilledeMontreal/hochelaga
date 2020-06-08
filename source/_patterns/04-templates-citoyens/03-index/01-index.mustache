@@ -6,6 +6,10 @@
 
 <main class="main-content {{ pageClasses }}" id="main-content" aria-label="Main Content" role="main">
 
+  {{# messageBar}}
+  {{> components-message-bar}}
+  {{/ messageBar}}
+
   {{# documentHeading}}
   {{> patterns-content-header}}
   {{/ documentHeading}}
@@ -13,7 +17,7 @@
   {{# navFilters }}
   <div id="nav-filters" class="section-filters border-bottom py-2">
     <div class="container">
-      <div class="d-none d-md-block">
+      <div class="d-none d-lg-block">
         <ul class="nav nav-filters">
           {{# filters}}
           <li class="nav-item {{ dropdownClass }}">
@@ -22,12 +26,7 @@
           {{/ filters }}
           {{# moreFilters }}
           <li class="nav-item nav-item-btn">
-            <button class="btn btn-secondary btn-squared" type="button" id="moreFiltersModalLabel" data-toggle="modal" data-target="#{{modalId}}">
-              <span class="btn-label">{{ label }}</span>
-              {{# numb-filters}}
-              <span>({{ numb-filters }})</span>
-              {{/ numb-filters}}
-            </button>
+            {{> components-chip }}
           </li>
           {{/ moreFilters }}
         </ul>
@@ -76,16 +75,12 @@
       </div>
       {{/ moreFilters}}
       <!-- END - Modal More Filters -->
-      <div class="d-md-none">  
-        <button class="btn btn-secondary btn-squared btn-block" type="button" id="mobileFiltersModalLabel" data-toggle="modal" data-target="#{{navModalID}}">
-          <span class="btn-label">Tous les filtres</span>
-          {{# numb-filters}}
-          <span>({{ numb-filters }})</span>
-          {{/ numb-filters}}
-        </button>
+      {{# mobileFilters }}
+      <div class="d-lg-none">
+        {{> components-chip }}
       </div>
       <!-- Modal Mobile Filters -->
-      <div class="modal modal-filters fade" id="{{navFilters.navModalID}}" tabindex="-1" role="dialog" aria-labelledby="mobileFiltersModalLabel" aria-hidden="true">
+      <div class="modal modal-filters fade" id="{{modalId}}" tabindex="-1" role="dialog" aria-labelledby="mobileFiltersModalLabel" aria-hidden="true">
         <div class="modal-dialog modal-dialog-scrollable modal-dialog-centered" role="document">
           <div class="modal-content">
             <div class="modal-header">
@@ -183,6 +178,8 @@
         </div>
       </div>
       <!-- End Modal Mobile Filters -->
+      {{/ mobileFilters }}
+
 
     </div>
   </div>
@@ -190,7 +187,7 @@
 
   <div class="region-content pt-2 pb-8">
     {{# filtersApplied }}
-    <div class="container d-none d-md-flex">
+    <div class="container d-none d-lg-block">
       <div class="row mb-2">
         <div class="col-12 filters-applied" aria-label="Filtres sélectionnés">
           <div class="badge-group">
@@ -254,7 +251,7 @@
         {{/ navSorts }}
       </div>
       {{/ headings }}
-      
+
       {{# listing}}
       <div class="row pt-2 mb-8">
         <div class="col-12">
@@ -262,13 +259,13 @@
         </div>
       </div>
       {{/ listing}}
-      
+
       {{# hasPagination }}
       <div class="pagination-wrapper">
         {{> components-pagination }}
       </div>
       {{/ hasPagination }}
-      
+
       {{/ results}}
 
       {{/ hasEmptyState }}

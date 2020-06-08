@@ -23,14 +23,14 @@ gulp.task('icon-utility', function() {
   .pipe(svgmin({
       plugins: [
         { cleanupAttrs: { newlines: false, trim: false, spaces: false } },
-        { cleanupIDs: { remove: true, minify: true } }, 
+        { cleanupIDs: { remove: false, minify: false } }, 
         { removeXMLNS: false },
         { removeDoctype: true },
         { removeComments: true },
         { removeStyleElement: true },
         { removeEditorsNSData: true },
         { removeViewBox: false },
-        { removeTitle: false },
+        { removeTitle: true },
         { cleanupNumericValues: { floatPrecision: 2  } },
         { addAttributesToSVGElement: { attributes: ['role="icon"'] } },
         { removeDimensions: true },

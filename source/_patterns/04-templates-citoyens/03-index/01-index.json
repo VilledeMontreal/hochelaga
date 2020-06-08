@@ -38,7 +38,14 @@
     ]
   },
   "navFilters": {
-    "navModalID": "navModalFiltersMoreFilters",
+    "mobileFilters": {
+      "chipLabel": "Tous les filtres",
+      "chipClass": "btn-block",
+      "chipID": "mobileFiltersModalLabel",
+      "is-dropdown": false,
+      "is-modal": true,
+      "modalId": "navModalFiltersMoreFilters"
+    },
     "filters":[
       {
         "chipLabel": "Tous les arrondissements",
@@ -254,9 +261,12 @@
       }
     ],
     "moreFilters": {
+      "chipLabel": "Plus de filtres",
+      "chipClass": false,
+      "chipID": "chipMoreFiltersModal",
+      "is-dropdown": false,
+      "is-modal": true,
       "modalId": "moreFiltersModalID",
-      "label": "Plus de filtres",
-      "numb-filters": null,
       "filters": [
         {
           "title": "Filtre supplémentaire #1",

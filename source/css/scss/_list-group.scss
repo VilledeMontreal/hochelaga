@@ -4,8 +4,6 @@
 .list-group {
   display: flex;
   flex-direction: column;
-
-  // No need to set list-style: none; since .list-group-item is block level
   padding-left: 0; // reset padding because ul and ol
   margin-bottom: 0;
 
@@ -13,6 +11,14 @@
     list-style: none;
   }
 
+  .list-group-item {
+    @include font-size($font-size-sm);
+    line-height: $line-height-md;
+  }
+  .list-group-item-content {
+    display: inline-flex;
+    flex-wrap: wrap;
+  }
   .list-group-item-title {
     font-weight: $font-weight-bold;
   }
@@ -37,6 +43,8 @@
 .list-group-lg {
   .list-group-item {
     padding: 1rem;
+    @include font-size($font-size-base);
+    line-height: $line-height-md;
     .icon {
       margin-right: 1rem;
     }
@@ -61,7 +69,7 @@
     &.active {
       border-color: $list-group-active-border-color;
     }
-    
+
     &:active,
     &.active {
       color: $list-group-action-active-color;
@@ -94,6 +102,12 @@
   a[href*="//"]:not([href*="montreal.ca"]):not([href*="ville.montreal.qc.ca"]):not([href$=".pdf"]):not(.link-has-icon):not(.btn) {
     .list-group-item-label {
       @extend .is-external-link;
+      margin-right: 0;
+      &:after {
+        vertical-align: -.4375rem;
+        margin-top: -.25rem;
+        margin-bottom: -.25rem;
+      }
     }
   }
 }
@@ -171,7 +185,6 @@
   a {
     border-bottom: none;
     &:hover {
-      //border-top: 1px solid transparent;
       .list-group-item-title {
         color: $action;
       }
@@ -373,8 +386,7 @@
     @include font-size($font-size-base);
     line-height: $line-height-md;
     position: relative;
-    padding-right: 1.5rem;
-    margin-right: -.25rem;
+    padding-right: 2rem;
     &:after {
       content: "";
       -webkit-mask: url($data-icon-dot-interpunct) no-repeat 50% 50%;
@@ -385,9 +397,11 @@
       width: $icon-md;
       height: $icon-md;
       position: absolute;
+      margin: 0 .25rem;
     }
 
     &:last-child {
+      padding-right: 0;
       &:after {
         content: none;
       }
@@ -485,7 +499,13 @@
   // Smaller font-size for list-group-complex
   .list-group-item-infos {
     @include font-size($font-size-sm);
-    line-height: $line-height-sm;
+    line-height: $line-height-xs;
+    padding-right: 1.5rem;
+    &:after {
+      width: $icon-xs;
+      height: $icon-xs;
+      margin: 0 .25rem;
+    }
   }
 
   .list-group-item {

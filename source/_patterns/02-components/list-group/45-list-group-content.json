@@ -45,9 +45,16 @@
       "type": "Type de contenu",
       "title": "Consetetur eirmod et aliquyam",
       "infos": {
-        "badge": false,
+        "extra-wrapper": true,
+        "badge": {
+          "class": "float-left",
+          "badge": "État",
+          "badgeClass": "badge-danger-light",
+          "badgeUrl": false
+        },
         "infos-items": [
           {
+            "class": "d-block",
             "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin accumsan finibus dui ac pretium. Cras consequat pharetra tellus, eget eleifend elit posuere ac."
           }
         ]
