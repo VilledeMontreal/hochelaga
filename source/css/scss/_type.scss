@@ -173,12 +173,7 @@ a {
 .sb-block,
 .region-content,
 .lead {
-  a[href*="//"]
-  :not([href*="montreal.ca"])
-  :not([href*="ville.montreal.qc.ca"])
-  :not([href$=".pdf"])
-  :not(.link-has-icon)
-  :not(.btn) {
+  a[href*="//"]:not([href*="montreal.ca"]):not([href*="ville.montreal.qc.ca"]):not([href$=".pdf"]):not(.link-has-icon):not(.btn) {
     @extend .is-external-link;
   }
 
@@ -210,13 +205,7 @@ a {
   .list-icon,
   .list-group-hub {
     // Don't show external link icon
-    a[href*="//"]
-    :not([href*="montreal.ca"])
-    :not([href*="ville.montreal.qc.ca"])
-    :not([href$=".pdf"])
-    :not(.list-group-item-action)
-    :not(.link-has-icon)
-    :not(.btn) {
+    a[href*="//"]:not([href*="montreal.ca"]):not([href*="ville.montreal.qc.ca"]):not([href$=".pdf"]):not(.list-group-item-action):not(.link-has-icon):not(.btn) {
       margin-right: 0;
       &:after {
         content: none;
@@ -246,7 +235,7 @@ a {
 .elided-text {
   max-width: 100%;
   display: inline-block;
-  white-space: nowrap; 
+  white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
 }
