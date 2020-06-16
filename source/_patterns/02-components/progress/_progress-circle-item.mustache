@@ -1,0 +1,16 @@
+<div class="progress-container">
+  {{# progress}}
+  <div class="progress-circle {{ progressClass }}" role="progessbar" aria-valuenow="{{ ariaNow }}" aria-valuemin="{{ ariaMin }}" aria-valuemax="{{ ariaMax }}" data-percentage="{{ ariaNow }}">
+    <div class="progress-left">
+      <span class="progress-bar"></span>
+    </div>
+    <div class="progress-right">
+      <span class="progress-bar"></span>
+    </div>
+    <div class="progress-value">{{ ariaNow }}%</div>
+  </div>
+  {{/ progress }}
+  <div class="progress-info">
+    <span class="progress-info-label">{{ progressInfoLabel }}</span>
+  </div>
+</div>

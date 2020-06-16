@@ -21,6 +21,8 @@
 //         Find a way to fix value over 100%
 
 .progress-circle {
+  @include font-size($font-size-base);
+  line-height: $line-height-lg;
   width: $progress-circle-size;
   height: $progress-circle-size;
   line-height: $progress-circle-size;
@@ -82,19 +84,31 @@
     }
   }
   .progress-value {
-    display: flex;
     border-radius: 50%;
+    color: $neutral-primary;
+    font-weight: $font-weight-bold;
+    height: 100%;
     text-align: center;
-    line-height: $line-height-sm;
+    display: flex;
     align-items: center;
     justify-content: center;
-    height: 100%;
+  }
+
+  ~ .progress-info {
+    @include font-size($font-size-base);
+    line-height: $line-height-md;
+    margin-top: 1rem;
+    .progress-info-label {
+      margin-right: auto;
+      margin-left: auto;
+
+    }
   }
 }
 
 /**
- * This for loop creates the necessary css animation names 
- * Due to the split circle of progress-left and progress right, we must use the animations on each side. 
+ * This for loop creates the necessary css animation names
+ * Due to the split circle of progress-left and progress right, we must use the animations on each side.
  */
 
 @for $i from 1 through $progress-circle-steps {
@@ -180,11 +194,15 @@
 @each $label, $map in $dialog-colors {
   $color: map-get($map, base);
   .progress-bar {
-    &.progress-#{$label} {
-      @include progress-variant($color);
-    }
     &.bg-#{$label} {
       background-color: $color !important;
+    }
+  }
+
+  .progress-circle {
+    &.bg-#{$label} {
+      background-color: transparent !important;
+      @include progress-variant($color);
     }
   }
 }

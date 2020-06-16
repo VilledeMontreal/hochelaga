@@ -12,12 +12,14 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 - Iconography - Editorial: icon-success and icon-empty added to vdm-icon-system
 
 ### Changed
-- Iconography: icon-plus was modified.
 - Print: Hide elements in the print stylesheet (navbar, breadcrumb, feedback section, footer).
+- Iconography: icon-plus was modified.
+- Components - Progress - Circle: Now conform to Design system. Used .bg-{color} for dialog color variation.
 
 ## Removed
 - Iconography - Editorial: icon-not-found was removed from the vdm-icon-system project.
 - Iconography - Utilitary: icon-loction was removed. This was an artefact from a wrong file-name. Should use icon-location instead.
+- Components - Progress: .progress-{dialog-color} remove (unused and undocumented). Caused conflict with progress-info text wrapper.
 
 
 ## [4.11.1] - 2020-06-12
