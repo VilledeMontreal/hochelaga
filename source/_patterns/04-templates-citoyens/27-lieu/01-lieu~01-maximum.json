@@ -33,10 +33,11 @@
         "icon-name": "icon-location",
         "listItemAction": false,
         "listItemLabel": "Adresse",
-        "listExtraContent": [
+        "listItemContent": [
           {
-            "extraContentBold": false,
-            "extraContent": "123, rue Avenue Ouest<br>Montréal (Québec) H1H 1H1"
+            "extraContent": {
+              "content": "123, rue Avenue Ouest<br>Montréal (Québec) H1H 1H1"
+            }
           },
           {
             "extraContentAction": {
@@ -53,9 +54,10 @@
         "icon-name": "icon-phone",
         "listItemAction": false,
         "listItemLabel": "Téléphone",
-        "listExtraContent": {
-          "extraContentBold": false,
-          "extraContent": "514 555-5555"
+        "listItemContent": {
+          "extraContent": {
+            "content": "514 555-5555"
+          }
         }
       }
     ]
@@ -72,9 +74,8 @@
           "icon-name": "icon-dot-bullet",
           "listItemAction": false,
           "listItemLabel": false,
-          "hasExtraContent": true,
-          "listExtraContent": {
-            "extraContent": "Ipsum est sed magna kasd sed"
+          "listItemContent": {
+            "itemContent": "Ipsum est sed magna kasd sed"
           }
         },
         {
@@ -82,9 +83,8 @@
           "icon-name": "icon-dot-bullet",
           "listItemAction": false,
           "listItemLabel": false,
-          "hasExtraContent": true,
-          "listExtraContent": {
-            "extraContent": "Ipsum est sed magna kasd sed"
+          "listItemContent": {
+            "itemContent":  "Ipsum est sed magna kasd sed"
           }
         },
         {
@@ -92,9 +92,8 @@
           "icon-name": "icon-dot-bullet",
           "listItemAction": false,
           "listItemLabel": false,
-          "hasExtraContent": true,
-          "listExtraContent": {
-            "extraContent": "Tempor sea dolores no magna dolore"
+          "listItemContent": {
+            "itemContent":  "Tempor sea dolores no magna dolore"
           }
         },
         {
@@ -102,9 +101,8 @@
           "icon-name": "icon-dot-bullet",
           "listItemAction": false,
           "listItemLabel": false,
-          "hasExtraContent": true,
-          "listExtraContent": {
-            "extraContent": "Takimata no sea lorem"
+          "listItemContent": {
+            "itemContent": "Takimata no sea lorem"
           }
         },
         {
@@ -112,9 +110,8 @@
           "icon-name": "icon-dot-bullet",
           "listItemAction": false,
           "listItemLabel": false,
-          "hasExtraContent": true,
-          "listExtraContent": {
-            "extraContent": "Diam et"
+          "listItemContent": {
+            "itemContent": "Diam et"
           }
         },
         {
@@ -122,9 +119,8 @@
           "icon-name": "icon-dot-bullet",
           "listItemAction": false,
           "listItemLabel": false,
-          "hasExtraContent": true,
-          "listExtraContent": {
-            "extraContent": "Et magna gubergren amet"
+          "listItemContent": {
+            "itemContent": "Et magna gubergren amet"
           }
         },
         {
@@ -132,9 +128,8 @@
           "icon-name": "icon-dot-bullet",
           "listItemAction": false,
           "listItemLabel": false,
-          "hasExtraContent": true,
-          "listExtraContent": {
-            "extraContent": "Sit sed amet"
+          "listItemContent": {
+            "itemContent": "Sit sed amet"
           }
         }
       ]
@@ -152,9 +147,8 @@
               "icon-name": "icon-dot-bullet",
               "listItemAction": false,
               "listItemLabel": false,
-              "hasExtraContent": true,
-              "listExtraContent": {
-                "extraContent": "Duo at elitr stet"
+              "listItemContent": {
+                "itemContent": "Duo at elitr stet"
               }
             },
             {
@@ -162,9 +156,8 @@
               "icon-name": "icon-dot-bullet",
               "listItemAction": false,
               "listItemLabel": false,
-              "hasExtraContent": true,
-              "listExtraContent": {
-                "extraContent": "Rebum vero eirmod amet"
+              "listItemContent": {
+                "itemContent": "Rebum vero eirmod amet"
               }
             },
             {
@@ -172,9 +165,8 @@
               "icon-name": "icon-dot-bullet",
               "listItemAction": false,
               "listItemLabel": false,
-              "hasExtraContent": true,
-              "listExtraContent": {
-                "extraContent": "At rebum est"
+              "listItemContent": {
+                "itemContent": "At rebum est"
               }
             },
             {
@@ -182,9 +174,8 @@
               "icon-name": "icon-dot-bullet",
               "listItemAction": false,
               "listItemLabel": false,
-              "hasExtraContent": true,
-              "listExtraContent": {
-                "extraContent": "Nonumy dolor et ipsum aliquyam"
+              "listItemContent": {
+                "itemContent": "Nonumy dolor et ipsum aliquyam"
               }
             }
           ]
@@ -199,9 +190,8 @@
               "icon-name": "icon-dot-bullet",
               "listItemAction": false,
               "listItemLabel": false,
-              "hasExtraContent": true,
-              "listExtraContent": {
-                "extraContent": "No tempor tempor"
+              "listItemContent": {
+                "itemContent": "No tempor tempor"
               }
             },
             {
@@ -209,9 +199,8 @@
               "icon-name": "icon-dot-bullet",
               "listItemAction": false,
               "listItemLabel": false,
-              "hasExtraContent": true,
-              "listExtraContent": {
-                "extraContent": "Et ipsum clita dolores et"
+              "listItemContent": {
+                "itemContent": "Et ipsum clita dolores et"
               }
             }
           ]
@@ -226,9 +215,8 @@
               "icon-name": "icon-dot-bullet",
               "listItemAction": false,
               "listItemLabel": false,
-              "hasExtraContent": true,
-              "listExtraContent": {
-                "extraContent": "Et dolor sanctus"
+              "listItemContent": {
+                "itemContent": "Et dolor sanctus"
               }
             }
           ]
@@ -243,9 +231,8 @@
           "icon-name": "icon-dot-bullet",
           "listItemAction": false,
           "listItemLabel": false,
-          "hasExtraContent": true,
-          "listExtraContent": {
-            "extraContent": "Sed lorem sadipscing sea"
+          "listItemContent": {
+            "itemContent": "Sed lorem sadipscing sea"
           }
         },
         {
@@ -253,9 +240,8 @@
           "icon-name": "icon-dot-bullet",
           "listItemAction": false,
           "listItemLabel": false,
-          "hasExtraContent": true,
-          "listExtraContent": {
-            "extraContent": "Sed dolor tempor diam"
+          "listItemContent": {
+            "itemContent": "Sed dolor tempor diam"
           }
         }
       ]
@@ -268,9 +254,8 @@
           "icon-name": "icon-dot-bullet",
           "listItemAction": false,
           "listItemLabel": false,
-          "hasExtraContent": true,
-          "listExtraContent": {
-            "extraContent": "Argent comptant"
+          "listItemContent": {
+            "itemContent": "Argent comptant"
           }
         },
         {
@@ -278,9 +263,8 @@
           "icon-name": "icon-dot-bullet",
           "listItemAction": false,
           "listItemLabel": false,
-          "hasExtraContent": true,
-          "listExtraContent": {
-            "extraContent": "Cartes de crédit"
+          "listItemContent": {
+            "itemContent": "Cartes de crédit"
           }
         }
       ]
@@ -405,9 +389,10 @@
         "icon-name": "icon-clock",
         "listItemAction": false,
         "listItemLabel": "Horaire",
-        "hasExtraContent": true,
-        "listExtraContent": {
-          "extraContent": "du 15 décembre 2019 au 15 mars 2020"
+        "listItemContent": {
+          "extraContent": {
+            "content": "du 15 décembre 2019 au 15 mars 2020"
+          }
         },
         "extraContentSchedule": {
           "schedule" : [
@@ -503,9 +488,10 @@
           "icon-name": "icon-clock",
           "listItemAction": false,
           "listItemLabel": "Horaire #2",
-          "hasExtraContent": true,
-          "listExtraContent": {
-            "extraContent": "du 15 mars 2020 au 15 mars 2030"
+          "listItemContent": {
+            "extraContent": {
+              "content": "du 15 mars 2020 au 15 mars 2030"
+            }
           },
           "extraContentSchedule": {
             "schedule" : [

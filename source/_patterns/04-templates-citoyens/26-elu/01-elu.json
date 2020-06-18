@@ -23,26 +23,32 @@
           "icon-name": "icon-dot-bullet",
           "listItemAction": false,
           "listItemLabel": "Role de fonction",
-          "listExtraContent": {
-            "extraContentAction": {
-              "url": "#",
-              "text": "Conseil, comité ou commission"
+          "listItemContent": [
+            {
+              "extraContentAction": {
+                "url": "#",
+                "text": "Conseil, comité ou commission"
+              }
             },
-            "extraContentBold": false,
-            "extraContent": "Stet diam amet duo diam dolor, nonumy dolore lorem clita voluptua, amet consetetur kasd dolore."
-          }
+            {
+              "extraContent": [
+                {
+                  "content": "Stet diam amet duo diam dolor, nonumy dolore lorem clita voluptua, amet consetetur kasd dolore."
+                }
+              ]
+            }
+          ]
         },
         {
           "hasIcon": true,
           "icon-name": "icon-dot-bullet",
           "listItemAction": false,
           "listItemLabel": "Role de fonction",
-          "listExtraContent": {
+          "listItemContent": {
             "extraContentAction": {
               "url": "#",
               "text": "Conseil, comité ou commission"
             },
-            "extraContentBold": false,
             "extraContent": false
           }
         },
@@ -51,12 +57,11 @@
           "icon-name": "icon-dot-bullet",
           "listItemAction": false,
           "listItemLabel": "Role de fonction",
-          "listExtraContent": {
+          "listItemContent": {
             "extraContentAction": {
               "url": "#",
               "text": "Conseil, comité ou commission"
             },
-            "extraContentBold": false,
             "extraContent": false
           }
         }
@@ -70,9 +75,8 @@
           "icon-name": "icon-dot-bullet",
           "listItemAction": false,
           "listItemLabel": false,
-          "listExtraContent": {
-            "extraContentBold": false,
-            "extraContent": "Ea tempor stet vero stet diam. Et ipsum diam ipsum."
+          "listItemContent": {
+            "itemContent": "Ea tempor stet vero stet diam. Et ipsum diam ipsum."
           }
         },
         {
@@ -80,9 +84,8 @@
           "icon-name": "icon-dot-bullet",
           "listItemAction": false,
           "listItemLabel": false,
-          "listExtraContent": {
-            "extraContentBold": false,
-            "extraContent": "Ea tempor stet vero stet diam. Et ipsum diam ipsum."
+          "listItemContent": {
+            "itemContent": "Ea tempor stet vero stet diam. Et ipsum diam ipsum."
           }
         },
         {
@@ -90,9 +93,8 @@
           "icon-name": "icon-dot-bullet",
           "listItemAction": false,
           "listItemLabel": false,
-          "listExtraContent": {
-            "extraContentBold": false,
-            "extraContent": "Ea tempor stet vero stet diam. Et ipsum diam ipsum."
+          "listItemContent": {
+            "itemContent": "Ea tempor stet vero stet diam. Et ipsum diam ipsum."
           }
         }
       ]
@@ -110,9 +112,16 @@
             "icon-name": "icon-location",
             "listItemAction": false,
             "listItemLabel": "Nom du lieu",
-            "listExtraContent": {
-              "extraContentBold": "Bureau administratif (optionnel)",
-              "extraContent" :"1441, rue Saint-Urbain<br>4e étage<br>Montréal (Québec) H2X 2M6"
+            "listItemContent": {
+              "extraContent": [
+                {
+                  "class": "font-weight-bold",
+                  "content": "Bureau administratif (optionnel)"
+                },
+                {
+                  "content": "1441, rue Saint-Urbain<br>4e étage<br>Montréal (Québec) H2X 2M6"
+                }
+              ]
             }
           },
           {
@@ -137,8 +146,12 @@
             "icon-name": "icon-location",
             "listItemAction": false,
             "listItemLabel": "Nom du lieu",
-            "listExtraContent": {
-              "extraContent": "1441, rue Saint-Urbain<br>4e étage<br>Montréal (Québec) H2X 2M6"
+            "listItemContent": {
+              "extraContent": [
+                {
+                  "content": "1441, rue Saint-Urbain<br>4e étage<br>Montréal (Québec) H2X 2M6"
+                }
+              ]
             }
           },
           {

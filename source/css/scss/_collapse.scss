@@ -38,11 +38,11 @@
         top: 50%;
         transform: translateY(-50%);
         content: '';
-        -webkit-mask: url($data-icon-plus-circle) no-repeat 50% 50%;
-        mask: url($data-icon-plus-circle) no-repeat 50% 50%;
+        -webkit-mask: url($data-icon-plus) no-repeat 50% 50%;
+        mask: url($data-icon-plus) no-repeat 50% 50%;
          -webkit-mask-size: cover;
         mask-size: cover;
-        background-color: $primary;
+        background-color: $neutral-primary;
         width: 24px;
         height: 24px;
       }
@@ -51,8 +51,8 @@
         color: $primary;
         &:after {
           content: '';
-          -webkit-mask: url($data-icon-minus-circle) no-repeat 50% 50%;
-          mask: url($data-icon-minus-circle) no-repeat 50% 50%;
+          -webkit-mask: url($data-icon-minus) no-repeat 50% 50%;
+          mask: url($data-icon-minus) no-repeat 50% 50%;
           -webkit-mask-size: cover;
           mask-size: cover;
           background-color: $primary;
@@ -70,8 +70,6 @@
         border-radius: $border-radius;
         &:after {
           content: '';
-          -webkit-mask: url($data-icon-plus-circle-full) no-repeat 50% 50%;
-          mask: url($data-icon-plus-circle-full) no-repeat 50% 50%;
           -webkit-mask-size: cover;
           mask-size: cover;
           background-color: $primary;
@@ -83,8 +81,6 @@
         &[aria-expanded="true"] {
           &:after {
             content: '';
-            -webkit-mask: url($data-icon-minus-circle-full) no-repeat 50% 50%;
-            mask: url($data-icon-minus-circle-full) no-repeat 50% 50%;
             -webkit-mask-size: cover;
             mask-size: cover;
             background-color: $primary;
@@ -114,8 +110,6 @@
         cursor: not-allowed;
         color: $neutral-stroke;
         &:after {
-          -webkit-mask: url($data-icon-plus-circle) no-repeat 50% 50%;
-          mask: url($data-icon-plus-circle) no-repeat 50% 50%;
           background-color: $neutral-stroke;
         }
       }
@@ -153,18 +147,18 @@
         &:after {
           -webkit-mask: url($data-icon-chevron-down) no-repeat 50% 50%;
           mask: url($data-icon-chevron-down) no-repeat 50% 50%;
-          background-color: $neutral-tertiary;
+          background-color: $neutral-primary;
         }
-  
+
         &[aria-expanded="true"] {
           color: $primary;
           &:after {
             -webkit-mask: url($data-icon-chevron-up) no-repeat 50% 50%;
             mask: url($data-icon-chevron-up) no-repeat 50% 50%;
-            background-color: $neutral-tertiary;
+            background-color: $neutral-primary;
           }
         }
-  
+
         &:hover,
         &:active,
         &:focus {
@@ -174,7 +168,7 @@
             mask: url($data-icon-chevron-down) no-repeat 50% 50%;
             background-color: $primary;
           }
-  
+
           &[aria-expanded="true"] {
             &:after {
               -webkit-mask: url($data-icon-chevron-up) no-repeat 50% 50%;

@@ -40,10 +40,11 @@
         "icon-name": "icon-location",
         "listItemAction": false,
         "listItemLabel": "Adresse",
-        "listExtraContent": [
+        "listItemContent": [
           {
-            "extraContentBold": false,
-            "extraContent": "123, rue Avenue Ouest<br>Montréal (Québec) H1H 1H1"
+            "extraContent": {
+              "content": "123, rue Avenue Ouest<br>Montréal (Québec) H1H 1H1"
+            }
           },
           {
             "extraContentAction": {
@@ -66,14 +67,13 @@
     "module-mode-paiement": {
       "listUL": true,
       "list": [
-        { 
+        {
           "hasIcon": true,
           "icon-name": "icon-dot-bullet",
           "listItemAction": false,
           "listItemLabel": false,
-          "hasExtraContent": true,
-          "listExtraContent": {
-            "extraContent": "Argent comptant"
+          "listItemContent": {
+            "itemContent": "Argent comptant"
           }
         },
         {
@@ -81,9 +81,8 @@
           "icon-name": "icon-dot-bullet",
           "listItemAction": false,
           "listItemLabel": false,
-          "hasExtraContent": true,
-          "listExtraContent": {
-            "extraContent": "Cartes de crédit"
+          "listItemContent": {
+            "itemContent": "Cartes de crédit"
           }
         }
       ]
@@ -142,8 +141,7 @@
         "icon-name": "icon-clock",
         "listItemAction": false,
         "listItemLabel": "Horaire",
-        "hasExtraContent": true,
-        "listExtraContent": false,
+        "listItemContent": false,
         "extraContentSchedule": {
           "schedule" : [
             {

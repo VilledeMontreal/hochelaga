@@ -7,22 +7,25 @@
       <span class="link-label">{{listItemLabel}}</span>
     </a>
   </div>
-  {{# listExtraContent}}
-  <div class="list-item-content">
-    {{# extraContentBold }}
-    <div class="font-weight-bold">{{{extraContentBold}}}</div>
-    {{/ extraContentBold }}
-    {{{extraContent}}}
+  {{# listItemContent}}
+  <div class="list-item-content">{{# itemContent}}{{{itemContent}}}{{/ itemContent}}
+    {{^ itemContent}}{{# extraContent}}
+    <div{{#class}} class="{{class}}"{{/class}}>{{{content}}}</div>
+    {{/ extraContent}}{{/ itemContent}}
   </div>
-  {{/ listExtraContent}}
+  {{/ listItemContent}}
   {{/ listItemAction}}
   {{^ listItemAction}}
   <div class="list-item-content">
     {{# listItemLabel }}
     <div class="list-item-label">{{listItemLabel}}</div>
     {{/ listItemLabel }}
-    {{# listExtraContent}}
+    {{# listItemContent}}
     <div class="list-item-content">
+      {{# itemContent}}{{{itemContent}}}{{/ itemContent}}
+      {{^ itemContent}}{{# extraContent}}
+      <div{{#class}} class="{{class}}"{{/class}}>{{{content}}}</div>
+      {{/ extraContent}}{{/ itemContent}}
       {{# extraContentAction}}
       <div class="list-item-action{{# classes}} {{classes}}{{/classes}}">
         <a href="{{url}}"{{# actionClasses}} class="{{actionClasses}}"{{/ actionClasses}}>
@@ -30,12 +33,8 @@
         </a>
       </div>
       {{/ extraContentAction}}
-      {{# extraContentBold }}
-      <div class="font-weight-bold">{{{extraContentBold}}}</div>
-      {{/ extraContentBold }}
-      {{{extraContent}}}
     </div>
-    {{/ listExtraContent}}
+    {{/ listItemContent}}
   </div>
   {{/ listItemAction}}
 {{# listUL}}</li>{{/ listUL}}
@@ -51,25 +50,21 @@
       <div><span class="link-icon-label">{{ listItemLabel }}</span></div>
     </a>
   </div>
-  {{# hasExtraContent}}
+  {{# listItemContent}}
   <div class="list-item-icon-content {{listExtraContentClass}}">
-    {{# listExtraContent}}
-    <div>
-      {{# extraContentBold }}
-      <div class="font-weight-bold">{{{extraContentBold}}}</div>
-      {{/ extraContentBold }}
-      {{{extraContent}}}
-      {{# extraContentAction}}
-      <div class="list-item-action {{# classes}} {{classes}}{{/classes}}">
-        <a href="{{url}}"{{# actionClasses}} class="{{actionClasses}}"{{/ actionClasses}}>
-          <span class="link-label">{{ text }}</span>
-        </a>
-      </div>
-      {{/ extraContentAction}}
+    {{# itemContent}}{{{itemContent}}}{{/ itemContent}}
+    {{^ itemContent}}{{# extraContent}}
+    <div{{#class}} class="{{class}}"{{/class}}>{{{content}}}</div>
+    {{/ extraContent}}{{/ itemContent}}
+    {{# extraContentAction}}
+    <div class="list-item-action {{# classes}} {{classes}}{{/classes}}">
+      <a href="{{url}}"{{# actionClasses}} class="{{actionClasses}}"{{/ actionClasses}}>
+        <span class="link-label">{{ text }}</span>
+      </a>
     </div>
-    {{/ listExtraContent}}
+    {{/ extraContentAction}}
   </div>
-  {{/ hasExtraContent}}
+  {{/ listItemContent}}
   {{/ listItemAction}}
   {{^ listItemAction}}
   <span class="icon {{icon-name}}{{# icon-color}} {{icon-color}}{{/icon-color}}" aria-hidden="true"></span>
@@ -77,8 +72,14 @@
     {{# listItemLabel }}
     <div class="list-item-icon-label">{{listItemLabel}}</div>
     {{/ listItemLabel}}
-    {{# listExtraContent}}
-    <div {{#listExtraContentClass}}class="{{listExtraContentClass}}"{{/listExtraContentClass}}>
+    {{# listItemContent}}
+    {{#listExtraContentClass}}
+    <div class="{{listExtraContentClass}}">
+    {{/listExtraContentClass}}
+      {{# itemContent}}{{{itemContent}}}{{/ itemContent}}
+      {{^ itemContent}}{{# extraContent}}
+      <div{{#class}} class="{{class}}"{{/class}}>{{{content}}}</div>
+      {{/ extraContent}}{{/ itemContent}}
       {{# extraContentAction}}
       <div class="list-item-action {{# classes}} {{classes}}{{/classes}}">
         <a href="{{url}}"{{# actionClasses}} class="{{actionClasses}}"{{/ actionClasses}}>
@@ -86,12 +87,10 @@
         </a>
       </div>
       {{/ extraContentAction}}
-      {{# extraContentBold }}
-      <div class="font-weight-bold">{{{extraContentBold}}}</div>
-      {{/ extraContentBold }}
-      {{{extraContent}}}
+    {{#listExtraContentClass}}
     </div>
-    {{/ listExtraContent}}
+    {{/ listExtraContentClass}}
+    {{/ listItemContent}}
     {{# extraContentSchedule}}
     {{> components-schedule}}
     {{/ extraContentSchedule}}
