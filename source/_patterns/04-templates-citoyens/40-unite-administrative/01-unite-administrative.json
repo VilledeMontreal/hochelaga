@@ -170,9 +170,10 @@
         "listItemAction": true,
         "url": "mailto:test@montreal.ca",
         "listItemLabel": "Envoyer un courriel",
-        "hasExtraContent": true,
-        "listExtraContent": {
-          "extraContent": "Texte complémentaire optionnel"
+        "listItemContent": {
+          "extraContent": {
+            "content": "Texte complémentaire optionnel"
+          }
         }
       },
       {
@@ -180,17 +181,21 @@
         "icon-name": "icon-phone",
         "listItemAction": false,
         "listItemLabel": "3-1-1",
-        "listExtraContent": {
-          "extraContent": "<p>De l’extérieur de Montréal : 514 872-0311</p><p>Du lundi au vendredi : de 8 h 30 à 20 h 30 Samedi, dimanche et jours fériés : de 9 h à 17 h</p><p>Texte complémentaire optionnel.</p>"
-        }  
+        "listItemContent": {
+          "extraContent": {
+            "content": "<p>De l’extérieur de Montréal : 514 872-0311</p><p>Du lundi au vendredi : de 8 h 30 à 20 h 30 Samedi, dimanche et jours fériés : de 9 h à 17 h</p><p>Texte complémentaire optionnel.</p>"
+          }
+          }
       },
       {
         "hasIcon": true,
         "icon-name": "icon-phone",
         "listItemAction": false,
         "listItemLabel": "9-1-1",
-        "listExtraContent": {
-          "extraContent": "Services d'urgence"
+        "listItemContent": {
+          "extraContent": {
+            "content": "Services d'urgence"
+          }
         }
       },
       {
@@ -198,8 +203,15 @@
         "icon-name": "icon-phone",
         "listItemAction": false,
         "listItemLabel": "Nom du service",
-        "listExtraContent": {
-          "extraContent": "514 555-5555, poste 123"
+        "listItemContent": {
+          "extraContent": [
+            {
+              "content": "514 555-5555"
+            },
+            {
+              "content": "poste 123"
+            }
+          ]
         }
       },
       {
@@ -208,9 +220,10 @@
         "listItemAction": true,
         "url": "https://ville.montreal.qc.ca/formulaires",
         "listItemLabel": "Formulaire en ligne",
-        "hasExtraContent": true,
-        "listExtraContent": {
-          "extraContent": "Texte complémentaire optionnel"
+        "listItemContent": {
+          "extraContent": {
+            "content": "Texte complémentaire optionnel"
+          }
         }
       }
     ]

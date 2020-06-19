@@ -127,7 +127,7 @@
           "block-id": "accordeon-vdl-irp",
           "heading-id": "accordeon-vdl-heading-irp"
         },
-        { 
+        {
           "item-disabled": true,
           "collapsible-item-vdl311": true,
           "procedures": true,
@@ -223,8 +223,10 @@
                   "hasIcon": true,
                   "icon-name": "icon-user",
                   "listItemLabel": "Nom Prénom",
-                  "listExtraContent": {
-                    "extraContent": "Fonction<br>Unité administrative"
+                  "listItemContent": {
+                    "extraContent": {
+                      "content": "Fonction<br>Unité administrative"
+                    }
                   }
                 },
                 {
@@ -232,8 +234,15 @@
                   "icon-name": "icon-phone",
                   "listItemAction": false,
                   "listItemLabel": false,
-                  "listExtraContent": {
-                    "extraContent": "514 897-4933, poste 1234"
+                  "listItemContent": {
+                    "extraContent": [
+                      {
+                        "content": "514 897-4933"
+                      },
+                      {
+                        "content": "poste 1234"
+                      }
+                    ]
                   }
                 },
                 {
@@ -242,15 +251,17 @@
                   "listItemAction": true,
                   "url": "mailto:prenom.nom@montreal.ca",
                   "listItemLabel": "prenom.nom@montreal.ca",
-                  "listExtraContent": false
+                  "listItemContent": false
                 },
                 {
                   "hasIcon": true,
                   "icon-name": "icon-comment",
                   "listItemAction": false,
                   "listItemLabel": false,
-                  "listExtraContent": {
-                    "extraContent": "Rebum aliquyam ut diam accusam diam amet vero sit vero kasd. No voluptua dolor at."
+                  "listItemContent": {
+                    "extraContent": {
+                      "content": "Rebum aliquyam ut diam accusam diam amet vero sit vero kasd. No voluptua dolor at."
+                    }
                   }
                 }
               ]
@@ -272,23 +283,32 @@
                   "hasIcon": true,
                   "icon-name": "icon-eye-off icon-color-danger",
                   "listItemLabel": false,
-                  "listExtraContent": {
-                    "extraContent": "Cette information ne doit pas être divulguée"
+                  "listItemContent": {
+                    "extraContent": {
+                      "content": "Cette information ne doit pas être divulguée"
+                    }
                   }
                 },
                 {
                   "hasIcon": true,
                   "icon-name": "icon-user",
                   "listItemLabel": "Nom Prénom",
-                  "listExtraContent": false
+                  "listItemContent": false
                 },
                 {
                   "hasIcon": true,
                   "icon-name": "icon-phone",
                   "listItemAction": false,
                   "listItemLabel": false,
-                  "listExtraContent": {
-                    "extraContent": "514 897-4933, poste 1234"
+                  "listItemContent": {
+                    "extraContent": [
+                      {
+                        "content": "514 897-4933"
+                      },
+                      {
+                        "content": "poste 1234"
+                      }
+                    ]
                   }
                 },
                 {
@@ -297,7 +317,7 @@
                   "listItemAction": true,
                   "url": "mailto:prenom.nom@montreal.ca",
                   "listItemLabel": "prenom.nom@montreal.ca",
-                  "listExtraContent": false
+                  "listItemContent": false
                 }
               ]
             }
@@ -317,15 +337,22 @@
                   "hasIcon": true,
                   "icon-name": "icon-user",
                   "listItemLabel": "Nom Prénom",
-                  "listExtraContent": false
+                  "listItemContent": false
                 },
                 {
                   "hasIcon": true,
                   "icon-name": "icon-phone",
                   "listItemAction": false,
                   "listItemLabel": false,
-                  "listExtraContent": {
-                    "extraContent": "514 897-4933, poste 1234"
+                  "listItemContent": {
+                    "extraContent": [
+                      {
+                        "content": "514 897-4933"
+                      },
+                      {
+                        "content": "poste 1234"
+                      }
+                    ]
                   }
                 },
                 {
@@ -334,7 +361,7 @@
                   "listItemAction": true,
                   "url": "mailto:prenom.nom@montreal.ca",
                   "listItemLabel": "prenom.nom@montreal.ca",
-                  "listExtraContent": false
+                  "listItemContent": false
                 }
               ]
             }

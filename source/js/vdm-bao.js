@@ -1,6 +1,6 @@
 (function ($) {
 
-   
+
   // ******************************
   // PL-internal Icon modal handling
   $('[id^="linkModalIcon"]').click(function() {
@@ -14,7 +14,7 @@
     $("#exampleModalIconEditorialLabel").text(title);
     $("#exampleModalIconUtility .modal-body .select-all").html(textModalUtility);
     $("#exampleModalIconEditorial .modal-body").html("<p class='select-all'>"+textModalEditorial+"</p> <p>ou<p> <p class='select-all'>"+textModalUtility+"</p>");
-    
+
   });
 
 
@@ -145,7 +145,7 @@
       // Close the menu and overlay
       $navbarSearch.toggleClass("show");
       $('.overlay').removeClass('show');
-  
+
       // Return focus to the element that invoked it
       $navbarSearchToggler.attr("aria-expanded", "false").focus();
     }
@@ -187,7 +187,7 @@
   //
 
   if($('#slide-menu-left').length != 0) {
-    
+
     $menuInterneToggler.on("click", function () {
       $('body').toggleClass('modal-open');
       $slideMenu.toggleClass('show');
@@ -218,7 +218,7 @@
       // Return focus to the element that invoked it
       $menuInterneToggler.attr("aria-expanded", "false").focus();
     });
-  
+
   }
 
 
@@ -230,7 +230,7 @@
     var visible = Boolean($this.val());
     $this.siblings('.btn-clear').toggleClass('d-none', !visible);
   }).trigger('propertychange');
-  
+
   $('.btn-clear').on('click', function(e) {
     e.preventDefault();
     $(this).siblings('input').val('').trigger('propertychange').focus();
@@ -325,7 +325,7 @@
       stickyWrapper.height('auto');
     }
   };
-  
+
   // Find all data-toggle="sticky-onscroll" elements
   $('[data-toggle="sticky-onscroll"]').each(function() {
     var sticky = $(this);
@@ -443,7 +443,7 @@
     $('#form21 button').prop('disabled', true);
     $('#form21 button#cancel').prop('hidden', true);
   }
-  
+
   // Activate scrollspy for navAnchors to add active class to navAnchors items on scroll
   if($('#navAnchors').length != 0) {
     $('body').scrollspy({
@@ -475,13 +475,13 @@
         });
         return items;
       }
- 
+
     var items = getItems();
-    
+
     var $pswp = $('.pswp')[0];
     $pic.on('click', 'li', function(event) {
       event.preventDefault();
-      
+
       var $index = $(this).index();
       let description = '';
       let author = '';
@@ -502,22 +502,22 @@
             captionEl.children[0].innerHTML = '';
             return false;
           }
-  
+
           if (item.description) {
             description = `<span class="pswp__legend d-block font-weight-bold text-white text-center">${item.description}</span>`;
           }
-  
+
           if (item.author) {
             author = `<span class="pswp__copyright d-block text-white text-center">&copy; ${item.author}</span>`;
           }
-  
+
           captionEl.children[0].innerHTML = description + author;
           // We need to set item.title to true based on photoswipe caption display validation...
           item.title = true;
           return true;
         }
       }
-      
+
       // Initialize PhotoSwipe
       var lightBox = new PhotoSwipe($pswp, PhotoSwipeUI_Default, items, options);
       lightBox.init();
@@ -548,9 +548,9 @@
         });
         return items;
       }
-   
+
       var items = getItems();
-      
+
       var $pswp = $('.pswp')[0];
       let description = '';
       let author = '';
@@ -571,15 +571,15 @@
             captionEl.children[0].innerHTML = '';
             return false;
           }
-  
+
           if (item.description) {
             description = `<span class="pswp__legend d-block font-weight-bold text-white text-center">${item.description}</span>`;
           }
-  
+
           if (item.author) {
             author = `<span class="pswp__copyright d-block text-white text-center">&copy; ${item.author}</span>`;
           }
-  
+
           captionEl.children[0].innerHTML = description + author;
           // We need to set item.title to true based on photoswipe caption display validation...
           item.title = true;
@@ -617,7 +617,7 @@
     map.resize();
     $("#triggerList").toggleClass('active');
   });
-  
+
   $("#triggerList").on('click', function(){
     $("#contentList").toggleClass('d-none');
     $("#contentMap").toggleClass('d-none');
@@ -660,16 +660,35 @@ flyouts.forEach((flyout) => {
 });
 
 
+// partial list li toggle
+const showPartialLists = document.querySelectorAll(`[data-toggle='show-list']`);
+
+showPartialLists.forEach((partialList) => {
+  const partialListId = partialList.dataset.target;
+  partialList.addEventListener('click', (ev) => {
+    ev.preventDefault();
+    partialList.classList.toggle('collapsed');
+    const doc = document.getElementById(partialListId)
+    const itemsArray = Array.from(doc.children)
+
+    const toggleVisibility = itemsArray.map(item => {
+      if(item.classList.contains('extra-item'))
+        item.classList.toggle('sr-only')
+    })
+  });
+});
+
+
 
 function toggleHidden(id) {
   var attr = document.getElementById(id).attributes;
-  
+
   if (attr['aria-hidden'].value == "true") {
     document.getElementById(id).setAttribute("aria-hidden", "false");
   } else {
     document.getElementById(id).setAttribute("aria-hidden", "true");
   }
-  
+
 }
 
 const focusableLinks = document.querySelectorAll(".sr-focusable-js");

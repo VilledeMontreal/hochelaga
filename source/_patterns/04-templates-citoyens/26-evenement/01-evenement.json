@@ -29,10 +29,13 @@
         "icon-name": "icon-calendar",
         "listItemAction": false,
         "listItemLabel": "Date",
-        "listExtraContent": [
+        "listItemContent": [
           {
-            "extraContentBold": false,
-            "extraContent": "Lundi 1 décembre 2020 à 9&nbsp;h&nbsp;00"
+            "extraContent": [
+              {
+                "content": "Lundi 1 décembre 2020 à 9&nbsp;h&nbsp;00"
+              }
+            ]
           }
         ]
       },
@@ -41,19 +44,16 @@
         "icon-name": "icon-money",
         "listItemAction": false,
         "listItemLabel": "Gratuit",
-        "listExtraContent": false
+        "listItemContent": false
       },
       {
         "hasIcon": true,
         "icon-name": "icon-ticket",
         "listItemAction": false,
         "listItemLabel": "Entrée",
-        "listExtraContent": [
-          {
-            "extraContentBold": false,
-            "extraContent": "Sans billet"
-          }
-        ]
+        "listItemContent": {
+          "itemContent": "Sans billet"
+        }
       }
     ]
   },
@@ -94,12 +94,13 @@
             "icon-name": "icon-location",
             "listItemAction": false,
             "listItemLabel": "Nom du lieu non Ville",
-            "listExtraContent": [
+            "listItemContent": [
               {
-                "extraContentBold": false,
-                "extraContent" :"123, rue Avenue Est<br>Montréal (Québec) H2Y 1B5"
-              },
-              {
+                "extraContent": [
+                  {
+                    "content": "123, rue Avenue Est<br>Montréal (Québec) H2Y 1B5"
+                  }
+                ],
                 "extraContentAction": {
                   "classes": "mt-1",
                   "actionClasses": "d-inline-flex is-external-link",
