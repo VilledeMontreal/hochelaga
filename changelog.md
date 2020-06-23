@@ -12,6 +12,7 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 - Iconography - Editorial: icon-success and icon-empty added to vdm-icon-system
 - Typography - Text utilities: New .text-{dialog}-reversed variant.
 - Component - List item: Possibility to add dialog color (.text-{dialog} or .text-{dialog}-reversed) to bold element under the Label.
+- Component - List item: Add examples for list items.
 - Templates - Démarches: Add examples for phone extension integration inside list-item.
 - Templates - Démarches: Add examples for location "state" inside list-item using .text-{dialog} or .text-{dialog}-reversed utility classes.
 
