@@ -8,7 +8,7 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 ## [4.12.0] - unreleased
 
 ### Added
-- Iconography - Utilitary: icon-flag-fill, icon-heart-fill, icon-history, icon-reorder, icon-roadsection, icon-rss, icon-selection, icon-star-fill, icon-star-half, icon-user-minus, icon-user-plus and icon-user-x, icon-wifi and icon-wifi-off added to vdm-icon-system.
+- Iconography - Utilitary: icon-flag-fill, icon-heart-fill, icon-history, icon-location-off, icon-reorder, icon-roadsection, icon-rss, icon-selection, icon-star-fill, icon-star-half, icon-user-minus, icon-user-plus and icon-user-x, icon-wifi and icon-wifi-off added to vdm-icon-system.
 - Iconography - Editorial: icon-success and icon-empty added to vdm-icon-system
 - Typography - Text utilities: New .text-{dialog}-reversed variant.
 - Components - Badges: Add .badge-notification-reversed.
