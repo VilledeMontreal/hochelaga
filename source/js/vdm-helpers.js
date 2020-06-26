@@ -9,16 +9,18 @@ var map;
 
 // GenerateMap function
 
-function generateMap(lngLat, addressInfos, mapID, addressTitle ) {
+function generateMap(lngLat, addressInfos, mapID, showZoom, addressTitle) {
 
   var pointLngLat = lngLat;
+  var showZoomControl = showZoom;
   var address = addressInfos && addressInfos.address ? addressInfos.address : undefined;
   var addressTitle = addressInfos && addressInfos.title ? addressInfos.title : null;
   var addressURI = addressInfos && addressInfos.uri ? addressInfos.uri : null;
-  var startZoom = 16;
+  var startZoom = 15;
   var center = pointLngLat;
   var maxBounds = [[-74.3965936,45.319517],[-73.442801,45.751651]];
   var marker = new mapboxgl.Marker(defaultMarker());
+  var nav = new mapboxgl.NavigationControl({showCompass: false});
   var mapboxStyle = {
     version: 8,
     name: 'basic',
@@ -37,7 +39,6 @@ function generateMap(lngLat, addressInfos, mapID, addressTitle ) {
           'background-color': '#e7e5e0'
         }
       },
-  
       {
         id: 'cities',
         type: 'fill',
@@ -48,7 +49,6 @@ function generateMap(lngLat, addressInfos, mapID, addressTitle ) {
           'fill-color': '#E6E4E0'
         }
       },
-  
       {
         id: 'water',
         type: 'fill',
@@ -59,7 +59,6 @@ function generateMap(lngLat, addressInfos, mapID, addressTitle ) {
           'fill-color': '#75cff0'
         }
       },
-  
       {
         id: 'large_parks',
         type: 'fill',
@@ -183,7 +182,6 @@ function generateMap(lngLat, addressInfos, mapID, addressTitle ) {
           }
         }
       },
-  
       {
         id: 'highways',
         type: 'line',
@@ -212,7 +210,6 @@ function generateMap(lngLat, addressInfos, mapID, addressTitle ) {
           'fill-color': ['interpolate', ['linear'], ['zoom'], 15, '#DCDCDC', 16, '#D3D3D3', 17, '#CECECE', 18, '#C3C3C3']
         }
       },
-      
       {
         id: 'highways_labels',
         type: 'symbol',
@@ -301,7 +298,6 @@ function generateMap(lngLat, addressInfos, mapID, addressTitle ) {
           'text-halo-blur': 0.5
         }
       },
-  
       {
         id: 'boroughs_labels',
         type: 'symbol',
@@ -324,7 +320,6 @@ function generateMap(lngLat, addressInfos, mapID, addressTitle ) {
           'text-halo-blur': 1
         }
       },
-  
       {
         id: 'cities_labels',
         type: 'symbol',
@@ -354,12 +349,17 @@ function generateMap(lngLat, addressInfos, mapID, addressTitle ) {
   map = new mapboxgl.Map({
     container: mapID,
     zoom: startZoom,
-    style: mapboxStyle,  
+    maxZoom: 17,
+    minZoom: 12,
+    style: mapboxStyle,
     center,
     maxBounds,
     interactive: false,
   });
 
+  if(showZoomControl) {
+    map.addControl(nav, 'bottom-right');
+  }
 
   marker.setLngLat(pointLngLat).addTo(map);
 
@@ -372,7 +372,7 @@ function generateMap(lngLat, addressInfos, mapID, addressTitle ) {
       } else {
         popupContent += `<strong>${addressTitle}</strong>`;
       }
-    }  
+    }
     popupContent += `<div class="font-size-sm-interface">${address}</div>`;
     popupContent += "</div>";
     popupContent += `<div class="d-flex mt-1"><a class="link-sm is-external-link" href="https://www.google.com/maps/search/?api=1&amp;query=${encodeURIComponent(strippedAddress)}" title="Obtenir un itinéraire">Obtenir un itinéraire</a></div>`;
