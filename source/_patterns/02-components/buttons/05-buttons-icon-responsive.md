@@ -2,7 +2,7 @@
 title: Buttons Icon Responsive
 ---
 
-#Utilisation
+## Utilisation
 
 Utilisez <code>.btn-hide-label-{breakpoint}</code> pour masquer le libellé à un breakpoint prédéfini.
 
