@@ -13,6 +13,7 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 - Typography - Text utilities: New .text-{dialog}-reversed variant.
 - Components - Badges: Add .badge-notification-reversed.
 - Components - Badges: Add color variants.
+- Components - Cards: Add Card location.
 - Components - List item: Possibility to add dialog color (.text-{dialog} or .text-{dialog}-reversed) to bold element under the Label.
 - Components - List item: Add examples for list items.
 - Templates - Démarches: Add examples for phone extension integration inside list-item.
@@ -32,6 +33,7 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 - SASS: fix @extend of .nav-link.active to only extend .active [https://sass-lang.com/documentation/at-rules/extend#limitations](SASS Extend Limitations).
 - Components - Badges: Fix left and right spacing.
 - Templates - Démarches: Fix various spacing issues with badge states and accordions content.
+- PL - mapbox integration: fix mapbox integration preventing map rendering in view-all pages.
 
 ## Removed
 - Iconography - Editorial: icon-not-found was removed from the vdm-icon-system project.

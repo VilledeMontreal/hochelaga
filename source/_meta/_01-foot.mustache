@@ -1,8 +1,8 @@
-    
+
     {{# includePhotoswipe}}
     {{> components-photoswipe }}
     {{/ includePhotoswipe}}
-    
+
     <script src="../../js/vendor/jquery.min.js"></script>
     <script src="../../js/vendor/jquery.easing.min.js"></script>
     <script src="../../js/vendor/jquery.validate.min.js"></script>
@@ -10,29 +10,17 @@
     <script src="../../js/vendor/bootstrap.min.js"></script>
     <script src="../../js/vdm-bao.js"></script>
 
-    {{# module-content.module-map}}
     <!-- Mapbox -->
-    <script src='https://api.tiles.mapbox.com/mapbox-gl-js/v0.48.0/mapbox-gl.js'></script>
-    <link href='https://api.tiles.mapbox.com/mapbox-gl-js/v0.48.0/mapbox-gl.css' rel='stylesheet' />
-    
-    <!-- VDM helpers -->
-    <script src="../../js/vdm-helpers.js"></script>
-    
-    <script>
-      var data = { 
-        address : "{{{location.addressInfos.address}}}", 
-        title : "{{{location.addressInfos.addressTitle}}}",
-        uri: "{{{location.addressInfos.uri}}}"
-      }
-      generateMap([{{{ location.lngLat }}}], data, {{ location.mapID }});
-    </script>
-    {{/ module-content.module-map}}
+  <script src='https://api.tiles.mapbox.com/mapbox-gl-js/v0.48.0/mapbox-gl.js'></script>
+  <link href='https://api.tiles.mapbox.com/mapbox-gl-js/v0.48.0/mapbox-gl.css' rel='stylesheet' />
+  <!-- VDM helpers -->
+  <script src="../../js/vdm-helpers.js"></script>
 
     <!--DO NOT REMOVE-->
     {{{ patternLabFoot }}}
 
     <!-- Quick fix to add Version of BAO -->
     <script src="../../js/pl-show-version.js"></script>
-	
+
 	</body>
 </html>

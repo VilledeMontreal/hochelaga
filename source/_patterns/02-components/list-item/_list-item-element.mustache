@@ -12,30 +12,35 @@
     {{^ itemContent}}{{# extraContent}}
     <div{{#class}} class="{{class}}"{{/class}}>{{{content}}}</div>
     {{/ extraContent}}{{/ itemContent}}
+    {{# extraContentAction}}
+    <div class="list-item-action{{# classes}} {{classes}}{{/classes}}">
+      <a href="{{url}}"{{# actionClasses}} class="{{actionClasses}}"{{/ actionClasses}}>
+        <span class="link-label">{{ text }}</span>
+      </a>
+    </div>
+    {{/ extraContentAction}}
   </div>
   {{/ listItemContent}}
   {{/ listItemAction}}
   {{^ listItemAction}}
+  {{# listItemLabel }}
+  <div class="list-item-label">{{listItemLabel}}</div>
+  {{/ listItemLabel }}
+  {{# listItemContent}}
   <div class="list-item-content">
-    {{# listItemLabel }}
-    <div class="list-item-label">{{listItemLabel}}</div>
-    {{/ listItemLabel }}
-    {{# listItemContent}}
-    <div class="list-item-content">
-      {{# itemContent}}{{{itemContent}}}{{/ itemContent}}
-      {{^ itemContent}}{{# extraContent}}
-      <div{{#class}} class="{{class}}"{{/class}}>{{{content}}}</div>
-      {{/ extraContent}}{{/ itemContent}}
-      {{# extraContentAction}}
-      <div class="list-item-action{{# classes}} {{classes}}{{/classes}}">
-        <a href="{{url}}"{{# actionClasses}} class="{{actionClasses}}"{{/ actionClasses}}>
-          <span class="link-label">{{ text }}</span>
-        </a>
-      </div>
-      {{/ extraContentAction}}
+    {{# itemContent}}{{{itemContent}}}{{/ itemContent}}
+    {{^ itemContent}}{{# extraContent}}
+    <div{{#class}} class="{{class}}"{{/class}}>{{{content}}}</div>
+    {{/ extraContent}}{{/ itemContent}}
+    {{# extraContentAction}}
+    <div class="list-item-action{{# classes}} {{classes}}{{/classes}}">
+      <a href="{{url}}"{{# actionClasses}} class="{{actionClasses}}"{{/ actionClasses}}>
+        <span class="link-label">{{ text }}</span>
+      </a>
     </div>
-    {{/ listItemContent}}
+    {{/ extraContentAction}}
   </div>
+  {{/ listItemContent}}
   {{/ listItemAction}}
 {{# listUL}}</li>{{/ listUL}}
 {{^ listUL}}</div>{{/ listUL}}
