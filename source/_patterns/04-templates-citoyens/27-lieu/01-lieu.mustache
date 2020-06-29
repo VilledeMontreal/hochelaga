@@ -86,7 +86,7 @@
       title : "{{{location.addressInfos.addressTitle}}}",
       uri: "{{{location.addressInfos.uri}}}"
     }
-    generateMap([{{{ location.lngLat }}}], data, {{ location.mapID }}, {{ location.showZoom}});
+    generateMap([{{{ location.lngLat }}}], data, '{{ location.mapID }}', {{ location.showZoom}});
   })
 </script>
 {{/ module-content.module-map}}
