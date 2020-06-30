@@ -396,35 +396,37 @@ function generateMap(lngLat, addressInfos, mapID, showZoom, addressTitle) {
 
 // Drag and drop
 // Highlight example
-let dropArea = document.getElementById('file-droparea-v2')
+const dropArea = document.getElementById('file-droparea-v2');
 
-// Prevent default drag behaviors
-;['dragenter', 'dragover', 'dragleave', 'drop'].forEach(eventName => {
-  dropArea.addEventListener(eventName, preventDefaults, false)
-  document.body.addEventListener(eventName, preventDefaults, false)
-})
+if(dropArea) {
+  // Prevent default drag behaviors
+  ;['dragenter', 'dragover', 'dragleave', 'drop'].forEach(eventName => {
+    dropArea.addEventListener(eventName, preventDefaults, false)
+    document.body.addEventListener(eventName, preventDefaults, false)
+  })
 
-// Highlight drop area when item is dragged over it
-;['dragenter', 'dragover'].forEach(eventName => {
-  dropArea.addEventListener(eventName, highlight, false)
-})
+  // Highlight drop area when item is dragged over it
+  ;['dragenter', 'dragover'].forEach(eventName => {
+    dropArea.addEventListener(eventName, highlight, false)
+  })
 
-;['dragleave', 'drop'].forEach(eventName => {
-  dropArea.addEventListener(eventName, unhighlight, false)
-})
+  ;['dragleave', 'drop'].forEach(eventName => {
+    dropArea.addEventListener(eventName, unhighlight, false)
+  })
 
-// Handle dropped files
-// dropArea.addEventListener('drop', handleDrop, false)
+  // Handle dropped files
+  // dropArea.addEventListener('drop', handleDrop, false)
 
-function preventDefaults (e) {
-  e.preventDefault()
-  e.stopPropagation()
-}
+  function preventDefaults (e) {
+    e.preventDefault()
+    e.stopPropagation()
+  }
 
-function highlight(e) {
-  dropArea.classList.add('active')
-}
+  function highlight(e) {
+    dropArea.classList.add('active')
+  }
 
-function unhighlight(e) {
-  dropArea.classList.remove('active')
+  function unhighlight(e) {
+    dropArea.classList.remove('active')
+  }
 }
