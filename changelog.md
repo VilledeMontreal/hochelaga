@@ -17,6 +17,7 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 - Components - Forms: Form input file and uploaded file list examples.
 - Components - List item: Possibility to add dialog color (.text-{dialog} or .text-{dialog}-reversed) to bold element under the Label.
 - Components - List item: Add examples for list items.
+- Components - Messages: Empty state and confirmation state examples.
 - Templates - Démarches: Add examples for phone extension integration inside list-item.
 - Templates - Démarches: Add examples for location "state" inside list-item using .text-{dialog} or .text-{dialog}-reversed utility classes.
 
@@ -29,10 +30,12 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 - Components - List item: Refactoring to allow more flexibility inside component.
 - Components - Navigation: Clean-up examples and removed deprecated examples.
 - Templates - Démarches: Refactoring of Needed documents section.
+- PL: Rename messaging components directory to messages.
 
 ### Fixed
 - SASS: fix @extend of .nav-link.active to only extend .active [https://sass-lang.com/documentation/at-rules/extend#limitations](SASS Extend Limitations).
 - Components - Badges: Fix left and right spacing.
+- Components - Alerts: Fix alert-actions spacing.
 - Templates - Démarches: Fix various spacing issues with badge states and accordions content.
 - PL - mapbox integration: fix mapbox integration preventing map rendering in view-all pages.
 
