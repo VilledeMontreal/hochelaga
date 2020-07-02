@@ -24,6 +24,29 @@
       }
     },
     {
+      "alertClass": "alert-info alert-with-icon",
+      "alertIcon": true,
+      "icon-name": "icon-info",
+      "alertTitle": "Titre du message",
+      "alertText": "Description du message obligatoire avec <a href=\"#\" class=\"alert-link\">un lien facultatif</a> si besoin.",
+      "alertButtons": {
+        "buttons": [
+          {
+            "buttonClass": "btn-primary btn-squared btn-info",
+            "buttonText": "Libellé"
+          },
+          {
+            "buttonClass": "btn-secondary btn-squared btn-info",
+            "buttonText": "Libellé"
+          },
+          {
+            "buttonClass": "btn-tertiary btn-squared btn-info",
+            "buttonText": "Libellé"
+          }
+        ]
+      }
+    },
+    {
       "alertClass": "alert-success alert-with-icon",
       "alertIcon": true,
       "icon-name": "icon-error",
@@ -41,29 +64,6 @@
           },
           {
             "buttonClass": "btn-tertiary btn-squared btn-success",
-            "buttonText": "Libellé"
-          }
-        ]
-      }
-    },
-    {
-      "alertClass": "alert-danger alert-with-icon",
-      "alertIcon": true,
-      "icon-name": "icon-error",
-      "alertTitle": "Titre du message",
-      "alertText": "Description du message obligatoire avec <a href=\"#\" class=\"alert-link\">un lien facultatif</a> si besoin.",
-      "alertButtons": {
-        "buttons": [
-          {
-            "buttonClass": "btn-primary btn-squared btn-danger",
-            "buttonText": "Libellé"
-          },
-          {
-            "buttonClass": "btn-secondary btn-squared btn-danger",
-            "buttonText": "Libellé"
-          },
-          {
-            "buttonClass": "btn-tertiary btn-squared btn-danger",
             "buttonText": "Libellé"
           }
         ]
@@ -93,23 +93,23 @@
       }
     },
     {
-      "alertClass": "alert-info alert-with-icon",
+      "alertClass": "alert-danger alert-with-icon",
       "alertIcon": true,
-      "icon-name": "icon-info",
+      "icon-name": "icon-error",
       "alertTitle": "Titre du message",
       "alertText": "Description du message obligatoire avec <a href=\"#\" class=\"alert-link\">un lien facultatif</a> si besoin.",
       "alertButtons": {
         "buttons": [
           {
-            "buttonClass": "btn-primary btn-squared btn-info",
+            "buttonClass": "btn-primary btn-squared btn-danger",
             "buttonText": "Libellé"
           },
           {
-            "buttonClass": "btn-secondary btn-squared btn-info",
+            "buttonClass": "btn-secondary btn-squared btn-danger",
             "buttonText": "Libellé"
           },
           {
-            "buttonClass": "btn-tertiary btn-squared btn-info",
+            "buttonClass": "btn-tertiary btn-squared btn-danger",
             "buttonText": "Libellé"
           }
         ]
