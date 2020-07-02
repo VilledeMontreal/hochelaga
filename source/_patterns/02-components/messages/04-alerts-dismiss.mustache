@@ -9,6 +9,16 @@
 }}
 
 {{> components-alert(
+    alertClass: "alert-info alert-with-icon alert-dismissible fade show",
+    alertTitle: false,
+    alertText: "Close Me! This is a dismissible info alert.",
+    alertIcon: true,
+    icon-name: "icon-info",
+    dismissableAlert: true
+  )
+}}
+
+{{> components-alert(
     alertClass: "alert-success alert-with-icon alert-dismissible fade show",
     alertTitle: false,
     alertText: "Close Me! This is a dismissible success alert.",
@@ -34,16 +44,6 @@
     alertText: "Close Me! This is a dismissible warning alert.",
     alertIcon: true,
     icon-name: "icon-warning",
-    dismissableAlert: true
-  )
-}}
-
-{{> components-alert(
-    alertClass: "alert-info alert-with-icon alert-dismissible fade show",
-    alertTitle: false,
-    alertText: "Close Me! This is a dismissible info alert.",
-    alertIcon: true,
-    icon-name: "icon-info",
     dismissableAlert: true
   )
 }}

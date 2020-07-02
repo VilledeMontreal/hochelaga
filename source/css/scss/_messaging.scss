@@ -150,6 +150,7 @@
 .message-bar {
   @include font-size($font-size-base);
   line-height: $line-height-md;
+  background-color: $neutral-primary;
   border-left-width: 0;
   color: $white;
   display: flex;

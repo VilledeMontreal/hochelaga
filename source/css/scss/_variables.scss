@@ -95,15 +95,15 @@ $theme-colors: map-merge(
 
 $dialog-colors: ();
 $dialog-colors: (
-  success: (
-    base:   $positive,
-    dark:   $positive-dark,
-    light:  $positive-light
-  ),
   info: (
     base:   $informative,
     dark:   $informative-dark,
     light:  $informative-light
+  ),
+  success: (
+    base:   $positive,
+    dark:   $positive-dark,
+    light:  $positive-light
   ),
   warning: (
     base:   $warning,
