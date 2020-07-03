@@ -35,7 +35,8 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 ### Fixed
 - SASS: fix @extend of .nav-link.active to only extend .active [https://sass-lang.com/documentation/at-rules/extend#limitations](SASS Extend Limitations).
 - Components - Badges: Fix left and right spacing.
-- Components - Alerts: Fix alert-actions spacing.
+- Components - List Item: Fix simple list Item hover background.
+- Components - messages: Fix alert-actions spacing.
 - Templates - Démarches: Fix various spacing issues with badge states and accordions content.
 - PL - mapbox integration: fix mapbox integration preventing map rendering in view-all pages.
 
