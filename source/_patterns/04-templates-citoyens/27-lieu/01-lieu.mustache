@@ -11,7 +11,7 @@
   {{/ messageBar}}
 
   <div class="container pt-4 pt-lg-8">
-    <div class="row">
+    <div class="row{{^ sidebarRight}}{{^documentHeading}} justify-content-center{{/documentHeading}}{{/ sidebarRight}}">
       <div class="col-12 col-lg-7">
         {{> components-breadcrumbs}}
       </div>
@@ -28,7 +28,7 @@
 
     <div class="container">
 
-      <div class="row d-md-block clearfix">
+      <div class="row {{# sidebarRight }} d-md-block clearfix{{/ sidebarRight}}{{^ sidebarRight}} justify-content-center{{/ sidebarRight}}">
         <div class="col-12 col-lg-7 float-left">
           <header class="content-header">
 
@@ -48,9 +48,11 @@
 
           </header>
         </div>
+        {{# sidebarRight}}
         <div class="col-12 col-lg-4 float-right">
           {{> templates-citoyens-sidebar-lieu}}
         </div>
+        {{/ sidebarRight}}
         <div class="col-12 col-lg-7 float-left">
           {{# lead}}
           <div class="lead">
@@ -66,7 +68,7 @@
         </div>
       </div>
 
-      <section class="row justify-content-between">
+      <section class="row{{# sidebarRight }} justify-content-between{{/ sidebarRight}}{{^ sidebarRight}} justify-content-center{{/ sidebarRight}}">
         <div class="col-12 col-lg-7">
         {{> components-feedback-form}}
         </div>
@@ -78,15 +80,15 @@
 
 {{> patterns-footer-main }}
 
-{{# module-content.module-map}}
+{{# module-content.module-map.cards.card-item}}
 <script>
   window.addEventListener('load', function() {
     var data = {
-      address : "{{{location.addressInfos.address}}}",
-      title : "{{{location.addressInfos.addressTitle}}}",
-      uri: "{{{location.addressInfos.uri}}}"
+      address : "{{{card-media.map.location.addressInfos.address}}}",
+      title : "{{{card-media.map.location.addressInfos.addressTitle}}}",
+      uri: "{{{card-media.map.location.addressInfos.uri}}}"
     }
-    generateMap([{{{ location.lngLat }}}], data, '{{ location.mapID }}', {{ location.showZoom}});
+    generateMap([{{{ card-media.map.location.lngLat }}}], data, '{{ card-media.map.location.mapID }}', {{ card-media.map.location.showZoom}});
   })
 </script>
-{{/ module-content.module-map}}
+{{/ module-content.module-map.cards.card-item}}

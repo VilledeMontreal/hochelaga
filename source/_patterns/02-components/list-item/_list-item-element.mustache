@@ -3,7 +3,7 @@
 {{# listUL}}<li class="list-item {{ listItemClass }}">{{/ listUL}}
   {{# listItemAction}}
   <div class="list-item-action">
-    <a href="{{url}}">
+    <a href="{{url}}"{{# actionClasses}} class="{{actionClasses}}"{{/ actionClasses}}>
       <span class="link-label">{{listItemLabel}}</span>
     </a>
   </div>

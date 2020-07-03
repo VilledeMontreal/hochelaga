@@ -3,7 +3,7 @@
   {{# schedule}}
   <div class="row mb-2">
     {{# day}}
-    <div class="col-12 col-sm-3 col-md-2 col-lg-4">
+    <div class="col-12 col-xsm-4 col-sm-3 col-md-2 col-lg-4">
       <span class="schedule-day">{{day}}</span>
     </div>
     {{/ day}}
@@ -11,7 +11,7 @@
     <div class="col-auto">
       {{# time}}
       <div class="schedule-data">
-        <span>{{startTime}}</span> à <span>{{endTime}}</span>
+        <span>{{{startTime}}}</span> {{timeSeparator}} <span>{{{endTime}}}</span>
       </div>
       {{/ time}}
       {{^ time}}

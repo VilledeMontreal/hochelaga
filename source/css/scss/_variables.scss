@@ -95,15 +95,15 @@ $theme-colors: map-merge(
 
 $dialog-colors: ();
 $dialog-colors: (
-  info: (
-    base:   $informative,
-    dark:   $informative-dark,
-    light:  $informative-light
-  ),
   success: (
     base:   $positive,
     dark:   $positive-dark,
     light:  $positive-light
+  ),
+  info: (
+    base:   $informative,
+    dark:   $informative-dark,
+    light:  $informative-light
   ),
   warning: (
     base:   $warning,
@@ -231,6 +231,20 @@ $link-border-width:           1px;
 $paragraph-margin-bottom:     1rem;
 
 
+// Grid breakpoints
+//
+// Define the minimum dimensions at which your layout will change,
+// adapting to different screen sizes, for use in media queries.
+
+$grid-breakpoints: (
+  xs: 0,
+  xsm: 352px,
+  sm: 576px,
+  md: 768px,
+  lg: 992px,
+  xl: 1200px
+);
+
 
 // Grid containers
 //
@@ -281,6 +295,7 @@ $line-height-xl:              2rem;    // 32px
 $line-height-lg:              1.75rem; // 28px
 $line-height-md:              1.5rem;  // 24px
 $line-height-sm:              1.25rem; // 20px
+$line-height-xs-action:       1.125rem;// 18px
 $line-height-xs:              1rem;    // 16px
 
 $border-radius:               .25rem;

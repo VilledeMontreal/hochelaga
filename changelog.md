@@ -7,9 +7,12 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 ## [4.13.0] - unreleased
 
 ### Added
+- Breakpoint: New xsm breakpoint at 352px for small mobile handling.
 - Styles - Tables: Sorting styles with .sorting-asc and .sorting-desc states.
 - Components - Controls - Input stepper: New control component: input-stepper.
 - Components - Forms: New checkbox wrapper and radio wrapper components.
+- Patterns - Wrapper: Generic structure for complex wrapper based on wrapper-arrondissement structure.
+  TODO: See if we can merge wrapper-arrondissement inside generic wrapper complex structure.
 - PL - Styles - Tables examples: Added Column header and row header examples.
 
 ### Changed
@@ -17,11 +20,16 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 - Components - Controls: Button groups color normalisation for 3 states: active, inactive and disabled.
 - Components - Forms: Normalisation of checkboxes and radios label to 14/20.
 - Components - Pagination: Conforms to button-group specs.
+- Templates - Index: swap light badges for strong in result lists.
+- Templates - Lieux: Evolutions - Added sections, refactored lists, added activity module, swap map for card-location.
+- Templates - Lieux: Center content when no sidebar.
 
 ### Fixed
 - Components - Accordion inside wrapper: Fix spacing bottom to 32px.
+- Components - Cards: Fix card location double container with duplicated ID.
 - Components - Messages - Alerts: Fix external link icon color.
 - Components - Messages - message bar: Fix external link icon color.
+- Components - List Item: Fix external link icon on simple list Action label.
 
 
 ## [4.12.0] - 2020-07-20
