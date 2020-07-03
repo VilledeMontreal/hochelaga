@@ -32,13 +32,14 @@
 
     // Hover state
     @include hover-focus {
-      background-color: $highlight-light;
+      background-color: transparent;
       color: $list-group-action-hover-color;
       text-decoration: none;
       z-index: 1; // Place hover/focus items above their siblings for proper border styling
       .link-label {
         border-bottom: 1px solid $action;
         display: inline;
+        background-color: $highlight-light;
       }
     }
   }
