@@ -3,10 +3,14 @@
     {
       "paginationClass": "pagination-sm",
       "paginationTitle": "Small",
+      "prev": {
+        "disabled": true
+      },
       "paginationList": [
         {
           "url": "#",
-          "text": "1"
+          "text": "1",
+          "class": "active"
         },
         {
           "url": "#",
@@ -14,8 +18,7 @@
         },
         {
           "url": "#",
-          "text": "3",
-          "class": "active"
+          "text": "3"
         },
         {
           "url": "#",
@@ -35,10 +38,14 @@
     {
       "paginationClass": "",
       "paginationTitle": "Default / Medium",
+      "prev": {
+        "disabled": true
+      },
       "paginationList": [
         {
           "url": "#",
-          "text": "1"
+          "text": "1",
+          "class": "active"
         },
         {
           "url": "#",
@@ -46,40 +53,7 @@
         },
         {
           "url": "#",
-          "text": "3",
-          "class": "active"
-        },
-        {
-          "url": "#",
-          "text": "4"
-        },
-        {
-          "url": "#",
-          "text": "5"
-        },
-        {
-          "url": false,
-          "text": "...",
-          "class": "no-link"
-        }
-      ]
-    },
-    {
-      "paginationClass": "pagination-lg",
-      "paginationTitle": "Large",
-      "paginationList": [
-        {
-          "url": "#",
-          "text": "1"
-        },
-        {
-          "url": "#",
-          "text": "2"
-        },
-        {
-          "url": "#",
-          "text": "3",
-          "class": "active"
+          "text": "3"
         },
         {
           "url": "#",

@@ -1,7 +1,7 @@
 <nav aria-label="Pagination">
   <ul class="pagination {{ paginationClass }}">
-    <li class="page-item">
-      <a class="page-link" href="#" aria-label="Précédent">
+    <li class="page-item{{# prev.disabled}} disabled{{/ prev.disabled}}">
+      <a class="page-link" href="#" aria-label="Précédent"{{# prev.disabled}} tabindex="-1" aria-disabled="true"{{/ prev.disabled}}>
         <span class="icon icon-chevron-left" aria-hidden="true"></span>
         <span class="sr-only">Précédent</span>
       </a>
@@ -16,8 +16,8 @@
       {{/ url}}
     </li>
   {{/ paginationList}}
-    <li class="page-item">
-      <a class="page-link" href="#" aria-label="Suivant">
+    <li class="page-item{{# next.disabled}} disabled{{/ next.disabled}}">
+      <a class="page-link" href="#" aria-label="Suivant"{{# next.disabled}} tabindex="-1" aria-disabled="true"{{/ next.disabled}}>
         <span class="icon icon-chevron-right" aria-hidden="true"></span>
         <span class="sr-only">Suivant</span>
       </a>
