@@ -5,7 +5,7 @@ The format is based on [Keep a Changelog](http://keepachangelog.com/en/1.0.0/)
 and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.html).
 
 
-## [4.12.0] - unreleased
+## [4.12.0] - 2020-07-20
 
 ### Added
 - Iconography - Utilitary: icon-flag-fill, icon-heart-fill, icon-history, icon-location-off, icon-reorder, icon-roadsection, icon-rss, icon-selection, icon-star-fill, icon-star-half, icon-user-minus, icon-user-plus and icon-user-x, icon-wifi and icon-wifi-off added to vdm-icon-system.
@@ -506,6 +506,7 @@ Main navbar, menu and footer are now in their own stylesheet. They will eventual
 The version 3 is now deprecated. Only bug fixes will be considered. Please refer to the old bitbucket repo https://bitbucket.org/villemontreal/boite-outils-web/.
 
 
+[4.12.0]: https://bitbucket.org/villemontreal/boite-outils4-web/src/4.12.0/
 [4.11.1]: https://bitbucket.org/villemontreal/boite-outils4-web/src/4.11.1/
 [4.11.0]: https://bitbucket.org/villemontreal/boite-outils4-web/src/4.11.0/
 [4.10.0]: https://bitbucket.org/villemontreal/boite-outils4-web/src/4.10.0/
