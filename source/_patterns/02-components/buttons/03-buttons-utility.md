@@ -4,7 +4,9 @@ title: Buttons Utility
 
 ## Utilisation
 
-Nous les utilisons surtout dans les outils internes, mais aussi dans tous les cas où l'interface devient complexe. Avec leur bordures plus carrées, ils prennent moins de place et s'emboîtent plus facilement les uns avec les autres. Toujours utiliser la classe <code>.btn-squared</code> pour générer un bouton utilitaire.
+Nous les utilisons surtout dans les outils internes, mais aussi dans tous les cas où l'interface devient complexe. Avec leur bordures plus carrées, ils prennent moins de place et s'emboîtent plus facilement les uns avec les autres.
+
+Utiliser la classe <code>.btn-squared</code> pour générer un bouton utilitaire.
 
 
 ## Tailles

@@ -66,6 +66,7 @@
   list-style: none;
   margin: 0;
   padding: 0;
+  width: 100%;
   li {
     padding: 0;
     display: flex;
@@ -193,7 +194,7 @@
             @include icon-color($action);
           }
         }
-        
+
         &.active,
         &:active {
           .icon {
@@ -249,7 +250,7 @@
       }
     }
 
-    // DEPRECATED 
+    // DEPRECATED
     // Revealing labels variants
     &.menu-items-revealing-labels {
       max-width: 56px;

@@ -1,65 +1,43 @@
-<div class="cotainer-fluid pl-atom-txt-utilities-grid">
+<div class="container-fluid pl-atom-txt-utilities-grid">
+
   <ul class="row list-unstyled">
-    <li class="col-xs-12 col-sm-4 col-md-3">
-      <div class="pl-atom-item">
-        <p class="select-all text-primary">.text-primary</p>
-      </div>
-    </li>
-    <li class="col-xs-12 col-sm-4 col-md-3">
-      <div class="pl-atom-item">
-        <p class="select-all text-primary-lighter">.text-primary-lighter</p>
-      </div>
-    </li>
-    <li class="col-xs-12 col-sm-4 col-md-3">
-      <div class="pl-atom-item">
-        <p class="select-all text-success">.text-success</p>
-      </div>
-    </li>
-    <li class="col-xs-12 col-sm-4 col-md-3">
-      <div class="pl-atom-item">
-        <p class="select-all text-danger">.text-danger</p>
-      </div>
-    </li>
-    <li class="col-xs-12 col-sm-4 col-md-3">
-      <div class="pl-atom-item">
-        <p class="select-all text-warning">.text-warning</p>
-      </div>
-    </li>
-    <li class="col-xs-12 col-sm-4 col-md-3">
-      <div class="pl-atom-item">
-        <p class="select-all text-info">.text-info</p>
-      </div>
-    </li>
-    <li class="col-xs-12 col-sm-4 col-md-3">
-      <div class="pl-atom-item">
-        <span class="select-all text-white bg-dark">.text-white</span>
-      </div>
-    </li>
-    <li class="col-xs-12 col-sm-4 col-md-3">
-      <div class="pl-atom-item">
-        <span class="select-all text-light bg-dark">.text-light</span>
-      </div>
-    </li>
-    <li class="col-xs-12 col-sm-4 col-md-3">
-      <div class="pl-atom-item">
-        <p>
-          <span class="select-all text-dark">.text-dark</span>
-        </p>
-      </div>
-    </li>
-    <li class="col-xs-12 col-sm-4 col-md-3">
-      <div class="pl-atom-item">
-        <p>
-          <span class="select-all text-body">.text-body</span>
-        </p>
-      </div>
-    </li>
-    <li class="col-xs-12 col-sm-4 col-md-3">
-      <div class="pl-atom-item">
-        <p>
-          <span class="select-all text-muted">.text-muted</span>
-        </p>
-      </div>
-    </li>
+    {{#textColorPrimary }}
+      <li class="col-xs-12 col-sm-4 col-md-3">
+        <div class="pl-atom-item">
+          <p class="select-all {{ classColor }}">{{ label }}</p>
+        </div>
+      </li>
+    {{/textColorPrimary}}
   </ul>
+
+  <ul class="row list-unstyled">
+    {{#textColorBase }}
+      <li class="col-xs-12 col-sm-4 col-md-3">
+        <div class="pl-atom-item">
+          <p class="select-all {{ classColor }}">{{ label }}</p>
+        </div>
+      </li>
+    {{/textColorBase}}
+  </ul>
+
+  <ul class="row list-unstyled">
+    {{#textColorDialog }}
+      <li class="col-xs-12 col-sm-4 col-md-3">
+        <div class="pl-atom-item">
+          <p class="select-all {{ classColor }}">{{ label }}</p>
+        </div>
+      </li>
+    {{/textColorDialog}}
+  </ul>
+
+  <ul class="row list-unstyled">
+    {{#textColorDialogReversed }}
+      <li class="col-xs-12 col-sm-4 col-md-3">
+        <div class="pl-atom-item">
+          <p class="select-all {{ classColor }}">{{ label }}</p>
+        </div>
+      </li>
+    {{/textColorDialogReversed}}
+  </ul>
+
 </div>

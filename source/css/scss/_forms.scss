@@ -55,13 +55,13 @@ legend,
   font-size: $font-size-xs;
   margin-top: .5rem;
   color: $neutral-primary;
-  
+
   // DEPRECATED
-  // We now conform to bootstrap validation 
+  // We now conform to bootstrap validation
   &.feedback-icon {
     display: none;
-  } 
-} 
+  }
+}
 
 .form-group {
   position: relative;
@@ -91,7 +91,7 @@ legend,
     &[type="password"],
     &[type="search"],
     &[type="tel"],
-    &[type="url"] { 
+    &[type="url"] {
       & + .icon {
         color: $neutral-primary;
         display: flex;
@@ -104,7 +104,7 @@ legend,
       }
     }
   }
-  
+
 
   &.input-group-icon-left {
     input {
@@ -114,7 +114,7 @@ legend,
       &[type="password"],
       &[type="search"],
       &[type="tel"],
-      &[type="url"] { 
+      &[type="url"] {
         padding-left: 2.5rem;
         & + .icon {
           left: 0;
@@ -122,7 +122,7 @@ legend,
       }
     }
   }
-  
+
   &.input-group-icon-right {
     input {
       &:not([type]),
@@ -131,7 +131,7 @@ legend,
       &[type="password"],
       &[type="search"],
       &[type="tel"],
-      &[type="url"] {  
+      &[type="url"] {
         padding-right: 2.5rem;
         & + .icon {
           right: 0;
@@ -274,7 +274,7 @@ legend,
       border: none;
       border-radius: $custom-switch-indicator-border-radius;
     }
-    
+
     &::after {
       top: calc(#{($line-height-md - $custom-control-indicator-size) / 2});
       left: -($custom-switch-width + $custom-control-gutter);
@@ -351,7 +351,7 @@ legend,
       &[type="password"],
       &[type="search"],
       &[type="tel"],
-      &[type="url"] { 
+      &[type="url"] {
         & + .icon {
           padding: 0 .5rem;
           &:before{
@@ -370,7 +370,7 @@ legend,
         &[type="password"],
         &[type="search"],
         &[type="tel"],
-        &[type="url"] { 
+        &[type="url"] {
           padding-left: 2rem;
         }
       }
@@ -384,7 +384,7 @@ legend,
         &[type="password"],
         &[type="search"],
         &[type="tel"],
-        &[type="url"] { 
+        &[type="url"] {
           padding-right: 2rem;
         }
       }
@@ -414,7 +414,7 @@ legend,
   .custom-control-label {
     @include font-size($font-size-xs);
     line-height: $line-height-xs;
-    
+
     // Background-color and (when enabled) gradient
     &::before {
       top: -.25rem;
@@ -431,7 +431,7 @@ legend,
       &::before {
         top: calc(#{($line-height-xs - .75rem) / 2});
       }
-      
+
       &::after {
         top: calc(#{($line-height-xs - $custom-control-indicator-size) / 2});
       }
@@ -471,7 +471,7 @@ legend,
       &[type="password"],
       &[type="search"],
       &[type="tel"],
-      &[type="url"] { 
+      &[type="url"] {
         & + .icon {
           padding: 0 1rem;
         }
@@ -486,7 +486,7 @@ legend,
         &[type="password"],
         &[type="search"],
         &[type="tel"],
-        &[type="url"] { 
+        &[type="url"] {
           padding-left: 3.5rem;
         }
       }
@@ -500,7 +500,7 @@ legend,
         &[type="password"],
         &[type="search"],
         &[type="tel"],
-        &[type="url"] { 
+        &[type="url"] {
           padding-right: 3.5rem;
         }
       }
@@ -558,6 +558,7 @@ legend,
 
 
 // file drop container
+// Deprecated - Use file-drop-container-v2
 //
 .file-drop-container {
   border-radius: $input-border-radius;
@@ -577,6 +578,44 @@ legend,
 
   &.file-over {
     background: $neutral-stroke;
+  }
+
+  .file-selector-button {
+    input:focus {
+      ~ .btn-secondary {
+        border-color: $action;
+        box-shadow: $btn-focus-box-shadow;
+      }
+    }
+  }
+}
+
+.file-drop-container-v2 {
+  border-radius: $input-border-radius;
+  border: 1px dashed $neutral-stroke;
+  display: flex;
+  padding: calc(0.25rem - #{$input-border-width});
+  align-items: center;
+
+  label {
+    margin-bottom: 0;
+  }
+
+  .help-text {
+    color: $neutral-secondary;
+    font-size: $font-size-sm;
+    line-height: $line-height-sm;
+    margin-left: .5rem;
+    text-align: center;
+  }
+  &.active,
+  &.file-over {
+    background: $highlight-light;
+    border-color: $action;
+
+    .btn {
+      border-color: $action;
+    }
   }
 
   .file-selector-button {

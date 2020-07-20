@@ -1,7 +1,7 @@
 {
   "navbarPosition": "fixed-top",
   "documentHeading": true,
-  "documentHeadingClass": "document-heading-left-notch",
+  "documentHeadingClass": "document-heading-left-notch d-print-none",
   "documentHeadingImageUrl": "https://picsum.photos/id/102/1170/480",
   "documentHeadingNotch": true,
   "has-left-notch": true,
@@ -32,7 +32,7 @@
       "voletID": "pg-multi-volet-1",
       "voletTitle": "Titre - Volet 1",
       "module-state": {
-        "badgeClass": "badge-info", 
+        "badgeClass": "badge-info",
         "badge": "État du programme"
       },
       "module-text": true,
@@ -225,7 +225,7 @@
       "voletID": "pg-multi-volet-2",
       "voletTitle": "Titre - Volet 2",
       "module-state": {
-        "badgeClass": "badge-info", 
+        "badgeClass": "badge-info",
         "badge": "État du programme"
       },
       "module-emphasis": {
@@ -319,8 +319,10 @@
             "icon-name": "icon-user",
             "listItemAction": false,
             "listItemLabel": "Titre de fonction",
-            "listExtraContent": {
-              "extraContent": "Prénom Nom"
+            "listItemContent": {
+              "extraContent": {
+                "content": "Prénom Nom"
+              }
             }
           },
           {
@@ -328,9 +330,10 @@
             "icon-name": "icon-location",
             "listItemAction": true,
             "listItemLabel": "Nom du lieu",
-            "hasExtraContent": true,
-            "listExtraContent": {
-              "extraContent": "1441, rue Saint-Urbain, 4e étage<br>Montréal (Québec) H2X 2M6"
+            "listItemContent": {
+              "extraContent": {
+                "content": "1441, rue Saint-Urbain, 4e étage<br>Montréal (Québec) H2X 2M6"
+              }
             }
           },
           {
@@ -338,8 +341,10 @@
             "icon-name": "icon-phone",
             "listItemAction": false,
             "listItemLabel": "3-1-1",
-            "listExtraContent": {
-              "extraContent": "<p>De l’extérieur de Montréal : 514 872-0311</p><p>Du lundi au vendredi : de 8 h 30 à 20 h 30 Samedi, dimanche et jours fériés : de 9 h à 17 h</p><p>Texte complémentaire optionnel.</p>"
+            "listItemContent": {
+              "extraContent": {
+                "content": "<p>De l’extérieur de Montréal : 514 872-0311</p><p>Du lundi au vendredi : de 8 h 30 à 20 h 30 Samedi, dimanche et jours fériés : de 9 h à 17 h</p><p>Texte complémentaire optionnel.</p>"
+              }
             }
           },
           {
@@ -347,8 +352,10 @@
             "icon-name": "icon-phone",
             "listItemAction": false,
             "listItemLabel": "9-1-1",
-            "listExtraContent": {
-              "extraContent": "Services d'urgence"
+            "listItemContent": {
+              "extraContent": {
+                "content": "Services d'urgence"
+              }
             }
           },
           {
@@ -356,8 +363,15 @@
             "icon-name": "icon-phone",
             "listItemAction": false,
             "text": "Nom du service",
-            "listExtraContent": {
-              "extraContent": "514 555-5555, poste 123"
+            "listItemContent": {
+              "extraContent": [
+                {
+                  "content": "514 555-5555"
+                },
+                {
+                  "content": "poste 123"
+                }
+              ]
             }
           },
           {
@@ -366,9 +380,10 @@
             "listItemAction": true,
             "url": "mailto:test@montreal.ca",
             "listItemLabel": "Envoyer un courriel",
-            "hasExtraContent": true,
-            "listExtraContent": {
-              "extraContent": "Texte complémentaire optionnel"
+            "listItemContent": {
+              "extraContent": {
+                "content": "Texte complémentaire optionnel"
+              }
             }
           }
         ]
@@ -380,8 +395,10 @@
             "icon-name": "icon-user",
             "listItemAction": false,
             "listItemLabel": "Titre de fonction",
-            "listExtraContent": {
-              "extraContent": "Prénom Nom"
+            "listItemContent": {
+              "extraContent": {
+                "content": "Prénom Nom"
+              }
             }
           },
           {
@@ -389,9 +406,10 @@
             "icon-name": "icon-location",
             "listItemAction": true,
             "listItemLabel": "Nom du lieu",
-            "hasExtraContent": true,
-            "listExtraContent": {
-              "extraContent": "1441, rue Saint-Urbain, 4e étage<br>Montréal (Québec) H2X 2M6"
+            "listItemContent": {
+              "extraContent": {
+                "content": "1441, rue Saint-Urbain, 4e étage<br>Montréal (Québec) H2X 2M6"
+              }
             }
           },
           {
@@ -399,8 +417,15 @@
             "icon-name": "icon-phone",
             "listItemAction": false,
             "listItemLabel": "Nom du service",
-            "listExtraContent": {
-              "extraContent": "514 555-5555, poste 123"
+            "listItemContent": {
+              "extraContent": [
+                {
+                  "content": "514 555-5555"
+                },
+                {
+                  "content": "poste 123"
+                }
+              ]
             }
           }
         ]

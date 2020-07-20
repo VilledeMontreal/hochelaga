@@ -8,7 +8,7 @@
 
 .wrapper-explainer {
   padding: 2rem 1rem;
-  
+
   @include media-breakpoint-up(md) {
     [class^="col-"] {
       > *:last-child {
@@ -87,9 +87,8 @@
         margin-bottom: 1rem;
       }
     }
-    // Margin-bottom is smaller when inside the wrapper-arrondissement-body
+
     .content-module-stacked {
-      margin-bottom: 2rem;
       &:last-child {
         margin-bottom: 0;
       }

@@ -95,7 +95,7 @@
     "search-term": "Fajitas"
   },
   "wrapperTitle": "Lorem ipsum dolor sit amet",
-  "address": 
+  "address":
     "<strong>Hôtel de Ville de Montréal</strong><br>275, rue Notre-Dame Est<br>Montréal (Québec) H2Y 1C6",
   "text-paragraph":
     "Kogi Cosby sweater ethical squid irony disrupt, organic tote bag gluten-free XOXO wolf typewriter mixtape small batch. DIY pickled four loko McSweeney's, Odd Future dreamcatcher plaid. PBR&B single-origin coffee gluten-free McSweeney's banjo, bicycle rights food truck gastropub vinyl four loko umami +1 narwhal chia. Fashion axe Banksy chia umami artisan, bitters 90's fanny pack. Single-origin coffee drinking vinegar blog semiotics. Fap mumblecore church-key PBR&B, direct trade 8-bit swag asymmetrical slow-carb Marfa ethical. Mustache retro four loko, church-key Thundercats Portland Helvetica Cosby sweater Echo Park sartorial 8-bit ugh bicycle rights iPhone tote bag.",
@@ -276,19 +276,23 @@
     "en": "View this site in English"
   },
   "message-bar-colors": [
-    { 
+    {
+      "messageBarClass": false,
+      "icon-name": "icon-info"
+    },
+    {
       "messageBarClass": "message-bar-info",
       "icon-name": "icon-info"
     },
-    { 
+    {
       "messageBarClass": "message-bar-success",
       "icon-name": "icon-check-circle"
     },
-    { 
+    {
       "messageBarClass": "message-bar-warning",
       "icon-name": "icon-warning"
     },
-    { 
+    {
       "messageBarClass": "message-bar-danger",
       "icon-name": "icon-error"
     }

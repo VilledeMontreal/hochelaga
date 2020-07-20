@@ -4,7 +4,49 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](http://keepachangelog.com/en/1.0.0/)
 and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.html).
 
-## [4.11.1] - unreleased
+
+## [4.12.0] - unreleased
+
+### Added
+- Iconography - Utilitary: icon-flag-fill, icon-heart-fill, icon-history, icon-location-off, icon-reorder, icon-roadsection, icon-rss, icon-selection, icon-star-fill, icon-star-half, icon-user-minus, icon-user-plus and icon-user-x, icon-wifi and icon-wifi-off added to vdm-icon-system.
+- Iconography - Editorial: icon-success and icon-empty added to vdm-icon-system
+- Typography - Text utilities: New .text-{dialog}-reversed variant.
+- Components - Badges: Add .badge-notification-reversed.
+- Components - Badges: Add color variants.
+- Components - Cards: Add Card location.
+- Components - Forms: Form input file and uploaded file list examples.
+- Components - List item: Possibility to add dialog color (.text-{dialog} or .text-{dialog}-reversed) to bold element under the Label.
+- Components - List item: Add examples for list items.
+- Components - Messages: Empty state and confirmation state examples.
+- Templates - Démarches: Add examples for phone extension integration inside list-item.
+- Templates - Démarches: Add examples for location "state" inside list-item using .text-{dialog} or .text-{dialog}-reversed utility classes.
+
+### Changed
+- Print: Hide elements in the print stylesheet (navbar, breadcrumb, feedback section, footer).
+- Iconography: icon-plus was modified.
+- Components - Badges and Tags: Separation of badges and tags to reflect Library state.
+- Components - Collapse - Accordion Framed: change icons for icon-plus and icon-minus.
+- Components - Progress - Circle: Now conform to Design system. Used .bg-{color} for dialog color variation.
+- Components - List item: Refactoring to allow more flexibility inside component.
+- Components - Navigation: Clean-up examples and removed deprecated examples.
+- Templates - Démarches: Refactoring of Needed documents section.
+- PL: Rename messaging components directory to messages.
+
+### Fixed
+- SASS: fix @extend of .nav-link.active to only extend .active [https://sass-lang.com/documentation/at-rules/extend#limitations](SASS Extend Limitations).
+- Components - Badges: Fix left and right spacing.
+- Components - List Item: Fix simple list Item hover background.
+- Components - messages: Fix alert-actions spacing.
+- Templates - Démarches: Fix various spacing issues with badge states and accordions content.
+- PL - mapbox integration: fix mapbox integration preventing map rendering in view-all pages.
+
+## Removed
+- Iconography - Editorial: icon-not-found was removed from the vdm-icon-system project.
+- Iconography - Utilitary: icon-loction was removed. This was an artefact from a wrong file-name. Should use icon-location instead.
+- Components - Progress: .progress-{dialog-color} remove (unused and undocumented). Caused conflict with progress-info text wrapper.
+
+
+## [4.11.1] - 2020-06-12
 
 ### Fixed
 - External link icon should not be applied inside cards.
@@ -16,6 +58,7 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 - Components - Badges: New .badge-max-width utility class for max-width badges to 288px.
 - Components - Chips: Rounded corners and spacing tweaks.
 - Components - List-group: Add example to float badge left of teaser.
+- Components - Forms - File upload: New component for file-upload.
 - Templates - Lieux: Add Full width bar messaging (TC diffusion).
 - Templates - Index: Add Full width bar messaging example.
 
@@ -463,6 +506,7 @@ Main navbar, menu and footer are now in their own stylesheet. They will eventual
 The version 3 is now deprecated. Only bug fixes will be considered. Please refer to the old bitbucket repo https://bitbucket.org/villemontreal/boite-outils-web/.
 
 
+[4.11.1]: https://bitbucket.org/villemontreal/boite-outils4-web/src/4.11.1/
 [4.11.0]: https://bitbucket.org/villemontreal/boite-outils4-web/src/4.11.0/
 [4.10.0]: https://bitbucket.org/villemontreal/boite-outils4-web/src/4.10.0/
 [4.9.0]: https://bitbucket.org/villemontreal/boite-outils4-web/src/4.9.0/

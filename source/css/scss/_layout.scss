@@ -108,12 +108,6 @@ html {
   }
 }
 
-.empty-state {
-  .icon {
-    @include icon-size(4rem);
-  }
-}
-
 // Wizard header
 // Optimize and normalize - we can extend from banner and build more generic containers
 .wizard-header {

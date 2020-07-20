@@ -1,10 +1,10 @@
 {
   "documentHeading": true,
-  "documentHeadingClass": "document-heading-left-notch",
+  "documentHeadingClass": "document-heading-left-notch d-print-none",
   "documentHeadingNotch": true,
   "has-left-notch": true,
   "state": {
-    "badgeClass": "badge-warning", 
+    "badgeClass": "badge-warning",
     "badge": "État - optionnel"
   },
   "content-header-extras": {
@@ -26,14 +26,16 @@
         "icon-name": "icon-calendar",
         "listItemAction": false,
         "listItemLabel": "Date",
-        "listExtraContent": [
+        "listItemContent": [
           {
-            "extraContentBold": false,
-            "extraContent": "Du 1 décembre 2020 - 9&nbsp;h&nbsp;00"
-          },
-          {
-            "extraContentBold": false,
-            "extraContent": "au 2 décembre 2020 - 21&nbsp;h&nbsp;00"
+            "extraContent": [
+              {
+                "content": "Du 1 décembre 2020 - 9&nbsp;h&nbsp;00"
+              },
+              {
+                "content": "au 2 décembre 2020 - 21&nbsp;h&nbsp;00"
+              }
+            ]
           }
         ]
       },
@@ -42,17 +44,18 @@
         "icon-name": "icon-money",
         "listItemAction": false,
         "listItemLabel": "Gratuit",
-        "listExtraContent": false
+        "listItemContent": false
       },
       {
         "hasIcon": true,
         "icon-name": "icon-ticket",
         "listItemAction": false,
         "listItemLabel": "Entrée",
-        "listExtraContent": [
+        "listItemContent": [
           {
-            "extraContentBold": false,
-            "extraContent": "Sur inscription"
+            "extraContent": {
+              "content": "Sur inscription"
+            }
           },
           {
             "extraContentAction": {
@@ -275,21 +278,17 @@
             "icon-name": "icon-location",
             "listItemAction": true,
             "listItemLabel": "Nom du lieu",
-            "hasExtraContent": true,
-            "listExtraContent": [
-              {
-                "extraContentBold": false,
-                "extraContent" :"123, rue Avenue Est<br>Montréal (Québec) H2Y 1B5"
+            "listItemContent": {
+              "extraContent": {
+                "content": "123, rue Avenue Est<br>Montréal (Québec) H2Y 1B5"
               },
-              {
-                "extraContentAction": {
-                  "classes": "mt-1",
-                  "actionClasses": "js-scroll-trigger",
-                  "url": "#section-mapEvent002",
-                  "text": "Voir carte"
-                }
+              "extraContentAction": {
+                "classes": "mt-1",
+                "actionClasses": "js-scroll-trigger",
+                "url": "#section-mapEvent002",
+                "text": "Voir carte"
               }
-            ]
+            }
           }
         ]
       },
@@ -300,8 +299,10 @@
             "icon-name": "icon-user",
             "listItemAction": false,
             "listItemLabel": "Titre coordonnées contact",
-            "listExtraContent": {
-              "extraContent": "Nom du contact"
+            "listItemContent": {
+              "extraContent": {
+                "content": "Nom du contact"
+              }
             }
           },
           {
@@ -309,8 +310,8 @@
             "icon-name": "icon-phone",
             "listItemAction": false,
             "listItemLabel": false,
-            "listExtraContent": {
-              "extraContent": "514 555-5555, note associée"
+            "listItemContent": {
+              "itemContent": "514 555-5555"
             }
           },
           {

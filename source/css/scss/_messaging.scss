@@ -28,9 +28,9 @@
   }
 
   .alert-actions {
-    margin-top: 1rem;
-    .btn + .btn {
-      margin: .5rem;
+    margin-top: .5rem;
+    .btn {
+      margin: .5rem 1rem .5rem 0;
     }
   }
 
@@ -47,7 +47,7 @@
   }
 
   .alert-icon-container svg,
-  .close svg {      
+  .close svg {
     fill: $neutral-tertiary;
   }
 
@@ -73,7 +73,7 @@
   $color-light: map-get($map, light);
   $color-dark:  map-get($map, dark);
   $color-base:  map-get($map, base);
-  
+
   .alert-#{$label} {
     color: $color-dark;
     @include gradient-bg($color-light);
@@ -97,7 +97,7 @@
     }
 
     .alert-icon-container svg,
-    .close svg {      
+    .close svg {
       fill: $color-dark;
     }
 
@@ -123,7 +123,7 @@
 .popover-header,
 .popover-body {
   padding-top: 1rem;
-  
+
   &:first-of-type {
     padding: 0;
   }
@@ -150,12 +150,13 @@
 .message-bar {
   @include font-size($font-size-base);
   line-height: $line-height-md;
+  background-color: $neutral-primary;
   border-left-width: 0;
   color: $white;
   display: flex;
   margin-bottom: 0;
   padding: 1rem 3.5rem 1rem 1rem;
-  
+
   svg {
     fill: $white;
   }
@@ -249,7 +250,7 @@
           }
         }
       }
-    } 
+    }
     @else {
       color: $white;
       svg {
@@ -264,7 +265,14 @@
             background-color: darken($color-base, 6%);
           }
         }
-      } 
+      }
     }
+  }
+}
+
+// Empty and confirmation states
+.empty-state {
+  .icon {
+    @include icon-size(4rem);
   }
 }

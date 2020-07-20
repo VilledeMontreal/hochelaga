@@ -1,4 +1,4 @@
-// Base class
+// Base badge class - Tags in our design system
 //
 // Requires one of the contextual, color modifier classes for `color` and
 // `background-color`.
@@ -50,7 +50,7 @@
 }
 
 
-// Pill badges
+// Pill badges - Badges in our design system
 //
 // Make them extra rounded with a modifier to replace v3's badges.
 
@@ -58,6 +58,7 @@
   padding-right: $badge-pill-padding-x;
   padding-left: $badge-pill-padding-x;
   @include border-radius($badge-pill-border-radius);
+  min-width: 1.5rem;
 }
 
 // Colors
@@ -195,7 +196,7 @@
   $color-dark: map-get($map, dark);
   $color-light: map-get($map, light);
   $color-base: map-get($map, base);
-  
+
   .badge-#{$label} {
     background-color: $color-base;
     &[href] {
@@ -218,7 +219,7 @@
           color: $neutral-primary;
         }
       }
-    } 
+    }
     @else {
       color: $white;
       .icon {
@@ -261,6 +262,19 @@
     position: absolute;
     top: -2px;
     right: -2px;
+  }
+}
+
+// Reversed mode. Must be applied on a bg-dark element or navbar-reversed.
+.badge-notification-reversed {
+  .icon {
+    @include icon-color($white);
+  }
+  .badge-notification-dot {
+    background-color: $neutral-primary;
+    &:after {
+      background-color: $action-lighter;
+    }
   }
 }
 

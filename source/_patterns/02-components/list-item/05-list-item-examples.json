@@ -1,94 +1,260 @@
 {
   "list-sizes": [
     {
-      "subtitle": "Small",
+      "subtitle": "Large",
       "list-item-size": [
         {
-          "listClass": "list-sm",
+          "listClass": "list-lg",
           "list": [
             {
               "listItemClass": false,
               "listItemAction": false,
               "listItemLabel": "Libellé",
-              "listExtraContent": {
-                "extraContentBold": false,
-                "extraContent": "Description"
+              "listItemContent": false
+            }
+          ]
+        },
+        {
+          "listClass": "list-lg",
+          "list": [
+            {
+              "listItemClass": false,
+              "listItemAction": false,
+              "listItemLabel": false,
+              "listItemContent": {
+                "itemContent": "Description",
+                "extraContent": false
               }
             }
           ]
         },
         {
-          "listClass": "list-sm",
+          "listClass": "list-lg",
           "list": [
             {
               "listItemClass": false,
               "listItemAction": true,
               "listItemLabel": "Libellé",
-              "listExtraContent": {
-                "extraContentBold": false,
-                "extraContent": "Description"
+              "listItemContent": false
+            }
+          ]
+        },
+        {
+          "listClass": "list-lg",
+          "list": [
+            {
+              "listItemClass": false,
+              "listItemAction": false,
+              "listItemLabel": "Libellé",
+              "listItemContent": {
+                "itemContent": "Description",
+                "extraContent": false
               }
             }
           ]
         },
         {
-          "listClass": "list-sm",
+          "listClass": "list-lg",
+          "list": [
+            {
+              "listItemClass": false,
+              "listItemAction": true,
+              "listItemLabel": "Libellé",
+              "listItemContent": {
+                "itemContent": "Description",
+                "extraContent": false
+              }
+            }
+          ]
+        },
+        {
+          "listClass": "list-lg",
           "list": [
             {
               "hasIcon": true,
               "icon-name": "icon-location",
               "listItemAction": false,
               "listItemLabel": "Libellé",
-              "listExtraContent": {
-                "extraContentBold": false,
-                "extraContent": "Description"
-              }
+              "listItemContent": false
             }
           ]
         },
         {
-          "listClass": "list-sm",
-          "list": [
-            {
-              "hasIcon": true,
-              "icon-name": "icon-location",
-              "listItemAction": true,
-              "listItemLabel": "Libellé",
-              "hasExtraContent": true,
-              "listExtraContent": {
-                "extraContentBold": false,
-                "extraContent": "Description"
-              }
-            }
-          ]
-        },
-        {
-          "listClass": "list-sm",
-          "list": [
-            {
-              "hasIcon": true,
-              "icon-name": "icon-location",
-              "listItemAction": true,
-              "listItemLabel": "Libellé",
-              "hasExtraContent": true,
-              "listExtraContent": {
-                "extraContentBold": "Information supplémentaire (optionnel)",
-                "extraContent": "Description"
-              }
-            }
-          ]
-        },
-        {
-          "listClass": "list-sm",
+          "listClass": "list-lg",
           "list": [
             {
               "hasIcon": true,
               "icon-name": "icon-location",
               "listItemAction": false,
               "listItemLabel": false,
-              "listExtraContent": {
-                "extraContentBold": false,
-                "extraContent": "Description"
+              "listItemContent": {
+                "itemContent": "Description",
+                "extraContent": false
+              }
+            }
+          ]
+        },
+        {
+          "listClass": "list-lg",
+          "list": [
+            {
+              "hasIcon": true,
+              "icon-name": "icon-location",
+              "listItemAction": true,
+              "listItemLabel": "Libellé",
+              "listItemContent": false
+            }
+          ]
+        },
+        {
+          "listClass": "list-lg",
+          "list": [
+            {
+              "hasIcon": true,
+              "icon-name": "icon-location",
+              "listItemAction": false,
+              "listItemLabel": "Libellé",
+              "listItemContent": {
+                "itemContent": "Description",
+                "extraContent": false
+              }
+            }
+          ]
+        },
+        {
+          "listClass": "list-lg",
+          "list": [
+            {
+              "hasIcon": true,
+              "icon-name": "icon-location",
+              "listItemAction": true,
+              "listItemLabel": "Libellé",
+              "listItemContent": {
+                "itemContent": "Description",
+                "extraContent": false
+              }
+            }
+          ]
+        },
+        {
+          "listClass": "list-lg",
+          "list": [
+            {
+              "hasIcon": true,
+              "icon-name": "icon-location",
+              "listItemAction": true,
+              "listItemLabel": "Libellé",
+              "listItemContent": {
+                "itemContent": false,
+                "extraContent": [
+                  {
+                    "class": "font-weight-bold",
+                    "content": "Information supplémentaire (optionnel)"
+                  },
+                  {
+                    "class": false,
+                    "content": "Description"
+                  }
+                ]
+              }
+            }
+          ]
+        },
+        {
+          "listClass": "list-lg",
+          "list": [
+            {
+              "hasIcon": true,
+              "icon-name": "icon-location",
+              "listItemAction": true,
+              "listItemLabel": "Libellé",
+              "listItemContent": {
+                "itemContent": false,
+                "extraContent": [
+                  {
+                    "class": "font-weight-bold text-danger-reversed",
+                    "content": "État"
+                  },
+                  {
+                    "class": false,
+                    "content": "Description"
+                  }
+                ]
+              }
+            }
+          ]
+        },
+        {
+          "listClass": "list-lg",
+          "list": [
+            {
+              "hasIcon": true,
+              "icon-name": "icon-location",
+              "listItemAction": true,
+              "listItemLabel": "Libellé",
+              "listItemContent": {
+                "itemContent": false,
+                "extraContent": [
+                  {
+                    "class": false,
+                    "content": "Description"
+                  },
+                  {
+                    "class": false,
+                    "content": "Informations supplémentaires"
+                  }
+                ]
+              }
+            }
+          ]
+        },
+        {
+          "listClass": "list-lg",
+          "list": [
+            {
+              "hasIcon": true,
+              "icon-name": "icon-location",
+              "listItemAction": false,
+              "listItemLabel": "Libellé",
+              "listItemContent": {
+                "itemContent": false,
+                "extraContent": [
+                  {
+                    "content": "Description"
+                  }
+                ],
+                "extraContentAction": {
+                  "classes": "mt-1",
+                  "actionClasses": false,
+                  "url": "#",
+                  "text": "Lien"
+                }
+              }
+            }
+          ]
+        },
+        {
+          "listClass": "list-lg",
+          "list": [
+            {
+              "hasIcon": true,
+              "icon-name": "icon-location",
+              "listItemAction": true,
+              "listItemLabel": "Libellé",
+              "listItemContent": {
+                "itemContent": false,
+                "extraContent": [
+                  {
+                    "class": false,
+                    "content": "Description"
+                  }
+                ],
+                "extraContentAction": {
+                  "classes": "mt-1",
+                  "actionClasses": false,
+                  "url": "#",
+                  "text": "Lien"
+                }
               }
             }
           ]
@@ -105,9 +271,20 @@
               "listItemClass": false,
               "listItemAction": false,
               "listItemLabel": "Libellé",
-              "listExtraContent": {
-                "extraContentBold": false,
-                "extraContent": "Description"
+              "listItemContent": false
+            }
+          ]
+        },
+        {
+          "listClass": "list-md",
+          "list": [
+            {
+              "listItemClass": false,
+              "listItemAction": false,
+              "listItemLabel": false,
+              "listItemContent": {
+                "itemContent": "Description",
+                "extraContent": false
               }
             }
           ]
@@ -119,9 +296,34 @@
               "listItemClass": false,
               "listItemAction": true,
               "listItemLabel": "Libellé",
-              "listExtraContent": {
-                "extraContentBold": false,
-                "extraContent": "Description"
+              "listItemContent": false
+            }
+          ]
+        },
+        {
+          "listClass": "list-md",
+          "list": [
+            {
+              "listItemClass": false,
+              "listItemAction": false,
+              "listItemLabel": "Libellé",
+              "listItemContent": {
+                "itemContent": "Description",
+                "extraContent": false
+              }
+            }
+          ]
+        },
+        {
+          "listClass": "list-md",
+          "list": [
+            {
+              "listItemClass": false,
+              "listItemAction": true,
+              "listItemLabel": "Libellé",
+              "listItemContent": {
+                "itemContent": "Description",
+                "extraContent": false
               }
             }
           ]
@@ -134,42 +336,7 @@
               "icon-name": "icon-location",
               "listItemAction": false,
               "listItemLabel": "Libellé",
-              "listExtraContent": {
-                "extraContentBold": false,
-                "extraContent": "Description"
-              }
-            }
-          ]
-        },
-        {
-          "listClass": "list-md",
-          "list": [
-            {
-              "hasIcon": true,
-              "icon-name": "icon-location",
-              "listItemAction": true,
-              "listItemLabel": "Libellé",
-              "hasExtraContent": true,
-              "listExtraContent": {
-                "extraContentBold": false,
-                "extraContent": "Description"
-              }
-            }
-          ]
-        },
-        {
-          "listClass": "list-md",
-          "list": [
-            {
-              "hasIcon": true,
-              "icon-name": "icon-location",
-              "listItemAction": true,
-              "listItemLabel": "Libellé",
-              "hasExtraContent": true,
-              "listExtraContent": {
-                "extraContentBold": "Information supplémentaire (optionnel)",
-                "extraContent": "Description"
-              }
+              "listItemContent": false
             }
           ]
         },
@@ -181,9 +348,174 @@
               "icon-name": "icon-location",
               "listItemAction": false,
               "listItemLabel": false,
-              "listExtraContent": {
-                "extraContentBold": false,
-                "extraContent": "Description"
+              "listItemContent": {
+                "itemContent": "Description",
+                "extraContent": false
+              }
+            }
+          ]
+        },
+        {
+          "listClass": "list-md",
+          "list": [
+            {
+              "hasIcon": true,
+              "icon-name": "icon-location",
+              "listItemAction": true,
+              "listItemLabel": "Libellé",
+              "listItemContent": false
+            }
+          ]
+        },
+        {
+          "listClass": "list-md",
+          "list": [
+            {
+              "hasIcon": true,
+              "icon-name": "icon-location",
+              "listItemAction": false,
+              "listItemLabel": "Libellé",
+              "listItemContent": {
+                "itemContent": "Description",
+                "extraContent": false
+              }
+            }
+          ]
+        },
+        {
+          "listClass": "list-md",
+          "list": [
+            {
+              "hasIcon": true,
+              "icon-name": "icon-location",
+              "listItemAction": true,
+              "listItemLabel": "Libellé",
+              "listItemContent": {
+                "itemContent": "Description",
+                "extraContent": false
+              }
+            }
+          ]
+        },
+        {
+          "listClass": "list-md",
+          "list": [
+            {
+              "hasIcon": true,
+              "icon-name": "icon-location",
+              "listItemAction": true,
+              "listItemLabel": "Libellé",
+              "listItemContent": {
+                "itemContent": false,
+                "extraContent": [
+                  {
+                    "class": "font-weight-bold",
+                    "content": "Information supplémentaire (optionnel)"
+                  },
+                  {
+                    "class": false,
+                    "content": "Description"
+                  }
+                ]
+              }
+            }
+          ]
+        },
+        {
+          "listClass": "list-md",
+          "list": [
+            {
+              "hasIcon": true,
+              "icon-name": "icon-location",
+              "listItemAction": true,
+              "listItemLabel": "Libellé",
+              "listItemContent": {
+                "itemContent": false,
+                "extraContent": [
+                  {
+                    "class": "font-weight-bold text-danger-reversed",
+                    "content": "État"
+                  },
+                  {
+                    "class": false,
+                    "content": "Description"
+                  }
+                ]
+              }
+            }
+          ]
+        },
+        {
+          "listClass": "list-md",
+          "list": [
+            {
+              "hasIcon": true,
+              "icon-name": "icon-location",
+              "listItemAction": true,
+              "listItemLabel": "Libellé",
+              "listItemContent": {
+                "itemContent": false,
+                "extraContent": [
+                  {
+                    "class": false,
+                    "content": "Description"
+                  },
+                  {
+                    "class": false,
+                    "content": "Informations supplémentaires"
+                  }
+                ]
+              }
+            }
+          ]
+        },
+        {
+          "listClass": "list-md",
+          "list": [
+            {
+              "hasIcon": true,
+              "icon-name": "icon-location",
+              "listItemAction": false,
+              "listItemLabel": "Libellé",
+              "listItemContent": {
+                "itemContent": false,
+                "extraContent": [
+                  {
+                    "content": "Description"
+                  }
+                ],
+                "extraContentAction": {
+                  "classes": "mt-1",
+                  "actionClasses": false,
+                  "url": "#",
+                  "text": "Lien"
+                }
+              }
+            }
+          ]
+        },
+        {
+          "listClass": "list-md",
+          "list": [
+            {
+              "hasIcon": true,
+              "icon-name": "icon-location",
+              "listItemAction": true,
+              "listItemLabel": "Libellé",
+              "listItemContent": {
+                "itemContent": false,
+                "extraContent": [
+                  {
+                    "class": false,
+                    "content": "Description"
+                  }
+                ],
+                "extraContentAction": {
+                  "classes": "mt-1",
+                  "actionClasses": false,
+                  "url": "#",
+                  "text": "Lien"
+                }
               }
             }
           ]
@@ -191,94 +523,260 @@
       ]
     },
     {
-      "subtitle": "Large",
+      "subtitle": "Small",
       "list-item-size": [
         {
-          "listClass": false,
+          "listClass": "list-sm",
           "list": [
             {
               "listItemClass": false,
               "listItemAction": false,
               "listItemLabel": "Libellé",
-              "listExtraContent": {
-                "extraContentBold": false,
-                "extraContent": "Description"
+              "listItemContent": false
+            }
+          ]
+        },
+        {
+          "listClass": "list-sm",
+          "list": [
+            {
+              "listItemClass": false,
+              "listItemAction": false,
+              "listItemLabel": false,
+              "listItemContent": {
+                "itemContent": "Description",
+                "extraContent": false
               }
             }
           ]
         },
         {
-          "listClass": "list-lg",
+          "listClass": "list-sm",
           "list": [
             {
               "listItemClass": false,
               "listItemAction": true,
               "listItemLabel": "Libellé",
-              "listExtraContent": {
-                "extraContentBold": false,
-                "extraContent": "Description"
+              "listItemContent": false
+            }
+          ]
+        },
+        {
+          "listClass": "list-sm",
+          "list": [
+            {
+              "listItemClass": false,
+              "listItemAction": false,
+              "listItemLabel": "Libellé",
+              "listItemContent": {
+                "itemContent": "Description",
+                "extraContent": false
               }
             }
           ]
         },
         {
-          "listClass": "list-lg",
+          "listClass": "list-sm",
+          "list": [
+            {
+              "listItemClass": false,
+              "listItemAction": true,
+              "listItemLabel": "Libellé",
+              "listItemContent": {
+                "itemContent": "Description",
+                "extraContent": false
+              }
+            }
+          ]
+        },
+        {
+          "listClass": "list-sm",
           "list": [
             {
               "hasIcon": true,
               "icon-name": "icon-location",
               "listItemAction": false,
               "listItemLabel": "Libellé",
-              "listExtraContent": {
-                "extraContentBold": false,
-                "extraContent": "Description"
-              }
+              "listItemContent": false
             }
           ]
         },
         {
-          "listClass": "list-lg",
-          "list": [
-            {
-              "hasIcon": true,
-              "icon-name": "icon-location",
-              "listItemAction": true,
-              "listItemLabel": "Libellé",
-              "hasExtraContent": true,
-              "listExtraContent": {
-                "extraContentBold": false,
-                "extraContent": "Description"
-              }
-            }
-          ]
-        },
-        {
-          "listClass": "list-lg",
-          "list": [
-            {
-              "hasIcon": true,
-              "icon-name": "icon-location",
-              "listItemAction": true,
-              "listItemLabel": "Libellé",
-              "hasExtraContent": true,
-              "listExtraContent": {
-                "extraContentBold": "Information supplémentaire (optionnel)",
-                "extraContent": "Description"
-              }
-            }
-          ]
-        },
-        {
-          "listClass": "list-lg",
+          "listClass": "list-sm",
           "list": [
             {
               "hasIcon": true,
               "icon-name": "icon-location",
               "listItemAction": false,
               "listItemLabel": false,
-              "listExtraContent": {
-                "extraContentBold": false,
-                "extraContent": "Description"
+              "listItemContent": {
+                "itemContent": "Description",
+                "extraContent": false
+              }
+            }
+          ]
+        },
+        {
+          "listClass": "list-sm",
+          "list": [
+            {
+              "hasIcon": true,
+              "icon-name": "icon-location",
+              "listItemAction": true,
+              "listItemLabel": "Libellé",
+              "listItemContent": false
+            }
+          ]
+        },
+        {
+          "listClass": "list-sm",
+          "list": [
+            {
+              "hasIcon": true,
+              "icon-name": "icon-location",
+              "listItemAction": false,
+              "listItemLabel": "Libellé",
+              "listItemContent": {
+                "itemContent": "Description",
+                "extraContent": false
+              }
+            }
+          ]
+        },
+        {
+          "listClass": "list-sm",
+          "list": [
+            {
+              "hasIcon": true,
+              "icon-name": "icon-location",
+              "listItemAction": true,
+              "listItemLabel": "Libellé",
+              "listItemContent": {
+                "itemContent": "Description",
+                "extraContent": false
+              }
+            }
+          ]
+        },
+        {
+          "listClass": "list-sm",
+          "list": [
+            {
+              "hasIcon": true,
+              "icon-name": "icon-location",
+              "listItemAction": true,
+              "listItemLabel": "Libellé",
+              "listItemContent": {
+                "itemContent": false,
+                "extraContent": [
+                  {
+                    "class": "font-weight-bold",
+                    "content": "Information supplémentaire (optionnel)"
+                  },
+                  {
+                    "class": false,
+                    "content": "Description"
+                  }
+                ]
+              }
+            }
+          ]
+        },
+        {
+          "listClass": "list-sm",
+          "list": [
+            {
+              "hasIcon": true,
+              "icon-name": "icon-location",
+              "listItemAction": true,
+              "listItemLabel": "Libellé",
+              "listItemContent": {
+                "itemContent": false,
+                "extraContent": [
+                  {
+                    "class": "font-weight-bold text-danger-reversed",
+                    "content": "État"
+                  },
+                  {
+                    "class": false,
+                    "content": "Description"
+                  }
+                ]
+              }
+            }
+          ]
+        },
+        {
+          "listClass": "list-sm",
+          "list": [
+            {
+              "hasIcon": true,
+              "icon-name": "icon-location",
+              "listItemAction": true,
+              "listItemLabel": "Libellé",
+              "listItemContent": {
+                "itemContent": false,
+                "extraContent": [
+                  {
+                    "class": false,
+                    "content": "Description"
+                  },
+                  {
+                    "class": false,
+                    "content": "Informations supplémentaires"
+                  }
+                ]
+              }
+            }
+          ]
+        },
+        {
+          "listClass": "list-sm",
+          "list": [
+            {
+              "hasIcon": true,
+              "icon-name": "icon-location",
+              "listItemAction": false,
+              "listItemLabel": "Libellé",
+              "listItemContent": {
+                "itemContent": false,
+                "extraContent": [
+                  {
+                    "content": "Description"
+                  }
+                ],
+                "extraContentAction": {
+                  "classes": "mt-1",
+                  "actionClasses": false,
+                  "url": "#",
+                  "text": "Lien"
+                }
+              }
+            }
+          ]
+        },
+        {
+          "listClass": "list-sm",
+          "list": [
+            {
+              "hasIcon": true,
+              "icon-name": "icon-location",
+              "listItemAction": true,
+              "listItemLabel": "Libellé",
+              "listItemContent": {
+                "itemContent": false,
+                "extraContent": [
+                  {
+                    "class": false,
+                    "content": "Description"
+                  }
+                ],
+                "extraContentAction": {
+                  "classes": "mt-1",
+                  "actionClasses": false,
+                  "url": "#",
+                  "text": "Lien"
+                }
               }
             }
           ]

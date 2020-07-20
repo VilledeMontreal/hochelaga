@@ -24,7 +24,7 @@
   text-align: inherit;
   display: inherit;
   width: 100%;
-  
+
   a {
     display: inline-block;
     border: none;
@@ -32,13 +32,14 @@
 
     // Hover state
     @include hover-focus {
-      background-color: $highlight-light;
+      background-color: transparent;
       color: $list-group-action-hover-color;
       text-decoration: none;
       z-index: 1; // Place hover/focus items above their siblings for proper border styling
       .link-label {
         border-bottom: 1px solid $action;
         display: inline;
+        background-color: $highlight-light;
       }
     }
   }
@@ -52,7 +53,7 @@
 .list-item {
   position: relative;
   display: flex;
-  flex-flow: row wrap;
+  flex-flow: column wrap;
   padding: .5rem 0;
   color: $list-group-color;
 
@@ -190,7 +191,7 @@
       }
       ~ .list-item-icon-content {
         margin-left: 2.25rem;
-      } 
+      }
     }
   }
 
@@ -216,7 +217,7 @@
       }
       ~ .list-item-icon-content {
       margin-left: 1.5rem;
-      } 
+      }
     }
   }
 }

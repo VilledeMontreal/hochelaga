@@ -4,11 +4,11 @@ title: Buttons Editorial
 
 ## Utilisation
 
-Utilisés notamment sur [montreal.ca](https://montreal.ca). Ils ont un aspect plus proche de l'identité de marque avec leurs bordures arrondies.
+Utilisés notamment sur [montreal.ca](https://montreal.ca). Ils ont un aspect plus proche de l'identité de marque avec leurs bordures arrondies. Utiliser des boutons éditoriaux uniquement dans des page éditoriales : articles, landing pages, nouvelles.
 
 ## Tailles
 
-Les boutons par default sont de taille médiums. Ils sont disponibles également en version small et large avec les classes suivantes; <code>.btn-sm</code> ou bien <code>.btn-lg</code>. 
+Les boutons par default sont de taille médiums. Ils sont disponibles également en version small et large avec les classes suivantes; <code>.btn-sm</code> ou bien <code>.btn-lg</code>.
 
 ## Hiérarchie
 

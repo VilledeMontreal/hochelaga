@@ -1,0 +1,83 @@
+{
+  "includeMapbox": true,
+  "cards": {
+    "classes": false,
+    "bsgrid-classes": "col-12 col-md-7",
+    "card-item": [
+      {
+        "classes" : false,
+        "card-media" : {
+          "icon": false,
+          "img": false,
+          "map": {
+            "location": {
+              "mapID": "cardLocationMapID",
+              "lngLat": "-73.589921, 45.534415",
+              "showZoom": true
+            }
+          }
+        },
+        "listClass": "list-lg",
+        "list": [
+          {
+            "hasIcon": false,
+            "listItemAction": false,
+            "listItemLabel": "Nom du lieu non-Ville",
+            "listItemContent": {
+              "itemContent": false,
+              "extraContent": [
+                {
+                  "class": false,
+                  "content": "5519 rue Gerry-Boulet<br>Montréal (Québec) H2J 3K3"
+                }
+              ],
+              "extraContentAction": {
+                "classes": "mt-1",
+                "actionClasses": "is-external-link",
+                "url": "https://google.ca",
+                "text": "Lien"
+              }
+            }
+          }
+        ]
+      },
+      {
+        "classes" : false,
+        "card-media" : {
+          "icon": false,
+          "img": false,
+          "map": {
+            "location": {
+              "mapID": "cardLocationMapID2",
+              "lngLat": "-73.576779, 45.544852",
+              "showZoom": true
+            }
+          }
+        },
+        "listClass": "list-lg",
+        "list": [
+          {
+            "hasIcon": false,
+            "listItemAction": true,
+            "listItemLabel": "Nom du lieu Ville",
+            "listItemContent": {
+              "itemContent": false,
+              "extraContent": [
+                {
+                  "class": false,
+                  "content": "2560 Rue Masson<br>Montréal (Québec) H1Y 1V9"
+                }
+              ],
+              "extraContentAction": {
+                "classes": "mt-1",
+                "actionClasses": "is-external-link",
+                "url": "https://google.ca",
+                "text": "Lien"
+              }
+            }
+          }
+        ]
+      }
+    ]
+  }
+}

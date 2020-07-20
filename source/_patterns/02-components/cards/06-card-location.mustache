@@ -1,0 +1,20 @@
+
+<div class="container">
+  <div class="row cards {{ cards.classes }}">
+  {{# cards.card-item }}
+    <div class="{{ cards.bsgrid-classes }}">
+      {{> components-card-item-location }}
+    </div>
+  {{/ cards.card-item }}
+  </div>
+</div>
+
+
+{{# cards.card-item}}
+<script>
+  window.addEventListener('load', function() {
+    var data = null
+    generateMap([{{{ card-media.map.location.lngLat }}}], data, '{{ card-media.map.location.mapID }}', {{ card-media.map.location.showZoom}});
+  })
+</script>
+{{/ cards.card-item}}

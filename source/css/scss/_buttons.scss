@@ -303,7 +303,7 @@ fieldset:disabled a.btn {
 .btn-squared {
   border-radius: $btn-border-radius-squared;
   padding-left: 1rem;
-  padding-right: 1rem; 
+  padding-right: 1rem;
   .icon,
   .utility-icon {
     margin-left: -.5rem;
@@ -311,7 +311,7 @@ fieldset:disabled a.btn {
 
   &.btn-collapse {
     padding-right: .5rem;
-    
+
     &.btn-sm {
       &:after {
         margin-left: .25rem;
@@ -515,6 +515,21 @@ input[type="button"] {
           }
         }
       }
+    }
+  }
+}
+
+// Generic Buttons wrapper class
+// Default is left align, can be centered
+.buttons-wrapper {
+  margin: -.5rem 0;
+  .btn {
+    margin: .5rem 1rem .5rem 0;
+  }
+  &-center {
+    text-align: center;
+    .btn {
+      margin: .5rem;
     }
   }
 }

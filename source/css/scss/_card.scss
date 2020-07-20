@@ -1,6 +1,6 @@
 /**
  * Generic cards styles and variants
- * Built on bootstrap card component 
+ * Built on bootstrap card component
  */
 .card {
   display: flex;
@@ -25,6 +25,10 @@
 
   .card-img-bottom {
     @include border-bottom-radius($border-radius);
+  }
+
+  .card-location-map {
+    height: 320px;
   }
 
   // Used to provide variable height images
@@ -63,6 +67,10 @@
     // remove margin-bottom on last-child of card-body
     > :last-child {
       margin-bottom: 0;
+    }
+
+    .list-item {
+      padding:0;
     }
   }
 
@@ -346,7 +354,7 @@
         margin-top: -4rem;
         z-index: 1;
         padding-right: 6rem;
-  
+
         &:before {
           content: "";
           height: 4rem;
@@ -371,7 +379,7 @@
         &:last-child {
           padding-right: $grid-gutter-width/2;
         }
-        
+
       }
     }
     // Invert Image and body Order on larger breakpoint

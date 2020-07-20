@@ -95,15 +95,15 @@ $theme-colors: map-merge(
 
 $dialog-colors: ();
 $dialog-colors: (
-  success: (
-    base:   $positive,
-    dark:   $positive-dark,
-    light:  $positive-light
-  ),
   info: (
     base:   $informative,
     dark:   $informative-dark,
     light:  $informative-light
+  ),
+  success: (
+    base:   $positive,
+    dark:   $positive-dark,
+    light:  $positive-light
   ),
   warning: (
     base:   $warning,
@@ -250,7 +250,7 @@ $bp-custom-xxs:   450px;
 
 // Grid columns
 //
-// Set the number of columns and specify the width of the gutters. 
+// Set the number of columns and specify the width of the gutters.
 
 $grid-columns:                12;
 $grid-gutter-width:           32px;
@@ -278,10 +278,10 @@ $column-count: map-merge(
 // Define common padding and border radius sizes and more.
 
 $line-height-xl:              2rem;    // 32px
-$line-height-lg:              1.75rem; // 28px 
-$line-height-md:              1.5rem;  // 24px  
+$line-height-lg:              1.75rem; // 28px
+$line-height-md:              1.5rem;  // 24px
 $line-height-sm:              1.25rem; // 20px
-$line-height-xs:              1rem;    // 16px 
+$line-height-xs:              1rem;    // 16px
 
 $border-radius:               .25rem;
 $border-width:                1px;
@@ -316,7 +316,7 @@ $font-size-lg:                $font-size-base * 1.25;   //20px
 $font-size-sm:                $font-size-base * .875;   //14px
 $font-size-xs:                $font-size-base * .75;    //12px
 
-$font-weight-normal:          400;  // Open Sans Regular     
+$font-weight-normal:          400;  // Open Sans Regular
 $font-weight-regular:         $font-weight-normal;
 $font-weight-bold:            700; // Open Sans Bold
 
@@ -332,17 +332,17 @@ $h6-font-size:                $font-size-base * 0.875;       // 14px
 
 $headings-margin-bottom:      1.5rem;
 $headings-font-family:        $font-family-base;
-$headings-font-weight:        $font-weight-bold;         
+$headings-font-weight:        $font-weight-bold;
 $headings-color:              $neutral-primary;
 
 
 // Headings font-size and line-height are made responsive
 // @see type.scss
 // These values represent the largest font-size for those headings
-$display1-size:               $h1-font-size;           
-$display2-size:               $h1-font-size;           
-$display3-size:               $h2-font-size;         
-$display4-size:               $h3-font-size;      
+$display1-size:               $h1-font-size;
+$display2-size:               $h1-font-size;
+$display3-size:               $h2-font-size;
+$display4-size:               $h3-font-size;
 
 $display1-weight:             600;
 $display2-weight:             600;
@@ -614,7 +614,7 @@ $dropdown-border-width:             $border-width;
 $dropdown-inner-border-radius:      calc(#{$dropdown-border-radius} - #{$dropdown-border-width});
 $dropdown-divider-bg:               $neutral-stroke;
 $dropdown-divider-margin-y:         .5rem;
-$dropdown-box-shadow:               $box-shadow; 
+$dropdown-box-shadow:               $box-shadow;
 
 $dropdown-link-color:               $neutral-primary;
 $dropdown-link-hover-color:         $neutral-primary;
@@ -666,7 +666,7 @@ $pagination-hover-border-color:     $neutral-stroke;
 
 $pagination-active-color:           $primary;
 $pagination-active-bg:              $highlight-light;
-$pagination-active-border-color:    $neutral-stroke; 
+$pagination-active-border-color:    $neutral-stroke;
 
 $pagination-disabled-color:         $neutral-secondary;
 $pagination-disabled-bg:            $neutral-underground-1;
@@ -712,7 +712,7 @@ $badge-padding-x:                   .5rem;
 $badge-transition:                  $btn-transition;
 $badge-focus-width:                 $input-btn-focus-width;
 
-$badge-pill-padding-x:              .5rem;
+$badge-pill-padding-x:              .4375rem;
 // Use a higher than normal value to ensure completely rounded edges when
 // customizing padding or font-size on labels.
 $badge-pill-border-radius:          10rem;
@@ -840,10 +840,10 @@ $progress-bar-bg:                   $action;
 
 // Progress circle bars
 
-$progress-circle-border-width:          .5rem;
+$progress-circle-border-width:          .25rem;
 $progress-circle-border-color-default:  $neutral-underground-2;
 $progress-circle-border-color-fill:     $action;
-$progress-circle-size:                  112px;
+$progress-circle-size:                  4.5rem;
 $progress-circle-steps:                 100; //this needs to be even.
 $progress-circle-animation-timing:      .5s;
 

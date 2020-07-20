@@ -1,0 +1,16 @@
+
+<div class="card {{ classes }}">
+  {{# card-media.map }}
+  {{# location}}
+  <div id="section-{{mapID}}">
+    <div id="{{ mapID }}" class="card-location-map"></div>
+  </div>
+  {{/ location}}
+  {{/ card-media.map }}
+
+  <div class="card-body list">
+    {{# list}}
+    {{> components-list-item-element}}
+    {{/list}}
+  </div>
+</div>

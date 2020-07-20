@@ -4,7 +4,7 @@
 // Text
 //
 
-// Define the default link before the mixin 
+// Define the default link before the mixin
 a {
   color: $primary;
   border-bottom: $link-border-width solid $primary;
@@ -125,8 +125,10 @@ a {
 // Make the color of dialog dark
 @each $label, $map in $dialog-colors {
   $color-dark: map-get($map, dark);
+  $color-base: map-get($map, base);
   $color-light: map-get($map, light);
   @include vdm-text-emphasis-variant(".text-#{$label}", $color-dark, $color-light);
+  @include vdm-text-emphasis-variant(".text-#{$label}-reversed", $color-base, $color-light);
 }
 
 @each $color, $value in $grays {
@@ -147,6 +149,7 @@ a {
 }
 
 // Overrides colors
+.text-body,
 .text-secondary,
 .text-black-50,
 .text-white-50,
@@ -155,6 +158,11 @@ a {
 .text-gray-100 {
   color: $body-color !important;
 }
+
+.text-tertiary {
+  color: $neutral-tertiary;
+}
+
 
 .text-primary-lighter {
   color: $primary-lighter;

@@ -5,9 +5,13 @@
       "icon-name": "icon-location",
       "listItemAction": false,
       "listItemLabel": "Libellé",
-      "listExtraContent": {
-        "extraContentBold": false,
-        "extraContent": "Description"
+      "listItemContent": {
+        "itemContent": false,
+        "extraContent": [
+          {
+            "content": "Description"
+          }
+        ]
       }
     }
   ]

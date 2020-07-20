@@ -1,9 +1,6 @@
 <div class="content-modules">
   <div class="content-module-stacked">
-    {{> components-badge(badgeClass: "badge-info", badge: "État de la démarche") }}
-  </div>
-
-  <div class="content-module-stacked">
+    <h2>Titre éditeur texte (H2)</h2>
     <p>Corps de texte complet - Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi condimentum sollicitudin erat, quis convallis risus. Nullam posuere odio ligula, hendrerit suscipit ligula congue laoreet. Curabitur eleifend nulla purus, ut pharetra urna efficitur id. Cras lacinia nisi id quam lacinia, et orci aliquam.</p>
     <h3>Tarifs - module Corps de texte ou module Titre (exemple H3)</h3>
     <p>Courte description optionnelle - corps de texte</p>
@@ -41,29 +38,32 @@
   {{# module-documents-necessaires}}
   <h2>Documents nécessaires</h2>
   <div class="content-module-stacked">
-    <h3>Documents à fournir</h3>
+    <p>Fournir les documents suivants :</p>
     <p>Corps de texte complet - avec liste à puce sit amet, consectetur adipiscing elit. Morbi condimentum sollicitudin erat, quis convallis risus. Nullam posuere odio ligula, hendrerit suscipit ligula congue laoreet. Curabitur eleifend nulla purus, ut pharetra urna efficitur id. Cras lacinia nisi id quam lacinia, et orci aliquam.</p>
-
-    <h3>Pièces d'identité</h3>
-    <p>Un des documents suivants :</p>
-    <ul class="mb-2">
-      <li>Permis de conduire du Québec</li>
-      <li>Carte d’assurance maladie du Québec</li>
-      <li>Nombre de pièces à présenter variable</li>
+  </div>
+  <div class="content-module-stacked">
+    <p>Présenter deux pièces d'identité parmi les suivantes :</p>
+    <ul class="">
+      <li>Pièce d'identité #1</li>
+      <li>Pièce d'identité #2</li>
+      <li>Pièce d'identité #3</li>
+      <li>Pièce d'identité #4</li>
+      <li>Pièce d'identité #5</li>
     </ul>
-    <div class="mb-2">
-    {{> styles-link-list-element("has-icon": true, "icon-right": true, "link-label": "Consulter la liste complète", icon: "icon-arrow-right")}}
-    </div>
-    <h3>Preuves d'adresse</h3>
-    <p>Un des documents suivants :</p>
-    <ul class="mb-2">
-      <li>Facture de services publics (Hydro-Québec, téléphone ou autre) datant de 3 mois ou moins</li>
-      <li>Facture d'un établissement d'enseignement datant de 3 mois ou moins</li>
-      <li>Nombre de pièces à présenter variable</li>
+  </div>
+  <div class="content-module-stacked">
+    <p>Présenter deux preuve d'adresse parmi les suivantes :</p>
+    <ul class="partial-hidden" id="show-more-preuve-adresse">
+      <li>Preuve d'adresse #1</li>
+      <li>Preuve d'adresse #2</li>
+      <li>Preuve d'adresse #3</li>
+      <li>Preuve d'adresse #4</li>
+      <li>Preuve d'adresse #5</li>
+      <li class="extra-item sr-only">Preuve d'adresse extra #6</li>
+      <li class="extra-item sr-only">Preuve d'adresse extra #7</li>
+      <li class="extra-item sr-only">Preuve d'adresse extra #8</li>
     </ul>
-    <div class="mb-2">
-    {{> styles-link-list-element("has-icon": true, "icon-right": true, "link-label": "Consulter la liste complète", icon: "icon-arrow-right")}}
-    </div>
+    <button class="btn btn-link btn-squared btn-collapse collapsed" type="button" data-toggle="show-list" data-target="show-more-preuve-adresse" aria-expanded="false" aria-controls="show-more-preuve-adresse">Voir la liste complète</button>
   </div>
   {{/ module-documents-necessaires}}
 
