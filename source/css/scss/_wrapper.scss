@@ -94,6 +94,14 @@
       }
     }
 
+    .collapsible-block {
+      .content-module-stacked {
+        &:last-child {
+          margin-bottom: 1rem;
+        }
+      }
+    }
+
     @include media-breakpoint-up(md) {
       .empty-state {
         padding: 2rem;

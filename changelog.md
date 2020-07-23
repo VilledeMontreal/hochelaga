@@ -5,6 +5,19 @@ The format is based on [Keep a Changelog](http://keepachangelog.com/en/1.0.0/)
 and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.html).
 
 
+## [4.13.0] - unreleased
+
+### Added
+- Styles - Tables: Sorting styles with .sorting-asc and .sorting-desc states.
+- PL - Styles - Tables examples: Added Column header and row header examples.
+
+### Changed
+- Styles - Tables: Removed border-top from thead th and add double border-bottom to thead th .
+
+### Fixed
+- Components - Accordion inside wrapper: Fix spacing bottom to 32px.
+
+
 ## [4.12.0] - 2020-07-20
 
 ### Added
