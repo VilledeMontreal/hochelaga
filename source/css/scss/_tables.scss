@@ -1,4 +1,4 @@
-.table { 
+.table {
   font-size: $font-size-sm;
   line-height: $line-height-sm;
   margin-bottom: 0;
@@ -10,7 +10,40 @@
     color: $headings-color;
   }
   thead th {
-    border-bottom: $table-border-width solid $table-border-color;
+    border-bottom: (2 * $table-border-width) solid $table-border-color;
+    border-top: none;
+
+    // Add sorting styles.
+    &.sorting {
+      cursor: pointer;
+      &:after {
+        content: "";
+        -webkit-mask: url($data-icon-chevron-down) no-repeat 50% 50%;
+        mask: url($data-icon-chevron-down) no-repeat 50% 50%;
+        background-color: $neutral-tertiary;
+        display: inline-flex;
+        margin-left: .5rem;
+        margin-top: -.5rem;
+        margin-bottom: -.5rem;
+        width: $icon-sm;
+        height: $icon-sm;
+        vertical-align: middle;
+      }
+      // Asending sort
+      &-asc {
+        &:after {
+          background-color: $neutral-primary;
+        }
+      }
+      // Descending sort
+      &-desc {
+        &:after {
+          -webkit-mask: url($data-icon-chevron-up) no-repeat 50% 50%;
+          mask: url($data-icon-chevron-up) no-repeat 50% 50%;
+          background-color: $neutral-primary;
+        }
+      }
+    }
   }
 
   p:last-of-type {
@@ -49,6 +82,7 @@
   }
 }
 
+// Small table variant
 .table-sm {
   font-size: $font-size-xs;
   th,
@@ -56,8 +90,18 @@
     line-height: $line-height-xs;
   }
 
+  thead th {
+    &.sorting {
+      &:after {
+        width: $icon-xs;
+        height: $icon-xs;
+      }
+    }
+  }
+
 }
 
+// Large table variant
 .table-lg {
   font-size: $font-size-base;
   line-height: $line-height-md;
@@ -65,6 +109,15 @@
   td {
     padding: $table-cell-padding-lg;
   }
+  thead th {
+    &.sorting {
+      &:after {
+        width: $icon-md;
+        height: $icon-md;
+      }
+    }
+  }
+
   caption {
     @include font-size($font-size-sm);
     line-height: $line-height-sm;
