@@ -7,22 +7,43 @@
   display: inline-flex;
   vertical-align: middle; // match .btn alignment given font-size hack above
 
+  > .input-btn-group {
+    border: 1px solid $neutral-stroke;
+    border-radius: 0;
+    font-weight: $font-weight-bold;
+    text-align: center;
+    color: $neutral-secondary;
+  }
+
   > .btn {
     position: relative;
     flex: 1 1 auto;
 
     @extend .btn-squared;
-    @include button-variant($background: transparent, $border: $neutral-stroke, $color: $neutral-secondary, $hover-background: $highlight-light, $hover-border: $neutral-stroke, $hover-color: $action, $active-background: $highlight-light, $active-border: $neutral-stroke, $active-color: $action);
+    @include button-variant($background: transparent, $border: $neutral-stroke, $color: $primary, $hover-background: $highlight-light, $hover-border: $neutral-stroke, $hover-color: $primary, $active-background: $highlight-light, $active-border: $neutral-stroke, $active-color: $primary);
+
+    &.disabled,
+    &:disabled {
+      color: $neutral-tertiary;
+    }
 
     // We need to fix padding and margin for btn-icon
     &.btn-icon {
+      flex: 0 0 auto;
       .icon {
-        @include icon-color($neutral-tertiary);
+        @include icon-color($primary);
         margin: 0;
       }
 
-      &:active,
-      &.active {
+      &.disabled,
+      &:disabled {
+        .icon {
+          @include icon-color($neutral-tertiary);
+        }
+      }
+
+      &:not(:disabled):not(.disabled):active,
+      &:not(:disabled):not(.disabled).active {
         .icon {
           @include icon-color($primary);
         }
@@ -55,6 +76,7 @@
 
 .btn-group {
   // Prevent double borders when buttons are next to each other
+  > .input-btn-group:not(:first-child),
   > .btn:not(:first-child),
   > .btn-group:not(:first-child) {
     margin-left: -$btn-border-width;
@@ -76,8 +98,12 @@
 //
 // Remix the default button sizing classes into new ones for easier manipulation.
 
-.btn-group-sm > .btn { @extend .btn-sm; }
-.btn-group-lg > .btn { @extend .btn-lg; }
+.btn-group-sm > .btn {
+  @extend .btn-sm;
+}
+.btn-group-lg > .btn {
+  @extend .btn-lg;
+}
 
 
 //
@@ -150,6 +176,18 @@
   > .btn:not(:first-child),
   > .btn-group:not(:first-child) > .btn {
     @include border-top-radius(0);
+  }
+}
+
+// Make the div behave like a button
+.btn-group-sm,
+.btn-group-vertical-sm {
+  // Prevent double borders when buttons are next to each other
+  .btn + .btn,
+  .btn + .btn-group,
+  .btn-group + .btn,
+  .btn-group + .btn-group {
+    margin-left: -1px;
   }
 }
 

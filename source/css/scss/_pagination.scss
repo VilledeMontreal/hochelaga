@@ -7,7 +7,7 @@
 // Pagination
 .pagination {
   @include font-size($font-size-sm);
-  line-height: $line-height-sm; 
+  line-height: $line-height-sm;
   margin-bottom: 0;
   .page-item {
     display: flex;
@@ -35,15 +35,23 @@
       &:focus,
       &:visited {
         border-bottom: 1px solid $neutral-stroke;
-      } 
+      }
     }
 
     &.no-link .page-link {
+      color: $body-color;
       pointer-events: none;
       cursor: auto;
     }
+
+    &.disabled {
+      .page-link {
+        .icon {
+          @include icon-color($pagination-disabled-color);
+        }
+      }
+    }
   }
-  
 }
 
 

@@ -9,10 +9,13 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 
 ### Added
 - Styles - Tables: Sorting styles with .sorting-asc and .sorting-desc states.
+- Components - Controls - Input stepper: New control component: input-stepper.
 - PL - Styles - Tables examples: Added Column header and row header examples.
 
 ### Changed
-- Styles - Tables: Removed border-top from thead th and add double border-bottom to thead th .
+- Styles - Tables: Removed border-top from thead th and add double border-bottom to thead th.
+- Components - Controls: Button groups color normalisation for 3 states: active, inactive and disabled.
+- Components - Pagination: Conforms to button-group specs.
 
 ### Fixed
 - Components - Accordion inside wrapper: Fix spacing bottom to 32px.
