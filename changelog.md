@@ -19,6 +19,8 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 
 ### Fixed
 - Components - Accordion inside wrapper: Fix spacing bottom to 32px.
+- Components - Messages - Alerts: Fix external link icon color.
+- Components - Messages - message bar: Fix external link icon color.
 
 
 ## [4.12.0] - 2020-07-20
