@@ -4,17 +4,18 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](http://keepachangelog.com/en/1.0.0/)
 and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.html).
 
-
 ## [4.13.0] - unreleased
 
 ### Added
 - Styles - Tables: Sorting styles with .sorting-asc and .sorting-desc states.
 - Components - Controls - Input stepper: New control component: input-stepper.
+- Components - Forms: New checkbox wrapper and radio wrapper components.
 - PL - Styles - Tables examples: Added Column header and row header examples.
 
 ### Changed
 - Styles - Tables: Removed border-top from thead th and add double border-bottom to thead th.
 - Components - Controls: Button groups color normalisation for 3 states: active, inactive and disabled.
+- Components - Forms: Normalisation of checkboxes and radios label to 14/20.
 - Components - Pagination: Conforms to button-group specs.
 
 ### Fixed
