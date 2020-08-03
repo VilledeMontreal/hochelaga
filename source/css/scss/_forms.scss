@@ -180,10 +180,11 @@ legend,
 //
 // Tweak just a few things for radios.
 .custom-control {
-  line-height: $line-height-md;
-  min-height: $line-height-md;
-  padding-top: .5rem;
-  padding-bottom: .5rem;
+  @include font-size($font-size-sm);
+  line-height: $line-height-sm;
+  min-height: $line-height-sm;
+  padding-top: .625rem;
+  padding-bottom: .625rem;
 
   .custom-control-input:checked ~ .custom-control-label {
     &::before {
@@ -206,9 +207,10 @@ legend,
 // Build the custom controls out of pseudo-elements.
 
 .custom-control-label {
-  @include font-size($font-size-base);
-  line-height: $line-height-md;
+  @include font-size($font-size-sm);
+  line-height: $line-height-sm;
   font-weight: $font-weight-normal; // custom-control-label should not be bold
+  color: $input-color;
   position: relative;
   margin-bottom: 0;
   vertical-align: top;
@@ -216,7 +218,7 @@ legend,
   // Background-color and (when enabled) gradient
   &::before {
     position: absolute;
-    top: 0;
+    top: -2px;
     left: -($custom-control-gutter + $custom-control-indicator-size);
     display: block;
     margin: .125rem;
@@ -232,7 +234,7 @@ legend,
   // Foreground (icon)
   &::after {
     position: absolute;
-    top: 0;
+    top: -2px;
     left: -($custom-control-gutter + $custom-control-indicator-size);
     display: block;
     margin: 0;
@@ -253,6 +255,58 @@ legend,
       &::before {
         border-color: $custom-control-indicator-disabled-bg;
       }
+    }
+  }
+}
+
+// Custom checkboxes and radios themed as card
+.custom-control-card {
+  padding: 0;
+  margin-bottom: 1.5rem;
+
+  .custom-control-label {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    justify-content: center;
+    padding: 1rem;
+    padding-left: 3.5rem;
+    position: relative;
+    border: $card-border-width solid $card-border-color;
+    border-radius: $card-border-radius;
+    color: $neutral-secondary;
+    min-height: 3.5rem; // Make sur card has minimum height
+
+    // Background-color and (when enabled) gradient
+    &::before {
+      top: calc(50% - (#{1.5rem}/2));
+      left: 0;
+      margin-left: 1rem + .125rem;
+    }
+
+    // Foreground (icon)
+    &::after {
+      top: calc(50% - (#{1.5rem}/2));
+      left: 0;
+      margin-left: 1rem;
+    }
+
+    .card-title,
+    .card-label {
+      @include font-size($font-size-sm);
+      line-height: $line-height-sm;
+      color: $input-color;
+      margin-left: 0;
+      margin-bottom: .5rem;
+    }
+    > :last-child {
+      margin-bottom: 0;
+    }
+  }
+
+  .custom-control-input:disabled ~ .custom-control-label {
+    .card-title, .card-label {
+      color: $custom-control-label-disabled-color;
     }
   }
 }
