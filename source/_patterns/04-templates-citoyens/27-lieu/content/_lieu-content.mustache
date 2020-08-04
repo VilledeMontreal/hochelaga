@@ -1,7 +1,7 @@
 {{# module-activite-libre}}
 <h2>{{ moduleTitle }}</h2>
 <div class="content-module-stacked">
-  <div class="wrapper wrapper-complex" aria-label="Texte du copydeck pour le aria-label">
+  <div class="wrapper wrapper-complex" aria-label="Sélecteur de période">
     <div class="wrapper-header d-flex">
       <button type="button" class="btn btn-link btn-icon btn-squared" aria-label="Précédent"{{# disabledStatePrev}} disabled{{/ disabledStatePrev}}>
         <span class="icon icon-chevron-left" aria-hidden="true"></span>
@@ -54,7 +54,7 @@
 {{/ module-reservation}}
 
 {{# module-consignes}}
-<h3>Consignes</h3>
+<h3>Règles à suivres</h3>
 <div class="content-module-stacked">
   <p>Et invidunt at dolor elitr ut. Lorem dolores at elitr est no sanctus, duo sea no at nonumy tempor. Ut dolor aliquyam elitr diam sed, et accusam vero voluptua takimata duo at. Ipsum lorem aliquyam sanctus justo dolore et. Amet nonumy justo tempor elitr dolore labore. Eirmod no accusam sit consetetur gubergren et invidunt, justo amet diam magna voluptua stet.</p>
   {{#link}}{{> styles-link-list-element}}{{/link}}
@@ -99,7 +99,7 @@
 {{/ vdm}}
 {{# partners}}
 <div class="content-module-stacked">
-  <div class="font-weight-bold">Offerts par nos partenaires</div>
+  <div class="font-weight-bold">Offerts par un partenaire</div>
   {{> components-list-item}}
 </div>
 {{/ partners}}
@@ -146,9 +146,9 @@
 {{/ module-etiquettes}}
 
 {{# module-activites-planifiees}}
-<h2>Activités, cours et formation</h2>
+<h2>Activités sur inscription</h2>
 <div class="content-module-stacked">
-  <p>Pour connaître l’offre actuelle consulter les liens suivants : </p>
+  <p>Consultez les activités sur inscription et les cours offerts dans ce lieu : </p>
   {{> components-list-item-link}}
 </div>
 {{/ module-activites-planifiees}}
