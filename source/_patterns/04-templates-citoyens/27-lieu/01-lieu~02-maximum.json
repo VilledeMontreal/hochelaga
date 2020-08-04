@@ -1,0 +1,1060 @@
+{
+  "messageBar": {
+    "messageBarClass": "message-bar-warning",
+    "icon-name": "icon-warning"
+  },
+  "documentHeading": true,
+  "documentHeadingClass": "document-heading-left-notch d-print-none",
+  "documentHeadingNotch": true,
+  "has-left-notch": true,
+  "state": {
+    "badgeClass": "badge-warning",
+    "badge": "État - optionnel"
+  },
+  "content-header-extras": {
+    "linkedContent": {
+      "linkedContentItem": [
+        {
+          "url": "#",
+          "label": "Arrondissement"
+        },
+        {
+          "url": "#",
+          "label": "Référence à un lieu"
+        }
+      ]
+    }
+  },
+  "header-extras": {
+    "list": [
+      {
+        "hasIcon": true,
+        "icon-name": "icon-location",
+        "listItemAction": false,
+        "listItemLabel": "Adresse",
+        "listItemContent": [
+          {
+            "extraContent": {
+              "content": "123, rue Avenue Ouest<br>Montréal (Québec) H1H 1H1"
+            }
+          },
+          {
+            "extraContentAction": {
+              "classes": "mt-1",
+              "actionClasses": "js-scroll-trigger",
+              "url": "#section-lieuMap003",
+              "text": "Voir carte"
+            }
+          }
+        ]
+      },
+      {
+        "hasIcon": true,
+        "icon-name": "icon-phone",
+        "listItemAction": false,
+        "listItemLabel": "Téléphone",
+        "listItemContent": {
+          "extraContent": [
+            {
+              "content": "514 555-5555"
+            },
+            {
+              "content": "poste 2222"
+            },
+            {
+              "content": "option 4"
+            }
+          ]
+        }
+      }
+    ]
+  },
+  "lead": "<p>Amorce - Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi condimentum sollicitudin erat, quis convallis risus. Nullam posuere odio ligula, hendrerit suscipit ligula laoreet. Curabitur eleifend nulla purus, ut pharet urna ef id. Cras lacinia nisi id  (recommandé 300 caractères maximum).</p>",
+  "module-content": {
+    "module-activite-libre": [
+      {
+        "moduleTitle": "Activité libre",
+        "titrePeriode": "Titre de la période",
+        "descPeriode": "du 15 juin au 15 octobre 2020",
+        "horaire": [
+          {
+            "title": "Pour tous",
+            "table": {
+              "tableWrapper": true,
+              "caption": false,
+              "tableClass": "table-lg",
+              "thead": {
+                "theadClass": "",
+                "th": [
+                  {
+                    "title": "Jour"
+                  },
+                  {
+                    "title": "Horaire"
+                  }
+                ]
+              },
+              "tbody": {
+                "tr": [
+                  {
+                    "td": [
+                      {
+                        "class": "align-middle",
+                        "text": "Lundi"
+                      },
+                      {
+                        "text": "9&nbsp;h&nbsp;00 à 12&nbsp;h&nbsp;50"
+                      }
+                    ]
+                  },
+                  {
+                    "td": [
+                      {
+                        "class": "align-middle",
+                        "text": "Mardi"
+                      },
+                      {
+                        "cell": {
+                          "items": [
+                            {
+                              "text": "9&nbsp;h&nbsp;00 à 12&nbsp;h&nbsp;50"
+                            },
+                            {
+                              "text": "14&nbsp;h&nbsp;00 à 18&nbsp;h&nbsp;00"
+                            }
+                          ]
+                        }
+                      }
+                    ]
+                  },
+                  {
+                    "td": [
+                      {
+                        "class": "align-middle",
+                        "text": "Mercredi"
+                      },
+                      {
+                        "cell": {
+                          "items": [
+                            {
+                              "text": "9&nbsp;h&nbsp;00 à 12&nbsp;h&nbsp;50"
+                            },
+                            {
+                              "class": "font-weight-bold text-danger-reversed",
+                              "text": "14&nbsp;h&nbsp;00 à 18&nbsp;h&nbsp;15 - Annulé"
+                            },
+                            {
+                              "text": "19&nbsp;h&nbsp;00 à 20&nbsp;h&nbsp;50"
+                            }
+                          ]
+                        }
+                      }
+                    ]
+                  },
+                  {
+                    "td": [
+                      {
+                        "class": "align-middle",
+                        "text": "Jeudi"
+                      },
+                      {
+                        "text": "9&nbsp;h&nbsp;00 à 12&nbsp;h&nbsp;50"
+                      }
+                    ]
+                  },
+                  {
+                    "td": [
+                      {
+                        "class": "align-middle",
+                        "text": "Vendredi"
+                      },
+                      {
+                        "text": "9&nbsp;h&nbsp;00 à 12&nbsp;h&nbsp;50"
+                      }
+                    ]
+                  },
+                  {
+                    "td": [
+                      {
+                        "class": "align-middle",
+                        "text": "Samedi"
+                      },
+                      {
+                        "text": "9&nbsp;h&nbsp;00 à 12&nbsp;h&nbsp;50"
+                      }
+                    ]
+                  },
+                  {
+                    "td": [
+                      {
+                        "class": "align-middle",
+                        "text": "Dimanche"
+                      },
+                      {
+                        "text": "9&nbsp;h&nbsp;00 à 12&nbsp;h&nbsp;50"
+                      }
+                    ]
+                  }
+                ]
+              }
+            }
+          },
+          {
+            "title": "Pour adulte (16 ans et plus)",
+            "table": {
+              "tableWrapper": true,
+              "caption": false,
+              "tableClass": "table-lg",
+              "thead": {
+                "theadClass": "",
+                "th": [
+                  {
+                    "title": "Jour"
+                  },
+                  {
+                    "title": "Horaire"
+                  }
+                ]
+              },
+              "tbody": {
+                "tr": [
+                  {
+                    "td": [
+                      {
+                        "class": "align-middle",
+                        "text": "Lundi"
+                      },
+                      {
+                        "text": "9&nbsp;h&nbsp;00 à 12&nbsp;h&nbsp;50"
+                      }
+                    ]
+                  },
+                  {
+                    "td": [
+                      {
+                        "class": "align-middle",
+                        "text": "Mardi"
+                      },
+                      {
+                        "text": "9&nbsp;h&nbsp;00 à 12&nbsp;h&nbsp;50"
+                      }
+                    ]
+                  },
+                  {
+                    "td": [
+                      {
+                        "class": "align-middle",
+                        "text": "Mercredi"
+                      },
+                      {
+                        "text": "9&nbsp;h&nbsp;00 à 12&nbsp;h&nbsp;50"
+                      }
+                    ]
+                  }
+                ]
+              }
+            }
+          }
+        ]
+      },
+      {
+        "moduleTitle": "Activité libre #2",
+        "titrePeriode": "Titre de la période",
+        "descPeriode": "du 15 juin au 15 octobre 2020",
+        "horaire": [
+          {
+            "title": "Pour tous",
+            "table": {
+              "tableWrapper": true,
+              "caption": false,
+              "tableClass": "table-lg",
+              "thead": {
+                "theadClass": "",
+                "th": [
+                  {
+                    "title": "Jour"
+                  },
+                  {
+                    "title": "Horaire"
+                  }
+                ]
+              },
+              "tbody": {
+                "tr": [
+                  {
+                    "td": [
+                      {
+                        "class": "align-middle",
+                        "text": "Lundi"
+                      },
+                      {
+                        "text": "9&nbsp;h&nbsp;00 à 12&nbsp;h&nbsp;50"
+                      }
+                    ]
+                  },
+                  {
+                    "td": [
+                      {
+                        "class": "align-middle",
+                        "text": "Mercredi"
+                      },
+                      {
+                        "cell": {
+                          "items": [
+                            {
+                              "text": "9&nbsp;h&nbsp;00 à 12&nbsp;h&nbsp;50"
+                            },
+                            {
+                              "class": "font-weight-bold text-danger-reversed",
+                              "text": "14&nbsp;h&nbsp;00 à 18&nbsp;h&nbsp;15 - Annulé"
+                            },
+                            {
+                              "text": "19&nbsp;h&nbsp;00 à 20&nbsp;h&nbsp;50"
+                            }
+                          ]
+                        }
+                      }
+                    ]
+                  },
+                  {
+                    "td": [
+                      {
+                        "class": "align-middle",
+                        "text": "Vendredi"
+                      },
+                      {
+                        "text": "9&nbsp;h&nbsp;00 à 12&nbsp;h&nbsp;50"
+                      }
+                    ]
+                  }
+                ]
+              }
+            }
+          }
+        ]
+      }
+    ],
+    "module-reservation": {
+      "buttonAsLink": {
+        "buttonUrl": "https://loisirs.montreal.ca/",
+        "buttonText": "Réserver un terrain"
+      }
+    },
+    "module-consignes": {
+      "link": {
+        "url": "#",
+        "link-label": "S'informer sur les règles à respecter (référence TC Article)"
+      }
+    },
+    "module-installations": {
+      "listClass": "d-block column-count-md-2",
+      "listUL": true,
+      "list": [
+        {
+          "hasIcon": false,
+          "listItemAction": true,
+          "listItemLabel": "Ipsum est sed magna kasd sed",
+          "listItemContent": {
+            "extraContent": [
+              {
+                "class": "font-weight-bold text-danger-reversed",
+                "content": "Fermeture temporaire"
+              }
+            ]
+          }
+
+        },
+        {
+          "hasIcon": false,
+          "listItemAction": true,
+          "listItemLabel": "Sit sed dolores magna"
+        },
+        {
+          "hasIcon": false,
+          "listItemAction": true,
+          "listItemLabel": "Clita nonumy"
+        },
+        {
+          "hasIcon": false,
+          "listItemAction": true,
+          "listItemLabel": "Takimata dolor elitr takimata erat duo accusam",
+          "listItemContent": {
+            "extraContent": [
+              {
+                "class": "font-weight-bold text-warning",
+                "content": "Fermeture partielle"
+              }
+            ]
+          }
+        },
+        {
+          "hasIcon": false,
+          "listItemAction": true,
+          "listItemLabel": "Sed diam rebum sanctus sit"
+        },
+        {
+          "hasIcon": false,
+          "listItemAction": true,
+          "listItemLabel": "Gubergren sed voluptua ea et ipsum"
+        },
+        {
+          "hasIcon": false,
+          "listItemAction": true,
+          "listItemLabel": "Sed rebum justo nonumy",
+          "listItemContent": {
+            "extraContent": [
+              {
+                "class": "font-weight-bold text-info-reversed",
+                "content": "Nouveau"
+              }
+            ]
+          }
+        }
+      ]
+    },
+    "module-services": {
+      "vdm": {
+        "listClass": "d-block column-count-md-2",
+        "listUL": true,
+        "list": [
+          {
+            "hasIcon": false,
+            "listItemAction": true,
+            "listItemLabel": "Ipsum est sed magna kasd sed"
+          },
+          {
+            "hasIcon": false,
+            "listItemAction": true,
+            "listItemLabel": "Labore justo et lorem no no"
+          },
+          {
+            "hasIcon": false,
+            "listItemAction": true,
+            "listItemLabel": "Sed nonumy diam ea",
+            "listItemContent": {
+              "extraContent": [
+                {
+                  "class": "font-weight-bold text-info-reversed",
+                  "content": "Nouveau"
+                }
+              ]
+            }
+          },
+          {
+            "hasIcon": false,
+            "listItemAction": true,
+            "listItemLabel": "Stet aliquyam lorem stet ipsum voluptua gubergren et ipsum gubergren"
+          },
+          {
+            "hasIcon": false,
+            "listItemAction": true,
+            "listItemLabel": "Aliquyam eos"
+          },
+          {
+            "hasIcon": false,
+            "listItemAction": true,
+            "listItemLabel": "Stet sanctus consetetur stet erat",
+            "listItemContent": {
+              "extraContent": [
+                {
+                  "class": "font-weight-bold text-info-reversed",
+                  "content": "Indisponible"
+                }
+              ]
+            }
+          },
+          {
+            "hasIcon": false,
+            "listItemAction": true,
+            "listItemLabel": "Voluptua justo sea dolor no sit amet"
+          }
+        ]
+      },
+      "partners": {
+        "listClass": false,
+        "listUL": true,
+        "list": [
+          {
+            "hasIcon": false,
+            "listItemAction": true,
+            "actionClasses": "is-external-link",
+            "url": "https://google.com",
+            "listItemLabel": "Ipsum est sed magna kasd sed"
+          },
+          {
+            "hasIcon": false,
+            "listItemAction": true,
+            "actionClasses": "is-external-link",
+            "url": "https://google.com",
+            "listItemLabel": "Labore justo et lorem no no"
+          }
+        ]
+      }
+    },
+    "module-commodites": {
+      "listClass": "d-block column-count-md-2",
+      "listUL": true,
+      "list": [
+        {
+          "hasIcon": true,
+          "icon-name": "icon-dot-bullet",
+          "listItemAction": false,
+          "listItemLabel": false,
+          "listItemContent": {
+            "itemContent": "Gubergren takimata voluptua ea stet et vero, gubergren rebum clita sea voluptua labore stet."
+          }
+        },
+        {
+          "hasIcon": true,
+          "icon-name": "icon-dot-bullet",
+          "listItemAction": false,
+          "listItemLabel": false,
+          "listItemContent": {
+            "itemContent":  "Ipsum est sed magna kasd sed"
+          }
+        },
+        {
+          "hasIcon": true,
+          "icon-name": "icon-dot-bullet",
+          "listItemAction": false,
+          "listItemLabel": false,
+          "listItemContent": {
+            "itemContent":  "Tempor sea dolores no magna dolore"
+          }
+        },
+        {
+          "hasIcon": true,
+          "icon-name": "icon-dot-bullet",
+          "listItemAction": false,
+          "listItemLabel": false,
+          "listItemContent": {
+            "itemContent": "Takimata no sea lorem"
+          }
+        },
+        {
+          "hasIcon": true,
+          "icon-name": "icon-dot-bullet",
+          "listItemAction": false,
+          "listItemLabel": false,
+          "listItemContent": {
+            "itemContent": "Diam et"
+          }
+        },
+        {
+          "hasIcon": true,
+          "icon-name": "icon-dot-bullet",
+          "listItemAction": false,
+          "listItemLabel": false,
+          "listItemContent": {
+            "itemContent": "Et magna gubergren amet"
+          }
+        },
+        {
+          "hasIcon": true,
+          "icon-name": "icon-dot-bullet",
+          "listItemAction": false,
+          "listItemLabel": false,
+          "listItemContent": {
+            "itemContent": "Sit sed amet"
+          }
+        }
+      ]
+    },
+    "module-accessibilite": {
+      "listUL": true,
+      "list": [
+        {
+          "hasIcon": true,
+          "icon-name": "icon-dot-bullet",
+          "listItemAction": false,
+          "listItemLabel": false,
+          "listItemContent": {
+            "itemContent": "Sed lorem sadipscing sea"
+          }
+        },
+        {
+          "hasIcon": true,
+          "icon-name": "icon-dot-bullet",
+          "listItemAction": false,
+          "listItemLabel": false,
+          "listItemContent": {
+            "itemContent": "Sed dolor tempor diam"
+          }
+        }
+      ]
+    },
+    "module-tarifs": {
+      "table": {
+        "tableWrapper": true,
+        "caption" : "* Sur présentation d’une pièce d’identité.<br>** Enfant de 6 ans et moins doit être accompagné d’un adulte.",
+        "tableClass": "table-lg",
+        "thead": {
+          "theadClass": "",
+          "th": [
+            { "title": "Clientèles" },
+            { "title": "Résident*" },
+            { "title": "Non-résident" }
+          ]
+        },
+        "tbody": {
+          "tr": [
+            {
+              "td": [
+                {"text": "Enfant"},
+                { "text": "Gratuit**" },
+                { "text": "2 $**" }
+              ]
+            },
+            {
+              "td": [
+                { "text": "Adulte"},
+                { "text": "2 $<br>Gratuit le dimanche" },
+                { "text": "5 $" }
+              ]
+            }
+          ]
+        }
+      }
+    },
+    "module-mode-paiement": {
+      "listUL": true,
+      "list": [
+        {
+          "hasIcon": true,
+          "icon-name": "icon-dot-bullet",
+          "listItemAction": false,
+          "listItemLabel": false,
+          "listItemContent": {
+            "itemContent": "Argent comptant"
+          }
+        },
+        {
+          "hasIcon": true,
+          "icon-name": "icon-dot-bullet",
+          "listItemAction": false,
+          "listItemLabel": false,
+          "listItemContent": {
+            "itemContent": "Cartes de crédit"
+          }
+        }
+      ]
+    },
+    "module-card-cta": {
+      "cards": {
+        "classes": "",
+        "bsgrid-classes": "col-12",
+        "card-item": [
+          {
+            "classes": "card-fw",
+            "url": "#",
+            "card-media" : {
+              "icon": false,
+              "img": {
+                "src": "https://picsum.photos/id/1080/768/432",
+                "alt": "Card full width #1 img alt."
+              }
+            },
+            "card-type": "Découvrir",
+            "card-title": "Lien de référence vers un article ou une galerie",
+            "card-text": false,
+            "card-text-interface": false
+          }
+        ]
+      }
+    },
+    "module-etiquettes": {
+      "badges-links": [
+        {
+          "badge": "Libellé",
+          "badgeClass": "badge-secondary",
+          "badgeUrl": "#",
+          "badgeIconClass": false
+        },
+        {
+          "badge": "Libellé",
+          "badgeClass": "badge-secondary",
+          "badgeUrl": "#",
+          "badgeIconClass": false
+        },
+        {
+          "badge": "Libellé",
+          "badgeClass": "badge-secondary",
+          "badgeUrl": "#",
+          "badgeIconClass": false
+        },
+        {
+          "badge": "Libellé",
+          "badgeClass": "badge-secondary",
+          "badgeUrl": "#",
+          "badgeIconClass": false
+        }
+      ]
+    },
+    "module-activites-planifiees": {
+      "listUL": true,
+      "listGroupClass": "list-group-lg list-group-allow-ext-icon",
+      "listGroup": [
+        {
+          "url": "https://loisirs.montreal.ca",
+          "text": "Libellé lien interne",
+          "class": false,
+          "classLink": false
+        },
+        {
+          "url": "https://google.com",
+          "text": "Libellé lien externe",
+          "class": false
+        },
+        {
+          "url": "https://rds.ca",
+          "text": "Morbi leo risus",
+          "class": false
+        }
+      ]
+    },
+    "module-events": {
+      "listGroupClass": "mb-4",
+      "listGroup": [
+        {
+          "url": "#",
+          "media": {
+            "img": {
+              "alt": "Alt image",
+              "src": "https://picsum.photos/id/1025/128/72"
+            },
+            "placeholder": false
+          },
+          "type": false,
+          "title": "At amet eos et diam sed no invidunt sadipscing no invidunt sed dolore eos amet",
+          "infos": {
+            "badge": false,
+            "infos-items": [
+              {
+                "text": "Dates de début et fin d'événement"
+              }
+            ]
+          }
+        },
+        {
+          "url": "#",
+          "media": {
+            "img": {
+              "alt": "Alt image",
+              "src": "https://picsum.photos/id/1025/128/72"
+            },
+            "placeholder": false
+          },
+          "type": false,
+          "title": "Dolore amet aliquyam justo vero lorem accusam amet eos vero",
+          "infos": {
+            "badge": false,
+            "infos-items": [
+              {
+                "text": "Dates de début et fin d'événement"
+              }
+            ]
+          }
+        },
+        {
+          "url": "#",
+          "media": {
+            "img": false,
+            "placeholder": {
+              "icon": "icon-event"
+            }
+          },
+          "type": false,
+          "title": "Consetetur eirmod et aliquyam",
+          "infos": {
+            "badge": false,
+            "infos-items": [
+              {
+                "text": "Dates de début et fin d'événement"
+              }
+            ]
+          }
+        },
+        {
+          "url": "#",
+          "media": {
+            "img": false,
+            "placeholder": {
+              "icon": "icon-event"
+            }
+          },
+          "type": false,
+          "title": "Takimata consetetur stet amet ea lorem",
+          "infos": {
+            "badge": false,
+            "infos-items": [
+              {
+                "text": "Dates de début et fin d'événement"
+              }
+            ]
+          }
+        },
+        {
+          "url": "#",
+          "media": {
+            "img": false,
+            "placeholder": {
+              "icon": "icon-event"
+            }
+          },
+          "type": false,
+          "title": "Sed et sea sea sadipscing",
+          "infos": {
+            "badge": false,
+            "infos-items": [
+              {
+                "text": "Dates de début et fin d'événement"
+              }
+            ]
+          }
+        }
+      ],
+      "button-cta": {
+        "data-link-title": "Tous les événements",
+        "buttonAsLink": true,
+        "buttonClass": "btn-secondary",
+        "buttonUrl": "#",
+        "buttonText": "Tous les événements"
+      }
+    },
+    "module-map": {
+      "heading": "Comment s'y rendre",
+      "sectionMapID": "lieuMap003",
+      "cards": {
+        "classes": false,
+        "bsgrid-classes": "col-12 col-md-7",
+        "card-item": [
+          {
+            "classes" : false,
+            "card-media" : {
+              "icon": false,
+              "img": false,
+              "map": {
+                "location": {
+                  "mapID": "cardLocationLieuMapID003",
+                  "lngLat": "-73.589921, 45.534415",
+                  "showZoom": true
+                }
+              }
+            },
+            "listClass": "list-lg",
+            "list": [
+              {
+                "hasIcon": false,
+                "listItemAction": false,
+                "listItemLabel": "Nom du lieu",
+                "listItemContent": {
+                  "itemContent": false,
+                  "extraContent": [
+                    {
+                      "class": false,
+                      "content": "5519 rue Gerry-Boulet<br>Montréal (Québec) H2J 3K3"
+                    }
+                  ],
+                  "extraContentAction": {
+                    "classes": "mt-1",
+                    "actionClasses": "is-external-link",
+                    "url": "https://google.ca",
+                    "text": "Obtenir un itinéraire"
+                  }
+                }
+              }
+            ]
+          }
+        ]
+      }
+    }
+  },
+  "sidebarRight": true,
+  "sb-block-schedule": {
+    "sidebarTitleClasses": false,
+    "list": [
+      {
+        "hasIcon": true,
+        "icon-name": "icon-clock",
+        "listItemAction": false,
+        "listItemLabel": "Horaire",
+        "listItemContent": {
+          "extraContent": {
+            "content": "du 15&nbsp;décembre&nbsp;2019 au 15&nbsp;mars&nbsp;2020"
+          }
+        },
+        "extraContentSchedule": {
+          "schedule" : [
+            {
+              "day": "Lundi",
+              "scheduleData": [
+                {
+                  "time": [
+                    {
+                      "startTime": "9&nbsp;h&nbsp;00",
+                      "endTime": "12&nbsp;h&nbsp;00"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "day": "Mardi",
+              "scheduleData": [
+                {
+                  "time": {
+                    "startTime": "9&nbsp;h&nbsp;00",
+                    "endTime": "12&nbsp;h&nbsp;00"
+                  }
+                }
+              ]
+            },
+            {
+              "day": "Mercredi",
+              "scheduleData": [
+                {
+                  "time": {
+                    "startTime": "9&nbsp;h&nbsp;00",
+                    "endTime": "12&nbsp;h&nbsp;00"
+                  }
+                }
+              ]
+            },
+            {
+              "day": "Jeudi",
+              "scheduleData": [
+                {
+                  "time": {
+                    "startTime": "9&nbsp;h&nbsp;00",
+                    "endTime": "12&nbsp;h&nbsp;00"
+                  }
+                }
+              ]
+            },
+            {
+              "day": "Vendredi",
+              "scheduleData": [
+                {
+                  "time": {
+                    "startTime": "9&nbsp;h&nbsp;00",
+                    "endTime": "12&nbsp;h&nbsp;00"
+                  }
+                }
+              ]
+            },
+            {
+              "day": "Samedi",
+              "scheduleData": [
+                {
+                  "time": {
+                    "startTime": "9&nbsp;h&nbsp;00",
+                    "endTime": "12&nbsp;h&nbsp;00"
+                  }
+                }
+              ]
+            },
+            {
+              "day": "Dimanche",
+              "scheduleData": [
+                {
+                  "time": false,
+                  "customLabel": "Fermé"
+                }
+              ]
+            }
+          ]
+        }
+      }
+    ],
+    "hasExtraSchedules": {
+      "list": [
+        {
+          "hasIcon": true,
+          "icon-name": "icon-clock",
+          "listItemAction": false,
+          "listItemLabel": "Horaire #2",
+          "listItemContent": {
+            "extraContent": {
+              "content": "du 15&nbsp;mars&nbsp;2020 au 15&nbsp;mars&nbsp;2030"
+            }
+          },
+          "extraContentSchedule": {
+            "schedule" : [
+              {
+                "day": "Lundi",
+                "scheduleData": [
+                  {
+                    "time": false,
+                    "customLabel": "Fermé"
+                  }
+                ]
+              },
+              {
+                "day": "Mardi",
+                "scheduleData": [
+                  {
+                    "time": {
+                      "startTime": "10&nbsp;h&nbsp;30",
+                      "endTime": "00&nbsp;h&nbsp;00"
+                    }
+                  }
+                ]
+              },
+              {
+                "day": "Mercredi",
+                "scheduleData": [
+                  {
+                    "time": {
+                      "startTime": "10&nbsp;h&nbsp;30",
+                      "endTime": "00&nbsp;h&nbsp;00"
+                    }
+                  }
+                ]
+              },
+              {
+                "day": "Jeudi",
+                "scheduleData": [
+                  {
+                    "time": {
+                      "startTime": "10&nbsp;h&nbsp;30",
+                      "endTime": "00&nbsp;h&nbsp;00"
+                    }
+                  }
+                ]
+              },
+              {
+                "day": "Vendredi",
+                "scheduleData": [
+                  {
+                    "time": {
+                      "startTime": "10&nbsp;h&nbsp;00",
+                      "endTime": "00&nbsp;h&nbsp;00"
+                    }
+                  }
+                ]
+              },
+              {
+                "day": "Samedi",
+                "scheduleData": [
+                  {
+                    "time": false,
+                    "customLabel": "Fermé"
+                  }
+                ]
+              },
+              {
+                "day": "Dimanche",
+                "scheduleData": [
+                  {
+                    "time": false,
+                    "customLabel": "Fermé"
+                  }
+                ]
+              }
+            ]
+          }
+        }
+      ]
+    }
+  }
+}

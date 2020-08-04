@@ -383,8 +383,8 @@
           "title": "Nom du lieu",
           "infos": {
             "badge": {
-              "badge": "État",
-              "badgeClass": "badge-danger-light",
+              "badge": "Fermeture permanente",
+              "badgeClass": "badge-danger",
               "badgeUrl": false
             },
             "infos-items": [
@@ -402,7 +402,11 @@
           "type": false,
           "title": "Nom du lieu",
           "infos": {
-            "badge": false,
+            "badge": {
+              "badge": "Fermeture temporaire",
+              "badgeClass": "badge-danger",
+              "badgeUrl": false
+            },
             "infos-items": [
               {
                 "text": "Adresse 1"
@@ -418,7 +422,11 @@
           "type": false,
           "title": "Nom du lieu",
           "infos": {
-            "badge": false,
+            "badge": {
+              "badge": "Fermeture partielle",
+              "badgeClass": "badge-warning",
+              "badgeUrl": false
+            },
             "infos-items": [
               {
                 "text": "Adresse 1"
@@ -434,7 +442,11 @@
           "type": false,
           "title": "Nom du lieu",
           "infos": {
-            "badge": false,
+            "badge": {
+              "badge": "nouveau",
+              "badgeClass": "badge-info",
+              "badgeUrl": false
+            },
             "infos-items": [
               {
                 "text": "Adresse 1"

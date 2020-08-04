@@ -61,6 +61,20 @@
       z-index: 1;
     }
   }
+
+  > .btn-group-div {
+    position: relative;
+    flex: 1 1 auto;
+    display: inline-flex;
+    align-items: center;
+    font-weight: $btn-font-weight;
+    text-align: center;
+    white-space: nowrap;
+    vertical-align: middle;
+    border-top: $btn-border-width solid $neutral-stroke;
+    border-bottom: $btn-border-width solid $neutral-stroke;
+    @include button-size($btn-padding-y, $btn-padding-x, $btn-font-size, $btn-line-height, 0);
+  }
 }
 
 // Optional: Group multiple button groups together for a toolbar

@@ -1,3 +1,31 @@
+{{# module-activite-libre}}
+<h2>{{ moduleTitle }}</h2>
+<div class="content-module-stacked">
+  <div class="wrapper wrapper-complex" aria-label="Texte du copydeck pour le aria-label">
+    <div class="wrapper-header d-flex">
+      <button type="button" class="btn btn-link btn-icon btn-squared" aria-label="Précédent"{{# disabledStatePrev}} disabled{{/ disabledStatePrev}}>
+        <span class="icon icon-chevron-left" aria-hidden="true"></span>
+      </button>
+      <div class="w-100 text-center px-2" aria-label="Période active">
+        {{# titrePeriode}}<div>Titre de la période</div>{{/ titrePeriode}}
+        {{# descPeriode}}<div class="font-weight-bold">{{ descPeriode}}</div>{{/ descPeriode}}
+      </div>
+      <button type="button" class="btn btn-link btn-icon btn-squared" aria-label="Suivant"{{# disabledStateNext}} disabled{{/ disabledStateNext}}>
+        <span class="icon icon-chevron-right" aria-hidden="true"></span>
+      </button>
+    </div>
+    <div class="wrapper-body">
+      {{# horaire}}
+      <div class="content-module-stacked">
+        <h3>{{title}}</h3>
+        {{> styles-table}}
+      </div>
+      {{/ horaire}}
+    </div>
+  </div>
+</div>
+{{/ module-activite-libre}}
+
 <h2>Description</h2>
 <div class="content-module-stacked">
   <p>Corps de texte - <i>Italique</i> et <strong>gras</strong>, exposant, indice et caractères spéciaux adipiscing elit. Morbi condimentum sollicitudin erat, quis <a href="#">lien interne</a> ou <a href="https://google.com">lien externe</a> convallis risus. Nullam  posuere odio ligula, hendrerit suscipit ligula congue laoreet. Curabitur eleifend nulla purus, ut pharetra urna efficitur id. Cras lacinia nisi id quam lacinia, et orci aliquam.</p>
@@ -16,42 +44,96 @@
   <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi condimentum sollicitudin erat, quis convallis risus.</p>
 </div>
 
-{{# module-commodites}}
-<h3>Commodités</h3>
+{{# module-reservation}}
 <div class="content-module-stacked">
-  {{> components-list-item}}
+  <p>Texte de mise en contexte générique de la réservation via le service Loisirs Montréal exemple à afficher si la case est cochée (copydeck)</p>
 </div>
-{{/ module-commodites}}
+<div class="content-module-stacked">
+  {{> components-button}}
+</div>
+{{/ module-reservation}}
+
+{{# module-consignes}}
+<h3>Consignes</h3>
+<div class="content-module-stacked">
+  <p>Et invidunt at dolor elitr ut. Lorem dolores at elitr est no sanctus, duo sea no at nonumy tempor. Ut dolor aliquyam elitr diam sed, et accusam vero voluptua takimata duo at. Ipsum lorem aliquyam sanctus justo dolore et. Amet nonumy justo tempor elitr dolore labore. Eirmod no accusam sit consetetur gubergren et invidunt, justo amet diam magna voluptua stet.</p>
+  {{#link}}{{> styles-link-list-element}}{{/link}}
+</div>
+{{/ module-consignes}}
 
 {{# module-installations}}
 <h3>Installations</h3>
 <div class="content-module-stacked">
-  <div class="mb-n2{{#groupClass}} {{groupClass}}{{/groupClass}}">
-    {{# groups}}
-    <div class="d-flex flex-column">
-      {{# group-heading}}
-      <div class="font-weight-bold mb-1">{{ group-heading }}</div>
-      {{/ group-heading}}
-      {{> components-list-item}}
-    </div>
-    {{/ groups}}
-  </div>
+  {{> components-list-item}}
 </div>
 {{/ module-installations}}
+
+{{# module-commodites}}
+<h3>Commodités et équipements</h3>
+<div class="content-module-stacked">
+  <ul{{#listClass}} class="{{listClass}}"{{/listClass}}>
+    {{# list}}
+    <li>{{listItemContent.itemContent}}</li>
+    {{/ list}}
+  </ul>
+</div>
+{{/ module-commodites}}
 
 {{# module-accessibilite}}
 <h3>Accessibilité</h3>
 <div class="content-module-stacked">
-  {{> components-list-item}}
+  <ul{{#listClass}} class="{{listClass}}"{{/listClass}}>
+    {{# list}}
+    <li>{{listItemContent.itemContent}}</li>
+    {{/ list}}
+  </ul>
 </div>
 {{/ module-accessibilite}}
+
+{{# module-services}}
+<h3>Services</h3>
+{{# vdm}}
+<div class="content-module-stacked">
+  {{> components-list-item}}
+</div>
+{{/ vdm}}
+{{# partners}}
+<div class="content-module-stacked">
+  <div class="font-weight-bold">Offerts par nos partenaires</div>
+  {{> components-list-item}}
+</div>
+{{/ partners}}
+{{/ module-services}}
+
+{{# module-tarifs}}
+<h3>Tarifs</h3>
+<div class="content-module-stacked">
+  {{> styles-table}}
+</div>
+{{/ module-tarifs}}
 
 {{# module-mode-paiement}}
 <h3>Modes de paiement</h3>
 <div class="content-module-stacked">
-  {{> components-list-item}}
+  <ul{{#listClass}} class="{{listClass}}"{{/listClass}}>
+    {{# list}}
+    <li>{{listItemContent.itemContent}}</li>
+    {{/ list}}
+  </ul>
 </div>
 {{/ module-mode-paiement}}
+
+{{# module-card-cta}}
+<div class="pt-4">
+  <div class="row cards">
+    {{# cards.card-item }}
+    <div class="{{ cards.bsgrid-classes }}">
+      {{> components-card-item-full-width }}
+    </div>
+    {{/ cards.card-item }}
+  </div>
+</div>
+{{/ module-card-cta}}
 
 {{# module-etiquettes}}
 <div class="badges-container pt-4 pb-1">
@@ -62,6 +144,14 @@
   </ul>
 </div>
 {{/ module-etiquettes}}
+
+{{# module-activites-planifiees}}
+<h2>Activités, cours et formation</h2>
+<div class="content-module-stacked">
+  <p>Pour connaître l’offre actuelle consulter les liens suivants : </p>
+  {{> components-list-item-link}}
+</div>
+{{/ module-activites-planifiees}}
 
 {{# module-events}}
 <h2>Événements à venir</h2>
@@ -76,10 +166,10 @@
 {{/ module-events}}
 
 {{# module-map}}
-{{# location}}
-<div class="content-module-stacked" id="section-{{mapID}}">
+<div class="content-module-stacked" id="section-{{sectionMapID}}">
   <h2>{{heading}}</h2>
-  <div id="{{ mapID }}" class="h-map"></div>
+  {{# cards.card-item }}
+    {{> components-card-item-location}}
+  {{/ cards.card-item }}
 </div>
-{{/ location}}
 {{/ module-map }}

@@ -1,0 +1,391 @@
+{
+  "navbarFixedTop": true,
+  "includeValidation": true,
+  "breadcrumbs": [
+    {
+      "url": "#",
+      "text": "Accueil"
+    },
+    {
+      "url": "#",
+      "text": "Lieux"
+    },
+    {
+      "url": "#",
+      "text": "Taxonomie installation"
+    }
+  ],
+  "documentHeading": false,
+  "pageClasses": false,
+  "state": false,
+  "heading": "Nom du lieu ou de l'édifice sur plusieurs lignes",
+  "updatedDate": false,
+  "content-header-extras": {
+    "hideExtraMetaInfos": true,
+    "linkedContent": {
+      "customLabel": "Situé dans",
+      "linkedContentItem": [
+        {
+          "url": "#",
+          "label": "Arrondissement"
+        }
+      ]
+    }
+  },
+  "header-extras": {
+    "listClass": "pt-4 mb-4",
+    "list": [
+      {
+        "hasIcon": true,
+        "icon-name": "icon-location",
+        "listItemAction": false,
+        "listItemLabel": "Adresse",
+        "listItemContent": [
+          {
+            "extraContent": {
+              "content": "123, rue Avenue Ouest<br>Montréal (Québec) H1H 1H1"
+            }
+          },
+          {
+            "extraContentAction": {
+              "classes": "mt-1",
+              "actionClasses": "js-scroll-trigger",
+              "url": "#section-lieuMap002",
+              "text": "Voir carte"
+            }
+          }
+        ]
+      },
+      {
+        "hasIcon": true,
+        "icon-name": "icon-phone",
+        "listItemAction": false,
+        "listItemLabel": "Téléphone",
+        "listItemContent": {
+          "extraContent": [
+            {
+              "content": "514 555-5555"
+            }
+          ]
+        }
+      }
+    ]
+  },
+  "lead": "<p>Amorce - Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi condimentum sollicitudin erat, quis convallis risus. Nullam posuere odio ligula, hendrerit suscipit ligula laoreet. Curabitur eleifend nulla purus, ut pharet urna ef id.</p>",
+  "module-content": {
+    "module-activite-libre": {
+      "moduleTitle": "Activité libre",
+      "disabledStatePrev": true,
+      "disabledStateNext": true,
+      "titrePeriode": false,
+      "descPeriode": "du 15 juin au 15 octobre 2020",
+      "horaire": [
+        {
+          "title": "Pour tous",
+          "table": {
+            "tableWrapper": true,
+            "caption": false,
+            "tableClass": "table-lg",
+            "thead": {
+              "theadClass": "",
+              "th": [
+                {
+                  "title": "Jour"
+                },
+                {
+                  "title": "Horaire"
+                }
+              ]
+            },
+            "tbody": {
+              "tr": [
+                {
+                  "td": [
+                    {
+                      "class": "align-middle",
+                      "text": "Lundi"
+                    },
+                    {
+                      "text": "9&nbsp;h&nbsp;00 à 12&nbsp;h&nbsp;50"
+                    }
+                  ]
+                },
+                {
+                  "td": [
+                    {
+                      "class": "align-middle",
+                      "text": "Jeudi"
+                    },
+                    {
+                      "text": "9&nbsp;h&nbsp;00 à 12&nbsp;h&nbsp;50"
+                    }
+                  ]
+                }
+              ]
+            }
+          }
+        }
+      ]
+    },
+    "module-installations": {
+      "listClass": false,
+      "listUL": true,
+      "list": [
+        {
+          "hasIcon": false,
+          "listItemAction": true,
+          "listItemLabel": "Ipsum est sed magna kasd sed",
+          "listItemContent": false
+        }
+      ]
+    },
+    "module-services": {
+      "vdm": false,
+      "partners": {
+        "listClass": false,
+        "listUL": true,
+        "list": [
+          {
+            "hasIcon": false,
+            "listItemAction": true,
+            "actionClasses": "is-external-link",
+            "url": "https://google.com",
+            "listItemLabel": "Ipsum est sed magna kasd sed"
+          },
+          {
+            "hasIcon": false,
+            "listItemAction": true,
+            "actionClasses": "is-external-link",
+            "url": "https://google.com",
+            "listItemLabel": "Labore justo et lorem no no"
+          }
+        ]
+      }
+    },
+    "module-commodites": false,
+    "module-accessibilite": false,
+    "module-mode-paiement": {
+      "listUL": true,
+      "list": [
+        {
+          "hasIcon": true,
+          "icon-name": "icon-dot-bullet",
+          "listItemAction": false,
+          "listItemLabel": false,
+          "listItemContent": {
+            "itemContent": "Argent comptant"
+          }
+        },
+        {
+          "hasIcon": true,
+          "icon-name": "icon-dot-bullet",
+          "listItemAction": false,
+          "listItemLabel": false,
+          "listItemContent": {
+            "itemContent": "Cartes de crédit"
+          }
+        }
+      ]
+    },
+    "module-etiquettes": {
+      "badges-links": [
+        {
+          "badge": "Libellé",
+          "badgeClass": "badge-secondary",
+          "badgeUrl": "#",
+          "badgeIconClass": false
+        },
+        {
+          "badge": "Libellé",
+          "badgeClass": "badge-secondary",
+          "badgeUrl": "#",
+          "badgeIconClass": false
+        },
+        {
+          "badge": "Libellé",
+          "badgeClass": "badge-secondary",
+          "badgeUrl": "#",
+          "badgeIconClass": false
+        },
+        {
+          "badge": "Libellé",
+          "badgeClass": "badge-secondary",
+          "badgeUrl": "#",
+          "badgeIconClass": false
+        },
+        {
+          "badge": "Libellé",
+          "badgeClass": "badge-secondary",
+          "badgeUrl": "#",
+          "badgeIconClass": false
+        },
+        {
+          "badge": "Libellé",
+          "badgeClass": "badge-secondary",
+          "badgeUrl": "#",
+          "badgeIconClass": false
+        }
+      ]
+    },
+    "module-events": {
+      "listGroupClass": "mb-4",
+      "listGroup": [
+        {
+          "url": "#",
+          "media": {
+            "img": {
+              "alt": "Alt image",
+              "src": "https://picsum.photos/id/1025/128/72"
+            },
+            "placeholder": false
+          },
+          "type": false,
+          "title": "At amet eos et diam sed no invidunt sadipscing no invidunt sed dolore eos amet",
+          "infos": {
+            "badge": false,
+            "infos-items": [
+              {
+                "text": "Dates et heures pouvant s'afficher sur deux lignes"
+              }
+            ]
+          }
+        }
+      ],
+      "button-cta": {
+        "data-link-title": "Tous les événements",
+        "buttonAsLink": true,
+        "buttonClass": "btn-secondary",
+        "buttonUrl": "#",
+        "buttonText": "Tous les événements"
+      }
+    },
+    "module-map": {
+      "heading": "Comment s'y rendre",
+      "sectionMapID": "lieuMap002",
+      "cards": {
+        "classes": false,
+        "bsgrid-classes": "col-12 col-md-7",
+        "card-item": [
+          {
+            "classes" : false,
+            "card-media" : {
+              "icon": false,
+              "img": false,
+              "map": {
+                "location": {
+                  "mapID": "cardLocationLieuMapID002",
+                  "lngLat": "-73.589921, 45.534415",
+                  "showZoom": true
+                }
+              }
+            },
+            "listClass": "list-lg",
+            "list": [
+              {
+                "hasIcon": false,
+                "listItemAction": false,
+                "listItemLabel": "Nom du lieu",
+                "listItemContent": {
+                  "itemContent": false,
+                  "extraContent": [
+                    {
+                      "class": false,
+                      "content": "5519 rue Gerry-Boulet<br>Montréal (Québec) H2J 3K3"
+                    }
+                  ],
+                  "extraContentAction": {
+                    "classes": "mt-1",
+                    "actionClasses": "is-external-link",
+                    "url": "https://google.ca",
+                    "text": "Obtenir un itinéraire"
+                  }
+                }
+              }
+            ]
+          }
+        ]
+      }
+    }
+  },
+  "sidebarRight": true,
+  "sb-block-schedule": {
+    "sidebarTitleClasses": false,
+    "list": [
+      {
+        "hasIcon": true,
+        "icon-name": "icon-clock",
+        "listItemAction": false,
+        "listItemLabel": "Horaire",
+        "listItemContent": false,
+        "extraContentSchedule": {
+          "schedule" : [
+            {
+              "day": "Lundi",
+              "scheduleData": [
+                {
+                  "time": false,
+                  "customLabel": "Fermé"
+                }
+              ]
+            },
+            {
+              "day": "Mardi",
+              "scheduleData": [
+                {
+                  "time": false,
+                  "customLabel": "Fermé"
+                }
+              ]
+            },
+            {
+              "day": "Mercredi",
+              "scheduleData": [
+                {
+                  "time": false,
+                  "customLabel": "Fermé"
+                }
+              ]
+            },
+            {
+              "day": "Jeudi",
+              "scheduleData": [
+                {
+                  "time": false,
+                  "customLabel": "Fermé"
+                }
+              ]
+            },
+            {
+              "day": "Vendredi",
+              "scheduleData": [
+                {
+                  "time": false,
+                  "customLabel": "Fermé"
+                }
+              ]
+            },
+            {
+              "day": "Samedi",
+              "scheduleData": [
+                {
+                  "time": false,
+                  "customLabel": "Fermé"
+                }
+              ]
+            },
+            {
+              "day": "Dimanche",
+              "scheduleData": [
+                {
+                  "time": false,
+                  "customLabel": "Fermé"
+                }
+              ]
+            }
+          ]
+        }
+      }
+    ]
+  },
+  "hasExtraSchedules": false
+}

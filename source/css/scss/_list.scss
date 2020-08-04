@@ -27,7 +27,8 @@
 
   a {
     display: inline-block;
-    border: none;
+    border-bottom: 1px solid transparent;
+    margin-bottom: -1px;
     color: $list-group-action-color;
 
     // Hover state
@@ -40,6 +41,15 @@
         border-bottom: 1px solid $action;
         display: inline;
         background-color: $highlight-light;
+      }
+    }
+
+    &.is-external-link {
+      margin-right: 0;
+      &:after {
+        margin-left: 0;
+        margin-right: 0;
+        vertical-align: -.375rem;
       }
     }
   }
@@ -163,6 +173,8 @@
 // TODO: Use mixins to set sizes
 .list {
   &.list-lg {
+    @include font-size($font-size-base);
+    line-height: $line-height-md;
     .list-item,
     .list-item-icon {
       @include font-size($font-size-base);
@@ -171,35 +183,33 @@
   }
 
   &.list-md {
+    @include font-size($font-size-sm);
+    line-height: $line-height-sm;
     .list-item,
     .list-item-icon {
      @include font-size($font-size-sm);
      line-height: $line-height-sm;
     }
 
-    // list item icon
-    .list-item-icon {
-      padding: .625rem 0;
-      // Icon and svgs handling
-      .icon {
-        @include icon-size($icon-sm);
+    .list-item-action {
+      .is-external-link {
+        &:after {
+          width: $icon-sm;
+          height: $icon-sm;
+          vertical-align: -.25rem;
+        }
       }
     }
-    .list-item-icon-action {
-      .link-has-icon {
-        line-height: $line-height-sm;
-      }
-      ~ .list-item-icon-content {
-        margin-left: 2.25rem;
-      }
-    }
+
   }
 
   &.list-sm {
+    @include font-size($font-size-xs);
+    line-height: $line-height-sm;
     .list-item,
     .list-item-icon {
       @include font-size($font-size-xs);
-      line-height: $line-height-xs;
+      line-height: $line-height-sm;
     }
 
     // list item icon
@@ -213,10 +223,21 @@
     }
     .list-item-icon-action {
       .link-has-icon {
-        line-height: $line-height-xs;
+        line-height: $line-height-xs-action;
       }
       ~ .list-item-icon-content {
       margin-left: 1.5rem;
+      }
+    }
+
+    .list-item-action {
+      line-height: $line-height-xs-action;
+      .is-external-link {
+        &:after {
+          width: $icon-xs;
+          height: $icon-xs;
+          vertical-align: -.25rem;
+        }
       }
     }
   }
