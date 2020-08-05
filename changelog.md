@@ -23,6 +23,7 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 - Templates - Index: swap light badges for strong in result lists.
 - Templates - Lieux: Evolutions - Added sections, refactored lists, added activity module, swap map for card-location.
 - Templates - Lieux: Center content when no sidebar.
+- Templates - Index - Recherche: Swap pagination for Load more button. Add rudimentary mecanism demo for focus and items display.
 
 ### Fixed
 - Components - Accordion inside wrapper: Fix spacing bottom to 32px.
