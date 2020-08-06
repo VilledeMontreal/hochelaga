@@ -7,8 +7,8 @@
         <span class="icon icon-chevron-left" aria-hidden="true"></span>
       </button>
       <div class="w-100 text-center px-2" aria-label="Période active">
-        {{# titrePeriode}}<div>Titre de la période</div>{{/ titrePeriode}}
-        {{# descPeriode}}<div class="font-weight-bold">{{ descPeriode}}</div>{{/ descPeriode}}
+        {{# titrePeriode}}<div>{{{titrePeriode}}}</div>{{/ titrePeriode}}
+        {{# descPeriode}}<div class="font-weight-bold">{{{ descPeriode}}}</div>{{/ descPeriode}}
       </div>
       <button type="button" class="btn btn-link btn-icon btn-squared" aria-label="Suivant"{{# disabledStateNext}} disabled{{/ disabledStateNext}}>
         <span class="icon icon-chevron-right" aria-hidden="true"></span>
@@ -154,7 +154,7 @@
 {{/ module-activites-planifiees}}
 
 {{# module-events}}
-<h2>Événements à venir</h2>
+<h2>À ne pas manquer</h2>
 <div class="content-module-stacked">
   {{> components-list-group-content}}
   {{# button-cta}}
