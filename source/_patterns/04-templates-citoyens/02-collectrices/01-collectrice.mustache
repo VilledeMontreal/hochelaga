@@ -44,7 +44,7 @@
           {{/ topRequested}}
 
           {{# hub-list}}
-          <div class="mb-8"> 
+          <div class="mb-8">
             <h2>{{ hub-list-heading}}</h2>
             {{> components-list-item-link}}
           </div>
@@ -91,27 +91,27 @@
               {{> components-list-item-link}}
             </div>
             {{/ topRequested}}
-            {{# featuredSidebarCTA}}
+            {{# sidebarFeaturedCTA}}
             <div class="sb-block">
               {{> patterns-wrapper-featured-cta}}
             </div>
-            {{/ featuredSidebarCTA}}
-            {{# featuredSidebarContent}}
+            {{/ sidebarFeaturedCTA}}
+            {{# sidebarFeaturedCards}}
             <div class="sb-block">
               <div class="row cards {{ cards.classes }}">
               {{# cards.card-item }}
-                <div class="col-12">
+                <div class="col-12 col-md-6 col-lg-12">
                   {{> components-card-item }}
                 </div>
               {{/ cards.card-item }}
               </div>
             </div>
-            {{/ featuredSidebarContent}}
+            {{/ sidebarFeaturedCards}}
 
           </div>
         </aside>
         {{/sidebarRight}}
-          
+
       </div>
     </div>
   </div>

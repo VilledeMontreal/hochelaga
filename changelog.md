@@ -13,6 +13,7 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 - Components - Forms: New checkbox wrapper and radio wrapper components.
 - Patterns - Wrapper: Generic structure for complex wrapper based on wrapper-arrondissement structure.
   TODO: See if we can merge wrapper-arrondissement inside generic wrapper complex structure.
+- Templates - Collectrices: Add featured cards to sidebar.
 - PL - Styles - Tables examples: Added Column header and row header examples.
 
 ### Changed

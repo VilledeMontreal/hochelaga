@@ -93,8 +93,45 @@
       }
     ]
   },
-  "featuredSidebarCTA": true,
-  "featuredSidebarContent": false,
+  "sidebarFeaturedCTA": true,
+  "sidebarFeaturedCards": {
+    "cards": {
+      "classes": false,
+      "bsgrid-classes": false,
+      "card-item" : [
+        {
+          "classes" : false,
+          "url" : "#",
+          "card-media" : {
+            "icon": false,
+            "img" : {
+              "src" : "https://picsum.photos/id/1074/768/432",
+              "alt" : "Card #1 img alt."
+            }
+          },
+          "card-type": "Type",
+          "card-title" : "Erat aliquyam no sed",
+          "card-text": false,
+          "card-text-interface" : false
+        },
+        {
+          "classes" : false,
+          "url" : "#",
+          "card-media" : {
+            "icon": false,
+            "img" : {
+              "src" : "https://picsum.photos/id/1070/768/432",
+              "alt" : "Card #2 img alt."
+            }
+          },
+          "card-type": "Type de contenu",
+          "card-title" : "Et nonumy justo sanctus gubergren et",
+          "card-text": false,
+          "card-text-interface" : false
+        }
+      ]
+    }
+  },
   "listOldContent": {
     "listGroupClass": "column-count-lg-2 list-group-lg",
     "listGroup": [
