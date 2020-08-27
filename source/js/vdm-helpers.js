@@ -350,7 +350,7 @@ function generateMap(lngLat, addressInfos, mapID, showZoom, addressTitle) {
     container: mapID,
     zoom: startZoom,
     maxZoom: 17,
-    minZoom: 12,
+    minZoom: 13,
     style: mapboxStyle,
     center,
     maxBounds,

@@ -18,6 +18,33 @@
   }
 }
 
+// Complexe wrapper
+// Section Header and body
+// Can contain anything in the body.
+//
+.wrapper-complex {
+  padding: 0;
+  .wrapper-header {
+    @include font-size($font-size-base);
+    line-height: $line-height-md;
+    border-bottom: 1px solid $neutral-stroke;
+    color: $headings-color;
+    padding: 1rem;
+    margin-bottom: 2rem;
+    align-items: center;
+  }
+  .wrapper-body {
+    padding: 0 1rem 2rem 1rem;
+
+    .content-module-stacked {
+      &:last-child {
+        margin-bottom: 0;
+      }
+    }
+  }
+}
+
+
 // Sélecteur arrondissement
 //
 .wrapper-arrondissement {
@@ -91,6 +118,14 @@
     .content-module-stacked {
       &:last-child {
         margin-bottom: 0;
+      }
+    }
+
+    .collapsible-block {
+      .content-module-stacked {
+        &:last-child {
+          margin-bottom: 1rem;
+        }
       }
     }
 

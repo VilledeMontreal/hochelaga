@@ -661,6 +661,9 @@ flyouts.forEach((flyout) => {
 
 
 // partial list li toggle
+//
+// This is simplistic code to demonstrate how partial list should behave
+// For demonstration purpose only.
 const showPartialLists = document.querySelectorAll(`[data-toggle='show-list']`);
 
 showPartialLists.forEach((partialList) => {
@@ -675,6 +678,28 @@ showPartialLists.forEach((partialList) => {
       if(item.classList.contains('extra-item'))
         item.classList.toggle('sr-only')
     })
+  });
+});
+
+
+// Load more
+//
+// This is simplistic code to demonstrate how load more
+// should set focus at the begining of the added content
+// For demonstration purpose only.
+const loadMoreItems = document.querySelectorAll(`[data-toggle='load-more']`);
+loadMoreItems.forEach((loadMoreItem) => {
+  const loadMoreItemId = loadMoreItem.dataset.target;
+  loadMoreItem.addEventListener('click', (ev) => {
+    ev.preventDefault();
+    const doc = document.getElementById(loadMoreItemId)
+    const itemsArray = Array.from(doc.children)
+    const toggleVisibility = itemsArray.map(item => {
+      if(item.classList.contains('load-more-item'))
+        item.classList.remove('d-none')
+    })
+    const setFocus = itemsArray.find((item) => item.getAttribute('role') == 'separator').focus();
+    loadMoreItem.parentNode.classList.add('d-none');
   });
 });
 

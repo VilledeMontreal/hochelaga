@@ -1,10 +1,11 @@
-<div class="list-group list-group-teaser{{#listGroupClass}} {{listGroupClass}}{{/listGroupClass}}" role="list">
+<div class="list-group list-group-teaser{{#listGroupClass}} {{listGroupClass}}{{/listGroupClass}}"{{#listGroupID}} id="{{listGroupID}}"{{/listGroupID}} role="list">
   {{# listGroup}}
+  {{^ separator}}
   {{# url}}
-  <a class="list-group-item list-group-item-action" href="{{ url }}" role="listitem">
+  <a class="list-group-item list-group-item-action{{#listGroupItemClass}} {{listGroupItemClass}}{{/listGroupItemClass}}" href="{{ url }}" role="listitem">
   {{/ url}}
   {{^ url}}
-  <div class="list-group-item" role="listitem">
+  <div class="list-group-item{{#listGroupItemClass}} {{listGroupItemClass}}{{/listGroupItemClass}}" role="listitem">
   {{/ url}}
     <div class="list-group-item-max-width">
       {{# media}}
@@ -65,6 +66,10 @@
   {{# url}}
   </a>
   {{/ url}}
+  {{/ separator}}
+  {{# separator}}
+  <div class="" tabindex="-1" role="separator">{{# text}}{{{ text}}}{{/ text}}</div>
+  {{/ separator}}
   {{/ listGroup}}
 </div>
 

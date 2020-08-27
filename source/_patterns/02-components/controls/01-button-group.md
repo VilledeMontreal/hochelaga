@@ -1,5 +1,5 @@
 ---
-title: Toggle (Button group)
+title: Button group
 ---
 
 ## Utilisation

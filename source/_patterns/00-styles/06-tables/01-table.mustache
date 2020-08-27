@@ -4,7 +4,7 @@
 {{/ tableWrapper}}
   <table class="table table-hover {{ tableClass }}">
     {{# caption }}
-    <caption>{{ caption }}</caption>
+    <caption>{{{ caption }}}</caption>
     {{/ caption }}
     {{# thead }}
     <thead class="{{ theadClass }}">
@@ -24,7 +24,8 @@
         <th scope="row">{{ th }}</th>
         {{/ th }}
         {{# td }}
-        <td>{{{ text }}}</td>
+        {{#text}}<td{{#class}} class="{{class}}"{{/class}}>{{{ text }}}</td>{{/text}}
+        {{#cell}}<td>{{#items}}<div{{#class}} class="{{class}}"{{/class}}>{{{ text }}}</div>{{/items}}</td>{{/cell}}
         {{/ td }}
       </tr>
     {{/ tr}}

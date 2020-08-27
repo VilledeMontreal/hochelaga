@@ -38,6 +38,48 @@
       ]
     }
   ],
+  "toggleStates":[
+    {
+      "toggleClass": false,
+      "aria-label": "Button group Text Aria-Label",
+      "toggleButton": [
+        {
+          "toggleButtonClass": "active",
+          "toggleButtonText": "Libellé"
+        },
+        {
+          "toggleButtonText": "Libellé"
+        },
+        {
+          "toggleButtonState": "disabled",
+          "toggleButtonText": "Libellé"
+        }
+      ]
+    },
+    {
+      "toggleClass": false,
+      "aria-label": "Toggle Button Icon Aria-Label",
+      "toggleButton": [
+        {
+          "toggleButtonClass": "btn-icon active",
+          "toggleButtonAriaLabel": "Afficher en mode liste",
+          "toggleButtonIcon": {
+            "icon-name": "icon-list"
+          },
+          "toggleButtonText": false
+        },
+        {
+          "toggleButtonClass": "btn-icon",
+          "toggleButtonAriaLabel": "Afficher en mode carte",
+          "toggleButtonIcon": {
+            "icon-name": "icon-map"
+          },
+          "toggleButtonText": false,
+          "toggleButtonState": "disabled"
+        }
+      ]
+    }
+  ],
   "toggleSizes":[
     {
       "toggleClass": "btn-group-sm",

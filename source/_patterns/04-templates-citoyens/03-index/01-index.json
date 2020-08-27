@@ -501,7 +501,7 @@
           "infos": {
             "badge": {
               "badge": "État",
-              "badgeClass": "badge-danger-light",
+              "badgeClass": "badge-danger",
               "badgeUrl": false
             },
             "infos-items": [
@@ -662,6 +662,9 @@
     },
     "hasPagination": {
       "paginationClass": false,
+      "prev": {
+        "disabled": true
+      },
       "paginationList": [
         {
           "url": "#",

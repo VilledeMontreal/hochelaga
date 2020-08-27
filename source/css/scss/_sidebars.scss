@@ -17,6 +17,14 @@
     border-top: none;
   }
 
+  // Schedule data
+  // Cheat for lg breakpoint to allow one line schedule...
+  @include media-breakpoint-only(lg) {
+    .schedule-data {
+      margin-left: -2px;
+    }
+  }
+
 }
 
 .list-social-medias {
@@ -47,3 +55,4 @@
     white-space: nowrap;
   }
 }
+

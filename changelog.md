@@ -4,8 +4,37 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](http://keepachangelog.com/en/1.0.0/)
 and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.html).
 
+## [4.13.0] - unreleased
 
-## [4.12.0] - unreleased
+### Added
+- Breakpoint: New xsm breakpoint at 352px for small mobile handling.
+- Styles - Tables: Sorting styles with .sorting-asc and .sorting-desc states.
+- Components - Controls - Input stepper: New control component: input-stepper.
+- Components - Forms: New checkbox wrapper and radio wrapper components.
+- Patterns - Wrapper: Generic structure for complex wrapper based on wrapper-arrondissement structure.
+  TODO: See if we can merge wrapper-arrondissement inside generic wrapper complex structure.
+- Templates - Collectrices: Add featured cards to sidebar.
+- PL - Styles - Tables examples: Added Column header and row header examples.
+
+### Changed
+- Styles - Tables: Removed border-top from thead th and add double border-bottom to thead th.
+- Components - Controls: Button groups color normalisation for 3 states: active, inactive and disabled.
+- Components - Forms: Normalisation of checkboxes and radios label to 14/20.
+- Components - Pagination: Conforms to button-group specs.
+- Templates - Index: swap light badges for strong in result lists.
+- Templates - Lieux: Evolutions - Added sections, refactored lists, added activity module, swap map for card-location.
+- Templates - Lieux: Center content when no sidebar.
+- Templates - Index - Recherche: Swap pagination for Load more button. Add rudimentary mecanism demo for focus and items display.
+
+### Fixed
+- Components - Accordion inside wrapper: Fix spacing bottom to 32px.
+- Components - Cards: Fix card location double container with duplicated ID.
+- Components - Messages - Alerts: Fix external link icon color.
+- Components - Messages - message bar: Fix external link icon color.
+- Components - List Item: Fix external link icon on simple list Action label.
+
+
+## [4.12.0] - 2020-07-20
 
 ### Added
 - Iconography - Utilitary: icon-flag-fill, icon-heart-fill, icon-history, icon-location-off, icon-reorder, icon-roadsection, icon-rss, icon-selection, icon-star-fill, icon-star-half, icon-user-minus, icon-user-plus and icon-user-x, icon-wifi and icon-wifi-off added to vdm-icon-system.
@@ -506,6 +535,7 @@ Main navbar, menu and footer are now in their own stylesheet. They will eventual
 The version 3 is now deprecated. Only bug fixes will be considered. Please refer to the old bitbucket repo https://bitbucket.org/villemontreal/boite-outils-web/.
 
 
+[4.12.0]: https://bitbucket.org/villemontreal/boite-outils4-web/src/4.12.0/
 [4.11.1]: https://bitbucket.org/villemontreal/boite-outils4-web/src/4.11.1/
 [4.11.0]: https://bitbucket.org/villemontreal/boite-outils4-web/src/4.11.0/
 [4.10.0]: https://bitbucket.org/villemontreal/boite-outils4-web/src/4.10.0/

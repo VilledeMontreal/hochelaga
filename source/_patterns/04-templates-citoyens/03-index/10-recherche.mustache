@@ -76,7 +76,7 @@
       </div>
       {{/ moreFilters}}
       <!-- END - Modal More Filters -->
-      <div class="d-md-none">  
+      <div class="d-md-none">
         <button class="btn btn-secondary btn-squared btn-block" type="button" id="mobileFiltersModalLabel" data-toggle="modal" data-target="#{{navModalID}}">
           <span class="btn-label">Tous les filtres</span>
           {{# numb-filters}}
@@ -254,7 +254,7 @@
         {{/ navSorts }}
       </div>
       {{/ headings }}
-      
+
       {{# listing}}
       <div class="row pt-2 mb-8">
         <div class="col-12">
@@ -262,13 +262,18 @@
         </div>
       </div>
       {{/ listing}}
-      
+
       {{# hasPagination }}
       <div class="pagination-wrapper">
         {{> components-pagination }}
       </div>
       {{/ hasPagination }}
-      
+      {{^ hasPagination }}{{# hasLoadMoreBtn}}
+      <div class="pagination-wrapper mt-n4 text-center">
+        {{> components-button-icon}}
+      </div>
+      {{/ hasLoadMoreBtn}}{{/ hasPagination }}
+
       {{/ results}}
 
       {{/ hasEmptyState }}

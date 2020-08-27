@@ -13,9 +13,15 @@
   background-color: $neutral-underground-1;
   color: $neutral-secondary;
 
-  a {
+  a,
+  .alert-link {
     color: $neutral-secondary;
     border-bottom: $link-border-width solid $neutral-secondary;
+    &:after {
+      background-color: $neutral-secondary !important;
+      // We need important because some content get the external link automatically applied if inside some specific container.
+      // TODO: Fix external-link so we can get rid of !important.
+    }
     @include hover-focus {
       background-color: lighten($neutral-underground-1, 2%);
     }
@@ -89,6 +95,9 @@
       border-bottom: $link-border-width solid $color-dark;
       @include hover-focus {
         background-color: lighten($color-light, 4%);
+      }
+      &:after {
+        background-color: $color-dark !important;
       }
     }
 
@@ -183,6 +192,10 @@
         color: $white;
         background: $black;
       }
+
+      &:after {
+        background-color: $white;
+      }
     }
 
   }
@@ -244,6 +257,9 @@
         a {
           color: $neutral-primary;
           border-bottom: $link-border-width solid $neutral-primary;
+          &:after {
+            background-color: $neutral-primary;
+          }
           @include hover-focus {
             color: $neutral-primary;
             background-color: lighten($color-base, 10%);
