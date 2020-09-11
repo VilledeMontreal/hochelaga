@@ -2,9 +2,9 @@
 <div class="row">
   <div class="col-xs-6 col-md-4">
     <div class="form-group">
-      {{# label }}
-      <label class="">{{ label }}</label>
-      {{/ label}}
+      {{^ formGroupNoLabel}}
+      {{# formGroupLabel}}<label>{{ formGroupLabel}}{{^ formGroupInputRequired}}<span>Facultatif</span>{{/ formGroupInputRequired}}</label>{{/ formGroupLabel}}
+      {{/ formGroupNoLabel}}
 		  {{> components-checkbox-item }}
 	  </div>
   </div>

@@ -2,8 +2,9 @@
   "selectSize": [
     {
       "formGroupClass": "form-group-sm",
-      "formGroupSelectID": "form-group-select-sm",
+      "formGroupSelectID": "custom-select-sm",
       "formGroupSelectLabel": "Small select label",
+      "formGroupSelectClass": "custom-select-sm",
       "formGroupSelect": {
         "defaultOption": "Default option",
         "options": [
@@ -20,8 +21,9 @@
     },
     {
       "formGroupClass": false,
-      "formGroupSelectID": "form-group-select",
+      "formGroupSelectID": "custom-select",
       "formGroupSelectLabel": "Default select label",
+      "formGroupSelectClass": false,
       "formGroupSelect": {
         "defaultOption": "Default option",
         "options": [
@@ -38,8 +40,9 @@
     },
     {
       "formGroupClass": "form-group-lg",
-      "formGroupSelectID": "form-group-select-sm",
+      "formGroupSelectID": "custom-select-lg",
       "formGroupSelectLabel": "Large select label",
+      "formGroupSelectClass": "custom-select-lg",
       "formGroupSelect": {
         "defaultOption": "Default option",
         "options": [

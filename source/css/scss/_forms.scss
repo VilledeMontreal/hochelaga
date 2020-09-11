@@ -311,6 +311,13 @@ legend,
   }
 }
 
+// Custom select
+//
+.custom-select-sm {
+  background: $custom-select-background-sm;
+  padding-right: ($custom-select-padding-x-sm + $custom-select-indicator-padding-sm);
+}
+
 // switches
 //
 // Tweak a few things for switches

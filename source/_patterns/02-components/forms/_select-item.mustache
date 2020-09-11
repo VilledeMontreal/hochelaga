@@ -2,8 +2,8 @@
   {{# formGroupSelectLabel}}
   <label for="{{ formGroupSelectID }}">{{ formGroupSelectLabel }}</label>
   {{/ formGroupSelectLabel}}
-  <select class="form-control {{formGroupSelectClass}}" name="{{ formGroupSelectID }}" id="{{formGroupSelectID}}"{{# formGroupSelectRequired}} required{{/ formGroupSelectRequired}}> 
-    <option value="">{{ formGroupSelect.defaultOption}}</option> 
+  <select class="custom-select {{formGroupSelectClass}}" name="{{ formGroupSelectID }}" id="{{formGroupSelectID}}"{{# formGroupSelectRequired}} required{{/ formGroupSelectRequired}}>
+    <option value="">{{ formGroupSelect.defaultOption}}</option>
     {{# formGroupSelect.options }}
       {{> components-option }}
     {{/ formGroupSelect.options }}

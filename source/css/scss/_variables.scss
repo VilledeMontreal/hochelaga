@@ -132,6 +132,16 @@ $overlay-light-reversed:            rgba($white, .3);
 $overlay-mid-reversed:              rgba($white, .5);
 $overlay-strong-reversed:           rgba($white, .7);
 
+// Shadows
+//
+$shadow-light:              0px 1px 4px rgba(0,0,0,.1);
+$shadow-moderate:           0px 2px 8px rgba(0,0,0,.1);
+$shadow-strong:             0px 8px 32px rgba(0,0,0,.1);
+
+$shadow-light-inverted:     0px -1px 4px rgba(0,0,0,.1);
+$shadow-moderate-inverted:  0px -2px 8px rgba(0,0,0,.1);
+$shadow-strong-inverted:    0px -8px 32px rgba(0,0,0,.1);
+
 
 // Icons
 //
@@ -312,7 +322,7 @@ $focus-color:                 $informative;
 $focus-reverse-color:         $informative-light;
 
 // generic variable box-shadow apply to card, popover, dropdown and modal
-$box-shadow:                  0 0 2rem 0 $overlay-subtle;
+$box-shadow:                  $shadow-strong;
 
 // Generic value for backdrop bg and opacity
 $backdrop-bg:                 $neutral-primary;
@@ -574,6 +584,15 @@ $custom-switch-indicator-checked-bg:              $highlight-strong;
 $custom-switch-indicator-checked-handle:          $action;
 $custom-switch-indicator-checked-handle-disabled: $highlight-light;
 
+$custom-select-padding-x-sm:          $input-padding-x-sm;
+
+$custom-select-indicator-padding:     2.5625rem; // Extra padding to account for the presence of the background-image based indicator
+$custom-select-indicator-padding-sm:  1.5rem;
+$custom-select-bg-size-sm:            16px 16px;
+$custom-select-bg-size:               24px 24px; // In pixels because image dimensions
+$custom-select-indicator-color:       $neutral-tertiary;
+$custom-select-indicator:             str-replace(url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3e%3cpath fill='#{$custom-select-indicator-color}' d='M12 12.586l3.293-3.293a1 1 0 011.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L12 12.586z'/%3E %3C/svg%3e"), "#", "%23");
+$custom-select-background-sm:         $custom-select-indicator no-repeat right $custom-select-padding-x-sm center / $custom-select-bg-size-sm; // Used so we can have multiple background elements (e.g., arrow and feedback icon)
 
 // Form validation
 
@@ -712,7 +731,7 @@ $toast-line-height:                 $line-height-sm;
 $toast-color:                       $white;
 $toast-background-color:            $neutral-primary;
 $toast-border-radius:               .25rem;
-$toast-box-shadow:                  0 .125rem .5rem $overlay-subtle;
+$toast-box-shadow:                  $shadow-moderate;
 
 
 // Badges
@@ -933,7 +952,7 @@ $main-navbar-focus-box-shadow:  0 0 0 $input-btn-focus-width rgba($action, .3);
 $main-menu-bg:                    $white;
 $main-menu-active-bg:             $highlight-light;
 $main-menu-transition:            transform 300ms ease-out;
-$main-menu-box-shadow:            0 .125rem .5rem 0 $overlay-subtle;
+$main-menu-box-shadow:            $shadow-moderate;
 
 
 // Slide Menus Interne

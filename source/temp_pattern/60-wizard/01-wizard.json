@@ -1,0 +1,217 @@
+{
+  "bodyClass": "site-sticky-footer",
+  "navbarFixedTop": true,
+  "footerMinimal": true,
+  "menuItemStepper": {
+    "menuItemClass": "menu-items-column",
+    "menuItem": [
+      {
+        "class": false,
+        "url": "#",
+        "menuItemState": true,
+        "stepID": "1",
+        "menuItemLabel": "Libellé"
+      },
+      {
+        "class": false,
+        "url": "#",
+        "menuItemState": true,
+        "stepID": "2",
+        "menuItemLabel": "Libellé long"
+      },
+      {
+        "class": false,
+        "url": false,
+        "menuItemState": true,
+        "stepID": "3",
+        "menuItemLabel": "Libellé très long",
+        "subMenuItems": {
+          "subMenuItem": [
+            {
+              "url": "#",
+              "class": false,
+              "subMenuItemLabel": "Libellé de sous-page"
+            },
+            {
+              "url": "#",
+              "class": false,
+              "subMenuItemLabel": "Libellé de sous-page"
+            },
+            {
+              "url": "#",
+              "class": false,
+              "subMenuItemLabel": "Libellé de sous-page"
+            }
+          ]
+        }
+      },
+      {
+        "menuItemSeparator": false,
+        "class": "active",
+        "url": "#",
+        "menuItemState": true,
+        "stepID": "4",
+        "menuItemLabel": "Libellé"
+      },
+      {
+        "menuItemSeparator": false,
+        "class": "disabled",
+        "url": false,
+        "menuItemState": false,
+        "stepID": "5",
+        "menuItemLabel": "Disabled"
+      }
+    ]
+  },
+  "module-message": {
+    "alertClass": "alert-info alert-with-icon",
+    "alertTitle": false,
+    "alertText": "Description du message.",
+    "alertIcon": {
+      "icon-name": "icon-info"
+    }
+  },
+  "inputFile": {
+    "formGroupClass": false,
+    "formGroupInputID": "form-control-input-file-v2",
+    "formGroupInputLabel": "Libellé",
+    "formGroupInputHelpText": "Message d'aide personnalisé.",
+    "formGroupFileID": "file-droparea-v2",
+    "formGroupFileDropID": "form-group-file-upload",
+    "formGroupFileDropLabel": "Parcourir",
+    "formGroupFileDropHelpText": "ou déposer votre fichier ici",
+    "dropdownMenu": {
+      "dropdownMenuClass": "dropdown-menu-right",
+      "dropdownMenuID": "dropdownMoreVertical-1",
+      "dropdownSection": [
+        {
+          "dropdownItem": [
+            {
+              "url": "#",
+              "dropdownItemLabel": "Libellé"
+            },
+            {
+              "url": "#",
+              "dropdownItemLabel": "Libellé"
+            }
+          ]
+        }
+      ]
+    }
+  },
+  "formInputText": {
+    "formGroupClass": false,
+    "formGroupInputID": "form-control-wizard-input-text",
+    "formGroupInputLabel": "Libellé",
+    "formGroupInputPlaceholder": {
+      "text": "Placeholder"
+    },
+    "formGroupInputHelpText": "Message d'aide personnalisé."
+  },
+  "formInputTextRow": [
+    {
+      "formGroupClass": "col-md-6",
+      "formGroupInputRequired": true,
+      "formGroupInputID": "form-control-wizard-input-text-row-1",
+      "formGroupInputLabel": "Libellé",
+      "formGroupInputPlaceholder": {
+        "text": "Placeholder"
+      },
+      "formGroupInputHelpText": "Message d'aide personnalisé."
+    },
+    {
+      "formGroupClass": "col-md-6",
+      "formGroupInputRequired": true,
+      "formGroupInputID": "form-control-wizard-input-text-row-2",
+      "formGroupInputLabel": "Libellé",
+      "formGroupInputPlaceholder": {
+        "text": "Placeholder"
+      }
+    }
+  ],
+  "textarea": {
+    "formGroupClass": false,
+    "formGroupInputRequired": true,
+    "formGroupInputID": "form-control-textarea",
+    "formGroupInputLabel": "Libellé",
+    "formGroupInputPlaceholder": false,
+    "formGroupInputHelpText": "Message d'aide personnalisé.",
+    "formGroupTextareaRows": "5"
+  },
+  "formCheckboxes": {
+    "formGroupInputLabel": "Libellé",
+    "formCheckboxItems": [
+      {
+        "class": "",
+        "id": "wizChk01-1",
+        "label": "Premier choix",
+        "state": false
+      },
+      {
+        "class": "",
+        "id": "wizChk01-2",
+        "label": "Second choix",
+        "state": false
+      },
+      {
+        "class": "",
+        "id": "wizChk01-3",
+        "label": "Troisième choix",
+        "state": false
+      },
+      {
+        "class": "",
+        "id": "wizChk01-4",
+        "label": "Troisième choix",
+        "state": false
+      }
+    ]
+  },
+  "formRadios": {
+    "formGroupInputLabel": "Libellé",
+    "formRadiosItems": [
+      {
+        "class": "",
+        "id": "wizRdio01-1",
+        "label": "Premier choix",
+        "name": "wizRadiosGroup",
+        "state": false
+      },
+      {
+        "class": "",
+        "id": "wizRdio01-2",
+        "label": "Second choix",
+        "name": "wizRadiosGroup",
+        "state": false
+      },
+      {
+        "class": "",
+        "id": "wizRdio01-3",
+        "label": "Troisième choix",
+        "name": "wizRadiosGroup",
+        "state": false
+      },
+      {
+        "class": "",
+        "id": "wizRdio01-4",
+        "label": "Quartrième choix",
+        "name": "wizRadiosGroup",
+        "state": false
+      }
+    ]
+  },
+  "formGroupActions": [
+    {
+      "buttonClass": "btn-secondary btn-squared btn-icon-left",
+      "buttonText": "Précédent",
+      "icon-name": "icon-arrow-left",
+      "buttonIcon": true
+    },
+    {
+      "buttonClass": "btn-primary btn-squared btn-icon-right",
+      "buttonText": "Suivant",
+      "icon-name": "icon-arrow-right",
+      "buttonIcon": true
+    }
+  ]
+}

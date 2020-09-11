@@ -19,6 +19,30 @@
   margin-right: -50vh;
 }
 
+// Shapes
+.circle {
+  @include font-size($font-size-sm);
+  line-height: $line-height-sm;
+  color: $neutral-secondary;
+  background-color: $white;
+  border-radius: 4rem;
+  box-shadow: $shadow-moderate;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 1.5rem;
+  height: 1.5rem;
+}
+
+// Sizing add-on
+// TODO: Move to own utility stylesheet
+.w-256 {
+  width: 256px;
+}
+.w-440 {
+  width: 440px;
+}
+
 // Provide the ability to "Unfix" a element using the fixed-top
 .unfixed {
   .fixed-top {
@@ -40,7 +64,7 @@
   height: 2rem;
   display: flex;
   justify-content: center;
-  
+
   a {
     margin: 0 2rem;
   }
@@ -62,7 +86,7 @@ iframe {
 // Content
 //
 
-// Alternate order (Left and right image) 
+// Alternate order (Left and right image)
 @each $breakpoint in map-keys($grid-breakpoints) {
   $infix: breakpoint-infix($breakpoint, $grid-breakpoints);
 

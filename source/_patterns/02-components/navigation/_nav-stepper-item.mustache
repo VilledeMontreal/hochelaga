@@ -1,0 +1,40 @@
+<nav class="nav-menu-items nav-wizard {{ navMenuItemsClass}}" aria-label="Navigation wizard">
+  <ul class="menu-items {{ menuItemClass}}">
+    {{# menuItem}}
+    <li{{#menuItemLiClass}} class="{{menuItemLiClass}}"{{/menuItemLiClass}}>
+      {{# url}}
+      <a class="menu-item{{# class}} {{class}}{{/ class}}" href="{{url}}">
+        {{# menuItemState}}<span class="icon icon-check-circle-full icon-color-success" aria-hidden="true"></span>{{/ menuItemState}}
+        {{^ menuItemState}}<span class="circle" aria-hidden="true">{{ stepID }}</span>{{/ menuItemState}}
+        {{# menuItemLabel}}<span class="menu-item-label">{{ menuItemLabel}}</span>{{/ menuItemLabel}}
+      </a>
+      {{/ url}}
+      {{^ url}}
+      <span class="menu-item{{# class}} {{class}}{{/ class}}">
+        {{# menuItemState}}<span class="icon icon-check-circle-full icon-color-success" aria-hidden="true"></span>{{/ menuItemState}}
+        {{^ menuItemState}}<span class="circle" aria-hidden="true">{{ stepID }}</span>{{/ menuItemState}}
+        {{# menuItemLabel}}<span class="menu-item-label">{{ menuItemLabel}}</span>{{/ menuItemLabel}}
+      </span>
+      {{# subMenuItems}}
+        <ul class="sub-menu-items">
+          {{# subMenuItem}}
+          <li>
+            {{# url }}
+            <a class="sub-menu-item{{# class}} {{class}}{{/ class}}" href="{{url}}">
+              {{# subMenuItemLabel}}<span class="sub-menu-item-label">{{ subMenuItemLabel}}</span>{{/ subMenuItemLabel}}
+            </a>
+            {{/ url}}
+            {{^ url}}
+            <span class="sub-menu-item{{# class}} {{class}}{{/ class}}">
+              {{# subMenuItemLabel}}<span class="sub-menu-item-label">{{ subMenuItemLabel}}</span>{{/ subMenuItemLabel}}
+            </span>
+            {{/ url}}
+          </li>
+          {{/subMenuItem}}
+        </ul>
+      {{/ subMenuItems}}
+      {{/ url}}
+    </li>
+    {{/ menuItem}}
+  </ul>
+</nav>
