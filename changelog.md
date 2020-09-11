@@ -4,6 +4,23 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](http://keepachangelog.com/en/1.0.0/)
 and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.html).
 
+## [4.14.0] - unreleased
+
+### Added
+- Components - Navigation - Stepper: Stepper (wizard).
+- Components - Navigation: Sub nav icons only variant.
+- Styles - Utilities: New .w-256 and .w-440 sizing classes.
+
+### Changed
+- PL - Components - Breadcrumbs: Moved breadcrumbs to own component directory.
+- PL - Components - Tabs: Moved tabs to own component directory.
+- Components - Forms - Select: Use custom-select.
+
+### Fixed
+- Components - Navigation: Fix issues with some navigation and removed unused/deprecated/never added to Figma navigation variants
+- Components - Forms - Select: Custom select background and padding fixes. Validation fixes.
+
+
 ## [4.13.0] - unreleased
 
 ### Added

@@ -1,0 +1,63 @@
+{
+  "menuItemStepper": {
+    "menuItemClass": "menu-items-column",
+    "menuItem": [
+      {
+        "class": false,
+        "url": "#",
+        "menuItemState": true,
+        "stepID": "1",
+        "menuItemLabel": "Libellé"
+      },
+      {
+        "class": false,
+        "url": "#",
+        "menuItemState": true,
+        "stepID": "2",
+        "menuItemLabel": "Libellé long"
+      },
+      {
+        "class": false,
+        "url": false,
+        "menuItemState": false,
+        "stepID": "3",
+        "menuItemLabel": "Libellé très long",
+        "subMenuItems": {
+          "subMenuItem": [
+            {
+              "url": "#",
+              "class": "",
+              "subMenuItemLabel": "Libellé de sous-page"
+            },
+            {
+              "url": "#",
+              "class": "active",
+              "subMenuItemLabel": "Libellé de sous-page"
+            },
+            {
+              "url": false,
+              "class": "disabled",
+              "subMenuItemLabel": "Libellé de sous-page"
+            }
+          ]
+        }
+      },
+      {
+        "menuItemSeparator": false,
+        "class": "disabled",
+        "url": false,
+        "menuItemState": false,
+        "stepID": "4",
+        "menuItemLabel": "Libellé"
+      },
+      {
+        "menuItemSeparator": false,
+        "class": "disabled",
+        "url": false,
+        "menuItemState": false,
+        "stepID": "5",
+        "menuItemLabel": "Disabled"
+      }
+    ]
+  }
+}
