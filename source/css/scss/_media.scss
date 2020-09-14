@@ -75,14 +75,14 @@
   margin: 0;
 }
 
-// Logos 
+// Logos
 svg {
   .letter {
     //fill:yellow;
     fill: $brand-black;
   }
   .rosace {
-    fill: $brand;   
+    fill: $brand;
   }
   .white {
     fill: #fff;
@@ -174,13 +174,13 @@ svg {
   &.reverse {
     .letter{
       fill: $white;
-    } 
+    }
     .rosace {
       fill: $brand;
     }
   }
   &.black {
-    .letter, 
+    .letter,
     .rosace,
     path {
       fill:  $brand-black;
@@ -253,4 +253,63 @@ svg {
 
 .img-zoom-in {
   cursor: zoom-in;
+}
+
+// Avatar
+.user-avatar,
+.media-avatar,
+.media-profile {
+  background-color: $action;
+  border-radius: $btn-border-radius;
+  color: $white;
+  font-weight: $font-weight-bold;
+  text-align: center;
+  height: 1.5rem;
+  width: 1.5rem;
+  @include font-size($font-size-xs);
+  line-height: $line-height-md;
+
+  img {
+    border-radius: 50%;
+    vertical-align: top;
+  }
+
+
+  .user-first-letter {
+    display: block;
+  }
+}
+
+// Media profile color variations
+.media-profile {
+  &-color-1 {
+    background-color: #0380A9;
+  }
+  &-color-2 {
+    background-color: #BD4F00;
+  }
+  &-color-3 {
+    background-color: #448600;
+  }
+  &-color-4 {
+    background-color: #DC00AC;
+  }
+  &-color-5 {
+    background-color: #01866E;
+  }
+  &-color-6 {
+    background-color: #EE0000;
+  }
+  &-color-7 {
+    background-color: #980BAD;
+  }
+  &-color-8 {
+    background-color: #0057FF;
+  }
+  &-color-9 {
+    background-color: #A36B00;
+  }
+  &-color-10 {
+    background-color: #E0007C;
+  }
 }

@@ -7,6 +7,8 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 ## [4.14.0] - unreleased
 
 ### Added
+- Styles - Media: New .media-profile-color-{1,10} utility class for accessible profile color
+- Styles - Media: New media avatar img example.
 - Components - Navigation - Stepper: Stepper (wizard).
 - Components - Navigation: Sub nav icons only variant.
 - Styles - Utilities: New .w-256 and .w-440 sizing classes.
