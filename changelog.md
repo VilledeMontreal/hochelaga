@@ -9,21 +9,27 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 ### Added
 - Styles - Media: New .media-profile-color-{1,10} utility class for accessible profile color
 - Styles - Media: New media avatar img example.
+- Components - Dropdowns: Add optionnal description
+- Components - Dropdowns: Add .dropdown-action for Action links
+- Components - Dropdowns: Add .dropdown-item-danger utility class.
+- Components - Dropdowns: Add media-avatar integration inside dropdowns
 - Components - Navigation - Stepper: Stepper (wizard).
 - Components - Navigation: Sub nav icons only variant.
 - Styles - Utilities: New .w-256 and .w-440 sizing classes.
 
 ### Changed
+- Components - Dropdowns: labels are now font-size: 16/24.
+- Components - Forms - Select: Use custom-select.
 - PL - Components - Breadcrumbs: Moved breadcrumbs to own component directory.
 - PL - Components - Tabs: Moved tabs to own component directory.
-- Components - Forms - Select: Use custom-select.
 
 ### Fixed
-- Components - Navigation: Fix issues with some navigation and removed unused/deprecated/never added to Figma navigation variants
+- Components - Dropdowns: Fix spacing and clickable zone for checkbox and radios inside dropdown.
 - Components - Forms - Select: Custom select background and padding fixes. Validation fixes.
+- Components - Navigation: Fix issues with some navigation and removed unused/deprecated/never added to Figma navigation variants.
 
 
-## [4.13.0] - unreleased
+## [4.13.0] - 2020-08-27
 
 ### Added
 - Breakpoint: New xsm breakpoint at 352px for small mobile handling.
@@ -554,6 +560,7 @@ Main navbar, menu and footer are now in their own stylesheet. They will eventual
 The version 3 is now deprecated. Only bug fixes will be considered. Please refer to the old bitbucket repo https://bitbucket.org/villemontreal/boite-outils-web/.
 
 
+[4.13.0]: https://bitbucket.org/villemontreal/boite-outils4-web/src/4.13.0/
 [4.12.0]: https://bitbucket.org/villemontreal/boite-outils4-web/src/4.12.0/
 [4.11.1]: https://bitbucket.org/villemontreal/boite-outils4-web/src/4.11.1/
 [4.11.0]: https://bitbucket.org/villemontreal/boite-outils4-web/src/4.11.0/

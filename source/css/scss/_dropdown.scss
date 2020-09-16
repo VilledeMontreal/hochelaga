@@ -19,6 +19,7 @@
   @include border-radius($dropdown-border-radius);
   box-shadow: $dropdown-box-shadow;
 
+
   .dropdown-item {
     display: flex;
     align-items: center;
@@ -26,19 +27,27 @@
     color: $neutral-primary;
     line-height: $line-height-md;
     margin-bottom: 0;
-    
+    // white-space: nowrap is the default bootstrap value for dropdown-item
+    // Need some investigation on how dropdown could be more "fluid"
+
+    .dropdown-item-description {
+      @include font-size($font-size-xs);
+      line-height: $line-height-xs;
+      color: $neutral-secondary;
+    }
+
     @include hover-focus {
       color: $neutral-primary;
       border: none;
       @include gradient-bg($neutral-underground-1);
     }
-  
+
     &.active,
     &:active {
       color: $neutral-primary;
       @include gradient-bg($neutral-underground-1);
     }
-  
+
     &.disabled,
     &:disabled {
       color: $dropdown-link-disabled-color;
@@ -51,11 +60,44 @@
     }
     .custom-control {
       margin-bottom: 0;
+      padding-left: 2.5rem;
+      padding: 0;
+      width: 100%;
+      .custom-control-label {
+        width: 100%;
+        padding: .5rem 2rem .5rem 3.5rem;
+        &::before,
+        &::after {
+          left: 1rem;
+          top: calc(50% - (#{1.5rem}/2));
+        }
+      }
+    }
+
+    .icon,
+    .media-avatar {
+      margin-right: 1rem;
     }
 
     .icon {
       @include icon-color($neutral-tertiary);
-      margin-right: 1rem;
+    }
+
+    &.dropdown-action {
+      color: $primary;
+      font-weight: $font-weight-bold;
+      .icon {
+        @include icon-color($primary);
+      }
+    }
+  }
+
+  .dropdown-item-danger {
+    &[href] {
+      color: $negative-dark;
+      .icon {
+        @include icon-color($negative-dark);
+      }
     }
   }
 
@@ -65,8 +107,7 @@
 
   &.dropdown-menu-form-group {
     .dropdown-item {
-      padding-top: 0;
-      padding-bottom: 0;
+      padding: 0;
     }
   }
 }
@@ -78,6 +119,7 @@
   padding: .5rem 1rem;
   margin-bottom: 0; // for use with heading elements
   @include font-size($dropdown-font-size);
+  line-height: $line-height-md;
   color: $dropdown-header-color;
   white-space: nowrap; // as with > li > a
 }
@@ -88,7 +130,7 @@
     &:after {
       content: '';
       -webkit-mask: url($data-icon-chevron-up) no-repeat 50% 50%;
-      mask: url($data-icon-chevron-up) no-repeat 50% 50%;     
+      mask: url($data-icon-chevron-up) no-repeat 50% 50%;
     }
   }
 }

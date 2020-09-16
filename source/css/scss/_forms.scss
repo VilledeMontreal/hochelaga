@@ -180,11 +180,12 @@ legend,
 //
 // Tweak just a few things for radios.
 .custom-control {
-  @include font-size($font-size-sm);
-  line-height: $line-height-sm;
-  min-height: $line-height-sm;
-  padding-top: .625rem;
-  padding-bottom: .625rem;
+  @include font-size($font-size-base);
+  line-height: $line-height-md;
+  min-height: $line-height-md;
+  padding-top: .5rem;
+  padding-bottom: .5rem;
+  padding-left: 2rem;
 
   .custom-control-input:checked ~ .custom-control-label {
     &::before {
@@ -207,8 +208,8 @@ legend,
 // Build the custom controls out of pseudo-elements.
 
 .custom-control-label {
-  @include font-size($font-size-sm);
-  line-height: $line-height-sm;
+  @include font-size($font-size-base);
+  line-height: $line-height-md;
   font-weight: $font-weight-normal; // custom-control-label should not be bold
   color: $input-color;
   position: relative;
@@ -218,7 +219,7 @@ legend,
   // Background-color and (when enabled) gradient
   &::before {
     position: absolute;
-    top: -2px;
+    top: 0;
     left: -($custom-control-gutter + $custom-control-indicator-size);
     display: block;
     margin: .125rem;
@@ -234,7 +235,7 @@ legend,
   // Foreground (icon)
   &::after {
     position: absolute;
-    top: -2px;
+    top: 0;
     left: -($custom-control-gutter + $custom-control-indicator-size);
     display: block;
     margin: 0;
@@ -293,8 +294,8 @@ legend,
 
     .card-title,
     .card-label {
-      @include font-size($font-size-sm);
-      line-height: $line-height-sm;
+      @include font-size($font-size-base);
+      line-height: $line-height-md;
       color: $input-color;
       margin-left: 0;
       margin-bottom: .5rem;

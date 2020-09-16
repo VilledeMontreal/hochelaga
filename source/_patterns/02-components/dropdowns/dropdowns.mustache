@@ -1,3 +1,4 @@
+<h3>Label only</h3>
 {{# dropdownBase}}
 <h4 class="pl-pattern-subtitle">Base</h4>
 <div class="pl-pattern-example pl-mb-4">
@@ -5,13 +6,28 @@
 </div>
 {{/ dropdownBase}}
 
-{{# dropdownDivider}}
-<h4 class="pl-pattern-subtitle">Divider</h4>
+{{# dropdownBaseDescription}}
+<h4 class="pl-pattern-subtitle">Description</h4>
 <div class="pl-pattern-example pl-mb-4">
   {{> components-dropdown}}
 </div>
-{{/ dropdownDivider}}
+{{/ dropdownBaseDescription}}
 
+{{# dropdownSection}}
+<h4 class="pl-pattern-subtitle">Sections</h4>
+<div class="pl-pattern-example pl-mb-4">
+  {{> components-dropdown}}
+</div>
+{{/ dropdownSection}}
+
+{{# dropdownSectionTitle}}
+<h4 class="pl-pattern-subtitle">Sections with title</h4>
+<div class="pl-pattern-example pl-mb-4">
+  {{> components-dropdown}}
+</div>
+{{/ dropdownSectionTitle}}
+
+<h3>With icons</h3>
 {{# dropdownBaseHasIcons}}
 <h4 class="pl-pattern-subtitle">Base with icons</h4>
 <div class="pl-pattern-example pl-mb-4">
@@ -19,12 +35,47 @@
 </div>
 {{/ dropdownBaseHasIcons}}
 
+{{# dropdownBaseDescriptionHasIcons}}
+<h4 class="pl-pattern-subtitle">Base with icons</h4>
+<div class="pl-pattern-example pl-mb-4">
+  {{> components-dropdown}}
+</div>
+{{/ dropdownBaseDescriptionHasIcons}}
+
 {{# dropdownDividerHasIcons}}
-<h4 class="pl-pattern-subtitle">Divider with icon</h4>
+<h4 class="pl-pattern-subtitle">Sections with icon</h4>
 <div class="pl-pattern-example pl-mb-4">
   {{> components-dropdown}}
 </div>
 {{/ dropdownDividerHasIcons}}
+
+{{# dropdownBaseStates}}
+<h4 class="pl-pattern-subtitle">States</h4>
+<div class="pl-pattern-example pl-mb-4">
+  {{> components-dropdown}}
+</div>
+{{/ dropdownBaseStates}}
+
+{{# dropdownSectionComplex}}
+<h4 class="pl-pattern-subtitle">Exemple complexe</h4>
+<div class="pl-pattern-example pl-mb-4">
+  {{> components-dropdown}}
+</div>
+{{/ dropdownSectionComplex}}
+
+{{# dropdownCheckbox}}
+<h4 class="pl-pattern-subtitle">Checkbox</h4>
+<div class="pl-pattern-example pl-mb-4">
+  {{> components-dropdown}}
+</div>
+{{/ dropdownCheckbox}}
+
+{{# dropdownRadio}}
+<h4 class="pl-pattern-subtitle">Radio</h4>
+<div class="pl-pattern-example pl-mb-4">
+  {{> components-dropdown}}
+</div>
+{{/ dropdownRadio}}
 
 <h4 class="pl-pattern-subtitle">Dropdown buttons variants (down,up,right,left)</h4>
 <!-- Default dropdown button -->
