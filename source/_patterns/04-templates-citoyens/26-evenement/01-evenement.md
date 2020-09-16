@@ -1,4 +1,4 @@
 ---
-title: Evenement minimum
+title: Evenement minimum présentiel
 ---
 

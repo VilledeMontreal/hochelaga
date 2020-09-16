@@ -52,12 +52,6 @@
     "module-etiquette": {
       "badges-links": [
         {
-          "badge": "Taxonomie Clientèle",
-          "badgeClass": "badge-secondary",
-          "badgeUrl": "#",
-          "badgeIconClass": false
-        },
-        {
           "badge": "Taxonomie Type",
           "badgeClass": "badge-secondary",
           "badgeUrl": "#",
@@ -81,24 +75,22 @@
         "list": [
           {
             "hasIcon": true,
-            "icon-name": "icon-location",
+            "icon-name": "icon-location-off",
             "listItemAction": false,
-            "listItemLabel": "Nom du lieu non Ville",
-            "listItemContent": [
-              {
-                "extraContent": [
-                  {
-                    "content": "123, rue Avenue Est<br>Montréal (Québec) H2Y 1B5"
-                  }
-                ],
-                "extraContentAction": {
-                  "classes": "mt-1",
-                  "actionClasses": "d-inline-flex is-external-link",
-                  "url": "#",
-                  "text": "Obtenir un itinéraire"
+            "listItemLabel": "En ligne",
+            "listItemContent": {
+              "extraContent": [
+                {
+                  "content": "Court texte éditorial pour présenter la plateforme."
                 }
+              ],
+              "extraContentAction": {
+                "classes": "mt-1",
+                "actionClasses": false,
+                "url": "https://google.ca",
+                "text": "S'inscrire"
               }
-            ]
+            }
           },
           {
             "hasIcon": true,

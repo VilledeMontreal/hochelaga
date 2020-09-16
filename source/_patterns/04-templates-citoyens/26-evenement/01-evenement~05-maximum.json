@@ -1,0 +1,523 @@
+{
+  "documentHeading": true,
+  "documentHeadingClass": "document-heading-left-notch d-print-none",
+  "documentHeadingNotch": true,
+  "has-left-notch": true,
+  "state": {
+    "badgeClass": "badge-warning",
+    "badge": "Reporté"
+  },
+  "content-header-extras": {
+    "hideExtraMetaInfos": true,
+    "linkedContent": {
+      "linkedContentItem": [
+        {
+          "url": "#",
+          "label": "Arrondissement (Vitrine)"
+        },
+        {
+          "url": "#",
+          "label": "Instance ou commission"
+        }
+      ]
+    }
+  },
+  "events-extras": {
+    "listClass": "pt-4 mb-lg-4",
+    "list": [
+      {
+        "hasIcon": true,
+        "icon-name": "icon-calendar",
+        "listItemAction": false,
+        "listItemLabel": "Date",
+        "listItemContent": [
+          {
+            "extraContent": [
+              {
+                "content": "Lundi 5 décembre 2020 à 11&nbsp;h&nbsp;00"
+              },
+              {
+                "content": "<del><span class=\"sr-only\">Date prévue le </span>Lundi 5 décembre 2020 à 9&nbsp;h&nbsp;00</del>"
+              }
+            ],
+            "extraContentDropdown": {
+              "url": "#",
+              "link-label": "Autres dates",
+              "dropdownMenu": {
+                "dropdownMenuID": "dropdownEventDates",
+                "dropdownSection": [
+                  {
+                    "dropdownHeader": false,
+                    "dropdownItem": [
+                      {
+                        "url": "#",
+                        "dropdownItemLabel": "Mardi 6 décembre 2020 à 11&nbsp;h&nbsp;00"
+                      },
+                      {
+                        "url": "#",
+                        "dropdownItemLabel": "Mercredi 7 décembre 2020 à 11&nbsp;h&nbsp;00"
+                      },
+                      {
+                        "url": "#",
+                        "dropdownItemLabel": "Jeudi 8 décembre 2020 à 11&nbsp;h&nbsp;00"
+                      },
+                      {
+                        "url": "#",
+                        "dropdownItemLabel": "Vendredi 9 décembre 2020 à 11&nbsp;h&nbsp;00"
+                      },
+                      {
+                        "url": "#",
+                        "dropdownItemLabel": "Lundi 12 décembre 2020 à 11&nbsp;h&nbsp;00"
+                      },
+                      {
+                        "url": "#",
+                        "dropdownItemLabel": "Mardi 13 décembre 2020 à 11&nbsp;h&nbsp;00"
+                      },
+                      {
+                        "url": "#",
+                        "dropdownItemLabel": "Mercredi 14 décembre 2020 à 11&nbsp;h&nbsp;00"
+                      },
+                      {
+                        "url": "#",
+                        "dropdownItemLabel": "Jeudi 15 décembre 2020 à 11&nbsp;h&nbsp;00"
+                      },
+                      {
+                        "url": "#",
+                        "dropdownItemLabel": "Vendredi 16 décembre 2020 à 11&nbsp;h&nbsp;00"
+                      },
+                      {
+                        "url": "#",
+                        "dropdownItemLabel": "Lundi 19 décembre 2020 à 11&nbsp;h&nbsp;00"
+                      }
+                    ],
+                    "dropdownSectionHasDivider": true
+                  },
+                  {
+                    "dropdownHeader": false,
+                    "dropdownItem": [
+                      {
+                        "url": "#",
+                        "dropdownItemClass": "dropdown-action",
+                        "dropdownItemIcon": false,
+                        "dropdownItemLabel": "Toutes les dates"
+                      }
+                    ],
+                    "dropdownSectionHasDivider": false
+                  }
+                ]
+              }
+            }
+          }
+        ]
+      }
+    ]
+  },
+  "lead": "<p>Amorce - Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi condimentum sollicitudin erat, quis convallis risus. Nullam posuere odio ligula, hendrerit suscipit ligula laoreet. Curabitur eleifend nulla purus, ut pharet urna ef id. Cras lacinia nisi id  (recommandé 300 caractères maximum).</p>",
+  "includePhotoswipe": true,
+  "module-content": {
+    "module-text": true,
+    "module-emphasis": {
+      "emphasisHtmlText": "<p>Texte en exergue spécifique à chaque événement. Ce texte est optionnel et limité à 300 caractères.</p>"
+    },
+    "module-image-album": {
+      "mediaGallery": [
+        {
+          "mediaSrc": "https://picsum.photos/id/1072/1920/1080",
+          "mediaSize": "1920x1080",
+          "mediaCaption": "Légende de la 1ere image.",
+          "mediaAuthor": "Jamie Mink",
+          "mediaAlt": "Media #1072",
+          "thumbnail" : {
+            "mediaSrc": "https://picsum.photos/id/1072/1920/1080",
+            "height": "1080",
+            "width": "1920"
+          }
+        },
+        {
+          "mediaSrc": "https://picsum.photos/id/1071/1000/667",
+          "mediaSize": "1000x667",
+          "mediaCaption": "Légende de la 2e image.",
+          "mediaAuthor": "Tim Stief",
+          "mediaAlt": "Media #1071",
+          "thumbnail" : {
+            "mediaSrc": "https://picsum.photos/id/1071/600/400",
+            "height": "400",
+            "width": "600"
+          }
+        },
+        {
+          "mediaSrc": "https://picsum.photos/id/1070/1500/320",
+          "mediaSize": "1500x320",
+          "mediaCaption": "Maecenas sem odio, commodo eget massa vitae, pharetra ultrices orci. Integer molestie feugiat erat. Ut efficitur ornare magna vitae consectetur. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Sed in consectetur lorem.",
+          "mediaAuthor": "Sean Stratton",
+          "mediaAlt": "Media #1070",
+          "thumbnail" : {
+            "mediaSrc": "https://picsum.photos/id/1070/600/400",
+            "height": "400",
+            "width": "600"
+          }
+        }
+      ]
+    },
+    "module-documents": {
+      "listGroupClass": "list-group-lg",
+      "listGroup": [
+        {
+          "url": "test.pdf",
+          "icon-name": "icon-file-pdf",
+          "text": "Titre du document [PDF 2 Mo]",
+          "class": "document-pdf"
+        },
+        {
+          "url": "test.pdf",
+          "icon-name": "icon-file-pdf",
+          "text": "Titre du document [PDF 2 Mo]",
+          "class": "document-pdf"
+        },
+        {
+          "url": "test.docx",
+          "icon-name": "icon-file",
+          "text": "Titre du document",
+          "class": "document"
+        }
+      ]
+    },
+    "module-partners": {
+      "listPartners": {
+        "items": [
+          {
+            "partnerName": "Partenaire #1"
+          },
+          {
+            "partnerName": "Partenaire #2"
+          },
+          {
+            "partnerName": "Partenaire #3"
+          }
+        ]
+      }
+    },
+    "module-video": {
+      "sectionID": "003"
+    },
+    "module-etiquette": {
+      "badges-links": [
+        {
+          "badge": "Taxonomie étiquettes",
+          "badgeClass": "badge-secondary",
+          "badgeUrl": "#",
+          "badgeIconClass": false
+        },
+        {
+          "badge": "Taxonomie Clientèle",
+          "badgeClass": "badge-secondary",
+          "badgeUrl": "#",
+          "badgeIconClass": false
+        },
+        {
+          "badge": "Taxonomie Type",
+          "badgeClass": "badge-secondary",
+          "badgeUrl": "#",
+          "badgeIconClass": false
+        },
+        {
+          "badge": "Taxonomie Catégorie principale",
+          "badgeClass": "badge-secondary",
+          "badgeUrl": "#",
+          "badgeIconClass": false
+        }
+      ]
+    },
+    "module-map": {
+      "heading": "Comment s'y rendre",
+      "sectionMapID": "map-002",
+      "cards": {
+        "classes": false,
+        "bsgrid-classes": "col-12 col-md-7",
+        "card-item": [
+          {
+            "classes" : false,
+            "card-media" : {
+              "icon": false,
+              "img": false,
+              "map": {
+                "location": {
+                  "mapID": "cardLocationLieuMapID003",
+                  "lngLat": "-73.589921, 45.534415",
+                  "showZoom": true
+                }
+              }
+            },
+            "listClass": "list-lg",
+            "list": [
+              {
+                "hasIcon": false,
+                "listItemAction": true,
+                "url": "#",
+                "listItemLabel": "Nom du lieu",
+                "listItemContent": {
+                  "itemContent": false,
+                  "extraContent": [
+                    {
+                      "class": false,
+                      "content": "5519 rue Gerry-Boulet<br>Montréal (Québec) H2J 3K3"
+                    }
+                  ],
+                  "extraContentAction": {
+                    "classes": "mt-1",
+                    "actionClasses": "is-external-link",
+                    "url": "https://google.ca",
+                    "text": "Obtenir un itinéraire"
+                  }
+                }
+              }
+            ]
+          }
+        ]
+      }
+    },
+    "module-events": {
+      "listGroupClass": "mb-4",
+      "listGroup": [
+        {
+          "url": "#",
+          "media": {
+            "img": {
+              "alt": "Alt image",
+              "src": "https://picsum.photos/id/1010/128/72"
+            },
+            "placeholder": false
+          },
+          "type": false,
+          "title": "At amet eos et diam sed no invidunt sadipscing no invidunt sed dolore eos amet",
+          "infos": {
+            "badge": false,
+            "infos-items": [
+              {
+                "text": "<div>Du 1 décembre 2020 - 9&nbsp;h&nbsp;00</div><div>Au 13 décembre 2020 - 18&nbsp;h&nbsp;00</div>"
+              }
+            ]
+          }
+        },
+        {
+          "url": "#",
+          "media": {
+            "img": {
+              "alt": "Alt image",
+              "src": "https://picsum.photos/id/1011/128/72"
+            },
+            "placeholder": false
+          },
+          "type": false,
+          "title": "Dolore amet aliquyam justo vero lorem accusam amet eos vero",
+          "infos": {
+            "badge": false,
+            "infos-items": [
+              {
+                "text": "Jeudi 3 décembre 2020 à 9&nbsp;h&nbsp;00"
+              }
+            ]
+          }
+        },
+        {
+          "url": "#",
+          "media": {
+            "img": false,
+            "placeholder": {
+              "icon": "icon-event"
+            }
+          },
+          "type": false,
+          "title": "Consetetur eirmod et aliquyam",
+          "infos": {
+            "badge": false,
+            "infos-items": [
+              {
+                "text": "Jeudi 10 décembre 2020 de 9&nbsp;h&nbsp;00 à 21&nbsp;h&nbsp;00"
+              }
+            ]
+          }
+        }
+      ],
+      "button-cta": {
+        "data-link-title": "Tous les événements",
+        "buttonAsLink": true,
+        "buttonClass": "btn-secondary",
+        "buttonUrl": "#",
+        "buttonText": "Tous les événements"
+      }
+    }
+  },
+  "sb-block-coordonnees": {
+    "sb-block-contact": [
+      {
+        "list": [
+          {
+            "hasIcon": true,
+            "icon-name": "icon-location",
+            "listItemAction": true,
+            "listItemLabel": "Nom du lieu",
+            "listItemContent": {
+              "extraContent": [
+                {
+                  "class": "font-weight-bold text-danger-reversed",
+                  "content": "État du lieu"
+                },
+                {
+                  "content": "123, rue Avenue Est<br>Montréal (Québec) H2Y 1B5"
+                }
+              ],
+              "extraContentAction": {
+                "classes": "mt-1",
+                "actionClasses": "js-scroll-trigger",
+                "url": "#section-mapEvent002",
+                "text": "Voir carte"
+              }
+            }
+          },
+          {
+            "hasIcon": true,
+            "icon-name": "icon-location-off",
+            "listItemAction": false,
+            "listItemLabel": "En ligne",
+            "listItemContent": {
+              "extraContent": [
+                {
+                  "content": "Court texte éditorial pour présenter la plateforme."
+                }
+              ],
+              "extraContentAction": {
+                "classes": "mt-1",
+                "actionClasses": "js-scroll-trigger",
+                "url": "#section-video-003",
+                "text": "Regarder"
+              }
+            }
+          },
+          {
+            "hasIcon": true,
+            "icon-name": "icon-money",
+            "listItemAction": false,
+            "listItemLabel": "Tarif",
+            "listItemContent": [
+              {
+                "extraContent": {
+                  "content": "Droit d'entrée"
+                }
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "list": [
+          {
+            "listItemAction": false,
+            "listItemLabel": "Réservation",
+            "listItemContent": {
+              "itemContent": "Description optionnelle",
+              "extraContent": false
+            }
+          },
+          {
+            "hasIcon": true,
+            "icon-name": "icon-ticket",
+            "listItemAction": true,
+            "url": "https://google.ca",
+            "listItemLabel": "Billetterie"
+          },
+          {
+            "hasIcon": true,
+            "icon-name": "icon-phone",
+            "listItemAction": false,
+            "listItemLabel": "514 555-5555",
+            "listItemContent": {
+              "extraContent": [
+                {
+                  "content": "Poste 2222"
+                },
+                {
+                  "content": "Option 4"
+                }
+              ]
+            }
+          },
+          {
+            "hasIcon": true,
+            "icon-name": "icon-email",
+            "listItemAction": true,
+            "url": "mailto:test@montreal.ca",
+            "listItemLabel": "Envoyer un courriel"
+          }
+        ]
+      },
+      {
+        "list": [
+          {
+            "listItemAction": false,
+            "listItemLabel": "Pour information",
+            "listItemContent": {
+              "itemContent": "Description optionnelle",
+              "extraContent": false
+            }
+          },
+          {
+            "hasIcon": true,
+            "icon-name": "icon-user",
+            "listItemAction": false,
+            "listItemLabel": "Prénom Nom",
+            "listItemContent": {
+              "extraContent": {
+                "content": "Fonction (Description optionnelle)"
+              }
+            }
+          },
+          {
+            "hasIcon": true,
+            "icon-name": "icon-phone",
+            "listItemAction": false,
+            "listItemLabel": "514 555-5555",
+            "listItemContent": {
+              "extraContent": [
+                {
+                  "content": "Poste 2222"
+                },
+                {
+                  "content": "Option 4"
+                }
+              ]
+            }
+          },
+          {
+            "hasIcon": true,
+            "icon-name": "icon-email",
+            "listItemAction": true,
+            "url": "mailto:test@montreal.ca",
+            "listItemLabel": "Envoyer un courriel"
+          },
+          {
+            "hasIcon": true,
+            "icon-name": "icon-website",
+            "listItemAction": true,
+            "url": "https://test.com",
+            "listItemLabel": "Site web"
+          },
+          {
+            "hasIcon": true,
+            "icon-name": "icon-social-facebook",
+            "listItemAction": true,
+            "url": "https://facebook.com",
+            "listItemLabel": "Facebook"
+          },
+          {
+            "hasIcon": true,
+            "icon-name": "icon-social-twitter",
+            "listItemAction": true,
+            "url": "https://twitter.com",
+            "listItemLabel": "Twitter"
+          }
+        ]
+      }
+    ]
+  }
+}
