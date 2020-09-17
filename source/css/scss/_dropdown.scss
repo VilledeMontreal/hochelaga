@@ -31,8 +31,8 @@
     // Need some investigation on how dropdown could be more "fluid"
 
     .dropdown-item-description {
-      @include font-size($font-size-xs);
-      line-height: $line-height-xs;
+      @include font-size($font-size-sm);
+      line-height: $line-height-sm;
       color: $neutral-secondary;
     }
 
