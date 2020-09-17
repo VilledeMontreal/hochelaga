@@ -519,7 +519,11 @@
           "type": false,
           "title": "Titre du contenu",
           "infos": {
-            "badge": false,
+            "badge": {
+              "badge": "État",
+              "badgeClass": "badge-warning",
+              "badgeUrl": false
+            },
             "infos-items": [
               {
                 "text": "Information supplémentaire"
@@ -535,7 +539,11 @@
           "type": false,
           "title": "Titre du contenu",
           "infos": {
-            "badge": false,
+            "badge": {
+              "badge": "État",
+              "badgeClass": "badge-info",
+              "badgeUrl": false
+            },
             "infos-items": [
               {
                 "text": "Information supplémentaire"
