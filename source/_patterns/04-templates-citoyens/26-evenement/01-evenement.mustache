@@ -74,15 +74,15 @@
 
 {{> patterns-footer-main }}
 
-{{# module-content.module-map}}
+{{# module-content.module-map.cards.card-item}}
 <script>
   window.addEventListener('load', function() {
     var data = {
-      address : "{{{location.addressInfos.address}}}",
-      title : "{{{location.addressInfos.addressTitle}}}",
-      uri: "{{{location.addressInfos.uri}}}"
+      address : "{{{card-media.map.location.addressInfos.address}}}",
+      title : "{{{card-media.map.location.addressInfos.addressTitle}}}",
+      uri: "{{{card-media.map.location.addressInfos.uri}}}"
     }
-    generateMap([{{{ location.lngLat }}}], data, '{{ location.mapID }}', {{ location.showZoom}});
+    generateMap([{{{ card-media.map.location.lngLat }}}], data, '{{ card-media.map.location.mapID }}', {{ card-media.map.location.showZoom}});
   })
 </script>
-{{/ module-content.module-map}}
+{{/ module-content.module-map.cards.card-item}}

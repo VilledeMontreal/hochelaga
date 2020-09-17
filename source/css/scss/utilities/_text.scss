@@ -85,6 +85,15 @@ a {
         @extend .icon-xs;
       }
     }
+
+    &.dropdown-toggle {
+      &:after {
+        margin-right: 0;
+        margin-left: .25rem;
+        margin-top: 0;
+        margin-bottom: 0;
+      }
+    }
   }
 }
 

@@ -4,10 +4,10 @@
   {{# dropdownHeader}}<span class="dropdown-header">{{dropdownHeader}}</span>{{/ dropdownHeader}}
   {{# dropdownItem}}
   {{^ dropdownItemDesc}}
-  <a class="dropdown-item{{# dropdownItemClass}} {{dropdownItemClass}}{{/dropdownItemClass}}" href="#">{{# dropdownItemIcon}}<span class="icon {{ icon-name }}" aria-hidden="true"></span>{{/ dropdownItemIcon}}{{# dropdownItemAvatar}}<div class="media-avatar"><span class="user-first-letter">{{userAvatar}}</span></div>{{/ dropdownItemAvatar}}{{ dropdownItemLabel}}</a>
+  <a class="dropdown-item{{# dropdownItemClass}} {{dropdownItemClass}}{{/dropdownItemClass}}" href="#">{{# dropdownItemIcon}}<span class="icon {{ icon-name }}" aria-hidden="true"></span>{{/ dropdownItemIcon}}{{# dropdownItemAvatar}}<div class="media-avatar"><span class="user-first-letter">{{userAvatar}}</span></div>{{/ dropdownItemAvatar}}{{{dropdownItemLabel}}}</a>
   {{/ dropdownItemDesc}}
   {{# dropdownItemDesc}}
-  <a class="dropdown-item{{# dropdownItemClass}} {{dropdownItemClass}}{{/dropdownItemClass}}" href="#">{{# dropdownItemIcon}}<span class="icon {{ icon-name }}" aria-hidden="true"></span>{{/ dropdownItemIcon}}{{# dropdownItemAvatar}}<div class="media-avatar"><span class="user-first-letter">{{userAvatar}}</span></div>{{/ dropdownItemAvatar}}<div class="dropdown-item-content"><div>{{ dropdownItemLabel}}</div><div class="dropdown-item-description">{{dropdownItemDesc}}</div></div></a>
+  <a class="dropdown-item{{# dropdownItemClass}} {{dropdownItemClass}}{{/dropdownItemClass}}" href="#">{{# dropdownItemIcon}}<span class="icon {{ icon-name }}" aria-hidden="true"></span>{{/ dropdownItemIcon}}{{# dropdownItemAvatar}}<div class="media-avatar"><span class="user-first-letter">{{userAvatar}}</span></div>{{/ dropdownItemAvatar}}<div class="dropdown-item-content"><div>{{{dropdownItemLabel}}}</div><div class="dropdown-item-description">{{dropdownItemDesc}}</div></div></a>
   {{/ dropdownItemDesc}}
   {{/ dropdownItem}}
   {{# dropdownSectionHasDivider}}<div class="dropdown-divider"></div>{{/ dropdownSectionHasDivider}}
