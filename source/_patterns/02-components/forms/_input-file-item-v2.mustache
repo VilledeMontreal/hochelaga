@@ -1,11 +1,11 @@
 <div class="form-group {{ formGroupClass }}">
   {{^ formGroupNoLabel}}
-  <label for="{{formGroupInputID}}">{{ formGroupInputLabel}}{{^ formGroupInputRequired}}<span>Facultatif</span>{{/ formGroupInputRequired}}</label>
+  <label for="{{formGroupInputID}}">{{ formGroupInputLabel}}</label>
   {{/ formGroupNoLabel}}
   <div class="file-drop-container-v2 {{formGroupFileClass}}" id="{{formGroupFileID}}">
     <div class="file-selector-button">
       <input type="file" id="{{ formGroupFileDropID}}" class="sr-only"{{# formGroupFileState}} {{formGroupFileState}}{{/ formGroupFileState}}>
-      <label class="btn btn-secondary btn-squared btn-sm" for="{{ formGroupFileDropID}}">{{ formGroupFileDropLabel }}</label>
+      <label class="btn btn-secondary btn-squared" for="{{ formGroupFileDropID}}">{{ formGroupFileDropLabel }}</label>
     </div>
     <span class="help-text">{{ formGroupFileDropHelpText }}</span>
   </div>

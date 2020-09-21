@@ -1,3 +1,6 @@
+{{^ formGroupNoLabel}}
+{{# formGroupLabel}}<label>{{ formGroupLabel}}</label>{{/ formGroupLabel}}
+{{/ formGroupNoLabel}}
 {{# formCheckboxItems}}
 <div class="custom-control custom-checkbox {{ class }}">
   <input type="checkbox" class="custom-control-input" id="{{ id }}" value="{{ id }}" {{ state }}>

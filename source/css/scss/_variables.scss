@@ -491,16 +491,16 @@ $btn-transition:              color .15s ease-in-out, background-color .15s ease
 // Forms
 $label-margin-bottom:                   0.5rem;
 
-$input-padding-y:                       $input-btn-padding-y;
+$input-padding-y:                       .4375rem;
 $input-padding-x:                       $input-btn-padding-x;
 $input-font-family:                     $input-btn-font-family;
-$input-font-size:                       $input-btn-font-size;
-$input-line-height:                     $input-btn-line-height;
+$input-font-size:                       $font-size-base;
+$input-line-height:                     $line-height-md;
 
-$input-padding-y-sm:                    $input-btn-padding-y-sm;
+$input-padding-y-sm:                    .3125rem;
 $input-padding-x-sm:                    $input-btn-padding-x-sm;
-$input-font-size-sm:                    $input-btn-font-size-sm;
-$input-line-height-sm:                  $input-btn-line-height-sm;
+$input-font-size-sm:                    $font-size-sm;
+$input-line-height-sm:                  $line-height-sm;
 
 $input-padding-y-lg:                    $input-btn-padding-y-lg;
 $input-padding-x-lg:                    $input-btn-padding-x-lg;
@@ -508,7 +508,7 @@ $input-font-size-lg:                    $input-btn-font-size-lg;
 $input-line-height-lg:                  $input-btn-line-height-lg;
 
 $input-bg:                              $white;
-$input-disabled-bg:                     $neutral-underground-2;
+$input-disabled-bg:                     $neutral-underground-1;
 
 $input-label-color:                     $headings-color;
 $input-color:                           $neutral-primary;
@@ -536,7 +536,7 @@ $input-height-inner-half:               calc(#{$input-line-height * .5} + #{$inp
 $input-height-inner-quarter:            calc(#{$input-line-height * .25} + #{$input-padding-y / 2});
 
 $input-height:                          calc(#{$input-line-height} + #{$input-padding-y * 2} + #{$input-height-border});
-$input-height-sm:                       calc(#{$input-line-height-sm} + #{$input-btn-padding-y-sm * 2} + #{$input-height-border});
+$input-height-sm:                       calc(#{$input-line-height-sm} + #{$input-padding-y-sm * 2} + #{$input-height-border});
 $input-height-lg:                       calc(#{$input-line-height-lg} + #{$input-btn-padding-y-lg * 2} + #{$input-height-border});
 
 $form-text-margin-top:                  .5rem;
