@@ -10,56 +10,58 @@
         "url": "#",
         "menuItemState": true,
         "stepID": "1",
-        "menuItemLabel": "Libellé"
+        "menuItemLabel": "Étape 1"
       },
       {
         "class": false,
         "url": "#",
         "menuItemState": true,
         "stepID": "2",
-        "menuItemLabel": "Libellé long"
+        "menuItemLabel": "Étape 2"
       },
       {
         "class": false,
         "url": false,
         "menuItemState": true,
         "stepID": "3",
-        "menuItemLabel": "Libellé très long",
+        "menuItemLabel": "Étape 3",
         "subMenuItems": {
           "subMenuItem": [
             {
               "url": "#",
               "class": false,
-              "subMenuItemLabel": "Libellé de sous-page"
+              "subMenuItemLabel": "Étape 3.1"
             },
             {
               "url": "#",
               "class": false,
-              "subMenuItemLabel": "Libellé de sous-page"
+              "subMenuItemLabel": "Étape 3.2"
             },
             {
               "url": "#",
               "class": false,
-              "subMenuItemLabel": "Libellé de sous-page"
+              "subMenuItemLabel": "Étape 3.3"
             }
           ]
         }
       },
       {
         "menuItemSeparator": false,
+        "ariaCurrent": true,
         "class": "active",
         "url": "#",
         "menuItemState": true,
         "stepID": "4",
-        "menuItemLabel": "Libellé"
+        "menuItemLabel": "Étape 4"
       },
       {
         "menuItemSeparator": false,
+        "ariaDisabled": true,
         "class": "disabled",
         "url": false,
         "menuItemState": false,
         "stepID": "5",
-        "menuItemLabel": "Disabled"
+        "menuItemLabel": "Étape 5"
       }
     ]
   },
@@ -139,7 +141,7 @@
     "formGroupTextareaRows": "5"
   },
   "formCheckboxes": {
-    "formGroupInputLabel": "Libellé",
+    "formGroupLabel": "Libellé",
     "formCheckboxItems": [
       {
         "class": "",
@@ -168,7 +170,7 @@
     ]
   },
   "formRadios": {
-    "formGroupInputLabel": "Libellé",
+    "formGroupLabel": "Libellé",
     "formRadiosItems": [
       {
         "class": "",

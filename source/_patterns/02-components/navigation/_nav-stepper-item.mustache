@@ -1,18 +1,18 @@
-<nav class="nav-menu-items nav-wizard {{ navMenuItemsClass}}" aria-label="Navigation wizard">
+<nav class="nav-menu-items nav-wizard {{ navMenuItemsClass}}" aria-label="Navigation par étape (voir doc accessibilité zeroHeight)">
   <ul class="menu-items {{ menuItemClass}}">
     {{# menuItem}}
     <li{{#menuItemLiClass}} class="{{menuItemLiClass}}"{{/menuItemLiClass}}>
       {{# url}}
-      <a class="menu-item{{# class}} {{class}}{{/ class}}" href="{{url}}">
-        {{# menuItemState}}<span class="icon icon-check-circle-full icon-color-success" aria-hidden="true"></span>{{/ menuItemState}}
-        {{^ menuItemState}}<span class="circle" aria-hidden="true">{{ stepID }}</span>{{/ menuItemState}}
+      <a class="menu-item{{# class}} {{class}}{{/ class}}" href="{{url}}"{{# ariaCurrent}} aria-current="step"{{/ ariaCurrent}}{{#ariaDisabled}} aria-disabled="true"{{/ariaDisabled}}>
+        {{# menuItemState}}<span class="icon icon-check-circle-full icon-color-success" aria-hidden="true"></span><span class="sr-only">Étape {{ stepID }} complétée ((voir doc accessibilité zeroHeight))</span>{{/ menuItemState}}
+        {{^ menuItemState}}<span class="circle"><span class="sr-only">Étape </span>{{ stepID }}</span>{{/ menuItemState}}
         {{# menuItemLabel}}<span class="menu-item-label">{{ menuItemLabel}}</span>{{/ menuItemLabel}}
       </a>
       {{/ url}}
       {{^ url}}
-      <span class="menu-item{{# class}} {{class}}{{/ class}}">
+      <span class="menu-item{{# class}} {{class}}{{/ class}}"{{#ariaDisabled}} aria-disabled="true"{{/ariaDisabled}}>
         {{# menuItemState}}<span class="icon icon-check-circle-full icon-color-success" aria-hidden="true"></span>{{/ menuItemState}}
-        {{^ menuItemState}}<span class="circle" aria-hidden="true">{{ stepID }}</span>{{/ menuItemState}}
+        {{^ menuItemState}}<span class="circle"><span class="sr-only">Étape </span>{{ stepID }}</span>{{/ menuItemState}}
         {{# menuItemLabel}}<span class="menu-item-label">{{ menuItemLabel}}</span>{{/ menuItemLabel}}
       </span>
       {{# subMenuItems}}
@@ -20,12 +20,12 @@
           {{# subMenuItem}}
           <li>
             {{# url }}
-            <a class="sub-menu-item{{# class}} {{class}}{{/ class}}" href="{{url}}">
+            <a class="sub-menu-item{{# class}} {{class}}{{/ class}}" href="{{url}}"{{# ariaCurrent}} aria-current="step"{{/ ariaCurrent}}{{#ariaDisabled}} aria-disabled="true"{{/ariaDisabled}}>
               {{# subMenuItemLabel}}<span class="sub-menu-item-label">{{ subMenuItemLabel}}</span>{{/ subMenuItemLabel}}
             </a>
             {{/ url}}
             {{^ url}}
-            <span class="sub-menu-item{{# class}} {{class}}{{/ class}}">
+            <span class="sub-menu-item{{# class}} {{class}}{{/ class}}"{{#ariaDisabled}} aria-disabled="true"{{/ariaDisabled}}>
               {{# subMenuItemLabel}}<span class="sub-menu-item-label">{{ subMenuItemLabel}}</span>{{/ subMenuItemLabel}}
             </span>
             {{/ url}}

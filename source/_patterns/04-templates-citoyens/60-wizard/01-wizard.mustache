@@ -14,7 +14,7 @@
           {{> components-nav-stepper-item}}
           {{/ menuItemStepper}}
         </div>
-        <div class="col-12 col-lg-7 mb-8">
+        <div class="col-12 col-lg-8 col-xl-7 mb-8">
           <header class="pb-6">
             <h1 class="h2">{{ heading }}</h1>
           </header>
@@ -50,11 +50,11 @@
               </div>
               {{# textarea}}
               <div class="form-row">
-                <div class="form-group col-md-6">
+                <div class="form-group form-group-required col-md-6">
                   <label for="form-group-wizard-adresse">Libellé</label>
                   <input type="text" class="form-control" id="form-group-wizard-adresse" required>
                 </div>
-                <div class="form-group col-md-3">
+                <div class="form-group form-group-required col-md-3">
                   <label for="custom-select-arron">Libellé</label>
                   <select class="custom-select" id="custom-select-arron" required>
                     <option selected disabled value="">Choisir</option>
@@ -63,7 +63,7 @@
                     <option>...</option>
                   </select>
                 </div>
-                <div class="form-group col-md-3">
+                <div class="form-group form-group-required col-md-3">
                   <label for="form-group-code-postal">Libellé</label>
                   <input type="text" class="form-control" id="form-group-code-postal" required>
                 </div>
@@ -72,17 +72,11 @@
               {{/ textarea}}
               {{# formCheckboxes }}
               <div class="form-group">
-                {{^ formGroupNoLabel}}
-                <label>{{ formGroupInputLabel}}{{^ formGroupInputRequired}}<span>Facultatif</span>{{/ formGroupInputRequired}}</label>
-                {{/ formGroupNoLabel}}
                 {{> components-checkbox-item }}
               </div>
               {{/ formCheckboxes }}
               {{# formRadios}}
               <div class="form-group">
-                {{^ formGroupNoLabel}}
-                <label>{{ formGroupInputLabel}}{{^ formGroupInputRequired}}<span>Facultatif</span>{{/ formGroupInputRequired}}</label>
-                {{/ formGroupNoLabel}}
                 {{> components-radio-item }}
               </div>
               {{/ formRadios}}
