@@ -1,7 +1,7 @@
 <div class="form-group {{ formGroupClass}}">
-  {{# formGroupInputLabel}}<label for="{{formGroupInputID}}">{{ formGroupInputLabel}}{{^ formGroupInputRequired}}<span>Facultatif</span>{{/ formGroupInputRequired}}</label>{{/ formGroupInputLabel}}
+  {{# formGroupInputLabel}}<label for="{{formGroupInputID}}">{{ formGroupInputLabel}}</label>{{/ formGroupInputLabel}}
   <div class="input-group-icon input-group-icon-left{{# formGroupInputError}} input-group-is-invalid{{/ formGroupInputError}}">
-    <input type="text" class="form-control {{formGroupInputClass}}" id="{{ formGroupInputID }}" {{# formGroupInputPlaceholder}}placeholder="{{ formGroupInputPlaceholder.text}}"{{/ formGroupInputPlaceholder}}{{# formGroupInputState}} {{ formGroupInputState}}{{/ formGroupInputState}}>
+    <input type="text" class="form-control {{formGroupInputClass}}" id="{{ formGroupInputID }}" {{# formGroupInputPlaceholder}}placeholder="{{ formGroupInputPlaceholder.text}}"{{/ formGroupInputPlaceholder}}{{# formGroupInputState}} {{ formGroupInputState}}{{/ formGroupInputState}}{{#formGroupInputAriaLabel}} aria-label="{{formGroupInputAriaLabel}}"{{/formGroupInputAriaLabel}}>
     <span class="icon {{ icon-name }}" aria-hidden="true"></span>
   </div>
   {{^formGroupInputError}}

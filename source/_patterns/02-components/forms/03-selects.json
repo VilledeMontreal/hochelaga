@@ -1,25 +1,6 @@
 {
   "selectSize": [
     {
-      "formGroupClass": "form-group-sm",
-      "formGroupSelectID": "custom-select-sm",
-      "formGroupSelectLabel": "Small select label",
-      "formGroupSelectClass": "custom-select-sm",
-      "formGroupSelect": {
-        "defaultOption": "Default option",
-        "options": [
-          {
-            "option-text" : "Option 1",
-            "option-value" : "option-1"
-          },
-          {
-            "option-text" : "Option 2",
-            "option-value" : "option-2"
-          }
-        ]
-      }
-    },
-    {
       "formGroupClass": false,
       "formGroupSelectID": "custom-select",
       "formGroupSelectLabel": "Default select label",
@@ -37,12 +18,11 @@
           }
         ]
       }
-    },
-    {
-      "formGroupClass": "form-group-lg",
-      "formGroupSelectID": "custom-select-lg",
-      "formGroupSelectLabel": "Large select label",
-      "formGroupSelectClass": "custom-select-lg",
+    },{
+      "formGroupClass": "form-group-sm",
+      "formGroupSelectID": "custom-select-sm",
+      "formGroupSelectLabel": "Small select label",
+      "formGroupSelectClass": "custom-select-sm",
       "formGroupSelect": {
         "defaultOption": "Default option",
         "options": [
@@ -61,9 +41,29 @@
   "selectValidation": [
     {
       "formGroupClass": false,
-      "formGroupSelectID": "form-group-select-validation",
+      "formGroupSelectID": "custom-select-validation",
       "formGroupSelectLabel": false,
       "formGroupSelectClass": "is-invalid",
+      "formGroupSelectRequired": true,
+      "formGroupSelect": {
+        "defaultOption": "Default option",
+        "options": [
+          {
+            "option-text" : "Option 1",
+            "option-value" : "option-1"
+          },
+          {
+            "option-text" : "Option 2",
+            "option-value" : "option-2"
+          }
+        ]
+      }
+    },
+    {
+      "formGroupClass":  "form-group-sm",
+      "formGroupSelectID": "custom-select-validation-sm",
+      "formGroupSelectLabel": false,
+      "formGroupSelectClass": "custom-select-sm is-invalid",
       "formGroupSelectRequired": true,
       "formGroupSelect": {
         "defaultOption": "Default option",

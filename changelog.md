@@ -20,6 +20,11 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 
 ### Changed
 - Components - Dropdowns: labels are now font-size: 16/24.
+- Components - Forms: Use * (required) instead of optionnal.
+- Components - Forms: Upscale font-size for label and input (16/24) for default and (14/20) for small.
+- Components - Forms: Upscale font-size for help text and error text (14/20).
+- Components - Forms: Upscale input file button and text (16/20).
+- Components - Forms: Restrict .rounded use for inputs AKA searchbar.
 - Components - Forms - Select: Use custom-select.
 - Templates - Evenement: Evolutions - Multiple evolutions, add virtual and recurent events display.
 - PL - Components - Breadcrumbs: Moved breadcrumbs to own component directory.
