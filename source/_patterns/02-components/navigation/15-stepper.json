@@ -30,11 +30,13 @@
               "subMenuItemLabel": "Libellé de sous-page"
             },
             {
+              "ariaCurrent": true,
               "url": "#",
               "class": "active",
               "subMenuItemLabel": "Libellé de sous-page"
             },
             {
+              "ariaDisabled": true,
               "url": false,
               "class": "disabled",
               "subMenuItemLabel": "Libellé de sous-page"
@@ -44,6 +46,7 @@
       },
       {
         "menuItemSeparator": false,
+        "ariaDisabled": true,
         "class": "disabled",
         "url": false,
         "menuItemState": false,
@@ -52,6 +55,7 @@
       },
       {
         "menuItemSeparator": false,
+        "ariaDisabled": true,
         "class": "disabled",
         "url": false,
         "menuItemState": false,
