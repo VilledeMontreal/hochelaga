@@ -15,78 +15,80 @@
           {{/ menuItemStepper}}
         </div>
         <div class="col-12 col-lg-8 col-xl-7 mb-8">
-          <header class="pb-6">
+          <header>
             <h1 class="h2">{{ heading }}</h1>
           </header>
-          <div class="content-modules border-bottom mb-8">
-            <h2 class="h3">Titre de section</h2>
-            <div class="content-module-stacked">
-              <p>Description de l’action à effectuer sur la page ou paragraphe explicatif sur les informations à savoir pour effectuer l’action.</p>
+          <form id="form-id">
+            <div class="content-modules border-bottom mb-8">
+              <h2 class="h3">Titre de section</h2>
+              <div class="content-module-stacked">
+                <p>Description de l’action à effectuer sur la page ou paragraphe explicatif sur les informations à savoir pour effectuer l’action.</p>
+              </div>
+              <div class="content-module-stacked">
+                {{# module-message}}
+                {{> components-alert}}
+                {{/ module-message}}
+              </div>
+              <div class="content-module-stacked">
+                {{# inputFile}}
+                {{> components-input-file-item-v2}}
+                {{/ inputFile}}
+              </div>
             </div>
-            <div class="content-module-stacked">
-              {{# module-message}}
-              {{> components-alert}}
-              {{/ module-message}}
-            </div>
-            <div class="content-module-stacked">
-              {{# inputFile}}
-              {{> components-input-file-item-v2}}
-              {{/ inputFile}}
-            </div>
-          </div>
-          <div class="content-modules">
-            <h2 class="h3">Titre de section</h2>
-            <div class="content-module-stacked">
-              <p>Description de l’action à effectuer sur la page ou paragraphe explicatif sur les informations à savoir pour effectuer l’action.</p>
-            </div>
-            <div class="content-module-stacked">
-              {{# formInputText}}
-              {{> components-input-text }}
-              {{/ formInputText}}
-              <div class="form-row">
-                {{# formInputTextRow}}
+            <div class="content-modules">
+              <h2 class="h3">Titre de section</h2>
+              <div class="content-module-stacked">
+                <p>Description de l’action à effectuer sur la page ou paragraphe explicatif sur les informations à savoir pour effectuer l’action.</p>
+              </div>
+              <div class="content-module-stacked">
+                {{# formInputText}}
                 {{> components-input-text }}
-                {{/ formInputTextRow}}
-              </div>
-              {{# textarea}}
-              <div class="form-row">
-                <div class="form-group form-group-required col-md-6">
-                  <label for="form-group-wizard-adresse">Libellé</label>
-                  <input type="text" class="form-control" id="form-group-wizard-adresse" required>
+                {{/ formInputText}}
+                <div class="form-row">
+                  {{# formInputTextRow}}
+                  {{> components-input-text }}
+                  {{/ formInputTextRow}}
                 </div>
-                <div class="form-group form-group-required col-md-3">
-                  <label for="custom-select-arron">Libellé</label>
-                  <select class="custom-select" id="custom-select-arron" required>
-                    <option selected disabled value="">Choisir</option>
-                    <option>Ahuntsic-Cartierville</option>
-                    <option>Anjou</option>
-                    <option>...</option>
-                  </select>
+                {{# textarea}}
+                <div class="form-row">
+                  <div class="form-group form-group-required col-md-6">
+                    <label for="form-group-wizard-adresse">Libellé</label>
+                    <input type="text" class="form-control" id="form-group-wizard-adresse" required>
+                  </div>
+                  <div class="form-group form-group-required col-md-3">
+                    <label for="custom-select-arron">Libellé</label>
+                    <select class="custom-select" id="custom-select-arron" required>
+                      <option selected disabled value="">Choisir</option>
+                      <option>Ahuntsic-Cartierville</option>
+                      <option>Anjou</option>
+                      <option>...</option>
+                    </select>
+                  </div>
+                  <div class="form-group form-group-required col-md-3">
+                    <label for="form-group-code-postal">Libellé</label>
+                    <input type="text" class="form-control" id="form-group-code-postal" required>
+                  </div>
                 </div>
-                <div class="form-group form-group-required col-md-3">
-                  <label for="form-group-code-postal">Libellé</label>
-                  <input type="text" class="form-control" id="form-group-code-postal" required>
+                {{> components-textarea }}
+                {{/ textarea}}
+                {{# formCheckboxes }}
+                <div class="form-group">
+                  {{> components-checkbox-item }}
                 </div>
+                {{/ formCheckboxes }}
+                {{# formRadios}}
+                <div class="form-group">
+                  {{> components-radio-item }}
+                </div>
+                {{/ formRadios}}
               </div>
-              {{> components-textarea }}
-              {{/ textarea}}
-              {{# formCheckboxes }}
-              <div class="form-group">
-                {{> components-checkbox-item }}
-              </div>
-              {{/ formCheckboxes }}
-              {{# formRadios}}
-              <div class="form-group">
-                {{> components-radio-item }}
-              </div>
-              {{/ formRadios}}
             </div>
-          </div>
-          <div class="buttons-wrapper">
-            {{# formGroupActions}}
-            {{> components-button-icon}}
-            {{/ formGroupActions}}
-          </div>
+            <div class="buttons-wrapper border-top pt-4 mt-0">
+              {{# formGroupActions}}
+              {{> components-button-icon}}
+              {{/ formGroupActions}}
+            </div>
+          </form>
         </div>
       </div>
     </div>

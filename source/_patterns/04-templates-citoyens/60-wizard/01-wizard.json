@@ -2,6 +2,7 @@
   "bodyClass": "site-sticky-footer",
   "navbarFixedTop": true,
   "footerMinimal": true,
+  "pageClasses": "main-content-wizard",
   "menuItemStepper": {
     "menuItemClass": "menu-items-column",
     "menuItem": [
@@ -77,7 +78,10 @@
     "formGroupClass": false,
     "formGroupInputID": "form-control-input-file-v2",
     "formGroupInputLabel": "Libellé",
-    "formGroupInputHelpText": "Message d'aide personnalisé.",
+    "formGroupInputHelpText": {
+      "id": "form-group-sm-textearea-help-text",
+      "text": "Texte d'assistance."
+    },
     "formGroupFileID": "file-droparea-v2",
     "formGroupFileDropID": "form-group-file-upload",
     "formGroupFileDropLabel": "Parcourir",
@@ -108,7 +112,10 @@
     "formGroupInputPlaceholder": {
       "text": "Placeholder"
     },
-    "formGroupInputHelpText": "Message d'aide personnalisé."
+    "formGroupInputHelpText": {
+      "id": "form-group-sm-textearea-help-text",
+      "text": "Texte d'assistance."
+    }
   },
   "formInputTextRow": [
     {
@@ -119,7 +126,10 @@
       "formGroupInputPlaceholder": {
         "text": "Placeholder"
       },
-      "formGroupInputHelpText": "Message d'aide personnalisé."
+      "formGroupInputHelpText": {
+        "id": "form-group-sm-textearea-help-text",
+        "text": "Texte d'assistance."
+      }
     },
     {
       "formGroupClass": "col-md-6",
@@ -137,7 +147,10 @@
     "formGroupInputID": "form-control-textarea",
     "formGroupInputLabel": "Libellé",
     "formGroupInputPlaceholder": false,
-    "formGroupInputHelpText": "Message d'aide personnalisé.",
+    "formGroupInputHelpText": {
+      "id": "form-group-sm-textearea-help-text",
+      "text": "Texte d'assistance."
+    },
     "formGroupTextareaRows": "5"
   },
   "formCheckboxes": {

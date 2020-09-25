@@ -18,6 +18,7 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 - Components - Navigation - Stepper: Stepper (wizard).
 - Components - Navigation: Sub nav icons only variant.
 - Templates - Wizard: New wizard template.
+- A11Y - Components - Forms: Add aria-describedby + id for help text and error messages.
 
 ### Changed
 - Components - Dropdowns: labels are now font-size: 16/24.

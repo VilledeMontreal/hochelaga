@@ -1,12 +1,12 @@
 <div class="form-group {{ formGroupClass}}">
   <label for="{{formGroupInputID}}">{{ formGroupInputLabel}}</label>
-  <textarea class="form-control {{formGroupInputClass}}" id="{{ formGroupInputID }}" {{# formGroupInputPlaceholder}}placeholder="{{ formGroupInputPlaceholder.text}}"{{/ formGroupInputPlaceholder}}{{# formGroupTextareaRows}} rows="{{formGroupTextareaRows}}"{{/ formGroupTextareaRows}}{{# formGroupInputState}} {{ formGroupInputState}}{{/ formGroupInputState}}{{# formGroupInputRequired}} required{{/ formGroupInputRequired}}></textarea>
+  <textarea class="form-control {{formGroupInputClass}}" id="{{ formGroupInputID }}" {{# formGroupInputPlaceholder}}placeholder="{{ formGroupInputPlaceholder.text}}"{{/ formGroupInputPlaceholder}}{{# formGroupTextareaRows}} rows="{{formGroupTextareaRows}}"{{/ formGroupTextareaRows}}{{^formGroupInputError}}{{# formGroupInputHelpText}} aria-describedby="{{id}}"{{/ formGroupInputHelpText}}{{/formGroupInputError}}{{#formGroupInputError}} aria-describedby="{{id}}"{{/formGroupInputError}}{{# formGroupInputState}} {{ formGroupInputState}}{{/ formGroupInputState}}{{# formGroupInputRequired}} required{{/ formGroupInputRequired}}></textarea>
   {{^formGroupInputError}}
   {{# formGroupInputHelpText}}
-  <small id="textRequiredHelpBlock" class="form-text">{{ formGroupInputHelpText }}</small>
+  <small id="{{id}}" class="form-text">{{ text }}</small>
   {{/ formGroupInputHelpText}}
   {{/formGroupInputError}}
   {{# formGroupInputError}}
-  <div class="invalid-feedback">{{ formGroupInputError.text }}</div>
+  <div class="invalid-feedback" id={{id}}>{{ text }}</div>
   {{/ formGroupInputError}}
 </div>
