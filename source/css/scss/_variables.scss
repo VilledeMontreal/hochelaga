@@ -736,11 +736,11 @@ $toast-box-shadow:                  $shadow-moderate;
 
 // Badges
 
-$badge-font-size:                   $font-size-xs;
+$badge-font-size:                   $font-size-sm;
 $badge-font-weight:                 $font-weight-bold;
 $badge-border-width:                $border-width;
 $badge-border-radius:               $border-radius;
-$badge-padding-y:                   calc(.25rem - #{$badge-border-width});
+$badge-padding-y:                   calc(.125rem - #{$badge-border-width});
 $badge-padding-x:                   .5rem;
 
 $badge-transition:                  $btn-transition;

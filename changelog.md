@@ -21,6 +21,7 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 - A11Y - Components - Forms: Add aria-describedby + id for help text and error messages.
 
 ### Changed
+- Components - Badges & Tags: Labels font-size: 14/20.
 - Components - Dropdowns: labels are now font-size: 16/24.
 - Components - Forms: Use * (required) instead of optionnal.
 - Components - Forms: Upscale font-size for label and input (16/24) for default and (14/20) for small.
