@@ -347,12 +347,16 @@ legend,
 //
 // Tweak a few things for switches
 .custom-switch {
-  padding-left: $custom-switch-width + $custom-control-gutter;
+  padding-left: 0;
 
   .custom-control-label {
+    width: 100%;
+    padding-right: $custom-switch-width + $custom-control-gutter;
     &::before {
-      top: calc(#{($line-height-md - .75rem) / 2});
-      left: -($custom-switch-width + $custom-control-gutter);
+      // Center vertically
+      top: calc(50% - (#{.75rem}/2));
+      right: 0;
+      left: auto;
       width: 2rem;
       height: .75rem;
       margin: 0 .25rem;
@@ -362,15 +366,16 @@ legend,
     }
 
     &::after {
-      top: calc(#{($line-height-md - $custom-control-indicator-size) / 2});
-      left: -($custom-switch-width + $custom-control-gutter);
+      // Center vertically
+      top: calc(50% - (#{$custom-switch-indicator-size}/2));
+      right: ($custom-switch-width/2);
+      left: auto;
       width: $custom-switch-indicator-size;
       height: $custom-switch-indicator-size;
       margin: 0;
       background-color: $custom-switch-indicator-handle;
       border: 1px solid $neutral-stroke;
       border-radius: 50%;
-      //box-shadow: 0 1px 4px 0 $overlay-subtle;
       box-shadow: $shadow-moderate;
       @include transition(transform .15s ease-in-out, $custom-forms-transition);
 

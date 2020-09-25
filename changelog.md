@@ -29,6 +29,7 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 - Components - Forms: Upscale input file button and text (16/20).
 - Components - Forms: Restrict .rounded use for inputs AKA searchbar.
 - Components - Forms - Select: Use custom-select.
+- Components - Forms - Switch: Controler is now shown AFTER the label (justify right) and center vertically for multi-line label.
 - Templates - Evenement: Evolutions - Multiple evolutions, add virtual and recurent events display.
 - PL - Components - Breadcrumbs: Moved breadcrumbs to own component directory.
 - PL - Components - Tabs: Moved tabs to own component directory.
