@@ -17,6 +17,7 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 - Components - Dropdowns: Add media-avatar integration inside dropdowns
 - Components - Navigation - Stepper: Stepper (wizard).
 - Components - Navigation: Sub nav icons only variant.
+- Components - Tooltip: Expose tooltip component and examples.
 - Templates - Wizard: New wizard template.
 - A11Y - Components - Forms: Add aria-describedby + id for help text and error messages.
 
