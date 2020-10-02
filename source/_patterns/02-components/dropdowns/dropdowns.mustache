@@ -78,26 +78,10 @@
 {{/ dropdownRadio}}
 
 <h4 class="pl-pattern-subtitle">Dropdown buttons variants (down,up,right,left)</h4>
-<!-- Default dropdown button -->
-<div class="btn-group dropdown">
-  <button class="btn btn-primary btn-squared dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Dropdown</button>
+{{# dropdownBtnGroup}}
+<!-- Default {{dropdownType}} button -->
+<div class="btn-group {{dropdownType}}">
+  <button class="btn btn-primary btn-squared dropdown-toggle" type="button" id="{{dropdownBtnID}}" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">{{dropdownBtnLabel}}</button>
   {{> components-dropdown}}
 </div>
-
-<!-- Default dropup button -->
-<div class="btn-group dropup">
-  <button type="button" class="btn btn-primary btn-squared dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Dropup</button>
-  {{> components-dropdown}}
-</div>
-
-<!-- Default dropright button -->
-<div class="btn-group dropright">
-  <button type="button" class="btn btn-primary btn-squared dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Dropright</button>
-  {{> components-dropdown}}
-</div>
-
-<!-- Default dropleft button -->
-<div class="btn-group dropleft">
-  <button type="button" class="btn btn-primary btn-squared dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Dropleft</button>
-  {{> components-dropdown}}
-</div>
+{{/ dropdownBtnGroup}}

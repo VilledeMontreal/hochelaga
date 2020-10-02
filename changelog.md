@@ -36,6 +36,7 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 - PL - Components - Tabs: Moved tabs to own component directory.
 
 ### Fixed
+- Styles - Tables: .sorting-asc and .sorting-desc icons inversion.
 - Components - Dropdowns: Fix spacing and clickable zone for checkbox and radios inside dropdown.
 - Components - Forms - Select: Custom select background and padding fixes. Validation fixes.
 - Components - Navigation: Fix issues with some navigation and removed unused/deprecated/never added to Figma navigation variants.

@@ -54,15 +54,13 @@
       background-color: transparent;
     }
 
-    // Handle form-group in dropdown-item
-    &.form-group {
-      margin-bottom: 0;
-    }
     .custom-control {
       margin-bottom: 0;
-      padding-left: 2.5rem;
       padding: 0;
       width: 100%;
+    }
+    .custom-radio,
+    .custom-checkbox {
       .custom-control-label {
         width: 100%;
         padding: .5rem 2rem .5rem 3.5rem;
@@ -70,6 +68,21 @@
         &::after {
           left: 1rem;
           top: calc(50% - (#{1.5rem}/2));
+        }
+      }
+    }
+
+    .custom-switch {
+      .custom-control-label {
+        padding-top: .5rem;
+        padding-bottom: .5rem;
+        padding-left: 1rem;
+        padding-right: 4.25rem;
+        &::before{
+          right: 1rem;
+        }
+        &::after {
+          right: 2.25rem;
         }
       }
     }
@@ -92,6 +105,14 @@
     }
   }
 
+  // Handle dropdown-item inside form-group
+  .form-group {
+    .dropdown-item {
+      margin-bottom: 0;
+      padding: 0;
+    }
+  }
+
   .dropdown-item-danger {
     &[href] {
       color: $negative-dark;
@@ -105,11 +126,6 @@
     min-width: $dropdown-sm-min-width;
   }
 
-  &.dropdown-menu-form-group {
-    .dropdown-item {
-      padding: 0;
-    }
-  }
 }
 
 // Dropdown section headers

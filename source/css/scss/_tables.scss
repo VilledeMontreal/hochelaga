@@ -16,11 +16,13 @@
     // Add sorting styles.
     &.sorting {
       cursor: pointer;
+      white-space: nowrap; // needed to prevent wrapping of pseudo-element
+
       &:after {
         content: "";
-        -webkit-mask: url($data-icon-chevron-down) no-repeat 50% 50%;
-        mask: url($data-icon-chevron-down) no-repeat 50% 50%;
-        background-color: $neutral-tertiary;
+        -webkit-mask: none;
+        mask: none;
+        background-color: transparent;
         display: inline-flex;
         margin-left: .5rem;
         margin-top: -.5rem;
@@ -32,17 +34,32 @@
       // Asending sort
       &-asc {
         &:after {
+          content: "";
+          -webkit-mask: url($data-icon-chevron-up) no-repeat 50% 50%;
+          mask: url($data-icon-chevron-up) no-repeat 50% 50%;
           background-color: $neutral-primary;
         }
       }
       // Descending sort
       &-desc {
         &:after {
-          -webkit-mask: url($data-icon-chevron-up) no-repeat 50% 50%;
-          mask: url($data-icon-chevron-up) no-repeat 50% 50%;
+          content: "";
+          -webkit-mask: url($data-icon-chevron-down) no-repeat 50% 50%;
+          mask: url($data-icon-chevron-down) no-repeat 50% 50%;
           background-color: $neutral-primary;
         }
       }
+
+      &:hover {
+        color: $action;
+        &:after {
+          content: "";
+          -webkit-mask: url($data-icon-chevron-up) no-repeat 50% 50%;
+          mask: url($data-icon-chevron-up) no-repeat 50% 50%;
+          background-color: $action;
+        }
+      }
+
     }
   }
 
