@@ -10,14 +10,12 @@
   <a class="dropdown-item{{# dropdownItemClass}} {{dropdownItemClass}}{{/dropdownItemClass}}" href="#">{{# dropdownItemIcon}}<span class="icon {{ icon-name }}" aria-hidden="true"></span>{{/ dropdownItemIcon}}{{# dropdownItemAvatar}}<div class="media-avatar"><span class="user-first-letter">{{userAvatar}}</span></div>{{/ dropdownItemAvatar}}<div class="dropdown-item-content"><div>{{{dropdownItemLabel}}}</div><div class="dropdown-item-description">{{dropdownItemDesc}}</div></div></a>
   {{/ dropdownItemDesc}}
   {{/ dropdownItem}}
-  {{# dropdownSectionHasDivider}}<div class="dropdown-divider"></div>{{/ dropdownSectionHasDivider}}
-  {{/ dropdownSection}}
   {{# dropdownFilters}}
     <form>
       <div class="form-group mb-0">
         {{# radios }}
         <div class="dropdown-item">
-          <div class="custom-control custom-control custom-radio {{ class }} ">
+          <div class="custom-control custom-radio {{ class }}">
             <input type="radio" id="{{ id }}" name="{{ name }}" class="custom-control-input" value="{{ id }}" {{ state }}>
             <label class="custom-control-label" for="{{ id }}">{{{ label }}}</label>
           </div>
@@ -25,14 +23,21 @@
         {{/ radios }}
         {{# checkboxes }}
         <div class="dropdown-item">
-          <div class="custom-control custom-control custom-checkbox {{ class }}">
+          <div class="custom-control custom-checkbox {{ class }}">
             <input type="checkbox" class="custom-control-input" id="{{ id }}" value="{{ id }}" {{ state }}>
             <label class="custom-control-label" for="{{ id }}">{{{ label }}}</label>
           </div>
         </div>
         {{/ checkboxes }}
+        {{# switches }}
+        <div class="dropdown-item">
+          {{> components-switch}}
+        </div>
+        {{/ switches }}
       </div>
     </form>
   {{/ dropdownFilters}}
+  {{# dropdownSectionHasDivider}}<div class="dropdown-divider"></div>{{/ dropdownSectionHasDivider}}
+  {{/ dropdownSection}}
 </div>
 {{/ dropdownMenu}}
