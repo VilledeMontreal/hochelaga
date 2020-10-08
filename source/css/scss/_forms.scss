@@ -89,13 +89,15 @@ legend,
       padding: $btn-padding-y $btn-padding-x-sm;
     }
   }
+}
 
-  &-required {
-    label:not(.custom-control-label):not(.btn) {
-      &:after {
-        content: '*';
-        color: $negative-dark;
-      }
+// Required fields
+.required,
+.form-group-required {
+  label:not(.custom-control-label):not(.btn) {
+    &:after {
+      content: '*';
+      color: $negative-dark;
     }
   }
 }
