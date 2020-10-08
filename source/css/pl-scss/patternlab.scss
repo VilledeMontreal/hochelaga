@@ -61,7 +61,7 @@ h5.pl-pattern-subtitle {
 h3.sg-pattern-title a {
 	font-size: 18px;
 	text-transform: none;
-	&::first-letter { 
+	&::first-letter {
   		text-transform: uppercase;
   }
   &:hover {
@@ -330,7 +330,7 @@ $pl-size-box-wrapper-padding: 1rem;
 			height: 24px;
 		}
 	}
-    
+
   }
 }
 
@@ -425,8 +425,8 @@ $pl-size-box-wrapper-padding: 1rem;
             &-fw {
               margin-right: 1rem;
             }
-            &:before { 
-              content: none; 
+            &:before {
+              content: none;
             }
           }
         }
@@ -462,6 +462,21 @@ $pl-size-box-wrapper-padding: 1rem;
   a.btn {
     margin-right: 8px;
     margin-bottom: 16px;
+  }
+}
+
+// Generic flex container with wrap options
+.pl-flex-wrap-container {
+  display: flex;
+  flex-wrap: wrap;
+  margin-bottom: 1rem;
+  align-items: center;
+  > div {
+    margin-bottom: 1rem;
+
+    + div {
+      margin-left: 1rem;
+    }
   }
 }
 
@@ -576,7 +591,7 @@ $pl-size-box-wrapper-padding: 1rem;
   }
 }
 
-// PL headings 
+// PL headings
 
 .pl-h2 {
  @extend .h2;
@@ -602,7 +617,7 @@ $pl-size-box-wrapper-padding: 1rem;
         min-width: 40px;
         min-height: 40px;
 		  }
-		
+
 		  &#logo-mtl-rosace {
 			  max-height: 40px;
 			  padding: 0 0.5rem;
@@ -643,16 +658,16 @@ $pl-size-box-wrapper-padding: 1rem;
 				max-width: 200px;
 				width: 100%;
 				overflow: visible;
-				
+
 		  	}
-		  }  
+		  }
 	  }
 	.logo-version {
-		padding: 1rem 0.5rem 0; 
+		padding: 1rem 0.5rem 0;
 		display: block;
 		line-height: 1em;
 	}
-	
+
   }
 }
 
@@ -667,29 +682,29 @@ $pl-size-box-wrapper-padding: 1rem;
   background: $brand-black;
 }
 .pl-neutral-primary {
-  background: $neutral-primary; 
+  background: $neutral-primary;
 }
 .pl-neutral-primary-reverse{
-  background: $neutral-primary-reverse; 
+  background: $neutral-primary-reverse;
   border: 1px solid $gray-500;
 }
 .pl-neutral-secondary {
-  background: $neutral-secondary;	
+  background: $neutral-secondary;
 }
 .pl-neutral-tertiary {
-  background: $neutral-tertiary;	
+  background: $neutral-tertiary;
 }
 .pl-neutral-stroke {
   background: $neutral-stroke;
 }
 .pl-neutral-underground-1 {
-  background: $neutral-underground-1;	
+  background: $neutral-underground-1;
 }
 .pl-neutral-underground-2 {
-  background: $neutral-underground-2; 
+  background: $neutral-underground-2;
 }
 .pl-action {
-  background: $action;	
+  background: $action;
 }
 .pl-action-lighter {
   background: $action-lighter;
@@ -701,13 +716,13 @@ $pl-size-box-wrapper-padding: 1rem;
   background: $highlight-light;
 }
 .pl-highlight-strong {
-  background: $highlight-strong;	
+  background: $highlight-strong;
 }
 .pl-informative-dark {
   background: $informative-dark;
 }
 .pl-informative-light {
-  background: $informative-light;				
+  background: $informative-light;
 }
 .pl-informative {
   background: $informative;
@@ -725,7 +740,7 @@ $pl-size-box-wrapper-padding: 1rem;
   background: $warning-dark;
 }
 .pl-warning-light {
-  background: $warning-light;	
+  background: $warning-light;
 }
 .pl-warning {
   background: $warning;
@@ -734,7 +749,7 @@ $pl-size-box-wrapper-padding: 1rem;
   background: $negative-dark;
 }
 .pl-negative-light {
-  background: $negative-light;	
+  background: $negative-light;
 }
 .pl-negative {
   background: $negative;

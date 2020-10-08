@@ -46,7 +46,7 @@
       "is-modal": true,
       "modalId": "navModalFiltersMoreFilters"
     },
-    "filters":[
+    "filters": [
       {
         "chipLabel": "Tous les arrondissements",
         "chipClass": false,
@@ -56,145 +56,149 @@
         "is-dropdown": true,
         "isStatic": true,
         "dropdownMenu": {
-          "dropdownMenuClass": "dropdown-menu-form-group",
+          "dropdownMenuClass": false,
           "dropdownMenuID": "chipFiltre1Dropdown",
-          "dropdownFilters":  {
-            "checkboxes": [
-              {
-                "class": "",
-                "id": "chckboxfilter-1",
-                "idMobile": "chckboxfilter-1-sm",
-                "label": "Ahuntsic-Cartierville",
-                "state": false
-              },
-              {
-                "class": "",
-                "id": "chckboxfilter-2",
-                "idMobile": "chckboxfilter-2-sm",
-                "label": "Anjou",
-                "state": false
-              },
-              {
-                "class": "",
-                "id": "chckboxfilter-3",
-                "idMobile": "chckboxfilter-3-sm",
-                "label": "Côte-des-Neiges–Notre-Dame-de-Grâce",
-                "state": false
-              },
-              {
-                "class": "",
-                "id": "chckboxfilter-4",
-                "idMobile": "chckboxfilter-4-sm",
-                "label": "L'Île-Bizard–Sainte-Geneviève",
-                "state": false
-              },
-              {
-                "class": "",
-                "id": "chckboxfilter-5",
-                "idMobile": "chckboxfilter-5-sm",
-                "label": "Lachine",
-                "state": false
-              },
-              {
-                "class": "",
-                "id": "chckboxfilter-6",
-                "idMobile": "chckboxfilter-6-sm",
-                "label": "LaSalle",
-                "state": false
-              },
-              {
-                "class": "",
-                "id": "chckboxfilter-7",
-                "idMobile": "chckboxfilter-7-sm",
-                "label": "Le Plateau-Mont-Royal",
-                "state": false
-              },
-              {
-                "class": "",
-                "id": "chckboxfilter-8",
-                "idMobile": "chckboxfilter-8-sm",
-                "label": "Le Sud-Ouest",
-                "state": false
-              },
-              {
-                "class": "",
-                "id": "chckboxfilter-9",
-                "idMobile": "chckboxfilter-9-sm",
-                "label": "Mercier–Hochelaga-Maisonneuve",
-                "state": false
-              },
-              {
-                "class": "",
-                "id": "chckboxfilter-10",
-                "idMobile": "chckboxfilter-10-sm",
-                "label": "Montréal-Nord",
-                "state": false
-              },
-              {
-                "class": "",
-                "id": "chckboxfilter-11",
-                "idMobile": "chckboxfilter-11-sm",
-                "label": "Outremont",
-                "state": false
-              },
-              {
-                "class": "",
-                "id": "chckboxfilter-12",
-                "idMobile": "chckboxfilter-12-sm",
-                "label": "Pierrefonds-Roxboro",
-                "state": false
-              },
-              {
-                "class": "",
-                "id": "chckboxfilter-13",
-                "idMobile": "chckboxfilter-13-sm",
-                "label": "Rivière-des-Prairies–Pointe-aux-Trembles",
-                "state": false
-              },
-              {
-                "class": "",
-                "id": "chckboxfilter-14",
-                "idMobile": "chckboxfilter-14-sm",
-                "label": "Rosemont–La Petite-Patrie",
-                "state": false
-              },
-              {
-                "class": "",
-                "id": "chckboxfilter-15",
-                "idMobile": "chckboxfilter-15-sm",
-                "label": "Saint-Laurent",
-                "state": false
-              },
-              {
-                "class": "",
-                "id": "chckboxfilter-16",
-                "idMobile": "chckboxfilter-16-sm",
-                "label": "Saint-Léonard",
-                "state": false
-              },
-              {
-                "class": "",
-                "id": "chckboxfilter-17",
-                "idMobile": "chckboxfilter-17-sm",
-                "label": "Verdun",
-                "state": false
-              },
-              {
-                "class": "",
-                "id": "chckboxfilter-18",
-                "idMobile": "chckboxfilter-18-sm",
-                "label": "Ville-Marie",
-                "state": false
-              },
-              {
-                "class": "",
-                "id": "chckboxfilter-19",
-                "idMobile": "chckboxfilter-19-sm",
-                "label": "Villeray–Saint-Michel–Parc-Extension",
-                "state": false
+          "dropdownSection": [
+            {
+              "dropdownFilters": {
+                "checkboxes": [
+                  {
+                    "class": "",
+                    "id": "chckboxfilter-1",
+                    "idMobile": "chckboxfilter-1-sm",
+                    "label": "Ahuntsic-Cartierville",
+                    "state": false
+                  },
+                  {
+                    "class": "",
+                    "id": "chckboxfilter-2",
+                    "idMobile": "chckboxfilter-2-sm",
+                    "label": "Anjou",
+                    "state": false
+                  },
+                  {
+                    "class": "",
+                    "id": "chckboxfilter-3",
+                    "idMobile": "chckboxfilter-3-sm",
+                    "label": "Côte-des-Neiges–Notre-Dame-de-Grâce",
+                    "state": false
+                  },
+                  {
+                    "class": "",
+                    "id": "chckboxfilter-4",
+                    "idMobile": "chckboxfilter-4-sm",
+                    "label": "L'Île-Bizard–Sainte-Geneviève",
+                    "state": false
+                  },
+                  {
+                    "class": "",
+                    "id": "chckboxfilter-5",
+                    "idMobile": "chckboxfilter-5-sm",
+                    "label": "Lachine",
+                    "state": false
+                  },
+                  {
+                    "class": "",
+                    "id": "chckboxfilter-6",
+                    "idMobile": "chckboxfilter-6-sm",
+                    "label": "LaSalle",
+                    "state": false
+                  },
+                  {
+                    "class": "",
+                    "id": "chckboxfilter-7",
+                    "idMobile": "chckboxfilter-7-sm",
+                    "label": "Le Plateau-Mont-Royal",
+                    "state": false
+                  },
+                  {
+                    "class": "",
+                    "id": "chckboxfilter-8",
+                    "idMobile": "chckboxfilter-8-sm",
+                    "label": "Le Sud-Ouest",
+                    "state": false
+                  },
+                  {
+                    "class": "",
+                    "id": "chckboxfilter-9",
+                    "idMobile": "chckboxfilter-9-sm",
+                    "label": "Mercier–Hochelaga-Maisonneuve",
+                    "state": false
+                  },
+                  {
+                    "class": "",
+                    "id": "chckboxfilter-10",
+                    "idMobile": "chckboxfilter-10-sm",
+                    "label": "Montréal-Nord",
+                    "state": false
+                  },
+                  {
+                    "class": "",
+                    "id": "chckboxfilter-11",
+                    "idMobile": "chckboxfilter-11-sm",
+                    "label": "Outremont",
+                    "state": false
+                  },
+                  {
+                    "class": "",
+                    "id": "chckboxfilter-12",
+                    "idMobile": "chckboxfilter-12-sm",
+                    "label": "Pierrefonds-Roxboro",
+                    "state": false
+                  },
+                  {
+                    "class": "",
+                    "id": "chckboxfilter-13",
+                    "idMobile": "chckboxfilter-13-sm",
+                    "label": "Rivière-des-Prairies–Pointe-aux-Trembles",
+                    "state": false
+                  },
+                  {
+                    "class": "",
+                    "id": "chckboxfilter-14",
+                    "idMobile": "chckboxfilter-14-sm",
+                    "label": "Rosemont–La Petite-Patrie",
+                    "state": false
+                  },
+                  {
+                    "class": "",
+                    "id": "chckboxfilter-15",
+                    "idMobile": "chckboxfilter-15-sm",
+                    "label": "Saint-Laurent",
+                    "state": false
+                  },
+                  {
+                    "class": "",
+                    "id": "chckboxfilter-16",
+                    "idMobile": "chckboxfilter-16-sm",
+                    "label": "Saint-Léonard",
+                    "state": false
+                  },
+                  {
+                    "class": "",
+                    "id": "chckboxfilter-17",
+                    "idMobile": "chckboxfilter-17-sm",
+                    "label": "Verdun",
+                    "state": false
+                  },
+                  {
+                    "class": "",
+                    "id": "chckboxfilter-18",
+                    "idMobile": "chckboxfilter-18-sm",
+                    "label": "Ville-Marie",
+                    "state": false
+                  },
+                  {
+                    "class": "",
+                    "id": "chckboxfilter-19",
+                    "idMobile": "chckboxfilter-19-sm",
+                    "label": "Villeray–Saint-Michel–Parc-Extension",
+                    "state": false
+                  }
+                ]
               }
-            ]
-          }
+            }
+          ]
         }
       },
       {
@@ -206,26 +210,30 @@
         "is-dropdown": true,
         "isStatic": true,
         "dropdownMenu": {
-          "dropdownMenuClass": "dropdown-menu-form-group",
+          "dropdownMenuClass": false,
           "dropdownMenuID": "chipFiltre2Dropdown",
-          "dropdownFilters":  {
-            "checkboxes": [
-              {
-                "class": "",
-                "id": "chckboxfilter2-1",
-                "idMobile": "chckboxfilter2-1-sm",
-                "label": "Libellé 1",
-                "state": false
-              },
-              {
-                "class": "",
-                "id": "chckboxfilter2-2",
-                "idMobile": "chckboxfilter2-2-sm",
-                "label": "Libellé #2",
-                "state": false
+          "dropdownSection": [
+            {
+              "dropdownFilters": {
+                "checkboxes": [
+                  {
+                    "class": "",
+                    "id": "chckboxfilter2-1",
+                    "idMobile": "chckboxfilter2-1-sm",
+                    "label": "Libellé 1",
+                    "state": false
+                  },
+                  {
+                    "class": "",
+                    "id": "chckboxfilter2-2",
+                    "idMobile": "chckboxfilter2-2-sm",
+                    "label": "Libellé #2",
+                    "state": false
+                  }
+                ]
               }
-            ]
-          }
+            }
+          ]
         }
       },
       {
@@ -237,26 +245,30 @@
         "is-dropdown": true,
         "isStatic": true,
         "dropdownMenu": {
-          "dropdownMenuClass": "dropdown-menu-form-group",
+          "dropdownMenuClass": false,
           "dropdownMenuID": "chipFiltre3Dropdown",
-          "dropdownFilters":  {
-            "checkboxes": [
-              {
-                "class": "",
-                "id": "chckboxfilter3-1",
-                "idMobile": "chckboxfilter3-1-sm",
-                "label": "Libellé #1",
-                "state": false
-              },
-              {
-                "class": "",
-                "id": "chckboxfilter3-2",
-                "idMobile": "chckboxfilter3-2-sm",
-                "label": "Libellé #2",
-                "state": false
+          "dropdownSection": [
+            {
+              "dropdownFilters":  {
+                "checkboxes": [
+                  {
+                    "class": "",
+                    "id": "chckboxfilter3-1",
+                    "idMobile": "chckboxfilter3-1-sm",
+                    "label": "Libellé #1",
+                    "state": false
+                  },
+                  {
+                    "class": "",
+                    "id": "chckboxfilter3-2",
+                    "idMobile": "chckboxfilter3-2-sm",
+                    "label": "Libellé #2",
+                    "state": false
+                  }
+                ]
               }
-            ]
-          }
+            }
+          ]
         }
       }
     ],
@@ -519,7 +531,11 @@
           "type": false,
           "title": "Titre du contenu",
           "infos": {
-            "badge": false,
+            "badge": {
+              "badge": "État",
+              "badgeClass": "badge-warning",
+              "badgeUrl": false
+            },
             "infos-items": [
               {
                 "text": "Information supplémentaire"
@@ -535,7 +551,11 @@
           "type": false,
           "title": "Titre du contenu",
           "infos": {
-            "badge": false,
+            "badge": {
+              "badge": "État",
+              "badgeClass": "badge-info",
+              "badgeUrl": false
+            },
             "infos-items": [
               {
                 "text": "Information supplémentaire"

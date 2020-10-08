@@ -1,27 +1,10 @@
 {
   "selectSize": [
     {
-      "formGroupClass": "form-group-sm",
-      "formGroupSelectID": "form-group-select-sm",
-      "formGroupSelectLabel": "Small select label",
-      "formGroupSelect": {
-        "defaultOption": "Default option",
-        "options": [
-          {
-            "option-text" : "Option 1",
-            "option-value" : "option-1"
-          },
-          {
-            "option-text" : "Option 2",
-            "option-value" : "option-2"
-          }
-        ]
-      }
-    },
-    {
       "formGroupClass": false,
-      "formGroupSelectID": "form-group-select",
+      "formGroupSelectID": "custom-select",
       "formGroupSelectLabel": "Default select label",
+      "formGroupSelectClass": false,
       "formGroupSelect": {
         "defaultOption": "Default option",
         "options": [
@@ -34,12 +17,17 @@
             "option-value" : "option-2"
           }
         ]
+      },
+      "formGroupInputHelpText": {
+        "id": "custom-select-help-text",
+        "text": "Texte d'assistance."
       }
     },
     {
-      "formGroupClass": "form-group-lg",
-      "formGroupSelectID": "form-group-select-sm",
-      "formGroupSelectLabel": "Large select label",
+      "formGroupClass": "form-group-sm",
+      "formGroupSelectID": "custom-select-sm",
+      "formGroupSelectLabel": "Small select label",
+      "formGroupSelectClass": "custom-select-sm",
       "formGroupSelect": {
         "defaultOption": "Default option",
         "options": [
@@ -52,14 +40,18 @@
             "option-value" : "option-2"
           }
         ]
+      },
+      "formGroupInputHelpText": {
+        "id": "custom-select-sm-help-text",
+        "text": "Texte d'assistance."
       }
     }
   ],
   "selectValidation": [
     {
       "formGroupClass": false,
-      "formGroupSelectID": "form-group-select-validation",
-      "formGroupSelectLabel": false,
+      "formGroupSelectID": "custom-select-validation",
+      "formGroupSelectLabel": "Libellé",
       "formGroupSelectClass": "is-invalid",
       "formGroupSelectRequired": true,
       "formGroupSelect": {
@@ -74,6 +66,34 @@
             "option-value" : "option-2"
           }
         ]
+      },
+      "formGroupInputError": {
+        "id": "custom-select-error-text",
+        "text": "Texte d'erreur personnalisé."
+      }
+    },
+    {
+      "formGroupClass":  "form-group-sm",
+      "formGroupSelectID": "custom-select-validation-sm",
+      "formGroupSelectLabel": "Libellé",
+      "formGroupSelectClass": "custom-select-sm is-invalid",
+      "formGroupSelectRequired": true,
+      "formGroupSelect": {
+        "defaultOption": "Default option",
+        "options": [
+          {
+            "option-text" : "Option 1",
+            "option-value" : "option-1"
+          },
+          {
+            "option-text" : "Option 2",
+            "option-value" : "option-2"
+          }
+        ]
+      },
+      "formGroupInputError": {
+        "id": "custom-select-sm-error-text",
+        "text": "Texte d'erreur personnalisé."
       }
     }
   ]

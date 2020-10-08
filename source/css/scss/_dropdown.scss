@@ -8,7 +8,7 @@
   float: left;
   min-width: $dropdown-min-width;
   padding: $dropdown-padding-y 0;
-  margin: $dropdown-spacer 0 0; // override default ul
+  margin: $dropdown-spacer 0 $dropdown-spacer 0; // override default ul
   @include font-size($dropdown-font-size);
   color: $dropdown-color;
   text-align: left; // Ensures proper alignment if parent has it changed (e.g., modal footer)
@@ -19,6 +19,7 @@
   @include border-radius($dropdown-border-radius);
   box-shadow: $dropdown-box-shadow;
 
+
   .dropdown-item {
     display: flex;
     align-items: center;
@@ -26,36 +27,98 @@
     color: $neutral-primary;
     line-height: $line-height-md;
     margin-bottom: 0;
-    
+    // white-space: nowrap is the default bootstrap value for dropdown-item
+    // Need some investigation on how dropdown could be more "fluid"
+
+    .dropdown-item-description {
+      @include font-size($font-size-sm);
+      line-height: $line-height-sm;
+      color: $neutral-secondary;
+    }
+
     @include hover-focus {
       color: $neutral-primary;
       border: none;
       @include gradient-bg($neutral-underground-1);
     }
-  
+
     &.active,
     &:active {
       color: $neutral-primary;
       @include gradient-bg($neutral-underground-1);
     }
-  
+
     &.disabled,
     &:disabled {
       color: $dropdown-link-disabled-color;
       background-color: transparent;
     }
 
-    // Handle form-group in dropdown-item
-    &.form-group {
-      margin-bottom: 0;
-    }
     .custom-control {
       margin-bottom: 0;
+      padding: 0;
+      width: 100%;
+    }
+    .custom-radio,
+    .custom-checkbox {
+      .custom-control-label {
+        width: 100%;
+        padding: .5rem 2rem .5rem 3.5rem;
+        &::before,
+        &::after {
+          left: 1rem;
+          top: calc(50% - (#{1.5rem}/2));
+        }
+      }
+    }
+
+    .custom-switch {
+      .custom-control-label {
+        padding-top: .5rem;
+        padding-bottom: .5rem;
+        padding-left: 1rem;
+        padding-right: 4.25rem;
+        &::before{
+          right: 1rem;
+        }
+        &::after {
+          right: 2.25rem;
+        }
+      }
+    }
+
+    .icon,
+    .media-avatar {
+      margin-right: 1rem;
     }
 
     .icon {
       @include icon-color($neutral-tertiary);
-      margin-right: 1rem;
+    }
+
+    &.dropdown-action {
+      color: $primary;
+      font-weight: $font-weight-bold;
+      .icon {
+        @include icon-color($primary);
+      }
+    }
+  }
+
+  // Handle dropdown-item inside form-group
+  .form-group {
+    .dropdown-item {
+      margin-bottom: 0;
+      padding: 0;
+    }
+  }
+
+  .dropdown-item-danger {
+    &[href] {
+      color: $negative-dark;
+      .icon {
+        @include icon-color($negative-dark);
+      }
     }
   }
 
@@ -63,12 +126,6 @@
     min-width: $dropdown-sm-min-width;
   }
 
-  &.dropdown-menu-form-group {
-    .dropdown-item {
-      padding-top: 0;
-      padding-bottom: 0;
-    }
-  }
 }
 
 // Dropdown section headers
@@ -78,6 +135,7 @@
   padding: .5rem 1rem;
   margin-bottom: 0; // for use with heading elements
   @include font-size($dropdown-font-size);
+  line-height: $line-height-md;
   color: $dropdown-header-color;
   white-space: nowrap; // as with > li > a
 }
@@ -88,7 +146,7 @@
     &:after {
       content: '';
       -webkit-mask: url($data-icon-chevron-up) no-repeat 50% 50%;
-      mask: url($data-icon-chevron-up) no-repeat 50% 50%;     
+      mask: url($data-icon-chevron-up) no-repeat 50% 50%;
     }
   }
 }

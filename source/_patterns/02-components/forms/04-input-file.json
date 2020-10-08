@@ -1,8 +1,11 @@
 {
-  "formGroupClass": false,
+  "formGroupClass": "form-group-required",
   "formGroupInputID": "form-control-input-file-v2",
   "formGroupInputLabel": "Libellé",
-  "formGroupInputHelpText": "Message d'aide personnalisé.",
+  "formGroupInputHelpText": {
+    "id": "input-file-help-text",
+    "text": "Texte d'assistance."
+  },
   "formGroupFileID": "file-droparea-v2",
   "formGroupFileDropID": "form-group-file-upload",
   "formGroupFileDropLabel": "Parcourir",

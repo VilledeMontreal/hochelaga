@@ -4,7 +4,45 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](http://keepachangelog.com/en/1.0.0/)
 and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.html).
 
-## [4.13.0] - unreleased
+## [4.14.0] - unreleased
+
+### Added
+- Utilities: New .w-256 and .w-440 sizing classes.
+- Styles - Links: .dropdown-toggle can be used with .link-list-item.link-has-icon to add dropdown chevron for list-item links.
+- Styles - Media: New .media-profile-color-{1,10} utility class for accessible profile color
+- Styles - Media: New media avatar img example.
+- Components - Dropdowns: Add optionnal description
+- Components - Dropdowns: Add .dropdown-action for Action links
+- Components - Dropdowns: Add .dropdown-item-danger utility class.
+- Components - Dropdowns: Add media-avatar integration inside dropdowns
+- Components - Navigation - Stepper: Stepper (wizard).
+- Components - Navigation: Sub nav icons only variant.
+- Components - Tooltip: Expose tooltip component and examples.
+- Templates - Wizard: New wizard template.
+- A11Y - Components - Forms: Add aria-describedby + id for help text and error messages.
+
+### Changed
+- Components - Badges & Tags: Labels font-size: 14/20.
+- Components - Dropdowns: labels are now font-size: 16/24.
+- Components - Forms: Use * (required) instead of optionnal.
+- Components - Forms: Upscale font-size for label and input (16/24) for default and (14/20) for small.
+- Components - Forms: Upscale font-size for help text and error text (14/20).
+- Components - Forms: Upscale input file button and text (16/20).
+- Components - Forms: Restrict .rounded use for inputs AKA searchbar.
+- Components - Forms - Select: Use custom-select.
+- Components - Forms - Switch: Controler is now shown AFTER the label (justify right) and center vertically for multi-line label.
+- Templates - Evenement: Evolutions - Multiple evolutions, add virtual and recurent events display.
+- PL - Components - Breadcrumbs: Moved breadcrumbs to own component directory.
+- PL - Components - Tabs: Moved tabs to own component directory.
+
+### Fixed
+- Styles - Tables: .sorting-asc and .sorting-desc icons inversion.
+- Components - Dropdowns: Fix spacing and clickable zone for checkbox and radios inside dropdown.
+- Components - Forms - Select: Custom select background and padding fixes. Validation fixes.
+- Components - Navigation: Fix issues with some navigation and removed unused/deprecated/never added to Figma navigation variants.
+
+
+## [4.13.0] - 2020-08-27
 
 ### Added
 - Breakpoint: New xsm breakpoint at 352px for small mobile handling.
@@ -535,6 +573,7 @@ Main navbar, menu and footer are now in their own stylesheet. They will eventual
 The version 3 is now deprecated. Only bug fixes will be considered. Please refer to the old bitbucket repo https://bitbucket.org/villemontreal/boite-outils-web/.
 
 
+[4.13.0]: https://bitbucket.org/villemontreal/boite-outils4-web/src/4.13.0/
 [4.12.0]: https://bitbucket.org/villemontreal/boite-outils4-web/src/4.12.0/
 [4.11.1]: https://bitbucket.org/villemontreal/boite-outils4-web/src/4.11.1/
 [4.11.0]: https://bitbucket.org/villemontreal/boite-outils4-web/src/4.11.0/

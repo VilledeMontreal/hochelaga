@@ -54,48 +54,52 @@
         "is-dropdown": true,
         "isStatic": true,
         "dropdownMenu": {
-          "dropdownMenuClass": "dropdown-menu-form-group",
+          "dropdownMenuClass": false,
           "dropdownMenuID": "mapChipFiltre1Dropdown",
-          "dropdownFilters":  {
-            "checkboxes": [
-              {
-                "class": "",
-                "id": "mapChckboxfilter-1",
-                "label": "Checkbox",
-                "state": false
-              },
-              {
-                "class": "",
-                "id": "mapChckboxfilter-2",
-                "label": "Checkbox option #2",
-                "state": false
-              },
-              {
-                "class": "",
-                "id": "mapChckboxfilter-3",
-                "label": "Checkbox option #2",
-                "state": false
-              },
-              {
-                "class": "",
-                "id": "mapChckboxfilter-4",
-                "label": "Checkbox option #2",
-                "state": false
-              },
-              {
-                "class": "",
-                "id": "mapChckboxfilter-5",
-                "label": "Checkbox option #2",
-                "state": false
-              },
-              {
-                "class": "",
-                "id": "mapChckboxfilter-6",
-                "label": "Checkbox option #2",
-                "state": false
+          "dropdownSection": [
+            {
+              "dropdownFilters":  {
+                "checkboxes": [
+                  {
+                    "class": "",
+                    "id": "mapChckboxfilter-1",
+                    "label": "Checkbox",
+                    "state": false
+                  },
+                  {
+                    "class": "",
+                    "id": "mapChckboxfilter-2",
+                    "label": "Checkbox option #2",
+                    "state": false
+                  },
+                  {
+                    "class": "",
+                    "id": "mapChckboxfilter-3",
+                    "label": "Checkbox option #2",
+                    "state": false
+                  },
+                  {
+                    "class": "",
+                    "id": "mapChckboxfilter-4",
+                    "label": "Checkbox option #2",
+                    "state": false
+                  },
+                  {
+                    "class": "",
+                    "id": "mapChckboxfilter-5",
+                    "label": "Checkbox option #2",
+                    "state": false
+                  },
+                  {
+                    "class": "",
+                    "id": "mapChckboxfilter-6",
+                    "label": "Checkbox option #2",
+                    "state": false
+                  }
+                ]
               }
-            ]
-          }
+            }
+          ]
         }
       },
       {
@@ -105,24 +109,28 @@
         "is-dropdown": true,
         "isStatic": true,
         "dropdownMenu": {
-          "dropdownMenuClass": "dropdown-menu-form-group",
+          "dropdownMenuClass": false,
           "dropdownMenuID": "mapChipFiltre2Dropdown",
-          "dropdownFilters":  {
-            "checkboxes": [
-              {
-                "class": "",
-                "id": "mapChckboxfilter2-1",
-                "label": "Checkbox",
-                "state": false
-              },
-              {
-                "class": "",
-                "id": "mapChckboxfilter2-2",
-                "label": "Checkbox option #2",
-                "state": false
+          "dropdownSection": [
+            {
+              "dropdownFilters":  {
+                "checkboxes": [
+                  {
+                    "class": "",
+                    "id": "mapChckboxfilter2-1",
+                    "label": "Checkbox",
+                    "state": false
+                  },
+                  {
+                    "class": "",
+                    "id": "mapChckboxfilter2-2",
+                    "label": "Checkbox option #2",
+                    "state": false
+                  }
+                ]
               }
-            ]
-          }
+            }
+          ]
         }
       },
       {
@@ -132,24 +140,28 @@
         "is-dropdown": true,
         "isStatic": true,
         "dropdownMenu": {
-          "dropdownMenuClass": "dropdown-menu-form-group",
+          "dropdownMenuClass": false,
           "dropdownMenuID": "mapChipFiltre3Dropdown",
-          "dropdownFilters":  {
-            "checkboxes": [
-              {
-                "class": "",
-                "id": "mapChckboxfilter3-1",
-                "label": "Checkbox",
-                "state": false
-              },
-              {
-                "class": "",
-                "id": "mapChckboxfilter3-2",
-                "label": "Checkbox option #2",
-                "state": false
+          "dropdownSection": [
+            {
+              "dropdownFilters":  {
+                "checkboxes": [
+                  {
+                    "class": "",
+                    "id": "mapChckboxfilter3-1",
+                    "label": "Checkbox",
+                    "state": false
+                  },
+                  {
+                    "class": "",
+                    "id": "mapChckboxfilter3-2",
+                    "label": "Checkbox option #2",
+                    "state": false
+                  }
+                ]
               }
-            ]
-          }
+            }
+          ]
         }
       }
     ],

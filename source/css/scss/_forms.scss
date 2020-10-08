@@ -8,24 +8,24 @@ textarea {
 }
 
 label {
-  font-size: $font-size-sm;
-  line-height: $line-height-sm;
+  font-size: $font-size-base;
+  line-height: $line-height-md;
   font-weight: $font-weight-bold;
   color: $neutral-primary;
   margin-bottom: .5rem;
   span {
-    @include font-size($font-size-xs);
+    @include font-size($font-size-sm);
     font-weight: $font-weight-normal;
     margin-left: .5rem;
     color: $neutral-secondary;
   }
   &.label-sm {
-    @include font-size($font-size-xs);
-    line-height: $line-height-xs;
+    @include font-size($font-size-sm);
+    line-height: $line-height-sm;
   }
   &.label-lg {
-    @include font-size($font-size-base);
-    line-height: $line-height-md;
+    @include font-size($font-size-lg);
+    line-height: $line-height-lg;
   }
 }
 
@@ -43,6 +43,7 @@ legend,
 .form-control {
   &:disabled,
   &[readonly] {
+    color: $neutral-secondary;
     &::placeholder {
      color: $neutral-secondary;
     }
@@ -51,8 +52,8 @@ legend,
 .valid-feedback,
 .invalid-feedback {
   font-weight: $font-weight-bold;
-  line-height: $line-height-xs;
-  font-size: $font-size-xs;
+  line-height: $line-height-sm;
+  font-size: $font-size-sm;
   margin-top: .5rem;
   color: $neutral-primary;
 
@@ -63,17 +64,40 @@ legend,
   }
 }
 
+.form-control-sm {
+  height: $input-height-sm;
+  padding: $input-padding-y-sm $input-padding-x-sm;
+  @include font-size($input-font-size-sm);
+  line-height: $input-line-height-sm;
+  // @include border-radius($input-border-radius-sm);
+}
+
 .form-group {
   position: relative;
-  small {
+  small,
+  .form-text {
     color: $neutral-secondary;
-    line-height: $line-height-xs;
-  }
-  .input-rounded {
-    border-radius: 1.4em;
-    padding: $btn-padding-y $btn-padding-x-sm;
+    @include font-size($font-size-sm);
+    line-height: $line-height-sm;
   }
 
+  // Rounded input are limited to
+  .input-rounded {
+    &[type="text"],
+    &[type="search"] {
+      border-radius: 1.4em;
+      padding: $btn-padding-y $btn-padding-x-sm;
+    }
+  }
+
+  &-required {
+    label:not(.custom-control-label):not(.btn) {
+      &:after {
+        content: '*';
+        color: $negative-dark;
+      }
+    }
+  }
 }
 
 .form-text {
@@ -180,11 +204,12 @@ legend,
 //
 // Tweak just a few things for radios.
 .custom-control {
-  @include font-size($font-size-sm);
-  line-height: $line-height-sm;
-  min-height: $line-height-sm;
-  padding-top: .625rem;
-  padding-bottom: .625rem;
+  @include font-size($font-size-base);
+  line-height: $line-height-md;
+  min-height: $line-height-md;
+  padding-top: .5rem;
+  padding-bottom: .5rem;
+  padding-left: 2rem;
 
   .custom-control-input:checked ~ .custom-control-label {
     &::before {
@@ -207,8 +232,8 @@ legend,
 // Build the custom controls out of pseudo-elements.
 
 .custom-control-label {
-  @include font-size($font-size-sm);
-  line-height: $line-height-sm;
+  @include font-size($font-size-base);
+  line-height: $line-height-md;
   font-weight: $font-weight-normal; // custom-control-label should not be bold
   color: $input-color;
   position: relative;
@@ -218,7 +243,7 @@ legend,
   // Background-color and (when enabled) gradient
   &::before {
     position: absolute;
-    top: -2px;
+    top: 0;
     left: -($custom-control-gutter + $custom-control-indicator-size);
     display: block;
     margin: .125rem;
@@ -234,7 +259,7 @@ legend,
   // Foreground (icon)
   &::after {
     position: absolute;
-    top: -2px;
+    top: 0;
     left: -($custom-control-gutter + $custom-control-indicator-size);
     display: block;
     margin: 0;
@@ -293,8 +318,8 @@ legend,
 
     .card-title,
     .card-label {
-      @include font-size($font-size-sm);
-      line-height: $line-height-sm;
+      @include font-size($font-size-base);
+      line-height: $line-height-md;
       color: $input-color;
       margin-left: 0;
       margin-bottom: .5rem;
@@ -311,16 +336,27 @@ legend,
   }
 }
 
+// Custom select
+//
+.custom-select-sm {
+  background: $custom-select-background-sm;
+  padding-right: ($custom-select-padding-x-sm + $custom-select-indicator-padding-sm);
+}
+
 // switches
 //
 // Tweak a few things for switches
 .custom-switch {
-  padding-left: $custom-switch-width + $custom-control-gutter;
+  padding-left: 0;
 
   .custom-control-label {
+    width: 100%;
+    padding-right: $custom-switch-width + $custom-control-gutter;
     &::before {
-      top: calc(#{($line-height-md - .75rem) / 2});
-      left: -($custom-switch-width + $custom-control-gutter);
+      // Center vertically
+      top: calc(50% - (#{.75rem}/2));
+      right: 0;
+      left: auto;
       width: 2rem;
       height: .75rem;
       margin: 0 .25rem;
@@ -330,14 +366,17 @@ legend,
     }
 
     &::after {
-      top: calc(#{($line-height-md - $custom-control-indicator-size) / 2});
-      left: -($custom-switch-width + $custom-control-gutter);
+      // Center vertically
+      top: calc(50% - (#{$custom-switch-indicator-size}/2));
+      right: ($custom-switch-width/2);
+      left: auto;
       width: $custom-switch-indicator-size;
       height: $custom-switch-indicator-size;
       margin: 0;
       background-color: $custom-switch-indicator-handle;
+      border: 1px solid $neutral-stroke;
       border-radius: 50%;
-      box-shadow: 0 1px 4px 0 $overlay-subtle;
+      box-shadow: $shadow-moderate;
       @include transition(transform .15s ease-in-out, $custom-forms-transition);
 
     }
@@ -349,6 +388,7 @@ legend,
     }
     &::after {
       background-color: $custom-switch-indicator-checked-handle;
+      border-color: $custom-switch-indicator-checked-handle;
     }
   }
 
@@ -369,6 +409,7 @@ legend,
     // Active disabled handle state
     &:checked ~ .custom-control-label::after {
       background-color: $custom-switch-indicator-checked-handle-disabled;
+      border-color: $custom-switch-indicator-checked-handle-disabled;
       cursor: not-allowed;
     }
   }
@@ -388,13 +429,29 @@ legend,
 //
 .form-group-sm {
   label {
+    @include font-size($font-size-sm);
+    line-height: $line-height-sm;
+  }
+
+  small,
+  .form-text {
     @include font-size($font-size-xs);
     line-height: $line-height-xs;
   }
 
+  .valid-feedback,
+  .invalid-feedback {
+    line-height: $line-height-xs;
+    font-size: $font-size-xs;
+  }
+
+
   .input-rounded {
-    border-radius: 1rem;
-    padding: $btn-padding-y-sm $btn-padding-x-sm;
+    &[type="text"],
+    &[type="search"] {
+      border-radius: 1rem;
+      padding: $btn-padding-y-sm $btn-padding-x-sm;
+    }
   }
 
   .input-group-icon {
@@ -462,12 +519,12 @@ legend,
   }
 
   .custom-control {
-    line-height: $line-height-xs;
+    line-height: $line-height-sm;
   }
 
   .custom-control-label {
-    @include font-size($font-size-xs);
-    line-height: $line-height-xs;
+    @include font-size($font-size-sm);
+    line-height: $line-height-sm;
 
     // Background-color and (when enabled) gradient
     &::before {
@@ -498,7 +555,7 @@ legend,
 
   .file-drop-container {
     .help-text {
-      font-size: $font-size-xs;
+      font-size: $font-size-sm;
     }
   }
 
@@ -509,13 +566,17 @@ legend,
 //
 .form-group-lg {
   label {
-    @include font-size($font-size-base);
-    line-height: $line-height-md;
+    @include font-size($font-size-lg);
+    line-height: $line-height-lg;
   }
+
   .input-rounded {
+    &[type="text"],
+    &[type="search"] {
       border-radius: 1.75rem;
       padding: $btn-padding-y-lg $btn-padding-x-lg;
     }
+  }
 
   .input-group-icon {
     input {
@@ -583,8 +644,8 @@ legend,
   }
 
   .custom-control-label {
-    @include font-size($font-size-base);
-    line-height: $line-height-md;
+    @include font-size($font-size-lg);
+    line-height: $line-height-lg;
   }
 
   .custom-control-inline {
@@ -597,7 +658,7 @@ legend,
 
   .file-drop-container {
     .help-text {
-      font-size: $font-size-base;
+      font-size: $font-size-lg;
     }
   }
 }
@@ -626,8 +687,8 @@ legend,
     color: $input-color;
     margin-bottom: 1rem;
     text-align: center;
-    font-size: $font-size-sm;
-    line-height: $line-height-sm;
+    font-size: $font-size-base;
+    line-height: $line-height-md;
   }
 
   &.file-over {
@@ -648,7 +709,7 @@ legend,
   border-radius: $input-border-radius;
   border: 1px dashed $neutral-stroke;
   display: flex;
-  padding: calc(0.25rem - #{$input-border-width});
+  padding: calc(.5rem - #{$input-border-width});
   align-items: center;
 
   label {
@@ -657,8 +718,8 @@ legend,
 
   .help-text {
     color: $neutral-secondary;
-    font-size: $font-size-sm;
-    line-height: $line-height-sm;
+    font-size: $font-size-base;
+    line-height: $line-height-md;
     margin-left: .5rem;
     text-align: center;
   }
@@ -673,6 +734,11 @@ legend,
   }
 
   .file-selector-button {
+    label {
+      &:after {
+        content: none;
+      }
+    }
     input:focus {
       ~ .btn-secondary {
         border-color: $action;

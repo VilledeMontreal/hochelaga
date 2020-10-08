@@ -14,7 +14,7 @@
           "menuItemLabel": "Libellé"
         },
         {
-          "menuItemSeparator": false,
+          "menuItemSeparator": true,
           "class": false,
           "url": "#",
           "menuItemIcon": {
@@ -23,7 +23,7 @@
           "menuItemLabel": "Libellé long"
         },
         {
-          "menuItemSeparator": true,
+          "menuItemSeparator": false,
           "class": false,
           "url": "#",
           "menuItemIcon": {
@@ -39,15 +39,6 @@
             "icon-name": "icon-info"
           },
           "menuItemLabel": "Très long libellé"
-        },
-        {
-          "menuItemSeparator": true,
-          "class": false,
-          "url": "#",
-          "menuItemIcon": {
-            "icon-name": "icon-info"
-          },
-          "menuItemLabel": "Libellé"
         },
         {
           "menuItemSeparator": false,
@@ -83,7 +74,7 @@
           "menuItemLabel": "Libellé"
         },
         {
-          "menuItemSeparator": false,
+          "menuItemSeparator": true,
           "class": false,
           "url": "#",
           "menuItemIcon": {
@@ -92,7 +83,7 @@
           "menuItemLabel": "Libellé long"
         },
         {
-          "menuItemSeparator": true,
+          "menuItemSeparator": false,
           "class": false,
           "url": "#",
           "menuItemIcon": {
@@ -108,15 +99,6 @@
             "icon-name": "icon-info"
           },
           "menuItemLabel": "Très long libellé"
-        },
-        {
-          "menuItemSeparator": true,
-          "class": false,
-          "url": "#",
-          "menuItemIcon": {
-            "icon-name": "icon-info"
-          },
-          "menuItemLabel": "Libellé"
         },
         {
           "menuItemSeparator": false,
@@ -135,6 +117,75 @@
             "icon-name": "icon-info"
           },
           "menuItemLabel": "Disabled"
+        }
+      ]
+    },
+    {
+      "title": "Icons only",
+      "menuItemClass": "menu-items-icon-bar",
+      "menuItem": [
+        {
+          "menuItemSeparator": false,
+          "class": "active",
+          "url": "#",
+          "menuItemIcon": {
+            "icon-name": "icon-info"
+          },
+          "menuItemLabel": false
+        },
+        {
+          "menuItemSeparator": false,
+          "class": false,
+          "url": "#",
+          "menuItemIcon": {
+            "icon-name": "icon-info"
+          },
+          "menuItemLabel": false
+        },
+        {
+          "menuItemSeparator": false,
+          "class": false,
+          "url": "#",
+          "menuItemIcon": {
+            "icon-name": "icon-info"
+          },
+          "menuItemLabel": false
+        },
+        {
+          "menuItemSeparator": true,
+          "class": false,
+          "url": "#",
+          "menuItemIcon": {
+            "icon-name": "icon-info"
+          },
+          "menuItemLabel": false
+        },
+        {
+          "menuItemSeparator": false,
+          "class": false,
+          "url": "#",
+          "menuItemIcon": {
+            "icon-name": "icon-info"
+          },
+          "menuItemLabel": false
+        },
+        {
+          "menuItemSeparator": false,
+          "class": false,
+          "url": "#",
+          "menuItemIcon": {
+            "icon-name": "icon-info"
+          },
+          "menuItemLabel": false
+        },
+        {
+          "menuItemSeparator": false,
+          "class": "disabled",
+          "url": false,
+          "menuItemIcon": {
+            "icon-name": "icon-info"
+          },
+          "menuItemLabel": false
         }
       ]
     }

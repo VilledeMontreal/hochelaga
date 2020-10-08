@@ -1,15 +1,15 @@
 <div class="form-group {{ formGroupClass}}">
   {{^ formGroupNoLabel}}
-  <label for="{{formGroupInputID}}">{{ formGroupInputLabel}}{{^ formGroupInputRequired}}<span>Facultatif</span>{{/ formGroupInputRequired}}</label>
+  <label for="{{formGroupInputID}}">{{ formGroupInputLabel}}</label>
   {{/ formGroupNoLabel}}
-  <input type="{{formGroupInputType}}" class="form-control {{formGroupInputClass}}" id="{{ formGroupInputID }}" {{# formGroupInputPlaceholder}}placeholder="{{ formGroupInputPlaceholder.text}}"{{/ formGroupInputPlaceholder}}{{# formGroupInputState}} {{ formGroupInputState}}{{/ formGroupInputState}}{{# formGroupInputRequired}} required{{/ formGroupInputRequired}}>
+  <input type="{{formGroupInputType}}" class="form-control {{formGroupInputClass}}" id="{{ formGroupInputID }}" {{# formGroupInputPlaceholder}}placeholder="{{ formGroupInputPlaceholder.text}}"{{/ formGroupInputPlaceholder}}{{^formGroupInputError}}{{# formGroupInputHelpText}} aria-describedby="{{id}}"{{/ formGroupInputHelpText}}{{/formGroupInputError}}{{#formGroupInputError}} aria-describedby="{{id}}"{{/formGroupInputError}}{{# formGroupInputState}} {{ formGroupInputState}}{{/ formGroupInputState}}{{# formGroupInputRequired}} required{{/ formGroupInputRequired}}>
   {{^formGroupInputError}}
   {{# formGroupInputHelpText}}
-  <small id="textRequiredHelpBlock" class="form-text">{{ formGroupInputHelpText }}</small>
+  <small id="{{id}}" class="form-text">{{ text }}</small>
   {{/ formGroupInputHelpText}}
   {{/formGroupInputError}}
   {{# formGroupInputError}}
-  <div class="invalid-feedback">{{ formGroupInputError.text }}</div>
+  <div class="invalid-feedback" id="{{id}}">{{ formGroupInputError.text }}</div>
   {{/ formGroupInputError}}
   {{# formGroupProgress}}
   {{> components-progress-bar-item}}

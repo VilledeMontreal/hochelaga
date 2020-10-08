@@ -1,31 +1,28 @@
 {
   "inputTextSize": [
     {
-      "formGroupClass": "form-group-sm",
-      "formGroupInputID": "form-control-sm-one",
-      "formGroupInputLabel": "Small form group",
-      "formGroupInputPlaceholder": {
-        "text": "Placeholder for small form group"
-      },
-      "formGroupInputHelpText": "Message d'aide personnalisé."
-    },
-    {
       "formGroupClass": false,
       "formGroupInputID": "form-control-default-one",
       "formGroupInputLabel": "Default form group",
       "formGroupInputPlaceholder": {
         "text": "Placeholder for default form group"
       },
-      "formGroupInputHelpText": "Message d'aide personnalisé."
+      "formGroupInputHelpText": {
+        "id": "input-text-help-text-id",
+        "text": "Message d'aide personnalisé."
+      }
     },
     {
-      "formGroupClass": "form-group-lg",
-      "formGroupInputID": "form-control-lg-one",
-      "formGroupInputLabel": "Large form group",
-      "formGroupInputPlaceholder":{
-        "text": "Placeholder for large form group"
+      "formGroupClass": "form-group-sm",
+      "formGroupInputID": "form-control-sm-one",
+      "formGroupInputLabel": "Small form group",
+      "formGroupInputPlaceholder": {
+        "text": "Placeholder for small form group"
       },
-      "formGroupInputHelpText": "Message d'aide personnalisé."
+      "formGroupInputHelpText": {
+        "id": "input-text-sm-help-text-id",
+        "text": "Message d'aide personnalisé."
+      }
     }
   ],
   "inputTextShape": [
@@ -33,7 +30,7 @@
       "formGroupClass": false,
       "formGroupInputID": "form-control-input",
       "formGroupInputLabel": "Default squared input",
-      "formGroupInputRequired": true,
+      "formGroupInputRequired": false,
       "formGroupInputPlaceholder": false,
       "formGroupInputHelpText": false
     },
@@ -42,7 +39,7 @@
       "formGroupInputID": "form-control-rounded",
       "formGroupInputLabel": "Rounded input",
       "formGroupInputClass": "input-rounded",
-      "formGroupInputRequired": true,
+      "formGroupInputRequired": false,
       "formGroupInputPlaceholder": false,
       "formGroupInputHelpText": false
     }
@@ -52,7 +49,7 @@
       "formGroupClass": false,
       "formGroupInputID": "form-control-input-text-disabled",
       "formGroupInputLabel": "Disabled input",
-      "formGroupInputRequired": true,
+      "formGroupInputRequired": false,
       "formGroupInputPlaceholder": false,
       "formGroupInputHelpText": false,
       "formGroupInputState": "disabled"
@@ -62,7 +59,7 @@
       "formGroupInputID": "form-control-input-text-readonly",
       "formGroupInputLabel": "Read only input",
       "formGroupInputClass": false,
-      "formGroupInputRequired": true,
+      "formGroupInputRequired": false,
       "formGroupInputPlaceholder": false,
       "formGroupInputHelpText": false,
       "formGroupInputState": "readonly"
@@ -70,21 +67,7 @@
   ],
   "inputTextSizeError": [
     {
-      "formGroupClass": "form-group-sm",
-      "formGroupInputID": "form-control-sm-error-one",
-      "formGroupInputClass": "is-invalid",
-      "formGroupInputRequired": true,
-      "formGroupInputLabel": "Small invalid",
-      "formGroupInputPlaceholder": {
-        "text": "Placeholder for small form group"
-      },
-      "formGroupInputHelpText": "Message d'aide personnalisé.",
-      "formGroupInputError": {
-        "text": "Message d'erreur personnalisé."
-      }
-    },
-    {
-      "formGroupClass": false,
+      "formGroupClass": "form-group-required",
       "formGroupInputID": "form-control-default-error-one",
       "formGroupInputClass": "is-invalid",
       "formGroupInputRequired": true,
@@ -94,20 +77,22 @@
       },
       "formGroupInputHelpText": "Message d'aide personnalisé.",
       "formGroupInputError": {
+        "id": "input-text-error-id",
         "text": "Message d'erreur personnalisé."
       }
     },
     {
-      "formGroupClass": "form-group-lg",
-      "formGroupInputID": "form-control-lg-error-one",
+      "formGroupClass": "form-group-sm form-group-required",
+      "formGroupInputID": "form-control-sm-error-one",
       "formGroupInputClass": "is-invalid",
       "formGroupInputRequired": true,
-      "formGroupInputLabel": "Large invalid",
-      "formGroupInputPlaceholder":{
-        "text": "Placeholder for large form group"
+      "formGroupInputLabel": "Small invalid",
+      "formGroupInputPlaceholder": {
+        "text": "Placeholder for small form group"
       },
       "formGroupInputHelpText": "Message d'aide personnalisé.",
       "formGroupInputError": {
+        "id": "input-text-sm-error-id",
         "text": "Message d'erreur personnalisé."
       }
     }

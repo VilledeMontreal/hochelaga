@@ -1,0 +1,113 @@
+{
+  "navbarFixedTop": true,
+  "includeValidation": true,
+  "breadcrumbs": [
+    {
+      "url": "#",
+      "text": "Accueil"
+    },
+    {
+      "url": "#",
+      "text": "Événements"
+    },
+    {
+      "url": "#",
+      "text": "Taxonomie type"
+    }
+  ],
+  "documentHeading": false,
+  "pageClasses": false,
+  "state": false,
+  "heading": "Titre de l'événement pouvant s'afficher sur plusieurs lignes",
+  "updatedDate": false,
+  "content-header-extras": false,
+  "events-extras": {
+    "listClass": "pt-4 mb-lg-4",
+    "list": [
+      {
+        "hasIcon": true,
+        "icon-name": "icon-calendar",
+        "listItemAction": false,
+        "listItemLabel": "Date",
+        "listItemContent": [
+          {
+            "extraContent": [
+              {
+                "content": "Lundi 1 décembre 2020 à 9&nbsp;h&nbsp;00"
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  "lead": "<p>Amorce - Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi condimentum sollicitudin erat, quis convallis risus. Nullam posuere odio ligula, hendrerit suscipit ligula laoreet. Curabitur eleifend nulla purus, ut pharet urna ef id. Cras lacinia nisi id  (recommandé 300 caractères maximum).</p>",
+  "includePhotoswipe": false,
+  "module-content": {
+    "module-text": true,
+    "module-image-album": false,
+    "module-documents": false,
+    "module-partners": false,
+    "module-video": false,
+    "module-etiquette": {
+      "badges-links": [
+        {
+          "badge": "Taxonomie Type",
+          "badgeClass": "badge-secondary",
+          "badgeUrl": "#",
+          "badgeIconClass": false
+        },
+        {
+          "badge": "Taxonomie Catégorie principale",
+          "badgeClass": "badge-secondary",
+          "badgeUrl": "#",
+          "badgeIconClass": false
+        }
+      ]
+    },
+    "module-map": false,
+    "module-events": false
+  },
+  "sb-block-coordonnees": {
+    "sidebarTitleClasses": "d-none d-lg-block",
+    "sb-block-contact": [
+      {
+        "list": [
+          {
+            "hasIcon": true,
+            "icon-name": "icon-location-off",
+            "listItemAction": false,
+            "listItemLabel": "En ligne",
+            "listItemContent": {
+              "extraContent": [
+                {
+                  "content": "Court texte éditorial pour présenter la plateforme."
+                }
+              ],
+              "extraContentAction": {
+                "classes": "mt-1",
+                "actionClasses": false,
+                "url": "https://google.ca",
+                "text": "S'inscrire"
+              }
+            }
+          },
+          {
+            "hasIcon": true,
+            "icon-name": "icon-money",
+            "listItemAction": false,
+            "listItemLabel": "Tarif",
+            "listItemContent": [
+              {
+                "extraContent": {
+                  "content": "Droit d'entrée"
+                }
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  "sb-block-ms": false
+}

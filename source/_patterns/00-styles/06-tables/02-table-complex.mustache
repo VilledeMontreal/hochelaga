@@ -7,9 +7,9 @@
     <thead>
       <tr>
         <th scope="col">#</th>
-        <th class="sorting sorting-asc" scope="col" aria-sort="descending">Libellé</th>
-        <th class="sorting" scope="col">Libellé</th>
-        <th class="sorting" scope="col">Libellé</th>
+        <th class="sorting sorting-asc" scope="col" aria-sort="ascending">Libellé</th>
+        <th class="sorting" scope="col" aria-sort="none">Libellé</th>
+        <th class="sorting" scope="col" aria-sort="none">Libellé</th>
         <th scope="col">Action</th>
       </tr>
     </thead>
@@ -23,13 +23,9 @@
           {{#td2}}{{> components-input-text }}{{/td2}}
         </td>
         <td class="align-middle">
-          {{# td3}}
-          <div class="td-n-margin">
-            {{> components-badge}}
+          <div class="d-flex">
+          {{# td3}}{{> components-badge}}{{/ td3}}
           </div>
-            <!--{{# icons}}<div class="ml-1">{{> styles-icon-item}}</div>{{/ icons}}-->
-          </div>
-          {{/ td3}}
         </td>
         <td class="align-middle cell-sm">
           {{# td4}}
@@ -37,10 +33,12 @@
           <div class="td-n-margin">
             {{# default}}{{> components-button}}{{/ default}}
             {{# moreVertical}}
-            <button class="btn {{ buttonClass }}" type="button" aria-label="Label du bouton icon dans le aria-label." id="dropdownTableButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-              <span class="icon icon-more-vertical" aria-hidden="true"></span>
-            </button>
-            {{> components-dropdown}}
+            <div class="dropdown d-inline-block">
+              <button class="btn {{ buttonClass }}" type="button" aria-label="Label du bouton icon dans le aria-label." id="{{dropdownMenu.dropdownMenuID}}" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                <span class="icon icon-more-vertical" aria-hidden="true"></span>
+              </button>
+              {{> components-dropdown}}
+            </div>
             {{/ moreVertical}}
           </div>
           {{/ buttons}}

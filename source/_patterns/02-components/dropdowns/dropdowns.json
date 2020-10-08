@@ -22,9 +22,88 @@
       ]
     }
   },
-  "dropdownDivider": {
+  "dropdownBaseDescription": {
     "dropdownMenu": {
-      "dropdownMenuID": "dropdownDividerMenuID",
+      "dropdownMenuID": "dropdownBaseDescriptionMenuID",
+      "dropdownSection": [
+        {
+          "dropdownItem": [
+            {
+              "url": "#",
+              "dropdownItemLabel": "Libellé",
+              "dropdownItemDesc": "Description"
+            },
+            {
+              "url": "#",
+              "dropdownItemLabel": "Libellé",
+              "dropdownItemDesc": "Description"
+            },
+            {
+              "url": "#",
+              "dropdownItemLabel": "Libellé",
+              "dropdownItemDesc": "Description"
+            }
+          ]
+        }
+      ]
+    }
+  },
+  "dropdownSection": {
+    "dropdownMenu": {
+      "dropdownMenuID": "dropdownSectionMenuID",
+      "dropdownSection": [
+        {
+          "dropdownHeader": false,
+          "dropdownItem": [
+            {
+              "url": "#",
+              "dropdownItemLabel": "Libellé"
+            },
+            {
+              "url": "#",
+              "dropdownItemLabel": "Libellé"
+            },
+            {
+              "url": "#",
+              "dropdownItemLabel": "Libellé"
+            }
+          ],
+          "dropdownSectionHasDivider": true
+        },
+        {
+          "dropdownHeader": false,
+          "dropdownItem": [
+            {
+              "url": "#",
+              "dropdownItemLabel": "Libellé"
+            },
+            {
+              "url": "#",
+              "dropdownItemLabel": "Libellé"
+            }
+          ],
+          "dropdownSectionHasDivider": true
+        },
+        {
+          "dropdownHeader": false,
+          "dropdownItem": [
+            {
+              "url": "#",
+              "dropdownItemClass": "dropdown-action",
+              "dropdownItemIcon": {
+                "icon-name": "icon-plus-circle"
+              },
+              "dropdownItemLabel": "Ajouter [un élément]"
+            }
+          ],
+          "dropdownSectionHasDivider": false
+        }
+      ]
+    }
+  },
+  "dropdownSectionTitle": {
+    "dropdownMenu": {
+      "dropdownMenuID": "dropdownSectionMenuID",
       "dropdownSection": [
         {
           "dropdownHeader": "Titre de la section",
@@ -93,6 +172,80 @@
       ]
     }
   },
+  "dropdownBaseDescriptionHasIcons": {
+    "dropdownMenu": {
+      "dropdownMenuID": "dropdownBaseHasIconsMenuID",
+      "dropdownSection": [
+        {
+          "dropdownItem": [
+            {
+              "url": "#",
+              "dropdownItemIcon": {
+                "icon-name": "icon-tag"
+              },
+              "dropdownItemLabel": "Libellé",
+              "dropdownItemDesc": "Description"
+            },
+            {
+              "url": "#",
+              "dropdownItemIcon": {
+                "icon-name": "icon-tag"
+              },
+              "dropdownItemLabel": "Libellé",
+              "dropdownItemDesc": "Description"
+            },
+            {
+              "url": "#",
+              "dropdownItemIcon": {
+                "icon-name": "icon-tag"
+              },
+              "dropdownItemLabel": "Libellé",
+              "dropdownItemDesc": "Description"
+            }
+          ]
+        }
+      ]
+    }
+  },
+  "dropdownBaseStates": {
+    "dropdownMenu": {
+      "dropdownMenuID": "dropdownBaseStatesMenuID",
+      "dropdownSection": [
+        {
+          "dropdownItem": [
+            {
+              "url": "#",
+              "dropdownItemIcon": {
+                "icon-name": "icon-dot-bullet icon-color-info"
+              },
+              "dropdownItemLabel": "En cours"
+            },
+            {
+              "url": "#",
+              "dropdownItemIcon": {
+                "icon-name": "icon-dot-bullet icon-color-warning"
+              },
+              "dropdownItemLabel": "En pause"
+            },
+            {
+              "url": "#",
+              "dropdownItemIcon": {
+                "icon-name": "icon-dot-bullet icon-color-danger"
+              },
+              "dropdownItemLabel": "En révision"
+            },
+            {
+              "url": "#",
+              "dropdownItemIcon": {
+                "icon-name": "icon-dot-bullet icon-color-success"
+              },
+              "dropdownItemLabel": "Terminé"
+            }
+          ]
+        }
+      ]
+    }
+  },
   "dropdownDividerHasIcons": {
     "dropdownMenu": {
       "dropdownMenuID": "dropdownDividerHasIconsMenuID",
@@ -136,15 +289,276 @@
             },
             {
               "url": "#",
+              "dropdownItemClass": "dropdown-item-danger",
               "dropdownItemIcon": {
-                "icon-name": "icon-tag"
+                "icon-name": "icon-trash"
               },
               "dropdownItemLabel": "Libellé"
+            }
+          ],
+          "dropdownSectionHasDivider": true
+        },
+        {
+          "dropdownHeader": false,
+          "dropdownItem": [
+            {
+              "url": "#",
+              "dropdownItemClass": "dropdown-action",
+              "dropdownItemIcon": {
+                "icon-name": "icon-plus-circle"
+              },
+              "dropdownItemLabel": "Ajouter [un élément]"
             }
           ],
           "dropdownSectionHasDivider": false
         }
       ]
     }
-  }
+  },
+  "dropdownSectionComplex": {
+    "dropdownMenu": {
+      "dropdownMenuID": "dropdownSectionUserID",
+      "dropdownSection": [
+        {
+          "dropdownHeader": "Ajouter...",
+          "dropdownItem": [
+            {
+              "url": "#",
+              "dropdownItemAvatar": {
+                "userAvatar": "PR"
+              },
+              "dropdownItemLabel": "Patrick Roy",
+              "dropdownItemDesc": "Gardien de but"
+            },
+            {
+              "url": "#",
+              "dropdownItemAvatar": {
+                "userAvatar": "ZZ"
+              },
+              "dropdownItemLabel": "Zarley Zalapski",
+              "dropdownItemDesc": "Défenseur"
+            },
+            {
+              "url": "#",
+              "dropdownItemAvatar": {
+                "userAvatar": "IL"
+              },
+              "dropdownItemLabel": "Igor Larionov",
+              "dropdownItemDesc": "Centre"
+            },
+            {
+              "url": "#",
+              "dropdownItemClass": "dropdown-action",
+              "dropdownItemIcon": {
+                "icon-name": "icon-plus-circle"
+              },
+              "dropdownItemLabel": "Ajouter un utilisateur"
+            }
+          ],
+          "dropdownSectionHasDivider": true
+        },
+        {
+          "dropdownItem": [
+            {
+              "url": "#",
+              "dropdownItemIcon": {
+                "icon-name": "icon-star"
+              },
+              "dropdownItemLabel": "Ajouter aux favoris"
+            },
+            {
+              "url": "#",
+              "dropdownItemIcon": {
+                "icon-name": "icon-copy"
+              },
+              "dropdownItemLabel": "Copier le lien"
+            }
+          ],
+          "dropdownSectionHasDivider": true
+        },
+        {
+          "dropdownFilters":  {
+            "switches": [
+              {
+                "switchLabel": "Libellé #1",
+                "switchID": "customSwitchDropdown01",
+                "switchState": false
+              },
+              {
+                "switchLabel": "Libellé #2",
+                "switchID": "customSwitchDropdown02",
+                "switchState": false
+              }
+            ]
+          },
+          "dropdownSectionHasDivider": false
+        }
+      ]
+    }
+  },
+  "dropdownCheckbox": {
+    "dropdownMenu": {
+      "dropdownMenuID": "dropdownCheckboxID",
+      "dropdownMenuClass": false,
+      "dropdownFilters": {
+        "checkboxes": [
+          {
+            "class": "",
+            "id": "ddChckboxfilter1-1",
+            "label": "Libellé #1",
+            "state": false
+          },
+          {
+            "class": "",
+            "id": "ddChckboxfilter1-2",
+            "label": "Libellé #2",
+            "state": false
+          },
+          {
+            "class": "",
+            "id": "ddChckboxfilter1-3",
+            "label": "Libellé #3",
+            "state": false
+          }
+        ]
+      }
+    }
+  },
+  "dropdownRadio": {
+    "dropdownMenu": {
+      "dropdownMenuID": "dropdownRadioID",
+      "dropdownMenuClass": false,
+      "dropdownFilters": {
+        "radios": [
+          {
+            "class": "",
+            "id": "ddRadio-1",
+            "name": "ddRadiosGroup1",
+            "label": "Libellé #1",
+            "state": false
+          },
+          {
+            "class": "",
+            "id": "ddRadio-2",
+            "name": "ddRadiosGroup1",
+            "label": "Libellé #2",
+            "state": false
+          },
+          {
+            "class": "",
+            "id": "ddRadio-3",
+            "name": "ddRadiosGroup1",
+            "label": "Libellé #3",
+            "state": false
+          }
+        ]
+      }
+    }
+  },
+  "dropdownBtnGroup": [
+    {
+      "dropdownType": "dropdown",
+      "dropdownBtnID": "dropdownBtnID",
+      "dropdownBtnLabel": "Dropdown",
+      "dropdownMenu": {
+        "dropdownMenuID": "dropdownBaseMenuID",
+        "dropdownSection": [
+          {
+            "dropdownItem": [
+              {
+                "url": "#",
+                "dropdownItemLabel": "Libellé"
+              },
+              {
+                "url": "#",
+                "dropdownItemLabel": "Libellé"
+              },
+              {
+                "url": "#",
+                "dropdownItemLabel": "Libellé"
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "dropdownType": "dropup",
+      "dropdownBtnID": "dropupBtnID",
+      "dropdownBtnLabel": "Dropup",
+      "dropdownMenu": {
+        "dropdownMenuID": "dropupBaseMenuID",
+        "dropdownSection": [
+          {
+            "dropdownItem": [
+              {
+                "url": "#",
+                "dropdownItemLabel": "Libellé"
+              },
+              {
+                "url": "#",
+                "dropdownItemLabel": "Libellé"
+              },
+              {
+                "url": "#",
+                "dropdownItemLabel": "Libellé"
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "dropdownType": "dropright",
+      "dropdownBtnID": "droprightBtnID",
+      "dropdownBtnLabel": "Dropright",
+      "dropdownMenu": {
+        "dropdownMenuID": "droprightBaseMenuID",
+        "dropdownSection": [
+          {
+            "dropdownItem": [
+              {
+                "url": "#",
+                "dropdownItemLabel": "Libellé"
+              },
+              {
+                "url": "#",
+                "dropdownItemLabel": "Libellé"
+              },
+              {
+                "url": "#",
+                "dropdownItemLabel": "Libellé"
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "dropdownType": "dropleft",
+      "dropdownBtnID": "dropleftBtnID",
+      "dropdownBtnLabel": "Dropleft",
+      "dropdownMenu": {
+        "dropdownMenuID": "dropleftBaseMenuID",
+        "dropdownSection": [
+          {
+            "dropdownItem": [
+              {
+                "url": "#",
+                "dropdownItemLabel": "Libellé"
+              },
+              {
+                "url": "#",
+                "dropdownItemLabel": "Libellé"
+              },
+              {
+                "url": "#",
+                "dropdownItemLabel": "Libellé"
+              }
+            ]
+          }
+        ]
+      }
+    }
+  ]
 }

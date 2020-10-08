@@ -2,18 +2,18 @@
   {{# formGroupSelectLabel}}
   <label for="{{ formGroupSelectID }}">{{ formGroupSelectLabel }}</label>
   {{/ formGroupSelectLabel}}
-  <select class="form-control {{formGroupSelectClass}}" name="{{ formGroupSelectID }}" id="{{formGroupSelectID}}"{{# formGroupSelectRequired}} required{{/ formGroupSelectRequired}}> 
-    <option value="">{{ formGroupSelect.defaultOption}}</option> 
+  <select class="custom-select {{formGroupSelectClass}}" name="{{ formGroupSelectID }}" id="{{formGroupSelectID}}"{{^formGroupInputError}}{{# formGroupInputHelpText}} aria-describedby="{{id}}"{{/ formGroupInputHelpText}}{{/formGroupInputError}}{{#formGroupInputError}} aria-describedby="{{id}}"{{/formGroupInputError}}{{# formGroupSelectRequired}} required{{/ formGroupSelectRequired}}>
+    <option value="">{{ formGroupSelect.defaultOption}}</option>
     {{# formGroupSelect.options }}
       {{> components-option }}
     {{/ formGroupSelect.options }}
   </select>
   {{^formGroupInputError}}
   {{# formGroupInputHelpText}}
-  <small id="textRequiredHelpBlock" class="form-text">{{ formGroupInputHelpText }}</small>
+  <small id="{{id}}" class="form-text">{{ text }}</small>
   {{/ formGroupInputHelpText}}
   {{/formGroupInputError}}
   {{# formGroupInputError}}
-  <div class="invalid-feedback">{{ formGroupInputError.text }}</div>
+  <div class="invalid-feedback" id="{{id}}">{{ text }}</div>
   {{/ formGroupInputError}}
 </div>

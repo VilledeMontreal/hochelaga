@@ -16,6 +16,12 @@
   <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi condimentum sollicitudin erat, quis convallis risus.</p>
 </div>
 
+{{# module-emphasis }}
+<div class="content-module-stacked">
+  {{> patterns-emphasis }}
+</div>
+{{/ module-emphasis}}
+
 {{# module-image-album}}
 <div class="content-module-stacked">
   {{> components-gallery }}
@@ -43,8 +49,8 @@
 {{/ module-partners}}
 
 {{# module-video}}
-<h2>Vidéo (Titre éditorial)</h2>
-<div class="content-module-stacked">
+<div class="content-module-stacked" id="section-video-{{sectionID}}">
+  <h2>Vidéo (Titre éditorial)</h2>
   {{> styles-video-responsive-embed }}
 </div>
 {{/ module-video}}
@@ -61,16 +67,16 @@
 {{/ module-etiquette}}
 
 {{# module-map}}
-{{# location}}
-<div class="content-module-stacked" id="section-{{mapID}}">
+<div class="content-module-stacked" id="section-evenement-{{sectionMapID}}">
   <h2>{{heading}}</h2>
-  <div id="{{ mapID }}" class="h-map"></div>
+  {{# cards.card-item }}
+    {{> components-card-item-location}}
+  {{/ cards.card-item }}
 </div>
-{{/ location}}
 {{/ module-map }}
 
 {{# module-events}}
-<h2>Suggestions d'événements</h2>
+<h2>Suggestions</h2>
 <div class="content-module-stacked">
   {{> components-list-group-content}}
   {{# button-cta}}

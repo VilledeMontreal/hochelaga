@@ -38,22 +38,6 @@
             ]
           }
         ]
-      },
-      {
-        "hasIcon": true,
-        "icon-name": "icon-money",
-        "listItemAction": false,
-        "listItemLabel": "Gratuit",
-        "listItemContent": false
-      },
-      {
-        "hasIcon": true,
-        "icon-name": "icon-ticket",
-        "listItemAction": false,
-        "listItemLabel": "Entrée",
-        "listItemContent": {
-          "itemContent": "Sans billet"
-        }
       }
     ]
   },
@@ -67,6 +51,12 @@
     "module-video": false,
     "module-etiquette": {
       "badges-links": [
+        {
+          "badge": "Taxonomie Clientèle",
+          "badgeClass": "badge-secondary",
+          "badgeUrl": "#",
+          "badgeIconClass": false
+        },
         {
           "badge": "Taxonomie Type",
           "badgeClass": "badge-secondary",
@@ -103,9 +93,22 @@
                 ],
                 "extraContentAction": {
                   "classes": "mt-1",
-                  "actionClasses": "d-inline-flex is-external-link",
+                  "actionClasses": "is-external-link",
                   "url": "#",
                   "text": "Obtenir un itinéraire"
+                }
+              }
+            ]
+          },
+          {
+            "hasIcon": true,
+            "icon-name": "icon-money",
+            "listItemAction": false,
+            "listItemLabel": "Tarif",
+            "listItemContent": [
+              {
+                "extraContent": {
+                  "content": "Droit d'entrée"
                 }
               }
             ]

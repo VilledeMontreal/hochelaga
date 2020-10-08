@@ -1,19 +1,19 @@
 <div class="form-group {{ formGroupClass }}">
   {{^ formGroupNoLabel}}
-  <label for="{{formGroupInputID}}">{{ formGroupInputLabel}}{{^ formGroupInputRequired}}<span>Facultatif</span>{{/ formGroupInputRequired}}</label>
+  <label for="{{formGroupInputID}}">{{ formGroupInputLabel}}</label>
   {{/ formGroupNoLabel}}
   <div class="file-drop-container-v2 {{formGroupFileClass}}" id="{{formGroupFileID}}">
     <div class="file-selector-button">
-      <input type="file" id="{{ formGroupFileDropID}}" class="sr-only"{{# formGroupFileState}} {{formGroupFileState}}{{/ formGroupFileState}}>
-      <label class="btn btn-secondary btn-squared btn-sm" for="{{ formGroupFileDropID}}">{{ formGroupFileDropLabel }}</label>
+      <input type="file" id="{{ formGroupFileDropID}}" class="sr-only"{{^formGroupInputError}}{{# formGroupInputHelpText}} aria-describedby="{{id}}"{{/ formGroupInputHelpText}}{{/formGroupInputError}}{{#formGroupInputError}} aria-describedby="{{id}}"{{/formGroupInputError}}{{# formGroupFileState}} {{formGroupFileState}}{{/ formGroupFileState}}>
+      <label class="btn btn-secondary btn-squared" for="{{ formGroupFileDropID}}">{{ formGroupFileDropLabel }}</label>
     </div>
     <span class="help-text">{{ formGroupFileDropHelpText }}</span>
   </div>
   {{# formGroupInputHelpText}}
-  <small id="textRequiredHelpBlock" class="form-text">{{ formGroupInputHelpText }}</small>
+  <small id="{{id}}" class="form-text">{{ text }}</small>
   {{/ formGroupInputHelpText}}
   {{# formGroupInputError}}
-  <div class="invalid-feedback">{{ formGroupInputError.text }}</div>
+  <div class="invalid-feedback" id="{{id}}">{{ text }}</div>
   {{/ formGroupInputError}}
 
   {{# listUploadedFiles}}

@@ -246,6 +246,10 @@
   //
   $('[data-toggle="popover"]').popover();
 
+  // Toggle tooltip from data-toggle
+  //
+  $('[data-toggle="tooltip"]').tooltip();
+
 
   // Wizard
   //

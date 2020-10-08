@@ -95,7 +95,7 @@
         display: none;
         @include font-size($font-size-xs);
         line-height: $line-height-xs;
-        color: $neutral-stroke;
+        color: $neutral-secondary;
         font-weight: $font-weight-bold;
         margin-top: .5rem;
       }
@@ -103,6 +103,9 @@
     .disabled {
       background-color: transparent;
       cursor: not-allowed;
+      .menu-item-label {
+        color: $neutral-tertiary;
+      }
     }
     // Defines color and states for links
     a.menu-item:not(.disabled) {
@@ -150,9 +153,13 @@
     border-right: 1px solid $neutral-stroke;
     flex-direction: column;
     height: 100%;
-    width: 256px;
+    // The menu-items-column is fluid.
+    // Use inside grid or use a fixed size container.
+    //width: 256px;
     li {
       position: relative;
+      display: flex;
+      flex-direction: column;
       &.menu-item-separator {
         padding-bottom: 2rem;
         &:after {
@@ -167,7 +174,6 @@
       }
       .menu-item {
         min-width: auto;
-        padding: 1rem;
         width: 100%;
         flex-direction: row;
         .icon {
@@ -216,14 +222,16 @@
     padding: 1rem 0 1rem 1rem;
   }
 
-  &.menu-items-icon-bar {
+  &.menu-items-column.menu-items-icon-bar {
     width: 56px;
+  }
+
+  &.menu-items-icon-bar {
     li {
       .menu-item {
+        padding: 1rem;
         width: 100%;
-        .icon {
-          @include icon-color($neutral-stroke);
-        }
+        // Hide label if any
         .menu-item-label {
           display: none;
         }
@@ -249,36 +257,9 @@
         }
       }
     }
-
-    // DEPRECATED
-    // Revealing labels variants
-    &.menu-items-revealing-labels {
-      max-width: 56px;
-      overflow: hidden;
-      transition: max-width .1s ease-in-out;
-      li {
-        .menu-item {
-          .menu-item-label {
-            display: block;
-            white-space: nowrap;
-          }
-        }
-      }
-      @include hover-focus {
-        max-width: 250px;
-        transition-delay: .5s;
-        box-shadow: $dropdown-box-shadow;
-        li {
-          .menu-item {
-            .menu-item-label {
-              margin-left: 1rem;
-            }
-          }
-        }
-      }
-    }
   }
 
+  // DEPRECATED
   // Dark variant
   &.menu-items-reverse {
     background-color: $neutral-primary;
@@ -317,6 +298,7 @@
     }
   }
 
+  // DEPRECATED
   // Light variant
   &.menu-items-light,
   &.menu-items-underground {
@@ -365,8 +347,68 @@
   }
 }
 
-// Menu item content
+.sub-menu-items {
+  padding-left: 3.5rem;
+  @include font-size($font-size-sm);
+  line-height: $line-height-sm;
+  .sub-menu-item {
+    border-bottom: none;
+    padding: .625rem 1rem;
+  }
+  .sub-menu-item-label {
+    color: $neutral-secondary;
+    font-weight: $font-weight-bold;
+  }
+  a.sub-menu-item:not(.disabled) {
+    @include border-left-radius($border-radius);
+    @include hover-focus {
+      background-color: transparent;
+      .sub-menu-item-label {
+        color: $action;
+      }
+    }
+    &.active,
+    &:active {
+      background-color: $highlight-light;
+      .sub-menu-item-label {
+        color: $action;
+      }
+      &:before {
+        content: "";
+        position: absolute;
+        top: 0;
+        bottom: auto;
+        right: -1px;
+        height: 100%;
+        width: 2px;
+        background-color: $action;
+      }
+    }
+  }
 
+  .disabled {
+    .sub-menu-item-label {
+      color: $neutral-tertiary;
+    }
+  }
+
+}
+
+// Nav Wizard
+//
+.nav-wizard {
+  .circle {
+    font-weight: $font-weight-bold;
+  }
+  .disabled {
+    .circle {
+      color: $neutral-tertiary;
+    }
+  }
+}
+
+// Menu item content
+//
 .menu-item-content {
   width: 100%;
   z-index: 2;

@@ -7,13 +7,13 @@
   {{/ inputTextSize}}
 </div>
 
-<h4 class="pl-pattern-subtitle">Shapes</h4>
+<h4 class="pl-pattern-subtitle">Validation</h4>
 <div class="row">
-  {{# inputTextShape}}
+  {{# inputTextSizeError}}
   <div class="col-xs-6 col-md-4">
     {{> components-input-text }}
   </div>
-  {{/ inputTextShape}}
+  {{/ inputTextSizeError}}
 </div>
 
 <h4 class="pl-pattern-subtitle">States</h4>
@@ -35,13 +35,4 @@
       </div>
     </div>
   </div>
-</div>
-
-<h4 class="pl-pattern-subtitle">Validation</h4>
-<div class="row">
-  {{# inputTextSizeError}}
-  <div class="col-xs-6 col-md-4">
-    {{> components-input-text }}
-  </div>
-  {{/ inputTextSizeError}}
 </div>
