@@ -4,7 +4,14 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](http://keepachangelog.com/en/1.0.0/)
 and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.html).
 
-## [4.14.0] - unreleased
+
+## [4.14.1] - unreleased
+
+### Fixed
+- Components - Forms: For backward compatibility support .required and .form-group-required for required fields.
+
+
+## [4.14.0] - 2020-10-08
 
 ### Added
 - Utilities: New .w-256 and .w-440 sizing classes.
@@ -573,6 +580,7 @@ Main navbar, menu and footer are now in their own stylesheet. They will eventual
 The version 3 is now deprecated. Only bug fixes will be considered. Please refer to the old bitbucket repo https://bitbucket.org/villemontreal/boite-outils-web/.
 
 
+[4.14.0]: https://bitbucket.org/villemontreal/boite-outils4-web/src/4.14.0/
 [4.13.0]: https://bitbucket.org/villemontreal/boite-outils4-web/src/4.13.0/
 [4.12.0]: https://bitbucket.org/villemontreal/boite-outils4-web/src/4.12.0/
 [4.11.1]: https://bitbucket.org/villemontreal/boite-outils4-web/src/4.11.1/
