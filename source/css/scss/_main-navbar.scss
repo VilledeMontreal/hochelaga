@@ -170,6 +170,23 @@
           background-color: $negative-dark;
         }
       }
+
+      &.navbar-btn-danger {
+        .btn-label {
+          color: $negative-dark;
+        }
+        .icon {
+          @include icon-color($negative-dark);
+        }
+        @include hover-focus {
+          .btn-label {
+            color: $negative;
+          }
+          .icon {
+            @include icon-color($negative);
+          }
+        }
+      }
     }
 
     // Dropdown
