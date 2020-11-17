@@ -1,35 +1,5 @@
 .modal {
-  /*
-  &.modal-left-pane,
-  &.modal-right-pane {
-    &.fade {
-      opacity: 1;
-    }
-    &.fade:not(.show) {
-      opacity: .9;
-    }
 
-    &.show .modal-dialog {
-      transform: translate(0, 0);
-    }
-
-  }
-
-  // Left-pane behavior
-  &.modal-left-pane {
-    .modal-dialog {
-      transform: translate(-100%, 0);
-    }
-  }
-
-  // Right-pane behavior
-  &.modal-right-pane {
-    .modal-dialog {
-      transform: translate(100%, 0);
-    }
-  }
-  */
-  
   .btn {
     @extend .btn-squared;
   }
@@ -42,27 +12,23 @@
     padding: 1rem;
     flex: 0 0 auto; // IE need this
     .btn-close {
-      position: absolute;
-      top: 1rem;
-      right: 1rem;
-      z-index: $zindex-modal + 1;
       .icon {
-        @include icon-color($neutral-primary);
+        @include icon-color($neutral-secondary);
       }
       svg {
         width: 24px;
         height: 24px;
         path {
-          fill: $neutral-primary;
+          fill: $neutral-secondary;
         }
       }
       &:hover {
         .icon {
-          @include icon-color($neutral-secondary);
+          @include icon-color($neutral-primary);
         }
         svg {
           path {
-            fill: $secondary;
+            fill: $neutral-primary;
           }
         }
       }
@@ -89,21 +55,13 @@
     }
   }
 
-  // Modal alert section with bg and icon
-  // Background-image is provided with inline styles for better customization.
-  .modal-alert-icon {
-    background-color: $danger;
-    background-position: center center;
-    background-repeat: no-repeat;
-    background-size: cover;
+  // Modal icon
+  // Modal-alert-icon is deprecated
+  .modal-alert-icon,
+  .modal-icon {
     display: flex;
     justify-content: center;
-    margin-bottom: 2rem;
-    padding: 5.5rem;
-    .icon {
-      @include icon-color($white);
-      @include icon-size(5rem);
-    }
+    margin-bottom: 1rem;
   }
 
   .modal-footer {
@@ -181,14 +139,14 @@
       max-height: 100%;
     }
 
-    // Centered 
+    // Centered
     .modal-dialog-centered {
       min-height: 100%;
-    
+
       &::before {
         height: 100vh;
       }
-    
+
       // Ensure `.modal-body` shows scrollbar (IE10/11)
       &.modal-dialog-scrollable {
         height: 100%;

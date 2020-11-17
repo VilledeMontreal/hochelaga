@@ -5,7 +5,19 @@ The format is based on [Keep a Changelog](http://keepachangelog.com/en/1.0.0/)
 and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.html).
 
 
-## [4.14.1] - unreleased
+## [4.15.0] - unreleased
+
+### Added
+- Components - Main-navbar: navbar-btn danger variant.
+- Templates - Accueil: Mesures d'urgence intermediaire.
+
+### Changed
+- Components - Content header - Mesures d'urgence: Icon size.
+- Components - Main-navbar: Update mesures d'urgences modal with new modal-centred-icon.
+- Components - Modals: Mesures d'urgences becomes modal-centred-icon with normalized styles.
+
+
+## [4.14.1] - 2020-10-13
 
 ### Fixed
 - Components - Forms: For backward compatibility support .required and .form-group-required for required fields.
@@ -579,7 +591,7 @@ Main navbar, menu and footer are now in their own stylesheet. They will eventual
 
 The version 3 is now deprecated. Only bug fixes will be considered. Please refer to the old bitbucket repo https://bitbucket.org/villemontreal/boite-outils-web/.
 
-
+[4.14.1]: https://bitbucket.org/villemontreal/boite-outils4-web/src/4.14.1/
 [4.14.0]: https://bitbucket.org/villemontreal/boite-outils4-web/src/4.14.0/
 [4.13.0]: https://bitbucket.org/villemontreal/boite-outils4-web/src/4.13.0/
 [4.12.0]: https://bitbucket.org/villemontreal/boite-outils4-web/src/4.12.0/
