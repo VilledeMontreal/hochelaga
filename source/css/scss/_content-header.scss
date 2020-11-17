@@ -12,11 +12,11 @@
   .content-header-extras {
     @include font-size($font-size-sm);
     line-height: $line-height-sm;
-    
+
     .content-header-extras-item {
       display: flex;
       flex-wrap: wrap;
-      
+
       + .content-header-extras-item {
         margin-top: .5rem;
       }
@@ -96,7 +96,7 @@
       @include make-container();
       max-width: map-get($container-max-widths, xl);
     }
-  
+
   }
 
   &.document-heading-fullwidth {
@@ -138,7 +138,6 @@
 
     .icon {
       @include icon-color($white);
-      @include icon-size(5rem);
     }
 
     .document-heading-header {
@@ -161,7 +160,7 @@
       font-weight: $font-weight-bold;
     }
 
-    
+
     // subtitle
     .document-heading-subtitle {
       @include font-size($font-size-base);
@@ -169,7 +168,7 @@
       color: $white;
       font-weight: $font-weight-bold;
     }
-  
+
   }
 
   .document-heading-background {
@@ -222,7 +221,7 @@
     font-weight: $font-weight-bold;
     margin-bottom: .5rem;
   }
-  
+
   // subtitle
   .document-heading-subtitle {
     @include font-size($font-size-base);
@@ -398,7 +397,7 @@
   }
 
   @include media-breakpoint-up(lg) {
-    .container-btn {  
+    .container-btn {
       text-align: right;
     }
   }

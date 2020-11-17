@@ -11,7 +11,7 @@
     {{/ media.copyright }}
   </div>
   {{/ documentHeadingImageUrl}}
-  
+
   {{# documentHeadingFullWidth}}<div class="container position-relative">{{/ documentHeadingFullWidth}}
     {{# documentHeadingFullWidth}}
     <div class="row document-heading-header">
@@ -22,9 +22,9 @@
           {{# heading-surtitle}}
           <div class="document-heading-surtitle{{# isNormal}} font-weight-normal{{/ isNormal}}">{{text}}</div>
           {{/ heading-surtitle}}
-          
+
           <h1 class="{{^headingClass}}h1{{/headingClass}}{{#headingClass}} {{headingClass}}{{/headingClass}}">{{{ heading }}}</h1>
-          
+
           {{# heading-fake-title}}
           <h2 class="h1">{{ heading-fake-title }}</h2>
           {{/ heading-fake-title}}
@@ -83,7 +83,9 @@
           <div class="d-flex justify-content-center mb-4">
             <span class="icon icon-sante-et-securite-publiques" aria-hidden="true"></span>
           </div>
+          {{# heading-surtitle}}
           <div class="document-heading-surtitle">{{heading-surtitle}}</div>
+          {{/ heading-surtitle}}
           <h1 class="sr-only">Bienvenue sur Montréal.ca</h1>
           <h2 class="h3">{{{ heading }}}</h2>
           {{# heading-subtitle}}
