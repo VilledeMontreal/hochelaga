@@ -250,11 +250,6 @@
   //
   $('[data-toggle="tooltip"]').tooltip();
 
-  // EM close trigger
-  $('#emMessageBar').on('close.bs.alert', function () {
-    $('.message-bar').toggleClass('d-none');
-  })
-
 
   // Wizard
   //
