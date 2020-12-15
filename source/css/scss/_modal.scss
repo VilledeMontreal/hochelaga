@@ -65,19 +65,21 @@
   }
 
   .modal-footer {
+    display: flex;
     flex-wrap: wrap;
-    justify-content: space-between;
     padding: 1rem;
-    a {
-      line-height: $modal-title-line-height;
-    }
 
+    // Easily place margin between footer elements
+    > :not(:first-child) { margin-left: .5rem; }
+    > :not(:last-child) { margin-right: .5rem; }
+
+    // DEPRECATED
     .modal-footer-buttons {
-      margin-left: auto;
+      display: flex;
       justify-content: end;
-      button + button {
-        margin-left: 1rem;
-      }
+        // Easily place margin between footer elements
+        > :not(:first-child) { margin-left: .5rem; }
+        > :not(:last-child) { margin-right: .5rem; }
     }
   }
 
