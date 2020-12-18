@@ -1,5 +1,5 @@
 ---
-title: Cards
+title: Card content
 ---
 
 Les cartes contiennent du contenu et des actions à propos d'un seul sujet.

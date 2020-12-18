@@ -84,10 +84,18 @@
     <div class="navbar-div ml-auto">
       <div class="d-flex align-items-center">
         {{# mesuresUrgences }}
+        {{^ emMax }}
+        <a href="#" class="btn navbar-btn navbar-btn-icon navbar-btn-danger btn-hide-label-lg ">
+          <span class="icon icon-error" aria-hidden="true"></span>
+          <span class="btn-label">Mesures d'urgence</span>
+        </a>
+        {{/ emMax}}
+        {{# emMax}}
         <button type="button" class="btn navbar-btn navbar-btn-icon navbar-btn-alert btn-hide-label-lg navbar-alert-toggler" id="navbar-alert" data-toggle="modal" data-target="#mesureUrgenceModal">
           <span class="icon icon-error" aria-hidden="true"></span>
           <span class="btn-label">Mesures d'urgence</span>
         </button>
+        {{/ emMax}}
         {{/ mesuresUrgences }}
         <button type="button" class="btn navbar-btn navbar-btn-icon btn-hide-label-md navbar-search-toggler" id="navbarSearch" aria-haspopup="true" aria-expanded="false" aria-controls="navbar-search">
           <span class="icon icon-search" aria-hidden="true"></span>
@@ -174,30 +182,32 @@
   <div class="overlay"></div>
 </nav>
 {{# mesuresUrgences}}
+{{# emMax}}
 <!-- Modal Mesure d'urgence -->
-<div class="modal modal-alert fade" id="mesureUrgenceModal" tabindex="-1" role="dialog" aria-labelledby="mesureUrgenceModalLabel" aria-hidden="true">
+<div class="modal fade" id="mesureUrgenceModal" tabindex="-1" role="dialog" aria-labelledby="mesureUrgenceModalLabel" aria-hidden="true">
   <div class="modal-dialog modal-dialog-centered" role="document">
     <div class="modal-content">
       <div class="modal-header">
-        <h5 class="modal-title" id="mesureUrgenceModalLabel">Mesure d'urgence</h5>
+        <h5 class="modal-title" id="mesureUrgenceModalLabel">Mesures d'urgences</h5>
         <button type="button" class="btn-close close" data-dismiss="modal" aria-label="Close">
           {{> styles-icon-item("icon-name": "icon-x")}}
         </button>
       </div>
-      <div class="modal-body">
-        <div class="modal-alert-icon">
-          <span class="icon icon-sante-et-securite-publiques" aria-hidden="true"></span>
+      <div class="modal-body text-center">
+        <div class="modal-icon">
+          <span class="icon icon-sante-et-securite-publiques icon-color-danger" aria-hidden="true"></span>
         </div>
-        <div class="modal-date-time">Le <time datetime="2020-07-23T16:34:00-0400">23 juillet 2020 à 12:34</time></div>
         <h2 class="h3">Titre de la mesure d'urgence</h2>
-        <p>Pour votre bien-être et votre santé, vous êtes encouragé à suivre les mesures préventives suggérées.</p>
+        <p>Duo sit et sit eos clita et diam.</p>
       </div>
       <div class="modal-footer">
         <div class="modal-footer-buttons">
-          <button type="submit" class="btn btn-primary">Se préparer et se protéger</button>
+          <button type="button" class="btn btn-tertiary" data-dismiss="modal" aria-label="Close">Fermer</button>
+          <button type="button" class="btn btn-primary">S'informer</button>
         </div>
       </div>
     </div>
   </div>
 </div>
+{{/ emMax}}
 {{/ mesuresUrgences}}

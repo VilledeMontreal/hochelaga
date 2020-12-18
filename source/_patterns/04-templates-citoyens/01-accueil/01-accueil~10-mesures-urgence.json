@@ -1,25 +1,23 @@
 {
-  "mesuresUrgences": true,
+  "mesuresUrgences": {
+    "emMax": true
+  },
   "documentHeadingClass": "document-heading-danger",
   "documentHeadingImageUrl": false,
   "media": false,
-  "heading-surtitle": "Le 23 mai 2020 à 19 h 30",
-  "heading": "Titre de la mesure d'urgence",
-  "headingClass": "h3",
-  "headingLead": "Pour votre bien-être et votre santé, vous êtes encouragé à suivre les mesures préventives suggérées.",
   "has-search-form": false,
   "has-quick-links": false,
   "documentHeadingOverride": {
     "mesures-urgence": {
-      "heading-surtitle": "Le 23 mai 2020 à 19 h 30",
+      "heading-surtitle": false,
       "heading": "Titre de la mesure d'urgence",
-      "heading-subtitle": "<p>Pour votre bien-être et votre santé, vous êtes encouragé à suivre les mesures préventives suggérées.</p>",
+      "heading-subtitle": "<p>Vero sanctus no sadipscing consetetur rebum consetetur clita dolor clita.</p>",
       "button-cta": {
         "data-link-title": "Titre de la mesure d'urgence",
         "buttonAsLink": true,
         "buttonClass": "btn-primary-reverse",
         "buttonUrl": "#",
-        "buttonText": "Se préparer et se protéger"
+        "buttonText": "S'informer"
       }
     }
   }
