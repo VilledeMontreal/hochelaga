@@ -1,3 +1,6 @@
-<div class="spinner-border {{spinnerClass}}" role="status">
-  <span class="sr-only">Loading...</span>
+<div class="spinner-container">
+  {{> components-spinner-element}}
+  {{# spinnerText}}
+  <div class="spinner-text">{{spinnerText}}</div>
+  {{/ spinnerText}}
 </div>

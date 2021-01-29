@@ -6,7 +6,21 @@
   to { transform: rotate(360deg); }
 }
 
+.spinner-container {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  padding: 2rem;
+}
+
+.spinner-text {
+  @extend .font-size-sm-interface;
+  color: $body-color;
+  margin-top: 1rem;
+}
+
 .spinner-border {
+  color: $action;
   display: inline-block;
   width: $spinner-width;
   height: $spinner-height;
@@ -16,6 +30,13 @@
   // stylelint-disable-next-line property-blacklist
   border-radius: 50%;
   animation: spinner-border .75s linear infinite;
+
+  &.spinner-reversed {
+    color: $action-lighter;
+    ~ .spinner-text {
+      color: $white;
+    }
+  }
 }
 
 .spinner-border-sm {
