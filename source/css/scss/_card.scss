@@ -222,19 +222,24 @@
     text-align: center;
     .card-img-top {
       margin: 2rem auto 0 auto;
-      width: 10rem;
+      width: 8rem;
       height: auto;
-      max-width: 10rem;
+      max-width: 8rem;
     }
     .card-body {
+      .card-title,
+      .card-text-interface {
+        margin-bottom: .5rem;
+      }
       *:last-child {
         margin-bottom: 0;
       }
     }
-    .card-title {
-      @include font-size($h3-font-size);  // 24/32
-      line-height: 2rem;
+
+    img ~ .card-body {
+      padding-top: 1rem;
     }
+
   }
 
   // Featured member
