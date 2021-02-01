@@ -9,9 +9,11 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 
 ### Added
 - Components - spinner: spinner-reversed variant.
+- Components - Card - Profile: Image profile placeholder.
 
 ### Changed
 - Components - Spinner: size, default color and optionnal text.
+- Components - Card - Profile: Styles + subtitle
 
 
 ## [4.15.0] - 2020-12-17
