@@ -1,0 +1,111 @@
+{
+  "navbarFixedTop": true,
+  "pageClasses": false,
+  "includeValidation": true,
+  "breadcrumbs": false,
+  "sidebarRight": false,
+  "heading": "Titre de la collecte",
+  "content-header-extras": {
+    "updatedDate": {
+      "dateTimeText": "2 février 2021",
+      "dateTimeFormat": "2021-02-02"
+    },
+    "linkedContent": {
+      "linkedContentItem": [
+        {
+          "url": "#",
+          "label": "Sujet"
+        }
+      ]
+    }
+  },
+  "lead": "<p>Amorce - Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi condimentum sollicitudin erat, quis convallis risus. Nullam posuere odio ligula, hendrerit suscipit ligula laoreet. Curabitur eleifend nulla purus, ut pharet urna ef id. Cras lacinia nisi id  (recommandé 300 caractères maximum).</p>",
+  "collecteArrContent": {
+    "selectedArrondissement": {
+      "arrondissement": "Nom-de-l'Arrondissement"
+    },
+    "module-text": true,
+    "module-collapse": {
+      "moduleTitle": "Matières acceptées",
+      "collapsibleItem": [
+        {
+          "title": "Titre #1",
+          "content": "Collapsible content",
+          "block-id": "collecte-item-1",
+          "heading-id": "collecte-heading-1",
+          "collapsible-default-content": "<ul><li>Item</li><li>Item</li><li>Item</li><li>Item</li></ul>"
+        },
+        {
+          "title": "Titre #2",
+          "content": "Collapsible content",
+          "block-id": "collecte-item-2",
+          "heading-id": "collecte-heading-2",
+          "collapsible-default-content": "<ul><li>Item</li><li>Item</li><li>Item</li><li>Item</li></ul>"
+        },
+        {
+          "title": "Titre #3",
+          "content": "Collapsible content",
+          "block-id": "collecte-item-3",
+          "heading-id": "collecte-heading-3",
+          "collapsible-default-content": "<ul><li>Item</li><li>Item</li><li>Item</li><li>Item</li></ul>"
+        }
+      ]
+    },
+    "module-list-item": [
+      {
+        "moduleTitle": "Matières refusées",
+        "listItem": [
+          {
+            "text": "Item"
+          },
+          {
+            "text": "Item"
+          },
+          {
+            "text": "Item"
+          },
+          {
+            "text": "Item"
+          }
+        ]
+      },
+      {
+        "moduleTitle": "Contenants acceptés",
+        "listItem": [
+          {
+            "text": "Item"
+          },
+          {
+            "text": "Item"
+          },
+          {
+            "text": "Item"
+          },
+          {
+            "text": "Item"
+          }
+        ]
+      }
+    ],
+    "module-list-reference": {
+      "listGroupClass": "list-group-lg list-group-allow-ext-icon",
+      "listGroup": [
+        {
+          "url": "#",
+          "text": "Lien de référence interne",
+          "class": false
+        },
+        {
+          "url": "#",
+          "text": "Lien de référence interne",
+          "class": false
+        },
+        {
+          "url": "https://perdu.com",
+          "text": "Lien externe (site externe)",
+          "class": false
+        }
+      ]
+    }
+  }
+}
