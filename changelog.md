@@ -10,11 +10,16 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 ### Added
 - Components - spinner: spinner-reversed variant.
 - Components - Card - Profile: Image profile placeholder.
+- Components - Navigation - Nav filters.
 - Templates - Collecte: New Collecte template and variants.
 
 ### Changed
 - Components - Spinner: size, default color and optionnal text.
-- Components - Card - Profile: Styles + subtitle
+- Components - Card - Profile: Styles + subtitle.
+- Templates - Index - No Filters: New index template variant (No filters).
+
+### Deprecated
+- Components - Navigation - Sub nav
 
 
 ## [4.15.0] - 2020-12-17
