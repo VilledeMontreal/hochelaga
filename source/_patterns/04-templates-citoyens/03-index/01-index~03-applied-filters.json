@@ -11,7 +11,7 @@
     "filters":[
       {
         "chipClass": "active",
-        "chipLabel": "Filtre sélectionné (4)",
+        "chipLabel": "Arrondissements (4)",
         "dropdownMenu": {
           "dropdownMenuID": "chipFiltre1Dropdown",
           "dropdownSection": [
@@ -164,7 +164,20 @@
       "chipID": "chipMoreFiltersModal",
       "is-dropdown": false,
       "is-modal": true,
-      "modalId": "moreFiltersModalID"
+      "modalId": "moreFiltersModalID",
+      "filters": [
+        {
+          "title": "Filtre supplémentaire #1"
+        },
+        {
+          "title": "Libellé filtre sélectionné (1)",
+          "checkboxes": [
+            {
+              "state": "checked"
+            }
+          ]
+        }
+      ]
     }
   },
   "filtersApplied": {
