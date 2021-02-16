@@ -1,0 +1,213 @@
+{
+  "navbarFixedTop": true,
+  "pageClasses": false,
+  "includeValidation": true,
+  "breadcrumbs": [
+    {
+      "url": "#",
+      "text": "Accueil"
+    },
+    {
+      "url": "#",
+      "text": "Élus"
+    }
+  ],
+  "header-in-container": false,
+  "heading": "Prénom Nom",
+  "headingImg": {
+    "src": "https://res.cloudinary.com/villemontreal/image/upload/w_348,ar_1,c_fill,q_auto,f_auto,dpr_auto/v1/portail/vaul8inwolg5axbehf2b.jpg",
+    "alt": "Valérie Plante, mairesse de Montréal."
+  },
+  "module-content": [
+    {
+      "content": {
+        "title": "Responsabilités",
+        "list": [
+          {
+            "hasIcon": true,
+            "icon-name": "icon-dot-bullet",
+            "listItemAction": false,
+            "listItemLabel": "Role de fonction",
+            "listItemContent": [
+              {
+                "extraContentAction": {
+                  "url": "#",
+                  "text": "Conseil, comité ou commission"
+                }
+              },
+              {
+                "extraContent": [
+                  {
+                    "content": "Stet diam amet duo diam dolor, nonumy dolore lorem clita voluptua, amet consetetur kasd dolore."
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "hasIcon": true,
+            "icon-name": "icon-dot-bullet",
+            "listItemAction": false,
+            "listItemLabel": "Role de fonction",
+            "listItemContent": {
+              "extraContentAction": {
+                "url": "#",
+                "text": "Conseil, comité ou commission"
+              },
+              "extraContent": false
+            }
+          },
+          {
+            "hasIcon": true,
+            "icon-name": "icon-dot-bullet",
+            "listItemAction": false,
+            "listItemLabel": "Role de fonction",
+            "listItemContent": {
+              "extraContentAction": {
+                "url": "#",
+                "text": "Conseil, comité ou commission"
+              },
+              "extraContent": false
+            }
+          }
+        ]
+      }
+    },
+    {
+      "content": {
+        "title": "Autres fonctions",
+        "list": [
+          {
+            "hasIcon": true,
+            "icon-name": "icon-dot-bullet",
+            "listItemAction": false,
+            "listItemLabel": false,
+            "listItemContent": {
+              "itemContent": "Ea tempor stet vero stet diam. Et ipsum diam ipsum."
+            }
+          },
+          {
+            "hasIcon": true,
+            "icon-name": "icon-dot-bullet",
+            "listItemAction": false,
+            "listItemLabel": false,
+            "listItemContent": {
+              "itemContent": "Ea tempor stet vero stet diam. Et ipsum diam ipsum."
+            }
+          },
+          {
+            "hasIcon": true,
+            "icon-name": "icon-dot-bullet",
+            "listItemAction": false,
+            "listItemLabel": false,
+            "listItemContent": {
+              "itemContent": "Ea tempor stet vero stet diam. Et ipsum diam ipsum."
+            }
+          }
+        ]
+      }
+    }
+  ],
+  "sidebarRight": true,
+  "sidebarClasses": false,
+  "sb-classes": "",
+  "sb-block-coordonnees": {
+    "sb-block-contact": [
+      {
+        "content": {
+          "list": [
+            {
+              "hasIcon": true,
+              "icon-name": "icon-location",
+              "listItemAction": false,
+              "listItemLabel": "Nom du lieu",
+              "listItemContent": {
+                "extraContent": [
+                  {
+                    "class": "font-weight-bold",
+                    "content": "Bureau administratif (optionnel)"
+                  },
+                  {
+                    "content": "1441, rue Saint-Urbain<br>4e étage<br>Montréal (Québec) H2X 2M6"
+                  }
+                ]
+              }
+            },
+            {
+              "hasIcon": true,
+              "icon-name": "icon-phone",
+              "listItemAction": false,
+              "listItemLabel": "514 555-5555"
+            },
+            {
+              "hasIcon": true,
+              "icon-name": "icon-email",
+              "listItemAction": true,
+              "url": "mailto:test@montreal.ca",
+              "listItemLabel": "Envoyer un courriel"
+            }
+          ]
+        }
+      },
+      {
+        "content": {
+          "list": [
+            {
+              "hasIcon": true,
+              "icon-name": "icon-location",
+              "listItemAction": false,
+              "listItemLabel": "Nom du lieu",
+              "listItemContent": {
+                "extraContent": [
+                  {
+                    "content": "1441, rue Saint-Urbain<br>4e étage<br>Montréal (Québec) H2X 2M6"
+                  }
+                ]
+              }
+            },
+            {
+              "hasIcon": true,
+              "icon-name": "icon-phone",
+              "listItemAction": false,
+              "listItemLabel": "514 555-5555"
+            },
+            {
+              "hasIcon": true,
+              "icon-name": "icon-email",
+              "listItemAction": true,
+              "url": "mailto:test@montreal.ca",
+              "listItemLabel": "Envoyer un courriel"
+            }
+          ]
+        }
+      },
+      {
+        "content": {
+          "list": [
+            {
+              "hasIcon": true,
+              "icon-name": "icon-social-facebook",
+              "listItemAction": true,
+              "url": "https://facebook.com",
+              "listItemLabel": "Facebook"
+            },
+            {
+              "hasIcon": true,
+              "icon-name": "icon-social-linkedin",
+              "listItemAction": true,
+              "url": "https://linkedin.com",
+              "listItemLabel": "LinkedIn"
+            },
+            {
+              "hasIcon": true,
+              "icon-name": "icon-social-twitter",
+              "listItemAction": true,
+              "url": "https://twitter.com",
+              "listItemLabel": "Twitter"
+            }
+          ]
+        }
+      }
+    ]
+  }
+}

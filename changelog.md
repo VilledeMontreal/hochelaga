@@ -12,12 +12,14 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 - Components - Card - Profile: Image profile placeholder.
 - Components - Navigation - Nav filters.
 - Templates - Collecte: New Collecte template and variants.
+- Templates - Élu et Profil: New Profil template. Refactor under Élu et profil directory.
 
 ### Changed
 - Components - Forms - Switch: Colors adjustement to inactive, inactive disabled and active disabled states.
 - Components - Spinner: size, default color and optionnal text.
 - Components - Card - Profile: Styles + subtitle.
 - Templates - Index - No Filters: New index template variant (No filters).
+- Templates - Élu et profil: Profil templates is based on the Élu template.
 
 ### Deprecated
 - Components - Navigation - Sub nav

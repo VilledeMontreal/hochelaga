@@ -1,0 +1,147 @@
+{
+  "breadcrumbs": false,
+  "extras": false,
+  "headingImg": {
+    "src": "https://picsum.photos/id/1005/350/350",
+    "alt": "Alt text"
+  },
+  "module-content": [
+    {
+      "content": {
+        "title": "Responsabilités",
+        "description": "<p>Description obligatoire limitée à 300 caractères. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc malesuada molestie sapien ut elementum. Etiam maximus congue dolor nec bibendum. Ut vel commodo ex. Sed convallis nibh ex, ac eleifend nulla varius et. Nunc mollis tortor et tempus suscip.</p>",
+        "list": [
+          {
+            "hasIcon": true,
+            "icon-name": "icon-dot-bullet",
+            "listItemAction": false,
+            "listItemLabel": "Titre de fonction",
+            "listItemContent": {
+              "extraContentAction": {
+                "url": "#",
+                "text": "Instance"
+              },
+              "extraContent": false
+            }
+          },
+          {
+            "hasIcon": true,
+            "icon-name": "icon-dot-bullet",
+            "listItemAction": false,
+            "listItemLabel": "Titre de fonction",
+            "listItemContent": {
+              "extraContentAction": {
+                "url": "#",
+                "text": "Unité administrative"
+              },
+              "extraContent": false
+            }
+          },
+          {
+            "hasIcon": true,
+            "icon-name": "icon-dot-bullet",
+            "listItemAction": false,
+            "listItemLabel": "Titre de fonction",
+            "listItemContent": {
+              "extraContentAction": {
+                "url": "#",
+                "text": "Programme"
+              },
+              "extraContent": false
+            }
+          }
+        ]
+      }
+    },
+    {
+      "content": false
+    }
+  ],
+  "sidebarRight": true,
+  "sidebarClasses": false,
+  "sb-classes": "",
+  "sb-block-coordonnees": {
+    "sb-block-contact": [
+      {
+        "content": {
+          "list": [
+            {
+              "hasIcon": true,
+              "icon-name": "icon-location",
+              "listItemAction": false,
+              "listItemLabel": "Nom du lieu",
+              "listItemContent": {
+                "extraContent": [
+                  {
+                    "class": false,
+                    "content": "1441, rue Saint-Urbain<br>4e étage<br>Montréal (Québec) H2X 2M6"
+                  },
+                  {
+                    "class": false,
+                    "content": false
+                  }
+                ]
+              }
+            },
+            {
+              "hasIcon": true,
+              "icon-name": "icon-phone",
+              "listItemAction": false,
+              "listItemLabel": "514 555-5555",
+              "listItemContent": {
+                "extraContent": [
+                  {
+                    "content": "Poste 5555"
+                  },
+                  {
+                    "content": "Option 5"
+                  }
+                ]
+              }
+            },
+            {
+              "hasIcon": true,
+              "icon-name": "icon-email",
+              "listItemAction": true,
+              "url": "mailto:test@montreal.ca",
+              "listItemLabel": "Envoyer un courriel"
+            }
+          ]
+        }
+      },
+      {
+        "content": {
+          "list": [
+            {
+              "hasIcon": true,
+              "icon-name": "icon-social-facebook",
+              "listItemAction": true,
+              "url": "https://facebook.com",
+              "listItemLabel": "Facebook",
+              "listItemContent": false
+            },
+            {
+              "hasIcon": true,
+              "icon-name": "icon-social-linkedin",
+              "listItemAction": true,
+              "url": "https://linkedin.com",
+              "listItemLabel": "LinkedIn",
+              "listItemContent": false
+            },
+            {
+              "hasIcon": true,
+              "icon-name": "icon-social-twitter",
+              "listItemAction": true,
+              "url": "https://twitter.com",
+              "listItemLabel": "Twitter",
+              "listItemContent": false
+            }
+          ]
+        }
+      },
+      {
+        "content": false
+      }
+    ]
+  }
+}

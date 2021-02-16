@@ -1,11 +1,13 @@
 {
   "header-in-container": true,
   "heading": "Prénom Nom",
-  "heading-subtitle": [
-    {
-      "content": "Titre de fonction"
-    }
-  ],
+  "heading-subtitle": {
+    "items": [
+      {
+        "content": "Rôle de fonction"
+      }
+    ]
+  },
   "extras": {
     "list": [
       {
@@ -36,5 +38,9 @@
         }
       }
     ]
+  },
+  "headingImg": {
+    "src": "https://picsum.photos/id/1005/350/350",
+    "alt": "Alt text"
   }
 }

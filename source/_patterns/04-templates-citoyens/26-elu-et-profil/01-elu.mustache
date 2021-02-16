@@ -6,25 +6,30 @@
 
 <main class="main-content {{ pageClasses }}" id="main-content" aria-label="Main Content" role="main">
   <div class="container pt-4 pt-lg-8">
-    <div class="row{{^ sidebarRight }} justify-content-center{{/ sidebarRight}}">
-      <div class="col-12{{^ sidebarRight }} col-lg-7{{/ sidebarRight}}">
+    <div class="row">
+      <div class="col-12 col-lg-7">
         {{> components-breadcrumbs}}
       </div>
     </div>
   </div>
   <div class="region-content pt-0">
     <div class="container">
-      
+
       {{> patterns-content-header-profile}}
 
       <div class="row justify-content-between">
         <div class="col-12 col-lg-7">
           <div class="content-modules">
             {{# module-content}}
+            {{# content}}
             <h2>{{ title }}</h2>
+            {{# description}}
+            <div class="content-module-stacked">{{{ description }}}</div>
+            {{/ description}}
             <div class="content-module-stacked">
               {{> components-list-item}}
             </div>
+            {{/ content}}
             {{/ module-content}}
           </div>
         </div>
@@ -37,7 +42,7 @@
 
       </div>
 
-      <section class="row{{# sidebarRight }} justify-content-between{{/ sidebarRight}}{{^ sidebarRight}} justify-content-center{{/ sidebarRight}}">
+      <section class="row justify-content-between">
         <div class="col-12 col-lg-7">
         {{> components-feedback-form}}
         </div>
