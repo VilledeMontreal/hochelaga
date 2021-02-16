@@ -14,6 +14,7 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 - Templates - Collecte: New Collecte template and variants.
 
 ### Changed
+- Components - Forms - Switch: Colors adjustement to inactive, inactive disabled and active disabled states.
 - Components - Spinner: size, default color and optionnal text.
 - Components - Card - Profile: Styles + subtitle.
 - Templates - Index - No Filters: New index template variant (No filters).
