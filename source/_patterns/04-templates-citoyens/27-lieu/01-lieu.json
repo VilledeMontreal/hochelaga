@@ -46,30 +46,30 @@
     "module-installations": false,
     "module-accessibilite": false,
     "module-mode-paiement": false,
-    "module-etiquettes": {
-      "badges-links": [
-        {
-          "badge": "Libellé",
-          "badgeClass": "badge-secondary",
-          "badgeUrl": "#",
-          "badgeIconClass": false
-        },
-        {
-          "badge": "Libellé",
-          "badgeClass": "badge-secondary",
-          "badgeUrl": "#",
-          "badgeIconClass": false
-        },
-        {
-          "badge": "Libellé",
-          "badgeClass": "badge-secondary",
-          "badgeUrl": "#",
-          "badgeIconClass": false
-        }
-      ]
-    },
     "module-events": false,
     "module-map": false
+  },
+  "module-etiquette": {
+    "badges-links": [
+      {
+        "badge": "Libellé",
+        "badgeClass": "badge-secondary",
+        "badgeUrl": "#",
+        "badgeIconClass": false
+      },
+      {
+        "badge": "Libellé",
+        "badgeClass": "badge-secondary",
+        "badgeUrl": "#",
+        "badgeIconClass": false
+      },
+      {
+        "badge": "Libellé",
+        "badgeClass": "badge-secondary",
+        "badgeUrl": "#",
+        "badgeIconClass": false
+      }
+    ]
   },
   "sidebarRight": false,
   "sb-block-schedule": false,

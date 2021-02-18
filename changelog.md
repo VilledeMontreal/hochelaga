@@ -8,6 +8,7 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 ## [4.16.0] - unreleased
 
 ### Added
+- Styles - Iconography - Utility: New social-medium icon (.icon-social-medium).
 - Components - spinner: spinner-reversed variant.
 - Components - Card - Profile: Image profile placeholder.
 - Components - Navigation - Nav filters.
@@ -18,8 +19,13 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 - Components - Forms - Switch: Colors adjustement to inactive, inactive disabled and active disabled states.
 - Components - Spinner: size, default color and optionnal text.
 - Components - Card - Profile: Styles + subtitle.
+- Components - Messages: Icon size for empty state and confirmation state is now standard 40px (editorial-icon size).
 - Templates - Index - No Filters: New index template variant (No filters).
 - Templates - Élu et profil: Profil templates is based on the Élu template.
+- Templates - Article, Événement, Lieux, Nouvelle, Programmes: Module étiquettes Title + positionning.
+
+### Fixed
+- Badges-container: removed overflow: hidden rules that hide focus styles of badges.
 
 ### Deprecated
 - Components - Navigation - Sub nav
