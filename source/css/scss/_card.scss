@@ -12,7 +12,7 @@
     padding: 2rem 2rem 0 2rem;
     margin-bottom: -1rem;
     .icon {
-      @include icon-size(40px);
+      @include icon-size($icon-xl);
       @include icon-color($neutral-tertiary);
     }
   }
@@ -59,7 +59,7 @@
   }
 
   .card-body {
-    padding: 2rem;
+    padding: 1rem;
     width: 100%;
     display: flex;
     flex-flow: column nowrap;
@@ -129,6 +129,13 @@
     }
   }
 
+  // Define cards using 32px padding
+  &.card-icon, &.card-service, &.card-profile, &.card-member {
+    .card-body {
+      padding: 2rem;
+    }
+  }
+
   // Card full-width
   // Images are handeld like list-group-links using
   // variable height image technique (bg-image)
@@ -148,6 +155,7 @@
       .card-body {
         align-self: flex-start;
         width: 100%;
+        padding: 2rem;
       }
       .card-title {
         @include font-size($h3-font-size);  // 24/32
@@ -164,7 +172,7 @@
       width: 198px;
       @include border-radius(0);
       border: $card-border-width solid $card-border-color;
-      margin: 2rem auto 0 auto;
+      margin: 1rem auto 0 auto;
     }
 
     .card-body-wrapper {
@@ -185,6 +193,7 @@
       }
       .card-body {
         width: auto;
+        padding: 2rem;
       }
     }
   }
@@ -358,7 +367,7 @@
         position: relative;
         margin-top: -4rem;
         z-index: 1;
-        padding-right: 6rem;
+        padding: 2rem 6rem 2rem 2rem;
 
         &:before {
           content: "";
@@ -501,18 +510,6 @@ a.card {
           @include font-size($h4-font-size);
           line-height: $line-height-lg;
         }
-      }
-    }
-  }
-}
-
-// Col-4
-// Gives a card-body smaller padding
-[class^="col-"][class$="-3"] {
-  @include media-breakpoint-up(lg) {
-    .card {
-      .card-body {
-        padding: 1rem;
       }
     }
   }

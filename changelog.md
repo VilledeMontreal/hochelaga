@@ -19,6 +19,7 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 - Components - Forms - Switch: Colors adjustement to inactive, inactive disabled and active disabled states.
 - Components - Spinner: size, default color and optionnal text.
 - Components - Card - Profile: Styles + subtitle.
+- Components - Card - Simplification de la gestion du padding.
 - Components - Messages: Icon size for empty state and confirmation state is now standard 40px (editorial-icon size).
 - Templates - Index - No Filters: New index template variant (No filters).
 - Templates - Élu et profil: Profil templates is based on the Élu template.
