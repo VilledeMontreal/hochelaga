@@ -14,6 +14,8 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 - Components - Navigation - Nav filters.
 - Templates - Collecte: New Collecte template and variants.
 - Templates - Élu et Profil: New Profil template. Refactor under Élu et profil directory.
+- Templates - Contact: New contact template.
+- Templates - Contact - Confirmation: New confirmation template.
 
 ### Changed
 - Components - Forms - Switch: Colors adjustement to inactive, inactive disabled and active disabled states.
@@ -21,6 +23,7 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 - Components - Card - Profile: Styles + subtitle.
 - Components - Card - Simplification de la gestion du padding.
 - Components - Messages: Icon size for empty state and confirmation state is now standard 40px (editorial-icon size).
+- Components - Messages - Empty State: Add utility class to center text.
 - Templates - Index - No Filters: New index template variant (No filters).
 - Templates - Élu et profil: Profil templates is based on the Élu template.
 - Templates - Article, Événement, Lieux, Nouvelle, Programmes: Module étiquettes Title + positionning.

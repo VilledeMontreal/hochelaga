@@ -1,0 +1,142 @@
+{{> styles-skip-links-section }}
+
+<header class="header-main-nav {{# navbarFixedTop}}is-fixed-top{{/navbarFixedTop}}">
+{{> components-navbar }}
+</header>
+
+<main class="main-content {{ pageClasses }}" id="main-content" aria-label="Main Content" role="main">
+
+  {{# documentHeading}}
+  {{> patterns-content-header}}
+  {{/ documentHeading}}
+
+  <div class="region-content pt-3 pt-lg-0">
+    <div class="container {{ regionMainContainerClasses }}">
+      <div class="row justify-content-between">
+
+        <div class="col-12 col-lg-7">
+          <div class="content-header">
+            <div class="lead">{{{ lead }}}</div>
+          </div>
+
+          <div class="content-modules">
+            {{# moduleMessage }}
+            <div class="content-module-stacked mb-8">
+              {{> components-alert}}
+            </div>
+            {{/ moduleMessage }}
+            {{# bodyText}}
+            <div class="content-module-stacked">
+              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi condimentum sollicitudin erat, quis convallis risus.</p>
+              <ul>
+                <li>Kasd at ipsum stet vero sed.</li>
+                <li>Clita amet lorem ipsum dolor labore.</li>
+                <li>Diam sit sit elitr diam takimata rebum sed.</li>
+                <li>Dolor elitr eirmod et ea lorem eirmod gubergren.</li>
+                <li>Diam accusam dolore invidunt sea nonumy lorem takimata amet sed.</li>
+                <li>Diam eos est amet dolor labore et et. Est sit clita amet.</li>
+              </ul>
+
+              <h2>Titre de niveau 2</h2>
+              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi condimentum sollicitudin erat, quis convallis risus.</p>
+            </div>
+            {{/ bodyText}}
+
+            <div class="content-module-stacked pt-4">
+
+              <form id="form19" name="form19" class="wufoo" accept-charset="UTF-8" method="POST" action="https://vdmtl.wufoo.com/forms/z1vh95sz0g1mp6f/#public" novalidate="novalidate">
+                <p>Les champs marqués d'un (<span class="text-danger">*</span>) sont obligatoires</p>
+                <div class="row">
+                  <div class="col-12 col-md-6">
+                    <div id="foli3" class="form-group required">
+                      <label id="title3" for="Field3">Prénom</label>
+                      <input type="text" id="Field3" name="Field3" class="form-control" maxlength="255" aria-required="true" required>
+                      <div class="invalid-feedback">Message d'erreur personnalisé</div>
+                    </div>
+                  </div>
+                  <div class="col-12 col-md-6">
+                    <div id="foli4" class="form-group required">
+                      <label id="title4" for="Field4">Nom</label>
+                      <input type="text" id="Field4" name="Field4" class="form-control" maxlength="255" aria-required="true" required>
+                      <div class="invalid-feedback">Message d'erreur personnalisé</div>
+                    </div>
+                  </div>
+                </div>
+                <div id="foli5" class="form-group required">
+                  <label id="title5" for="Field5">Courriel</label>
+                  <input type="email" id="Field5" name="Field5" class="form-control" aria-required="true" placeholder="xyz@exemple.ca" required>
+                  <div class="invalid-feedback">Message d'erreur personnalisé</div>
+                </div>
+                <div id="foli8" class="form-group">
+                  <label id="title8" for="Field8">Votre demande concerne-t-elle un arrondissement? Si oui, lequel?</label>
+                  <select id="Field8" name="Field8" class="form-control">
+                    <option selected=""></option>
+                    <option value="Ahuntsic-Cartierville">Ahuntsic-Cartierville</option>
+                    <option value="Anjou">Anjou</option>
+                    <option value="Côte-des-Neiges–Notre-Dame-de-Grâce">Côte-des-Neiges–Notre-Dame-de-Grâce</option>
+                    <option value="L'Île-Bizard–Sainte-Geneviève">L'Île-Bizard–Sainte-Geneviève</option>
+                    <option value="Lachine">Lachine</option>
+                    <option value="LaSalle">LaSalle</option>
+                    <option value="Le Plateau-Mont-Royal">Le Plateau-Mont-Royal</option>
+                    <option value="Le Sud-Ouest">Le Sud-Ouest</option>
+                    <option value="Mercier–Hochelaga-Maisonneuve">Mercier–Hochelaga-Maisonneuve</option>
+                    <option value="Montréal-Nord">Montréal-Nord</option>
+                    <option value="Outremont">Outremont</option>
+                    <option value="Pierrefonds-Roxboro">Pierrefonds-Roxboro</option>
+                    <option value="Rivière-des-Prairies–Pointe-aux-Trembles">Rivière-des-Prairies–Pointe-aux-Trembles</option>
+                    <option value="Rosemont–La Petite-Patrie">Rosemont–La Petite-Patrie</option>
+                    <option value="Saint-Laurent">Saint-Laurent</option>
+                    <option value="Saint-Léonard">Saint-Léonard</option>
+                    <option value="Verdun">Verdun</option>
+                    <option value="Ville-Marie">Ville-Marie</option>
+                    <option value="Villeray–Saint-Michel–Parc-Extension">Villeray–Saint-Michel–Parc-Extension</option>
+                  </select>
+                </div>
+                <div id="foli6" class="form-group">
+                  <label id="title6" for="Fiedl6">Objet</label>
+                  <input type="text" id="Field6" name="Field6" class="form-control" maxlength="255">
+                </div>
+                <div id="foli7" class="form-group required">
+                  <label id="title7" for="Field7">Message</label>
+                  <textarea id="Field7" name="Field7" class="form-control" aria-required="true" rows="7" required></textarea>
+                  <div class="invalid-feedback">Message d'erreur personnalisé</div>
+                </div>
+                <div id="foli9" class="notranslate d-none">
+                  <label id="title9">Language
+                    <div>
+                      <input type="hidden" id="Field9" name="Field9" value="fr">
+                    </div>
+                  </label>
+                </div>
+                <button id="saveForm" name="saveForm" class="btn btn-primary" type="submit">Soumettre</button>
+                <div class="d-none">
+                  <label>Do Not Fill This Out
+                    <textarea name="comment" id="comment"></textarea>
+                    <input type="hidden" id="idstamp" name="idstamp" value="kmBkFdCoXbsS3sKzVX5qH5ZoFajez3vM7lWfztxN5Ns=">
+                  </label>
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+
+        {{#sidebarRight}}
+        <aside class="col-12 col-lg-4" role="complementary">
+          {{> templates-citoyens-sidebar-contact}}
+        </aside>
+        {{/sidebarRight}}
+
+      </div>
+
+      <section class="row{{# sidebarRight }} justify-content-between{{/ sidebarRight}}{{^ sidebarRight}} justify-content-center{{/ sidebarRight}}">
+        <div class="col-12 col-lg-7">
+        {{> components-feedback-form}}
+        </div>
+      </section>
+
+    </div>
+  </div>
+
+</main>
+
+{{> patterns-footer-main }}

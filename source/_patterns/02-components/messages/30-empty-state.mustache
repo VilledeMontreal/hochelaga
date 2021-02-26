@@ -1,8 +1,8 @@
-<div class="empty-state d-flex flex-column align-items-center py-8">
+<div class="empty-state d-flex flex-column align-items-center text-center py-8">
   <div class="mb-4">
     {{> styles-icon-item}}
   </div>
-  {{# messageStateTitle}}<h2 class="mb-2">{{ messageStateTitle}}</h2>{{/ messageStateTitle}}
+  {{# messageStateTitle}}<{{tag}} class="h2 mb-2">{{ title}}</{{tag}}>{{/ messageStateTitle}}
   <p class="mb-4">{{ description}}</p>
   {{# messageActions}}
   <div class="buttons-wrapper buttons-wrapper-center">

@@ -1,0 +1,82 @@
+{
+  "navbarFixedTop": true,
+  "bodyClass": "site-sticky-footer",
+  "pageClasses": "site-main-content d-flex flex-column",
+  "documentHeading": true,
+  "documentHeadingFullWidth": true,
+  "documentHeadingClass": "document-heading-hub document-heading-left-notch",
+  "documentHeadingImageUrl": "https://res.cloudinary.com/villemontreal/image/upload/q_auto,f_auto,dpr_auto/v1570212188/portail/background/texture-large-undeground.png",
+  "documentHeadingNotch": true,
+  "has-left-notch": true,
+  "media": false,
+  "heading": "Titre de la page",
+  "heading-subtitle": false,
+  "has-brand-border": true,
+  "sidebarRight" : true,
+  "sidebarRightClass": false,
+  "lead": "<p>Amorce - Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi condimentum sollicitudin erat, quis convallis risus. Nullam posuere odio ligula, hendrerit suscipit ligula laoreet.</p>",
+  "moduleMessage": {
+    "alertClass": "alert-warning alert-with-icon",
+    "alertTitle": "Titre de l'avis",
+    "alertText": "Description du message.",
+    "alertIcon": {
+      "icon-name": "icon-warning"
+    }
+  },
+  "bodyText": true,
+  "sb-block": [
+    {
+      "sidebarTitle": "Par téléphone",
+      "listItem": {
+        "list": [
+          {
+            "hasIcon": true,
+            "icon-name": "icon-phone",
+            "listItemAction": false,
+            "listItemLabel": "311",
+            "listItemContent": {
+              "extraContent": {
+                "content": "<p>De l’extérieur de Montréal : 514&nbsp;872-0311</p>"
+              }
+            }
+          },
+          {
+            "hasIcon": true,
+            "icon-name": "icon-clock",
+            "listItemAction": false,
+            "listItemLabel": "Heures d'ouverture",
+            "listItemContent": {
+              "extraContent": {
+                "content": "<p>Du lundi au vendredi : de 8&nbsp;h&nbsp;30&nbsp;à&nbsp;20&nbsp;h&nbsp;30</p><p>Samedi, dimanche et jours fériés : de 9&nbsp;h&nbsp;à&nbsp;17&nbsph</p>"
+              }
+            }
+          }
+        ]
+      }
+    },
+    {
+      "sidebarTitle": "En personne",
+      "sbText": "<p>Trouver un point de service, un comptoir de permis ou un point de service de la cour municipale</p>",
+      "clickableWrapper": {
+        "listGroupClass": "list-group-lg list-group-allow-ext-icon",
+        "listGroup": [
+          {
+            "url": "#",
+            "text": "Bureaux Accès Montréal",
+            "class": false
+          },
+          {
+            "url": "#",
+            "text": "Comptoirs de permis",
+            "class": false
+          },
+          {
+            "url": "#",
+            "text": "Points de service de la cour municipale",
+            "class": false
+          }
+        ]
+      }
+    }
+  ]
+}
