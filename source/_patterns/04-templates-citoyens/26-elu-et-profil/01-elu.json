@@ -111,103 +111,111 @@
   "sidebarRight": true,
   "sidebarClasses": false,
   "sb-classes": "",
-  "sb-block-coordonnees": {
-    "sb-block-contact": [
-      {
-        "content": {
-          "list": [
-            {
-              "hasIcon": true,
-              "icon-name": "icon-location",
-              "listItemAction": false,
-              "listItemLabel": "Nom du lieu",
-              "listItemContent": {
-                "extraContent": [
-                  {
-                    "class": "font-weight-bold",
-                    "content": "Bureau administratif (optionnel)"
-                  },
-                  {
-                    "content": "1441, rue Saint-Urbain<br>4e étage<br>Montréal (Québec) H2X 2M6"
-                  }
-                ]
+  "sb-block-coordonnees": [
+    {
+      "sidebarTitle": "Me joindre",
+      "sb-block-contact": [
+        {
+          "content": {
+            "list": [
+              {
+                "hasIcon": true,
+                "icon-name": "icon-location",
+                "listItemAction": false,
+                "listItemLabel": "Nom du lieu",
+                "listItemContent": {
+                  "extraContent": [
+                    {
+                      "class": "font-weight-bold",
+                      "content": "Bureau administratif (optionnel)"
+                    },
+                    {
+                      "content": "1441, rue Saint-Urbain<br>4e étage<br>Montréal (Québec) H2X 2M6"
+                    }
+                  ]
+                }
+              },
+              {
+                "hasIcon": true,
+                "icon-name": "icon-phone",
+                "listItemAction": false,
+                "listItemLabel": "514 555-5555"
+              },
+              {
+                "hasIcon": true,
+                "icon-name": "icon-email",
+                "listItemAction": true,
+                "url": "mailto:test@montreal.ca",
+                "listItemLabel": "Envoyer un courriel"
               }
-            },
-            {
-              "hasIcon": true,
-              "icon-name": "icon-phone",
-              "listItemAction": false,
-              "listItemLabel": "514 555-5555"
-            },
-            {
-              "hasIcon": true,
-              "icon-name": "icon-email",
-              "listItemAction": true,
-              "url": "mailto:test@montreal.ca",
-              "listItemLabel": "Envoyer un courriel"
-            }
-          ]
-        }
-      },
-      {
-        "content": {
-          "list": [
-            {
-              "hasIcon": true,
-              "icon-name": "icon-location",
-              "listItemAction": false,
-              "listItemLabel": "Nom du lieu",
-              "listItemContent": {
-                "extraContent": [
-                  {
-                    "content": "1441, rue Saint-Urbain<br>4e étage<br>Montréal (Québec) H2X 2M6"
-                  }
-                ]
+            ]
+          }
+        },
+        {
+          "content": {
+            "list": [
+              {
+                "hasIcon": true,
+                "icon-name": "icon-location",
+                "listItemAction": false,
+                "listItemLabel": "Nom du lieu",
+                "listItemContent": {
+                  "extraContent": [
+                    {
+                      "content": "1441, rue Saint-Urbain<br>4e étage<br>Montréal (Québec) H2X 2M6"
+                    }
+                  ]
+                }
+              },
+              {
+                "hasIcon": true,
+                "icon-name": "icon-phone",
+                "listItemAction": false,
+                "listItemLabel": "514 555-5555"
+              },
+              {
+                "hasIcon": true,
+                "icon-name": "icon-email",
+                "listItemAction": true,
+                "url": "mailto:test@montreal.ca",
+                "listItemLabel": "Envoyer un courriel"
               }
-            },
-            {
-              "hasIcon": true,
-              "icon-name": "icon-phone",
-              "listItemAction": false,
-              "listItemLabel": "514 555-5555"
-            },
-            {
-              "hasIcon": true,
-              "icon-name": "icon-email",
-              "listItemAction": true,
-              "url": "mailto:test@montreal.ca",
-              "listItemLabel": "Envoyer un courriel"
-            }
-          ]
+            ]
+          }
         }
-      },
-      {
-        "content": {
-          "list": [
-            {
-              "hasIcon": true,
-              "icon-name": "icon-social-facebook",
-              "listItemAction": true,
-              "url": "https://facebook.com",
-              "listItemLabel": "Facebook"
-            },
-            {
-              "hasIcon": true,
-              "icon-name": "icon-social-linkedin",
-              "listItemAction": true,
-              "url": "https://linkedin.com",
-              "listItemLabel": "LinkedIn"
-            },
-            {
-              "hasIcon": true,
-              "icon-name": "icon-social-twitter",
-              "listItemAction": true,
-              "url": "https://twitter.com",
-              "listItemLabel": "Twitter"
-            }
-          ]
+      ]
+    },
+    {
+      "sidebarTitle": "Me suivre",
+      "sb-block-contact": [
+        {
+          "content": {
+            "list": [
+              {
+                "hasIcon": true,
+                "icon-name": "icon-social-facebook",
+                "listItemAction": true,
+                "url": "https://facebook.com",
+                "listItemLabel": "Facebook"
+              },
+              {
+                "hasIcon": true,
+                "icon-name": "icon-social-linkedin",
+                "listItemAction": true,
+                "url": "https://linkedin.com",
+                "listItemLabel": "LinkedIn"
+              },
+              {
+                "hasIcon": true,
+                "icon-name": "icon-social-twitter",
+                "listItemAction": true,
+                "url": "https://twitter.com",
+                "listItemLabel": "Twitter"
+              }
+            ]
+          }
         }
-      }
-    ]
-  }
+      ]
+    }
+  ]
 }
