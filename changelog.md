@@ -22,6 +22,7 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 - Components - Spinner: size, default color and optionnal text.
 - Components - Card - Profile: Styles + subtitle.
 - Components - Card - Simplification de la gestion du padding.
+- Components - Card - Allow ul.cards>li structure without any additionnal classes.
 - Components - Messages: Icon size for empty state and confirmation state is now standard 40px (editorial-icon size).
 - Components - Messages - Empty State: Add utility class to center text.
 - Templates - Index - No Filters: New index template variant (No filters).
