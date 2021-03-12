@@ -26,6 +26,7 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 - Components - Messages - Empty State: Add utility class to center text.
 - Templates - Index - No Filters: New index template variant (No filters).
 - Templates - Élu et profil: Profil templates is based on the Élu template.
+- Templates - Élu et profil: Social media is moved to a new block inside sidebar content.
 - Templates - Article, Événement, Lieux, Nouvelle, Programmes: Module étiquettes Title + positionning.
 
 ### Fixed
