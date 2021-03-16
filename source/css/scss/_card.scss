@@ -487,9 +487,15 @@ a.card {
 // Generic flex capacity for equalheight
 .cards {
   > div,
+  > li,
   .card-item {
     display: flex; // must add flex capacity to col to get equalheight
   }
+}
+
+// Allow ul>li structure for cards without extra classes
+ul.cards {
+  @extend .list-unstyled;
 }
 
 
