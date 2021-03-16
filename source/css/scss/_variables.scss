@@ -781,7 +781,7 @@ $chip-focus-width:                  $input-btn-focus-width;
 $modal-inner-padding:               2rem;
 
 $modal-dialog-margin:               .5rem;
-$modal-dialog-margin-y-sm-up:       4rem;
+$modal-dialog-margin-y-sm-up:       2rem;
 
 $modal-title-line-height:           $line-height-md;
 
@@ -801,10 +801,10 @@ $modal-header-padding-y:            1rem;
 $modal-header-padding-x:            1rem;
 $modal-header-padding:              $modal-header-padding-y $modal-header-padding-x;
 
-$modal-xl:                          1140px;
-$modal-lg:                          800px;
-$modal-md:                          600px;
-$modal-sm:                          460px;
+$modal-xl:                          100%;
+$modal-lg:                          $modal-xl;
+$modal-md:                          800px;
+$modal-sm:                          500px;
 
 $modal-transition:                  transform 300ms ease-out;
 
