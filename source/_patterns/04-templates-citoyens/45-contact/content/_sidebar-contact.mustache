@@ -1,0 +1,14 @@
+<div class="sidebar pt-8">
+  {{# sb-block}}
+  <section class="sb-block">
+    {{> styles-heading-sidebar}}
+    {{# sbText}}{{{ sbText }}}{{/ sbText}}
+    {{# listItem}}
+    {{> components-list-item}}
+    {{/ listItem}}
+    {{# clickableWrapper}}
+    {{> components-list-item-link}}
+    {{/ clickableWrapper}}
+  </section>
+  {{/ sb-block}}
+</div>

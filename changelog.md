@@ -5,7 +5,39 @@ The format is based on [Keep a Changelog](http://keepachangelog.com/en/1.0.0/)
 and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.html).
 
 
-## [4.15.0] - unreleased
+## [4.16.0] - unreleased
+
+### Added
+- Styles - Iconography - Utility: New social-medium icon (.icon-social-medium).
+- Components - spinner: spinner-reversed variant.
+- Components - Card - Profile: Image profile placeholder.
+- Components - Navigation - Nav filters.
+- Templates - Collecte: New Collecte template and variants.
+- Templates - Élu et Profil: New Profil template. Refactor under Élu et profil directory.
+- Templates - Contact: New contact template.
+- Templates - Contact - Confirmation: New confirmation template.
+
+### Changed
+- Components - Forms - Switch: Colors adjustement to inactive, inactive disabled and active disabled states.
+- Components - Spinner: size, default color and optionnal text.
+- Components - Card - Profile: Styles + subtitle.
+- Components - Card - Simplification de la gestion du padding.
+- Components - Card - Allow ul.cards>li structure without any additionnal classes.
+- Components - Messages: Icon size for empty state and confirmation state is now standard 40px (editorial-icon size).
+- Components - Messages - Empty State: Add utility class to center text.
+- Templates - Index - No Filters: New index template variant (No filters).
+- Templates - Élu et profil: Profil templates is based on the Élu template.
+- Templates - Élu et profil: Social media is moved to a new block inside sidebar content.
+- Templates - Article, Événement, Lieux, Nouvelle, Programmes: Module étiquettes Title + positionning.
+
+### Fixed
+- Badges-container: removed overflow: hidden rules that hide focus styles of badges.
+
+### Deprecated
+- Components - Navigation - Sub nav
+
+
+## [4.15.0] - 2020-12-17
 
 ### Added
 - Components - Main-navbar: navbar-btn danger variant.
@@ -591,6 +623,7 @@ Main navbar, menu and footer are now in their own stylesheet. They will eventual
 
 The version 3 is now deprecated. Only bug fixes will be considered. Please refer to the old bitbucket repo https://bitbucket.org/villemontreal/boite-outils-web/.
 
+[4.15.0]: https://bitbucket.org/villemontreal/boite-outils4-web/src/4.15.0/
 [4.14.1]: https://bitbucket.org/villemontreal/boite-outils4-web/src/4.14.1/
 [4.14.0]: https://bitbucket.org/villemontreal/boite-outils4-web/src/4.14.0/
 [4.13.0]: https://bitbucket.org/villemontreal/boite-outils4-web/src/4.13.0/

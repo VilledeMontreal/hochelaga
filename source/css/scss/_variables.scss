@@ -150,6 +150,7 @@ $shadow-strong-inverted:    0px -8px 32px rgba(0,0,0,.1);
 $icon-xs:     16px;
 $icon-sm:     20px;
 $icon-md:     24px;
+$icon-xl:     40px;
 
 $icon-cat:    40px;
 $icon-cat-xl: 80px;
@@ -582,7 +583,7 @@ $custom-switch-indicator-handle-disabled:         $neutral-underground-2;
 
 $custom-switch-indicator-checked-bg:              $highlight-strong;
 $custom-switch-indicator-checked-handle:          $action;
-$custom-switch-indicator-checked-handle-disabled: $highlight-light;
+$custom-switch-indicator-checked-handle-disabled: $neutral-underground-2;
 
 $custom-select-padding-x-sm:          $input-padding-x-sm;
 
@@ -921,10 +922,17 @@ $breadcrumb-active-color:           $action;
 
 
 // Carousel
+
 $carousel-control-opacity:           1;
 $carousel-control-hover-opacity:     .6;
 $carousel-caption-width:             100%;
 $carousel-caption-color:             $neutral-primary;
+
+
+// Spinners
+
+$spinner-width:         2.5rem;
+
 
 // Tooltips
 
