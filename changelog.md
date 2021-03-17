@@ -14,7 +14,8 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 - Components - Modals: Modals sizes - Small as default, medium and large (full page).
 - Components - Modals: modal-footer optimisation - Mobile button placements, button order and visibility.
 
-## [4.16.0] - unreleased
+
+## [4.16.0] - 2021-03-16
 
 ### Added
 - Styles - Iconography - Utility: New social-medium icon (.icon-social-medium).
@@ -632,6 +633,7 @@ Main navbar, menu and footer are now in their own stylesheet. They will eventual
 
 The version 3 is now deprecated. Only bug fixes will be considered. Please refer to the old bitbucket repo https://bitbucket.org/villemontreal/boite-outils-web/.
 
+[4.16.0]: https://bitbucket.org/villemontreal/boite-outils4-web/src/4.16.0/
 [4.15.0]: https://bitbucket.org/villemontreal/boite-outils4-web/src/4.15.0/
 [4.14.1]: https://bitbucket.org/villemontreal/boite-outils4-web/src/4.14.1/
 [4.14.0]: https://bitbucket.org/villemontreal/boite-outils4-web/src/4.14.0/
