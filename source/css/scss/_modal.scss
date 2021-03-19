@@ -226,8 +226,6 @@
   .modal-lg,
   .modal-xl {
     max-width: calc(100% - #{$modal-dialog-margin-y-sm-up * 2});
-    min-height: auto;
-    height: auto;
 
     .modal-content {
       min-height: calc(100vh - #{$modal-dialog-margin-y-sm-up * 2});
