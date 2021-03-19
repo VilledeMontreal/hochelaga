@@ -5,14 +5,21 @@ The format is based on [Keep a Changelog](http://keepachangelog.com/en/1.0.0/)
 and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.html).
 
 
-## [4.17.0] - unrelease
+## [4.17.0] - unreleased
 
 ### Added
 - Components - Modals: New .modal-footer-order class to handle button html order vs design positioning
+- Components - Spinner: New modal option to display spinner in modal mode.
+
 ### Changed
 - Components - Modals: Close button switch to $action.
 - Components - Modals: Modals sizes - Small as default, medium and large (full page).
 - Components - Modals: modal-footer optimisation - Mobile button placements, button order and visibility.
+- Components - Spinner: Change color to $info.
+
+### Deprecated
+- Components - Modals: .modal-footer-buttons wrapper is deprecated. buttons should go directly inside modal-footer
+- Components - Spinner: Reverse mode.
 
 
 ## [4.16.0] - 2021-03-16
