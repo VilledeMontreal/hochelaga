@@ -173,6 +173,7 @@
       @include border-radius(0);
       border: $card-border-width solid $card-border-color;
       margin: 1rem auto 0 auto;
+      align-self: flex-start;
     }
 
     .card-body-wrapper {
