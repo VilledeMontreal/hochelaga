@@ -5,7 +5,7 @@ The format is based on [Keep a Changelog](http://keepachangelog.com/en/1.0.0/)
 and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.html).
 
 
-## [4.17.0] - unreleased
+## [4.17.0] - 2021-03-24
 
 ### Added
 - Components - Modals: New .modal-footer-order class to handle button html order vs design positioning
@@ -640,6 +640,7 @@ Main navbar, menu and footer are now in their own stylesheet. They will eventual
 
 The version 3 is now deprecated. Only bug fixes will be considered. Please refer to the old bitbucket repo https://bitbucket.org/villemontreal/boite-outils-web/.
 
+[4.17.0]: https://bitbucket.org/villemontreal/boite-outils4-web/src/4.17.0/
 [4.16.0]: https://bitbucket.org/villemontreal/boite-outils4-web/src/4.16.0/
 [4.15.0]: https://bitbucket.org/villemontreal/boite-outils4-web/src/4.15.0/
 [4.14.1]: https://bitbucket.org/villemontreal/boite-outils4-web/src/4.14.1/
