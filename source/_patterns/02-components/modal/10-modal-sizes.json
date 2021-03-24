@@ -1,7 +1,7 @@
 {
   "modalSize": [
     {
-      "title": "Small",
+      "title": "Small (Defaut)",
       "modalID": "exampleModalSm",
       "modalHeaderID": "exampleModalSmLabel",
       "modalDialogClasses": "modal-sm",
@@ -10,37 +10,38 @@
       "modalFooter": {
         "buttons": [
           {
-            "buttonType": "button",
-            "buttonClass": "btn-link",
-            "buttonText": "Annuler",
-            "buttonState": "data-dismiss=\"modal\""
-          },
-          {
             "buttonType": "submit",
             "buttonClass": "btn-primary",
             "buttonText": "Action"
+          },
+          {
+            "buttonType": "button",
+            "buttonClass": "btn-link",
+            "buttonText": "Annuler",
+            "buttonState": "data-dismiss=modal"
           }
         ]
       }
     },
     {
-      "title": "Default",
-      "modalID": "exampleModalDefault",
-      "modalHeaderID": "exampleModalDefaultLabel",
+      "title": "Medium",
+      "modalID": "exampleModalMd",
+      "modalHeaderID": "exampleModalMdLabel",
+      "modalDialogClasses": "modal-md",
       "modalHeaderTitle": "Titre de la modale",
       "modalBody": " <p>Et duo takimata elitr sit clita et accusam voluptua. Diam dolor duo et consetetur lorem gubergren, no gubergren diam tempor et sadipscing et et. Voluptua rebum et dolor sanctus gubergren.</p>",
       "modalFooter": {
         "buttons": [
           {
-            "buttonType": "button",
-            "buttonClass": "btn-link",
-            "buttonText": "Annuler",
-            "buttonState": "data-dismiss=\"modal\""
-          },
-          {
             "buttonType": "submit",
             "buttonClass": "btn-primary",
             "buttonText": "Action"
+          },
+          {
+            "buttonType": "button",
+            "buttonClass": "btn-link",
+            "buttonText": "Annuler",
+            "buttonState": "data-dismiss=modal"
           }
         ]
       }
@@ -48,22 +49,22 @@
     {
       "title": "Large",
       "modalID": "exampleModalLg",
-      "modalDialogClasses": "modal-lg",
       "modalHeaderID": "exampleModalLgLabel",
+      "modalDialogClasses": "modal-lg",
       "modalHeaderTitle": "Titre de la modale",
       "modalBody": " <p>Et duo takimata elitr sit clita et accusam voluptua. Diam dolor duo et consetetur lorem gubergren, no gubergren diam tempor et sadipscing et et. Voluptua rebum et dolor sanctus gubergren.</p>",
       "modalFooter": {
         "buttons": [
           {
-            "buttonType": "button",
-            "buttonClass": "btn-link",
-            "buttonText": "Annuler",
-            "buttonState": "data-dismiss=\"modal\""
-          },
-          {
             "buttonType": "submit",
             "buttonClass": "btn-primary",
             "buttonText": "Action"
+          },
+          {
+            "buttonType": "button",
+            "buttonClass": "btn-link",
+            "buttonText": "Annuler",
+            "buttonState": "data-dismiss=modal"
           }
         ]
       }

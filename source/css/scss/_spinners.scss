@@ -9,18 +9,21 @@
 .spinner-container {
   display: flex;
   align-items: center;
+  justify-content: center;
   flex-direction: column;
   padding: 2rem;
+  width: 268px;
 }
 
 .spinner-text {
   @extend .font-size-sm-interface;
   color: $body-color;
   margin-top: 1rem;
+  text-align: center;
 }
 
 .spinner-border {
-  color: $action;
+  color: $info;
   display: inline-block;
   width: $spinner-width;
   height: $spinner-height;
@@ -31,11 +34,29 @@
   border-radius: 50%;
   animation: spinner-border .75s linear infinite;
 
+  // Deprecated in v4.17.0
   &.spinner-reversed {
     color: $action-lighter;
     ~ .spinner-text {
       color: $white;
     }
+  }
+}
+
+.modal-spinner {
+  display: flex;
+  align-items: center;
+  width: 268px;
+  margin: 2rem auto;
+  height: calc(100vh - 4rem);
+  .spinner-container {
+    background-color: $white;
+    border-radius: $border-radius;
+  }
+  &::before {
+    display: block;
+    height: calc(100vh - 1rem);
+    content: "";
   }
 }
 
