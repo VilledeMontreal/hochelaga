@@ -11,6 +11,7 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 
 ### Fixed
 - Components - Cards - Document: image is no longer being stretch by flex.
+- Components - Messages - Popover: Fix spacing.
 
 ## [4.17.0] - 2021-03-24
 
