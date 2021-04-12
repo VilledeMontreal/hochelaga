@@ -89,23 +89,89 @@
     }
   ],
   "module-reglements": false,
-  "module-partners": {
-    "hasLogos": false,
-    "partnerText": "<p>Texte optionnel, la Ville de Montréal remercie ses partenaires du programme. En version 1 il n’y aura pas de logos de partenaires d’affichés.</p>",
-    "listPartners": {
-      "items": [
-        {
-          "partnerName": "Partenaire #1"
-        },
-        {
-          "partnerName": "Partenaire #2"
-        },
-        {
-          "partnerName": "Partenaire #3"
-        }
-      ]
+  "module-partners": [
+    {
+      "hasLogos": true,
+      "partnerText": "<p>Description optionnelle limitée à 300 caractères. Nunc malesuada molestie sapien ut elementum. Etiam maximus congue dolor nec bibendum. Ut vel commodo ex. Sed convallis nibh ex, ac eleifend nulla varius et. Nunc mollis tortor et tempus suscipit. Quisque dapibus, magna ac mollis dapibus adesaullegue.</p>",
+      "listPartners": {
+        "items": [
+          {
+            "url": "https://desjardins.com",
+            "name": "Partenaire A",
+            "logo": {
+              "src": "https://logoipsum.com/logo/logo-15.svg",
+              "alt": "Partenaire A"
+            }
+          },
+          {
+            "url": "https://google.com",
+            "name": "Partenaire B",
+            "logo": {
+              "src": "https://placeholder.com/wp-content/uploads/2018/10/placeholder.com-logo1.jpg",
+              "alt": "Partenaire B"
+            }
+          },
+          {
+            "url": "https://google.com",
+            "name": "Est clita consetetur at sanctus aliquyam duo nonumy ipsum sea.",
+            "logo": false
+          },
+          {
+            "url": "https://google.com",
+            "name": "Partenaire D",
+            "logo": {
+              "src": "https://logoipsum.com/logo/logo-12.svg",
+              "alt": "Partenaire D"
+            }
+          },
+          {
+            "url": false,
+            "name": "Partenaire E",
+            "logo": {
+              "src": "https://logoipsum.com/logo/logo-4.svg",
+              "alt": "Partenaire E"
+            }
+          },
+          {
+            "url": "https://google.com",
+            "name": "Partenaire F",
+            "logo": {
+              "src": "https://logoipsum.com/logo/logo-16.svg",
+              "alt": "Partenaire F"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "hasLogos": false,
+      "partnerText": "<p>Description optionnelle limitée à 300 caractères. Nunc malesuada molestie sapien ut elementum. Etiam maximus congue dolor nec bibendum. Ut vel commodo ex. Sed convallis nibh ex, ac eleifend nulla varius et. Nunc mollis tortor et tempus suscipit. Quisque dapibus, magna ac mollis dapibus adesaullegue.</p>",
+      "listPartners": {
+        "items": [
+          {
+            "url": "https://desjardins.com",
+            "name": "Partenaire A",
+            "logo": false
+          },
+          {
+            "url": false,
+            "name": "Partenaire B",
+            "logo": false
+          },
+          {
+            "url": "https://google.com",
+            "name": "Partenaire C",
+            "logo": false
+          },
+          {
+            "url": false,
+            "name": "Partenaire D",
+            "logo": false
+          }
+        ]
+      }
     }
-  },
+  ],
   "module-etiquette": {
     "badges-links": [
       {

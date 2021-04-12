@@ -8,6 +8,7 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 
 ### Changed
 - Templates - Unité administrative: Various modules added, sidebar revamp.
+- Templates - Programmes: Partners display mode. List and logos.
 
 ### Fixed
 - Components - Cards - Document: image is no longer being stretch by flex.
