@@ -306,14 +306,14 @@ legend,
 
     // Background-color and (when enabled) gradient
     &::before {
-      top: calc(50% - (#{1.5rem}/2));
+      top: 1rem;
       left: 0;
       margin-left: 1rem + .125rem;
     }
 
     // Foreground (icon)
     &::after {
-      top: calc(50% - (#{1.5rem}/2));
+      top: 1rem;
       left: 0;
       margin-left: 1rem;
     }
