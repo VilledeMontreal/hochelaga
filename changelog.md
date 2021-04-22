@@ -8,6 +8,9 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 
 ### Changed
 - Components - Forms - Checkbox wrapper and radio wrapper : control element align top.
+- Components - Forms : Update disabled label color for accessibility.
+- Components - Buttons : Update disabled label color for accessibility.
+- Components - Button-group : Update disabled label color for accessibility.
 - Templates - Unité administrative: Various modules added, sidebar revamp.
 - Templates - Programmes: Partners display mode. List and logos.
 
