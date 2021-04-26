@@ -349,8 +349,38 @@
 
 // Page Header for Templates outils interne.
 .page-header {
-  padding: 1rem 0 0 0;
+  padding: 1rem 0;
   height: auto;
+
+  .btn-backlink {
+    border-bottom: none;
+    border-radius: $btn-border-radius-squared;
+    .icon {
+      @include icon-size($icon-md);
+      @include icon-color($action);
+    }
+  }
+
+  .content-header-extras {
+    @include font-size($font-size-sm);
+    line-height: $line-height-sm;
+
+    .content-header-extras-item {
+      display: flex;
+      flex-wrap: wrap;
+
+      + .content-header-extras-item {
+        margin-top: .5rem;
+      }
+    }
+  }
+
+  .breadcrumb-container {
+    margin-bottom: 0.5rem;
+    .breadcrumb {
+      margin-bottom: 0;
+    }
+  }
 
   .container-title {
     h1, .h1,
@@ -359,13 +389,14 @@
     h4, .h4,
     h5, .h5,
     h6, .h6 {
-      margin-bottom: 1rem;
+      margin-bottom: .5rem;
     }
 
-    .container-subtitle {
+    .container-subtitle,
+    .container-info {
       display: inline-flex;
       align-items: center;
-      margin-bottom: 1rem;
+      margin-bottom: 0;
 
       p {
         font-size: $font-size-sm;
@@ -382,23 +413,59 @@
   }
 
   .container-btn {
-    text-align: left;
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-end;
 
-    .btn {
-      margin: 0 0.5rem 0.5rem 0;
-      &:last-of-type {
-        margin-right: 0;
+    // Easily place margin between footer elements
+    > .btn:not(:first-child) { margin-left: .5rem; }
+    > .btn:not(:last-child) { margin-right: .5rem; }
+
+    &.btn-sem-order {
+      flex-direction: row-reverse;
+      justify-content: flex-start;
+      // Easily place margin between footer elements
+      > .btn:not(:first-child):not(:last-child) {
+        margin-left: .5rem;
+        margin-right: .5rem;
+      }
+      > .btn:not(:first-child) {
+        margin: inherit;
+        margin-right: .5rem;
+      }
+      > .btn:not(:last-child) {
+        margin: inherit;
+        margin-left: .5rem;
+      }
+    }
+
+  }
+}
+
+// Breakpoint MD and up
+@include media-breakpoint-up(md) {
+  .page-header {
+    padding: 1.5rem 0;
+
+    .btn-backlink {
+      .icon {
+        @include icon-size($icon-lg);
       }
     }
   }
+}
 
-  @include media-breakpoint-up(md) {
-    padding: 2rem 0 1rem 0;
-  }
-
-  @include media-breakpoint-up(lg) {
-    .container-btn {
-      text-align: right;
+// Breakpoint MD and down
+@include media-breakpoint-down(md) {
+  .page-header {
+    .list-inline-interpunct {
+      .list-inline-item {
+        display: flex;
+        width: 100%;
+        &::after {
+          content: none;
+        }
+      }
     }
   }
 }

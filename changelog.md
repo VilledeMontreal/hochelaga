@@ -11,6 +11,7 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 - Components - Forms : Update disabled label color for accessibility.
 - Components - Buttons : Update disabled label color for accessibility.
 - Components - Button-group : Update disabled label color for accessibility.
+- Patterns - En-tête interne : Adapt pattern to meet new specs.
 - Templates - Unité administrative: Various modules added, sidebar revamp.
 - Templates - Programmes: Partners display mode. List and logos.
 

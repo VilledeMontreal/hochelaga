@@ -4,7 +4,7 @@
 // and disabled options for all buttons
 
 @mixin button-variant($background, $border, $color: color-yiq($background), $hover-background: $action-darker, $hover-border: $action-darker, $hover-color: $white, $active-background: $action-darker, $active-border: $action-darker, $active-color: $white, $reversed: false, $box-shadow-color: false) {
-  
+
   color: $color;
   @include gradient-bg($background);
   border-color: $border;
@@ -32,7 +32,7 @@
       fill: $color;
     }
   }
-  
+
   // Change focus and active focus states if reversed
   @if $reversed {
     &:focus,
@@ -75,7 +75,7 @@
   @if $box-shadow-color {
     // Scoped dialog-box-shadow variable definition
     $custom-box-shadow: 0 0 0 $input-btn-focus-width rgba($box-shadow-color, .3);
-    
+
     &:focus,
     &.focus {
       box-shadow: $custom-box-shadow;
@@ -135,4 +135,9 @@
   border: 0;
   margin: 0;
   overflow: visible;
+
+  @include hover-focus {
+    background-color: transparent;
+    border: 0;
+  }
 }
