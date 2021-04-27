@@ -1,3 +1,3 @@
 ---
-title: En-tête interne
+title: En-tête interne - Fil d'ariane
 ---
