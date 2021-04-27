@@ -1,4 +1,0 @@
----
-title: Content header interne
----
-
