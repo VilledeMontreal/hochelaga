@@ -418,22 +418,22 @@
     justify-content: flex-end;
 
     // Easily place margin between footer elements
-    > .btn:not(:first-child) { margin-left: .5rem; }
-    > .btn:not(:last-child) { margin-right: .5rem; }
+    > :not(:first-child) { margin-left: .5rem; }
+    > :not(:last-child) { margin-right: .5rem; }
 
     &.btn-sem-order {
       flex-direction: row-reverse;
       justify-content: flex-start;
       // Easily place margin between footer elements
-      > .btn:not(:first-child):not(:last-child) {
+      > :not(:first-child):not(:last-child) {
         margin-left: .5rem;
         margin-right: .5rem;
       }
-      > .btn:not(:first-child) {
+      > :not(:first-child) {
         margin: inherit;
         margin-right: .5rem;
       }
-      > .btn:not(:last-child) {
+      > :not(:last-child) {
         margin: inherit;
         margin-left: .5rem;
       }
@@ -456,7 +456,7 @@
 }
 
 // Breakpoint MD and down
-@include media-breakpoint-down(md) {
+@include media-breakpoint-down(sm) {
   .page-header {
     .list-inline-interpunct {
       .list-inline-item {

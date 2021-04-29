@@ -26,7 +26,7 @@
           <h1 class="h3">Vero erat invidunt voluptua dolores ut sit sed sed clita diam erat diam gubergren diam sadipscing dolore ipsum at elitr</h1>
           {{# pageHeaderExtraContent}}
           <div class="content-header-extras">
-            <div class="list-inline-interpunct mb-0">
+            <div class="list-inline-interpunct">
               {{# hasBadge}}<div class="list-inline-item">{{> components-badge }}</div>{{/ hasBadge}}
               {{# listElements}}
               <div class="list-inline-item">{{{ content}}}</div>
@@ -37,19 +37,23 @@
         </div>
       </div>
     </div>
-    <div class="col-auto">
+    <div class="col-auto pl-0">
       <div class="container-btn btn-sem-order d-none d-md-flex">
         {{> components-button(buttonClass: "btn-primary btn-squared", buttonText: "Action primaire")}}
         {{> components-button(buttonClass: "btn-secondary btn-squared d-none d-lg-inline-flex", buttonText: "Action secondaire")}}
         {{# moreActionBtn}}
-        {{> components-button-icon(buttonClass: "btn-secondary btn-squared btn-icon", buttonText: false, ariaLabel: "Libellé pour accessibilité", icon-name: "icon-more-vertical", buttonIcon: true, dataToggle: false, dataTarget: false, dataExtras: "data-toggle=\"dropdown\" aria-expanded=\"false\" aria-haspopup=\"true\"")}}
-        {{> components-dropdown}}
+        <div class="dropdown">
+          {{> components-button-icon(buttonClass: "btn-secondary btn-squared btn-icon", buttonText: false, ariaLabel: "Libellé pour accessibilité", icon-name: "icon-more-vertical", buttonIcon: true, dataToggle: false, dataTarget: false, dataExtras: "data-toggle=\"dropdown\" aria-expanded=\"false\" aria-haspopup=\"true\"")}}
+          {{> components-dropdown}}
+        </div>
         {{/ moreActionBtn}}
       </div>
       <div class="container-btn btn-sem-order d-md-none">
         {{# moreActionBtn}}
-        {{> components-button-icon(buttonClass: "btn-tertiary btn-squared btn-icon", buttonText: false, ariaLabel: "Libellé pour accessibilité", icon-name: "icon-more-vertical", buttonIcon: true, dataToggle: false, dataTarget: false, dataExtras: "data-toggle=\"dropdown\" aria-expanded=\"false\" aria-haspopup=\"true\"")}}
-        {{> components-dropdown}}
+        <div class="dropdown">
+          {{> components-button-icon(buttonClass: "btn-tertiary btn-squared btn-icon", buttonText: false, ariaLabel: "Libellé pour accessibilité", icon-name: "icon-more-vertical", buttonIcon: true, dataToggle: false, dataTarget: false, dataExtras: "data-toggle=\"dropdown\" aria-expanded=\"false\" aria-haspopup=\"true\"")}}
+          {{> components-dropdown}}
+        </div>
         {{/ moreActionBtn}}
       </div>
     </div>
