@@ -40,14 +40,43 @@
   display: flex;
   align-items: center;
   padding: $toast-padding-x; // apply to both vertical and horizontal
-  margin: .125rem 1rem .125rem 0; // We tweak margin to overcome line-height vs centering on icon comportement
+  margin: .125rem 0; // We tweak margin to overcome line-height vs centering on icon comportement
+
+  &:last-child {
+    margin-right: 1rem;
+  }
 }
 .toast-action {
   display: flex;
   align-items: center;
   margin-right: .5rem;
+  .btn + .btn {
+    margin-left: .5rem;
+  }
   .btn {
+    @extend .btn-reversed;
     @extend .btn-squared;
+    @extend .btn-tertiary;
+
+    @each $breakpoint, $value in $grid-breakpoints {
+      &.btn-swap-label-#{$breakpoint} {
+        @include media-breakpoint-down($breakpoint) {
+          padding: .4375rem;
+          &.btn-lg {
+            padding: .9375rem;
+          }
+          &.btn-sm {
+            padding: .4375rem;
+          }
+        }
+      }
+    }
+  }
+}
+
+@each $color, $value in $toast-colors {
+  .toast-#{$color} {
+    @include toast-variant($value, $white);
   }
 }
 

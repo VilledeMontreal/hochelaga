@@ -6,12 +6,15 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 
 ## [4.18.0] - unreleased
 
+### Added
+- Components - Buttons: New utility class .btn-swap-label-[BREAKPOINT] to swap label for icon below a certain breakpoint.
 ### Changed
-- Components - Forms - Checkbox wrapper and radio wrapper : control element align top.
-- Components - Forms : Update disabled label color for accessibility.
-- Components - Buttons : Update disabled label color for accessibility.
-- Components - Button-group : Update disabled label color for accessibility.
-- Patterns - En-tête interne : Adapt pattern to meet new specs.
+- Components - Forms - Checkbox wrapper and radio wrapper: control element align top.
+- Components - Forms: Update disabled label color for accessibility.
+- Components - Buttons: Update disabled label color for accessibility.
+- Components - Button-group: Update disabled label color for accessibility.
+- Components - Toasts: Add variants and new button structure.
+- Patterns - En-tête interne: Adapt pattern to meet new specs.
 - Templates - Unité administrative: Various modules added, sidebar revamp.
 - Templates - Programmes: Partners display mode. List and logos.
 - Templates outils interne - Vue de l'agent: Harmonisation with design system.
