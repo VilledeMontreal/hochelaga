@@ -1,16 +1,22 @@
 <div class="drawer">
   {{# drawerInfo}}
   <div class="menu-item-content" id="vdl311-info">
-    <div class="menu-item-content-header">
-      <div class="mb-2">
-        <div class="h4 mb-1">Nom de l'arrondissement</div>
-        <div class="d-flex">
-          {{# badgesCategories}}
-          {{> components-badge}}
-          {{/ badgesCategories}}
+    <div class="menu-item-content-header p-2">
+      <div class="mb-2 d-flex justify-content-between">
+        <div class="h4 mb-0 mr-2">Rivière-des-Prairies–Pointe-aux-Trembles</div>
+        <div class="ml-auto">
+          <button type="button" class="btn btn-sm btn-tertiary btn-squared btn-icon-right" data-toggle="modal" data-target="#modalArrondissementVDA">
+            <span class="icon icon-location" aria-hidden="true"></span>
+            <span class="btn-label">Changer</span>
+          </button>
         </div>
       </div>
-      <div class="font-size-xs-interface">Mis à jour 2019-09-04</div>
+      <div class="font-size-xs-interface">Mis à jour le 18 mai 2021</div>
+    </div>
+    <div class="px-2">
+      {{# moduleAvis}}
+      {{> components-alert}}
+      {{/ moduleAvis}}
     </div>
     {{# accordionListed}}
     {{> components-accordeon}}

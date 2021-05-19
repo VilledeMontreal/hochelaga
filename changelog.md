@@ -14,10 +14,12 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 - Patterns - En-tête interne : Adapt pattern to meet new specs.
 - Templates - Unité administrative: Various modules added, sidebar revamp.
 - Templates - Programmes: Partners display mode. List and logos.
+- Templates outils interne - Vue de l'agent: Harmonisation with design system.
 
 ### Fixed
 - Components - Cards - Document: image is no longer being stretch by flex.
 - Components - Messages - Popover: Fix spacing.
+- Components - Navigation - Side nav: Fix padding for large breakpoint.
 
 ## [4.17.0] - 2021-03-24
 

@@ -18,7 +18,7 @@
   </div>
   <!-- TableData modal -->
   <div class="modal fade" id="exampleTableData" tabindex="-1" role="dialog" aria-labelledby="exampleTableDataLabel" aria-hidden="true">
-    <div class="modal-dialog modal-dialog-centered modal-lg" role="document">
+    <div class="modal-dialog modal-md modal-dialog-centered" role="document">
       <div class="modal-content">
         <div class="modal-header">
           <h5 class="modal-title" id="exampleTableDataLabel">Seuil de faible revenu</h5>
@@ -28,6 +28,31 @@
         </div>
         <div class="modal-body">
           {{> styles-table}}
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Modal Arrondissement -->
+  <div class="modal fade" id="modalArrondissementVDA" tabindex="-1" role="dialog" aria-labelledby="modalArrondissementVDALabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="modalArrondissementVDALabel">Sélectionner votre arrondissement</h5>
+          <button type="button" class="btn-close close" data-dismiss="modal" aria-label="Close">
+            {{> styles-icon-item("icon-name":"icon-x")}}
+          </button>
+        </div>
+        <div class="modal-body">
+        {{# dropdown}}
+          <ul>
+            {{# options }}
+            <li>
+              <a href="#">{{label}}</a>
+            </li>
+            {{/ options}}
+          </ul>
+        {{/ dropdown}}
         </div>
       </div>
     </div>
