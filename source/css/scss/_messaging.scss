@@ -83,7 +83,7 @@
   .alert-#{$label} {
     color: $color-dark;
     @include gradient-bg($color-light);
-    border-color: $color-base;;
+    border-color: $color-base;
 
     hr {
       border-top-color: $color-dark;

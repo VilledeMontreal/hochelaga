@@ -1,0 +1,24 @@
+<div class="toast show{{# toastClass}} {{toastClass}}{{/toastClass}}" role="alert" aria-live="assertive" aria-atomic="true">
+  <div class="toast-icon">
+    <span class="icon {{toastIcon}}" aria-hidden="true"></span>
+  </div>
+  <div class="toast-body">
+    {{{ toast-body }}}
+  </div>
+  {{# showActions}}
+  <div class="toast-action">
+    {{# btnAction}}
+    {{> components-button}}
+    {{/ btnAction}}
+    {{# btnSwapLabel}}
+    {{> components-button-icon}}
+    {{/ btnSwapLabel}}
+    {{# btnDismiss}}
+    <button type="button" class="btn btn-icon" data-dismiss="toast" aria-label="Fermer">
+      <span class="icon icon-x" aria-hidden="true"></span>
+    </button>
+    {{/ btnDismiss}}
+  </div>
+  {{/ showActions}}
+</div>
+

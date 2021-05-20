@@ -239,7 +239,7 @@ fieldset:disabled a.btn {
     }
 
     // We need to override btn-icon inside .btn-reversed
-    // See if we can simplify the whole think
+    // See if we can simplify the whole thing
     &.btn-icon {
       .icon {
         margin: 0;
@@ -469,20 +469,20 @@ input[type="button"] {
   }
   // Handle padding on button sizes
   &.btn {
-    padding: .4375rem;
+    padding: .4375rem !important;
   }
   &.btn-lg {
-    padding: .9375rem;
+    padding: .9375rem !important;
   }
   &.btn-sm {
-    padding: .4375rem;
+    padding: .4375rem !important;
   }
 }
 
 
 // Utility class to hide button-icon label
 @each $breakpoint, $value in $grid-breakpoints {
-  // Hide button label at small breakpoint
+  // Hide button label at breakpoint
   .btn-hide-label-#{$breakpoint} {
     @include media-breakpoint-down($breakpoint) {
 
@@ -515,6 +515,31 @@ input[type="button"] {
            margin: 0;
           }
         }
+      }
+    }
+  }
+
+  // Swap label for icon at breakpoint
+  .btn-swap-label-#{$breakpoint} {
+    @include media-breakpoint-up($breakpoint) {
+      .icon {
+        display: none;
+      }
+    }
+    @include media-breakpoint-down($breakpoint) {
+      padding: .4375rem;
+      &.btn-lg {
+        padding: .9375rem;
+      }
+      &.btn-sm {
+        padding: .4375rem;
+      }
+      .btn-label {
+        display: none;
+      }
+      .icon {
+        display: flex;
+        margin: 0 !important; // We need to reset margin for all button variants
       }
     }
   }
