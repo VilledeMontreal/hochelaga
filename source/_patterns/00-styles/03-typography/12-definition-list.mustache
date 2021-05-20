@@ -2,14 +2,11 @@
   {{# dl-item}}
   <div class="dl-item">
     <dt>{{ term }}</dt>
-    {{# definition}}
     <dd>{{ definition }}</dd>
-    {{/ definition}}
-    {{# dd-translation}}
-    <dd class="dd-translated" lang="en">{{ dd-translation }}</dd>
-    {{/ dd-translation}}
     {{# dd-image}}
-    <dd class="dd-image pt-1">{{> styles-figure }}</dd>
+    <dd class="dd-image pt-1">
+    {{> components-gallery }}
+    </dd>
     {{/ dd-image}}
   </div>
   {{/ dl-item}}

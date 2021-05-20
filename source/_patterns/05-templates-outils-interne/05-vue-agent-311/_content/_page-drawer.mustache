@@ -30,13 +30,12 @@
   </div>
   {{/ drawerInfo}}
   {{# drawerLexique}}
-  <div class="menu-item-content" id="vdl311-lexicon">
-    <div class="menu-item-content-header">
-      <div class="h4 mb-0">Lexique XYZ</div>
+  <div class="menu-item-content" id="vdl311-lexicon" data="lexique">
+    <div class="menu-item-content-header p-2">
+      <h2 class="h4 mb-2">Lexique XYZ</h2>
+      <div class="font-size-xs-interface">Mis à jour le 19 mai 2021</div>
     </div>
-    <div class="pt-2 pr-0 pb-2 pl-2">
-    {{> patterns-lexique}}
-    </div>
+    {{> patterns-lexique-element}}
   </div>
   {{/ drawerLexique}}
   {{# drawerSignaler}}

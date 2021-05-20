@@ -18,6 +18,7 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 - Templates - Unité administrative: Various modules added, sidebar revamp.
 - Templates - Programmes: Partners display mode. List and logos.
 - Templates outils interne - Vue de l'agent: Harmonisation with design system.
+- Templates outils interne - Vue de l'agent: Lexique harmonisation with design system.
 
 ### Fixed
 - Components - Cards - Document: image is no longer being stretch by flex.

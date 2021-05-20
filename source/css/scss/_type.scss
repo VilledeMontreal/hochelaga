@@ -243,6 +243,7 @@ a {
 dl {
   @include font-size($font-size-base);
   line-height: $line-height-md;
+  margin-bottom: 2rem;
   // Smaller variant
   &.dl-sm {
     @include font-size($font-size-sm);
@@ -265,6 +266,7 @@ dl {
 
 dt {
   color: $neutral-primary;
+  margin-bottom: .5rem;
 
   + .dd-translated {
     margin-top: .5rem;
@@ -272,7 +274,7 @@ dt {
 }
 
 dd {
-  line-height: $line-height-lg;
+  line-height: $line-height-md;
   margin-bottom: .5rem;
   &.dd-translated {
     color: $neutral-primary;
