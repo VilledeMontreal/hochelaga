@@ -19,17 +19,24 @@ $action-darker:     #075B4F;
 $primary-darker:   $action-darker;
 
 // Highlight
+$highlight-focus:   #98BCDE;
+$highlight-focus-reversed: #ffffff;
 $highlight-light:	  #eefaf8;
 $highlight-strong:  #d0f3ee;
 
 // Neutral
 $neutral-primary: 			    #212529;
-$neutral-primary-reverse: 	#ffffff;
+$neutral-primary-reversed:  #ffffff;
+$neutral-primary-reverse: 	$neutral-primary-reversed;
 $neutral-secondary:		    	#637381;
 $neutral-tertiary:			    #adb5bd;
 $neutral-stroke:			      #ced4dA;
 $neutral-underground-1:		  #f8f9fa;
 $neutral-underground-2: 	  #dee2e6;
+$neutral-ground:            #ffffff;
+$neutral-ground-reversed:     #212529;
+$neutral-underground-1-reversed: #191c1f;
+$neutral-underground-2-reversed: #111315;
 
 //Grays
 $black:             #000000;
@@ -42,7 +49,7 @@ $gray-400:          $neutral-stroke;
 $gray-300:          $neutral-underground-2;
 $gray-200:          $neutral-underground-1;
 $gray-100:          $neutral-underground-1;
-$white:             $neutral-primary-reverse;
+$white:             $neutral-primary-reversed;
 
 
 // Alert colors
