@@ -97,7 +97,8 @@ legend,
   label:not(.custom-control-label):not(.btn) {
     &:after {
       content: '*';
-      color: $negative-dark;
+      color: $negative;
+      padding-left: .25rem;
     }
   }
 }
