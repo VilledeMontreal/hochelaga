@@ -10,6 +10,7 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 - Components - Buttons: New utility class .btn-swap-label-[BREAKPOINT] to swap label for icon below a certain breakpoint.
 ### Changed
 - Styles - Colors: Change colors names - Harmonisation Design System.
+- Components - Forms - Required: Change colors and fix padding.
 - Components - Forms - Checkbox wrapper and radio wrapper: control element align top.
 - Components - Forms: Update disabled label color for accessibility.
 - Components - Buttons: Update disabled label color for accessibility.
