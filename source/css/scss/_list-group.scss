@@ -282,7 +282,6 @@
 
   .list-group-item {
     display: block;
-    padding: 1rem 0;
     border-top: $list-group-border-width solid $list-group-border-color;
 
     &:last-child {
@@ -461,10 +460,17 @@
 
 }
 
+// All lists should have paddings all around
+.list-group-complex,
+.list-group-teaser {
+  .list-group-item {
+    padding: 1rem;
+  }
+}
+
 .list-group-complex {
 
   .list-group-item {
-    padding: 1rem;
 
     .badge + .badge {
       margin-left: .25rem;
