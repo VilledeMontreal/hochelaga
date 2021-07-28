@@ -17,6 +17,7 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 - Components - Button-group: Update disabled label color for accessibility.
 - Components - Toasts: Add variants and new button structure.
 - Components - List-group: Add border-bottom on last element.
+- Components - List-group: Add 16px of padding.
 - Components - Collapse - Accordeon: Add border-bottom on last element.
 - Patterns - En-tête interne: Adapt pattern to meet new specs.
 - Templates - Unité administrative: Various modules added, sidebar revamp.
@@ -24,8 +25,11 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 - Templates outils interne - Vue de l'agent: Harmonisation with design system.
 - Templates outils interne - Vue de l'agent: Lexique harmonisation with design system.
 
+### Removed
+- Components - List-group - List complexe icon editorial
 ### Fixed
 - Components - Cards - Document: image is no longer being stretch by flex.
+- Components - Cards - Profil: prevent .card-text-interface from being sticky bottom of card.
 - Components - Messages - Popover: Fix spacing.
 - Components - Navigation - Side nav: Fix padding for large breakpoint.
 
