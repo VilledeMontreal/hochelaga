@@ -16,6 +16,8 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 - Components - Buttons: Update disabled label color for accessibility.
 - Components - Button-group: Update disabled label color for accessibility.
 - Components - Toasts: Add variants and new button structure.
+- Components - List-group: Add border-bottom on last element.
+- Components - Collapse - Accordeon: Add border-bottom on last element.
 - Patterns - En-tête interne: Adapt pattern to meet new specs.
 - Templates - Unité administrative: Various modules added, sidebar revamp.
 - Templates - Programmes: Partners display mode. List and logos.
