@@ -319,10 +319,12 @@
 .list-inline-interpunct {
   display: flex;
   flex-wrap: wrap;
+  align-items: center;
+  margin-bottom: -.5rem; // Match .list-inline-item margin-bottom negatively to balance container height.
   .list-inline-item {
     display: inline-flex;
     margin-right: 0;
-    margin-bottom: .25rem;
+    margin-bottom: .5rem;
     &:after {
       -webkit-mask: url($data-icon-dot-interpunct) no-repeat 50% 50%;
       mask: url($data-icon-dot-interpunct) no-repeat 50% 50%;
@@ -335,6 +337,7 @@
       background-color: $neutral-tertiary;
       margin-left: .25rem;
       margin-right: .25rem;
+      align-self: center;
     }
     // Remove interpunct from last item
     &:last-child {

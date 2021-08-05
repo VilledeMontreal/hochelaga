@@ -66,15 +66,12 @@
 .list-group-xl {
   .list-group-item {
     border-top: $list-group-border-width solid $list-group-border-color;
-    &.active {
-      border-color: $list-group-active-border-color;
-    }
-
+    border-bottom: none;
     &:active,
     &.active {
       color: $list-group-action-active-color;
       background-color: $list-group-action-active-bg;
-      border-bottom: none;
+      border-color: $list-group-active-border-color;
       border-top: 1px solid transparent;
       + .list-group-item-action {
         border-top: 1px solid transparent;
@@ -93,6 +90,16 @@
         + .list-group-item-action {
           border-top: 1px solid transparent;
         }
+      }
+    }
+    &:last-child {
+      border-bottom: $list-group-border-width solid $list-group-border-color;
+      &:active,
+      &.active {
+        border-bottom: 1px solid transparent;
+      }
+      @include hover-focus {
+        border-bottom: 1px solid transparent;
       }
     }
   }
@@ -275,8 +282,11 @@
 
   .list-group-item {
     display: block;
-    padding: 1rem 0;
     border-top: $list-group-border-width solid $list-group-border-color;
+
+    &:last-child {
+      border-bottom: $list-group-border-width solid $list-group-border-color;
+    }
 
     // DEPRECATED
     // use list-group-thumb
@@ -450,10 +460,17 @@
 
 }
 
+// All lists should have paddings all around
+.list-group-complex,
+.list-group-teaser {
+  .list-group-item {
+    padding: 1rem;
+  }
+}
+
 .list-group-complex {
 
   .list-group-item {
-    padding: 1rem;
 
     .badge + .badge {
       margin-left: .25rem;

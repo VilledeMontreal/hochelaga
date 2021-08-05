@@ -3,7 +3,14 @@
   <button class="btn-media js-gallery-trigger" aria-hidden="true">
     <img src="{{ mediaGallery.0.thumbnail.mediaSrc }}" class="img-fluid" height="{{ mediaGallery.0.thumbnail.height }}" width="{{ mediaGallery.0.thumbnail.width }}" itemprop="thumbnail" alt="{{ mediaGallery.0.mediaAlt }}">
   </button>
-    <button class="btn btn-sm btn-primary btn-reversed btn-media-gallery js-gallery-trigger">Voir la galerie</button>
+  {{^btnMediaIcon}}
+  <button class="btn btn-sm btn-primary btn-reversed btn-media-gallery js-gallery-trigger">Voir la galerie</button>
+  {{/btnMediaIcon}}
+  {{# btnMediaIcon}}
+  <button class="btn btn-sm btn-primary btn-reversed btn-media-gallery btn-icon js-gallery-trigger" aria-label={{ariaLabel}}>
+    <span class="icon {{icon-name}}" aria-hidden="true"></span>
+  </button>
+  {{/btnMediaIcon}}
 </div>
 
 <ul class="media-gallery d-none" itemscope itemtype="http://schema.org/ImageGallery">

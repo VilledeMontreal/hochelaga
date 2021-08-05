@@ -19,34 +19,27 @@
     </div>
   </div>
   <div class="content-module-stacked">
-  <!-- Media Gallery -->
-  <button class="btn-media js-gallery-trigger">
-    {{> styles-figure}}
-  </button>
-
-  <div class="media-gallery d-none" itemscope itemtype="http://schema.org/ImageGallery">
-    <div itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
-      <a href="{{ mediaSrc }}" itemprop="contentUrl" data-size="{{ mediaSize }}" data-index="{{ index }}" data-description="{{ mediaCaption}}" data-author="{{ mediaAuthor }}">
-        <img src="{{ thumbnail.mediaSrc }}" class="img-fluid" height="{{ thumbnail.height }}" width="{{ thumbnail.width }}" itemprop="thumbnail" alt="{{ mediaAlt }}">
-      </a>
-    </div>
-  </div>
-  
+    <!-- Media Gallery -->
+    {{> components-gallery }}
   </div>
   <div class="content-module-stacked">
   {{> patterns-emphasis(emphasisClasses: emphasis-md)}}
   </div>
   {{# comment}}
   <div class="content-module-stacked">
-  {{> components-alert}}
+    <div class="list text-info-reversed">
+    {{> components-list-item-element}}
+    </div>
   </div>
   {{/ comment}}
 </div>
 {{/ generalites}}
 
 {{# procedures}}
-<div class="content-modules mb-2 pb-0">
-  <h2 class="font-size-base-interface mb-1">Titre de niveau 2</h2>
+<div class="content-modules mb-2 pb-0{{#separator}} {{separatorClass}}{{/separator}}">
+  {{# modules}}
+  {{# moduleText}}
+  {{# heading}}<h2 class="font-size-base-interface mb-1">{{heading}}</h2>{{/heading}}
   <div class="content-module-stacked">
     <p>Labore eirmod ea dolor sadipscing ipsum tempor erat, sit lorem tempor duo labore dolores takimata lorem, at amet elitr et est. At ut et eos sadipscing sadipscing. At <a href="/lien-interne">diam clita sit</a> et <a href="https://google.ca">consetetur vero accusam</a> lorem aliquyam. Aliquyam sit ea dolore ipsum ipsum, no lorem et sit diam ipsum. Lorem nonumy clita voluptua voluptua consetetur, voluptua ea est takimata sed.</p>
     <ul>
@@ -55,6 +48,8 @@
       <li>Item 3</li>
     </ul>
   </div>
+  {{/ moduleText}}
+  {{# moduleTable}}
   <div class="content-module-stacked">
     <div class="list-group">
       <div class="list-group-item list-group-item-action">
@@ -64,64 +59,74 @@
       </div>
     </div>
   </div>
+  {{/ moduleTable}}
+  {{# moduleImage}}
   <div class="content-module-stacked">
-  {{> styles-figure}}
+      <!-- Media Gallery -->
+    {{> components-gallery }}
   </div>
+  {{/ moduleImage}}
+  {{# moduleDocuments}}
   <h2 class="font-size-base-interface mb-1">Module titre de section</h2>
-  {{# module-documents}}
   <div class="content-module-stacked">
   {{> components-list-item-link}}
   </div>
-  {{/ module-documents}}
+  {{/ moduleDocuments}}
+  {{# moduleLiens}}
   <h2 class="font-size-base-interface mb-1">Module titre de section</h2>
-  {{# module-liens}}
   <div class="content-module-stacked">
   {{> components-list-item-link}}
   </div>
-  {{/ module-liens}}
+  {{/ moduleLiens}}
+  {{# moduleComment}}
+  <div class="content-module-stacked">
+    <div class="list text-info-reversed">
+    {{> components-list-item-element}}
+    </div>
+  </div>
+  {{/ moduleComment}}
+  {{/ modules}}
+  {{^modules}}Voir Procédures internes pour les modules possibles.{{/modules}}
 </div>
 {{/ procedures}}
 
 {{# gdc}}
 <div class="mb-1">
-  <h2 class="font-size-base-interface mb-1">{{ heading }}</h2>
-  <div class="list {{listClass}}">
-  {{# list }}
-    <div class="mb-2">
-      <div class="list-item-icon list-item-icon-sm">
-        <div class="mr-2">
-          <img src="{{ src}}" alt="{{alt}}" />
-        </div>
-        <div class="list-item-icon-content">
-          <div class="list-item-icon-label">{{iconLabel}}</div>
-          <div>{{type}}</div>
-        </div>
+  {{# heading}}<h2 class="font-size-base-interface mb-1">{{ heading }}</h2>{{/ heading}}
+  <ul class="list{{# listClass }} {{ listClass }}{{/ listClass }}">
+    {{# list }}
+    <li class="list-item-icon">
+      <div class="mr-2">
+        <img src="{{ src}}" alt="{{alt}}" width="24" height="24"/>
       </div>
-      {{# has-subcontent}}
-      <div class="list-item-icon-sub-content py-1 ml-5 mb-1">
-        <div class="font-weight-bold font-size-md-interface text-dark mb-0">{{ title }}</div>
-        {{# description }}
-        <div class="element-mb-xs">
-          {{{description}}}
+      <div class="list-item-icon-content">
+        {{# listItemLabel }}
+        <div class="list-item-icon-label">{{listItemLabel}}</div>
+        {{/ listItemLabel}}
+        {{# listItemContent}}
+        {{#listExtraContentClass}}
+        <div class="{{listExtraContentClass}}">
+        {{/listExtraContentClass}}
+          {{# extraContent}}
+          <div{{#class}} class="{{class}}"{{/class}}>{{{content}}}</div>
+          {{/ extraContent}}
+        {{#listExtraContentClass}}
         </div>
-        {{/ description}}
-        {{# comment}}
-        {{> patterns-emphasis("emphasisClasses": "emphasis-sm")}}
-        {{/ comment}}
+        {{/ listExtraContentClass}}
+        {{/ listItemContent}}
       </div>
-      {{/ has-subcontent}}
-    </div>
-  {{/ list }}
-  </div>
+    </li>
+    {{/ list }}
+  </ul>
 </div>
 {{/ gdc}}
 
 {{# question-type}}
-<div class="questions-container element-mb-sm">
+<div class="questions-container mb-0">
   {{# question-item}}
   <div class="question-item">
     <h2 class="font-size-base-interface mb-1">{{ question }}</h2>
-    <div class="wrapper wrapper-answer mb-3 rm-last-child-mb">
+    <div class="pb-2">
       {{{ answer}}}
     </div>
   </div>

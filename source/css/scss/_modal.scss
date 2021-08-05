@@ -248,8 +248,14 @@
       flex-direction: row-reverse;
 
       // Easily place margin between footer elements
-      > :not(:first-child) { margin-right: .5rem; }
-      > :not(:last-child) { margin-left: .5rem; }
+      > :not(:first-child) {
+        margin-left: 0;
+        margin-right: .5rem;
+      }
+      > :not(:last-child) {
+        margin-left: .5rem;
+        margin-right: 0;
+      }
 
       // DEPRECATED
       .modal-footer-buttons {

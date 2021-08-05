@@ -83,7 +83,7 @@
   .alert-#{$label} {
     color: $color-dark;
     @include gradient-bg($color-light);
-    border-color: $color-base;;
+    border-color: $color-base;
 
     hr {
       border-top-color: $color-dark;
@@ -131,10 +131,10 @@
 
 .popover-header,
 .popover-body {
-  padding-top: 1rem;
+  padding-bottom: 1rem;
 
-  &:first-of-type {
-    padding: 0;
+  &:last-child {
+    padding-bottom: 0;
   }
 }
 

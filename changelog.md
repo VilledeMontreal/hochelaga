@@ -4,8 +4,36 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](http://keepachangelog.com/en/1.0.0/)
 and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.html).
 
+## [4.18.0] - unreleased
 
-## [4.17.0] - unreleased
+### Added
+- Components - Buttons: New utility class .btn-swap-label-[BREAKPOINT] to swap label for icon below a certain breakpoint.
+### Changed
+- Styles - Colors: Change colors names - Harmonisation Design System.
+- Components - Forms - Required: Change colors and fix padding.
+- Components - Forms - Checkbox wrapper and radio wrapper: control element align top.
+- Components - Forms: Update disabled label color for accessibility.
+- Components - Buttons: Update disabled label color for accessibility.
+- Components - Button-group: Update disabled label color for accessibility.
+- Components - Toasts: Add variants and new button structure.
+- Components - List-group: Add border-bottom on last element.
+- Components - List-group: Add 16px of padding.
+- Components - Collapse - Accordeon: Add border-bottom on last element.
+- Patterns - En-tête interne: Adapt pattern to meet new specs.
+- Templates - Unité administrative: Various modules added, sidebar revamp.
+- Templates - Programmes: Partners display mode. List and logos.
+- Templates outils interne - Vue de l'agent: Harmonisation with design system.
+- Templates outils interne - Vue de l'agent: Lexique harmonisation with design system.
+
+### Removed
+- Components - List-group - List complexe icon editorial
+### Fixed
+- Components - Cards - Document: image is no longer being stretch by flex.
+- Components - Cards - Profil: prevent .card-text-interface from being sticky bottom of card.
+- Components - Messages - Popover: Fix spacing.
+- Components - Navigation - Side nav: Fix padding for large breakpoint.
+
+## [4.17.0] - 2021-03-24
 
 ### Added
 - Components - Modals: New .modal-footer-order class to handle button html order vs design positioning
@@ -640,6 +668,7 @@ Main navbar, menu and footer are now in their own stylesheet. They will eventual
 
 The version 3 is now deprecated. Only bug fixes will be considered. Please refer to the old bitbucket repo https://bitbucket.org/villemontreal/boite-outils-web/.
 
+[4.17.0]: https://bitbucket.org/villemontreal/boite-outils4-web/src/4.17.0/
 [4.16.0]: https://bitbucket.org/villemontreal/boite-outils4-web/src/4.16.0/
 [4.15.0]: https://bitbucket.org/villemontreal/boite-outils4-web/src/4.15.0/
 [4.14.1]: https://bitbucket.org/villemontreal/boite-outils4-web/src/4.14.1/

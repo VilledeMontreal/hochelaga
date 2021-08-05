@@ -110,6 +110,8 @@
     line-height: $line-height-md;
   }
 
+  // TODO: Utiliser la classe card-text-sticky-bottom pour qu'un contenu soit sticky au bas de la card
+  // Les autres instructions seront retiré après décision du comité UX sur la normalisation des cards.
   .card-text-sticky-bottom,
   .card-text-interface,
   .card-date-text,
@@ -173,6 +175,7 @@
       @include border-radius(0);
       border: $card-border-width solid $card-border-color;
       margin: 1rem auto 0 auto;
+      align-self: flex-start;
     }
 
     .card-body-wrapper {
@@ -239,6 +242,9 @@
       .card-title,
       .card-text-interface {
         margin-bottom: .5rem;
+      }
+      .card-text-interface {
+        margin-top: inherit;
       }
       *:last-child {
         margin-bottom: 0;

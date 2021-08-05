@@ -40,6 +40,163 @@
     }
   },
   "lead": "<p>Amorce - Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi condimentum sollicitudin erat, quis convallis risus. Nullam posuere odio ligula, hendrerit suscipit ligula laoreet. Curabitur eleifend nulla purus, ut pharet urna ef id. Cras lacinia nisi id  (recommandé 300 caractères maximum).</p>",
+  "module-events": {
+    "listGroupClass": "mb-4",
+    "listGroup": [
+      {
+        "url": "#",
+        "media": {
+          "img": {
+            "alt": "Alt image",
+            "src": "https://picsum.photos/id/1010/128/72"
+          },
+          "placeholder": false
+        },
+        "type": false,
+        "title": "At amet eos et diam sed no invidunt sadipscing no invidunt sed dolore eos amet",
+        "infos": {
+          "badge": false,
+          "infos-items": [
+            {
+              "text": "<div>Du 1 décembre 2021 - 9&nbsp;h&nbsp;00</div><div>Au 13 décembre 2021 - 18&nbsp;h&nbsp;00</div>"
+            }
+          ]
+        }
+      },
+      {
+        "url": "#",
+        "media": {
+          "img": {
+            "alt": "Alt image",
+            "src": "https://picsum.photos/id/1011/128/72"
+          },
+          "placeholder": false
+        },
+        "type": false,
+        "title": "Dolore amet aliquyam justo vero lorem accusam amet eos vero",
+        "infos": {
+          "badge": false,
+          "infos-items": [
+            {
+              "text": "Jeudi 3 décembre 2021 à 9&nbsp;h&nbsp;00"
+            }
+          ]
+        }
+      },
+      {
+        "url": "#",
+        "media": {
+          "img": false,
+          "placeholder": {
+            "icon": "icon-event"
+          }
+        },
+        "type": false,
+        "title": "Consetetur eirmod et aliquyam",
+        "infos": {
+          "badge": false,
+          "infos-items": [
+            {
+              "text": "Jeudi 10 décembre 2021 de 9&nbsp;h&nbsp;00 à 21&nbsp;h&nbsp;00"
+            }
+          ]
+        }
+      }
+    ]
+  },
+  "module-news": {
+    "listGroupClass": "mb-4",
+    "listGroup": [
+      {
+        "url": "#",
+        "media": {
+          "img": {
+            "alt": "Alt image",
+            "src": "https://picsum.photos/id/1010/128/72"
+          },
+          "placeholder": false
+        },
+        "type": false,
+        "title": "At amet eos et diam sed no invidunt sadipscing no invidunt sed dolore eos amet",
+        "infos": {
+          "badge": false,
+          "infos-items": [
+            {
+              "text": "<div>Du 1 décembre 2021 - 9&nbsp;h&nbsp;00</div><div>Au 13 décembre 2021 - 18&nbsp;h&nbsp;00</div>"
+            }
+          ]
+        }
+      },
+      {
+        "url": "#",
+        "media": {
+          "img": {
+            "alt": "Alt image",
+            "src": "https://picsum.photos/id/1011/128/72"
+          },
+          "placeholder": false
+        },
+        "type": false,
+        "title": "Dolore amet aliquyam justo vero lorem accusam amet eos vero",
+        "infos": {
+          "badge": false,
+          "infos-items": [
+            {
+              "text": "Jeudi 3 décembre 2021 à 9&nbsp;h&nbsp;00"
+            }
+          ]
+        }
+      },
+      {
+        "url": "#",
+        "media": {
+          "img": false,
+          "placeholder": {
+            "icon": "icon-event"
+          }
+        },
+        "type": false,
+        "title": "Consetetur eirmod et aliquyam",
+        "infos": {
+          "badge": false,
+          "infos-items": [
+            {
+              "text": "Jeudi 10 décembre 2021 de 9&nbsp;h&nbsp;00 à 21&nbsp;h&nbsp;00"
+            }
+          ]
+        }
+      }
+    ]
+  },
+  "module-featured-external": {
+    "cards": {
+      "classes": false,
+      "bsgrid-classes": "col-12",
+      "card-item": [
+        {
+          "classes": "card-fw card-document",
+          "url": "https://rds.ca",
+          "card-media" : {
+            "icon": false,
+            "img": false,
+            "document": {
+              "img": {
+                "classes": false,
+                "src": "https://picsum.photos/id/1074/768",
+                "alt": "Alt de l'image de couverture du PDF."
+              }
+            }
+          },
+          "card-type": false,
+          "card-title": "Titre",
+          "card-text": false,
+          "card-text-interface": "Description",
+          "card-link": "Libellé du lien",
+          "card-link-icon": "icon-externallink"
+        }
+      ]
+    }
+  },
   "module-featured-document": {
     "cards": {
       "classes": false,
@@ -67,6 +224,44 @@
         }
       ]
     }
+  },
+  "module-card-cta": {
+    "cards": {
+      "classes": "",
+      "bsgrid-classes": "col-12",
+      "card-item": [
+        {
+          "classes": "card-fw",
+          "url": "#",
+          "card-media" : {
+            "icon": false,
+            "img": {
+              "src": "https://picsum.photos/id/1074/768/432",
+              "alt": "Card full width #1 img alt."
+            }
+          },
+          "card-type": "Type",
+          "card-title": "Lien de référence",
+          "card-text": false,
+          "card-text-interface": false
+        }
+      ]
+    }
+  },
+  "module-list-reference-xl": {
+    "listGroupClass": "list-group-xl",
+    "listGroup": [
+      {
+        "icon-name": "icon-affaires-et-economie",
+        "text": "Référence : Titre de l'article lié (choix éditorial)",
+        "class": false
+      },
+      {
+        "icon-name": "icon-animaux",
+        "text": "Titre du contenu référencé",
+        "class": false
+      }
+    ]
   },
   "module-documents": {
     "listGroupClass": "list-group-lg",
@@ -118,45 +313,69 @@
     "listGroup": [
       {
         "url": "/lien-interne",
-        "text": "Titre du programme",
-        "class": false
-      },
-      {
-        "url": "https://google.ca",
-        "text": "Titre du programme",
+        "text": "Titre du programme #1",
         "class": false
       },
       {
         "url": "#",
-        "text": "Titre du programme",
+        "text": "Titre du programme #2",
+        "class": false
+      },
+      {
+        "url": "#",
+        "text": "Titre du programme #3",
+        "class": false
+      },
+      {
+        "url": "#",
+        "text": "Titre du programme #4",
+        "class": false
+      },
+      {
+        "url": "#",
+        "text": "Titre du programme #5",
         "class": false
       }
-    ]
+    ],
+    "button-cta": {
+      "data-link-title": "Tous les programmes",
+      "buttonAsLink": true,
+      "buttonClass": "btn-secondary",
+      "buttonUrl": "#",
+      "buttonText": "Tous les programmes"
+    }
   },
   "listAutoArticles": {
     "listGroupClass": "list-group-lg",
     "listGroup": [
       {
-        "text": "Titre de l'article",
+        "text": "Titre de l'article #1",
         "class": false
       },
       {
-        "text": "Titre de l'article",
+        "text": "Titre de l'article #2",
         "class": false
       },
       {
-        "text": "Titre de l'article",
+        "text": "Titre de l'article #3",
         "class": false
       },
       {
-        "text": "Titre de l'article",
+        "text": "Titre de l'article #4",
         "class": false
       },
       {
-        "text": "Titre de l'article",
+        "text": "Titre de l'article #5",
         "class": false
       }
-    ]
+    ],
+    "button-cta": {
+      "data-link-title": "Tous les articles",
+      "buttonAsLink": true,
+      "buttonClass": "btn-secondary",
+      "buttonUrl": "#",
+      "buttonText": "Tous les articles"
+    }
   },
   "listAutoProjets": false,
   "sidebarRight": true,
@@ -166,65 +385,48 @@
     "list": [
       {
         "hasIcon": true,
-        "icon-name": "icon-email",
+        "icon-name": "icon-location",
         "listItemAction": true,
-        "url": "mailto:test@montreal.ca",
-        "listItemLabel": "Envoyer un courriel",
-        "listItemContent": {
-          "extraContent": {
-            "content": "Texte complémentaire optionnel"
-          }
-        }
-      },
-      {
-        "hasIcon": true,
-        "icon-name": "icon-phone",
-        "listItemAction": false,
-        "listItemLabel": "311",
-        "listItemContent": {
-          "extraContent": {
-            "content": "<p>De l’extérieur de Montréal : 514 872-0311</p><p>Du lundi au vendredi : de 8 h 30 à 20 h 30 Samedi, dimanche et jours fériés : de 9 h à 17 h</p><p>Texte complémentaire optionnel.</p>"
-          }
-          }
-      },
-      {
-        "hasIcon": true,
-        "icon-name": "icon-phone",
-        "listItemAction": false,
-        "listItemLabel": "911",
-        "listItemContent": {
-          "extraContent": {
-            "content": "Services d'urgence"
-          }
-        }
-      },
-      {
-        "hasIcon": true,
-        "icon-name": "icon-phone",
-        "listItemAction": false,
-        "listItemLabel": "Nom du service",
+        "url": "#",
+        "listItemLabel": "Nom du lieu",
         "listItemContent": {
           "extraContent": [
             {
-              "content": "514 555-5555"
+              "class": "font-weight-bold text-danger-reversed",
+              "content": "État du lieu"
             },
             {
-              "content": "poste 123"
+              "content": "123, rue Avenue Est<br>Montréal (Québec) H2H 2H2"
             }
           ]
         }
       },
       {
         "hasIcon": true,
-        "icon-name": "icon-externallink",
-        "listItemAction": true,
-        "url": "https://ville.montreal.qc.ca/formulaires",
-        "listItemLabel": "Formulaire en ligne",
+        "icon-name": "icon-phone",
+        "listItemAction": false,
+        "listItemLabel": "514 555-5555",
         "listItemContent": {
-          "extraContent": {
-            "content": "Texte complémentaire optionnel"
-          }
+          "extraContent": [
+            {
+              "content": "Poste 1234"
+            },
+            {
+              "content": "Option 56"
+            },
+            {
+              "content": "Du lundi au vendredi : de 9 h à 17 h"
+            }
+          ]
         }
+      },
+      {
+        "hasIcon": true,
+        "icon-name": "icon-email",
+        "listItemAction": true,
+        "url": "mailto:test@montreal.ca",
+        "listItemLabel": "Écrivez-nous",
+        "listItemContent": false
       }
     ]
   },
@@ -232,10 +434,24 @@
     "list": [
       {
         "hasIcon": true,
+        "icon-name": "icon-social-medium",
+        "listItemAction": true,
+        "url": "https://medium.com",
+        "listItemLabel": "Medium"
+      },
+      {
+        "hasIcon": true,
         "icon-name": "icon-social-facebook",
         "listItemAction": true,
         "url": "https://facebook.com",
         "listItemLabel": "Facebook"
+      },
+      {
+        "hasIcon": true,
+        "icon-name": "icon-social-flickr",
+        "listItemAction": true,
+        "url": "https://flickr.com",
+        "listItemLabel": "Flickr"
       },
       {
         "hasIcon": true,

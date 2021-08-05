@@ -19,17 +19,24 @@ $action-darker:     #075B4F;
 $primary-darker:   $action-darker;
 
 // Highlight
+$highlight-focus:   #98BCDE;
+$highlight-focus-reversed: #ffffff;
 $highlight-light:	  #eefaf8;
 $highlight-strong:  #d0f3ee;
 
 // Neutral
 $neutral-primary: 			    #212529;
-$neutral-primary-reverse: 	#ffffff;
+$neutral-primary-reversed:  #ffffff;
+$neutral-primary-reverse: 	$neutral-primary-reversed;
 $neutral-secondary:		    	#637381;
 $neutral-tertiary:			    #adb5bd;
 $neutral-stroke:			      #ced4dA;
 $neutral-underground-1:		  #f8f9fa;
 $neutral-underground-2: 	  #dee2e6;
+$neutral-ground:            #ffffff;
+$neutral-ground-reversed:     #212529;
+$neutral-underground-1-reversed: #191c1f;
+$neutral-underground-2-reversed: #111315;
 
 //Grays
 $black:             #000000;
@@ -42,7 +49,7 @@ $gray-400:          $neutral-stroke;
 $gray-300:          $neutral-underground-2;
 $gray-200:          $neutral-underground-1;
 $gray-100:          $neutral-underground-1;
-$white:             $neutral-primary-reverse;
+$white:             $neutral-primary-reversed;
 
 
 // Alert colors
@@ -117,6 +124,12 @@ $dialog-colors: (
   )
 );
 
+$toast-colors: (
+  info: $informative-dark,
+  success: $positive-dark,
+  danger: $negative-dark
+);
+
 
 // Overlays
 //
@@ -150,6 +163,7 @@ $shadow-strong-inverted:    0px -8px 32px rgba(0,0,0,.1);
 $icon-xs:     16px;
 $icon-sm:     20px;
 $icon-md:     24px;
+$icon-lg:     32px;
 $icon-xl:     40px;
 
 $icon-cat:    40px;
@@ -165,6 +179,9 @@ $icons-size: (
   ),
   md:  (
     size: $icon-md
+  ),
+  lg:  (
+    size: $icon-lg
   )
 );
 
@@ -547,7 +564,7 @@ $form-group-margin-bottom:              1rem;
 // custom forms
 
 $custom-control-indicator-disabled-bg:          $neutral-stroke;
-$custom-control-label-disabled-color:           $neutral-tertiary;
+$custom-control-label-disabled-color:           $neutral-secondary;
 
 $custom-control-gutter:                         .75rem;
 $custom-control-spacer-x:                       1rem;
@@ -703,7 +720,7 @@ $pagination-active-color:           $primary;
 $pagination-active-bg:              $highlight-light;
 $pagination-active-border-color:    $neutral-stroke;
 
-$pagination-disabled-color:         $neutral-tertiary;
+$pagination-disabled-color:         $neutral-secondary;
 $pagination-disabled-bg:            $white;
 $pagination-disabled-border-color:  $neutral-stroke;
 
@@ -730,7 +747,7 @@ $toast-padding-y:                   1rem;
 $toast-font-size:                   $font-size-sm;
 $toast-line-height:                 $line-height-sm;
 $toast-color:                       $white;
-$toast-background-color:            $neutral-primary;
+$toast-background-color:            $informative-dark;
 $toast-border-radius:               .25rem;
 $toast-box-shadow:                  $shadow-moderate;
 

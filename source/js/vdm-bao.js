@@ -350,9 +350,8 @@
     });
   });
 
-
   // Smooth scrolling using jQuery easing
-  $('a.js-scroll-trigger[href*="#"]:not([href="#"])').click(function() {
+  $('a.js-scroll-trigger[href*="#"]:not([href="#"])').on('click', function() {
     if (location.pathname.replace(/^\//, '') == this.pathname.replace(/^\//, '') && location.hostname == this.hostname) {
       var target = $(this.hash);
       target = target.length ? target : $('[name=' + this.hash.slice(1) + ']');
@@ -683,6 +682,45 @@ showPartialLists.forEach((partialList) => {
         item.classList.toggle('sr-only')
     })
   });
+});
+
+// Smooth scrolling using Vanilla JS
+const scrollLexique = document.querySelectorAll(`[data='lexique']`);
+
+scrollLexique.forEach((lexique) => {
+  const container = document.getElementById(lexique.id);
+  const navLexique = document.getElementById('navLexique');
+
+  const links = document.querySelectorAll('a.js-scroll-trigger-vda');
+
+  for (const link of links) {
+    link.addEventListener("click", scrollHandler);
+  }
+
+  function scrollHandler(e) {
+    e.preventDefault();
+    const href = this.getAttribute("href");
+    const offsetTop = document.querySelector(href).offsetTop;
+    assureAtTop(href);
+    container.scroll({
+      top: offsetTop - navLexique.offsetHeight,
+      behavior: "smooth"
+    });
+  }
+
+  function assureAtTop(href) {
+
+    const buffer = document.getElementById('lower-buffer');
+
+    const w = container.offsetHeight;
+    const y = document.getElementById(href.substring(1)).offsetHeight;
+    let z = buffer.offsetHeight;
+    while (y+z < w) {
+      const newHeight = z + 32;
+      buffer.style.height = newHeight + 'px';
+      z = buffer.offsetHeight;
+    }
+  }
 });
 
 

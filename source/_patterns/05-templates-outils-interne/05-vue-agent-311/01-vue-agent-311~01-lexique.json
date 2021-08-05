@@ -5,7 +5,7 @@
       {
         "menuItemSeparator": false,
         "class": false,
-        "url": "link.templates-outils-interne-vue-agent-311-info",
+        "url": "link.templates-outils-interne-vue-agent-311",
         "menuItemIcon": {
           "icon-name": "icon-info"
         },
@@ -45,137 +45,192 @@
     "lexiqueId": "lexique-example",
     "lexiqueSection": [
       {
-        "id": "A",
+        "id": "a-lexique",
         "label": "A",
-        "menu-active": true,
-        "dl-classes": "dl-sm mb-2",
-        "dl-item": [
-          {
-            "term": "Aenean",
-            "definition": "Aenean mattis tincidunt sapien a venenatis.",
-            "dd-translation": "Aenean english translation",
-            "dd-image": {
-              "media": {
-                "src": "https://picsum.photos/id/1024/768/432",
-                "alt": "Image alt text.",
-                "copyright": false
-              },
-              "figure": {
-                "caption": "Aenean vel blandit lectus. Aenean ex enim, tempus et ipsum eu, tristique faucibus nunc." 
+        "content": {
+          "dl-item": [
+            {
+              "term": "Aenean",
+              "definition": "Aenean mattis tincidunt sapien a venenatis."
+            },
+            {
+              "term": "Aliquam",
+              "definition": "Aliquam eleifend at justo et bibendum."
+            }
+          ]
+        }
+      },
+      {
+        "id": "b-lexique",
+        "label": "B",
+        "content": {
+          "dl-item": [
+            {
+              "term": "Bibendum",
+              "definition": "Bibendum, tincidunt diam eget, semper nisl.",
+
+              "dd-image": {
+                "btnMediaIcon": {
+                  "icon-name": "icon-search",
+                  "ariaLabel": "Zoomer image"
+                },
+                "mediaGallery": [
+                  {
+                    "mediaSrc": "https://picsum.photos/id/1072/1920/1080",
+                    "mediaSize": "1920x1080",
+                    "mediaCaption": "Légende de la 1ere image.",
+                    "mediaAuthor": "Jamie Mink",
+                    "mediaAlt": "Media #1072",
+                    "thumbnail" : {
+                      "mediaSrc": "https://picsum.photos/id/1072/1920/1080",
+                      "height": "1080",
+                      "width": "1920"
+                    }
+                  }
+                ]
               }
             }
-          },
-          {
-            "term": "Aliquam",
-            "definition": false,
-            "dd-translation": "Aliquam english translation"
-          }
-        ]
+          ]
+        }
       },
       {
-        "id": "B",
-        "label": "B",
-        "dl-classes": "dl-sm mb-2",
-        "dl-item": [
-          {
-            "term": "Baenean",
-            "definition": "Baenean mattis tincidunt sapien a venenatis.",
-            "dd-translation": "Baenean english translation"
-          },
-          {
-            "term": "Baliquam",
-            "definition": false,
-            "dd-translation": "Baliquam english translation"
-          }
-        ]
+        "id": "c-lexique",
+        "label": "C",
+        "content": false
       },
       {
-        "id": "F",
+        "id": "d-lexique",
+        "label": "D",
+        "content": false
+      },
+      {
+        "id": "e-lexique",
+        "label": "E",
+        "content": false
+      },
+      {
+        "id": "f-lexique",
         "label": "F",
-        "dl-classes": "dl-sm mb-2",
-        "dl-item": [
-          {
-            "term": "Fringilla",
-            "definition": "Integer fringilla dui sed mauris euismod iaculis. Quisque lorem ex, blandit quis bibendum in, scelerisque nec nisi.",
-            "dd-translation": "Fringilla english translation"
-          },
-          {
-            "term": "Fusce",
-            "definition": false,
-            "dd-translation": "Fusce english translation."
-          },
-          {
-            "term": "Finibus",
-            "definition": false,
-            "dd-translation": "Finibus english translation"
-          }
-        ]
+        "content": false
       },
       {
-        "id": "M",
+        "id": "g-lexique",
+        "label": "G",
+        "content": false
+      },
+      {
+        "id": "h-lexique",
+        "label": "H",
+        "content": false
+      },
+      {
+        "id": "i-lexique",
+        "label": "I",
+        "content": false
+      },
+      {
+        "id": "j-lexique",
+        "label": "J",
+        "content": false
+      },
+      {
+        "id": "k-lexique",
+        "label": "K",
+        "content": false
+      },
+      {
+        "id": "l-lexique",
+        "label": "L",
+        "content": false
+      },
+      {
+        "id": "m-lexique",
         "label": "M",
-        "dl-classes": "dl-sm mb-2",
-        "dl-item": [
-          {
-            "term": "Mauris",
-            "definition": "Quisque et lorem mauris. Pellentesque augue mi, tincidunt et leo nec, suscipit venenatis purus.",
-            "dd-translation": "Mauris english translation"
-          },
-          {
-            "term": "Maximus",
-            "definition": false,
-            "dd-translation": "Maximus english translation."
-          },
-          {
-            "term": "Malesuada",
-            "definition": false,
-            "dd-translation": "Malesuada english translation"
-          }
-        ]
+        "content": {
+          "dl-item": [
+            {
+              "term": "Mauris",
+              "definition": "Mauris accumsan sapien non lectus scelerisque finibus nec eu ante."
+            },
+            {
+              "term": "Morbi",
+              "definition": "Morbi neque purus, commodo ac elit quis, malesuada malesuada orci."
+            }
+          ]
+        }
       },
       {
-        "id": "T",
+        "id": "n-lexique",
+        "label": "N",
+        "content": false
+      },
+      {
+        "id": "o-lexique",
+        "label": "O",
+        "menu-active": true,
+        "content": false
+      },
+      {
+        "id": "p-lexique",
+        "label": "P",
+        "content": false
+      },
+      {
+        "id": "q-lexique",
+        "label": "Q",
+        "content": false
+      },
+      {
+        "id": "r-lexique",
+        "label": "R",
+        "content": false
+      },
+      {
+        "id": "s-lexique",
+        "label": "S",
+        "content": false
+      },
+      {
+        "id": "t-lexique",
         "label": "T",
-        "dl-classes": "dl-sm mb-2",
-        "dl-item": [
-          {
-            "term": "Tauris",
-            "definition": "Quisque et lorem mauris. Pellentesque augue mi, tincidunt et leo nec, suscipit venenatis purus.",
-            "dd-translation": "Tauris english translation"
-          },
-          {
-            "term": "Taximus",
-            "definition": false,
-            "dd-translation": "Taximus english translation."
-          },
-          {
-            "term": "Talesuada",
-            "definition": false,
-            "dd-translation": "Talesuada english translation"
-          }
-        ]
+        "content": false
       },
       {
-        "id": "V",
+        "id": "u-lexique",
+        "label": "U",
+        "content": false
+      },
+      {
+        "id": "v-lexique",
         "label": "V",
-        "dl-classes": "dl-sm mb-2",
-        "dl-item": [
-          {
-            "term": "Vauris",
-            "definition": "Quisque et lorem mauris. Pellentesque augue mi, tincidunt et leo nec, suscipit venenatis purus.",
-            "dd-translation": "Vauris english translation"
-          },
-          {
-            "term": "Vaximus",
-            "definition": false,
-            "dd-translation": "Vaximus english translation."
-          },
-          {
-            "term": "Valesuada",
-            "definition": false,
-            "dd-translation": "Valesuada english translation"
-          }
-        ]
+        "content": {
+          "dl-item": [
+            {
+              "term": "Vestibulum",
+              "definition": "Vestibulum ultricies pulvinar auctor."
+            }
+          ]
+        }
+      },
+      {
+        "id": "w-lexique",
+        "label": "W",
+        "content": false
+      },
+      {
+        "id": "x-lexique",
+        "label": "X",
+        "content":  false
+      },
+      {
+        "id": "y-lexique",
+        "label": "Y",
+        "content": false
+      },
+      {
+        "id": "z-lexique",
+        "label": "Z",
+        "content": false
       }
     ]
   }

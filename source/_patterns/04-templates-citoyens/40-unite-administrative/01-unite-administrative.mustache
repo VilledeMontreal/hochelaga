@@ -26,12 +26,26 @@
             {{> patterns-content-header-extras}}
 
           </header>
-          
+
           <div class="lead">
             {{{ lead }}}
           </div>
 
           <div class="content-modules">
+
+            {{# module-events}}
+            <h2>À ne pas manquer</h2>
+            <div class="content-module-stacked">
+              {{> components-list-group-content}}
+            </div>
+            {{/ module-events}}
+
+            {{# module-news}}
+            <h2>Nouvelles</h2>
+            <div class="content-module-stacked">
+              {{> components-list-group-content}}
+            </div>
+            {{/ module-news}}
 
             <h2>Module Titre de section</h2>
 
@@ -51,6 +65,18 @@
               </ol>
             </div>
 
+            {{# module-featured-external}}
+            <div class="content-module-stacked">
+              <div class="row cards">
+                {{# cards.card-item }}
+                <div class="{{ cards.bsgrid-classes }}">
+                  {{> components-card-item-full-width }}
+                </div>
+                {{/ cards.card-item }}
+              </div>
+            </div>
+            {{/ module-featured-external}}
+
             {{# module-featured-document}}
             <div class="content-module-stacked">
               <div class="row cards">
@@ -62,6 +88,25 @@
               </div>
             </div>
             {{/ module-featured-document}}
+
+            {{# module-card-cta}}
+            <div class="content-module-stacked">
+              <div class="row cards">
+                {{# cards.card-item }}
+                <div class="{{ cards.bsgrid-classes }}">
+                  {{> components-card-item-full-width }}
+                </div>
+                {{/ cards.card-item }}
+              </div>
+            </div>
+            {{/ module-card-cta}}
+
+            {{# module-list-reference-xl}}
+            <h2>Module Titre</h2>
+            <div class="content-module-stacked">
+              {{> components-list-item-link}}
+            </div>
+            {{/ module-list-reference-xl}}
 
             {{# module-documents}}
             <h2>Module Titre</h2>
@@ -101,11 +146,16 @@
             {{> patterns-emphasis }}
             </div>
             {{/ module-emphasis}}
-            
+
             {{# listAutoProgrammes}}
             <h2>Liste automatisée des programmes</h2>
             <div class="content-module-stacked">
               {{> components-list-item-link}}
+              {{# button-cta}}
+              <div class="d-flex my-4">
+              {{> components-button}}
+              </div>
+              {{/ button-cta}}
             </div>
             {{/ listAutoProgrammes}}
 
@@ -113,6 +163,11 @@
             <h2>Liste automatisée des articles</h2>
             <div class="content-module-stacked">
               {{> components-list-item-link}}
+              {{# button-cta}}
+              <div class="d-flex my-4">
+              {{> components-button}}
+              </div>
+              {{/ button-cta}}
             </div>
             {{/ listAutoArticles}}
 
@@ -131,6 +186,12 @@
         {{/ sidebarRight}}
 
       </div>
+
+      <section class="row{{# sidebarRight }} justify-content-between{{/ sidebarRight}}{{^ sidebarRight}} justify-content-center{{/ sidebarRight}}">
+        <div class="col-12 col-lg-7">
+        {{> components-feedback-form}}
+        </div>
+      </section>
 
     </div>
   </div>

@@ -57,20 +57,45 @@
             {{/ module-reglements}}
 
             {{# module-partners}}
-            <div class="content-module-stacked">
-              <h2>Partenaires</h2>
+
+              <h2>En partenariat</h2>
               {{{ partnerText }}}
+              {{# hasLogos }}
               {{# listPartners}}
-              <ul {{# hasLogos}}class="mt-0 list-inline"{{/ hasLogos}}>
+              <ul class="row cards pt-2">
                 {{# listPartners.items }}
-                <li {{# hasLogos}}class="list-inline-item"{{/ hasLogos}}>
-                  {{# hasLogos}}<img src="{{ src }}" alt="{{ alt }}" class="img-fluid" />{{/hasLogos}}
-                  {{^hasLogos}}{{ partnerName }}{{/ hasLogos}}
+                <li class="col-12 col-sm-6 col-md-4 col-lg-6 col-xl-4">
+                  {{# url}}<a href="{{url}}" class="card">{{/url}}
+                  {{^url}}<div class="card">{{/url}}
+                    <div class="card-body" style="height: 138px;">
+                      {{# logo}}
+                      <div class="p-2 d-flex align-items-center justify-content-center text-center my-auto h-100" >
+                          <img src="{{ src }}" alt="{{ alt }}" class="h-auto w-auto mh-100 mw-100" />
+                      </div>
+                      {{/logo}}
+                      {{^logo}}<div class="text-center my-auto font-weight-bold font-size-sm-interface">{{ name }}</div>{{/ logo}}
+                    </div>
+                  {{#url}}</a>{{/url}}
+                  {{^url}}</div>{{/url}}
                 </li>
                 {{/ listPartners.items }}
               </ul>
               {{/ listPartners}}
-            </div>
+              {{/ hasLogos}}
+              {{^ hasLogos}}
+              {{# listPartners}}
+              <ul>
+                {{# listPartners.items }}
+                <li>
+                  {{# url}}<a href="{{url}}">{{/ url}}
+                  {{ name }}
+                  {{#url}}</a>{{/url}}
+                </li>
+                {{/ listPartners.items }}
+              </ul>
+              {{/ listPartners}}
+              {{/ hasLogos}}
+
             {{/ module-partners}}
           </div>
 
