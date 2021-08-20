@@ -1,29 +1,6 @@
 {
   "hasButtons": [
     {
-      "alertClass": "alert-with-icon",
-      "alertIcon": true,
-      "icon-name": "icon-info",
-      "alertTitle": "Titre du message",
-      "alertText": "Description du message obligatoire avec <a href=\"#\" class=\"alert-link\">un lien facultatif</a> si besoin.",
-      "alertButtons": {
-        "buttons": [
-          {
-            "buttonClass": "btn-primary btn-squared",
-            "buttonText": "Libellé"
-          },
-          {
-            "buttonClass": "btn-secondary btn-squared",
-            "buttonText": "Libellé"
-          },
-          {
-            "buttonClass": "btn-tertiary btn-squared",
-            "buttonText": "Libellé"
-          }
-        ]
-      }
-    },
-    {
       "alertClass": "alert-info alert-with-icon",
       "alertIcon": true,
       "icon-name": "icon-info",
@@ -32,15 +9,15 @@
       "alertButtons": {
         "buttons": [
           {
-            "buttonClass": "btn-primary btn-squared btn-info",
+            "buttonClass": "btn-primary",
             "buttonText": "Libellé"
           },
           {
-            "buttonClass": "btn-secondary btn-squared btn-info",
+            "buttonClass": "btn-secondary",
             "buttonText": "Libellé"
           },
           {
-            "buttonClass": "btn-tertiary btn-squared btn-info",
+            "buttonClass": "btn-tertiary",
             "buttonText": "Libellé"
           }
         ]
@@ -55,15 +32,15 @@
       "alertButtons": {
         "buttons": [
           {
-            "buttonClass": "btn-primary btn-squared btn-success",
+            "buttonClass": "btn-primary",
             "buttonText": "Libellé"
           },
           {
-            "buttonClass": "btn-secondary btn-squared btn-success",
+            "buttonClass": "btn-secondary",
             "buttonText": "Libellé"
           },
           {
-            "buttonClass": "btn-tertiary btn-squared btn-success",
+            "buttonClass": "btn-tertiary",
             "buttonText": "Libellé"
           }
         ]
@@ -78,15 +55,15 @@
       "alertButtons": {
         "buttons": [
           {
-            "buttonClass": "btn-primary btn-squared btn-warning",
+            "buttonClass": "btn-primary",
             "buttonText": "Libellé"
           },
           {
-            "buttonClass": "btn-secondary btn-squared btn-warning",
+            "buttonClass": "btn-secondary",
             "buttonText": "Libellé"
           },
           {
-            "buttonClass": "btn-tertiary btn-squared btn-warning",
+            "buttonClass": "btn-tertiary",
             "buttonText": "Libellé"
           }
         ]
@@ -101,15 +78,15 @@
       "alertButtons": {
         "buttons": [
           {
-            "buttonClass": "btn-primary btn-squared btn-danger",
+            "buttonClass": "btn-primary",
             "buttonText": "Libellé"
           },
           {
-            "buttonClass": "btn-secondary btn-squared btn-danger",
+            "buttonClass": "btn-secondary",
             "buttonText": "Libellé"
           },
           {
-            "buttonClass": "btn-tertiary btn-squared btn-danger",
+            "buttonClass": "btn-tertiary",
             "buttonText": "Libellé"
           }
         ]
