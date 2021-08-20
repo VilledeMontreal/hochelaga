@@ -4,7 +4,21 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](http://keepachangelog.com/en/1.0.0/)
 and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.html).
 
-## [4.18.0] - unreleased
+## [4.19.0] - unreleased
+
+### Added
+- Styles - Iconography - Utility: Ajout des icones utilitaires chevron-double-left et chevron-double-right.
+
+### Deprecated
+- Components - Dropdown: Retrait de la section Ajouter un élément (utiliser un élément de menu avec icône)
+- Components - Dropdown: Retrait de l'exemple States.
+- Components - Pagination: Retrait du variant Small.
+- Components - Navigation - Side nav: Retrait du variant disabled de tous les exemples.
+- Styles - Tables: Retrait du variant Small.
+### Fixed
+- Ajout fds manquante (close.scss) dans styles-header-footer-v4
+
+## [4.18.0] - 2021-08-05
 
 ### Added
 - Components - Buttons: New utility class .btn-swap-label-[BREAKPOINT] to swap label for icon below a certain breakpoint.
