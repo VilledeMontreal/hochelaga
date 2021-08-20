@@ -82,20 +82,6 @@
               "dropdownItemLabel": "Libellé"
             }
           ],
-          "dropdownSectionHasDivider": true
-        },
-        {
-          "dropdownHeader": false,
-          "dropdownItem": [
-            {
-              "url": "#",
-              "dropdownItemClass": "dropdown-action",
-              "dropdownItemIcon": {
-                "icon-name": "icon-plus-circle"
-              },
-              "dropdownItemLabel": "Ajouter [un élément]"
-            }
-          ],
           "dropdownSectionHasDivider": false
         }
       ]
@@ -207,45 +193,6 @@
       ]
     }
   },
-  "dropdownBaseStates": {
-    "dropdownMenu": {
-      "dropdownMenuID": "dropdownBaseStatesMenuID",
-      "dropdownSection": [
-        {
-          "dropdownItem": [
-            {
-              "url": "#",
-              "dropdownItemIcon": {
-                "icon-name": "icon-dot-bullet icon-color-info"
-              },
-              "dropdownItemLabel": "En cours"
-            },
-            {
-              "url": "#",
-              "dropdownItemIcon": {
-                "icon-name": "icon-dot-bullet icon-color-warning"
-              },
-              "dropdownItemLabel": "En pause"
-            },
-            {
-              "url": "#",
-              "dropdownItemIcon": {
-                "icon-name": "icon-dot-bullet icon-color-danger"
-              },
-              "dropdownItemLabel": "En révision"
-            },
-            {
-              "url": "#",
-              "dropdownItemIcon": {
-                "icon-name": "icon-dot-bullet icon-color-success"
-              },
-              "dropdownItemLabel": "Terminé"
-            }
-          ]
-        }
-      ]
-    }
-  },
   "dropdownDividerHasIcons": {
     "dropdownMenu": {
       "dropdownMenuID": "dropdownDividerHasIconsMenuID",
@@ -296,20 +243,6 @@
               "dropdownItemLabel": "Libellé"
             }
           ],
-          "dropdownSectionHasDivider": true
-        },
-        {
-          "dropdownHeader": false,
-          "dropdownItem": [
-            {
-              "url": "#",
-              "dropdownItemClass": "dropdown-action",
-              "dropdownItemIcon": {
-                "icon-name": "icon-plus-circle"
-              },
-              "dropdownItemLabel": "Ajouter [un élément]"
-            }
-          ],
           "dropdownSectionHasDivider": false
         }
       ]
@@ -345,14 +278,6 @@
               },
               "dropdownItemLabel": "Igor Larionov",
               "dropdownItemDesc": "Centre"
-            },
-            {
-              "url": "#",
-              "dropdownItemClass": "dropdown-action",
-              "dropdownItemIcon": {
-                "icon-name": "icon-plus-circle"
-              },
-              "dropdownItemLabel": "Ajouter un utilisateur"
             }
           ],
           "dropdownSectionHasDivider": true

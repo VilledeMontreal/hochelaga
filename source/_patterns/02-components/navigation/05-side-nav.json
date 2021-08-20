@@ -42,16 +42,6 @@
         "menuItemLabel": "Libellé",
         "srMenuItemLabel": "Libellé pour screen-reader",
         "tooltip": true
-      },
-      {
-        "menuItemSeparator": false,
-        "class": "disabled",
-        "url": false,
-        "menuItemIcon": {
-          "icon-name": "icon-info"
-        },
-        "menuItemLabel": "Disabled",
-        "srMenuItemLabel": "Libellé pour screen-reader"
       }
     ]
   },
@@ -74,6 +64,7 @@
         "menuItemLabel": "Libellé long"
       },
       {
+        "menuItemSeparator": true,
         "class": false,
         "url": "#",
         "menuItemIcon": {
@@ -82,22 +73,12 @@
         "menuItemLabel": "Libellé très long"
       },
       {
-        "menuItemSeparator": true,
         "class": false,
         "url": "#",
         "menuItemIcon": {
           "icon-name": "icon-info"
         },
         "menuItemLabel": "Libellé"
-      },
-      {
-        "menuItemSeparator": false,
-        "class": "disabled",
-        "url": false,
-        "menuItemIcon": {
-          "icon-name": "icon-info"
-        },
-        "menuItemLabel": "Disabled"
       }
     ]
   }
