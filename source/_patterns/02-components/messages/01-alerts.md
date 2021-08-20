@@ -13,7 +13,7 @@ La largeur du message est égale à la largeur du contenu de la section dans laq
 
 Il existe quatre niveaux d'alertes qui renforcent le contexte. Ils doivent être utilisés à bon escient et selon les contextes pour lesquels ils ont été créés, définis ci-bas.
 
-### Informative (informative)
+### Informative (informative) - valeur par défaut
 À utiliser uniquement pour donner une information neutre, qui ne perturbe pas le cours de l'expérience.
 * informative (<code>.alert-info</code>)
 

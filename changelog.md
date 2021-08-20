@@ -9,11 +9,15 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 ### Added
 - Styles - Iconography - Utility: Ajout des icones utilitaires chevron-double-left et chevron-double-right.
 
+### Changed
+- Components - Messages: Plus possible de créer des messages neutres. Style par defaut = info.
+- Components - Messages: Les boutons prennent les styles .btn-squared et les couleurs des messages par defaut. Plus besoin de passé les classes btn-info et btn-squared.
 ### Deprecated
 - Components - Dropdown: Retrait de la section Ajouter un élément (utiliser un élément de menu avec icône)
 - Components - Dropdown: Retrait de l'exemple States.
-- Components - Pagination: Retrait du variant Small.
+- Components - Messages: Retrait des exemples neutres.
 - Components - Navigation - Side nav: Retrait du variant disabled de tous les exemples.
+- Components - Pagination: Retrait du variant Small.
 - Styles - Tables: Retrait du variant Small.
 ### Fixed
 - Ajout fds manquante (close.scss) dans styles-header-footer-v4
