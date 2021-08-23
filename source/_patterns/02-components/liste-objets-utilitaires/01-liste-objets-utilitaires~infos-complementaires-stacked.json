@@ -4,13 +4,14 @@
     {
       "listToggle": false,
       "listIcon": {
-        "icon-editorial": true,
-        "icon-name": "icon-animaux"
+        "icon-editorial": false,
+        "icon-name": "icon-eye"
       },
-      "url": "#",
+      "url": false,
       "type": false,
       "title": "At amet eos et diam sed no invidunt sadipscing no invidunt sed dolore eos amet",
       "infos": {
+        "infosClass": "list-group-items-stacked",
         "infos-items": [
           {
             "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit"
@@ -21,13 +22,8 @@
         ]
       },
       "badges": {
-        "classes": "col-12 mt-1",
+        "classes": false,
         "badge": [
-          {
-            "badge": "Libellé",
-            "badgeClass": "badge-dark",
-            "badgeUrl": false
-          },
           {
             "badge": "Libellé",
             "badgeClass": "badge-success-light",
@@ -35,18 +31,19 @@
           }
         ]
       },
-      "btnMore": false
+      "btnMore": true
     },
     {
-      "url": "#",
+      "url": false,
       "listToggle": false,
       "listIcon": {
-        "icon-editorial": true,
-        "icon-name": "icon-machine"
+        "icon-editorial": false,
+        "icon-name": "icon-eye-off"
       },
       "type": false,
       "title": "Dolore amet aliquyam justo vero lorem accusam amet eos vero",
       "infos": {
+        "infosClass": "list-group-items-stacked",
         "infos-items": [
           {
             "text": "Lorem ipsum"
@@ -57,7 +54,7 @@
         ]
       },
       "badges": {
-        "classes": "col-12 mt-1",
+        "classes": false,
         "badge": [
           {
             "badge": "Libellé",
@@ -66,18 +63,19 @@
           }
         ]
       },
-      "btnMore": false
+      "btnMore": true
     },
     {
-      "url": "#",
+      "url": false,
       "listToggle": false,
       "listIcon": {
-        "icon-editorial": true,
-        "icon-name": "icon-megaphone"
+        "icon-editorial": false,
+        "icon-name": "icon-eye"
       },
       "type": false,
       "title": "Consetetur eirmod et aliquyam",
       "infos": {
+        "infosClass": "list-group-items-stacked",
         "infos-items": [
           {
             "text": "Lorem ipsum"
@@ -88,7 +86,7 @@
         ]
       },
       "badges": {
-        "classes": "col-12 mt-1",
+        "classes": false,
         "badge": [
           {
             "badge": "Libellé",
@@ -97,7 +95,7 @@
           }
         ]
       },
-      "btnMore": false
+      "btnMore": true
     }
   ]
 }
