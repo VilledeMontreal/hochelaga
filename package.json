@@ -2,12 +2,6 @@
   "name": "@villemontreal/boite-outils4-web",
   "description": "La boite à outils web",
   "version": "4.19.0",
-  "dependencies": {
-    "bootstrap": "4.3.1",
-    "jquery": "^3.3.1",
-    "jquery.easing": "^1.4.1",
-    "popper.js": "^1.15.0"
-  },
   "publishConfig": {
     "registry": "https://nexus.interne.montreal.ca/repository/npm-vdmtl"
   },
@@ -22,28 +16,34 @@
   "engines": {
     "node": ">=8.9.1"
   },
+  "dependencies": {
+    "bootstrap": "^4.6.0",
+    "jquery": "^3.6.0",
+    "jquery.easing": "^1.4.1",
+    "popper.js": "^1.16.1"
+  },
   "devDependencies": {
-    "browser-sync": "^2.26.3",
+    "browser-sync": "^2.27.5",
     "gulp": "^3.9.1",
     "gulp-autoprefixer": "^6.1.0",
     "gulp-clean": "0.4.0",
     "gulp-cssmin": "0.2.0",
-    "gulp-if": "2.0.2",
+    "gulp-if": "^3.0.0",
     "gulp-imagemin": "4.1.0",
-    "gulp-json-concat": "^0.1.1",
+    "gulp-json-concat": "^0.2.0",
     "gulp-order": "^1.2.0",
-    "gulp-postcss": "8.0.0",
+    "gulp-postcss": "^9.0.0",
     "gulp-rename": "^1.4.0",
-    "gulp-sass": "4.0.2",
-    "gulp-shell": "^0.7.1",
-    "gulp-sourcemaps": "^2.6.4",
+    "gulp-sass": "^4.1.1",
+    "gulp-shell": "^0.8.0",
+    "gulp-sourcemaps": "^3.0.0",
     "gulp-tag-version": "1.3.1",
-    "gulp-uglify-es": "1.0.4",
+    "gulp-uglify-es": "^3.0.0",
     "gulp-util": "3.0.8",
     "gulp-watch": "5.0.1",
+    "jquery-validation": "^1.19.3",
     "node-sass-tilde-importer": "1.0.2",
-    "photoswipe": "shofer/photoSwipe#set-image-alt-text",
-    "stylelint": "^10.1.0",
-    "jquery-validation": "1.19.1"
+    "photoswipe": "github:shofer/photoSwipe#set-image-alt-text",
+    "stylelint": "^13.13.1"
   }
 }
