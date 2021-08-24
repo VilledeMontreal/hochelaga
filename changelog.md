@@ -12,6 +12,14 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 ### Changed
 - Components - Messages: Plus possible de créer des messages neutres. Style par defaut = info.
 - Components - Messages: Les boutons prennent les styles .btn-squared et les couleurs des messages par defaut. Plus besoin de passé les classes btn-info et btn-squared.
+- Components - Liste d'objets utilitaires: Exemples sous forme de liste (ul/li) plutôt que divs.
+  Passage au breakpoint md pour la gestion du mobile.
+  Ajout de classe pour gestion de l'espacement.
+  Modification de l'alignement vertical des cases à cocher/icone, étiquettes et bouton en haut.
+  Ajout d'un variant pour infos complementaires 'stacked'.
+- PL - Components - Liste d'objets utilitaires/Liste d'objets éditoriaux (List group): Séparer depuis List Group et renommer avec la nomenclature officielle.
+- PL - Components - Liste de liens(List group): Séparer depuis List Group et renommer avec la nomenclature officielle.
+- PL - Components - Liste de contenu (List item): Renommer avec la nomenclature officielle.
 ### Deprecated
 - Components - Dropdown: Retrait de la section Ajouter un élément (utiliser un élément de menu avec icône)
 - Components - Dropdown: Retrait de l'exemple States.
@@ -21,6 +29,7 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 - Styles - Tables: Retrait du variant Small.
 ### Fixed
 - Ajout fds manquante (close.scss) dans styles-header-footer-v4
+- La case à cocher ne s'affichait plus dans le composant Liste d'objets utilitaires.
 
 ## [4.18.0] - 2021-08-05
 

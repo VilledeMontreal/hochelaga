@@ -513,25 +513,66 @@
     margin-bottom: 0;
   }
 
-  // Smaller font-size for list-group-complex
-  .list-group-item-infos {
+  // Smaller font-size for list-group-complex info complementaire
+  .list-group-item-content {
     @include font-size($font-size-sm);
-    line-height: $line-height-xs;
-    padding-right: 1.5rem;
-    &:after {
-      width: $icon-xs;
-      height: $icon-xs;
-      margin: 0 .25rem;
+    line-height: $line-height-sm;
+    display: block;
+
+    .list-group-item-infos {
+      @include font-size($font-size-sm);
+      line-height: $line-height-sm;
+      display: block;
+      padding-right: 1.5rem;
+      margin-bottom: .25rem;
+      &:after {
+        content: none
+      }
+      &:last-child {
+        margin-bottom: 0;
+      }
     }
+    // Overwrite some rules to allow stacked list-group-item-infos
+    &.list-group-items-stacked {
+      display: block;
+      .list-group-item-infos {
+        display: block;
+        padding-right: 0;
+        &:after {
+          content: none;
+        }
+      }
+    }
+
+    @include media-breakpoint-up(md) {
+      display: inline-flex;
+      .list-group-item-infos {
+        display: inline-block;
+        padding-right: 1.5rem;
+        &:after {
+          content: '';
+          width: $icon-xs;
+          height: $icon-xs;
+          margin: 2px .25rem;
+        }
+        &:last-child {
+          padding-right: 0;
+          &:after {
+            content: none;
+          }
+        }
+      }
+    }
+  }
+
+  .btn {
+    margin-top: -.5rem;
+    margin-bottom: -.5rem;
   }
 
   .list-group-item {
     @include hover-focus {
       background-color: $neutral-underground-1;
-
-      .icon {
-        @include icon-color($neutral-primary);
-      }
 
       .list-group-icon {
         .icon {
@@ -544,5 +585,6 @@
       }
     }
   }
+
 }
 

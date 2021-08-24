@@ -39,14 +39,14 @@
           {{# topRequested }}
           <div class="mb-8 d-lg-none">
             <h2>Les plus demandés</h2>
-            {{> components-list-item-link}}
+            {{> components-liste-lien}}
           </div>
           {{/ topRequested}}
 
           {{# hub-list}}
           <div class="mb-8">
             <h2>{{ hub-list-heading}}</h2>
-            {{> components-list-item-link}}
+            {{> components-liste-lien}}
           </div>
           {{/ hub-list}}
 
@@ -88,7 +88,7 @@
             {{# topRequested}}
             <div class="sb-block d-none d-lg-block">
               {{> styles-heading-sidebar(sidebarTitle: "Les plus demandés") }}
-              {{> components-list-item-link}}
+              {{> components-liste-lien}}
             </div>
             {{/ topRequested}}
             {{# sidebarFeaturedCTA}}
@@ -122,7 +122,7 @@
         <h2>Vous n'avez pas trouvé ce que vous cherchez ?</h2>
         <p>Certains contenus ne sont pas encore accessibles sur montreal.ca. Les rubriques suivantes vous redirigeront vers notre ancien site web.</p>
         {{# listOldContent}}
-        {{> components-list-item-link}}
+        {{> components-liste-lien}}
         {{/ listOldContent}}
       </div>
     </div>
