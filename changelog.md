@@ -10,6 +10,7 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 - Styles - Iconography - Utility: Ajout des icones utilitaires chevron-double-left et chevron-double-right.
 
 ### Changed
+- Components - Dropdowns: Modification style .active. Ajout A11y pour dropdown-item disabled.
 - Components - Messages: Plus possible de créer des messages neutres. Style par defaut = info.
 - Components - Messages: Les boutons prennent les styles .btn-squared et les couleurs des messages par defaut. Plus besoin de passé les classes btn-info et btn-squared.
 - Components - Liste d'objets utilitaires: Exemples sous forme de liste (ul/li) plutôt que divs.
