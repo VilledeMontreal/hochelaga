@@ -12,7 +12,7 @@
 # docker run -d -p 3000:3000 php-node:latest
 
 # -- Serve the content on localhost:3000 binding your local voluem for edits and dev work
-# docker run -d -p 3000:3000 -v $(pwd)/source:/usr/src/app/source  php-node:latest 
+# docker run -d -p 3000:3000 -v $(pwd)/source:/usr/src/app/source  php-node:latest
 
 # -- Liste active containers, use 'docker kill CONTAINER_ID' to stop
 # docker container ls
@@ -20,7 +20,7 @@
 # - - - - - - - - - - - - - - - - - -
 
 FROM php:7.2-cli
-ENV NODE_VERSION 8.9.1
+ENV NODE_VERSION 10.24.1
 ENV ARCH x64
 ENV NODE_PACKAGE node-v$NODE_VERSION-linux-$ARCH.tar.xz
 ENV NODE_URL "https://nodejs.org/dist/v$NODE_VERSION/$NODE_PACKAGE"

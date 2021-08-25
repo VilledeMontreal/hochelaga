@@ -3,8 +3,8 @@
 
 ## Requirements
 
-* PHP 5.4 + and a global composer installation. 
-* Node 7.5.0, a globally installed copy of gulp and an [updated copy of gulp CLI 4].(https://github.com/pattern-lab/edition-node-gulp/wiki/Updating-to-Gulp-4) for this node version.
+* PHP 5.4 + and a global composer installation.
+* Node 10.24.1, a globally installed copy of gulp and an [updated copy of gulp CLI 4].(https://github.com/pattern-lab/edition-node-gulp/wiki/Updating-to-Gulp-4) for this node version.
 
 ## Installation
 
@@ -25,7 +25,7 @@ The gulp tasks used in this project were largely inspired by the methods propose
 * [View git repo](https://github.com/neoskop/patternlab-php/)
 
 
----------  
+---------
 # Patternlab php-mustache documentation
 
 ## Standard Patternlab PHP Mustache documentation starts below
