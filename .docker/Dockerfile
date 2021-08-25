@@ -4,7 +4,7 @@
 
 FROM php:7.2-cli
 
-ENV NODE_VERSION 8.9.1
+ENV NODE_VERSION 10.24.1
 ENV ARCH x64
 ENV NODE_PACKAGE node-v$NODE_VERSION-linux-$ARCH.tar.xz
 ENV NODE_URL "https://nodejs.org/dist/v$NODE_VERSION/$NODE_PACKAGE"
@@ -14,7 +14,7 @@ ARG GIT_COMMIT=unknown
 
 LABEL GIT_COMMIT=${GIT_COMMIT}
 
-MAINTAINER VdMtl
+LABEL maintainer="Ville de Montréal"
 
 EXPOSE 3200
 
