@@ -52,8 +52,8 @@ function cleanPublic() {
 
 // Clear distribution folder
 function cleanDist() {
-  return src( config.assets.distribution )
-    .pipe(clean({force: true}));
+  return src( config.assets.distribution, { allowEmpty: true })
+    .pipe(clean({force: true, read: false}));
 }
 
 // SASS: Copy
