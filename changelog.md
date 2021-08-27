@@ -19,9 +19,6 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
   Ajout de classe pour gestion de l'espacement.
   Modification de l'alignement vertical des cases à cocher/icone, étiquettes et bouton en haut.
   Ajout d'un variant pour infos complementaires 'stacked'.
-- PL - Components - Liste d'objets utilitaires/Liste d'objets éditoriaux (List group): Séparer depuis List Group et renommer avec la nomenclature officielle.
-- PL - Components - Liste de liens(List group): Séparer depuis List Group et renommer avec la nomenclature officielle.
-- PL - Components - Liste de contenu (List item): Renommer avec la nomenclature officielle.
 ### Deprecated
 - Components - Dropdown: Retrait de la section Ajouter un élément (utiliser un élément de menu avec icône)
 - Components - Dropdown: Retrait de l'exemple States.
@@ -33,6 +30,14 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 - Ajout fds manquante (close.scss) dans styles-header-footer-v4
 - La case à cocher ne s'affichait plus dans le composant Liste d'objets utilitaires.
 
+### PatternLab
+- Minimum requirement: Node 12, PHP 7, Gulp 4.
+- Migration vers Node 12, Gulp 4.
+- Réécriture des tâches gulp en version 4.
+- Components - Liste d'objets utilitaires/Liste d'objets éditoriaux (List group): Séparer depuis List Group et renommer avec la nomenclature officielle.
+- Components - Liste de liens(List group): Séparer depuis List Group et renommer avec la nomenclature officielle.
+- Components - Liste de contenu (List item): Renommer avec la nomenclature officielle.
+- TODO: Mettre à jour ce qui est deprecated dans dart-sass / Possible impact sur les projets qui compile sass.
 ## [4.18.0] - 2021-08-05
 
 ### Added
