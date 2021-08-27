@@ -3,8 +3,9 @@
 
 ## Requirements
 
-* PHP 5.4 + and a global composer installation.
-* Node 10.24.1, a globally installed copy of gulp and an [updated copy of gulp CLI 4].(https://github.com/pattern-lab/edition-node-gulp/wiki/Updating-to-Gulp-4) for this node version.
+* PHP 7 + and a global composer installation.
+* Node 12
+* Gulp 4
 
 ## Installation
 
@@ -19,10 +20,7 @@
 
 ## Gulp tasks
 
-The gulp tasks used in this project were largely inspired by the methods proposed by Timm Hartmann
-
-* [View detailed recipe](https://webdesign.tutsplus.com/tutorials/combining-pattern-lab-with-gulp-for-improved-workflow--cms-22187)
-* [View git repo](https://github.com/neoskop/patternlab-php/)
+Task migration from Gulp 3 to Gulp 4 - August 2021.
 
 
 ---------
@@ -107,9 +105,6 @@ Pattern Lab 2 was a complete rewrite and reorganization of Pattern Lab 1. [Learn
 
 Everything else should work without changes.
 
-## Need Pattern Lab 1?
-
-The [source code for Pattern Lab 1](https://github.com/pattern-lab/patternlab-php/releases/tag/v1.1.0) is still available for download.
 
 ## Packaged Components
 
