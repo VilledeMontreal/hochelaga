@@ -1,8 +1,5 @@
-// Source of this recipe :
-// https://webdesign.tutsplus.com/tutorials/combining-pattern-lab-with-gulp-for-improved-workflow--cms-22187
-
-// PLEASE SEE ALSO
-// https://github.com/neoskop/patternlab-php && https://github.com/neoskop/patternlab-php/blob/master/gulpfile.js
+// Migration from Gulp 3 to Gulp 4
+// 2021-08
 
 const { src, series, parallel, dest, watch } = require('gulp');
 const autoprefixer = require('autoprefixer');
@@ -98,7 +95,7 @@ function scripts() {
 }
 
 // JS: Distribution
-function scriptsDist() {
+function jsDist() {
   return src(config.scripts.files)
     .pipe(dest(config.scripts.distribution))
     .pipe(uglify())
@@ -251,7 +248,7 @@ exports.serve = series(
 exports.distribute = series(
   cleanDist,
   parallel(
-    scriptsDist,
+    jsDist,
     images,
     cssDist
   ),
