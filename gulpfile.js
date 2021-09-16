@@ -169,19 +169,6 @@ function patternlab() {
 // Task: Bao-version
 // Get version from package.json and output a json the source directory
 function baoVersion() {
-
-  const output = {
-    "version"  : package.version
-  };
-
-  // Write the bao version file
-  fs.writeFile(config.bao.files.json, JSON.stringify(output, null, 4), (err) => {
-    if (err) {
-      console.error(err);
-      return;
-    }
-  });
-
   return src(config.bao.files.json)
     .pipe(dest(config.bao.dest));
 
@@ -199,6 +186,8 @@ function watchTask() {
   watch(config.scss.files, series(css, browsersyncReload));
   // Watch Patternlab Sass
   watch(config.patternlab.scss.files, series(plSass, browsersyncReload));
+  // Watch version update
+  watch(config.bao.files.json, series(baoVersion, browsersyncReload));
 
 }
 
@@ -218,7 +207,8 @@ exports.default = series(
     vendorScripts,
     photoswipe,
     scripts,
-    glyphs
+    glyphs,
+    baoVersion
   )
 )
 
@@ -236,11 +226,11 @@ exports.serve = series(
     vendorScripts,
     photoswipe,
     glyphs,
-    scripts
+    scripts,
+    baoVersion
   ),
   browsersyncServe,
-  watchTask,
-  baoVersion
+  watchTask
 )
 
 // Task: Distribute
