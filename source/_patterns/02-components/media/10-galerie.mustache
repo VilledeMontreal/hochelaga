@@ -1,0 +1,27 @@
+<!-- Media Gallery -->
+{{# mediaGallery}}
+<figure class="figure">
+  <div class="media-gallery-button">
+    <button class="btn-media js-gallery-trigger" aria-hidden="true">
+      {{# badge}}<div class="badge-gallery">
+        {{> components-etiquette }}
+      </div>{{/ badge}}
+      <img src="{{ items.0.thumbnail.mediaSrc }}" class="img-fluid" height="{{ items.0.thumbnail.height }}" width="{{ items.0.thumbnail.width }}" itemprop="thumbnail" alt="{{ items.0.mediaAlt }}">
+    </button>
+    {{# badgeCopyright }}<div class="badge-copyright">
+      {{> components-etiquette}}
+    </div>{{/ badgeCopyright }}
+  </div>
+  <figcaption class="figure-caption">{{ items.0.mediaCaption }}</figcaption>
+</figure>
+
+<ul class="media-gallery d-none" itemscope itemtype="http://schema.org/ImageGallery">
+  {{# items }}
+  <li itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
+    <a href="{{ mediaSrc }}" itemprop="contentUrl" data-size="{{ mediaSize }}" data-index="{{ index }}" data-description="{{ mediaCaption}}" data-author="{{ mediaAuthor }}" data-alt="{{ mediaAlt }}">
+      <img src="{{ thumbnail.mediaSrc }}" class="img-fluid" height="{{ thumbnail.height }}" width="{{ thumbnail.width }}" itemprop="thumbnail" alt="{{ mediaAlt }}">
+    </a>
+  </li>
+  {{/ items}}
+</ul>
+{{/ mediaGallery}}

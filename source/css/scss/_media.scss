@@ -1,8 +1,10 @@
+// Deprecated: not used
 .media-container {
   margin-bottom: 3rem;
 }
 
 // Media gallery
+// Deprecated: not used
 .media-gallery-container {
   padding-top: 1rem;
   margin-bottom: 1rem;
@@ -30,6 +32,7 @@
   }
 }
 
+// Deprecated: not used
 .media-gallery-hidden {
   display: none;
 }
@@ -37,6 +40,8 @@
 .media-gallery-button {
   position: relative;
   height: 100%;
+
+  // btn-media-gallery is deprecated
   .btn-media-gallery {
     position: absolute;
     bottom: 0;
@@ -44,14 +49,23 @@
     margin: 1rem;
   }
   .btn-media {
+    cursor: zoom-in;
     &:hover {
       ~ .btn-media-gallery {
         color: $action;
       }
     }
   }
+  .badge-gallery {
+    position: absolute;
+    top: 0;
+    right: 0;
+    display: flex;
+    margin: 1rem;
+  }
 }
 
+// TODO: is this usefull?
 .media-cover {
   background-size: cover;
   background-position: 50% 50%;
@@ -65,6 +79,7 @@
 
 }
 
+// Deprecated
 .btn-media {
   @include button-reset();
   cursor: pointer;
@@ -197,12 +212,10 @@ svg {
     line-height: $line-height-xs;
   }
   .figure-caption {
-    margin-top: $spacer;
-    // Bug with Safari prevented the use of table-caption to constrain caption to image width
-    // display: table-caption;
-    // caption-side: bottom;
-    font-size: $font-size-sm;
-    line-height: $line-height-sm;
+    margin-top: .5rem;
+    font-size: $font-size-xs;
+    line-height: $line-height-xs;
+    font-weight: $font-weight-bold;
   }
 }
 
@@ -213,8 +226,22 @@ svg {
   display: table;
 }
 
+// Wrappper for badge-copyright
+.badge-copyright {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  display: flex;
+  margin: 1rem;
+  z-index: 5;
+}
+.js-trigger-copyright {
+  cursor: pointer;
+}
+
 // Image copyright
 // Should be wrapped inside relative container for proper placement
+// Deprecated: see @badges.
 .img-copyright {
   position: absolute;
   bottom: 1rem;
@@ -250,7 +277,7 @@ svg {
 }
 
 // Zoom in cursor
-
+// Deprecated: Default for galleries
 .img-zoom-in {
   cursor: zoom-in;
 }

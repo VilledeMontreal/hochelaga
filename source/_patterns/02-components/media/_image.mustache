@@ -3,10 +3,8 @@
 {{/ media.copyright}}
   <img src="{{ media.src }}" class="img-fluid {{ imgClass }}" alt="{{ media.alt }}">
 {{# media.copyright }}
-  <div class="img-copyright">
-    <span class="icon icon-copyright" aria-hidden="true"></span>
-    <span class="copyright-text d-none">{{ media.copyright }}</span>
-    <span class="sr-only">&copy; {{ media.copyright }}</span>
+  <div class="badge-copyright">
+  {{> components-etiquette}}
   </div>
 </div>
 {{/ media.copyright }}
