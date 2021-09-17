@@ -12,6 +12,7 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 ### Changed
 - Bootstrap: Mise à jour mineure vers Bootstrap 4.6.0 et mise à jour des dépendances (jquery, popper).
 - Components - Dropdowns: Modification style .active. Ajout A11y pour dropdown-item disabled.
+- Components - Etiquette: Modifications des examples proposé dans la BAO.
 - Components - Messages: Plus possible de créer des messages neutres. Style par defaut = info.
 - Components - Messages: Les boutons prennent les styles .btn-squared et les couleurs des messages par defaut. Plus besoin de passé les classes btn-info et btn-squared.
 - Components - Liste d'objets utilitaires: Exemples sous forme de liste (ul/li) plutôt que divs.
@@ -22,6 +23,8 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 ### Deprecated
 - Components - Dropdown: Retrait de la section Ajouter un élément (utiliser un élément de menu avec icône)
 - Components - Dropdown: Retrait de l'exemple States.
+- Components - Etiquette: Ne peuvent plus être des liens.
+- Components - Etiquette: L'icône doit toujours être à gauche.
 - Components - Messages: Retrait des exemples neutres.
 - Components - Navigation - Side nav: Retrait du variant disabled de tous les exemples.
 - Components - Pagination: Retrait du variant Small.
@@ -37,6 +40,7 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 - Components - Liste d'objets utilitaires/Liste d'objets éditoriaux (List group): Séparer depuis List Group et renommer avec la nomenclature officielle.
 - Components - Liste de liens(List group): Séparer depuis List Group et renommer avec la nomenclature officielle.
 - Components - Liste de contenu (List item): Renommer avec la nomenclature officielle.
+- Components - Etiquette: Renommer avec la nomenclature officielle.
 - TODO: Mettre à jour ce qui est deprecated dans dart-sass / Possible impact sur les projets qui compile sass.
 ## [4.18.0] - 2021-08-05
 
