@@ -38,10 +38,13 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 - Minimum requirement: Node 12, PHP 7, Gulp 4.
 - Migration vers Node 12, Gulp 4.
 - Réécriture des tâches gulp en version 4.
+
 - Components - Liste d'objets utilitaires/Liste d'objets éditoriaux (List group): Séparer depuis List Group et renommer avec la nomenclature officielle.
 - Components - Liste de liens(List group): Séparer depuis List Group et renommer avec la nomenclature officielle.
 - Components - Liste de contenu (List item): Renommer avec la nomenclature officielle.
 - Components - Etiquette: Renommer avec la nomenclature officielle.
+- Components - Media: Déplacer depuis styles.
+- Components - Tableau: Déplacer depuis styles et renommer avec la nomenclature officielle.
 - TODO: Mettre à jour ce qui est deprecated dans dart-sass / Possible impact sur les projets qui compile sass.
 ## [4.18.0] - 2021-08-05
 
@@ -707,6 +710,7 @@ Main navbar, menu and footer are now in their own stylesheet. They will eventual
 
 The version 3 is now deprecated. Only bug fixes will be considered. Please refer to the old bitbucket repo https://bitbucket.org/villemontreal/boite-outils-web/.
 
+[4.18.0]: https://bitbucket.org/villemontreal/boite-outils4-web/src/4.18.0/
 [4.17.0]: https://bitbucket.org/villemontreal/boite-outils4-web/src/4.17.0/
 [4.16.0]: https://bitbucket.org/villemontreal/boite-outils4-web/src/4.16.0/
 [4.15.0]: https://bitbucket.org/villemontreal/boite-outils4-web/src/4.15.0/
