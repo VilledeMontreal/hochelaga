@@ -13,6 +13,7 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 - Bootstrap: Mise à jour mineure vers Bootstrap 4.6.0 et mise à jour des dépendances (jquery, popper).
 - Components - Dropdowns: Modification style .active. Ajout A11y pour dropdown-item disabled.
 - Components - Etiquette: Modifications des examples proposé dans la BAO.
+- Components - Étiquettes: Ajustement du border-radius à 2px.
 - Components - Messages: Plus possible de créer des messages neutres. Style par defaut = info.
 - Components - Messages: Les boutons prennent les styles .btn-squared et les couleurs des messages par defaut. Plus besoin de passé les classes btn-info et btn-squared.
 - Components - Liste d'objets utilitaires: Exemples sous forme de liste (ul/li) plutôt que divs.
