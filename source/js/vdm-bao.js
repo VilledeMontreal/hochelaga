@@ -522,8 +522,8 @@
       }
 
       // Initialize PhotoSwipe
-      var lightBox = new PhotoSwipe($pswp, PhotoSwipeUI_Default, items, options);
-      lightBox.init();
+      gallery = new PhotoSwipe($pswp, PhotoSwipeUI_Default, items, options);
+      gallery.init();
     });
   });
 
@@ -590,13 +590,13 @@
         }
       }
       // Initialize PhotoSwipe
-      var lightBox = new PhotoSwipe($pswp, PhotoSwipeUI_Default, items, options);
-      lightBox.init();
+      gallery = new PhotoSwipe($pswp, PhotoSwipeUI_Default, items, options);
+      gallery.init();
     });
   };
 
   // Trigger gallery on click
-  $(".js-gallery-trigger").click(function() {
+  $(".js-gallery-trigger").on('click', function() {
     openPhotoSwipe();
   });
 
@@ -635,19 +635,12 @@
 
 
 // Copyright toggle
-const copyrights = document.querySelectorAll('.img-copyright');
-
+const copyrights = document.querySelectorAll('.js-trigger-copyright');
 copyrights.forEach((copyright) => {
   copyright.addEventListener('click', () => {
-    showHideCopyright(copyright);
+    copyright.classList.toggle('badge-hidden-label');
   });
 });
-
-function showHideCopyright(copyright) {
-  const copyrightText = copyright.querySelector('.copyright-text');
-  copyrightText.classList.toggle('d-none');
-}
-
 
 
 // Flyout toggle

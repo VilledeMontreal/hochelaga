@@ -117,52 +117,58 @@
     },
     "module-text": true,
     "module-image-album": {
-      "mediaGallery": [
-        {
-          "mediaSrc": "https://picsum.photos/id/1072/1920/1080",
-          "mediaSize": "1920x1080",
-          "mediaCaption": "Légende de la 1ere image.",
-          "mediaAuthor": "Jamie Mink",
-          "mediaAlt": "Media #1072",
-          "thumbnail" : {
+      "mediaGallery": {
+        "badge": {
+          "badge": "1/3",
+          "badgeClass": "badge-dark badge-icon-left",
+          "badgeIconClass": "icon-image"
+        },
+        "badgeCopyright": {
+          "badge": "Jamie Mink",
+          "badgeClass": "badge-dark badge-icon-left badge-hidden-label js-trigger-copyright",
+          "badgeIconClass": "icon-copyright"
+        },
+        "items": [
+          {
             "mediaSrc": "https://picsum.photos/id/1072/1920/1080",
-            "height": "1080",
-            "width": "1920"
+            "mediaSize": "1920x1080",
+            "mediaCaption": "Légende de la 1ere image.",
+            "mediaAuthor": "Jamie Mink",
+            "mediaAlt": "Media #1072",
+            "thumbnail" : {
+              "mediaSrc": "https://picsum.photos/id/1072/1920/1080",
+              "height": "1080",
+              "width": "1920"
+            }
+          },
+          {
+            "mediaSrc": "https://picsum.photos/id/1071/1000/667",
+            "mediaSize": "1000x667",
+            "mediaCaption": "Légende de la 2e image.",
+            "mediaAuthor": "Tim Stief",
+            "mediaAlt": "Media #1071",
+            "thumbnail" : {
+              "mediaSrc": "https://picsum.photos/id/1071/600/400",
+              "height": "400",
+              "width": "600"
+            }
+          },
+          {
+            "mediaSrc": "https://picsum.photos/id/1070/1500/320",
+            "mediaSize": "1500x320",
+            "mediaCaption": "Maecenas sem odio, commodo eget massa vitae, pharetra ultrices orci. Integer molestie feugiat erat. Ut efficitur ornare magna vitae consectetur. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Sed in consectetur lorem.",
+            "mediaAuthor": "Sean Stratton",
+            "mediaAlt": "Media #1070",
+            "thumbnail" : {
+              "mediaSrc": "https://picsum.photos/id/1070/600/400",
+              "height": "400",
+              "width": "600"
+            }
           }
-        },
-        {
-          "mediaSrc": "https://picsum.photos/id/1071/1000/667",
-          "mediaSize": "1000x667",
-          "mediaCaption": "Légende de la 2e image.",
-          "mediaAuthor": "Tim Stief",
-          "mediaAlt": "Media #1071",
-          "thumbnail" : {
-            "mediaSrc": "https://picsum.photos/id/1071/600/400",
-            "height": "400",
-            "width": "600"
-          }
-        },
-        {
-          "mediaSrc": "https://picsum.photos/id/1070/1500/320",
-          "mediaSize": "1500x320",
-          "mediaCaption": "Maecenas sem odio, commodo eget massa vitae, pharetra ultrices orci. Integer molestie feugiat erat. Ut efficitur ornare magna vitae consectetur. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Sed in consectetur lorem.",
-          "mediaAuthor": "Sean Stratton",
-          "mediaAlt": "Media #1070",
-          "thumbnail" : {
-            "mediaSrc": "https://picsum.photos/id/1070/600/400",
-            "height": "400",
-            "width": "600"
-          }
-        }
-      ]
-    },
-    "module-image-single": {
-      "media": {
-        "src": "https://picsum.photos/id/1024/768/432",
-        "alt": "A generic placeholder image alt text.",
-        "copyright": "Un très long copyright pour voir comment ça se comporte sur plusieurs lignes!"
+        ]
       }
     },
+    "module-image-single": false,
     "module-video": true,
     "module-collapse": {
       "collapsibleItem": [
@@ -352,9 +358,5 @@
         "class": false
       }
     ]
-  },
-  "hasSelecteurArrondissement": true,
-  "selectedArrondissement": {
-    "arrondissement": "Nom-de-l'Arrondissement"
   }
 }
