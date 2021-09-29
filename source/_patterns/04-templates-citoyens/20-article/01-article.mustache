@@ -21,23 +21,16 @@
   {{/ documentHeading}}
 
   <div class="region-content pt-0">
-
     <div class="container">
-
       <div class="row{{# sidebarRight }} justify-content-between{{/ sidebarRight}}{{^ sidebarRight}} justify-content-center{{/ sidebarRight}}">
         <div class="col-12 col-lg-7">
           <header class="content-header">
-
             <h1>{{ heading }}</h1>
-
             {{> patterns-content-header-extras}}
-
           </header>
-
           <div class="lead">
             {{{ lead }}}
           </div>
-
           {{# module-content}}
           <div class="content-modules">
           {{> templates-citoyens-article-content}}
@@ -50,13 +43,12 @@
             <ul class="list-inline">
             {{# badges-links }}
               <li class="list-inline-item">
-              {{> components-badge }}
+              {{> components-etiquette }}
               </li>
             {{/ badges-links }}
             </ul>
           </div>
           {{/ module-etiquette}}
-
         </div>
 
         {{# sidebarRight}}

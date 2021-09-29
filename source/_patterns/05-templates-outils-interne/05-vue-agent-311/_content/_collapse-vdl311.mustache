@@ -20,7 +20,7 @@
   </div>
   <div class="content-module-stacked">
     <!-- Media Gallery -->
-    {{> components-gallery }}
+    {{> components-galerie }}
   </div>
   <div class="content-module-stacked">
   {{> patterns-emphasis(emphasisClasses: emphasis-md)}}
@@ -28,7 +28,7 @@
   {{# comment}}
   <div class="content-module-stacked">
     <div class="list text-info-reversed">
-    {{> components-list-item-element}}
+    {{> components-liste-contenu-element}}
     </div>
   </div>
   {{/ comment}}
@@ -63,25 +63,25 @@
   {{# moduleImage}}
   <div class="content-module-stacked">
       <!-- Media Gallery -->
-    {{> components-gallery }}
+    {{> components-galerie }}
   </div>
   {{/ moduleImage}}
   {{# moduleDocuments}}
   <h2 class="font-size-base-interface mb-1">Module titre de section</h2>
   <div class="content-module-stacked">
-  {{> components-list-item-link}}
+  {{> components-liste-lien}}
   </div>
   {{/ moduleDocuments}}
   {{# moduleLiens}}
   <h2 class="font-size-base-interface mb-1">Module titre de section</h2>
   <div class="content-module-stacked">
-  {{> components-list-item-link}}
+  {{> components-liste-lien}}
   </div>
   {{/ moduleLiens}}
   {{# moduleComment}}
   <div class="content-module-stacked">
     <div class="list text-info-reversed">
-    {{> components-list-item-element}}
+    {{> components-liste-contenu-element}}
     </div>
   </div>
   {{/ moduleComment}}
@@ -137,7 +137,7 @@
 {{# personne-ressource}}
   {{# list-icon}}
   <div class="mb-2">
-    {{> components-list-item}}
+    {{> components-liste-contenu}}
   </div>
   {{/ list-icon}}
   {{{ extra-content }}}
@@ -146,7 +146,7 @@
 {{# agent-liaison}}
   {{# list-icon}}
   <div class="mb-2">
-    {{> components-list-item}}
+    {{> components-liste-contenu}}
   </div>
   {{/ list-icon}}
   {{{ extra-content }}}
@@ -155,7 +155,7 @@
 {{# responsable-maj}}
   {{# list-icon}}
   <div class="mb-2">
-    {{> components-list-item}}
+    {{> components-liste-contenu}}
   </div>
   {{/ list-icon}}
   {{{ extra-content }}}

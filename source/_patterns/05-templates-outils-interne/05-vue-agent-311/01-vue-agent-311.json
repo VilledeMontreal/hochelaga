@@ -90,20 +90,23 @@
             "icon-name": "icon-search",
             "ariaLabel": "Zoomer image"
           },
-          "mediaGallery": [
-            {
-              "mediaSrc": "https://picsum.photos/id/1072/1920/1080",
-              "mediaSize": "1920x1080",
-              "mediaCaption": "Légende de la 1ere image.",
-              "mediaAuthor": "Jamie Mink",
-              "mediaAlt": "Media #1072",
-              "thumbnail" : {
+          "mediaGallery": {
+            "badge": false,
+            "items": [
+              {
                 "mediaSrc": "https://picsum.photos/id/1072/1920/1080",
-                "height": "1080",
-                "width": "1920"
+                "mediaSize": "1920x1080",
+                "mediaCaption": "Légende de la 1ere image.",
+                "mediaAuthor": "Jamie Mink",
+                "mediaAlt": "Media #1072",
+                "thumbnail" : {
+                  "mediaSrc": "https://picsum.photos/id/1072/1920/1080",
+                  "height": "1080",
+                  "width": "1920"
+                }
               }
-            }
-          ],
+            ]
+          },
           "comment": {
             "hasIcon": true,
             "icon-name": "icon-comment",
@@ -165,20 +168,23 @@
                   ]
                 },
                 "moduleImage": {
-                  "mediaGallery": [
-                    {
-                      "mediaSrc": "https://picsum.photos/id/1072/1920/1080",
-                      "mediaSize": "1920x1080",
-                      "mediaCaption": "Légende de la 1ere image.",
-                      "mediaAuthor": "Jamie Mink",
-                      "mediaAlt": "Media #1072",
-                      "thumbnail" : {
+                  "mediaGallery": {
+                    "badge": false,
+                    "items": [
+                      {
                         "mediaSrc": "https://picsum.photos/id/1072/1920/1080",
-                        "height": "1080",
-                        "width": "1920"
+                        "mediaSize": "1920x1080",
+                        "mediaCaption": "Légende de la 1ere image.",
+                        "mediaAuthor": "Jamie Mink",
+                        "mediaAlt": "Media #1072",
+                        "thumbnail" : {
+                          "mediaSrc": "https://picsum.photos/id/1072/1920/1080",
+                          "height": "1080",
+                          "width": "1920"
+                        }
                       }
-                    }
-                  ]
+                    ]
+                  }
                 },
                 "moduleComment": {
                   "hasIcon": true,

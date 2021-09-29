@@ -45,7 +45,7 @@
     &.active,
     &:active {
       color: $neutral-primary;
-      @include gradient-bg($neutral-underground-1);
+      @include gradient-bg($highlight-light);
     }
 
     &.disabled,

@@ -18,7 +18,7 @@
       {{# horaire}}
       <div class="content-module-stacked">
         <h3>{{title}}</h3>
-        {{> styles-table}}
+        {{> components-tableau}}
       </div>
       {{/ horaire}}
     </div>
@@ -64,7 +64,7 @@
 {{# module-installations}}
 <h3>Installations</h3>
 <div class="content-module-stacked">
-  {{> components-list-item}}
+  {{> components-liste-contenu}}
 </div>
 {{/ module-installations}}
 
@@ -94,13 +94,13 @@
 <h3>Services</h3>
 {{# vdm}}
 <div class="content-module-stacked">
-  {{> components-list-item}}
+  {{> components-liste-contenu}}
 </div>
 {{/ vdm}}
 {{# partners}}
 <div class="content-module-stacked">
   <div class="font-weight-bold">Offerts par un partenaire</div>
-  {{> components-list-item}}
+  {{> components-liste-contenu}}
 </div>
 {{/ partners}}
 {{/ module-services}}
@@ -108,7 +108,7 @@
 {{# module-tarifs}}
 <h3>Tarifs</h3>
 <div class="content-module-stacked">
-  {{> styles-table}}
+  {{> components-tableau}}
 </div>
 {{/ module-tarifs}}
 
@@ -139,14 +139,14 @@
 <h2>Activités sur inscription</h2>
 <div class="content-module-stacked">
   <p>Consultez les activités sur inscription et les cours offerts dans ce lieu : </p>
-  {{> components-list-item-link}}
+  {{> components-liste-lien}}
 </div>
 {{/ module-activites-planifiees}}
 
 {{# module-events}}
 <h2>À ne pas manquer</h2>
 <div class="content-module-stacked">
-  {{> components-list-group-content}}
+  {{> components-liste-objets-editoriaux}}
   {{# button-cta}}
   <div class="d-flex justify-content-center mt-0 mb-4">
   {{> components-button}}

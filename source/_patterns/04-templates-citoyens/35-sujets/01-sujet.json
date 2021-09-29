@@ -1,4 +1,5 @@
 {
+  "includePhotoswipe": true,
   "navbarFixedTop": true,
   "pageClasses": false,
   "includeValidation": true,
@@ -55,10 +56,27 @@
     "module-text": true,
     "module-image-album": false,
     "module-image-single": {
-      "media": {
-        "src": "https://picsum.photos/id/1024/768/432",
-        "alt": "A generic placeholder image alt text.",
-        "copyright": "Un très long copyright pour voir comment ça se comporte sur plusieurs lignes!"
+      "mediaGallery": {
+        "badge": false,
+        "badgeCopyright": {
+          "badge": "Prénom Nom",
+          "badgeClass": "badge-dark badge-icon-left badge-hidden-label js-trigger-copyright",
+          "badgeIconClass": "icon-copyright"
+        },
+        "items": [
+          {
+            "mediaSrc": "https://picsum.photos/id/1024/1920/1080",
+            "mediaSize": "1920x1080",
+            "mediaCaption": "Légende de l'image.",
+            "mediaAuthor": "Prénom Nom",
+            "mediaAlt": "Media #1024",
+            "thumbnail" : {
+              "mediaSrc": "https://picsum.photos/id/1024/768/432",
+              "height": "432",
+              "width": "768"
+            }
+          }
+        ]
       }
     },
     "module-video": true,

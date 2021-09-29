@@ -3,16 +3,16 @@
   loadJSON(function(response) {
     // Parse JSON string into object
       var bao_version = JSON.parse(response);
-      
+
       // We are in an infamous iframe here!
-      // Test if we have allready output the version 
+      // Test if we have allready output the version
       if(window.parent.$(".sg-header .sg-bao-version").length == 0) {
         window.parent.$(".sg-header .sg-controls").before('<span class="sg-bao-version" style="color: #ffffff;font-size: 70%;display:inline-block;padding: .9em 1em;text-transform:lowercase;">v'+ bao_version.version +'</span>');
       }
    });
 
-  // LoadJSON function 
-  function loadJSON(callback) {   
+  // LoadJSON function
+  function loadJSON(callback) {
 
     var xobj = new XMLHttpRequest();
     xobj.overrideMimeType("application/json");
@@ -23,7 +23,7 @@
         callback(xobj.responseText);
       }
     };
-    xobj.send(null);  
+    xobj.send(null);
   }
 
 })(jQuery);

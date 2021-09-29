@@ -114,176 +114,17 @@
       ]
     },
     "module-text": true,
-    "module-image-album": {
-      "mediaGallery": [
-        {
-          "mediaSrc": "https://picsum.photos/id/1072/1920/1080",
-          "mediaSize": "1920x1080",
-          "mediaCaption": "Légende de la 1ere image.",
-          "mediaAuthor": "Jamie Mink",
-          "mediaAlt": "Media #1072",
-          "thumbnail" : {
-            "mediaSrc": "https://picsum.photos/id/1072/1920/1080",
-            "height": "1080",
-            "width": "1920"
-          }
-        },
-        {
-          "mediaSrc": "https://picsum.photos/id/1071/1000/667",
-          "mediaSize": "1000x667",
-          "mediaCaption": "Légende de la 2e image.",
-          "mediaAuthor": "Tim Stief",
-          "mediaAlt": "Media #1071",
-          "thumbnail" : {
-            "mediaSrc": "https://picsum.photos/id/1071/600/400",
-            "height": "400",
-            "width": "600"
-          }
-        },
-        {
-          "mediaSrc": "https://picsum.photos/id/1070/1500/320",
-          "mediaSize": "1500x320",
-          "mediaCaption": "Maecenas sem odio, commodo eget massa vitae, pharetra ultrices orci. Integer molestie feugiat erat. Ut efficitur ornare magna vitae consectetur. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Sed in consectetur lorem.",
-          "mediaAuthor": "Sean Stratton",
-          "mediaAlt": "Media #1070",
-          "thumbnail" : {
-            "mediaSrc": "https://picsum.photos/id/1070/600/400",
-            "height": "400",
-            "width": "600"
-          }
-        }
-      ]
-    },
-    "module-image-single": {
-      "media": {
-        "src": "https://picsum.photos/id/1024/768/432",
-        "alt": "A generic placeholder image alt text.",
-        "copyright": "Un très long copyright pour voir comment ça se comporte sur plusieurs lignes!"
-      }
-    },
+    "module-image-album": false,
+    "module-image-single": false,
     "module-video": true,
-    "module-collapse": {
-      "collapsibleItem": [
-        {
-          "title": "Collapsible item #1",
-          "content": "Collapsible content",
-          "block-id": "sujet-template-item-1",
-          "heading-id": "sujet-template-heading-1",
-          "collapsible-default-content": "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>"
-        },
-        {
-          "title": "Collapsible item #2",
-          "content": "Collapsible content",
-          "block-id": "sujet-template-item-2",
-          "heading-id": "sujet-template-heading-2",
-          "collapsible-default-content": "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>"
-        },
-        {
-          "title": "Collapsible item #3",
-          "content": "Collapsible content",
-          "block-id": "sujet-template-item-3",
-          "heading-id": "sujet-template-heading-3",
-          "collapsible-default-content": "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>"
-        }
-      ]
-    },
-    "module-table": {
-      "table": {
-        "tableWrapper": true,
-        "caption": "Note de bas de tableau",
-        "tableClass" : "table-lg",
-        "thead": {
-          "theadClass": "",
-          "th": [
-            { "title": "#" },
-            { "title": "Libellé 1" },
-            { "title": "Libellé 2" }
-          ]
-        },
-        "tbody": {
-          "tr": [
-            {
-              "th": "1",
-              "td": [
-                { "text": "Libellé" },
-                { "text": "Libellé" }
-              ]
-            },
-            {
-              "th": "2",
-              "td": [
-                { "text": "Libellé" },
-                { "text": "Libellé" }
-              ]
-            },
-            {
-              "th": "3",
-              "td": [
-                { "text": "Libellé" },
-                { "text": "Libellé" }
-              ]
-            }
-          ]
-        }
-      }
-    },
-    "module-comparatif-colonne": {
-      "colonnes": true,
-      "comparatif": [
-        {
-          "title": "Titre de la section",
-          "text": "<p>Corps de texte simple - Pas de liens. Permet de structure l'information en regroupant visuellement sur deux colonnes des contenus pouvant être comparés.</p><ul><li>Liste à puce</li><li>Liste à puce</li><li>Liste à puce</li></ul>"
-        },
-        {
-          "title": "Titre de la section",
-          "text": "<p>Exemples  : Quoi faire vs Quoi pas faire ou Propriétaire vs Locataire.</p><ul><li>Liste à puce</li><li>Liste à puce</li><li>Liste à puce</li></ul>"
-        }
-      ]
-    },
-    "module-comparatif-rangee": {
-      "comparatif": [
-        {
-          "title": "Titre de la section",
-          "text": "<p>Corps de texte - Permet de structure l'information en regroupant visuellement sur plusieurs rangées des contenus pouvant être comparés. Exemple : Avant, Pendant et Après</p>"
-        },
-        {
-          "title": "Titre de la section",
-          "text": "<ul><li>Liste à puce</li><li>Liste à puce</li><li>Liste à puce</li></ul>"
-        },
-        {
-          "title": "Titre de la section",
-          "text": "<ul><li>Liste à puce</li><li>Liste à puce</li><li>Liste à puce</li></ul>"
-        }
-      ]
-    },
-    "module-explainer-img-left": {
-      "wrapperTitle": "Titre - Image à gauche et texte associés",
-      "img": {
-        "src": "https://picsum.photos/id/1058/768/432",
-        "alt": "Alt - Lorem ipsum dolor site."
-      }
-    },
-    "module-explainer-img-right": {
-      "wrapperTitle": "Titre - Image à droite et texte associés",
-      "img": {
-        "src": "https://picsum.photos/id/1058/768/432",
-        "alt": "Alt - Lorem ipsum dolor site."
-      }
-    },
-    "module-explainer-img-top": {
-      "wrapperTitle": "Titre - Image en haut et texte associés",
-      "img": {
-        "src": "https://picsum.photos/id/1058/768/432",
-        "alt": "Alt - Lorem ipsum dolor site."
-      }
-    },
-    "module-explainer-img-bottom": {
-      "wrapperTitle": "Titre - Image en bas et texte associés",
-      "img": {
-        "src": "https://picsum.photos/id/1058/768/432",
-        "alt": "Alt - Lorem ipsum dolor site."
-      }
-    }
+    "module-collapse": false,
+    "module-table": false,
+    "module-comparatif-colonne": false,
+    "module-comparatif-rangee": false,
+    "module-explainer-img-left": false,
+    "module-explainer-img-right": false,
+    "module-explainer-img-top": false,
+    "module-explainer-img-bottom": false
   },
   "module-etiquette": {
     "badges-links": [
@@ -295,40 +136,5 @@
       }
     ]
   },
-  "sidebarRight": false,
-  "sb-block-tc-lies": {
-    "listGroupClass": "list-group-xl",
-    "listGroup": [
-      {
-        "url": "https://rds.ca",
-        "icon-name": "icon-affaires-et-economie",
-        "text": "Titre du sujet sur plusieurs lignes si nécessaire",
-        "class": false
-      },
-      {
-        "icon-name": "icon-contraventions-et-reglementation",
-        "text": "Titre du sujet sur plusieurs lignes si nécessaire",
-        "class": false
-      },
-      {
-        "icon-name": "icon-affaires-et-economie",
-        "text": "Titre de l'article",
-        "class": false
-      },
-      {
-        "icon-name": "icon-vie-communautaire",
-        "text": "Titre du sujet sur plusieurs lignes si nécessaire",
-        "class": false
-      },
-      {
-        "icon-name": "icon-participation-citoyenne",
-        "text": "Titre du sujet sur plusieurs lignes si nécessaire",
-        "class": false
-      }
-    ]
-  },
-  "hasSelecteurArrondissement": true,
-  "selectedArrondissement": {
-    "arrondissement": "Nom-de-l'Arrondissement"
-  }
+  "sidebarRight": false
 }

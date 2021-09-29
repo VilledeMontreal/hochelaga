@@ -66,7 +66,7 @@
 {{# module-documents}}
 <h2>Module Titre de section (H2, H3 ou H4)</h2>
 <div class="content-module-stacked">
-  {{> components-list-item-link}}
+  {{> components-liste-lien}}
 </div>
 {{/ module-documents }}
 
@@ -89,23 +89,23 @@
 {{/ module-text}}
 
 {{# module-image-album}}
-<h2>Image-Album - Module titre</h2>
+<h2>Galerie - Module titre</h2>
 <div class="content-module-stacked">
-  {{> components-gallery }}
+  {{> components-galerie }}
 </div>
 {{/ module-image-album}}
 
 {{# module-image-single}}
-<h2>Image simple - Module titre</h2>
+<h2>Image - Module titre</h2>
 <div class="content-module-stacked">
-  {{> styles-figure}}
+  {{> components-galerie}}
 </div>
 {{/ module-image-single}}
 
 {{# module-video}}
 <h2>Vidéo intégrée - Module titre</h2>
 <div class="content-module-stacked">
-  {{> styles-video-responsive-embed }}
+  {{> components-video-responsive-embed }}
 </div>
 {{/ module-video}}
 
@@ -121,7 +121,7 @@
 {{# module-table}}
 <h2>Titre tableau - module Titre (H2, H3...)</h2>
 <div class="content-module-stacked">
-  {{> styles-table }}
+  {{> components-tableau }}
 </div>
 {{/ module-table}}
 

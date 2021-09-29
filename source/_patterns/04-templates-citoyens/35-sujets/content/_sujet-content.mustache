@@ -41,19 +41,17 @@
 </div>
 {{/ module-image-album}}
 
-{{^module-image-album}}
 {{# module-image-single}}
-<h2>Image simple - Module titre</h2>
+<h2>Image - Module titre</h2>
 <div class="content-module-stacked">
-  {{> styles-figure}}
+  {{> components-galerie}}
 </div>
 {{/ module-image-single}}
-{{/module-image-album}}
 
 {{# module-video}}
 <h2>Vidéo intégrée - Module titre</h2>
 <div class="content-module-stacked">
-  {{> styles-video-responsive-embed }}
+  {{> components-video-responsive-embed }}
 </div>
 {{/ module-video}}
 
@@ -90,20 +88,20 @@
 <h2>Titre tableau - module Titre (H2, H3...)</h2>
 <div class="content-module-stacked">
   <p>Courte description optionnelle - module corps de texte</p>
-  {{> styles-table }}
+  {{> components-tableau }}
 </div>
 {{/ module-table}}
 
 {{# module-list-reference}}
 <h2>Liste de références de liens internes ou externes</h2>
 <div class="content-module-stacked">
-  {{> components-list-item-link }}
+  {{> components-liste-lien }}
 </div>
 {{/ module-list-reference}}
 
 {{# module-documents}}
 <h2>Documents à télécharger</h2>
 <div class="content-module-stacked">
-  {{> components-list-item-link}}
+  {{> components-liste-lien}}
 </div>
 {{/ module-documents }}

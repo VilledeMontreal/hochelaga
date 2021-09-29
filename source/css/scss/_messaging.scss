@@ -6,29 +6,48 @@
 }
 
 .alert {
+  $informative-darker: darken($informative-dark, 10%);
+
   @include font-size($font-size-base);
   line-height: $line-height-md;
   border-left-width: 2px;
-  border-color: $neutral-tertiary;
-  background-color: $neutral-underground-1;
-  color: $neutral-secondary;
+  border-color: $informative;
+  background-color: $informative-light;
+  color: $informative-dark;
 
   a,
   .alert-link {
-    color: $neutral-secondary;
-    border-bottom: $link-border-width solid $neutral-secondary;
+    color: $informative-dark;
+    border-bottom: $link-border-width solid $informative-dark;
     &:after {
-      background-color: $neutral-secondary !important;
+      background-color: $informative-dark !important;
       // We need important because some content get the external link automatically applied if inside some specific container.
       // TODO: Fix external-link so we can get rid of !important.
     }
     @include hover-focus {
-      background-color: lighten($neutral-underground-1, 2%);
+      background-color: lighten($informative-light, 4%);
+    }
+  }
+
+  .btn {
+    @extend .btn-squared;
+    &.btn-primary {
+      @include button-variant($background: $informative-dark, $border: $informative-dark, $hover-background: $informative-darker, $hover-border: $informative-darker, $active-background: $informative-darker, $active-border: $informative-darker, $box-shadow-color: $informative-dark);
+    }
+
+    &.btn-secondary {
+      @include button-variant($background: transparent, $border: $neutral-stroke, $color: $informative-dark, $hover-background: transparent, $hover-border: $informative-dark, $hover-color: $informative-dark, $active-background: transparent, $active-border: $informative-dark, $active-color: $informative-dark, $box-shadow-color: $informative-dark);
+    }
+
+    // Tertiary
+    &.btn-tertiary,
+    &.btn-link {
+      @include button-variant($background: transparent, $border: transparent, $color: $informative-dark, $hover-background: $informative-light, $hover-border: $informative-light, $hover-color: $informative-dark, $active-background: $informative-light, $active-border: $informative-light, $active-color: $informative-dark, $box-shadow-color: $informative-dark);
     }
   }
 
   .alert-heading {
-    color: $neutral-primary;
+    color: $informative-dark;
     font-weight: $font-weight-bold;
     margin-bottom: .5rem;
   }
@@ -54,7 +73,14 @@
 
   .alert-icon-container svg,
   .close svg {
-    fill: $neutral-tertiary;
+    fill: $informative-dark;
+  }
+
+  .alert-icon-container,
+  .close {
+    .icon {
+      @include icon-color($informative-dark);
+    }
   }
 
 }
@@ -79,6 +105,7 @@
   $color-light: map-get($map, light);
   $color-dark:  map-get($map, dark);
   $color-base:  map-get($map, base);
+  $color-darker: darken($color-dark, 10%);
 
   .alert-#{$label} {
     color: $color-dark;
@@ -114,6 +141,22 @@
     .close {
       .icon {
         @include icon-color($color-dark);
+      }
+    }
+
+    .btn {
+      &.btn-primary {
+        @include button-variant($background: $color-dark, $border: $color-dark, $hover-background: $color-darker, $hover-border: $color-darker, $active-background: $color-darker, $active-border: $color-darker, $box-shadow-color: $color-dark);
+      }
+
+      &.btn-secondary {
+        @include button-variant($background: transparent, $border: $neutral-stroke, $color: $color-dark, $hover-background: transparent, $hover-border: $color-dark, $hover-color: $color-dark, $active-background: transparent, $active-border: $color-dark, $active-color: $color-dark, $box-shadow-color: $color-dark);
+      }
+
+      // Tertiary
+      &.btn-tertiary,
+      &.btn-link {
+        @include button-variant($background: transparent, $border: transparent, $color: $color-dark, $hover-background: $color-light, $hover-border: $color-light, $hover-color: $color-dark, $active-background: $color-light, $active-border: $color-light, $active-color: $color-dark, $box-shadow-color: $color-dark);
       }
     }
 
@@ -170,7 +213,8 @@
     fill: $white;
   }
 
-  .icon {
+  .icon,
+  .close .icon {
     @include icon-color($white);
   }
 
@@ -187,10 +231,9 @@
       color: $white;
       border-bottom: $link-border-width solid $white;
 
-      &:active,
-      &:hover {
+      @include hover-focus {
         color: $white;
-        background: $black;
+        background-color: $black;
       }
 
       &:after {
@@ -199,6 +242,7 @@
     }
 
   }
+
   .message-bar-icon-container {
     margin-right: 1rem;
   }
@@ -250,7 +294,8 @@
       svg {
         fill: $neutral-primary;
       }
-      .icon {
+      .icon,
+      .close .icon {
         @include icon-color($neutral-primary);
       }
       .message-bar-container {
@@ -272,7 +317,8 @@
       svg {
         fill: $white;
       }
-      .icon {
+      .icon,
+      .close .icon {
         @include icon-color($white);
       }
       .message-bar-container {

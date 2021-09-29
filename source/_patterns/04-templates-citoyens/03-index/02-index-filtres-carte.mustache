@@ -83,7 +83,7 @@
           <span class="sr-only">Filtres sélectionnés : </span>
           <div class="badge-group">
             {{# badges}}
-            {{> components-badge}}
+            {{> components-etiquette}}
             {{/ badges}}
             {{> components-button(buttonClass: "btn-link btn-sm btn-squared", buttonText: "Tout effacer")}}
           </div>
@@ -206,7 +206,7 @@
                       <div class="col-12 filters-applied px-4" aria-label="Filtres sélectionnés">
                         <div class="badge-group">
                           {{# badges}}
-                          {{> components-badge}}
+                          {{> components-etiquette}}
                           {{/ badges}}
                         </div>
                       </div>
@@ -277,7 +277,7 @@
       {{# listing }}
       <div class="row pt-2 mb-8 {{# showMap }}d-none{{/ showMap }}" id="contentList">
         <div class="col-12">
-          {{> components-list-group-content }}
+          {{> components-liste-objets-editoriaux }}
         </div>
       </div>
       {{/ listing }}
@@ -289,13 +289,13 @@
         </div>
       </div>
       {{/ map }}
-      
+
       {{# hasPagination }}
       <div class="pagination-wrapper" id="paginationList">
         {{> components-pagination }}
       </div>
       {{/ hasPagination }}
-      
+
       {{/ results}}
 
       {{/ hasEmptyState }}

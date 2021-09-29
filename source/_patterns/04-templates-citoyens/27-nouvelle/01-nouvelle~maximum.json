@@ -1,4 +1,5 @@
 {
+  "includePhotoswipe": true,
   "documentHeading": true,
   "documentHeadingClass": false,
   "documentHeadingNotch": true,
@@ -23,7 +24,6 @@
     }
   },
   "lead": "<p>Amorce - Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi condimentum sollicitudin erat, quis convallis risus. Nullam posuere odio ligula, hendrerit suscipit ligula laoreet. Curabitur eleifend nulla purus, ut pharet urna ef id. Cras lacinia nisi id  (recommandé 300 caractères maximum).</p>",
-  "includePhotoswipe": true,
   "module-content": {
     "module-text": true,
     "module-emphasis": {
@@ -146,51 +146,80 @@
       }
     ],
     "module-image-single": {
-      "media": {
-        "src": "https://picsum.photos/id/1024/768/432",
-        "alt": "texte alternatif.",
-        "copyright": "Un très long copyright pour voir comment ça se comporte sur plusieurs lignes!"
+      "mediaGallery": {
+        "badge": false,
+        "badgeCopyright": {
+          "badge": "Prénom Nom",
+          "badgeClass": "badge-dark badge-icon-left badge-hidden-label js-trigger-copyright",
+          "badgeIconClass": "icon-copyright"
+        },
+        "items": [
+          {
+            "mediaSrc": "https://picsum.photos/id/1024/1920/1080",
+            "mediaSize": "1920x1080",
+            "mediaCaption": "Légende de l'image.",
+            "mediaAuthor": "Prénom Nom",
+            "mediaAlt": "Media #1024",
+            "thumbnail" : {
+              "mediaSrc": "https://picsum.photos/id/1024/768/432",
+              "height": "432",
+              "width": "768"
+            }
+          }
+        ]
       }
     },
     "module-image-album": {
-      "mediaGallery": [
-        {
-          "mediaSrc": "https://picsum.photos/id/1072/992/558",
-          "mediaSize": "992x558",
-          "mediaCaption": "Légende de la 1ere image.",
-          "mediaAuthor": "Jamie Mink",
-          "mediaAlt": "Media #1072",
-          "thumbnail" : {
+      "mediaGallery": {
+        "badge": {
+          "badge": "1/3",
+          "badgeClass": "badge-dark badge-icon-left",
+          "badgeIconClass": "icon-image"
+        },
+        "badgeCopyright": {
+          "badge": "Jamie Mink",
+          "badgeClass": "badge-dark badge-icon-left badge-hidden-label js-trigger-copyright",
+          "badgeIconClass": "icon-copyright"
+        },
+        "items": [
+          {
             "mediaSrc": "https://picsum.photos/id/1072/992/558",
-            "height": "558",
-            "width": "992"
+            "mediaSize": "992x558",
+            "mediaCaption": "Légende de la 1ere image.",
+            "mediaAuthor": "Jamie Mink",
+            "mediaAlt": "Media #1072",
+            "thumbnail" : {
+              "mediaSrc": "https://picsum.photos/id/1072/992/558",
+              "height": "558",
+              "width": "992"
+            }
+          },
+          {
+            "mediaSrc": "https://picsum.photos/id/1071/1000/667",
+            "mediaSize": "1000x667",
+            "mediaCaption": "Légende de la 2e image.",
+            "mediaAuthor": "Tim Stief",
+            "mediaAlt": "Media #1071",
+            "thumbnail" : {
+              "mediaSrc": "https://picsum.photos/id/1071/600/400",
+              "height": "400",
+              "width": "600"
+            }
+          },
+          {
+            "mediaSrc": "https://picsum.photos/id/1070/1275/272",
+            "mediaSize": "1275x272",
+            "mediaCaption": "Maecenas sem odio, commodo eget massa vitae, pharetra ultrices orci. Integer molestie feugiat erat. Ut efficitur ornare magna vitae consectetur. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Sed in consectetur lorem.",
+            "mediaAuthor": "Sean Stratton",
+            "mediaAlt": "Media #1070",
+            "thumbnail" : {
+              "mediaSrc": "https://picsum.photos/id/1070/600/400",
+              "height": "400",
+              "width": "600"
+            }
           }
-        },
-        {
-          "mediaSrc": "https://picsum.photos/id/1071/1000/667",
-          "mediaSize": "1000x667",
-          "mediaCaption": "Légende de la 2e image.",
-          "mediaAuthor": "Tim Stief",
-          "mediaAlt": "Media #1071",
-          "thumbnail" : {
-            "mediaSrc": "https://picsum.photos/id/1071/600/400",
-            "height": "400",
-            "width": "600"
-          }
-        },
-        {
-          "mediaSrc": "https://picsum.photos/id/1070/1275/272",
-          "mediaSize": "1275x272",
-          "mediaCaption": "Maecenas sem odio, commodo eget massa vitae, pharetra ultrices orci. Integer molestie feugiat erat. Ut efficitur ornare magna vitae consectetur. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Sed in consectetur lorem.",
-          "mediaAuthor": "Sean Stratton",
-          "mediaAlt": "Media #1070",
-          "thumbnail" : {
-            "mediaSrc": "https://picsum.photos/id/1070/600/400",
-            "height": "400",
-            "width": "600"
-          }
-        }
-      ]
+        ]
+      }
     },
     "module-video": true
   },

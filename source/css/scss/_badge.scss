@@ -68,6 +68,7 @@
 .badge {
   .icon {
     @include icon-color($neutral-primary);
+    @include icon-size($icon-xs);
   }
 
   &.badge-max-width {
@@ -105,6 +106,7 @@
       @include icon-color($neutral-primary);
     }
   }
+  // Deprecated
   &.badge-primary {
     background-color: $primary;
     color: $white;
@@ -123,6 +125,7 @@
       @include icon-color($white);
     }
   }
+  // Deprecated
   &.badge-secondary {
     color: $primary;
     background-color: $white;
@@ -143,7 +146,6 @@
       @include icon-color($primary);
     }
   }
-
   &.badge-icon-left,
   &.badge-icon-right {
     display: inline-flex;
@@ -168,7 +170,7 @@
       margin-right: .25rem;
     }
   }
-
+  // Deprecated
   &.badge-icon-right {
     .badge-label {
       order: 1;
@@ -181,12 +183,23 @@
       }
     }
   }
-
+  // Deprecated
   &[href] {
     @include hover-focus {
       color: $neutral-primary;
       border: 1px solid transparent;
       background-color: darken($neutral-underground-2, 10%);
+    }
+  }
+
+  &.badge-hidden-label {
+    &.badge-icon-left .icon {
+      margin-right: -.25rem;
+      margin-top: .125rem;
+      margin-bottom: .125rem;
+    }
+    .badge-label {
+      display: none;
     }
   }
 

@@ -1,0 +1,168 @@
+{
+  "table": {
+    "caption": "Consetetur ea elitr tempor ut dolor eirmod. Dolore accusam ut invidunt tempor lorem. Eos at consetetur eos sanctus sanctus consetetur.",
+    "tableClass": false,
+    "tbody": {
+      "tr": [
+        {
+          "th": "1",
+          "td1": "<p>Row 1 cell 1</p>",
+          "td2": {
+            "formGroupClass": "form-group-sm",
+            "formGroupNoLabel": true,
+            "formGroupInputID": "form-control-table-1",
+            "formGroupInputPlaceholder": {
+              "text": "Placeholder"
+            },
+            "formGroupInputHelpText": false
+          },
+          "td3": {
+            "badge": "Libellé",
+            "badgeClass": "badge-success-light",
+            "badgeUrl": false,
+            "icons": [
+              {
+                "icon-name": "icon-settings"
+              }
+            ]
+          },
+          "td4": {
+            "buttons": {
+              "default": {
+                "buttonClass": "btn-primary btn-sm btn-squared",
+                "buttonText": "Libellé"
+              },
+              "moreVertical": {
+                "buttonClass": "btn-primary btn-reversed btn-squared btn-icon btn-sm ml-1",
+                "dropdownMenu": {
+                  "dropdownMenuClass": "dropdown-menu-right",
+                  "dropdownMenuID": "dropdownTableMoreVertical",
+                  "dropdownSection": [
+                    {
+                      "dropdownItem": [
+                        {
+                          "url": "#",
+                          "dropdownItemLabel": "Libellé"
+                        },
+                        {
+                          "url": "#",
+                          "dropdownItemLabel": "Libellé"
+                        },
+                        {
+                          "url": "#",
+                          "dropdownItemLabel": "Libellé"
+                        }
+                      ]
+                    }
+                  ]
+                }
+              }
+            }
+          }
+        },
+        {
+          "th": "2",
+          "td1": "Row 2 cell 1",
+          "td2": {
+            "formGroupClass": "form-group-sm",
+            "formGroupNoLabel": true,
+            "formGroupInputID": "form-control-table-2",
+            "formGroupInputPlaceholder": {
+              "text": "Placeholder"
+            },
+            "formGroupInputHelpText": false
+          },
+          "td3": {
+            "badge": "Libellé",
+            "badgeClass": "badge-info-light",
+            "badgeUrl": false
+          },
+          "td4": {
+            "buttons": {
+              "default": {
+                "buttonClass": "btn-secondary btn-sm btn-squared",
+                "buttonText": "Libellé"
+              },
+              "moreVertical": {
+                "buttonClass": "btn-primary btn-reversed btn-squared btn-icon btn-sm ml-1",
+                "dropdownMenu": {
+                  "dropdownMenuClass": "dropdown-menu-right",
+                  "dropdownMenuID": "dropdownTableMoreVertical2",
+                  "dropdownSection": [
+                    {
+                      "dropdownItem": [
+                        {
+                          "url": "#",
+                          "dropdownItemLabel": "Libellé"
+                        },
+                        {
+                          "url": "#",
+                          "dropdownItemLabel": "Libellé"
+                        },
+                        {
+                          "url": "#",
+                          "dropdownItemLabel": "Libellé"
+                        }
+                      ]
+                    }
+                  ]
+                }
+              }
+            }
+          }
+        },
+        {
+          "th": "3",
+          "td1": "Row 3 cell 1",
+          "td2": {
+            "formGroupClass": "form-group-sm",
+            "formGroupNoLabel": true,
+            "formGroupInputID": "form-control-table-3",
+            "formGroupInputPlaceholder": {
+              "text": "Placeholder"
+            },
+            "formGroupInputHelpText": false
+          },
+          "td3": {
+            "badge": "Libellé",
+            "badgeClass": "badge-warning-light",
+            "badgeUrl": false
+          },
+          "td4": {
+            "buttons": {
+              "default" : {
+                "buttonClass": "btn-tertiary btn-sm btn-squared",
+                "buttonText": "Libellé"
+              },
+              "moreVertical": {
+                "buttonClass": "btn-primary btn-reversed btn-squared btn-icon btn-sm ml-1",
+                "dropdownMenu": {
+                  "dropdownMenuClass": "dropdown-menu-right",
+                  "dropdownMenuID": "dropdownTableMoreVertical3",
+                  "dropdownSection": [
+                    {
+                      "dropdownItem": [
+                        {
+                          "url": "#",
+                          "dropdownItemLabel": "Libellé"
+                        },
+                        {
+                          "url": "#",
+                          "dropdownItemLabel": "Libellé"
+                        },
+                        {
+                          "url": "#",
+                          "dropdownItemLabel": "Libellé"
+                        }
+                      ]
+                    }
+                  ]
+                }
+              }
+            }
+          }
+        }
+      ]
+    }
+  }
+}

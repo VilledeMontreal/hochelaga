@@ -1,0 +1,56 @@
+<ul class="list-group list-group-teaser list-group-complex">
+  {{# listGroup}}
+  <li class="list-group-item list-group-item-action">
+  {{# url}}
+  <a href="{{ url }}">
+  {{/ url}}
+    <div class="row no-gutters">
+      {{# listToggle}}
+      <div class="col-auto">
+        {{> components-checkbox-item}}
+      </div>
+      {{/ listToggle}}
+      {{# listIcon}}
+      <div class="col-auto list-group-icon">
+        {{> styles-icon-item}}
+      </div>
+      {{/ listIcon}}
+      <div class="col">
+        <div class="row no-gutters">
+          <div class="col">
+            {{# type }}
+            <div class="list-group-item-type">{{ type }}</div>
+            {{/ type}}
+            <div class="list-group-item-title">{{ title }}</div>
+            {{# infos }}
+            <div class="list-group-item-content {{infosClass}}">
+              {{# infos.infos-items }}
+              <div class="list-group-item-infos {{class}}">{{{ text }}}</div>
+              {{/ infos.infos-items }}
+            </div>
+            {{/ infos}}
+          </div>
+          {{# badges}}
+          <div class="col-md-auto mt-1 mt-md-0 ml-md-2">
+            {{# badge}}
+            {{> components-etiquette}}
+            {{/ badge}}
+          </div>
+          {{/ badges}}
+        </div>
+      </div>
+      {{# btnMore}}
+      <div class="col-auto ml-2 ml-md-4 dropdown">
+        <button class="btn btn-tertiary btn-squared btn-icon" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" aria-label="Button aria label">
+          <span class="icon icon-more-vertical" aria-hidden="true"></span>
+        </button>
+        {{> components-dropdown}}
+      </div>
+      {{/ btnMore}}
+    </div>
+  {{# url}}
+  </a>
+  {{/ url}}
+  </li>
+  {{/ listGroup}}
+</ul>

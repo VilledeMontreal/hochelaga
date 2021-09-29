@@ -3,10 +3,10 @@
   <div class="document-heading-image-container{{# hideDocumentHeadingImageMobile}} d-none d-sm-block{{/ hideDocumentHeadingImageMobile}}">
     <div style="background-image:url('{{documentHeadingImageUrl}}')" class="document-heading-background"></div>
     {{# media.copyright }}
-    <div class="img-copyright">
-      <span class="icon icon-copyright" aria-hidden="true"></span>
-      <span class="copyright-text d-none">{{ media.copyright }}</span>
-      <span class="sr-only">&copy; {{ media.copyright }}</span>
+    <div class="position-relative">
+      <div class="badge-copyright">
+        {{> components-etiquette}}
+      </div>
     </div>
     {{/ media.copyright }}
   </div>

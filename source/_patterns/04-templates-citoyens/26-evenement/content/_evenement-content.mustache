@@ -24,14 +24,14 @@
 
 {{# module-image-album}}
 <div class="content-module-stacked">
-  {{> components-gallery }}
+  {{> components-galerie }}
 </div>
 {{/ module-image-album}}
 
 {{# module-documents}}
 <h3>À consulter</h3>
 <div class="content-module-stacked">
-  {{> components-list-item-link}}
+  {{> components-liste-lien}}
 </div>
 {{/ module-documents }}
 
@@ -51,7 +51,7 @@
 {{# module-video}}
 <div class="content-module-stacked" id="section-video-{{sectionID}}">
   <h2>Vidéo (Titre éditorial)</h2>
-  {{> styles-video-responsive-embed }}
+  {{> components-video-responsive-embed }}
 </div>
 {{/ module-video}}
 
@@ -69,7 +69,7 @@
   <h2 class="h5 text-body">Recherche rapide</h2>
   <ul class="list-inline">
     {{# badges-links }}
-    <li class="list-inline-item">{{> components-badge }}</li>
+    <li class="list-inline-item">{{> components-etiquette }}</li>
     {{/ badges-links }}
   </ul>
 </div>
@@ -78,7 +78,7 @@
 {{# module-events}}
 <h2>Suggestions</h2>
 <div class="content-module-stacked">
-  {{> components-list-group-content}}
+  {{> components-liste-objets-editoriaux}}
   {{# button-cta}}
   <div class="d-flex justify-content-center mt-0 mb-4">
   {{> components-button}}
