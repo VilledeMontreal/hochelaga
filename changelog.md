@@ -4,7 +4,14 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](http://keepachangelog.com/en/1.0.0/)
 and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.html).
 
-## [4.19.0] - unreleased
+
+## [4.20.0] - unreleased
+
+### added
+- Styles - Iconography - Utility: Ajout des icones utilitaires activity, compass, maximize et minimize.
+
+
+## [4.19.0] - 2021-09-29
 
 ### Added
 - Styles - Iconography - Utility: Ajout des icones utilitaires chevron-double-left et chevron-double-right.
@@ -718,6 +725,7 @@ Main navbar, menu and footer are now in their own stylesheet. They will eventual
 
 The version 3 is now deprecated. Only bug fixes will be considered. Please refer to the old bitbucket repo https://bitbucket.org/villemontreal/boite-outils-web/.
 
+[4.19.0]: https://bitbucket.org/villemontreal/boite-outils4-web/src/4.19.0/
 [4.18.0]: https://bitbucket.org/villemontreal/boite-outils4-web/src/4.18.0/
 [4.17.0]: https://bitbucket.org/villemontreal/boite-outils4-web/src/4.17.0/
 [4.16.0]: https://bitbucket.org/villemontreal/boite-outils4-web/src/4.16.0/
