@@ -7,8 +7,13 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 
 ## [4.20.0] - unreleased
 
-### added
+### Added
 - Styles - Iconography - Utility: Ajout des icones utilitaires activity, compass, maximize et minimize.
+- Components - Chips: Classe utilitaire .chip-max-width pour des chips à largeur maximal.
+- Components - Chips: Classe utilitaire .chip-group pour gestion du spacing des chips.
+
+### Changed
+- Components - Chips: label tronqué si plus long que la largeur disponible.
 
 
 ## [4.19.0] - 2021-09-29

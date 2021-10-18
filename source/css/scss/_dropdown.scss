@@ -140,6 +140,12 @@
   white-space: nowrap; // as with > li > a
 }
 
+.dropdown-toggle {
+  &:after {
+    flex-shrink: 0;
+  }
+}
+
 // change icon when dropdown is open
 .dropdown.show {
   .dropdown-toggle {
