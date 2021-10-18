@@ -1,0 +1,88 @@
+{
+  "chips-truncated-label":[
+    {
+      "chipLabel": "Ingénieur, arpenteur-géomètre, chimiste et vétérinaire - Scientifique",
+      "chipClass": false,
+      "chipID": "chipTruncatedfExample",
+      "has-icon": false,
+      "is-dropdown": false,
+      "dropdownMenu": false
+    }
+  ],
+  "chips-max-width-truncated-label":[
+    {
+      "chipLabel": "Ingénieur, arpenteur-géomètre, chimiste et vétérinaire - Scientifique",
+      "chipClass": "chip-max-width",
+      "chipID": "chipMaxWidthExample",
+      "has-icon": false,
+      "is-dropdown": false,
+      "dropdownMenu": false
+    },
+    {
+      "chipLabel": "Ingénieur, arpenteur-géomètre, chimiste et vétérinaire - Scientifique",
+      "chipClass": "chip-max-width",
+      "chipID": "chipMaxWidthExampleTriggerDropdown",
+      "has-icon": false,
+      "is-dropdown": true,
+      "dropdownMenu": {
+        "dropdownMenuID": "chipExampleTriggerDropdown",
+        "dropdownSection": [
+          {
+            "dropdownItem": [
+              {
+                "url": "#",
+                "dropdownItemLabel": "Libellé"
+              },
+              {
+                "url": "#",
+                "dropdownItemLabel": "Libellé"
+              },
+              {
+                "url": "#",
+                "dropdownItemLabel": "Libellé"
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "chipLabel": "Libellé (99)",
+      "chipClass": "chip-max-width active",
+      "chipID": "chipMaxWidthExampleTriggerDropdownActive",
+      "has-icon": false,
+      "is-dropdown": true,
+      "dropdownMenu": {
+        "dropdownMenuID": "chipExampleTriggerDropdownActive",
+        "dropdownSection": [
+          {
+            "dropdownItem": [
+              {
+                "url": "#",
+                "dropdownItemLabel": "Libellé"
+              },
+              {
+                "url": "#",
+                "dropdownItemLabel": "Libellé"
+              },
+              {
+                "url": "#",
+                "dropdownItemLabel": "Libellé"
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "chipLabel": "Ingénieur, arpenteur-géomètre, chimiste et vétérinaire - Scientifique",
+      "chipClass": "chip-max-width active",
+      "chipID": "chipMaxWidthExampleDeletable",
+      "has-icon": {
+        "icon-name": "icon-x-circle-full"
+      },
+      "is-dropdown": false,
+      "dropdownMenu": false
+    }
+  ]
+}
