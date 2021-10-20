@@ -8,7 +8,7 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 ## [4.20.0] - unreleased
 
 ### Added
-- Styles - Iconography - Utility: Ajout des icones utilitaires activity, compass, maximize et minimize.
+- Styles - Iconography - Utility: Ajout de 11 icones utilitaires:  5min, 15min, 30min, activity, anomaly, compass, maximize, minimize, timer, timer-off et vehicule.
 - Components - Chips: Classe utilitaire .chip-max-width pour des chips à largeur maximal.
 - Components - Chips: Classe utilitaire .chip-group pour gestion du spacing des chips.
 
