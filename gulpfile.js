@@ -75,7 +75,6 @@ function cssDist() {
     .pipe(sourcemaps.init())
     .pipe(sass( { importer: tildeImporter } ).on('error', sass.logError))
     .pipe(postcss([autoprefixer()]))
-    .pipe(dest(config.scss.distribution))
     .pipe(cleanCSS())
     .pipe(rename({suffix: '.min'}))
     .pipe(sourcemaps.write(config.sourcemaps.dest))
@@ -188,7 +187,6 @@ function watchTask() {
   watch(config.patternlab.scss.files, series(plSass, browsersyncReload));
   // Watch version update
   watch(config.bao.files.json, series(baoVersion, browsersyncReload));
-
 }
 
 // Task: Default
