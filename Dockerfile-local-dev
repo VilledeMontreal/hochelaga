@@ -43,6 +43,9 @@ LABEL maintainer="Ville de Montréal"
 RUN mkdir -p /usr/src/app
 RUN ln -fs /usr/share/zoneinfo/America/New_York /etc/localtime && dpkg-reconfigure --frontend noninteractive tzdata
 
+# Install required php extensions
+RUN docker-php-ext-install sockets
+
 # Install composer globally
 RUN curl -sS https://getcomposer.org/installer | php
 RUN mv composer.phar /usr/local/bin/composer
