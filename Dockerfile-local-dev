@@ -19,14 +19,11 @@
 
 # - - - - - - - - - - - - - - - - - -
 
-FROM php:7.2-cli
-ENV NODE_VERSION 12.22.4
+FROM php:7.3-cli
+ENV NODE_VERSION 16.11.1
 ENV ARCH x64
 ENV NODE_PACKAGE node-v$NODE_VERSION-linux-$ARCH.tar.xz
 ENV NODE_URL "https://nodejs.org/dist/v$NODE_VERSION/$NODE_PACKAGE"
-
-
-MAINTAINER VdMtl
 
 RUN apt-get update \
     && apt-get install -y zip \
@@ -40,6 +37,7 @@ ARG GIT_COMMIT=unknown
 
 # GIT label of the packaged code
 LABEL GIT_COMMIT=${GIT_COMMIT}
+LABEL maintainer="Ville de Montréal"
 
 #Create app directory
 RUN mkdir -p /usr/src/app

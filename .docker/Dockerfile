@@ -2,9 +2,9 @@
 # docker build  --no-cache -t php-node:latest .
 # docker run -d -p 3000:3000 php-node:latest
 
-FROM php:7.2-cli
+FROM php:7.3-cli
 
-ENV NODE_VERSION 12.22.4
+ENV NODE_VERSION 16.11.1
 ENV ARCH x64
 ENV NODE_PACKAGE node-v$NODE_VERSION-linux-$ARCH.tar.xz
 ENV NODE_URL "https://nodejs.org/dist/v$NODE_VERSION/$NODE_PACKAGE"
@@ -13,7 +13,6 @@ ARG ENV=unknown
 ARG GIT_COMMIT=unknown
 
 LABEL GIT_COMMIT=${GIT_COMMIT}
-
 LABEL maintainer="Ville de Montréal"
 
 EXPOSE 3200
@@ -65,8 +64,7 @@ VOLUME /usr/src/app/source
 
 RUN ls -al \
   && npm install \
-  && composer install \
-  && npm rebuild node-sass
+  && composer install
 
 #	Serve the project, npm start would work just as well
 

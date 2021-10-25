@@ -3,8 +3,8 @@
 
 ## Requirements
 
-* PHP 7 + and a global composer installation.
-* Node 12
+* PHP 7+ and a global composer installation.
+* Node 16
 * Gulp 4
 
 ## Installation
@@ -12,7 +12,7 @@
 * Clone this repo locally
 * Run `composer install`
 * Refuse to load the default mustache starterkit when asked -- (N).
-* Run `nvm use` if you use nvm and make sure v7.5.0 is the active version.
+* Run `nvm use` if you use nvm and make sure v16.11.1 is the active version.
 * Run `npm i`
 * Run `gulp serve`
 * Visit [http://localhost:3000](http://localhost:3000) freshly launched in your browser.

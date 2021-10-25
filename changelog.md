@@ -15,6 +15,10 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 ### Changed
 - Components - Chips: label tronqué si plus long que la largeur disponible.
 
+### PatternLab
+- Node 16.
+- Nouveau package-lock en v2 pour node 16.
+
 
 ## [4.19.0] - 2021-09-29
 
