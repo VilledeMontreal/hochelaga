@@ -59,10 +59,8 @@ pipeline.start(ctx) {
     }
 
     pipeline.withDraftDockerImage(ctx) {
-
-
         pipeline.publishStage(ctx) {
-            sh "cd /usr/src/app && npm run distribute"
+            sh "whoami && cd /usr/src/app && ls -la && npm run distribute && ls -la"
             pipeline.publishLibrary(ctx)
         }
 
