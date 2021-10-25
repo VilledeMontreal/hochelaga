@@ -27,11 +27,12 @@ RUN apt-get update \
         curl \
         xz-utils
 
+# Install required php extensions
+RUN docker-php-ext-install sockets
 
 #	Create app directory
 # 	Set timezone
 #	Install composer
-
 RUN mkdir -p /usr/src/app \
     && ln -fs /usr/share/zoneinfo/America/New_York /etc/localtime && dpkg-reconfigure --frontend noninteractive tzdata \
     && curl -sS https://getcomposer.org/installer | php \
