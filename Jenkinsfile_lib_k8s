@@ -1,5 +1,4 @@
 #!groovy
-// @Library('cicd-lib@develop')
 @Library('cicd-lib')
 
 import vdmtl.cicd.*
@@ -60,10 +59,9 @@ pipeline.start(ctx) {
 
     pipeline.withDraftDockerImage(ctx) {
         pipeline.publishStage(ctx) {
-            sh "whoami && cd /usr/src/app && ls -la && npm run distribute && ls -la"
+            sh "cd /usr/src/app && npm run distribute"
             pipeline.publishLibrary(ctx)
         }
-
-
     }
+
 }
