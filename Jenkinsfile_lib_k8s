@@ -1,6 +1,6 @@
 #!groovy
-//@Library('cicd-lib@develop')
-@Library('cicd-lib@develop')
+// @Library('cicd-lib@develop')
+@Library('cicd-lib')
 
 import vdmtl.cicd.*
 import jenkins.model.*
