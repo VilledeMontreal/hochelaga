@@ -14,6 +14,7 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 
 ### Changed
 - Components - Chips: label tronqué si plus long que la largeur disponible.
+- Styles - Iconography - Utility: Modification de l'icône reorder.
 
 ### PatternLab
 - Node 16.
