@@ -510,7 +510,7 @@ ul.cards {
 [class^="col-"][class$="-7"],
 [class^="col-"][class$="-8"] {
   .card {
-    &.card-fw {
+    &.card-fw:not(.card-document) {
       @include media-breakpoint-up(md) {
         .card-img-bg {
           @include make-col(5);
