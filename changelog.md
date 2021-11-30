@@ -18,6 +18,7 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 
 ### Fixed
 - Components - Cards full width document: Correction placement image et texte a certain breakpoint.
+- Components - Forms - Checkbox: Correction pour le svg et le placement de l'état :indeterminate
 
 ### PatternLab
 - Node 16.
