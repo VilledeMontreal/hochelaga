@@ -23,10 +23,10 @@
     <div class="container d-none d-lg-block">
       <div class="row mb-2">
         <div class="col-12 filters-applied" aria-label="Filtres sélectionnés">
-          <div class="badge-group">
-            {{# badges}}
-            {{> components-etiquette}}
-            {{/ badges}}
+          <div class="chip-group">
+            {{# filtersGroup}}
+            {{> components-chip}}
+            {{/ filtersGroup}}
             {{> components-button(buttonClass: "btn-link btn-sm btn-squared", buttonText: "Tout effacer")}}
           </div>
         </div>

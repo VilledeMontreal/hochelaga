@@ -287,6 +287,23 @@ legend,
   }
 }
 
+// Checkboxes
+//
+// Tweak just a few things for checkboxes indeterminate state
+
+.custom-checkbox {
+  .custom-control-input:indeterminate ~ .custom-control-label {
+    &::after {
+      top: .25rem;
+      left: -($custom-control-gutter + 1rem);
+      width: 1rem;
+      height: 1rem;
+      background: 50% / #{$custom-control-indicator-bg-size} no-repeat;
+      background-image: escape-svg($custom-checkbox-indicator-icon-indeterminate);
+    }
+  }
+}
+
 // Custom checkboxes and radios themed as card
 .custom-control-card {
   padding: 0;
@@ -335,6 +352,15 @@ legend,
   .custom-control-input:disabled ~ .custom-control-label {
     .card-title, .card-label {
       color: $custom-control-label-disabled-color;
+    }
+  }
+
+  &.custom-checkbox {
+    .custom-control-input:indeterminate ~ .custom-control-label {
+      &::after {
+        top: 1.25rem;
+        left: 0.25rem;
+      }
     }
   }
 }

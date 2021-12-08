@@ -19,10 +19,10 @@
     "cleanable": {
       "base"  : "public/",
       "files" : [
-        "public/annotations/*", 
-        "public/css/*", 
-        "public/js/*", 
-        "public/patterns/*", 
+        "public/annotations/*",
+        "public/css/*",
+        "public/js/*",
+        "public/patterns/*",
         "public/images/*"
       ]
     },
@@ -37,7 +37,7 @@
       "files" : [
         "node_modules/jquery/dist/jquery.min.js",
         "node_modules/jquery.easing/jquery.easing.min.js",
-        "node_modules/popper.js/dist/umd/popper.min.js", 
+        "node_modules/popper.js/dist/umd/popper.min.js",
         "node_modules/bootstrap/dist/js/bootstrap.min.js",
         "node_modules/jquery-validation/dist/jquery.validate.min.js"
       ],
@@ -100,7 +100,7 @@
         "!source/images/icons-original",
         "!source/images/icons-original/**/*",
         "!source/images/pl-demo/",
-        "!source/images/pl-demo/**/*"  
+        "!source/images/pl-demo/**/*"
       ],
       "dest" : "dist/images/"
     },
@@ -108,14 +108,14 @@
       "files": [
         "source/vdm-icon-system/icons/utility/_icons-utility.scss",
         "source/vdm-icon-system/icons/editorial/_icons-editorial.scss",
-        "!source/vdm-icon-system/icons"  
+        "!source/vdm-icon-system/icons"
       ],
       "dest" : "source/css/scss"
     },
     "iconesjson": {
       "files": [
         "source/vdm-icon-system/icons/**/*.json",
-        "!source/vdm-icon-system/icons"  
+        "!source/vdm-icon-system/icons"
       ],
       "dest" : "source/_data"
     },

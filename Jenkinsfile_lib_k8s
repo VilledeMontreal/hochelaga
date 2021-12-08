@@ -1,6 +1,5 @@
 #!groovy
-//@Library('cicd-lib@develop')
-@Library('cicd-lib@develop')
+@Library('cicd-lib@masterDocker')
 
 import vdmtl.cicd.*
 import jenkins.model.*
@@ -59,13 +58,10 @@ pipeline.start(ctx) {
     }
 
     pipeline.withDraftDockerImage(ctx) {
-
-
         pipeline.publishStage(ctx) {
             sh "cd /usr/src/app && npm run distribute"
             pipeline.publishLibrary(ctx)
         }
-
-
     }
+
 }

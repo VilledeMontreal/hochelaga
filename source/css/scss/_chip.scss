@@ -8,7 +8,6 @@
   align-items: center;
   font-weight: $chip-font-weight;
   justify-content: center;
-  text-align: center;
   white-space: nowrap;
   vertical-align: middle;
   user-select: none;
@@ -16,6 +15,7 @@
   @include chip-size($chip-padding-y, $chip-padding-x, $font-size-sm, $line-height-sm);
   @include border-radius($chip-border-radius);
   @include transition($chip-transition);
+  @extend .text-truncate;
 
   &:after,
   .icon {
@@ -27,6 +27,11 @@
     @include transition($chip-transition);
   }
 
+  .chip-label {
+    display: inline-block;
+    @extend .text-truncate;
+  }
+
   .icon {
     margin-top: -.1875rem;
     margin-bottom: -.1875rem;
@@ -34,6 +39,10 @@
     &:before {
       @include transition($chip-transition);
     }
+  }
+
+  &.chip-max-width {
+    max-width: 18rem;
   }
 
   @include hover-focus {
@@ -78,7 +87,7 @@
 // Chip Small variant
 .chip-sm {
   @include chip-size($chip-padding-y-sm, $chip-padding-x-sm, $font-size-xs, $line-height-xs);
-  
+
   // Icons handling
   &:after,
   .icon {
@@ -99,7 +108,7 @@
 // Chip XSmall variant
 .chip-xs {
   @include chip-size($chip-padding-y-xs, $chip-padding-x-xs, $font-size-xs, $line-height-xs);
-  
+
   // Icons handling
   &:after,
   .icon {
@@ -116,5 +125,19 @@
   .icon {
     margin-top: -.1875rem;
     margin-bottom: -.1875rem;
+  }
+}
+
+// Handle chips horizontal spacing inside container
+.chip-group {
+  display: flex;
+  flex-wrap: wrap;
+  margin-top: -.25rem;
+  margin-bottom: -.25rem;
+  > .chip,
+  > .dropdown .chip {
+    margin-right: .5rem;
+    margin-top: .25rem;
+    margin-bottom: .25rem;
   }
 }
