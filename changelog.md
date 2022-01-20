@@ -5,7 +5,13 @@ The format is based on [Keep a Changelog](http://keepachangelog.com/en/1.0.0/)
 and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.html).
 
 
-## [4.20.0] - unreleased
+## [4.21.0] - unreleased
+
+### Changed
+
+- Components - Accordeon : Retrait du margin bottom sur le dernier element pour toujours avoir 16px comme margin bottom sous le contenu.
+
+## [4.20.0] - 2021-12-08
 
 ### Added
 - Styles - Iconography - Utility: Ajout de 11 icones utilitaires:  5min, 15min, 30min, activity, anomaly, compass, maximize, minimize, timer, timer-off et vehicule.
@@ -739,6 +745,7 @@ Main navbar, menu and footer are now in their own stylesheet. They will eventual
 
 The version 3 is now deprecated. Only bug fixes will be considered. Please refer to the old bitbucket repo https://bitbucket.org/villemontreal/boite-outils-web/.
 
+[4.20.0]: https://bitbucket.org/villemontreal/boite-outils4-web/src/4.20.0/
 [4.19.0]: https://bitbucket.org/villemontreal/boite-outils4-web/src/4.19.0/
 [4.18.0]: https://bitbucket.org/villemontreal/boite-outils4-web/src/4.18.0/
 [4.17.0]: https://bitbucket.org/villemontreal/boite-outils4-web/src/4.17.0/
