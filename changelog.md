@@ -10,6 +10,12 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 ### Changed
 
 - Components - Accordeon : Retrait du margin bottom sur le dernier element pour toujours avoir 16px comme margin bottom sous le contenu.
+- Components - Filtres (chips): Ajout état désactivé.
+
+### PatternLab
+- Components - Filtres (chips): Modification de l'affichage par type de filtre.
+### Deprecated
+- Components - Filtres (Chips): extra-small version.
 
 ## [4.20.0] - 2021-12-08
 

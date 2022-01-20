@@ -9,10 +9,9 @@ Les Chips permettent de filtrer du contenu ou de proposer des actions rapides. C
 Les Chips sont inspirées des Chips créées par Google dans Material Design.
 
 ## Tailles
-Il existe trois tailles de Chips :
+Il existe 2 tailles de Chips :
 - Medium
 - Small
-- ExtraSmall
 
 ## Documentation
 
