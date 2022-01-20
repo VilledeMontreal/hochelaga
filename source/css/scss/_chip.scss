@@ -45,7 +45,8 @@
     max-width: 18rem;
   }
 
-  &:hover {
+  &:hover,
+  &:focus {
     color: $chip-hover-color;
     background-color: $chip-hover-background-color;
     text-decoration: none;
