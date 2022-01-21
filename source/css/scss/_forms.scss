@@ -403,7 +403,7 @@ legend,
       height: $custom-switch-indicator-size;
       margin: 0;
       background-color: $custom-switch-indicator-handle;
-      border: 1px solid $neutral-tertiary;
+      border: 1px solid $action;
       border-radius: 50%;
       box-shadow: $shadow-moderate;
       @include transition(transform .15s ease-in-out, $custom-forms-transition);
@@ -413,7 +413,7 @@ legend,
 
   .custom-control-input:checked ~ .custom-control-label {
     &::before {
-      background-color: $custom-switch-indicator-checked-bg;
+      background-color: $custom-switch-indicator-bg;
     }
     &::after {
       background-color: $custom-switch-indicator-checked-handle;
@@ -428,18 +428,17 @@ legend,
     // Inactive disabled state
     ~ .custom-control-label::after {
       background-color: $custom-switch-indicator-handle-disabled;
-      border-color: $custom-switch-indicator-checked-handle-disabled;
+      border-color: $custom-switch-indicator-handle-disabled;
       cursor: not-allowed;
     }
     // Active disabled background
     &:checked ~ .custom-control-label::before {
-      background-color: $custom-switch-indicator-bg;
       cursor: not-allowed;
     }
     // Active disabled handle state
     &:checked ~ .custom-control-label::after {
-      background-color: $custom-switch-indicator-checked-handle-disabled;
-      border-color: $custom-switch-indicator-checked-handle-disabled;
+      background-color: $custom-switch-indicator-handle-disabled;
+      border-color: $custom-switch-indicator-handle-disabled;
       cursor: not-allowed;
     }
   }
