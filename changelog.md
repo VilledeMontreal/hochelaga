@@ -11,7 +11,7 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 - Components - Accordeon : Retrait du margin bottom sur le dernier element pour toujours avoir 16px comme margin bottom sous le contenu.
 - Components - Filtres (chips): Ajout état désactivé.
 - Components - Interrupteur: Modification état OFF.
-- Components - Forms: Libellé état désactivé.
+- Components - Couleur de l'état désactivé pour les éléments suivants: Case à cocher, case à cocher encadrée, bouton radio, bouton radio encadrée, interrupteur, boutons secondaire et bouton tertiaire.
 
 ### PatternLab
 - Components - Filtres (chips): Modification de l'affichage par type de filtre.

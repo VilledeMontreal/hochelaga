@@ -350,6 +350,7 @@ legend,
   }
 
   .custom-control-input:disabled ~ .custom-control-label {
+    border-color: $neutral-underground-2;
     .card-title, .card-label {
       color: $custom-control-label-disabled-color;
     }

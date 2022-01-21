@@ -4,50 +4,44 @@
     "formGroupInputRequired": true,
     "formCheckboxItems": [
       {
-        "headings": "Defaut checkboxes",
         "class": "",
         "id": "chk01-2",
-        "label": "Checkbox",
+        "label": "Libellé",
         "state": false
       },
       {
-        "headings": false,
         "class": "",
         "id": "chk02-2",
-        "label": "Checkbox two",
+        "label": "Libellé",
         "state": "checked"
       },
       {
-        "headings": false,
         "class": "",
         "id": "chk03-2",
-        "label": "Checkbox three, disabled",
+        "label": "Libellé",
         "state": "disabled"
       }
     ]
   },
   "formCheckboxesInline": {
-    "label": false,
+    "formGroupLabel": false,
     "formCheckboxItems": [
       {
-        "headings": "Inline defaults checkboxes",
         "class": "custom-control-inline",
         "id": "chk01-5",
-        "label": "Checkbox",
+        "label": "Libellé",
         "state": false
       },
       {
-        "headings": false,
         "class": "custom-control-inline",
         "id": "chk02-5",
-        "label": "Checkbox two",
+        "label": "Libellé",
         "state": "checked"
       },
       {
-        "headings": false,
         "class": "custom-control-inline",
         "id": "chk03-5",
-        "label": "Checkbox three, disabled",
+        "label": "Libellé",
         "state": "disabled"
       }
     ]
