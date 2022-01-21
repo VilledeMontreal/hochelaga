@@ -57,6 +57,7 @@ RUN curl -SLO "$NODE_URL" \
 #	Set working volumes and permissions
 
 RUN chmod o+w /usr/src/app
+USER node
 COPY . /usr/src/app
 WORKDIR /usr/src/app
 VOLUME /usr/src/app/source
