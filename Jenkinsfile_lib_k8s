@@ -1,5 +1,5 @@
 #!groovy
-@Library('cicd-lib')
+@Library('cicd-lib@masterDocker')
 
 import vdmtl.cicd.*
 import jenkins.model.*
