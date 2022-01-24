@@ -573,7 +573,7 @@ $form-group-margin-bottom:              1rem;
 // custom forms
 
 $custom-control-indicator-disabled-bg:          $neutral-stroke;
-$custom-control-label-disabled-color:           $neutral-secondary;
+$custom-control-label-disabled-color:           $neutral-tertiary;
 
 $custom-control-gutter:                         .75rem;
 $custom-control-spacer-x:                       1rem;
@@ -608,13 +608,11 @@ $custom-switch-width:                             2.5rem;
 $custom-switch-indicator-border-radius:           .5rem;
 $custom-switch-indicator-size:                    1.25rem;
 
-$custom-switch-indicator-bg:                      $neutral-stroke;
+$custom-switch-indicator-bg:                      $highlight-strong;
+$custom-switch-indicator-bg-disabled:             $neutral-stroke;
 $custom-switch-indicator-handle:                  $white;
 $custom-switch-indicator-handle-disabled:         $neutral-underground-2;
-
-$custom-switch-indicator-checked-bg:              $highlight-strong;
 $custom-switch-indicator-checked-handle:          $action;
-$custom-switch-indicator-checked-handle-disabled: $neutral-underground-2;
 
 $custom-select-padding-x-sm:          $input-padding-x-sm;
 

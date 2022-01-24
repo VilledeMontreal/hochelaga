@@ -1,19 +1,13 @@
 ---
-title: Switches
+title: Interrupteur
 ---
 
-Une "switch" a le balisage d'une case à cocher mais utilise la classe <code>.custom-switch</code>
+Permet d'activer ou désactiver rapidement une fonctionnalité.
 
 ## Utilisation
 
-Utilisez les "switch" lorsque vous devez activer ou désactiver une seule option.
+L'interrupteur est uniquement utilisé activer ou désactiver une fonctionnalité, ou pour un filtre contenant une seule option qui peut être activée ou désactivée.
 
-## Tailles
+## États
 
-Les "switch" par default sont de taille médiums. Ils sont disponibles également en version small et large. L'intégration se fait de deux façons:
-
-1. Sur le formulaire (<code>form</code>) avec les classes suivantes; <code>.form-sm</code> ou bien <code>.form-lg</code>. 
-2. Sur un <code>.form-group</code> avec les classes suivantes; <code>.form-group-sm</code> et <code>.form-group-lg</code>. 
-
-
-[Voir plus de détails sur les formulaires Bootstrap](https://getbootstrap.com/docs/4.3/components/forms/)
+Un interrupteur peut avoir trois états : activé, désactivé, fonctionnalité désactivée.
