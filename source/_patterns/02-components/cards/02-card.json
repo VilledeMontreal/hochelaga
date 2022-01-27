@@ -11,9 +11,25 @@
           "img" : false
         },
         "card-type": "Type (optionnel)",
-        "card-title" : "Titre de la carte",
+        "card-title": "Titre de la carte",
+        "card-badge": {
+          "badge": "Libellé",
+          "badgeClass": "badge-warning",
+          "badge-sr-text": "",
+          "badgeUrl": false,
+          "badgeIconClass": false
+        },
         "card-text": false,
-        "card-text-interface": "Information complémentaire"
+        "card-text-interface": {
+          "date-time": {
+            "date": {
+              "text": false,
+              "dateTimeFormat": "2019-01-31",
+              "dateTimeText": "31 janvier 2019"
+            }
+          },
+          "info": "Information complémentaire"
+        }
       }
     ]
   }

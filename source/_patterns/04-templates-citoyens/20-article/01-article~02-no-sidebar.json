@@ -58,13 +58,15 @@
             "card-title": "Titre de l'événement",
             "card-text": false,
             "card-text-interface": {
-              "date-time": [
-                {
-                  "text": false,
-                  "dateTimeFormat": "2019-12-24",
-                  "dateTimeText": "24 décembre 2019 de 8&nbsp;h&nbsp;00 à 18&nbsp;h&nbsp;00"
-                }
-              ]
+              "date-time": {
+                "date": [
+                  {
+                    "text": false,
+                    "dateTimeFormat": "2019-12-24",
+                    "dateTimeText": "24 décembre 2019 de 8&nbsp;h&nbsp;00 à 18&nbsp;h&nbsp;00"
+                  }
+                ]
+              }
             }
           }
         ]
@@ -92,7 +94,9 @@
             "card-type": "Type",
             "card-title": "Titre du document",
             "card-text": false,
-            "card-text-interface": "PDF X Mo",
+            "card-text-interface": {
+              "info": "PDF X Mo"
+            },
             "card-link": "Télécharger"
           }
         ]
