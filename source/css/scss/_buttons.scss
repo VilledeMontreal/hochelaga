@@ -548,14 +548,21 @@ input[type="button"] {
 // Generic Buttons wrapper class
 // Default is left align, can be centered
 .buttons-wrapper {
+  display: flex;
+  flex-wrap: wrap;
   margin: -.5rem 0;
   .btn {
     margin: .5rem 1rem .5rem 0;
   }
   &-center {
-    text-align: center;
+    justify-content: center;
+    flex-direction: column;
     .btn {
       margin: .5rem;
+    }
+
+    @include media-breakpoint-up(sm) {
+      flex-direction: row;
     }
   }
 }
