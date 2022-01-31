@@ -7,6 +7,9 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 
 ## [4.21.0] - unreleased
 
+### Added
+- Components - Message important: Gestion du responsive (small mobile).
+
 ### Changed
 - Components - Accordeon: Retrait du margin bottom sur le dernier element pour toujours avoir 16px comme margin bottom sous le contenu.
 - Components - Cards: Passage de border à box-shadow pour se conformer au design system.
