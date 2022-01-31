@@ -3,6 +3,8 @@
  * Built on bootstrap card component
  */
 .card {
+  border: none;
+  box-shadow: 0 0 0 $card-border-width $card-border-color;
   display: flex;
   font-weight: $font-weight-regular;
   margin-bottom: $grid-gutter-width;
@@ -18,8 +20,6 @@
   }
   .card-img-top {
     flex: 0 0 auto; // IE needs this
-    margin: -1px;
-    width: calc(100% + 2px); // Add the 2px from the negative margins to overlap border
     @include border-top-radius($border-radius);
   }
 
@@ -36,8 +36,7 @@
     background-size: cover;
     background-position: center center;
     position: relative;
-    width: calc(100% + 2px); // Add the 2px from the negative margins to overlap border
-    margin: -1px;
+    width: 100%;
     @include border-top-radius($border-radius);
 
     &:before {
@@ -77,11 +76,10 @@
   // Card type
   .card-type {
     font-weight: $font-weight-bold;
-    @include font-size($font-size-xs);
-    line-height: $line-height-xs;
+    @include font-size($font-size-sm);
+    line-height: $line-height-sm;
     display: block;
     margin-bottom: .5rem;
-    text-transform: uppercase;
   }
 
   // Card title
@@ -205,10 +203,7 @@
   &.card-date {
     // Card type
     .card-type {
-      @include font-size($font-size-sm);
-      line-height: $line-height-sm;
       margin-bottom: 1rem;
-      text-transform: none;
       &:after {
         content: "";
         background-color: $brand;
@@ -341,6 +336,7 @@
   &.card-multi,
   &.card-featured {
     border: none;
+    box-shadow: none;
     @include border-radius(0);
     border-bottom: 1px solid $neutral-stroke;
     .card-img-bg,
@@ -448,7 +444,7 @@ a.card {
   color: inherit;
   @include hover-focus {
     background-color: $card-bg;
-    border: $card-border-width solid transparent;
+    border: none;
     box-shadow: $card-box-shadow;
     .icon {
       @include icon-color($primary);

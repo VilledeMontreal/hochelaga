@@ -12,8 +12,12 @@
         },
         "card-type": false,
         "card-title" : "Titre de la carte",
+        "card-badge": false,
         "card-text": false,
-        "card-text-interface": "Description optionnelle"
+        "card-text-interface": {
+          "date-time": false,
+          "info": "Description optionnelle"
+        }
       }
     ]
   }

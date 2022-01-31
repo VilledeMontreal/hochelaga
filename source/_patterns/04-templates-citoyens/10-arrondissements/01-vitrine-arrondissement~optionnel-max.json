@@ -322,13 +322,15 @@
           "card-type": false,
           "card-title": "Quisque enim lacus mollis id fermentum quis mattis sit amet purus",
           "card-text-interface": {
-            "date-time": [
-              {
-                "text": false,
-                "dateTimeFormat": "2019-12-11",
-                "dateTimeText": "11 décembre 2019"
-              }
-            ]
+            "date-time": {
+              "date": [
+                {
+                  "text": false,
+                  "dateTimeFormat": "2019-12-11",
+                  "dateTimeText": "11 décembre 2019"
+                }
+              ]
+            }
           }
         },
         {
@@ -344,13 +346,15 @@
           "card-type": false,
           "card-title": "Sed iaculis nisl justo et fermentum augue sollicitudin",
           "card-text-interface": {
-            "date-time": [
-              {
-                "text": false,
-                "dateTimeFormat": "2019-12-10",
-                "dateTimeText": "10 décembre 2019"
-              }
-            ]
+            "date-time": {
+              "date": [
+                {
+                  "text": false,
+                  "dateTimeFormat": "2019-12-10",
+                  "dateTimeText": "10 décembre 2019"
+                }
+              ]
+            }
           }
         },
         {
@@ -366,13 +370,15 @@
           "card-type": false,
           "card-title": "Sed ultrices ipsum vitae est dictum",
           "card-text-interface": {
-            "date-time": [
-              {
-                "text": false,
-                "dateTimeFormat": "2019-12-09",
-                "dateTimeText": "9 décembre 2019"
-              }
-            ]
+            "date-time": {
+              "date": [
+                {
+                  "text": false,
+                  "dateTimeFormat": "2019-12-09",
+                  "dateTimeText": "9 décembre 2019"
+                }
+              ]
+            }
           }
         }
       ]
@@ -404,19 +410,21 @@
           "card-type": "Type d'événement",
           "card-title" : "Titre de l'événement",
           "card-text-interface": {
-            "date-time": [
-              {
-                "line-break": true,
-                "text": "Du ",
-                "dateTimeFormat": "2019-12-10",
-                "dateTimeText": "10 décembre 2019 - 16&nbsp;h&nbsp;00"
-              },
-              {
-                "text": " au ",
-                "dateTimeFormat": "2019-12-10",
-                "dateTimeText": "21 décembre 2019 - 17&nbsp;h&nbsp;00"
-              }
-            ]
+            "date-time": {
+              "date":[
+                {
+                  "line-break": true,
+                  "text": "Du ",
+                  "dateTimeFormat": "2019-12-10",
+                  "dateTimeText": "10 décembre 2019"
+                },
+                {
+                  "text": " au ",
+                  "dateTimeFormat": "2019-12-10",
+                  "dateTimeText": "21 décembre 2019"
+                }
+              ]
+            }
           }
         },
         {
@@ -433,13 +441,15 @@
           "card-type": "Type d'événement",
           "card-title" : "Titre de l'événement",
           "card-text-interface": {
-            "date-time": [
-              {
-                "text": "Jeudi ",
-                "dateTimeFormat": "2019-12-19",
-                "dateTimeText": "19 décembre 2019 à 6&nbsp;h&nbsp;45"
-              }
-            ]
+            "date-time": {
+              "date": [
+                {
+                  "text": "Jeudi ",
+                  "dateTimeFormat": "2019-12-19",
+                  "dateTimeText": "19 décembre 2019"
+                }
+              ]
+            }
           }
         },
         {
@@ -456,19 +466,21 @@
           "card-type": "Type d'événement",
           "card-title" : "Titre de l'événement",
           "card-text-interface": {
-            "date-time": [
-              {
-                "line-break": true,
-                "text": "Du ",
-                "dateTimeFormat": "2019-12-12",
-                "dateTimeText": "12 décembre 2019 - 16&nbsp;h&nbsp;00"
-              },
-              {
-                "text": " au ",
-                "dateTimeFormat": "2019-12-22",
-                "dateTimeText": "22 décembre 2019 - 18&nbsp;h&nbsp;00"
-              }
-            ]
+            "date-time": {
+              "date": [
+                {
+                  "line-break": true,
+                  "text": "Du ",
+                  "dateTimeFormat": "2019-12-12",
+                  "dateTimeText": "12 décembre 2019"
+                },
+                {
+                  "text": " au ",
+                  "dateTimeFormat": "2019-12-22",
+                  "dateTimeText": "22 décembre 2019"
+                }
+              ]
+            }
           }
         },
         {
@@ -485,13 +497,15 @@
           "card-type": "Type d'événement",
           "card-title" : "Titre de l'événement",
           "card-text-interface": {
-            "date-time": [
-              {
-                "text": false,
-                "dateTimeFormat": "2019-12-24",
-                "dateTimeText": "24 décembre 2019"
-              }
-            ]
+            "date-time": {
+              "date": [
+                {
+                  "text": false,
+                  "dateTimeFormat": "2019-12-24",
+                  "dateTimeText": "24 décembre 2019"
+                }
+              ]
+            }
           }
         }
       ]

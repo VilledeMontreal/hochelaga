@@ -15,8 +15,18 @@
         },
         "card-type": "Type de contenu",
         "card-title" : "Titre de la carte",
+        "card-badge": {
+          "badge": "Libellé",
+          "badgeClass": "badge-warning",
+          "badge-sr-text": "",
+          "badgeUrl": false,
+          "badgeIconClass": false
+        },
         "card-text": false,
-        "card-text-interface" : "Information complémentaire"
+        "card-text-interface": {
+          "date-time": false,
+          "info": "Information complémentaire"
+        }
       }
     ]
   }

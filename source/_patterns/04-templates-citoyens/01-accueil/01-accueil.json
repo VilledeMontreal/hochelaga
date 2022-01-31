@@ -365,19 +365,21 @@
           "card-title" : "Titre de l'événement",
           "card-text": false,
           "card-text-interface" : {
-            "date-time": [
-              {
-                "line-break": true,
-                "text": "Du ",
-                "dateTimeFormat": "2019-12-12",
-                "dateTimeText": "12 décembre 2019 - 17&nbsp;h&nbsp;00"
-              },
-              {
-                "text": "au ",
-                "dateTimeFormat": "2019-12-15",
-                "dateTimeText": "15 décembre 2019 - 23&nbsp;h&nbsp;30"
-              }
-            ]
+            "date-time": {
+              "date": [
+                {
+                  "line-break": true,
+                  "text": "Du ",
+                  "dateTimeFormat": "2019-12-12",
+                  "dateTimeText": "12 décembre 2019"
+                },
+                {
+                  "text": "au ",
+                  "dateTimeFormat": "2019-12-15",
+                  "dateTimeText": "15 décembre 2019"
+                }
+              ]
+            }
           }
         },
         {
@@ -395,13 +397,15 @@
           "card-title" : "Titre de l'événement",
           "card-text": false,
           "card-text-interface" : {
-            "date-time": [
-              {
-                "text": "Jeudi ",
-                "dateTimeFormat": "2019-12-19",
-                "dateTimeText": "19 décembre 2019"
-              }
-            ]
+            "date-time": {
+              "date": [
+                {
+                  "text": "Jeudi ",
+                  "dateTimeFormat": "2019-12-19",
+                  "dateTimeText": "19 décembre 2019"
+                }
+              ]
+            }
           }
         },
         {
@@ -419,19 +423,21 @@
           "card-title" : "Titre de l'événement",
           "card-text": false,
           "card-text-interface" : {
-            "date-time": [
-              {
-                "line-break": true,
-                "text": "Du ",
-                "dateTimeFormat": "2019-12-24",
-                "dateTimeText": "24 décembre 2019 - 18&nbsp;h&nbsp;00"
-              },
-              {
-                "text": "au ",
-                "dateTimeFormat": "2019-12-314",
-                "dateTimeText": "31 décembre 2019 - 23&nbsp;h&nbsp;59"
-              }
-            ]
+            "date-time": {
+              "date": [
+                {
+                  "line-break": true,
+                  "text": "Du ",
+                  "dateTimeFormat": "2019-12-24",
+                  "dateTimeText": "24 décembre 2019"
+                },
+                {
+                  "text": "au ",
+                  "dateTimeFormat": "2019-12-314",
+                  "dateTimeText": "31 décembre 2019"
+                }
+              ]
+            }
           }
         }
       ]
