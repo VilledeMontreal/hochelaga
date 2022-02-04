@@ -1,20 +1,20 @@
 {
   "cards": {
     "classes": false,
-    "bsgrid-classes": "col-12",
-    "card-item": [
+    "bsgrid-classes": "col-12 col-lg-4",
+    "card-item" : [
       {
-        "classes" : "card-fw",
+        "classes" : false,
         "url" : "#",
         "card-media" : {
           "icon": false,
           "img" : {
             "src" : "https://picsum.photos/id/1074/768/432",
-            "alt" : "Card full width #1 img alt."
+            "alt" : "Card #1 img alt."
           }
         },
-        "card-type": "Type de contenu",
-        "card-title" : "Titre de la carte",
+        "card-type": "Type (optionnel)",
+        "card-title": "Titre de la carte",
         "card-badge": {
           "badge": "Libellé",
           "badgeClass": "badge-warning",
@@ -24,7 +24,13 @@
         },
         "card-text": false,
         "card-text-interface": {
-          "date-time": false,
+          "date-time": {
+            "date": {
+              "text": false,
+              "dateTimeFormat": "2019-01-31",
+              "dateTimeText": "31 janvier 2019"
+            }
+          },
           "info": "Information complémentaire"
         }
       }
