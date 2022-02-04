@@ -2,12 +2,16 @@
 <div class="modal{{# modalClasses}} {{modalClasses}}{{/ modalClasses}}" id="{{modalID}}" tabindex="-1" role="dialog" aria-labelledby="{{modalHeaderID}}" aria-hidden="true">
   <div class="modal-dialog{{# modalDialogClasses}} {{modalDialogClasses}}{{/ modalDialogClasses}}" role="document">
     <div class="modal-content">
+      {{^ modalHideHeader}}
       <div class="modal-header">
         <h5 class="modal-title" id="{{modalHeaderID}}">{{modalHeaderTitle}}</h5>
+        {{^ modalHideCloseBtn }}
         <button type="button" class="btn-close close" data-dismiss="modal" aria-label="Close">
           {{> styles-icon-item("icon-name": "icon-x")}}
         </button>
+        {{/ modalHideCloseBtn}}
       </div>
+      {{/ modalHideHeader}}
       <div class="modal-body{{#modalBodyClass}} {{modalBodyClass}}{{/modalBodyClass}}">
         {{# modalHasIcon}}
         <div class="modal-icon">

@@ -24,7 +24,8 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 - Components - Filtres (chips): Modification de l'affichage par type de filtre.
 - Components - Cards: Ajout d'une étiquette (badge).
 - Components - Cards: Ajout de la date en gras.
-- Components - Cars: Remplacer Cards par Tuiles dans l'interface.
+- Components - Cards: Remplacer Cards par Tuiles dans l'interface.
+- Components - Modal: Renommer pour modale.
 - Templates-citoyens - index: Passage de chip-xs à chip-sm.
 ### Deprecated
 - Components - Filtres (Chips): extra-small version.
