@@ -15,6 +15,7 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 - Components - Accordeon: Retrait du margin bottom sur le dernier element pour toujours avoir 16px comme margin bottom sous le contenu.
 - Components - Cards: Passage de border à box-shadow pour se conformer au design system.
 - Components - Cards: Type xs > sm et retrait de l'uppercase.
+- Components - Cards: Retrait du sticky bottom sur les classes suivante: card-text-interface, card-date-text, card-publication-date. La classe utilitaire .card-text-sticky-bottom doit être utiliser en cas de besoin mais le design system ne recommande plus d'élément sticky-bottom dans les tuiles.
 - Components - Filtres (chips): Ajout état désactivé.
 - Components - Interrupteur: Modification état OFF.
 - Components - Couleur de l'état désactivé pour les éléments suivants: Case à cocher, case à cocher encadrée, bouton radio, bouton radio encadrée, interrupteur, boutons secondaire et bouton tertiaire.
@@ -23,6 +24,7 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 - Components - Filtres (chips): Modification de l'affichage par type de filtre.
 - Components - Cards: Ajout d'une étiquette (badge).
 - Components - Cards: Ajout de la date en gras.
+- Components - Cars: Remplacer Cards par Tuiles dans l'interface.
 - Templates-citoyens - index: Passage de chip-xs à chip-sm.
 ### Deprecated
 - Components - Filtres (Chips): extra-small version.

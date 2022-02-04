@@ -1,5 +1,5 @@
 ---
-title: Card content
+title: Tuile info
 ---
 
 Les cartes contiennent du contenu et des actions à propos d'un seul sujet.
