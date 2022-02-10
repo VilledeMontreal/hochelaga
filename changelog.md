@@ -26,6 +26,11 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 - Components - Cards: Ajout de la date en gras.
 - Components - Cards: Remplacer Cards par Tuiles dans l'interface.
 - Components - Modal: Renommer pour modale.
+- Components - Progres bar: Renommer par Indicateur de progres
+- Components - Message - Alertes: Renommé par Message ciblé
+- Components - Message - Message bars: Renommé par Message global
+- Components - Message - Popovers - Renommé par Message flottant.
+- Components - MessageL Retrait des exemples sans icône.
 - Templates-citoyens - index: Passage de chip-xs à chip-sm.
 ### Deprecated
 - Components - Filtres (Chips): extra-small version.
