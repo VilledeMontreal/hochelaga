@@ -1,7 +1,8 @@
 {
   "hasButtons": [
     {
-      "alertClass": "alert-info alert-with-icon",
+      "dismissableAlert": true,
+      "alertClass": "alert-info alert-with-icon alert-dismissible fade show",
       "alertIcon": true,
       "icon-name": "icon-info",
       "alertTitle": "Titre du message",
@@ -24,7 +25,8 @@
       }
     },
     {
-      "alertClass": "alert-success alert-with-icon",
+      "dismissableAlert": true,
+      "alertClass": "alert-success alert-with-icon alert-dismissible fade show",
       "alertIcon": true,
       "icon-name": "icon-check-circle",
       "alertTitle": "Titre du message",
@@ -47,7 +49,8 @@
       }
     },
     {
-      "alertClass": "alert-warning alert-with-icon",
+      "dismissableAlert": true,
+      "alertClass": "alert-warning alert-with-icon alert-dismissible fade show",
       "alertIcon": true,
       "icon-name": "icon-warning",
       "alertTitle": "Titre du message",
@@ -70,7 +73,8 @@
       }
     },
     {
-      "alertClass": "alert-danger alert-with-icon",
+      "dismissableAlert": true,
+      "alertClass": "alert-danger alert-with-icon alert-dismissible fade show",
       "alertIcon": true,
       "icon-name": "icon-error",
       "alertTitle": "Titre du message",
