@@ -130,11 +130,11 @@
     .modal-dialog:not(.modal-compact) {
       min-width: 100%;
       margin: 0;
-      min-height: auto;
-      height: auto;
+      min-height: 100%;
+      height: 100%;
 
       .modal-content {
-        min-height: 100vh;
+        min-height: 100%;
       }
 
       .modal-body {
