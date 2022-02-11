@@ -20,6 +20,9 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 - Components - Interrupteur: Modification état OFF.
 - Components - Couleur de l'état désactivé pour les éléments suivants: Case à cocher, case à cocher encadrée, bouton radio, bouton radio encadrée, interrupteur, boutons secondaire et bouton tertiaire.
 
+### Fixed
+- Components - modale: Correction des modales plein écran sur mobile. Dans certaines conditions, la modale est partiellement caché par l'interface du téléphone.
+
 ### PatternLab
 - Components - Filtres (chips): Modification de l'affichage par type de filtre.
 - Components - Cards: Ajout d'une étiquette (badge).
