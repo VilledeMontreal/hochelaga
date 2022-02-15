@@ -24,6 +24,6 @@ jobs:
         env:
           NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
       - run: npm run publish:dev
-        if: github.ref == 'refs/heads/develop'
+        if: github.ref == 'refs/heads/develop' && contains(github.event.head_commit.message, 'ci(release):')
         env:
           NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
