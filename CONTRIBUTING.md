@@ -2,7 +2,7 @@
 
 # How to Contribute
 
-This library is one of the open source projects of the Ville de Montréal which is currently under active development and which is also used to operate online services on [montreal.com](https://montreal.com).
+This library is one of the open source projects of the Ville de Montréal which is currently under active development and which is also used to operate online services on [montreal.ca](https://montreal.ca).
 
 ## [Code of Conduct](http://ville.montreal.qc.ca/pls/portal/docs/page/intra_fr/media/documents/code_conduite_employes.pdf)
 

@@ -1,6 +1,6 @@
 # Comment contribuer
 
-Cette librairie est l’un des projets open source de la Ville de Montréal. Elle est utilisé pour les services en ligne que vous pouvez accéder à [beta.montreal.com](https://beta.montreal.com).
+Cette librairie est l’un des projets open source de la Ville de Montréal. Elle est utilisé pour les services en ligne que vous pouvez accéder à [montreal.ca](https://montreal.ca).
 
 ## [Code de conduite](http://ville.montreal.qc.ca/pls/portal/docs/page/intra_fr/media/documents/code_conduite_employes.pdf)
 
