@@ -1,16 +1,24 @@
 {
-  "name": "@villemontreal/boite-outils4-web",
+  "name": "@villedemontreal/hochelaga",
   "description": "La boite à outils web",
   "version": "4.21.0",
   "publishConfig": {
-    "registry": "https://nexus.interne.montreal.ca/repository/npm-vdmtl"
+    "access": "public"
   },
-  "bugs": "https://bitbucket.org/villemontreal/boite-outils4-web",
-  "author": "Ville de Montréal",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/VilledeMontreal/hochelaga.git"
+  },
+  "bugs": {
+    "url": "https://github.com/VilledeMontreal/hochelaga/issues"
+  },
+  "author": "Montreal City Authors",
   "scripts": {
     "start": "gulp default",
     "serve": "gulp serve",
-    "distribute": "gulp distribute"
+    "distribute": "gulp distribute",
+    "publish:main": "npm run distribute && npm publish",
+    "publish:develop": "npm run distribute && npm publish --tag dev"
   },
   "license": "MIT",
   "engines": {
