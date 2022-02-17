@@ -1,7 +1,7 @@
 {
   "name": "@villedemontreal/hochelaga",
   "description": "La boite à outils web",
-  "version": "4.21.4",
+  "version": "4.21.5",
   "publishConfig": {
     "access": "public"
   },
@@ -17,9 +17,10 @@
     "start": "gulp default",
     "serve": "gulp serve",
     "distribute": "gulp distribute",
-    "dev:release:patch": "npm version patch -m \"ci(release): %s for develop\"",
+    "main:release:patch": "npm version patch && -m \"ci(release): %s\"",
+    "dev:release:patch": "npm --preid=next version prerelease && -m \"ci(release): %s for develop\"",
     "publish:main": "npm run distribute && npm publish",
-    "publish:dev": "npm run distribute && npm --preid=\"next\" version from-git && npm publish --tag next"
+    "publish:dev": "npm run distribute && npm publish --tag next"
   },
   "license": "MIT",
   "engines": {
