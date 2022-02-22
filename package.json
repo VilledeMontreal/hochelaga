@@ -18,7 +18,7 @@
     "serve": "gulp serve",
     "distribute": "gulp distribute",
     "main:release:patch": "npm version patch -m \"ci(release): %s\"",
-    "dev:release:patch": "npm --preid=next version prerelease -m \"ci(release): %s for develop\"",
+    "dev:release:patch": "npm --preid=next version prerelease -m \"ci(prerelease): %s for develop\"",
     "publish:main": "npm run distribute && npm publish",
     "publish:dev": "npm run distribute && npm publish --tag next"
   },
