@@ -3,25 +3,33 @@
     {
       "formGroupClass": false,
       "formGroupInputID": "form-control-default-one",
-      "formGroupInputLabel": "Default form group",
+      "formGroupInputLabel": "Libellé",
       "formGroupInputPlaceholder": {
-        "text": "Placeholder for default form group"
+        "text": "Placeholder"
       },
       "formGroupInputHelpText": {
         "id": "input-text-help-text-id",
-        "text": "Message d'aide personnalisé."
+        "text": "Texte d'assistance"
+      },
+      "formGroupInputCounter": {
+        "id": "input-text-caracter-count",
+        "text": "compteur de caractères"
       }
     },
     {
       "formGroupClass": "form-group-sm",
       "formGroupInputID": "form-control-sm-one",
-      "formGroupInputLabel": "Small form group",
+      "formGroupInputLabel": "Libellé",
       "formGroupInputPlaceholder": {
-        "text": "Placeholder for small form group"
+        "text": "Placeholder"
       },
       "formGroupInputHelpText": {
         "id": "input-text-sm-help-text-id",
-        "text": "Message d'aide personnalisé."
+        "text": "Texte d'assistance"
+      },
+      "formGroupInputCounter": {
+        "id": "input-text-sm-caracter-count",
+        "text": "compteur de caractères"
       }
     }
   ],
@@ -29,7 +37,7 @@
     {
       "formGroupClass": false,
       "formGroupInputID": "form-control-input",
-      "formGroupInputLabel": "Default squared input",
+      "formGroupInputLabel": "Libellé",
       "formGroupInputRequired": false,
       "formGroupInputPlaceholder": false,
       "formGroupInputHelpText": false
@@ -37,7 +45,7 @@
     {
       "formGroupClass": false,
       "formGroupInputID": "form-control-rounded",
-      "formGroupInputLabel": "Rounded input",
+      "formGroupInputLabel": "Libellé",
       "formGroupInputClass": "input-rounded",
       "formGroupInputRequired": false,
       "formGroupInputPlaceholder": false,
@@ -48,19 +56,19 @@
     {
       "formGroupClass": false,
       "formGroupInputID": "form-control-input-text-disabled",
-      "formGroupInputLabel": "Disabled input",
+      "formGroupInputLabel": "Désactivé",
       "formGroupInputRequired": false,
-      "formGroupInputPlaceholder": false,
+      "formGroupInputPlaceholder": "désactivé",
       "formGroupInputHelpText": false,
       "formGroupInputState": "disabled"
     },
     {
       "formGroupClass": false,
       "formGroupInputID": "form-control-input-text-readonly",
-      "formGroupInputLabel": "Read only input",
+      "formGroupInputLabel": "Read-only",
       "formGroupInputClass": false,
       "formGroupInputRequired": false,
-      "formGroupInputPlaceholder": false,
+      "formGroupInputPlaceholder": "read-only",
       "formGroupInputHelpText": false,
       "formGroupInputState": "readonly"
     }
@@ -71,14 +79,14 @@
       "formGroupInputID": "form-control-default-error-one",
       "formGroupInputClass": "is-invalid",
       "formGroupInputRequired": true,
-      "formGroupInputLabel": "Default invalid",
+      "formGroupInputLabel": "En erreur",
       "formGroupInputPlaceholder": {
-        "text": "Placeholder for default form group"
+        "text": "Placeholder"
       },
-      "formGroupInputHelpText": "Message d'aide personnalisé.",
+      "formGroupInputHelpText": false,
       "formGroupInputError": {
         "id": "input-text-error-id",
-        "text": "Message d'erreur personnalisé."
+        "text": "Texte d'erreur"
       }
     },
     {
@@ -86,14 +94,14 @@
       "formGroupInputID": "form-control-sm-error-one",
       "formGroupInputClass": "is-invalid",
       "formGroupInputRequired": true,
-      "formGroupInputLabel": "Small invalid",
+      "formGroupInputLabel": "En erreur",
       "formGroupInputPlaceholder": {
-        "text": "Placeholder for small form group"
+        "text": "Placeholder"
       },
-      "formGroupInputHelpText": "Message d'aide personnalisé.",
+      "formGroupInputHelpText": false,
       "formGroupInputError": {
         "id": "input-text-sm-error-id",
-        "text": "Message d'erreur personnalisé."
+        "text": "Texte d'erreur"
       }
     }
   ]

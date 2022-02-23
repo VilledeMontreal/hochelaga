@@ -1,6 +1,9 @@
 {{^ formGroupNoLabel}}
 {{# formGroupLabel}}<label>{{ formGroupLabel}}</label>{{/ formGroupLabel}}
 {{/ formGroupNoLabel}}
+{{# formGroupInputHelpText}}
+<span id="{{id}}" class="form-text">{{ text }}</span>
+{{/ formGroupInputHelpText}}
 {{# formRadiosItems}}
 <div class="custom-control custom-radio {{ class }} ">
   <input type="radio" id="{{ id }}" name="{{ name }}" class="custom-control-input" value="{{ id }}" {{ state }}>

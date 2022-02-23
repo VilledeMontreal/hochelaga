@@ -2,7 +2,10 @@
   "formRadios": {
     "formGroupLabel": "Libellé",
     "formGroupClass": "required",
-    "label": false,
+    "formGroupInputHelpText": {
+      "id": "radios-help-text-id",
+      "text": "Texte d'assistance"
+    },
     "formRadiosItems": [
       {
         "class": "",
@@ -27,7 +30,6 @@
     ]
   },
   "formRadiosInline": {
-    "label": false,
     "formRadiosItems": [
       {
         "class": "custom-control-inline",

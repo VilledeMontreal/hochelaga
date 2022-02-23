@@ -3,10 +3,10 @@
     {
       "formGroupClass": false,
       "formGroupSelectID": "custom-select",
-      "formGroupSelectLabel": "Default select label",
+      "formGroupSelectLabel": "Libellé",
       "formGroupSelectClass": false,
       "formGroupSelect": {
-        "defaultOption": "Default option",
+        "defaultOption": "Option par défaut",
         "options": [
           {
             "option-text" : "Option 1",
@@ -26,10 +26,10 @@
     {
       "formGroupClass": "form-group-sm",
       "formGroupSelectID": "custom-select-sm",
-      "formGroupSelectLabel": "Small select label",
+      "formGroupSelectLabel": "Libellé",
       "formGroupSelectClass": "custom-select-sm",
       "formGroupSelect": {
-        "defaultOption": "Default option",
+        "defaultOption": "Option par défaut",
         "options": [
           {
             "option-text" : "Option 1",
@@ -55,7 +55,7 @@
       "formGroupSelectClass": "is-invalid",
       "formGroupSelectRequired": true,
       "formGroupSelect": {
-        "defaultOption": "Default option",
+        "defaultOption": "Option par défaut",
         "options": [
           {
             "option-text" : "Option 1",
@@ -69,7 +69,7 @@
       },
       "formGroupInputError": {
         "id": "custom-select-error-text",
-        "text": "Texte d'erreur personnalisé."
+        "text": "Texte d'erreur"
       }
     },
     {
@@ -79,7 +79,7 @@
       "formGroupSelectClass": "custom-select-sm is-invalid",
       "formGroupSelectRequired": true,
       "formGroupSelect": {
-        "defaultOption": "Default option",
+        "defaultOption": "Option par défaut",
         "options": [
           {
             "option-text" : "Option 1",
@@ -93,7 +93,7 @@
       },
       "formGroupInputError": {
         "id": "custom-select-sm-error-text",
-        "text": "Texte d'erreur personnalisé."
+        "text": "Texte d'erreur"
       }
     }
   ]

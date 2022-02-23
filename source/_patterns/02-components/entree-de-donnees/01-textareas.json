@@ -3,27 +3,37 @@
     {
       "formGroupClass": false,
       "formGroupInputID": "form-control-textarea-default",
-      "formGroupInputLabel": "Default textarea",
+      "formGroupInputLabel": "Libellé",
       "formGroupInputPlaceholder": {
-        "text": "Placeholder pour default textarea"
+        "text": "Placeholder"
       },
       "formGroupInputHelpText": {
         "id": "form-group-textearea-help-text",
         "text": "Texte d'assistance."
       },
+      "formGroupInputCounter": {
+        "id": "textarea-caracter-count",
+        "text": "compteur de caractères"
+      },
+      "formGroupPopover": true,
       "formGroupTextareaRows": "5"
     },
     {
       "formGroupClass": "form-group-sm",
       "formGroupInputID": "form-control-textarea-sm",
-      "formGroupInputLabel": "Small textarea",
+      "formGroupInputLabel": "Libellé",
       "formGroupInputPlaceholder": {
-        "text": "Placeholder pour small textarea"
+        "text": "Placeholder"
       },
       "formGroupInputHelpText": {
         "id": "form-group-textearea-sm-help-text",
         "text": "Texte d'assistance."
       },
+      "formGroupInputCounter": {
+        "id": "textarea-sm-caracter-count",
+        "text": "compteur de caractères"
+      },
+      "formGroupPopover": true,
       "formGroupTextareaRows": "3"
     }
   ],
@@ -33,9 +43,9 @@
       "formGroupInputID": "form-control-textarea-default-validation",
       "formGroupInputClass": "is-invalid",
       "formGroupInputRequired": true,
-      "formGroupInputLabel": "Default textarea invalid",
+      "formGroupInputLabel": "Libellé",
       "formGroupInputPlaceholder": {
-        "text": "Placeholder pour default textarea"
+        "text": "Placeholder"
       },
       "formGroupInputHelpText": {
         "id": "form-group-textearea-error-help-text",
@@ -44,7 +54,7 @@
       "formGroupTextareaRows": "5",
       "formGroupInputError": {
         "id": "form-group-textarea-error-text",
-        "text": "Message d'erreur personnalisé."
+        "text": "Texte d'erreur"
       }
     },
     {
@@ -52,9 +62,9 @@
       "formGroupInputID": "form-control-textarea-sm-validation",
       "formGroupInputClass": "is-invalid",
       "formGroupInputRequired": true,
-      "formGroupInputLabel": "Small textarea invalid",
+      "formGroupInputLabel": "Libellé",
       "formGroupInputPlaceholder": {
-        "text": "Placeholder pour small textarea"
+        "text": "Placeholder"
       },
       "formGroupInputHelpText": {
         "id": "form-group-sm-textearea-help-text",
@@ -63,7 +73,7 @@
       "formGroupTextareaRows": "3",
       "formGroupInputError": {
         "id": "form-group-sm-textarea-error-text",
-        "text": "Texte d'erreur personnalisé."
+        "text": "Texte d'erreur"
       }
     }
   ],
@@ -73,19 +83,19 @@
       "formGroupInputID": "form-control-textarea-default-state",
       "formGroupInputClass": false,
       "formGroupInputRequired": false,
-      "formGroupInputLabel": "Disabled textarea",
+      "formGroupInputLabel": "Libellé",
       "formGroupInputPlaceholder":{
-        "text": "Texte d'assistance."
+        "text": "Placeholder"
       },
       "formGroupInputHelpText": {
         "id": "form-group-sm-textearea-disabled-help-text",
-        "text": "Texte d'assistance."
+        "text": "Texte d'assistance"
       },
       "formGroupTextareaRows": "5",
       "formGroupInputState": "disabled",
       "formGroupInputError": {
         "id": "form-group-textarea-disabled-error-text",
-        "text": "Message d'erreur personnalisé."
+        "text": "texte d'erreur"
       }
     }
   ]

@@ -2,6 +2,9 @@
   {{^ formGroupNoLabel}}
   <label for="{{formGroupInputID}}">{{ formGroupInputLabel}}</label>
   {{/ formGroupNoLabel}}
+  {{# formGroupInputHelpText}}
+  <span id="{{id}}" class="form-text">{{ text }}</span>
+  {{/ formGroupInputHelpText}}
   <div class="file-drop-container-v2 {{formGroupFileClass}}" id="{{formGroupFileID}}">
     <div class="file-selector-button">
       <input type="file" id="{{ formGroupFileDropID}}" class="sr-only"{{^formGroupInputError}}{{# formGroupInputHelpText}} aria-describedby="{{id}}"{{/ formGroupInputHelpText}}{{/formGroupInputError}}{{#formGroupInputError}} aria-describedby="{{id}}"{{/formGroupInputError}}{{# formGroupFileState}} {{formGroupFileState}}{{/ formGroupFileState}}>
@@ -9,9 +12,6 @@
     </div>
     <span class="help-text">{{ formGroupFileDropHelpText }}</span>
   </div>
-  {{# formGroupInputHelpText}}
-  <small id="{{id}}" class="form-text">{{ text }}</small>
-  {{/ formGroupInputHelpText}}
   {{# formGroupInputError}}
   <div class="invalid-feedback" id="{{id}}">{{ text }}</div>
   {{/ formGroupInputError}}
