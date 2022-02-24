@@ -17,6 +17,7 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 - Components - Cards: Type xs > sm et retrait de l'uppercase.
 - Components - Cards: Retrait du sticky bottom sur les classes suivante: card-text-interface, card-date-text, card-publication-date. La classe utilitaire .card-text-sticky-bottom doit être utiliser en cas de besoin mais le design system ne recommande plus d'élément sticky-bottom dans les tuiles.
 - Components - Filtres (chips): Ajout état désactivé.
+- Components - Entree de données: Ajustement des éléments de formulaires. Ajout icône interactive d'information. Ajout compteur de caractères. Déplacement du texte d'assistance.
 - Components - Interrupteur: Modification état OFF.
 - Components - Couleur de l'état désactivé pour les éléments suivants: Case à cocher, case à cocher encadrée, bouton radio, bouton radio encadrée, interrupteur, boutons secondaire et bouton tertiaire.
 
