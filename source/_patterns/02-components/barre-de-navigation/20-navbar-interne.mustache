@@ -2,14 +2,13 @@
   {{# navbarInterneHasMenu}}
   <button type="button" id="menu-interne-toggler" class="btn navbar-btn navbar-btn-icon btn-hide-label-sm ml-0" aria-expanded="false" aria-controls="slide-menu-left">
     <span class="icon icon-menu" aria-hidden="true"></span>
-    <span class="btn-label">Menu</span>
+    <span class="sr-only btn-label">Menu</span>
   </button>
   {{> components-main-menu-interne }}
-  <div class="navbar-separator ml-1 ml-lg-3 mr-1 mr-lg-3"></div>
   {{/ navbarInterneHasMenu}}
-  <a class="navbar-brand" href="#">
+  <div class="navbar-sitename">
     <span class="sitename">{{ applicationName }}</span>
-  </a>
+  </div>
   <div class="navbar-div ml-auto">
     <div class="d-flex align-items-center">
       {{# navbarInterneHasSearch}}

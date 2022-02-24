@@ -1,5 +1,5 @@
 ---
-title: Navigation Bar
+title: Barre de navigation principale
 ---
 
 Les styles de barre de navigation principale, de menu et de pied de page sont migrés vers le Shell. Pour les besoins de BAO, il est ajouté en tant que deuxième feuille de style (styles-header-footer-v4).
