@@ -20,7 +20,7 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 - Components - Entree de données: Ajustement des éléments de formulaires. Ajout icône interactive d'information. Ajout compteur de caractères. Déplacement du texte d'assistance.
 - Components - Interrupteur: Modification état OFF.
 - Components - Couleur de l'état désactivé pour les éléments suivants: Case à cocher, case à cocher encadrée, bouton radio, bouton radio encadrée, interrupteur, boutons secondaire et bouton tertiaire.
-
+- Components - Barre de navigation: Harmonisation des barres de navigation.
 ### Fixed
 - Components - modale: Correction des modales plein écran sur mobile. Dans certaines conditions, la modale est partiellement caché par l'interface du téléphone.
 

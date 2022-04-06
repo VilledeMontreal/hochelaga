@@ -1,6 +1,6 @@
 <nav {{# navbarFixedTop}}class="fixed-top"{{/ navbarFixedTop}}>
-  <div class="navbar navbar-light main-navbar navbar-expand w-100" role="navigation">
-    <a class="navbar-brand" href="/">
+  <div class="navbar navbar-light main-navbar navbar-expand w-100 main-navbar-service" role="navigation">
+    <a class="navbar-brand" href="/" aria-label="Page d'accueil de la Ville de Montréal">
       <div class="d-none d-md-flex">
         <svg id="logo-mtl-rosace" x="0px" y="0px" viewBox="0 0 184.6 39.3" xml:space="preserve">
           <polyline class="letter" points="0,6.6 6.1,6.6 13.9,27.9 14,27.9 21.8,6.6 27.7,6.6 27.7,32.8 23.6,32.8 23.6,10.2 23.5,10.2 15.2,32.8 11.8,32.8 3.5,10.2 3.4,10.2 3.4,32.8 0,32.8 0,6.6"/>
@@ -64,11 +64,13 @@
         </svg>
       </div>
     </a>
-    <div class="navbar-separator mr-1 mr-lg-3"></div>
-    <a class="navbar-brand" href="#">
-      <span class="sitename">{{ siteName }}</span>
-    </a>
+    <div class="navbar-separator"></div>
+      <div class="navbar-sitename">
+        <span class="sitename">{{ siteName }}</span>
+        {{# siteInfo}}<span class="font-size-xs-interface font-weight-normal text-secondary">{{siteInfo}}</span>{{/ siteInfo}}
+      </div>
+    <div class="ml-auto">
+      {{> components-button-icon(buttonClass: "btn-tertiary btn-icon-right btn-squared btn-hide-label-md", buttonIconSr: true, buttonIconSrText: "Quitter", buttonText: "Quitter", icon-name: "icon-log-out", buttonIcon: true, dataToggle: false, dataTarget: false)}}
+    </div>
   </div>
-
 </nav>
-
