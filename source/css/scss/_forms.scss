@@ -424,7 +424,7 @@ legend,
     padding-right: $custom-switch-width + $custom-control-gutter;
     &::before {
       // Center vertically
-      top: calc(50% - (#{.75rem}/2));
+      top: calc(50% - calc(.75rem / 2));
       right: 0;
       left: auto;
       width: 2rem;
@@ -437,8 +437,8 @@ legend,
 
     &::after {
       // Center vertically
-      top: calc(50% - (#{$custom-switch-indicator-size}/2));
-      right: ($custom-switch-width/2);
+      top: calc(50% - calc($custom-switch-indicator-size / 2));
+      right: calc($custom-switch-width / 2);
       left: auto;
       width: $custom-switch-indicator-size;
       height: $custom-switch-indicator-size;
@@ -615,11 +615,11 @@ legend,
   .custom-switch {
     .custom-control-label {
       &::before {
-        top: calc(#{($line-height-xs - .75rem) / 2});
+        top: calc(($line-height-xs - .75rem) / 2);
       }
 
       &::after {
-        top: calc(#{($line-height-xs - $custom-control-indicator-size) / 2});
+        top: calc(($line-height-xs - $custom-control-indicator-size) / 2);
       }
     }
   }
