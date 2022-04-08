@@ -36,6 +36,7 @@ label {
   }
   .form-popover {
     margin-left: .25rem;
+    align-self: flex-start; // Use to avoid height issues
 
     .icon {
       @include icon-color($action);

@@ -1,9 +1,11 @@
 {
   "inputTextSize": [
     {
-      "formGroupClass": false,
+      "formGroupClass": "required",
       "formGroupInputID": "form-control-default-one",
+      "formGroupInputRequired": true,
       "formGroupInputLabel": "Libellé",
+      "formGroupPopover": true,
       "formGroupInputPlaceholder": {
         "text": "Placeholder"
       },
@@ -13,13 +15,15 @@
       },
       "formGroupInputCounter": {
         "id": "input-text-caracter-count",
-        "text": "compteur de caractères"
+        "text": "Compteur de caractères"
       }
     },
     {
-      "formGroupClass": "form-group-sm",
+      "formGroupClass": "form-group-sm required",
       "formGroupInputID": "form-control-sm-one",
+      "formGroupInputRequired": true,
       "formGroupInputLabel": "Libellé",
+      "formGroupPopover": true,
       "formGroupInputPlaceholder": {
         "text": "Placeholder"
       },
@@ -29,48 +33,8 @@
       },
       "formGroupInputCounter": {
         "id": "input-text-sm-caracter-count",
-        "text": "compteur de caractères"
+        "text": "Compteur de caractères"
       }
-    }
-  ],
-  "inputTextShape": [
-    {
-      "formGroupClass": false,
-      "formGroupInputID": "form-control-input",
-      "formGroupInputLabel": "Libellé",
-      "formGroupInputRequired": false,
-      "formGroupInputPlaceholder": false,
-      "formGroupInputHelpText": false
-    },
-    {
-      "formGroupClass": false,
-      "formGroupInputID": "form-control-rounded",
-      "formGroupInputLabel": "Libellé",
-      "formGroupInputClass": "input-rounded",
-      "formGroupInputRequired": false,
-      "formGroupInputPlaceholder": false,
-      "formGroupInputHelpText": false
-    }
-  ],
-  "inputTextState": [
-    {
-      "formGroupClass": false,
-      "formGroupInputID": "form-control-input-text-disabled",
-      "formGroupInputLabel": "Désactivé",
-      "formGroupInputRequired": false,
-      "formGroupInputPlaceholder": "désactivé",
-      "formGroupInputHelpText": false,
-      "formGroupInputState": "disabled"
-    },
-    {
-      "formGroupClass": false,
-      "formGroupInputID": "form-control-input-text-readonly",
-      "formGroupInputLabel": "Read-only",
-      "formGroupInputClass": false,
-      "formGroupInputRequired": false,
-      "formGroupInputPlaceholder": "read-only",
-      "formGroupInputHelpText": false,
-      "formGroupInputState": "readonly"
     }
   ],
   "inputTextSizeError": [
@@ -103,6 +67,27 @@
         "id": "input-text-sm-error-id",
         "text": "Texte d'erreur"
       }
+    }
+  ],
+  "inputTextState": [
+    {
+      "formGroupClass": false,
+      "formGroupInputID": "form-control-input-text-disabled",
+      "formGroupInputLabel": "Désactivé",
+      "formGroupInputRequired": false,
+      "formGroupInputPlaceholder": "désactivé",
+      "formGroupInputHelpText": false,
+      "formGroupInputState": "disabled"
+    },
+    {
+      "formGroupClass": false,
+      "formGroupInputID": "form-control-input-text-readonly",
+      "formGroupInputLabel": "Read-only",
+      "formGroupInputClass": false,
+      "formGroupInputRequired": false,
+      "formGroupInputPlaceholder": "read-only",
+      "formGroupInputHelpText": false,
+      "formGroupInputState": "readonly"
     }
   ]
 }
