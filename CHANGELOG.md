@@ -5,10 +5,11 @@ The format is based on [Keep a Changelog](http://keepachangelog.com/en/1.0.0/)
 and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.html).
 
 
-## [4.21.6-next.0] - @next
+## [4.21.6-next.7] - @next
 
 ### Added
 - Components - Message important: Gestion du responsive (small mobile).
+- Components - Message ciblé: Ajout d'un message de type Urgence avec icon-emergency
 - Components - Modal: Ajout d'une version compacte mobile (.modal-compact)
 - Styles - Iconographie: Ajout de l'icone urgence (icon-emergency)
 
@@ -22,6 +23,9 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 - Components - Interrupteur: Modification état OFF.
 - Components - Couleur de l'état désactivé pour les éléments suivants: Case à cocher, case à cocher encadrée, bouton radio, bouton radio encadrée, interrupteur, boutons secondaire et bouton tertiaire.
 - Components - Barre de navigation: Harmonisation des barres de navigation.
+- Components - Barre de navigation: Modification de l'icône du bouton mesures d'urgence.
+- Components - Message ciblé: Icone informatif - Retrait de aria-hidden="true" et ajout d'un aria-label
+- Compoentns - Message global: Changement de l'icône icon-error pour icon-emergency pour le message de type negatif (rouge).
 ### Fixed
 - Components - modale: Correction des modales plein écran sur mobile. Dans certaines conditions, la modale est partiellement caché par l'interface du téléphone.
 

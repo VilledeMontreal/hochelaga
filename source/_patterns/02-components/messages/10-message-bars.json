@@ -3,22 +3,26 @@
     {
       "dismissibleAlert": true,
       "messageBarClass": "message-bar-info alert-dismissible fade show",
-      "icon-name": "icon-info"
+      "icon-name": "icon-info",
+      "iconAriaLabel": "Information"
     },
     {
       "dismissibleAlert": true,
       "messageBarClass": "message-bar-warning alert-dismissible fade show",
-      "icon-name": "icon-warning"
+      "icon-name": "icon-warning",
+      "iconAriaLabel": "Attention"
     },
     {
       "dismissibleAlert": true,
       "messageBarClass": "message-bar-danger alert-dismissible fade show",
-      "icon-name": "icon-error"
+      "icon-name": "icon-emergency",
+      "iconAriaLabel": "urgence"
     },
     {
       "dismissibleAlert": true,
       "messageBarClass": "alert-dismissible fade show",
-      "icon-name": "icon-info"
+      "icon-name": "icon-info",
+      "iconAriaLabel": "Information"
     }
   ]
 }
