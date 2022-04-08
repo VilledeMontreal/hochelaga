@@ -10,6 +10,7 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 ### Added
 - Components - Message important: Gestion du responsive (small mobile).
 - Components - Modal: Ajout d'une version compacte mobile (.modal-compact)
+- Styles - Iconographie: Ajout de l'icone urgence (icon-emergency)
 
 ### Changed
 - Components - Accordeon: Retrait du margin bottom sur le dernier element pour toujours avoir 16px comme margin bottom sous le contenu.
