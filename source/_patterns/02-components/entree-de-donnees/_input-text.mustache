@@ -1,6 +1,10 @@
 <div class="form-group {{ formGroupClass}}">
   {{^ formGroupNoLabel}}
+  {{# formGroupPopover}}<div class="label-has-popover">{{/ formGroupPopover}}
   <label for="{{formGroupInputID}}">{{ formGroupInputLabel}}</label>
+  {{# formGroupPopover}}<div class="form-popover" aria-hidden="true" data-toggle="popover" data-placement="auto" title="Lorem ipsum" data-content="Lorem ipsum dolor sit amet, consectetur adipiscing elit. In nec quam ut erat scelerisque efficitur."><span class="icon icon-help" aria-hidden="true"></span><span class="sr-only">Lorem ipsum dolor sit amet, consectetur adipiscing elit. In nec quam ut erat scelerisque efficitur.</span></div>
+  {{/ formGroupPopover}}
+  {{# formGroupPopover}}</div>{{/ formGroupPopover}}
   {{/ formGroupNoLabel}}
   {{# formGroupInputHelpText}}
   <span id="{{id}}" class="form-text">{{ text }}</span>
