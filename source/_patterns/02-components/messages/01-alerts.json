@@ -5,6 +5,7 @@
       "alertClass": "alert-info alert-with-icon alert-dismissible fade show",
       "alertIcon": true,
       "icon-name": "icon-info",
+      "iconAriaLabel": "Information",
       "alertTitle": "Titre du message",
       "alertText": "Description du message obligatoire avec <a href=\"#\" class=\"alert-link\">un lien facultatif</a> si besoin.",
       "alertButtons": {
@@ -29,6 +30,7 @@
       "alertClass": "alert-success alert-with-icon alert-dismissible fade show",
       "alertIcon": true,
       "icon-name": "icon-check-circle",
+      "iconAriaLabel": "Succès",
       "alertTitle": "Titre du message",
       "alertText": "Description du message obligatoire avec <a href=\"#\" class=\"alert-link\">un lien facultatif</a> si besoin.",
       "alertButtons": {
@@ -53,6 +55,7 @@
       "alertClass": "alert-warning alert-with-icon alert-dismissible fade show",
       "alertIcon": true,
       "icon-name": "icon-warning",
+      "iconAriaLabel": "Attention",
       "alertTitle": "Titre du message",
       "alertText": "Description du message obligatoire avec <a href=\"#\" class=\"alert-link\">un lien facultatif</a> si besoin.",
       "alertButtons": {
@@ -77,6 +80,32 @@
       "alertClass": "alert-danger alert-with-icon alert-dismissible fade show",
       "alertIcon": true,
       "icon-name": "icon-error",
+      "iconAriaLabel": "Erreur",
+      "alertTitle": "Titre du message",
+      "alertText": "Description du message obligatoire avec <a href=\"#\" class=\"alert-link\">un lien facultatif</a> si besoin.",
+      "alertButtons": {
+        "buttons": [
+          {
+            "buttonClass": "btn-primary",
+            "buttonText": "Libellé"
+          },
+          {
+            "buttonClass": "btn-secondary",
+            "buttonText": "Libellé"
+          },
+          {
+            "buttonClass": "btn-tertiary",
+            "buttonText": "Libellé"
+          }
+        ]
+      }
+    },
+    {
+      "dismissableAlert": true,
+      "alertClass": "alert-danger alert-with-icon alert-dismissible fade show",
+      "alertIcon": true,
+      "icon-name": "icon-emergency",
+      "iconAriaLabel": "Urgence",
       "alertTitle": "Titre du message",
       "alertText": "Description du message obligatoire avec <a href=\"#\" class=\"alert-link\">un lien facultatif</a> si besoin.",
       "alertButtons": {
