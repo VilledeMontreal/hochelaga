@@ -5,7 +5,7 @@ The format is based on [Keep a Changelog](http://keepachangelog.com/en/1.0.0/)
 and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.html).
 
 
-## [4.21.6-next.7] - @next
+## [4.21.6-next.2] - @next
 
 ### Added
 - Components - Message important: Gestion du responsive (small mobile).
@@ -15,6 +15,7 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 
 ### Changed
 - Components - Accordeon: Retrait du margin bottom sur le dernier element pour toujours avoir 16px comme margin bottom sous le contenu.
+- Components - Accordeon: A11y - Utiliser un bouton au lieu d'une balise <a>. Gestion du focus  vers l'intérieur de l'élément. Ajout d'attribut aria pour l'accessibilité. Utilisation d'un niveau de titre si possible.
 - Components - Cards: Passage de border à box-shadow pour se conformer au design system.
 - Components - Cards: Type xs > sm et retrait de l'uppercase.
 - Components - Cards: Retrait du sticky bottom sur les classes suivante: card-text-interface, card-date-text, card-publication-date. La classe utilitaire .card-text-sticky-bottom doit être utiliser en cas de besoin mais le design system ne recommande plus d'élément sticky-bottom dans les tuiles.
@@ -26,6 +27,7 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 - Components - Barre de navigation: Modification de l'icône du bouton mesures d'urgence.
 - Components - Message ciblé: Icone informatif - Retrait de aria-hidden="true" et ajout d'un aria-label
 - Compoentns - Message global: Changement de l'icône icon-error pour icon-emergency pour le message de type negatif (rouge).
+
 ### Fixed
 - Components - modale: Correction des modales plein écran sur mobile. Dans certaines conditions, la modale est partiellement caché par l'interface du téléphone.
 
@@ -41,6 +43,7 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 - Components - Message - Popovers - Renommé par Message flottant.
 - Components - MessageL Retrait des exemples sans icône.
 - Templates-citoyens - index: Passage de chip-xs à chip-sm.
+
 ### Deprecated
 - Components - Filtres (Chips): extra-small version.
 

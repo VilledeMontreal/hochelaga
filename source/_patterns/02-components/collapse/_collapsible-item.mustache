@@ -1,26 +1,22 @@
 {{# collapsibleItem }}
 <div class="collapsible-item">
-  <div class="collapsible-header" role="tab" id="{{ heading-id }}">
-    <div class="collapsible-title">
+  <div class="collapsible-header" id="{{ heading-id }}">
+    <h3 class="collapsible-title">
       {{^ item-disabled}}
-      <a data-toggle="collapse" href="#" data-target="#{{ block-id }}" aria-expanded="{{# show}}true{{/ show}}{{^ show}}false{{/ show}}" aria-controls="{{ block-id }}">
+      <button data-toggle="collapse" data-target="#{{ block-id }}" aria-expanded="{{# show}}true{{/ show}}{{^ show}}false{{/ show}}" aria-controls="{{ block-id }}">
         <span>{{ title }}</span>
-        {{# subtitle}}
-        <span class="collapsible-subtitle">{{subtitle}}</span>
-        {{/ subtitle}}
-      </a>
+        {{# subtitle}}<span class="collapsible-subtitle">{{subtitle}}</span>{{/ subtitle}}
+      </button>
       {{/ item-disabled}}
       {{# item-disabled}}
       <span class="disabled" aria-expanded="false">
         <span>{{ title }}</span>
-        {{# subtitle}}
-        <span class="collapsible-subtitle">{{subtitle}}</span>
-        {{/ subtitle}}
-      </a>
+        {{# subtitle}}<span class="collapsible-subtitle">{{subtitle}}</span>{{/ subtitle}}
+      </span>
       {{/ item-disabled}}
-    </div>
+    </h3>
   </div>
-  <div id="{{ block-id }}" class="collapse {{# show }}show{{/ show}}" role="tabpanel" aria-labelledby="{{ heading-id }}">
+  <div id="{{ block-id }}" class="collapse {{# show }}show{{/ show}}" role="region" aria-labelledby="{{ heading-id }}">
     {{# collapsible-default-content}}
     <div class="collapsible-block">
       {{{ collapsible-default-content }}}
