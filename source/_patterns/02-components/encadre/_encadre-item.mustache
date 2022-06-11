@@ -1,0 +1,14 @@
+<div class="encart{{#light}} encart-light{{/light}}">
+  <h3 class="encart-title">{{ title }}</h3>
+  <div class="encart-body">
+  {{# description}}{{{description}}}{{/ description}}
+  {{# list-items}}
+    {{> components-liste-contenu}}
+  {{/ list-items}}
+  {{# actions}}
+    <div class="btn-wrapper">
+      {{# action}}{{> components-button}}{{/ action}}
+    </div>
+  {{/ actions}}
+  </div>
+</div>
