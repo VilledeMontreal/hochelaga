@@ -5,9 +5,10 @@ The format is based on [Keep a Changelog](http://keepachangelog.com/en/1.0.0/)
 and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.html).
 
 
-## [4.21.6-next.2] - @next
+## [4.21.6-next.3] - @next
 
 ### Added
+- Components - Encadré: Ajout du composant encadré et variant.
 - Components - Message important: Gestion du responsive (small mobile).
 - Components - Message ciblé: Ajout d'un message de type Urgence avec icon-emergency
 - Components - Modal: Ajout d'une version compacte mobile (.modal-compact)

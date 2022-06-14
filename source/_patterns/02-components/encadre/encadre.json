@@ -1,0 +1,66 @@
+{
+  "title": "Titre de l'encadré",
+  "description": "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec quis leo ut arcu viverra scelerisque vel nec justo. Sed ac viverra lorem non.</p>",
+  "list-items": {
+    "list": [
+      {
+        "hasIcon": true,
+        "icon-name": "icon-bolt",
+        "listItemAction": false,
+        "url": "https://google.ca",
+        "listItemLabel": "Libellé",
+        "listItemContent": {
+          "extraContent": [
+            {
+              "content": "Description"
+            }
+          ]
+        }
+      },
+      {
+        "hasIcon": true,
+        "icon-name": "icon-cut",
+        "listItemAction": false,
+        "url": "https://google.ca",
+        "listItemLabel": "Libellé",
+        "listItemContent": {
+          "extraContent": [
+            {
+              "content": "Description"
+            }
+          ]
+        }
+      },
+      {
+        "hasIcon": true,
+        "icon-name": "icon-music",
+        "listItemAction": false,
+        "url": "https://google.ca",
+        "listItemLabel": "Libellé",
+        "listItemContent": {
+          "extraContent": [
+            {
+              "content": "Description"
+            }
+          ]
+        }
+      }
+    ]
+  },
+  "actions": {
+    "action": [
+      {
+        "buttonAsLink": true,
+        "buttonClass": "btn-secondary btn-squared",
+        "buttonUrl": "#",
+        "buttonText": "Libellé"
+      },
+      {
+        "buttonAsLink": true,
+        "buttonClass": "btn-primary btn-squared",
+        "buttonUrl": "#",
+        "buttonText": "Libellé"
+      }
+    ]
+  }
+}
