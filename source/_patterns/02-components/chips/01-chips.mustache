@@ -1,20 +1,47 @@
-<h4 class="pl-pattern-subtitle">Default</h4>
-<div class="chip-group">
-{{# chips }}
+<h4 class="pl-pattern-subtitle">Simple</h4>
+<div class="chip-group mb-2">
+{{# chips-simple }}
 {{> components-chip }}
-{{/ chips }}
+{{/ chips-simple }}
+</div>
+<div class="chip-group mb-4">
+{{# chips-simple-sm }}
+{{> components-chip }}
+{{/ chips-simple-sm }}
 </div>
 
-<h4 class="pl-pattern-subtitle">Small</h4>
-<div class="chip-group">
-{{# chips-sm }}
+<h4 class="pl-pattern-subtitle">Afficher menu</h4>
+<div class="chip-group mb-2">
+{{# chips-menu }}
 {{> components-chip }}
-{{/ chips-sm }}
+{{/ chips-menu }}
+</div>
+<div class="chip-group mb-4">
+{{# chips-menu-sm }}
+{{> components-chip }}
+{{/ chips-menu-sm }}
 </div>
 
-<h4 class="pl-pattern-subtitle">ExtraSmall</h4>
-<div class="chip-group">
-{{# chips-xs }}
+<h4 class="pl-pattern-subtitle">Afficher modale</h4>
+<div class="chip-group mb-2">
+{{# chips-modale }}
 {{> components-chip }}
-{{/ chips-xs }}
+{{/ chips-modale }}
+</div>
+<div class="chip-group mb-4">
+{{# chips-modale-sm }}
+{{> components-chip }}
+{{/ chips-modale-sm }}
+</div>
+
+<h4 class="pl-pattern-subtitle">Supprimer</h4>
+<div class="chip-group mb-2">
+{{# chips-supprimer }}
+{{> components-chip }}
+{{/ chips-supprimer }}
+</div>
+<div class="chip-group mb-4">
+{{# chips-supprimer-sm }}
+{{> components-chip }}
+{{/ chips-supprimer-sm }}
 </div>

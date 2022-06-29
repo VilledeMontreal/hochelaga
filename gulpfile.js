@@ -63,7 +63,7 @@ function sassCopy() {
 function css() {
   return src(config.scss.files)
     .pipe(sourcemaps.init())
-    .pipe(sass( { importer: tildeImporter } ).on('error', sass.logError))
+    .pipe(sass( { importer: tildeImporter, quietDeps: true } ).on('error', sass.logError))
     .pipe(postcss([autoprefixer()]))
     .pipe(sourcemaps.write(config.sourcemaps.dest))
     .pipe(dest(config.scss.dest));
@@ -73,7 +73,7 @@ function css() {
 function cssDist() {
   return src(config.scss.files)
     .pipe(sourcemaps.init())
-    .pipe(sass( { importer: tildeImporter } ).on('error', sass.logError))
+    .pipe(sass( { importer: tildeImporter, quietDeps: true } ).on('error', sass.logError))
     .pipe(postcss([autoprefixer()]))
     .pipe(cleanCSS())
     .pipe(rename({suffix: '.min'}))
@@ -145,7 +145,7 @@ function glyphs() {
 function plSass() {
   return src(config.patternlab.scss.files)
     .pipe(sourcemaps.init())
-    .pipe(sass( { importer: tildeImporter } ).on('error', sass.logError))
+    .pipe(sass( { importer: tildeImporter, quietDeps: true } ).on('error', sass.logError))
     .pipe(postcss( [autoprefixer({})] ))
     .pipe(sourcemaps.write(config.sourcemaps.dest))
     .pipe(dest(config.patternlab.scss.dest));

@@ -217,12 +217,12 @@ fieldset:disabled a.btn {
   }
   // Secondary
   &.btn-secondary {
-    @include button-variant($background: transparent, $border: $neutral-stroke, $color: $neutral-secondary, $hover-background: transparent, $hover-border: $neutral-stroke, $hover-color: $neutral-tertiary, $active-background: transparent, $active-border: $neutral-stroke, $active-color: $neutral-tertiary);
+    @include button-variant($background: transparent, $border: $neutral-stroke, $color: $neutral-tertiary, $hover-background: transparent, $hover-border: $neutral-stroke, $hover-color: $neutral-tertiary, $active-background: transparent, $active-border: $neutral-stroke, $active-color: $neutral-tertiary);
   }
   // Tertiary
   &.btn-link,
   &.btn-tertiary {
-    @include button-variant($background: transparent, $border: transparent, $color: $neutral-secondary, $hover-background: transparent, $hover-border: transparent, $hover-color: $neutral-tertiary, $active-background: transparent, $active-border: transparent, $active-color: $neutral-tertiary);
+    @include button-variant($background: transparent, $border: transparent, $color: $neutral-tertiary, $hover-background: transparent, $hover-border: transparent, $hover-color: $neutral-tertiary, $active-background: transparent, $active-border: transparent, $active-color: $neutral-tertiary);
   }
 
   // Reversed
@@ -383,9 +383,6 @@ input[type="button"] {
     order: 1;
     margin-left: -1.125rem;
     margin-right: .5rem;
-    &:before {
-      left: ($spacer/4);
-    }
   }
   &.btn-lg {
     .icon {
@@ -423,9 +420,6 @@ input[type="button"] {
     order: 2;
     margin-right: -1.125rem;
     margin-left: .5rem;
-    &:before {
-      right: ($spacer/4);
-    }
   }
   &.btn-lg {
     .icon {
@@ -548,14 +542,21 @@ input[type="button"] {
 // Generic Buttons wrapper class
 // Default is left align, can be centered
 .buttons-wrapper {
+  display: flex;
+  flex-wrap: wrap;
   margin: -.5rem 0;
   .btn {
     margin: .5rem 1rem .5rem 0;
   }
   &-center {
-    text-align: center;
+    justify-content: center;
+    flex-direction: column;
     .btn {
       margin: .5rem;
+    }
+
+    @include media-breakpoint-up(sm) {
+      flex-direction: row;
     }
   }
 }

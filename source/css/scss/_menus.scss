@@ -14,8 +14,8 @@
     display: flex;
     flex-direction: column;
     visibility: hidden;
-    padding-right: $grid-gutter-width / 2;
-    padding-left: $grid-gutter-width / 2;
+    padding-right: calc($grid-gutter-width / 2);
+    padding-left: calc($grid-gutter-width / 2);
     transition: $main-menu-transition, visibility 0s linear 300ms;
     transform: translateY(-100%);
     will-change: transform;
@@ -354,7 +354,7 @@
     }
 
   }
-  
+
   // Sm and up
   @include media-breakpoint-up(sm) {
     width: $slide-menu-interne-width;

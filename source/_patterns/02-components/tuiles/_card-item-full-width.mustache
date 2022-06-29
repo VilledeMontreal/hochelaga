@@ -1,0 +1,70 @@
+
+{{# url}}
+<a href="{{ url }}" class="card {{ classes }}"{{# data-link-title}} data-link-title="{{data-link-title}}"{{/ data-link-title}}{{# data-link-position}} data-link-position="{{data-link-position}}"{{/ data-link-position}}{{# hreflang}} hreflang="{{hreflang}}"{{/ hreflang}}>
+{{/ url}}
+{{^ url}}
+<div class="card {{ classes }}">
+{{/ url}}
+  <div class="row w-100 no-gutters">
+
+    {{# card-media.document}}
+    <img class="card-img {{ card-media.document.img.classes }}" src="{{ card-media.document.img.src}}" alt="{{ card-media.document.img.alt }}">
+    {{/ card-media.document}}
+    {{# card-media.img }}
+    <div class="card-img-bg" style="background-image: url('{{ card-media.img.src }}')">
+      <span class="sr-only">{{card-media.img.alt}}</span>
+    </div>
+    {{/ card-media.img }}
+
+    {{# card-media.placeholder}}
+    <div class="card-img-bg img-placeholder" style="background-image:url(https://res.cloudinary.com/villemontreal/image/upload/q_auto,f_auto,dpr_auto,w_768,c_fill/v1571398706/portail/background/texture-Small-highlight.png)">
+      <span class="icon {{ card-media.placeholder.icon }}" aria-hidden="true"></span>
+    </div>
+    {{/ card-media.placeholder}}
+
+    <div class="card-body-wrapper">
+      <div class="card-body">
+        {{# card-type }}
+        <span class="card-type">{{ card-type }}</span>
+        {{/ card-type}}
+
+        {{# card-title }}
+        <span class="card-title">{{ card-title }}</span>
+        {{/ card-title }}
+
+        {{# card-badge }}
+        <div class="d-flex pb-2 mt-n1">
+          {{> components-etiquette}}
+        </div>
+        {{/ card-badge }}
+
+        {{# card-text }}
+        <p class="card-text">{{{ card-text }}}</p>
+        {{/ card-text }}
+
+        {{# card-text-interface }}
+        <div class="card-text-interface">
+          {{# date-time}}
+          <div class="font-weight-bold">
+            {{#date}}{{{text}}} <time datetime="{{dateTimeFormat}}">{{{dateTimeText}}}</time>{{# line-break}}<br>{{/ line-break}}{{/date}}
+          </div>
+          {{/ date-time}}
+          {{# info}}
+          <div>{{{info}}}</div>
+          {{/ info}}
+        </div>
+        {{/ card-text-interface }}
+
+        {{# card-link }}
+        <div class="card-link mt-4">{{ card-link }} <span class="icon{{^card-link-icon}} icon-arrow-right{{/card-link-icon}}{{#card-link-icon}} {{card-link-icon}}{{/card-link-icon}}" aria-hidden="true"></span></div>
+        {{/ card-link }}
+
+      </div>
+    </div>
+  </div>
+{{# url }}
+</a>
+{{/ url }}
+{{^url}}
+</div>
+{{/ url}}

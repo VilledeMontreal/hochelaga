@@ -1,0 +1,29 @@
+name: Publish NPM Package
+on:
+  push:
+    branches:
+      - master
+      - main
+      - develop
+    paths-ignore:
+      - '**.md'
+jobs:
+  publish-npm:
+    name: Publish npm packages
+    runs-on: ubuntu-latest
+    if: github.ref == 'refs/heads/master' || github.ref == 'refs/heads/main' || github.ref == 'refs/heads/develop'
+    steps:
+      - uses: actions/checkout@v2
+      - uses: actions/setup-node@v2
+        with:
+          node-version: '16'
+          registry-url: 'https://registry.npmjs.org'
+      - run: npm ci
+      - run: npm run publish:main
+        if: github.ref == 'refs/heads/master' || github.ref == 'refs/heads/main' && contains(github.event.head_commit.message, 'ci(release):')
+        env:
+          NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
+      - run: npm run publish:dev
+        if: github.ref == 'refs/heads/develop' && contains(github.event.head_commit.message, 'ci(prerelease):')
+        env:
+          NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}

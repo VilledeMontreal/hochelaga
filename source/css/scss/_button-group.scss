@@ -24,7 +24,7 @@
 
     &.disabled,
     &:disabled {
-      color: $neutral-secondary;
+      color: $neutral-tertiary;
     }
 
     // We need to fix padding and margin for btn-icon
@@ -38,7 +38,7 @@
       &.disabled,
       &:disabled {
         .icon {
-          @include icon-color($neutral-secondary);
+          @include icon-color($neutral-tertiary);
         }
       }
 

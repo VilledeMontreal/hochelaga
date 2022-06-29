@@ -19,7 +19,8 @@
       font-weight: $font-weight-normal;
     }
     .disabled,
-    a {
+    a,
+    button {
       background: transparent;
       border: none;
       color: $headings-color;
@@ -32,11 +33,11 @@
       line-height: $line-height-md;
       padding: 1rem 3.5rem 1rem 1rem;
       position: relative;
+      text-align: left;
+      width: 100%;
       &:after {
         position: absolute;
         right: 1rem;
-        top: 50%;
-        transform: translateY(-50%);
         content: '';
         -webkit-mask: url($data-icon-plus) no-repeat 50% 50%;
         mask: url($data-icon-plus) no-repeat 50% 50%;
@@ -91,6 +92,11 @@
         }
       }
 
+      &:focus {
+        box-shadow: $btn-focus-inset-box-shadow;
+        border-radius: subtract($border-radius, 1px);
+      }
+
       // TODO: Is this still needed?
       span {
         &.collapsible-icon {
@@ -106,7 +112,10 @@
         background-color: $neutral-stroke;
       }
       &:hover,
-      &:active {
+      &:active,
+      &:focus {
+        box-shadow: none;
+        border-radius: 0;
         cursor: not-allowed;
         color: $neutral-stroke;
         &:after {
@@ -128,8 +137,8 @@
     h6, .h6 {
       padding-top: 0;
     }
-    > *:last-child {
-      margin-bottom: 1rem;
+    > :last-child {
+      margin-bottom: 0;
     }
   }
 
@@ -148,7 +157,8 @@
     }
 
     .collapsible-header {
-      a {
+      a,
+      button {
         &:after {
           -webkit-mask: url($data-icon-chevron-down) no-repeat 50% 50%;
           mask: url($data-icon-chevron-down) no-repeat 50% 50%;

@@ -1,0 +1,38 @@
+<h4 class="pl-pattern-subtitle">Tailles</h4>
+<div class="row">
+  {{# inputTextSize}}
+  <div class="col-xs-6 col-md-4">
+    {{> components-input-text }}
+  </div>
+  {{/ inputTextSize}}
+</div>
+
+<h4 class="pl-pattern-subtitle">Validation</h4>
+<div class="row">
+  {{# inputTextSizeError}}
+  <div class="col-xs-6 col-md-4">
+    {{> components-input-text }}
+  </div>
+  {{/ inputTextSizeError}}
+</div>
+
+<h4 class="pl-pattern-subtitle">États</h4>
+<div class="row">
+  {{# inputTextState}}
+  <div class="col-xs-6 col-md-4">
+    {{> components-input-text}}
+  </div>
+  {{/ inputTextState}}
+  <div class="col-xs-6 col-md-4">
+    <div class="form-group has-clear">
+      <label for="form-group-input-clear">Rempli</label>
+      <div class="input-group-icon">
+        <input type="text" class="form-control" id="form-group-input-clear" value="jonathan Levingston">
+        <button class="btn-clear">
+          <span class="icon icon-x-circle-full icon-sm">
+          <span class="sr-only">Clear search input</span>
+        </button>
+      </div>
+    </div>
+  </div>
+</div>

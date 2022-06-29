@@ -1,0 +1,61 @@
+{
+  "formGroupClass": false,
+  "formGroupInputID": "form-control-input-file-v2",
+  "formGroupInputLabel": "Libellé",
+  "formGroupFileID": "file-droparea-v2",
+  "formGroupFileDropID": "form-group-file-upload",
+  "formGroupFileDropLabel": "Parcourir",
+  "formGroupFileDropHelpText": "ou déposer votre fichier ici",
+  "dropdownMenu": {
+    "dropdownMenuClass": "dropdown-menu-right",
+    "dropdownMenuID": "dropdownMoreVertical-3",
+    "dropdownSection": [
+      {
+        "dropdownItem": [
+          {
+            "url": "#",
+            "dropdownItemLabel": "Libellé"
+          },
+          {
+            "url": "#",
+            "dropdownItemLabel": "Libellé"
+          }
+        ]
+      }
+    ]
+  },
+  "listUploadedFiles": {
+    "listUploadedItems": [
+      {
+        "media": {
+          "img" : {
+            "src": "https://picsum.photos/id/1062/40/40",
+            "alt": "Alt pour image #1."
+          }
+        },
+        "fileName": "nom-du-fichier.jpg",
+        "fileSize": "12 Mo"
+      },
+      {
+        "media": {
+          "img" : {
+            "src": "https://picsum.photos/id/1062/40/40",
+            "alt": "Alt pour image #2."
+          }
+        },
+        "fileName": "nom-du-fichier-2.jpg",
+        "fileSize": "1 Mo"
+      },
+      {
+        "media": {
+          "img" : {
+            "src": "https://picsum.photos/id/1062/40/40",
+            "alt": "Alt pour image #3."
+          }
+        },
+        "fileName": "nom-du-fichier-3.jpg",
+        "fileSize": "500 Ko"
+      }
+    ]
+  }
+}

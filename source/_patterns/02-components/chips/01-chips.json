@@ -1,13 +1,59 @@
 {
-  "chips":[
+  "chips-simple": [
     {
       "chipLabel": "Libellé",
       "chipClass": false,
-      "chipID": "chipExamplePlain",
+      "chipID": "chipExampleSimple",
       "has-icon": false,
       "is-dropdown": false,
       "dropdownMenu": false
     },
+    {
+      "chipLabel": "Libellé",
+      "chipClass": "active",
+      "chipID": "chipExampleSimpleActive",
+      "has-icon": false,
+      "is-dropdown": false,
+      "dropdownMenu": false
+    },
+    {
+      "chipLabel": "Libellé",
+      "chipClass": "disabled",
+      "chipID": "chipExampleSimpleDisabled",
+      "has-icon": false,
+      "is-dropdown": false,
+      "dropdownMenu": false,
+      "chipState": "disabled"
+    }
+  ],
+  "chips-simple-sm": [
+    {
+      "chipLabel": "Libellé",
+      "chipClass": "chip-sm",
+      "chipID": "chipExampleSimple",
+      "has-icon": false,
+      "is-dropdown": false,
+      "dropdownMenu": false
+    },
+    {
+      "chipLabel": "Libellé",
+      "chipClass": "chip-sm active",
+      "chipID": "chipExampleSimpleActive",
+      "has-icon": false,
+      "is-dropdown": false,
+      "dropdownMenu": false
+    },
+    {
+      "chipLabel": "Libellé",
+      "chipClass": "chip-sm disabled",
+      "chipID": "chipExampleSimpleDisabled",
+      "has-icon": false,
+      "is-dropdown": false,
+      "dropdownMenu": false,
+      "chipState": "disabled"
+    }
+  ],
+  "chips-menu":[
     {
       "chipLabel": "Libellé",
       "chipClass": false,
@@ -66,28 +112,20 @@
     },
     {
       "chipLabel": "Libellé",
-      "chipClass": "active",
-      "chipID": "chipExampleDeletable",
-      "has-icon": {
-        "icon-name": "icon-x-circle-full"
-      },
-      "is-dropdown": false,
-      "dropdownMenu": false
+      "chipClass": "disabled",
+      "chipID": "chipExampleTriggerDropdownDisabled",
+      "has-icon": false,
+      "is-dropdown": true,
+      "dropdownMenu": false,
+      "chipState": "disabled"
     }
   ],
-  "chips-sm":[
-    {
-      "chipLabel": "Libellé",
-      "chipClass": "chip-sm",
-      "chipID": "chipSmExamplePlain",
-      "has-icon": false,
-      "is-dropdown": false,
-      "dropdownMenu": false
-    },
+  "chips-menu-sm":[
     {
       "chipLabel": "Libellé",
       "chipClass": "chip-sm",
       "chipID": "chipSmExampleTriggerDropdown",
+      "has-icon": false,
       "is-dropdown": true,
       "dropdownMenu": {
         "dropdownMenuID": "chipSmExampleTriggerDropdown",
@@ -115,6 +153,7 @@
       "chipLabel": "Libellé (99)",
       "chipClass": "chip-sm active",
       "chipID": "chipSmExampleTriggerDropdownActive",
+      "has-icon": false,
       "is-dropdown": true,
       "dropdownMenu": {
         "dropdownMenuID": "chipSmExampleTriggerDropdownActive",
@@ -140,6 +179,106 @@
     },
     {
       "chipLabel": "Libellé",
+      "chipClass": "chip-sm disabled",
+      "chipID": "chipSmExampleTriggerDropdownDisabled",
+      "has-icon": false,
+      "is-dropdown": true,
+      "dropdownMenu": false,
+      "chipState": "disabled"
+    }
+  ],
+  "chips-modale": [
+    {
+      "chipLabel": "Libellé",
+      "chipClass": "",
+      "chipID": "chipExampleModal",
+      "has-icon": {
+        "icon-name": "icon-filters"
+      },
+      "is-dropdown": false,
+      "dropdownMenu": false
+    },
+    {
+      "chipLabel": "Libellé",
+      "chipClass": "active",
+      "chipID": "chipExampleModalActive",
+      "has-icon": {
+        "icon-name": "icon-filters"
+      },
+      "is-dropdown": false,
+      "dropdownMenu": false
+    },
+    {
+      "chipLabel": "Libellé",
+      "chipClass": "",
+      "chipID": "chipExampleModalDisabled",
+      "has-icon": {
+        "icon-name": "icon-filters"
+      },
+      "is-dropdown": false,
+      "dropdownMenu": false,
+      "chipState": "disabled"
+    }
+  ],
+  "chips-modale-sm": [
+    {
+      "chipLabel": "Libellé",
+      "chipClass": "chip-sm",
+      "chipID": "chipSmExampleModal",
+      "has-icon": {
+        "icon-name": "icon-filters"
+      },
+      "is-dropdown": false,
+      "dropdownMenu": false
+    },
+    {
+      "chipLabel": "Libellé",
+      "chipClass": "chip-sm active",
+      "chipID": "chipSmExampleModalActive",
+      "has-icon": {
+        "icon-name": "icon-filters"
+      },
+      "is-dropdown": false,
+      "dropdownMenu": false
+    },
+    {
+      "chipLabel": "Libellé",
+      "chipClass": "chip-sm",
+      "chipID": "chipSmExampleModalDisabled",
+      "has-icon": {
+        "icon-name": "icon-filters"
+      },
+      "is-dropdown": false,
+      "dropdownMenu": false,
+      "chipState": "disabled"
+    }
+  ],
+  "chips-supprimer": [
+    {
+      "chipLabel": "Libellé",
+      "chipClass": "active",
+      "chipID": "chipExampleDeletable",
+      "has-icon": {
+        "icon-name": "icon-x-circle-full"
+      },
+      "is-dropdown": false,
+      "dropdownMenu": false
+    },
+    {
+      "chipLabel": "Libellé",
+      "chipClass": "disabled",
+      "chipID": "chipExampleDeletableDisabled",
+      "has-icon": {
+        "icon-name": "icon-x-circle-full"
+      },
+      "is-dropdown": false,
+      "dropdownMenu": false,
+      "chipState": "disabled"
+    }
+  ],
+  "chips-supprimer-sm": [
+    {
+      "chipLabel": "Libellé",
       "chipClass": "chip-sm active",
       "chipID": "chipSmExampleDeletable",
       "has-icon": {
@@ -147,80 +286,17 @@
       },
       "is-dropdown": false,
       "dropdownMenu": false
-    }
-  ],
-  "chips-xs":[
-    {
-      "chipLabel": "Libellé",
-      "chipClass": "chip-xs",
-      "chipID": "chipXsExamplePlain",
-      "has-icon": false,
-      "is-dropdown": false,
-      "dropdownMenu": false
     },
     {
       "chipLabel": "Libellé",
-      "chipClass": "chip-xs",
-      "chipID": "chipXsExampleTriggerDropdown",
-      "is-dropdown": true,
-      "dropdownMenu": {
-        "dropdownMenuID": "chipXsExampleTriggerDropdown",
-        "dropdownSection": [
-          {
-            "dropdownItem": [
-              {
-                "url": "#",
-                "dropdownItemLabel": "Libellé"
-              },
-              {
-                "url": "#",
-                "dropdownItemLabel": "Libellé"
-              },
-              {
-                "url": "#",
-                "dropdownItemLabel": "Libellé"
-              }
-            ]
-          }
-        ]
-      }
-    },
-    {
-      "chipLabel": "Libellé (99)",
-      "chipClass": "chip-xs active",
-      "chipID": "chipXsExampleTriggerDropdownActive",
-      "is-dropdown": true,
-      "dropdownMenu": {
-        "dropdownMenuID": "chipXsExampleTriggerDropdownActive",
-        "dropdownSection": [
-          {
-            "dropdownItem": [
-              {
-                "url": "#",
-                "dropdownItemLabel": "Libellé"
-              },
-              {
-                "url": "#",
-                "dropdownItemLabel": "Libellé"
-              },
-              {
-                "url": "#",
-                "dropdownItemLabel": "Libellé"
-              }
-            ]
-          }
-        ]
-      }
-    },
-    {
-      "chipLabel": "Libellé",
-      "chipClass": "chip-xs active",
-      "chipID": "chipXsExampleDeletable",
+      "chipClass": "chip-sm disabled",
+      "chipID": "chipSmExampleDeletableDisabled",
       "has-icon": {
         "icon-name": "icon-x-circle-full"
       },
       "is-dropdown": false,
-      "dropdownMenu": false
+      "dropdownMenu": false,
+      "chipState": "disabled"
     }
   ]
 }

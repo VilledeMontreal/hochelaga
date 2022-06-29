@@ -31,7 +31,9 @@
     {{# customLabel}}
     <span class="mr-1">{{ customLabel }}</span>
     {{/ customLabel}}
-    {{# linkedContentItem}}<a href="{{url}}" class="mr-1">{{label}}</a>{{/ linkedContentItem}}
+    <ul class="list-inline">
+    {{# linkedContentItem}}<li class="list-inline-item"><a href="{{url}}">{{label}}</a></li>{{/ linkedContentItem}}
+    </ul>
   </div>
   {{/ linkedContent}}
 </div>

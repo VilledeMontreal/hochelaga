@@ -195,20 +195,21 @@
               "card-title": "Lien de référence à un événement vedette",
               "card-text": false,
               "card-text-interface": {
-                "date-range": true,
-                "date-time": [
-                  {
-                    "line-break": true,
-                    "text": "Du ",
-                    "dateTimeFormat": "2019-12-12",
-                    "dateTimeText": "12 décembre 2019 - 8&nbsp;h&nbsp;00"
-                  },
-                  {
-                    "text": "au ",
-                    "dateTimeFormat": "2019-12-22",
-                    "dateTimeText": "22 décembre 2019 - 18&nbsp;h&nbsp;00"
-                  }
-                ]
+                "date-time": {
+                  "date": [
+                    {
+                      "line-break": true,
+                      "text": "Du ",
+                      "dateTimeFormat": "2019-12-12",
+                      "dateTimeText": "12 décembre 2019"
+                    },
+                    {
+                      "text": "au ",
+                      "dateTimeFormat": "2019-12-22",
+                      "dateTimeText": "22 décembre 2019"
+                    }
+                  ]
+                }
               }
             }
           ]
@@ -277,7 +278,7 @@
           "url": "https://desjardins.com",
           "name": "Partenaire A",
           "logo": {
-            "src": "https://logoipsum.com/logo/logo-15.svg",
+            "src": "https://placeholder.com/wp-content/uploads/2018/10/placeholder.com-logo3.jpg",
             "alt": "Partenaire A"
           }
         },
@@ -298,7 +299,7 @@
           "url": "https://google.com",
           "name": "Partenaire D",
           "logo": {
-            "src": "https://logoipsum.com/logo/logo-12.svg",
+            "src": "https://placeholder.com/wp-content/uploads/2018/10/placeholder.com-logo2.jpg",
             "alt": "Partenaire D"
           }
         },
@@ -306,7 +307,7 @@
           "url": false,
           "name": "Partenaire E",
           "logo": {
-            "src": "https://logoipsum.com/logo/logo-4.svg",
+            "src": "https://placeholder.com/wp-content/uploads/2018/10/placeholder.com-logo4.jpg",
             "alt": "Partenaire E"
           }
         },
@@ -314,7 +315,7 @@
           "url": "https://google.com",
           "name": "Partenaire F",
           "logo": {
-            "src": "https://logoipsum.com/logo/logo-16.svg",
+            "src": "https://placeholder.com/wp-content/uploads/2018/10/placeholder.com-logo3.jpg",
             "alt": "Partenaire F"
           }
         }

@@ -1,0 +1,93 @@
+{
+  "inputTextSize": [
+    {
+      "formGroupClass": "required",
+      "formGroupInputID": "form-control-default-one",
+      "formGroupInputRequired": true,
+      "formGroupInputLabel": "Libellé",
+      "formGroupPopover": true,
+      "formGroupInputPlaceholder": {
+        "text": "Placeholder"
+      },
+      "formGroupInputHelpText": {
+        "id": "input-text-help-text-id",
+        "text": "Texte d'assistance"
+      },
+      "formGroupInputCounter": {
+        "id": "input-text-caracter-count",
+        "text": "Compteur de caractères"
+      }
+    },
+    {
+      "formGroupClass": "form-group-sm required",
+      "formGroupInputID": "form-control-sm-one",
+      "formGroupInputRequired": true,
+      "formGroupInputLabel": "Libellé",
+      "formGroupPopover": true,
+      "formGroupInputPlaceholder": {
+        "text": "Placeholder"
+      },
+      "formGroupInputHelpText": {
+        "id": "input-text-sm-help-text-id",
+        "text": "Texte d'assistance"
+      },
+      "formGroupInputCounter": {
+        "id": "input-text-sm-caracter-count",
+        "text": "Compteur de caractères"
+      }
+    }
+  ],
+  "inputTextSizeError": [
+    {
+      "formGroupClass": "required",
+      "formGroupInputID": "form-control-default-error-one",
+      "formGroupInputClass": "is-invalid",
+      "formGroupInputRequired": true,
+      "formGroupInputLabel": "En erreur",
+      "formGroupInputPlaceholder": {
+        "text": "Placeholder"
+      },
+      "formGroupInputHelpText": false,
+      "formGroupInputError": {
+        "id": "input-text-error-id",
+        "text": "Texte d'erreur"
+      }
+    },
+    {
+      "formGroupClass": "form-group-sm required",
+      "formGroupInputID": "form-control-sm-error-one",
+      "formGroupInputClass": "is-invalid",
+      "formGroupInputRequired": true,
+      "formGroupInputLabel": "En erreur",
+      "formGroupInputPlaceholder": {
+        "text": "Placeholder"
+      },
+      "formGroupInputHelpText": false,
+      "formGroupInputError": {
+        "id": "input-text-sm-error-id",
+        "text": "Texte d'erreur"
+      }
+    }
+  ],
+  "inputTextState": [
+    {
+      "formGroupClass": false,
+      "formGroupInputID": "form-control-input-text-disabled",
+      "formGroupInputLabel": "Désactivé",
+      "formGroupInputRequired": false,
+      "formGroupInputPlaceholder": "désactivé",
+      "formGroupInputHelpText": false,
+      "formGroupInputState": "disabled"
+    },
+    {
+      "formGroupClass": false,
+      "formGroupInputID": "form-control-input-text-readonly",
+      "formGroupInputLabel": "Read-only",
+      "formGroupInputClass": false,
+      "formGroupInputRequired": false,
+      "formGroupInputPlaceholder": "read-only",
+      "formGroupInputHelpText": false,
+      "formGroupInputState": "readonly"
+    }
+  ]
+}

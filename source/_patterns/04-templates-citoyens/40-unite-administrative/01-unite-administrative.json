@@ -190,7 +190,9 @@
           "card-type": false,
           "card-title": "Titre",
           "card-text": false,
-          "card-text-interface": "Description",
+          "card-text-interface": {
+            "info": "Description"
+          },
           "card-link": "Libellé du lien",
           "card-link-icon": "icon-externallink"
         }
@@ -219,7 +221,9 @@
           "card-type": "Type",
           "card-title": "Titre du document",
           "card-text": false,
-          "card-text-interface": "PDF X Mo",
+          "card-text-interface": {
+            "info": "PDF X Mo"
+          },
           "card-link": "Télécharger"
         }
       ]

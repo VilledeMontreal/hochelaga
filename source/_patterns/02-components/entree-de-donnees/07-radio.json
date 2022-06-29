@@ -1,0 +1,56 @@
+{
+  "formRadios": {
+    "formGroupLabel": "Libellé",
+    "formGroupClass": "required",
+    "formGroupInputHelpText": {
+      "id": "radios-help-text-id",
+      "text": "Texte d'assistance"
+    },
+    "formRadiosItems": [
+      {
+        "class": "",
+        "id": "rdio01-1",
+        "label": "Libellé",
+        "name": "radiosGroup"
+      },
+      {
+        "class": "",
+        "id": "rdio03-1",
+        "label": "Libellé",
+        "state": "checked",
+        "name": "radiosGroup"
+      },
+      {
+        "class": "",
+        "id": "rdio04-1",
+        "label": "Libellé",
+        "state": "disabled",
+        "name": "radiosGroup"
+      }
+    ]
+  },
+  "formRadiosInline": {
+    "formRadiosItems": [
+      {
+        "class": "custom-control-inline",
+        "id": "rdio01-4",
+        "label": "Libellé",
+        "name": "radiosGroupInline"
+      },
+      {
+        "class": "custom-control-inline",
+        "id": "rdio03-4",
+        "label": "Libellé",
+        "state": "checked",
+        "name": "radiosGroupInline"
+      },
+      {
+        "class": "custom-control-inline",
+        "id": "rdio04-4",
+        "label": "Libellé",
+        "state": "disabled",
+        "name": "radiosGroupInline"
+      }
+    ]
+  }
+}

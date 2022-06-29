@@ -1,0 +1,53 @@
+{
+  "formCheckboxes": {
+    "formGroupLabel": "Libellé",
+    "formGroupInputRequired": true,
+    "formGroupInputHelpText": {
+      "id": "checkbox-help-text-id",
+      "text": "Texte d'assistance"
+    },
+    "formCheckboxItems": [
+      {
+        "class": "",
+        "id": "chk01-2",
+        "label": "Libellé",
+        "state": false
+      },
+      {
+        "class": "",
+        "id": "chk02-2",
+        "label": "Libellé",
+        "state": "checked"
+      },
+      {
+        "class": "",
+        "id": "chk03-2",
+        "label": "Libellé",
+        "state": "disabled"
+      }
+    ]
+  },
+  "formCheckboxesInline": {
+    "formGroupLabel": false,
+    "formCheckboxItems": [
+      {
+        "class": "custom-control-inline",
+        "id": "chk01-5",
+        "label": "Libellé",
+        "state": false
+      },
+      {
+        "class": "custom-control-inline",
+        "id": "chk02-5",
+        "label": "Libellé",
+        "state": "checked"
+      },
+      {
+        "class": "custom-control-inline",
+        "id": "chk03-5",
+        "label": "Libellé",
+        "state": "disabled"
+      }
+    ]
+  }
+}

@@ -1,0 +1,102 @@
+{
+  "textareaSize": [
+    {
+      "formGroupClass": false,
+      "formGroupInputID": "form-control-textarea-default",
+      "formGroupInputLabel": "Libellé",
+      "formGroupInputPlaceholder": {
+        "text": "Placeholder"
+      },
+      "formGroupInputHelpText": {
+        "id": "form-group-textearea-help-text",
+        "text": "Texte d'assistance."
+      },
+      "formGroupInputCounter": {
+        "id": "textarea-caracter-count",
+        "text": "compteur de caractères"
+      },
+      "formGroupPopover": true,
+      "formGroupTextareaRows": "5"
+    },
+    {
+      "formGroupClass": "form-group-sm",
+      "formGroupInputID": "form-control-textarea-sm",
+      "formGroupInputLabel": "Libellé",
+      "formGroupInputPlaceholder": {
+        "text": "Placeholder"
+      },
+      "formGroupInputHelpText": {
+        "id": "form-group-textearea-sm-help-text",
+        "text": "Texte d'assistance."
+      },
+      "formGroupInputCounter": {
+        "id": "textarea-sm-caracter-count",
+        "text": "compteur de caractères"
+      },
+      "formGroupPopover": true,
+      "formGroupTextareaRows": "3"
+    }
+  ],
+  "textareaValidation": [
+    {
+      "formGroupClass": "form-group-required",
+      "formGroupInputID": "form-control-textarea-default-validation",
+      "formGroupInputClass": "is-invalid",
+      "formGroupInputRequired": true,
+      "formGroupInputLabel": "Libellé",
+      "formGroupInputPlaceholder": {
+        "text": "Placeholder"
+      },
+      "formGroupInputHelpText": {
+        "id": "form-group-textearea-error-help-text",
+        "text": "Texte d'assistance."
+      },
+      "formGroupTextareaRows": "5",
+      "formGroupInputError": {
+        "id": "form-group-textarea-error-text",
+        "text": "Texte d'erreur"
+      }
+    },
+    {
+      "formGroupClass": "form-group-sm form-group-required",
+      "formGroupInputID": "form-control-textarea-sm-validation",
+      "formGroupInputClass": "is-invalid",
+      "formGroupInputRequired": true,
+      "formGroupInputLabel": "Libellé",
+      "formGroupInputPlaceholder": {
+        "text": "Placeholder"
+      },
+      "formGroupInputHelpText": {
+        "id": "form-group-sm-textearea-help-text",
+        "text": "Texte d'assistance."
+      },
+      "formGroupTextareaRows": "3",
+      "formGroupInputError": {
+        "id": "form-group-sm-textarea-error-text",
+        "text": "Texte d'erreur"
+      }
+    }
+  ],
+  "textareaState": [
+    {
+      "formGroupClass": false,
+      "formGroupInputID": "form-control-textarea-default-state",
+      "formGroupInputClass": false,
+      "formGroupInputRequired": false,
+      "formGroupInputLabel": "Libellé",
+      "formGroupInputPlaceholder":{
+        "text": "Placeholder"
+      },
+      "formGroupInputHelpText": {
+        "id": "form-group-sm-textearea-disabled-help-text",
+        "text": "Texte d'assistance"
+      },
+      "formGroupTextareaRows": "5",
+      "formGroupInputState": "disabled",
+      "formGroupInputError": {
+        "id": "form-group-textarea-disabled-error-text",
+        "text": "texte d'erreur"
+      }
+    }
+  ]
+}

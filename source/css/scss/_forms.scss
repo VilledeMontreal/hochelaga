@@ -29,6 +29,30 @@ label {
   }
 }
 
+.label-has-popover {
+  display: flex;
+  > * {
+    margin: 0;
+  }
+  .form-popover {
+    margin-left: .25rem;
+    align-self: flex-start; // Use to avoid height issues
+
+    .icon {
+      @include icon-color($action);
+    }
+
+    &:focus,
+    &:focus {
+      .icon {
+        @include icon-color($action-darker);
+      }
+    }
+  }
+}
+
+
+
 
 legend,
 .group-label {
@@ -89,6 +113,16 @@ legend,
       padding: $btn-padding-y $btn-padding-x-sm;
     }
   }
+
+  > :not([class*=custom-control]):not(:last-child) {
+    margin-top: 0;
+    margin-bottom: .5rem;
+  }
+
+  > :not([class*=custom-control]):last-child {
+    margin-top: 0;
+    margin-bottom: 0;
+  }
 }
 
 // Required fields
@@ -101,10 +135,6 @@ legend,
       padding-left: .25rem;
     }
   }
-}
-
-.form-text {
-  margin-top: .5rem;
 }
 
 .input-group-icon {
@@ -196,6 +226,17 @@ legend,
     margin-right: .3rem;
     padding: 0;
     border-radius: 50%;
+
+    .icon {
+      @include icon-color($action);
+    }
+
+    &:hover,
+    &:focus {
+      .icon {
+        @include icon-color($action-darker);
+      }
+    }
   }
 }
 
@@ -307,7 +348,7 @@ legend,
 // Custom checkboxes and radios themed as card
 .custom-control-card {
   padding: 0;
-  margin-bottom: 1.5rem;
+  margin-bottom: 1rem;
 
   .custom-control-label {
     display: flex;
@@ -350,6 +391,7 @@ legend,
   }
 
   .custom-control-input:disabled ~ .custom-control-label {
+    border-color: $neutral-underground-2;
     .card-title, .card-label {
       color: $custom-control-label-disabled-color;
     }
@@ -383,7 +425,7 @@ legend,
     padding-right: $custom-switch-width + $custom-control-gutter;
     &::before {
       // Center vertically
-      top: calc(50% - (#{.75rem}/2));
+      top: calc(50% - calc(.75rem / 2));
       right: 0;
       left: auto;
       width: 2rem;
@@ -396,14 +438,14 @@ legend,
 
     &::after {
       // Center vertically
-      top: calc(50% - (#{$custom-switch-indicator-size}/2));
-      right: ($custom-switch-width/2);
+      top: calc(50% - calc($custom-switch-indicator-size / 2));
+      right: calc($custom-switch-width / 2);
       left: auto;
       width: $custom-switch-indicator-size;
       height: $custom-switch-indicator-size;
       margin: 0;
       background-color: $custom-switch-indicator-handle;
-      border: 1px solid $neutral-tertiary;
+      border: 1px solid $action;
       border-radius: 50%;
       box-shadow: $shadow-moderate;
       @include transition(transform .15s ease-in-out, $custom-forms-transition);
@@ -413,7 +455,7 @@ legend,
 
   .custom-control-input:checked ~ .custom-control-label {
     &::before {
-      background-color: $custom-switch-indicator-checked-bg;
+      background-color: $custom-switch-indicator-bg;
     }
     &::after {
       background-color: $custom-switch-indicator-checked-handle;
@@ -428,18 +470,17 @@ legend,
     // Inactive disabled state
     ~ .custom-control-label::after {
       background-color: $custom-switch-indicator-handle-disabled;
-      border-color: $custom-switch-indicator-checked-handle-disabled;
+      border-color: $custom-switch-indicator-handle-disabled;
       cursor: not-allowed;
     }
     // Active disabled background
     &:checked ~ .custom-control-label::before {
-      background-color: $custom-switch-indicator-bg;
       cursor: not-allowed;
     }
     // Active disabled handle state
     &:checked ~ .custom-control-label::after {
-      background-color: $custom-switch-indicator-checked-handle-disabled;
-      border-color: $custom-switch-indicator-checked-handle-disabled;
+      background-color: $custom-switch-indicator-handle-disabled;
+      border-color: $custom-switch-indicator-handle-disabled;
       cursor: not-allowed;
     }
   }
@@ -460,6 +501,12 @@ legend,
   label {
     @include font-size($font-size-sm);
     line-height: $line-height-sm;
+  }
+  .form-popover {
+    line-height: $line-height-sm;
+    .icon {
+      @include icon-size($icon-sm);
+    }
   }
 
   small,
@@ -569,11 +616,11 @@ legend,
   .custom-switch {
     .custom-control-label {
       &::before {
-        top: calc(#{($line-height-xs - .75rem) / 2});
+        top: calc(($line-height-xs - .75rem) / 2);
       }
 
       &::after {
-        top: calc(#{($line-height-xs - $custom-control-indicator-size) / 2});
+        top: calc(($line-height-xs - $custom-control-indicator-size) / 2);
       }
     }
   }
@@ -763,6 +810,7 @@ legend,
   }
 
   .file-selector-button {
+    margin: 0;
     label {
       &:after {
         content: none;
@@ -890,4 +938,3 @@ legend,
     }
   }
 }
-

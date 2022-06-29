@@ -1,0 +1,47 @@
+<div class="form-group {{ formGroupClass }}">
+  {{^ formGroupNoLabel}}
+  <label for="{{formGroupInputID}}">{{ formGroupInputLabel}}</label>
+  {{/ formGroupNoLabel}}
+  {{# formGroupInputHelpText}}
+  <span id="{{id}}" class="form-text">{{ text }}</span>
+  {{/ formGroupInputHelpText}}
+  <div class="file-drop-container-v2 {{formGroupFileClass}}" id="{{formGroupFileID}}">
+    <div class="file-selector-button">
+      <input type="file" id="{{ formGroupFileDropID}}" class="sr-only"{{^formGroupInputError}}{{# formGroupInputHelpText}} aria-describedby="{{id}}"{{/ formGroupInputHelpText}}{{/formGroupInputError}}{{#formGroupInputError}} aria-describedby="{{id}}"{{/formGroupInputError}}{{# formGroupFileState}} {{formGroupFileState}}{{/ formGroupFileState}}>
+      <label class="btn btn-secondary btn-squared" for="{{ formGroupFileDropID}}">{{ formGroupFileDropLabel }}</label>
+    </div>
+    <span class="help-text">{{ formGroupFileDropHelpText }}</span>
+  </div>
+  {{# formGroupInputError}}
+  <div class="invalid-feedback" id="{{id}}">{{ text }}</div>
+  {{/ formGroupInputError}}
+
+  {{# listUploadedFiles}}
+  <div id="file-list-teaser" class="mt-2">
+    <ul class="list-unstyled">
+      {{# listUploadedItems}}
+      <li class="media py-1{{# media.icon}} align-items-center{{/media.icon}}">
+        {{# media.img}}
+        <img src="{{ src }}" width="40" height="40" class="mr-2" alt="{{ alt }}">
+        {{/ media.img}}
+        {{# media.icon}}
+        <div class="mr-2">
+          {{> styles-icon-item}}
+        </div>
+        {{/ media.icon}}
+        <div class="media-body">
+          <div class="font-size-sm-interface font-weight-bold text-dark">{{ fileName}}</div>
+          <div class="font-size-xs-interface">{{ fileSize}}</div>
+        </div>
+        <div class="ml-2 dropdown">
+          <button class="btn btn-primary btn-reversed btn-icon" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" aria-label="Button aria label">
+            <span class="icon icon-more-vertical" aria-hidden="true"></span>
+          </button>
+          {{> components-dropdown}}
+        </div>
+      </li>
+      {{/ listUploadedItems}}
+    </ul>
+  </div>
+  {{/ listUploadedFiles}}
+</div>

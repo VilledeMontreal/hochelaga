@@ -194,8 +194,7 @@ $pl-size-box-wrapper-padding: 1rem;
 
   .pl-size-box {
     text-align: center;
-    margin: $pl-size-box-wrapper-padding/2 auto $pl-size-box-wrapper-padding/2
-      auto;
+    margin: calc($pl-size-box-wrapper-padding / 2) auto calc($pl-size-box-wrapper-padding / 2) auto;
   }
   .pl-size-box-margin {
     background: darken($gray-100, 20%);
@@ -913,7 +912,7 @@ $pl-size-box-wrapper-padding: 1rem;
 // View all don't have body class...
 // Hack for VDL311
 [id^='templates-outils-interne-vue-agent-311'] {
-  min-height: calc(100vh -72px);
+  min-height: calc(100vh - 72px);
   .sg-pattern-example {
     position: relative;
     .main-content {
