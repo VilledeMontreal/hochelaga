@@ -1,11 +1,11 @@
-<nav class="nav-tabs {{navTabsClass}}">
+<nav class="nav-tabs {{navTabsClass}}" aria-label="Nav label">
   {{# inContainer}}
   <div class="container">
   {{/ inContainer}}
     <ul class="nav" role="tablist">
       {{# navTabs.navItem }}
       <li class="nav-item {{liClass}}" role="presentation">
-        <a href="{{ url }}" class="nav-link {{ class }}" role="tab" data-toggle="tab">{{ title }}</a>
+        <button type="button" class="nav-link {{ class }}" role="tab" data-toggle="tab" aria-controls={{tabContentId}} {{#isDisabled}}tabindex="-1" aria-disabled="true"{{/isDisabled}}>{{ title }}</button>
       </li>
       {{/ navTabs.navItem }}
     </ul>

@@ -46,7 +46,7 @@ nav {
 
 // Nav tabs
 .nav-tabs {
-  background-color: $white;
+  background-color: $neutral-ground;
   flex-wrap: nowrap;
   overflow-x: auto;
   overflow-y: hidden;
@@ -63,8 +63,6 @@ nav {
   }
   .nav {
     flex-wrap: nowrap;
-    margin-left: -1rem;
-    width: calc(100% + 1rem);
   }
   .nav-item {
     display: inline-block;
@@ -84,32 +82,36 @@ nav {
   }
   .nav-link {
     flex-shrink: 0;
+    background-color: $neutral-ground;
     color: $neutral-secondary;
     @include font-size($font-size-sm);
     line-height: $line-height-sm;
     font-weight: $font-weight-bold;
-    padding: .625rem 1rem;
+    padding: .625rem;
     position: relative;
     white-space: normal;
     &:hover,
-    &.active,
-    &:focus {
+    &.active {
       &:not(.disabled) {
         border: none;
         color: $action;
-        background-color: $white;
+        background-color: $neutral-ground;
         &:before {
           content: " ";
           width: auto;
           height: $nav-tabs-active-border-width;
           background-color: $action;
           position: absolute;
+          left: 0;
+          right: 0;
           bottom: 0;
-          left: 1rem;
-          right: 1rem;
           display: block;
         }
       }
+    }
+    &:focus {
+      background-color: $neutral-ground;
+      box-shadow: $btn-focus-inset-box-shadow;
     }
     // Disabled state lightens text
     &.disabled {
@@ -129,10 +131,6 @@ nav {
 // Nav Tabs Small variant
 .nav-tabs-sm {
   @include nav-tabs-size(.5rem, .5rem, $font-size-xs, $line-height-xs);
-  .nav {
-    margin-left: -.5rem;
-    width: calc(100% + .5rem);
-  }
 }
 
 // Nav filters

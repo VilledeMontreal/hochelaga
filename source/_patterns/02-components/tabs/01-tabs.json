@@ -3,19 +3,24 @@
     "navItem": [
       {
         "class": "active show",
-        "title": "Nav item #1"
+        "title": "Nav item #1",
+        "tabContentId": "tabContent1"
       },
       {
         "class": false,
-        "title": "Nav item #2"
+        "title": "Nav item #2",
+        "tabContentId": "tabContent2"
       },
       {
         "class": false,
-        "title": "Longer label for nav item #3"
+        "title": "Longer label for nav item #3",
+        "tabContentId": "tabContent3"
       },
       {
         "class": "disabled",
-        "title": "Nav item #4"
+        "title": "Nav item #4",
+        "tabContentId": "tabContent4",
+        "isDisabled": true
       }
     ]
   }

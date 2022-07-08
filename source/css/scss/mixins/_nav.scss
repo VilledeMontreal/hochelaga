@@ -4,15 +4,5 @@
     @include font-size($font-size);
     line-height: $line-height;
     padding: $padding-y $padding-x;
-    &:hover,
-    &.active,
-    &:focus {
-      &:not(.disabled) {
-        &:before {
-          left: $padding-x;
-          right: $padding-x;
-        }
-      }
-    }
   }
 }
