@@ -4,6 +4,10 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](http://keepachangelog.com/en/1.0.0/)
 and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.html).
 
+## [4.22.1] - unreleased
+
+### Changed
+- Components - Tabs: Ajustement des espacements, du focus et des différents états. Ajout d'attributs d'accessibilité.
 
 ## [4.22.0] - 2022-06-29
 
