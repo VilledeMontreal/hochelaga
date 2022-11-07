@@ -18,7 +18,6 @@ const tildeImporter = require('node-sass-tilde-importer');
 const uglify = require('gulp-uglify-es').default;
 const config = require('./build.config.json');
 const package = require('./package.json');
-const imagemin = require('gulp-imagemin');
 
 // Browsersybnc Serve
 function browsersyncServe(cb) {
@@ -104,10 +103,18 @@ function jsDist() {
 
 // Images: public
 function images() {
-  return src(config.images.files)
-    .pipe(imagemin())
+  return import('gulp-imagemin').then((gulpImagemin) => {
+    src(config.images.files)
+    .pipe(gulpImagemin.default([
+      gulpImagemin.mozjpeg({ progressive: true }),
+      gulpImagemin.optipng(),
+      gulpImagemin.gifsicle(),
+      gulpImagemin.svgo(),
+    ]),
+    )
     .pipe(dest(config.images.dest))
     .pipe(dest(config.imagesdist.dest))
+  });
 }
 
 // Icons Sass folder
