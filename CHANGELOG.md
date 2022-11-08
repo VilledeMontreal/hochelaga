@@ -6,6 +6,8 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 
 ## [4.23.0] - unreleased
 
+### Added
+- Components - Barre de navigation: Ajout du lien Accèder au contenu.
 ### Changed
 - Components - Tabs: Ajustement des espacements, du focus et des différents états. Ajout d'attributs d'accessibilité.
 
