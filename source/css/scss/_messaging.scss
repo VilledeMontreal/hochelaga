@@ -19,14 +19,20 @@
   .alert-link {
     color: $informative-dark;
     border-bottom: $link-border-width solid $informative-dark;
-    &:after {
-      background-color: $informative-dark !important;
-      // We need important because some content get the external link automatically applied if inside some specific container.
-      // TODO: Fix external-link so we can get rid of !important.
-    }
+    @extend .text-break;
     @include hover-focus {
       background-color: lighten($informative-light, 4%);
     }
+    // Fix to prevent background-color for pdf links
+    &:not([href$=".pdf"]) {
+      &:after {
+        background-color: $informative-dark !important;
+        // We need important because some content get the external link automatically applied if inside some specific container.
+        // TODO: Fix external-link so we can get rid of !important.
+      }
+
+    }
+
   }
 
   .btn {
@@ -123,8 +129,11 @@
       @include hover-focus {
         background-color: lighten($color-light, 4%);
       }
-      &:after {
-        background-color: $color-dark !important;
+      // Fix to prevent background-color for pdf links
+      &:not([href$=".pdf"]) {
+        &:after {
+          background-color: $color-dark !important;
+        }
       }
     }
 
