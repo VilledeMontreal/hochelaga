@@ -8,6 +8,7 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 
 ### Added
 - Components - Barre de navigation: Ajout du lien Accèder au contenu.
+- Styles - Iconographie: Ajout de l'icone cell (icon-cell).
 ### Changed
 - Components - Tabs: Ajustement des espacements, du focus et des différents états. Ajout d'attributs d'accessibilité.
 
