@@ -50,6 +50,24 @@
   }
 }
 
+.skip-navigation {
+  margin: 0.5rem;
+  z-index: $zindex-modal;
+  transition: none;
+  display: inline-flex;
+  align-items: center;
+  font-weight: $btn-font-weight;
+  text-align: center;
+  white-space: nowrap;
+  vertical-align: middle;
+  user-select: none;
+  border: $btn-border-width solid $highlight-light;
+  @include button-size($btn-padding-y-sm, $btn-padding-x-sm, $btn-font-size-sm, $btn-line-height-sm,  $btn-border-radius-squared);
+  @include button-variant($background: transparent, $border: transparent, $color: $action, $hover-background: $highlight-light, $hover-border: $highlight-light, $hover-color: $action, $active-background: $highlight-light, $active-border: $highlight-light, $active-color: $action);
+}
+
+// Deprecated - use skip-navigation
+//
 .skip-links-focus {
   @include font-size($font-size-sm);
   line-height: $line-height-sm;
