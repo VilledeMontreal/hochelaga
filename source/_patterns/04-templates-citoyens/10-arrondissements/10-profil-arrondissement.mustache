@@ -1,11 +1,10 @@
-{{> styles-skip-links-section }}
-
+{{> components-skip-navigation }}
 <header class="header-main-nav {{# navbarFixedTop}}is-fixed-top{{/navbarFixedTop}}">
 {{> components-navbar }}
 </header>
 
-<main class="main-content {{ pageClasses }}" id="main-content" aria-label="Main Content" role="main">
-  
+<main class="main-content {{ pageClasses }}" id="main-content" aria-label="Main Content">
+
   <div class="container pt-4 pt-lg-8">
     <div class="row">
       <div class="col-12 col-lg-7">
@@ -29,7 +28,7 @@
               {{ heading }}
             </h1>
           </header>
-          
+
           <div class="lead m-0 pb-4 pb-lg-4">
             {{{ lead }}}
           </div>
@@ -86,7 +85,7 @@
       <h2>Quartiers</h2>
       <div class="alternate-order-lg">
         {{# items }}
-        <div class="row justify-content-between alternate-order-content mb-4 mb-lg-8">  
+        <div class="row justify-content-between alternate-order-content mb-4 mb-lg-8">
           <div class="col-12 col-lg-5 alternate-order-element mb-2 my-lg-auto">
             <img class="img-fluid" alt="{{img.alt}}" src="{{ img.src }}" />
           </div>
@@ -102,7 +101,7 @@
     </div>
   </div>
   {{/ quartiers}}
-  
+
   {{# video}}
   <div class="border-top py-8 py-lg-16" id="video">
     <div class="container">
@@ -129,7 +128,7 @@
             <li class="col-12 col-sm-6 col-lg-3 pb-2 pb-lg-4">
               <div class="text-center">
                 {{# highlight}}
-                <div class="font-size-lg-interface text-dark mb-lg-1">{{{highlight}}}</div> 
+                <div class="font-size-lg-interface text-dark mb-lg-1">{{{highlight}}}</div>
                 {{/ highlight}}
                 {{# text}}
                 <div class="font-size-sm-interface">{{{ text }}}</div>

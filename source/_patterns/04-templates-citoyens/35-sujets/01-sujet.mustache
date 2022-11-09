@@ -1,10 +1,9 @@
-{{> styles-skip-links-section }}
-
+{{> components-skip-navigation }}
 <header class="header-main-nav {{# navbarFixedTop}}is-fixed-top{{/navbarFixedTop}}">
 {{> components-navbar }}
 </header>
 
-<main class="main-content {{ pageClasses }}" id="main-content" aria-label="Main Content" role="main">
+<main class="main-content {{ pageClasses }}" id="main-content" aria-label="Main Content">
 
   <div class="region-content">
     <div class="container">
@@ -23,7 +22,7 @@
             {{> patterns-content-header-extras}}
 
           </header>
-          
+
           <div class="lead">
             {{{ lead }}}
           </div>
@@ -48,7 +47,7 @@
             {{# module-content}}
             {{> templates-citoyens-sujet-content}}
             {{/ module-content}}
-            
+
             {{# sujetContent}}
             <h2>Renseignements et services</h2>
             {{# hasSelecteurArrondissement}}

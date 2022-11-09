@@ -50,7 +50,8 @@
   }
 }
 
-.skip-navigation {
+.skip-navigation,
+a.skip-navigation {
   margin: 0.5rem;
   z-index: $zindex-modal;
   transition: none;
@@ -64,6 +65,16 @@
   border: $btn-border-width solid $highlight-light;
   @include button-size($btn-padding-y-sm, $btn-padding-x-sm, $btn-font-size-sm, $btn-line-height-sm,  $btn-border-radius-squared);
   @include button-variant($background: transparent, $border: transparent, $color: $action, $hover-background: $highlight-light, $hover-border: $highlight-light, $hover-color: $action, $active-background: $highlight-light, $active-border: $highlight-light, $active-color: $action);
+
+  &:active,
+  &:focus {
+    width: auto;
+    height: auto;
+    overflow: visible;
+    clip: auto;
+    white-space: normal;
+    z-index: $zindex-modal;
+  }
 }
 
 // Deprecated - use skip-navigation
