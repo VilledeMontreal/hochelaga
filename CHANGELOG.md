@@ -11,6 +11,7 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 - Styles - Iconographie: Ajout de l'icone cell (icon-cell).
 ### Changed
 - Components - Tabs: Ajustement des espacements, du focus et des différents états. Ajout d'attributs d'accessibilité.
+- Components - Messages ciblés: A11y - utilisation d'un tag strong pour le titre du message ciblé.
 
 ### Fixed
 - Components - Message ciblé: Correction background-color pour lien pdf.
