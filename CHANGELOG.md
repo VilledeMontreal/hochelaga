@@ -12,6 +12,8 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 ### Changed
 - Components - Tabs: Ajustement des espacements, du focus et des différents états. Ajout d'attributs d'accessibilité.
 - Components - Messages ciblés: A11y - utilisation d'un tag strong pour le titre du message ciblé.
+- Components - Barre de navigation: A11y - Ajout de aria-label sur les bouton hybrides.
+- Components - Barre de navigation: Logo Ville de Montréal n'est plus un lien dans la Barre de navigation Service numérique.
 
 ### Fixed
 - Components - Message ciblé: Correction background-color pour lien pdf.

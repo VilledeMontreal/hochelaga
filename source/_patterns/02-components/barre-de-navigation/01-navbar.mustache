@@ -10,7 +10,7 @@
     {{/ notTranslated}}
   </div>
   <div class="navbar navbar-light main-navbar navbar-expand w-100" role="navigation">
-    <a class="navbar-brand" href="/">
+    <a class="navbar-brand" href="/" aria-label="Retourner à la page d'accueil de Montréal.ca">
       <div class="d-none d-md-flex">
         <svg id="logo-mtl-rosace" x="0px" y="0px" viewBox="0 0 184.6 39.3" xml:space="preserve">
           <polyline class="letter" points="0,6.6 6.1,6.6 13.9,27.9 14,27.9 21.8,6.6 27.7,6.6 27.7,32.8 23.6,32.8 23.6,10.2 23.5,10.2 15.2,32.8 11.8,32.8 3.5,10.2 3.4,10.2 3.4,32.8 0,32.8 0,6.6"/>
@@ -76,7 +76,7 @@
     </a>
     <div class="navbar-separator"></div>
 
-    <button type="button" id="main-menu-toggler" class="btn navbar-btn navbar-btn-icon btn-hide-label-sm" aria-expanded="false" aria-controls="main-menu">
+    <button type="button" id="main-menu-toggler" class="btn navbar-btn navbar-btn-icon btn-hide-label-sm" aria-expanded="false" aria-controls="main-menu" aria-label="Menu">
       <span class="icon icon-menu" aria-hidden="true"></span>
       <span class="btn-label">Menu</span>
     </button>
@@ -85,19 +85,19 @@
       <div class="d-flex align-items-center">
         {{# mesuresUrgences }}
         {{^ emMax }}
-        <a href="#" class="btn navbar-btn navbar-btn-icon navbar-btn-danger btn-hide-label-lg">
+        <a href="#" class="btn navbar-btn navbar-btn-icon navbar-btn-danger btn-hide-label-lg" aria-label="Mesure d'urgence">
           <span class="icon icon-emergency" aria-hidden="true"></span>
           <span class="btn-label">Mesures d'urgence</span>
         </a>
         {{/ emMax}}
         {{# emMax}}
-        <button type="button" class="btn navbar-btn navbar-btn-icon navbar-btn-alert btn-hide-label-lg navbar-alert-toggler" id="navbar-alert" data-toggle="modal" data-target="#mesureUrgenceModal">
+        <button type="button" class="btn navbar-btn navbar-btn-icon navbar-btn-alert btn-hide-label-lg navbar-alert-toggler" id="navbar-alert" data-toggle="modal" data-target="#mesureUrgenceModal" aria-label="Mesure d'urgence">
           <span class="icon icon-emergency" aria-hidden="true"></span>
           <span class="btn-label">Mesures d'urgence</span>
         </button>
         {{/ emMax}}
         {{/ mesuresUrgences }}
-        <button type="button" class="btn navbar-btn navbar-btn-icon btn-hide-label-md navbar-search-toggler" id="navbarSearch" aria-haspopup="true" aria-expanded="false" aria-controls="navbar-search">
+        <button type="button" class="btn navbar-btn navbar-btn-icon btn-hide-label-md navbar-search-toggler" id="navbarSearch" aria-haspopup="true" aria-expanded="false" aria-controls="navbar-search" aria-label="Recherche">
           <span class="icon icon-search" aria-hidden="true"></span>
           <span class="btn-label">Recherche</span>
         </button>
@@ -125,14 +125,14 @@
         </div>
         <div class="navbar-separator d-none d-lg-flex"></div>
         {{^ user-authenticated }}
-        <button type="button" class="btn navbar-btn navbar-btn-icon btn-login btn-hide-label-md">
+        <button type="button" class="btn navbar-btn navbar-btn-icon btn-login btn-hide-label-md" aria-label="Mon compte">
           <span class="icon icon-user-circle" aria-hidden="true"></span>
           <span class="btn-label">Mon compte</span>
         </button>
         {{/ user-authenticated }}
         {{# user-authenticated }}
         <div class="dropdown">
-          <button type="button" class="btn navbar-btn dropdown-toggle" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          <button type="button" class="btn navbar-btn dropdown-toggle" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" aria-label="Menu du profil de (nom d'utilisateur)">
             {{> components-media-avatar}}
             {{^ user-has-profile}}
             <div class="user-info d-none d-lg-inline-flex ml-2">
