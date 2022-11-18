@@ -7,7 +7,6 @@
 
 .alert {
   $informative-darker: darken($informative-dark, 10%);
-
   @include font-size($font-size-base);
   line-height: $line-height-md;
   border-left-width: 2px;
@@ -30,9 +29,7 @@
         // We need important because some content get the external link automatically applied if inside some specific container.
         // TODO: Fix external-link so we can get rid of !important.
       }
-
     }
-
   }
 
   .btn {
@@ -56,6 +53,7 @@
     color: $informative-dark;
     font-weight: $font-weight-bold;
     margin-bottom: .5rem;
+    display: block;
   }
 
   .alert-actions {
