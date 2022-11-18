@@ -12,21 +12,21 @@
   <div class="navbar-div ml-auto">
     <div class="d-flex align-items-center">
       {{# navbarInterneHasSearch}}
-      <button class="btn navbar-btn navbar-btn-icon navbar-search-toggler btn-hide-label-md" id="navbarDropdownSearch" aria-haspopup="true" aria-expanded="false">
+      <button class="btn navbar-btn navbar-btn-icon navbar-search-toggler btn-hide-label-md" id="navbarDropdownSearch" aria-haspopup="true" aria-expanded="false" aria-label="Recherche">
         <span class="icon icon-search" aria-hidden="true"></span>
         <span class="btn-label">Recherche</span>
       </button>
       {{/ navbarInterneHasSearch}}
       <div class="navbar-separator d-none d-lg-flex"></div>
         {{^ user-authenticated }}
-        <button class="btn navbar-btn navbar-btn-icon btn-hide-label-md">
+        <button class="btn navbar-btn navbar-btn-icon btn-hide-label-md" aria-label="Me connecter">
           <span class="icon icon-user-circle" aria-hidden="true"></span>
           <span class="btn-label">Me connecter</span>
         </button>
         {{/ user-authenticated }}
         {{# user-authenticated }}
         <div class="dropdown">
-          <button type="button" class="btn navbar-btn dropdown-toggle" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          <button type="button" class="btn navbar-btn dropdown-toggle" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" aria-label="Menu du profil de (nom d'utilisateur)">
             {{> components-media-avatar}}
             {{^ user-has-profile}}
             <div class="user-info d-none d-lg-inline-flex ml-2">
