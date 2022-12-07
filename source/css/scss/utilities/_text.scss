@@ -15,7 +15,7 @@ a {
     border-bottom: $link-border-width solid $primary;
   }
   &:after {
-    background-color: $primary;
+    background-color: currentColor;
   }
   .icon {
     @include icon-color($action);
@@ -241,7 +241,7 @@ a.text-muted {
     mask: url($data-icon-externallink) no-repeat 50% 50%;
     -webkit-mask-size: cover;
     mask-size: cover;
-    background-color: $action;
+    background-color: currentColor;
     display: inline-flex;
     width: $icon-md;
     height: $icon-md;
