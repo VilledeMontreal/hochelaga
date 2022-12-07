@@ -22,30 +22,24 @@
     @include hover-focus {
       background-color: lighten($informative-light, 4%);
     }
-    // Fix to prevent background-color for pdf links
-    &:not([href$=".pdf"]) {
-      &:after {
-        background-color: $informative-dark !important;
-        // We need important because some content get the external link automatically applied if inside some specific container.
-        // TODO: Fix external-link so we can get rid of !important.
-      }
-    }
   }
 
   .btn {
     @extend .btn-squared;
-    &.btn-primary {
-      @include button-variant($background: $informative-dark, $border: $informative-dark, $hover-background: $informative-darker, $hover-border: $informative-darker, $active-background: $informative-darker, $active-border: $informative-darker, $box-shadow-color: $informative-dark);
-    }
+    &:not(:disabled):not(.disabled) {
+      &.btn-primary {
+        @include button-variant($background: $informative-dark, $border: $informative-dark, $hover-background: $informative-darker, $hover-border: $informative-darker, $active-background: $informative-darker, $active-border: $informative-darker, $box-shadow-color: $informative-dark);
+      }
 
-    &.btn-secondary {
-      @include button-variant($background: transparent, $border: $neutral-stroke, $color: $informative-dark, $hover-background: transparent, $hover-border: $informative-dark, $hover-color: $informative-dark, $active-background: transparent, $active-border: $informative-dark, $active-color: $informative-dark, $box-shadow-color: $informative-dark);
-    }
+      &.btn-secondary {
+        @include button-variant($background: transparent, $border: $neutral-stroke, $color: $informative-dark, $hover-background: transparent, $hover-border: $informative-dark, $hover-color: $informative-dark, $active-background: transparent, $active-border: $informative-dark, $active-color: $informative-dark, $box-shadow-color: $informative-dark);
+      }
 
-    // Tertiary
-    &.btn-tertiary,
-    &.btn-link {
-      @include button-variant($background: transparent, $border: transparent, $color: $informative-dark, $hover-background: $informative-light, $hover-border: $informative-light, $hover-color: $informative-dark, $active-background: $informative-light, $active-border: $informative-light, $active-color: $informative-dark, $box-shadow-color: $informative-dark);
+      // Tertiary
+      &.btn-tertiary,
+      &.btn-link {
+        @include button-variant($background: transparent, $border: transparent, $color: $informative-dark, $hover-background: $informative-light, $hover-border: $informative-light, $hover-color: $informative-dark, $active-background: $informative-light, $active-border: $informative-light, $active-color: $informative-dark, $box-shadow-color: $informative-dark);
+      }
     }
   }
 
@@ -127,12 +121,6 @@
       @include hover-focus {
         background-color: lighten($color-light, 4%);
       }
-      // Fix to prevent background-color for pdf links
-      &:not([href$=".pdf"]) {
-        &:after {
-          background-color: $color-dark !important;
-        }
-      }
     }
 
     .alert-heading {
@@ -152,18 +140,20 @@
     }
 
     .btn {
-      &.btn-primary {
-        @include button-variant($background: $color-dark, $border: $color-dark, $hover-background: $color-darker, $hover-border: $color-darker, $active-background: $color-darker, $active-border: $color-darker, $box-shadow-color: $color-dark);
-      }
+      &:not(:disabled):not(.disabled) {
+        &.btn-primary {
+          @include button-variant($background: $color-dark, $border: $color-dark, $hover-background: $color-darker, $hover-border: $color-darker, $active-background: $color-darker, $active-border: $color-darker, $box-shadow-color: $color-dark);
+        }
 
-      &.btn-secondary {
-        @include button-variant($background: transparent, $border: $neutral-stroke, $color: $color-dark, $hover-background: transparent, $hover-border: $color-dark, $hover-color: $color-dark, $active-background: transparent, $active-border: $color-dark, $active-color: $color-dark, $box-shadow-color: $color-dark);
-      }
+        &.btn-secondary {
+          @include button-variant($background: transparent, $border: $neutral-stroke, $color: $color-dark, $hover-background: transparent, $hover-border: $color-dark, $hover-color: $color-dark, $active-background: transparent, $active-border: $color-dark, $active-color: $color-dark, $box-shadow-color: $color-dark);
+        }
 
-      // Tertiary
-      &.btn-tertiary,
-      &.btn-link {
-        @include button-variant($background: transparent, $border: transparent, $color: $color-dark, $hover-background: $color-light, $hover-border: $color-light, $hover-color: $color-dark, $active-background: $color-light, $active-border: $color-light, $active-color: $color-dark, $box-shadow-color: $color-dark);
+        // Tertiary
+        &.btn-tertiary,
+        &.btn-link {
+          @include button-variant($background: transparent, $border: transparent, $color: $color-dark, $hover-background: $color-light, $hover-border: $color-light, $hover-color: $color-dark, $active-background: $color-light, $active-border: $color-light, $active-color: $color-dark, $box-shadow-color: $color-dark);
+        }
       }
     }
 

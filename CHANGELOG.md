@@ -4,7 +4,14 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](http://keepachangelog.com/en/1.0.0/)
 and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.html).
 
-## [4.23.0] - unreleased
+## [4.23.1] - 2022-12-07
+
+### Fixed
+- Components - Feedback form: Correction bouton disabled.
+- Components - Feedback form: Correction couleur de liens.
+- Components - Message Ciblé: Correction bouton disabled.
+
+## [4.23.0] - 2022-11-18
 
 ### Added
 - Components - Barre de navigation: Ajout du lien Accèder au contenu.

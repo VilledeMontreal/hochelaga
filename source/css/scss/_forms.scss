@@ -827,36 +827,52 @@ legend,
 
 // Feedback form
 //
-.feedback-form-container.alert {
-  padding: 2rem;
-  display: block;
-  box-shadow: none;
-  margin-bottom: 2rem;
-  border-color: $neutral-tertiary;
-  background-color: $neutral-underground-1;
-  color: $neutral-secondary;
-  @include font-size($font-size-base);
-  line-height: $line-height-lg;
+.feedback-form-container {
+  &.alert {
+    padding: 2rem;
+    display: block;
+    box-shadow: none;
+    margin-bottom: 2rem;
+    border-color: $neutral-tertiary;
+    background-color: $neutral-underground-1;
+    color: $neutral-secondary;
+    @include font-size($font-size-base);
+    line-height: $line-height-lg;
 
-  .btn {
-    @extend .btn-squared;
-    &.btn-primary {
-      @include button-variant($background: $action, $border: $action, $color: $white);
+    a,
+    .alert-link {
+      color: $action;
+      border-bottom: $link-border-width solid $action;
+      &:hover,
+      &:focus {
+        background-color: $highlight-light;
+      }
     }
 
-    &.btn-secondary {
-      @include button-variant($background: transparent, $border: $neutral-stroke, $color: $action, $hover-background: transparent, $hover-border: $action, $hover-color: $action, $active-background: transparent, $active-border: $action, $active-color: $action);
+    .btn {
+      @extend .btn-squared;
+
+      &:not(:disabled):not(.disabled) {
+
+        &.btn-primary {
+          @include button-variant($background: $action, $border: $action, $color: $white);
+        }
+
+        &.btn-secondary {
+          @include button-variant($background: transparent, $border: $neutral-stroke, $color: $action, $hover-background: transparent, $hover-border: $action, $hover-color: $action, $active-background: transparent, $active-border: $action, $active-color: $action);
+        }
+
+        // Tertiary
+        &.btn-tertiary,
+        &.btn-link {
+          @include button-variant($background: transparent, $border: transparent, $color: $action, $hover-background: $highlight-light, $hover-border: $highlight-light, $hover-color: $action, $active-background: $highlight-light, $active-border: $highlight-light, $active-color: $action);
+        }
+      }
     }
 
-    // Tertiary
-    &.btn-tertiary,
-    &.btn-link {
-      @include button-variant($background: transparent, $border: transparent, $color: $action, $hover-background: $highlight-light, $hover-border: $highlight-light, $hover-color: $action, $active-background: $highlight-light, $active-border: $highlight-light, $active-color: $action);
+    @include media-breakpoint-up(lg) {
+      margin-bottom: 4rem;
     }
-  }
-
-  @include media-breakpoint-up(lg) {
-    margin-bottom: 4rem;
   }
 }
 
