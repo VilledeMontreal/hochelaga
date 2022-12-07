@@ -430,8 +430,12 @@
         if(!$('#form21 [name=Field14]').parent().hasClass('d-none')) {
           $('#form21 [name=Field14]').parent().addClass('d-none');
         }
+        if(!$('#feedback-help').hasClass('d-none')) {
+          $('#feedback-help').addClass('d-none');
+        }
       } else {
         $('#form21 [name=Field14]').parent().removeClass('d-none');
+        $('#feedback-help').removeClass('d-none');
         $('#form21 [name=Field14]').prop('required', true);
       }
     }
