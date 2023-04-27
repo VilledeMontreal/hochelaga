@@ -109,12 +109,6 @@
   a[href*="//"]:not([href*="montreal.ca"]):not([href*="ville.montreal.qc.ca"]):not([href$=".pdf"]):not(.link-has-icon):not(.btn) {
     .list-group-item-label {
       @extend .is-external-link;
-      margin-right: 0;
-      &:after {
-        vertical-align: -.4375rem;
-        margin-top: -.25rem;
-        margin-bottom: -.25rem;
-      }
     }
   }
 }
