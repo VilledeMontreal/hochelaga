@@ -68,8 +68,31 @@
   }
 
   // Caption inside table
-  caption {
-    margin-top: 1rem;
+  // Default is Caption top with Title visual
+  // We provide temporary .caption-bottom class to allow smooth transition
+  &:not(.caption-bottom) {
+    caption {
+      font-size: $font-size-lg;
+      line-height: 2rem;
+      color: $neutral-primary;
+      caption-side: top;
+    }
+  }
+  &.caption-bottom {
+    caption {
+      padding-top: .625rem;
+      caption-side: bottom;
+    }
+  }
+
+  tfoot {
+    td {
+      border: none;
+      padding: 0;
+      padding-top: .625rem;
+      font-size: $font-size-sm;
+      line-height: $line-height-sm;
+    }
   }
 
   // Fix padding for some elements inside Table cell.
@@ -135,10 +158,8 @@
       }
     }
   }
-
-  caption {
-    @include font-size($font-size-sm);
-    line-height: $line-height-sm;
+  tfoot td {
+    padding-top: 1rem;
   }
 
   // Fix padding for inputs
