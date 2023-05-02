@@ -8,6 +8,7 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 
 ### Changed
 - Components - Tableau: ajustement caption et tfoot.
+- Styles - Link: modification .is-external-link pour empecher l'icone :after d'être orphelin sur une nouvelle ligne.
 
 ## [4.23.1] - 2022-12-07
 

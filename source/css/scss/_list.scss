@@ -44,14 +44,6 @@
       }
     }
 
-    &.is-external-link {
-      margin-right: 0;
-      &:after {
-        margin-left: 0;
-        margin-right: 0;
-        vertical-align: -.375rem;
-      }
-    }
   }
 }
 
@@ -191,16 +183,6 @@
      line-height: $line-height-sm;
     }
 
-    .list-item-action {
-      .is-external-link {
-        &:after {
-          width: $icon-sm;
-          height: $icon-sm;
-          vertical-align: -.25rem;
-        }
-      }
-    }
-
   }
 
   &.list-sm {
@@ -232,13 +214,6 @@
 
     .list-item-action {
       line-height: $line-height-xs-action;
-      .is-external-link {
-        &:after {
-          width: $icon-xs;
-          height: $icon-xs;
-          vertical-align: -.25rem;
-        }
-      }
     }
   }
 }
