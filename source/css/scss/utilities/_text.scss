@@ -99,7 +99,7 @@ a {
 
 // Utility class for inline link with icon tag.
 .link-has-icon:not(.link-list-element) {
-  margin-right: 1.75rem;
+  margin-right: 1.5rem;
   .icon {
     display: inline;
     @include icon-size($icon-md);
@@ -233,42 +233,30 @@ a.text-muted {
 
 // Utility class to give external link icon for external link
 .is-external-link {
-  margin-right: 1.75rem;
+  margin-right: 1.5rem;
   position: relative;
   &:after {
-    content: '';
-    -webkit-mask: url($data-icon-externallink) no-repeat 50% 50%;
-    mask: url($data-icon-externallink) no-repeat 50% 50%;
-    -webkit-mask-size: cover;
-    mask-size: cover;
-    background-color: currentColor;
-    display: inline-flex;
-    width: $icon-md;
-    height: $icon-md;
-    overflow: hidden;
-    margin-left: .25rem;
-    margin-right: -1.75rem;
-    vertical-align: -.375rem;
+    content: "";
+    -webkit-mask: url($data-icon-externallink) no-repeat center right;
+    mask: url($data-icon-externallink) no-repeat center right;
+    -webkit-mask-size: contain;
+    mask-size: contain;
+    padding-right: 1.5rem; /* sizing */
+    margin-right: -1.5rem;
   }
-
   &.link-sm {
-    margin-right: 1.5rem;
-    position: relative;
+    margin-right: 1.25rem;
     &:after {
-      width: $icon-sm;
-      height: $icon-sm;
-      margin-right: -1.5rem;
-      vertical-align: -5px;
+      padding-right: 1.25rem;
+      margin-right: -1.25rem;
     }
   }
 
   &.link-xs {
-    margin-right: 1.25rem;
+    margin-right: 1.125rem;
     &:after {
-      width: $icon-xs;
-      height: $icon-xs;
-      margin-right: -1.25rem;
-      vertical-align: -4px;
+      padding-right: 1.125rem;
+      margin-right: -1.125rem;
     }
   }
 }
