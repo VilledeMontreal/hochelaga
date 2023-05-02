@@ -37,21 +37,7 @@ footer {
         position: relative;
         width: auto !important;
         &:after {
-          content: '';
-          -webkit-mask: url($data-icon-externallink) no-repeat 50% 50%;
-          mask: url($data-icon-externallink) no-repeat 50% 50%;
-          -webkit-mask-size: cover;
-          mask-size: cover;
           background-color: $white;
-          display: inline-flex;
-          width: $icon-sm;
-          height: $icon-sm;
-          overflow: hidden;
-          vertical-align: middle;
-          margin-right: -1.5rem;
-          margin-top: -.75rem;
-          margin-bottom: -.5rem;
-          margin-left: .25rem;
         }
 
         @include hover-focus {
@@ -188,7 +174,7 @@ footer {
               height: 24px;
               border: none;
             }
-    
+
             &[aria-expanded="true"] {
               &:after {
                 -webkit-mask: url($data-icon-chevron-up) no-repeat 50% 50%;
