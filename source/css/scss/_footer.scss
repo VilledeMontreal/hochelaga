@@ -35,7 +35,8 @@ footer {
       a[href*="//"]:not([href*="montreal.ca"]):not([href*="montreal.qc.ca"]):not([href$=".pdf"]):not(.link-has-icon):not(.btn) {
         margin-right: 1.5rem;
         position: relative;
-        width: auto !important;
+        display: inline-block;
+        @extend .is-external-link;
         &:after {
           background-color: $white;
         }
