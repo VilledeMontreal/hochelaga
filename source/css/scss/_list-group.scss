@@ -109,6 +109,9 @@
   a[href*="//"]:not([href*="montreal.ca"]):not([href*="ville.montreal.qc.ca"]):not([href$=".pdf"]):not(.link-has-icon):not(.btn) {
     .list-group-item-label {
       @extend .is-external-link;
+      &:after {
+        background-color: $action;
+      }
     }
   }
 }
