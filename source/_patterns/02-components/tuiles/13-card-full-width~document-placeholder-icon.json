@@ -10,23 +10,18 @@
           "icon": false,
           "img": false,
           "document": {
-            "placeholder": false,
-            "img": {
-              "classes": false,
-              "src": "https://picsum.photos/id/357/400/400.jpg",
-              "alt": "Alt de l'image de couverture du PDF."
-            }
+            "placeholder": {
+              "icon": "icon-paper-list"
+            },
+            "img": false
           }
         },
         "card-type": "Type",
         "card-title": "Titre du document",
         "card-badge": false,
         "card-text": false,
-        "card-text-interface": {
-          "date-time": false,
-          "info": "PDF X Mo"
-        },
-        "card-link": "Télécharger"
+        "card-text-interface": false,
+        "card-link": "Consulter"
       }
     ]
   }
