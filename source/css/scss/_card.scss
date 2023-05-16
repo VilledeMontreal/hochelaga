@@ -48,12 +48,46 @@
     // Placeholder is a mix of a background image and an icon
     .icon {
       position: absolute;
-      top: 50%;
-      margin-top: -2.5rem;
-      left: 50%;
-      margin-left: -2.5rem;
-      @include icon-size(5rem);
+      top: 0;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      display: flex;
+      align-items: center;
+      justify-content: center;
       @include icon-color($action-lighter);
+    }
+  }
+
+  .card-img {
+    width: 198px;
+    @include border-radius(0);
+    border: $card-border-width solid $card-border-color;
+    margin: 2rem 2rem 0 2rem;
+    align-self: flex-start;
+
+    &.img-placeholder {
+      width: calc(100% - 4rem);
+      max-height: 200px;
+      border: none;
+      align-items: center;
+      justify-content: center;
+      display: flex;
+
+      &:before {
+        content: "";
+        display: block;
+        padding-top: 100%;
+      }
+    }
+
+    // 576px and up
+    @include media-breakpoint-up(sm) {
+      margin: 2rem 0 2rem 2rem;
+
+      &.img-placeholder {
+        width: 200px;
+      }
     }
   }
 
@@ -99,6 +133,7 @@
   // smaller line-height
   .card-text-interface {
     line-height: $line-height-md;
+    margin-bottom: 1rem;
   }
 
   // Deprecated
@@ -127,7 +162,12 @@
   }
 
   // Define cards using 32px padding
-  &.card-icon, &.card-service, &.card-profile, &.card-member {
+  &.card-icon,
+  &.card-service,
+  &.card-profile,
+  &.card-member,
+  &.card-document,
+  &.card-2x-spacing {
     .card-body {
       padding: 2rem;
     }
@@ -165,23 +205,12 @@
   // Card Document
   //
   &.card-document {
-    .card-img {
-      width: 198px;
-      @include border-radius(0);
-      border: $card-border-width solid $card-border-color;
-      margin: 1rem auto 0 auto;
-      align-self: flex-start;
-    }
-
     .card-body-wrapper {
       width: 100%;
     }
 
     // 576px and up
     @include media-breakpoint-up(sm) {
-      .card-img {
-        margin: 2rem 0 2rem 2rem;
-      }
       .card-body-wrapper {
         display: flex;
         flex: 1;
@@ -191,7 +220,6 @@
       }
       .card-body {
         width: auto;
-        padding: 2rem;
       }
     }
   }
