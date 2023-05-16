@@ -4,7 +4,20 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](http://keepachangelog.com/en/1.0.0/)
 and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.html).
 
-## [4.24.0] - Unreleased
+## [4.24.2] - 2023-05-16
+
+### Fixed
+- Components - Etiquette: Ajustement de la largeur maximale (.badge-max-width) à 295px.
+- Components - Tuiles: Ajustement padding et placeholder pour .card-document.
+- Components - Tuiles: Assouplissement des règles pour .card-img.
+- Components - Liste d'objets utilitaires: Retrait du Uppercase et ajustement du font-size pour le type.
+
+## [4.24.1] - 2023-05-02
+
+### Fixed
+- Styles - Link: .is-external-link doit être overridé dans certain cas particulier (list-item, list-group).
+
+## [4.24.0] - 2023-05-02
 
 ### Changed
 - Components - Tableau: ajustement caption et tfoot.
