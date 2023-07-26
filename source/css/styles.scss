@@ -1,11 +1,11 @@
 @import "scss/functions";
-@import "~bootstrap/scss/functions";
+@import "bootstrap/scss/functions";
 
 /*-- VARIABLES --*/
 @import "scss/variables";
 
 /*-- BOOTSTRAP --*/
-@import "~bootstrap/scss/variables";
+@import "bootstrap/scss/variables";
 @import "scss/bootstrap_overrides"; // Overrides theme-colors variables
 @import "scss/mixins"; // Partial bootstrap mixins import
 @import "scss/icons";
