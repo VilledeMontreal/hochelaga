@@ -4,10 +4,7 @@ title: Champ de texte
 
 ## Tailles
 
-Les inputs par défaut sont de taille médium. Ils sont disponibles également en version small. L'intégration se fait de deux façons:
-
-1. Sur le formulaire (<code>form</code>) avec la classes suivantes; <code>.form-sm</code>.
-2. Sur un <code>.form-group</code> avec la classe suivante; <code>.form-group-sm</code>.
+Les inputs par défaut sont de taille médium.
 
 ## Validation
 
