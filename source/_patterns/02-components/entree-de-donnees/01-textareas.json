@@ -17,24 +17,6 @@
       },
       "formGroupPopover": true,
       "formGroupTextareaRows": "5"
-    },
-    {
-      "formGroupClass": "form-group-sm",
-      "formGroupInputID": "form-control-textarea-sm",
-      "formGroupInputLabel": "Libellé",
-      "formGroupInputPlaceholder": {
-        "text": "Placeholder"
-      },
-      "formGroupInputHelpText": {
-        "id": "form-group-textearea-sm-help-text",
-        "text": "Texte d'assistance."
-      },
-      "formGroupInputCounter": {
-        "id": "textarea-sm-caracter-count",
-        "text": "compteur de caractères"
-      },
-      "formGroupPopover": true,
-      "formGroupTextareaRows": "3"
     }
   ],
   "textareaValidation": [
@@ -56,25 +38,6 @@
         "id": "form-group-textarea-error-text",
         "text": "Texte d'erreur"
       }
-    },
-    {
-      "formGroupClass": "form-group-sm form-group-required",
-      "formGroupInputID": "form-control-textarea-sm-validation",
-      "formGroupInputClass": "is-invalid",
-      "formGroupInputRequired": true,
-      "formGroupInputLabel": "Libellé",
-      "formGroupInputPlaceholder": {
-        "text": "Placeholder"
-      },
-      "formGroupInputHelpText": {
-        "id": "form-group-sm-textearea-help-text",
-        "text": "Texte d'assistance."
-      },
-      "formGroupTextareaRows": "3",
-      "formGroupInputError": {
-        "id": "form-group-sm-textarea-error-text",
-        "text": "Texte d'erreur"
-      }
     }
   ],
   "textareaState": [
@@ -88,7 +51,7 @@
         "text": "Placeholder"
       },
       "formGroupInputHelpText": {
-        "id": "form-group-sm-textearea-disabled-help-text",
+        "id": "form-group-textearea-disabled-help-text",
         "text": "Texte d'assistance"
       },
       "formGroupTextareaRows": "5",
