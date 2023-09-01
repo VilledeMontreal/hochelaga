@@ -13,8 +13,8 @@
       margin: 0;
     }
     .collapsible-subtitle {
-      @include font-size($font-size-xs);
-      line-height: $line-height-xs;
+      @include font-size($font-size-sm);
+      line-height: $line-height-sm;
       color: $neutral-secondary;
       font-weight: $font-weight-normal;
     }
@@ -193,28 +193,28 @@
           }
         }
       }
-    }
-    .disabled {
-      &:after {
-        -webkit-mask: url($data-icon-chevron-down) no-repeat 50% 50%;
-        mask: url($data-icon-chevron-down) no-repeat 50% 50%;
-        background-color: $neutral-stroke;
-      }
-      &:hover,
-      &:active {
+      .disabled {
         &:after {
           -webkit-mask: url($data-icon-chevron-down) no-repeat 50% 50%;
           mask: url($data-icon-chevron-down) no-repeat 50% 50%;
           background-color: $neutral-stroke;
         }
+        &:hover,
+        &:active {
+          &:after {
+            -webkit-mask: url($data-icon-chevron-down) no-repeat 50% 50%;
+            mask: url($data-icon-chevron-down) no-repeat 50% 50%;
+            background-color: $neutral-stroke;
+          }
+        }
       }
     }
   }
-
+  // Deprecated Small version
   &.accordeon-listed-sm {
     > .collapsible-item {
       .collapsible-header {
-        a {
+        a, button {
           @include font-size($font-size-sm);
           line-height: $line-height-sm;
           padding: .5rem 2.5rem .5rem .5rem;
