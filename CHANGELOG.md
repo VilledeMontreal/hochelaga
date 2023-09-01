@@ -8,9 +8,13 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 
 ## Changed
 - Retrait du tilde importer qui causait problème avec des versions récentes (15+ d'angular). Devrait être transparent dans des versions récentes de sass (dart-sass).
+- Components Accordeon: Ajustement structure accordeon et fix disabled state.
 
 ## Added
 - Styles - iconographie: Ajout des icones social-threads, social-twitch, social-vimeo.
+
+## Deprecated
+- Components Accordeon: retrait de la version small.
 
 ## [4.24.3] - 2023-05-24
 
