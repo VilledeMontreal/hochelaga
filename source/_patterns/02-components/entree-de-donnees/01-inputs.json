@@ -17,24 +17,6 @@
         "id": "input-text-caracter-count",
         "text": "Compteur de caractères"
       }
-    },
-    {
-      "formGroupClass": "form-group-sm required",
-      "formGroupInputID": "form-control-sm-one",
-      "formGroupInputRequired": true,
-      "formGroupInputLabel": "Libellé",
-      "formGroupPopover": true,
-      "formGroupInputPlaceholder": {
-        "text": "Placeholder"
-      },
-      "formGroupInputHelpText": {
-        "id": "input-text-sm-help-text-id",
-        "text": "Texte d'assistance"
-      },
-      "formGroupInputCounter": {
-        "id": "input-text-sm-caracter-count",
-        "text": "Compteur de caractères"
-      }
     }
   ],
   "inputTextSizeError": [
@@ -50,21 +32,6 @@
       "formGroupInputHelpText": false,
       "formGroupInputError": {
         "id": "input-text-error-id",
-        "text": "Texte d'erreur"
-      }
-    },
-    {
-      "formGroupClass": "form-group-sm required",
-      "formGroupInputID": "form-control-sm-error-one",
-      "formGroupInputClass": "is-invalid",
-      "formGroupInputRequired": true,
-      "formGroupInputLabel": "En erreur",
-      "formGroupInputPlaceholder": {
-        "text": "Placeholder"
-      },
-      "formGroupInputHelpText": false,
-      "formGroupInputError": {
-        "id": "input-text-sm-error-id",
         "text": "Texte d'erreur"
       }
     }
