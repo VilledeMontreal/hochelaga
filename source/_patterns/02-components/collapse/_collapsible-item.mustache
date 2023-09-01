@@ -2,18 +2,10 @@
 <div class="collapsible-item">
   <div class="collapsible-header" id="{{ heading-id }}">
     <h3 class="collapsible-title">
-      {{^ item-disabled}}
-      <button data-toggle="collapse" data-target="#{{ block-id }}" aria-expanded="{{# show}}true{{/ show}}{{^ show}}false{{/ show}}" aria-controls="{{ block-id }}">
+      <button data-toggle="collapse" data-target="#{{ block-id }}" aria-expanded="{{# show}}true{{/ show}}{{^ show}}false{{/ show}}" aria-controls="{{ block-id }}"{{#item-disabled}} class="disabled" aria-disabled="true" disabled="true"{{/ item-disabled}}>
         <span>{{ title }}</span>
         {{# subtitle}}<span class="collapsible-subtitle">{{subtitle}}</span>{{/ subtitle}}
       </button>
-      {{/ item-disabled}}
-      {{# item-disabled}}
-      <span class="disabled" aria-expanded="false">
-        <span>{{ title }}</span>
-        {{# subtitle}}<span class="collapsible-subtitle">{{subtitle}}</span>{{/ subtitle}}
-      </span>
-      {{/ item-disabled}}
     </h3>
   </div>
   <div id="{{ block-id }}" class="collapse {{# show }}show{{/ show}}" role="region" aria-labelledby="{{ heading-id }}">
