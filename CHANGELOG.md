@@ -9,6 +9,8 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 ## Changed
 - Retrait du tilde importer qui causait problème avec des versions récentes (15+ d'angular). Devrait être transparent dans des versions récentes de sass (dart-sass).
 - Components Accordeon: Ajustement structure accordeon et fix disabled state.
+- Components Étiquettes: Fusion de la variante light. Modification des schemas de couleurs des étiquettes.
+- Components Badge: Harmonisation des schémas de couleurs avec les étiquettes. Ajout d'une bordure.
 
 ## Added
 - Styles - iconographie: Ajout des icones social-threads, social-twitch, social-vimeo.
