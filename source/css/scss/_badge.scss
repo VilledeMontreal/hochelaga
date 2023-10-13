@@ -236,7 +236,8 @@
   }
 
   .badge-pill {
-    &.badge {
+    border: 1px solid $neutral-secondary;
+    &.badge-light {
       border: 1px solid $neutral-secondary;
     }
     &.badge-#{$label} {
