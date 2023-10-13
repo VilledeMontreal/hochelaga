@@ -11,6 +11,7 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 - Components Accordeon: Ajustement structure accordeon et fix disabled state.
 - Components Étiquettes: Fusion de la variante light. Modification des schemas de couleurs des étiquettes.
 - Components Badge: Harmonisation des schémas de couleurs avec les étiquettes. Ajout d'une bordure.
+- Components Boutons: Ajustement couleur de fond des boutons secondaires et tertiaires (non inversés)
 
 ## Added
 - Styles - iconographie: Ajout des icones social-threads, social-twitch, social-vimeo.

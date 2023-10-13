@@ -32,13 +32,13 @@
       }
 
       &.btn-secondary {
-        @include button-variant($background: transparent, $border: $neutral-stroke, $color: $informative-dark, $hover-background: transparent, $hover-border: $informative-dark, $hover-color: $informative-dark, $active-background: transparent, $active-border: $informative-dark, $active-color: $informative-dark, $box-shadow-color: $informative-dark);
+        @include button-variant($background: $white, $border: $neutral-stroke, $color: $informative-dark, $hover-background: $white, $hover-border: $informative-dark, $hover-color: $informative-dark, $active-background: $white, $active-border: $informative-dark, $active-color: $informative-dark, $box-shadow-color: $informative-dark);
       }
 
       // Tertiary
       &.btn-tertiary,
       &.btn-link {
-        @include button-variant($background: transparent, $border: transparent, $color: $informative-dark, $hover-background: $informative-light, $hover-border: $informative-light, $hover-color: $informative-dark, $active-background: $informative-light, $active-border: $informative-light, $active-color: $informative-dark, $box-shadow-color: $informative-dark);
+        @include button-variant($background: $white, $border: $white, $color: $informative-dark, $hover-background: $informative-light, $hover-border: $informative-light, $hover-color: $informative-dark, $active-background: $informative-light, $active-border: $informative-light, $active-color: $informative-dark, $box-shadow-color: $informative-dark);
       }
     }
   }
@@ -146,13 +146,13 @@
         }
 
         &.btn-secondary {
-          @include button-variant($background: transparent, $border: $neutral-stroke, $color: $color-dark, $hover-background: transparent, $hover-border: $color-dark, $hover-color: $color-dark, $active-background: transparent, $active-border: $color-dark, $active-color: $color-dark, $box-shadow-color: $color-dark);
+          @include button-variant($background: $white, $border: $neutral-stroke, $color: $color-dark, $hover-background: $white, $hover-border: $color-dark, $hover-color: $color-dark, $active-background: $white, $active-border: $color-dark, $active-color: $color-dark, $box-shadow-color: $color-dark);
         }
 
         // Tertiary
         &.btn-tertiary,
         &.btn-link {
-          @include button-variant($background: transparent, $border: transparent, $color: $color-dark, $hover-background: $color-light, $hover-border: $color-light, $hover-color: $color-dark, $active-background: $color-light, $active-border: $color-light, $active-color: $color-dark, $box-shadow-color: $color-dark);
+          @include button-variant($background: $white, $border: $white, $color: $color-dark, $hover-background: $color-light, $hover-border: $color-light, $hover-color: $color-dark, $active-background: $color-light, $active-border: $color-light, $active-color: $color-dark, $box-shadow-color: $color-dark);
         }
       }
     }
