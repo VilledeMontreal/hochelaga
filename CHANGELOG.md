@@ -15,6 +15,7 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 
 ## Added
 - Styles - iconographie: Ajout des icones social-threads, social-twitch, social-vimeo.
+- Styles - iconographie: Ajout des icones accessibilite, astuce, communiquer, demander, erreur, payer, permis, securite, signaler, trouver, trouverMap.
 
 ## Deprecated
 - Components - Accordeon: retrait de la version small.
