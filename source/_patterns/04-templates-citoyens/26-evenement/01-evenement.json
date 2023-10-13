@@ -49,30 +49,24 @@
     "module-documents": false,
     "module-partners": false,
     "module-video": false,
-    "module-etiquette": {
-      "badges-links": [
-        {
-          "badge": "Taxonomie Clientèle",
-          "badgeClass": "badge-secondary",
-          "badgeUrl": "#",
-          "badgeIconClass": false
-        },
-        {
-          "badge": "Taxonomie Type",
-          "badgeClass": "badge-secondary",
-          "badgeUrl": "#",
-          "badgeIconClass": false
-        },
-        {
-          "badge": "Taxonomie Catégorie principale",
-          "badgeClass": "badge-secondary",
-          "badgeUrl": "#",
-          "badgeIconClass": false
-        }
-      ]
-    },
     "module-map": false,
     "module-events": false
+  },
+  "module-links": {
+    "links": [
+      {
+        "title": "Taxonomie Clientèle",
+        "url": "#"
+      },
+      {
+        "title": "Taxonomie Type",
+        "url": "#"
+      },
+      {
+        "title": "Taxonomie Catégorie principale",
+        "url": "#"
+      }
+    ]
   },
   "sb-block-coordonnees": {
     "sidebarTitleClasses": "d-none d-lg-block",
