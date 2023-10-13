@@ -5,7 +5,7 @@
 
 .badge {
   background-color: $neutral-underground-2;
-  border: 1px solid transparent;
+  border: 1px solid $neutral-underground-2;
   color: $neutral-primary;
   display: inline-block;
   padding: $badge-padding-y $badge-padding-x;
@@ -77,6 +77,7 @@
 
   &.badge-dark {
     background-color: $neutral-primary;
+    border-color: $neutral-primary;
     color: $white;
     &[href] {
       @include hover-focus {
@@ -93,8 +94,10 @@
       @include icon-color($white);
     }
   }
+
   &.badge-light {
     background-color: $neutral-underground-2;
+    border-color: $neutral-underground-2;
     color: $neutral-primary;
     &[href] {
       @include hover-focus {
@@ -109,6 +112,7 @@
   // Deprecated
   &.badge-primary {
     background-color: $primary;
+    border-color: $primary;
     color: $white;
     &[href] {
       @include hover-focus {
@@ -210,45 +214,11 @@
   $color-light: map-get($map, light);
   $color-base: map-get($map, base);
 
-  .badge-#{$label} {
-    background-color: $color-base;
-    &[href] {
-      @include hover-focus {
-        background-color: darken($color-base, 10%);
-      }
-      &:focus,
-      &.focus {
-        outline: 0;
-        box-shadow: 0 0 0 $badge-focus-width rgba($color-base, .3);
-      }
-    }
-    @if $label == warning {
-      color: $neutral-primary;
-      .icon {
-        @include icon-color($neutral-primary);
-      }
-      &[href] {
-        @include hover-focus {
-          color: $neutral-primary;
-        }
-      }
-    }
-    @else {
-      color: $white;
-      .icon {
-        @include icon-color($white);
-      }
-      &[href] {
-        @include hover-focus {
-          color: $white;
-        }
-      }
-    }
-  }
-
+  .badge-#{$label},
   .badge-#{$label}-light {
     color: $color-dark;
     background-color: $color-light;
+    border-color: $color-light;
     .icon {
       @include icon-color($color-dark);
     }
@@ -262,6 +232,15 @@
         outline: 0;
         box-shadow: 0 0 0 $badge-focus-width rgba($color-dark, .3);
       }
+    }
+  }
+
+  .badge-pill {
+    &.badge {
+      border: 1px solid $neutral-secondary;
+    }
+    &.badge-#{$label} {
+      border: 1px solid $color-base;
     }
   }
 }

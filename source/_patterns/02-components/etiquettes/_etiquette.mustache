@@ -1,0 +1,12 @@
+{{# badgeIconClass }}
+<span class="badge {{ badgeClass }}">
+  <span class="badge-label">{{ badge }}</span>
+  <span class="icon {{ badgeIconClass }}"></span>
+</span>
+{{/ badgeIconClass }}
+{{^ badgeIconClass }}
+  <span class="badge {{ badgeClass }}">{{ badge }}</span>
+{{/ badgeIconClass }}
+{{# badge-sr-text }}
+  <span class="sr-only">{{ badge-sr-text }}</span>
+{{/ badge-sr-text }}
