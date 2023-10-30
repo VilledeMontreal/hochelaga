@@ -113,6 +113,7 @@
 
   // Adjust close link position
   .close {
+    border-radius: $btn-border-radius-squared;
     margin: .5rem;
     padding: .5rem;
   }
@@ -239,6 +240,11 @@
   .close .icon {
     @include icon-color($white);
   }
+  .close {
+    &:focus {
+      box-shadow: $input-btn-reverse-focus-box-shadow;
+    }
+  }
 
   .message-bar-container {
     display: block;
@@ -251,11 +257,14 @@
     // Default link colors and underline, overrides in mixins
     a {
       color: $white;
-      @include hover-focus {
+      &:hover,
+      &:focus {
         color: $white;
         background-color: $black;
       }
-
+      &:focus {
+        box-shadow: $input-btn-reverse-focus-box-shadow;
+      }
       &:after {
         background-color: $white;
       }
@@ -318,15 +327,22 @@
       .close .icon {
         @include icon-color($neutral-primary);
       }
+      .close:focus {
+        box-shadow: $input-btn-focus-box-shadow;
+      }
       .message-bar-container {
         a {
           color: $neutral-primary;
           &:after {
             background-color: $neutral-primary;
           }
-          @include hover-focus {
+          &:hover,
+          &:focus {
             color: $neutral-primary;
             background-color: lighten($color-base, 10%);
+          }
+          &:focus {
+            box-shadow: $input-btn-focus-box-shadow;
           }
         }
       }
@@ -340,10 +356,17 @@
       .close .icon {
         @include icon-color($white);
       }
+      .close:focus {
+        box-shadow: $input-btn-reverse-focus-box-shadow;
+      }
       .message-bar-container {
         a {
-          @include hover-focus {
+          &:hover,
+          &:focus {
             background-color: darken($color-base, 6%);
+          }
+          &:focus {
+            box-shadow: $input-btn-reverse-focus-box-shadow;
           }
         }
       }

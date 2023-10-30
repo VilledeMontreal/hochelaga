@@ -116,7 +116,8 @@
       .menu-item-label {
         color: $neutral-secondary;
       }
-      @include hover-focus {
+      &:hover,
+      &:focus {
         background-color: transparent;
         z-index: 2;
         .icon {
@@ -125,6 +126,10 @@
         .menu-item-label {
           color: $action;
         }
+      }
+
+      &:focus {
+        box-shadow: $input-btn-focus-inside-box-shadow;
       }
 
       &.active,
@@ -375,6 +380,10 @@
         width: 2px;
         background-color: $action;
       }
+    }
+
+    &:focus {
+      box-shadow: $input-btn-focus-inside-box-shadow;
     }
   }
 

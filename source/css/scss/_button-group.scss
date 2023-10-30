@@ -27,6 +27,13 @@
       color: $neutral-tertiary;
     }
 
+    &:not(:disabled):not(.disabled):not(.dropdown-toggle):active,
+    &:not(:disabled):not(.disabled):not(.dropdown-toggle).active {
+      &:focus {
+        box-shadow: $input-btn-focus-inside-box-shadow;
+      }
+    }
+
     // We need to fix padding and margin for btn-icon
     &.btn-icon {
       flex: 0 0 auto;
@@ -47,18 +54,24 @@
         .icon {
           @include icon-color($primary);
         }
+
+        &:not(.dropdown-toggle):focus {
+          box-shadow: $input-btn-focus-inside-box-shadow;
+        }
       }
     }
 
     // Bring the hover, focused, and "active" buttons to the front to overlay
     // the borders properly
-    @include hover {
-      z-index: 1;
-    }
+    &:hover,
     &:focus,
     &:active,
     &.active {
       z-index: 1;
+    }
+
+    &:not(.dropdown-toggle):focus {
+      box-shadow: $input-btn-focus-inside-box-shadow;
     }
   }
 
@@ -117,6 +130,14 @@
 }
 .btn-group-lg > .btn {
   @extend .btn-lg;
+}
+
+.btn-group-stepper {
+  .form-control {
+    &:focus {
+      box-shadow: $input-btn-focus-inside-box-shadow;
+    }
+  }
 }
 
 

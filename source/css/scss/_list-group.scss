@@ -85,7 +85,8 @@
       > a {
         align-items: center;
       }
-      @include hover-focus {
+      &:hover,
+      &:focus {
         border-bottom: none;
         border-top: 1px solid transparent;
         + .list-group-item-action {
@@ -99,7 +100,8 @@
       &.active {
         border-bottom: 1px solid transparent;
       }
-      @include hover-focus {
+      &:hover,
+      &:focus {
         border-bottom: 1px solid transparent;
       }
     }
@@ -131,7 +133,8 @@
   text-align: inherit; // For `<button>`s (anchors inherit)
   text-decoration: none;
 
-  @include hover-focus {
+  &:hover,
+  &:focus {
     z-index: 1; // Place hover/focus items above their siblings for proper border styling
     color: $list-group-action-hover-color;
     text-decoration: none;
@@ -203,6 +206,10 @@
       }
     }
 
+    &:focus {
+      box-shadow: $input-btn-focus-inside-box-shadow;
+    }
+
   }
 
   .icon {
@@ -230,6 +237,10 @@
       text-decoration: none;
       // align-items: center;
       width: 100%;
+
+      &:focus {
+        box-shadow: $input-btn-focus-inside-box-shadow;
+      }
     }
   }
 
@@ -242,28 +253,14 @@
   a {
     text-decoration: none;
     border-bottom: none;
-      // Hover state
-    @include hover-focus {
-      .icon {
-        @include icon-color($action-lighter);
-      }
-      svg {
-        fill: $action-lighter;
-      }
+    .icon {
+      @include icon-color($action);
     }
-
-    &:active,
-    &.active {
-      .icon {
-        @include icon-color($action-lighter);
-      }
-      svg {
-        fill: $action-lighter;
-      }
+    svg {
+      fill: $action;
     }
   }
   .icon {
-    @include icon-color($neutral-tertiary);
     &:before {
       height: 2.5rem;
       width: 2.5rem;
@@ -314,7 +311,8 @@
     }
 
     a.list-group-item-title {
-      @include hover-focus {
+      &:hover,
+      &:focus {
         background-color: transparent;
         color: $list-group-action-active-color;
       }
@@ -327,7 +325,8 @@
     color: $neutral-secondary;
     font-weight: $font-weight-normal;
 
-    @include hover-focus {
+    &:hover,
+    &:focus {
       background-color: transparent;
       cursor: pointer;
 
@@ -339,6 +338,11 @@
         color: $list-group-action-active-color;
       }
     }
+
+    &:focus {
+      box-shadow: $input-btn-focus-inside-box-shadow;
+    }
+
   }
 
   .list-group-thumb {
@@ -573,7 +577,8 @@
   }
 
   .list-group-item {
-    @include hover-focus {
+    &:hover,
+    &:focus {
       background-color: $neutral-underground-1;
 
       .list-group-icon {

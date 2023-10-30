@@ -80,7 +80,6 @@ legend,
   padding: $input-padding-y-sm $input-padding-x-sm;
   @include font-size($input-font-size-sm);
   line-height: $input-line-height-sm;
-  // @include border-radius($input-border-radius-sm);
 }
 
 .form-group {
@@ -219,7 +218,7 @@ legend,
     transform: translateY(-50%);
     display: flex;
     color: $neutral-primary;
-    margin-right: .3rem;
+    margin-right: .5rem;
     padding: 0;
     border-radius: 50%;
 
@@ -456,6 +455,15 @@ legend,
     &::after {
       background-color: $custom-switch-indicator-checked-handle;
       border-color: $custom-switch-indicator-checked-handle;
+    }
+  }
+
+  .custom-control-input:focus ~ .custom-control-label {
+    &::before {
+      box-shadow: none;
+    }
+    &::after {
+      box-shadow: $input-btn-focus-box-shadow;
     }
   }
 

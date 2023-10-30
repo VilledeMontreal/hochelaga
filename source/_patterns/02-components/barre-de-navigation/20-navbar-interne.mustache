@@ -1,14 +1,19 @@
 <nav class="main-navbar navbar navbar-dark navbar-expand w-100" role="navigation">
   {{# navbarInterneHasMenu}}
-  <button type="button" id="menu-interne-toggler" class="btn navbar-btn navbar-btn-icon btn-hide-label-sm ml-0" aria-expanded="false" aria-controls="slide-menu-left">
+  <button type="button" id="menu-interne-toggler" class="btn navbar-btn navbar-btn-icon btn-hide-label-sm ml-0{{# isHomeLink}} mr-2{{/ isHomeLink}}" aria-expanded="false" aria-controls="slide-menu-left">
     <span class="icon icon-menu" aria-hidden="true"></span>
     <span class="sr-only btn-label">Menu</span>
   </button>
   {{> components-main-menu-interne }}
   {{/ navbarInterneHasMenu}}
+  {{^ isHomeLink}}
   <div class="navbar-sitename">
     <span class="sitename">{{ applicationName }}</span>
   </div>
+  {{/ isHomeLink}}
+  {{# isHomeLink}}
+  <a class="navbar-brand" href="/">{{ applicationName }}</a>
+  {{/ isHomeLink}}
   <div class="navbar-div ml-auto">
     <div class="d-flex align-items-center">
       {{# navbarInterneHasSearch}}
