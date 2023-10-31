@@ -1,5 +1,6 @@
 //
 // Collapsible Item
+// TODO: merge accordion-listed since listed became the only available version.
 //
 .collapsible-item {
   background-color: $white;
@@ -160,16 +161,16 @@
       a,
       button {
         &:after {
-          -webkit-mask: url($data-icon-chevron-down) no-repeat 50% 50%;
-          mask: url($data-icon-chevron-down) no-repeat 50% 50%;
+          -webkit-mask: url($data-icon-plus) no-repeat 50% 50%;
+          mask: url($data-icon-plus) no-repeat 50% 50%;
           background-color: $neutral-primary;
         }
 
         &[aria-expanded="true"] {
           color: $primary;
           &:after {
-            -webkit-mask: url($data-icon-chevron-up) no-repeat 50% 50%;
-            mask: url($data-icon-chevron-up) no-repeat 50% 50%;
+            -webkit-mask: url($data-icon-minus) no-repeat 50% 50%;
+            mask: url($data-icon-minus) no-repeat 50% 50%;
             background-color: $neutral-primary;
           }
         }
@@ -179,15 +180,15 @@
         &:focus {
           border-radius: 0;
           &:after {
-            -webkit-mask: url($data-icon-chevron-down) no-repeat 50% 50%;
-            mask: url($data-icon-chevron-down) no-repeat 50% 50%;
+            -webkit-mask: url($data-icon-plus) no-repeat 50% 50%;
+            mask: url($data-icon-plus) no-repeat 50% 50%;
             background-color: $primary;
           }
 
           &[aria-expanded="true"] {
             &:after {
-              -webkit-mask: url($data-icon-chevron-up) no-repeat 50% 50%;
-              mask: url($data-icon-chevron-up) no-repeat 50% 50%;
+              -webkit-mask: url($data-icon-minus) no-repeat 50% 50%;
+              mask: url($data-icon-minus) no-repeat 50% 50%;
               background-color: $primary;
             }
           }
@@ -195,15 +196,15 @@
       }
       .disabled {
         &:after {
-          -webkit-mask: url($data-icon-chevron-down) no-repeat 50% 50%;
-          mask: url($data-icon-chevron-down) no-repeat 50% 50%;
+          -webkit-mask: url($data-icon-plus) no-repeat 50% 50%;
+          mask: url($data-icon-plus) no-repeat 50% 50%;
           background-color: $neutral-stroke;
         }
         &:hover,
         &:active {
           &:after {
-            -webkit-mask: url($data-icon-chevron-down) no-repeat 50% 50%;
-            mask: url($data-icon-chevron-down) no-repeat 50% 50%;
+            -webkit-mask: url($data-icon-plus) no-repeat 50% 50%;
+            mask: url($data-icon-plus) no-repeat 50% 50%;
             background-color: $neutral-stroke;
           }
         }

@@ -3,7 +3,7 @@
 
 <main class="main-content {{ pageClasses }}" id="main-content" aria-label="Main Content">
   <div class="row no-gutters h-100">
-    <div class="col border-ltr-4">
+    <div class="col border-top border-right">
       <iframe id="item-frame" class="is-full-frame" allowfullscreen="" sandbox="allow-forms allow-popups allow-same-origin allow-scripts" src="{{link.templates-citoyens-demarche}}"></iframe>
     </div>
     <div class="col-auto">
@@ -56,9 +56,4 @@
       </div>
     </div>
   </div>
-
-  <!-- Flyout Aide décision -->
-  {{# aideDecision }}
-  {{> components-flyout-item }}
-  {{/ aideDecision }}
 </main>

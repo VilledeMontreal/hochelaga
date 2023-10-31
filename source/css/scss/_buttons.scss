@@ -99,6 +99,22 @@ button {
     }
   }
 
+  &.btn-accordion-collapse {
+    padding: 0;
+    margin: 1rem 0;
+    background: transparent;
+    border-radius: 0;
+    color: $action;
+    border: none;
+    border-bottom: 1px solid transparent;
+
+    &:hover,
+    &:focus {
+      background-color: $highlight-light;
+      border-color: $action;
+    }
+  }
+
   // Spinner
   .spinner-border {
     color: currentColor;
