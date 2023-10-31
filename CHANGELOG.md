@@ -6,19 +6,21 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 
 ## [5.0.0] - unreleased
 
-## Changed
+### Changed
 - Retrait du tilde importer qui causait problème avec des versions récentes (15+ d'angular). Devrait être transparent dans des versions récentes de sass (dart-sass).
 - Components Accordeon: Ajustement structure accordeon et fix disabled state.
 - Components Étiquettes: Fusion de la variante light. Modification des schemas de couleurs des étiquettes.
 - Components Badge: Harmonisation des schémas de couleurs avec les étiquettes. Ajout d'une bordure.
 - Components Boutons: Ajustement couleur de fond des boutons secondaires et tertiaires (non inversés)
 
-## Added
+### Added
 - Styles - iconographie: Ajout des icones social-threads, social-twitch, social-vimeo.
 - Styles - iconographie: Ajout des icones accessibilite, astuce, communiquer, demander, erreur, payer, permis, securite, signaler, trouver, trouverMap.
+- Components Accordeon: Ajout du bouton Tout ouvrir / Tout fermer avec exemple de script.
 
-## Deprecated
+### Deprecated
 - Components - Accordeon: retrait de la version small.
+- Components - Accordeon: retrait de la version Framed. La version listed est la seule qui devrait être utilisé.
 - Components - Entree de données: Les versions small des input text, textarea et select sont deprecated et retiré des exemples.
 
 ## [4.24.3] - 2023-05-24

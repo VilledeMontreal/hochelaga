@@ -1,15 +1,15 @@
 {
   "pageClasses": "show-drawer",
   "includePhotoswipe": true,
-  "navbarInterneHasMenu": false,
-  "navbarInterneHasSearch": false,
+  "navbarInterneHasMenu": true,
+  "navbarInterneHasSearch": true,
   "user-authenticated": true,
   "user": {
     "name": "Uxabcd01",
     "username": "Uxabc1b",
     "email": "courriel@montreal.ca"
   },
-  "applicationName": "Vue de l'agent 311",
+  "applicationName": "Outil intégré",
   "menuItemVerticalLabeledBar": {
     "menuItemClass": "menu-items-column menu-items-labeled-bar menu-items-right",
     "menuItem": [
@@ -33,7 +33,7 @@
       },
       {
         "class": false,
-        "url": "link.templates-outils-interne-vue-agent-311-signaler",
+        "url": "#",
         "menuItemIcon": {
           "icon-name": "icon-comment"
         },
@@ -76,8 +76,8 @@
         "icon-name": "icon-info"
       }
     ],
-    "accordionListed": {
-      "collapsibleClasses": "accordeon-listed mb-3",
+    "accordion": {
+      "collapsibleClasses": "accordeon-listed mb-2 px-2",
       "collapsibleItem": [
         {
           "disabled": false,
@@ -521,32 +521,5 @@
         }
       ]
     }
-  },
-  "help": {
-    "list": [
-      {
-        "hasIcon": true,
-        "icon-name": "icon-help",
-        "listItemAction": {
-          "toggle": {
-            "type": "flyout",
-            "id": "aideDecisionFlyout01"
-          }
-        },
-        "listItemLabel": "Aide à la décision",
-        "listItemContentClass": "font-size-sm-interface",
-        "listItemContent": {
-          "extraContent": {
-            "content": "Distribution, réparation ou remplacement de bac roulant."
-          }
-        }
-      }
-    ]
-  },
-  "aideDecision": {
-    "id": "aideDecisionFlyout01",
-    "ariaLabelledBy": "aideDecisionFlyoutLabel",
-    "flyoutPositionClass": "flyout-bottom flyout-custom-right",
-    "flyoutAideDecisionBody": true
   }
 }

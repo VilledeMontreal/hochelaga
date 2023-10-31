@@ -742,6 +742,66 @@ loadMoreItems.forEach((loadMoreItem) => {
   });
 });
 
+// Expand All / Collapse All
+//
+// This is simplistic code to demonstrate how load more
+// should set focus at the begining of the added content
+// For demonstration purpose only.
+const accordions = document.querySelectorAll('.accordeon-listed');
+accordions.forEach((accordion) => {
+  const accordionOpenAllButton = accordion.querySelector('.btn-accordion-collapse');
+  const accordionList = Array.from(accordion.querySelectorAll('.accordeon-listed .collapsible-item')).filter(
+    (accordion) => !accordion.firstElementChild.firstElementChild.firstElementChild.classList.contains('disabled')
+  );
+  const openAllButtonLabel = 'Tout ouvrir';
+  const closeAllButtonLabel = 'Tout fermer';
+  let expanded = false;
+
+  // If an accordion is opened, set expanded state to true and adjust open all button label
+  accordionList.forEach((accordion) => {
+    $(accordion.lastElementChild).on('shown.bs.collapse', () => {
+      expanded = true;
+      accordionOpenAllButton.setAttribute("aria-hidden", "true");
+      accordionOpenAllButton.textContent = closeAllButtonLabel;
+    });
+  });
+
+  // If a collapsable element doesn't have the show class, set expanded state to false and adjust open all button label
+  $('.collapse').on('hidden.bs.collapse', () => {
+    if (!$('.collapse').hasClass('show')) {
+      expanded = false;
+      accordionOpenAllButton.setAttribute('aria-expanded', 'false');
+      accordionOpenAllButton.textContent = openAllButtonLabel;
+    }
+  });
+
+  // On open all button click, open or close all accordions depending on expanded state
+  accordionOpenAllButton.addEventListener('click', () => {
+    if (expanded) {
+      expanded = false;
+      accordionOpenAllButton.setAttribute('aria-expanded', 'false');
+      accordionOpenAllButton.textContent = openAllButtonLabel;
+      collapseAll();
+    } else {
+      expanded = true;
+      accordionOpenAllButton.setAttribute('aria-expanded', 'true');
+      accordionOpenAllButton.textContent = closeAllButtonLabel;
+      expandAll();
+    }
+  });
+
+  function expandAll() {
+    accordionList.forEach((accordion) => {
+      $(accordion.lastElementChild).collapse('show');
+    });
+  }
+  function collapseAll() {
+    accordionList.forEach((accordion) => {
+      $(accordion.lastElementChild).collapse('hide');
+    });
+  }
+
+});
 
 
 function toggleHidden(id) {
