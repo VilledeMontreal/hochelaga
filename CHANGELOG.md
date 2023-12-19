@@ -18,6 +18,9 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 - Styles - iconographie: Ajout des icones accessibilite, astuce, communiquer, demander, erreur, payer, permis, securite, signaler, trouver, trouverMap.
 - Components Accordeon: Ajout du bouton Tout ouvrir / Tout fermer avec exemple de script.
 
+### Fixed
+- Styes - typographie: correction bogue artefact sur lien avec la classe .is-external-link
+
 ### Deprecated
 - Components - Accordeon: retrait de la version small.
 - Components - Accordeon: retrait de la version Framed. La version listed est la seule qui devrait être utilisé.
