@@ -239,9 +239,9 @@ a.text-muted {
     content: "";
     -webkit-mask: url($data-icon-externallink) no-repeat center right;
     mask: url($data-icon-externallink) no-repeat center right;
-    -webkit-mask-size: contain;
-    mask-size: contain;
-    padding-right: 1.5rem; /* sizing */
+    -webkit-mask-size: cover;
+    mask-size: cover;
+    padding-right: 1.5rem;
     margin-right: -1.5rem;
   }
   &.link-sm {
