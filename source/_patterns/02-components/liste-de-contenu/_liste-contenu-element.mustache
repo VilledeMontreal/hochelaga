@@ -3,9 +3,7 @@
 {{# listUL}}<li class="list-item {{ listItemClass }}">{{/ listUL}}
   {{# listItemAction}}
   <div class="list-item-action">
-    <a href="{{url}}"{{# actionClasses}} class="{{actionClasses}}"{{/ actionClasses}}>
-      <span class="link-label">{{listItemLabel}}</span>
-    </a>
+    <a href="{{url}}"{{# actionClasses}} class="{{actionClasses}}"{{/ actionClasses}}>{{listItemLabel}}</a>
   </div>
   {{# listItemContent}}
   <div class="list-item-content">{{# itemContent}}{{{itemContent}}}{{/ itemContent}}
@@ -14,14 +12,12 @@
     {{/ extraContent}}{{/ itemContent}}
     {{# extraContentAction}}
     <div class="list-item-action{{# classes}} {{classes}}{{/classes}}">
-      <a href="{{url}}"{{# actionClasses}} class="{{actionClasses}}"{{/ actionClasses}}>
-        <span class="link-label">{{ text }}</span>
-      </a>
+      <a href="{{url}}"{{# actionClasses}} class="{{actionClasses}}"{{/ actionClasses}}>{{ text }}</a>
     </div>
     {{/ extraContentAction}}
     {{# extraContentDropdown}}
     <div class="dropdown mt-1">
-      <a href="{{url}}" class="link-list-element link-has-icon dropdown-toggle" id="dropdownDateButton" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><div><span class="link-label">{{ link-label }}</span></div></a>
+      <a href="{{url}}" class="link-list-element link-has-icon dropdown-toggle" id="dropdownDateButton" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><div>{{ link-label }}</div></a>
       {{> components-dropdown}}
     </div>
     {{/ extraContentDropdown}}
@@ -40,14 +36,12 @@
     {{/ extraContent}}{{/ itemContent}}
     {{# extraContentAction}}
     <div class="list-item-action{{# classes}} {{classes}}{{/classes}}">
-      <a href="{{url}}"{{# actionClasses}} class="{{actionClasses}}"{{/ actionClasses}}>
-        <span class="link-label">{{ text }}</span>
-      </a>
+      <a href="{{url}}"{{# actionClasses}} class="{{actionClasses}}"{{/ actionClasses}}>{{ text }}</a>
     </div>
     {{/ extraContentAction}}
     {{# extraContentDropdown}}
     <div class="dropdown mt-1">
-      <a href="{{url}}" class="link-list-element link-has-icon dropdown-toggle" id="dropdownDateButton" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><div><span class="link-label">{{ link-label }}</span></div></a>
+      <a href="{{url}}" class="link-list-element link-has-icon dropdown-toggle" id="dropdownDateButton" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><div>{{ link-label }}</div></a>
       {{> components-dropdown}}
     </div>
     {{/ extraContentDropdown}}
@@ -75,14 +69,12 @@
     {{/ extraContent}}{{/ itemContent}}
     {{# extraContentAction}}
     <div class="list-item-action {{# classes}} {{classes}}{{/classes}}">
-      <a href="{{url}}"{{# actionClasses}} class="{{actionClasses}}"{{/ actionClasses}}>
-        <span class="link-label">{{ text }}</span>
-      </a>
+      <a href="{{url}}"{{# actionClasses}} class="{{actionClasses}}"{{/ actionClasses}}>{{ text }}</a>
     </div>
     {{/ extraContentAction}}
     {{# extraContentDropdown}}
     <div class="dropdown mt-1">
-      <a href="{{url}}" class="link-list-element link-has-icon dropdown-toggle" id="dropdownDateButton" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><div><span class="link-label">{{ link-label }}</span></div></a>
+      <a href="{{url}}" class="link-list-element link-has-icon dropdown-toggle" id="dropdownDateButton" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><div>{{ link-label }}</div></a>
       {{> components-dropdown}}
     </div>
     {{/ extraContentDropdown}}
@@ -105,14 +97,12 @@
       {{/ extraContent}}{{/ itemContent}}
       {{# extraContentAction}}
       <div class="list-item-action {{# classes}} {{classes}}{{/classes}}">
-        <a href="{{url}}"{{# actionClasses}} class="{{actionClasses}}"{{/ actionClasses}}>
-          <span class="link-label">{{ text }}</span>
-        </a>
+        <a href="{{url}}"{{# actionClasses}} class="{{actionClasses}}"{{/ actionClasses}}>{{ text }}</a>
       </div>
       {{/ extraContentAction}}
       {{# extraContentDropdown}}
       <div class="dropdown mt-1">
-        <a href="{{url}}" class="link-list-element link-has-icon dropdown-toggle" id="dropdownDateButton" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><div><span class="link-label">{{ link-label }}</span></div></a>
+        <a href="{{url}}" class="link-list-element link-has-icon dropdown-toggle" id="dropdownDateButton" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><div>{{ link-label }}</div></a>
         {{> components-dropdown}}
       </div>
       {{/ extraContentDropdown}}
