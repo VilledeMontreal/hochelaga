@@ -7,10 +7,8 @@
     color: $color !important;
     a {
       color: $color !important;
-      border-bottom: $link-border-width solid $color;
       @include hover-focus {
         background-color: $color-lighten;
-        border-bottom: $link-border-width solid $color;
         &:before {
           background-color: $color-lighten;
         }
@@ -26,12 +24,10 @@
   }
   a#{$parent}{
     color: $color !important;
-    border-bottom: $link-border-width solid $color;
     @if $color-lighten != 0 {
       @include hover-focus {
         color: $color !important;
         background-color: $color-lighten;
-        border-bottom: $link-border-width solid $color;
       }
     }
     &:before {

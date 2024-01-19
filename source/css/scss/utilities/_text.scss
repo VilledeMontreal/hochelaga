@@ -7,12 +7,11 @@
 // Define the default link before the mixin
 a {
   color: $primary;
-  border-bottom: $link-border-width solid $primary;
+  text-underline-offset: .3125em;
   font-weight: $font-weight-bold;
   @include hover-focus {
     color: $primary;
     background-color: $highlight-light;
-    border-bottom: $link-border-width solid $primary;
   }
   &:after {
     background-color: currentColor;
@@ -27,32 +26,32 @@ a {
   @include font-size($font-size-base);
   line-height: $line-height-md;
   border: none;
+  text-decoration: none;
   @include hover-focus {
     border: none;
+    text-decoration: underline;
     background-color: transparent;
     .link-label {
       background-color: $highlight-light;
       display: inline;
-      border-bottom: 1px solid $action;
     }
   }
 
   // Utility class for link element with icon tag.
   &.link-has-icon {
     display: inline-flex;
-    border: none;
+    text-decoration: none;
     line-height: $line-height-md;
     .icon {
       @include icon-color($action);
       padding-right: .25rem;
     }
     @include hover-focus {
-      border: none;
       background-color: transparent;
+      text-decoration: underline;
       .link-icon-label {
         background-color: $highlight-light;
         display: inline;
-        border-bottom: 1px solid $action;
       }
     }
 
@@ -99,7 +98,7 @@ a {
 
 // Utility class for inline link with icon tag.
 .link-has-icon:not(.link-list-element) {
-  margin-right: 1.5rem;
+  margin-right: 1.75rem;
   .icon {
     display: inline;
     @include icon-size($icon-md);
@@ -191,10 +190,8 @@ a {
 
 a.text-light,
 a.text-white {
-  border-bottom: $link-border-width solid $white !important;
   @include hover-focus {
     color: $white !important;
-    border-bottom: $link-border-width solid $white !important;
     background-color: transparent;
   }
   // Handle specific cases here...
@@ -214,10 +211,12 @@ a.text-white {
 
 a.text-muted {
   border-bottom: none;
+  text-decoration: none;
   cursor: not-allowed;
   @include hover-focus {
     color: $neutral-tertiary !important;
     border-bottom: none;
+    text-decoration: none;
     background-color: transparent;
     outline: none;
     box-shadow: none;
@@ -237,12 +236,16 @@ a.text-muted {
   position: relative;
   &:after {
     content: "";
+    display: inline-block;
     -webkit-mask: url($data-icon-externallink) no-repeat center right;
     mask: url($data-icon-externallink) no-repeat center right;
-    -webkit-mask-size: cover;
-    mask-size: cover;
+    -webkit-mask-size: 2.4ex;
+    mask-size: 2.4ex;
     padding-right: 1.5rem;
     margin-right: -1.5rem;
+    width: 1.5em;
+    height: 1.5em;
+    vertical-align: text-bottom;
   }
   &.link-sm {
     margin-right: 1.25rem;
