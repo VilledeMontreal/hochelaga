@@ -15,9 +15,11 @@
 
 .patternLink {
   border: none;
+  text-decoration: none;
   color: $gray-800;
   &:hover {
     color: lighten($gray-800, 30%);
+    text-decoration: none;
     border: none;
     background-color: transparent !important;
   }
@@ -35,8 +37,6 @@
 // Titles
 .pl-stroked-header {
   padding-top: 0.25em;
-  //   padding-left: 0.25em;
-  // border-top: 1px solid #ddd;
   width: 93%;
 }
 .sg-pattern-category {
@@ -62,7 +62,7 @@ h3.sg-pattern-title a {
 	font-size: 18px;
 	text-transform: none;
 	&::first-letter {
-  		text-transform: uppercase;
+  	text-transform: uppercase;
   }
   &:hover {
     color: lighten($neutral-primary, 20%) !important;
@@ -224,8 +224,7 @@ $pl-size-box-wrapper-padding: 1rem;
     font-size: 2rem;
 
     .pl-size-box {
-      margin: $pl-size-box-wrapper-padding auto $pl-size-box-wrapper-padding
-        auto;
+      margin: $pl-size-box-wrapper-padding auto $pl-size-box-wrapper-padding auto;
     }
 
     .pl-size-box-margin {
@@ -813,6 +812,7 @@ $pl-size-box-wrapper-padding: 1rem;
     &:hover,
     &:active,
     &:focus {
+      text-decoration: none;
       border-bottom: 1px solid #f5f2f0;
       background-color: #f5f2f0;
     }

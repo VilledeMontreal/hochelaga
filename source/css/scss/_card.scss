@@ -4,6 +4,7 @@
  */
 .card {
   border: none;
+  text-decoration: none;
   box-shadow: 0 0 0 $card-border-width $card-border-color;
   display: flex;
   font-weight: $font-weight-regular;
@@ -469,6 +470,7 @@ a.card {
   color: inherit;
   @include hover-focus {
     background-color: $card-bg;
+    text-decoration: none;
     border: none;
     box-shadow: $card-box-shadow;
     .icon {
@@ -493,6 +495,7 @@ a.card {
   &.card-multi,
   &.card-featured {
     @include hover-focus {
+      text-decoration: none;
       border: none;
       border-bottom: $card-border-width solid transparent;
     }
@@ -502,6 +505,7 @@ a.card {
   &.card-featured-lg {
     @include media-breakpoint-up(lg) {
       @include hover-focus {
+        text-decoration: none;
         border: none;
         .card-body {
           border-bottom: 1px solid transparent;

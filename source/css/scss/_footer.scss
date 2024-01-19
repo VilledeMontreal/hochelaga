@@ -9,11 +9,13 @@ footer {
     padding-bottom: 2rem;
 
     a:not(.btn) {
+      text-decoration: none;
       border: none;
       color: $white;
       font-weight: $font-weight-normal;
       @include hover-focus {
         background-color: transparent;
+        text-decoration: none;
         border-bottom: none;
         color: $action-lighter;
       }
