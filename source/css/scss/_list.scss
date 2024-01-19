@@ -27,18 +27,16 @@
 
   a {
     display: inline-block;
-    border-bottom: 1px solid transparent;
-    margin-bottom: -1px;
+    text-decoration: none;
     color: $list-group-action-color;
 
     // Hover state
     @include hover-focus {
       background-color: transparent;
       color: $list-group-action-hover-color;
-      text-decoration: none;
+      text-decoration: underline;
       z-index: 1; // Place hover/focus items above their siblings for proper border styling
       .link-label {
-        border-bottom: 1px solid $action;
         display: inline;
         background-color: $highlight-light;
       }
@@ -136,6 +134,7 @@
   .link-has-icon {
     display: inline-flex;
     border: none;
+    text-decoration: none;
     line-height: $line-height-md;
     .icon {
       @include icon-color($action);
@@ -146,11 +145,11 @@
     }
     @include hover-focus {
       border: none;
+      text-decoration: underline;
       background-color: transparent;
       .link-icon-label {
         background-color: $highlight-light;
         display: inline;
-        border-bottom: 1px solid $action;
       }
       .icon {
         border: none;

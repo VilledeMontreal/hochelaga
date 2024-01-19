@@ -12,6 +12,7 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 - Components Étiquettes: Fusion de la variante light. Modification des schemas de couleurs des étiquettes.
 - Components Badge: Harmonisation des schémas de couleurs avec les étiquettes. Ajout d'une bordure.
 - Components Boutons: Ajustement couleur de fond des boutons secondaires et tertiaires (non inversés)
+- Styles: Passage de border-bottom à text-decoration pour la gestion des underline de liens.
 
 ### Added
 - Styles - iconographie: Ajout des icones social-threads, social-twitch, social-vimeo.
@@ -19,7 +20,8 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 - Components Accordeon: Ajout du bouton Tout ouvrir / Tout fermer avec exemple de script.
 
 ### Fixed
-- Styes - typographie: correction bogue artefact sur lien avec la classe .is-external-link
+- Styles - typographie: correction bogue artefact sur lien avec la classe .is-external-link
+- Styles - typograhie: correction is-external-icon pour regler un problème d'artefact visuel sur ios.
 
 ### Deprecated
 - Components - Accordeon: retrait de la version small.

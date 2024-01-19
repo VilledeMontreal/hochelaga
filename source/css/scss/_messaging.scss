@@ -17,7 +17,6 @@
   a,
   .alert-link {
     color: $informative-dark;
-    border-bottom: $link-border-width solid $informative-dark;
     @extend .text-break;
     @include hover-focus {
       background-color: lighten($informative-light, 4%);
@@ -226,8 +225,6 @@
     // Default link colors and underline, overrides in mixins
     a {
       color: $white;
-      border-bottom: $link-border-width solid $white;
-
       @include hover-focus {
         color: $white;
         background-color: $black;
@@ -298,7 +295,6 @@
       .message-bar-container {
         a {
           color: $neutral-primary;
-          border-bottom: $link-border-width solid $neutral-primary;
           &:after {
             background-color: $neutral-primary;
           }
