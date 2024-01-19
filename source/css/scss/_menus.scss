@@ -71,9 +71,10 @@
 
   .main-menu-level1 {
     a {
+      text-decoration: none;
       border-bottom: none;
       @include hover-focus {
-        border-bottom: 1px solid $action !important;
+        text-decoration: underline;
       }
     }
   }
