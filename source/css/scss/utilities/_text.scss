@@ -232,35 +232,23 @@ a.text-muted {
 
 // Utility class to give external link icon for external link
 .is-external-link {
-  margin-right: 1.5rem;
+  margin-right: 1.5em;
   position: relative;
   &:after {
     content: "";
-    display: inline-block;
-    -webkit-mask: url($data-icon-externallink) no-repeat center right;
-    mask: url($data-icon-externallink) no-repeat center right;
-    -webkit-mask-size: 2.4ex;
-    mask-size: 2.4ex;
-    padding-right: 1.5rem;
-    margin-right: -1.5rem;
+    display: inline;
+    background: 0 0;
+    background-color: currentColor;
+    -webkit-mask: url($data-icon-externallink) no-repeat center right, linear-gradient(transparent, transparent);
+    mask: url($data-icon-externallink) no-repeat center right, linear-gradient(transparent, transparent);
+    -webkit-mask-size: 1.5em;
+    mask-size: 1.5em;
     width: 1.5em;
     height: 1.5em;
-    vertical-align: text-bottom;
-  }
-  &.link-sm {
-    margin-right: 1.25rem;
-    &:after {
-      padding-right: 1.25rem;
-      margin-right: -1.25rem;
-    }
-  }
-
-  &.link-xs {
-    margin-right: 1.125rem;
-    &:after {
-      padding-right: 1.125rem;
-      margin-right: -1.125rem;
-    }
+    margin-left: 0.125rem;
+    padding-left: 1.5em;
+    margin-right: -1.5em;
+    vertical-align: baseline;
   }
 }
 
