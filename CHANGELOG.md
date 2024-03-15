@@ -4,6 +4,7 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](http://keepachangelog.com/en/1.0.0/)
 and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.html).
 
+
 ## [5.0.0] - unreleased
 
 ### Changed
@@ -15,7 +16,7 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 - Styles: Passage de border-bottom à text-decoration pour la gestion des underline de liens.
 
 ### Added
-- Styles - iconographie: Ajout des icones social-threads, social-twitch, social-vimeo.
+- Styles - iconographie: Ajout des icones social-threads, social-twitch, social-vimeo et social-x.
 - Styles - iconographie: Ajout des icones accessibilite, astuce, communiquer, demander, erreur, payer, permis, securite, signaler, trouver, trouverMap.
 - Components Accordeon: Ajout du bouton Tout ouvrir / Tout fermer avec exemple de script.
 
