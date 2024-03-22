@@ -21,6 +21,7 @@ button {
   vertical-align: middle;
   user-select: none;
   border: $btn-border-width solid transparent;
+  text-decoration: if($link-decoration == none, null, none);
   @include button-size($btn-padding-y, $btn-padding-x, $btn-font-size, $btn-line-height, $btn-border-radius);
   @include transition($btn-transition);
 
@@ -99,6 +100,22 @@ button {
     }
   }
 
+  &.btn-accordion-collapse {
+    padding: 0;
+    margin: 1rem 0;
+    background: transparent;
+    border-radius: 0;
+    color: $action;
+    border: none;
+    border-bottom: 1px solid transparent;
+
+    &:hover,
+    &:focus {
+      background-color: $highlight-light;
+      border-color: $action;
+    }
+  }
+
   // Spinner
   .spinner-border {
     color: currentColor;
@@ -121,12 +138,12 @@ fieldset:disabled a.btn {
 }
 
 .btn-secondary {
-  @include button-variant($background: transparent, $border: $neutral-stroke, $color: $action, $hover-background: transparent, $hover-border: $action, $hover-color: $action, $active-background: transparent, $active-border: $action, $active-color: $action);
+  @include button-variant($background: $white, $border: $neutral-stroke, $color: $action, $hover-background: $white, $hover-border: $action, $hover-color: $action, $active-background: $white, $active-border: $action, $active-color: $action);
 }
 
 .btn-link,
 .btn-tertiary {
-  @include button-variant($background: transparent, $border: transparent, $color: $action, $hover-background: $highlight-light, $hover-border: $highlight-light, $hover-color: $action, $active-background: $highlight-light, $active-border: $highlight-light, $active-color: $action);
+  @include button-variant($background: $white, $border: $white, $color: $action, $hover-background: $highlight-light, $hover-border: $highlight-light, $hover-color: $action, $active-background: $highlight-light, $active-border: $highlight-light, $active-color: $action);
 }
 
 // Dialog Color Modifier
@@ -142,12 +159,12 @@ fieldset:disabled a.btn {
     }
     // Secondary
     &.btn-secondary {
-      @include button-variant($background: transparent, $border: $neutral-stroke, $color: $color-dark, $hover-background: transparent, $hover-border: $color-dark, $hover-color: $color-dark, $active-background: transparent, $active-border: $color-dark, $active-color: $color-dark, $box-shadow-color: $color-dark);
+      @include button-variant($background: $white, $border: $neutral-stroke, $color: $color-dark, $hover-background: $white, $hover-border: $color-dark, $hover-color: $color-dark, $active-background: $white, $active-border: $color-dark, $active-color: $color-dark, $box-shadow-color: $color-dark);
     }
     // Tertiary
     &.btn-tertiary,
     &.btn-link {
-      @include button-variant($background: transparent, $border: transparent, $color: $color-dark, $hover-background: $color-light, $hover-border: $color-light, $hover-color: $color-dark, $active-background: $color-light, $active-border: $color-light, $active-color: $color-dark, $box-shadow-color: $color-dark);
+      @include button-variant($background: $white, $border: $white, $color: $color-dark, $hover-background: $color-light, $hover-border: $color-light, $hover-color: $color-dark, $active-background: $color-light, $active-border: $color-light, $active-color: $color-dark, $box-shadow-color: $color-dark);
     }
   }
 
@@ -217,12 +234,12 @@ fieldset:disabled a.btn {
   }
   // Secondary
   &.btn-secondary {
-    @include button-variant($background: transparent, $border: $neutral-stroke, $color: $neutral-tertiary, $hover-background: transparent, $hover-border: $neutral-stroke, $hover-color: $neutral-tertiary, $active-background: transparent, $active-border: $neutral-stroke, $active-color: $neutral-tertiary);
+    @include button-variant($background: $neutral-underground-1, $border: $neutral-stroke, $color: $neutral-tertiary, $hover-background: $neutral-underground-1, $hover-border: $neutral-stroke, $hover-color: $neutral-tertiary, $active-background: $neutral-underground-1, $active-border: $neutral-stroke, $active-color: $neutral-tertiary);
   }
   // Tertiary
   &.btn-link,
   &.btn-tertiary {
-    @include button-variant($background: transparent, $border: transparent, $color: $neutral-tertiary, $hover-background: transparent, $hover-border: transparent, $hover-color: $neutral-tertiary, $active-background: transparent, $active-border: transparent, $active-color: $neutral-tertiary);
+    @include button-variant($background: $neutral-underground-1, $border: $neutral-underground-1, $color: $neutral-tertiary, $hover-background: $neutral-underground-1, $hover-border: $neutral-underground-1, $hover-color: $neutral-tertiary, $active-background: $neutral-underground-1, $active-border: $neutral-underground-1, $active-color: $neutral-tertiary);
   }
 
   // Reversed
@@ -258,6 +275,7 @@ fieldset:disabled a.btn {
   padding-right: 0;
   padding-top: .375rem;
   padding-bottom: .375rem;
+  text-decoration: none;
   @include hover-focus {
     border: none;
   }

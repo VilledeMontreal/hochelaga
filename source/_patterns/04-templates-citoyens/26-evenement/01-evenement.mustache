@@ -58,6 +58,19 @@
           {{> templates-citoyens-evenement-content}}
           </div>
           {{/ module-content}}
+
+          {{# module-links}}
+          <div class="badges-container mb-8">
+            <h2 class="h5 text-body">Recherche rapide</h2>
+            <ul class="list-inline mb-n1 font-size-base-interface">
+            {{# links }}
+              <li class="list-inline-item mr-1 mb-1">
+                <a href="{{url}}" title="link title text">{{title}}</a>
+              </li>
+            {{/ links }}
+            </ul>
+          </div>
+          {{/ module-links}}
         </div>
       </div>
 

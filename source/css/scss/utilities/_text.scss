@@ -7,12 +7,11 @@
 // Define the default link before the mixin
 a {
   color: $primary;
-  border-bottom: $link-border-width solid $primary;
+  text-underline-offset: .3125em;
   font-weight: $font-weight-bold;
   @include hover-focus {
     color: $primary;
     background-color: $highlight-light;
-    border-bottom: $link-border-width solid $primary;
   }
   &:after {
     background-color: currentColor;
@@ -27,32 +26,32 @@ a {
   @include font-size($font-size-base);
   line-height: $line-height-md;
   border: none;
+  text-decoration: none;
   @include hover-focus {
     border: none;
+    text-decoration: underline;
     background-color: transparent;
     .link-label {
       background-color: $highlight-light;
       display: inline;
-      border-bottom: 1px solid $action;
     }
   }
 
   // Utility class for link element with icon tag.
   &.link-has-icon {
     display: inline-flex;
-    border: none;
+    text-decoration: none;
     line-height: $line-height-md;
     .icon {
       @include icon-color($action);
       padding-right: .25rem;
     }
     @include hover-focus {
-      border: none;
       background-color: transparent;
+      text-decoration: underline;
       .link-icon-label {
         background-color: $highlight-light;
         display: inline;
-        border-bottom: 1px solid $action;
       }
     }
 
@@ -191,10 +190,8 @@ a {
 
 a.text-light,
 a.text-white {
-  border-bottom: $link-border-width solid $white !important;
   @include hover-focus {
     color: $white !important;
-    border-bottom: $link-border-width solid $white !important;
     background-color: transparent;
   }
   // Handle specific cases here...
@@ -214,10 +211,12 @@ a.text-white {
 
 a.text-muted {
   border-bottom: none;
+  text-decoration: none;
   cursor: not-allowed;
   @include hover-focus {
     color: $neutral-tertiary !important;
     border-bottom: none;
+    text-decoration: none;
     background-color: transparent;
     outline: none;
     box-shadow: none;
@@ -233,31 +232,23 @@ a.text-muted {
 
 // Utility class to give external link icon for external link
 .is-external-link {
-  margin-right: 1.5rem;
+  margin-right: 1.5em;
   position: relative;
   &:after {
     content: "";
-    -webkit-mask: url($data-icon-externallink) no-repeat center right;
-    mask: url($data-icon-externallink) no-repeat center right;
-    -webkit-mask-size: contain;
-    mask-size: contain;
-    padding-right: 1.5rem; /* sizing */
-    margin-right: -1.5rem;
-  }
-  &.link-sm {
-    margin-right: 1.25rem;
-    &:after {
-      padding-right: 1.25rem;
-      margin-right: -1.25rem;
-    }
-  }
-
-  &.link-xs {
-    margin-right: 1.125rem;
-    &:after {
-      padding-right: 1.125rem;
-      margin-right: -1.125rem;
-    }
+    display: inline;
+    background: 0 0;
+    background-color: currentColor;
+    -webkit-mask: url($data-icon-externallink) no-repeat center right, linear-gradient(transparent, transparent);
+    mask: url($data-icon-externallink) no-repeat center right, linear-gradient(transparent, transparent);
+    -webkit-mask-size: 1.5em;
+    mask-size: 1.5em;
+    width: 1.5em;
+    height: 1.5em;
+    margin-left: 0.125rem;
+    padding-left: 1.5em;
+    margin-right: -1.5em;
+    vertical-align: baseline;
   }
 }
 

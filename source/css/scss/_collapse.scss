@@ -1,5 +1,6 @@
 //
 // Collapsible Item
+// TODO: merge accordion-listed since listed became the only available version.
 //
 .collapsible-item {
   background-color: $white;
@@ -13,8 +14,8 @@
       margin: 0;
     }
     .collapsible-subtitle {
-      @include font-size($font-size-xs);
-      line-height: $line-height-xs;
+      @include font-size($font-size-sm);
+      line-height: $line-height-sm;
       color: $neutral-secondary;
       font-weight: $font-weight-normal;
     }
@@ -22,6 +23,7 @@
     a,
     button {
       background: transparent;
+      text-decoration: none;
       border: none;
       color: $headings-color;
       cursor: pointer;
@@ -160,16 +162,16 @@
       a,
       button {
         &:after {
-          -webkit-mask: url($data-icon-chevron-down) no-repeat 50% 50%;
-          mask: url($data-icon-chevron-down) no-repeat 50% 50%;
+          -webkit-mask: url($data-icon-plus) no-repeat 50% 50%;
+          mask: url($data-icon-plus) no-repeat 50% 50%;
           background-color: $neutral-primary;
         }
 
         &[aria-expanded="true"] {
           color: $primary;
           &:after {
-            -webkit-mask: url($data-icon-chevron-up) no-repeat 50% 50%;
-            mask: url($data-icon-chevron-up) no-repeat 50% 50%;
+            -webkit-mask: url($data-icon-minus) no-repeat 50% 50%;
+            mask: url($data-icon-minus) no-repeat 50% 50%;
             background-color: $neutral-primary;
           }
         }
@@ -179,42 +181,42 @@
         &:focus {
           border-radius: 0;
           &:after {
-            -webkit-mask: url($data-icon-chevron-down) no-repeat 50% 50%;
-            mask: url($data-icon-chevron-down) no-repeat 50% 50%;
+            -webkit-mask: url($data-icon-plus) no-repeat 50% 50%;
+            mask: url($data-icon-plus) no-repeat 50% 50%;
             background-color: $primary;
           }
 
           &[aria-expanded="true"] {
             &:after {
-              -webkit-mask: url($data-icon-chevron-up) no-repeat 50% 50%;
-              mask: url($data-icon-chevron-up) no-repeat 50% 50%;
+              -webkit-mask: url($data-icon-minus) no-repeat 50% 50%;
+              mask: url($data-icon-minus) no-repeat 50% 50%;
               background-color: $primary;
             }
           }
         }
       }
-    }
-    .disabled {
-      &:after {
-        -webkit-mask: url($data-icon-chevron-down) no-repeat 50% 50%;
-        mask: url($data-icon-chevron-down) no-repeat 50% 50%;
-        background-color: $neutral-stroke;
-      }
-      &:hover,
-      &:active {
+      .disabled {
         &:after {
-          -webkit-mask: url($data-icon-chevron-down) no-repeat 50% 50%;
-          mask: url($data-icon-chevron-down) no-repeat 50% 50%;
+          -webkit-mask: url($data-icon-plus) no-repeat 50% 50%;
+          mask: url($data-icon-plus) no-repeat 50% 50%;
           background-color: $neutral-stroke;
+        }
+        &:hover,
+        &:active {
+          &:after {
+            -webkit-mask: url($data-icon-plus) no-repeat 50% 50%;
+            mask: url($data-icon-plus) no-repeat 50% 50%;
+            background-color: $neutral-stroke;
+          }
         }
       }
     }
   }
-
+  // Deprecated Small version
   &.accordeon-listed-sm {
     > .collapsible-item {
       .collapsible-header {
-        a {
+        a, button {
           @include font-size($font-size-sm);
           line-height: $line-height-sm;
           padding: .5rem 2.5rem .5rem .5rem;

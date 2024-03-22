@@ -4,6 +4,31 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](http://keepachangelog.com/en/1.0.0/)
 and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.html).
 
+
+## [5.1.0] - 2024-03-22
+
+### Changed
+- Retrait du tilde importer qui causait problème avec des versions récentes (15+ d'angular). Devrait être transparent dans des versions récentes de sass (dart-sass).
+- Components Accordeon: Ajustement structure accordeon et fix disabled state.
+- Components Étiquettes: Fusion de la variante light. Modification des schemas de couleurs des étiquettes.
+- Components Badge: Harmonisation des schémas de couleurs avec les étiquettes. Ajout d'une bordure.
+- Components Boutons: Ajustement couleur de fond des boutons secondaires et tertiaires (non inversés)
+- Styles: Passage de border-bottom à text-decoration pour la gestion des underline de liens.
+
+### Added
+- Styles - iconographie: Ajout des icones social-threads, social-twitch, social-vimeo et social-x.
+- Styles - iconographie: Ajout des icones accessibilite, astuce, communiquer, demander, erreur, payer, permis, securite, signaler, trouver, trouverMap.
+- Components Accordeon: Ajout du bouton Tout ouvrir / Tout fermer avec exemple de script.
+
+### Fixed
+- Styles - typographie: correction bogue artefact sur lien avec la classe .is-external-link
+- Styles - typograhie: correction is-external-icon pour regler un problème d'artefact visuel sur ios.
+
+### Deprecated
+- Components - Accordeon: retrait de la version small.
+- Components - Accordeon: retrait de la version Framed. La version listed est la seule qui devrait être utilisé.
+- Components - Entree de données: Les versions small des input text, textarea et select sont deprecated et retiré des exemples.
+
 ## [4.24.3] - 2023-05-24
 
 ### Fixed
