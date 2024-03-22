@@ -5,7 +5,7 @@ The format is based on [Keep a Changelog](http://keepachangelog.com/en/1.0.0/)
 and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.html).
 
 
-## [5.0.0] - unreleased
+## [5.1.0] - 2024-03-22
 
 ### Changed
 - Retrait du tilde importer qui causait problème avec des versions récentes (15+ d'angular). Devrait être transparent dans des versions récentes de sass (dart-sass).
