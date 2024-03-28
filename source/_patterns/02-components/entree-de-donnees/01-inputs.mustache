@@ -9,11 +9,28 @@
 
 <h4 class="pl-pattern-subtitle">Validation</h4>
 <div class="row">
-  {{# inputTextSizeError}}
+  {{# inputTextSizeValidation}}
   <div class="col-xs-6 col-md-4">
     {{> components-input-text }}
   </div>
-  {{/ inputTextSizeError}}
+  {{/ inputTextSizeValidation}}
+  <div class="col-xs-6 col-md-4">
+    <div class="form-group has-clear required">
+      <label for="form-group-input-clear">En erreur input rempli</label>
+      <div class="input-group-icon">
+        <input type="text" class="form-control is-invalid" id="form-group-input-clear-error" value="E98126-NN45" aria-invalid="true" aria-describedby="input-text-error-id" required>
+        <button class="btn-clear">
+          <span class="icon icon-x-circle icon-md" aria-hidden="true">
+          <span class="sr-only">Supprimer le texte saisi</span>
+        </button>
+      </div>
+      <div class="invalid-feedback" id="input-text-error-id">
+        <span class="icon icon-exclamation icon-xs" aria-hidden="true"></span>
+        <span class="sr-only">Erreur</span>
+        Texte d'erreur
+      </div>
+    </div>
+  </div>
 </div>
 
 <h4 class="pl-pattern-subtitle">États</h4>
@@ -29,8 +46,8 @@
       <div class="input-group-icon">
         <input type="text" class="form-control" id="form-group-input-clear" value="jonathan Levingston">
         <button class="btn-clear">
-          <span class="icon icon-x-circle-full icon-sm">
-          <span class="sr-only">Clear search input</span>
+          <span class="icon icon-x-circle icon-md" aria-hidden="true">
+          <span class="sr-only">Supprimer le texte saisi</span>
         </button>
       </div>
     </div>

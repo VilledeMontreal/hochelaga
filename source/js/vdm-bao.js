@@ -233,12 +233,12 @@
 
   $('.btn-clear').on('click', function(e) {
     e.preventDefault();
-    $(this).siblings('input').val('').trigger('propertychange').focus();
+    $(this).siblings('input').val('').trigger('propertychange').trigger("focus");
   });
 
   $('.js-btn-clear').on('click', function(e) {
     $(this).parent('.form-control').val('');
-    $(this).closest('.form-row').find('.form-control').val('').focus();
+    $(this).closest('.form-row').find('.form-control').val('').trigger("focus");
   });
 
 

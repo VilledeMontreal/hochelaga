@@ -49,5 +49,95 @@
         "state": "disabled"
       }
     ]
+  },
+  "formCheckboxesWrapper": {
+    "formGroupLabel": "Libellé",
+    "formCheckboxItems": [
+      {
+        "class": "custom-control-card",
+        "id": "chk-card05-1",
+        "label": "<span class=\"card-title\">Libellé</span><p>Est est et dolores dolore sed justo ipsum et sit.</p>",
+        "state": false
+      },
+      {
+        "class": "custom-control-card",
+        "id": "chk-card06-3",
+        "label": "<span class=\"card-title\">Libellé</span><p>Est est et dolores dolore sed justo ipsum et sit.</p>",
+        "state": "checked"
+      },
+      {
+        "class": "custom-control-card",
+        "id": "chk-card06-4",
+        "label": "<span class=\"card-title\">Libellé</span><p>Est est et dolores dolore sed justo ipsum et sit.</p>",
+        "state": "disabled"
+      }
+    ]
+  },
+  "formCheckboxesValidation": {
+    "formGroupLabel": "Libellé",
+    "formGroupClass": "required",
+    "formGroupInputRequired": true,
+    "formGroupInputHelpText": {
+      "id": "checkbox-help-text-id",
+      "text": "Texte d'assistance"
+    },
+    "formGroupCheckboxesError": {
+      "id": "form-group-checkboxes-error",
+      "text": "Texte d'erreur"
+    },
+    "formGroupInputAriaText": {
+      "id": "form-group-checkboxes-error"
+    },
+    "formCheckboxItems": [
+      {
+        "class": "is-invalid",
+        "id": "chkv01-2",
+        "label": "Libellé",
+        "state": false
+      },
+      {
+        "class": "is-invalid",
+        "id": "chkv02-2",
+        "label": "Libellé",
+        "state": "checked"
+      },
+      {
+        "class": "is-invalid",
+        "id": "chkv03-2",
+        "label": "Libellé",
+        "state": "disabled"
+      }
+    ]
+  },
+  "formCheckboxesWrapperValidation": {
+    "formGroupLabel": "Libellé",
+    "formGroupClass": "required",
+    "formGroupCheckboxesError": {
+      "id": "form-group-checkboxes-error",
+      "text": "Texte d'erreur"
+    },
+    "formGroupInputAriaText": {
+      "id": "form-group-checkboxes-error"
+    },
+    "formCheckboxItems": [
+      {
+        "class": "custom-control-card is-invalid",
+        "id": "chkv-card05-1",
+        "label": "<span class=\"card-title\">Libellé</span><p>Est est et dolores dolore sed justo ipsum et sit.</p>",
+        "state": false
+      },
+      {
+        "class": "custom-control-card is-invalid",
+        "id": "chkv-card06-3",
+        "label": "<span class=\"card-title\">Libellé</span><p>Est est et dolores dolore sed justo ipsum et sit.</p>",
+        "state": "checked"
+      },
+      {
+        "class": "custom-control-card",
+        "id": "chvk-card06-4",
+        "label": "<span class=\"card-title\">Libellé</span><p>Est est et dolores dolore sed justo ipsum et sit.</p>",
+        "state": "disabled"
+      }
+    ]
   }
 }

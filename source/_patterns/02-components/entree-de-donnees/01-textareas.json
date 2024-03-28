@@ -36,7 +36,8 @@
       "formGroupTextareaRows": "5",
       "formGroupInputError": {
         "id": "form-group-textarea-error-text",
-        "text": "Texte d'erreur"
+        "text": "Texte d'erreur",
+        "formAriaInputError": true
       }
     }
   ],
@@ -47,7 +48,7 @@
       "formGroupInputClass": false,
       "formGroupInputRequired": false,
       "formGroupInputLabel": "Libellé",
-      "formGroupInputPlaceholder":{
+      "formGroupInputPlaceholder": {
         "text": "Placeholder"
       },
       "formGroupInputHelpText": {

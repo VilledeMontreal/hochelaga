@@ -1,4 +1,4 @@
-<div class="form-group {{ formGroupClass}}">
+<div class="form-group {{#formGroupBtnClear}}has-clear{{/formGroupBtnClear}} {{formGroupClass}}">
   {{^ formGroupNoLabel}}
   {{# formGroupPopover}}<div class="label-has-popover">{{/ formGroupPopover}}
   <label for="{{formGroupInputID}}">{{ formGroupInputLabel}}</label>
@@ -7,14 +7,26 @@
   {{# formGroupPopover}}</div>{{/ formGroupPopover}}
   {{/ formGroupNoLabel}}
   {{# formGroupInputHelpText}}
-  <span id="{{id}}" class="form-text">{{ text }}</span>
+    <span id="{{id}}" class="form-text">{{ text }}</span>
   {{/ formGroupInputHelpText}}
-  <input type="{{formGroupInputType}}" class="form-control {{formGroupInputClass}}" id="{{ formGroupInputID }}" {{# formGroupInputPlaceholder}}placeholder="{{ formGroupInputPlaceholder.text}}"{{/ formGroupInputPlaceholder}}{{# formGroupInputHelpText}} aria-describedby="{{id}}"{{/ formGroupInputHelpText}}{{#formGroupInputError}} aria-describedby="{{id}}"{{/formGroupInputError}}{{# formGroupInputState}} {{ formGroupInputState}}{{/ formGroupInputState}}{{# formGroupInputRequired}} required{{/ formGroupInputRequired}}>
+  {{# formGroupBtnClear}}<div class="input-group-icon">{{/ formGroupBtnClear}}
+    <input type="{{formGroupInputType}}" class="form-control {{formGroupInputClass}}" id="{{ formGroupInputID }}" {{# formGroupInputPlaceholder}}placeholder="{{ formGroupInputPlaceholder.text}}"{{/ formGroupInputPlaceholder}}{{# formGroupInputHelpText}} aria-describedby="{{id}}"{{/ formGroupInputHelpText}}{{#formGroupInputError}} aria-describedby="{{id}}" {{#formAriaInputError}} aria-invalid="true" {{/formAriaInputError}}{{/formGroupInputError}}{{# formGroupInputState}} {{ formGroupInputState}}{{/ formGroupInputState}}{{# formGroupInputRequired}} required{{/ formGroupInputRequired}}>
+    {{# formGroupBtnClear}}
+      <button class="btn-clear">
+        <span class="icon icon-x-circle icon-md" aria-hidden="true">
+        <span class="sr-only">Clear the input text</span>
+      </button>{{/ formGroupBtnClear}}
+    {{# formGroupBtnClear}}
+  </div>{{/ formGroupBtnClear}}
   {{# formGroupInputCounter}}
-  <span id="{{id}}" class="form-text">{{ text }}</span>
+    <span id="{{id}}" class="form-text">{{ text }}</span>
   {{/ formGroupInputCounter}}
   {{# formGroupInputError}}
-  <div class="invalid-feedback" id="{{id}}">{{ formGroupInputError.text }}</div>
+    <div class="invalid-feedback" id={{id}}>
+        <span class="icon icon-exclamation icon-xs" aria-hidden="true"></span>
+        <span class="sr-only">Erreur</span>
+        {{ text }}
+    </div>
   {{/ formGroupInputError}}
   {{# formGroupProgress}}
   {{> components-progress-bar-item}}
