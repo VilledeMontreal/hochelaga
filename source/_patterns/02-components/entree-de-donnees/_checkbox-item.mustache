@@ -6,7 +6,7 @@
 {{/ formGroupInputHelpText}}
 {{# formCheckboxItems}}
 <div class="custom-control custom-checkbox {{ class }}">
-  <input type="checkbox" class="custom-control-input" id="{{ id }}" value="{{ id }}" {{ state }}>
+  <input type="checkbox" class="custom-control-input" id="{{ id }}" value="{{ id }}" {{# formGroupInputAriaText}} aria-describedby="{{id}}"{{/ formGroupInputAriaText}} {{ state }} {{# formGroupInputRequired}} required{{/ formGroupInputRequired}}>
   <label class="custom-control-label" for="{{ id }}">{{{ label }}}</label>
 </div>
 {{/ formCheckboxItems}}

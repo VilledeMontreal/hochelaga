@@ -1,0 +1,36 @@
+{
+  "formGroupClass": "required",
+  "formGroupInputID": "form-control-input-file-v2",
+  "formGroupInputLabel": "Libellé",
+  "formGroupInputHelpText": {
+    "id": "input-file-help-text",
+    "text": "Texte d'assistance."
+  },
+  "formGroupFileID": "file-droparea-v2",
+  "formGroupFileDropID": "form-group-file-upload",
+  "formGroupFileDropLabel": "Parcourir",
+  "formGroupFileDropHelpText": "ou déposer votre fichier ici",
+  "formGroupFileClass": "is-invalid",
+  "formGroupInputError": {
+    "id": "file-droparea-v2-error",
+    "text": "Texte d'erreur"
+  },
+  "dropdownMenu": {
+    "dropdownMenuClass": "dropdown-menu-right",
+    "dropdownMenuID": "dropdownMoreVertical-1",
+    "dropdownSection": [
+      {
+        "dropdownItem": [
+          {
+            "url": "#",
+            "dropdownItemLabel": "Libellé"
+          },
+          {
+            "url": "#",
+            "dropdownItemLabel": "Libellé"
+          }
+        ]
+      }
+    ]
+  }
+}
