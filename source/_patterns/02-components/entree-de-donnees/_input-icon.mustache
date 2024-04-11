@@ -10,6 +10,10 @@
   {{/ formGroupInputHelpText}}
   {{/formGroupInputError}}
   {{# formGroupInputError}}
-  <div class="invalid-feedback">{{ formGroupInputError.text }}</div>
+    <div class="invalid-feedback" id={{id}}>
+      <span class="icon icon-exclamation icon-xs" aria-hidden="true"></span>
+      <span class="sr-only">Erreur</span>
+      {{ text }}
+    </div>
   {{/ formGroupInputError}}
 </div>

@@ -7,13 +7,17 @@
   {{/ formGroupInputHelpText}}
   <div class="file-drop-container-v2 {{formGroupFileClass}}" id="{{formGroupFileID}}">
     <div class="file-selector-button">
-      <input type="file" id="{{ formGroupFileDropID}}" class="sr-only"{{^formGroupInputError}}{{# formGroupInputHelpText}} aria-describedby="{{id}}"{{/ formGroupInputHelpText}}{{/formGroupInputError}}{{#formGroupInputError}} aria-describedby="{{id}}"{{/formGroupInputError}}{{# formGroupFileState}} {{formGroupFileState}}{{/ formGroupFileState}}>
+      <input type="file" id="{{ formGroupFileDropID}}" class="sr-only {{formGroupFileClass}}"{{^formGroupInputError}}{{# formGroupInputHelpText}} aria-describedby="{{id}}"{{/ formGroupInputHelpText}}{{/formGroupInputError}}{{#formGroupInputError}} aria-describedby="{{id}}"{{/formGroupInputError}}{{# formGroupFileState}} {{formGroupFileState}}{{/ formGroupFileState}}>
       <label class="btn btn-secondary btn-squared" for="{{ formGroupFileDropID}}">{{ formGroupFileDropLabel }}</label>
     </div>
     <span class="help-text">{{ formGroupFileDropHelpText }}</span>
   </div>
   {{# formGroupInputError}}
-  <div class="invalid-feedback" id="{{id}}">{{ text }}</div>
+    <div class="invalid-feedback" id={{id}}>
+      <span class="icon icon-exclamation icon-xs" aria-hidden="true"></span>
+      <span class="sr-only">Erreur</span>
+      {{ text }}
+    </div>
   {{/ formGroupInputError}}
 
   {{# listUploadedFiles}}
