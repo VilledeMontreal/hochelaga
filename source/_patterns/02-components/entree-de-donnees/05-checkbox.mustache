@@ -1,20 +1,54 @@
-{{# formCheckboxes }}
-<div class="row">
-  <div class="col-12 col-md-6">
-    <div class="form-group {{ formGroupClass}}">
-		  {{> components-checkbox-item }}
-	  </div>
-  </div>
-</div>
-{{/ formCheckboxes }}
 
-{{# formCheckboxesInline }}
-<h4 class="pl-pattern-subtitle">Position inline</h4>
 <div class="row">
-  <div class="col-12">
-    <div class="form-group {{ formGroupClass}}">
-		  {{> components-checkbox-item }}
-	  </div>
-  </div>
+  {{# formCheckboxes }}
+    <div class="col-12 col-md-6">
+      <div class="form-group {{ formGroupClass}}">
+		    {{> components-checkbox-item }}
+	    </div>
+    </div>
+  {{/ formCheckboxes }}
+  
+  {{# formCheckboxesValidation }}
+    <div class="col-12 col-md-6">
+      <div class="form-group {{ formGroupClass}}">
+		    {{> components-checkbox-item }}
+        {{# formGroupCheckboxesError}}
+          <div class="invalid-feedback" id={{id}}>
+            <span class="icon icon-exclamation icon-xs" aria-hidden="true"></span>
+            <span class="sr-only">Erreur</span>
+            {{ text }}
+          </div>
+        {{/ formGroupCheckboxesError}}
+	    </div>
+    </div>
+  {{/ formCheckboxesValidation}}
 </div>
-{{/ formCheckboxesInline }}
+
+{{# formCheckboxesWrapper }}
+  <h4 class="pl-pattern-subtitle">Case à cocher encadrée</h4>
+  <div class="row">
+    <div class="col-12 col-md-6">
+      <div class="form-group {{ formGroupClass}}">
+        {{> components-checkbox-item }}
+      </div>
+    </div>
+  </div>
+{{/ formCheckboxesWrapper }}
+
+{{# formCheckboxesWrapperValidation }}
+  <h4 class="pl-pattern-subtitle">Validation</h4>
+  <div class="row">
+    <div class="col-12 col-md-6">
+      <div class="form-group {{ formGroupClass}}">
+        {{> components-checkbox-item }}
+        {{# formGroupCheckboxesError}}
+          <div class="invalid-feedback" id={{id}}>
+            <span class="icon icon-exclamation icon-xs" aria-hidden="true"></span>
+            <span class="sr-only">Erreur</span>
+            {{ text }}
+          </div>
+        {{/ formGroupCheckboxesError}}
+      </div>
+    </div>
+  </div>
+{{/ formCheckboxesWrapperValidation }}
