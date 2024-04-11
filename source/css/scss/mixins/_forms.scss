@@ -75,6 +75,10 @@
 
         @if $state == invalid {
           color: $negative-dark;
+          display: flex;
+          .icon {
+            @include icon-color($negative-dark);
+          }
         }
       }
     }
@@ -168,6 +172,10 @@
 
         @if $state == invalid {
           color: $negative-dark;
+          display: flex;
+          .icon {
+            @include icon-color($negative-dark);
+          }
         }
       }
     }

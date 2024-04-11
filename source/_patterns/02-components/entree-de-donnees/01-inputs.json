@@ -6,6 +6,7 @@
       "formGroupInputRequired": true,
       "formGroupInputLabel": "Libellé",
       "formGroupPopover": true,
+      "formGroupBtnClear": true,
       "formGroupInputPlaceholder": {
         "text": "Placeholder"
       },
@@ -19,20 +20,22 @@
       }
     }
   ],
-  "inputTextSizeError": [
+  "inputTextSizeValidation": [
     {
       "formGroupClass": "required",
       "formGroupInputID": "form-control-default-error-one",
       "formGroupInputClass": "is-invalid",
       "formGroupInputRequired": true,
-      "formGroupInputLabel": "En erreur",
+      "formGroupBtnClear": true,
+      "formGroupInputLabel": "En erreur input vide",
       "formGroupInputPlaceholder": {
         "text": "Placeholder"
       },
       "formGroupInputHelpText": false,
       "formGroupInputError": {
         "id": "input-text-error-id",
-        "text": "Texte d'erreur"
+        "text": "Texte d'erreur",
+        "formAriaInputError": true
       }
     }
   ],
@@ -44,7 +47,8 @@
       "formGroupInputRequired": false,
       "formGroupInputPlaceholder": "désactivé",
       "formGroupInputHelpText": false,
-      "formGroupInputState": "disabled"
+      "formGroupInputState": "disabled",
+      "formGroupBtnClear": false
     },
     {
       "formGroupClass": false,
@@ -54,7 +58,8 @@
       "formGroupInputRequired": false,
       "formGroupInputPlaceholder": "read-only",
       "formGroupInputHelpText": false,
-      "formGroupInputState": "readonly"
+      "formGroupInputState": "readonly",
+      "formGroupBtnClear": false
     }
   ]
 }

@@ -29,6 +29,40 @@
       }
     ]
   },
+  "formRadiosValidation": {
+    "formGroupLabel": "Libellé",
+    "formGroupClass": "required",
+    "formGroupInputHelpText": {
+      "id": "radios-help-text-id-validation",
+      "text": "Texte d'assistance"
+    },
+    "formRadioError": {
+      "id": "radios-form-id-validation",
+      "text": "Texte d'erreur"
+    },
+    "formRadiosItems": [
+      {
+        "class": "is-invalid",
+        "id": "rdio01-11",
+        "label": "Libellé",
+        "name": "radiosGroupValidation"
+      },
+      {
+        "class": "is-invalid",
+        "id": "rdio03-11",
+        "label": "Libellé",
+        "state": "checked",
+        "name": "radiosGroupValidation"
+      },
+      {
+        "class": "",
+        "id": "rdio04-11",
+        "label": "Libellé",
+        "state": "disabled",
+        "name": "radiosGroupValidation"
+      }
+    ]
+  },
   "formRadiosInline": {
     "formRadiosItems": [
       {
@@ -50,6 +84,66 @@
         "label": "Libellé",
         "state": "disabled",
         "name": "radiosGroupInline"
+      }
+    ]
+  },
+  "formRadiosWrapper": {
+    "formGroupLabel": "Libellé",
+    "formRadiosItems": [
+      {
+        "class": "custom-control-card",
+        "id": "rdio01-2",
+        "label": "<span class=\"card-title\">Libellé</span><div>Sadipscing ut ea et dolores et amet duo et dolor est, lorem ea lorem sed kasd et et. Ea diam.</div>",
+        "name": "radiosGroup1",
+        "state": false
+      },
+      {
+        "class": "custom-control-card",
+        "id": "rdio3-2",
+        "label": "<span class=\"card-title\">Libellé</span><div>Sadipscing ut ea et dolores et amet duo et dolor est, lorem ea lorem sed kasd et et. Ea diam.</div>",
+        "name": "radiosGroup1",
+        "state": "checked"
+      },
+      {
+        "class": "custom-control-card",
+        "id": "rdio04-2",
+        "label": "<span class=\"card-title\">Libellé</span><p>Sadipscing ut ea et dolores et amet duo et dolor est, lorem ea lorem sed kasd et et. Ea diam.</p>",
+        "name": "radiosGroup1111",
+        "state": "disabled"
+      }
+    ]
+  },
+  "formRadiosWrapperValidation": {
+    "formGroupLabel": "Libellé",
+    "formGroupClass": "required",
+    "formRadioError": {
+      "id": "radios-form-id-error",
+      "text": "Texte d'erreur"
+    },
+    "formGroupInputAriaText": {
+      "id": "radios-form-id-error"
+    },
+    "formRadiosItems": [
+      {
+        "class": "custom-control-card is-invalid",
+        "id": "rdio01-22",
+        "label": "<span class=\"card-title\">Libellé</span><div>Sadipscing ut ea et dolores et amet duo et dolor est, lorem ea lorem sed kasd et et. Ea diam.</div>",
+        "name": "radiosGroup1Validation",
+        "state": false
+      },
+      {
+        "class": "custom-control-card is-invalid",
+        "id": "rdio3-22",
+        "label": "<span class=\"card-title\">Libellé</span><div>Sadipscing ut ea et dolores et amet duo et dolor est, lorem ea lorem sed kasd et et. Ea diam.</div>",
+        "name": "radiosGroup1Validation",
+        "state": "checked"
+      },
+      {
+        "class": "custom-control-card",
+        "id": "rdio04-22",
+        "label": "<span class=\"card-title\">Libellé</span><p>Sadipscing ut ea et dolores et amet duo et dolor est, lorem ea lorem sed kasd et et. Ea diam.</p>",
+        "name": "radiosGroup1Validation",
+        "state": "disabled"
       }
     ]
   }
