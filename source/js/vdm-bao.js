@@ -380,7 +380,7 @@
   });
 
   // Test for disabled state
-  $('#email-subscription-form #confirmation-chk-card01').change(function () {
+  $('#email-subscription-form #confirmation-chk-card01').on('change', function () {
     if(this.checked) {
       $(this).closest('form').find('.btn').prop('disabled', false);
     } else {
@@ -398,10 +398,10 @@
               $('#form21 textarea').length === 1)
           ) {
 
-            $('textarea').focus(() => {
+            $('textarea').on('focus', () => {
               $(".form-control").addClass("is-invalid");
             });
-            $('#form21 .invalid-feedback').show();
+            $('#form21 .invalid-feedback').addClass('d-flex');
           }
         }
       },
@@ -413,15 +413,15 @@
         if (($('#rdioFeedback01-2').is(':checked') && $.trim(message) !== '') || $('#rdioFeedback01-1').is(':checked')
         ) form.submit();
         else {
-          $('textarea').addClass("is-invalid");
-          $('#form21 .invalid-feedback').show();
+          $('textarea').addClass('is-invalid');
+          $('#form21 .invalid-feedback').addClass('d-flex');
         }
       }
 
     });
   };
 
-  $('#form21 input[name=Field10]').change(evt => {
+  $('#form21 input[name=Field10]').on('change', evt => {
     const inputValue = $(evt.target).val();
     if (inputValue) {
       $('#form21 button').prop('disabled', false);
@@ -441,7 +441,7 @@
     }
   });
 
-  $('#form21 button.reset-button').click(evt => {
+  $('#form21 button.reset-button').on('click', evt => {
     resetAllValues();
   });
 
@@ -450,6 +450,22 @@
     $('#form21 button').prop('disabled', true);
     $('#form21 button#cancel').prop('hidden', true);
   }
+
+  // Form validation example
+  window.addEventListener('load', function() {
+    // Fetch all the forms we want to apply custom Bootstrap validation styles to
+    var forms = document.getElementsByClassName('needs-validation');
+    // Loop over them and prevent submission
+    var validation = Array.prototype.filter.call(forms, function(form) {
+      form.addEventListener('submit', function(event) {
+        if (form.checkValidity() === false) {
+          event.preventDefault();
+          event.stopPropagation();
+        }
+        form.classList.add('was-validated');
+      }, false);
+    });
+  }, false);
 
   // Activate scrollspy for navAnchors to add active class to navAnchors items on scroll
   if($('#navAnchors').length != 0) {
