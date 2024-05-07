@@ -42,6 +42,7 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 ### BREAKING CHANGE
 - Retrait du tilde importer qui causait problème avec des versions récentes (15+ d'angular). Devrait être transparent dans des versions récentes de sass (dart-sass). A valider pour les anciennes versions ou node-sass...
 
+
 ## [4.24.3] - 2023-05-24
 
 ### Fixed
