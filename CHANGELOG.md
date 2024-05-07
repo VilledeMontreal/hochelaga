@@ -4,6 +4,12 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](http://keepachangelog.com/en/1.0.0/)
 and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.html).
 
+## [5.3.0] - Unreleased
+
+### Changed
+- Components Tuile: Modification Tuile en vedette (Espacement, breakpoint)
+
+
 ## [5.2.0] - 2024-04-11
 
 ### Changed
@@ -13,7 +19,6 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 ## [5.1.0] - 2024-03-22
 
 ### Changed
-- Retrait du tilde importer qui causait problème avec des versions récentes (15+ d'angular). Devrait être transparent dans des versions récentes de sass (dart-sass).
 - Components Accordeon: Ajustement structure accordeon et fix disabled state.
 - Components Étiquettes: Fusion de la variante light. Modification des schemas de couleurs des étiquettes.
 - Components Badge: Harmonisation des schémas de couleurs avec les étiquettes. Ajout d'une bordure.
@@ -33,6 +38,10 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 - Components - Accordeon: retrait de la version small.
 - Components - Accordeon: retrait de la version Framed. La version listed est la seule qui devrait être utilisé.
 - Components - Entree de données: Les versions small des input text, textarea et select sont deprecated et retiré des exemples.
+
+### BREAKING CHANGE
+- Retrait du tilde importer qui causait problème avec des versions récentes (15+ d'angular). Devrait être transparent dans des versions récentes de sass (dart-sass). A valider pour les anciennes versions ou node-sass...
+
 
 ## [4.24.3] - 2023-05-24
 
