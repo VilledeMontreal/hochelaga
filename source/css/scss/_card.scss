@@ -132,6 +132,7 @@
 
   // Card text-interface
   // smaller line-height
+  .card-text,
   .card-text-interface {
     line-height: $line-height-md;
     margin-bottom: 1rem;
@@ -373,6 +374,7 @@
     }
 
     .card-body {
+      padding: 2rem;
       .card-title {
         @include font-size($h3-font-size);  // 24/32
         line-height: 2rem;
@@ -390,12 +392,12 @@
       }
     }
 
-    @include media-breakpoint-up(lg) {
+    @include media-breakpoint-up(md) {
       .card-body {
         position: relative;
         margin-top: -4rem;
         z-index: 1;
-        padding: 2rem 6rem 2rem 2rem;
+        padding-right: 6rem;
 
         &:before {
           content: "";
@@ -414,6 +416,9 @@
         @include border-radius(0);
       }
 
+    }
+
+    @include media-breakpoint-up(lg) {
       [class*="col-"] {
         &:first-child {
           padding-left: calc($grid-gutter-width / 2);
@@ -440,24 +445,18 @@
       .card-body {
         height: 100%; // Force to take 100% of parent
         position: relative;
-        margin-top: 0;
         z-index: 1;
-
-        &:before {
-          content: none;
-        }
       }
 
       @include media-breakpoint-up(lg) {
         border: none;
         .card-body {
           border-bottom: 1px solid $neutral-stroke;
+          margin-top: 0;
           padding-right: 2rem;
 
-          .card-title {
-            @include font-size($h2-font-size);  // 32/40
-            line-height: 2.5rem;
-            margin-bottom: 2rem;
+          &:before {
+            content: none;
           }
         }
       }
