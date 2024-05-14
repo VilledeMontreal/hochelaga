@@ -23,8 +23,10 @@
       <div class="form-group d-none">
         <label for="feedback-comment">Avez-vous des commentaires à nous partager?</label>
         <div id="feedback-comment-help" class="form-text">Évitez d’inscrire des renseignements personnels. Nous n’envoyons aucune réponse, mais nous prenons vos commentaires en considération.</div>
-        <textarea class="form-control" name="Field14" id="feedback-comment" aria-described-by="feedback-comment-help"></textarea>
-        <div class="invalid-feedback">
+        <textarea class="form-control" name="Field14" id="feedback-comment" aria-described-by="feedback-comment-help feedback-comment-error"></textarea>
+        <div class="invalid-feedback" id="feedback-comment-error">
+          <span class="icon icon-exclamation icon-xs" aria-hidden="true"></span>
+          <span class="sr-only">Erreur</span>
           Message d'erreur personnalisé
         </div>
       </div>

@@ -4,7 +4,15 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](http://keepachangelog.com/en/1.0.0/)
 and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.html).
 
-## [5.3.0] - Unreleased
+## [5.4.0] - Unreleased
+
+### Changed
+- Components - Entree de données: Ajustement espacement input + message d'erreur.
+
+### Fixed
+- PL: Exemple de validation de formulaire client-side avec .was-validated
+
+## [5.3.0] - 2024-04-08
 
 ### Changed
 - Components Tuile: Modification Tuile en vedette (Espacement, breakpoint)
