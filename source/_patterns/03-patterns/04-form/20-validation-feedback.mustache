@@ -7,8 +7,8 @@
         "formGroupInputPlaceholder": true,
         "formGroupInputPlaceholder.text": "Prénom",
         "formGroupInputRequired": true,
-        "formGroupFeedbackIcon": true,
         "formGroupInputError": true,
+        "formGroupInputError.id": "validationFeedbackPrenom",
         "formGroupInputError.text": "Veuillez saisir un prénom valide.")
       }}
     </div>
@@ -19,8 +19,8 @@
         "formGroupInputPlaceholder": true,
         "formGroupInputPlaceholder.text": "Nom",
         "formGroupInputRequired": true,
-        "formGroupFeedbackIcon": true,
         "formGroupInputError": true,
+        "formGroupInputError.id": "validationFeedbackNom",
         "formGroupInputError.text": "Veuillez saisir un nom valide.")
       }}
     </div>
@@ -31,8 +31,8 @@
         "formGroupInputPlaceholder": true,
         "formGroupInputPlaceholder.text": "Username",
         "formGroupInputRequired": true,
-        "formGroupFeedbackIcon": true,
         "formGroupInputError": true,
+        "formGroupInputError.id": "validationFeedbackUsername",
         "formGroupInputError.text": "Veuillez saisir un username valide.")
       }}
     </div>
@@ -45,8 +45,8 @@
         "formGroupInputPlaceholder": true,
         "formGroupInputPlaceholder.text": "Montréal",
         "formGroupInputRequired": true,
-        "formGroupFeedbackIcon": true,
         "formGroupInputError": true,
+        "formGroupInputError.id": "validationFeedbackVille",
         "formGroupInputError.text": "Veuillez saisir une ville valide.")
       }}
     </div>
@@ -57,8 +57,8 @@
         "formGroupInputPlaceholder": true,
         "formGroupInputPlaceholder.text": "Québec",
         "formGroupInputRequired": true,
-        "formGroupFeedbackIcon": true,
         "formGroupInputError": true,
+        "formGroupInputError.id": "validationFeedbackProvince",
         "formGroupInputError.text": "Veuillez saisir une province valide.")
       }}
     </div>
@@ -69,8 +69,8 @@
         "formGroupInputPlaceholder": true,
         "formGroupInputPlaceholder.text": "H1X 1X0",
         "formGroupInputRequired": true,
-        "formGroupFeedbackIcon": true,
         "formGroupInputError": true,
+        "formGroupInputError.id": "validationFeedbackPostalCode",
         "formGroupInputError.text": "Veuillez saisir un code postale valide.")
       }}
     </div>
@@ -79,9 +79,11 @@
     <div class="custom-control custom-checkbox">
       <input type="checkbox" class="custom-control-input" id="confirmation-vld-chk-card01" value="confirmation-vld-chk-card01" required>
       <label class="custom-control-label" for="confirmation-vld-chk-card01">Accepter les termes et conditions</label>
-      <div class="invalid-feedback">
-        Message d'erreur personnalisé.
-      </div>
+    </div>
+    <div class="invalid-feedback" id="validationfeedbackAccepTerm">
+      <span class="icon icon-exclamation icon-xs" aria-hidden="true"></span>
+      <span class="sr-only">Erreur</span>
+      Message d'erreur personnalisé.
     </div>
   </div>
 

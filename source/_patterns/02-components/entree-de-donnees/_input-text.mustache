@@ -22,10 +22,10 @@
     <span id="{{id}}" class="form-text">{{ text }}</span>
   {{/ formGroupInputCounter}}
   {{# formGroupInputError}}
-    <div class="invalid-feedback" id={{id}}>
+    <div class="invalid-feedback" id={{formGroupInputError.id}}>
         <span class="icon icon-exclamation icon-xs" aria-hidden="true"></span>
         <span class="sr-only">Erreur</span>
-        {{ text }}
+        {{ formGroupInputError.text }}
     </div>
   {{/ formGroupInputError}}
   {{# formGroupProgress}}
