@@ -12,17 +12,14 @@
   {{> patterns-content-header}}
 
   <div class="container">
-    <div class="mb-4 mb-lg-8 border-bottom border-neutral-stroke" data-component-type="liens-rapides">
+    <div class="my-4 my-lg-8 border-bottom border-neutral-stroke" data-component-type="liens-rapides">
       <div class="row mb-2 mb-lg-6 px-2 px-lg-0">
-        <div class="col-12 col-lg-6 pl-lg-8 pl-xl-14">
+        <div class="col-12 col-lg-10 mx-auto">
           <h2 class="mb-2">Liens rapides</h2>
-          <p class="mb-2">Takimata tempor ea no rebum stet et erat, ipsum amet kasd stet no, gubergren eirmod consetetur sea vero.</p>
-        </div>
-        <div class="col-12 col-lg-6 pr-lg-8 pr-xl-14">
           <ul class="list-inline mb-1">
             {{# liensRapides}}
             <li class="list-inline-item mb-1">
-              <a href="{{ url }}" class="btn btn-sm{{^btnPrimary}} btn-secondary{{/ btnPrimary}}{{#btnPrimary}} btn-primary{{/ btnPrimary}}" data-link-title="{{label}}" {{^btnPrimary}}data-link-position="{{position}}"{{/btnPrimary}}>{{ label }}</a>
+              <a href="{{ url }}" class="btn btn-secondary btn-squared btn-wrap" data-link-title="{{label}}" data-link-position="{{position}}">{{ label }}</a>
             </li>
             {{/ liensRapides}}
         </div>
@@ -32,7 +29,7 @@
 
   {{# categoriesAll}}
   <div class="container" data-component-type="categories">
-    <div class="mb-4 mb-lg-12">
+    <div class="mb-4">
       <div class="column-count-md-2 column-count-lg-3">
         {{# category }}
         <div class="d-flex">
@@ -56,117 +53,113 @@
   </div>
   {{/ categoriesAll}}
 
-  <div class="pb-4 pb-lg-8">
+  <div class="container">
+    {{# events }}
+    <div class="pb-4" data-component-type="sommaire-evenements">
+      <h2>Événements</h2>
+      {{# cards }}
+      <div class="row cards">
+      {{# card-item }}
+        <div class="{{ cards.bsgrid-classes }}">
+          {{> components-card-item }}
+        </div>
+      {{/ card-item }}
+      </div>
+      {{/ cards}}
+      {{^ cards}}
+      <div class="row">
+        <div class="col-12 col-lg-9 col-xl-7 font-size-lg text-dark">
+          <p class="mb-4">ll n'y a pas d'événements à venir prochainement. Consulter cette section plus tard pour rester à l'affût des prochains événements.</p>
+        </div>
+      </div>
+      {{/ cards}}
+    </div>
+    {{/ events }}
+    {{# news }}
+    <div class="pb-4" data-component-type="sommaire-nouvelles">
+      <h2>Nouvelles</h2>
+      {{# cards }}
+      <div class="row cards mb-0">
+      {{# card-item }}
+        <div class="{{ cards.bsgrid-classes }}">
+          {{> components-card-item }}
+        </div>
+      {{/ card-item }}
+      </div>
+      {{# button-cta}}
+      <div class="mb-4">
+      {{> components-button}}
+      </div>
+      {{/ button-cta}}
+      {{/ cards}}
+      {{^ cards}}
+      <div class="row">
+        <div class="col-12 col-lg-9 col-xl-7 font-size-lg text-dark">
+          <p class="mb-4">ll n'y a pas nouvelles pour le moment. Consulter cette section plus tard pour rester à l'affût.</p>
+        </div>
+      </div>
+      {{/ cards}}
+    </div>
+    {{/ news }}
+  </div>
+  {{# mairie}}
+  <div class="page-section pt-8 pb-4 border-top" data-component-type="mairie">
     <div class="container">
-      {{# events }}
-      <div class="pb-lg-4" data-component-type="sommaire-evenements">
-        <h2>Événements</h2>
-        {{# cards }}
-        <div class="row cards">
-        {{# card-item }}
-          <div class="{{ cards.bsgrid-classes }}">
-            {{> components-card-item }}
-          </div>
-        {{/ card-item }}
+      <div class="row cards">
+      {{# cards.card-item }}
+        <div class="{{ cards.bsgrid-classes }}">
+          {{> components-card-item-featured }}
         </div>
-        {{# button-cta}}
-        <div class="d-flex justify-content-center mt-0 mb-4 my-lg-4">
-        {{> components-button}}
-        </div>
-        {{/ button-cta}}
-        {{/ cards}}
-        {{^ cards}}
-        <div class="row">
-          <div class="col-12 col-lg-9 col-xl-7 font-size-lg text-dark">
-            <p class="mb-4">ll n'y a pas d'événements à venir prochainement. Consulter cette section plus tard pour rester à l'affût des prochains événements.</p>
-          </div>
-        </div>
-        {{/ cards}}
+      {{/ cards.card-item }}
       </div>
-      {{/ events }}
-      {{# news }}
-      <div class="border-top pt-4 pt-lg-8 pb-lg-4" data-component-type="sommaire-nouvelles">
-        <h2>Nouvelles</h2>
-        {{# cards }}
-        <div class="row cards">
-        {{# card-item }}
-          <div class="{{ cards.bsgrid-classes }}">
-            {{> components-card-item }}
-          </div>
-        {{/ card-item }}
-        </div>
-        {{# button-cta}}
-        <div class="d-flex justify-content-center mt-0 mb-4 my-lg-4">
-        {{> components-button}}
-        </div>
-        {{/ button-cta}}
-        {{/ cards}}
-        {{^ cards}}
-        <div class="row">
-          <div class="col-12 col-lg-9 col-xl-7 font-size-lg text-dark">
-            <p class="mb-4">ll n'y a pas nouvelles pour le moment. Consulter cette section plus tard pour rester à l'affût.</p>
-          </div>
-        </div>
-        {{/ cards}}
-      </div>
-      {{/ news }}
     </div>
   </div>
+  {{/ mairie }}
 
-  <div class="border-top pt-8 pb-4 pt-lg-16 pb-lg-8" id="elusSection">
+  {{# comite-conseils}}
+  <div class="page-section pt-8 pb-4 bg-light" data-component-type="sommaire-seances">
     <div class="container">
-      {{# mairie}}
-      <div class="pb-lg-4" data-component-type="mairie">
-        <div class="row cards">
-        {{# cards.card-item }}
-          <div class="{{ cards.bsgrid-classes }}">
-            {{> components-card-item-featured }}
+      <div class="row">
+        <div class="col-12">
+          <h2>Prochaines séances</h2>
+          <div class="row cards">
+          {{# cards.card-item }}
+            <div class="{{ cards.bsgrid-classes }}">
+              {{> components-card-item }}
+            </div>
+          {{/ cards.card-item }}
           </div>
-        {{/ cards.card-item }}
         </div>
       </div>
-      {{/ mairie }}
-      {{# comite-conseils}}
-      <div class="pb-lg-4" data-component-type="sommaire-seances">
-        <h2>Prochaines séances</h2>
-        <div class="row cards">
-        {{# cards.card-item }}
-          <div class="{{ cards.bsgrid-classes }}">
-            {{> components-card-item }}
-          </div>
-        {{/ cards.card-item }}
-        </div>
-        {{# button-cta}}
-        <div class="d-flex justify-content-center mt-0 mb-4 my-lg-4">
-        {{> components-button}}
-        </div>
-        {{/ button-cta}}
-      </div>
-      {{/ comite-conseils }}
     </div>
   </div>
+  {{/ comite-conseils }}
 
   {{# homePromo}}
-  <div class="border-top pt-8 pb-4 pt-lg-16 pb-lg-8" data-component-type="promotion">
+  <div class="page-section pt-8 pb-4 border-top" data-component-type="promotion">
     <div class="container">
-      <h2>Des services simples et pratiques</h2>
-      <div class="alternate-order-lg">
-      {{# promoContent}}
-      <div class="row alternate-order-content mb-4 mb-lg-8">
-        <div class="col-12 col-lg-6 alternate-order-element my-auto">
-          <img class="img-fluid mb-4 mb-lg-0" alt="{{img.alt}}" src="{{ img.src }}" />
-        </div>
-        <div class="col-12 col-lg-6 my-auto">
-          <h3>{{ title }}</h3>
-          <div class="formatted-text-container">
-            {{{formattedText}}}
+      <div class="row">
+        <div class="col-12">
+          <h2>Des services simples et pratiques</h2>
+          <div class="alternate-order-lg">
+          {{# promoContent}}
+          <div class="row alternate-order-content mb-4 mb-lg-8">
+            <div class="col-12 col-lg-6 alternate-order-element my-auto">
+              <img class="img-fluid mb-4 mb-lg-0" alt="{{img.alt}}" src="{{ img.src }}" />
+            </div>
+            <div class="col-12 col-lg-6 my-auto">
+              <h3>{{ title }}</h3>
+              <div class="formatted-text-container">
+                {{{formattedText}}}
+              </div>
+              {{# link}}
+              {{> styles-link-list-element}}
+              {{/ link}}
+            </div>
           </div>
-          {{# link}}
-          {{> styles-link-list-element}}
-          {{/ link}}
+          {{/ promoContent}}
         </div>
       </div>
-      {{/ promoContent}}
     </div>
   </div>
   {{/ homePromo}}

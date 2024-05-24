@@ -6,7 +6,7 @@
   "news": {
     "cards": {
       "classes": false,
-      "bsgrid-classes": "col-12 col-md-6 col-lg-3",
+      "bsgrid-classes": "col-12 col-md-6 col-lg-4",
       "card-item": [
         {
           "classes": false,
@@ -73,35 +73,13 @@
               }
             }
           }
-        },
-        {
-          "classes": false,
-          "data-link-title": "Fusce mattis ante sit amet aliquam porttitor",
-          "url": "#",
-          "card-media": {
-            "img" : {
-              "src" : "https://picsum.photos/id/103/768/432",
-              "alt" : "Card #1 img alt."
-            }
-          },
-          "card-type": false,
-          "card-title": "Fusce mattis ante sit amet aliquam porttitor",
-          "card-text-interface": {
-            "date-time": {
-              "date": {
-                "text": false,
-                "dateTimeFormat": "2019-09-22",
-                "dateTimeText": "22 septembre 2019"
-              }
-            }
-          }
         }
       ]
     },
     "button-cta": {
       "data-link-title": "Toutes les nouvelles",
       "buttonAsLink": true,
-      "buttonClass": "btn-secondary",
+      "buttonClass": "btn-secondary btn-squared",
       "buttonUrl": "#",
       "buttonText": "Toutes les nouvelles"
     }

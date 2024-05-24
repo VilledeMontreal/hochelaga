@@ -1,14 +1,13 @@
 {
   "navbarFixedTop": true,
-  "is-homepage": true,
-  "hideDocumentHeadingImageMobile": true,
+  "has-illustration": true,
   "pageClasses": false,
   "documentHeadingFullWidth": true,
-  "documentHeadingClass": "document-heading-homepage",
-  "documentHeadingImageUrl": "https://res.cloudinary.com/villemontreal/image/upload/q_auto,f_auto,dpr_auto/v1/portail/jdkwiwajrv1natxzjsnr.png",
-  "documentHeadingNotch": true,
+  "documentHeadingClass": "document-heading-sm bg-light",
+  "documentHeadingImageUrl": false,
+  "documentHeadingNotch": false,
   "has-left-notch": false,
-  "notch-full-width": true,
+  "notch-full-width": false,
   "customHeadingGridClass": "col-md-6 col-lg-5",
   "has-search-form": true,
   "media": false,
@@ -348,106 +347,77 @@
   "events": {
     "cards": {
       "classes": false,
-      "bsgrid-classes": "col-12 col-lg-4",
+      "bsgrid-classes": "col-12 col-lg-3",
       "card-item": [
         {
           "classes" : false,
-          "data-link-title": "Titre de l'événement",
+          "data-link-title": "Tuile #1",
           "url" : "#",
           "card-media" : {
             "icon": false,
             "img" : {
               "src" : "https://picsum.photos/id/605/768/432",
-              "alt" : "Card #1 img alt."
+              "alt" : "Tuile #1 img alt."
             }
           },
-          "card-type": "Type d'événement",
-          "card-title" : "Titre de l'événement",
+          "card-title" : "Tuile #1",
           "card-text": false,
           "card-text-interface" : {
-            "date-time": {
-              "date": [
-                {
-                  "line-break": true,
-                  "text": "Du ",
-                  "dateTimeFormat": "2019-12-12",
-                  "dateTimeText": "12 décembre 2019"
-                },
-                {
-                  "text": "au ",
-                  "dateTimeFormat": "2019-12-15",
-                  "dateTimeText": "15 décembre 2019"
-                }
-              ]
-            }
+            "info": "Lorem ipsum dolore site."
           }
         },
         {
           "classes" : false,
-          "data-link-title": "Titre de l'événement",
+          "data-link-title": "Tuile #2",
           "url" : "#",
           "card-media" : {
             "icon": false,
             "img" : {
               "src" : "https://picsum.photos/id/63/768/432",
-              "alt" : "Card #1 img alt."
+              "alt" : "Card #2 img alt."
             }
           },
-          "card-type": "Type d'événement",
-          "card-title" : "Titre de l'événement",
+          "card-title" : "Tuile #2",
           "card-text": false,
           "card-text-interface" : {
-            "date-time": {
-              "date": [
-                {
-                  "text": "Jeudi ",
-                  "dateTimeFormat": "2019-12-19",
-                  "dateTimeText": "19 décembre 2019"
-                }
-              ]
-            }
+            "info": "Lorem ipsum dolore site."
           }
         },
         {
           "classes" : false,
-          "data-link-title": "Titre de l'événement",
+          "data-link-title": "Tuile #3",
           "url" : "#",
           "card-media" : {
             "icon": false,
             "img" : {
-              "src" : "https://picsum.photos/id/423/768/432",
-              "alt" : "Card #1 img alt."
+              "src" : "https://picsum.photos/id/60/768/432",
+              "alt" : "Card #3 img alt."
             }
           },
-          "card-type": "Type d'événement",
-          "card-title" : "Titre de l'événement",
+          "card-title" : "Tuile #3",
           "card-text": false,
           "card-text-interface" : {
-            "date-time": {
-              "date": [
-                {
-                  "line-break": true,
-                  "text": "Du ",
-                  "dateTimeFormat": "2019-12-24",
-                  "dateTimeText": "24 décembre 2019"
-                },
-                {
-                  "text": "au ",
-                  "dateTimeFormat": "2019-12-314",
-                  "dateTimeText": "31 décembre 2019"
-                }
-              ]
+            "info": "Lorem ipsum dolore site."
+          }
+        },
+        {
+          "classes" : false,
+          "data-link-title": "Tuile #4",
+          "url" : "#",
+          "card-media" : {
+            "icon": false,
+            "img" : {
+              "src" : "https://picsum.photos/id/75/768/432",
+              "alt" : "Card #4 img alt."
             }
+          },
+          "card-title" : "Tuile #4",
+          "card-text": false,
+          "card-text-interface" : {
+            "info": "Lorem ipsum dolore site."
           }
         }
       ]
-    },
-    "button-cta": {
-      "data-link-title": "Tous les événements",
-      "buttonAsLink": true,
-      "buttonClass": "btn-secondary",
-      "buttonUrl": "#",
-      "buttonText": "Tous les événements"
     }
   },
   "news": false,
