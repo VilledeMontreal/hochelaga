@@ -50,9 +50,31 @@
   }
 
   .alert-actions {
-    margin-top: .5rem;
+    margin-top: 1rem;
+    display: flex;
+    flex-wrap: wrap;
     .btn {
-      margin: .5rem 1rem .5rem 0;
+      margin: 0 1rem .5rem 0;
+    }
+    a {
+      display: inline !important;
+      margin-right: 0 !important;
+      text-decoration: none;
+      .icon-nowrap {
+        display: inline;
+        white-space: nowrap;
+        vertical-align: -6px;
+        line-height: 1;
+      }
+      .icon {
+        display: inline;
+        margin-left: 0.25rem;
+        margin-right: 0;
+      }
+      &:hover,
+      &:focus {
+        background-color: transparent;
+      }
     }
   }
 
@@ -116,9 +138,13 @@
     a,
     .alert-link {
       color: $color-dark;
-      border-bottom: $link-border-width solid $color-dark;
-      @include hover-focus {
+      .icon {
+        @include icon-color($color-dark);
+      }
+      &:hover,
+      &:focus {
         background-color: lighten($color-light, 4%);
+        text-decoration: underline;
       }
     }
 
