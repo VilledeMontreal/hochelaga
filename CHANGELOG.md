@@ -6,6 +6,9 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 
 ## [5.4.0] - Unreleased
 
+### Added
+- Components - Message ciblé: Ajout de la variante hyperlien.
+
 ### Changed
 - Components - Entree de données: Ajustement espacement input + message d'erreur.
 
@@ -18,7 +21,7 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 ## [5.3.0] - 2024-04-08
 
 ### Changed
-- Components Tuile: Modification Tuile en vedette (Espacement, breakpoint)
+- Components - Tuiles: Modification Tuile en vedette (Espacement, breakpoint)
 
 
 ## [5.2.0] - 2024-04-11
@@ -30,16 +33,16 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 ## [5.1.0] - 2024-03-22
 
 ### Changed
-- Components Accordeon: Ajustement structure accordeon et fix disabled state.
-- Components Étiquettes: Fusion de la variante light. Modification des schemas de couleurs des étiquettes.
-- Components Badge: Harmonisation des schémas de couleurs avec les étiquettes. Ajout d'une bordure.
-- Components Boutons: Ajustement couleur de fond des boutons secondaires et tertiaires (non inversés)
+- Components - Accordeon: Ajustement structure accordeon et fix disabled state.
+- Components - Étiquettes: Fusion de la variante light. Modification des schemas de couleurs des étiquettes.
+- Components - Badge: Harmonisation des schémas de couleurs avec les étiquettes. Ajout d'une bordure.
+- Components - Boutons: Ajustement couleur de fond des boutons secondaires et tertiaires (non inversés)
 - Styles: Passage de border-bottom à text-decoration pour la gestion des underline de liens.
 
 ### Added
 - Styles - iconographie: Ajout des icones social-threads, social-twitch, social-vimeo et social-x.
 - Styles - iconographie: Ajout des icones accessibilite, astuce, communiquer, demander, erreur, payer, permis, securite, signaler, trouver, trouverMap.
-- Components Accordeon: Ajout du bouton Tout ouvrir / Tout fermer avec exemple de script.
+- Components - Accordeon: Ajout du bouton Tout ouvrir / Tout fermer avec exemple de script.
 
 ### Fixed
 - Styles - typographie: correction bogue artefact sur lien avec la classe .is-external-link
