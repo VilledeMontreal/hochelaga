@@ -1,18 +1,18 @@
 {
   "navbarFixedTop": true,
-  "is-homepage": true,
-  "hideDocumentHeadingImageMobile": true,
+  "has-illustration": true,
   "pageClasses": false,
   "documentHeadingFullWidth": true,
-  "documentHeadingClass": "document-heading-homepage",
-  "documentHeadingImageUrl": "https://res.cloudinary.com/villemontreal/image/upload/q_auto,f_auto,dpr_auto/v1/portail/jdkwiwajrv1natxzjsnr.png",
-  "documentHeadingNotch": true,
+  "documentHeadingClass": "document-heading-sm bg-light",
+  "documentHeadingImageUrl": false,
+  "documentHeadingNotch": false,
   "has-left-notch": false,
-  "notch-full-width": true,
+  "notch-full-width": false,
   "customHeadingGridClass": "col-md-6 col-lg-5",
   "has-search-form": true,
   "media": false,
   "heading": "Mon quartier.<br>Mes services.<br>Ma ville.",
+  "messageBar": false,
   "liensRapides": [
     {
       "position": 1,
@@ -348,109 +348,160 @@
   "events": {
     "cards": {
       "classes": false,
-      "bsgrid-classes": "col-12 col-lg-4",
+      "bsgrid-classes": "col-12 col-lg-3",
       "card-item": [
         {
           "classes" : false,
-          "data-link-title": "Titre de l'événement",
+          "data-link-title": "Tuile #1",
           "url" : "#",
           "card-media" : {
             "icon": false,
             "img" : {
               "src" : "https://picsum.photos/id/605/768/432",
-              "alt" : "Card #1 img alt."
+              "alt" : "Tuile #1 img alt."
             }
           },
-          "card-type": "Type d'événement",
-          "card-title" : "Titre de l'événement",
+          "card-title" : "Tuile #1",
           "card-text": false,
           "card-text-interface" : {
-            "date-time": {
-              "date": [
-                {
-                  "line-break": true,
-                  "text": "Du ",
-                  "dateTimeFormat": "2019-12-12",
-                  "dateTimeText": "12 décembre 2019"
-                },
-                {
-                  "text": "au ",
-                  "dateTimeFormat": "2019-12-15",
-                  "dateTimeText": "15 décembre 2019"
-                }
-              ]
-            }
+            "info": "Lorem ipsum dolore site."
           }
         },
         {
           "classes" : false,
-          "data-link-title": "Titre de l'événement",
+          "data-link-title": "Tuile #2",
           "url" : "#",
           "card-media" : {
             "icon": false,
             "img" : {
               "src" : "https://picsum.photos/id/63/768/432",
-              "alt" : "Card #1 img alt."
+              "alt" : "Card #2 img alt."
             }
           },
-          "card-type": "Type d'événement",
-          "card-title" : "Titre de l'événement",
+          "card-title" : "Tuile #2",
           "card-text": false,
           "card-text-interface" : {
-            "date-time": {
-              "date": [
-                {
-                  "text": "Jeudi ",
-                  "dateTimeFormat": "2019-12-19",
-                  "dateTimeText": "19 décembre 2019"
-                }
-              ]
-            }
+            "info": "Lorem ipsum dolore site."
           }
         },
         {
           "classes" : false,
-          "data-link-title": "Titre de l'événement",
+          "data-link-title": "Tuile #3",
           "url" : "#",
           "card-media" : {
             "icon": false,
             "img" : {
-              "src" : "https://picsum.photos/id/423/768/432",
+              "src" : "https://picsum.photos/id/60/768/432",
+              "alt" : "Card #3 img alt."
+            }
+          },
+          "card-title" : "Tuile #3",
+          "card-text": false,
+          "card-text-interface" : {
+            "info": "Lorem ipsum dolore site."
+          }
+        },
+        {
+          "classes" : false,
+          "data-link-title": "Tuile #4",
+          "url" : "#",
+          "card-media" : {
+            "icon": false,
+            "img" : {
+              "src" : "https://picsum.photos/id/75/768/432",
+              "alt" : "Card #4 img alt."
+            }
+          },
+          "card-title" : "Tuile #4",
+          "card-text": false,
+          "card-text-interface" : {
+            "info": "Lorem ipsum dolore site."
+          }
+        }
+      ]
+    }
+  },
+  "news": {
+    "cards": {
+      "classes": false,
+      "bsgrid-classes": "col-12 col-md-6 col-lg-4",
+      "card-item": [
+        {
+          "classes": false,
+          "data-link-title": "Quisque enim lacus mollis id fermentum quis mattis sit amet purus",
+          "url": "#",
+          "card-media": {
+            "img": {
+              "src": "https://picsum.photos/id/553/768/432",
+              "alt": "Card #1 img alt."
+            }
+          },
+          "card-type": false,
+          "card-title": "Quisque enim lacus mollis id fermentum quis mattis sit amet purus",
+          "card-text-interface": {
+            "date-time": {
+              "date": {
+                "text": false,
+                "dateTimeFormat": "2019-12-22",
+                "dateTimeText": "22 décembre 2019"
+              }
+            }
+          }
+        },
+        {
+          "classes": false,
+          "data-link-title": "Sed iaculis nisl justo et fermentum augue sollicitudin",
+          "url": "#",
+          "card-media": {
+            "img": {
+              "src" : "https://picsum.photos/id/522/768/432",
               "alt" : "Card #1 img alt."
             }
           },
-          "card-type": "Type d'événement",
-          "card-title" : "Titre de l'événement",
-          "card-text": false,
-          "card-text-interface" : {
+          "card-type": false,
+          "card-title": "Sed iaculis nisl justo et fermentum augue sollicitudin",
+          "card-text-interface": {
             "date-time": {
-              "date": [
-                {
-                  "line-break": true,
-                  "text": "Du ",
-                  "dateTimeFormat": "2019-12-24",
-                  "dateTimeText": "24 décembre 2019"
-                },
-                {
-                  "text": "au ",
-                  "dateTimeFormat": "2019-12-314",
-                  "dateTimeText": "31 décembre 2019"
-                }
-              ]
+              "date": {
+                "text": false,
+                "dateTimeFormat": "2019-11-22",
+                "dateTimeText": "22 novembre 2019"
+              }
+            }
+          }
+        },
+        {
+          "classes": false,
+          "data-link-title": "Sed ultrices ipsum vitae est dictum",
+          "url": "#",
+          "card-media": {
+            "img" : {
+              "src" : "https://picsum.photos/id/527/768/432",
+              "alt" : "Card #1 img alt."
+            }
+          },
+          "card-type": false,
+          "card-title": "Sed ultrices ipsum vitae est dictum",
+          "card-text-interface": {
+            "date-time": {
+              "date": {
+                "text": false,
+                "dateTimeFormat": "2019-10-22",
+                "dateTimeText": "22 octobre 2019"
+              }
             }
           }
         }
       ]
     },
     "button-cta": {
-      "data-link-title": "Tous les événements",
+      "data-link-title": "Toutes les nouvelles",
       "buttonAsLink": true,
-      "buttonClass": "btn-secondary",
+      "buttonClass": "btn-secondary btn-squared",
       "buttonUrl": "#",
-      "buttonText": "Tous les événements"
+      "buttonText": "Toutes les nouvelles"
     }
   },
-  "news": false,
   "mairie": {
     "cards": {
       "classes": false,
@@ -526,5 +577,45 @@
       "buttonText": "Toutes les séances"
     }
   },
-  "homePromo": false
+  "homePromo": {
+    "promoContent": [
+      {
+        "img": {
+          "src": "https://picsum.photos/id/668/768/640",
+          "alt": "Alt image #1."
+        },
+        "title": "Lorem ipsum dolor sit amet, consectetur adipiscing elit",
+        "formattedText": "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed iaculis nisl justo, et fermentum augue sollicitudin vitae. Sed ultrices ipsum vitae est dictum, et tempor erat convallis.</p><p>Fusce mattis ante sit amet aliquam porttitor. Quisque enim lacus, mollis id fermentum quis, mattis sit amet purus. </p>",
+        "link": {
+          "data-link-title": "Lorem ipsum dolor sit amet, consectetur adipiscing elit",
+          "data-link-position": 1,
+          "has-icon": true,
+          "icon-right": true,
+          "link-label": "Lorem ipsum",
+          "icon": "icon-arrow-right",
+          "url": "#"
+        }
+      },
+      {
+        "order": {
+          "last": true
+        },
+        "img": {
+          "src": "https://picsum.photos/id/80/768/640",
+          "alt": "Alt image #1."
+        },
+        "title": "Vestibulum et fermentum libero",
+        "formattedText": "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed iaculis nisl justo, et fermentum augue sollicitudin vitae. Sed ultrices ipsum vitae est dictum, et tempor erat convallis.</p><p>Fusce mattis ante sit amet aliquam porttitor. Quisque enim lacus, mollis id fermentum quis, mattis sit amet purus. </p>",
+        "link": {
+          "data-link-title": "Vestibulum et fermentum libero",
+          "data-link-position": 2,
+          "has-icon": true,
+          "icon-right": true,
+          "link-label": "Vestibulum fermentum libero",
+          "icon": "icon-arrow-right",
+          "url": "#"
+        }
+      }
+    ]
+  }
 }

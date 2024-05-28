@@ -16,11 +16,11 @@
     {{# documentHeadingFullWidth}}
     <div class="row document-heading-header">
       {{^ documentHeadingOverride}}
-      {{^ is-homepage}}
+      {{^ has-illustration}}
       <div class="{{^ customHeadingGridClass}}col-12 col-lg-7{{/customHeadingGridClass}}{{# customHeadingGridClass}} {{ customHeadingGridClass}}{{/customHeadingGridClass}}">
         <div class="pb-2">
           {{# heading-surtitle}}
-          <div class="document-heading-surtitle{{# isNormal}} font-weight-normal{{/ isNormal}}">{{text}}</div>
+          <div class="document-heading-surtitle">{{text}}</div>
           {{/ heading-surtitle}}
 
           <h1 class="{{^headingClass}}h1{{/headingClass}}{{#headingClass}} {{headingClass}}{{/headingClass}}">{{{ heading }}}</h1>
@@ -55,27 +55,26 @@
         </div>
         {{/ has-quick-links}}
       </div>
-      {{/ is-homepage}}
-      {{# is-homepage}}
-      <div class="col-12">
+      {{/ has-illustration}}
+      {{# has-illustration}}
+      <div class="col-12 col-md-6 align-self-center">
         <div class="pb-2">
-          <h1 class="document-heading-surtitle font-weight-normal">Bienvenue sur Montréal.ca</h1>
-          <div class="h1">{{{ heading }}}</div>
+          <div class="document-heading-surtitle">Bienvenue sur Montréal.ca</div>
+          <h1 class="heading-fullwidth-title">{{{ heading }}}</h1>
         </div>
         {{# has-search-form}}
-        <div class="row">
-          <div class="col-12 col-sm-7 col-md-6 col-lg-5">
-            <div class="form-group form-group-lg">
-              <div class="input-group-icon input-group-icon-left">
-                <input type="text" class="form-control input-rounded" id="input-group-search" placeholder="Rechercher ..." aria-label="Rechercher">
-                <span class="icon icon-search" aria-hidden="true"></span>
-              </div>
-            </div>
+        <div class="form-group form-group-lg">
+          <div class="input-group-icon input-group-icon-left">
+            <input type="text" class="form-control input-rounded" id="input-group-search" placeholder="Rechercher ..." aria-label="Rechercher">
+            <span class="icon icon-search" aria-hidden="true"></span>
           </div>
         </div>
         {{/ has-search-form}}
       </div>
-      {{/ is-homepage}}
+      <div class="col-12 col-md-6 align-self-center mt-4 mt-md-0">
+        <img src="https://res.cloudinary.com/villemontreal/image/upload/w_768,c_limit/f_auto,dpr_auto,q_auto/v1/portail/uyshs5agcweflio7enhq.png" alt="" class="img-fluid">
+      </div>
+      {{/ has-illustration}}
       {{/ documentHeadingOverride}}
       {{# documentHeadingOverride}}
         {{# mesures-urgence}}

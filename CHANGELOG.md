@@ -9,8 +9,11 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 ### Changed
 - Components - Entree de données: Ajustement espacement input + message d'erreur.
 
-### Fixed
+### PatternLab
+- PL: Mise à jour des gabarits.
+- PL: Retrait composants flyout et cookie consent.
 - PL: Exemple de validation de formulaire client-side avec .was-validated
+
 
 ## [5.3.0] - 2024-04-08
 
