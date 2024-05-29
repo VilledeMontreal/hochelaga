@@ -13,6 +13,7 @@ label {
   font-weight: $font-weight-bold;
   color: $neutral-primary;
   margin-bottom: .5rem;
+  display: block;
   span {
     @include font-size($font-size-sm);
     font-weight: $font-weight-normal;

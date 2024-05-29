@@ -1,0 +1,85 @@
+{
+  "inputTextSize": [
+    {
+      "formGroupClass": "required",
+      "formGroupInputID": "form-control-number-default-one",
+      "formGroupInputRequired": true,
+      "formGroupInputLabel": "Libellé",
+      "formGroupPopover": true,
+      "formGroupInputPlaceholder": {
+        "text": "XX"
+      },
+      "formGroupInputHelpText": {
+        "id": "input-number-help-text-id",
+        "text": "Texte d'assistance"
+      },
+      "formGroupInputCounter": false
+    },
+    {
+      "formGroupClass": "required",
+      "formGroupInputID": "form-control-number-default-two",
+      "formGroupInputRequired": true,
+      "formGroupInputLabel": "Libellé",
+      "formGroupPopover": false,
+      "formGroupInputPlaceholder": {
+        "text": "XX"
+      },
+      "formGroupInputValue": "40",
+      "formGroupInputHelpText": {
+        "id": "input-number-help-text-id",
+        "text": "Texte d'assistance"
+      },
+      "formGroupInputCounter": {
+        "id": "input-number-caracter-count",
+        "text": "La valeur doit se situer entre 20 et 60"
+      },
+      "boundary": {
+        "min": 20,
+        "max": 60,
+        "step": 5
+      }
+    }
+  ],
+  "inputTextSizeValidation": [
+    {
+      "formGroupClass": "required",
+      "formGroupInputID": "form-control-number-default-error-one",
+      "formGroupInputClass": "is-invalid",
+      "formGroupInputRequired": true,
+      "formGroupInputLabel": "En erreur input vide",
+      "formGroupInputPlaceholder": false,
+      "formGroupInputHelpText": false,
+      "formGroupInputError": {
+        "id": "input-text-error-id",
+        "text": "Texte d'erreur",
+        "formAriaInputError": true
+      },
+      "boundary": {
+        "min": 10,
+        "max": 100
+      }
+    }
+  ],
+  "inputTextState": [
+    {
+      "formGroupClass": false,
+      "formGroupInputID": "form-control-input-number-disabled",
+      "formGroupInputLabel": "Désactivé",
+      "formGroupInputRequired": false,
+      "formGroupInputPlaceholder": "désactivé",
+      "formGroupInputHelpText": false,
+      "formGroupInputState": "disabled"
+    },
+    {
+      "formGroupClass": false,
+      "formGroupInputID": "form-control-input-number-readonly",
+      "formGroupInputLabel": "Read-only",
+      "formGroupInputClass": false,
+      "formGroupInputRequired": false,
+      "formGroupInputPlaceholder": "read-only",
+      "formGroupInputHelpText": false,
+      "formGroupInputState": "readonly",
+      "formGroupInputValue": "40"
+    }
+  ]
+}
