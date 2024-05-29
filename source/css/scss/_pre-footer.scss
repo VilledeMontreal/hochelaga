@@ -1,12 +1,11 @@
 footer {
   // Pre footer
-  // Use-case: Vitrine d'arrondissement
   &.pre-footer {
     background-color: $white;
     color: $body-color;
-    padding-top: 2rem;
-    padding-bottom: 0;
-    
+    padding-top: 4rem;
+    padding-bottom: 2rem;
+
     .font-size-sm {
       p {
         margin-bottom: 1rem;
@@ -50,11 +49,6 @@ footer {
           }
         }
       }
-    }
-
-    @include media-breakpoint-up(md) {
-      padding-top: 4rem;
-      padding-bottom: 2rem;
     }
   }
 }
