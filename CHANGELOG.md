@@ -12,6 +12,7 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 
 ### Changed
 - Components - Entree de données: Ajustement espacement input + message d'erreur.
+- Components - Feedback form: retrait du margin-bottom.
 
 ### Fixed
 - Components - Entrée de données: Modification display du label pour corriger problème d'alignement avec ou sans popover.
