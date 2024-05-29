@@ -8,9 +8,13 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 
 ### Added
 - Components - Message ciblé: Ajout de la variante hyperlien.
+- Components - Entree de données: Ajout d'exemple pour champ numérique (input type="number").
 
 ### Changed
 - Components - Entree de données: Ajustement espacement input + message d'erreur.
+
+### Fixed
+- Components - Entrée de données: Modification display du label pour corriger problème d'alignement avec ou sans popover.
 
 ### PatternLab
 - PL: Mise à jour des gabarits.
