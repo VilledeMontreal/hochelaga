@@ -828,7 +828,7 @@ legend,
     padding: 2rem;
     display: block;
     box-shadow: none;
-    margin-bottom: 2rem;
+    margin-bottom: 0;
     border-color: $neutral-tertiary;
     background-color: $neutral-underground-1;
     color: $neutral-secondary;
@@ -866,9 +866,6 @@ legend,
       }
     }
 
-    @include media-breakpoint-up(lg) {
-      margin-bottom: 4rem;
-    }
   }
 }
 
