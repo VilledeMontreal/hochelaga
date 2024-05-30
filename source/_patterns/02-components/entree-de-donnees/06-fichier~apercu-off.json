@@ -1,14 +1,14 @@
 {
   "formGroupClass": false,
-  "formGroupInputID": "form-control-input-file-v2",
+  "formGroupInputID": "form-control-input-file-v2-2",
   "formGroupInputLabel": "Libellé",
-  "formGroupFileID": "file-droparea-v2",
-  "formGroupFileDropID": "form-group-file-upload",
+  "formGroupFileID": "file-droparea-v2-2",
+  "formGroupFileDropID": "form-group-file-upload-2",
   "formGroupFileDropLabel": "Parcourir",
   "formGroupFileDropHelpText": "ou déposer votre fichier ici",
   "dropdownMenu": {
     "dropdownMenuClass": "dropdown-menu-right",
-    "dropdownMenuID": "dropdownMoreVertical-3",
+    "dropdownMenuID": "dropdownMoreVertical-2",
     "dropdownSection": [
       {
         "dropdownItem": [
@@ -28,33 +28,33 @@
     "listUploadedItems": [
       {
         "media": {
-          "img": {
-            "src": "https://picsum.photos/id/1062/40/40",
-            "alt": "Alt pour image #1."
+          "img": false,
+          "icon": {
+            "icon-name": "icon-md icon-file-pdf"
           }
         },
-        "fileName": "nom-du-fichier.jpg",
+        "fileName": "nom-du-fichier.pdf",
         "fileSize": "12 Mo"
       },
       {
         "media": {
-          "img": {
-            "src": "https://picsum.photos/id/1062/40/40",
-            "alt": "Alt pour image #2."
+          "img": false,
+          "icon": {
+            "icon-name": "icon-md icon-file-pdf"
           }
         },
-        "fileName": "nom-du-fichier-2.jpg",
+        "fileName": "nom-du-fichier-2.pdf",
         "fileSize": "1 Mo"
       },
       {
         "media": {
-          "img": {
-            "src": "https://picsum.photos/id/1062/40/40",
-            "alt": "Alt pour image #3."
+          "img": false,
+          "icon": {
+            "icon-name": "icon-md icon-file"
           }
         },
-        "fileName": "nom-du-fichier-3.jpg",
-        "fileSize": "500 Ko"
+        "fileName": "nom-du-fichier-3-qui-est-tres-tres-long.txt",
+        "fileSize": "12 Ko"
       }
     ]
   }

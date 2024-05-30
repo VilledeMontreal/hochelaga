@@ -108,6 +108,20 @@ html {
   }
 }
 
+// Page section and sub-section
+.page-section {
+  :nth-child(n + 2 of .page-subsection) {
+    border-top: 1px solid $neutral-stroke;
+    padding-top: 4rem;
+  }
+  .page-subsection {
+    padding-bottom: 2rem;
+    &:last-child {
+      padding-bottom: 0;
+    }
+  }
+}
+
 // Wizard header
 // Optimize and normalize - we can extend from banner and build more generic containers
 .wizard-header {

@@ -4,10 +4,30 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](http://keepachangelog.com/en/1.0.0/)
 and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.html).
 
-## [5.3.0] - Unreleased
+## [5.4.0] - Unreleased
+
+### Added
+- Components - Message ciblé: Ajout de la variante hyperlien.
+- Components - Entree de données: Ajout d'exemple pour champ numérique (input type="number").
 
 ### Changed
-- Components Tuile: Modification Tuile en vedette (Espacement, breakpoint)
+- Components - Entree de données: Ajustement espacement input + message d'erreur.
+- Components - Feedback form: retrait du margin-bottom.
+- Components - Pre-footer: Ajustement des espacements.
+
+### Fixed
+- Components - Entrée de données: Modification display du label pour corriger problème d'alignement avec ou sans popover.
+
+### PatternLab
+- PL: Mise à jour des gabarits.
+- PL: Retrait composants flyout et cookie consent.
+- PL: Exemple de validation de formulaire client-side avec .was-validated
+
+
+## [5.3.0] - 2024-04-08
+
+### Changed
+- Components - Tuiles: Modification Tuile en vedette (Espacement, breakpoint)
 
 
 ## [5.2.0] - 2024-04-11
@@ -19,16 +39,16 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 ## [5.1.0] - 2024-03-22
 
 ### Changed
-- Components Accordeon: Ajustement structure accordeon et fix disabled state.
-- Components Étiquettes: Fusion de la variante light. Modification des schemas de couleurs des étiquettes.
-- Components Badge: Harmonisation des schémas de couleurs avec les étiquettes. Ajout d'une bordure.
-- Components Boutons: Ajustement couleur de fond des boutons secondaires et tertiaires (non inversés)
+- Components - Accordeon: Ajustement structure accordeon et fix disabled state.
+- Components - Étiquettes: Fusion de la variante light. Modification des schemas de couleurs des étiquettes.
+- Components - Badge: Harmonisation des schémas de couleurs avec les étiquettes. Ajout d'une bordure.
+- Components - Boutons: Ajustement couleur de fond des boutons secondaires et tertiaires (non inversés)
 - Styles: Passage de border-bottom à text-decoration pour la gestion des underline de liens.
 
 ### Added
 - Styles - iconographie: Ajout des icones social-threads, social-twitch, social-vimeo et social-x.
 - Styles - iconographie: Ajout des icones accessibilite, astuce, communiquer, demander, erreur, payer, permis, securite, signaler, trouver, trouverMap.
-- Components Accordeon: Ajout du bouton Tout ouvrir / Tout fermer avec exemple de script.
+- Components - Accordeon: Ajout du bouton Tout ouvrir / Tout fermer avec exemple de script.
 
 ### Fixed
 - Styles - typographie: correction bogue artefact sur lien avec la classe .is-external-link
@@ -41,7 +61,6 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 
 ### BREAKING CHANGE
 - Retrait du tilde importer qui causait problème avec des versions récentes (15+ d'angular). Devrait être transparent dans des versions récentes de sass (dart-sass). A valider pour les anciennes versions ou node-sass...
-
 
 ## [4.24.3] - 2023-05-24
 

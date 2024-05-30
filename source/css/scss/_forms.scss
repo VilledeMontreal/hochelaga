@@ -13,6 +13,7 @@ label {
   font-weight: $font-weight-bold;
   color: $neutral-primary;
   margin-bottom: .5rem;
+  display: block;
   span {
     @include font-size($font-size-sm);
     font-weight: $font-weight-normal;
@@ -73,20 +74,6 @@ legend,
     }
   }
 }
-.valid-feedback,
-.invalid-feedback {
-  font-weight: $font-weight-bold;
-  line-height: $line-height-sm;
-  font-size: $font-size-sm;
-  margin-top: .5rem;
-  color: $neutral-primary;
-
-  // DEPRECATED
-  // We now conform to bootstrap validation
-  &.feedback-icon {
-    display: none;
-  }
-}
 
 .form-control-sm {
   height: $input-height-sm;
@@ -123,18 +110,14 @@ legend,
     margin-top: 0;
     margin-bottom: 0;
   }
-  &:has(.is-invalid) {
-      .invalid-feedback {
-        display: flex;
-        color: $negative-dark;
-        align-items: start;
-        margin-top: 0.5rem;
-        .icon {
-          @include icon-color($negative-dark);
-          margin-top: .125rem;
-          margin-right: .25rem;
-        }
-      }
+
+  // Handle spacing for invadid-feedback for custom-control
+  .custom-control ~ .invalid-feedback {
+    margin-top: .5rem;
+  }
+  // Handle spacing for invalid-feedback for custom-control-card
+  .custom-control-card ~ .invalid-feedback {
+    margin-top: -.5rem;
   }
 }
 
@@ -845,7 +828,7 @@ legend,
     padding: 2rem;
     display: block;
     box-shadow: none;
-    margin-bottom: 2rem;
+    margin-bottom: 0;
     border-color: $neutral-tertiary;
     background-color: $neutral-underground-1;
     color: $neutral-secondary;
@@ -883,9 +866,6 @@ legend,
       }
     }
 
-    @include media-breakpoint-up(lg) {
-      margin-bottom: 4rem;
-    }
   }
 }
 

@@ -13,10 +13,10 @@
     }
   ],
   "documentHeadingFullWidth": false,
-  "documentHeadingClass": false,
+  "documentHeadingClass": "document-heading-left-notch",
   "documentHeadingImageUrl": "https://picsum.photos/id/797/1170/480",
   "documentHeadingNotch": true,
-  "has-left-notch": false,
+  "has-left-notch": true,
   "heading": "Nom-de-l'Arrondissement",
   "lead": "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus fringilla egestas enim, ut tempus ligula tempor maximus. Suspendisse quis lorem mauris. Proin at feugiat libero, et tincidunt tellus. Cras ut sodales sem. Maecenas libero felis, auctor eget mattis a, dapibus ut tellus.</p><p>Maecenas tempus nibh a elit scelerisque, nec scelerisque velit interdum. Proin eu magna nec arcu porta vehicula. Sed volutpat lacus nec sodales auctor. Quisque ut lacus nisl. Phasellus nec aliquet velit, eu aliquet enim.</p>",
   "show-hide-description": true,
@@ -74,7 +74,10 @@
       }
     ]
   },
-  "video": false,
+  "video": {
+    "title": "Titre de la vidéo",
+    "src": "//www.youtube.com/embed/rBfphgabDhU"
+  },
   "stats": {
     "items": [
       {
