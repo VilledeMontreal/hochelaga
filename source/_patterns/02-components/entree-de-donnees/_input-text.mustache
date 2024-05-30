@@ -10,7 +10,7 @@
     <span id="{{id}}" class="form-text">{{ text }}</span>
   {{/ formGroupInputHelpText}}
   {{# formGroupBtnClear}}<div class="input-group-icon">{{/ formGroupBtnClear}}
-    <input type="{{formGroupInputType}}" class="form-control {{formGroupInputClass}}" id="{{ formGroupInputID }}" {{# formGroupInputPlaceholder}}placeholder="{{ formGroupInputPlaceholder.text}}"{{/ formGroupInputPlaceholder}}{{# formGroupInputHelpText}} aria-describedby="{{id}}"{{/ formGroupInputHelpText}}{{#formGroupInputError}} aria-describedby="{{id}}" {{#formAriaInputError}} aria-invalid="true" {{/formAriaInputError}}{{/formGroupInputError}}{{# formGroupInputState}} {{ formGroupInputState}}{{/ formGroupInputState}}{{# formGroupInputRequired}} required{{/ formGroupInputRequired}}>
+    <input type="{{formGroupInputType}}" class="form-control {{formGroupInputClass}}" id="{{ formGroupInputID }}" {{# formGroupInputPlaceholder}}placeholder="{{ formGroupInputPlaceholder.text}}"{{/ formGroupInputPlaceholder}}{{# formGroupInputDescribedBy}} aria-describedby="{{formGroupInputDescribedBy}}"{{/ formGroupInputDescribedBy}}{{#formAriaInputError}} aria-invalid="true" {{/ formAriaInputError}}{{# formGroupInputState}} {{ formGroupInputState}}{{/ formGroupInputState}}{{# formGroupInputRequired}} required{{/ formGroupInputRequired}}>
     {{# formGroupBtnClear}}
       <button class="btn-clear">
         <span class="icon icon-x-circle icon-md" aria-hidden="true">

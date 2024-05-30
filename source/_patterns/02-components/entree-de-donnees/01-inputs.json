@@ -10,6 +10,7 @@
       "formGroupInputPlaceholder": {
         "text": "Placeholder"
       },
+      "formGroupInputDescribedBy": "input-text-help-text-id input-text-caracter-count",
       "formGroupInputHelpText": {
         "id": "input-text-help-text-id",
         "text": "Texte d'assistance"
@@ -31,12 +32,13 @@
       "formGroupInputPlaceholder": {
         "text": "Placeholder"
       },
+      "formGroupInputDescribedBy": "input-text-error-id",
       "formGroupInputHelpText": false,
       "formGroupInputError": {
         "id": "input-text-error-id",
-        "text": "Texte d'erreur",
-        "formAriaInputError": true
-      }
+        "text": "Texte d'erreur"
+      },
+      "formAriaInputError": true
     }
   ],
   "inputTextState": [
@@ -45,7 +47,8 @@
       "formGroupInputID": "form-control-input-text-disabled",
       "formGroupInputLabel": "Désactivé",
       "formGroupInputRequired": false,
-      "formGroupInputPlaceholder": "désactivé",
+      "formGroupInputPlaceholder": false,
+      "formGroupInputDescribedBy": false,
       "formGroupInputHelpText": false,
       "formGroupInputState": "disabled",
       "formGroupBtnClear": false
@@ -56,7 +59,8 @@
       "formGroupInputLabel": "Read-only",
       "formGroupInputClass": false,
       "formGroupInputRequired": false,
-      "formGroupInputPlaceholder": "read-only",
+      "formGroupInputPlaceholder": false,
+      "formGroupInputDescribedBy": false,
       "formGroupInputHelpText": false,
       "formGroupInputState": "readonly",
       "formGroupBtnClear": false
