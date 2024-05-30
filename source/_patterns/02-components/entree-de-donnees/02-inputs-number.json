@@ -9,11 +9,13 @@
       "formGroupInputPlaceholder": {
         "text": "XX"
       },
+      "formGroupInputDescribedBy": "input-number-help-text-id",
       "formGroupInputHelpText": {
         "id": "input-number-help-text-id",
         "text": "Texte d'assistance"
       },
       "formGroupInputCounter": false
+
     },
     {
       "formGroupClass": "required",
@@ -24,6 +26,7 @@
       "formGroupInputPlaceholder": {
         "text": "XX"
       },
+      "formGroupInputDescribedBy": "input-number-help-text-id input-number-caracter-count",
       "formGroupInputValue": "40",
       "formGroupInputHelpText": {
         "id": "input-number-help-text-id",
@@ -48,6 +51,7 @@
       "formGroupInputRequired": true,
       "formGroupInputLabel": "En erreur input vide",
       "formGroupInputPlaceholder": false,
+      "formGroupInputDescribedBy": "input-text-error-id",
       "formGroupInputHelpText": false,
       "formGroupInputError": {
         "id": "input-text-error-id",
@@ -76,7 +80,7 @@
       "formGroupInputLabel": "Read-only",
       "formGroupInputClass": false,
       "formGroupInputRequired": false,
-      "formGroupInputPlaceholder": "read-only",
+      "formGroupInputPlaceholder": false,
       "formGroupInputHelpText": false,
       "formGroupInputState": "readonly",
       "formGroupInputValue": "40"
