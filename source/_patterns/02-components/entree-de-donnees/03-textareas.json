@@ -7,6 +7,7 @@
       "formGroupInputPlaceholder": {
         "text": "Placeholder"
       },
+      "formGroupInputDescribedBy": "form-group-textearea-help-text textarea-caracter-count",
       "formGroupInputHelpText": {
         "id": "form-group-textearea-help-text",
         "text": "Texte d'assistance."
@@ -29,16 +30,17 @@
       "formGroupInputPlaceholder": {
         "text": "Placeholder"
       },
+      "formGroupInputDescribedBy": "form-group-textearea-help-text form-group-textarea-error-text",
       "formGroupInputHelpText": {
-        "id": "form-group-textearea-error-help-text",
+        "id": "form-group-textearea-help-text",
         "text": "Texte d'assistance."
       },
       "formGroupTextareaRows": "5",
       "formGroupInputError": {
         "id": "form-group-textarea-error-text",
-        "text": "Texte d'erreur",
-        "formAriaInputError": true
-      }
+        "text": "Texte d'erreur"
+      },
+      "formAriaInputError": true
     }
   ],
   "textareaState": [
@@ -51,16 +53,13 @@
       "formGroupInputPlaceholder": {
         "text": "Placeholder"
       },
+      "formGroupInputDescribedBy": "form-group-textearea-disabled-help-text ",
       "formGroupInputHelpText": {
         "id": "form-group-textearea-disabled-help-text",
         "text": "Texte d'assistance"
       },
       "formGroupTextareaRows": "5",
-      "formGroupInputState": "disabled",
-      "formGroupInputError": {
-        "id": "form-group-textarea-disabled-error-text",
-        "text": "texte d'erreur"
-      }
+      "formGroupInputState": "disabled"
     }
   ]
 }
