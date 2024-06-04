@@ -4,7 +4,13 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](http://keepachangelog.com/en/1.0.0/)
 and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.html).
 
-## [5.4.0] - Unreleased
+## [5.5.0] - unreleased
+
+## Added
+- Components - Tuiles: Ajout d'une classe card-link-icon pour gerer le link label pour tuile horizontale document et tuile en vedette.
+
+
+## [5.4.0] - 2024-05-30
 
 ### Added
 - Components - Message ciblé: Ajout de la variante hyperlien.
