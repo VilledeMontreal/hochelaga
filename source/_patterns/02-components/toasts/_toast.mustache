@@ -1,4 +1,4 @@
-<div class="toast show{{# toastClass}} {{toastClass}}{{/toastClass}}" role="alert" aria-live="assertive" aria-atomic="true">
+<div class="toast fade show{{# toastClass}} {{toastClass}}{{/toastClass}}" role="alert" aria-live="assertive" aria-atomic="true">
   <div class="toast-icon">
     <span class="icon {{toastIcon}}" aria-hidden="true"></span>
   </div>
@@ -11,7 +11,10 @@
     {{> components-button}}
     {{/ btnAction}}
     {{# btnSwapLabel}}
-    {{> components-button-icon}}
+    <button type="button" class="btn {{ buttonClass }}" aria-label="{{ buttonText }}">
+      <span class="icon {{ icon-name }}" aria-hidden="true"></span>
+      <span class="btn-label">{{ buttonText }}</span>
+    </button>
     {{/ btnSwapLabel}}
     {{# btnDismiss}}
     <button type="button" class="btn btn-icon" data-dismiss="toast" aria-label="Fermer">

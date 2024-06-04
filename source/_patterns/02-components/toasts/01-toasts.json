@@ -10,29 +10,23 @@
       "toastClass": "toast-success",
       "toastIcon": "icon-check-circle",
       "toast-body": "Message qui définit la longueur de la boîte.",
-      "showActions": {
-        "btnAction": {
-          "buttonClass": false,
-          "buttonText": "Libellé"
-        }
+      "showActions": true,
+      "btnAction": {
+        "buttonClass": false,
+        "buttonText": "Libellé"
       }
     },
     {
       "toastClass": "toast-danger",
       "toastIcon": "icon-error",
       "toast-body": "Message qui définit la longueur de la boîte.",
-      "showActions": {
-        "btnSwapLabel": {
-          "buttonClass": "btn-swap-label-sm",
-          "buttonIconSr": false,
-          "buttonText": "Libellé",
-          "icon-name": "icon-refresh",
-          "buttonIcon": true,
-          "dataToggle": false,
-          "dataTarget": false
-        },
-        "btnDismiss": true
-      }
+      "showActions": true,
+      "btnSwapLabel": {
+        "buttonClass": "btn-swap-label-sm",
+        "buttonText": "Libellé",
+        "icon-name": "icon-refresh"
+      },
+      "btnDismiss": true
     }
   ]
 }
