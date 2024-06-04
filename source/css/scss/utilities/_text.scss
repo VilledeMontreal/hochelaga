@@ -252,6 +252,31 @@ a.text-muted {
   }
 }
 
+// Allow inline icon that wraps with label and leave no orphan
+.link-inline-icon {
+  display: inline !important;
+  margin-right: 0 !important;
+  text-decoration: none;
+  .icon-nowrap {
+    display: inline;
+    white-space: nowrap;
+    vertical-align: -6px;
+    line-height: 1;
+  }
+  .icon {
+    display: inline;
+    margin-left: 0.25rem;
+    margin-right: 0;
+  }
+  &:hover,
+  &:focus {
+    background-color: transparent;
+    .link-label {
+      background-color: $highlight-light;
+    }
+  }
+}
+
 
 // Utility class for font-size
 
