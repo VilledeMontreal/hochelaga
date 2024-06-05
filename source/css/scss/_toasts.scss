@@ -14,8 +14,13 @@
     margin-bottom: $toast-padding-x;
   }
 
+  &.fade {
+    display: inline-flex;
+  }
+
   &.showing {
     opacity: 1;
+    display: inline-flex;
   }
 
   &.show {
@@ -53,10 +58,14 @@
   .btn + .btn {
     margin-left: .5rem;
   }
+
   .btn {
     @extend .btn-reversed;
     @extend .btn-squared;
     @extend .btn-tertiary;
+    .icon {
+      margin: 0;
+    }
 
     @each $breakpoint, $value in $grid-breakpoints {
       &.btn-swap-label-#{$breakpoint} {
