@@ -250,6 +250,10 @@
   //
   $('[data-toggle="tooltip"]').tooltip();
 
+  // Toggle Toast
+  //
+  $('.toast').toast();
+
 
   // Wizard
   //
