@@ -1,0 +1,40 @@
+{
+  "orientation": "vertical",
+  "orientationClass": "nav-vertical",
+  "navTabs": {
+    "navItem": [
+      {
+        "icon-name": "icon-delivery",
+        "id": "nav-item-ic-vert-1",
+        "class": "active show",
+        "title": "Nav item #1",
+        "tabContentId": "tabContent1",
+        "selected": "true"
+      },
+      {
+        "icon-name": "icon-cone",
+        "id": "nav-item-ic-vert-2",
+        "class": false,
+        "title": "Nav item #2",
+        "tabContentId": "tabContent2",
+        "selected": "false"
+      },
+      {
+        "icon-name": "icon-cone",
+        "id": "nav-item-ic-vert-3",
+        "class": false,
+        "title": "Longer label for nav item #3",
+        "tabContentId": "tabContent3",
+        "selected": "false"
+      },
+      {
+        "icon-name": "icon-cone",
+        "id": "nav-item-ic-vert-4",
+        "class": "disabled",
+        "title": "Nav item #4",
+        "tabContentId": "tabContent4",
+        "isDisabled": true
+      }
+    ]
+  }
+}

@@ -6,11 +6,12 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 
 ## [5.5.0] - unreleased
 
-## Added
+### Added
 - Components - Tuiles: Ajout d'une classe card-link-icon pour gerer le link label pour tuile horizontale document et tuile en vedette.
 
-## Changed
+### Changed
 - Styles - Typographie: Remplacement de Open Sans par la nouvelle police Montreal.
+- Components - Onglet: Modifications état onglet. Ajout variante onglets verticaux.
 
 ## Fixed
 - Components - Toasts: Ajustement fonction fermeture et styles boutons.
