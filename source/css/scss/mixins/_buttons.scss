@@ -72,25 +72,6 @@
     }
   }
 
-  @if $box-shadow-color {
-    // Scoped dialog-box-shadow variable definition
-    $custom-box-shadow: 0 0 0 $input-btn-focus-width rgba($box-shadow-color, .3);
-
-    &:focus,
-    &.focus {
-      box-shadow: $custom-box-shadow;
-    }
-
-    &:not(:disabled):not(.disabled):active,
-    &:not(:disabled):not(.disabled).active {
-
-      &:focus {
-        // Avoid using mixin so we can pass custom focus shadow properly
-        box-shadow: $custom-box-shadow;
-      }
-    }
-  }
-
 }
 
 // Button sizes

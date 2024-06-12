@@ -12,8 +12,16 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 ### Changed
 - Styles - Typographie: Remplacement de Open Sans par la nouvelle police Montreal.
 - Components - Onglet: Modifications état onglet. Ajout variante onglets verticaux.
+- Global: Modification des états focus de la plupart des éléments pouvant recevoir le focus: boutons, liens, input.
+  Il y a 3 grandes familles de focus: normal, inversé et intérieur.
+  Normal pour les composant de base.
+  Inversé pour les composant sur fond foncé.
+  Intérieur pour les éléments pleine largeur.
 
-## Fixed
+### PatternLab
+- PL: Mise à jour des gabarits
+
+### Fixed
 - Components - Toasts: Ajustement fonction fermeture et styles boutons.
 
 

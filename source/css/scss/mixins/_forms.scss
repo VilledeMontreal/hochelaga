@@ -105,7 +105,6 @@
 
       &:focus {
         border-color: $color;
-        box-shadow: 0 0 0 $input-focus-width rgba($color, .25);
       }
       // form-group avec un custom-control invalid
       :has(.custom-control-input:invalid) {
@@ -170,7 +169,6 @@
 
       &:focus {
         border-color: $color;
-        box-shadow: 0 0 0 $input-focus-width rgba($color, .25);
       }
     }
   }
@@ -230,7 +228,6 @@
       &:focus {
         ~ .custom-file-label {
           border-color: $color;
-          box-shadow: 0 0 0 $input-focus-width rgba($color, .25);
         }
       }
     }

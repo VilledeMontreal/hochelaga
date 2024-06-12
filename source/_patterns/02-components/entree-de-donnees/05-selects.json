@@ -50,5 +50,27 @@
         "formAriaInputError": true
       }
     }
+  ],
+  "selectDisabled": [
+    {
+      "formGroupClass": false,
+      "formGroupSelectID": "custom-select-disabled",
+      "formGroupSelectLabel": "Libellé",
+      "formGroupSelectClass": false,
+      "formGroupSelect": {
+        "defaultOption": "Option par défaut",
+        "options": [
+          {
+            "option-text" : "Option 1",
+            "option-value" : "option-1"
+          },
+          {
+            "option-text" : "Option 2",
+            "option-value" : "option-2"
+          }
+        ]
+      },
+      "formGroupSelectState": "disabled"
+    }
   ]
 }

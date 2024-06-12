@@ -1,5 +1,5 @@
 <h4 class="pl-pattern-subtitle">Taille</h4>
-<div class="row list-unstyled">
+<div class="row">
   {{# selectSize }}
   <div class="col-xs-6 col-md-4">
     {{> components-select-item }}
@@ -8,10 +8,19 @@
 </div>
 
 <h4 class="pl-pattern-subtitle">Validation</h4>
-<div class="row list-unstyled">
+<div class="row">
   {{# selectValidation }}
   <div class="col-xs-6 col-md-4">
     {{> components-select-item }}
   </div>
   {{/ selectValidation}}
+</div>
+
+<h4 class="pl-pattern-subtitle">Désactivé</h4>
+<div class="row">
+  {{# selectDisabled }}
+  <div class="col-xs-6 col-md-4">
+    {{> components-select-item }}
+  </div>
+  {{/ selectDisabled}}
 </div>
