@@ -91,7 +91,7 @@ nav {
     @include font-size($font-size-sm);
     line-height: $line-height-sm;
     font-weight: $font-weight-bold;
-    padding: .625rem;
+    padding: .625rem 1rem;
     position: relative;
     white-space: normal;
     &:hover,
@@ -150,6 +150,7 @@ nav {
       .nav-link {
         width: 100%;
         margin-bottom: 0;
+        text-align: left;
         &:hover,
         &.active {
           &:not(.disabled) {
