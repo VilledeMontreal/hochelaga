@@ -36,10 +36,15 @@
       color: $neutral-secondary;
     }
 
-    @include hover-focus {
+    &:hover,
+    &:focus {
       color: $neutral-primary;
       border: none;
       @include gradient-bg($neutral-underground-1);
+    }
+
+    &:focus {
+      box-shadow: $btn-focus-inside-box-shadow;
     }
 
     &.active,

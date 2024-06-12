@@ -156,6 +156,7 @@ a {
   &.link-sm {
     @include font-size($font-size-sm);
     line-height: $line-height-sm;
+    text-underline-offset: .1875em;
   }
 
   &.link-xs {

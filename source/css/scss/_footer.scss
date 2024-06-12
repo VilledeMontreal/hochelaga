@@ -13,7 +13,9 @@ footer {
       border: none;
       color: $white;
       font-weight: $font-weight-normal;
-      @include hover-focus {
+      display: inline-block;
+      &:hover,
+      &:focus {
         background-color: transparent;
         text-decoration: none;
         border-bottom: none;
@@ -22,7 +24,7 @@ footer {
       // Custom focus for footer links
       &:focus,
       &.focus {
-        box-shadow: 0 0 0 $input-btn-focus-width $input-btn-focus-reverse-color;
+        box-shadow: $input-btn-reverse-focus-box-shadow;
       }
 
       &.link-page-top {
@@ -125,9 +127,15 @@ footer {
     }
 
     .btn-lang {
-      padding-left: 0;
-      padding-right: 0;
-      margin-right: .5rem;
+      padding: 0;
+      border-radius: 0;
+      display: block;
+      transition: none;
+      display: inline-block;
+    }
+
+    .footer-last {
+      line-height: 1.25;
     }
   }
 
