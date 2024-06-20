@@ -10,7 +10,8 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 - Components - Tuiles: Ajout d'une classe card-link-icon pour gerer le link label pour tuile horizontale document et tuile en vedette.
 
 ### Changed
-- Styles - Typographie: Remplacement de Open Sans par la nouvelle police Montreal.
+-  **REVERTED** Styles - Typographie: Remplacement de Open Sans par la nouvelle police Montreal.
+  Des problèmes sous Windows et Android nous oblige à retarder le deploiement de la police Montreal.
 - Components - Onglet: Modifications état onglet. Ajout variante onglets verticaux.
 - Global: Modification des états focus de la plupart des éléments pouvant recevoir le focus: boutons, liens, input.
   Il y a 3 grandes familles de focus: normal, inversé et intérieur.
