@@ -61,16 +61,14 @@
   }
 
   .card-img {
-    width: 198px;
+    width: calc(100% - 4rem);
     @include border-radius(0);
-    border: $card-border-width solid $card-border-color;
     margin: 2rem 2rem 0 2rem;
     align-self: flex-start;
 
     &.img-placeholder {
       width: calc(100% - 4rem);
       max-height: 200px;
-      border: none;
       align-items: center;
       justify-content: center;
       display: flex;
@@ -85,6 +83,7 @@
     // 576px and up
     @include media-breakpoint-up(sm) {
       margin: 2rem 0 2rem 2rem;
+      width: 200px;
 
       &.img-placeholder {
         width: 200px;
@@ -157,9 +156,29 @@
     display: inline-flex;
     font-weight: $font-weight-bold;
     line-height: $line-height-md;
+    margin-right: 0;
     .icon {
       @include icon-color($action);
       margin-left: .25rem;
+    }
+    &:hover,
+    &:focus {
+      background-color: transparent;
+    }
+
+    &.card-link-icon {
+      display: inline;
+      .icon-nowrap {
+        display: inline;
+        white-space: nowrap;
+        vertical-align: -6px;
+        line-height: 1;
+      }
+      .icon {
+        display: inline;
+        margin-right: 0;
+        line-height: 1;
+      }
     }
   }
 
@@ -239,14 +258,6 @@
         height: .125rem;
         margin-top: 1rem;
       }
-    }
-    // Optionnal bottom link-label
-    .card-link {
-      color: $action;
-      display: inline-flex;
-      font-weight: $font-weight-bold;
-      line-height: $line-height-md;
-      padding-top: 1rem;
     }
   }
 
@@ -380,16 +391,6 @@
         line-height: 2rem;
         margin-bottom: 1rem;
       }
-      .card-link {
-        color: $action;
-        display: inline-flex;
-        font-weight: $font-weight-bold;
-        line-height: $line-height-md;
-        .icon {
-          @include icon-color($action);
-          margin-left: .25rem;
-        }
-      }
     }
 
     @include media-breakpoint-up(md) {
@@ -488,7 +489,7 @@ a.card {
   }
   &:focus,
   &.focus {
-    box-shadow: $card-box-shadow, $input-btn-focus-box-shadow;
+    box-shadow: $input-btn-focus-box-shadow;
   }
 
   &.card-multi,

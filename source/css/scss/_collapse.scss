@@ -1,6 +1,6 @@
 //
 // Collapsible Item
-// TODO: merge accordion-listed since listed became the only available version.
+// TODO: merge accordion-listed since listed became the only version available.
 //
 .collapsible-item {
   background-color: $white;
@@ -95,7 +95,7 @@
       }
 
       &:focus {
-        box-shadow: $btn-focus-inset-box-shadow;
+        box-shadow: $btn-focus-inside-box-shadow;
         border-radius: subtract($border-radius, 1px);
       }
 

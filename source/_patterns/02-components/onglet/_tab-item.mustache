@@ -1,0 +1,15 @@
+<nav class="nav-tabs {{navTabsClass}}" aria-label="Onglets" orientation="{{orientation}}">
+  {{# inContainer}}
+  <div class="container">
+  {{/ inContainer}}
+    <ul class="nav {{orientationClass}}" role="tablist">
+      {{# navTabs.navItem }}
+      <li class="nav-item {{liClass}}">
+        <button type="button" class="nav-link {{class}}" role="tab" id={{id}} data-toggle="tab" aria-controls={{tabContentId}} {{#isDisabled}}tabindex="-1" aria-disabled="true"{{/ isDisabled}}{{#selected}} aria-selected="{{selected}}"{{/ selected}}>{{# icon-name}}{{> styles-icon-item }}{{/ icon-name}}{{ title }}</button>
+      </li>
+      {{/ navTabs.navItem }}
+    </ul>
+  {{# inContainer}}
+  </div>
+  {{/ inContainer}}
+</nav>

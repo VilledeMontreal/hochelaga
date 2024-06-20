@@ -4,7 +4,29 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](http://keepachangelog.com/en/1.0.0/)
 and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.html).
 
-## [5.4.0] - Unreleased
+## [5.5.0] - 2024-06-20
+
+### Added
+- Components - Tuiles: Ajout d'une classe card-link-icon pour gerer le link label pour tuile horizontale document et tuile en vedette.
+
+### Changed
+-  **REVERTED** Styles - Typographie: Remplacement de Open Sans par la nouvelle police Montreal.
+  Des problèmes sous Windows et Android nous oblige à retarder le deploiement de la police Montreal.
+- Components - Onglet: Modifications état onglet. Ajout variante onglets verticaux.
+- Global: Modification des états focus de la plupart des éléments pouvant recevoir le focus: boutons, liens, input.
+  Il y a 3 grandes familles de focus: normal, inversé et intérieur.
+  Normal pour les composant de base.
+  Inversé pour les composant sur fond foncé.
+  Intérieur pour les éléments pleine largeur.
+
+### PatternLab
+- PL: Mise à jour des gabarits
+
+### Fixed
+- Components - Toasts: Ajustement fonction fermeture et styles boutons.
+
+
+## [5.4.0] - 2024-05-30
 
 ### Added
 - Components - Message ciblé: Ajout de la variante hyperlien.

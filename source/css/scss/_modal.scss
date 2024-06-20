@@ -11,7 +11,12 @@
   .modal-header {
     padding: 1rem;
     flex: 0 0 auto; // IE need this
+    .close,
     .btn-close {
+      padding: .4375rem;
+      border: $btn-border-width solid transparent;
+      border-radius: $btn-border-radius-squared;
+      margin: -.5rem -.5rem -.5rem auto;
       .icon {
         @include icon-color($action);
       }
@@ -23,16 +28,14 @@
         }
       }
       &:not(:disabled):not(.disabled) {
-        @include hover-focus {
-          opacity: 1;
-          .icon {
-            @include icon-color($action-darker);
-          }
-          svg {
-            path {
-              fill: $neutral-primary;
-            }
-          }
+        &:hover,
+        &:focus {
+          opacity: 1; // Fix what is herited from bootstrap
+          background-color: $highlight-light;
+        }
+        &:focus {
+          outline: 0;
+          box-shadow: $btn-focus-box-shadow;
         }
       }
     }

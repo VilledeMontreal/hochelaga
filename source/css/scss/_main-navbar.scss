@@ -27,17 +27,9 @@
     a,
     button,
     .btn {
-      &:focus {
-        box-shadow: $main-navbar-focus-box-shadow;
-      }
       &:not(:disabled):not(.disabled):active,
       &:not(:disabled):not(.disabled).active {
         background-image: none;
-        box-shadow: $main-navbar-focus-box-shadow;
-
-        &:focus {
-          box-shadow: $main-navbar-focus-box-shadow;
-        }
       }
     }
 
@@ -55,7 +47,8 @@
       display: inline-flex;
       padding: .5rem;
       margin: 0;
-      @include hover-focus {
+      &:hover,
+      &:focus {
         background-color: transparent;
       }
       svg {
@@ -70,11 +63,16 @@
       line-height: $line-height-md;
       font-weight: $font-weight-bold;
       align-items: center;
-      @include transition(color .15s ease-in-out);
     }
 
     a.navbar-brand {
-      @include hover-focus {
+      border-radius: $btn-border-radius-squared;
+      background-color: $white;
+      @include transition(color .15s ease-in-out, box-shadow .15s ease-in-out);
+
+      &:hover,
+      &:focus {
+        background-color: $white;
         color: $action;
       }
     }
@@ -123,6 +121,7 @@
     // Navbar buttons styles
     .navbar-btn {
       @include button-reset();
+      background-color: $white;
       display: inline-flex;
       align-items: center;
       font-weight: $btn-font-weight;
@@ -163,8 +162,10 @@
         }
       }
 
-      @include hover-focus {
+      &:hover,
+      &:focus {
         color: $action;
+        background-color: $white;
         .icon {
           @include icon-color($action);
         }
@@ -196,7 +197,8 @@
           fill: $white;
         }
 
-        @include hover-focus {
+        &:hover,
+        &:focus {
           background-color: $negative-dark;
         }
       }
@@ -208,7 +210,8 @@
         .icon {
           @include icon-color($negative-dark);
         }
-        @include hover-focus {
+        &:hover,
+        &:focus {
           .btn-label {
             color: $negative;
           }
@@ -258,7 +261,8 @@
         content: none;
       }
 
-      @include hover-focus {
+      &:hover,
+      &:focus {
         .user-avatar,
         .media-avatar {
           background-color: $action-darker;
@@ -304,6 +308,7 @@
 
       .navbar-btn {
         color: $white;
+        background-color: transparent;
         .icon {
           @include icon-color($white);
         }
@@ -312,7 +317,8 @@
           color: $white;
         }
 
-        @include hover-focus {
+        &:hover,
+        &:focus {
           color: $action-lighter;
           .icon {
             @include icon-color($action-lighter);
@@ -320,6 +326,10 @@
           .btn-label {
             color: $action-lighter;
           }
+        }
+
+        &:focus {
+          box-shadow: $input-btn-reverse-focus-box-shadow;
         }
       }
       .navbar-separator {
@@ -332,9 +342,20 @@
         line-height: $line-height-md;
         font-weight: $font-weight-bold;
         align-items: center;
+      }
 
-        @include hover-focus {
+      a.navbar-brand {
+        background-color: transparent;
+        @include transition(color .15s ease-in-out, box-shadow .15s ease-in-out);
+
+        &:hover,
+        &:focus {
+          background-color: transparent;
           color: $action-lighter;
+        }
+
+        &:focus {
+          box-shadow: $input-btn-reverse-focus-box-shadow;
         }
       }
 
@@ -351,7 +372,8 @@
           background-color: $white;
         }
 
-        @include hover-focus {
+        &:hover,
+        &:focus {
           &::after {
             background-color: $action-lighter;
           }
@@ -433,9 +455,10 @@
           content: '';
           background-color: $neutral-tertiary;
         }
-        @include hover-focus {
+        &:hover,
+        &:focus {
           &::after {
-            background-color: $primary;
+            background-color: $action;
           }
         }
       }
@@ -446,14 +469,17 @@
 .navbar-lang-switcher {
   background-color: $neutral-primary;
   color: $white;
-  padding: 0;
+  padding: 0 2rem 0 0;
   height: $navbar-lang-height;
   position: relative;
   z-index: $zindex-fixed + 1;
   align-items: center;
   .btn-lang {
-    padding-top: .125rem;
-    padding-bottom: .125rem;
+    padding: 0;
+    border-radius: 0;
+    &:focus {
+      box-shadow: $input-btn-reverse-focus-box-shadow;
+    }
   }
   .not-translated {
     @include font-size($font-size-sm);
@@ -465,9 +491,6 @@
     > * {
       margin-bottom: 0;
     }
-  }
-  @include media-breakpoint-up(lg) {
-    padding: 0 1rem;
   }
 }
 

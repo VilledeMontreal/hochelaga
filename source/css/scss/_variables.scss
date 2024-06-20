@@ -346,7 +346,7 @@ $component-active-color:      $white;
 $component-active-bg:         $primary;
 
 $focus-color:                 $informative;
-$focus-reverse-color:         $informative-light;
+$focus-reverse-color:         $yellow;
 
 // generic variable box-shadow apply to card, popover, dropdown and modal
 $box-shadow:                  $shadow-strong;
@@ -454,11 +454,15 @@ $input-btn-font-family:       null;
 $input-btn-font-size:         $font-size-sm;
 $input-btn-line-height:       $line-height-sm; // 14/20
 
-$input-btn-focus-width:       .1875rem;
-$input-btn-focus-color:       rgba($focus-color, .5);
+$input-btn-focus-width:        .125rem;
+$input-btn-focus-color:         rgba($focus-color, .5);
 $input-btn-focus-reverse-color: rgba($focus-reverse-color, .3);
-$input-btn-focus-box-shadow:  0 0 0 $input-btn-focus-width $input-btn-focus-color;
-$input-btn-reverse-focus-box-shadow:  0 0 0 $input-btn-focus-width $input-btn-focus-reverse-color;
+
+// Custom focus box-shadows
+$input-btn-focus-box-shadow:                  0 0 0 .125rem $white, 0 0 0 .25rem $focus-color;
+$input-btn-focus-inside-box-shadow:           inset 0 0 0 .25rem $white, inset 0 0 0 .375rem $focus-color;
+$input-btn-reverse-focus-box-shadow:          0 0 0 .125rem #101215, 0 0 0 .25rem $focus-reverse-color;
+$input-btn-reverse-focus-inside-box-shadow:   inset 0 0 0 .25rem $white, inset 0 0 0 .375rem $focus-color;
 
 $input-btn-padding-y-sm:      .4375rem;
 $input-btn-padding-x-sm:      .4375rem;
@@ -499,7 +503,7 @@ $btn-font-weight:             $font-weight-bold;
 $btn-box-shadow:              inset 0 1px 0 rgba($white, .15), 0 1px 1px rgba($black, .075);
 $btn-focus-width:             $input-btn-focus-width;
 $btn-focus-box-shadow:        $input-btn-focus-box-shadow;
-$btn-focus-inset-box-shadow:  inset $input-btn-focus-box-shadow;
+$btn-focus-inside-box-shadow:  $input-btn-focus-inside-box-shadow;
 $btn-disabled-opacity:        .65;
 $btn-active-box-shadow:       inset 0 3px 5px rgba($black, .125);
 
@@ -615,9 +619,14 @@ $custom-switch-indicator-handle:                  $white;
 $custom-switch-indicator-handle-disabled:         $neutral-underground-2;
 $custom-switch-indicator-checked-handle:          $action;
 
+$custom-select-padding-x:           $input-padding-x;
+$custom-select-disabled-color:      $neutral-secondary;
+
+$custom-select-focus-box-shadow:    $input-btn-focus-box-shadow;
+
 $custom-select-padding-x-sm:          $input-padding-x-sm;
 
-$custom-select-indicator-padding:     2.5625rem; // Extra padding to account for the presence of the background-image based indicator
+$custom-select-indicator-padding:     2rem; // Extra padding to account for the presence of the background-image based indicator
 $custom-select-indicator-padding-sm:  1.5rem;
 $custom-select-bg-size-sm:            16px 16px;
 $custom-select-bg-size:               24px 24px; // In pixels because image dimensions
@@ -720,7 +729,7 @@ $pagination-bg:                     $white;
 $pagination-border-width:           1px;
 $pagination-border-color:           $neutral-stroke;
 
-$pagination-focus-box-shadow:       $input-btn-focus-box-shadow;
+$pagination-focus-box-shadow:       $input-btn-focus-inside-box-shadow;
 $pagination-focus-outline:          0;
 
 $pagination-hover-color:            $primary;
