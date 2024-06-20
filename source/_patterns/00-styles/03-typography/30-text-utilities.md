@@ -1,5 +1,5 @@
 ---
-title: Utilitaires texte
+title: Text utilities
 ---
 
 ## Utilisation

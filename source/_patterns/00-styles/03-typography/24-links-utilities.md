@@ -1,5 +1,5 @@
 ---
-title: Utilitaires hyperliens
+title: Links utilities
 ---
 
 ## Utilisation
