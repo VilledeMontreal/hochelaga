@@ -4,6 +4,14 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](http://keepachangelog.com/en/1.0.0/)
 and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.html).
 
+## [5.5.1] - unreleased
+
+### Added
+- Styles - iconographie: Ajout des icônes clipboard-checklist, park, snow et trails.
+
+### Changed
+- Styles - iconographie: Modification des icônes arrow-down, arrow-left, arrow-right, arrow-up, check, download, droplet, home, log-in, log-out, menu, upload et x.
+
 ## [5.5.0] - 2024-06-20
 
 ### Added
