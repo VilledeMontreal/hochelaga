@@ -147,6 +147,17 @@ function glyphs() {
     .pipe(dest(config.glyphs.dest));
 }
 
+// Fonts: copy
+function fonts() {
+  return src(config.fonts.files)
+    .pipe(dest(config.fonts.dest));
+}
+// Fonts: Distribution
+function fontsDist() {
+  return src(config.fonts.files)
+    .pipe(dest(config.fonts.distribution))
+}
+
 // Task: Handle Patternlab Sass
 function plSass() {
   return src(config.patternlab.scss.files)
@@ -212,6 +223,7 @@ exports.default = series(
     photoswipe,
     scripts,
     glyphs,
+    fonts,
     baoVersion
   )
 )
@@ -230,6 +242,7 @@ exports.serve = series(
     vendorScripts,
     photoswipe,
     glyphs,
+    fonts,
     scripts,
     baoVersion
   ),
