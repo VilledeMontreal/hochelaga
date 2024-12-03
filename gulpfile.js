@@ -257,7 +257,8 @@ exports.distribute = series(
   parallel(
     jsDist,
     images,
-    cssDist
+    cssDist,
+    fontsDist
   ),
   sassCopy
 )
