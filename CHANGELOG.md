@@ -6,6 +6,9 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 
 ## [5.6.0] - 2024-12-03
 
+### Added
+- Styles - iconographie: Ajout de l'icône social-bluesky
+
 ### Changed
 - Styles - Typographie: Remplacement de Open Sans par la nouvelle police Montreal. La 2e fois est la bonne!
 
