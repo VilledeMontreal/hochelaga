@@ -23,6 +23,15 @@
     }
   }
 
+  // Content header surtitle
+  .content-header-surtitle {
+    @include font-size($font-size-lg);
+    line-height: $line-height-lg;
+    color: $headings-color;
+    font-weight: $font-weight-bold;
+    margin-bottom: 0.5rem;
+  }
+
   // Deprecated
   // Use content-header-extras
   //
