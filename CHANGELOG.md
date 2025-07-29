@@ -4,10 +4,16 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](http://keepachangelog.com/en/1.0.0/)
 and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.html).
 
-## [5.7.0] - 2025-03-28
+## [5.8.0] - 2025-07-29
 
 ### Added
-- Components - Content Header: Ajout classe .content-header-surtitle
+- Components - Fil d'ariane: Ajout d'une classe .has-mobile-version pour l'ajout de la version mobile, pour permettre la retrocompatibilité. La version mobile marche avec l'affichage de la page courante.
+
+### Changed
+- Components - Fil d'ariane: Modification des styles liens Hover, ajout page actuelle et ajustement des styles.
+- Patterns: Ajout de la page en cours du fil d'ariane dans les gabarits. Ajustement des gabarits: alignement du contenu a gauche, largeur des section fil d'ariane et feedback form.
+
+## [5.7.0] - 2025-06-15
 
 ### Changed
 - Styles - Typographie: Remplacement de l'emplacement de l'hébergement de la font montreal. Maintenant hébergé sur https://montreal.ca/fonts/montreal/v1

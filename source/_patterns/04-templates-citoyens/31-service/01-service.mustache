@@ -6,9 +6,9 @@
 <main class="main-content {{ pageClasses }}" id="main-content" aria-label="Main Content">
 
   <div class="container pt-4 pt-lg-8">
-    <div class="row{{^ sidebarRight }} justify-content-center{{/ sidebarRight}}">
-      <div class="col-12{{^ sidebarRight }} col-lg-7{{/ sidebarRight}}">
-        {{> components-breadcrumbs}}
+    <div class="row">
+      <div class="col-12">
+        {{> components-fil-ariane}}
       </div>
     </div>
   </div>
@@ -17,7 +17,7 @@
 
     <div class="container">
 
-      <section class="row{{# sidebarRight }} justify-content-between{{/ sidebarRight}}{{^ sidebarRight}} justify-content-center{{/ sidebarRight}}">
+      <section class="row justify-content-between">
         <div class="col-12 col-lg-7">
           <header class="content-header">
             {{# module-state }}
@@ -100,8 +100,8 @@
 
       </section>
 
-      <section class="row{{# sidebarRight }} justify-content-between{{/ sidebarRight}}{{^ sidebarRight}} justify-content-center{{/ sidebarRight}}">
-        <div class="col-12 col-lg-7">
+      <section class="row">
+        <div class="col-12">
         {{> components-feedback-form}}
         </div>
       </section>

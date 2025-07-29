@@ -1,0 +1,10 @@
+{{# breadcrumb }}
+<nav class="breadcrumb-container" role="navigation" aria-label="Fil d'ariane">
+  <ol class="breadcrumb has-mobile-version">
+    {{# breadcrumbs }}
+    <li class="breadcrumb-item"><a href="{{ url }}">{{ text }}</a></li>
+    {{/ breadcrumbs }}
+    {{# currentPage}}<li class="breadcrumb-item active" aria-curent="page">{{ text }}</li>{{/ currentPage}}
+  </ol>
+</nav>
+{{/ breadcrumb}}
