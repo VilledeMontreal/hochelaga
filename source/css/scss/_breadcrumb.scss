@@ -7,12 +7,16 @@
   flex-wrap: wrap;
   padding: 0;
   list-style: none;
+  margin-bottom: -.5rem;
 }
 
 .breadcrumb-item {
   display: inline-flex;
-  @include font-size($font-size-xs);
-  line-height: $line-height-xs;
+  @include font-size($font-size-sm);
+  color: $neutral-secondary;
+  line-height: $line-height-sm;
+  font-weight: $font-weight-bold;
+  margin-bottom: .5rem;
 
   // The separator between breadcrumbs (chevron-right)
   + .breadcrumb-item {
@@ -20,12 +24,12 @@
 
     &::before {
       padding: 0;
-      margin-right: $breadcrumb-item-padding;
+      margin: -2px $breadcrumb-item-padding -2px 0;
       @include icon-color($breadcrumb-divider-color);
       -webkit-mask: url($data-icon-chevron-right) no-repeat 50% 50%;
 		  mask: url($data-icon-chevron-right) no-repeat 50% 50%;
-		  width: 16px;
-		  height: 16px;
+		  width: 24px;
+		  height: 24px;
       content: '';
       display: inline-block;
       -webkit-mask-size: cover;
@@ -38,18 +42,58 @@
     border: none;
     text-decoration: none;
     color: $neutral-secondary;
-    font-weight: $font-weight-bold;
-    @include font-size($font-size-xs);
-    line-height: $line-height-xs;
-    text-transform: uppercase;
+    @include font-size($font-size-sm);
+    line-height: $line-height-sm;
 
-    @include hover-focus {
-      background-color: transparent;
+    &:hover,
+    &:focus {
+      background-color: $highlight-light;
       color: $breadcrumb-active-color;
+      text-decoration: underline;
     }
   }
 
   &.active {
-    color: $breadcrumb-active-color;
+    color: $neutral-secondary;
+    font-weight: $font-weight-normal;
   }
+
+}
+
+// Add mobile version enhancement with a class for
+@include media-breakpoint-down(md) {
+  .has-mobile-version {
+    .breadcrumb-item {
+      display: none;
+      &:nth-last-child(2):not(.active) {
+        display: inline-flex;
+        a {
+          padding-left: 28px;
+          &::before {
+            padding: 0;
+            margin: -2px 0 -2px 0;
+            @include icon-color($breadcrumb-divider-color);
+            -webkit-mask: url($data-icon-arrow-left) no-repeat 50% 50%;
+            mask: url($data-icon-arrow-left) no-repeat 50% 50%;
+            width: 24px;
+            height: 24px;
+            content: '';
+            display: inline-block;
+            -webkit-mask-size: cover;
+            mask-size: cover;
+            background-color: $breadcrumb-divider-color;
+            position: absolute;
+            left: 0;
+          }
+        }
+      }
+      + .breadcrumb-item {
+        padding-left: 0;
+        &::before {
+          display: none;
+        }
+      }
+    }
+  }
+
 }

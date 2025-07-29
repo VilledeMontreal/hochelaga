@@ -6,9 +6,9 @@
 <main class="main-content {{ pageClasses }}" id="main-content" aria-label="Main Content">
 
   <div class="container pt-4 pt-lg-8">
-    <div class="row{{^documentHeading}} justify-content-center{{/documentHeading}}">
-      <div class="col-12 col-lg-7">
-        {{> components-breadcrumbs}}
+    <div class="row">
+      <div class="col-12">
+        {{> components-fil-ariane}}
       </div>
     </div>
   </div>
@@ -23,7 +23,7 @@
 
     <div class="container">
 
-      <div class="row justify-content-center">
+      <div class="row justify-content-between">
         <div class="col-12 col-lg-7">
           <header class="content-header">
 
@@ -59,8 +59,8 @@
 
       </div>
 
-      <section class="row justify-content-center">
-        <div class="col-12 col-lg-7">
+      <section class="row">
+        <div class="col-12">
         {{> components-feedback-form}}
         </div>
       </section>
