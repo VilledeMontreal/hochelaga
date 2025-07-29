@@ -12,6 +12,7 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 ### Changed
 - Components - Fil d'ariane: Modification des styles liens Hover, ajout page actuelle et ajustement des styles.
 - Patterns: Ajout de la page en cours du fil d'ariane dans les gabarits. Ajustement des gabarits: alignement du contenu a gauche, largeur des section fil d'ariane et feedback form.
+- Styles - Typographie: Remplacement de l'emplacement de l'hébergement de la font montreal. Maintenant hébergé sur https://montreal.ca/fonts/montreal/v1
 
 ## [5.6.1] - 2025-02-26
 
