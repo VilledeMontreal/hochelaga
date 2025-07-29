@@ -10,9 +10,9 @@
   {{/ messageBar}}
 
   <div class="container pt-4 pt-lg-8">
-    <div class="row{{^ sidebarRight}}{{^documentHeading}} justify-content-center{{/documentHeading}}{{/ sidebarRight}}">
-      <div class="col-12 col-lg-7">
-        {{> components-breadcrumbs}}
+    <div class="row">
+      <div class="col-12">
+        {{> components-fil-ariane}}
       </div>
     </div>
   </div>
@@ -27,7 +27,7 @@
 
     <div class="container">
 
-      <div class="row {{# sidebarRight }} d-md-block clearfix{{/ sidebarRight}}{{^ sidebarRight}} justify-content-center{{/ sidebarRight}}">
+      <div class="row {{# sidebarRight }} d-md-block clearfix{{/ sidebarRight}}">
         <div class="col-12 col-lg-7 float-left">
           <header class="content-header">
 
@@ -80,8 +80,8 @@
         </div>
       </div>
 
-      <section class="row{{# sidebarRight }} justify-content-between{{/ sidebarRight}}{{^ sidebarRight}} justify-content-center{{/ sidebarRight}}">
-        <div class="col-12 col-lg-7">
+      <section class="row">
+        <div class="col-12">
         {{> components-feedback-form}}
         </div>
       </section>
