@@ -42,7 +42,7 @@ jobs:
         env:
           NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
       - name: Publish legacy tag
-        run: npm publish --tag v4
+        run: npm publish --tag legacy
         if: startsWith(github.ref, 'refs/tags/v4.')
         env:
           NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
