@@ -4,10 +4,7 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](http://keepachangelog.com/en/1.0.0/)
 and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.html).
 
-## [4.24.5] - 2025-08-01
-Same as 4.24.4 - for publishing purpose only.
-
-## [4.24.4] - 2025-02-27
+## [4.24.4] - 2025-08-01
 
 ### Added
 - Styles - Iconographie: Ajout de l'icône play.

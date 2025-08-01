@@ -5,25 +5,36 @@ on:
       - master
       - main
       - develop
+    tags:
+      - 'v4.*'
     paths-ignore:
       - '**.md'
 jobs:
   publish-npm:
     name: Publish npm packages
     runs-on: ubuntu-latest
-    if: github.ref == 'refs/heads/master' || github.ref == 'refs/heads/main' || github.ref == 'refs/heads/develop'
+
     steps:
-      - uses: actions/checkout@v2
-      - uses: actions/setup-node@v2
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
         with:
           node-version: '16'
           registry-url: 'https://registry.npmjs.org'
       - run: npm ci
-      - run: npm run publish:main
-        if: github.ref == 'refs/heads/master' || github.ref == 'refs/heads/main' && contains(github.event.head_commit.message, 'ci(release):')
+
+      - name: Publish main
+        run: npm run publish:main --tag latest
+        if: (github.ref == 'refs/heads/master' || github.ref == 'refs/heads/main') && contains(github.event.head_commit.message, 'ci(release):')
         env:
           NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
-      - run: npm run publish:dev
+
+      - name: Publish dev
+        run: npm run publish:dev --tag dev
         if: github.ref == 'refs/heads/develop' && contains(github.event.head_commit.message, 'ci(prerelease):')
+        env:
+          NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
+      - name: Publish legacy tag
+        run: npm publish --tag legacy-v4
+        if: startsWith(github.ref, 'refs/tags/v4.')
         env:
           NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
