@@ -35,7 +35,7 @@
 
   .main-menu-content {
     display: flex;
-    padding: 2rem 0 2rem 0;
+    padding: 2rem 1rem;
     background-color: $main-menu-bg;
     box-shadow: $main-menu-box-shadow;
     // Fix weird behavior for ios Device...
@@ -62,9 +62,9 @@
     li {
       @include font-size($font-size-sm);
       line-height: $line-height-sm;
-      padding-bottom: 1rem;
+      margin-bottom: .5rem;
       &:last-child {
-        padding-bottom: 0;
+        margin-bottom: 0;
       }
     }
   }
@@ -196,8 +196,8 @@
 
   // Breakpoints tweaks
   @include media-breakpoint-up(lg) {
-    left: calc(50vw - (#{map-get($container-max-widths, lg)} / 2));
-    max-width: map-get($container-max-widths, lg);
+    left: max(0px, calc(50vw - (#{$main-menu-max-width} / 2)));
+    max-width: $main-menu-max-width;
     padding: 0 .5rem .5rem .5rem;
 
     .main-menu-container {
