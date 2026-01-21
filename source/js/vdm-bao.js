@@ -25,200 +25,165 @@
   const TAB_KEYCODE     = 'Tab' // KeyboardEvent.which value for tab key
 
   // Main Menu
-  var $menuToggler = $("#main-menu-toggler");
-  var $mainMenu = $("#main-menu");
+  const menuToggler = document.getElementById('main-menu-toggler');
+  const mainMenu = document.getElementById('main-menu');
+  const mainMenuCloseButton = mainMenu?.querySelector('.js-button-mobile-close');
 
   // Menu interne
-  var $menuInterneToggler = $("#menu-interne-toggler");
-  var $slideMenu = $("#slide-menu-left");
+  const menuInterneToggler = document.getElementById('menu-interne-toggler');
+  const slideMenu = document.getElementById('slide-menu-left');
 
   // Navbar search
-  var $navbarSearchToggler = $(".navbar-search-toggler");
-  var $navbarSearch = $("#navbar-search");
+  const navbarSearchToggler = document.querySelector('.navbar-search-toggler');
+  const navbarSearch = document.getElementById('navbar-search');
+  const navbarSearchCloseButton = navbarSearch?.querySelector('#navbar-search .js-button-close')
 
-  // Close navbarSide when the overlay is clicked
-  $('.overlay').on('click', function () {
-    if($mainMenu.hasClass('show')) {
-      $mainMenu.removeClass('show');
-      // Return focus to the element that invoked it
-      $menuToggler.attr("aria-expanded", "false").toggleClass('active').focus();
-      $('body').removeClass('modal-open');
-    }
-    if($slideMenu.hasClass('show')) {
-      $slideMenu.removeClass('show');
-      // Return focus to the element that invoked it
-      $menuInterneToggler.attr("aria-expanded", "false").focus();
-      $('body').removeClass('modal-open');
-    }
-    if($navbarSearch.hasClass('show')) {
-      $navbarSearch.removeClass('show');
-      $navbarSearchToggler.attr("aria-expanded", "false");
-      $('body').removeClass('modal-open');
-    }
-    if($('.overlay').hasClass('show')) {
-      $('.overlay').removeClass('show');
-      $('body').removeClass('modal-open');
-    }
-  });
+  // Overlay
+  const overlay = document.querySelector('.overlay');
+
+  if(overlay) {
+    // Close navbar menu when the overlay is clicked
+    overlay.addEventListener('click', function () {
+      if (mainMenu?.classList.contains('show')) {
+        mainMenu.classList.remove('show');
+        menuToggler.setAttribute('aria-expanded', 'false');
+        menuToggler.classList.toggle('active');
+        menuToggler.focus();
+        document.body.classList.remove('modal-open');
+      }
+      if (slideMenu?.classList.contains('show')) {
+        slideMenu.classList.remove('show');
+        menuInterneToggler.setAttribute('aria-expanded', 'false');
+        menuInterneToggler.focus();
+        document.body.classList.remove('modal-open');
+      }
+      if (navbarSearch?.classList.contains('show')) {
+        navbarSearch.classList.remove('show');
+        navbarSearchToggler.setAttribute('aria-expanded', 'false');
+        document.body.classList.remove('modal-open');
+      }
+      if (overlay?.classList.contains('show')) {
+        overlay.classList.remove('show');
+        document.body.classList.remove('modal-open');
+      }
+    });
+  }
+
 
   // Main menu close button (Mobile)
-  $("#main-menu .js-button-mobile-close").on("click", function (e) {
-    $mainMenu.removeClass('show');
-    $('.overlay').removeClass('show');
-    $('body').removeClass('modal-open');
-    // Return focus to the element that invoked it
-    $menuToggler.attr("aria-expanded", "false").toggleClass('active').focus();
+  if(mainMenuCloseButton) {
+    mainMenuCloseButton.addEventListener('click', function () {
+    mainMenu.classList.remove('show');
+    overlay.classList.remove('show');
+    document.body.classList.remove('modal-open');
+    menuToggler.setAttribute('aria-expanded', 'false');
+    menuToggler.classList.toggle('active');
+    menuToggler.focus();
   });
+  }
+
 
   // Navbar search Close button
-  $("#navbar-search .js-button-close").on('click', function(e) {
-    $navbarSearch.removeClass('show');
-    $navbarSearchToggler.attr("aria-expanded", "false").focus();
-    if(!$mainMenu.hasClass('show')) {
-      $('.overlay').removeClass('show');
-      $('body').removeClass('modal-open');
-    }
-  });
-
-  // Sous-categories Close button
-  $('.main-menu-categories > .main-menu-level1-item .main-menu-level2-close .js-button-close').on('click', function(e) {
-    e.stopPropagation();
-    $(this).parent().siblings('.main-menu-level2').addClass('main-menu-level2-hidden');
-    $(this).parent().siblings('.btn-main-menu-toggle').removeClass('active').attr('aria-expanded', false).focus();
-  });
+  if(navbarSearchCloseButton) {
+    navbarSearchCloseButton.addEventListener('click', function () {
+      navbarSearch.classList.remove('show');
+      navbarSearchToggler.setAttribute('aria-expanded', 'false');
+      navbarSearchToggler.focus();
+      if (!mainMenu.classList.contains('show')) {
+        overlay.classList.remove('show');
+        document.body.classList.remove('modal-open');
+      }
+    });
+  }
 
 
   // Flyout Main Menu
-  $menuToggler.on("click", function () {
-    $('body').toggleClass('modal-open');
-    $mainMenu.toggleClass('show');
-    $('.overlay').toggleClass('show');
-    $(this).toggleClass('active');
-    // Set aria-expanded attribute on toggled button
-    if($mainMenu.hasClass('show')) {
-      $(this).attr("aria-expanded", "true");
-    } else {
-      $(this).attr("aria-expanded", "false");
-    }
-  });
+  if(menuToggler) {
+    menuToggler.addEventListener('click', function () {
+      document.body.classList.toggle('modal-open');
+      mainMenu.classList.toggle('show');
+      overlay.classList.toggle('show');
+      this.classList.toggle('active');
+      this.setAttribute('aria-expanded', mainMenu.classList.contains('show') ? 'true' : 'false');
+    });
+  }
 
-  $navbarSearchToggler.on("click", function() {
-    $(this).attr("aria-expanded", "true");
-    $navbarSearch.addClass('show');
-    $('#input-navbar-search').focus();
-    if(!$('.overlay').hasClass('show')) {
-      $('.overlay').addClass('show');
-      $('body').addClass('modal-open');
-    }
-    if($mainMenu.hasClass('show')) {
-      $mainMenu.toggleClass('show');
-      $mainMenu.attr("aria-expanded", "false");
-    }
-  });
+
+  // Navbar search toggler
+  if(navbarSearchToggler) {
+    navbarSearchToggler.addEventListener('click', function () {
+      this.setAttribute('aria-expanded', 'true');
+      navbarSearch.classList.add('show');
+      document.getElementById('input-navbar-search').focus();
+      if (!overlay.classList.contains('show')) {
+        overlay.classList.add('show');
+        document.body.classList.add('modal-open');
+      }
+      if (mainMenu.classList.contains('show')) {
+        mainMenu.classList.remove('show');
+        mainMenu.setAttribute('aria-expanded', 'false');
+      }
+    });
+  }
+
 
   // Handle esc key on menu
-  $mainMenu.keydown(function(e) {
-    if (e.key === ESCAPE_KEYCODE) {
-      // Close the menu and overlay
-      $mainMenu.toggleClass("show");
-      $('.overlay').removeClass('show');
-      // Return focus to the element that invoked it
-      $menuToggler.attr("aria-expanded", "false").toggleClass('active').focus();
-    }
-  });
+  if(mainMenu) {
+    mainMenu.addEventListener('keydown', function (e) {
+      if (e.key === ESCAPE_KEYCODE) {
+        mainMenu.classList.toggle('show');
+        overlay.classList.remove('show');
+        menuToggler.setAttribute('aria-expanded', 'false');
+        menuToggler.classList.toggle('active');
+        menuToggler.focus();
+      }
+    });
+  }
 
-
-  // Handle esc key on sub-menu
-  $('.main-menu-categories > .main-menu-level1-item > .main-menu-level2').keydown(function(e) {
-    e.stopPropagation();
-    if (e.key === ESCAPE_KEYCODE) {
-      // Close the menu and overlay
-      $(this).addClass("main-menu-level2-hidden");
-      // Return focus to the element that invoked it
-      $(this).siblings('.btn-main-menu-toggle').attr("aria-expanded", "false").toggleClass('active').focus();
-    }
-  });
 
   // Handle esc key on navbar search
-  $navbarSearch.keydown(function(e) {
-    if (e.key === ESCAPE_KEYCODE) {
-      // Close the menu and overlay
-      $navbarSearch.toggleClass("show");
-      $('.overlay').removeClass('show');
-
-      // Return focus to the element that invoked it
-      $navbarSearchToggler.attr("aria-expanded", "false").focus();
-    }
-  });
-
-  // Handle second level for Categories
-  $('.btn-main-menu-toggle').on('click', function() {
-    $(this).parent('li').siblings().find('.main-menu-level2').addClass('main-menu-level2-hidden');
-    $(this).parent('li').siblings().find('.btn-main-menu-toggle').removeClass('active').attr('aria-expanded', false);
-    $(this).attr('aria-expanded', $(this).attr('aria-expanded') == 'true' ? 'false' : 'true');
-    $(this).toggleClass('active');
-    $(this).next('.main-menu-level2').toggleClass('main-menu-level2-hidden');
-  });
-
-  // Handle leaving submenu
-  // If key is pressed while on the last link in a sub menu
-  $('.main-menu-categories > .main-menu-level1-item > .main-menu-level2 > li:last-child > a').on('keydown', function(e) {
-    // If tabbing out of the last link in a sub menu AND NOT tabbing into another sub menu
-    if (e.key === TAB_KEYCODE) {
-      // Close this sub menu
-      $(this).parent('li').parent('ul').toggleClass('main-menu-level2-hidden');
-      $(this).parent('li').parent('ul').siblings('.btn-main-menu-toggle').removeClass('active').attr('aria-expanded', false);
-    }
-  })
-
-  // If key is pressed while on the first link in a sub menu
-  $('.main-menu-categories > .main-menu-level1-item > .main-menu-level2 > li:first-child > a').on('keydown', function(e) {
-    // If tabbing out of the last link in a sub menu AND NOT tabbing into another sub menu
-    if (e.shiftKey && e.key === TAB_KEYCODE) {
-      // Close this sub menu
-      $(this).parent('li').parent('ul').toggleClass('main-menu-level2-hidden');
-      $(this).parent('li').parent('ul').siblings('.btn-main-menu-toggle').removeClass('active').attr('aria-expanded', false);
-    }
-  })
-
+  if(navbarSearch) {
+    navbarSearch.addEventListener('keydown', function (e) {
+      if (e.key === ESCAPE_KEYCODE) {
+        navbarSearch.classList.toggle('show');
+        overlay.classList.remove('show');
+        navbarSearchToggler.setAttribute('aria-expanded', 'false');
+        navbarSearchToggler.focus();
+      }
+    });
+  }
 
 
   // Slide-menu interne
   //
-
-  if($('#slide-menu-left').length != 0) {
-
-    $menuInterneToggler.on("click", function () {
-      $('body').toggleClass('modal-open');
-      $slideMenu.toggleClass('show');
-      $('.overlay').toggleClass('show');
-      // Set aria-expanded attribute on toggled button
-      if($slideMenu.hasClass('show')) {
-        $(this).attr("aria-expanded", "true");
-      } else {
-        $(this).attr("aria-expanded", "false");
-      }
+  if (slideMenu) {
+    const closeButton = slideMenu.querySelector('.js-button-close');
+    // Toggle menu via bouton principal
+    menuInterneToggler.addEventListener('click', function () {
+      const isOpen = slideMenu.classList.toggle('show');
+      document.body.classList.toggle('modal-open', isOpen);
+      overlay?.classList.toggle('show', isOpen);
+      this.setAttribute('aria-expanded', isOpen ? 'true' : 'false');
     });
 
-    // Handle esc key on menu
-    $slideMenu.keydown(function(e) {
+
+    // Handle ESC key
+    slideMenu.addEventListener('keydown', function (e) {
       if (e.key === ESCAPE_KEYCODE) {
-        // Close the menu and overlay
-        $slideMenu.toggleClass("show");
-        $('.overlay').removeClass('show');
-        // Return focus to the element that invoked it
-        $menuInterneToggler.attr("aria-expanded", "false").focus();
+        slideMenu.classList.remove('show');
+        overlay?.classList.remove('show');
+        menuInterneToggler.setAttribute('aria-expanded', 'false');
+        menuInterneToggler.focus();
       }
     });
 
-    // Slide menu
-    $("#slide-menu-left .js-button-close").on("click", function (e) {
-      $slideMenu.removeClass('show');
-      $('.overlay').removeClass('show');
-      // Return focus to the element that invoked it
-      $menuInterneToggler.attr("aria-expanded", "false").focus();
+    // Slide menu close button
+    closeButton.addEventListener('click', function () {
+      slideMenu.classList.remove('show');
+      overlay?.classList.remove('show');
+      menuInterneToggler.setAttribute('aria-expanded', 'false');
+      menuInterneToggler.focus();
     });
-
   }
 
 
