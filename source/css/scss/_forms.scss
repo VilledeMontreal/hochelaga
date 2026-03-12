@@ -43,7 +43,6 @@ label {
       @include icon-color($action);
     }
 
-    &:focus,
     &:focus {
       .icon {
         @include icon-color($action-darker);
@@ -255,13 +254,9 @@ legend,
       border-color: $custom-control-indicator-checked-bg;
     }
   }
-
-  .custom-control-input:disabled {
-    &:checked ~ .custom-control-label::before {
-      border-color: $custom-control-indicator-checked-disabled-bg;
-    }
-    &:indeterminate ~ .custom-control-label::before {
-      border-color: $custom-control-indicator-checked-disabled-bg;
+  .custom-control-input:disabled:checked ~ .custom-control-label {
+    &::before {
+      border-color: $custom-control-indicator-border-color;
     }
   }
 }
@@ -313,14 +308,6 @@ legend,
   position: absolute;
   z-index: -1; // Put the input behind the label so it doesn't overlay text
   opacity: 0;
-
-  &:disabled {
-    ~ .custom-control-label {
-      &::before {
-        border-color: $custom-control-indicator-disabled-bg;
-      }
-    }
-  }
 }
 
 // Checkboxes
@@ -386,7 +373,6 @@ legend,
   }
 
   .custom-control-input:disabled ~ .custom-control-label {
-    border-color: $neutral-underground-2;
     .card-title, .card-label {
       color: $custom-control-label-disabled-color;
     }
@@ -787,7 +773,7 @@ legend,
 
 .file-drop-container-v2 {
   border-radius: $input-border-radius;
-  border: 1px dashed $neutral-stroke;
+  border: 1px dashed $neutral-tertiary;
   display: flex;
   padding: calc(.5rem - #{$input-border-width});
   align-items: center;

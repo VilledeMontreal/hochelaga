@@ -89,15 +89,8 @@
       {{/ listing}}
 
       {{# hasPagination }}
-      <div class="pagination-wrapper">
-        {{> components-pagination }}
-      </div>
+      {{> components-pagination }}
       {{/ hasPagination }}
-      {{^ hasPagination }}{{# hasLoadMoreBtn}}
-      <div class="pagination-wrapper mt-n4 text-center">
-        {{> components-button-icon}}
-      </div>
-      {{/ hasLoadMoreBtn}}{{/ hasPagination }}
 
       {{/ results}}
 

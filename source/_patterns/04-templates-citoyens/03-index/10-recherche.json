@@ -252,7 +252,6 @@
     "navSorts": false,
     "listing": {
       "listGroupClass": false,
-      "listGroupID": "search-load-more-items",
       "listGroup": [
         {
           "url": "#",
@@ -414,160 +413,41 @@
               }
             ]
           }
-        },
-        {
-          "separator": true
-        },
-        {
-          "listGroupItemClass": "load-more-item d-none",
-          "url": "#",
-          "type": "Article",
-          "title": "11e résultat de recherche",
-          "infos": {
-            "badge": false,
-            "infos-items": [
-              {
-                "text": "Invidunt sea takimata clita sit diam labore amet, consetetur voluptua lorem et diam ipsum ut nonumy et, et ipsum sea stet sed sea vero et, justo gubergren nonumy consetetur eirmod."
-              }
-            ]
-          }
-        },
-        {
-          "listGroupItemClass": "load-more-item d-none",
-          "url": "#",
-          "type": "Article",
-          "title": "12e résultat de recherche",
-          "infos": {
-            "badge": false,
-            "infos-items": [
-              {
-                "text": "Invidunt sea takimata clita sit diam labore amet, consetetur voluptua lorem et diam ipsum ut nonumy et, et ipsum sea stet sed sea vero et, justo gubergren nonumy consetetur eirmod."
-              }
-            ]
-          }
-        },
-        {
-          "listGroupItemClass": "load-more-item d-none",
-          "url": "#",
-          "type": "Article",
-          "title": "13e résultat de recherche",
-          "infos": {
-            "badge": false,
-            "infos-items": [
-              {
-                "text": "Invidunt sea takimata clita sit diam labore amet, consetetur voluptua lorem et diam ipsum ut nonumy et, et ipsum sea stet sed sea vero et, justo gubergren nonumy consetetur eirmod."
-              }
-            ]
-          }
-        },
-        {
-          "listGroupItemClass": "load-more-item d-none",
-          "url": "#",
-          "type": "Article",
-          "title": "14e résultat de recherche",
-          "infos": {
-            "badge": false,
-            "infos-items": [
-              {
-                "text": "Invidunt sea takimata clita sit diam labore amet, consetetur voluptua lorem et diam ipsum ut nonumy et, et ipsum sea stet sed sea vero et, justo gubergren nonumy consetetur eirmod."
-              }
-            ]
-          }
-        },
-        {
-          "listGroupItemClass": "load-more-item d-none",
-          "url": "#",
-          "type": "Article",
-          "title": "15e résultat de recherche",
-          "infos": {
-            "badge": false,
-            "infos-items": [
-              {
-                "text": "Invidunt sea takimata clita sit diam labore amet, consetetur voluptua lorem et diam ipsum ut nonumy et, et ipsum sea stet sed sea vero et, justo gubergren nonumy consetetur eirmod."
-              }
-            ]
-          }
-        },
-        {
-          "listGroupItemClass": "load-more-item d-none",
-          "url": "#",
-          "type": "Article",
-          "title": "16e résultat de recherche",
-          "infos": {
-            "badge": false,
-            "infos-items": [
-              {
-                "text": "Invidunt sea takimata clita sit diam labore amet, consetetur voluptua lorem et diam ipsum ut nonumy et, et ipsum sea stet sed sea vero et, justo gubergren nonumy consetetur eirmod."
-              }
-            ]
-          }
-        },
-        {
-          "listGroupItemClass": "load-more-item d-none",
-          "url": "#",
-          "type": "Article",
-          "title": "17e résultat de recherche",
-          "infos": {
-            "badge": false,
-            "infos-items": [
-              {
-                "text": "Invidunt sea takimata clita sit diam labore amet, consetetur voluptua lorem et diam ipsum ut nonumy et, et ipsum sea stet sed sea vero et, justo gubergren nonumy consetetur eirmod."
-              }
-            ]
-          }
-        },
-        {
-          "listGroupItemClass": "load-more-item d-none",
-          "url": "#",
-          "type": "Article",
-          "title": "18e résultat de recherche",
-          "infos": {
-            "badge": false,
-            "infos-items": [
-              {
-                "text": "Invidunt sea takimata clita sit diam labore amet, consetetur voluptua lorem et diam ipsum ut nonumy et, et ipsum sea stet sed sea vero et, justo gubergren nonumy consetetur eirmod."
-              }
-            ]
-          }
-        },
-        {
-          "listGroupItemClass": "load-more-item d-none",
-          "url": "#",
-          "type": "Article",
-          "title": "19e résultat de recherche",
-          "infos": {
-            "badge": false,
-            "infos-items": [
-              {
-                "text": "Invidunt sea takimata clita sit diam labore amet, consetetur voluptua lorem et diam ipsum ut nonumy et, et ipsum sea stet sed sea vero et, justo gubergren nonumy consetetur eirmod."
-              }
-            ]
-          }
-        },
-        {
-          "listGroupItemClass": "load-more-item d-none",
-          "url": "#",
-          "type": "Article",
-          "title": "20e résultat de recherche",
-          "infos": {
-            "badge": false,
-            "infos-items": [
-              {
-                "text": "Invidunt sea takimata clita sit diam labore amet, consetetur voluptua lorem et diam ipsum ut nonumy et, et ipsum sea stet sed sea vero et, justo gubergren nonumy consetetur eirmod."
-              }
-            ]
-          }
         }
       ]
     },
-    "hasLoadMoreBtn": {
-      "buttonClass": "btn-secondary btn-squared btn-icon-right",
-      "buttonText": "Plus de résultats",
-      "icon-name": "icon-chevron-down",
-      "buttonIcon": true,
-      "dataToggle": "load-more",
-      "dataTarget": "search-load-more-items"
-    },
-    "hasPagination": false
+    "hasPagination": {
+      "paginationClass": false,
+      "prev": {
+        "disabled": true
+      },
+      "paginationList": [
+        {
+          "url": "#",
+          "text": "1",
+          "class": "active"
+        },
+        {
+          "url": "#",
+          "text": "2",
+          "class": false
+        },
+        {
+          "url": "#",
+          "text": "3",
+          "class": false
+        },
+        {
+          "url": "#",
+          "text": "4",
+          "class": false
+        },
+        {
+          "url": "#",
+          "text": "5",
+          "class": false
+        }
+      ]
+    }
   }
 }

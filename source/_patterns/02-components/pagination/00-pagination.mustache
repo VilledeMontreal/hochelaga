@@ -1,26 +1,40 @@
-<nav aria-label="Pagination">
-  <ul class="pagination {{ paginationClass }}">
-    <li class="page-item{{# prev.disabled}} disabled{{/ prev.disabled}}">
-      <a class="page-link" href="#" aria-label="Précédent"{{# prev.disabled}} tabindex="-1" aria-disabled="true"{{/ prev.disabled}}>
-        <span class="icon icon-chevron-left" aria-hidden="true"></span>
-        <span class="sr-only">Précédent</span>
-      </a>
-    </li>
-  {{# paginationList}}
-    <li class="page-item {{ class }}">
-      {{# url}}
-      <a class="page-link" href="{{ url}}">{{ text }}</a>
-      {{/ url}}
-      {{^ url}}
-      <span class="page-link">{{ text }}</span>
-      {{/ url}}
-    </li>
-  {{/ paginationList}}
-    <li class="page-item{{# next.disabled}} disabled{{/ next.disabled}}">
-      <a class="page-link" href="#" aria-label="Suivant"{{# next.disabled}} tabindex="-1" aria-disabled="true"{{/ next.disabled}}>
-        <span class="icon icon-chevron-right" aria-hidden="true"></span>
-        <span class="sr-only">Suivant</span>
-      </a>
-    </li>
-  </ul>
-</nav>
+<div class="pagination-wrapper">
+  <div class="pagination-controls">
+    <div class="items-label">X à Y sur Z items</div>
+    <div class="pagination-items-select">
+      <label class="items-label" for="pagination-items-select">Items par page</label>
+      <select name="size" id="pagination-items-select" class="custom-select">
+        <option value="10">10</option>
+        <option value="25">25</option>
+        <option value="50">50</option>
+        <option value="100">100</option>
+      </select>
+    </div>
+  </div>
+  <nav aria-label="Pagination" class="pagination-list">
+    <ul class="pagination {{ paginationClass }}">
+      <li class="page-item{{# prev.disabled}} disabled{{/ prev.disabled}}">
+        <a class="page-link" href="#" aria-label="Page précédente"{{# prev.disabled}} tabindex="-1" aria-disabled="true"{{/ prev.disabled}}>
+          <span class="icon icon-chevron-left" aria-hidden="true"></span>
+          <span class="sr-only">Page précédente</span>
+        </a>
+      </li>
+    {{# paginationList}}
+      <li class="page-item {{ class }}">
+        {{# url}}
+        <a class="page-link" href="{{ url}}"><span class="sr-only">Page </span>{{ text }}</a>
+        {{/ url}}
+        {{^ url}}
+        <span class="page-link">{{{ text }}}</span>
+        {{/ url}}
+      </li>
+    {{/ paginationList}}
+      <li class="page-item{{# next.disabled}} disabled{{/ next.disabled}}">
+        <a class="page-link" href="#" aria-label="Page suivante"{{# next.disabled}} tabindex="-1" aria-disabled="true"{{/ next.disabled}}>
+          <span class="icon icon-chevron-right" aria-hidden="true"></span>
+          <span class="sr-only">Page suivante</span>
+        </a>
+      </li>
+    </ul>
+  </nav>
+</div>
