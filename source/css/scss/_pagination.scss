@@ -1,7 +1,52 @@
 // Page load-more section
 // Load more buttons and optionnal all results link
 .pagination-wrapper {
-  margin-bottom: 4rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 1rem;
+}
+
+.pagination-controls {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+  margin-bottom: 1rem;
+
+  .items-label {
+    @include font-size($font-size-sm);
+    line-height: $line-height-sm;
+    font-weight: $font-weight-bold;
+    color: $body-color;
+    margin-bottom: 0;
+  }
+
+  .pagination-items-select {
+    flex: 1 1 auto;
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    justify-content: flex-end;
+    gap: 1rem;
+    .custom-select {
+      width: auto;
+    }
+  }
+}
+
+@include media-breakpoint-up(md) {
+  .pagination-controls {
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 0;
+  }
+}
+
+.pagination-list {
+  display: flex;
+  justify-content: center;
 }
 
 // Pagination
@@ -16,12 +61,19 @@
     &.active {
       display: flex;
     }
+    &.active {
+      .page-link {
+        border-color: $action-darker;
+      }
+    }
     .page-link {
       display: flex;
       flex-wrap: wrap;
       justify-content: center;
       align-items: center;
       font-weight: $font-weight-bold;
+      border-radius: $border-radius;
+      margin-left: 0;
 
       .icon {
         @include icon-color($pagination-color);
@@ -34,7 +86,11 @@
       }
       &:focus,
       &:visited {
-        border-bottom: 1px solid $neutral-stroke;
+        border: 1px solid transparent;
+      }
+      &:focus {
+        border-color: $white;
+        border-radius: 0;
       }
     }
 
@@ -42,6 +98,8 @@
       color: $body-color;
       pointer-events: none;
       cursor: auto;
+      border: 0;
+      padding: 0.625rem 0.5rem;
     }
 
     &.disabled {
@@ -53,7 +111,6 @@
     }
   }
 }
-
 
 // Page item
 .page-item {
