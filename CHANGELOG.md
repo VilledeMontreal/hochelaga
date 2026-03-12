@@ -4,13 +4,18 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](http://keepachangelog.com/en/1.0.0/)
 and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.html).
 
-## [5.9.0] - Unreleased
+## [5.10.0] - 2026-03-12
 
 ### Changed
 - Components - Pagination: Modification des styles pour la pagination.
 - Components - Pagination: Ajout section supplémentaire de la pagination (nombre de résultats + select nombre de resultat par page).
 - Composants - Entrée de données: Modification de la couleur de bordure des inputs text, select, textarea, file, checkbox et radios.
 - Templates - Ajustement pagination dans les templates.
+
+## [5.9.0] - 2026-01-21
+
+### Changed
+- Components - Mise à jour du menu principal.
 
 ## [5.8.0] - 2025-07-29
 
